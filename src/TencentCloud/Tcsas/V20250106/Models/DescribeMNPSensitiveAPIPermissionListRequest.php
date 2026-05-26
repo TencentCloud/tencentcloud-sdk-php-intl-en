@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMNPSensitiveAPIPermissionList request structure.
  *
- * @method integer getOffset() Obtain Page offset
- * @method void setOffset(integer $Offset) Set Page offset
- * @method integer getLimit() Obtain Number of results per page
- * @method void setLimit(integer $Limit) Set Number of results per page
- * @method string getMNPId() Obtain Mini program ID
- * @method void setMNPId(string $MNPId) Set Mini program ID
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method integer getOffset() Obtain Pagination offset.
+ * @method void setOffset(integer $Offset) Set Pagination offset.
+ * @method integer getLimit() Obtain Number of entries per page.
+ * @method void setLimit(integer $Limit) Set Number of entries per page.
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
  * @method string getApplicationId() Obtain Application ID
  * @method void setApplicationId(string $ApplicationId) Set Application ID
- * @method string getKeyword() Obtain Keywords for search (API name)
- * @method void setKeyword(string $Keyword) Set Keywords for search (API name)
+ * @method string getKeyword() Obtain Search keyword (API name).
+ * @method void setKeyword(string $Keyword) Set Search keyword (API name).
  */
 class DescribeMNPSensitiveAPIPermissionListRequest extends AbstractModel
 {
     /**
-     * @var integer Page offset
+     * @var integer Pagination offset.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results per page
+     * @var integer Number of entries per page.
      */
     public $Limit;
 
     /**
-     * @var string Mini program ID
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
@@ -61,17 +61,17 @@ class DescribeMNPSensitiveAPIPermissionListRequest extends AbstractModel
     public $ApplicationId;
 
     /**
-     * @var string Keywords for search (API name)
+     * @var string Search keyword (API name).
      */
     public $Keyword;
 
     /**
-     * @param integer $Offset Page offset
-     * @param integer $Limit Number of results per page
-     * @param string $MNPId Mini program ID
-     * @param string $PlatformId Platform ID
+     * @param integer $Offset Pagination offset.
+     * @param integer $Limit Number of entries per page.
+     * @param string $MNPId Mini program appid.
+     * @param string $PlatformId Platform ID.
      * @param string $ApplicationId Application ID
-     * @param string $Keyword Keywords for search (API name)
+     * @param string $Keyword Search keyword (API name).
      */
     function __construct()
     {

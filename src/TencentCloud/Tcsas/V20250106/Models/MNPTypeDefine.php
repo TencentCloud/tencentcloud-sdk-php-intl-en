@@ -18,30 +18,30 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mini program category information
+ * Mini program category information.
  *
- * @method string getTypeName() Obtain Specifies the mini program category name.
- * @method void setTypeName(string $TypeName) Set Specifies the mini program category name.
- * @method array getTypeValue() Obtain Mini program category value.
- * @method void setTypeValue(array $TypeValue) Set Mini program category value.
+ * @method string getTypeName() Obtain Mini program category name.
+ * @method void setTypeName(string $TypeName) Set Mini program category name.
+ * @method array getTypeValue() Obtain Mini program category values.
+ * @method void setTypeValue(array $TypeValue) Set Mini program category values.
  * @method integer getTypeId() Obtain Category ID.
  * @method void setTypeId(integer $TypeId) Set Category ID.
- * @method integer getCreateTime() Obtain Creation time
- * @method void setCreateTime(integer $CreateTime) Set Creation time
- * @method string getCreateUser() Obtain Creator
- * @method void setCreateUser(string $CreateUser) Set Creator
- * @method boolean getIsSystem() Obtain Indicates whether it is a system category.
- * @method void setIsSystem(boolean $IsSystem) Set Indicates whether it is a system category.
+ * @method integer getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(integer $CreateTime) Set Creation time.
+ * @method string getCreateUser() Obtain Creator.
+ * @method void setCreateUser(string $CreateUser) Set Creator.
+ * @method boolean getIsSystem() Obtain Whether it is a system category.
+ * @method void setIsSystem(boolean $IsSystem) Set Whether it is a system category.
  */
 class MNPTypeDefine extends AbstractModel
 {
     /**
-     * @var string Specifies the mini program category name.
+     * @var string Mini program category name.
      */
     public $TypeName;
 
     /**
-     * @var array Mini program category value.
+     * @var array Mini program category values.
      */
     public $TypeValue;
 
@@ -51,27 +51,27 @@ class MNPTypeDefine extends AbstractModel
     public $TypeId;
 
     /**
-     * @var integer Creation time
+     * @var integer Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Creator
+     * @var string Creator.
      */
     public $CreateUser;
 
     /**
-     * @var boolean Indicates whether it is a system category.
+     * @var boolean Whether it is a system category.
      */
     public $IsSystem;
 
     /**
-     * @param string $TypeName Specifies the mini program category name.
-     * @param array $TypeValue Mini program category value.
+     * @param string $TypeName Mini program category name.
+     * @param array $TypeValue Mini program category values.
      * @param integer $TypeId Category ID.
-     * @param integer $CreateTime Creation time
-     * @param string $CreateUser Creator
-     * @param boolean $IsSystem Indicates whether it is a system category.
+     * @param integer $CreateTime Creation time.
+     * @param string $CreateUser Creator.
+     * @param boolean $IsSystem Whether it is a system category.
      */
     function __construct()
     {

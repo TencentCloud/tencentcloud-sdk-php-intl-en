@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAPPDataOverview request structure.
  *
- * @method string getPlatformId() Obtain Tenant ID
- * @method void setPlatformId(string $PlatformId) Set Tenant ID
- * @method integer getDataTime() Obtain Start time in YYYYMMDD format
- * @method void setDataTime(integer $DataTime) Set Start time in YYYYMMDD format
- * @method array getApplicationIds() Obtain Superapp ID
- * @method void setApplicationIds(array $ApplicationIds) Set Superapp ID
+ * @method string getPlatformId() Obtain Tenant ID.
+ * @method void setPlatformId(string $PlatformId) Set Tenant ID.
+ * @method integer getDataTime() Obtain Start time in YYYYMMDD format.
+ * @method void setDataTime(integer $DataTime) Set Start time in YYYYMMDD format.
+ * @method array getApplicationIds() Obtain Superapp ID.
+ * @method void setApplicationIds(array $ApplicationIds) Set Superapp ID.
  */
 class DescribeAPPDataOverviewRequest extends AbstractModel
 {
     /**
-     * @var string Tenant ID
+     * @var string Tenant ID.
      */
     public $PlatformId;
 
     /**
-     * @var integer Start time in YYYYMMDD format
+     * @var integer Start time in YYYYMMDD format.
      */
     public $DataTime;
 
     /**
-     * @var array Superapp ID
+     * @var array Superapp ID.
      */
     public $ApplicationIds;
 
     /**
-     * @param string $PlatformId Tenant ID
-     * @param integer $DataTime Start time in YYYYMMDD format
-     * @param array $ApplicationIds Superapp ID
+     * @param string $PlatformId Tenant ID.
+     * @param integer $DataTime Start time in YYYYMMDD format.
+     * @param array $ApplicationIds Superapp ID.
      */
     function __construct()
     {

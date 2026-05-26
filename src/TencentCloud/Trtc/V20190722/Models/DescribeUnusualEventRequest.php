@@ -20,46 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUnusualEvent request structure.
  *
- * @method integer getSdkAppId() Obtain The application ID, such as `1400xxxxxx`.
- * @method void setSdkAppId(integer $SdkAppId) Set The application ID, such as `1400xxxxxx`.
- * @method integer getStartTime() Obtain The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
-Note: Only data in the last 14 days can be queried.
- * @method void setStartTime(integer $StartTime) Set The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
-Note: Only data in the last 14 days can be queried.
- * @method integer getEndTime() Obtain The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
- * @method void setEndTime(integer $EndTime) Set The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
- * @method string getRoomId() Obtain The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
- * @method void setRoomId(string $RoomId) Set The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
+ * @method integer getSdkAppId() Obtain User SdkAppId (for example: 1400xxxxxx).
+ * @method void setSdkAppId(integer $SdkAppId) Set User SdkAppId (for example: 1400xxxxxx).
+ * @method integer getStartTime() Obtain Query start time, local unix timestamp, in seconds (for example: 1590065777).
+Note: support querying data within the last 14 days.
+ * @method void setStartTime(integer $StartTime) Set Query start time, local unix timestamp, in seconds (for example: 1590065777).
+Note: support querying data within the last 14 days.
+ * @method integer getEndTime() Obtain Query end time, local unix timestamp, in seconds (for example, 1590065877). note: the time interval from StartTime should be no more than 1 hour.
+ * @method void setEndTime(integer $EndTime) Set Query end time, local unix timestamp, in seconds (for example, 1590065877). note: the time interval from StartTime should be no more than 1 hour.
+ * @method string getRoomId() Obtain Room number. query up to 20 abnormal experience events in the room.
+ * @method void setRoomId(string $RoomId) Set Room number. query up to 20 abnormal experience events in the room.
  */
 class DescribeUnusualEventRequest extends AbstractModel
 {
     /**
-     * @var integer The application ID, such as `1400xxxxxx`.
+     * @var integer User SdkAppId (for example: 1400xxxxxx).
      */
     public $SdkAppId;
 
     /**
-     * @var integer The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
-Note: Only data in the last 14 days can be queried.
+     * @var integer Query start time, local unix timestamp, in seconds (for example: 1590065777).
+Note: support querying data within the last 14 days.
      */
     public $StartTime;
 
     /**
-     * @var integer The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
+     * @var integer Query end time, local unix timestamp, in seconds (for example, 1590065877). note: the time interval from StartTime should be no more than 1 hour.
      */
     public $EndTime;
 
     /**
-     * @var string The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
+     * @var string Room number. query up to 20 abnormal experience events in the room.
      */
     public $RoomId;
 
     /**
-     * @param integer $SdkAppId The application ID, such as `1400xxxxxx`.
-     * @param integer $StartTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
-Note: Only data in the last 14 days can be queried.
-     * @param integer $EndTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
-     * @param string $RoomId The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
+     * @param integer $SdkAppId User SdkAppId (for example: 1400xxxxxx).
+     * @param integer $StartTime Query start time, local unix timestamp, in seconds (for example: 1590065777).
+Note: support querying data within the last 14 days.
+     * @param integer $EndTime Query end time, local unix timestamp, in seconds (for example, 1590065877). note: the time interval from StartTime should be no more than 1 hour.
+     * @param string $RoomId Room number. query up to 20 abnormal experience events in the room.
      */
     function __construct()
     {

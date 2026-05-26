@@ -18,108 +18,116 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mini game details
+ * Mini game detail information.
  *
- * @method string getMNPType() Obtain <p>Mini game type</p>
- * @method void setMNPType(string $MNPType) Set <p>Mini game type</p>
- * @method string getMNPId() Obtain <p>Mini game appid</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini game appid</p>
- * @method string getMNPName() Obtain <p>Mini game name</p>
- * @method void setMNPName(string $MNPName) Set <p>Mini game name</p>
- * @method string getMNPIcon() Obtain <p>Mini game icon</p>
- * @method void setMNPIcon(string $MNPIcon) Set <p>Mini game icon</p>
- * @method string getMNPIntro() Obtain <p>Mini game introduction</p>
- * @method void setMNPIntro(string $MNPIntro) Set <p>Mini game introduction</p>
- * @method string getMNPDesc() Obtain <p>Mini game description</p>
- * @method void setMNPDesc(string $MNPDesc) Set <p>Mini game description</p>
- * @method string getCreateTime() Obtain <p>Creation time (Unix timestamp)</p>
- * @method void setCreateTime(string $CreateTime) Set <p>Creation time (Unix timestamp)</p>
- * @method string getCreateUser() Obtain <p>Creator</p>
- * @method void setCreateUser(string $CreateUser) Set <p>Creator</p>
- * @method integer getAccessStatus() Obtain Connection status. Valid values: 1: Not connected; 2: Connected
- * @method void setAccessStatus(integer $AccessStatus) Set Connection status. Valid values: 1: Not connected; 2: Connected
- * @method string getTeamName() Obtain <p>Team name</p>
- * @method void setTeamName(string $TeamName) Set <p>Team name</p>
- * @method string getTeamId() Obtain <p>Team ID</p>
- * @method void setTeamId(string $TeamId) Set <p>Team ID</p>
- * @method integer getStatus() Obtain <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
- * @method void setStatus(integer $Status) Set <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
+ * @method string getMNPType() Obtain <p>Mini game category.</p>
+ * @method void setMNPType(string $MNPType) Set <p>Mini game category.</p>
+ * @method string getMNPId() Obtain <p>Mini game appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini game appid.</p>
+ * @method string getMNPName() Obtain <p>Mini game name.</p>
+ * @method void setMNPName(string $MNPName) Set <p>Mini game name.</p>
+ * @method string getMNPIcon() Obtain <p>Mini game icon.</p>
+ * @method void setMNPIcon(string $MNPIcon) Set <p>Mini game icon.</p>
+ * @method string getMNPIntro() Obtain <p>Mini game introduction.</p>
+ * @method void setMNPIntro(string $MNPIntro) Set <p>Mini game introduction.</p>
+ * @method string getMNPDesc() Obtain <p>Mini game description.</p>
+ * @method void setMNPDesc(string $MNPDesc) Set <p>Mini game description.</p>
+ * @method string getCreateTime() Obtain <p>Creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
+ * @method string getCreateUser() Obtain <p>Creator.</p>
+ * @method void setCreateUser(string $CreateUser) Set <p>Creator.</p>
+ * @method integer getAccessStatus() Obtain Access status. Valid values: 1: Not connected; 2: Connected. 
+ * @method void setAccessStatus(integer $AccessStatus) Set Access status. Valid values: 1: Not connected; 2: Connected. 
+ * @method string getTeamName() Obtain <p>Team name.</p>
+ * @method void setTeamName(string $TeamName) Set <p>Team name.</p>
+ * @method string getTeamId() Obtain <p>Team ID.</p>
+ * @method void setTeamId(string $TeamId) Set <p>Team ID.</p>
+ * @method integer getStatus() Obtain <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
+ * @method void setStatus(integer $Status) Set <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
+ * @method array getI18nList() Obtain The mini game name and description in multiple languages.
+ * @method void setI18nList(array $I18nList) Set The mini game name and description in multiple languages.
  */
 class DescribeMNGManagerDetailData extends AbstractModel
 {
     /**
-     * @var string <p>Mini game type</p>
+     * @var string <p>Mini game category.</p>
      */
     public $MNPType;
 
     /**
-     * @var string <p>Mini game appid</p>
+     * @var string <p>Mini game appid.</p>
      */
     public $MNPId;
 
     /**
-     * @var string <p>Mini game name</p>
+     * @var string <p>Mini game name.</p>
      */
     public $MNPName;
 
     /**
-     * @var string <p>Mini game icon</p>
+     * @var string <p>Mini game icon.</p>
      */
     public $MNPIcon;
 
     /**
-     * @var string <p>Mini game introduction</p>
+     * @var string <p>Mini game introduction.</p>
      */
     public $MNPIntro;
 
     /**
-     * @var string <p>Mini game description</p>
+     * @var string <p>Mini game description.</p>
      */
     public $MNPDesc;
 
     /**
-     * @var string <p>Creation time (Unix timestamp)</p>
+     * @var string <p>Creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string <p>Creator</p>
+     * @var string <p>Creator.</p>
      */
     public $CreateUser;
 
     /**
-     * @var integer Connection status. Valid values: 1: Not connected; 2: Connected
+     * @var integer Access status. Valid values: 1: Not connected; 2: Connected. 
      */
     public $AccessStatus;
 
     /**
-     * @var string <p>Team name</p>
+     * @var string <p>Team name.</p>
      */
     public $TeamName;
 
     /**
-     * @var string <p>Team ID</p>
+     * @var string <p>Team ID.</p>
      */
     public $TeamId;
 
     /**
-     * @var integer <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
+     * @var integer <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
      */
     public $Status;
 
     /**
-     * @param string $MNPType <p>Mini game type</p>
-     * @param string $MNPId <p>Mini game appid</p>
-     * @param string $MNPName <p>Mini game name</p>
-     * @param string $MNPIcon <p>Mini game icon</p>
-     * @param string $MNPIntro <p>Mini game introduction</p>
-     * @param string $MNPDesc <p>Mini game description</p>
-     * @param string $CreateTime <p>Creation time (Unix timestamp)</p>
-     * @param string $CreateUser <p>Creator</p>
-     * @param integer $AccessStatus Connection status. Valid values: 1: Not connected; 2: Connected
-     * @param string $TeamName <p>Team name</p>
-     * @param string $TeamId <p>Team ID</p>
-     * @param integer $Status <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
+     * @var array The mini game name and description in multiple languages.
+     */
+    public $I18nList;
+
+    /**
+     * @param string $MNPType <p>Mini game category.</p>
+     * @param string $MNPId <p>Mini game appid.</p>
+     * @param string $MNPName <p>Mini game name.</p>
+     * @param string $MNPIcon <p>Mini game icon.</p>
+     * @param string $MNPIntro <p>Mini game introduction.</p>
+     * @param string $MNPDesc <p>Mini game description.</p>
+     * @param string $CreateTime <p>Creation time.</p>
+     * @param string $CreateUser <p>Creator.</p>
+     * @param integer $AccessStatus Access status. Valid values: 1: Not connected; 2: Connected. 
+     * @param string $TeamName <p>Team name.</p>
+     * @param string $TeamId <p>Team ID.</p>
+     * @param integer $Status <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
+     * @param array $I18nList The mini game name and description in multiple languages.
      */
     function __construct()
     {
@@ -180,6 +188,15 @@ class DescribeMNGManagerDetailData extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("I18nList",$param) and $param["I18nList"] !== null) {
+            $this->I18nList = [];
+            foreach ($param["I18nList"] as $key => $value){
+                $obj = new MNPDetailI18nVO();
+                $obj->deserialize($value);
+                array_push($this->I18nList, $obj);
+            }
         }
     }
 }

@@ -18,44 +18,44 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response of creating a global domain name
+ * Response for creating a global domain.
  *
- * @method boolean getResult() Obtain Result
- * @method void setResult(boolean $Result) Set Result
- * @method array getRepeatUrls() Obtain Indicates the duplicate domain name.
- * @method void setRepeatUrls(array $RepeatUrls) Set Indicates the duplicate domain name.
- * @method array getExistsWhiteUrls() Obtain Lists allowed domain names.
- * @method void setExistsWhiteUrls(array $ExistsWhiteUrls) Set Lists allowed domain names.
- * @method array getExistsBlackUrls() Obtain Indicates the domain name already exists in the blocklist.
- * @method void setExistsBlackUrls(array $ExistsBlackUrls) Set Indicates the domain name already exists in the blocklist.
+ * @method boolean getResult() Obtain Operation result. 
+ * @method void setResult(boolean $Result) Set Operation result. 
+ * @method array getRepeatUrls() Obtain Duplicate domains.
+ * @method void setRepeatUrls(array $RepeatUrls) Set Duplicate domains.
+ * @method array getExistsWhiteUrls() Obtain Domains that already exist in the allowlist.
+ * @method void setExistsWhiteUrls(array $ExistsWhiteUrls) Set Domains that already exist in the allowlist.
+ * @method array getExistsBlackUrls() Obtain Domains that already exist in the blocklist. 
+ * @method void setExistsBlackUrls(array $ExistsBlackUrls) Set Domains that already exist in the blocklist. 
  */
 class CreateGlobalDomainResp extends AbstractModel
 {
     /**
-     * @var boolean Result
+     * @var boolean Operation result. 
      */
     public $Result;
 
     /**
-     * @var array Indicates the duplicate domain name.
+     * @var array Duplicate domains.
      */
     public $RepeatUrls;
 
     /**
-     * @var array Lists allowed domain names.
+     * @var array Domains that already exist in the allowlist.
      */
     public $ExistsWhiteUrls;
 
     /**
-     * @var array Indicates the domain name already exists in the blocklist.
+     * @var array Domains that already exist in the blocklist. 
      */
     public $ExistsBlackUrls;
 
     /**
-     * @param boolean $Result Result
-     * @param array $RepeatUrls Indicates the duplicate domain name.
-     * @param array $ExistsWhiteUrls Lists allowed domain names.
-     * @param array $ExistsBlackUrls Indicates the domain name already exists in the blocklist.
+     * @param boolean $Result Operation result. 
+     * @param array $RepeatUrls Duplicate domains.
+     * @param array $ExistsWhiteUrls Domains that already exist in the allowlist.
+     * @param array $ExistsBlackUrls Domains that already exist in the blocklist. 
      */
     function __construct()
     {

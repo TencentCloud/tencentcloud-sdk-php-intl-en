@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveMNP request structure.
  *
- * @method string getMNPId() Obtain Mini program ID
- * @method void setMNPId(string $MNPId) Set Mini program ID
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
  */
 class RemoveMNPRequest extends AbstractModel
 {
     /**
-     * @var string Mini program ID
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @param string $MNPId Mini program ID
-     * @param string $PlatformId Platform ID
+     * @param string $MNPId Mini program appid.
+     * @param string $PlatformId Platform ID.
      */
     function __construct()
     {

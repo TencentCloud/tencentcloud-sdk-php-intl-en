@@ -20,42 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTask request structure.
  *
- * @method string getProjectId() Obtain Project ID.
- * @method void setProjectId(string $ProjectId) Set Project ID.
- * @method CreateTaskBaseAttribute getTaskBaseAttribute() Obtain The basic attributes of the task.
- * @method void setTaskBaseAttribute(CreateTaskBaseAttribute $TaskBaseAttribute) Set The basic attributes of the task.
- * @method CreateTaskConfiguration getTaskConfiguration() Obtain Task configurations.
- * @method void setTaskConfiguration(CreateTaskConfiguration $TaskConfiguration) Set Task configurations.
- * @method CreateTaskSchedulerConfiguration getTaskSchedulerConfiguration() Obtain Task scheduling configuration.
- * @method void setTaskSchedulerConfiguration(CreateTaskSchedulerConfiguration $TaskSchedulerConfiguration) Set Task scheduling configuration.
+ * @method string getProjectId() Obtain <p>Project ID</p>
+ * @method void setProjectId(string $ProjectId) Set <p>Project ID</p>
+ * @method CreateTaskBaseAttribute getTaskBaseAttribute() Obtain <p>The
+basic attributes of the task.</p>
+ * @method void setTaskBaseAttribute(CreateTaskBaseAttribute $TaskBaseAttribute) Set <p>The
+basic attributes of the task.</p>
+ * @method CreateTaskConfiguration getTaskConfiguration() Obtain <p>Task configurations.</p>
+ * @method void setTaskConfiguration(CreateTaskConfiguration $TaskConfiguration) Set <p>Task configurations.</p>
+ * @method CreateTaskSchedulerConfiguration getTaskSchedulerConfiguration() Obtain <p>Task scheduling configuration</p>
+ * @method void setTaskSchedulerConfiguration(CreateTaskSchedulerConfiguration $TaskSchedulerConfiguration) Set <p>Task scheduling configuration</p>
  */
 class CreateTaskRequest extends AbstractModel
 {
     /**
-     * @var string Project ID.
+     * @var string <p>Project ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var CreateTaskBaseAttribute The basic attributes of the task.
+     * @var CreateTaskBaseAttribute <p>The
+basic attributes of the task.</p>
      */
     public $TaskBaseAttribute;
 
     /**
-     * @var CreateTaskConfiguration Task configurations.
+     * @var CreateTaskConfiguration <p>Task configurations.</p>
      */
     public $TaskConfiguration;
 
     /**
-     * @var CreateTaskSchedulerConfiguration Task scheduling configuration.
+     * @var CreateTaskSchedulerConfiguration <p>Task scheduling configuration</p>
      */
     public $TaskSchedulerConfiguration;
 
     /**
-     * @param string $ProjectId Project ID.
-     * @param CreateTaskBaseAttribute $TaskBaseAttribute The basic attributes of the task.
-     * @param CreateTaskConfiguration $TaskConfiguration Task configurations.
-     * @param CreateTaskSchedulerConfiguration $TaskSchedulerConfiguration Task scheduling configuration.
+     * @param string $ProjectId <p>Project ID</p>
+     * @param CreateTaskBaseAttribute $TaskBaseAttribute <p>The
+basic attributes of the task.</p>
+     * @param CreateTaskConfiguration $TaskConfiguration <p>Task configurations.</p>
+     * @param CreateTaskSchedulerConfiguration $TaskSchedulerConfiguration <p>Task scheduling configuration</p>
      */
     function __construct()
     {

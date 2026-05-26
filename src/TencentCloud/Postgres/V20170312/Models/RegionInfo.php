@@ -28,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(integer $RegionId) Set Region number
  * @method string getRegionState() Obtain Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
  * @method void setRegionState(string $RegionState) Set Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
- * @method integer getSupportInternational() Obtain Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSupportInternational(integer $SupportInternational) Set Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getSupportInternational() Obtain Whether the international site is supported in this region. valid values: 0 (no support), 1 (support).
+ * @method void setSupportInternational(integer $SupportInternational) Set Whether the international site is supported in this region. valid values: 0 (no support), 1 (support).
  */
 class RegionInfo extends AbstractModel
 {
@@ -56,8 +54,7 @@ class RegionInfo extends AbstractModel
     public $RegionState;
 
     /**
-     * @var integer Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Whether the international site is supported in this region. valid values: 0 (no support), 1 (support).
      */
     public $SupportInternational;
 
@@ -66,8 +63,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $RegionName Region name
      * @param integer $RegionId Region number
      * @param string $RegionState Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
-     * @param integer $SupportInternational Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $SupportInternational Whether the international site is supported in this region. valid values: 0 (no support), 1 (support).
      */
     function __construct()
     {

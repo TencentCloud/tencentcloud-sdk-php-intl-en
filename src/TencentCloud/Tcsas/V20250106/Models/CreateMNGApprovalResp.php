@@ -18,32 +18,32 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response for submitting a mini game version for approval
+ * Response for submitting a mini game version for approval.
  *
- * @method boolean getResult() Obtain <p>Boolean response object</p>
+ * @method boolean getResult() Obtain <p>Boolean response object.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResult(boolean $Result) Set <p>Boolean response object</p>
+ * @method void setResult(boolean $Result) Set <p>Boolean response object.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getApprovalNo() Obtain <p>Approval number</p>
- * @method void setApprovalNo(string $ApprovalNo) Set <p>Approval number</p>
+ * @method string getApprovalNo() Obtain <p>Approval number.</p>
+ * @method void setApprovalNo(string $ApprovalNo) Set <p>Approval number.</p>
  */
 class CreateMNGApprovalResp extends AbstractModel
 {
     /**
-     * @var boolean <p>Boolean response object</p>
+     * @var boolean <p>Boolean response object.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Result;
 
     /**
-     * @var string <p>Approval number</p>
+     * @var string <p>Approval number.</p>
      */
     public $ApprovalNo;
 
     /**
-     * @param boolean $Result <p>Boolean response object</p>
+     * @param boolean $Result <p>Boolean response object.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ApprovalNo <p>Approval number</p>
+     * @param string $ApprovalNo <p>Approval number.</p>
      */
     function __construct()
     {

@@ -34,11 +34,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUserHost(string $UserHost) Set IP source
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getQueryTime() Obtain Execution time in seconds
- * @method void setQueryTime(integer $QueryTime) Set Execution time in seconds
- * @method integer getLockTime() Obtain Lock time in seconds
+ * @method float getQueryTime() Obtain Execution time in seconds
+ * @method void setQueryTime(float $QueryTime) Set Execution time in seconds
+ * @method float getLockTime() Obtain Lock time in seconds
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLockTime(integer $LockTime) Set Lock time in seconds
+ * @method void setLockTime(float $LockTime) Set Lock time in seconds
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getRowsExamined() Obtain Number of scanned rows
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -79,12 +79,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UserHost;
 
     /**
-     * @var integer Execution time in seconds
+     * @var float Execution time in seconds
      */
     public $QueryTime;
 
     /**
-     * @var integer Lock time in seconds
+     * @var float Lock time in seconds
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LockTime;
@@ -109,8 +109,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UserHost IP source
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $QueryTime Execution time in seconds
-     * @param integer $LockTime Lock time in seconds
+     * @param float $QueryTime Execution time in seconds
+     * @param float $LockTime Lock time in seconds
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RowsExamined Number of scanned rows
 Note: This field may return null, indicating that no valid values can be obtained.

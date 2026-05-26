@@ -18,28 +18,28 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Domain information
+ * Response parameters for querying domain information.
  *
- * @method string getDomainUrl() Obtain Multiple domain separators ';'.
- * @method void setDomainUrl(string $DomainUrl) Set Multiple domain separators ';'.
- * @method integer getDomainType() Obtain Domain type 1-requests domain 2-business domain.
- * @method void setDomainType(integer $DomainType) Set Domain type 1-requests domain 2-business domain.
+ * @method string getDomainUrl() Obtain Multiple domains concatenated with semicolons (;). 
+ * @method void setDomainUrl(string $DomainUrl) Set Multiple domains concatenated with semicolons (;). 
+ * @method integer getDomainType() Obtain Domain type. Valid values: 1 Requests domain; 2 web-view domain.
+ * @method void setDomainType(integer $DomainType) Set Domain type. Valid values: 1 Requests domain; 2 web-view domain.
  */
 class DescribeDomainInfoParam extends AbstractModel
 {
     /**
-     * @var string Multiple domain separators ';'.
+     * @var string Multiple domains concatenated with semicolons (;). 
      */
     public $DomainUrl;
 
     /**
-     * @var integer Domain type 1-requests domain 2-business domain.
+     * @var integer Domain type. Valid values: 1 Requests domain; 2 web-view domain.
      */
     public $DomainType;
 
     /**
-     * @param string $DomainUrl Multiple domain separators ';'.
-     * @param integer $DomainType Domain type 1-requests domain 2-business domain.
+     * @param string $DomainUrl Multiple domains concatenated with semicolons (;). 
+     * @param integer $DomainType Domain type. Valid values: 1 Requests domain; 2 web-view domain.
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() Obtain <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li></p>
  * @method void setType(string $Type) Set <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li></p>
- * @method string getFileId() Obtain <p>Media file ID, the globally unique identifier of this file in VOD, is assigned by the VOD backend after a successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File. Description: 1. Recommended image size is less than 10M. 2. Image format values: jpeg, jpg, png.</p>
- * @method void setFileId(string $FileId) Set <p>Media file ID, the globally unique identifier of this file in VOD, is assigned by the VOD backend after a successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File. Description: 1. Recommended image size is less than 10M. 2. Image format values: jpeg, jpg, png.</p>
+ * @method string getFileId() Obtain <p>Media file ID, the globally unique identifier of this file in VOD, is assigned by the VOD backend after a successful upload. You can obtain this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File. Description: 1. Recommended image size is less than 10M. 2. Image format values: jpeg, jpg, png.</p>
+ * @method void setFileId(string $FileId) Set <p>Media file ID, the globally unique identifier of this file in VOD, is assigned by the VOD backend after a successful upload. You can obtain this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File. Description: 1. Recommended image size is less than 10M. 2. Image format values: jpeg, jpg, png.</p>
  * @method string getUrl() Obtain <p>Accessible file URL. This parameter is valid when Type value is Url. Description: 1. Recommended image less than 10M; 2. Image format value is jpeg, jpg, png.</p>
  * @method void setUrl(string $Url) Set <p>Accessible file URL. This parameter is valid when Type value is Url. Description: 1. Recommended image less than 10M; 2. Image format value is jpeg, jpg, png.</p>
  */
@@ -35,7 +35,7 @@ class AigcVideoRedrawTaskInputFileInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var string <p>Media file ID, the globally unique identifier of this file in VOD, is assigned by the VOD backend after a successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File. Description: 1. Recommended image size is less than 10M. 2. Image format values: jpeg, jpg, png.</p>
+     * @var string <p>Media file ID, the globally unique identifier of this file in VOD, is assigned by the VOD backend after a successful upload. You can obtain this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File. Description: 1. Recommended image size is less than 10M. 2. Image format values: jpeg, jpg, png.</p>
      */
     public $FileId;
 
@@ -46,7 +46,7 @@ class AigcVideoRedrawTaskInputFileInfo extends AbstractModel
 
     /**
      * @param string $Type <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li></p>
-     * @param string $FileId <p>Media file ID, the globally unique identifier of this file in VOD, is assigned by the VOD backend after a successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File. Description: 1. Recommended image size is less than 10M. 2. Image format values: jpeg, jpg, png.</p>
+     * @param string $FileId <p>Media file ID, the globally unique identifier of this file in VOD, is assigned by the VOD backend after a successful upload. You can obtain this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File. Description: 1. Recommended image size is less than 10M. 2. Image format values: jpeg, jpg, png.</p>
      * @param string $Url <p>Accessible file URL. This parameter is valid when Type value is Url. Description: 1. Recommended image less than 10M; 2. Image format value is jpeg, jpg, png.</p>
      */
     function __construct()

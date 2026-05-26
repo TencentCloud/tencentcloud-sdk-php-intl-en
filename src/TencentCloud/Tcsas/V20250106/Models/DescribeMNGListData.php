@@ -18,132 +18,132 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mini program list data
+ * Mini game list data.
  *
- * @method string getMNPId() Obtain <p>Mini game appid</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini game appid</p>
- * @method string getMNPIcon() Obtain <p>Mini game icon</p>
- * @method void setMNPIcon(string $MNPIcon) Set <p>Mini game icon</p>
- * @method string getMNPName() Obtain <p>Mini game name</p>
- * @method void setMNPName(string $MNPName) Set <p>Mini game name</p>
- * @method string getTeamName() Obtain <p>Team name</p>
- * @method void setTeamName(string $TeamName) Set <p>Team name</p>
- * @method string getMNPType() Obtain <p>Mini game category</p>
- * @method void setMNPType(string $MNPType) Set <p>Mini game category</p>
- * @method integer getStatus() Obtain <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
- * @method void setStatus(integer $Status) Set <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
- * @method string getMNPIntro() Obtain <p>Mini game introduction</p>
- * @method void setMNPIntro(string $MNPIntro) Set <p>Mini game introduction</p>
- * @method string getCreateUser() Obtain <p>Creator</p>
- * @method void setCreateUser(string $CreateUser) Set <p>Creator</p>
- * @method string getCreateTime() Obtain <p>Creation time</p>
- * @method void setCreateTime(string $CreateTime) Set <p>Creation time</p>
- * @method string getUpdateUser() Obtain <p>Updater</p>
- * @method void setUpdateUser(string $UpdateUser) Set <p>Updater</p>
- * @method string getUpdateTime() Obtain <p>Update time</p>
- * @method void setUpdateTime(string $UpdateTime) Set <p>Update time</p>
- * @method string getApplicationName() Obtain <p>Superapp name</p>
- * @method void setApplicationName(string $ApplicationName) Set <p>Superapp name</p>
- * @method integer getEffectStatus() Obtain <p>Effective status of the bound superapp. 1: Not effective; 2: Effective</p>
- * @method void setEffectStatus(integer $EffectStatus) Set <p>Effective status of the bound superapp. 1: Not effective; 2: Effective</p>
- * @method integer getEffectMNPVersionId() Obtain <p>Effective version ID of the superapp bound to the mini game</p>
- * @method void setEffectMNPVersionId(integer $EffectMNPVersionId) Set <p>Effective version ID of the superapp bound to the mini game</p>
- * @method string getEffectMNPVersion() Obtain <p>Effective version number of the superapp bound to the mini game</p>
- * @method void setEffectMNPVersion(string $EffectMNPVersion) Set <p>Effective version number of the superapp bound to the mini game</p>
+ * @method string getMNPId() Obtain <p>Mini game appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini game appid.</p>
+ * @method string getMNPIcon() Obtain <p>Mini game icon.</p>
+ * @method void setMNPIcon(string $MNPIcon) Set <p>Mini game icon.</p>
+ * @method string getMNPName() Obtain <p>Mini game name.</p>
+ * @method void setMNPName(string $MNPName) Set <p>Mini game name.</p>
+ * @method string getTeamName() Obtain <p>Team name.</p>
+ * @method void setTeamName(string $TeamName) Set <p>Team name.</p>
+ * @method string getMNPType() Obtain <p>Mini game category.</p>
+ * @method void setMNPType(string $MNPType) Set <p>Mini game category.</p>
+ * @method integer getStatus() Obtain <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
+ * @method void setStatus(integer $Status) Set <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
+ * @method string getMNPIntro() Obtain <p>Mini game introduction.</p>
+ * @method void setMNPIntro(string $MNPIntro) Set <p>Mini game introduction.</p>
+ * @method string getCreateUser() Obtain <p>Creator.</p>
+ * @method void setCreateUser(string $CreateUser) Set <p>Creator.</p>
+ * @method string getCreateTime() Obtain <p>Creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
+ * @method string getUpdateUser() Obtain <p>Last modifier.</p>
+ * @method void setUpdateUser(string $UpdateUser) Set <p>Last modifier.</p>
+ * @method string getUpdateTime() Obtain <p>Last modified time.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Last modified time.</p>
+ * @method string getApplicationName() Obtain <p>Superapp name.</p>
+ * @method void setApplicationName(string $ApplicationName) Set <p>Superapp name.</p>
+ * @method integer getEffectStatus() Obtain <p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
+ * @method void setEffectStatus(integer $EffectStatus) Set <p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
+ * @method integer getEffectMNPVersionId() Obtain <p>Effective mini game version ID bound to the superapp.</p>
+ * @method void setEffectMNPVersionId(integer $EffectMNPVersionId) Set <p>Effective mini game version ID bound to the superapp.</p>
+ * @method string getEffectMNPVersion() Obtain <p>Effective mini game version number bound to the superapp. </p>
+ * @method void setEffectMNPVersion(string $EffectMNPVersion) Set <p>Effective mini game version number bound to the superapp. </p>
  */
 class DescribeMNGListData extends AbstractModel
 {
     /**
-     * @var string <p>Mini game appid</p>
+     * @var string <p>Mini game appid.</p>
      */
     public $MNPId;
 
     /**
-     * @var string <p>Mini game icon</p>
+     * @var string <p>Mini game icon.</p>
      */
     public $MNPIcon;
 
     /**
-     * @var string <p>Mini game name</p>
+     * @var string <p>Mini game name.</p>
      */
     public $MNPName;
 
     /**
-     * @var string <p>Team name</p>
+     * @var string <p>Team name.</p>
      */
     public $TeamName;
 
     /**
-     * @var string <p>Mini game category</p>
+     * @var string <p>Mini game category.</p>
      */
     public $MNPType;
 
     /**
-     * @var integer <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
+     * @var integer <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
      */
     public $Status;
 
     /**
-     * @var string <p>Mini game introduction</p>
+     * @var string <p>Mini game introduction.</p>
      */
     public $MNPIntro;
 
     /**
-     * @var string <p>Creator</p>
+     * @var string <p>Creator.</p>
      */
     public $CreateUser;
 
     /**
-     * @var string <p>Creation time</p>
+     * @var string <p>Creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string <p>Updater</p>
+     * @var string <p>Last modifier.</p>
      */
     public $UpdateUser;
 
     /**
-     * @var string <p>Update time</p>
+     * @var string <p>Last modified time.</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string <p>Superapp name</p>
+     * @var string <p>Superapp name.</p>
      */
     public $ApplicationName;
 
     /**
-     * @var integer <p>Effective status of the bound superapp. 1: Not effective; 2: Effective</p>
+     * @var integer <p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
      */
     public $EffectStatus;
 
     /**
-     * @var integer <p>Effective version ID of the superapp bound to the mini game</p>
+     * @var integer <p>Effective mini game version ID bound to the superapp.</p>
      */
     public $EffectMNPVersionId;
 
     /**
-     * @var string <p>Effective version number of the superapp bound to the mini game</p>
+     * @var string <p>Effective mini game version number bound to the superapp. </p>
      */
     public $EffectMNPVersion;
 
     /**
-     * @param string $MNPId <p>Mini game appid</p>
-     * @param string $MNPIcon <p>Mini game icon</p>
-     * @param string $MNPName <p>Mini game name</p>
-     * @param string $TeamName <p>Team name</p>
-     * @param string $MNPType <p>Mini game category</p>
-     * @param integer $Status <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
-     * @param string $MNPIntro <p>Mini game introduction</p>
-     * @param string $CreateUser <p>Creator</p>
-     * @param string $CreateTime <p>Creation time</p>
-     * @param string $UpdateUser <p>Updater</p>
-     * @param string $UpdateTime <p>Update time</p>
-     * @param string $ApplicationName <p>Superapp name</p>
-     * @param integer $EffectStatus <p>Effective status of the bound superapp. 1: Not effective; 2: Effective</p>
-     * @param integer $EffectMNPVersionId <p>Effective version ID of the superapp bound to the mini game</p>
-     * @param string $EffectMNPVersion <p>Effective version number of the superapp bound to the mini game</p>
+     * @param string $MNPId <p>Mini game appid.</p>
+     * @param string $MNPIcon <p>Mini game icon.</p>
+     * @param string $MNPName <p>Mini game name.</p>
+     * @param string $TeamName <p>Team name.</p>
+     * @param string $MNPType <p>Mini game category.</p>
+     * @param integer $Status <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
+     * @param string $MNPIntro <p>Mini game introduction.</p>
+     * @param string $CreateUser <p>Creator.</p>
+     * @param string $CreateTime <p>Creation time.</p>
+     * @param string $UpdateUser <p>Last modifier.</p>
+     * @param string $UpdateTime <p>Last modified time.</p>
+     * @param string $ApplicationName <p>Superapp name.</p>
+     * @param integer $EffectStatus <p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
+     * @param integer $EffectMNPVersionId <p>Effective mini game version ID bound to the superapp.</p>
+     * @param string $EffectMNPVersion <p>Effective mini game version number bound to the superapp. </p>
      */
     function __construct()
     {

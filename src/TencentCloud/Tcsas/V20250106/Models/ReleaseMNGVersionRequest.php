@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReleaseMNGVersion request structure.
  *
- * @method integer getMNPVersionId() Obtain <p>Mini game version ID</p>
- * @method void setMNPVersionId(integer $MNPVersionId) Set <p>Mini game version ID</p>
- * @method string getPlatformId() Obtain <p>Platform ID</p>
- * @method void setPlatformId(string $PlatformId) Set <p>Platform ID</p>
+ * @method integer getMNPVersionId() Obtain <p>Mini game version ID.</p>
+ * @method void setMNPVersionId(integer $MNPVersionId) Set <p>Mini game version ID.</p>
+ * @method string getPlatformId() Obtain <p>Platform ID.</p>
+ * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
  */
 class ReleaseMNGVersionRequest extends AbstractModel
 {
     /**
-     * @var integer <p>Mini game version ID</p>
+     * @var integer <p>Mini game version ID.</p>
      */
     public $MNPVersionId;
 
     /**
-     * @var string <p>Platform ID</p>
+     * @var string <p>Platform ID.</p>
      */
     public $PlatformId;
 
     /**
-     * @param integer $MNPVersionId <p>Mini game version ID</p>
-     * @param string $PlatformId <p>Platform ID</p>
+     * @param integer $MNPVersionId <p>Mini game version ID.</p>
+     * @param string $PlatformId <p>Platform ID.</p>
      */
     function __construct()
     {

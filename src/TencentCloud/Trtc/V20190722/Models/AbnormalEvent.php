@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The information of an error event (the possible cause of an abnormal user experience).
  *
- * @method integer getAbnormalEventId() Obtain The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
- * @method void setAbnormalEventId(integer $AbnormalEventId) Set The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
- * @method string getPeerId() Obtain The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPeerId(string $PeerId) Set The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAbnormalEventId() Obtain Exception event ID. view the specific value in the appendix: abnormal experience ID [mapping table](https://trtc.io/document/37906)
+ * @method void setAbnormalEventId(integer $AbnormalEventId) Set Exception event ID. view the specific value in the appendix: abnormal experience ID [mapping table](https://trtc.io/document/37906)
+ * @method string getPeerId() Obtain Remote user ID,"": indicates the exception event is not user-generated.
+ * @method void setPeerId(string $PeerId) Set Remote user ID,"": indicates the exception event is not user-generated.
  */
 class AbnormalEvent extends AbstractModel
 {
     /**
-     * @var integer The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
+     * @var integer Exception event ID. view the specific value in the appendix: abnormal experience ID [mapping table](https://trtc.io/document/37906)
      */
     public $AbnormalEventId;
 
     /**
-     * @var string The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Remote user ID,"": indicates the exception event is not user-generated.
      */
     public $PeerId;
 
     /**
-     * @param integer $AbnormalEventId The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
-     * @param string $PeerId The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AbnormalEventId Exception event ID. view the specific value in the appendix: abnormal experience ID [mapping table](https://trtc.io/document/37906)
+     * @param string $PeerId Remote user ID,"": indicates the exception event is not user-generated.
      */
     function __construct()
     {

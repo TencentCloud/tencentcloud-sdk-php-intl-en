@@ -20,46 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Suspected attack detail
  *
- * @method string getType() Obtain Suspected attack trace types
-SuspectedSpoofingAttack: Suspected spoofing attack
-SuspectedSynthesisImage: Suspected synthesis image
-SuspectedSynthesisVideo: Suspected synthesis video
-SuspectedeAnomalyAttack: Suspected anomaly attack
-SuspectedAdversarialAttack: Suspected adversarial attack 
-SuspectedBlackIndustry: Suspected batch generation attack
-SuspectedWatermark: Suspected watermark
- * @method void setType(string $Type) Set Suspected attack trace types
-SuspectedSpoofingAttack: Suspected spoofing attack
-SuspectedSynthesisImage: Suspected synthesis image
-SuspectedSynthesisVideo: Suspected synthesis video
-SuspectedeAnomalyAttack: Suspected anomaly attack
-SuspectedAdversarialAttack: Suspected adversarial attack 
-SuspectedBlackIndustry: Suspected batch generation attack
-SuspectedWatermark: Suspected watermark
+ * @method string getType() Obtain <p>Suspected attack trace type, specific type as follows:<br>SuspectedSpoofingAttack: Rephotography attack<br>SuspectedSynthesisImage: Suspected synthesized image<br>SuspectedSynthesisVideo: Suspected synthesized video<br>SuspectedAnomalyAttack: Facial features suspected of not being real<br>SuspectedAdversarialAttack: Suspected adversarial sample attack<br>SuspectedBlackIndustry: Suspected black industry batch template attack<br>SuspectedWatermark: Suspected watermark</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setType(string $Type) Set <p>Suspected attack trace type, specific type as follows:<br>SuspectedSpoofingAttack: Rephotography attack<br>SuspectedSynthesisImage: Suspected synthesized image<br>SuspectedSynthesisVideo: Suspected synthesized video<br>SuspectedAnomalyAttack: Facial features suspected of not being real<br>SuspectedAdversarialAttack: Suspected adversarial sample attack<br>SuspectedBlackIndustry: Suspected black industry batch template attack<br>SuspectedWatermark: Suspected watermark</p>
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AttackRiskDetail extends AbstractModel
 {
     /**
-     * @var string Suspected attack trace types
-SuspectedSpoofingAttack: Suspected spoofing attack
-SuspectedSynthesisImage: Suspected synthesis image
-SuspectedSynthesisVideo: Suspected synthesis video
-SuspectedeAnomalyAttack: Suspected anomaly attack
-SuspectedAdversarialAttack: Suspected adversarial attack 
-SuspectedBlackIndustry: Suspected batch generation attack
-SuspectedWatermark: Suspected watermark
+     * @var string <p>Suspected attack trace type, specific type as follows:<br>SuspectedSpoofingAttack: Rephotography attack<br>SuspectedSynthesisImage: Suspected synthesized image<br>SuspectedSynthesisVideo: Suspected synthesized video<br>SuspectedAnomalyAttack: Facial features suspected of not being real<br>SuspectedAdversarialAttack: Suspected adversarial sample attack<br>SuspectedBlackIndustry: Suspected black industry batch template attack<br>SuspectedWatermark: Suspected watermark</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
     /**
-     * @param string $Type Suspected attack trace types
-SuspectedSpoofingAttack: Suspected spoofing attack
-SuspectedSynthesisImage: Suspected synthesis image
-SuspectedSynthesisVideo: Suspected synthesis video
-SuspectedeAnomalyAttack: Suspected anomaly attack
-SuspectedAdversarialAttack: Suspected adversarial attack 
-SuspectedBlackIndustry: Suspected batch generation attack
-SuspectedWatermark: Suspected watermark
+     * @param string $Type <p>Suspected attack trace type, specific type as follows:<br>SuspectedSpoofingAttack: Rephotography attack<br>SuspectedSynthesisImage: Suspected synthesized image<br>SuspectedSynthesisVideo: Suspected synthesized video<br>SuspectedAnomalyAttack: Facial features suspected of not being real<br>SuspectedAdversarialAttack: Suspected adversarial sample attack<br>SuspectedBlackIndustry: Suspected black industry batch template attack<br>SuspectedWatermark: Suspected watermark</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

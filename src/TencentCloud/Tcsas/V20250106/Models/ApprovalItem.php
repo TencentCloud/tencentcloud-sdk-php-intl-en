@@ -18,40 +18,36 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result of the mini program approval requests
+ * Mini program approval processing details.
  *
- * @method string getAppId() Obtain Application ID
- * @method void setAppId(string $AppId) Set Application ID
- * @method integer getApprovalResult() Obtain Approval result. 2: Rejected;
-3: Approved
- * @method void setApprovalResult(integer $ApprovalResult) Set Approval result. 2: Rejected;
-3: Approved
- * @method string getApprovalNote() Obtain Approval notes. It’s required when the request is rejected.
- * @method void setApprovalNote(string $ApprovalNote) Set Approval notes. It’s required when the request is rejected.
+ * @method string getAppId() Obtain Superapp ID.
+ * @method void setAppId(string $AppId) Set Superapp ID.
+ * @method integer getApprovalResult() Obtain Approval result. Valid value: 2: Rejected; 3: Approved.
+ * @method void setApprovalResult(integer $ApprovalResult) Set Approval result. Valid value: 2: Rejected; 3: Approved.
+ * @method string getApprovalNote() Obtain Approval notes. It is required when the request is rejected.
+ * @method void setApprovalNote(string $ApprovalNote) Set Approval notes. It is required when the request is rejected.
  */
 class ApprovalItem extends AbstractModel
 {
     /**
-     * @var string Application ID
+     * @var string Superapp ID.
      */
     public $AppId;
 
     /**
-     * @var integer Approval result. 2: Rejected;
-3: Approved
+     * @var integer Approval result. Valid value: 2: Rejected; 3: Approved.
      */
     public $ApprovalResult;
 
     /**
-     * @var string Approval notes. It’s required when the request is rejected.
+     * @var string Approval notes. It is required when the request is rejected.
      */
     public $ApprovalNote;
 
     /**
-     * @param string $AppId Application ID
-     * @param integer $ApprovalResult Approval result. 2: Rejected;
-3: Approved
-     * @param string $ApprovalNote Approval notes. It’s required when the request is rejected.
+     * @param string $AppId Superapp ID.
+     * @param integer $ApprovalResult Approval result. Valid value: 2: Rejected; 3: Approved.
+     * @param string $ApprovalNote Approval notes. It is required when the request is rejected.
      */
     function __construct()
     {

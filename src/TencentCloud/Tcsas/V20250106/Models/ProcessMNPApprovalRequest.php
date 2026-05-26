@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessMNPApproval request structure.
  *
- * @method string getApprovalNo() Obtain Approval ID
- * @method void setApprovalNo(string $ApprovalNo) Set Approval ID
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method array getApprovalItems() Obtain Approval details
- * @method void setApprovalItems(array $ApprovalItems) Set Approval details
+ * @method string getApprovalNo() Obtain Approval number.
+ * @method void setApprovalNo(string $ApprovalNo) Set Approval number.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method array getApprovalItems() Obtain Approval details.
+ * @method void setApprovalItems(array $ApprovalItems) Set Approval details.
  */
 class ProcessMNPApprovalRequest extends AbstractModel
 {
     /**
-     * @var string Approval ID
+     * @var string Approval number.
      */
     public $ApprovalNo;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var array Approval details
+     * @var array Approval details.
      */
     public $ApprovalItems;
 
     /**
-     * @param string $ApprovalNo Approval ID
-     * @param string $PlatformId Platform ID
-     * @param array $ApprovalItems Approval details
+     * @param string $ApprovalNo Approval number.
+     * @param string $PlatformId Platform ID.
+     * @param array $ApprovalItems Approval details.
      */
     function __construct()
     {

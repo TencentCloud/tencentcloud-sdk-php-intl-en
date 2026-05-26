@@ -18,20 +18,20 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response of global domain name modification
+ * Response for modifying a global domain.
  *
- * @method integer getResult() Obtain 0: success; 1: allowed domains exist; 2: blocked domains exist.
- * @method void setResult(integer $Result) Set 0: success; 1: allowed domains exist; 2: blocked domains exist.
+ * @method integer getResult() Obtain Operation result. Valid values: 0: Succeeded; 1: Exists in the allowlist; 2: Exists in the blocklist. 
+ * @method void setResult(integer $Result) Set Operation result. Valid values: 0: Succeeded; 1: Exists in the allowlist; 2: Exists in the blocklist. 
  */
 class GlobalDomainModifyRespResp extends AbstractModel
 {
     /**
-     * @var integer 0: success; 1: allowed domains exist; 2: blocked domains exist.
+     * @var integer Operation result. Valid values: 0: Succeeded; 1: Exists in the allowlist; 2: Exists in the blocklist. 
      */
     public $Result;
 
     /**
-     * @param integer $Result 0: success; 1: allowed domains exist; 2: blocked domains exist.
+     * @param integer $Result Operation result. Valid values: 0: Succeeded; 1: Exists in the allowlist; 2: Exists in the blocklist. 
      */
     function __construct()
     {

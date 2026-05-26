@@ -18,160 +18,156 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of all developer versions of a mini program
+ * Response for querying all-stage versions of a mini program.
  *
- * @method string getMNPId() Obtain Mini program ID.
- * @method void setMNPId(string $MNPId) Set Mini program ID.
- * @method integer getMNPVersionId() Obtain Specifies the mini program version primary key id.
- * @method void setMNPVersionId(integer $MNPVersionId) Set Specifies the mini program version primary key id.
- * @method string getMNPName() Obtain Mini program name
- * @method void setMNPName(string $MNPName) Set Mini program name
- * @method string getMNPIcon() Obtain Specifies the mini program avatar.
- * @method void setMNPIcon(string $MNPIcon) Set Specifies the mini program avatar.
- * @method string getMNPType() Obtain Mini program type
- * @method void setMNPType(string $MNPType) Set Mini program type
- * @method string getMNPIntro() Obtain Mini program introduction
- * @method void setMNPIntro(string $MNPIntro) Set Mini program introduction
- * @method string getMNPDesc() Obtain Mini program description
- * @method void setMNPDesc(string $MNPDesc) Set Mini program description
- * @method string getCreateUser() Obtain Specifies the developer.
- * @method void setCreateUser(string $CreateUser) Set Specifies the developer.
- * @method string getCreateTime() Obtain Developer creation time.
- * @method void setCreateTime(string $CreateTime) Set Developer creation time.
- * @method string getMNPVersion() Obtain Mini program version.
- * @method void setMNPVersion(string $MNPVersion) Set Mini program version.
- * @method string getMNPVersionIntro() Obtain Describes version features.
- * @method void setMNPVersionIntro(string $MNPVersionIntro) Set Describes version features.
- * @method string getPhase() Obtain Development Platform Online.
- * @method void setPhase(string $Phase) Set Development Platform Online.
- * @method integer getApprovalStatus() Obtain 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
- * @method void setApprovalStatus(integer $ApprovalStatus) Set 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
- * @method string getApprovalNo() Obtain Approval ticket ID
- * @method void setApprovalNo(string $ApprovalNo) Set Approval ticket ID
- * @method integer getShowCase() Obtain Specifies whether it is a trial version.
-Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
- * @method void setShowCase(integer $ShowCase) Set Specifies whether it is a trial version.
-Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
- * @method integer getRollbackVersion() Obtain Version number to roll back to.
- * @method void setRollbackVersion(integer $RollbackVersion) Set Version number to roll back to.
- * @method integer getStatus() Obtain Indicates the release status.
- * @method void setStatus(integer $Status) Set Indicates the release status.
- * @method integer getVersionCurrentStatus() Obtain Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
- * @method void setVersionCurrentStatus(integer $VersionCurrentStatus) Set Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method integer getMNPVersionId() Obtain Mini program version primary key ID.
+ * @method void setMNPVersionId(integer $MNPVersionId) Set Mini program version primary key ID.
+ * @method string getMNPName() Obtain Mini program name.
+ * @method void setMNPName(string $MNPName) Set Mini program name.
+ * @method string getMNPIcon() Obtain Mini program icon.
+ * @method void setMNPIcon(string $MNPIcon) Set Mini program icon.
+ * @method string getMNPType() Obtain Mini program category.
+ * @method void setMNPType(string $MNPType) Set Mini program category.
+ * @method string getMNPIntro() Obtain Mini program introduction.
+ * @method void setMNPIntro(string $MNPIntro) Set Mini program introduction.
+ * @method string getMNPDesc() Obtain Mini program description.
+ * @method void setMNPDesc(string $MNPDesc) Set Mini program description.
+ * @method string getCreateUser() Obtain Creator.
+ * @method void setCreateUser(string $CreateUser) Set Creator.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method string getMNPVersion() Obtain Mini program version number.
+ * @method void setMNPVersion(string $MNPVersion) Set Mini program version number.
+ * @method string getMNPVersionIntro() Obtain Version introduction.
+ * @method void setMNPVersionIntro(string $MNPVersionIntro) Set Version introduction.
+ * @method string getPhase() Obtain Stage: Develop, preview, released.
+ * @method void setPhase(string $Phase) Set Stage: Develop, preview, released.
+ * @method integer getApprovalStatus() Obtain Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+ * @method void setApprovalStatus(integer $ApprovalStatus) Set Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+ * @method string getApprovalNo() Obtain Approval number.
+ * @method void setApprovalNo(string $ApprovalNo) Set Approval number.
+ * @method integer getShowCase() Obtain Whether this is a preview. Valid values: 0: No; 1: Yes.
+ * @method void setShowCase(integer $ShowCase) Set Whether this is a preview. Valid values: 0: No; 1: Yes.
+ * @method integer getRollbackVersion() Obtain Rollback version number.
+ * @method void setRollbackVersion(integer $RollbackVersion) Set Rollback version number.
+ * @method integer getStatus() Obtain Available status. Valid value: 0: All; 1 Available; 2: In canary release.
+ * @method void setStatus(integer $Status) Set Available status. Valid value: 0: All; 1 Available; 2: In canary release.
+ * @method integer getVersionCurrentStatus() Obtain Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+ * @method void setVersionCurrentStatus(integer $VersionCurrentStatus) Set Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
  */
 class DescribeMPAllStageVersionsResp extends AbstractModel
 {
     /**
-     * @var string Mini program ID.
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var integer Specifies the mini program version primary key id.
+     * @var integer Mini program version primary key ID.
      */
     public $MNPVersionId;
 
     /**
-     * @var string Mini program name
+     * @var string Mini program name.
      */
     public $MNPName;
 
     /**
-     * @var string Specifies the mini program avatar.
+     * @var string Mini program icon.
      */
     public $MNPIcon;
 
     /**
-     * @var string Mini program type
+     * @var string Mini program category.
      */
     public $MNPType;
 
     /**
-     * @var string Mini program introduction
+     * @var string Mini program introduction.
      */
     public $MNPIntro;
 
     /**
-     * @var string Mini program description
+     * @var string Mini program description.
      */
     public $MNPDesc;
 
     /**
-     * @var string Specifies the developer.
+     * @var string Creator.
      */
     public $CreateUser;
 
     /**
-     * @var string Developer creation time.
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Mini program version.
+     * @var string Mini program version number.
      */
     public $MNPVersion;
 
     /**
-     * @var string Describes version features.
+     * @var string Version introduction.
      */
     public $MNPVersionIntro;
 
     /**
-     * @var string Development Platform Online.
+     * @var string Stage: Develop, preview, released.
      */
     public $Phase;
 
     /**
-     * @var integer 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
+     * @var integer Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
      */
     public $ApprovalStatus;
 
     /**
-     * @var string Approval ticket ID
+     * @var string Approval number.
      */
     public $ApprovalNo;
 
     /**
-     * @var integer Specifies whether it is a trial version.
-Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
+     * @var integer Whether this is a preview. Valid values: 0: No; 1: Yes.
      */
     public $ShowCase;
 
     /**
-     * @var integer Version number to roll back to.
+     * @var integer Rollback version number.
      */
     public $RollbackVersion;
 
     /**
-     * @var integer Indicates the release status.
+     * @var integer Available status. Valid value: 0: All; 1 Available; 2: In canary release.
      */
     public $Status;
 
     /**
-     * @var integer Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
+     * @var integer Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
      */
     public $VersionCurrentStatus;
 
     /**
-     * @param string $MNPId Mini program ID.
-     * @param integer $MNPVersionId Specifies the mini program version primary key id.
-     * @param string $MNPName Mini program name
-     * @param string $MNPIcon Specifies the mini program avatar.
-     * @param string $MNPType Mini program type
-     * @param string $MNPIntro Mini program introduction
-     * @param string $MNPDesc Mini program description
-     * @param string $CreateUser Specifies the developer.
-     * @param string $CreateTime Developer creation time.
-     * @param string $MNPVersion Mini program version.
-     * @param string $MNPVersionIntro Describes version features.
-     * @param string $Phase Development Platform Online.
-     * @param integer $ApprovalStatus 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
-     * @param string $ApprovalNo Approval ticket ID
-     * @param integer $ShowCase Specifies whether it is a trial version.
-Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
-     * @param integer $RollbackVersion Version number to roll back to.
-     * @param integer $Status Indicates the release status.
-     * @param integer $VersionCurrentStatus Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
+     * @param string $MNPId Mini program appid.
+     * @param integer $MNPVersionId Mini program version primary key ID.
+     * @param string $MNPName Mini program name.
+     * @param string $MNPIcon Mini program icon.
+     * @param string $MNPType Mini program category.
+     * @param string $MNPIntro Mini program introduction.
+     * @param string $MNPDesc Mini program description.
+     * @param string $CreateUser Creator.
+     * @param string $CreateTime Creation time.
+     * @param string $MNPVersion Mini program version number.
+     * @param string $MNPVersionIntro Version introduction.
+     * @param string $Phase Stage: Develop, preview, released.
+     * @param integer $ApprovalStatus Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+     * @param string $ApprovalNo Approval number.
+     * @param integer $ShowCase Whether this is a preview. Valid values: 0: No; 1: Yes.
+     * @param integer $RollbackVersion Rollback version number.
+     * @param integer $Status Available status. Valid value: 0: All; 1 Available; 2: In canary release.
+     * @param integer $VersionCurrentStatus Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
      */
     function __construct()
     {

@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUser request structure.
  *
- * @method string getUserAccount() Obtain User account
- * @method void setUserAccount(string $UserAccount) Set User account
- * @method string getUserName() Obtain User name
- * @method void setUserName(string $UserName) Set User name
- * @method integer getAccountType() Obtain User account type. 2: Platform admin; 3: Member.
- * @method void setAccountType(integer $AccountType) Set User account type. 2: Platform admin; 3: Member.
+ * @method string getUserAccount() Obtain User account.
+ * @method void setUserAccount(string $UserAccount) Set User account.
+ * @method string getUserName() Obtain User name.
+ * @method void setUserName(string $UserName) Set User name.
+ * @method integer getAccountType() Obtain User account type. Valid values: 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
+ * @method void setAccountType(integer $AccountType) Set User account type. Valid values: 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
  * @method string getPassword() Obtain Account password. Use CreatePresetKey to get the public key to encrypt the password.
  * @method void setPassword(string $Password) Set Account password. Use CreatePresetKey to get the public key to encrypt the password.
- * @method string getKeyId() Obtain Call CreatePresetKey to get the keyID from RequestId
- * @method void setKeyId(string $KeyId) Set Call CreatePresetKey to get the keyID from RequestId
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method string getKeyId() Obtain Call CreatePresetKey to get the keyID from RequestId.
+ * @method void setKeyId(string $KeyId) Set Call CreatePresetKey to get the keyID from RequestId.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
  */
 class CreateUserRequest extends AbstractModel
 {
     /**
-     * @var string User account
+     * @var string User account.
      */
     public $UserAccount;
 
     /**
-     * @var string User name
+     * @var string User name.
      */
     public $UserName;
 
     /**
-     * @var integer User account type. 2: Platform admin; 3: Member.
+     * @var integer User account type. Valid values: 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
      */
     public $AccountType;
 
@@ -56,22 +56,22 @@ class CreateUserRequest extends AbstractModel
     public $Password;
 
     /**
-     * @var string Call CreatePresetKey to get the keyID from RequestId
+     * @var string Call CreatePresetKey to get the keyID from RequestId.
      */
     public $KeyId;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @param string $UserAccount User account
-     * @param string $UserName User name
-     * @param integer $AccountType User account type. 2: Platform admin; 3: Member.
+     * @param string $UserAccount User account.
+     * @param string $UserName User name.
+     * @param integer $AccountType User account type. Valid values: 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
      * @param string $Password Account password. Use CreatePresetKey to get the public key to encrypt the password.
-     * @param string $KeyId Call CreatePresetKey to get the keyID from RequestId
-     * @param string $PlatformId Platform ID
+     * @param string $KeyId Call CreatePresetKey to get the keyID from RequestId.
+     * @param string $PlatformId Platform ID.
      */
     function __construct()
     {

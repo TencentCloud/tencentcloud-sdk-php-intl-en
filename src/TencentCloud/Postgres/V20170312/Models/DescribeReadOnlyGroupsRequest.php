@@ -20,26 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReadOnlyGroups request structure.
  *
- * @method array getFilters() Obtain Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
- * @method void setFilters(array $Filters) Set Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
- * @method integer getPageSize() Obtain The number of results per page. Default value: 10.
- * @method void setPageSize(integer $PageSize) Set The number of results per page. Default value: 10.
+ * @method array getFilters() Obtain Query using one or more filter criteria. filter criteria currently supported include:.
+db-master-instance-id: specifies the primary instance to filter by (in string format).
+read-only-group-id: Filter by read-only group ID, type string.
+Note: in the filter criteria of this parameter, db-master-instance-id must be specified.
+ * @method void setFilters(array $Filters) Set Query using one or more filter criteria. filter criteria currently supported include:.
+db-master-instance-id: specifies the primary instance to filter by (in string format).
+read-only-group-id: Filter by read-only group ID, type string.
+Note: in the filter criteria of this parameter, db-master-instance-id must be specified.
+ * @method integer getPageSize() Obtain Specifies the number of items per page. default value: 10. maximum value: 99.
+ * @method void setPageSize(integer $PageSize) Set Specifies the number of items per page. default value: 10. maximum value: 99.
  * @method integer getPageNumber() Obtain Specify which page is displayed. Default value: 1 (the first page).
  * @method void setPageNumber(integer $PageNumber) Set Specify which page is displayed. Default value: 1 (the first page).
- * @method string getOrderBy() Obtain Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
- * @method void setOrderBy(string $OrderBy) Set Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
- * @method string getOrderByType() Obtain Sorting order. Valid values: `desc`, `asc`.
- * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `desc`, `asc`.
+ * @method string getOrderBy() Obtain Specifies the sorting basis for queries. currently supports: ROGroupId, CreateTime, Name. default value: CreateTime.
+ * @method void setOrderBy(string $OrderBy) Set Specifies the sorting basis for queries. currently supports: ROGroupId, CreateTime, Name. default value: CreateTime.
+ * @method string getOrderByType() Obtain Specifies the sorting basis type for queries. currently supports: desc, asc. default value: asc.
+ * @method void setOrderByType(string $OrderByType) Set Specifies the sorting basis type for queries. currently supports: desc, asc. default value: asc.
  */
 class DescribeReadOnlyGroupsRequest extends AbstractModel
 {
     /**
-     * @var array Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
+     * @var array Query using one or more filter criteria. filter criteria currently supported include:.
+db-master-instance-id: specifies the primary instance to filter by (in string format).
+read-only-group-id: Filter by read-only group ID, type string.
+Note: in the filter criteria of this parameter, db-master-instance-id must be specified.
      */
     public $Filters;
 
     /**
-     * @var integer The number of results per page. Default value: 10.
+     * @var integer Specifies the number of items per page. default value: 10. maximum value: 99.
      */
     public $PageSize;
 
@@ -49,21 +58,24 @@ class DescribeReadOnlyGroupsRequest extends AbstractModel
     public $PageNumber;
 
     /**
-     * @var string Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
+     * @var string Specifies the sorting basis for queries. currently supports: ROGroupId, CreateTime, Name. default value: CreateTime.
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting order. Valid values: `desc`, `asc`.
+     * @var string Specifies the sorting basis type for queries. currently supports: desc, asc. default value: asc.
      */
     public $OrderByType;
 
     /**
-     * @param array $Filters Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
-     * @param integer $PageSize The number of results per page. Default value: 10.
+     * @param array $Filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-master-instance-id: specifies the primary instance to filter by (in string format).
+read-only-group-id: Filter by read-only group ID, type string.
+Note: in the filter criteria of this parameter, db-master-instance-id must be specified.
+     * @param integer $PageSize Specifies the number of items per page. default value: 10. maximum value: 99.
      * @param integer $PageNumber Specify which page is displayed. Default value: 1 (the first page).
-     * @param string $OrderBy Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
-     * @param string $OrderByType Sorting order. Valid values: `desc`, `asc`.
+     * @param string $OrderBy Specifies the sorting basis for queries. currently supports: ROGroupId, CreateTime, Name. default value: CreateTime.
+     * @param string $OrderByType Specifies the sorting basis type for queries. currently supports: desc, asc. default value: asc.
      */
     function __construct()
     {

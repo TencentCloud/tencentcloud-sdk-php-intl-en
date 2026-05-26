@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMNGMAULineChart request structure.
  *
- * @method integer getDataType() Obtain Type: 0 Non-production data, 1 Production data 
- * @method void setDataType(integer $DataType) Set Type: 0 Non-production data, 1 Production data 
- * @method string getPlatformId() Obtain Tenant ID
- * @method void setPlatformId(string $PlatformId) Set Tenant ID
- * @method string getApplicationId() Obtain Superapp ID
- * @method void setApplicationId(string $ApplicationId) Set Superapp ID
- * @method string getMNPId() Obtain Mini program appid, required. When provided, the query is performed based on the mini program.
- * @method void setMNPId(string $MNPId) Set Mini program appid, required. When provided, the query is performed based on the mini program.
- * @method integer getMNPTeamId() Obtain Mini program team ID
- * @method void setMNPTeamId(integer $MNPTeamId) Set Mini program team ID
+ * @method integer getDataType() Obtain Data type. Valid values: 0: Non-production data; 1: Production data.
+ * @method void setDataType(integer $DataType) Set Data type. Valid values: 0: Non-production data; 1: Production data.
+ * @method string getPlatformId() Obtain Tenant ID.
+ * @method void setPlatformId(string $PlatformId) Set Tenant ID.
+ * @method string getApplicationId() Obtain Superapp ID.
+ * @method void setApplicationId(string $ApplicationId) Set Superapp ID.
+ * @method string getMNPId() Obtain Mini program appid. If not empty, results are filtered by mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid. If not empty, results are filtered by mini program appid.
+ * @method integer getMNPTeamId() Obtain Mini program team ID.
+ * @method void setMNPTeamId(integer $MNPTeamId) Set Mini program team ID.
  */
 class DescribeMNGMAULineChartRequest extends AbstractModel
 {
     /**
-     * @var integer Type: 0 Non-production data, 1 Production data 
+     * @var integer Data type. Valid values: 0: Non-production data; 1: Production data.
      */
     public $DataType;
 
     /**
-     * @var string Tenant ID
+     * @var string Tenant ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Superapp ID
+     * @var string Superapp ID.
      */
     public $ApplicationId;
 
     /**
-     * @var string Mini program appid, required. When provided, the query is performed based on the mini program.
+     * @var string Mini program appid. If not empty, results are filtered by mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var integer Mini program team ID
+     * @var integer Mini program team ID.
      */
     public $MNPTeamId;
 
     /**
-     * @param integer $DataType Type: 0 Non-production data, 1 Production data 
-     * @param string $PlatformId Tenant ID
-     * @param string $ApplicationId Superapp ID
-     * @param string $MNPId Mini program appid, required. When provided, the query is performed based on the mini program.
-     * @param integer $MNPTeamId Mini program team ID
+     * @param integer $DataType Data type. Valid values: 0: Non-production data; 1: Production data.
+     * @param string $PlatformId Tenant ID.
+     * @param string $ApplicationId Superapp ID.
+     * @param string $MNPId Mini program appid. If not empty, results are filtered by mini program appid.
+     * @param integer $MNPTeamId Mini program team ID.
      */
     function __construct()
     {

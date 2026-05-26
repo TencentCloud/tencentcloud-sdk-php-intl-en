@@ -20,51 +20,51 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartAITranscription request structure.
  *
- * @method integer getSdkAppId() Obtain TRTC's [SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid) is the same as the SdkAppId used by the room that starts the transcription task.
- * @method void setSdkAppId(integer $SdkAppId) Set TRTC's [SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid) is the same as the SdkAppId used by the room that starts the transcription task.
- * @method string getRoomId() Obtain TRTC's [RoomId](https://cloud.tencent.com/document/product/647/46351#roomid), which indicates the room number where the transcription task is started.
- * @method void setRoomId(string $RoomId) Set TRTC's [RoomId](https://cloud.tencent.com/document/product/647/46351#roomid), which indicates the room number where the transcription task is started.
- * @method TranscriptionParams getTranscriptionParams() Obtain Parameters of the transcription robot.
- * @method void setTranscriptionParams(TranscriptionParams $TranscriptionParams) Set Parameters of the transcription robot.
- * @method string getSessionId() Obtain The unique ID passed by the caller is used by the server to deduplicate. Note: If this parameter is passed, the server will use it first to deduplicate. If this parameter is not passed, the server's deduplication strategy is as follows: 
-- If the TranscriptionMode field is 0, only one task can be opened in a room
-- If the TranscriptionMode field is 1, only one task can be opened in a TargetUserId
- * @method void setSessionId(string $SessionId) Set The unique ID passed by the caller is used by the server to deduplicate. Note: If this parameter is passed, the server will use it first to deduplicate. If this parameter is not passed, the server's deduplication strategy is as follows: 
-- If the TranscriptionMode field is 0, only one task can be opened in a room
-- If the TranscriptionMode field is 1, only one task can be opened in a TargetUserId
- * @method integer getRoomIdType() Obtain The type of TRTC room number. 0 represents a numeric room number, and 1 represents a string room number. If not filled in, the default is a numeric room number.
- * @method void setRoomIdType(integer $RoomIdType) Set The type of TRTC room number. 0 represents a numeric room number, and 1 represents a string room number. If not filled in, the default is a numeric room number.
+ * @method integer getSdkAppId() Obtain [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId used by the room with transcription task enabled.
+ * @method void setSdkAppId(integer $SdkAppId) Set [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId used by the room with transcription task enabled.
+ * @method string getRoomId() Obtain [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC refers to the room number that enables the transcription task.
+ * @method void setRoomId(string $RoomId) Set [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC refers to the room number that enables the transcription task.
+ * @method TranscriptionParams getTranscriptionParams() Obtain Transcription robot parameters.
+ * @method void setTranscriptionParams(TranscriptionParams $TranscriptionParams) Set Transcription robot parameters.
+ * @method string getSessionId() Obtain Unique Id passed by the caller, used by the server for task deduplication. duplicate tasks will fail to initiate. the server uses SdkAppId+RoomId+RoomIdType+RobotUserId for deduplication by default. if SessionId is provided, it will also be used for deduplication.
+Note:.
+When TranscriptionMode is 0, ensure only one task is initiated in a room. if multiple tasks are initiated, robots will subscribe to each other. unless the task is stopped proactively, it will timeout exit after 10 hours. in such cases, it is advisable to fill in SessionId to ensure subsequent repeated tasks fail.
+ * @method void setSessionId(string $SessionId) Set Unique Id passed by the caller, used by the server for task deduplication. duplicate tasks will fail to initiate. the server uses SdkAppId+RoomId+RoomIdType+RobotUserId for deduplication by default. if SessionId is provided, it will also be used for deduplication.
+Note:.
+When TranscriptionMode is 0, ensure only one task is initiated in a room. if multiple tasks are initiated, robots will subscribe to each other. unless the task is stopped proactively, it will timeout exit after 10 hours. in such cases, it is advisable to fill in SessionId to ensure subsequent repeated tasks fail.
+ * @method integer getRoomIdType() Obtain Type of the TRTC room number. 0 indicates digit room number, 1 indicates string room number. by default if left blank, it is digit room number.
+ * @method void setRoomIdType(integer $RoomIdType) Set Type of the TRTC room number. 0 indicates digit room number, 1 indicates string room number. by default if left blank, it is digit room number.
  * @method RecognizeConfig getRecognizeConfig() Obtain Speech recognition configuration.
  * @method void setRecognizeConfig(RecognizeConfig $RecognizeConfig) Set Speech recognition configuration.
- * @method TranslationConfig getTranslationConfig() Obtain Translation config.
- * @method void setTranslationConfig(TranslationConfig $TranslationConfig) Set Translation config.
+ * @method TranslationConfig getTranslationConfig() Obtain Translate configuration details.
+ * @method void setTranslationConfig(TranslationConfig $TranslationConfig) Set Translate configuration details.
  */
 class StartAITranscriptionRequest extends AbstractModel
 {
     /**
-     * @var integer TRTC's [SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid) is the same as the SdkAppId used by the room that starts the transcription task.
+     * @var integer [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId used by the room with transcription task enabled.
      */
     public $SdkAppId;
 
     /**
-     * @var string TRTC's [RoomId](https://cloud.tencent.com/document/product/647/46351#roomid), which indicates the room number where the transcription task is started.
+     * @var string [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC refers to the room number that enables the transcription task.
      */
     public $RoomId;
 
     /**
-     * @var TranscriptionParams Parameters of the transcription robot.
+     * @var TranscriptionParams Transcription robot parameters.
      */
     public $TranscriptionParams;
 
     /**
-     * @var string The unique ID passed by the caller is used by the server to deduplicate. Note: If this parameter is passed, the server will use it first to deduplicate. If this parameter is not passed, the server's deduplication strategy is as follows: 
-- If the TranscriptionMode field is 0, only one task can be opened in a room
-- If the TranscriptionMode field is 1, only one task can be opened in a TargetUserId
+     * @var string Unique Id passed by the caller, used by the server for task deduplication. duplicate tasks will fail to initiate. the server uses SdkAppId+RoomId+RoomIdType+RobotUserId for deduplication by default. if SessionId is provided, it will also be used for deduplication.
+Note:.
+When TranscriptionMode is 0, ensure only one task is initiated in a room. if multiple tasks are initiated, robots will subscribe to each other. unless the task is stopped proactively, it will timeout exit after 10 hours. in such cases, it is advisable to fill in SessionId to ensure subsequent repeated tasks fail.
      */
     public $SessionId;
 
     /**
-     * @var integer The type of TRTC room number. 0 represents a numeric room number, and 1 represents a string room number. If not filled in, the default is a numeric room number.
+     * @var integer Type of the TRTC room number. 0 indicates digit room number, 1 indicates string room number. by default if left blank, it is digit room number.
      */
     public $RoomIdType;
 
@@ -74,20 +74,20 @@ class StartAITranscriptionRequest extends AbstractModel
     public $RecognizeConfig;
 
     /**
-     * @var TranslationConfig Translation config.
+     * @var TranslationConfig Translate configuration details.
      */
     public $TranslationConfig;
 
     /**
-     * @param integer $SdkAppId TRTC's [SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid) is the same as the SdkAppId used by the room that starts the transcription task.
-     * @param string $RoomId TRTC's [RoomId](https://cloud.tencent.com/document/product/647/46351#roomid), which indicates the room number where the transcription task is started.
-     * @param TranscriptionParams $TranscriptionParams Parameters of the transcription robot.
-     * @param string $SessionId The unique ID passed by the caller is used by the server to deduplicate. Note: If this parameter is passed, the server will use it first to deduplicate. If this parameter is not passed, the server's deduplication strategy is as follows: 
-- If the TranscriptionMode field is 0, only one task can be opened in a room
-- If the TranscriptionMode field is 1, only one task can be opened in a TargetUserId
-     * @param integer $RoomIdType The type of TRTC room number. 0 represents a numeric room number, and 1 represents a string room number. If not filled in, the default is a numeric room number.
+     * @param integer $SdkAppId [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId used by the room with transcription task enabled.
+     * @param string $RoomId [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC refers to the room number that enables the transcription task.
+     * @param TranscriptionParams $TranscriptionParams Transcription robot parameters.
+     * @param string $SessionId Unique Id passed by the caller, used by the server for task deduplication. duplicate tasks will fail to initiate. the server uses SdkAppId+RoomId+RoomIdType+RobotUserId for deduplication by default. if SessionId is provided, it will also be used for deduplication.
+Note:.
+When TranscriptionMode is 0, ensure only one task is initiated in a room. if multiple tasks are initiated, robots will subscribe to each other. unless the task is stopped proactively, it will timeout exit after 10 hours. in such cases, it is advisable to fill in SessionId to ensure subsequent repeated tasks fail.
+     * @param integer $RoomIdType Type of the TRTC room number. 0 indicates digit room number, 1 indicates string room number. by default if left blank, it is digit room number.
      * @param RecognizeConfig $RecognizeConfig Speech recognition configuration.
-     * @param TranslationConfig $TranslationConfig Translation config.
+     * @param TranslationConfig $TranslationConfig Translate configuration details.
      */
     function __construct()
     {

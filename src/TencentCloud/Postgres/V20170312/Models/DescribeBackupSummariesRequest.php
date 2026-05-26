@@ -24,18 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Value range: 1-100. Default: `10`
  * @method integer getOffset() Obtain Data offset, which starts from 0.
  * @method void setOffset(integer $Offset) Set Data offset, which starts from 0.
- * @method array getFilters() Obtain Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
- * @method void setFilters(array $Filters) Set Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
- * @method string getOrderBy() Obtain Sorting field. Valid values: `TotalBackupSize`, `LogBackupSize`, `ManualBaseBackupSize`, `AutoBaseBackupSize`.
- * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid values: `TotalBackupSize`, `LogBackupSize`, `ManualBaseBackupSize`, `AutoBaseBackupSize`.
- * @method string getOrderByType() Obtain Sorting order. Valid values: `asc` (ascending), `desc` (descending).
- * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+ * @method array getFilters() Obtain Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+ * @method void setFilters(array $Filters) Set Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+ * @method string getOrderBy() Obtain Sorting field, supports TotalBackupSize - total size of backups, LogBackupSize - size of backup logs, ManualBaseBackupSize - size of manual backup data, AutoBaseBackupSize - size of automatic data backup. if this parameter is not input, no sorting is performed by default.
+ * @method void setOrderBy(string $OrderBy) Set Sorting field, supports TotalBackupSize - total size of backups, LogBackupSize - size of backup logs, ManualBaseBackupSize - size of manual backup data, AutoBaseBackupSize - size of automatic data backup. if this parameter is not input, no sorting is performed by default.
+ * @method string getOrderByType() Obtain Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
+ * @method void setOrderByType(string $OrderByType) Set Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
  */
 class DescribeBackupSummariesRequest extends AbstractModel
 {
@@ -50,32 +50,32 @@ class DescribeBackupSummariesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+     * @var array Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
      */
     public $Filters;
 
     /**
-     * @var string Sorting field. Valid values: `TotalBackupSize`, `LogBackupSize`, `ManualBaseBackupSize`, `AutoBaseBackupSize`.
+     * @var string Sorting field, supports TotalBackupSize - total size of backups, LogBackupSize - size of backup logs, ManualBaseBackupSize - size of manual backup data, AutoBaseBackupSize - size of automatic data backup. if this parameter is not input, no sorting is performed by default.
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+     * @var string Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
      */
     public $OrderByType;
 
     /**
      * @param integer $Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
      * @param integer $Offset Data offset, which starts from 0.
-     * @param array $Filters Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
-     * @param string $OrderBy Sorting field. Valid values: `TotalBackupSize`, `LogBackupSize`, `ManualBaseBackupSize`, `AutoBaseBackupSize`.
-     * @param string $OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+     * @param array $Filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+     * @param string $OrderBy Sorting field, supports TotalBackupSize - total size of backups, LogBackupSize - size of backup logs, ManualBaseBackupSize - size of manual backup data, AutoBaseBackupSize - size of automatic data backup. if this parameter is not input, no sorting is performed by default.
+     * @param string $OrderByType Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
      */
     function __construct()
     {

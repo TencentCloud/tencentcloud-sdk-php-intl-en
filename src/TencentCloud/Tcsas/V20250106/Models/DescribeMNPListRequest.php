@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMNPList request structure.
  *
- * @method integer getOffset() Obtain Page offset
- * @method void setOffset(integer $Offset) Set Page offset
- * @method integer getLimit() Obtain Number of results per page
- * @method void setLimit(integer $Limit) Set Number of results per page
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getKeyword() Obtain Keywords for search (mini program name)
- * @method void setKeyword(string $Keyword) Set Keywords for search (mini program name)
- * @method string getTeamId() Obtain Team ID
- * @method void setTeamId(string $TeamId) Set Team ID
- * @method string getApplicationId() Obtain Application ID
- * @method void setApplicationId(string $ApplicationId) Set Application ID
+ * @method integer getOffset() Obtain Pagination offset.
+ * @method void setOffset(integer $Offset) Set Pagination offset.
+ * @method integer getLimit() Obtain Number of entries per page.
+ * @method void setLimit(integer $Limit) Set Number of entries per page.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method string getKeyword() Obtain Search keyword (mini program name).
+ * @method void setKeyword(string $Keyword) Set Search keyword (mini program name).
+ * @method string getTeamId() Obtain Team ID.
+ * @method void setTeamId(string $TeamId) Set Team ID.
+ * @method string getApplicationId() Obtain Superapp ID.
+ * @method void setApplicationId(string $ApplicationId) Set Superapp ID.
  */
 class DescribeMNPListRequest extends AbstractModel
 {
     /**
-     * @var integer Page offset
+     * @var integer Pagination offset.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results per page
+     * @var integer Number of entries per page.
      */
     public $Limit;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Keywords for search (mini program name)
+     * @var string Search keyword (mini program name).
      */
     public $Keyword;
 
     /**
-     * @var string Team ID
+     * @var string Team ID.
      */
     public $TeamId;
 
     /**
-     * @var string Application ID
+     * @var string Superapp ID.
      */
     public $ApplicationId;
 
     /**
-     * @param integer $Offset Page offset
-     * @param integer $Limit Number of results per page
-     * @param string $PlatformId Platform ID
-     * @param string $Keyword Keywords for search (mini program name)
-     * @param string $TeamId Team ID
-     * @param string $ApplicationId Application ID
+     * @param integer $Offset Pagination offset.
+     * @param integer $Limit Number of entries per page.
+     * @param string $PlatformId Platform ID.
+     * @param string $Keyword Search keyword (mini program name).
+     * @param string $TeamId Team ID.
+     * @param string $ApplicationId Superapp ID.
      */
     function __construct()
     {

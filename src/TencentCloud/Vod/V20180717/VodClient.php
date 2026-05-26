@@ -48,7 +48,7 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) This API is used to create an adaptive bitrate streaming template. Up to 100 templates can be created.
  * @method Models\CreateAigcAdvancedCustomElementResponse CreateAigcAdvancedCustomElement(Models\CreateAigcAdvancedCustomElementRequest $req) This API is used to create an advanced custom AIGC subject.
  * @method Models\CreateAigcApiTokenResponse CreateAigcApiToken(Models\CreateAigcApiTokenRequest $req) This API is used to create a Token for invoking AIGC API. After creation, there is a delay in data sync. It becomes queryable or deletable after about 30 seconds.
- * @method Models\CreateAigcAudioCloneResponse CreateAigcAudioClone(Models\CreateAigcAudioCloneRequest $req) This API is used to create AIGC voice replication. Note that calling this API will incur fees. See the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#96b3b59a-f9e1-49e9-966a-bedb70a4bf12).
+ * @method Models\CreateAigcAudioCloneResponse CreateAigcAudioClone(Models\CreateAigcAudioCloneRequest $req) This API is used to create AIGC voice replication. Note that calling this API will incur fees. See the [billing documentation](https://intl.cloud.tencent.com/document/product/266/14666#87e472ca-9c95-4658-ab7b-8f2130608419).
  * @method Models\CreateAigcAudioTaskResponse CreateAigcAudioTask(Models\CreateAigcAudioTaskRequest $req) This API is used to create AI audio generation tasks.
  * @method Models\CreateAigcCustomElementResponse CreateAigcCustomElement(Models\CreateAigcCustomElementRequest $req) Call this API to target a specified model and perform subject creation.
  * @method Models\CreateAigcCustomVoiceResponse CreateAigcCustomVoice(Models\CreateAigcCustomVoiceRequest $req) This API is used to create custom voice types for AIGC.
@@ -131,6 +131,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplate(Models\DeleteAnimatedGraphicsTemplateRequest $req) This API is used to delete a custom animated image generating template.
  * @method Models\DeleteBlindWatermarkTemplateResponse DeleteBlindWatermarkTemplate(Models\DeleteBlindWatermarkTemplateRequest $req) This API is used to delete a user-defined digital watermark template.
  * @method Models\DeleteCDNDomainResponse DeleteCDNDomain(Models\DeleteCDNDomainRequest $req) Delete CDN Domain
+ * @method Models\DeleteCLSTopicResponse DeleteCLSTopic(Models\DeleteCLSTopicRequest $req) Delete the log topic enabled by VOD.
  * @method Models\DeleteClassResponse DeleteClass(Models\DeleteClassRequest $req) * A category can be deleted only if it has no subcategories and associated media files;
 * Otherwise, [delete the media files](https://intl.cloud.tencent.com/document/product/266/31764?from_cn_redirect=1) and subcategories first before deleting the category.
  * @method Models\DeleteContentReviewTemplateResponse DeleteContentReviewTemplate(Models\DeleteContentReviewTemplateRequest $req) We have <font color=red>stopped updating</font> this API. Our new moderation templates can moderate audio/video as well as images. For details, see [DeleteReviewTemplate](https://intl.cloud.tencent.com/document/api/266/84390?from_cn_redirect=1).
@@ -192,6 +193,8 @@ Playback statistics only target VOD domains (EdgeOne domain name distribution is
 3. You can specify the time granularity of usage data, which supports 5 minutes, 1 hour, and 1 day.
 4. Traffic volume is the total traffic within the query time granularity, and bandwidth is the peak bandwidth within the query time granularity.
 5. Playback statistics only target VOD domains (EdgeOne domain name distribution is not included).
+ * @method Models\DescribeCLSLogsetsResponse DescribeCLSLogsets(Models\DescribeCLSLogsetsRequest $req) Query the CLS log set created by VOD.
+ * @method Models\DescribeCLSTopicsResponse DescribeCLSTopics(Models\DescribeCLSTopicsRequest $req) Query the log topic list created by VOD.
  * @method Models\DescribeCdnLogsResponse DescribeCdnLogs(Models\DescribeCdnLogsRequest $req) Query the download URL of the access log for the CDN (exclude EdgeOne origin back to VOD domain) of the on-demand domain name.
 1. You can query the log download links for CDN in the most recent 30 days.
 2. By default, CDN creates a log file per hour. If no CDN access occurs in an hour, it does not generate a log file.    

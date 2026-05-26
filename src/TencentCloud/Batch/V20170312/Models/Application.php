@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Application information
  *
- * @method string getCommand() Obtain Task execution command
- * @method void setCommand(string $Command) Set Task execution command
  * @method string getDeliveryForm() Obtain Delivery form of the application. Values: `PACKAGE` (package stored in a remote location), `LOCAL` (local computer).
  * @method void setDeliveryForm(string $DeliveryForm) Set Delivery form of the application. Values: `PACKAGE` (package stored in a remote location), `LOCAL` (local computer).
+ * @method string getCommand() Obtain Task execution command
+ * @method void setCommand(string $Command) Set Task execution command
  * @method string getPackagePath() Obtain Remote storage path of the application package
  * @method void setPackagePath(string $PackagePath) Set Remote storage path of the application package
  * @method Docker getDocker() Obtain Relevant configuration of the Docker used by the application. In case that the Docker configuration is used, "LOCAL" DeliveryForm means that the application software inside the Docker image is used directly and run in Docker mode; "PACKAGE" DeliveryForm means that the remote application package is run in Docker mode after being injected into the Docker image. To avoid compatibility issues with different versions of Docker, the Docker installation package and relevant dependencies are taken care of by BatchCompute. For custom images where Docker has already been installed, uninstall Docker first and then use the Docker feature.
@@ -32,14 +32,14 @@ use TencentCloud\Common\AbstractModel;
 class Application extends AbstractModel
 {
     /**
-     * @var string Task execution command
-     */
-    public $Command;
-
-    /**
      * @var string Delivery form of the application. Values: `PACKAGE` (package stored in a remote location), `LOCAL` (local computer).
      */
     public $DeliveryForm;
+
+    /**
+     * @var string Task execution command
+     */
+    public $Command;
 
     /**
      * @var string Remote storage path of the application package
@@ -52,8 +52,8 @@ class Application extends AbstractModel
     public $Docker;
 
     /**
-     * @param string $Command Task execution command
      * @param string $DeliveryForm Delivery form of the application. Values: `PACKAGE` (package stored in a remote location), `LOCAL` (local computer).
+     * @param string $Command Task execution command
      * @param string $PackagePath Remote storage path of the application package
      * @param Docker $Docker Relevant configuration of the Docker used by the application. In case that the Docker configuration is used, "LOCAL" DeliveryForm means that the application software inside the Docker image is used directly and run in Docker mode; "PACKAGE" DeliveryForm means that the remote application package is run in Docker mode after being injected into the Docker image. To avoid compatibility issues with different versions of Docker, the Docker installation package and relevant dependencies are taken care of by BatchCompute. For custom images where Docker has already been installed, uninstall Docker first and then use the Docker feature.
      */
@@ -70,12 +70,12 @@ class Application extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
-            $this->Command = $param["Command"];
-        }
-
         if (array_key_exists("DeliveryForm",$param) and $param["DeliveryForm"] !== null) {
             $this->DeliveryForm = $param["DeliveryForm"];
+        }
+
+        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
+            $this->Command = $param["Command"];
         }
 
         if (array_key_exists("PackagePath",$param) and $param["PackagePath"] !== null) {

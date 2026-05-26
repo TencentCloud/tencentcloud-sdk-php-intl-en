@@ -18,20 +18,44 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TTS-related configurations
+ * TTS configuration.
  *
- * @method string getVoiceId() Obtain Voice ID
- * @method void setVoiceId(string $VoiceId) Set Voice ID
+ * @method string getVoiceId() Obtain Voice type ID.
+ * @method void setVoiceId(string $VoiceId) Set Voice type ID.
+ * @method string getModel() Obtain TTS model: flow_01_turbo is selected by default. options: [flow_01_turbo, flow_01_ex].
+ * @method void setModel(string $Model) Set TTS model: flow_01_turbo is selected by default. options: [flow_01_turbo, flow_01_ex].
+ * @method float getSpeed() Obtain Speaking rate. value range: 0.5-2.0. default: 1.0.
+ * @method void setSpeed(float $Speed) Set Speaking rate. value range: 0.5-2.0. default: 1.0.
+ * @method float getVolume() Obtain Value range: (0, 10]. default value: 1.0.
+ * @method void setVolume(float $Volume) Set Value range: (0, 10]. default value: 1.0.
  */
 class TTSConfig extends AbstractModel
 {
     /**
-     * @var string Voice ID
+     * @var string Voice type ID.
      */
     public $VoiceId;
 
     /**
-     * @param string $VoiceId Voice ID
+     * @var string TTS model: flow_01_turbo is selected by default. options: [flow_01_turbo, flow_01_ex].
+     */
+    public $Model;
+
+    /**
+     * @var float Speaking rate. value range: 0.5-2.0. default: 1.0.
+     */
+    public $Speed;
+
+    /**
+     * @var float Value range: (0, 10]. default value: 1.0.
+     */
+    public $Volume;
+
+    /**
+     * @param string $VoiceId Voice type ID.
+     * @param string $Model TTS model: flow_01_turbo is selected by default. options: [flow_01_turbo, flow_01_ex].
+     * @param float $Speed Speaking rate. value range: 0.5-2.0. default: 1.0.
+     * @param float $Volume Value range: (0, 10]. default value: 1.0.
      */
     function __construct()
     {
@@ -48,6 +72,18 @@ class TTSConfig extends AbstractModel
         }
         if (array_key_exists("VoiceId",$param) and $param["VoiceId"] !== null) {
             $this->VoiceId = $param["VoiceId"];
+        }
+
+        if (array_key_exists("Model",$param) and $param["Model"] !== null) {
+            $this->Model = $param["Model"];
+        }
+
+        if (array_key_exists("Speed",$param) and $param["Speed"] !== null) {
+            $this->Speed = $param["Speed"];
+        }
+
+        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
+            $this->Volume = $param["Volume"];
         }
     }
 }

@@ -20,29 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewInstance request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID in the format of `postgres-6fego161`
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of `postgres-6fego161`
- * @method integer getPeriod() Obtain Renewal duration in months
- * @method void setPeriod(integer $Period) Set Renewal duration in months
- * @method integer getAutoVoucher() Obtain Whether to automatically use vouchers. 1: yes, 0: no. Default value: 0
- * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use vouchers. 1: yes, 0: no. Default value: 0
+ * @method string getDBInstanceId() Obtain Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances.
+ * @method void setDBInstanceId(string $DBInstanceId) Set Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances.
+ * @method integer getPeriod() Obtain Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+ * @method void setPeriod(integer $Period) Set Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+ * @method integer getAutoVoucher() Obtain Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
+ * @method void setAutoVoucher(integer $AutoVoucher) Set Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
  * @method array getVoucherIds() Obtain Voucher ID list (only one voucher can be specified currently)
  * @method void setVoucherIds(array $VoucherIds) Set Voucher ID list (only one voucher can be specified currently)
  */
 class RenewInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of `postgres-6fego161`
+     * @var string Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances.
      */
     public $DBInstanceId;
 
     /**
-     * @var integer Renewal duration in months
+     * @var integer Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
      */
     public $Period;
 
     /**
-     * @var integer Whether to automatically use vouchers. 1: yes, 0: no. Default value: 0
+     * @var integer Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
      */
     public $AutoVoucher;
 
@@ -52,9 +64,13 @@ class RenewInstanceRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @param string $DBInstanceId Instance ID in the format of `postgres-6fego161`
-     * @param integer $Period Renewal duration in months
-     * @param integer $AutoVoucher Whether to automatically use vouchers. 1: yes, 0: no. Default value: 0
+     * @param string $DBInstanceId Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances.
+     * @param integer $Period Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+     * @param integer $AutoVoucher Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
      * @param array $VoucherIds Voucher ID list (only one voucher can be specified currently)
      */
     function __construct()

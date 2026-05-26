@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEndPointId() Obtain Endpoint ID
  * @method void setEndPointId(string $EndPointId) Set Endpoint ID
- * @method string getVpcId() Obtain The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
- * @method void setVpcId(string $VpcId) Set The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+ * @method string getVpcId() Obtain The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
+ * @method void setVpcId(string $VpcId) Set The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
  * @method string getSubnetId() Obtain Subnet ID
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
  * @method string getEndPointOwner() Obtain APP ID
@@ -59,7 +59,7 @@ class EndPoint extends AbstractModel
     public $EndPointId;
 
     /**
-     * @var string The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+     * @var string The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
      */
     public $VpcId;
 
@@ -130,7 +130,7 @@ class EndPoint extends AbstractModel
 
     /**
      * @param string $EndPointId Endpoint ID
-     * @param string $VpcId The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+     * @param string $VpcId The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
      * @param string $SubnetId Subnet ID
      * @param string $EndPointOwner APP ID
      * @param string $EndPointName Endpoint name

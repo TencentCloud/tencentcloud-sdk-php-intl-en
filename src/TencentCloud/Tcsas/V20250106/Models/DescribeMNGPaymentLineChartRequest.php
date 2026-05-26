@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMNGPaymentLineChart request structure.
  *
- * @method string getPlatformId() Obtain Tenant ID
- * @method void setPlatformId(string $PlatformId) Set Tenant ID
- * @method string getReportId() Obtain Fixed value: payment_data_analysis
- * @method void setReportId(string $ReportId) Set Fixed value: payment_data_analysis
+ * @method string getPlatformId() Obtain Tenant ID.
+ * @method void setPlatformId(string $PlatformId) Set Tenant ID.
+ * @method string getReportId() Obtain Fixed value: payment_data_analysis.
+ * @method void setReportId(string $ReportId) Set Fixed value: payment_data_analysis.
  * @method string getIndexId() Obtain Valid values:
 mng_paid_amount: Virtual payment amount,
 paid_user_num: Number of paying users,
@@ -32,7 +32,7 @@ new_paid_user_amount: Revenue from new paying users,
 new_paid_user_ratio: Percentage of new users who made payments,
 arppu: Average revenue per paying user (ARPPU),
 mng_refund_num: Number of refund orders
-mng_refund_amount: Refund amount
+mng_refund_amount: Refund amount.
  * @method void setIndexId(string $IndexId) Set Valid values:
 mng_paid_amount: Virtual payment amount,
 paid_user_num: Number of paying users,
@@ -41,19 +41,19 @@ new_paid_user_amount: Revenue from new paying users,
 new_paid_user_ratio: Percentage of new users who made payments,
 arppu: Average revenue per paying user (ARPPU),
 mng_refund_num: Number of refund orders
-mng_refund_amount: Refund amount
- * @method string getQueryData() Obtain Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}
- * @method void setQueryData(string $QueryData) Set Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}
+mng_refund_amount: Refund amount.
+ * @method string getQueryData() Obtain Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}.
+ * @method void setQueryData(string $QueryData) Set Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}.
  */
 class DescribeMNGPaymentLineChartRequest extends AbstractModel
 {
     /**
-     * @var string Tenant ID
+     * @var string Tenant ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Fixed value: payment_data_analysis
+     * @var string Fixed value: payment_data_analysis.
      */
     public $ReportId;
 
@@ -66,18 +66,18 @@ new_paid_user_amount: Revenue from new paying users,
 new_paid_user_ratio: Percentage of new users who made payments,
 arppu: Average revenue per paying user (ARPPU),
 mng_refund_num: Number of refund orders
-mng_refund_amount: Refund amount
+mng_refund_amount: Refund amount.
      */
     public $IndexId;
 
     /**
-     * @var string Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}
+     * @var string Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}.
      */
     public $QueryData;
 
     /**
-     * @param string $PlatformId Tenant ID
-     * @param string $ReportId Fixed value: payment_data_analysis
+     * @param string $PlatformId Tenant ID.
+     * @param string $ReportId Fixed value: payment_data_analysis.
      * @param string $IndexId Valid values:
 mng_paid_amount: Virtual payment amount,
 paid_user_num: Number of paying users,
@@ -86,8 +86,8 @@ new_paid_user_amount: Revenue from new paying users,
 new_paid_user_ratio: Percentage of new users who made payments,
 arppu: Average revenue per paying user (ARPPU),
 mng_refund_num: Number of refund orders
-mng_refund_amount: Refund amount
-     * @param string $QueryData Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}
+mng_refund_amount: Refund amount.
+     * @param string $QueryData Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}.
      */
     function __construct()
     {

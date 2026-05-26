@@ -24,9 +24,13 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
 
 /**
  * @method Models\ActivateInstanceResponse ActivateInstance(Models\ActivateInstanceRequest $req) This interface (ActivateInstance) restores access to isolated instances.
+ * @method Models\ActivateLibraDBClusterResponse ActivateLibraDBCluster(Models\ActivateLibraDBClusterRequest $req) Release the analysis cluster from quarantined state
+ * @method Models\ActivateLibraDBInstanceResponse ActivateLibraDBInstance(Models\ActivateLibraDBInstanceRequest $req) This API is used to unbind an isolated read-only analysis engine instance.
  * @method Models\AddClusterSlaveZoneResponse AddClusterSlaveZone(Models\AddClusterSlaveZoneRequest $req) This interface (AddClusterSlaveZone) is used to enable multi-az deployment for a cluster.
  * @method Models\AddInstancesResponse AddInstances(Models\AddInstancesRequest $req) This API is used to add instances to a cluster.
+ * @method Models\AddLibraDBInstancesResponse AddLibraDBInstances(Models\AddLibraDBInstancesRequest $req) This API is used to add read-only analysis engine to a cluster.
  * @method Models\BindClusterResourcePackagesResponse BindClusterResourcePackages(Models\BindClusterResourcePackagesRequest $req) This API is used to bind resource packages to a cluster.
+ * @method Models\CheckCreateLibraDBInstanceResponse CheckCreateLibraDBInstance(Models\CheckCreateLibraDBInstanceRequest $req) This API is used to verify whether it is possible to add a read-only analysis engine instance to the cluster.
  * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) This API is used to close the database audit service for TDSQL-C MySQL instances.
  * @method Models\CloseClusterPasswordComplexityResponse CloseClusterPasswordComplexity(Models\CloseClusterPasswordComplexityRequest $req) This API is used to close cluster password complexity.
  * @method Models\CloseProxyResponse CloseProxy(Models\CloseProxyRequest $req) This API is used to close the database proxy service of a cluster.
@@ -41,6 +45,8 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\CreateClusterDatabaseResponse CreateClusterDatabase(Models\CreateClusterDatabaseRequest $req) This API is used to create a database.
  * @method Models\CreateClustersResponse CreateClusters(Models\CreateClustersRequest $req) This API is used to purchase new clusters.
  * @method Models\CreateIntegrateClusterResponse CreateIntegrateCluster(Models\CreateIntegrateClusterRequest $req) This API is used to create a newly purchased cluster.
+ * @method Models\CreateLibraDBClusterAccountsResponse CreateLibraDBClusterAccounts(Models\CreateLibraDBClusterAccountsRequest $req) This API is used to create an analysis cluster account.
+ * @method Models\CreateLibraDBClustersResponse CreateLibraDBClusters(Models\CreateLibraDBClustersRequest $req) This API is used to create a TDSQL-C analysis cluster
  * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) This API is used to create parameter templates.
  * @method Models\CreateProxyResponse CreateProxy(Models\CreateProxyRequest $req) This API is used to enable the database proxy of a cluster.
  * @method Models\CreateProxyEndPointResponse CreateProxyEndPoint(Models\CreateProxyEndPointRequest $req) This API is used to create a database proxy connection point.
@@ -50,6 +56,8 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DeleteBackupResponse DeleteBackup(Models\DeleteBackupRequest $req) This API is used to delete manual backups for a cluster. Automatic backups cannot be deleted.
  * @method Models\DeleteCLSDeliveryResponse DeleteCLSDelivery(Models\DeleteCLSDeliveryRequest $req) This API is used to delete log delivery.
  * @method Models\DeleteClusterDatabaseResponse DeleteClusterDatabase(Models\DeleteClusterDatabaseRequest $req) This interface is used to delete a database.
+ * @method Models\DeleteLibraDBClusterResponse DeleteLibraDBCluster(Models\DeleteLibraDBClusterRequest $req) Deleting a TDSQL-C Analysis Cluster
+ * @method Models\DeleteLibraDBClusterAccountsResponse DeleteLibraDBClusterAccounts(Models\DeleteLibraDBClusterAccountsRequest $req) This API is used to delete cluster accounts.
  * @method Models\DeleteParamTemplateResponse DeleteParamTemplate(Models\DeleteParamTemplateRequest $req) This API is used to delete a parameter template.
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) This API is used to query account privileges.
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) This API is used to query the database account list.
@@ -88,6 +96,9 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeInstancesWithinSameClusterResponse DescribeInstancesWithinSameCluster(Models\DescribeInstancesWithinSameClusterRequest $req) This API is used to query the instance list under the same cluster.
  * @method Models\DescribeIntegrateTaskResponse DescribeIntegrateTask(Models\DescribeIntegrateTaskRequest $req) This API is used to query cluster tasks.
  * @method Models\DescribeIsolatedInstancesResponse DescribeIsolatedInstances(Models\DescribeIsolatedInstancesRequest $req) This interface is used for querying the recycle bin instance list.
+ * @method Models\DescribeLibraDBClusterAccountAllPrivilegesResponse DescribeLibraDBClusterAccountAllPrivileges(Models\DescribeLibraDBClusterAccountAllPrivilegesRequest $req) This API is used to query and analyze all permissions of a cluster account.
+ * @method Models\DescribeLibraDBClusterAccountPrivilegesResponse DescribeLibraDBClusterAccountPrivileges(Models\DescribeLibraDBClusterAccountPrivilegesRequest $req) This API is used to query the permissions of a cluster account.
+ * @method Models\DescribeLibraDBClusterAccountsResponse DescribeLibraDBClusterAccounts(Models\DescribeLibraDBClusterAccountsRequest $req) This API is used to query and analyze cluster accounts.
  * @method Models\DescribeMaintainPeriodResponse DescribeMaintainPeriod(Models\DescribeMaintainPeriodRequest $req) This interface (DescribeMaintainPeriod) is used to query the instance maintenance window.
  * @method Models\DescribeParamTemplateDetailResponse DescribeParamTemplateDetail(Models\DescribeParamTemplateDetailRequest $req) This API is used to query user parameter template details.
  * @method Models\DescribeParamTemplatesResponse DescribeParamTemplates(Models\DescribeParamTemplatesRequest $req) This API is used to query all parameter template information under the user-specified product.

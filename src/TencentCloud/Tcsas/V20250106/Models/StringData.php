@@ -18,20 +18,20 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * String object
+ * String data object.
  *
- * @method string getData() Obtain string type response data.
- * @method void setData(string $Data) Set string type response data.
+ * @method string getData() Obtain String response data. 
+ * @method void setData(string $Data) Set String response data. 
  */
 class StringData extends AbstractModel
 {
     /**
-     * @var string string type response data.
+     * @var string String response data. 
      */
     public $Data;
 
     /**
-     * @param string $Data string type response data.
+     * @param string $Data String response data. 
      */
     function __construct()
     {

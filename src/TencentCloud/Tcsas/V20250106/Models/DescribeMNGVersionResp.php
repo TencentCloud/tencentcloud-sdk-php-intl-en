@@ -18,52 +18,52 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Queries the mini program version creation results
+ * Response for querying the mini game version creation result.
  *
- * @method string getMNPId() Obtain <p>Mini game appid</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini game appid</p>
- * @method string getTaskId() Obtain <p>Task ID</p>
- * @method void setTaskId(string $TaskId) Set <p>Task ID</p>
- * @method integer getTaskStatus() Obtain <p>Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded</p>
- * @method void setTaskStatus(integer $TaskStatus) Set <p>Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded</p>
- * @method string getTaskMsg() Obtain <p>Task status information</p>
- * @method void setTaskMsg(string $TaskMsg) Set <p>Task status information</p>
- * @method integer getMNPVersionId() Obtain <p>Mini game version ID (returned upon successful compilation)</p>
- * @method void setMNPVersionId(integer $MNPVersionId) Set <p>Mini game version ID (returned upon successful compilation)</p>
+ * @method string getMNPId() Obtain <p>Mini game appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini game appid.</p>
+ * @method string getTaskId() Obtain <p>Task ID.</p>
+ * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
+ * @method integer getTaskStatus() Obtain <p>Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded.</p>
+ * @method void setTaskStatus(integer $TaskStatus) Set <p>Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded.</p>
+ * @method string getTaskMsg() Obtain <p>Task status information.</p>
+ * @method void setTaskMsg(string $TaskMsg) Set <p>Task status information.</p>
+ * @method integer getMNPVersionId() Obtain <p>Mini game version ID (returned upon successful compilation).</p>
+ * @method void setMNPVersionId(integer $MNPVersionId) Set <p>Mini game version ID (returned upon successful compilation).</p>
  */
 class DescribeMNGVersionResp extends AbstractModel
 {
     /**
-     * @var string <p>Mini game appid</p>
+     * @var string <p>Mini game appid.</p>
      */
     public $MNPId;
 
     /**
-     * @var string <p>Task ID</p>
+     * @var string <p>Task ID.</p>
      */
     public $TaskId;
 
     /**
-     * @var integer <p>Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded</p>
+     * @var integer <p>Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded.</p>
      */
     public $TaskStatus;
 
     /**
-     * @var string <p>Task status information</p>
+     * @var string <p>Task status information.</p>
      */
     public $TaskMsg;
 
     /**
-     * @var integer <p>Mini game version ID (returned upon successful compilation)</p>
+     * @var integer <p>Mini game version ID (returned upon successful compilation).</p>
      */
     public $MNPVersionId;
 
     /**
-     * @param string $MNPId <p>Mini game appid</p>
-     * @param string $TaskId <p>Task ID</p>
-     * @param integer $TaskStatus <p>Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded</p>
-     * @param string $TaskMsg <p>Task status information</p>
-     * @param integer $MNPVersionId <p>Mini game version ID (returned upon successful compilation)</p>
+     * @param string $MNPId <p>Mini game appid.</p>
+     * @param string $TaskId <p>Task ID.</p>
+     * @param integer $TaskStatus <p>Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded.</p>
+     * @param string $TaskMsg <p>Task status information.</p>
+     * @param integer $MNPVersionId <p>Mini game version ID (returned upon successful compilation).</p>
      */
     function __construct()
     {

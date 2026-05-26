@@ -34,6 +34,7 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) Delete device info
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) Delete group
  * @method Models\DeleteL3ConnResponse DeleteL3Conn(Models\DeleteL3ConnRequest $req) Delete an interconnection rule
+ * @method Models\DescribeAccessRegionsResponse DescribeAccessRegions(Models\DescribeAccessRegionsRequest $req) Query the access region list.
  * @method Models\DownloadActiveDeviceCountResponse DownloadActiveDeviceCount(Models\DownloadActiveDeviceCountRequest $req) Download the number of active devices statistics
  * @method Models\GetActiveDeviceCountResponse GetActiveDeviceCount(Models\GetActiveDeviceCountRequest $req) Number of active devices statistics
  * @method Models\GetApplicationResponse GetApplication(Models\GetApplicationRequest $req) This API is used to query applications.
@@ -62,6 +63,7 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\GetVendorHardwareResponse GetVendorHardware(Models\GetVendorHardwareRequest $req) This API is used to get the hardware device list of the manufacturer.
  * @method Models\GroupAddDeviceResponse GroupAddDevice(Models\GroupAddDeviceRequest $req) Add device to already exist group
  * @method Models\GroupDeleteDeviceResponse GroupDeleteDevice(Models\GroupDeleteDeviceRequest $req) Delete devices in the group
+ * @method Models\ModifyDeviceAccessRegionsResponse ModifyDeviceAccessRegions(Models\ModifyDeviceAccessRegionsRequest $req) This API is used to modify device connectivity regions.
  * @method Models\ModifyPackageRenewFlagResponse ModifyPackageRenewFlag(Models\ModifyPackageRenewFlagRequest $req) Auto renewal of data transfer plans can be enabled or disabled, unaffected by ongoing effective plans in the current cycle.
  * @method Models\OrderFlowPackageResponse OrderFlowPackage(Models\OrderFlowPackageRequest $req) Purchase a Prepaid Traffic Package
  * @method Models\OrderPerLicenseResponse OrderPerLicense(Models\OrderPerLicenseRequest $req) Purchase a single-use License

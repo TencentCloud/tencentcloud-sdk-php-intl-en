@@ -18,48 +18,44 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * User details
+ * Response for querying user details.
  *
- * @method string getUserId() Obtain User iD.
- * @method void setUserId(string $UserId) Set User iD.
- * @method string getUserAccount() Obtain User account
- * @method void setUserAccount(string $UserAccount) Set User account
- * @method integer getAccountType() Obtain User account
-1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
- * @method void setAccountType(integer $AccountType) Set User account
-1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
- * @method string getUserName() Obtain User name
- * @method void setUserName(string $UserName) Set User name
+ * @method string getUserId() Obtain User ID.
+ * @method void setUserId(string $UserId) Set User ID.
+ * @method string getUserAccount() Obtain User account.
+ * @method void setUserAccount(string $UserAccount) Set User account.
+ * @method integer getAccountType() Obtain User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned.
+ * @method void setAccountType(integer $AccountType) Set User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned.
+ * @method string getUserName() Obtain User name.
+ * @method void setUserName(string $UserName) Set User name.
  */
 class DescribeUserDetailResp extends AbstractModel
 {
     /**
-     * @var string User iD.
+     * @var string User ID.
      */
     public $UserId;
 
     /**
-     * @var string User account
+     * @var string User account.
      */
     public $UserAccount;
 
     /**
-     * @var integer User account
-1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
+     * @var integer User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned.
      */
     public $AccountType;
 
     /**
-     * @var string User name
+     * @var string User name.
      */
     public $UserName;
 
     /**
-     * @param string $UserId User iD.
-     * @param string $UserAccount User account
-     * @param integer $AccountType User account
-1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
-     * @param string $UserName User name
+     * @param string $UserId User ID.
+     * @param string $UserAccount User account.
+     * @param integer $AccountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned.
+     * @param string $UserName User name.
      */
     function __construct()
     {

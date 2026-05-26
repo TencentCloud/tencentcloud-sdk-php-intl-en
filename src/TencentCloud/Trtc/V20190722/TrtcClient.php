@@ -48,8 +48,7 @@ This API is used to enable the cloud slicing feature, completing audio and video
 This API is used to achieve the following goals:
 * This API is used to specify the slicing parameter (SliceParams) to define the blocklist or allowlist of the anchors that require slicing.
 * This API is used to specify the storage parameter (SliceStorageParams) to specify the cloud storage you want to upload to. Currently, Tencent Cloud Object Storage (COS) and third-party AWS are supported.
- * @method Models\CreateCloudTranscriptionResponse CreateCloudTranscription(Models\CreateCloudTranscriptionRequest $req) API description:
-Enable the cloud transcription feature.
+ * @method Models\CreateCloudTranscriptionResponse CreateCloudTranscription(Models\CreateCloudTranscriptionRequest $req) API description: Enable the cloud transcription feature.
  * @method Models\DeleteCloudModerationResponse DeleteCloudModeration(Models\DeleteCloudModerationRequest $req) This API is used to stop submission for moderation after the cloud moderation task is successfully started.
  * @method Models\DeleteCloudRecordingResponse DeleteCloudRecording(Models\DeleteCloudRecordingRequest $req) This API is used to stop a recording task. If a task is stopped successfully, but the uploading of recording files has not completed, the backend will continue to upload the files and will notify you via a callback when the upload is completed.
  * @method Models\DeleteCloudSliceTaskResponse DeleteCloudSliceTask(Models\DeleteCloudSliceTaskRequest $req) This API is used to stop the slicing task after it is started. Successfully stopping the slicing does not mean that all files are fully transmitted; if the transmission is not completed, the backend will continue to upload files. After the upload is successful, a notification is sent to the customer, prompting that all files have been transmitted, through the event callback.
@@ -149,11 +148,16 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
  * @method Models\StartAIConversationResponse StartAIConversation(Models\StartAIConversationRequest $req) Start an AI conversation task. The AI Channel Robot joins the TRTC room and performs AI dialogue with specified members inside the room. Suitable for smart customer service, AI spoken language teacher, and other scenarios.
 
 The TRTC AI dialogue function has built-in speech-to-text capability and provides both Channel Service, allowing customers to flexibly designate third-party AI model (LLM) services and Text-to-Audio (TTS) services.
- * @method Models\StartAITranscriptionResponse StartAITranscription(Models\StartAITranscriptionRequest $req) Initiate the transcription bot. The backend will pull the stream through the bot to perform real-time speech recognition and deliver subtitles and transcription messages. The transcription bot supports two stream pulling modes, controlled by the `TranscriptionMode` field:
-- Pull the stream of the entire room.
-- Pull the stream of a specific user.
+ * @method Models\StartAITranscriptionResponse StartAITranscription(Models\StartAITranscriptionRequest $req) Start up the transcription bot. The backend will pass the robot stream pulling to perform real-time speech recognition and deliver subtitles and transcription messages.
+The transcription bot supports two stream pulling methods, controlled by the TranscriptionMode field.
+- Pull the stream of all players in the room.
+- Pull the stream for a specific user.
 
-The server delivers subtitles and transcription messages in real-time through TRTC's custom messages, with `CmdId` fixed at 1. The client only needs to listen for the callback of custom messages. For example, see the [C++ callback](https://cloud.tencent.com/document/product/647/79637#4cd82f4edb24992a15a25187089e1565). Other clients, such as Android, Web, etc., can also be found at the same link.
+The server delivers subtitles and transcription messages in real time through TRTC custom messages, with CmdId fixed to 1. Clients just need to listen to the custom message callback, such as the C++ callback (https://www.tencentcloud.com/document/product/647/79637?from_cn_redirect=1#4cd82f4edb24992a15a25187089e1565). Other clients such as Android and Web can likewise find it at the same link.
+
+
+**Note:**
+When TranscriptionMode is 0, ensure only one task is initiated in a room. If multiple tasks are initiated, robots will subscribe with each other. Unless the task is stopped proactively, it will timeout exit after 10 hours. In such cases, it is advisable to fill in SessionId to ensure subsequent repeated task failures.
  * @method Models\StartPublishCdnStreamResponse StartPublishCdnStream(Models\StartPublishCdnStreamRequest $req) API description:.  
 Start a mixed stream forwarding task to mix multiple audio and video streams in a TRTC room into one media stream, transcode it, and push it to live stream CDN or back to the TRTC room. It also supports directly forwarding a single stream from the TRTC room without transcoding. After startup successful, it will return a task ID (TaskId) unique to the SdkAppid dimension. You need to save this TaskId, as it will be relied on to update and end the task subsequently. 
 
@@ -171,10 +175,13 @@ Because parameter or API logic issues will return immediate results. For page is
 You can create a relay task before the anchor enters the room. When the relay task is finished, you need to call the stop interface actively. If you do not call the Stop Relay Task Interface, Tencent Cloud will automatically stop the mix relay task when all users participating in the mix have no data uploaded for a period of time exceeding the timeout (AgentParams.MaxIdleTime) set when starting the relay task.
  * @method Models\StopStreamIngestResponse StopStreamIngest(Models\StopStreamIngestRequest $req) Stop a Pull stream Relay task.
  * @method Models\StopWebRecordResponse StopWebRecord(Models\StopWebRecordRequest $req) Stop an web-page recording task
+ * @method Models\TextToSpeechResponse TextToSpeech(Models\TextToSpeechRequest $req) This API is used to perform text to speech.
+ * @method Models\TextToSpeechSSEResponse TextToSpeechSSE(Models\TextToSpeechSSERequest $req) This API is used to stream text-to-speech.
  * @method Models\UpdateAIConversationResponse UpdateAIConversation(Models\UpdateAIConversationRequest $req) Update AI conversation task parameters
  * @method Models\UpdatePublishCdnStreamResponse UpdatePublishCdnStream(Models\UpdatePublishCdnStreamRequest $req) This API is used to change the parameters of a relaying task.
 Note: For details about how to use this API, see the `StartPublishCdnStream` document.
  * @method Models\UpdateStreamIngestResponse UpdateStreamIngest(Models\UpdateStreamIngestRequest $req) You can update the StreamUrl of the Relay task.
+ * @method Models\VoiceCloneResponse VoiceClone(Models\VoiceCloneRequest $req) This API is used to clone sound.
  */
 
 class TrtcClient extends AbstractClient

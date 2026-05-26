@@ -18,23 +18,23 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Advertising analysis data overview
+ * Ad analysis data overview.
  *
- * @method AdvertDataOverview getOverviewData() Obtain Advertising overview
+ * @method AdvertDataOverview getOverviewData() Obtain Ad overview. 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOverviewData(AdvertDataOverview $OverviewData) Set Advertising overview
+ * @method void setOverviewData(AdvertDataOverview $OverviewData) Set Ad overview. 
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AnalysisAdvertOverview extends AbstractModel
 {
     /**
-     * @var AdvertDataOverview Advertising overview
+     * @var AdvertDataOverview Ad overview. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OverviewData;
 
     /**
-     * @param AdvertDataOverview $OverviewData Advertising overview
+     * @param AdvertDataOverview $OverviewData Ad overview. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

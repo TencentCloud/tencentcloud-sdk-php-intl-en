@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessMNPSensitiveAPIPermissionApproval request structure.
  *
- * @method string getApprovalNo() Obtain Approval ID
- * @method void setApprovalNo(string $ApprovalNo) Set Approval ID
- * @method integer getApprovalStatus() Obtain Approval status. 20: Rejected; 30: Approved
- * @method void setApprovalStatus(integer $ApprovalStatus) Set Approval status. 20: Rejected; 30: Approved
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getApprovalNote() Obtain Approval notes
- * @method void setApprovalNote(string $ApprovalNote) Set Approval notes
+ * @method string getApprovalNo() Obtain Approval number.
+ * @method void setApprovalNo(string $ApprovalNo) Set Approval number.
+ * @method integer getApprovalStatus() Obtain Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+ * @method void setApprovalStatus(integer $ApprovalStatus) Set Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method string getApprovalNote() Obtain Approval note.
+ * @method void setApprovalNote(string $ApprovalNote) Set Approval note.
  */
 class ProcessMNPSensitiveAPIPermissionApprovalRequest extends AbstractModel
 {
     /**
-     * @var string Approval ID
+     * @var string Approval number.
      */
     public $ApprovalNo;
 
     /**
-     * @var integer Approval status. 20: Rejected; 30: Approved
+     * @var integer Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
      */
     public $ApprovalStatus;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Approval notes
+     * @var string Approval note.
      */
     public $ApprovalNote;
 
     /**
-     * @param string $ApprovalNo Approval ID
-     * @param integer $ApprovalStatus Approval status. 20: Rejected; 30: Approved
-     * @param string $PlatformId Platform ID
-     * @param string $ApprovalNote Approval notes
+     * @param string $ApprovalNo Approval number.
+     * @param integer $ApprovalStatus Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+     * @param string $PlatformId Platform ID.
+     * @param string $ApprovalNote Approval note.
      */
     function __construct()
     {

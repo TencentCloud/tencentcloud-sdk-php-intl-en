@@ -18,35 +18,35 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Line chart data
+ * Line chart data.
  *
- * @method integer getDataTime() Obtain Year-month date data
+ * @method integer getDataTime() Obtain Date in YYYYMM format.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataTime(integer $DataTime) Set Year-month date data
+ * @method void setDataTime(integer $DataTime) Set Date in YYYYMM format.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMAUCount() Obtain MAU data
+ * @method string getMAUCount() Obtain MAU count. 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMAUCount(string $MAUCount) Set MAU data
+ * @method void setMAUCount(string $MAUCount) Set MAU count. 
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MAULineChartData extends AbstractModel
 {
     /**
-     * @var integer Year-month date data
+     * @var integer Date in YYYYMM format.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataTime;
 
     /**
-     * @var string MAU data
+     * @var string MAU count. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MAUCount;
 
     /**
-     * @param integer $DataTime Year-month date data
+     * @param integer $DataTime Date in YYYYMM format.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MAUCount MAU data
+     * @param string $MAUCount MAU count. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

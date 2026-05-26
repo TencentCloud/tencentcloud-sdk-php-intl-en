@@ -18,64 +18,60 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Page visit data
+ * Page visit data.
  *
- * @method integer getVisitCount() Obtain Number of visits
- * @method void setVisitCount(integer $VisitCount) Set Number of visits
- * @method string getAvgDeviceVisitDeep() Obtain Average pages per device - visit_page_count / active_device_num
- * @method void setAvgDeviceVisitDeep(string $AvgDeviceVisitDeep) Set Average pages per device - visit_page_count / active_device_num
- * @method string getAvgCountVisitDeep() Obtain Pages per visit - visit_page_count / miniapp_open_num
- * @method void setAvgCountVisitDeep(string $AvgCountVisitDeep) Set Pages per visit - visit_page_count / miniapp_open_num
- * @method string getAvgPageVisitDuration() Obtain Average visit duration - miniapp_total_duration / visit_page_count
- * @method void setAvgPageVisitDuration(string $AvgPageVisitDuration) Set Average visit duration - miniapp_total_duration / visit_page_count
- * @method string getAvgCountVisitDuration() Obtain Average visit duration per session
-miniapp_total_duration/miniapp_open_num
- * @method void setAvgCountVisitDuration(string $AvgCountVisitDuration) Set Average visit duration per session
-miniapp_total_duration/miniapp_open_num
- * @method integer getDataTime() Obtain Refresh time in YYYYMMDD format
- * @method void setDataTime(integer $DataTime) Set Refresh time in YYYYMMDD format
+ * @method integer getVisitCount() Obtain Number of visits.
+ * @method void setVisitCount(integer $VisitCount) Set Number of visits.
+ * @method string getAvgDeviceVisitDeep() Obtain Average pages viewed per device. Calculated as: visit_page_count / active_device_num.
+ * @method void setAvgDeviceVisitDeep(string $AvgDeviceVisitDeep) Set Average pages viewed per device. Calculated as: visit_page_count / active_device_num.
+ * @method string getAvgCountVisitDeep() Obtain Average pages viewed per session. Calculated as: visit_page_count / miniapp_open_num.
+ * @method void setAvgCountVisitDeep(string $AvgCountVisitDeep) Set Average pages viewed per session. Calculated as: visit_page_count / miniapp_open_num.
+ * @method string getAvgPageVisitDuration() Obtain Average page visit duration. Calculated as: miniapp_total_duration / visit_page_count.
+ * @method void setAvgPageVisitDuration(string $AvgPageVisitDuration) Set Average page visit duration. Calculated as: miniapp_total_duration / visit_page_count.
+ * @method string getAvgCountVisitDuration() Obtain Average visit duration per session. Calculated as: miniapp_total_duration / miniapp_open_num.
+ * @method void setAvgCountVisitDuration(string $AvgCountVisitDuration) Set Average visit duration per session. Calculated as: miniapp_total_duration / miniapp_open_num.
+ * @method integer getDataTime() Obtain Refresh time in YYYYMMDD format.
+ * @method void setDataTime(integer $DataTime) Set Refresh time in YYYYMMDD format.
  */
 class VisitData extends AbstractModel
 {
     /**
-     * @var integer Number of visits
+     * @var integer Number of visits.
      */
     public $VisitCount;
 
     /**
-     * @var string Average pages per device - visit_page_count / active_device_num
+     * @var string Average pages viewed per device. Calculated as: visit_page_count / active_device_num.
      */
     public $AvgDeviceVisitDeep;
 
     /**
-     * @var string Pages per visit - visit_page_count / miniapp_open_num
+     * @var string Average pages viewed per session. Calculated as: visit_page_count / miniapp_open_num.
      */
     public $AvgCountVisitDeep;
 
     /**
-     * @var string Average visit duration - miniapp_total_duration / visit_page_count
+     * @var string Average page visit duration. Calculated as: miniapp_total_duration / visit_page_count.
      */
     public $AvgPageVisitDuration;
 
     /**
-     * @var string Average visit duration per session
-miniapp_total_duration/miniapp_open_num
+     * @var string Average visit duration per session. Calculated as: miniapp_total_duration / miniapp_open_num.
      */
     public $AvgCountVisitDuration;
 
     /**
-     * @var integer Refresh time in YYYYMMDD format
+     * @var integer Refresh time in YYYYMMDD format.
      */
     public $DataTime;
 
     /**
-     * @param integer $VisitCount Number of visits
-     * @param string $AvgDeviceVisitDeep Average pages per device - visit_page_count / active_device_num
-     * @param string $AvgCountVisitDeep Pages per visit - visit_page_count / miniapp_open_num
-     * @param string $AvgPageVisitDuration Average visit duration - miniapp_total_duration / visit_page_count
-     * @param string $AvgCountVisitDuration Average visit duration per session
-miniapp_total_duration/miniapp_open_num
-     * @param integer $DataTime Refresh time in YYYYMMDD format
+     * @param integer $VisitCount Number of visits.
+     * @param string $AvgDeviceVisitDeep Average pages viewed per device. Calculated as: visit_page_count / active_device_num.
+     * @param string $AvgCountVisitDeep Average pages viewed per session. Calculated as: visit_page_count / miniapp_open_num.
+     * @param string $AvgPageVisitDuration Average page visit duration. Calculated as: miniapp_total_duration / visit_page_count.
+     * @param string $AvgCountVisitDuration Average visit duration per session. Calculated as: miniapp_total_duration / miniapp_open_num.
+     * @param integer $DataTime Refresh time in YYYYMMDD format.
      */
     function __construct()
     {

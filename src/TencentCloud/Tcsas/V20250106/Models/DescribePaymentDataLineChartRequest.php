@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePaymentDataLineChart request structure.
  *
- * @method string getPlatformId() Obtain Tenant ID
- * @method void setPlatformId(string $PlatformId) Set Tenant ID
- * @method string getReportId() Obtain Fixed value: payment_data_analysis
- * @method void setReportId(string $ReportId) Set Fixed value: payment_data_analysis
- * @method string getIndexId() Obtain IndexId (optional):
+ * @method string getPlatformId() Obtain Tenant ID.
+ * @method void setPlatformId(string $PlatformId) Set Tenant ID.
+ * @method string getReportId() Obtain Fixed value: payment_data_analysis.
+ * @method void setReportId(string $ReportId) Set Fixed value: payment_data_analysis.
+ * @method string getIndexId() Obtain Index ID (optional):
 order_user_num: Number of users placing orders
 order_num: Total orders
 total_amount: Total amount
@@ -33,8 +33,8 @@ unpaid_amount: Unpaid amount
 order_paid_num: Total paid orders
 paid_amount: Amount paid
 order_refund_num: Total refunded orders
-refund_amount: Total amount refunded
- * @method void setIndexId(string $IndexId) Set IndexId (optional):
+refund_amount: Total amount refunded.
+ * @method void setIndexId(string $IndexId) Set Index ID (optional):
 order_user_num: Number of users placing orders
 order_num: Total orders
 total_amount: Total amount
@@ -43,24 +43,24 @@ unpaid_amount: Unpaid amount
 order_paid_num: Total paid orders
 paid_amount: Amount paid
 order_refund_num: Total refunded orders
-refund_amount: Total amount refunded
- * @method string getQueryData() Obtain Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}
- * @method void setQueryData(string $QueryData) Set Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}
+refund_amount: Total amount refunded.
+ * @method string getQueryData() Obtain Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}.
+ * @method void setQueryData(string $QueryData) Set Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}.
  */
 class DescribePaymentDataLineChartRequest extends AbstractModel
 {
     /**
-     * @var string Tenant ID
+     * @var string Tenant ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Fixed value: payment_data_analysis
+     * @var string Fixed value: payment_data_analysis.
      */
     public $ReportId;
 
     /**
-     * @var string IndexId (optional):
+     * @var string Index ID (optional):
 order_user_num: Number of users placing orders
 order_num: Total orders
 total_amount: Total amount
@@ -69,19 +69,19 @@ unpaid_amount: Unpaid amount
 order_paid_num: Total paid orders
 paid_amount: Amount paid
 order_refund_num: Total refunded orders
-refund_amount: Total amount refunded
+refund_amount: Total amount refunded.
      */
     public $IndexId;
 
     /**
-     * @var string Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}
+     * @var string Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}.
      */
     public $QueryData;
 
     /**
-     * @param string $PlatformId Tenant ID
-     * @param string $ReportId Fixed value: payment_data_analysis
-     * @param string $IndexId IndexId (optional):
+     * @param string $PlatformId Tenant ID.
+     * @param string $ReportId Fixed value: payment_data_analysis.
+     * @param string $IndexId Index ID (optional):
 order_user_num: Number of users placing orders
 order_num: Total orders
 total_amount: Total amount
@@ -90,8 +90,8 @@ unpaid_amount: Unpaid amount
 order_paid_num: Total paid orders
 paid_amount: Amount paid
 order_refund_num: Total refunded orders
-refund_amount: Total amount refunded
-     * @param string $QueryData Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}
+refund_amount: Total amount refunded.
+     * @param string $QueryData Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}.
      */
     function __construct()
     {

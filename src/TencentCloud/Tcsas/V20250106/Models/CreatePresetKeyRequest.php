@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePresetKey request structure.
  *
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
  */
 class CreatePresetKeyRequest extends AbstractModel
 {
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @param string $PlatformId Platform ID
+     * @param string $PlatformId Platform ID.
      */
     function __construct()
     {

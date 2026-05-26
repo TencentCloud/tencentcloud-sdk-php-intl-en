@@ -18,20 +18,20 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response of creating a mini program version
+ * Response for creating a mini program version.
  *
- * @method string getTaskId() Obtain Specifies the ID of the task to create a mini program version.
- * @method void setTaskId(string $TaskId) Set Specifies the ID of the task to create a mini program version.
+ * @method string getTaskId() Obtain Mini program version compilation task ID.
+ * @method void setTaskId(string $TaskId) Set Mini program version compilation task ID.
  */
 class CreateMNPVersionResp extends AbstractModel
 {
     /**
-     * @var string Specifies the ID of the task to create a mini program version.
+     * @var string Mini program version compilation task ID.
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId Specifies the ID of the task to create a mini program version.
+     * @param string $TaskId Mini program version compilation task ID.
      */
     function __construct()
     {

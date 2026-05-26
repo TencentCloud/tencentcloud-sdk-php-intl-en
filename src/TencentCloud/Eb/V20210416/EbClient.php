@@ -43,7 +43,7 @@ use TencentCloud\Eb\V20210416\Models as Models;
  * @method Models\ListEventBusesResponse ListEventBuses(Models\ListEventBusesRequest $req) This API is used to get the list of event buses.
  * @method Models\ListRulesResponse ListRules(Models\ListRulesRequest $req) This API is used to get the list of event rules.
  * @method Models\ListTargetsResponse ListTargets(Models\ListTargetsRequest $req) This API is used to get the list delivery targets.
- * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) This API is used to query logs. 
+ * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) This API is used to query logs.
  * @method Models\UpdateConnectionResponse UpdateConnection(Models\UpdateConnectionRequest $req) This API is used to update an event connector.
  * @method Models\UpdateEventBusResponse UpdateEventBus(Models\UpdateEventBusRequest $req) This API is used to update an event bus.
  * @method Models\UpdateRuleResponse UpdateRule(Models\UpdateRuleRequest $req) This API is used to update an event rule.

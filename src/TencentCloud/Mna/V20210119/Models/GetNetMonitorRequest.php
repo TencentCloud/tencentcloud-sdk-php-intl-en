@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetNetMonitor request structure.
  *
- * @method string getDeviceId() Obtain Device ID
- * @method void setDeviceId(string $DeviceId) Set Device ID
- * @method integer getBeginTime() Obtain Start time.
- * @method void setBeginTime(integer $BeginTime) Set Start time.
- * @method integer getEndTime() Obtain End time.
- * @method void setEndTime(integer $EndTime) Set End time.
- * @method string getMetrics() Obtain Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet loss: "Loss": %, Latency: "RTT": ms)
- * @method void setMetrics(string $Metrics) Set Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet loss: "Loss": %, Latency: "RTT": ms)
- * @method integer getGatewayType() Obtain Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
- * @method void setGatewayType(integer $GatewayType) Set Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
+ * @method string getDeviceId() Obtain <p>device id</p>
+ * @method void setDeviceId(string $DeviceId) Set <p>device id</p>
+ * @method integer getBeginTime() Obtain <p>Start time.</p>
+ * @method void setBeginTime(integer $BeginTime) Set <p>Start time.</p>
+ * @method integer getEndTime() Obtain <p>End time.</p>
+ * @method void setEndTime(integer $EndTime) Set <p>End time.</p>
+ * @method string getMetrics() Obtain <p>Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet Loss: "Loss": %, Latency: "RTT": ms)</p>
+ * @method void setMetrics(string $Metrics) Set <p>Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet Loss: "Loss": %, Latency: "RTT": ms)</p>
+ * @method integer getGatewayType() Obtain <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not specified.</p>
+ * @method void setGatewayType(integer $GatewayType) Set <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not specified.</p>
  */
 class GetNetMonitorRequest extends AbstractModel
 {
     /**
-     * @var string Device ID
+     * @var string <p>device id</p>
      */
     public $DeviceId;
 
     /**
-     * @var integer Start time.
+     * @var integer <p>Start time.</p>
      */
     public $BeginTime;
 
     /**
-     * @var integer End time.
+     * @var integer <p>End time.</p>
      */
     public $EndTime;
 
     /**
-     * @var string Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet loss: "Loss": %, Latency: "RTT": ms)
+     * @var string <p>Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet Loss: "Loss": %, Latency: "RTT": ms)</p>
      */
     public $Metrics;
 
     /**
-     * @var integer Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
+     * @var integer <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not specified.</p>
      */
     public $GatewayType;
 
     /**
-     * @param string $DeviceId Device ID
-     * @param integer $BeginTime Start time.
-     * @param integer $EndTime End time.
-     * @param string $Metrics Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet loss: "Loss": %, Latency: "RTT": ms)
-     * @param integer $GatewayType Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
+     * @param string $DeviceId <p>device id</p>
+     * @param integer $BeginTime <p>Start time.</p>
+     * @param integer $EndTime <p>End time.</p>
+     * @param string $Metrics <p>Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet Loss: "Loss": %, Latency: "RTT": ms)</p>
+     * @param integer $GatewayType <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not specified.</p>
      */
     function __construct()
     {

@@ -18,59 +18,59 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Superapp data overview
+ * Superapp data overview.
  *
- * @method APPOverviewData getBaseData() Obtain No data available
+ * @method APPOverviewData getBaseData() Obtain No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBaseData(APPOverviewData $BaseData) Set No data available
+ * @method void setBaseData(APPOverviewData $BaseData) Set No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method APPOverviewData getOverview() Obtain Superapp overview summary data
+ * @method APPOverviewData getOverview() Obtain Superapp overview summary data.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOverview(APPOverviewData $Overview) Set Superapp overview summary data
+ * @method void setOverview(APPOverviewData $Overview) Set Superapp overview summary data.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method APPOverviewData getPageData() Obtain No data available
+ * @method APPOverviewData getPageData() Obtain No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPageData(APPOverviewData $PageData) Set No data available
+ * @method void setPageData(APPOverviewData $PageData) Set No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method APPOverviewData getPayment() Obtain No data available
+ * @method APPOverviewData getPayment() Obtain No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPayment(APPOverviewData $Payment) Set No data available
+ * @method void setPayment(APPOverviewData $Payment) Set No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class APPOverview extends AbstractModel
 {
     /**
-     * @var APPOverviewData No data available
+     * @var APPOverviewData No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BaseData;
 
     /**
-     * @var APPOverviewData Superapp overview summary data
+     * @var APPOverviewData Superapp overview summary data.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Overview;
 
     /**
-     * @var APPOverviewData No data available
+     * @var APPOverviewData No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PageData;
 
     /**
-     * @var APPOverviewData No data available
+     * @var APPOverviewData No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Payment;
 
     /**
-     * @param APPOverviewData $BaseData No data available
+     * @param APPOverviewData $BaseData No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param APPOverviewData $Overview Superapp overview summary data
+     * @param APPOverviewData $Overview Superapp overview summary data.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param APPOverviewData $PageData No data available
+     * @param APPOverviewData $PageData No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param APPOverviewData $Payment No data available
+     * @param APPOverviewData $Payment No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

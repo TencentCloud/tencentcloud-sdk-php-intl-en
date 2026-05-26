@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMNPCategory request structure.
  *
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
  */
 class DescribeMNPCategoryRequest extends AbstractModel
 {
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @param string $PlatformId Platform ID
+     * @param string $PlatformId Platform ID.
      */
     function __construct()
     {

@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMNG request structure.
  *
- * @method string getMNPType() Obtain <p>Mini game type</p>
- * @method void setMNPType(string $MNPType) Set <p>Mini game type</p>
- * @method string getMNPName() Obtain <p>Mini game name</p>
- * @method void setMNPName(string $MNPName) Set <p>Mini game name</p>
- * @method string getMNPIcon() Obtain <p>Mini game icon</p>
- * @method void setMNPIcon(string $MNPIcon) Set <p>Mini game icon</p>
- * @method string getMNPIntro() Obtain <p>Mini game introduction</p>
- * @method void setMNPIntro(string $MNPIntro) Set <p>Mini game introduction</p>
- * @method string getMNPDesc() Obtain <p>Mini game description</p>
- * @method void setMNPDesc(string $MNPDesc) Set <p>Mini game description</p>
- * @method string getPlatformId() Obtain <p>Platform ID</p>
- * @method void setPlatformId(string $PlatformId) Set <p>Platform ID</p>
- * @method string getTeamId() Obtain <p>Team ID</p>
- * @method void setTeamId(string $TeamId) Set <p>Team ID</p>
+ * @method string getMNPType() Obtain <p>Mini game category.</p>
+ * @method void setMNPType(string $MNPType) Set <p>Mini game category.</p>
+ * @method string getMNPName() Obtain <p>Mini game name.</p>
+ * @method void setMNPName(string $MNPName) Set <p>Mini game name.</p>
+ * @method string getMNPIcon() Obtain <p>Mini game icon.</p>
+ * @method void setMNPIcon(string $MNPIcon) Set <p>Mini game icon.</p>
+ * @method string getMNPIntro() Obtain <p>Mini game introduction.</p>
+ * @method void setMNPIntro(string $MNPIntro) Set <p>Mini game introduction.</p>
+ * @method string getMNPDesc() Obtain <p>Mini game description.</p>
+ * @method void setMNPDesc(string $MNPDesc) Set <p>Mini game description.</p>
+ * @method string getPlatformId() Obtain <p>Platform ID.</p>
+ * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
+ * @method string getTeamId() Obtain <p>Team ID.</p>
+ * @method void setTeamId(string $TeamId) Set <p>Team ID.</p>
+ * @method array getI18nList() Obtain <p>The mini game name and description in multiple languages.</p>
+ * @method void setI18nList(array $I18nList) Set <p>The mini game name and description in multiple languages.</p>
  */
 class CreateMNGRequest extends AbstractModel
 {
     /**
-     * @var string <p>Mini game type</p>
+     * @var string <p>Mini game category.</p>
      */
     public $MNPType;
 
     /**
-     * @var string <p>Mini game name</p>
+     * @var string <p>Mini game name.</p>
      */
     public $MNPName;
 
     /**
-     * @var string <p>Mini game icon</p>
+     * @var string <p>Mini game icon.</p>
      */
     public $MNPIcon;
 
     /**
-     * @var string <p>Mini game introduction</p>
+     * @var string <p>Mini game introduction.</p>
      */
     public $MNPIntro;
 
     /**
-     * @var string <p>Mini game description</p>
+     * @var string <p>Mini game description.</p>
      */
     public $MNPDesc;
 
     /**
-     * @var string <p>Platform ID</p>
+     * @var string <p>Platform ID.</p>
      */
     public $PlatformId;
 
     /**
-     * @var string <p>Team ID</p>
+     * @var string <p>Team ID.</p>
      */
     public $TeamId;
 
     /**
-     * @param string $MNPType <p>Mini game type</p>
-     * @param string $MNPName <p>Mini game name</p>
-     * @param string $MNPIcon <p>Mini game icon</p>
-     * @param string $MNPIntro <p>Mini game introduction</p>
-     * @param string $MNPDesc <p>Mini game description</p>
-     * @param string $PlatformId <p>Platform ID</p>
-     * @param string $TeamId <p>Team ID</p>
+     * @var array <p>The mini game name and description in multiple languages.</p>
+     */
+    public $I18nList;
+
+    /**
+     * @param string $MNPType <p>Mini game category.</p>
+     * @param string $MNPName <p>Mini game name.</p>
+     * @param string $MNPIcon <p>Mini game icon.</p>
+     * @param string $MNPIntro <p>Mini game introduction.</p>
+     * @param string $MNPDesc <p>Mini game description.</p>
+     * @param string $PlatformId <p>Platform ID.</p>
+     * @param string $TeamId <p>Team ID.</p>
+     * @param array $I18nList <p>The mini game name and description in multiple languages.</p>
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class CreateMNGRequest extends AbstractModel
 
         if (array_key_exists("TeamId",$param) and $param["TeamId"] !== null) {
             $this->TeamId = $param["TeamId"];
+        }
+
+        if (array_key_exists("I18nList",$param) and $param["I18nList"] !== null) {
+            $this->I18nList = [];
+            foreach ($param["I18nList"] as $key => $value){
+                $obj = new MNPI18NSyncDto();
+                $obj->deserialize($value);
+                array_push($this->I18nList, $obj);
+            }
         }
     }
 }

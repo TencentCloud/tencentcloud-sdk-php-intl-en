@@ -20,47 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstances request structure.
  *
- * @method array getFilters() Obtain Query using one or more filter criteria. Filter criteria currently supported include:
-db-instance-id: filter by instance ID (in string format)
-db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in string format)
-db-pay-mode: filter by instance billing mode (in string format)
-db-tag-key: filter by tag key (in string format)
-db-private-ip: filter by instance VPC IP (in string format)
+ * @method array getFilters() Obtain Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: Filter by instance ID, type string
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-project-id: Filter by project ID, type integer
+db-pay-mode: filter by instance billing mode (prepaid - prepayment; postpaid - postpayment). string type.
+db-tag-key: specifies the tag key to filter by (string type).
+db-private-ip: Filter by instance Private Cloud IP, type string
 db-public-address: filter by instance public network address (in string format)
- * @method void setFilters(array $Filters) Set Query using one or more filter criteria. Filter criteria currently supported include:
-db-instance-id: filter by instance ID (in string format)
-db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in string format)
-db-pay-mode: filter by instance billing mode (in string format)
-db-tag-key: filter by tag key (in string format)
-db-private-ip: filter by instance VPC IP (in string format)
+db-dedicated-cluster-id: Filter by private cluster Id, type string
+ * @method void setFilters(array $Filters) Set Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: Filter by instance ID, type string
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-project-id: Filter by project ID, type integer
+db-pay-mode: filter by instance billing mode (prepaid - prepayment; postpaid - postpayment). string type.
+db-tag-key: specifies the tag key to filter by (string type).
+db-private-ip: Filter by instance Private Cloud IP, type string
 db-public-address: filter by instance public network address (in string format)
- * @method integer getLimit() Obtain The maximum number of results returned per page. Value range: 1-100. Default: `10`.
- * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Value range: 1-100. Default: `10`.
+db-dedicated-cluster-id: Filter by private cluster Id, type string
+ * @method integer getLimit() Obtain Number of results displayed per page. value range: 0-100. input 0 to use the default configuration. default is 10.
+ * @method void setLimit(integer $Limit) Set Number of results displayed per page. value range: 0-100. input 0 to use the default configuration. default is 10.
  * @method integer getOffset() Obtain Data offset, which starts from 0.
  * @method void setOffset(integer $Offset) Set Data offset, which starts from 0.
- * @method string getOrderBy() Obtain Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
- * @method void setOrderBy(string $OrderBy) Set Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
- * @method string getOrderByType() Obtain Sorting order. Valid values: `asc` (ascending), `desc` (descending)
- * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+ * @method string getOrderBy() Obtain Specifies the sorting index, such as instance Name and creation time. supports DBInstanceId, CreateTime, Name, and EndTime. default value: CreateTime.
+ * @method void setOrderBy(string $OrderBy) Set Specifies the sorting index, such as instance Name and creation time. supports DBInstanceId, CreateTime, Name, and EndTime. default value: CreateTime.
+ * @method string getOrderByType() Obtain Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
+ * @method void setOrderByType(string $OrderByType) Set Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Query using one or more filter criteria. Filter criteria currently supported include:
-db-instance-id: filter by instance ID (in string format)
-db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in string format)
-db-pay-mode: filter by instance billing mode (in string format)
-db-tag-key: filter by tag key (in string format)
-db-private-ip: filter by instance VPC IP (in string format)
+     * @var array Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: Filter by instance ID, type string
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-project-id: Filter by project ID, type integer
+db-pay-mode: filter by instance billing mode (prepaid - prepayment; postpaid - postpayment). string type.
+db-tag-key: specifies the tag key to filter by (string type).
+db-private-ip: Filter by instance Private Cloud IP, type string
 db-public-address: filter by instance public network address (in string format)
+db-dedicated-cluster-id: Filter by private cluster Id, type string
      */
     public $Filters;
 
     /**
-     * @var integer The maximum number of results returned per page. Value range: 1-100. Default: `10`.
+     * @var integer Number of results displayed per page. value range: 0-100. input 0 to use the default configuration. default is 10.
      */
     public $Limit;
 
@@ -70,28 +73,29 @@ db-public-address: filter by instance public network address (in string format)
     public $Offset;
 
     /**
-     * @var string Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
+     * @var string Specifies the sorting index, such as instance Name and creation time. supports DBInstanceId, CreateTime, Name, and EndTime. default value: CreateTime.
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+     * @var string Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
      */
     public $OrderByType;
 
     /**
-     * @param array $Filters Query using one or more filter criteria. Filter criteria currently supported include:
-db-instance-id: filter by instance ID (in string format)
-db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in string format)
-db-pay-mode: filter by instance billing mode (in string format)
-db-tag-key: filter by tag key (in string format)
-db-private-ip: filter by instance VPC IP (in string format)
+     * @param array $Filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: Filter by instance ID, type string
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-project-id: Filter by project ID, type integer
+db-pay-mode: filter by instance billing mode (prepaid - prepayment; postpaid - postpayment). string type.
+db-tag-key: specifies the tag key to filter by (string type).
+db-private-ip: Filter by instance Private Cloud IP, type string
 db-public-address: filter by instance public network address (in string format)
-     * @param integer $Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`.
+db-dedicated-cluster-id: Filter by private cluster Id, type string
+     * @param integer $Limit Number of results displayed per page. value range: 0-100. input 0 to use the default configuration. default is 10.
      * @param integer $Offset Data offset, which starts from 0.
-     * @param string $OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
-     * @param string $OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+     * @param string $OrderBy Specifies the sorting index, such as instance Name and creation time. supports DBInstanceId, CreateTime, Name, and EndTime. default value: CreateTime.
+     * @param string $OrderByType Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
      */
     function __construct()
     {

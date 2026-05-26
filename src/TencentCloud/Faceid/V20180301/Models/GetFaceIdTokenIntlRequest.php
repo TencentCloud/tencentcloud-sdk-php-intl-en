@@ -20,142 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFaceIdTokenIntl request structure.
  *
- * @method string getCheckMode() Obtain The detection mode. Valid values:
-`liveness`: Liveness detection only.
-`compare`: Selfie Verification(liveness detection and face comparison).
-Default value: `liveness`.
- * @method void setCheckMode(string $CheckMode) Set The detection mode. Valid values:
-`liveness`: Liveness detection only.
-`compare`: Selfie Verification(liveness detection and face comparison).
-Default value: `liveness`.
- * @method string getSecureLevel() Obtain The verification security level. Valid values:
-`1`: Video-based liveness detection.
-`2`: Motion-based liveness detection.
-`3`: Reflection-based liveness detection.
-`4`: Motion- and reflection-based liveness detection.
-Default value: `4`.
- * @method void setSecureLevel(string $SecureLevel) Set The verification security level. Valid values:
-`1`: Video-based liveness detection.
-`2`: Motion-based liveness detection.
-`3`: Reflection-based liveness detection.
-`4`: Motion- and reflection-based liveness detection.
-Default value: `4`.
- * @method string getImage() Obtain The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
- * @method void setImage(string $Image) Set The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
- * @method string getExtra() Obtain The pass-through parameter, which can be omitted if there are no special requirements.
- * @method void setExtra(string $Extra) Set The pass-through parameter, which can be omitted if there are no special requirements.
- * @method string getActionList() Obtain This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
- * @method void setActionList(string $ActionList) Set This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
- * @method string getSdkVersion() Obtain BASIC: Basic version (Default).
-ENHANCE: Enhance version, enable additional output of device risk level field.
-PRO: Pro version, enable additional output of attack type fields.
-PLUS: Plus version, enable additional output of device risk level and attack type fields.
-Please contact us to access enhance version & plus version.	
- * @method void setSdkVersion(string $SdkVersion) Set BASIC: Basic version (Default).
-ENHANCE: Enhance version, enable additional output of device risk level field.
-PRO: Pro version, enable additional output of attack type fields.
-PLUS: Plus version, enable additional output of device risk level and attack type fields.
-Please contact us to access enhance version & plus version.	
+ * @method string getCheckMode() Obtain <p>Indicates the detection mode. Parameter values as follows:<br>"liveness": liveness detection only;<br>"compare": liveness detection + face comparison;<br>Default value: "liveness".</p>
+ * @method void setCheckMode(string $CheckMode) Set <p>Indicates the detection mode. Parameter values as follows:<br>"liveness": liveness detection only;<br>"compare": liveness detection + face comparison;<br>Default value: "liveness".</p>
+ * @method string getSecureLevel() Obtain <p>Indicates the security level of authentication. Security levels are divided into:<br>"1": silent liveness;<br>"2": action liveness detection;<br>"3": light liveness;<br>"4": action + light liveness;<br>Default value is "4".</p>
+**Note:** Security level increases from `1` to `4`, with `4` providing the highest security.
+ * @method void setSecureLevel(string $SecureLevel) Set <p>Indicates the security level of authentication. Security levels are divided into:<br>"1": silent liveness;<br>"2": action liveness detection;<br>"3": light liveness;<br>"4": action + light liveness;<br>Default value is "4".</p>
+**Note:** Security level increases from `1` to `4`, with `4` providing the highest security.
+ * @method string getImage() Obtain <p>The base64 code of the image for comparison, used for the "liveness comparison" mode. This parameter is required when CheckMode is "compare".</p>
+ * @method void setImage(string $Image) Set <p>The base64 code of the image for comparison, used for the "liveness comparison" mode. This parameter is required when CheckMode is "compare".</p>
+ * @method string getExtra() Obtain <p>This parameter is a business passthrough parameter and can be omitted unless otherwise needed.</p>
+ * @method void setExtra(string $Extra) Set <p>This parameter is a business passthrough parameter and can be omitted unless otherwise needed.</p>
+ * @method string getActionList() Obtain <p>This API is used to control the sequence of actions. The action types are as follows:<br>"blink"<br>"mouth"<br>"nod"<br>"shake"<br>Choose 1-2 actions from the four.<br>Single action example: "blink"<br>Multi-action example: "blink,mouth".<br>Default value is blink.<br>Input this parameter only when SecureLevel is 2 or 4 for different action types to take effect; otherwise, the API returns an error.</p>
+ * @method void setActionList(string $ActionList) Set <p>This API is used to control the sequence of actions. The action types are as follows:<br>"blink"<br>"mouth"<br>"nod"<br>"shake"<br>Choose 1-2 actions from the four.<br>Single action example: "blink"<br>Multi-action example: "blink,mouth".<br>Default value is blink.<br>Input this parameter only when SecureLevel is 2 or 4 for different action types to take effect; otherwise, the API returns an error.</p>
+ * @method string getSdkVersion() Obtain <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
+ * @method void setSdkVersion(string $SdkVersion) Set <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
+ * @method integer getRetryLimit() Obtain <p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
+ * @method void setRetryLimit(integer $RetryLimit) Set <p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
  */
 class GetFaceIdTokenIntlRequest extends AbstractModel
 {
     /**
-     * @var string The detection mode. Valid values:
-`liveness`: Liveness detection only.
-`compare`: Selfie Verification(liveness detection and face comparison).
-Default value: `liveness`.
+     * @var string <p>Indicates the detection mode. Parameter values as follows:<br>"liveness": liveness detection only;<br>"compare": liveness detection + face comparison;<br>Default value: "liveness".</p>
      */
     public $CheckMode;
 
     /**
-     * @var string The verification security level. Valid values:
-`1`: Video-based liveness detection.
-`2`: Motion-based liveness detection.
-`3`: Reflection-based liveness detection.
-`4`: Motion- and reflection-based liveness detection.
-Default value: `4`.
+     * @var string <p>Indicates the security level of authentication. Security levels are divided into:<br>"1": silent liveness;<br>"2": action liveness detection;<br>"3": light liveness;<br>"4": action + light liveness;<br>Default value is "4".</p>
+**Note:** Security level increases from `1` to `4`, with `4` providing the highest security.
      */
     public $SecureLevel;
 
     /**
-     * @var string The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
+     * @var string <p>The base64 code of the image for comparison, used for the "liveness comparison" mode. This parameter is required when CheckMode is "compare".</p>
      */
     public $Image;
 
     /**
-     * @var string The pass-through parameter, which can be omitted if there are no special requirements.
+     * @var string <p>This parameter is a business passthrough parameter and can be omitted unless otherwise needed.</p>
      */
     public $Extra;
 
     /**
-     * @var string This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+     * @var string <p>This API is used to control the sequence of actions. The action types are as follows:<br>"blink"<br>"mouth"<br>"nod"<br>"shake"<br>Choose 1-2 actions from the four.<br>Single action example: "blink"<br>Multi-action example: "blink,mouth".<br>Default value is blink.<br>Input this parameter only when SecureLevel is 2 or 4 for different action types to take effect; otherwise, the API returns an error.</p>
      */
     public $ActionList;
 
     /**
-     * @var string BASIC: Basic version (Default).
-ENHANCE: Enhance version, enable additional output of device risk level field.
-PRO: Pro version, enable additional output of attack type fields.
-PLUS: Plus version, enable additional output of device risk level and attack type fields.
-Please contact us to access enhance version & plus version.	
+     * @var string <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
      */
     public $SdkVersion;
 
     /**
-     * @param string $CheckMode The detection mode. Valid values:
-`liveness`: Liveness detection only.
-`compare`: Selfie Verification(liveness detection and face comparison).
-Default value: `liveness`.
-     * @param string $SecureLevel The verification security level. Valid values:
-`1`: Video-based liveness detection.
-`2`: Motion-based liveness detection.
-`3`: Reflection-based liveness detection.
-`4`: Motion- and reflection-based liveness detection.
-Default value: `4`.
-     * @param string $Image The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
-     * @param string $Extra The pass-through parameter, which can be omitted if there are no special requirements.
-     * @param string $ActionList This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
-     * @param string $SdkVersion BASIC: Basic version (Default).
-ENHANCE: Enhance version, enable additional output of device risk level field.
-PRO: Pro version, enable additional output of attack type fields.
-PLUS: Plus version, enable additional output of device risk level and attack type fields.
-Please contact us to access enhance version & plus version.	
+     * @var integer <p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
+     */
+    public $RetryLimit;
+
+    /**
+     * @param string $CheckMode <p>Indicates the detection mode. Parameter values as follows:<br>"liveness": liveness detection only;<br>"compare": liveness detection + face comparison;<br>Default value: "liveness".</p>
+     * @param string $SecureLevel <p>Indicates the security level of authentication. Security levels are divided into:<br>"1": silent liveness;<br>"2": action liveness detection;<br>"3": light liveness;<br>"4": action + light liveness;<br>Default value is "4".</p>
+**Note:** Security level increases from `1` to `4`, with `4` providing the highest security.
+     * @param string $Image <p>The base64 code of the image for comparison, used for the "liveness comparison" mode. This parameter is required when CheckMode is "compare".</p>
+     * @param string $Extra <p>This parameter is a business passthrough parameter and can be omitted unless otherwise needed.</p>
+     * @param string $ActionList <p>This API is used to control the sequence of actions. The action types are as follows:<br>"blink"<br>"mouth"<br>"nod"<br>"shake"<br>Choose 1-2 actions from the four.<br>Single action example: "blink"<br>Multi-action example: "blink,mouth".<br>Default value is blink.<br>Input this parameter only when SecureLevel is 2 or 4 for different action types to take effect; otherwise, the API returns an error.</p>
+     * @param string $SdkVersion <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
+     * @param integer $RetryLimit <p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
      */
     function __construct()
     {
@@ -192,6 +120,10 @@ Please contact us to access enhance version & plus version.
 
         if (array_key_exists("SdkVersion",$param) and $param["SdkVersion"] !== null) {
             $this->SdkVersion = $param["SdkVersion"];
+        }
+
+        if (array_key_exists("RetryLimit",$param) and $param["RetryLimit"] !== null) {
+            $this->RetryLimit = $param["RetryLimit"];
         }
     }
 }

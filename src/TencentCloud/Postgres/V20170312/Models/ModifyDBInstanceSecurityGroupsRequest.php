@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceSecurityGroups request structure.
  *
- * @method array getSecurityGroupIdSet() Obtain The list of security groups to be associated with the instance or RO groups.
-Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
-
- * @method void setSecurityGroupIdSet(array $SecurityGroupIdSet) Set The list of security groups to be associated with the instance or RO groups.
-Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
-
- * @method string getDBInstanceId() Obtain Instance ID. Either this parameter or `ReadOnlyGroupId` must be passed in. If both parameters are passed in, `ReadOnlyGroupId` will be ignored.
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. Either this parameter or `ReadOnlyGroupId` must be passed in. If both parameters are passed in, `ReadOnlyGroupId` will be ignored.
- * @method string getReadOnlyGroupId() Obtain RO group ID. Either this parameter or `DBInstanceId` must be passed in. To modify  the security groups associated with the RO groups, only pass in `ReadOnlyGroupId`.
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set RO group ID. Either this parameter or `DBInstanceId` must be passed in. To modify  the security groups associated with the RO groups, only pass in `ReadOnlyGroupId`.
+ * @method array getSecurityGroupIdSet() Obtain Specifies the security group list to bind to the instance or read-only group.
+Security group information can be queried by calling the sgId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1).
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+ * @method void setSecurityGroupIdSet(array $SecurityGroupIdSet) Set Specifies the security group list to bind to the instance or read-only group.
+Security group information can be queried by calling the sgId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1).
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). specify either DBInstanceId or ReadOnlyGroupId. if both are provided, ReadOnlyGroupId is ignored.
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). specify either DBInstanceId or ReadOnlyGroupId. if both are provided, ReadOnlyGroupId is ignored.
+ * @method string getReadOnlyGroupId() Obtain ReadOnlyGroupId. specifies the read-only group ID, which can be obtained through the api [DescribeReadOnlyGroups](https://www.tencentcloud.com/document/product/409/39725). valid values: DBInstanceId and ReadOnlyGroupId (at least one is required). if you need to modify the associated security group of the read-only group, only ReadOnlyGroupId is required.
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set ReadOnlyGroupId. specifies the read-only group ID, which can be obtained through the api [DescribeReadOnlyGroups](https://www.tencentcloud.com/document/product/409/39725). valid values: DBInstanceId and ReadOnlyGroupId (at least one is required). if you need to modify the associated security group of the read-only group, only ReadOnlyGroupId is required.
  */
 class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var array The list of security groups to be associated with the instance or RO groups.
-Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
-
+     * @var array Specifies the security group list to bind to the instance or read-only group.
+Security group information can be queried by calling the sgId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1).
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
      */
     public $SecurityGroupIdSet;
 
     /**
-     * @var string Instance ID. Either this parameter or `ReadOnlyGroupId` must be passed in. If both parameters are passed in, `ReadOnlyGroupId` will be ignored.
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). specify either DBInstanceId or ReadOnlyGroupId. if both are provided, ReadOnlyGroupId is ignored.
      */
     public $DBInstanceId;
 
     /**
-     * @var string RO group ID. Either this parameter or `DBInstanceId` must be passed in. To modify  the security groups associated with the RO groups, only pass in `ReadOnlyGroupId`.
+     * @var string ReadOnlyGroupId. specifies the read-only group ID, which can be obtained through the api [DescribeReadOnlyGroups](https://www.tencentcloud.com/document/product/409/39725). valid values: DBInstanceId and ReadOnlyGroupId (at least one is required). if you need to modify the associated security group of the read-only group, only ReadOnlyGroupId is required.
      */
     public $ReadOnlyGroupId;
 
     /**
-     * @param array $SecurityGroupIdSet The list of security groups to be associated with the instance or RO groups.
-Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
-
-     * @param string $DBInstanceId Instance ID. Either this parameter or `ReadOnlyGroupId` must be passed in. If both parameters are passed in, `ReadOnlyGroupId` will be ignored.
-     * @param string $ReadOnlyGroupId RO group ID. Either this parameter or `DBInstanceId` must be passed in. To modify  the security groups associated with the RO groups, only pass in `ReadOnlyGroupId`.
+     * @param array $SecurityGroupIdSet Specifies the security group list to bind to the instance or read-only group.
+Security group information can be queried by calling the sgId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1).
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). specify either DBInstanceId or ReadOnlyGroupId. if both are provided, ReadOnlyGroupId is ignored.
+     * @param string $ReadOnlyGroupId ReadOnlyGroupId. specifies the read-only group ID, which can be obtained through the api [DescribeReadOnlyGroups](https://www.tencentcloud.com/document/product/409/39725). valid values: DBInstanceId and ReadOnlyGroupId (at least one is required). if you need to modify the associated security group of the read-only group, only ReadOnlyGroupId is required.
      */
     function __construct()
     {

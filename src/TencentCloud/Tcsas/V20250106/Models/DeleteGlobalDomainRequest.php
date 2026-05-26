@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteGlobalDomain request structure.
  *
- * @method integer getDomainId() Obtain Domain ID
- * @method void setDomainId(integer $DomainId) Set Domain ID
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method integer getDomainId() Obtain Domain ID.
+ * @method void setDomainId(integer $DomainId) Set Domain ID.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
  */
 class DeleteGlobalDomainRequest extends AbstractModel
 {
     /**
-     * @var integer Domain ID
+     * @var integer Domain ID.
      */
     public $DomainId;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @param integer $DomainId Domain ID
-     * @param string $PlatformId Platform ID
+     * @param integer $DomainId Domain ID.
+     * @param string $PlatformId Platform ID.
      */
     function __construct()
     {

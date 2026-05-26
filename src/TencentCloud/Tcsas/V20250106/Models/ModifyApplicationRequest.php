@@ -20,85 +20,85 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApplication request structure.
  *
- * @method string getApplicationId() Obtain Application ID
- * @method void setApplicationId(string $ApplicationId) Set Application ID
- * @method string getApplicationName() Obtain Application name
- * @method void setApplicationName(string $ApplicationName) Set Application name
- * @method string getIntro() Obtain Application introduction
- * @method void setIntro(string $Intro) Set Application introduction
- * @method string getLogo() Obtain Icon
- * @method void setLogo(string $Logo) Set Icon
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getAndroidAppKey() Obtain Android app package name
- * @method void setAndroidAppKey(string $AndroidAppKey) Set Android app package name
- * @method string getIosAppKey() Obtain iOS App bundleId
- * @method void setIosAppKey(string $IosAppKey) Set iOS App bundleId
- * @method string getRemark() Obtain Remarks
- * @method void setRemark(string $Remark) Set Remarks
- * @method string getScheme() Obtain Scheme
- * @method void setScheme(string $Scheme) Set Scheme
+ * @method string getApplicationId() Obtain Superapp ID.
+ * @method void setApplicationId(string $ApplicationId) Set Superapp ID.
+ * @method string getApplicationName() Obtain Superapp name.
+ * @method void setApplicationName(string $ApplicationName) Set Superapp name.
+ * @method string getIntro() Obtain Superapp introduction.
+ * @method void setIntro(string $Intro) Set Superapp introduction.
+ * @method string getLogo() Obtain Superapp icon.
+ * @method void setLogo(string $Logo) Set Superapp icon.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method string getAndroidAppKey() Obtain Android app package name.
+ * @method void setAndroidAppKey(string $AndroidAppKey) Set Android app package name.
+ * @method string getIosAppKey() Obtain iOS app bundle ID.
+ * @method void setIosAppKey(string $IosAppKey) Set iOS app bundle ID.
+ * @method string getRemark() Obtain Remarks.
+ * @method void setRemark(string $Remark) Set Remarks.
+ * @method string getScheme() Obtain Scheme.
+ * @method void setScheme(string $Scheme) Set Scheme.
  */
 class ModifyApplicationRequest extends AbstractModel
 {
     /**
-     * @var string Application ID
+     * @var string Superapp ID.
      */
     public $ApplicationId;
 
     /**
-     * @var string Application name
+     * @var string Superapp name.
      */
     public $ApplicationName;
 
     /**
-     * @var string Application introduction
+     * @var string Superapp introduction.
      */
     public $Intro;
 
     /**
-     * @var string Icon
+     * @var string Superapp icon.
      */
     public $Logo;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Android app package name
+     * @var string Android app package name.
      * @deprecated
      */
     public $AndroidAppKey;
 
     /**
-     * @var string iOS App bundleId
+     * @var string iOS app bundle ID.
      * @deprecated
      */
     public $IosAppKey;
 
     /**
-     * @var string Remarks
+     * @var string Remarks.
      * @deprecated
      */
     public $Remark;
 
     /**
-     * @var string Scheme
+     * @var string Scheme.
      */
     public $Scheme;
 
     /**
-     * @param string $ApplicationId Application ID
-     * @param string $ApplicationName Application name
-     * @param string $Intro Application introduction
-     * @param string $Logo Icon
-     * @param string $PlatformId Platform ID
-     * @param string $AndroidAppKey Android app package name
-     * @param string $IosAppKey iOS App bundleId
-     * @param string $Remark Remarks
-     * @param string $Scheme Scheme
+     * @param string $ApplicationId Superapp ID.
+     * @param string $ApplicationName Superapp name.
+     * @param string $Intro Superapp introduction.
+     * @param string $Logo Superapp icon.
+     * @param string $PlatformId Platform ID.
+     * @param string $AndroidAppKey Android app package name.
+     * @param string $IosAppKey iOS app bundle ID.
+     * @param string $Remark Remarks.
+     * @param string $Scheme Scheme.
      */
     function __construct()
     {

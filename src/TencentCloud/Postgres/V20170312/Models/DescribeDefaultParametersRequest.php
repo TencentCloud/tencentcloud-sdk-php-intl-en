@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDefaultParameters request structure.
  *
- * @method string getDBMajorVersion() Obtain The major database version number, such as 11, 12, 13.
- * @method void setDBMajorVersion(string $DBMajorVersion) Set The major database version number, such as 11, 12, 13.
+ * @method string getDBMajorVersion() Obtain Database version. specifies the major version number, such as 11, 12, 13. can be obtained from the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
+ * @method void setDBMajorVersion(string $DBMajorVersion) Set Database version. specifies the major version number, such as 11, 12, 13. can be obtained from the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
  * @method string getDBEngine() Obtain Database engine, such as postgresql, mssql_compatible.
  * @method void setDBEngine(string $DBEngine) Set Database engine, such as postgresql, mssql_compatible.
  */
 class DescribeDefaultParametersRequest extends AbstractModel
 {
     /**
-     * @var string The major database version number, such as 11, 12, 13.
+     * @var string Database version. specifies the major version number, such as 11, 12, 13. can be obtained from the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
      */
     public $DBMajorVersion;
 
@@ -38,7 +38,7 @@ class DescribeDefaultParametersRequest extends AbstractModel
     public $DBEngine;
 
     /**
-     * @param string $DBMajorVersion The major database version number, such as 11, 12, 13.
+     * @param string $DBMajorVersion Database version. specifies the major version number, such as 11, 12, 13. can be obtained from the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
      * @param string $DBEngine Database engine, such as postgresql, mssql_compatible.
      */
     function __construct()

@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceName request structure.
  *
- * @method string getDBInstanceId() Obtain Database instance ID in the format of postgres-6fego161
- * @method void setDBInstanceId(string $DBInstanceId) Set Database instance ID in the format of postgres-6fego161
- * @method string getInstanceName() Obtain Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+ * @method string getDBInstanceId() Obtain Specifies the database instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Specifies the database instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method string getInstanceName() Obtain Instance name. only supports chinese, english, digits, "_", or "-" with length less than 60.
 
- * @method void setInstanceName(string $InstanceName) Set Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+ * @method void setInstanceName(string $InstanceName) Set Instance name. only supports chinese, english, digits, "_", or "-" with length less than 60.
  */
 class ModifyDBInstanceNameRequest extends AbstractModel
 {
     /**
-     * @var string Database instance ID in the format of postgres-6fego161
+     * @var string Specifies the database instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
     /**
-     * @var string Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+     * @var string Instance name. only supports chinese, english, digits, "_", or "-" with length less than 60.
 
      */
     public $InstanceName;
 
     /**
-     * @param string $DBInstanceId Database instance ID in the format of postgres-6fego161
-     * @param string $InstanceName Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+     * @param string $DBInstanceId Specifies the database instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param string $InstanceName Instance name. only supports chinese, english, digits, "_", or "-" with length less than 60.
      */
     function __construct()
     {

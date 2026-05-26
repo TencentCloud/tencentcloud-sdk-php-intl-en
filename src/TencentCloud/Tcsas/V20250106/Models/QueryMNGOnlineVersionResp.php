@@ -18,52 +18,52 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Queries the released mini game version ID
+ * Response for querying mini game released version IDs.
  *
- * @method string getMNPId() Obtain <p>Mini game appid</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini game appid</p>
- * @method string getMNPVersion() Obtain <p>Version number</p>
- * @method void setMNPVersion(string $MNPVersion) Set <p>Version number</p>
- * @method integer getMNPVersionId() Obtain <p>Version ID</p>
- * @method void setMNPVersionId(integer $MNPVersionId) Set <p>Version ID</p>
- * @method string getMNPVersionNote() Obtain <p>Version remarks</p>
- * @method void setMNPVersionNote(string $MNPVersionNote) Set <p>Version remarks</p>
- * @method string getUpdateTime() Obtain <p>Update time</p>
- * @method void setUpdateTime(string $UpdateTime) Set <p>Update time</p>
+ * @method string getMNPId() Obtain <p>Mini game appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini game appid.</p>
+ * @method string getMNPVersion() Obtain <p>Version number.</p>
+ * @method void setMNPVersion(string $MNPVersion) Set <p>Version number.</p>
+ * @method integer getMNPVersionId() Obtain <p>Version ID.</p>
+ * @method void setMNPVersionId(integer $MNPVersionId) Set <p>Version ID.</p>
+ * @method string getMNPVersionNote() Obtain <p>Version note.</p>
+ * @method void setMNPVersionNote(string $MNPVersionNote) Set <p>Version note.</p>
+ * @method string getUpdateTime() Obtain <p>Last modified time.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Last modified time.</p>
  */
 class QueryMNGOnlineVersionResp extends AbstractModel
 {
     /**
-     * @var string <p>Mini game appid</p>
+     * @var string <p>Mini game appid.</p>
      */
     public $MNPId;
 
     /**
-     * @var string <p>Version number</p>
+     * @var string <p>Version number.</p>
      */
     public $MNPVersion;
 
     /**
-     * @var integer <p>Version ID</p>
+     * @var integer <p>Version ID.</p>
      */
     public $MNPVersionId;
 
     /**
-     * @var string <p>Version remarks</p>
+     * @var string <p>Version note.</p>
      */
     public $MNPVersionNote;
 
     /**
-     * @var string <p>Update time</p>
+     * @var string <p>Last modified time.</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $MNPId <p>Mini game appid</p>
-     * @param string $MNPVersion <p>Version number</p>
-     * @param integer $MNPVersionId <p>Version ID</p>
-     * @param string $MNPVersionNote <p>Version remarks</p>
-     * @param string $UpdateTime <p>Update time</p>
+     * @param string $MNPId <p>Mini game appid.</p>
+     * @param string $MNPVersion <p>Version number.</p>
+     * @param integer $MNPVersionId <p>Version ID.</p>
+     * @param string $MNPVersionNote <p>Version note.</p>
+     * @param string $UpdateTime <p>Last modified time.</p>
      */
     function __construct()
     {

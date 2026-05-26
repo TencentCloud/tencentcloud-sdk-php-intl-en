@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SwitchDBInstancePrimary request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
- * @method boolean getForce() Obtain Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
-<li>Default: `false`.
- * @method void setForce(boolean $Force) Set Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
-<li>Default: `false`.
- * @method integer getSwitchTag() Obtain Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-<li>Default value: `0`. 
- * @method void setSwitchTag(integer $SwitchTag) Set Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-<li>Default value: `0`. 
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method boolean getForce() Obtain Whether to force a switch. forced switching initiates a switch as long as the secondary node is accessible, regardless of the primary/secondary delay. only when SwitchTag is 0 can you use switch immediately.
+<Li>Default: false</li>.
+ * @method void setForce(boolean $Force) Set Whether to force a switch. forced switching initiates a switch as long as the secondary node is accessible, regardless of the primary/secondary delay. only when SwitchTag is 0 can you use switch immediately.
+<Li>Default: false</li>.
+ * @method integer getSwitchTag() Obtain Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
+ * @method void setSwitchTag(integer $SwitchTag) Set Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
  * @method string getSwitchStartTime() Obtain The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00". This parameter is invalid when `SwitchTag` is `0` or `2`.
  * @method void setSwitchStartTime(string $SwitchStartTime) Set The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00". This parameter is invalid when `SwitchTag` is `0` or `2`.
  * @method string getSwitchEndTime() Obtain The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00". This parameter is invalid when `SwitchTag` is `0` or `2`. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
@@ -44,22 +44,22 @@ use TencentCloud\Common\AbstractModel;
 class SwitchDBInstancePrimaryRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
     /**
-     * @var boolean Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
-<li>Default: `false`.
+     * @var boolean Whether to force a switch. forced switching initiates a switch as long as the secondary node is accessible, regardless of the primary/secondary delay. only when SwitchTag is 0 can you use switch immediately.
+<Li>Default: false</li>.
      */
     public $Force;
 
     /**
-     * @var integer Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-<li>Default value: `0`. 
+     * @var integer Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
      */
     public $SwitchTag;
 
@@ -74,14 +74,14 @@ class SwitchDBInstancePrimaryRequest extends AbstractModel
     public $SwitchEndTime;
 
     /**
-     * @param string $DBInstanceId Instance ID
-     * @param boolean $Force Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
-<li>Default: `false`.
-     * @param integer $SwitchTag Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-<li>Default value: `0`. 
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param boolean $Force Whether to force a switch. forced switching initiates a switch as long as the secondary node is accessible, regardless of the primary/secondary delay. only when SwitchTag is 0 can you use switch immediately.
+<Li>Default: false</li>.
+     * @param integer $SwitchTag Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
      * @param string $SwitchStartTime The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00". This parameter is invalid when `SwitchTag` is `0` or `2`.
      * @param string $SwitchEndTime The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00". This parameter is invalid when `SwitchTag` is `0` or `2`. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
      */

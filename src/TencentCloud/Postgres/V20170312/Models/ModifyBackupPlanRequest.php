@@ -20,23 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBackupPlan request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  * @method string getMinBackupStartTime() Obtain The earliest time to start a backup
  * @method void setMinBackupStartTime(string $MinBackupStartTime) Set The earliest time to start a backup
  * @method string getMaxBackupStartTime() Obtain The latest time to start a backup
  * @method void setMaxBackupStartTime(string $MaxBackupStartTime) Set The latest time to start a backup
  * @method integer getBaseBackupRetentionPeriod() Obtain Backup retention period in days. Value range: 7-1830
  * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) Set Backup retention period in days. Value range: 7-1830
- * @method array getBackupPeriod() Obtain Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
- * @method void setBackupPeriod(array $BackupPeriod) Set Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
+ * @method array getBackupPeriod() Obtain Instance backup period. if by week, format is lowercase english word of week and set at least two days for backup. if by month, format is digits such as ["1","2"].
+ * @method void setBackupPeriod(array $BackupPeriod) Set Instance backup period. if by week, format is lowercase english word of week and set at least two days for backup. if by month, format is digits such as ["1","2"].
  * @method integer getLogBackupRetentionPeriod() Obtain Instance log backup retention duration, with a value range of 7-1830 and a unit of day
  * @method void setLogBackupRetentionPeriod(integer $LogBackupRetentionPeriod) Set Instance log backup retention duration, with a value range of 7-1830 and a unit of day
+ * @method string getPlanId() Obtain Backup plan ID. specifies which backup plan to modify. if left empty, the default backup plan will be modified.
+ * @method void setPlanId(string $PlanId) Set Backup plan ID. specifies which backup plan to modify. if left empty, the default backup plan will be modified.
+ * @method string getPlanName() Obtain Specifies the name of the backup plan to modify.
+ * @method void setPlanName(string $PlanName) Set Specifies the name of the backup plan to modify.
  */
 class ModifyBackupPlanRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
@@ -56,7 +60,7 @@ class ModifyBackupPlanRequest extends AbstractModel
     public $BaseBackupRetentionPeriod;
 
     /**
-     * @var array Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
+     * @var array Instance backup period. if by week, format is lowercase english word of week and set at least two days for backup. if by month, format is digits such as ["1","2"].
      */
     public $BackupPeriod;
 
@@ -66,12 +70,24 @@ class ModifyBackupPlanRequest extends AbstractModel
     public $LogBackupRetentionPeriod;
 
     /**
-     * @param string $DBInstanceId Instance ID
+     * @var string Backup plan ID. specifies which backup plan to modify. if left empty, the default backup plan will be modified.
+     */
+    public $PlanId;
+
+    /**
+     * @var string Specifies the name of the backup plan to modify.
+     */
+    public $PlanName;
+
+    /**
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      * @param string $MinBackupStartTime The earliest time to start a backup
      * @param string $MaxBackupStartTime The latest time to start a backup
      * @param integer $BaseBackupRetentionPeriod Backup retention period in days. Value range: 7-1830
-     * @param array $BackupPeriod Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
+     * @param array $BackupPeriod Instance backup period. if by week, format is lowercase english word of week and set at least two days for backup. if by month, format is digits such as ["1","2"].
      * @param integer $LogBackupRetentionPeriod Instance log backup retention duration, with a value range of 7-1830 and a unit of day
+     * @param string $PlanId Backup plan ID. specifies which backup plan to modify. if left empty, the default backup plan will be modified.
+     * @param string $PlanName Specifies the name of the backup plan to modify.
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class ModifyBackupPlanRequest extends AbstractModel
 
         if (array_key_exists("LogBackupRetentionPeriod",$param) and $param["LogBackupRetentionPeriod"] !== null) {
             $this->LogBackupRetentionPeriod = $param["LogBackupRetentionPeriod"];
+        }
+
+        if (array_key_exists("PlanId",$param) and $param["PlanId"] !== null) {
+            $this->PlanId = $param["PlanId"];
+        }
+
+        if (array_key_exists("PlanName",$param) and $param["PlanName"] !== null) {
+            $this->PlanName = $param["PlanName"];
         }
     }
 }

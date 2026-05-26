@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceHAConfig response structure.
  *
- * @method string getSyncMode() Obtain Primary-standby sync mode. Valid values:
-<li>`Semi-sync`
-<li>`Async`
- * @method void setSyncMode(string $SyncMode) Set Primary-standby sync mode. Valid values:
-<li>`Semi-sync`
-<li>`Async`
- * @method integer getMaxStandbyLatency() Obtain Maximum data lag for high-availability standby server. The standby node can be promoted to the primary node when its data lag and the delay time are both less than the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: byte
-<li>Value range: 1073741824-322122547200
- * @method void setMaxStandbyLatency(integer $MaxStandbyLatency) Set Maximum data lag for high-availability standby server. The standby node can be promoted to the primary node when its data lag and the delay time are both less than the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: byte
-<li>Value range: 1073741824-322122547200
- * @method integer getMaxStandbyLag() Obtain The maximum delay for high-availability standby server The standby node can be promoted to the primary node when its data lag and the delay time are both less than or equals to the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: s
-<li>Value range: 5-10
- * @method void setMaxStandbyLag(integer $MaxStandbyLag) Set The maximum delay for high-availability standby server The standby node can be promoted to the primary node when its data lag and the delay time are both less than or equals to the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: s
-<li>Value range: 5-10
+ * @method string getSyncMode() Obtain Primary-Standby sync mode.
+<Li>Semi-Sync: semi-sync</li>.
+<Li>Async: asynchronous</li>.
+ * @method void setSyncMode(string $SyncMode) Set Primary-Standby sync mode.
+<Li>Semi-Sync: semi-sync</li>.
+<Li>Async: asynchronous</li>.
+ * @method integer getMaxStandbyLatency() Obtain Specifies the maximum delayed data volume of the high-availability standby server. the backup node can switchover to the primary node when its latency data volume is less than or equal to this value and its delay time is less than or equal to MaxStandbyLag.
+<Li>Unit: byte</li>.
+<Li>Value range: [1073741824, 322122547200]</li>.
+ * @method void setMaxStandbyLatency(integer $MaxStandbyLatency) Set Specifies the maximum delayed data volume of the high-availability standby server. the backup node can switchover to the primary node when its latency data volume is less than or equal to this value and its delay time is less than or equal to MaxStandbyLag.
+<Li>Unit: byte</li>.
+<Li>Value range: [1073741824, 322122547200]</li>.
+ * @method integer getMaxStandbyLag() Obtain Maximum delay time of the high-availability standby server. the secondary node can be switched to the primary node when the backup node latency is less than or equal to this value and the delayed data volume is less than or equal to MaxStandbyLatency.
+<Li>Specifies the unit in seconds.</li>.
+<Li>Parameter range: [5, 10].</li>.
+ * @method void setMaxStandbyLag(integer $MaxStandbyLag) Set Maximum delay time of the high-availability standby server. the secondary node can be switched to the primary node when the backup node latency is less than or equal to this value and the delayed data volume is less than or equal to MaxStandbyLatency.
+<Li>Specifies the unit in seconds.</li>.
+<Li>Parameter range: [5, 10].</li>.
  * @method integer getMaxSyncStandbyLatency() Obtain Maximum data sync lag for standby server. If data lag of the standby node and the delay time are both less than or equals to the values of `MaxSyncStandbyLatency` and `MaxSyncStandbyLag` respectively, the standby server adopts semi-sync replication; if not, it adopts async replication.
 This value is only valid for the instance with `SyncMode` set to `Semi-sync`.
 This field returns null for async instance
@@ -64,23 +64,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class DescribeDBInstanceHAConfigResponse extends AbstractModel
 {
     /**
-     * @var string Primary-standby sync mode. Valid values:
-<li>`Semi-sync`
-<li>`Async`
+     * @var string Primary-Standby sync mode.
+<Li>Semi-Sync: semi-sync</li>.
+<Li>Async: asynchronous</li>.
      */
     public $SyncMode;
 
     /**
-     * @var integer Maximum data lag for high-availability standby server. The standby node can be promoted to the primary node when its data lag and the delay time are both less than the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: byte
-<li>Value range: 1073741824-322122547200
+     * @var integer Specifies the maximum delayed data volume of the high-availability standby server. the backup node can switchover to the primary node when its latency data volume is less than or equal to this value and its delay time is less than or equal to MaxStandbyLag.
+<Li>Unit: byte</li>.
+<Li>Value range: [1073741824, 322122547200]</li>.
      */
     public $MaxStandbyLatency;
 
     /**
-     * @var integer The maximum delay for high-availability standby server The standby node can be promoted to the primary node when its data lag and the delay time are both less than or equals to the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: s
-<li>Value range: 5-10
+     * @var integer Maximum delay time of the high-availability standby server. the secondary node can be switched to the primary node when the backup node latency is less than or equal to this value and the delayed data volume is less than or equal to MaxStandbyLatency.
+<Li>Specifies the unit in seconds.</li>.
+<Li>Parameter range: [5, 10].</li>.
      */
     public $MaxStandbyLag;
 
@@ -108,15 +108,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $SyncMode Primary-standby sync mode. Valid values:
-<li>`Semi-sync`
-<li>`Async`
-     * @param integer $MaxStandbyLatency Maximum data lag for high-availability standby server. The standby node can be promoted to the primary node when its data lag and the delay time are both less than the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: byte
-<li>Value range: 1073741824-322122547200
-     * @param integer $MaxStandbyLag The maximum delay for high-availability standby server The standby node can be promoted to the primary node when its data lag and the delay time are both less than or equals to the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: s
-<li>Value range: 5-10
+     * @param string $SyncMode Primary-Standby sync mode.
+<Li>Semi-Sync: semi-sync</li>.
+<Li>Async: asynchronous</li>.
+     * @param integer $MaxStandbyLatency Specifies the maximum delayed data volume of the high-availability standby server. the backup node can switchover to the primary node when its latency data volume is less than or equal to this value and its delay time is less than or equal to MaxStandbyLag.
+<Li>Unit: byte</li>.
+<Li>Value range: [1073741824, 322122547200]</li>.
+     * @param integer $MaxStandbyLag Maximum delay time of the high-availability standby server. the secondary node can be switched to the primary node when the backup node latency is less than or equal to this value and the delayed data volume is less than or equal to MaxStandbyLatency.
+<Li>Specifies the unit in seconds.</li>.
+<Li>Parameter range: [5, 10].</li>.
      * @param integer $MaxSyncStandbyLatency Maximum data sync lag for standby server. If data lag of the standby node and the delay time are both less than or equals to the values of `MaxSyncStandbyLatency` and `MaxSyncStandbyLag` respectively, the standby server adopts semi-sync replication; if not, it adopts async replication.
 This value is only valid for the instance with `SyncMode` set to `Semi-sync`.
 This field returns null for async instance

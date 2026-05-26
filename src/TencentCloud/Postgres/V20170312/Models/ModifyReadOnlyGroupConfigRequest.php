@@ -20,32 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyReadOnlyGroupConfig request structure.
  *
- * @method string getReadOnlyGroupId() Obtain RO group ID
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set RO group ID
- * @method string getReadOnlyGroupName() Obtain RO group name
- * @method void setReadOnlyGroupName(string $ReadOnlyGroupName) Set RO group name
+ * @method string getReadOnlyGroupId() Obtain Read-Only group ID.
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set Read-Only group ID.
+ * @method string getReadOnlyGroupName() Obtain Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
+ * @method void setReadOnlyGroupName(string $ReadOnlyGroupName) Set Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
  * @method integer getReplayLagEliminate() Obtain Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
  * @method void setReplayLagEliminate(integer $ReplayLagEliminate) Set Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
  * @method integer getReplayLatencyEliminate() Obtain Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
  * @method void setReplayLatencyEliminate(integer $ReplayLatencyEliminate) Set Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
- * @method integer getMaxReplayLatency() Obtain Delayed log size threshold in MB
- * @method void setMaxReplayLatency(integer $MaxReplayLatency) Set Delayed log size threshold in MB
- * @method integer getMaxReplayLag() Obtain Delay threshold in ms
- * @method void setMaxReplayLag(integer $MaxReplayLag) Set Delay threshold in ms
+ * @method integer getMaxReplayLatency() Obtain Delay log size threshold in MB. specifies a positive integer when enabling the delay log size configuration.
+ * @method void setMaxReplayLatency(integer $MaxReplayLatency) Set Delay log size threshold in MB. specifies a positive integer when enabling the delay log size configuration.
+ * @method integer getMaxReplayLag() Obtain Delay time size threshold, unit: s. when enabling the delay time configuration, manually input a positive integer.
+ * @method void setMaxReplayLag(integer $MaxReplayLag) Set Delay time size threshold, unit: s. when enabling the delay time configuration, manually input a positive integer.
  * @method integer getRebalance() Obtain Whether to enable automatic load balancing. Valid values: `0` (disable), `1` (enable).
  * @method void setRebalance(integer $Rebalance) Set Whether to enable automatic load balancing. Valid values: `0` (disable), `1` (enable).
- * @method integer getMinDelayEliminateReserve() Obtain The minimum number of read-only replicas that must be retained in an RO group
- * @method void setMinDelayEliminateReserve(integer $MinDelayEliminateReserve) Set The minimum number of read-only replicas that must be retained in an RO group
+ * @method integer getMinDelayEliminateReserve() Obtain Specifies the minimum number of instances to retain with delay removal. value range [0,100].
+ * @method void setMinDelayEliminateReserve(integer $MinDelayEliminateReserve) Set Specifies the minimum number of instances to retain with delay removal. value range [0,100].
  */
 class ModifyReadOnlyGroupConfigRequest extends AbstractModel
 {
     /**
-     * @var string RO group ID
+     * @var string Read-Only group ID.
      */
     public $ReadOnlyGroupId;
 
     /**
-     * @var string RO group name
+     * @var string Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
      */
     public $ReadOnlyGroupName;
 
@@ -60,12 +60,12 @@ class ModifyReadOnlyGroupConfigRequest extends AbstractModel
     public $ReplayLatencyEliminate;
 
     /**
-     * @var integer Delayed log size threshold in MB
+     * @var integer Delay log size threshold in MB. specifies a positive integer when enabling the delay log size configuration.
      */
     public $MaxReplayLatency;
 
     /**
-     * @var integer Delay threshold in ms
+     * @var integer Delay time size threshold, unit: s. when enabling the delay time configuration, manually input a positive integer.
      */
     public $MaxReplayLag;
 
@@ -75,19 +75,19 @@ class ModifyReadOnlyGroupConfigRequest extends AbstractModel
     public $Rebalance;
 
     /**
-     * @var integer The minimum number of read-only replicas that must be retained in an RO group
+     * @var integer Specifies the minimum number of instances to retain with delay removal. value range [0,100].
      */
     public $MinDelayEliminateReserve;
 
     /**
-     * @param string $ReadOnlyGroupId RO group ID
-     * @param string $ReadOnlyGroupName RO group name
+     * @param string $ReadOnlyGroupId Read-Only group ID.
+     * @param string $ReadOnlyGroupName Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
      * @param integer $ReplayLagEliminate Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
      * @param integer $ReplayLatencyEliminate Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-     * @param integer $MaxReplayLatency Delayed log size threshold in MB
-     * @param integer $MaxReplayLag Delay threshold in ms
+     * @param integer $MaxReplayLatency Delay log size threshold in MB. specifies a positive integer when enabling the delay log size configuration.
+     * @param integer $MaxReplayLag Delay time size threshold, unit: s. when enabling the delay time configuration, manually input a positive integer.
      * @param integer $Rebalance Whether to enable automatic load balancing. Valid values: `0` (disable), `1` (enable).
-     * @param integer $MinDelayEliminateReserve The minimum number of read-only replicas that must be retained in an RO group
+     * @param integer $MinDelayEliminateReserve Specifies the minimum number of instances to retain with delay removal. value range [0,100].
      */
     function __construct()
     {

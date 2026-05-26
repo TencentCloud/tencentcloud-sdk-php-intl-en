@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Docker container information
  *
+ * @method string getImage() Obtain For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
+ * @method void setImage(string $Image) Set For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
  * @method string getUser() Obtain Docker Hub username or Tencent Registry username
  * @method void setUser(string $User) Set Docker Hub username or Tencent Registry username
  * @method string getPassword() Obtain Docker Hub password or Tencent Registry password
  * @method void setPassword(string $Password) Set Docker Hub password or Tencent Registry password
- * @method string getImage() Obtain For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
- * @method void setImage(string $Image) Set For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
  * @method string getServer() Obtain For Docker Hub, this can be left blank, but please ensure public network access is present. For Tencent Registry, the server address is "ccr.ccs.tencentyun.com"
  * @method void setServer(string $Server) Set For Docker Hub, this can be left blank, but please ensure public network access is present. For Tencent Registry, the server address is "ccr.ccs.tencentyun.com"
  * @method integer getMaxRetryCount() Obtain Maximum retry attempts to load docket images. Range: 0 - 10. Default: `0`
@@ -40,6 +40,11 @@ Note: This field may return `null`, indicating that no valid value was found.
 class Docker extends AbstractModel
 {
     /**
+     * @var string For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
+     */
+    public $Image;
+
+    /**
      * @var string Docker Hub username or Tencent Registry username
      */
     public $User;
@@ -48,11 +53,6 @@ class Docker extends AbstractModel
      * @var string Docker Hub password or Tencent Registry password
      */
     public $Password;
-
-    /**
-     * @var string For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
-     */
-    public $Image;
 
     /**
      * @var string For Docker Hub, this can be left blank, but please ensure public network access is present. For Tencent Registry, the server address is "ccr.ccs.tencentyun.com"
@@ -76,9 +76,9 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $DockerRunOption;
 
     /**
+     * @param string $Image For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
      * @param string $User Docker Hub username or Tencent Registry username
      * @param string $Password Docker Hub password or Tencent Registry password
-     * @param string $Image For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
      * @param string $Server For Docker Hub, this can be left blank, but please ensure public network access is present. For Tencent Registry, the server address is "ccr.ccs.tencentyun.com"
      * @param integer $MaxRetryCount Maximum retry attempts to load docket images. Range: 0 - 10. Default: `0`
      * @param integer $DelayOnRetry Docker image loading timeout period (in seconds). Range: 1 - 360
@@ -98,16 +98,16 @@ Note: This field may return `null`, indicating that no valid value was found.
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
+            $this->Image = $param["Image"];
+        }
+
         if (array_key_exists("User",$param) and $param["User"] !== null) {
             $this->User = $param["User"];
         }
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
-        }
-
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
         }
 
         if (array_key_exists("Server",$param) and $param["Server"] !== null) {

@@ -18,20 +18,20 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Encryption key returned
+ * Response for obtaining the encryption key.
  *
- * @method string getKey() Obtain RSA encryption public key.
- * @method void setKey(string $Key) Set RSA encryption public key.
+ * @method string getKey() Obtain RSA public key.
+ * @method void setKey(string $Key) Set RSA public key.
  */
 class PresetResp extends AbstractModel
 {
     /**
-     * @var string RSA encryption public key.
+     * @var string RSA public key.
      */
     public $Key;
 
     /**
-     * @param string $Key RSA encryption public key.
+     * @param string $Key RSA public key.
      */
     function __construct()
     {

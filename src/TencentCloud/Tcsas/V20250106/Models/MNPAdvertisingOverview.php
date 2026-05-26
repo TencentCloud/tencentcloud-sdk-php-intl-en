@@ -18,23 +18,23 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mini program advertising revenue
+ * Mini program advertising revenue.
  *
- * @method MNPAdOverview getOverviewData() Obtain Data
+ * @method MNPAdOverview getOverviewData() Obtain Data.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOverviewData(MNPAdOverview $OverviewData) Set Data
+ * @method void setOverviewData(MNPAdOverview $OverviewData) Set Data.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MNPAdvertisingOverview extends AbstractModel
 {
     /**
-     * @var MNPAdOverview Data
+     * @var MNPAdOverview Data.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OverviewData;
 
     /**
-     * @param MNPAdOverview $OverviewData Data
+     * @param MNPAdOverview $OverviewData Data.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

@@ -18,23 +18,23 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Application configuration info
+ * Superapp configuration information.
  *
- * @method string getFile() Obtain Configuration information in Base64 format
+ * @method string getFile() Obtain Configuration information in Base64 encoding.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFile(string $File) Set Configuration information in Base64 format
+ * @method void setFile(string $File) Set Configuration information in Base64 encoding.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DownloadApplicationConfigResp extends AbstractModel
 {
     /**
-     * @var string Configuration information in Base64 format
+     * @var string Configuration information in Base64 encoding.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $File;
 
     /**
-     * @param string $File Configuration information in Base64 format
+     * @param string $File Configuration information in Base64 encoding.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

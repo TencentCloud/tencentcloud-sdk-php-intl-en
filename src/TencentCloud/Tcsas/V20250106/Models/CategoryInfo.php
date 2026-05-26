@@ -18,36 +18,36 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Category information
+ * Category information.
  *
- * @method string getID() Obtain Category ID
- * @method void setID(string $ID) Set Category ID
- * @method string getName() Obtain Category name
- * @method void setName(string $Name) Set Category name
- * @method array getSubItems() Obtain Subcategory information
- * @method void setSubItems(array $SubItems) Set Subcategory information
+ * @method string getID() Obtain Category ID.
+ * @method void setID(string $ID) Set Category ID.
+ * @method string getName() Obtain Category name.
+ * @method void setName(string $Name) Set Category name.
+ * @method array getSubItems() Obtain Subcategory information.
+ * @method void setSubItems(array $SubItems) Set Subcategory information.
  */
 class CategoryInfo extends AbstractModel
 {
     /**
-     * @var string Category ID
+     * @var string Category ID.
      */
     public $ID;
 
     /**
-     * @var string Category name
+     * @var string Category name.
      */
     public $Name;
 
     /**
-     * @var array Subcategory information
+     * @var array Subcategory information.
      */
     public $SubItems;
 
     /**
-     * @param string $ID Category ID
-     * @param string $Name Category name
-     * @param array $SubItems Subcategory information
+     * @param string $ID Category ID.
+     * @param string $Name Category name.
+     * @param array $SubItems Subcategory information.
      */
     function __construct()
     {

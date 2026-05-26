@@ -18,99 +18,99 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of permission requests to allow a mini program to call sensitive APIs
+ * List data for querying mini program sensitive API permission approvals.
  *
- * @method string getApprovalNo() Obtain Approval ID
- * @method void setApprovalNo(string $ApprovalNo) Set Approval ID
- * @method string getAPIId() Obtain Sensitive API ID
- * @method void setAPIId(string $APIId) Set Sensitive API ID
- * @method string getAPIName() Obtain API name
- * @method void setAPIName(string $APIName) Set API name
- * @method string getAPIMethod() Obtain API request method
- * @method void setAPIMethod(string $APIMethod) Set API request method
- * @method string getMNPId() Obtain Mini program ID
- * @method void setMNPId(string $MNPId) Set Mini program ID
- * @method string getMNPName() Obtain Mini program name
- * @method void setMNPName(string $MNPName) Set Mini program name
- * @method string getApplyUser() Obtain Applicant
- * @method void setApplyUser(string $ApplyUser) Set Applicant
- * @method string getApplyTime() Obtain Application time
- * @method void setApplyTime(string $ApplyTime) Set Application time
- * @method string getApplyNote() Obtain Application notes
- * @method void setApplyNote(string $ApplyNote) Set Application notes
- * @method integer getApprovalStatus() Obtain Approval status. 1: Processing; 20: Rejected; 30: Approved
- * @method void setApprovalStatus(integer $ApprovalStatus) Set Approval status. 1: Processing; 20: Rejected; 30: Approved
- * @method string getApprovalUser() Obtain Specifies the review user.
- * @method void setApprovalUser(string $ApprovalUser) Set Specifies the review user.
+ * @method string getApprovalNo() Obtain Approval number.
+ * @method void setApprovalNo(string $ApprovalNo) Set Approval number.
+ * @method string getAPIId() Obtain Sensitive API ID.
+ * @method void setAPIId(string $APIId) Set Sensitive API ID.
+ * @method string getAPIName() Obtain API name.
+ * @method void setAPIName(string $APIName) Set API name.
+ * @method string getAPIMethod() Obtain API method.
+ * @method void setAPIMethod(string $APIMethod) Set API method.
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method string getMNPName() Obtain Mini program name.
+ * @method void setMNPName(string $MNPName) Set Mini program name.
+ * @method string getApplyUser() Obtain Applicant.
+ * @method void setApplyUser(string $ApplyUser) Set Applicant.
+ * @method string getApplyTime() Obtain Application time.
+ * @method void setApplyTime(string $ApplyTime) Set Application time.
+ * @method string getApplyNote() Obtain Application note.
+ * @method void setApplyNote(string $ApplyNote) Set Application note.
+ * @method integer getApprovalStatus() Obtain Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+ * @method void setApprovalStatus(integer $ApprovalStatus) Set Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+ * @method string getApprovalUser() Obtain Approver.
+ * @method void setApprovalUser(string $ApprovalUser) Set Approver.
  * @method string getApprovalTime() Obtain Approval time.
  * @method void setApprovalTime(string $ApprovalTime) Set Approval time.
- * @method string getApprovalNote() Obtain Approval notes
- * @method void setApprovalNote(string $ApprovalNote) Set Approval notes
- * @method string getApplicationId() Obtain Application ID
- * @method void setApplicationId(string $ApplicationId) Set Application ID
- * @method string getApplicationName() Obtain Application name
- * @method void setApplicationName(string $ApplicationName) Set Application name
- * @method string getApplicationLogo() Obtain Specifies the application icon.
- * @method void setApplicationLogo(string $ApplicationLogo) Set Specifies the application icon.
- * @method integer getAPIType() Obtain API type. 1: system; 2: custom.
- * @method void setAPIType(integer $APIType) Set API type. 1: system; 2: custom.
+ * @method string getApprovalNote() Obtain Approval note.
+ * @method void setApprovalNote(string $ApprovalNote) Set Approval note.
+ * @method string getApplicationId() Obtain Superapp ID.
+ * @method void setApplicationId(string $ApplicationId) Set Superapp ID.
+ * @method string getApplicationName() Obtain Superapp name.
+ * @method void setApplicationName(string $ApplicationName) Set Superapp name.
+ * @method string getApplicationLogo() Obtain Superapp icon.
+ * @method void setApplicationLogo(string $ApplicationLogo) Set Superapp icon.
+ * @method integer getAPIType() Obtain API type. Valid values: 1: System; 2: Custom.
+ * @method void setAPIType(integer $APIType) Set API type. Valid values: 1: System; 2: Custom.
  * @method string getAPIDesc() Obtain API feature description.
  * @method void setAPIDesc(string $APIDesc) Set API feature description.
  */
 class DescribeMNPSensitiveAPIPermissionApprovalListData extends AbstractModel
 {
     /**
-     * @var string Approval ID
+     * @var string Approval number.
      */
     public $ApprovalNo;
 
     /**
-     * @var string Sensitive API ID
+     * @var string Sensitive API ID.
      */
     public $APIId;
 
     /**
-     * @var string API name
+     * @var string API name.
      */
     public $APIName;
 
     /**
-     * @var string API request method
+     * @var string API method.
      */
     public $APIMethod;
 
     /**
-     * @var string Mini program ID
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var string Mini program name
+     * @var string Mini program name.
      */
     public $MNPName;
 
     /**
-     * @var string Applicant
+     * @var string Applicant.
      */
     public $ApplyUser;
 
     /**
-     * @var string Application time
+     * @var string Application time.
      */
     public $ApplyTime;
 
     /**
-     * @var string Application notes
+     * @var string Application note.
      */
     public $ApplyNote;
 
     /**
-     * @var integer Approval status. 1: Processing; 20: Rejected; 30: Approved
+     * @var integer Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
      */
     public $ApprovalStatus;
 
     /**
-     * @var string Specifies the review user.
+     * @var string Approver.
      */
     public $ApprovalUser;
 
@@ -120,27 +120,27 @@ class DescribeMNPSensitiveAPIPermissionApprovalListData extends AbstractModel
     public $ApprovalTime;
 
     /**
-     * @var string Approval notes
+     * @var string Approval note.
      */
     public $ApprovalNote;
 
     /**
-     * @var string Application ID
+     * @var string Superapp ID.
      */
     public $ApplicationId;
 
     /**
-     * @var string Application name
+     * @var string Superapp name.
      */
     public $ApplicationName;
 
     /**
-     * @var string Specifies the application icon.
+     * @var string Superapp icon.
      */
     public $ApplicationLogo;
 
     /**
-     * @var integer API type. 1: system; 2: custom.
+     * @var integer API type. Valid values: 1: System; 2: Custom.
      */
     public $APIType;
 
@@ -150,23 +150,23 @@ class DescribeMNPSensitiveAPIPermissionApprovalListData extends AbstractModel
     public $APIDesc;
 
     /**
-     * @param string $ApprovalNo Approval ID
-     * @param string $APIId Sensitive API ID
-     * @param string $APIName API name
-     * @param string $APIMethod API request method
-     * @param string $MNPId Mini program ID
-     * @param string $MNPName Mini program name
-     * @param string $ApplyUser Applicant
-     * @param string $ApplyTime Application time
-     * @param string $ApplyNote Application notes
-     * @param integer $ApprovalStatus Approval status. 1: Processing; 20: Rejected; 30: Approved
-     * @param string $ApprovalUser Specifies the review user.
+     * @param string $ApprovalNo Approval number.
+     * @param string $APIId Sensitive API ID.
+     * @param string $APIName API name.
+     * @param string $APIMethod API method.
+     * @param string $MNPId Mini program appid.
+     * @param string $MNPName Mini program name.
+     * @param string $ApplyUser Applicant.
+     * @param string $ApplyTime Application time.
+     * @param string $ApplyNote Application note.
+     * @param integer $ApprovalStatus Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+     * @param string $ApprovalUser Approver.
      * @param string $ApprovalTime Approval time.
-     * @param string $ApprovalNote Approval notes
-     * @param string $ApplicationId Application ID
-     * @param string $ApplicationName Application name
-     * @param string $ApplicationLogo Specifies the application icon.
-     * @param integer $APIType API type. 1: system; 2: custom.
+     * @param string $ApprovalNote Approval note.
+     * @param string $ApplicationId Superapp ID.
+     * @param string $ApplicationName Superapp name.
+     * @param string $ApplicationLogo Superapp icon.
+     * @param integer $APIType API type. Valid values: 1: System; 2: Custom.
      * @param string $APIDesc API feature description.
      */
     function __construct()

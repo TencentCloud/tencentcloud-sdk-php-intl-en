@@ -18,92 +18,92 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Temporary key for file upload
+ * Temporary credentials for file upload.
  *
- * @method string getBucket() Obtain Bucket
+ * @method string getBucket() Obtain Storage bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBucket(string $Bucket) Set Bucket
+ * @method void setBucket(string $Bucket) Set Storage bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegion() Obtain Region
+ * @method string getRegion() Obtain Region.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Region
+ * @method void setRegion(string $Region) Set Region.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPath() Obtain Destination of upload
+ * @method string getPath() Obtain Upload path.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPath(string $Path) Set Destination of upload
+ * @method void setPath(string $Path) Set Upload path.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTempSecretId() Obtain Temporary secret ID
+ * @method string getTempSecretId() Obtain Temporary secret ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTempSecretId(string $TempSecretId) Set Temporary secret ID
+ * @method void setTempSecretId(string $TempSecretId) Set Temporary secret ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTempSecretKey() Obtain Temporary secret key
+ * @method string getTempSecretKey() Obtain Temporary secret key.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTempSecretKey(string $TempSecretKey) Set Temporary secret key
+ * @method void setTempSecretKey(string $TempSecretKey) Set Temporary secret key.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getToken() Obtain Token 
+ * @method string getToken() Obtain Token credential. 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setToken(string $Token) Set Token 
+ * @method void setToken(string $Token) Set Token credential. 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAccelerateEnable() Obtain Whether to enable global acceleration. Valid values: 0 (no), 1 (yes)
- * @method void setAccelerateEnable(integer $AccelerateEnable) Set Whether to enable global acceleration. Valid values: 0 (no), 1 (yes)
+ * @method integer getAccelerateEnable() Obtain Whether global acceleration is enabled. Valid values: 0: No; 1: Yes.
+ * @method void setAccelerateEnable(integer $AccelerateEnable) Set Whether global acceleration is enabled. Valid values: 0: No; 1: Yes.
  */
 class UploadFileTempSecret extends AbstractModel
 {
     /**
-     * @var string Bucket
+     * @var string Storage bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Bucket;
 
     /**
-     * @var string Region
+     * @var string Region.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Region;
 
     /**
-     * @var string Destination of upload
+     * @var string Upload path.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Path;
 
     /**
-     * @var string Temporary secret ID
+     * @var string Temporary secret ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TempSecretId;
 
     /**
-     * @var string Temporary secret key
+     * @var string Temporary secret key.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TempSecretKey;
 
     /**
-     * @var string Token 
+     * @var string Token credential. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Token;
 
     /**
-     * @var integer Whether to enable global acceleration. Valid values: 0 (no), 1 (yes)
+     * @var integer Whether global acceleration is enabled. Valid values: 0: No; 1: Yes.
      */
     public $AccelerateEnable;
 
     /**
-     * @param string $Bucket Bucket
+     * @param string $Bucket Storage bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Region Region
+     * @param string $Region Region.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Path Destination of upload
+     * @param string $Path Upload path.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TempSecretId Temporary secret ID
+     * @param string $TempSecretId Temporary secret ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TempSecretKey Temporary secret key
+     * @param string $TempSecretKey Temporary secret key.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Token Token 
+     * @param string $Token Token credential. 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AccelerateEnable Whether to enable global acceleration. Valid values: 0 (no), 1 (yes)
+     * @param integer $AccelerateEnable Whether global acceleration is enabled. Valid values: 0: No; 1: Yes.
      */
     function __construct()
     {

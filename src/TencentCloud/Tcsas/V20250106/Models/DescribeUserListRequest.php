@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserList request structure.
  *
- * @method integer getOffset() Obtain Page offset
- * @method void setOffset(integer $Offset) Set Page offset
- * @method integer getLimit() Obtain Number of results per page
- * @method void setLimit(integer $Limit) Set Number of results per page
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getKeyword() Obtain Keywords for search (username or account)
- * @method void setKeyword(string $Keyword) Set Keywords for search (username or account)
- * @method integer getAccountType() Obtain User account 1 - Super admin 2 - Platform admin 3 - Member
- * @method void setAccountType(integer $AccountType) Set User account 1 - Super admin 2 - Platform admin 3 - Member
- * @method string getTeamId() Obtain Team ID
- * @method void setTeamId(string $TeamId) Set Team ID
+ * @method integer getOffset() Obtain Pagination offset. 
+ * @method void setOffset(integer $Offset) Set Pagination offset. 
+ * @method integer getLimit() Obtain Number of entries per page.
+ * @method void setLimit(integer $Limit) Set Number of entries per page.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method string getKeyword() Obtain Search keyword (username or account).
+ * @method void setKeyword(string $Keyword) Set Search keyword (username or account).
+ * @method integer getAccountType() Obtain User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
+ * @method void setAccountType(integer $AccountType) Set User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
+ * @method string getTeamId() Obtain Team ID. If left empty, all teams are returned.
+ * @method void setTeamId(string $TeamId) Set Team ID. If left empty, all teams are returned.
  */
 class DescribeUserListRequest extends AbstractModel
 {
     /**
-     * @var integer Page offset
+     * @var integer Pagination offset. 
      */
     public $Offset;
 
     /**
-     * @var integer Number of results per page
+     * @var integer Number of entries per page.
      */
     public $Limit;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Keywords for search (username or account)
+     * @var string Search keyword (username or account).
      */
     public $Keyword;
 
     /**
-     * @var integer User account 1 - Super admin 2 - Platform admin 3 - Member
+     * @var integer User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
      */
     public $AccountType;
 
     /**
-     * @var string Team ID
+     * @var string Team ID. If left empty, all teams are returned.
      */
     public $TeamId;
 
     /**
-     * @param integer $Offset Page offset
-     * @param integer $Limit Number of results per page
-     * @param string $PlatformId Platform ID
-     * @param string $Keyword Keywords for search (username or account)
-     * @param integer $AccountType User account 1 - Super admin 2 - Platform admin 3 - Member
-     * @param string $TeamId Team ID
+     * @param integer $Offset Pagination offset. 
+     * @param integer $Limit Number of entries per page.
+     * @param string $PlatformId Platform ID.
+     * @param string $Keyword Search keyword (username or account).
+     * @param integer $AccountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
+     * @param string $TeamId Team ID. If left empty, all teams are returned.
      */
     function __construct()
     {

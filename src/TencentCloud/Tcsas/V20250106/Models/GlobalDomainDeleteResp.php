@@ -18,20 +18,20 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response of deleting a global domain name
+ * Response for deleting a global domain.
  *
- * @method boolean getResult() Obtain Result.
- * @method void setResult(boolean $Result) Set Result.
+ * @method boolean getResult() Obtain Operation result.
+ * @method void setResult(boolean $Result) Set Operation result.
  */
 class GlobalDomainDeleteResp extends AbstractModel
 {
     /**
-     * @var boolean Result.
+     * @var boolean Operation result.
      */
     public $Result;
 
     /**
-     * @param boolean $Result Result.
+     * @param boolean $Result Operation result.
      */
     function __construct()
     {

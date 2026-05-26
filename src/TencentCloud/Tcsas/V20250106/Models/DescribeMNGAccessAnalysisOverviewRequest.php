@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMNGAccessAnalysisOverview request structure.
  *
- * @method integer getTimeBegin() Obtain Start time
- * @method void setTimeBegin(integer $TimeBegin) Set Start time
- * @method string getMNPId() Obtain Mini program appid
- * @method void setMNPId(string $MNPId) Set Mini program appid
- * @method string getPlatformId() Obtain Tenant ID
- * @method void setPlatformId(string $PlatformId) Set Tenant ID
- * @method integer getTimeEnd() Obtain End time
- * @method void setTimeEnd(integer $TimeEnd) Set End time
- * @method integer getProdData() Obtain 1 Production data, 0 Non-production data
- * @method void setProdData(integer $ProdData) Set 1 Production data, 0 Non-production data
- * @method integer getPlatform() Obtain Operating system: 0 All, 2-Android, 3 iOS
- * @method void setPlatform(integer $Platform) Set Operating system: 0 All, 2-Android, 3 iOS
+ * @method integer getTimeBegin() Obtain Start time.
+ * @method void setTimeBegin(integer $TimeBegin) Set Start time.
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method string getPlatformId() Obtain Tenant ID.
+ * @method void setPlatformId(string $PlatformId) Set Tenant ID.
+ * @method integer getTimeEnd() Obtain End time.
+ * @method void setTimeEnd(integer $TimeEnd) Set End time.
+ * @method integer getProdData() Obtain Data type. Valid values: 0: Non-production data; 1: Production data.
+ * @method void setProdData(integer $ProdData) Set Data type. Valid values: 0: Non-production data; 1: Production data.
+ * @method integer getPlatform() Obtain Operating system. Valid values: 0: All; 2: Android; 3: iOS.
+ * @method void setPlatform(integer $Platform) Set Operating system. Valid values: 0: All; 2: Android; 3: iOS.
  */
 class DescribeMNGAccessAnalysisOverviewRequest extends AbstractModel
 {
     /**
-     * @var integer Start time
+     * @var integer Start time.
      */
     public $TimeBegin;
 
     /**
-     * @var string Mini program appid
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var string Tenant ID
+     * @var string Tenant ID.
      */
     public $PlatformId;
 
     /**
-     * @var integer End time
+     * @var integer End time.
      */
     public $TimeEnd;
 
     /**
-     * @var integer 1 Production data, 0 Non-production data
+     * @var integer Data type. Valid values: 0: Non-production data; 1: Production data.
      */
     public $ProdData;
 
     /**
-     * @var integer Operating system: 0 All, 2-Android, 3 iOS
+     * @var integer Operating system. Valid values: 0: All; 2: Android; 3: iOS.
      */
     public $Platform;
 
     /**
-     * @param integer $TimeBegin Start time
-     * @param string $MNPId Mini program appid
-     * @param string $PlatformId Tenant ID
-     * @param integer $TimeEnd End time
-     * @param integer $ProdData 1 Production data, 0 Non-production data
-     * @param integer $Platform Operating system: 0 All, 2-Android, 3 iOS
+     * @param integer $TimeBegin Start time.
+     * @param string $MNPId Mini program appid.
+     * @param string $PlatformId Tenant ID.
+     * @param integer $TimeEnd End time.
+     * @param integer $ProdData Data type. Valid values: 0: Non-production data; 1: Production data.
+     * @param integer $Platform Operating system. Valid values: 0: All; 2: Android; 3: iOS.
      */
     function __construct()
     {

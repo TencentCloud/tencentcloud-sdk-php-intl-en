@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Database instance specification
  *
- * @method string getSpecCode() Obtain Specification ID
- * @method void setSpecCode(string $SpecCode) Set Specification ID
- * @method integer getCPU() Obtain Number of CPU cores
- * @method void setCPU(integer $CPU) Set Number of CPU cores
- * @method integer getMemory() Obtain Memory size in MB
- * @method void setMemory(integer $Memory) Set Memory size in MB
- * @method integer getMaxStorage() Obtain Maximum storage capacity in GB supported by this specification
- * @method void setMaxStorage(integer $MaxStorage) Set Maximum storage capacity in GB supported by this specification
- * @method integer getMinStorage() Obtain Minimum storage capacity in GB supported by this specification
- * @method void setMinStorage(integer $MinStorage) Set Minimum storage capacity in GB supported by this specification
- * @method integer getQPS() Obtain Estimated QPS for this specification
- * @method void setQPS(integer $QPS) Set Estimated QPS for this specification
+ * @method string getSpecCode() Obtain <p>Specification ID.</p>
+ * @method void setSpecCode(string $SpecCode) Set <p>Specification ID.</p>
+ * @method integer getCPU() Obtain <p>CPU cores.</p>
+ * @method void setCPU(integer $CPU) Set <p>CPU cores.</p>
+ * @method integer getMemory() Obtain <p>Memory size, in MB.</p>
+ * @method void setMemory(integer $Memory) Set <p>Memory size, in MB.</p>
+ * @method integer getMaxStorage() Obtain <p>Maximum storage capacity supported by this specification, in GB.</p>
+ * @method void setMaxStorage(integer $MaxStorage) Set <p>Maximum storage capacity supported by this specification, in GB.</p>
+ * @method integer getMinStorage() Obtain <p>Minimum storage capacity supported by this specification, in GB.</p>
+ * @method void setMinStorage(integer $MinStorage) Set <p>Minimum storage capacity supported by this specification, in GB.</p>
+ * @method integer getQPS() Obtain <p>Estimated QPS of the specification.</p>
+ * @method void setQPS(integer $QPS) Set <p>Estimated QPS of the specification.</p>
  */
 class ClassInfo extends AbstractModel
 {
     /**
-     * @var string Specification ID
+     * @var string <p>Specification ID.</p>
      */
     public $SpecCode;
 
     /**
-     * @var integer Number of CPU cores
+     * @var integer <p>CPU cores.</p>
      */
     public $CPU;
 
     /**
-     * @var integer Memory size in MB
+     * @var integer <p>Memory size, in MB.</p>
      */
     public $Memory;
 
     /**
-     * @var integer Maximum storage capacity in GB supported by this specification
+     * @var integer <p>Maximum storage capacity supported by this specification, in GB.</p>
      */
     public $MaxStorage;
 
     /**
-     * @var integer Minimum storage capacity in GB supported by this specification
+     * @var integer <p>Minimum storage capacity supported by this specification, in GB.</p>
      */
     public $MinStorage;
 
     /**
-     * @var integer Estimated QPS for this specification
+     * @var integer <p>Estimated QPS of the specification.</p>
      */
     public $QPS;
 
     /**
-     * @param string $SpecCode Specification ID
-     * @param integer $CPU Number of CPU cores
-     * @param integer $Memory Memory size in MB
-     * @param integer $MaxStorage Maximum storage capacity in GB supported by this specification
-     * @param integer $MinStorage Minimum storage capacity in GB supported by this specification
-     * @param integer $QPS Estimated QPS for this specification
+     * @param string $SpecCode <p>Specification ID.</p>
+     * @param integer $CPU <p>CPU cores.</p>
+     * @param integer $Memory <p>Memory size, in MB.</p>
+     * @param integer $MaxStorage <p>Maximum storage capacity supported by this specification, in GB.</p>
+     * @param integer $MinStorage <p>Minimum storage capacity supported by this specification, in GB.</p>
+     * @param integer $QPS <p>Estimated QPS of the specification.</p>
      */
     function __construct()
     {

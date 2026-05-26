@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTeam request structure.
  *
- * @method string getTeamName() Obtain Team name
- * @method void setTeamName(string $TeamName) Set Team name
- * @method string getAdminUserId() Obtain Admin name
- * @method void setAdminUserId(string $AdminUserId) Set Admin name
- * @method array getTeamRoleTypeList() Obtain Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
- * @method void setTeamRoleTypeList(array $TeamRoleTypeList) Set Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
- * @method string getRemark() Obtain Remarks
- * @method void setRemark(string $Remark) Set Remarks
- * @method string getPlatformId() Obtain Platform ID, required for API call
- * @method void setPlatformId(string $PlatformId) Set Platform ID, required for API call
- * @method string getRelatedTeamId() Obtain Associated team ID
- * @method void setRelatedTeamId(string $RelatedTeamId) Set Associated team ID
+ * @method string getTeamName() Obtain Team name.
+ * @method void setTeamName(string $TeamName) Set Team name.
+ * @method string getAdminUserId() Obtain Admin name.
+ * @method void setAdminUserId(string $AdminUserId) Set Admin name.
+ * @method array getTeamRoleTypeList() Obtain Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
+ * @method void setTeamRoleTypeList(array $TeamRoleTypeList) Set Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
+ * @method string getRemark() Obtain Remark.
+ * @method void setRemark(string $Remark) Set Remark.
+ * @method string getPlatformId() Obtain Platform ID, required for API call.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID, required for API call.
+ * @method string getRelatedTeamId() Obtain Associated team ID.
+ * @method void setRelatedTeamId(string $RelatedTeamId) Set Associated team ID.
  */
 class CreateTeamRequest extends AbstractModel
 {
     /**
-     * @var string Team name
+     * @var string Team name.
      */
     public $TeamName;
 
     /**
-     * @var string Admin name
+     * @var string Admin name.
      */
     public $AdminUserId;
 
     /**
-     * @var array Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
+     * @var array Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
      */
     public $TeamRoleTypeList;
 
     /**
-     * @var string Remarks
+     * @var string Remark.
      */
     public $Remark;
 
     /**
-     * @var string Platform ID, required for API call
+     * @var string Platform ID, required for API call.
      */
     public $PlatformId;
 
     /**
-     * @var string Associated team ID
+     * @var string Associated team ID.
      */
     public $RelatedTeamId;
 
     /**
-     * @param string $TeamName Team name
-     * @param string $AdminUserId Admin name
-     * @param array $TeamRoleTypeList Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
-     * @param string $Remark Remarks
-     * @param string $PlatformId Platform ID, required for API call
-     * @param string $RelatedTeamId Associated team ID
+     * @param string $TeamName Team name.
+     * @param string $AdminUserId Admin name.
+     * @param array $TeamRoleTypeList Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
+     * @param string $Remark Remark.
+     * @param string $PlatformId Platform ID, required for API call.
+     * @param string $RelatedTeamId Associated team ID.
      */
     function __construct()
     {

@@ -18,23 +18,23 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The general parameter for resource ID returned for successful operations
+ * Unified ID data returned on successful operation.
  *
- * @method string getResourceId() Obtain The ID of the resource returned
+ * @method string getResourceId() Obtain Resource ID returned by the operation.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResourceId(string $ResourceId) Set The ID of the resource returned
+ * @method void setResourceId(string $ResourceId) Set Resource ID returned by the operation.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ResourceIdStringInfo extends AbstractModel
 {
     /**
-     * @var string The ID of the resource returned
+     * @var string Resource ID returned by the operation.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ResourceId;
 
     /**
-     * @param string $ResourceId The ID of the resource returned
+     * @param string $ResourceId Resource ID returned by the operation.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

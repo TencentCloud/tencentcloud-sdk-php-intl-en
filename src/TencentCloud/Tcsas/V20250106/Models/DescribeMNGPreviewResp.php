@@ -18,76 +18,76 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response object for querying the preview
+ * Response for querying the preview.
  *
- * @method string getMNPId() Obtain <p>Mini game appid</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini game appid</p>
- * @method string getMNPName() Obtain <p>Mini game name</p>
- * @method void setMNPName(string $MNPName) Set <p>Mini game name</p>
- * @method string getMNPDesc() Obtain <p>Mini game description</p>
- * @method void setMNPDesc(string $MNPDesc) Set <p>Mini game description</p>
- * @method string getMNPVersion() Obtain <p>Mini game version</p>
- * @method void setMNPVersion(string $MNPVersion) Set <p>Mini game version</p>
- * @method string getMNPVersionIntro() Obtain <p>Mini game version description</p>
- * @method void setMNPVersionIntro(string $MNPVersionIntro) Set <p>Mini game version description</p>
- * @method string getQRCodeUrl() Obtain <p>Mini game version QR code</p>
- * @method void setQRCodeUrl(string $QRCodeUrl) Set <p>Mini game version QR code</p>
- * @method string getPreviewEntrancePath() Obtain <p>Preview path</p>
- * @method void setPreviewEntrancePath(string $PreviewEntrancePath) Set <p>Preview path</p>
- * @method string getQRCodeContent() Obtain <p>Information encoded in the QR code</p>
- * @method void setQRCodeContent(string $QRCodeContent) Set <p>Information encoded in the QR code</p>
+ * @method string getMNPId() Obtain <p>Mini game appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini game appid.</p>
+ * @method string getMNPName() Obtain <p>Mini game name.</p>
+ * @method void setMNPName(string $MNPName) Set <p>Mini game name.</p>
+ * @method string getMNPDesc() Obtain <p>Mini game description.</p>
+ * @method void setMNPDesc(string $MNPDesc) Set <p>Mini game description.</p>
+ * @method string getMNPVersion() Obtain <p>Mini game version.</p>
+ * @method void setMNPVersion(string $MNPVersion) Set <p>Mini game version.</p>
+ * @method string getMNPVersionIntro() Obtain <p>Mini game version description.</p>
+ * @method void setMNPVersionIntro(string $MNPVersionIntro) Set <p>Mini game version description.</p>
+ * @method string getQRCodeUrl() Obtain <p>Mini game version QR code URL.</p>
+ * @method void setQRCodeUrl(string $QRCodeUrl) Set <p>Mini game version QR code URL.</p>
+ * @method string getPreviewEntrancePath() Obtain <p>Preview path.</p>
+ * @method void setPreviewEntrancePath(string $PreviewEntrancePath) Set <p>Preview path.</p>
+ * @method string getQRCodeContent() Obtain <p>Information encoded in the QR code.</p>
+ * @method void setQRCodeContent(string $QRCodeContent) Set <p>Information encoded in the QR code.</p>
  */
 class DescribeMNGPreviewResp extends AbstractModel
 {
     /**
-     * @var string <p>Mini game appid</p>
+     * @var string <p>Mini game appid.</p>
      */
     public $MNPId;
 
     /**
-     * @var string <p>Mini game name</p>
+     * @var string <p>Mini game name.</p>
      */
     public $MNPName;
 
     /**
-     * @var string <p>Mini game description</p>
+     * @var string <p>Mini game description.</p>
      */
     public $MNPDesc;
 
     /**
-     * @var string <p>Mini game version</p>
+     * @var string <p>Mini game version.</p>
      */
     public $MNPVersion;
 
     /**
-     * @var string <p>Mini game version description</p>
+     * @var string <p>Mini game version description.</p>
      */
     public $MNPVersionIntro;
 
     /**
-     * @var string <p>Mini game version QR code</p>
+     * @var string <p>Mini game version QR code URL.</p>
      */
     public $QRCodeUrl;
 
     /**
-     * @var string <p>Preview path</p>
+     * @var string <p>Preview path.</p>
      */
     public $PreviewEntrancePath;
 
     /**
-     * @var string <p>Information encoded in the QR code</p>
+     * @var string <p>Information encoded in the QR code.</p>
      */
     public $QRCodeContent;
 
     /**
-     * @param string $MNPId <p>Mini game appid</p>
-     * @param string $MNPName <p>Mini game name</p>
-     * @param string $MNPDesc <p>Mini game description</p>
-     * @param string $MNPVersion <p>Mini game version</p>
-     * @param string $MNPVersionIntro <p>Mini game version description</p>
-     * @param string $QRCodeUrl <p>Mini game version QR code</p>
-     * @param string $PreviewEntrancePath <p>Preview path</p>
-     * @param string $QRCodeContent <p>Information encoded in the QR code</p>
+     * @param string $MNPId <p>Mini game appid.</p>
+     * @param string $MNPName <p>Mini game name.</p>
+     * @param string $MNPDesc <p>Mini game description.</p>
+     * @param string $MNPVersion <p>Mini game version.</p>
+     * @param string $MNPVersionIntro <p>Mini game version description.</p>
+     * @param string $QRCodeUrl <p>Mini game version QR code URL.</p>
+     * @param string $PreviewEntrancePath <p>Preview path.</p>
+     * @param string $QRCodeContent <p>Information encoded in the QR code.</p>
      */
     function __construct()
     {

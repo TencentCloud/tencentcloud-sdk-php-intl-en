@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMNGActiveUserRealTimeStatistics request structure.
  *
- * @method string getMNPId() Obtain Mini program appid
- * @method void setMNPId(string $MNPId) Set Mini program appid
- * @method string getPlatformId() Obtain Tenant ID
- * @method void setPlatformId(string $PlatformId) Set Tenant ID
- * @method string getReportId() Obtain Fixed value: mnp_data_analysis
- * @method void setReportId(string $ReportId) Set Fixed value: mnp_data_analysis
- * @method string getIndexId() Obtain IndexId
- * @method void setIndexId(string $IndexId) Set IndexId
- * @method string getQueryData() Obtain Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}
- * @method void setQueryData(string $QueryData) Set Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method string getPlatformId() Obtain Tenant ID.
+ * @method void setPlatformId(string $PlatformId) Set Tenant ID.
+ * @method string getReportId() Obtain Fixed value: mnp_data_analysis.
+ * @method void setReportId(string $ReportId) Set Fixed value: mnp_data_analysis.
+ * @method string getIndexId() Obtain IndexId.
+ * @method void setIndexId(string $IndexId) Set IndexId.
+ * @method string getQueryData() Obtain Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}.
+ * @method void setQueryData(string $QueryData) Set Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}.
  */
 class DescribeMNGActiveUserRealTimeStatisticsRequest extends AbstractModel
 {
     /**
-     * @var string Mini program appid
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var string Tenant ID
+     * @var string Tenant ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Fixed value: mnp_data_analysis
+     * @var string Fixed value: mnp_data_analysis.
      */
     public $ReportId;
 
     /**
-     * @var string IndexId
+     * @var string IndexId.
      */
     public $IndexId;
 
     /**
-     * @var string Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}
+     * @var string Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}.
      */
     public $QueryData;
 
     /**
-     * @param string $MNPId Mini program appid
-     * @param string $PlatformId Tenant ID
-     * @param string $ReportId Fixed value: mnp_data_analysis
-     * @param string $IndexId IndexId
-     * @param string $QueryData Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}
+     * @param string $MNPId Mini program appid.
+     * @param string $PlatformId Tenant ID.
+     * @param string $ReportId Fixed value: mnp_data_analysis.
+     * @param string $IndexId IndexId.
+     * @param string $QueryData Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}.
      */
     function __construct()
     {

@@ -20,126 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Specification description
  *
- * @method string getSpecCode() Obtain Specification ID
- * @method void setSpecCode(string $SpecCode) Set Specification ID
- * @method string getVersion() Obtain PostgerSQL version number
- * @method void setVersion(string $Version) Set PostgerSQL version number
- * @method string getVersionName() Obtain Full version name corresponding to kernel number
- * @method void setVersionName(string $VersionName) Set Full version name corresponding to kernel number
- * @method integer getCpu() Obtain Number of CPU cores
- * @method void setCpu(integer $Cpu) Set Number of CPU cores
- * @method integer getMemory() Obtain Memory size in MB
- * @method void setMemory(integer $Memory) Set Memory size in MB
- * @method integer getMaxStorage() Obtain Maximum storage capacity in GB supported by this specification
- * @method void setMaxStorage(integer $MaxStorage) Set Maximum storage capacity in GB supported by this specification
- * @method integer getMinStorage() Obtain Minimum storage capacity in GB supported by this specification
- * @method void setMinStorage(integer $MinStorage) Set Minimum storage capacity in GB supported by this specification
- * @method integer getQps() Obtain Estimated QPS for this specification
- * @method void setQps(integer $Qps) Set Estimated QPS for this specification
- * @method integer getPid() Obtain (Disused)
- * @method void setPid(integer $Pid) Set (Disused)
- * @method string getType() Obtain Machine type
- * @method void setType(string $Type) Set Machine type
- * @method string getMajorVersion() Obtain PostgreSQL major version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setMajorVersion(string $MajorVersion) Set PostgreSQL major version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getKernelVersion() Obtain PostgreSQL kernel version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setKernelVersion(string $KernelVersion) Set PostgreSQL kernel version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getIsSupportTDE() Obtain Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setIsSupportTDE(integer $IsSupportTDE) Set Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getSpecCode() Obtain <p>Specification ID.</p>
+ * @method void setSpecCode(string $SpecCode) Set <p>Specification ID.</p>
+ * @method string getVersion() Obtain <p>PostgreSQL version number.</p>
+ * @method void setVersion(string $Version) Set <p>PostgreSQL version number.</p>
+ * @method string getVersionName() Obtain <p>Full version name of the kernel number.</p>
+ * @method void setVersionName(string $VersionName) Set <p>Full version name of the kernel number.</p>
+ * @method integer getCpu() Obtain <p>CPU cores.</p>
+ * @method void setCpu(integer $Cpu) Set <p>CPU cores.</p>
+ * @method integer getMemory() Obtain <p>Memory size, in MB.</p>
+ * @method void setMemory(integer $Memory) Set <p>Memory size, in MB.</p>
+ * @method integer getMaxStorage() Obtain <p>Maximum storage capacity supported by this specification, in GB.</p>
+ * @method void setMaxStorage(integer $MaxStorage) Set <p>Maximum storage capacity supported by this specification, in GB.</p>
+ * @method integer getMinStorage() Obtain <p>Minimum storage capacity supported by this specification, in GB.</p>
+ * @method void setMinStorage(integer $MinStorage) Set <p>Minimum storage capacity supported by this specification, in GB.</p>
+ * @method integer getQps() Obtain <p>Estimated QPS of the specification.</p>
+ * @method void setQps(integer $Qps) Set <p>Estimated QPS of the specification.</p>
+ * @method integer getPid() Obtain <p>[Deprecated field].</p>
+ * @method void setPid(integer $Pid) Set <p>[Deprecated field].</p>
+ * @method string getType() Obtain <p>Machine type.</p>
+ * @method void setType(string $Type) Set <p>Machine type.</p>
+ * @method string getMajorVersion() Obtain <p>PostgreSQL major version number.</p>
+ * @method void setMajorVersion(string $MajorVersion) Set <p>PostgreSQL major version number.</p>
+ * @method string getKernelVersion() Obtain <p>PostgreSQL kernel version number.</p>
+ * @method void setKernelVersion(string $KernelVersion) Set <p>PostgreSQL kernel version number.</p>
+ * @method integer getIsSupportTDE() Obtain <p>Indicates whether the TDE data encryption feature is supported. 0 - not supported. 1 - supported.</p>
+ * @method void setIsSupportTDE(integer $IsSupportTDE) Set <p>Indicates whether the TDE data encryption feature is supported. 0 - not supported. 1 - supported.</p>
  */
 class SpecItemInfo extends AbstractModel
 {
     /**
-     * @var string Specification ID
+     * @var string <p>Specification ID.</p>
      */
     public $SpecCode;
 
     /**
-     * @var string PostgerSQL version number
+     * @var string <p>PostgreSQL version number.</p>
      */
     public $Version;
 
     /**
-     * @var string Full version name corresponding to kernel number
+     * @var string <p>Full version name of the kernel number.</p>
      */
     public $VersionName;
 
     /**
-     * @var integer Number of CPU cores
+     * @var integer <p>CPU cores.</p>
      */
     public $Cpu;
 
     /**
-     * @var integer Memory size in MB
+     * @var integer <p>Memory size, in MB.</p>
      */
     public $Memory;
 
     /**
-     * @var integer Maximum storage capacity in GB supported by this specification
+     * @var integer <p>Maximum storage capacity supported by this specification, in GB.</p>
      */
     public $MaxStorage;
 
     /**
-     * @var integer Minimum storage capacity in GB supported by this specification
+     * @var integer <p>Minimum storage capacity supported by this specification, in GB.</p>
      */
     public $MinStorage;
 
     /**
-     * @var integer Estimated QPS for this specification
+     * @var integer <p>Estimated QPS of the specification.</p>
      */
     public $Qps;
 
     /**
-     * @var integer (Disused)
+     * @var integer <p>[Deprecated field].</p>
      */
     public $Pid;
 
     /**
-     * @var string Machine type
+     * @var string <p>Machine type.</p>
      */
     public $Type;
 
     /**
-     * @var string PostgreSQL major version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string <p>PostgreSQL major version number.</p>
      */
     public $MajorVersion;
 
     /**
-     * @var string PostgreSQL kernel version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string <p>PostgreSQL kernel version number.</p>
      */
     public $KernelVersion;
 
     /**
-     * @var integer Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer <p>Indicates whether the TDE data encryption feature is supported. 0 - not supported. 1 - supported.</p>
      */
     public $IsSupportTDE;
 
     /**
-     * @param string $SpecCode Specification ID
-     * @param string $Version PostgerSQL version number
-     * @param string $VersionName Full version name corresponding to kernel number
-     * @param integer $Cpu Number of CPU cores
-     * @param integer $Memory Memory size in MB
-     * @param integer $MaxStorage Maximum storage capacity in GB supported by this specification
-     * @param integer $MinStorage Minimum storage capacity in GB supported by this specification
-     * @param integer $Qps Estimated QPS for this specification
-     * @param integer $Pid (Disused)
-     * @param string $Type Machine type
-     * @param string $MajorVersion PostgreSQL major version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $KernelVersion PostgreSQL kernel version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $IsSupportTDE Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $SpecCode <p>Specification ID.</p>
+     * @param string $Version <p>PostgreSQL version number.</p>
+     * @param string $VersionName <p>Full version name of the kernel number.</p>
+     * @param integer $Cpu <p>CPU cores.</p>
+     * @param integer $Memory <p>Memory size, in MB.</p>
+     * @param integer $MaxStorage <p>Maximum storage capacity supported by this specification, in GB.</p>
+     * @param integer $MinStorage <p>Minimum storage capacity supported by this specification, in GB.</p>
+     * @param integer $Qps <p>Estimated QPS of the specification.</p>
+     * @param integer $Pid <p>[Deprecated field].</p>
+     * @param string $Type <p>Machine type.</p>
+     * @param string $MajorVersion <p>PostgreSQL major version number.</p>
+     * @param string $KernelVersion <p>PostgreSQL kernel version number.</p>
+     * @param integer $IsSupportTDE <p>Indicates whether the TDE data encryption feature is supported. 0 - not supported. 1 - supported.</p>
      */
     function __construct()
     {

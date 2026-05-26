@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteParameterTemplate request structure.
  *
- * @method string getTemplateId() Obtain Parameter template ID, which uniquely identifies the parameter template to be operated.
- * @method void setTemplateId(string $TemplateId) Set Parameter template ID, which uniquely identifies the parameter template to be operated.
+ * @method string getTemplateId() Obtain Specifies the parameter template ID, which uniquely identifies the parameter template to be operated. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/api/409/84067?from_cn_redirect=1).
+ * @method void setTemplateId(string $TemplateId) Set Specifies the parameter template ID, which uniquely identifies the parameter template to be operated. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/api/409/84067?from_cn_redirect=1).
  */
 class DeleteParameterTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Parameter template ID, which uniquely identifies the parameter template to be operated.
+     * @var string Specifies the parameter template ID, which uniquely identifies the parameter template to be operated. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/api/409/84067?from_cn_redirect=1).
      */
     public $TemplateId;
 
     /**
-     * @param string $TemplateId Parameter template ID, which uniquely identifies the parameter template to be operated.
+     * @param string $TemplateId Specifies the parameter template ID, which uniquely identifies the parameter template to be operated. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/api/409/84067?from_cn_redirect=1).
      */
     function __construct()
     {

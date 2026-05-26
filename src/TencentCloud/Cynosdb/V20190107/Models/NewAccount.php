@@ -18,14 +18,16 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The newly created x08 account
+ * Create account
  *
  * @method string getAccountName() Obtain Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
  * @method void setAccountName(string $AccountName) Set Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
- * @method string getAccountPassword() Obtain Password, which can contain 8-64 characters.
- * @method void setAccountPassword(string $AccountPassword) Set Password, which can contain 8-64 characters.
  * @method string getHost() Obtain Host
  * @method void setHost(string $Host) Set Host
+ * @method string getAccountPassword() Obtain Password, which can contain 8-64 characters.
+ * @method void setAccountPassword(string $AccountPassword) Set Password, which can contain 8-64 characters.
+ * @method integer getPasswordRotation() Obtain Whether password rotation is enabled (0: turn off; 1: turn on)
+ * @method void setPasswordRotation(integer $PasswordRotation) Set Whether password rotation is enabled (0: turn off; 1: turn on)
  * @method string getDescription() Obtain Description
  * @method void setDescription(string $Description) Set Description
  * @method integer getMaxUserConnections() Obtain Maximum number of user connections, which cannot be above 10,240.
@@ -39,14 +41,19 @@ class NewAccount extends AbstractModel
     public $AccountName;
 
     /**
+     * @var string Host
+     */
+    public $Host;
+
+    /**
      * @var string Password, which can contain 8-64 characters.
      */
     public $AccountPassword;
 
     /**
-     * @var string Host
+     * @var integer Whether password rotation is enabled (0: turn off; 1: turn on)
      */
-    public $Host;
+    public $PasswordRotation;
 
     /**
      * @var string Description
@@ -60,8 +67,9 @@ class NewAccount extends AbstractModel
 
     /**
      * @param string $AccountName Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
-     * @param string $AccountPassword Password, which can contain 8-64 characters.
      * @param string $Host Host
+     * @param string $AccountPassword Password, which can contain 8-64 characters.
+     * @param integer $PasswordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
      * @param string $Description Description
      * @param integer $MaxUserConnections Maximum number of user connections, which cannot be above 10,240.
      */
@@ -82,12 +90,16 @@ class NewAccount extends AbstractModel
             $this->AccountName = $param["AccountName"];
         }
 
+        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
+            $this->Host = $param["Host"];
+        }
+
         if (array_key_exists("AccountPassword",$param) and $param["AccountPassword"] !== null) {
             $this->AccountPassword = $param["AccountPassword"];
         }
 
-        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
-            $this->Host = $param["Host"];
+        if (array_key_exists("PasswordRotation",$param) and $param["PasswordRotation"] !== null) {
+            $this->PasswordRotation = $param["PasswordRotation"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

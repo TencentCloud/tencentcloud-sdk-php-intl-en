@@ -18,28 +18,28 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * New team member - Member information
+ * Member information for adding a team member.
  *
- * @method string getUserId() Obtain User ID
- * @method void setUserId(string $UserId) Set User ID
- * @method integer getUserRoleId() Obtain User role ID
- * @method void setUserRoleId(integer $UserRoleId) Set User role ID
+ * @method string getUserId() Obtain User ID.
+ * @method void setUserId(string $UserId) Set User ID.
+ * @method integer getUserRoleId() Obtain User role ID.
+ * @method void setUserRoleId(integer $UserRoleId) Set User role ID.
  */
 class CreateTeamMemberInfoReq extends AbstractModel
 {
     /**
-     * @var string User ID
+     * @var string User ID.
      */
     public $UserId;
 
     /**
-     * @var integer User role ID
+     * @var integer User role ID.
      */
     public $UserRoleId;
 
     /**
-     * @param string $UserId User ID
-     * @param integer $UserRoleId User role ID
+     * @param string $UserId User ID.
+     * @param integer $UserRoleId User role ID.
      */
     function __construct()
     {

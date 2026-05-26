@@ -18,44 +18,44 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The request to add a sensitive API
+ * Request object for creating a sensitive API.
  *
- * @method string getAPIName() Obtain <p>API name</p>
- * @method void setAPIName(string $APIName) Set <p>API name</p>
- * @method string getAPIDesc() Obtain <p>API description</p>
- * @method void setAPIDesc(string $APIDesc) Set <p>API description</p>
- * @method integer getAPIType() Obtain <p>API type. Valid values: 1: System; 2: Custom</p>
- * @method void setAPIType(integer $APIType) Set <p>API type. Valid values: 1: System; 2: Custom</p>
- * @method integer getUseScope() Obtain <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Universal</p>
- * @method void setUseScope(integer $UseScope) Set <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Universal</p>
+ * @method string getAPIName() Obtain <p>API name.</p>
+ * @method void setAPIName(string $APIName) Set <p>API name.</p>
+ * @method string getAPIDesc() Obtain <p>API description.</p>
+ * @method void setAPIDesc(string $APIDesc) Set <p>API description.</p>
+ * @method integer getAPIType() Obtain <p>API type. Valid values: 1: System; 2: Custom.</p>
+ * @method void setAPIType(integer $APIType) Set <p>API type. Valid values: 1: System; 2: Custom.</p>
+ * @method integer getUseScope() Obtain <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
+ * @method void setUseScope(integer $UseScope) Set <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
  */
 class CreateApplicationSensitiveAPIReq extends AbstractModel
 {
     /**
-     * @var string <p>API name</p>
+     * @var string <p>API name.</p>
      */
     public $APIName;
 
     /**
-     * @var string <p>API description</p>
+     * @var string <p>API description.</p>
      */
     public $APIDesc;
 
     /**
-     * @var integer <p>API type. Valid values: 1: System; 2: Custom</p>
+     * @var integer <p>API type. Valid values: 1: System; 2: Custom.</p>
      */
     public $APIType;
 
     /**
-     * @var integer <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Universal</p>
+     * @var integer <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
      */
     public $UseScope;
 
     /**
-     * @param string $APIName <p>API name</p>
-     * @param string $APIDesc <p>API description</p>
-     * @param integer $APIType <p>API type. Valid values: 1: System; 2: Custom</p>
-     * @param integer $UseScope <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Universal</p>
+     * @param string $APIName <p>API name.</p>
+     * @param string $APIDesc <p>API description.</p>
+     * @param integer $APIType <p>API type. Valid values: 1: System; 2: Custom.</p>
+     * @param integer $UseScope <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
      */
     function __construct()
     {

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMNGDomain request structure.
  *
- * @method string getMNPId() Obtain <p>Mini game appid</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini game appid</p>
- * @method string getPlatformId() Obtain <p>Platform ID</p>
- * @method void setPlatformId(string $PlatformId) Set <p>Platform ID</p>
- * @method array getDomain() Obtain <p>Domain list</p>
- * @method void setDomain(array $Domain) Set <p>Domain list</p>
+ * @method string getMNPId() Obtain <p>Mini game appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini game appid.</p>
+ * @method string getPlatformId() Obtain <p>Platform ID.</p>
+ * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
+ * @method array getDomain() Obtain <p>List of domains.</p>
+ * @method void setDomain(array $Domain) Set <p>List of domains.</p>
  */
 class ModifyMNGDomainRequest extends AbstractModel
 {
     /**
-     * @var string <p>Mini game appid</p>
+     * @var string <p>Mini game appid.</p>
      */
     public $MNPId;
 
     /**
-     * @var string <p>Platform ID</p>
+     * @var string <p>Platform ID.</p>
      */
     public $PlatformId;
 
     /**
-     * @var array <p>Domain list</p>
+     * @var array <p>List of domains.</p>
      */
     public $Domain;
 
     /**
-     * @param string $MNPId <p>Mini game appid</p>
-     * @param string $PlatformId <p>Platform ID</p>
-     * @param array $Domain <p>Domain list</p>
+     * @param string $MNPId <p>Mini game appid.</p>
+     * @param string $PlatformId <p>Platform ID.</p>
+     * @param array $Domain <p>List of domains.</p>
      */
     function __construct()
     {

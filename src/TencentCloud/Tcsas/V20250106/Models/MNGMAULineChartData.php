@@ -18,44 +18,44 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mini game MAU line chart data
+ * Mini game MAU line chart data.
  *
- * @method integer getDataTime() Obtain Year-month-date data
+ * @method integer getDataTime() Obtain Date in YYYYMM format. 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataTime(integer $DataTime) Set Year-month-date data
+ * @method void setDataTime(integer $DataTime) Set Date in YYYYMM format. 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMAUCount() Obtain MAU data
+ * @method integer getMAUCount() Obtain MAU count.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMAUCount(integer $MAUCount) Set MAU data
+ * @method void setMAUCount(integer $MAUCount) Set MAU count.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getUpdateTime() Obtain Update time
- * @method void setUpdateTime(integer $UpdateTime) Set Update time
+ * @method integer getUpdateTime() Obtain Last modified time.
+ * @method void setUpdateTime(integer $UpdateTime) Set Last modified time.
  */
 class MNGMAULineChartData extends AbstractModel
 {
     /**
-     * @var integer Year-month-date data
+     * @var integer Date in YYYYMM format. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataTime;
 
     /**
-     * @var integer MAU data
+     * @var integer MAU count.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MAUCount;
 
     /**
-     * @var integer Update time
+     * @var integer Last modified time.
      */
     public $UpdateTime;
 
     /**
-     * @param integer $DataTime Year-month-date data
+     * @param integer $DataTime Date in YYYYMM format. 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MAUCount MAU data
+     * @param integer $MAUCount MAU count.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $UpdateTime Update time
+     * @param integer $UpdateTime Last modified time.
      */
     function __construct()
     {

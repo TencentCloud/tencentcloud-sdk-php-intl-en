@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTeamList request structure.
  *
- * @method integer getOffset() Obtain Pagination offset
- * @method void setOffset(integer $Offset) Set Pagination offset
- * @method integer getLimit() Obtain Page size
- * @method void setLimit(integer $Limit) Set Page size
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getKeyword() Obtain Team name to be queried
- * @method void setKeyword(string $Keyword) Set Team name to be queried
+ * @method integer getOffset() Obtain Pagination offset.
+ * @method void setOffset(integer $Offset) Set Pagination offset.
+ * @method integer getLimit() Obtain Number of entries per page.
+ * @method void setLimit(integer $Limit) Set Number of entries per page.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method string getKeyword() Obtain Search keyword (team name).
+ * @method void setKeyword(string $Keyword) Set Search keyword (team name).
  */
 class DescribeTeamListRequest extends AbstractModel
 {
     /**
-     * @var integer Pagination offset
+     * @var integer Pagination offset.
      */
     public $Offset;
 
     /**
-     * @var integer Page size
+     * @var integer Number of entries per page.
      */
     public $Limit;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Team name to be queried
+     * @var string Search keyword (team name).
      */
     public $Keyword;
 
     /**
-     * @param integer $Offset Pagination offset
-     * @param integer $Limit Page size
-     * @param string $PlatformId Platform ID
-     * @param string $Keyword Team name to be queried
+     * @param integer $Offset Pagination offset.
+     * @param integer $Limit Number of entries per page.
+     * @param string $PlatformId Platform ID.
+     * @param string $Keyword Search keyword (team name).
      */
     function __construct()
     {

@@ -18,71 +18,71 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Advertising line chart data
+ * Ad trend data.
  *
- * @method array getEstimatedEarnings() Obtain Estimated revenue
+ * @method array getEstimatedEarnings() Obtain Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEstimatedEarnings(array $EstimatedEarnings) Set Estimated revenue
+ * @method void setEstimatedEarnings(array $EstimatedEarnings) Set Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getRequestsNumber() Obtain Requests
+ * @method array getRequestsNumber() Obtain Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRequestsNumber(array $RequestsNumber) Set Requests
+ * @method void setRequestsNumber(array $RequestsNumber) Set Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getImpressions() Obtain Impressions
+ * @method array getImpressions() Obtain Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setImpressions(array $Impressions) Set Impressions
+ * @method void setImpressions(array $Impressions) Set Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getECPM() Obtain Effective Cost Per Mille
+ * @method array getECPM() Obtain eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setECPM(array $ECPM) Set Effective Cost Per Mille
+ * @method void setECPM(array $ECPM) Set eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getClicksNumber() Obtain Taps
+ * @method array getClicksNumber() Obtain Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClicksNumber(array $ClicksNumber) Set Taps
+ * @method void setClicksNumber(array $ClicksNumber) Set Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AdTrendChart extends AbstractModel
 {
     /**
-     * @var array Estimated revenue
+     * @var array Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EstimatedEarnings;
 
     /**
-     * @var array Requests
+     * @var array Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RequestsNumber;
 
     /**
-     * @var array Impressions
+     * @var array Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Impressions;
 
     /**
-     * @var array Effective Cost Per Mille
+     * @var array eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ECPM;
 
     /**
-     * @var array Taps
+     * @var array Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClicksNumber;
 
     /**
-     * @param array $EstimatedEarnings Estimated revenue
+     * @param array $EstimatedEarnings Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $RequestsNumber Requests
+     * @param array $RequestsNumber Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Impressions Impressions
+     * @param array $Impressions Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ECPM Effective Cost Per Mille
+     * @param array $ECPM eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ClicksNumber Taps
+     * @param array $ClicksNumber Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

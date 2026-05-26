@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 <dx-alert infotype="explain" title="">You should specify either DataDisks or SystemDisk, but you cannot specify both at the same time.</dx-alert>
  * @method boolean getForceStop() Obtain Whether to forcibly shut down a running instance. It is recommended to manually shut down a running instance first and then reset the user password. Valid values:<br><li>true: Forcibly shut down an instance after a normal shutdown fails.</li><br><li>false: Do not forcibly shut down an instance after a normal shutdown fails.</li><br><br>Default value: false.<br><br>Forced shutdown is equivalent to turning off a physical computer's power switch. Forced shutdown may cause data loss or file system corruption and should only be used when a server cannot be shut down normally.
  * @method void setForceStop(boolean $ForceStop) Set Whether to forcibly shut down a running instance. It is recommended to manually shut down a running instance first and then reset the user password. Valid values:<br><li>true: Forcibly shut down an instance after a normal shutdown fails.</li><br><li>false: Do not forcibly shut down an instance after a normal shutdown fails.</li><br><br>Default value: false.<br><br>Forced shutdown is equivalent to turning off a physical computer's power switch. Forced shutdown may cause data loss or file system corruption and should only be used when a server cannot be shut down normally.
+ * @method SystemDisk getSystemDisk() Obtain Configuration information of the system disk to be expanded. Only cloud disks are supported for expansion. You must specify either DataDisks or SystemDisk, but not both.
+ * @method void setSystemDisk(SystemDisk $SystemDisk) Set Configuration information of the system disk to be expanded. Only cloud disks are supported for expansion. You must specify either DataDisks or SystemDisk, but not both.
+ * @method boolean getResizeOnline() Obtain Whether to perform online resizing.
+ * @method void setResizeOnline(boolean $ResizeOnline) Set Whether to perform online resizing.
  */
 class InquiryPriceResizeInstanceDisksRequest extends AbstractModel
 {
@@ -48,10 +52,22 @@ class InquiryPriceResizeInstanceDisksRequest extends AbstractModel
     public $ForceStop;
 
     /**
+     * @var SystemDisk Configuration information of the system disk to be expanded. Only cloud disks are supported for expansion. You must specify either DataDisks or SystemDisk, but not both.
+     */
+    public $SystemDisk;
+
+    /**
+     * @var boolean Whether to perform online resizing.
+     */
+    public $ResizeOnline;
+
+    /**
      * @param string $InstanceId Instance ID. To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response.
      * @param array $DataDisks Configuration information of a data disk to be expanded. Only inelastic data disks (with `Portable` being `false` in the return values of [DescribeDisks](https://intl.cloud.tencent.com/document/api/362/16315?from_cn_redirect=1)) can be expanded. The unit of data disk capacity is GB. The minimum expansion step is 10 GB. For more information about data disk types, refer to Disk Product Introduction. The available data disk type is restricted by the instance type `InstanceType`. Additionally, the maximum allowable capacity for expansion varies by data disk type.
 <dx-alert infotype="explain" title="">You should specify either DataDisks or SystemDisk, but you cannot specify both at the same time.</dx-alert>
      * @param boolean $ForceStop Whether to forcibly shut down a running instance. It is recommended to manually shut down a running instance first and then reset the user password. Valid values:<br><li>true: Forcibly shut down an instance after a normal shutdown fails.</li><br><li>false: Do not forcibly shut down an instance after a normal shutdown fails.</li><br><br>Default value: false.<br><br>Forced shutdown is equivalent to turning off a physical computer's power switch. Forced shutdown may cause data loss or file system corruption and should only be used when a server cannot be shut down normally.
+     * @param SystemDisk $SystemDisk Configuration information of the system disk to be expanded. Only cloud disks are supported for expansion. You must specify either DataDisks or SystemDisk, but not both.
+     * @param boolean $ResizeOnline Whether to perform online resizing.
      */
     function __construct()
     {
@@ -81,6 +97,15 @@ class InquiryPriceResizeInstanceDisksRequest extends AbstractModel
 
         if (array_key_exists("ForceStop",$param) and $param["ForceStop"] !== null) {
             $this->ForceStop = $param["ForceStop"];
+        }
+
+        if (array_key_exists("SystemDisk",$param) and $param["SystemDisk"] !== null) {
+            $this->SystemDisk = new SystemDisk();
+            $this->SystemDisk->deserialize($param["SystemDisk"]);
+        }
+
+        if (array_key_exists("ResizeOnline",$param) and $param["ResizeOnline"] !== null) {
+            $this->ResizeOnline = $param["ResizeOnline"];
         }
     }
 }

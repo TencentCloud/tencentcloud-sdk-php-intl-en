@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTeamMemberList request structure.
  *
- * @method integer getOffset() Obtain Page offset
- * @method void setOffset(integer $Offset) Set Page offset
- * @method integer getLimit() Obtain Number of results per page
- * @method void setLimit(integer $Limit) Set Number of results per page
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getTeamId() Obtain Team ID
- * @method void setTeamId(string $TeamId) Set Team ID
- * @method string getKeyword() Obtain Keywords for search (user name)
- * @method void setKeyword(string $Keyword) Set Keywords for search (user name)
- * @method array getRoleIds() Obtain Role ID
- * @method void setRoleIds(array $RoleIds) Set Role ID
+ * @method integer getOffset() Obtain Pagination offset.
+ * @method void setOffset(integer $Offset) Set Pagination offset.
+ * @method integer getLimit() Obtain Number of entries per page.
+ * @method void setLimit(integer $Limit) Set Number of entries per page.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method string getTeamId() Obtain Team ID.
+ * @method void setTeamId(string $TeamId) Set Team ID.
+ * @method string getKeyword() Obtain Search keyword (user name).
+ * @method void setKeyword(string $Keyword) Set Search keyword (user name).
+ * @method array getRoleIds() Obtain Role ID.
+ * @method void setRoleIds(array $RoleIds) Set Role ID.
  */
 class DescribeTeamMemberListRequest extends AbstractModel
 {
     /**
-     * @var integer Page offset
+     * @var integer Pagination offset.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results per page
+     * @var integer Number of entries per page.
      */
     public $Limit;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Team ID
+     * @var string Team ID.
      */
     public $TeamId;
 
     /**
-     * @var string Keywords for search (user name)
+     * @var string Search keyword (user name).
      */
     public $Keyword;
 
     /**
-     * @var array Role ID
+     * @var array Role ID.
      */
     public $RoleIds;
 
     /**
-     * @param integer $Offset Page offset
-     * @param integer $Limit Number of results per page
-     * @param string $PlatformId Platform ID
-     * @param string $TeamId Team ID
-     * @param string $Keyword Keywords for search (user name)
-     * @param array $RoleIds Role ID
+     * @param integer $Offset Pagination offset.
+     * @param integer $Limit Number of entries per page.
+     * @param string $PlatformId Platform ID.
+     * @param string $TeamId Team ID.
+     * @param string $Keyword Search keyword (user name).
+     * @param array $RoleIds Role ID.
      */
     function __construct()
     {

@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalTime(float $TotalTime) Set The total execution time (in ms) of all slow query statements during the specified period of time
  * @method integer getTotalCallNum() Obtain The total number of all slow query statements during the specified period of time
  * @method void setTotalCallNum(integer $TotalCallNum) Set The total number of all slow query statements during the specified period of time
- * @method array getAnalysisItems() Obtain The statistical analysis list of slow queries
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setAnalysisItems(array $AnalysisItems) Set The statistical analysis list of slow queries
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getAnalysisItems() Obtain List of slow SQL statistical analysis.
+ * @method void setAnalysisItems(array $AnalysisItems) Set List of slow SQL statistical analysis.
  */
 class Detail extends AbstractModel
 {
@@ -42,16 +40,14 @@ class Detail extends AbstractModel
     public $TotalCallNum;
 
     /**
-     * @var array The statistical analysis list of slow queries
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array List of slow SQL statistical analysis.
      */
     public $AnalysisItems;
 
     /**
      * @param float $TotalTime The total execution time (in ms) of all slow query statements during the specified period of time
      * @param integer $TotalCallNum The total number of all slow query statements during the specified period of time
-     * @param array $AnalysisItems The statistical analysis list of slow queries
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $AnalysisItems List of slow SQL statistical analysis.
      */
     function __construct()
     {

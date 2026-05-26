@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetAutoRenewFlag request structure.
  *
- * @method array getDBInstanceIdSet() Obtain List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+ * @method array getDBInstanceIdSet() Obtain Instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances. supports operating multiple instances simultaneously.
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set Instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances. supports operating multiple instances simultaneously.
  * @method integer getAutoRenewFlag() Obtain Renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal upon expiration
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal upon expiration
  */
 class SetAutoRenewFlagRequest extends AbstractModel
 {
     /**
-     * @var array List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+     * @var array Instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances. supports operating multiple instances simultaneously.
      */
     public $DBInstanceIdSet;
 
@@ -38,7 +38,7 @@ class SetAutoRenewFlagRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @param array $DBInstanceIdSet List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+     * @param array $DBInstanceIdSet Instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances. supports operating multiple instances simultaneously.
      * @param integer $AutoRenewFlag Renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal upon expiration
      */
     function __construct()

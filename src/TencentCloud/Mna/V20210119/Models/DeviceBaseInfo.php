@@ -20,114 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * basic device information
  *
- * @method string getDeviceId() Obtain Device unique ID
- * @method void setDeviceId(string $DeviceId) Set Device unique ID
- * @method string getDeviceName() Obtain Device name.
- * @method void setDeviceName(string $DeviceName) Set Device name.
- * @method string getCreateTime() Obtain The time when the device is created, in ms.
- * @method void setCreateTime(string $CreateTime) Set The time when the device is created, in ms.
- * @method string getLastTime() Obtain Last online time of the device, in ms.
- * @method void setLastTime(string $LastTime) Set Last online time of the device, in ms.
- * @method string getRemark() Obtain Device remark
- * @method void setRemark(string $Remark) Set Device remark
- * @method integer getAccessScope() Obtain Access environment. 0: Public cloud gateway; 1: Private gateway; 2: Public cloud gateway and private gateway. Default is public cloud gateway. Specific meaning: Public cloud gateway: The device can only connect to the public cloud gateway (nearby access). Private gateway: The device can only connect to the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).
- * @method void setAccessScope(integer $AccessScope) Set Access environment. 0: Public cloud gateway; 1: Private gateway; 2: Public cloud gateway and private gateway. Default is public cloud gateway. Specific meaning: Public cloud gateway: The device can only connect to the public cloud gateway (nearby access). Private gateway: The device can only connect to the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).
- * @method integer getLicensePayMode() Obtain Authorization validity period of license 0: Monthly authorization 1: Permanent license
- * @method void setLicensePayMode(integer $LicensePayMode) Set Authorization validity period of license 0: Monthly authorization 1: Permanent license
- * @method integer getPayer() Obtain Payer 0: Manufacturer payment 1: Customer payment
- * @method void setPayer(integer $Payer) Set Payer 0: Manufacturer payment 1: Customer payment
- * @method string getGroupId() Obtain device group ID
- * @method void setGroupId(string $GroupId) Set device group ID
- * @method string getGroupName() Obtain Device group name
- * @method void setGroupName(string $GroupName) Set Device group name
- * @method integer getFlowTrunc() Obtain No traffic processing method for the device. 0: pay-as-you-go, 1: truncate and accelerate
- * @method void setFlowTrunc(integer $FlowTrunc) Set No traffic processing method for the device. 0: pay-as-you-go, 1: truncate and accelerate
- * @method string getSn() Obtain Device sn
- * @method void setSn(string $Sn) Set Device sn
- * @method string getVendor() Obtain manufacturer
- * @method void setVendor(string $Vendor) Set manufacturer
+ * @method string getDeviceId() Obtain <p>Unique ID of the device</p>
+ * @method void setDeviceId(string $DeviceId) Set <p>Unique ID of the device</p>
+ * @method string getDeviceName() Obtain <p>Device name</p>
+ * @method void setDeviceName(string $DeviceName) Set <p>Device name</p>
+ * @method string getCreateTime() Obtain <p>The time when the device is created, in ms</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>The time when the device is created, in ms</p>
+ * @method string getLastTime() Obtain <p>Last online time of the device, in ms</p>
+ * @method void setLastTime(string $LastTime) Set <p>Last online time of the device, in ms</p>
+ * @method string getRemark() Obtain <p>Remark of the device</p>
+ * @method void setRemark(string $Remark) Set <p>Remark of the device</p>
+ * @method integer getAccessScope() Obtain <p>Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. Defaults to public cloud gateway. Specific meaning: Public cloud gateway: The device can only access the public cloud gateway (nearby access). Private gateway: The device can only access the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also access both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).</p>
+ * @method void setAccessScope(integer $AccessScope) Set <p>Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. Defaults to public cloud gateway. Specific meaning: Public cloud gateway: The device can only access the public cloud gateway (nearby access). Private gateway: The device can only access the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also access both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).</p>
+ * @method integer getLicensePayMode() Obtain <p>license authorization validity period 0: monthly authorization 1: permanent license</p>
+ * @method void setLicensePayMode(integer $LicensePayMode) Set <p>license authorization validity period 0: monthly authorization 1: permanent license</p>
+ * @method integer getPayer() Obtain <p>Payment party 0: Manufacturer pays 1: Customer pays</p>
+ * @method void setPayer(integer $Payer) Set <p>Payment party 0: Manufacturer pays 1: Customer pays</p>
+ * @method string getGroupId() Obtain <p>device group ID</p>
+ * @method void setGroupId(string $GroupId) Set <p>device group ID</p>
+ * @method string getGroupName() Obtain <p>Device group name</p>
+ * @method void setGroupName(string $GroupName) Set <p>Device group name</p>
+ * @method integer getFlowTrunc() Obtain <p>Device data transfer plan processing method, 0: pay-as-you-go, 1: truncate acceleration</p>
+ * @method void setFlowTrunc(integer $FlowTrunc) Set <p>Device data transfer plan processing method, 0: pay-as-you-go, 1: truncate acceleration</p>
+ * @method string getSn() Obtain <p>Device sn</p>
+ * @method void setSn(string $Sn) Set <p>Device sn</p>
+ * @method string getVendor() Obtain <p>Manufacturer</p>
+ * @method void setVendor(string $Vendor) Set <p>Manufacturer</p>
+ * @method array getAllowedRegions() Obtain <p>Access region list.</p>
+ * @method void setAllowedRegions(array $AllowedRegions) Set <p>Access region list.</p>
  */
 class DeviceBaseInfo extends AbstractModel
 {
     /**
-     * @var string Device unique ID
+     * @var string <p>Unique ID of the device</p>
      */
     public $DeviceId;
 
     /**
-     * @var string Device name.
+     * @var string <p>Device name</p>
      */
     public $DeviceName;
 
     /**
-     * @var string The time when the device is created, in ms.
+     * @var string <p>The time when the device is created, in ms</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Last online time of the device, in ms.
+     * @var string <p>Last online time of the device, in ms</p>
      */
     public $LastTime;
 
     /**
-     * @var string Device remark
+     * @var string <p>Remark of the device</p>
      */
     public $Remark;
 
     /**
-     * @var integer Access environment. 0: Public cloud gateway; 1: Private gateway; 2: Public cloud gateway and private gateway. Default is public cloud gateway. Specific meaning: Public cloud gateway: The device can only connect to the public cloud gateway (nearby access). Private gateway: The device can only connect to the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).
+     * @var integer <p>Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. Defaults to public cloud gateway. Specific meaning: Public cloud gateway: The device can only access the public cloud gateway (nearby access). Private gateway: The device can only access the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also access both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).</p>
      */
     public $AccessScope;
 
     /**
-     * @var integer Authorization validity period of license 0: Monthly authorization 1: Permanent license
+     * @var integer <p>license authorization validity period 0: monthly authorization 1: permanent license</p>
      */
     public $LicensePayMode;
 
     /**
-     * @var integer Payer 0: Manufacturer payment 1: Customer payment
+     * @var integer <p>Payment party 0: Manufacturer pays 1: Customer pays</p>
      */
     public $Payer;
 
     /**
-     * @var string device group ID
+     * @var string <p>device group ID</p>
      */
     public $GroupId;
 
     /**
-     * @var string Device group name
+     * @var string <p>Device group name</p>
      */
     public $GroupName;
 
     /**
-     * @var integer No traffic processing method for the device. 0: pay-as-you-go, 1: truncate and accelerate
+     * @var integer <p>Device data transfer plan processing method, 0: pay-as-you-go, 1: truncate acceleration</p>
      */
     public $FlowTrunc;
 
     /**
-     * @var string Device sn
+     * @var string <p>Device sn</p>
      */
     public $Sn;
 
     /**
-     * @var string manufacturer
+     * @var string <p>Manufacturer</p>
      */
     public $Vendor;
 
     /**
-     * @param string $DeviceId Device unique ID
-     * @param string $DeviceName Device name.
-     * @param string $CreateTime The time when the device is created, in ms.
-     * @param string $LastTime Last online time of the device, in ms.
-     * @param string $Remark Device remark
-     * @param integer $AccessScope Access environment. 0: Public cloud gateway; 1: Private gateway; 2: Public cloud gateway and private gateway. Default is public cloud gateway. Specific meaning: Public cloud gateway: The device can only connect to the public cloud gateway (nearby access). Private gateway: The device can only connect to the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).
-     * @param integer $LicensePayMode Authorization validity period of license 0: Monthly authorization 1: Permanent license
-     * @param integer $Payer Payer 0: Manufacturer payment 1: Customer payment
-     * @param string $GroupId device group ID
-     * @param string $GroupName Device group name
-     * @param integer $FlowTrunc No traffic processing method for the device. 0: pay-as-you-go, 1: truncate and accelerate
-     * @param string $Sn Device sn
-     * @param string $Vendor manufacturer
+     * @var array <p>Access region list.</p>
+     */
+    public $AllowedRegions;
+
+    /**
+     * @param string $DeviceId <p>Unique ID of the device</p>
+     * @param string $DeviceName <p>Device name</p>
+     * @param string $CreateTime <p>The time when the device is created, in ms</p>
+     * @param string $LastTime <p>Last online time of the device, in ms</p>
+     * @param string $Remark <p>Remark of the device</p>
+     * @param integer $AccessScope <p>Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. Defaults to public cloud gateway. Specific meaning: Public cloud gateway: The device can only access the public cloud gateway (nearby access). Private gateway: The device can only access the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also access both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).</p>
+     * @param integer $LicensePayMode <p>license authorization validity period 0: monthly authorization 1: permanent license</p>
+     * @param integer $Payer <p>Payment party 0: Manufacturer pays 1: Customer pays</p>
+     * @param string $GroupId <p>device group ID</p>
+     * @param string $GroupName <p>Device group name</p>
+     * @param integer $FlowTrunc <p>Device data transfer plan processing method, 0: pay-as-you-go, 1: truncate acceleration</p>
+     * @param string $Sn <p>Device sn</p>
+     * @param string $Vendor <p>Manufacturer</p>
+     * @param array $AllowedRegions <p>Access region list.</p>
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class DeviceBaseInfo extends AbstractModel
 
         if (array_key_exists("Vendor",$param) and $param["Vendor"] !== null) {
             $this->Vendor = $param["Vendor"];
+        }
+
+        if (array_key_exists("AllowedRegions",$param) and $param["AllowedRegions"] !== null) {
+            $this->AllowedRegions = $param["AllowedRegions"];
         }
     }
 }

@@ -18,47 +18,47 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Application details
+ * Superapp details.
  *
- * @method string getApplicationId() Obtain Application ID
- * @method void setApplicationId(string $ApplicationId) Set Application ID
+ * @method string getApplicationId() Obtain Superapp ID.
+ * @method void setApplicationId(string $ApplicationId) Set Superapp ID.
  * @method integer getAppIdentityId() Obtain Product ID.
  * @method void setAppIdentityId(integer $AppIdentityId) Set Product ID.
- * @method string getApplicationName() Obtain Application name
- * @method void setApplicationName(string $ApplicationName) Set Application name
- * @method string getLogo() Obtain Specifies the application icon.
- * @method void setLogo(string $Logo) Set Specifies the application icon.
- * @method string getRemark() Obtain Remarks
- * @method void setRemark(string $Remark) Set Remarks
- * @method string getAndroidAppKey() Obtain Android package name
- * @method void setAndroidAppKey(string $AndroidAppKey) Set Android package name
- * @method string getIosAppKey() Obtain iOS bundleId
- * @method void setIosAppKey(string $IosAppKey) Set iOS bundleId
- * @method string getCreateUser() Obtain Creator
- * @method void setCreateUser(string $CreateUser) Set Creator
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getUpdateUser() Obtain Specifies the updater.
- * @method void setUpdateUser(string $UpdateUser) Set Specifies the updater.
- * @method string getUpdateTime() Obtain Update time
- * @method void setUpdateTime(string $UpdateTime) Set Update time
- * @method string getIntro() Obtain Describes the application description.
- * @method void setIntro(string $Intro) Set Describes the application description.
- * @method string getTeamId() Obtain Team ID
- * @method void setTeamId(string $TeamId) Set Team ID
- * @method string getTeamName() Obtain Team name
- * @method void setTeamName(string $TeamName) Set Team name
- * @method integer getSensitiveApiCount() Obtain Number of sensitive apis.
- * @method void setSensitiveApiCount(integer $SensitiveApiCount) Set Number of sensitive apis.
- * @method integer getApplicationType() Obtain Application type. 1: Test; 2: Formal
- * @method void setApplicationType(integer $ApplicationType) Set Application type. 1: Test; 2: Formal
- * @method string getScheme() Obtain Specifies the application Scheme.
- * @method void setScheme(string $Scheme) Set Specifies the application Scheme.
+ * @method string getApplicationName() Obtain Superapp name.
+ * @method void setApplicationName(string $ApplicationName) Set Superapp name.
+ * @method string getLogo() Obtain Superapp icon.
+ * @method void setLogo(string $Logo) Set Superapp icon.
+ * @method string getRemark() Obtain Remarks.
+ * @method void setRemark(string $Remark) Set Remarks.
+ * @method string getAndroidAppKey() Obtain Android superapp package name.
+ * @method void setAndroidAppKey(string $AndroidAppKey) Set Android superapp package name.
+ * @method string getIosAppKey() Obtain iOS superapp bundle ID.
+ * @method void setIosAppKey(string $IosAppKey) Set iOS superapp bundle ID.
+ * @method string getCreateUser() Obtain Creator.
+ * @method void setCreateUser(string $CreateUser) Set Creator.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method string getUpdateUser() Obtain Last modifier.
+ * @method void setUpdateUser(string $UpdateUser) Set Last modifier.
+ * @method string getUpdateTime() Obtain Last modified time.
+ * @method void setUpdateTime(string $UpdateTime) Set Last modified time.
+ * @method string getIntro() Obtain Superapp introduction.
+ * @method void setIntro(string $Intro) Set Superapp introduction.
+ * @method string getTeamId() Obtain Team ID.
+ * @method void setTeamId(string $TeamId) Set Team ID.
+ * @method string getTeamName() Obtain Team name.
+ * @method void setTeamName(string $TeamName) Set Team name.
+ * @method integer getSensitiveApiCount() Obtain Number of sensitive APIs.
+ * @method void setSensitiveApiCount(integer $SensitiveApiCount) Set Number of sensitive APIs.
+ * @method integer getApplicationType() Obtain Superapp type. Valid values: 1: Test; 2: Production.
+ * @method void setApplicationType(integer $ApplicationType) Set Superapp type. Valid values: 1: Test; 2: Production.
+ * @method string getScheme() Obtain Superapp scheme.
+ * @method void setScheme(string $Scheme) Set Superapp scheme.
  */
 class DescribeApplicationResp extends AbstractModel
 {
     /**
-     * @var string Application ID
+     * @var string Superapp ID.
      */
     public $ApplicationId;
 
@@ -68,98 +68,98 @@ class DescribeApplicationResp extends AbstractModel
     public $AppIdentityId;
 
     /**
-     * @var string Application name
+     * @var string Superapp name.
      */
     public $ApplicationName;
 
     /**
-     * @var string Specifies the application icon.
+     * @var string Superapp icon.
      */
     public $Logo;
 
     /**
-     * @var string Remarks
+     * @var string Remarks.
      */
     public $Remark;
 
     /**
-     * @var string Android package name
+     * @var string Android superapp package name.
      */
     public $AndroidAppKey;
 
     /**
-     * @var string iOS bundleId
+     * @var string iOS superapp bundle ID.
      */
     public $IosAppKey;
 
     /**
-     * @var string Creator
+     * @var string Creator.
      */
     public $CreateUser;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Specifies the updater.
+     * @var string Last modifier.
      */
     public $UpdateUser;
 
     /**
-     * @var string Update time
+     * @var string Last modified time.
      */
     public $UpdateTime;
 
     /**
-     * @var string Describes the application description.
+     * @var string Superapp introduction.
      */
     public $Intro;
 
     /**
-     * @var string Team ID
+     * @var string Team ID.
      */
     public $TeamId;
 
     /**
-     * @var string Team name
+     * @var string Team name.
      */
     public $TeamName;
 
     /**
-     * @var integer Number of sensitive apis.
+     * @var integer Number of sensitive APIs.
      */
     public $SensitiveApiCount;
 
     /**
-     * @var integer Application type. 1: Test; 2: Formal
+     * @var integer Superapp type. Valid values: 1: Test; 2: Production.
      */
     public $ApplicationType;
 
     /**
-     * @var string Specifies the application Scheme.
+     * @var string Superapp scheme.
      */
     public $Scheme;
 
     /**
-     * @param string $ApplicationId Application ID
+     * @param string $ApplicationId Superapp ID.
      * @param integer $AppIdentityId Product ID.
-     * @param string $ApplicationName Application name
-     * @param string $Logo Specifies the application icon.
-     * @param string $Remark Remarks
-     * @param string $AndroidAppKey Android package name
-     * @param string $IosAppKey iOS bundleId
-     * @param string $CreateUser Creator
-     * @param string $CreateTime Creation time
-     * @param string $UpdateUser Specifies the updater.
-     * @param string $UpdateTime Update time
-     * @param string $Intro Describes the application description.
-     * @param string $TeamId Team ID
-     * @param string $TeamName Team name
-     * @param integer $SensitiveApiCount Number of sensitive apis.
-     * @param integer $ApplicationType Application type. 1: Test; 2: Formal
-     * @param string $Scheme Specifies the application Scheme.
+     * @param string $ApplicationName Superapp name.
+     * @param string $Logo Superapp icon.
+     * @param string $Remark Remarks.
+     * @param string $AndroidAppKey Android superapp package name.
+     * @param string $IosAppKey iOS superapp bundle ID.
+     * @param string $CreateUser Creator.
+     * @param string $CreateTime Creation time.
+     * @param string $UpdateUser Last modifier.
+     * @param string $UpdateTime Last modified time.
+     * @param string $Intro Superapp introduction.
+     * @param string $TeamId Team ID.
+     * @param string $TeamName Team name.
+     * @param integer $SensitiveApiCount Number of sensitive APIs.
+     * @param integer $ApplicationType Superapp type. Valid values: 1: Test; 2: Production.
+     * @param string $Scheme Superapp scheme.
      */
     function __construct()
     {

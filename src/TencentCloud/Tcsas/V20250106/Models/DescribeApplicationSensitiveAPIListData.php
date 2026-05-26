@@ -18,132 +18,140 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of sensitive APIs of an application
+ * Superapp sensitive API list data.
  *
- * @method string getAPIId() Obtain APIID
- * @method void setAPIId(string $APIId) Set APIID
- * @method string getAPIName() Obtain API name
- * @method void setAPIName(string $APIName) Set API name
- * @method string getAPIMethod() Obtain API request method
- * @method void setAPIMethod(string $APIMethod) Set API request method
- * @method string getAPIDesc() Obtain API description
- * @method void setAPIDesc(string $APIDesc) Set API description
- * @method string getCreateUser() Obtain Creator
- * @method void setCreateUser(string $CreateUser) Set Creator
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getUpdateUser() Obtain Updater
- * @method void setUpdateUser(string $UpdateUser) Set Updater
- * @method string getUpdateTime() Obtain Update time
- * @method void setUpdateTime(string $UpdateTime) Set Update time
- * @method string getApplicationId() Obtain Application ID
- * @method void setApplicationId(string $ApplicationId) Set Application ID
- * @method string getApplicationName() Obtain Application name
- * @method void setApplicationName(string $ApplicationName) Set Application name
- * @method string getTeamId() Obtain Team ID
- * @method void setTeamId(string $TeamId) Set Team ID
- * @method string getTeamName() Obtain Team name
- * @method void setTeamName(string $TeamName) Set Team name
- * @method string getApplicationLogo() Obtain Specifies the application icon.
- * @method void setApplicationLogo(string $ApplicationLogo) Set Specifies the application icon.
- * @method integer getAPIType() Obtain API type. 1: system; 2: custom.
- * @method void setAPIType(integer $APIType) Set API type. 1: system; 2: custom.
- * @method integer getStatus() Obtain API status. 0: public; 1: restricted.
- * @method void setStatus(integer $Status) Set API status. 0: public; 1: restricted.
+ * @method string getAPIId() Obtain API ID.
+ * @method void setAPIId(string $APIId) Set API ID.
+ * @method string getAPIName() Obtain API name.
+ * @method void setAPIName(string $APIName) Set API name.
+ * @method string getAPIMethod() Obtain API request method.
+ * @method void setAPIMethod(string $APIMethod) Set API request method.
+ * @method string getAPIDesc() Obtain API description.
+ * @method void setAPIDesc(string $APIDesc) Set API description.
+ * @method string getCreateUser() Obtain Creator.
+ * @method void setCreateUser(string $CreateUser) Set Creator.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method string getUpdateUser() Obtain Last modifier.
+ * @method void setUpdateUser(string $UpdateUser) Set Last modifier.
+ * @method string getUpdateTime() Obtain Last modified time.
+ * @method void setUpdateTime(string $UpdateTime) Set Last modified time.
+ * @method string getApplicationId() Obtain Superapp ID.
+ * @method void setApplicationId(string $ApplicationId) Set Superapp ID.
+ * @method string getApplicationName() Obtain Superapp name.
+ * @method void setApplicationName(string $ApplicationName) Set Superapp name.
+ * @method string getTeamId() Obtain Team ID.
+ * @method void setTeamId(string $TeamId) Set Team ID.
+ * @method string getTeamName() Obtain Team name.
+ * @method void setTeamName(string $TeamName) Set Team name.
+ * @method string getApplicationLogo() Obtain Superapp icon.
+ * @method void setApplicationLogo(string $ApplicationLogo) Set Superapp icon.
+ * @method integer getAPIType() Obtain API type. Valid values: 1: System; 2: Custom.
+ * @method void setAPIType(integer $APIType) Set API type. Valid values: 1: System; 2: Custom.
+ * @method integer getStatus() Obtain API status. Valid values: 0: Public; 1: Restricted.
+ * @method void setStatus(integer $Status) Set API status. Valid values: 0: Public; 1: Restricted.
+ * @method integer getUseScope() Obtain Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+ * @method void setUseScope(integer $UseScope) Set Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
  */
 class DescribeApplicationSensitiveAPIListData extends AbstractModel
 {
     /**
-     * @var string APIID
+     * @var string API ID.
      */
     public $APIId;
 
     /**
-     * @var string API name
+     * @var string API name.
      */
     public $APIName;
 
     /**
-     * @var string API request method
+     * @var string API request method.
      */
     public $APIMethod;
 
     /**
-     * @var string API description
+     * @var string API description.
      */
     public $APIDesc;
 
     /**
-     * @var string Creator
+     * @var string Creator.
      */
     public $CreateUser;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Updater
+     * @var string Last modifier.
      */
     public $UpdateUser;
 
     /**
-     * @var string Update time
+     * @var string Last modified time.
      */
     public $UpdateTime;
 
     /**
-     * @var string Application ID
+     * @var string Superapp ID.
      */
     public $ApplicationId;
 
     /**
-     * @var string Application name
+     * @var string Superapp name.
      */
     public $ApplicationName;
 
     /**
-     * @var string Team ID
+     * @var string Team ID.
      */
     public $TeamId;
 
     /**
-     * @var string Team name
+     * @var string Team name.
      */
     public $TeamName;
 
     /**
-     * @var string Specifies the application icon.
+     * @var string Superapp icon.
      */
     public $ApplicationLogo;
 
     /**
-     * @var integer API type. 1: system; 2: custom.
+     * @var integer API type. Valid values: 1: System; 2: Custom.
      */
     public $APIType;
 
     /**
-     * @var integer API status. 0: public; 1: restricted.
+     * @var integer API status. Valid values: 0: Public; 1: Restricted.
      */
     public $Status;
 
     /**
-     * @param string $APIId APIID
-     * @param string $APIName API name
-     * @param string $APIMethod API request method
-     * @param string $APIDesc API description
-     * @param string $CreateUser Creator
-     * @param string $CreateTime Creation time
-     * @param string $UpdateUser Updater
-     * @param string $UpdateTime Update time
-     * @param string $ApplicationId Application ID
-     * @param string $ApplicationName Application name
-     * @param string $TeamId Team ID
-     * @param string $TeamName Team name
-     * @param string $ApplicationLogo Specifies the application icon.
-     * @param integer $APIType API type. 1: system; 2: custom.
-     * @param integer $Status API status. 0: public; 1: restricted.
+     * @var integer Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+     */
+    public $UseScope;
+
+    /**
+     * @param string $APIId API ID.
+     * @param string $APIName API name.
+     * @param string $APIMethod API request method.
+     * @param string $APIDesc API description.
+     * @param string $CreateUser Creator.
+     * @param string $CreateTime Creation time.
+     * @param string $UpdateUser Last modifier.
+     * @param string $UpdateTime Last modified time.
+     * @param string $ApplicationId Superapp ID.
+     * @param string $ApplicationName Superapp name.
+     * @param string $TeamId Team ID.
+     * @param string $TeamName Team name.
+     * @param string $ApplicationLogo Superapp icon.
+     * @param integer $APIType API type. Valid values: 1: System; 2: Custom.
+     * @param integer $Status API status. Valid values: 0: Public; 1: Restricted.
+     * @param integer $UseScope Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class DescribeApplicationSensitiveAPIListData extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("UseScope",$param) and $param["UseScope"] !== null) {
+            $this->UseScope = $param["UseScope"];
         }
     }
 }

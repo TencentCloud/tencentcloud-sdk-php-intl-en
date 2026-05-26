@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDBInstanceNetworkAccess request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-6bwgamo3.
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-6bwgamo3.
+ * @method string getDBInstanceId() Obtain Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  * @method string getVpcId() Obtain Unified VPC ID. If you want to delete the classic network, set the parameter to `0`.
  * @method void setVpcId(string $VpcId) Set Unified VPC ID. If you want to delete the classic network, set the parameter to `0`.
  * @method string getSubnetId() Obtain Subnet ID. If you want to delete the classic network, set the parameter to `0`.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteDBInstanceNetworkAccessRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of postgres-6bwgamo3.
+     * @var string Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
@@ -52,7 +52,7 @@ class DeleteDBInstanceNetworkAccessRequest extends AbstractModel
     public $Vip;
 
     /**
-     * @param string $DBInstanceId Instance ID in the format of postgres-6bwgamo3.
+     * @param string $DBInstanceId Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      * @param string $VpcId Unified VPC ID. If you want to delete the classic network, set the parameter to `0`.
      * @param string $SubnetId Subnet ID. If you want to delete the classic network, set the parameter to `0`.
      * @param string $Vip Target VIP.

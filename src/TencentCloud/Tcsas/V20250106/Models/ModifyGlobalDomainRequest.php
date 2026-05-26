@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGlobalDomain request structure.
  *
- * @method integer getDomainId() Obtain Domain ID
- * @method void setDomainId(integer $DomainId) Set Domain ID
- * @method string getDomainUrl() Obtain Domain name
- * @method void setDomainUrl(string $DomainUrl) Set Domain name
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method integer getDomainId() Obtain Domain ID.
+ * @method void setDomainId(integer $DomainId) Set Domain ID.
+ * @method string getDomainUrl() Obtain Domain URL.
+ * @method void setDomainUrl(string $DomainUrl) Set Domain URL.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
  */
 class ModifyGlobalDomainRequest extends AbstractModel
 {
     /**
-     * @var integer Domain ID
+     * @var integer Domain ID.
      */
     public $DomainId;
 
     /**
-     * @var string Domain name
+     * @var string Domain URL.
      */
     public $DomainUrl;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @param integer $DomainId Domain ID
-     * @param string $DomainUrl Domain name
-     * @param string $PlatformId Platform ID
+     * @param integer $DomainId Domain ID.
+     * @param string $DomainUrl Domain URL.
+     * @param string $PlatformId Platform ID.
      */
     function __construct()
     {

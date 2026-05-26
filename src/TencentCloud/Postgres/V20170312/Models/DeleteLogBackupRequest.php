@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLogBackup request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
- * @method string getLogBackupId() Obtain Log backup ID
- * @method void setLogBackupId(string $LogBackupId) Set Log backup ID
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method string getLogBackupId() Obtain Log backup ID. obtain through the api [DescribeLogBackups](https://www.tencentcloud.com/document/api/409/89021?from_cn_redirect=1). note: automatic backup sets cannot be deleted within 7 days.
+ * @method void setLogBackupId(string $LogBackupId) Set Log backup ID. obtain through the api [DescribeLogBackups](https://www.tencentcloud.com/document/api/409/89021?from_cn_redirect=1). note: automatic backup sets cannot be deleted within 7 days.
  */
 class DeleteLogBackupRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
     /**
-     * @var string Log backup ID
+     * @var string Log backup ID. obtain through the api [DescribeLogBackups](https://www.tencentcloud.com/document/api/409/89021?from_cn_redirect=1). note: automatic backup sets cannot be deleted within 7 days.
      */
     public $LogBackupId;
 
     /**
-     * @param string $DBInstanceId Instance ID
-     * @param string $LogBackupId Log backup ID
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param string $LogBackupId Log backup ID. obtain through the api [DescribeLogBackups](https://www.tencentcloud.com/document/api/409/89021?from_cn_redirect=1). note: automatic backup sets cannot be deleted within 7 days.
      */
     function __construct()
     {

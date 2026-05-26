@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMNPApproval request structure.
  *
- * @method integer getMNPVersionId() Obtain Mini program version ID
- * @method void setMNPVersionId(integer $MNPVersionId) Set Mini program version ID
- * @method string getApplyAction() Obtain submit: Submit an approval request; cancel: Cancel the approval request
- * @method void setApplyAction(string $ApplyAction) Set submit: Submit an approval request; cancel: Cancel the approval request
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method integer getMNPVersionId() Obtain Mini program version ID.
+ * @method void setMNPVersionId(integer $MNPVersionId) Set Mini program version ID.
+ * @method string getApplyAction() Obtain submit: Submit an approval request; cancel: Cancel the approval request.
+ * @method void setApplyAction(string $ApplyAction) Set submit: Submit an approval request; cancel: Cancel the approval request.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
  */
 class CreateMNPApprovalRequest extends AbstractModel
 {
     /**
-     * @var integer Mini program version ID
+     * @var integer Mini program version ID.
      */
     public $MNPVersionId;
 
     /**
-     * @var string submit: Submit an approval request; cancel: Cancel the approval request
+     * @var string submit: Submit an approval request; cancel: Cancel the approval request.
      */
     public $ApplyAction;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @param integer $MNPVersionId Mini program version ID
-     * @param string $ApplyAction submit: Submit an approval request; cancel: Cancel the approval request
-     * @param string $PlatformId Platform ID
+     * @param integer $MNPVersionId Mini program version ID.
+     * @param string $ApplyAction submit: Submit an approval request; cancel: Cancel the approval request.
+     * @param string $PlatformId Platform ID.
      */
     function __construct()
     {

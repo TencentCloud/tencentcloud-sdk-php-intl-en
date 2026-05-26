@@ -18,20 +18,20 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response data for creating a mini game version
+ * Response for creating a mini game version.
  *
- * @method string getTaskId() Obtain <p>Mini game version compilation task ID</p>
- * @method void setTaskId(string $TaskId) Set <p>Mini game version compilation task ID</p>
+ * @method string getTaskId() Obtain <p>Mini game version compilation task ID.</p>
+ * @method void setTaskId(string $TaskId) Set <p>Mini game version compilation task ID.</p>
  */
 class CreateMNGVersionResp extends AbstractModel
 {
     /**
-     * @var string <p>Mini game version compilation task ID</p>
+     * @var string <p>Mini game version compilation task ID.</p>
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId <p>Mini game version compilation task ID</p>
+     * @param string $TaskId <p>Mini game version compilation task ID.</p>
      */
     function __construct()
     {

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddTeamMember request structure.
  *
- * @method string getTeamId() Obtain Team ID
- * @method void setTeamId(string $TeamId) Set Team ID
- * @method array getMemberList() Obtain Members to be added
- * @method void setMemberList(array $MemberList) Set Members to be added
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method string getTeamId() Obtain Team ID.
+ * @method void setTeamId(string $TeamId) Set Team ID.
+ * @method array getMemberList() Obtain List of new team members.
+ * @method void setMemberList(array $MemberList) Set List of new team members.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
  */
 class AddTeamMemberRequest extends AbstractModel
 {
     /**
-     * @var string Team ID
+     * @var string Team ID.
      */
     public $TeamId;
 
     /**
-     * @var array Members to be added
+     * @var array List of new team members.
      */
     public $MemberList;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @param string $TeamId Team ID
-     * @param array $MemberList Members to be added
-     * @param string $PlatformId Platform ID
+     * @param string $TeamId Team ID.
+     * @param array $MemberList List of new team members.
+     * @param string $PlatformId Platform ID.
      */
     function __construct()
     {

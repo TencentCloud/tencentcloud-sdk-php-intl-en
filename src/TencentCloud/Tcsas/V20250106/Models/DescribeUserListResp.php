@@ -18,35 +18,35 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * User management list
+ * Response for querying the user list.
  *
- * @method integer getTotalCount() Obtain Total number of entries
+ * @method integer getTotalCount() Obtain Total number of entries.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Total number of entries
+ * @method void setTotalCount(integer $TotalCount) Set Total number of entries.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDataList() Obtain List data
+ * @method array getDataList() Obtain List data.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataList(array $DataList) Set List data
+ * @method void setDataList(array $DataList) Set List data.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DescribeUserListResp extends AbstractModel
 {
     /**
-     * @var integer Total number of entries
+     * @var integer Total number of entries.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TotalCount;
 
     /**
-     * @var array List data
+     * @var array List data.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataList;
 
     /**
-     * @param integer $TotalCount Total number of entries
+     * @param integer $TotalCount Total number of entries.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $DataList List data
+     * @param array $DataList List data.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

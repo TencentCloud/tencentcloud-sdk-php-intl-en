@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RollbackMNGVersion request structure.
  *
- * @method string getMNPId() Obtain <p>Mini game appid</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini game appid</p>
- * @method integer getMNPVersionId() Obtain <p>Mini game version ID</p>
- * @method void setMNPVersionId(integer $MNPVersionId) Set <p>Mini game version ID</p>
- * @method string getPlatformId() Obtain <p>Platform ID</p>
- * @method void setPlatformId(string $PlatformId) Set <p>Platform ID</p>
- * @method string getMNPVersion() Obtain <p>Mini game version number</p>
- * @method void setMNPVersion(string $MNPVersion) Set <p>Mini game version number</p>
+ * @method string getMNPId() Obtain <p>Mini game appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini game appid.</p>
+ * @method integer getMNPVersionId() Obtain <p>Mini game version ID.</p>
+ * @method void setMNPVersionId(integer $MNPVersionId) Set <p>Mini game version ID.</p>
+ * @method string getPlatformId() Obtain <p>Platform ID.</p>
+ * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
+ * @method string getMNPVersion() Obtain <p>Mini game version number.</p>
+ * @method void setMNPVersion(string $MNPVersion) Set <p>Mini game version number.</p>
  */
 class RollbackMNGVersionRequest extends AbstractModel
 {
     /**
-     * @var string <p>Mini game appid</p>
+     * @var string <p>Mini game appid.</p>
      */
     public $MNPId;
 
     /**
-     * @var integer <p>Mini game version ID</p>
+     * @var integer <p>Mini game version ID.</p>
      */
     public $MNPVersionId;
 
     /**
-     * @var string <p>Platform ID</p>
+     * @var string <p>Platform ID.</p>
      */
     public $PlatformId;
 
     /**
-     * @var string <p>Mini game version number</p>
+     * @var string <p>Mini game version number.</p>
      */
     public $MNPVersion;
 
     /**
-     * @param string $MNPId <p>Mini game appid</p>
-     * @param integer $MNPVersionId <p>Mini game version ID</p>
-     * @param string $PlatformId <p>Platform ID</p>
-     * @param string $MNPVersion <p>Mini game version number</p>
+     * @param string $MNPId <p>Mini game appid.</p>
+     * @param integer $MNPVersionId <p>Mini game version ID.</p>
+     * @param string $PlatformId <p>Platform ID.</p>
+     * @param string $MNPVersion <p>Mini game version number.</p>
      */
     function __construct()
     {

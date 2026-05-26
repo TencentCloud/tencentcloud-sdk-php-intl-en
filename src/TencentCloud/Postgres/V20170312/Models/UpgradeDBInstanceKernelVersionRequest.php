@@ -20,39 +20,39 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeDBInstanceKernelVersion request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  * @method string getTargetDBKernelVersion() Obtain Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field in the returned value of the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
 
  * @method void setTargetDBKernelVersion(string $TargetDBKernelVersion) Set Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field in the returned value of the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
 
- * @method integer getSwitchTag() Obtain Switch time after the kernel version upgrade for the specified instance. Valid values:
-<li>`0`: Switch now.
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
- * @method void setSwitchTag(integer $SwitchTag) Set Switch time after the kernel version upgrade for the specified instance. Valid values:
-<li>`0`: Switch now.
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+ * @method integer getSwitchTag() Obtain Specifies the switch time after upgrading the kernel for the specified instance. valid values:.
+<Li>0: switch immediately.</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
+ * @method void setSwitchTag(integer $SwitchTag) Set Specifies the switch time after upgrading the kernel for the specified instance. valid values:.
+<Li>0: switch immediately.</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
  * @method string getSwitchStartTime() Obtain Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is `0` or `2`, this parameter is invalid.
  * @method void setSwitchStartTime(string $SwitchStartTime) Set Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is `0` or `2`, this parameter is invalid.
  * @method string getSwitchEndTime() Obtain Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is `0` or `2`, this parameter is invalid. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
  * @method void setSwitchEndTime(string $SwitchEndTime) Set Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is `0` or `2`, this parameter is invalid. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
- * @method boolean getDryRun() Obtain Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
-u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+ * @method boolean getDryRun() Obtain Specifies whether to perform a pre-check for the instance kernel version upgrade operation this time.
+<li>true: performs a pre-check without upgrading the kernel. check items include request parameters, kernel version compatibility, and instance parameters.</li>.
+<li>false: send a normal request (default value). after passing the check, directly upgrade the kernel.</li>.
 Default value: `false`.
- * @method void setDryRun(boolean $DryRun) Set Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
-u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+ * @method void setDryRun(boolean $DryRun) Set Specifies whether to perform a pre-check for the instance kernel version upgrade operation this time.
+<li>true: performs a pre-check without upgrading the kernel. check items include request parameters, kernel version compatibility, and instance parameters.</li>.
+<li>false: send a normal request (default value). after passing the check, directly upgrade the kernel.</li>.
 Default value: `false`.
  */
 class UpgradeDBInstanceKernelVersionRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
@@ -63,11 +63,11 @@ class UpgradeDBInstanceKernelVersionRequest extends AbstractModel
     public $TargetDBKernelVersion;
 
     /**
-     * @var integer Switch time after the kernel version upgrade for the specified instance. Valid values:
-<li>`0`: Switch now.
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+     * @var integer Specifies the switch time after upgrading the kernel for the specified instance. valid values:.
+<Li>0: switch immediately.</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
      */
     public $SwitchTag;
 
@@ -82,27 +82,27 @@ Default value: `0`.
     public $SwitchEndTime;
 
     /**
-     * @var boolean Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
-u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+     * @var boolean Specifies whether to perform a pre-check for the instance kernel version upgrade operation this time.
+<li>true: performs a pre-check without upgrading the kernel. check items include request parameters, kernel version compatibility, and instance parameters.</li>.
+<li>false: send a normal request (default value). after passing the check, directly upgrade the kernel.</li>.
 Default value: `false`.
      */
     public $DryRun;
 
     /**
-     * @param string $DBInstanceId Instance ID
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      * @param string $TargetDBKernelVersion Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field in the returned value of the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
 
-     * @param integer $SwitchTag Switch time after the kernel version upgrade for the specified instance. Valid values:
-<li>`0`: Switch now.
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+     * @param integer $SwitchTag Specifies the switch time after upgrading the kernel for the specified instance. valid values:.
+<Li>0: switch immediately.</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
      * @param string $SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is `0` or `2`, this parameter is invalid.
      * @param string $SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is `0` or `2`, this parameter is invalid. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
-     * @param boolean $DryRun Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
-u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+     * @param boolean $DryRun Specifies whether to perform a pre-check for the instance kernel version upgrade operation this time.
+<li>true: performs a pre-check without upgrading the kernel. check items include request parameters, kernel version compatibility, and instance parameters.</li>.
+<li>false: send a normal request (default value). after passing the check, directly upgrade the kernel.</li>.
 Default value: `false`.
      */
     function __construct()

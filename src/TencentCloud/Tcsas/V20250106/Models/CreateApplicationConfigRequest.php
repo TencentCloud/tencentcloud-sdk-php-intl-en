@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApplicationConfig request structure.
  *
- * @method string getApplicationId() Obtain Superapp ID
- * @method void setApplicationId(string $ApplicationId) Set Superapp ID
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method integer getApplicationType() Obtain Superapp type. 1: Test; 2: Formal
- * @method void setApplicationType(integer $ApplicationType) Set Superapp type. 1: Test; 2: Formal
- * @method integer getApplicationPlatformType() Obtain Superapp operating system. 2 Android 3 iOS
- * @method void setApplicationPlatformType(integer $ApplicationPlatformType) Set Superapp operating system. 2 Android 3 iOS
- * @method string getAppKey() Obtain Package name: corresponds to packageName on Android and bundleId on iOS
- * @method void setAppKey(string $AppKey) Set Package name: corresponds to packageName on Android and bundleId on iOS
- * @method string getAppURL() Obtain Superapp URL
- * @method void setAppURL(string $AppURL) Set Superapp URL
+ * @method string getApplicationId() Obtain Superapp ID.
+ * @method void setApplicationId(string $ApplicationId) Set Superapp ID.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method integer getApplicationType() Obtain Superapp type. Valid values: 1: Test; 2: Production.
+ * @method void setApplicationType(integer $ApplicationType) Set Superapp type. Valid values: 1: Test; 2: Production.
+ * @method integer getApplicationPlatformType() Obtain Superapp operating system type. Valid values: 2: Android; 3: iOS.
+ * @method void setApplicationPlatformType(integer $ApplicationPlatformType) Set Superapp operating system type. Valid values: 2: Android; 3: iOS.
+ * @method string getAppKey() Obtain Package name. Corresponds to the package name on Android and the bundle ID on iOS.
+ * @method void setAppKey(string $AppKey) Set Package name. Corresponds to the package name on Android and the bundle ID on iOS.
+ * @method string getAppURL() Obtain Superapp URL.
+ * @method void setAppURL(string $AppURL) Set Superapp URL.
  */
 class CreateApplicationConfigRequest extends AbstractModel
 {
     /**
-     * @var string Superapp ID
+     * @var string Superapp ID.
      */
     public $ApplicationId;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var integer Superapp type. 1: Test; 2: Formal
+     * @var integer Superapp type. Valid values: 1: Test; 2: Production.
      */
     public $ApplicationType;
 
     /**
-     * @var integer Superapp operating system. 2 Android 3 iOS
+     * @var integer Superapp operating system type. Valid values: 2: Android; 3: iOS.
      */
     public $ApplicationPlatformType;
 
     /**
-     * @var string Package name: corresponds to packageName on Android and bundleId on iOS
+     * @var string Package name. Corresponds to the package name on Android and the bundle ID on iOS.
      */
     public $AppKey;
 
     /**
-     * @var string Superapp URL
+     * @var string Superapp URL.
      */
     public $AppURL;
 
     /**
-     * @param string $ApplicationId Superapp ID
-     * @param string $PlatformId Platform ID
-     * @param integer $ApplicationType Superapp type. 1: Test; 2: Formal
-     * @param integer $ApplicationPlatformType Superapp operating system. 2 Android 3 iOS
-     * @param string $AppKey Package name: corresponds to packageName on Android and bundleId on iOS
-     * @param string $AppURL Superapp URL
+     * @param string $ApplicationId Superapp ID.
+     * @param string $PlatformId Platform ID.
+     * @param integer $ApplicationType Superapp type. Valid values: 1: Test; 2: Production.
+     * @param integer $ApplicationPlatformType Superapp operating system type. Valid values: 2: Android; 3: iOS.
+     * @param string $AppKey Package name. Corresponds to the package name on Android and the bundle ID on iOS.
+     * @param string $AppURL Superapp URL.
      */
     function __construct()
     {

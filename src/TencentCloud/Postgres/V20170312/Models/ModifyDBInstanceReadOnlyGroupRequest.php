@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceReadOnlyGroup request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  * @method string getReadOnlyGroupId() Obtain ID of the RO group to which the read-only replica belongs
  * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set ID of the RO group to which the read-only replica belongs
  * @method string getNewReadOnlyGroupId() Obtain ID of the new RO group into which the read-only replica will move
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDBInstanceReadOnlyGroupRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
@@ -45,7 +45,7 @@ class ModifyDBInstanceReadOnlyGroupRequest extends AbstractModel
     public $NewReadOnlyGroupId;
 
     /**
-     * @param string $DBInstanceId Instance ID
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      * @param string $ReadOnlyGroupId ID of the RO group to which the read-only replica belongs
      * @param string $NewReadOnlyGroupId ID of the new RO group into which the read-only replica will move
      */

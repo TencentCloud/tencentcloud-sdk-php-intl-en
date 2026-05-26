@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMNGList request structure.
  *
- * @method integer getOffset() Obtain <p>Pagination offset</p>
- * @method void setOffset(integer $Offset) Set <p>Pagination offset</p>
- * @method integer getLimit() Obtain <p>Pagination count</p>
- * @method void setLimit(integer $Limit) Set <p>Pagination count</p>
- * @method string getPlatformId() Obtain <p>Platform ID</p>
- * @method void setPlatformId(string $PlatformId) Set <p>Platform ID</p>
- * @method string getKeyword() Obtain <p>Keywords for search (mini game name)</p>
- * @method void setKeyword(string $Keyword) Set <p>Keywords for search (mini game name)</p>
- * @method string getTeamId() Obtain <p>Team ID</p>
- * @method void setTeamId(string $TeamId) Set <p>Team ID</p>
- * @method string getApplicationId() Obtain <p>Superapp ID</p>
- * @method void setApplicationId(string $ApplicationId) Set <p>Superapp ID</p>
+ * @method integer getOffset() Obtain <p>Pagination offset.</p>
+ * @method void setOffset(integer $Offset) Set <p>Pagination offset.</p>
+ * @method integer getLimit() Obtain <p>Number of entries per page.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of entries per page.</p>
+ * @method string getPlatformId() Obtain <p>Platform ID.</p>
+ * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
+ * @method string getKeyword() Obtain <p>The search keyword (mini game name).</p>
+ * @method void setKeyword(string $Keyword) Set <p>The search keyword (mini game name).</p>
+ * @method string getTeamId() Obtain <p>Team ID.</p>
+ * @method void setTeamId(string $TeamId) Set <p>Team ID.</p>
+ * @method string getApplicationId() Obtain <p>Superapp ID.</p>
+ * @method void setApplicationId(string $ApplicationId) Set <p>Superapp ID.</p>
  */
 class DescribeMNGListRequest extends AbstractModel
 {
     /**
-     * @var integer <p>Pagination offset</p>
+     * @var integer <p>Pagination offset.</p>
      */
     public $Offset;
 
     /**
-     * @var integer <p>Pagination count</p>
+     * @var integer <p>Number of entries per page.</p>
      */
     public $Limit;
 
     /**
-     * @var string <p>Platform ID</p>
+     * @var string <p>Platform ID.</p>
      */
     public $PlatformId;
 
     /**
-     * @var string <p>Keywords for search (mini game name)</p>
+     * @var string <p>The search keyword (mini game name).</p>
      */
     public $Keyword;
 
     /**
-     * @var string <p>Team ID</p>
+     * @var string <p>Team ID.</p>
      */
     public $TeamId;
 
     /**
-     * @var string <p>Superapp ID</p>
+     * @var string <p>Superapp ID.</p>
      */
     public $ApplicationId;
 
     /**
-     * @param integer $Offset <p>Pagination offset</p>
-     * @param integer $Limit <p>Pagination count</p>
-     * @param string $PlatformId <p>Platform ID</p>
-     * @param string $Keyword <p>Keywords for search (mini game name)</p>
-     * @param string $TeamId <p>Team ID</p>
-     * @param string $ApplicationId <p>Superapp ID</p>
+     * @param integer $Offset <p>Pagination offset.</p>
+     * @param integer $Limit <p>Number of entries per page.</p>
+     * @param string $PlatformId <p>Platform ID.</p>
+     * @param string $Keyword <p>The search keyword (mini game name).</p>
+     * @param string $TeamId <p>Team ID.</p>
+     * @param string $ApplicationId <p>Superapp ID.</p>
      */
     function __construct()
     {

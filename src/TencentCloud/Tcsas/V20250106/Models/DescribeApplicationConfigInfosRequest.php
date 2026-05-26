@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApplicationConfigInfos request structure.
  *
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getApplicationId() Obtain Superapp ID
- * @method void setApplicationId(string $ApplicationId) Set Superapp ID
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method string getApplicationId() Obtain Superapp ID.
+ * @method void setApplicationId(string $ApplicationId) Set Superapp ID.
  */
 class DescribeApplicationConfigInfosRequest extends AbstractModel
 {
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Superapp ID
+     * @var string Superapp ID.
      */
     public $ApplicationId;
 
     /**
-     * @param string $PlatformId Platform ID
-     * @param string $ApplicationId Superapp ID
+     * @param string $PlatformId Platform ID.
+     * @param string $ApplicationId Superapp ID.
      */
     function __construct()
     {

@@ -18,39 +18,39 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response of querying the preview
+ * Response for querying the preview.
  *
- * @method string getMNPId() Obtain Mini program ID
- * @method void setMNPId(string $MNPId) Set Mini program ID
- * @method string getMNPName() Obtain Mini program name
- * @method void setMNPName(string $MNPName) Set Mini program name
- * @method string getMNPDesc() Obtain Mini program description
- * @method void setMNPDesc(string $MNPDesc) Set Mini program description
+ * @method string getMNPId() Obtain Mini program appid. 
+ * @method void setMNPId(string $MNPId) Set Mini program appid. 
+ * @method string getMNPName() Obtain Mini program name.
+ * @method void setMNPName(string $MNPName) Set Mini program name.
+ * @method string getMNPDesc() Obtain Mini program description.
+ * @method void setMNPDesc(string $MNPDesc) Set Mini program description.
  * @method string getMNPVersion() Obtain Mini program version.
  * @method void setMNPVersion(string $MNPVersion) Set Mini program version.
- * @method string getMNPVersionIntro() Obtain Describes the mini program version.
- * @method void setMNPVersionIntro(string $MNPVersionIntro) Set Describes the mini program version.
- * @method string getQRCodeUrl() Obtain Specifies the mini program qr code.
- * @method void setQRCodeUrl(string $QRCodeUrl) Set Specifies the mini program qr code.
- * @method string getPreviewEntrancePath() Obtain Specifies the path to the preview version.
- * @method void setPreviewEntrancePath(string $PreviewEntrancePath) Set Specifies the path to the preview version.
- * @method string getQRCodeContent() Obtain Specifies the qr code content.
- * @method void setQRCodeContent(string $QRCodeContent) Set Specifies the qr code content.
+ * @method string getMNPVersionIntro() Obtain Mini program version introduction.
+ * @method void setMNPVersionIntro(string $MNPVersionIntro) Set Mini program version introduction.
+ * @method string getQRCodeUrl() Obtain Mini program QR code URL.
+ * @method void setQRCodeUrl(string $QRCodeUrl) Set Mini program QR code URL.
+ * @method string getPreviewEntrancePath() Obtain Preview path.
+ * @method void setPreviewEntrancePath(string $PreviewEntrancePath) Set Preview path.
+ * @method string getQRCodeContent() Obtain Information encoded in the QR code.
+ * @method void setQRCodeContent(string $QRCodeContent) Set Information encoded in the QR code.
  */
 class DescribeMNPPreviewResp extends AbstractModel
 {
     /**
-     * @var string Mini program ID
+     * @var string Mini program appid. 
      */
     public $MNPId;
 
     /**
-     * @var string Mini program name
+     * @var string Mini program name.
      */
     public $MNPName;
 
     /**
-     * @var string Mini program description
+     * @var string Mini program description.
      */
     public $MNPDesc;
 
@@ -60,34 +60,34 @@ class DescribeMNPPreviewResp extends AbstractModel
     public $MNPVersion;
 
     /**
-     * @var string Describes the mini program version.
+     * @var string Mini program version introduction.
      */
     public $MNPVersionIntro;
 
     /**
-     * @var string Specifies the mini program qr code.
+     * @var string Mini program QR code URL.
      */
     public $QRCodeUrl;
 
     /**
-     * @var string Specifies the path to the preview version.
+     * @var string Preview path.
      */
     public $PreviewEntrancePath;
 
     /**
-     * @var string Specifies the qr code content.
+     * @var string Information encoded in the QR code.
      */
     public $QRCodeContent;
 
     /**
-     * @param string $MNPId Mini program ID
-     * @param string $MNPName Mini program name
-     * @param string $MNPDesc Mini program description
+     * @param string $MNPId Mini program appid. 
+     * @param string $MNPName Mini program name.
+     * @param string $MNPDesc Mini program description.
      * @param string $MNPVersion Mini program version.
-     * @param string $MNPVersionIntro Describes the mini program version.
-     * @param string $QRCodeUrl Specifies the mini program qr code.
-     * @param string $PreviewEntrancePath Specifies the path to the preview version.
-     * @param string $QRCodeContent Specifies the qr code content.
+     * @param string $MNPVersionIntro Mini program version introduction.
+     * @param string $QRCodeUrl Mini program QR code URL.
+     * @param string $PreviewEntrancePath Preview path.
+     * @param string $QRCodeContent Information encoded in the QR code.
      */
     function __construct()
     {

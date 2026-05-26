@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteReadOnlyGroupNetworkAccess request structure.
  *
- * @method string getReadOnlyGroupId() Obtain RO group ID in the format of pgro-4t9c6g7k.
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set RO group ID in the format of pgro-4t9c6g7k.
+ * @method string getReadOnlyGroupId() Obtain ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/api/409/52599?from_cn_redirect=1).
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/api/409/52599?from_cn_redirect=1).
  * @method string getVpcId() Obtain Unified VPC ID. If you want to delete the classic network, set the parameter to `0`.
  * @method void setVpcId(string $VpcId) Set Unified VPC ID. If you want to delete the classic network, set the parameter to `0`.
  * @method string getSubnetId() Obtain Subnet ID. If you want to delete the classic network, set the parameter to `0`.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteReadOnlyGroupNetworkAccessRequest extends AbstractModel
 {
     /**
-     * @var string RO group ID in the format of pgro-4t9c6g7k.
+     * @var string ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/api/409/52599?from_cn_redirect=1).
      */
     public $ReadOnlyGroupId;
 
@@ -52,7 +52,7 @@ class DeleteReadOnlyGroupNetworkAccessRequest extends AbstractModel
     public $Vip;
 
     /**
-     * @param string $ReadOnlyGroupId RO group ID in the format of pgro-4t9c6g7k.
+     * @param string $ReadOnlyGroupId ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/api/409/52599?from_cn_redirect=1).
      * @param string $VpcId Unified VPC ID. If you want to delete the classic network, set the parameter to `0`.
      * @param string $SubnetId Subnet ID. If you want to delete the classic network, set the parameter to `0`.
      * @param string $Vip Target VIP.

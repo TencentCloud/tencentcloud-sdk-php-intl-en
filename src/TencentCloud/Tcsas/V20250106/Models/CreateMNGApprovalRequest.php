@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMNGApproval request structure.
  *
- * @method integer getMNPVersionId() Obtain <p>Mini game version ID</p>
- * @method void setMNPVersionId(integer $MNPVersionId) Set <p>Mini game version ID</p>
- * @method string getApplyAction() Obtain <p>submit: Submit for approval; cancel: Cancel approval</p>
- * @method void setApplyAction(string $ApplyAction) Set <p>submit: Submit for approval; cancel: Cancel approval</p>
- * @method string getPlatformId() Obtain <p>Platform ID</p>
- * @method void setPlatformId(string $PlatformId) Set <p>Platform ID</p>
+ * @method integer getMNPVersionId() Obtain <p>Mini game version ID.</p>
+ * @method void setMNPVersionId(integer $MNPVersionId) Set <p>Mini game version ID.</p>
+ * @method string getApplyAction() Obtain <p>submit: Submit an approval request; cancel: Cancel the approval request.</p>
+ * @method void setApplyAction(string $ApplyAction) Set <p>submit: Submit an approval request; cancel: Cancel the approval request.</p>
+ * @method string getPlatformId() Obtain <p>Platform ID.</p>
+ * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
  */
 class CreateMNGApprovalRequest extends AbstractModel
 {
     /**
-     * @var integer <p>Mini game version ID</p>
+     * @var integer <p>Mini game version ID.</p>
      */
     public $MNPVersionId;
 
     /**
-     * @var string <p>submit: Submit for approval; cancel: Cancel approval</p>
+     * @var string <p>submit: Submit an approval request; cancel: Cancel the approval request.</p>
      */
     public $ApplyAction;
 
     /**
-     * @var string <p>Platform ID</p>
+     * @var string <p>Platform ID.</p>
      */
     public $PlatformId;
 
     /**
-     * @param integer $MNPVersionId <p>Mini game version ID</p>
-     * @param string $ApplyAction <p>submit: Submit for approval; cancel: Cancel approval</p>
-     * @param string $PlatformId <p>Platform ID</p>
+     * @param integer $MNPVersionId <p>Mini game version ID.</p>
+     * @param string $ApplyAction <p>submit: Submit an approval request; cancel: Cancel the approval request.</p>
+     * @param string $PlatformId <p>Platform ID.</p>
      */
     function __construct()
     {

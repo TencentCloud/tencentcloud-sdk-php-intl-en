@@ -18,28 +18,28 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mini program online version ID
+ * Response for querying mini program released version IDs.
  *
- * @method string getMNPId() Obtain Mini program ID
- * @method void setMNPId(string $MNPId) Set Mini program ID
- * @method string getMNPVersion() Obtain Version number
- * @method void setMNPVersion(string $MNPVersion) Set Version number
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method string getMNPVersion() Obtain Version number.
+ * @method void setMNPVersion(string $MNPVersion) Set Version number.
  * @method integer getMNPVersionId() Obtain Version ID.
  * @method void setMNPVersionId(integer $MNPVersionId) Set Version ID.
- * @method string getMNPVersionNote() Obtain Version remarks.
- * @method void setMNPVersionNote(string $MNPVersionNote) Set Version remarks.
- * @method string getUpdateTime() Obtain Update time
- * @method void setUpdateTime(string $UpdateTime) Set Update time
+ * @method string getMNPVersionNote() Obtain Version note.
+ * @method void setMNPVersionNote(string $MNPVersionNote) Set Version note.
+ * @method string getUpdateTime() Obtain Last modified time.
+ * @method void setUpdateTime(string $UpdateTime) Set Last modified time.
  */
 class QueryOnlineVersionResp extends AbstractModel
 {
     /**
-     * @var string Mini program ID
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var string Version number
+     * @var string Version number.
      */
     public $MNPVersion;
 
@@ -49,21 +49,21 @@ class QueryOnlineVersionResp extends AbstractModel
     public $MNPVersionId;
 
     /**
-     * @var string Version remarks.
+     * @var string Version note.
      */
     public $MNPVersionNote;
 
     /**
-     * @var string Update time
+     * @var string Last modified time.
      */
     public $UpdateTime;
 
     /**
-     * @param string $MNPId Mini program ID
-     * @param string $MNPVersion Version number
+     * @param string $MNPId Mini program appid.
+     * @param string $MNPVersion Version number.
      * @param integer $MNPVersionId Version ID.
-     * @param string $MNPVersionNote Version remarks.
-     * @param string $UpdateTime Update time
+     * @param string $MNPVersionNote Version note.
+     * @param string $UpdateTime Last modified time.
      */
     function __construct()
     {

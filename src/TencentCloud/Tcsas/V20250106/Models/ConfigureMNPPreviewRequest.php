@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ConfigureMNPPreview request structure.
  *
- * @method string getMNPId() Obtain Mini program ID
- * @method void setMNPId(string $MNPId) Set Mini program ID
- * @method integer getActionType() Obtain 1: Set; 2: Cancel
- * @method void setActionType(integer $ActionType) Set 1: Set; 2: Cancel
- * @method integer getMNPVersionId() Obtain Mini program version ID
- * @method void setMNPVersionId(integer $MNPVersionId) Set Mini program version ID
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getPreivewEntrancePath() Obtain Path to the preview page
- * @method void setPreivewEntrancePath(string $PreivewEntrancePath) Set Path to the preview page
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method integer getActionType() Obtain Action type. Valid values: 1: Set; 2: Cancel.
+ * @method void setActionType(integer $ActionType) Set Action type. Valid values: 1: Set; 2: Cancel.
+ * @method integer getMNPVersionId() Obtain Mini program version ID.
+ * @method void setMNPVersionId(integer $MNPVersionId) Set Mini program version ID.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method string getPreivewEntrancePath() Obtain Preview path.
+ * @method void setPreivewEntrancePath(string $PreivewEntrancePath) Set Preview path.
  */
 class ConfigureMNPPreviewRequest extends AbstractModel
 {
     /**
-     * @var string Mini program ID
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var integer 1: Set; 2: Cancel
+     * @var integer Action type. Valid values: 1: Set; 2: Cancel.
      */
     public $ActionType;
 
     /**
-     * @var integer Mini program version ID
+     * @var integer Mini program version ID.
      */
     public $MNPVersionId;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Path to the preview page
+     * @var string Preview path.
      */
     public $PreivewEntrancePath;
 
     /**
-     * @param string $MNPId Mini program ID
-     * @param integer $ActionType 1: Set; 2: Cancel
-     * @param integer $MNPVersionId Mini program version ID
-     * @param string $PlatformId Platform ID
-     * @param string $PreivewEntrancePath Path to the preview page
+     * @param string $MNPId Mini program appid.
+     * @param integer $ActionType Action type. Valid values: 1: Set; 2: Cancel.
+     * @param integer $MNPVersionId Mini program version ID.
+     * @param string $PlatformId Platform ID.
+     * @param string $PreivewEntrancePath Preview path.
      */
     function __construct()
     {

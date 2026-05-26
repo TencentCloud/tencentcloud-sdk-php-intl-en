@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceDeployment request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID.
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID.
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  * @method array getDBNodeSet() Obtain Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
 The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
  * @method void setDBNodeSet(array $DBNodeSet) Set Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
 The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
- * @method integer getSwitchTag() Obtain Switch time after instance configurations are modified.
-<li>0: Switch immediately</li>
-<li>1: Switch at specified time</li>
-<li>2: Switch during maintenance time window</li>
-Default value: 0
- * @method void setSwitchTag(integer $SwitchTag) Set Switch time after instance configurations are modified.
-<li>0: Switch immediately</li>
-<li>1: Switch at specified time</li>
-<li>2: Switch during maintenance time window</li>
-Default value: 0
+ * @method integer getSwitchTag() Obtain Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+
+ * @method void setSwitchTag(integer $SwitchTag) Set Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+
  * @method string getSwitchStartTime() Obtain Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
  * @method void setSwitchStartTime(string $SwitchStartTime) Set Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
  * @method string getSwitchEndTime() Obtain Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
@@ -44,7 +44,7 @@ Default value: 0
 class ModifyDBInstanceDeploymentRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
@@ -55,11 +55,11 @@ The information of AZ can be obtained from the `Zone` field in the returned valu
     public $DBNodeSet;
 
     /**
-     * @var integer Switch time after instance configurations are modified.
-<li>0: Switch immediately</li>
-<li>1: Switch at specified time</li>
-<li>2: Switch during maintenance time window</li>
-Default value: 0
+     * @var integer Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+
      */
     public $SwitchTag;
 
@@ -74,14 +74,14 @@ Default value: 0
     public $SwitchEndTime;
 
     /**
-     * @param string $DBInstanceId Instance ID.
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      * @param array $DBNodeSet Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
 The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
-     * @param integer $SwitchTag Switch time after instance configurations are modified.
-<li>0: Switch immediately</li>
-<li>1: Switch at specified time</li>
-<li>2: Switch during maintenance time window</li>
-Default value: 0
+     * @param integer $SwitchTag Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+
      * @param string $SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
      * @param string $SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
      */

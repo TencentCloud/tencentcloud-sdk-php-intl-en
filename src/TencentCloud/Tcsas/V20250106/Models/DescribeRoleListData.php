@@ -18,23 +18,23 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Role management list
+ * Role list data.
  *
- * @method integer getRoleId() Obtain Role ID
- * @method void setRoleId(integer $RoleId) Set Role ID
+ * @method integer getRoleId() Obtain Role ID.
+ * @method void setRoleId(integer $RoleId) Set Role ID.
  * @method string getRoleName() Obtain Role name.
  * @method void setRoleName(string $RoleName) Set Role name.
- * @method string getTeamName() Obtain Team name
- * @method void setTeamName(string $TeamName) Set Team name
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method integer getRoleType() Obtain Role type 1-preset role 2-custom role.
- * @method void setRoleType(integer $RoleType) Set Role type 1-preset role 2-custom role.
+ * @method string getTeamName() Obtain Team name.
+ * @method void setTeamName(string $TeamName) Set Team name.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method integer getRoleType() Obtain Role type. Valid values: 1: Preset role; 2: Custom role. 
+ * @method void setRoleType(integer $RoleType) Set Role type. Valid values: 1: Preset role; 2: Custom role. 
  */
 class DescribeRoleListData extends AbstractModel
 {
     /**
-     * @var integer Role ID
+     * @var integer Role ID.
      */
     public $RoleId;
 
@@ -44,26 +44,26 @@ class DescribeRoleListData extends AbstractModel
     public $RoleName;
 
     /**
-     * @var string Team name
+     * @var string Team name.
      */
     public $TeamName;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var integer Role type 1-preset role 2-custom role.
+     * @var integer Role type. Valid values: 1: Preset role; 2: Custom role. 
      */
     public $RoleType;
 
     /**
-     * @param integer $RoleId Role ID
+     * @param integer $RoleId Role ID.
      * @param string $RoleName Role name.
-     * @param string $TeamName Team name
-     * @param string $CreateTime Creation time
-     * @param integer $RoleType Role type 1-preset role 2-custom role.
+     * @param string $TeamName Team name.
+     * @param string $CreateTime Creation time.
+     * @param integer $RoleType Role type. Valid values: 1: Preset role; 2: Custom role. 
      */
     function __construct()
     {

@@ -87,6 +87,10 @@ This API is used to delete a snapshot group. If a snapshot in the snapshot group
 You can filter results by backup point ID. You can also look for certain backup points by specifying the ID or type of the cloud disk for which the backup points are created. The relationship between different filters is logical `AND`. For more information on filters, see `Filter`.
 If the parameter is empty, a certain number (as specified by `Limit` and 20 by default) of backup points will be returned.
  * @method Models\DescribeDiskConfigQuotaResponse DescribeDiskConfigQuota(Models\DescribeDiskConfigQuotaRequest $req) This API (DescribeDiskConfigQuota) is used to query the cloud disk quota.
+ * @method Models\DescribeDiskStoragePoolResponse DescribeDiskStoragePool(Models\DescribeDiskStoragePoolRequest $req) This API is used to query the list of dedicated cloud disk clusters under the current user account.
+
+* You can query by the dedicated cloud disk cluster ID (`CdcId`) and availability zone (`zone`). Multiple filters are combined with AND. For details about filtering, please see `Filter`.
+* If the parameter is empty, a number (as specified by `Limit`; the default is 20) of dedicated cloud disk clusters are returned.
  * @method Models\DescribeDisksResponse DescribeDisks(Models\DescribeDisksRequest $req) This API (DescribeDisks) is used to query the list of cloud disks.
 
 * The details of the cloud disk can be queried based on the ID, type or status of the cloud disk. The relationship between different conditions is AND. For more information about filtering, please see the `Filter`.

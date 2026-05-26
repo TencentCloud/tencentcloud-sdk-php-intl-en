@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMNPApprovalList request structure.
  *
- * @method integer getOffset() Obtain Page offset
- * @method void setOffset(integer $Offset) Set Page offset
- * @method integer getLimit() Obtain Number of results per page
- * @method void setLimit(integer $Limit) Set Number of results per page
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method array getApprovalStatusList() Obtain Approval status. 1: Processing; 2: Rejected; 3: Approved; 4 Cancelled
- * @method void setApprovalStatusList(array $ApprovalStatusList) Set Approval status. 1: Processing; 2: Rejected; 3: Approved; 4 Cancelled
- * @method string getKeyword() Obtain Keywords of the mini program name to search
- * @method void setKeyword(string $Keyword) Set Keywords of the mini program name to search
- * @method string getApplicationId() Obtain Application ID
- * @method void setApplicationId(string $ApplicationId) Set Application ID
- * @method string getTeamId() Obtain Team ID
- * @method void setTeamId(string $TeamId) Set Team ID
+ * @method integer getOffset() Obtain Pagination offset.
+ * @method void setOffset(integer $Offset) Set Pagination offset.
+ * @method integer getLimit() Obtain Number of entries per page.
+ * @method void setLimit(integer $Limit) Set Number of entries per page.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method array getApprovalStatusList() Obtain Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+ * @method void setApprovalStatusList(array $ApprovalStatusList) Set Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+ * @method string getKeyword() Obtain Search keyword (mini program name).
+ * @method void setKeyword(string $Keyword) Set Search keyword (mini program name).
+ * @method string getApplicationId() Obtain Superapp ID.
+ * @method void setApplicationId(string $ApplicationId) Set Superapp ID.
+ * @method string getTeamId() Obtain Team ID.
+ * @method void setTeamId(string $TeamId) Set Team ID.
  */
 class DescribeMNPApprovalListRequest extends AbstractModel
 {
     /**
-     * @var integer Page offset
+     * @var integer Pagination offset.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results per page
+     * @var integer Number of entries per page.
      */
     public $Limit;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var array Approval status. 1: Processing; 2: Rejected; 3: Approved; 4 Cancelled
+     * @var array Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
      */
     public $ApprovalStatusList;
 
     /**
-     * @var string Keywords of the mini program name to search
+     * @var string Search keyword (mini program name).
      */
     public $Keyword;
 
     /**
-     * @var string Application ID
+     * @var string Superapp ID.
      */
     public $ApplicationId;
 
     /**
-     * @var string Team ID
+     * @var string Team ID.
      */
     public $TeamId;
 
     /**
-     * @param integer $Offset Page offset
-     * @param integer $Limit Number of results per page
-     * @param string $PlatformId Platform ID
-     * @param array $ApprovalStatusList Approval status. 1: Processing; 2: Rejected; 3: Approved; 4 Cancelled
-     * @param string $Keyword Keywords of the mini program name to search
-     * @param string $ApplicationId Application ID
-     * @param string $TeamId Team ID
+     * @param integer $Offset Pagination offset.
+     * @param integer $Limit Number of entries per page.
+     * @param string $PlatformId Platform ID.
+     * @param array $ApprovalStatusList Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+     * @param string $Keyword Search keyword (mini program name).
+     * @param string $ApplicationId Superapp ID.
+     * @param string $TeamId Team ID.
      */
     function __construct()
     {

@@ -18,132 +18,132 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mini program list
+ * Mini program list data.
  *
- * @method string getMNPId() Obtain Mini program ID
- * @method void setMNPId(string $MNPId) Set Mini program ID
- * @method string getMNPIcon() Obtain Mini program icon
- * @method void setMNPIcon(string $MNPIcon) Set Mini program icon
- * @method string getMNPName() Obtain Mini program name
- * @method void setMNPName(string $MNPName) Set Mini program name
- * @method string getTeamName() Obtain Name of the associated team
- * @method void setTeamName(string $TeamName) Set Name of the associated team
- * @method string getMNPType() Obtain Mini program type
- * @method void setMNPType(string $MNPType) Set Mini program type
- * @method integer getStatus() Obtain Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
- * @method void setStatus(integer $Status) Set Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
- * @method string getMNPIntro() Obtain Mini program introduction
- * @method void setMNPIntro(string $MNPIntro) Set Mini program introduction
- * @method string getCreateUser() Obtain Creator
- * @method void setCreateUser(string $CreateUser) Set Creator
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getUpdateUser() Obtain Specifies the updater.
- * @method void setUpdateUser(string $UpdateUser) Set Specifies the updater.
- * @method string getUpdateTime() Obtain Update time
- * @method void setUpdateTime(string $UpdateTime) Set Update time
- * @method string getApplicationName() Obtain Application name
- * @method void setApplicationName(string $ApplicationName) Set Application name
- * @method integer getEffectStatus() Obtain Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
- * @method void setEffectStatus(integer $EffectStatus) Set Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
- * @method integer getEffectMNPVersionId() Obtain Specifies the ID of the application bound with the mini program.
- * @method void setEffectMNPVersionId(integer $EffectMNPVersionId) Set Specifies the ID of the application bound with the mini program.
- * @method string getEffectMNPVersion() Obtain Specifies the effective version number of the application bound to the mini program.
- * @method void setEffectMNPVersion(string $EffectMNPVersion) Set Specifies the effective version number of the application bound to the mini program.
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method string getMNPIcon() Obtain Mini program icon.
+ * @method void setMNPIcon(string $MNPIcon) Set Mini program icon.
+ * @method string getMNPName() Obtain Mini program name.
+ * @method void setMNPName(string $MNPName) Set Mini program name.
+ * @method string getTeamName() Obtain Team name. 
+ * @method void setTeamName(string $TeamName) Set Team name. 
+ * @method string getMNPType() Obtain Mini program category.
+ * @method void setMNPType(string $MNPType) Set Mini program category.
+ * @method integer getStatus() Obtain Mini program available status. Valid values: 1: Available; 2: Removed.
+ * @method void setStatus(integer $Status) Set Mini program available status. Valid values: 1: Available; 2: Removed.
+ * @method string getMNPIntro() Obtain Mini program introduction.
+ * @method void setMNPIntro(string $MNPIntro) Set Mini program introduction.
+ * @method string getCreateUser() Obtain Creator.
+ * @method void setCreateUser(string $CreateUser) Set Creator.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method string getUpdateUser() Obtain Last modifier.
+ * @method void setUpdateUser(string $UpdateUser) Set Last modifier.
+ * @method string getUpdateTime() Obtain Last modified time.
+ * @method void setUpdateTime(string $UpdateTime) Set Last modified time.
+ * @method string getApplicationName() Obtain Superapp name.
+ * @method void setApplicationName(string $ApplicationName) Set Superapp name.
+ * @method integer getEffectStatus() Obtain Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
+ * @method void setEffectStatus(integer $EffectStatus) Set Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
+ * @method integer getEffectMNPVersionId() Obtain Effective mini program version ID bound to the superapp. 
+ * @method void setEffectMNPVersionId(integer $EffectMNPVersionId) Set Effective mini program version ID bound to the superapp. 
+ * @method string getEffectMNPVersion() Obtain Effective mini program version number bound to the superapp. 
+ * @method void setEffectMNPVersion(string $EffectMNPVersion) Set Effective mini program version number bound to the superapp. 
  */
 class DescribeMNPListData extends AbstractModel
 {
     /**
-     * @var string Mini program ID
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var string Mini program icon
+     * @var string Mini program icon.
      */
     public $MNPIcon;
 
     /**
-     * @var string Mini program name
+     * @var string Mini program name.
      */
     public $MNPName;
 
     /**
-     * @var string Name of the associated team
+     * @var string Team name. 
      */
     public $TeamName;
 
     /**
-     * @var string Mini program type
+     * @var string Mini program category.
      */
     public $MNPType;
 
     /**
-     * @var integer Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+     * @var integer Mini program available status. Valid values: 1: Available; 2: Removed.
      */
     public $Status;
 
     /**
-     * @var string Mini program introduction
+     * @var string Mini program introduction.
      */
     public $MNPIntro;
 
     /**
-     * @var string Creator
+     * @var string Creator.
      */
     public $CreateUser;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Specifies the updater.
+     * @var string Last modifier.
      */
     public $UpdateUser;
 
     /**
-     * @var string Update time
+     * @var string Last modified time.
      */
     public $UpdateTime;
 
     /**
-     * @var string Application name
+     * @var string Superapp name.
      */
     public $ApplicationName;
 
     /**
-     * @var integer Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
+     * @var integer Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
      */
     public $EffectStatus;
 
     /**
-     * @var integer Specifies the ID of the application bound with the mini program.
+     * @var integer Effective mini program version ID bound to the superapp. 
      */
     public $EffectMNPVersionId;
 
     /**
-     * @var string Specifies the effective version number of the application bound to the mini program.
+     * @var string Effective mini program version number bound to the superapp. 
      */
     public $EffectMNPVersion;
 
     /**
-     * @param string $MNPId Mini program ID
-     * @param string $MNPIcon Mini program icon
-     * @param string $MNPName Mini program name
-     * @param string $TeamName Name of the associated team
-     * @param string $MNPType Mini program type
-     * @param integer $Status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
-     * @param string $MNPIntro Mini program introduction
-     * @param string $CreateUser Creator
-     * @param string $CreateTime Creation time
-     * @param string $UpdateUser Specifies the updater.
-     * @param string $UpdateTime Update time
-     * @param string $ApplicationName Application name
-     * @param integer $EffectStatus Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
-     * @param integer $EffectMNPVersionId Specifies the ID of the application bound with the mini program.
-     * @param string $EffectMNPVersion Specifies the effective version number of the application bound to the mini program.
+     * @param string $MNPId Mini program appid.
+     * @param string $MNPIcon Mini program icon.
+     * @param string $MNPName Mini program name.
+     * @param string $TeamName Team name. 
+     * @param string $MNPType Mini program category.
+     * @param integer $Status Mini program available status. Valid values: 1: Available; 2: Removed.
+     * @param string $MNPIntro Mini program introduction.
+     * @param string $CreateUser Creator.
+     * @param string $CreateTime Creation time.
+     * @param string $UpdateUser Last modifier.
+     * @param string $UpdateTime Last modified time.
+     * @param string $ApplicationName Superapp name.
+     * @param integer $EffectStatus Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
+     * @param integer $EffectMNPVersionId Effective mini program version ID bound to the superapp. 
+     * @param string $EffectMNPVersion Effective mini program version number bound to the superapp. 
      */
     function __construct()
     {

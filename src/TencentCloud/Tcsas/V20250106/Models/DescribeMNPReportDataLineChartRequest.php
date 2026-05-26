@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMNPReportDataLineChart request structure.
  *
- * @method string getMNPId() Obtain Mini program appid
- * @method void setMNPId(string $MNPId) Set Mini program appid
- * @method string getPlatformId() Obtain Tenant ID
- * @method void setPlatformId(string $PlatformId) Set Tenant ID
- * @method string getReportId() Obtain Fixed value: mnp_data_analysis
- * @method void setReportId(string $ReportId) Set Fixed value: mnp_data_analysis
- * @method string getIndexId() Obtain IndexId (optional):
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method string getPlatformId() Obtain Tenant ID.
+ * @method void setPlatformId(string $PlatformId) Set Tenant ID.
+ * @method string getReportId() Obtain Fixed value: mnp_data_analysis.
+ * @method void setReportId(string $ReportId) Set Fixed value: mnp_data_analysis.
+ * @method string getIndexId() Obtain Index ID (optional):
 active_device_num: Active users
 new_device_num: New users
 total_user_num: Total users
@@ -34,8 +34,8 @@ share_num: Number of shares
 miniapp_open_num: Number of opens
 avg_device_open_num: Average opens per user
 avg_device_open_duration: Average duration per user
-avg_count_open_duration: Average duration per session
- * @method void setIndexId(string $IndexId) Set IndexId (optional):
+avg_count_open_duration: Average duration per session.
+ * @method void setIndexId(string $IndexId) Set Index ID (optional):
 active_device_num: Active users
 new_device_num: New users
 total_user_num: Total users
@@ -43,29 +43,29 @@ share_num: Number of shares
 miniapp_open_num: Number of opens
 avg_device_open_num: Average opens per user
 avg_device_open_duration: Average duration per user
-avg_count_open_duration: Average duration per session
- * @method string getQueryData() Obtain Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}
- * @method void setQueryData(string $QueryData) Set Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}
+avg_count_open_duration: Average duration per session.
+ * @method string getQueryData() Obtain Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}.
+ * @method void setQueryData(string $QueryData) Set Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}.
  */
 class DescribeMNPReportDataLineChartRequest extends AbstractModel
 {
     /**
-     * @var string Mini program appid
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var string Tenant ID
+     * @var string Tenant ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Fixed value: mnp_data_analysis
+     * @var string Fixed value: mnp_data_analysis.
      */
     public $ReportId;
 
     /**
-     * @var string IndexId (optional):
+     * @var string Index ID (optional):
 active_device_num: Active users
 new_device_num: New users
 total_user_num: Total users
@@ -73,20 +73,20 @@ share_num: Number of shares
 miniapp_open_num: Number of opens
 avg_device_open_num: Average opens per user
 avg_device_open_duration: Average duration per user
-avg_count_open_duration: Average duration per session
+avg_count_open_duration: Average duration per session.
      */
     public $IndexId;
 
     /**
-     * @var string Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}
+     * @var string Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}.
      */
     public $QueryData;
 
     /**
-     * @param string $MNPId Mini program appid
-     * @param string $PlatformId Tenant ID
-     * @param string $ReportId Fixed value: mnp_data_analysis
-     * @param string $IndexId IndexId (optional):
+     * @param string $MNPId Mini program appid.
+     * @param string $PlatformId Tenant ID.
+     * @param string $ReportId Fixed value: mnp_data_analysis.
+     * @param string $IndexId Index ID (optional):
 active_device_num: Active users
 new_device_num: New users
 total_user_num: Total users
@@ -94,8 +94,8 @@ share_num: Number of shares
 miniapp_open_num: Number of opens
 avg_device_open_num: Average opens per user
 avg_device_open_duration: Average duration per user
-avg_count_open_duration: Average duration per session
-     * @param string $QueryData Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}
+avg_count_open_duration: Average duration per session.
+     * @param string $QueryData Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}.
      */
     function __construct()
     {

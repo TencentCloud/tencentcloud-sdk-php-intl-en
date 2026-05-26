@@ -18,68 +18,68 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of global domain names
+ * Global domain list information.
  *
- * @method integer getDomainId() Obtain Domain ID
- * @method void setDomainId(integer $DomainId) Set Domain ID
- * @method string getDomainUrl() Obtain Domain name
- * @method void setDomainUrl(string $DomainUrl) Set Domain name
- * @method integer getDomainType() Obtain Type. 1: allowlist; 2: blocklist.
- * @method void setDomainType(integer $DomainType) Set Type. 1: allowlist; 2: blocklist.
- * @method string getCreateUser() Obtain Creator
- * @method void setCreateUser(string $CreateUser) Set Creator
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getUpdateUser() Obtain Specifies the updater.
- * @method void setUpdateUser(string $UpdateUser) Set Specifies the updater.
- * @method string getUpdateTime() Obtain Update time
- * @method void setUpdateTime(string $UpdateTime) Set Update time
+ * @method integer getDomainId() Obtain Domain ID.
+ * @method void setDomainId(integer $DomainId) Set Domain ID.
+ * @method string getDomainUrl() Obtain Domain name.
+ * @method void setDomainUrl(string $DomainUrl) Set Domain name.
+ * @method integer getDomainType() Obtain Domain type. Valid value: 1: Allowed; 2: Blocked.
+ * @method void setDomainType(integer $DomainType) Set Domain type. Valid value: 1: Allowed; 2: Blocked.
+ * @method string getCreateUser() Obtain Creator.
+ * @method void setCreateUser(string $CreateUser) Set Creator.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method string getUpdateUser() Obtain Last modifier.
+ * @method void setUpdateUser(string $UpdateUser) Set Last modifier.
+ * @method string getUpdateTime() Obtain Last modified time.
+ * @method void setUpdateTime(string $UpdateTime) Set Last modified time.
  */
 class DescribeGlobalDomainsListData extends AbstractModel
 {
     /**
-     * @var integer Domain ID
+     * @var integer Domain ID.
      */
     public $DomainId;
 
     /**
-     * @var string Domain name
+     * @var string Domain name.
      */
     public $DomainUrl;
 
     /**
-     * @var integer Type. 1: allowlist; 2: blocklist.
+     * @var integer Domain type. Valid value: 1: Allowed; 2: Blocked.
      */
     public $DomainType;
 
     /**
-     * @var string Creator
+     * @var string Creator.
      */
     public $CreateUser;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Specifies the updater.
+     * @var string Last modifier.
      */
     public $UpdateUser;
 
     /**
-     * @var string Update time
+     * @var string Last modified time.
      */
     public $UpdateTime;
 
     /**
-     * @param integer $DomainId Domain ID
-     * @param string $DomainUrl Domain name
-     * @param integer $DomainType Type. 1: allowlist; 2: blocklist.
-     * @param string $CreateUser Creator
-     * @param string $CreateTime Creation time
-     * @param string $UpdateUser Specifies the updater.
-     * @param string $UpdateTime Update time
+     * @param integer $DomainId Domain ID.
+     * @param string $DomainUrl Domain name.
+     * @param integer $DomainType Domain type. Valid value: 1: Allowed; 2: Blocked.
+     * @param string $CreateUser Creator.
+     * @param string $CreateTime Creation time.
+     * @param string $UpdateUser Last modifier.
+     * @param string $UpdateTime Last modified time.
      */
     function __construct()
     {

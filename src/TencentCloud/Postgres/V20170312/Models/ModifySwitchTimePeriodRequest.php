@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySwitchTimePeriod request structure.
  *
- * @method string getDBInstanceId() Obtain The ID of the instance waiting for a switch
- * @method void setDBInstanceId(string $DBInstanceId) Set The ID of the instance waiting for a switch
- * @method integer getSwitchTag() Obtain Valid value: `0` (switch immediately)
- * @method void setSwitchTag(integer $SwitchTag) Set Valid value: `0` (switch immediately)
+ * @method string getDBInstanceId() Obtain <p>ID of the instance that is waiting for a switch, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+ * @method void setDBInstanceId(string $DBInstanceId) Set <p>ID of the instance that is waiting for a switch, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+ * @method integer getSwitchTag() Obtain <p>If the value of the input parameter is 0, it indicates to switch immediately.</p>
+ * @method void setSwitchTag(integer $SwitchTag) Set <p>If the value of the input parameter is 0, it indicates to switch immediately.</p>
  */
 class ModifySwitchTimePeriodRequest extends AbstractModel
 {
     /**
-     * @var string The ID of the instance waiting for a switch
+     * @var string <p>ID of the instance that is waiting for a switch, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
      */
     public $DBInstanceId;
 
     /**
-     * @var integer Valid value: `0` (switch immediately)
+     * @var integer <p>If the value of the input parameter is 0, it indicates to switch immediately.</p>
      */
     public $SwitchTag;
 
     /**
-     * @param string $DBInstanceId The ID of the instance waiting for a switch
-     * @param integer $SwitchTag Valid value: `0` (switch immediately)
+     * @param string $DBInstanceId <p>ID of the instance that is waiting for a switch, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+     * @param integer $SwitchTag <p>If the value of the input parameter is 0, it indicates to switch immediately.</p>
      */
     function __construct()
     {

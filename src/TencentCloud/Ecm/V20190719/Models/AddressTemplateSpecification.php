@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IP address template
  *
- * @method string getAddressId() Obtain IP address ID, such as `eipm-2uw6ujo6`.
- * @method void setAddressId(string $AddressId) Set IP address ID, such as `eipm-2uw6ujo6`.
+ * @method string getAddressId() Obtain IP address ID, such as `eipm-2uw6ujo6`. 
+ * @method void setAddressId(string $AddressId) Set IP address ID, such as `eipm-2uw6ujo6`. 
  * @method string getAddressGroupId() Obtain IP address group ID, such as `eipmg-2uw6ujo6`.
  * @method void setAddressGroupId(string $AddressGroupId) Set IP address group ID, such as `eipmg-2uw6ujo6`.
  */
 class AddressTemplateSpecification extends AbstractModel
 {
     /**
-     * @var string IP address ID, such as `eipm-2uw6ujo6`.
+     * @var string IP address ID, such as `eipm-2uw6ujo6`. 
      */
     public $AddressId;
 
@@ -38,7 +38,7 @@ class AddressTemplateSpecification extends AbstractModel
     public $AddressGroupId;
 
     /**
-     * @param string $AddressId IP address ID, such as `eipm-2uw6ujo6`.
+     * @param string $AddressId IP address ID, such as `eipm-2uw6ujo6`. 
      * @param string $AddressGroupId IP address group ID, such as `eipmg-2uw6ujo6`.
      */
     function __construct()

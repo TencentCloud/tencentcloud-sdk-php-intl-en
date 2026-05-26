@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableApplicationSensitiveAPI request structure.
  *
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getAPIId() Obtain API ID
- * @method void setAPIId(string $APIId) Set API ID
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method string getAPIId() Obtain API ID.
+ * @method void setAPIId(string $APIId) Set API ID.
  */
 class EnableApplicationSensitiveAPIRequest extends AbstractModel
 {
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var string API ID
+     * @var string API ID.
      */
     public $APIId;
 
     /**
-     * @param string $PlatformId Platform ID
-     * @param string $APIId API ID
+     * @param string $PlatformId Platform ID.
+     * @param string $APIId API ID.
      */
     function __construct()
     {

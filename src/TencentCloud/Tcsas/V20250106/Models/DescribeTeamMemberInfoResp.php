@@ -18,76 +18,76 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Team member information
+ * Team member information.
  *
- * @method string getUserId() Obtain User ID
- * @method void setUserId(string $UserId) Set User ID
- * @method string getUserAccount() Obtain User account
- * @method void setUserAccount(string $UserAccount) Set User account
- * @method string getUserName() Obtain User name
- * @method void setUserName(string $UserName) Set User name
- * @method string getTeamId() Obtain Team ID
- * @method void setTeamId(string $TeamId) Set Team ID
- * @method string getTeamName() Obtain Team name
- * @method void setTeamName(string $TeamName) Set Team name
- * @method string getTeamRoleName() Obtain Specifies the team role name.
- * @method void setTeamRoleName(string $TeamRoleName) Set Specifies the team role name.
- * @method integer getTeamRoleId() Obtain Specifies the team role ID.
- * @method void setTeamRoleId(integer $TeamRoleId) Set Specifies the team role ID.
- * @method boolean getCanEdit() Obtain Whether it is editable
- * @method void setCanEdit(boolean $CanEdit) Set Whether it is editable
+ * @method string getUserId() Obtain User ID.
+ * @method void setUserId(string $UserId) Set User ID.
+ * @method string getUserAccount() Obtain User account.
+ * @method void setUserAccount(string $UserAccount) Set User account.
+ * @method string getUserName() Obtain User name.
+ * @method void setUserName(string $UserName) Set User name.
+ * @method string getTeamId() Obtain Team ID.
+ * @method void setTeamId(string $TeamId) Set Team ID.
+ * @method string getTeamName() Obtain Team name.
+ * @method void setTeamName(string $TeamName) Set Team name.
+ * @method string getTeamRoleName() Obtain Team role name.
+ * @method void setTeamRoleName(string $TeamRoleName) Set Team role name.
+ * @method integer getTeamRoleId() Obtain Team role ID.
+ * @method void setTeamRoleId(integer $TeamRoleId) Set Team role ID.
+ * @method boolean getCanEdit() Obtain Whether it can be edited.
+ * @method void setCanEdit(boolean $CanEdit) Set Whether it can be edited.
  */
 class DescribeTeamMemberInfoResp extends AbstractModel
 {
     /**
-     * @var string User ID
+     * @var string User ID.
      */
     public $UserId;
 
     /**
-     * @var string User account
+     * @var string User account.
      */
     public $UserAccount;
 
     /**
-     * @var string User name
+     * @var string User name.
      */
     public $UserName;
 
     /**
-     * @var string Team ID
+     * @var string Team ID.
      */
     public $TeamId;
 
     /**
-     * @var string Team name
+     * @var string Team name.
      */
     public $TeamName;
 
     /**
-     * @var string Specifies the team role name.
+     * @var string Team role name.
      */
     public $TeamRoleName;
 
     /**
-     * @var integer Specifies the team role ID.
+     * @var integer Team role ID.
      */
     public $TeamRoleId;
 
     /**
-     * @var boolean Whether it is editable
+     * @var boolean Whether it can be edited.
      */
     public $CanEdit;
 
     /**
-     * @param string $UserId User ID
-     * @param string $UserAccount User account
-     * @param string $UserName User name
-     * @param string $TeamId Team ID
-     * @param string $TeamName Team name
-     * @param string $TeamRoleName Specifies the team role name.
-     * @param integer $TeamRoleId Specifies the team role ID.
-     * @param boolean $CanEdit Whether it is editable
+     * @param string $UserId User ID.
+     * @param string $UserAccount User account.
+     * @param string $UserName User name.
+     * @param string $TeamId Team ID.
+     * @param string $TeamName Team name.
+     * @param string $TeamRoleName Team role name.
+     * @param integer $TeamRoleId Team role ID.
+     * @param boolean $CanEdit Whether it can be edited.
      */
     function __construct()
     {

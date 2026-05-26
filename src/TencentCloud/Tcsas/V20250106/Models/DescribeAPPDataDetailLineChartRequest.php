@@ -20,78 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAPPDataDetailLineChart request structure.
  *
- * @method string getPlatformId() Obtain Tenant ID
- * @method void setPlatformId(string $PlatformId) Set Tenant ID
- * @method string getReportId() Obtain Fixed value: mnp_data_analysis
- * @method void setReportId(string $ReportId) Set Fixed value: mnp_data_analysis
- * @method array getIndexIds() Obtain IndexId (optional):
+ * @method string getPlatformId() Obtain Tenant ID.
+ * @method void setPlatformId(string $PlatformId) Set Tenant ID.
+ * @method string getReportId() Obtain Fixed value: mnp_data_analysis.
+ * @method void setReportId(string $ReportId) Set Fixed value: mnp_data_analysis.
+ * @method array getIndexIds() Obtain Index ID (optional):
 app_minigame_num: Number of created mini games
 app_online_miniapp_num: Number of available mini programs
 app_miniapp_num: Number of created mini programs
 app_related_corp_num: Mini program team data
 app_online_minigame_num: Number of available mini games
 app_active_device_num: Number of active devices
-app_new_device_num: Number of new devices
- * @method void setIndexIds(array $IndexIds) Set IndexId (optional):
+app_new_device_num: Number of new devices.
+ * @method void setIndexIds(array $IndexIds) Set Index ID (optional):
 app_minigame_num: Number of created mini games
 app_online_miniapp_num: Number of available mini programs
 app_miniapp_num: Number of created mini programs
 app_related_corp_num: Mini program team data
 app_online_minigame_num: Number of available mini games
 app_active_device_num: Number of active devices
-app_new_device_num: Number of new devices
- * @method string getQueryData() Obtain Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}
- * @method void setQueryData(string $QueryData) Set Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}
- * @method array getApplicationIds() Obtain Superapp ID
- * @method void setApplicationIds(array $ApplicationIds) Set Superapp ID
+app_new_device_num: Number of new devices.
+ * @method string getQueryData() Obtain Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}.
+ * @method void setQueryData(string $QueryData) Set Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}.
+ * @method array getApplicationIds() Obtain Superapp ID.
+ * @method void setApplicationIds(array $ApplicationIds) Set Superapp ID.
  */
 class DescribeAPPDataDetailLineChartRequest extends AbstractModel
 {
     /**
-     * @var string Tenant ID
+     * @var string Tenant ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Fixed value: mnp_data_analysis
+     * @var string Fixed value: mnp_data_analysis.
      */
     public $ReportId;
 
     /**
-     * @var array IndexId (optional):
+     * @var array Index ID (optional):
 app_minigame_num: Number of created mini games
 app_online_miniapp_num: Number of available mini programs
 app_miniapp_num: Number of created mini programs
 app_related_corp_num: Mini program team data
 app_online_minigame_num: Number of available mini games
 app_active_device_num: Number of active devices
-app_new_device_num: Number of new devices
+app_new_device_num: Number of new devices.
      */
     public $IndexIds;
 
     /**
-     * @var string Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}
+     * @var string Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}.
      */
     public $QueryData;
 
     /**
-     * @var array Superapp ID
+     * @var array Superapp ID.
      */
     public $ApplicationIds;
 
     /**
-     * @param string $PlatformId Tenant ID
-     * @param string $ReportId Fixed value: mnp_data_analysis
-     * @param array $IndexIds IndexId (optional):
+     * @param string $PlatformId Tenant ID.
+     * @param string $ReportId Fixed value: mnp_data_analysis.
+     * @param array $IndexIds Index ID (optional):
 app_minigame_num: Number of created mini games
 app_online_miniapp_num: Number of available mini programs
 app_miniapp_num: Number of created mini programs
 app_related_corp_num: Mini program team data
 app_online_minigame_num: Number of available mini games
 app_active_device_num: Number of active devices
-app_new_device_num: Number of new devices
-     * @param string $QueryData Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}
-     * @param array $ApplicationIds Superapp ID
+app_new_device_num: Number of new devices.
+     * @param string $QueryData Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}.
+     * @param array $ApplicationIds Superapp ID.
      */
     function __construct()
     {

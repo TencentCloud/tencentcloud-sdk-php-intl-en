@@ -24,12 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorage(integer $Storage) Set Instance disk size in GB
  * @method integer getMemory() Obtain Instance memory size in GB
  * @method void setMemory(integer $Memory) Set Instance memory size in GB
- * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-hez4fh0v
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-hez4fh0v
+ * @method string getDBInstanceId() Obtain Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  * @method string getInstanceChargeType() Obtain Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
- * @method integer getCpu() Obtain Instance CPU size, unit: Core
- * @method void setCpu(integer $Cpu) Set Instance CPU size, unit: Core
+ * @method integer getCpu() Obtain Specifies the instance Cpu size in unit Core.
+If this parameter is not input, the Cpu is set based on the corresponding sales specification determined by Memory. for example, if Memory is 2 and the supported sales specification is 1-core 2GiB, the Cpu defaults to 1 when not input.
+ * @method void setCpu(integer $Cpu) Set Specifies the instance Cpu size in unit Core.
+If this parameter is not input, the Cpu is set based on the corresponding sales specification determined by Memory. for example, if Memory is 2 and the supported sales specification is 1-core 2GiB, the Cpu defaults to 1 when not input.
  */
 class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 {
@@ -44,26 +46,29 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
     public $Memory;
 
     /**
-     * @var string Instance ID in the format of postgres-hez4fh0v
+     * @var string Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
     /**
      * @var string Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
+     * @deprecated
      */
     public $InstanceChargeType;
 
     /**
-     * @var integer Instance CPU size, unit: Core
+     * @var integer Specifies the instance Cpu size in unit Core.
+If this parameter is not input, the Cpu is set based on the corresponding sales specification determined by Memory. for example, if Memory is 2 and the supported sales specification is 1-core 2GiB, the Cpu defaults to 1 when not input.
      */
     public $Cpu;
 
     /**
      * @param integer $Storage Instance disk size in GB
      * @param integer $Memory Instance memory size in GB
-     * @param string $DBInstanceId Instance ID in the format of postgres-hez4fh0v
+     * @param string $DBInstanceId Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      * @param string $InstanceChargeType Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
-     * @param integer $Cpu Instance CPU size, unit: Core
+     * @param integer $Cpu Specifies the instance Cpu size in unit Core.
+If this parameter is not input, the Cpu is set based on the corresponding sales specification determined by Memory. for example, if Memory is 2 and the supported sales specification is 1-core 2GiB, the Cpu defaults to 1 when not input.
      */
     function __construct()
     {

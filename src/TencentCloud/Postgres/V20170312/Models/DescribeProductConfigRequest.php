@@ -20,38 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProductConfig request structure.
  *
- * @method string getZone() Obtain AZ name
- * @method void setZone(string $Zone) Set AZ name
- * @method string getDBEngine() Obtain Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-Default value: `postgresql`
- * @method void setDBEngine(string $DBEngine) Set Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-Default value: `postgresql`
+ * @method string getZone() Obtain <p>Availability zone name.</p>
+ * @method void setZone(string $Zone) Set <p>Availability zone name.</p>
+ * @method string getDBEngine() Obtain <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).<br>If this parameter is not specified, the default value is postgresql.</p>
+ * @method void setDBEngine(string $DBEngine) Set <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).<br>If this parameter is not specified, the default value is postgresql.</p>
+ * @method string getStorageType() Obtain <p>Instance storage type. The supported versions and specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+ * @method void setStorageType(string $StorageType) Set <p>Instance storage type. The supported versions and specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
  */
 class DescribeProductConfigRequest extends AbstractModel
 {
     /**
-     * @var string AZ name
+     * @var string <p>Availability zone name.</p>
      */
     public $Zone;
 
     /**
-     * @var string Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-Default value: `postgresql`
+     * @var string <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).<br>If this parameter is not specified, the default value is postgresql.</p>
      */
     public $DBEngine;
 
     /**
-     * @param string $Zone AZ name
-     * @param string $DBEngine Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-Default value: `postgresql`
+     * @var string <p>Instance storage type. The supported versions and specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+     */
+    public $StorageType;
+
+    /**
+     * @param string $Zone <p>Availability zone name.</p>
+     * @param string $DBEngine <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).<br>If this parameter is not specified, the default value is postgresql.</p>
+     * @param string $StorageType <p>Instance storage type. The supported versions and specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
      */
     function __construct()
     {
@@ -72,6 +68,10 @@ Default value: `postgresql`
 
         if (array_key_exists("DBEngine",$param) and $param["DBEngine"] !== null) {
             $this->DBEngine = $param["DBEngine"];
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
         }
     }
 }

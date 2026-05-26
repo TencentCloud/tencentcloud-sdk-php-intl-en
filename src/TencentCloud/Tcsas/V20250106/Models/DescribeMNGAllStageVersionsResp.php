@@ -18,156 +18,156 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response object for querying the mini game version information
+ * Response for querying all-stage versions of a mini game.
  *
- * @method string getMNPId() Obtain <p>Mini game appid</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini game appid</p>
- * @method integer getMNPVersionId() Obtain <p>Mini game version ID</p>
- * @method void setMNPVersionId(integer $MNPVersionId) Set <p>Mini game version ID</p>
- * @method string getMNPName() Obtain <p>Mini game name</p>
- * @method void setMNPName(string $MNPName) Set <p>Mini game name</p>
- * @method string getMNPIcon() Obtain <p>Mini game icon</p>
- * @method void setMNPIcon(string $MNPIcon) Set <p>Mini game icon</p>
- * @method string getMNPType() Obtain <p>Mini game category</p>
- * @method void setMNPType(string $MNPType) Set <p>Mini game category</p>
- * @method string getMNPIntro() Obtain <p>Mini game introduction</p>
- * @method void setMNPIntro(string $MNPIntro) Set <p>Mini game introduction</p>
- * @method string getMNPDesc() Obtain <p>Mini game description</p>
- * @method void setMNPDesc(string $MNPDesc) Set <p>Mini game description</p>
- * @method string getCreateUser() Obtain <p>Developer</p>
- * @method void setCreateUser(string $CreateUser) Set <p>Developer</p>
- * @method string getCreateTime() Obtain <p>Developer creation time</p>
- * @method void setCreateTime(string $CreateTime) Set <p>Developer creation time</p>
- * @method string getMNPVersion() Obtain <p>Mini game version</p>
- * @method void setMNPVersion(string $MNPVersion) Set <p>Mini game version</p>
- * @method string getMNPVersionIntro() Obtain <p>Version feature description</p>
- * @method void setMNPVersionIntro(string $MNPVersionIntro) Set <p>Version feature description</p>
- * @method string getPhase() Obtain <p>Version:</p> Develop, preview, released</p>
- * @method void setPhase(string $Phase) Set <p>Version:</p> Develop, preview, released</p>
- * @method integer getApprovalStatus() Obtain <p>Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
- * @method void setApprovalStatus(integer $ApprovalStatus) Set <p>Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
- * @method string getApprovalNo() Obtain <p>Approval number</p>
- * @method void setApprovalNo(string $ApprovalNo) Set <p>Approval number</p>
- * @method integer getShowCase() Obtain <p>Whether this is a preview. Valid values: 0: No; 1: Yes</p>
- * @method void setShowCase(integer $ShowCase) Set <p>Whether this is a preview. Valid values: 0: No; 1: Yes</p>
- * @method integer getRollbackVersion() Obtain <p>Rollback version number</p>
- * @method void setRollbackVersion(integer $RollbackVersion) Set <p>Rollback version number</p>
- * @method integer getStatus() Obtain <p>Available status</p>
- * @method void setStatus(integer $Status) Set <p>Available status</p>
- * @method integer getVersionCurrentStatus() Obtain <p>Primary status of the current version. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
- * @method void setVersionCurrentStatus(integer $VersionCurrentStatus) Set <p>Primary status of the current version. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
+ * @method string getMNPId() Obtain <p>Mini game appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini game appid.</p>
+ * @method integer getMNPVersionId() Obtain <p>Mini game version ID.</p>
+ * @method void setMNPVersionId(integer $MNPVersionId) Set <p>Mini game version ID.</p>
+ * @method string getMNPName() Obtain <p>Mini game name.</p>
+ * @method void setMNPName(string $MNPName) Set <p>Mini game name.</p>
+ * @method string getMNPIcon() Obtain <p>Mini game icon.</p>
+ * @method void setMNPIcon(string $MNPIcon) Set <p>Mini game icon.</p>
+ * @method string getMNPType() Obtain <p>Mini game category.</p>
+ * @method void setMNPType(string $MNPType) Set <p>Mini game category.</p>
+ * @method string getMNPIntro() Obtain <p>Mini game introduction.</p>
+ * @method void setMNPIntro(string $MNPIntro) Set <p>Mini game introduction.</p>
+ * @method string getMNPDesc() Obtain <p>Mini game description.</p>
+ * @method void setMNPDesc(string $MNPDesc) Set <p>Mini game description.</p>
+ * @method string getCreateUser() Obtain <p>Creator.</p>
+ * @method void setCreateUser(string $CreateUser) Set <p>Creator.</p>
+ * @method string getCreateTime() Obtain <p>Creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
+ * @method string getMNPVersion() Obtain <p>Mini game version.</p>
+ * @method void setMNPVersion(string $MNPVersion) Set <p>Mini game version.</p>
+ * @method string getMNPVersionIntro() Obtain <p>Version feature introduction.</p>
+ * @method void setMNPVersionIntro(string $MNPVersionIntro) Set <p>Version feature introduction.</p>
+ * @method string getPhase() Obtain <p>Stage: Develop, preview, available.</p>
+ * @method void setPhase(string $Phase) Set <p>Stage: Develop, preview, available.</p>
+ * @method integer getApprovalStatus() Obtain <p>Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
+ * @method void setApprovalStatus(integer $ApprovalStatus) Set <p>Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
+ * @method string getApprovalNo() Obtain <p>Approval number.</p>
+ * @method void setApprovalNo(string $ApprovalNo) Set <p>Approval number.</p>
+ * @method integer getShowCase() Obtain <p>Whether this is a preview. Valid values: 0: No; 1: Yes.</p>
+ * @method void setShowCase(integer $ShowCase) Set <p>Whether this is a preview. Valid values: 0: No; 1: Yes.</p>
+ * @method integer getRollbackVersion() Obtain <p>Rollback version number.</p>
+ * @method void setRollbackVersion(integer $RollbackVersion) Set <p>Rollback version number.</p>
+ * @method integer getStatus() Obtain <p>Available status.</p>
+ * @method void setStatus(integer $Status) Set <p>Available status.</p>
+ * @method integer getVersionCurrentStatus() Obtain <p>Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
+ * @method void setVersionCurrentStatus(integer $VersionCurrentStatus) Set <p>Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
  */
 class DescribeMNGAllStageVersionsResp extends AbstractModel
 {
     /**
-     * @var string <p>Mini game appid</p>
+     * @var string <p>Mini game appid.</p>
      */
     public $MNPId;
 
     /**
-     * @var integer <p>Mini game version ID</p>
+     * @var integer <p>Mini game version ID.</p>
      */
     public $MNPVersionId;
 
     /**
-     * @var string <p>Mini game name</p>
+     * @var string <p>Mini game name.</p>
      */
     public $MNPName;
 
     /**
-     * @var string <p>Mini game icon</p>
+     * @var string <p>Mini game icon.</p>
      */
     public $MNPIcon;
 
     /**
-     * @var string <p>Mini game category</p>
+     * @var string <p>Mini game category.</p>
      */
     public $MNPType;
 
     /**
-     * @var string <p>Mini game introduction</p>
+     * @var string <p>Mini game introduction.</p>
      */
     public $MNPIntro;
 
     /**
-     * @var string <p>Mini game description</p>
+     * @var string <p>Mini game description.</p>
      */
     public $MNPDesc;
 
     /**
-     * @var string <p>Developer</p>
+     * @var string <p>Creator.</p>
      */
     public $CreateUser;
 
     /**
-     * @var string <p>Developer creation time</p>
+     * @var string <p>Creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string <p>Mini game version</p>
+     * @var string <p>Mini game version.</p>
      */
     public $MNPVersion;
 
     /**
-     * @var string <p>Version feature description</p>
+     * @var string <p>Version feature introduction.</p>
      */
     public $MNPVersionIntro;
 
     /**
-     * @var string <p>Version:</p> Develop, preview, released</p>
+     * @var string <p>Stage: Develop, preview, available.</p>
      */
     public $Phase;
 
     /**
-     * @var integer <p>Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
+     * @var integer <p>Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
      */
     public $ApprovalStatus;
 
     /**
-     * @var string <p>Approval number</p>
+     * @var string <p>Approval number.</p>
      */
     public $ApprovalNo;
 
     /**
-     * @var integer <p>Whether this is a preview. Valid values: 0: No; 1: Yes</p>
+     * @var integer <p>Whether this is a preview. Valid values: 0: No; 1: Yes.</p>
      */
     public $ShowCase;
 
     /**
-     * @var integer <p>Rollback version number</p>
+     * @var integer <p>Rollback version number.</p>
      */
     public $RollbackVersion;
 
     /**
-     * @var integer <p>Available status</p>
+     * @var integer <p>Available status.</p>
      */
     public $Status;
 
     /**
-     * @var integer <p>Primary status of the current version. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
+     * @var integer <p>Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
      */
     public $VersionCurrentStatus;
 
     /**
-     * @param string $MNPId <p>Mini game appid</p>
-     * @param integer $MNPVersionId <p>Mini game version ID</p>
-     * @param string $MNPName <p>Mini game name</p>
-     * @param string $MNPIcon <p>Mini game icon</p>
-     * @param string $MNPType <p>Mini game category</p>
-     * @param string $MNPIntro <p>Mini game introduction</p>
-     * @param string $MNPDesc <p>Mini game description</p>
-     * @param string $CreateUser <p>Developer</p>
-     * @param string $CreateTime <p>Developer creation time</p>
-     * @param string $MNPVersion <p>Mini game version</p>
-     * @param string $MNPVersionIntro <p>Version feature description</p>
-     * @param string $Phase <p>Version:</p> Develop, preview, released</p>
-     * @param integer $ApprovalStatus <p>Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
-     * @param string $ApprovalNo <p>Approval number</p>
-     * @param integer $ShowCase <p>Whether this is a preview. Valid values: 0: No; 1: Yes</p>
-     * @param integer $RollbackVersion <p>Rollback version number</p>
-     * @param integer $Status <p>Available status</p>
-     * @param integer $VersionCurrentStatus <p>Primary status of the current version. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
+     * @param string $MNPId <p>Mini game appid.</p>
+     * @param integer $MNPVersionId <p>Mini game version ID.</p>
+     * @param string $MNPName <p>Mini game name.</p>
+     * @param string $MNPIcon <p>Mini game icon.</p>
+     * @param string $MNPType <p>Mini game category.</p>
+     * @param string $MNPIntro <p>Mini game introduction.</p>
+     * @param string $MNPDesc <p>Mini game description.</p>
+     * @param string $CreateUser <p>Creator.</p>
+     * @param string $CreateTime <p>Creation time.</p>
+     * @param string $MNPVersion <p>Mini game version.</p>
+     * @param string $MNPVersionIntro <p>Version feature introduction.</p>
+     * @param string $Phase <p>Stage: Develop, preview, available.</p>
+     * @param integer $ApprovalStatus <p>Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
+     * @param string $ApprovalNo <p>Approval number.</p>
+     * @param integer $ShowCase <p>Whether this is a preview. Valid values: 0: No; 1: Yes.</p>
+     * @param integer $RollbackVersion <p>Rollback version number.</p>
+     * @param integer $Status <p>Available status.</p>
+     * @param integer $VersionCurrentStatus <p>Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
      */
     function __construct()
     {

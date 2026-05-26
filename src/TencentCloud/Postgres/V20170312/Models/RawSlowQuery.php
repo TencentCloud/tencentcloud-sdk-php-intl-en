@@ -20,58 +20,118 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The list of slow query details returned by the `DescribeSlowQueryList` API
  *
- * @method string getRawQuery() Obtain Slow query statement
- * @method void setRawQuery(string $RawQuery) Set Slow query statement
- * @method string getDatabaseName() Obtain The database queried by the slow query statement
- * @method void setDatabaseName(string $DatabaseName) Set The database queried by the slow query statement
- * @method float getDuration() Obtain The execution time of the slow query statement
- * @method void setDuration(float $Duration) Set The execution time of the slow query statement
- * @method string getClientAddr() Obtain The client that executes the slow query statement
- * @method void setClientAddr(string $ClientAddr) Set The client that executes the slow query statement
- * @method string getUserName() Obtain The name of the user who executes the slow query statement
- * @method void setUserName(string $UserName) Set The name of the user who executes the slow query statement
- * @method string getSessionStartTime() Obtain The time when the slow query statement starts to execute
- * @method void setSessionStartTime(string $SessionStartTime) Set The time when the slow query statement starts to execute
+ * @method string getRawQuery() Obtain <p>Slow SQL statement</p>
+ * @method void setRawQuery(string $RawQuery) Set <p>Slow SQL statement</p>
+ * @method string getDatabaseName() Obtain <p>Database for slow SQL queries</p>
+ * @method void setDatabaseName(string $DatabaseName) Set <p>Database for slow SQL queries</p>
+ * @method float getDuration() Obtain <p>Slow SQL execution duration</p>
+ * @method void setDuration(float $Duration) Set <p>Slow SQL execution duration</p>
+ * @method string getClientAddr() Obtain <p>Client that executes Slow SQL</p>
+ * @method void setClientAddr(string $ClientAddr) Set <p>Client that executes Slow SQL</p>
+ * @method string getUserName() Obtain <p>userName that executes slow SQL</p>
+ * @method void setUserName(string $UserName) Set <p>userName that executes slow SQL</p>
+ * @method string getSessionStartTime() Obtain <p>Start time of Slow SQL execution</p>
+ * @method void setSessionStartTime(string $SessionStartTime) Set <p>Start time of Slow SQL execution</p>
+ * @method integer getProcessId() Obtain <p>Process ID of the slow SQL being executed</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProcessId(integer $ProcessId) Set <p>Process ID of the slow SQL being executed</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSessionId() Obtain <p>Session ID that executes slow SQL.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSessionId(string $SessionId) Set <p>Session ID that executes slow SQL.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVirtualTransactionId() Obtain <p>Transaction ID of the executed slow SQL</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVirtualTransactionId(string $VirtualTransactionId) Set <p>Transaction ID of the executed slow SQL</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSqlStateCode() Obtain <p>Status code for executing slow SQL</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSqlStateCode(string $SqlStateCode) Set <p>Status code for executing slow SQL</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getApplicationName() Obtain <p>client name that executes slow SQL</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setApplicationName(string $ApplicationName) Set <p>client name that executes slow SQL</p>
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RawSlowQuery extends AbstractModel
 {
     /**
-     * @var string Slow query statement
+     * @var string <p>Slow SQL statement</p>
      */
     public $RawQuery;
 
     /**
-     * @var string The database queried by the slow query statement
+     * @var string <p>Database for slow SQL queries</p>
      */
     public $DatabaseName;
 
     /**
-     * @var float The execution time of the slow query statement
+     * @var float <p>Slow SQL execution duration</p>
      */
     public $Duration;
 
     /**
-     * @var string The client that executes the slow query statement
+     * @var string <p>Client that executes Slow SQL</p>
      */
     public $ClientAddr;
 
     /**
-     * @var string The name of the user who executes the slow query statement
+     * @var string <p>userName that executes slow SQL</p>
      */
     public $UserName;
 
     /**
-     * @var string The time when the slow query statement starts to execute
+     * @var string <p>Start time of Slow SQL execution</p>
      */
     public $SessionStartTime;
 
     /**
-     * @param string $RawQuery Slow query statement
-     * @param string $DatabaseName The database queried by the slow query statement
-     * @param float $Duration The execution time of the slow query statement
-     * @param string $ClientAddr The client that executes the slow query statement
-     * @param string $UserName The name of the user who executes the slow query statement
-     * @param string $SessionStartTime The time when the slow query statement starts to execute
+     * @var integer <p>Process ID of the slow SQL being executed</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProcessId;
+
+    /**
+     * @var string <p>Session ID that executes slow SQL.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SessionId;
+
+    /**
+     * @var string <p>Transaction ID of the executed slow SQL</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $VirtualTransactionId;
+
+    /**
+     * @var string <p>Status code for executing slow SQL</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SqlStateCode;
+
+    /**
+     * @var string <p>client name that executes slow SQL</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ApplicationName;
+
+    /**
+     * @param string $RawQuery <p>Slow SQL statement</p>
+     * @param string $DatabaseName <p>Database for slow SQL queries</p>
+     * @param float $Duration <p>Slow SQL execution duration</p>
+     * @param string $ClientAddr <p>Client that executes Slow SQL</p>
+     * @param string $UserName <p>userName that executes slow SQL</p>
+     * @param string $SessionStartTime <p>Start time of Slow SQL execution</p>
+     * @param integer $ProcessId <p>Process ID of the slow SQL being executed</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SessionId <p>Session ID that executes slow SQL.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VirtualTransactionId <p>Transaction ID of the executed slow SQL</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SqlStateCode <p>Status code for executing slow SQL</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ApplicationName <p>client name that executes slow SQL</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -108,6 +168,26 @@ class RawSlowQuery extends AbstractModel
 
         if (array_key_exists("SessionStartTime",$param) and $param["SessionStartTime"] !== null) {
             $this->SessionStartTime = $param["SessionStartTime"];
+        }
+
+        if (array_key_exists("ProcessId",$param) and $param["ProcessId"] !== null) {
+            $this->ProcessId = $param["ProcessId"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("VirtualTransactionId",$param) and $param["VirtualTransactionId"] !== null) {
+            $this->VirtualTransactionId = $param["VirtualTransactionId"];
+        }
+
+        if (array_key_exists("SqlStateCode",$param) and $param["SqlStateCode"] !== null) {
+            $this->SqlStateCode = $param["SqlStateCode"];
+        }
+
+        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
+            $this->ApplicationName = $param["ApplicationName"];
         }
     }
 }

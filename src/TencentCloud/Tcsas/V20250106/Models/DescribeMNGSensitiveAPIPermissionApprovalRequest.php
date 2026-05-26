@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMNGSensitiveAPIPermissionApproval request structure.
  *
- * @method string getApprovalNo() Obtain <p>Approval number</p>
- * @method void setApprovalNo(string $ApprovalNo) Set <p>Approval number</p>
- * @method string getPlatformId() Obtain <p>Platform ID</p>
- * @method void setPlatformId(string $PlatformId) Set <p>Platform ID</p>
+ * @method string getApprovalNo() Obtain <p>Approval number.</p>
+ * @method void setApprovalNo(string $ApprovalNo) Set <p>Approval number.</p>
+ * @method string getPlatformId() Obtain <p>Platform ID.</p>
+ * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
  */
 class DescribeMNGSensitiveAPIPermissionApprovalRequest extends AbstractModel
 {
     /**
-     * @var string <p>Approval number</p>
+     * @var string <p>Approval number.</p>
      */
     public $ApprovalNo;
 
     /**
-     * @var string <p>Platform ID</p>
+     * @var string <p>Platform ID.</p>
      */
     public $PlatformId;
 
     /**
-     * @param string $ApprovalNo <p>Approval number</p>
-     * @param string $PlatformId <p>Platform ID</p>
+     * @param string $ApprovalNo <p>Approval number.</p>
+     * @param string $PlatformId <p>Platform ID.</p>
      */
     function __construct()
     {

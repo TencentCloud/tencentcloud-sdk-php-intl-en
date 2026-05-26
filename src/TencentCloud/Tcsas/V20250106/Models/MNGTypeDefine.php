@@ -18,60 +18,60 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mini game type definition
+ * Mini game category definition.
  *
- * @method string getTypeName() Obtain <p>Mini game category name</p>
- * @method void setTypeName(string $TypeName) Set <p>Mini game category name</p>
- * @method array getTypeValue() Obtain <p>Mini game category</p>
- * @method void setTypeValue(array $TypeValue) Set <p>Mini game category</p>
- * @method integer getTypeId() Obtain <p>Category ID</p>
- * @method void setTypeId(integer $TypeId) Set <p>Category ID</p>
- * @method integer getCreateTime() Obtain <p>Creation time</p>
- * @method void setCreateTime(integer $CreateTime) Set <p>Creation time</p>
- * @method string getCreateUser() Obtain <p>Creator</p>
- * @method void setCreateUser(string $CreateUser) Set <p>Creator</p>
- * @method boolean getIsSystem() Obtain <p>Whether this is a system category</p>
- * @method void setIsSystem(boolean $IsSystem) Set <p>Whether this is a system category</p>
+ * @method string getTypeName() Obtain <p>Mini game category name.</p>
+ * @method void setTypeName(string $TypeName) Set <p>Mini game category name.</p>
+ * @method array getTypeValue() Obtain <p>Mini game category.</p>
+ * @method void setTypeValue(array $TypeValue) Set <p>Mini game category.</p>
+ * @method integer getTypeId() Obtain <p>Category ID.</p>
+ * @method void setTypeId(integer $TypeId) Set <p>Category ID.</p>
+ * @method integer getCreateTime() Obtain <p>Creation time.</p>
+ * @method void setCreateTime(integer $CreateTime) Set <p>Creation time.</p>
+ * @method string getCreateUser() Obtain <p>Creator.</p>
+ * @method void setCreateUser(string $CreateUser) Set <p>Creator.</p>
+ * @method boolean getIsSystem() Obtain <p>Whether it is a system category.</p>
+ * @method void setIsSystem(boolean $IsSystem) Set <p>Whether it is a system category.</p>
  */
 class MNGTypeDefine extends AbstractModel
 {
     /**
-     * @var string <p>Mini game category name</p>
+     * @var string <p>Mini game category name.</p>
      */
     public $TypeName;
 
     /**
-     * @var array <p>Mini game category</p>
+     * @var array <p>Mini game category.</p>
      */
     public $TypeValue;
 
     /**
-     * @var integer <p>Category ID</p>
+     * @var integer <p>Category ID.</p>
      */
     public $TypeId;
 
     /**
-     * @var integer <p>Creation time</p>
+     * @var integer <p>Creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string <p>Creator</p>
+     * @var string <p>Creator.</p>
      */
     public $CreateUser;
 
     /**
-     * @var boolean <p>Whether this is a system category</p>
+     * @var boolean <p>Whether it is a system category.</p>
      */
     public $IsSystem;
 
     /**
-     * @param string $TypeName <p>Mini game category name</p>
-     * @param array $TypeValue <p>Mini game category</p>
-     * @param integer $TypeId <p>Category ID</p>
-     * @param integer $CreateTime <p>Creation time</p>
-     * @param string $CreateUser <p>Creator</p>
-     * @param boolean $IsSystem <p>Whether this is a system category</p>
+     * @param string $TypeName <p>Mini game category name.</p>
+     * @param array $TypeValue <p>Mini game category.</p>
+     * @param integer $TypeId <p>Category ID.</p>
+     * @param integer $CreateTime <p>Creation time.</p>
+     * @param string $CreateUser <p>Creator.</p>
+     * @param boolean $IsSystem <p>Whether it is a system category.</p>
      */
     function __construct()
     {

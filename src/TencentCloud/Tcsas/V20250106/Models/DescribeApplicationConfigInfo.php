@@ -18,28 +18,28 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response data for retrieving superapp configuration information
+ * Response for querying superapp configuration information.
  *
- * @method array getAndroidConfig() Obtain Android configuration list
- * @method void setAndroidConfig(array $AndroidConfig) Set Android configuration list
- * @method array getIosConfig() Obtain iOS configuration list
- * @method void setIosConfig(array $IosConfig) Set iOS configuration list
+ * @method array getAndroidConfig() Obtain Android configuration list.
+ * @method void setAndroidConfig(array $AndroidConfig) Set Android configuration list.
+ * @method array getIosConfig() Obtain iOS configuration list.
+ * @method void setIosConfig(array $IosConfig) Set iOS configuration list.
  */
 class DescribeApplicationConfigInfo extends AbstractModel
 {
     /**
-     * @var array Android configuration list
+     * @var array Android configuration list.
      */
     public $AndroidConfig;
 
     /**
-     * @var array iOS configuration list
+     * @var array iOS configuration list.
      */
     public $IosConfig;
 
     /**
-     * @param array $AndroidConfig Android configuration list
-     * @param array $IosConfig iOS configuration list
+     * @param array $AndroidConfig Android configuration list.
+     * @param array $IosConfig iOS configuration list.
      */
     function __construct()
     {

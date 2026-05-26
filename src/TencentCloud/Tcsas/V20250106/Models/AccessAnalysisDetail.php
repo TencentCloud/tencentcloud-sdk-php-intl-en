@@ -18,92 +18,92 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Detailed visit analysis data
+ * Access analysis detail data.
  *
- * @method integer getActiveCount() Obtain Number of new devices
- * @method void setActiveCount(integer $ActiveCount) Set Number of new devices
- * @method string getAvgDevice() Obtain Average visit duration per user
- * @method void setAvgDevice(string $AvgDevice) Set Average visit duration per user
- * @method string getAvgOnce() Obtain Average visit duration per session
- * @method void setAvgOnce(string $AvgOnce) Set Average visit duration per session
- * @method string getAvgOpenCount() Obtain Average opens per user
- * @method void setAvgOpenCount(string $AvgOpenCount) Set Average opens per user
- * @method string getDataTime() Obtain Date
- * @method void setDataTime(string $DataTime) Set Date
- * @method string getFlushTime() Obtain Data time
- * @method void setFlushTime(string $FlushTime) Set Data time
- * @method integer getNewCount() Obtain Number of active devices
- * @method void setNewCount(integer $NewCount) Set Number of active devices
- * @method integer getOpenCount() Obtain Number of opens
- * @method void setOpenCount(integer $OpenCount) Set Number of opens
- * @method integer getTotalShareNum() Obtain Number of shares
- * @method void setTotalShareNum(integer $TotalShareNum) Set Number of shares
- * @method integer getTotalUserNum() Obtain Cumulative users
- * @method void setTotalUserNum(integer $TotalUserNum) Set Cumulative users
+ * @method integer getActiveCount() Obtain Number of new devices.
+ * @method void setActiveCount(integer $ActiveCount) Set Number of new devices.
+ * @method string getAvgDevice() Obtain Average visit duration per user.
+ * @method void setAvgDevice(string $AvgDevice) Set Average visit duration per user.
+ * @method string getAvgOnce() Obtain Average visit duration per session.
+ * @method void setAvgOnce(string $AvgOnce) Set Average visit duration per session.
+ * @method string getAvgOpenCount() Obtain Average opens per user.
+ * @method void setAvgOpenCount(string $AvgOpenCount) Set Average opens per user.
+ * @method string getDataTime() Obtain Date.
+ * @method void setDataTime(string $DataTime) Set Date.
+ * @method string getFlushTime() Obtain Data refresh time.
+ * @method void setFlushTime(string $FlushTime) Set Data refresh time.
+ * @method integer getNewCount() Obtain Number of active devices.
+ * @method void setNewCount(integer $NewCount) Set Number of active devices.
+ * @method integer getOpenCount() Obtain Number of opens.
+ * @method void setOpenCount(integer $OpenCount) Set Number of opens.
+ * @method integer getTotalShareNum() Obtain Number of shares.
+ * @method void setTotalShareNum(integer $TotalShareNum) Set Number of shares.
+ * @method integer getTotalUserNum() Obtain Cumulative users.
+ * @method void setTotalUserNum(integer $TotalUserNum) Set Cumulative users.
  */
 class AccessAnalysisDetail extends AbstractModel
 {
     /**
-     * @var integer Number of new devices
+     * @var integer Number of new devices.
      */
     public $ActiveCount;
 
     /**
-     * @var string Average visit duration per user
+     * @var string Average visit duration per user.
      */
     public $AvgDevice;
 
     /**
-     * @var string Average visit duration per session
+     * @var string Average visit duration per session.
      */
     public $AvgOnce;
 
     /**
-     * @var string Average opens per user
+     * @var string Average opens per user.
      */
     public $AvgOpenCount;
 
     /**
-     * @var string Date
+     * @var string Date.
      */
     public $DataTime;
 
     /**
-     * @var string Data time
+     * @var string Data refresh time.
      */
     public $FlushTime;
 
     /**
-     * @var integer Number of active devices
+     * @var integer Number of active devices.
      */
     public $NewCount;
 
     /**
-     * @var integer Number of opens
+     * @var integer Number of opens.
      */
     public $OpenCount;
 
     /**
-     * @var integer Number of shares
+     * @var integer Number of shares.
      */
     public $TotalShareNum;
 
     /**
-     * @var integer Cumulative users
+     * @var integer Cumulative users.
      */
     public $TotalUserNum;
 
     /**
-     * @param integer $ActiveCount Number of new devices
-     * @param string $AvgDevice Average visit duration per user
-     * @param string $AvgOnce Average visit duration per session
-     * @param string $AvgOpenCount Average opens per user
-     * @param string $DataTime Date
-     * @param string $FlushTime Data time
-     * @param integer $NewCount Number of active devices
-     * @param integer $OpenCount Number of opens
-     * @param integer $TotalShareNum Number of shares
-     * @param integer $TotalUserNum Cumulative users
+     * @param integer $ActiveCount Number of new devices.
+     * @param string $AvgDevice Average visit duration per user.
+     * @param string $AvgOnce Average visit duration per session.
+     * @param string $AvgOpenCount Average opens per user.
+     * @param string $DataTime Date.
+     * @param string $FlushTime Data refresh time.
+     * @param integer $NewCount Number of active devices.
+     * @param integer $OpenCount Number of opens.
+     * @param integer $TotalShareNum Number of shares.
+     * @param integer $TotalUserNum Cumulative users.
      */
     function __construct()
     {

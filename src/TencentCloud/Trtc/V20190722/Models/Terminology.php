@@ -18,28 +18,28 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Translation terminology
+ * Translate terminology.
  *
- * @method string getSource() Obtain Source terminology
- * @method void setSource(string $Source) Set Source terminology
- * @method string getTarget() Obtain Target terminology
- * @method void setTarget(string $Target) Set Target terminology
+ * @method string getSource() Obtain Source terminology.
+ * @method void setSource(string $Source) Set Source terminology.
+ * @method string getTarget() Obtain Terminology translation result.
+ * @method void setTarget(string $Target) Set Terminology translation result.
  */
 class Terminology extends AbstractModel
 {
     /**
-     * @var string Source terminology
+     * @var string Source terminology.
      */
     public $Source;
 
     /**
-     * @var string Target terminology
+     * @var string Terminology translation result.
      */
     public $Target;
 
     /**
-     * @param string $Source Source terminology
-     * @param string $Target Target terminology
+     * @param string $Source Source terminology.
+     * @param string $Target Terminology translation result.
      */
     function __construct()
     {

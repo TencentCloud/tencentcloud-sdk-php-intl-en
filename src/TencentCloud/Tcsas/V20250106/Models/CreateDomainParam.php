@@ -18,28 +18,28 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameters to create a domain name
+ * Request parameters for creating a domain.
  *
- * @method array getDomainUrlList() Obtain Array of domain name URLs
- * @method void setDomainUrlList(array $DomainUrlList) Set Array of domain name URLs
- * @method integer getDomainType() Obtain Domain type. 1: requests domain; 2: WebView load domain, 3: sockets domain; 4: File upload; 5: File download
- * @method void setDomainType(integer $DomainType) Set Domain type. 1: requests domain; 2: WebView load domain, 3: sockets domain; 4: File upload; 5: File download
+ * @method array getDomainUrlList() Obtain Array of domain URLs.
+ * @method void setDomainUrlList(array $DomainUrlList) Set Array of domain URLs.
+ * @method integer getDomainType() Obtain Domain type. Valid values: 1: Request domain; 2: Business domain; 3: Socket domain; 4: File upload; 5: File download. 
+ * @method void setDomainType(integer $DomainType) Set Domain type. Valid values: 1: Request domain; 2: Business domain; 3: Socket domain; 4: File upload; 5: File download. 
  */
 class CreateDomainParam extends AbstractModel
 {
     /**
-     * @var array Array of domain name URLs
+     * @var array Array of domain URLs.
      */
     public $DomainUrlList;
 
     /**
-     * @var integer Domain type. 1: requests domain; 2: WebView load domain, 3: sockets domain; 4: File upload; 5: File download
+     * @var integer Domain type. Valid values: 1: Request domain; 2: Business domain; 3: Socket domain; 4: File upload; 5: File download. 
      */
     public $DomainType;
 
     /**
-     * @param array $DomainUrlList Array of domain name URLs
-     * @param integer $DomainType Domain type. 1: requests domain; 2: WebView load domain, 3: sockets domain; 4: File upload; 5: File download
+     * @param array $DomainUrlList Array of domain URLs.
+     * @param integer $DomainType Domain type. Valid values: 1: Request domain; 2: Business domain; 3: Socket domain; 4: File upload; 5: File download. 
      */
     function __construct()
     {

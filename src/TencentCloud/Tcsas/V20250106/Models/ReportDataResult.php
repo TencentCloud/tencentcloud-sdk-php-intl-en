@@ -18,55 +18,55 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * General response for data query reports
+ * General response for data query reports.
  *
- * @method string getDataResult() Obtain Base64-encoded result data
- * @method void setDataResult(string $DataResult) Set Base64-encoded result data
- * @method string getExecSql() Obtain Executed SQL
+ * @method string getDataResult() Obtain Result data in Base64 encoding.
+ * @method void setDataResult(string $DataResult) Set Result data in Base64 encoding.
+ * @method string getExecSql() Obtain Executed SQL.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExecSql(string $ExecSql) Set Executed SQL
+ * @method void setExecSql(string $ExecSql) Set Executed SQL.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getExecTime() Obtain Execution time
+ * @method integer getExecTime() Obtain Execution time.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExecTime(integer $ExecTime) Set Execution time
+ * @method void setExecTime(integer $ExecTime) Set Execution time.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIndexId() Obtain Query index ID
+ * @method string getIndexId() Obtain Query index ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIndexId(string $IndexId) Set Query index ID
+ * @method void setIndexId(string $IndexId) Set Query index ID.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ReportDataResult extends AbstractModel
 {
     /**
-     * @var string Base64-encoded result data
+     * @var string Result data in Base64 encoding.
      */
     public $DataResult;
 
     /**
-     * @var string Executed SQL
+     * @var string Executed SQL.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExecSql;
 
     /**
-     * @var integer Execution time
+     * @var integer Execution time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExecTime;
 
     /**
-     * @var string Query index ID
+     * @var string Query index ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IndexId;
 
     /**
-     * @param string $DataResult Base64-encoded result data
-     * @param string $ExecSql Executed SQL
+     * @param string $DataResult Result data in Base64 encoding.
+     * @param string $ExecSql Executed SQL.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ExecTime Execution time
+     * @param integer $ExecTime Execution time.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IndexId Query index ID
+     * @param string $IndexId Query index ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

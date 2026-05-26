@@ -18,28 +18,28 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response for platform review of mini program version submission.
+ * Response for submitting a mini program version for approval.
  *
- * @method boolean getResult() Obtain Bool type response object
- * @method void setResult(boolean $Result) Set Bool type response object
- * @method string getApprovalNo() Obtain Approval No.
- * @method void setApprovalNo(string $ApprovalNo) Set Approval No.
+ * @method boolean getResult() Obtain The Boolean response object.
+ * @method void setResult(boolean $Result) Set The Boolean response object.
+ * @method string getApprovalNo() Obtain Approval nunmber.
+ * @method void setApprovalNo(string $ApprovalNo) Set Approval nunmber.
  */
 class CreateMNPApprovalResp extends AbstractModel
 {
     /**
-     * @var boolean Bool type response object
+     * @var boolean The Boolean response object.
      */
     public $Result;
 
     /**
-     * @var string Approval No.
+     * @var string Approval nunmber.
      */
     public $ApprovalNo;
 
     /**
-     * @param boolean $Result Bool type response object
-     * @param string $ApprovalNo Approval No.
+     * @param boolean $Result The Boolean response object.
+     * @param string $ApprovalNo Approval nunmber.
      */
     function __construct()
     {

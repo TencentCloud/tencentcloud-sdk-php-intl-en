@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMNPSensitiveAPIPermissionApproval request structure.
  *
- * @method string getAPIId() Obtain API Id
- * @method void setAPIId(string $APIId) Set API Id
- * @method string getApplyReason() Obtain Reason for application
- * @method void setApplyReason(string $ApplyReason) Set Reason for application
- * @method string getMNPId() Obtain Mini program ID
- * @method void setMNPId(string $MNPId) Set Mini program ID
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method string getAPIId() Obtain API ID.
+ * @method void setAPIId(string $APIId) Set API ID.
+ * @method string getApplyReason() Obtain Reason for request.
+ * @method void setApplyReason(string $ApplyReason) Set Reason for request.
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
  */
 class CreateMNPSensitiveAPIPermissionApprovalRequest extends AbstractModel
 {
     /**
-     * @var string API Id
+     * @var string API ID.
      */
     public $APIId;
 
     /**
-     * @var string Reason for application
+     * @var string Reason for request.
      */
     public $ApplyReason;
 
     /**
-     * @var string Mini program ID
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @param string $APIId API Id
-     * @param string $ApplyReason Reason for application
-     * @param string $MNPId Mini program ID
-     * @param string $PlatformId Platform ID
+     * @param string $APIId API ID.
+     * @param string $ApplyReason Reason for request.
+     * @param string $MNPId Mini program appid.
+     * @param string $PlatformId Platform ID.
      */
     function __construct()
     {

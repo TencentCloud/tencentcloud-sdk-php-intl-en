@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DestroyDBInstance request structure.
  *
- * @method string getDBInstanceId() Obtain The ID of the instance to be eliminated
- * @method void setDBInstanceId(string $DBInstanceId) Set The ID of the instance to be eliminated
+ * @method string getDBInstanceId() Obtain <p>ID of the instance to be shut down</p>
+ * @method void setDBInstanceId(string $DBInstanceId) Set <p>ID of the instance to be shut down</p>
  */
 class DestroyDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string The ID of the instance to be eliminated
+     * @var string <p>ID of the instance to be shut down</p>
      */
     public $DBInstanceId;
 
     /**
-     * @param string $DBInstanceId The ID of the instance to be eliminated
+     * @param string $DBInstanceId <p>ID of the instance to be shut down</p>
      */
     function __construct()
     {

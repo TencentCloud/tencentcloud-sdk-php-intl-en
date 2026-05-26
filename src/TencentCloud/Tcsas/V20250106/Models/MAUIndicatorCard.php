@@ -18,60 +18,52 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * MAU metric comparison response data
+ * MAU metric comparison response data.
  *
- * @method string getComparisonRatio() Obtain Growth rate (targetData - sourceData) / sourceData, returns 0 when SourceMAUNum is 0
- * @method void setComparisonRatio(string $ComparisonRatio) Set Growth rate (targetData - sourceData) / sourceData, returns 0 when SourceMAUNum is 0
- * @method integer getComparisonResult() Obtain 1 Increase
-2 Decrease
-Returns 0 when SourceMAUNum is 0
- * @method void setComparisonResult(integer $ComparisonResult) Set 1 Increase
-2 Decrease
-Returns 0 when SourceMAUNum is 0
- * @method integer getSourceMAUNum() Obtain Last month's MAU data
- * @method void setSourceMAUNum(integer $SourceMAUNum) Set Last month's MAU data
- * @method integer getTargetMAUNum() Obtain This month's MAU data
- * @method void setTargetMAUNum(integer $TargetMAUNum) Set This month's MAU data
- * @method integer getFlushTime() Obtain Data timestamp
- * @method void setFlushTime(integer $FlushTime) Set Data timestamp
+ * @method string getComparisonRatio() Obtain Growth rate, calculated as (targetData - sourceData) / sourceData. Returns 0 when SourceMAUNum is 0.
+ * @method void setComparisonRatio(string $ComparisonRatio) Set Growth rate, calculated as (targetData - sourceData) / sourceData. Returns 0 when SourceMAUNum is 0.
+ * @method integer getComparisonResult() Obtain Comparison result. Valid values: 1: Increase; 2: Decrease. Returns 0 when SourceMAUNum is 0.
+ * @method void setComparisonResult(integer $ComparisonResult) Set Comparison result. Valid values: 1: Increase; 2: Decrease. Returns 0 when SourceMAUNum is 0.
+ * @method integer getSourceMAUNum() Obtain Previous month MAU. 
+ * @method void setSourceMAUNum(integer $SourceMAUNum) Set Previous month MAU. 
+ * @method integer getTargetMAUNum() Obtain Current month MAU.
+ * @method void setTargetMAUNum(integer $TargetMAUNum) Set Current month MAU.
+ * @method integer getFlushTime() Obtain Data timestamp.
+ * @method void setFlushTime(integer $FlushTime) Set Data timestamp.
  */
 class MAUIndicatorCard extends AbstractModel
 {
     /**
-     * @var string Growth rate (targetData - sourceData) / sourceData, returns 0 when SourceMAUNum is 0
+     * @var string Growth rate, calculated as (targetData - sourceData) / sourceData. Returns 0 when SourceMAUNum is 0.
      */
     public $ComparisonRatio;
 
     /**
-     * @var integer 1 Increase
-2 Decrease
-Returns 0 when SourceMAUNum is 0
+     * @var integer Comparison result. Valid values: 1: Increase; 2: Decrease. Returns 0 when SourceMAUNum is 0.
      */
     public $ComparisonResult;
 
     /**
-     * @var integer Last month's MAU data
+     * @var integer Previous month MAU. 
      */
     public $SourceMAUNum;
 
     /**
-     * @var integer This month's MAU data
+     * @var integer Current month MAU.
      */
     public $TargetMAUNum;
 
     /**
-     * @var integer Data timestamp
+     * @var integer Data timestamp.
      */
     public $FlushTime;
 
     /**
-     * @param string $ComparisonRatio Growth rate (targetData - sourceData) / sourceData, returns 0 when SourceMAUNum is 0
-     * @param integer $ComparisonResult 1 Increase
-2 Decrease
-Returns 0 when SourceMAUNum is 0
-     * @param integer $SourceMAUNum Last month's MAU data
-     * @param integer $TargetMAUNum This month's MAU data
-     * @param integer $FlushTime Data timestamp
+     * @param string $ComparisonRatio Growth rate, calculated as (targetData - sourceData) / sourceData. Returns 0 when SourceMAUNum is 0.
+     * @param integer $ComparisonResult Comparison result. Valid values: 1: Increase; 2: Decrease. Returns 0 when SourceMAUNum is 0.
+     * @param integer $SourceMAUNum Previous month MAU. 
+     * @param integer $TargetMAUNum Current month MAU.
+     * @param integer $FlushTime Data timestamp.
      */
     function __construct()
     {

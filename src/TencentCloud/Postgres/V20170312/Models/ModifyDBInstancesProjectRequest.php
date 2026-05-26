@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstancesProject request structure.
  *
- * @method array getDBInstanceIdSet() Obtain List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
- * @method string getProjectId() Obtain ID of the new project
- * @method void setProjectId(string $ProjectId) Set ID of the new project
+ * @method array getDBInstanceIdSet() Obtain Specifies the instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports operating multiple instances simultaneously.
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set Specifies the instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports operating multiple instances simultaneously.
+ * @method string getProjectId() Obtain ID of the new project it belongs to. obtain through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api.
+ * @method void setProjectId(string $ProjectId) Set ID of the new project it belongs to. obtain through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api.
  */
 class ModifyDBInstancesProjectRequest extends AbstractModel
 {
     /**
-     * @var array List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+     * @var array Specifies the instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports operating multiple instances simultaneously.
      */
     public $DBInstanceIdSet;
 
     /**
-     * @var string ID of the new project
+     * @var string ID of the new project it belongs to. obtain through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api.
      */
     public $ProjectId;
 
     /**
-     * @param array $DBInstanceIdSet List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
-     * @param string $ProjectId ID of the new project
+     * @param array $DBInstanceIdSet Specifies the instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports operating multiple instances simultaneously.
+     * @param string $ProjectId ID of the new project it belongs to. obtain through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api.
      */
     function __construct()
     {

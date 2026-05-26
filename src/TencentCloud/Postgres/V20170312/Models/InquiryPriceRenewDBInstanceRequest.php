@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceRenewDBInstance request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
- * @method integer getPeriod() Obtain Renewal duration in months. Maximum value: 48
- * @method void setPeriod(integer $Period) Set Renewal duration in months. Maximum value: 48
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+This API only supports prepaid instance queries.
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+This API only supports prepaid instance queries.
+ * @method integer getPeriod() Obtain Renewal period, calculated on a monthly basis.
+ * @method void setPeriod(integer $Period) Set Renewal period, calculated on a monthly basis.
  */
 class InquiryPriceRenewDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+This API only supports prepaid instance queries.
      */
     public $DBInstanceId;
 
     /**
-     * @var integer Renewal duration in months. Maximum value: 48
+     * @var integer Renewal period, calculated on a monthly basis.
      */
     public $Period;
 
     /**
-     * @param string $DBInstanceId Instance ID
-     * @param integer $Period Renewal duration in months. Maximum value: 48
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+This API only supports prepaid instance queries.
+     * @param integer $Period Renewal period, calculated on a monthly basis.
      */
     function __construct()
     {

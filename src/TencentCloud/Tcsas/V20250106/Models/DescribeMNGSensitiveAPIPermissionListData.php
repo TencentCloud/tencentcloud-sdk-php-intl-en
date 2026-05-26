@@ -18,108 +18,108 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Queries the list data of sensitive APIs that available to the mini game
+ * List data for querying callable sensitive APIs of a mini game.
  *
- * @method string getAPIId() Obtain <p>API ID</p>
- * @method void setAPIId(string $APIId) Set <p>API ID</p>
- * @method string getAPIName() Obtain <p>API name</p>
- * @method void setAPIName(string $APIName) Set <p>API name</p>
- * @method string getAPIMethod() Obtain <p>API method</p>
- * @method void setAPIMethod(string $APIMethod) Set <p>API method</p>
- * @method integer getAPIStatus() Obtain <p>API status</p>
- * @method void setAPIStatus(integer $APIStatus) Set <p>API status</p>
- * @method integer getAPIApplyStatus() Obtain <p>API request status</p>
- * @method void setAPIApplyStatus(integer $APIApplyStatus) Set <p>API request status</p>
- * @method string getRejectReason() Obtain <p>Reason for rejection</p>
- * @method void setRejectReason(string $RejectReason) Set <p>Reason for rejection</p>
- * @method string getApprovalNo() Obtain <p>Approval number</p>
- * @method void setApprovalNo(string $ApprovalNo) Set <p>Approval number</p>
- * @method string getApplicationId() Obtain <p>Superapp ID</p>
- * @method void setApplicationId(string $ApplicationId) Set <p>Superapp ID</p>
- * @method string getApplicationIcon() Obtain <p>Superapp icon</p>
- * @method void setApplicationIcon(string $ApplicationIcon) Set <p>Superapp icon</p>
- * @method string getApplicationName() Obtain <p>Superapp name</p>
- * @method void setApplicationName(string $ApplicationName) Set <p>Superapp name</p>
- * @method integer getAPIType() Obtain <p>API type. Valid values: 1: System; 2: Custom
- * @method void setAPIType(integer $APIType) Set <p>API type. Valid values: 1: System; 2: Custom
- * @method string getAPIDesc() Obtain <p>API feature description</p>
- * @method void setAPIDesc(string $APIDesc) Set <p>API feature description</p>
+ * @method string getAPIId() Obtain <p>API ID.</p>
+ * @method void setAPIId(string $APIId) Set <p>API ID.</p>
+ * @method string getAPIName() Obtain <p>API name.</p>
+ * @method void setAPIName(string $APIName) Set <p>API name.</p>
+ * @method string getAPIMethod() Obtain <p>API method.</p>
+ * @method void setAPIMethod(string $APIMethod) Set <p>API method.</p>
+ * @method integer getAPIStatus() Obtain <p>API status.</p>
+ * @method void setAPIStatus(integer $APIStatus) Set <p>API status.</p>
+ * @method integer getAPIApplyStatus() Obtain <p>API request status.</p>
+ * @method void setAPIApplyStatus(integer $APIApplyStatus) Set <p>API request status.</p>
+ * @method string getRejectReason() Obtain <p>Reason for rejection.</p>
+ * @method void setRejectReason(string $RejectReason) Set <p>Reason for rejection.</p>
+ * @method string getApprovalNo() Obtain <p>Approval number.</p>
+ * @method void setApprovalNo(string $ApprovalNo) Set <p>Approval number.</p>
+ * @method string getApplicationId() Obtain <p>Superapp ID.</p>
+ * @method void setApplicationId(string $ApplicationId) Set <p>Superapp ID.</p>
+ * @method string getApplicationIcon() Obtain <p>Superapp icon.</p>
+ * @method void setApplicationIcon(string $ApplicationIcon) Set <p>Superapp icon.</p>
+ * @method string getApplicationName() Obtain <p>Superapp name.</p>
+ * @method void setApplicationName(string $ApplicationName) Set <p>Superapp name.</p>
+ * @method integer getAPIType() Obtain <p>API type. Valid values: 1: System; 2: Custom.</p>
+ * @method void setAPIType(integer $APIType) Set <p>API type. Valid values: 1: System; 2: Custom.</p>
+ * @method string getAPIDesc() Obtain <p>API feature description.</p>
+ * @method void setAPIDesc(string $APIDesc) Set <p>API feature description.</p>
  */
 class DescribeMNGSensitiveAPIPermissionListData extends AbstractModel
 {
     /**
-     * @var string <p>API ID</p>
+     * @var string <p>API ID.</p>
      */
     public $APIId;
 
     /**
-     * @var string <p>API name</p>
+     * @var string <p>API name.</p>
      */
     public $APIName;
 
     /**
-     * @var string <p>API method</p>
+     * @var string <p>API method.</p>
      */
     public $APIMethod;
 
     /**
-     * @var integer <p>API status</p>
+     * @var integer <p>API status.</p>
      */
     public $APIStatus;
 
     /**
-     * @var integer <p>API request status</p>
+     * @var integer <p>API request status.</p>
      */
     public $APIApplyStatus;
 
     /**
-     * @var string <p>Reason for rejection</p>
+     * @var string <p>Reason for rejection.</p>
      */
     public $RejectReason;
 
     /**
-     * @var string <p>Approval number</p>
+     * @var string <p>Approval number.</p>
      */
     public $ApprovalNo;
 
     /**
-     * @var string <p>Superapp ID</p>
+     * @var string <p>Superapp ID.</p>
      */
     public $ApplicationId;
 
     /**
-     * @var string <p>Superapp icon</p>
+     * @var string <p>Superapp icon.</p>
      */
     public $ApplicationIcon;
 
     /**
-     * @var string <p>Superapp name</p>
+     * @var string <p>Superapp name.</p>
      */
     public $ApplicationName;
 
     /**
-     * @var integer <p>API type. Valid values: 1: System; 2: Custom
+     * @var integer <p>API type. Valid values: 1: System; 2: Custom.</p>
      */
     public $APIType;
 
     /**
-     * @var string <p>API feature description</p>
+     * @var string <p>API feature description.</p>
      */
     public $APIDesc;
 
     /**
-     * @param string $APIId <p>API ID</p>
-     * @param string $APIName <p>API name</p>
-     * @param string $APIMethod <p>API method</p>
-     * @param integer $APIStatus <p>API status</p>
-     * @param integer $APIApplyStatus <p>API request status</p>
-     * @param string $RejectReason <p>Reason for rejection</p>
-     * @param string $ApprovalNo <p>Approval number</p>
-     * @param string $ApplicationId <p>Superapp ID</p>
-     * @param string $ApplicationIcon <p>Superapp icon</p>
-     * @param string $ApplicationName <p>Superapp name</p>
-     * @param integer $APIType <p>API type. Valid values: 1: System; 2: Custom
-     * @param string $APIDesc <p>API feature description</p>
+     * @param string $APIId <p>API ID.</p>
+     * @param string $APIName <p>API name.</p>
+     * @param string $APIMethod <p>API method.</p>
+     * @param integer $APIStatus <p>API status.</p>
+     * @param integer $APIApplyStatus <p>API request status.</p>
+     * @param string $RejectReason <p>Reason for rejection.</p>
+     * @param string $ApprovalNo <p>Approval number.</p>
+     * @param string $ApplicationId <p>Superapp ID.</p>
+     * @param string $ApplicationIcon <p>Superapp icon.</p>
+     * @param string $ApplicationName <p>Superapp name.</p>
+     * @param integer $APIType <p>API type. Valid values: 1: System; 2: Custom.</p>
+     * @param string $APIDesc <p>API feature description.</p>
      */
     function __construct()
     {

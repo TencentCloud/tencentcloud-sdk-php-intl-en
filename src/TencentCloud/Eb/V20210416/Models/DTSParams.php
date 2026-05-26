@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Data Transfer Service (DTS) connector information
  *
-
+ * @method string getConsumerGroupName() Obtain 
+ * @method void setConsumerGroupName(string $ConsumerGroupName) Set 
+ * @method string getAccount() Obtain 
+ * @method void setAccount(string $Account) Set 
+ * @method string getPassword() Obtain 
+ * @method void setPassword(string $Password) Set 
  */
 class DTSParams extends AbstractModel
 {
-
+    /**
+     * @var string 
+     */
+    public $ConsumerGroupName;
 
     /**
+     * @var string 
+     */
+    public $Account;
 
+    /**
+     * @var string 
+     */
+    public $Password;
+
+    /**
+     * @param string $ConsumerGroupName 
+     * @param string $Account 
+     * @param string $Password 
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class DTSParams extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ConsumerGroupName",$param) and $param["ConsumerGroupName"] !== null) {
+            $this->ConsumerGroupName = $param["ConsumerGroupName"];
+        }
 
+        if (array_key_exists("Account",$param) and $param["Account"] !== null) {
+            $this->Account = $param["Account"];
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
+        }
     }
 }

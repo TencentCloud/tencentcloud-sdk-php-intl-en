@@ -42,8 +42,8 @@ zone = Availability zoneactionType = Transaction typepayMode = Billing modetags 
  * @method void setPageSize(integer $PageSize) Set Quantity. The maximum value per page is 100.
  * @method integer getPageNo() Obtain Starting page, where PageNo=1 indicates the first page, PageNo=2 indicates the second page, and so on.
  * @method void setPageNo(integer $PageNo) Set Starting page, where PageNo=1 indicates the first page, PageNo=2 indicates the second page, and so on.
- * @method string getTagKeyStr() Obtain Cost allocation tag value
- * @method void setTagKeyStr(string $TagKeyStr) Set Cost allocation tag value
+ * @method string getTagKeyStr() Obtain Cost allocation tag key
+ * @method void setTagKeyStr(string $TagKeyStr) Set Cost allocation tag key
  * @method string getNeedConditionValue() Obtain Whether the filter box is needed: 1- indicates it is needed, 0- indicates it is not needed. If it is not specified, it is not required by default.
  * @method void setNeedConditionValue(string $NeedConditionValue) Set Whether the filter box is needed: 1- indicates it is needed, 0- indicates it is not needed. If it is not specified, it is not required by default.
  * @method AnalyseConditions getConditions() Obtain Filter parameters
@@ -95,7 +95,7 @@ zone = Availability zoneactionType = Transaction typepayMode = Billing modetags 
     public $PageNo;
 
     /**
-     * @var string Cost allocation tag value
+     * @var string Cost allocation tag key
      */
     public $TagKeyStr;
 
@@ -121,7 +121,7 @@ zone = Availability zoneactionType = Transaction typepayMode = Billing modetags 
      * @param string $FeeType Fee type: cost-discounted total cost, totalCost-original price cost
      * @param integer $PageSize Quantity. The maximum value per page is 100.
      * @param integer $PageNo Starting page, where PageNo=1 indicates the first page, PageNo=2 indicates the second page, and so on.
-     * @param string $TagKeyStr Cost allocation tag value
+     * @param string $TagKeyStr Cost allocation tag key
      * @param string $NeedConditionValue Whether the filter box is needed: 1- indicates it is needed, 0- indicates it is not needed. If it is not specified, it is not required by default.
      * @param AnalyseConditions $Conditions Filter parameters
      */

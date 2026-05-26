@@ -18,37 +18,37 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of sensitive APIs that can be called by a mini program
+ * List data for querying callable sensitive APIs of a mini program.
  *
- * @method string getAPIId() Obtain API ID
- * @method void setAPIId(string $APIId) Set API ID
+ * @method string getAPIId() Obtain API ID.
+ * @method void setAPIId(string $APIId) Set API ID.
  * @method string getAPIName() Obtain API name.
  * @method void setAPIName(string $APIName) Set API name.
- * @method string getAPIMethod() Obtain API request method
- * @method void setAPIMethod(string $APIMethod) Set API request method
+ * @method string getAPIMethod() Obtain API method.
+ * @method void setAPIMethod(string $APIMethod) Set API method.
  * @method integer getAPIStatus() Obtain API status.
  * @method void setAPIStatus(integer $APIStatus) Set API status.
  * @method integer getAPIApplyStatus() Obtain API application status.
  * @method void setAPIApplyStatus(integer $APIApplyStatus) Set API application status.
  * @method string getRejectReason() Obtain Reason for rejection.
  * @method void setRejectReason(string $RejectReason) Set Reason for rejection.
- * @method string getApprovalNo() Obtain Approval ID
- * @method void setApprovalNo(string $ApprovalNo) Set Approval ID
- * @method string getApplicationId() Obtain Application ID
- * @method void setApplicationId(string $ApplicationId) Set Application ID
- * @method string getApplicationIcon() Obtain Specifies the application icon.
- * @method void setApplicationIcon(string $ApplicationIcon) Set Specifies the application icon.
- * @method string getApplicationName() Obtain Application name
- * @method void setApplicationName(string $ApplicationName) Set Application name
- * @method integer getAPIType() Obtain API type. 1: system; 2: custom.
- * @method void setAPIType(integer $APIType) Set API type. 1: system; 2: custom.
+ * @method string getApprovalNo() Obtain Approval number.
+ * @method void setApprovalNo(string $ApprovalNo) Set Approval number.
+ * @method string getApplicationId() Obtain Superapp ID.
+ * @method void setApplicationId(string $ApplicationId) Set Superapp ID.
+ * @method string getApplicationIcon() Obtain Superapp icon.
+ * @method void setApplicationIcon(string $ApplicationIcon) Set Superapp icon.
+ * @method string getApplicationName() Obtain Superapp name.
+ * @method void setApplicationName(string $ApplicationName) Set Superapp name.
+ * @method integer getAPIType() Obtain API type. Valid values: 1: System; 2: Custom.
+ * @method void setAPIType(integer $APIType) Set API type. Valid values: 1: System; 2: Custom.
  * @method string getAPIDesc() Obtain API feature description.
  * @method void setAPIDesc(string $APIDesc) Set API feature description.
  */
 class DescribeMNPSensitiveAPIPermissionListData extends AbstractModel
 {
     /**
-     * @var string API ID
+     * @var string API ID.
      */
     public $APIId;
 
@@ -58,7 +58,7 @@ class DescribeMNPSensitiveAPIPermissionListData extends AbstractModel
     public $APIName;
 
     /**
-     * @var string API request method
+     * @var string API method.
      */
     public $APIMethod;
 
@@ -78,27 +78,27 @@ class DescribeMNPSensitiveAPIPermissionListData extends AbstractModel
     public $RejectReason;
 
     /**
-     * @var string Approval ID
+     * @var string Approval number.
      */
     public $ApprovalNo;
 
     /**
-     * @var string Application ID
+     * @var string Superapp ID.
      */
     public $ApplicationId;
 
     /**
-     * @var string Specifies the application icon.
+     * @var string Superapp icon.
      */
     public $ApplicationIcon;
 
     /**
-     * @var string Application name
+     * @var string Superapp name.
      */
     public $ApplicationName;
 
     /**
-     * @var integer API type. 1: system; 2: custom.
+     * @var integer API type. Valid values: 1: System; 2: Custom.
      */
     public $APIType;
 
@@ -108,17 +108,17 @@ class DescribeMNPSensitiveAPIPermissionListData extends AbstractModel
     public $APIDesc;
 
     /**
-     * @param string $APIId API ID
+     * @param string $APIId API ID.
      * @param string $APIName API name.
-     * @param string $APIMethod API request method
+     * @param string $APIMethod API method.
      * @param integer $APIStatus API status.
      * @param integer $APIApplyStatus API application status.
      * @param string $RejectReason Reason for rejection.
-     * @param string $ApprovalNo Approval ID
-     * @param string $ApplicationId Application ID
-     * @param string $ApplicationIcon Specifies the application icon.
-     * @param string $ApplicationName Application name
-     * @param integer $APIType API type. 1: system; 2: custom.
+     * @param string $ApprovalNo Approval number.
+     * @param string $ApplicationId Superapp ID.
+     * @param string $ApplicationIcon Superapp icon.
+     * @param string $ApplicationName Superapp name.
+     * @param integer $APIType API type. Valid values: 1: System; 2: Custom.
      * @param string $APIDesc API feature description.
      */
     function __construct()

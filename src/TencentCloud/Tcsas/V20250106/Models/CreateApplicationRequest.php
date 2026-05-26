@@ -20,94 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApplication request structure.
  *
- * @method string getApplicationName() Obtain Application name
- * @method void setApplicationName(string $ApplicationName) Set Application name
- * @method string getLogo() Obtain Logo address
- * @method void setLogo(string $Logo) Set Logo address
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getTeamId() Obtain Team ID
- * @method void setTeamId(string $TeamId) Set Team ID
- * @method string getIntro() Obtain Introduction
- * @method void setIntro(string $Intro) Set Introduction
- * @method integer getApplicationType() Obtain Application type. 1: Test; 2: Formal
- * @method void setApplicationType(integer $ApplicationType) Set Application type. 1: Test; 2: Formal
- * @method string getAndroidAppKey() Obtain Android app package name
- * @method void setAndroidAppKey(string $AndroidAppKey) Set Android app package name
- * @method string getIosAppKey() Obtain iOS App bundleId
- * @method void setIosAppKey(string $IosAppKey) Set iOS App bundleId
- * @method string getRemark() Obtain Remarks
- * @method void setRemark(string $Remark) Set Remarks
- * @method string getScheme() Obtain Scheme
- * @method void setScheme(string $Scheme) Set Scheme
+ * @method string getApplicationName() Obtain Superapp name.
+ * @method void setApplicationName(string $ApplicationName) Set Superapp name.
+ * @method string getLogo() Obtain Superapp logo URL.
+ * @method void setLogo(string $Logo) Set Superapp logo URL.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method string getTeamId() Obtain Team ID.
+ * @method void setTeamId(string $TeamId) Set Team ID.
+ * @method string getIntro() Obtain Superapp introduction.
+ * @method void setIntro(string $Intro) Set Superapp introduction.
+ * @method integer getApplicationType() Obtain Superapp type. Valid values: 1: Test; 2: Production.
+ * @method void setApplicationType(integer $ApplicationType) Set Superapp type. Valid values: 1: Test; 2: Production.
+ * @method string getAndroidAppKey() Obtain Android app package name.
+ * @method void setAndroidAppKey(string $AndroidAppKey) Set Android app package name.
+ * @method string getIosAppKey() Obtain iOS app bundle ID.
+ * @method void setIosAppKey(string $IosAppKey) Set iOS app bundle ID.
+ * @method string getRemark() Obtain Remarks.
+ * @method void setRemark(string $Remark) Set Remarks.
+ * @method string getScheme() Obtain Scheme.
+ * @method void setScheme(string $Scheme) Set Scheme.
  */
 class CreateApplicationRequest extends AbstractModel
 {
     /**
-     * @var string Application name
+     * @var string Superapp name.
      */
     public $ApplicationName;
 
     /**
-     * @var string Logo address
+     * @var string Superapp logo URL.
      */
     public $Logo;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Team ID
+     * @var string Team ID.
      */
     public $TeamId;
 
     /**
-     * @var string Introduction
+     * @var string Superapp introduction.
      */
     public $Intro;
 
     /**
-     * @var integer Application type. 1: Test; 2: Formal
+     * @var integer Superapp type. Valid values: 1: Test; 2: Production.
      * @deprecated
      */
     public $ApplicationType;
 
     /**
-     * @var string Android app package name
+     * @var string Android app package name.
      * @deprecated
      */
     public $AndroidAppKey;
 
     /**
-     * @var string iOS App bundleId
+     * @var string iOS app bundle ID.
      * @deprecated
      */
     public $IosAppKey;
 
     /**
-     * @var string Remarks
+     * @var string Remarks.
      * @deprecated
      */
     public $Remark;
 
     /**
-     * @var string Scheme
+     * @var string Scheme.
      */
     public $Scheme;
 
     /**
-     * @param string $ApplicationName Application name
-     * @param string $Logo Logo address
-     * @param string $PlatformId Platform ID
-     * @param string $TeamId Team ID
-     * @param string $Intro Introduction
-     * @param integer $ApplicationType Application type. 1: Test; 2: Formal
-     * @param string $AndroidAppKey Android app package name
-     * @param string $IosAppKey iOS App bundleId
-     * @param string $Remark Remarks
-     * @param string $Scheme Scheme
+     * @param string $ApplicationName Superapp name.
+     * @param string $Logo Superapp logo URL.
+     * @param string $PlatformId Platform ID.
+     * @param string $TeamId Team ID.
+     * @param string $Intro Superapp introduction.
+     * @param integer $ApplicationType Superapp type. Valid values: 1: Test; 2: Production.
+     * @param string $AndroidAppKey Android app package name.
+     * @param string $IosAppKey iOS app bundle ID.
+     * @param string $Remark Remarks.
+     * @param string $Scheme Scheme.
      */
     function __construct()
     {

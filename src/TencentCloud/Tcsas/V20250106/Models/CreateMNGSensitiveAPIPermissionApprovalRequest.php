@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMNGSensitiveAPIPermissionApproval request structure.
  *
- * @method string getAPIId() Obtain <p>API ID</p>
- * @method void setAPIId(string $APIId) Set <p>API ID</p>
- * @method string getApplyReason() Obtain <p>Reason for request</p>
- * @method void setApplyReason(string $ApplyReason) Set <p>Reason for request</p>
- * @method string getMNPId() Obtain <p>Mini game appid</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini game appid</p>
- * @method string getPlatformId() Obtain <p>Platform ID</p>
- * @method void setPlatformId(string $PlatformId) Set <p>Platform ID</p>
+ * @method string getAPIId() Obtain <p>API ID.</p>
+ * @method void setAPIId(string $APIId) Set <p>API ID.</p>
+ * @method string getApplyReason() Obtain <p>Reason for request.</p>
+ * @method void setApplyReason(string $ApplyReason) Set <p>Reason for request.</p>
+ * @method string getMNPId() Obtain <p>Mini game appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini game appid.</p>
+ * @method string getPlatformId() Obtain <p>Platform ID.</p>
+ * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
  */
 class CreateMNGSensitiveAPIPermissionApprovalRequest extends AbstractModel
 {
     /**
-     * @var string <p>API ID</p>
+     * @var string <p>API ID.</p>
      */
     public $APIId;
 
     /**
-     * @var string <p>Reason for request</p>
+     * @var string <p>Reason for request.</p>
      */
     public $ApplyReason;
 
     /**
-     * @var string <p>Mini game appid</p>
+     * @var string <p>Mini game appid.</p>
      */
     public $MNPId;
 
     /**
-     * @var string <p>Platform ID</p>
+     * @var string <p>Platform ID.</p>
      */
     public $PlatformId;
 
     /**
-     * @param string $APIId <p>API ID</p>
-     * @param string $ApplyReason <p>Reason for request</p>
-     * @param string $MNPId <p>Mini game appid</p>
-     * @param string $PlatformId <p>Platform ID</p>
+     * @param string $APIId <p>API ID.</p>
+     * @param string $ApplyReason <p>Reason for request.</p>
+     * @param string $MNPId <p>Mini game appid.</p>
+     * @param string $PlatformId <p>Platform ID.</p>
      */
     function __construct()
     {

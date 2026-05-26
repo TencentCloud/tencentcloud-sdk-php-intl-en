@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMNGAccessAnalysisDetail request structure.
  *
- * @method integer getTimeBegin() Obtain Start time in YYYYMMDD format
- * @method void setTimeBegin(integer $TimeBegin) Set Start time in YYYYMMDD format
- * @method string getMNPId() Obtain Mini program appid
- * @method void setMNPId(string $MNPId) Set Mini program appid
- * @method integer getDataType() Obtain Type: 0 Non-production data, 1 Production data
- * @method void setDataType(integer $DataType) Set Type: 0 Non-production data, 1 Production data
- * @method string getPlatformId() Obtain Tenant ID
- * @method void setPlatformId(string $PlatformId) Set Tenant ID
- * @method integer getPlatform() Obtain 0 All, 2 Android, 3 iOS
- * @method void setPlatform(integer $Platform) Set 0 All, 2 Android, 3 iOS
- * @method integer getTimeEnd() Obtain End time in YYYYMMDD format
- * @method void setTimeEnd(integer $TimeEnd) Set End time in YYYYMMDD format
+ * @method integer getTimeBegin() Obtain Start time in YYYYMMDD format.
+ * @method void setTimeBegin(integer $TimeBegin) Set Start time in YYYYMMDD format.
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method integer getDataType() Obtain Data type. Valid values: 0: Non-production data; 1: Production data.
+ * @method void setDataType(integer $DataType) Set Data type. Valid values: 0: Non-production data; 1: Production data.
+ * @method string getPlatformId() Obtain Tenant ID.
+ * @method void setPlatformId(string $PlatformId) Set Tenant ID.
+ * @method integer getPlatform() Obtain Operating system. Valid values: 0: All; 2: Android; 3: iOS.
+ * @method void setPlatform(integer $Platform) Set Operating system. Valid values: 0: All; 2: Android; 3: iOS.
+ * @method integer getTimeEnd() Obtain End time in YYYYMMDD format.
+ * @method void setTimeEnd(integer $TimeEnd) Set End time in YYYYMMDD format.
  */
 class DescribeMNGAccessAnalysisDetailRequest extends AbstractModel
 {
     /**
-     * @var integer Start time in YYYYMMDD format
+     * @var integer Start time in YYYYMMDD format.
      */
     public $TimeBegin;
 
     /**
-     * @var string Mini program appid
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var integer Type: 0 Non-production data, 1 Production data
+     * @var integer Data type. Valid values: 0: Non-production data; 1: Production data.
      */
     public $DataType;
 
     /**
-     * @var string Tenant ID
+     * @var string Tenant ID.
      */
     public $PlatformId;
 
     /**
-     * @var integer 0 All, 2 Android, 3 iOS
+     * @var integer Operating system. Valid values: 0: All; 2: Android; 3: iOS.
      */
     public $Platform;
 
     /**
-     * @var integer End time in YYYYMMDD format
+     * @var integer End time in YYYYMMDD format.
      */
     public $TimeEnd;
 
     /**
-     * @param integer $TimeBegin Start time in YYYYMMDD format
-     * @param string $MNPId Mini program appid
-     * @param integer $DataType Type: 0 Non-production data, 1 Production data
-     * @param string $PlatformId Tenant ID
-     * @param integer $Platform 0 All, 2 Android, 3 iOS
-     * @param integer $TimeEnd End time in YYYYMMDD format
+     * @param integer $TimeBegin Start time in YYYYMMDD format.
+     * @param string $MNPId Mini program appid.
+     * @param integer $DataType Data type. Valid values: 0: Non-production data; 1: Production data.
+     * @param string $PlatformId Tenant ID.
+     * @param integer $Platform Operating system. Valid values: 0: All; 2: Android; 3: iOS.
+     * @param integer $TimeEnd End time in YYYYMMDD format.
      */
     function __construct()
     {

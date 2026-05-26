@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApplicationSensitiveAPIList request structure.
  *
- * @method integer getOffset() Obtain Page offset
- * @method void setOffset(integer $Offset) Set Page offset
- * @method integer getLimit() Obtain Number of results per page
- * @method void setLimit(integer $Limit) Set Number of results per page
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getApplicationId() Obtain Application ID
- * @method void setApplicationId(string $ApplicationId) Set Application ID
- * @method string getKeyword() Obtain Keywords for search (API name or method)
- * @method void setKeyword(string $Keyword) Set Keywords for search (API name or method)
- * @method string getTeamId() Obtain Team ID
- * @method void setTeamId(string $TeamId) Set Team ID
+ * @method integer getOffset() Obtain Pagination offset. 
+ * @method void setOffset(integer $Offset) Set Pagination offset. 
+ * @method integer getLimit() Obtain Number of entries per page. 
+ * @method void setLimit(integer $Limit) Set Number of entries per page. 
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method string getApplicationId() Obtain Superapp ID.
+ * @method void setApplicationId(string $ApplicationId) Set Superapp ID.
+ * @method string getKeyword() Obtain Search keyword (API name or method).
+ * @method void setKeyword(string $Keyword) Set Search keyword (API name or method).
+ * @method string getTeamId() Obtain Team ID.
+ * @method void setTeamId(string $TeamId) Set Team ID.
  */
 class DescribeApplicationSensitiveAPIListRequest extends AbstractModel
 {
     /**
-     * @var integer Page offset
+     * @var integer Pagination offset. 
      */
     public $Offset;
 
     /**
-     * @var integer Number of results per page
+     * @var integer Number of entries per page. 
      */
     public $Limit;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Application ID
+     * @var string Superapp ID.
      */
     public $ApplicationId;
 
     /**
-     * @var string Keywords for search (API name or method)
+     * @var string Search keyword (API name or method).
      */
     public $Keyword;
 
     /**
-     * @var string Team ID
+     * @var string Team ID.
      */
     public $TeamId;
 
     /**
-     * @param integer $Offset Page offset
-     * @param integer $Limit Number of results per page
-     * @param string $PlatformId Platform ID
-     * @param string $ApplicationId Application ID
-     * @param string $Keyword Keywords for search (API name or method)
-     * @param string $TeamId Team ID
+     * @param integer $Offset Pagination offset. 
+     * @param integer $Limit Number of entries per page. 
+     * @param string $PlatformId Platform ID.
+     * @param string $ApplicationId Superapp ID.
+     * @param string $Keyword Search keyword (API name or method).
+     * @param string $TeamId Team ID.
      */
     function __construct()
     {

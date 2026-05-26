@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVpcEndPoint request structure.
  *
- * @method string getVpcId() Obtain VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
- * @method void setVpcId(string $VpcId) Set VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
- * @method string getSubnetId() Obtain Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
- * @method void setSubnetId(string $SubnetId) Set Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
+ * @method string getVpcId() Obtain VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/1108/43663?from_cn_redirect=1).
+ * @method void setVpcId(string $VpcId) Set VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/1108/43663?from_cn_redirect=1).
+ * @method string getSubnetId() Obtain Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) api.
+ * @method void setSubnetId(string $SubnetId) Set Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) api.
  * @method string getEndPointName() Obtain Endpoint name. limited to 60 characters.
  * @method void setEndPointName(string $EndPointName) Set Endpoint name. limited to 60 characters.
- * @method string getEndPointServiceId() Obtain Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
- * @method void setEndPointServiceId(string $EndPointServiceId) Set Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
+ * @method string getEndPointServiceId() Obtain Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.com/document/product/215/54678?from_cn_redirect=1) api.
+ * @method void setEndPointServiceId(string $EndPointServiceId) Set Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.com/document/product/215/54678?from_cn_redirect=1) api.
  * @method string getEndPointVip() Obtain Endpoint VIP. You can apply for a specified IP.
  * @method void setEndPointVip(string $EndPointVip) Set Endpoint VIP. You can apply for a specified IP.
- * @method string getSecurityGroupId() Obtain Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
- * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+ * @method string getSecurityGroupId() Obtain Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
  * @method array getTags() Obtain List of tags to be bound, for example, [{"Key": "city", "Value": "shanghai"}].
  * @method void setTags(array $Tags) Set List of tags to be bound, for example, [{"Key": "city", "Value": "shanghai"}].
  * @method string getIpAddressType() Obtain Protocol type. supports Ipv4 and Ipv6. default is Ipv4.
@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateVpcEndPointRequest extends AbstractModel
 {
     /**
-     * @var string VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
+     * @var string VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/1108/43663?from_cn_redirect=1).
      */
     public $VpcId;
 
     /**
-     * @var string Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
+     * @var string Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) api.
      */
     public $SubnetId;
 
@@ -55,7 +55,7 @@ class CreateVpcEndPointRequest extends AbstractModel
     public $EndPointName;
 
     /**
-     * @var string Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
+     * @var string Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.com/document/product/215/54678?from_cn_redirect=1) api.
      */
     public $EndPointServiceId;
 
@@ -65,7 +65,7 @@ class CreateVpcEndPointRequest extends AbstractModel
     public $EndPointVip;
 
     /**
-     * @var string Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+     * @var string Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
      */
     public $SecurityGroupId;
 
@@ -80,12 +80,12 @@ class CreateVpcEndPointRequest extends AbstractModel
     public $IpAddressType;
 
     /**
-     * @param string $VpcId VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
-     * @param string $SubnetId Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
+     * @param string $VpcId VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/1108/43663?from_cn_redirect=1).
+     * @param string $SubnetId Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) api.
      * @param string $EndPointName Endpoint name. limited to 60 characters.
-     * @param string $EndPointServiceId Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
+     * @param string $EndPointServiceId Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.com/document/product/215/54678?from_cn_redirect=1) api.
      * @param string $EndPointVip Endpoint VIP. You can apply for a specified IP.
-     * @param string $SecurityGroupId Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+     * @param string $SecurityGroupId Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
      * @param array $Tags List of tags to be bound, for example, [{"Key": "city", "Value": "shanghai"}].
      * @param string $IpAddressType Protocol type. supports Ipv4 and Ipv6. default is Ipv4.
      */

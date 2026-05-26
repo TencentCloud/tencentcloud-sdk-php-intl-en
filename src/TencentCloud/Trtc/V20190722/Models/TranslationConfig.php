@@ -18,44 +18,52 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Translation config
+ * Translate configuration.
  *
- * @method array getTargetLanguages() Obtain Target language, target language list (ISO 639-1).
- * @method void setTargetLanguages(array $TargetLanguages) Set Target language, target language list (ISO 639-1).
- * @method integer getMode() Obtain 1: Only text translation, 2: Voice simultaneous interpretation.
- * @method void setMode(integer $Mode) Set 1: Only text translation, 2: Voice simultaneous interpretation.
- * @method TTSConfig getTTSConfig() Obtain Voice simultaneous interpretation configuration: When enabling simultaneous interpretation, this parameter needs to be passed.
- * @method void setTTSConfig(TTSConfig $TTSConfig) Set Voice simultaneous interpretation configuration: When enabling simultaneous interpretation, this parameter needs to be passed.
- * @method array getTerminology() Obtain Translation terminology.
- * @method void setTerminology(array $Terminology) Set Translation terminology.
+ * @method array getTargetLanguages() Obtain Target language for translation, target language list (ISO 639-1).
+
+ * @method void setTargetLanguages(array $TargetLanguages) Set Target language for translation, target language list (ISO 639-1).
+
+ * @method integer getMode() Obtain 1: text translation only 2: speech simultaneous interpretation.
+
+ * @method void setMode(integer $Mode) Set 1: text translation only 2: speech simultaneous interpretation.
+
+ * @method TTSConfig getTTSConfig() Obtain Speech simultaneous interpretation configuration. when enabling simultaneous interpretation, transmission is required.
+ * @method void setTTSConfig(TTSConfig $TTSConfig) Set Speech simultaneous interpretation configuration. when enabling simultaneous interpretation, transmission is required.
+ * @method array getTerminology() Obtain Translation terminology collection.
+ * @method void setTerminology(array $Terminology) Set Translation terminology collection.
  */
 class TranslationConfig extends AbstractModel
 {
     /**
-     * @var array Target language, target language list (ISO 639-1).
+     * @var array Target language for translation, target language list (ISO 639-1).
+
      */
     public $TargetLanguages;
 
     /**
-     * @var integer 1: Only text translation, 2: Voice simultaneous interpretation.
+     * @var integer 1: text translation only 2: speech simultaneous interpretation.
+
      */
     public $Mode;
 
     /**
-     * @var TTSConfig Voice simultaneous interpretation configuration: When enabling simultaneous interpretation, this parameter needs to be passed.
+     * @var TTSConfig Speech simultaneous interpretation configuration. when enabling simultaneous interpretation, transmission is required.
      */
     public $TTSConfig;
 
     /**
-     * @var array Translation terminology.
+     * @var array Translation terminology collection.
      */
     public $Terminology;
 
     /**
-     * @param array $TargetLanguages Target language, target language list (ISO 639-1).
-     * @param integer $Mode 1: Only text translation, 2: Voice simultaneous interpretation.
-     * @param TTSConfig $TTSConfig Voice simultaneous interpretation configuration: When enabling simultaneous interpretation, this parameter needs to be passed.
-     * @param array $Terminology Translation terminology.
+     * @param array $TargetLanguages Target language for translation, target language list (ISO 639-1).
+
+     * @param integer $Mode 1: text translation only 2: speech simultaneous interpretation.
+
+     * @param TTSConfig $TTSConfig Speech simultaneous interpretation configuration. when enabling simultaneous interpretation, transmission is required.
+     * @param array $Terminology Translation terminology collection.
      */
     function __construct()
     {

@@ -18,108 +18,116 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mini program details
+ * Mini program details.
  *
- * @method string getMNPType() Obtain Mini program type 
- * @method void setMNPType(string $MNPType) Set Mini program type 
- * @method string getMNPId() Obtain Mini program ID
- * @method void setMNPId(string $MNPId) Set Mini program ID
- * @method string getMNPName() Obtain Mini program name
- * @method void setMNPName(string $MNPName) Set Mini program name
- * @method string getMNPIcon() Obtain Mini program icon
- * @method void setMNPIcon(string $MNPIcon) Set Mini program icon
- * @method string getMNPIntro() Obtain Mini program introduction
- * @method void setMNPIntro(string $MNPIntro) Set Mini program introduction
- * @method string getMNPDesc() Obtain Mini program description
- * @method void setMNPDesc(string $MNPDesc) Set Mini program description
- * @method string getCreateTime() Obtain Creation time, timestamp.
- * @method void setCreateTime(string $CreateTime) Set Creation time, timestamp.
- * @method string getCreateUser() Obtain Creator
- * @method void setCreateUser(string $CreateUser) Set Creator
- * @method integer getAccessStatus() Obtain Access status. 1: not connected; 2: connected.
- * @method void setAccessStatus(integer $AccessStatus) Set Access status. 1: not connected; 2: connected.
- * @method string getTeamName() Obtain Name of the associated team
- * @method void setTeamName(string $TeamName) Set Name of the associated team
- * @method string getTeamId() Obtain Team ID
- * @method void setTeamId(string $TeamId) Set Team ID
- * @method integer getStatus() Obtain Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
- * @method void setStatus(integer $Status) Set Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+ * @method string getMNPType() Obtain Mini program category.
+ * @method void setMNPType(string $MNPType) Set Mini program category.
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method string getMNPName() Obtain Mini program name.
+ * @method void setMNPName(string $MNPName) Set Mini program name.
+ * @method string getMNPIcon() Obtain Mini program icon.
+ * @method void setMNPIcon(string $MNPIcon) Set Mini program icon.
+ * @method string getMNPIntro() Obtain Mini program introduction.
+ * @method void setMNPIntro(string $MNPIntro) Set Mini program introduction.
+ * @method string getMNPDesc() Obtain Mini program description.
+ * @method void setMNPDesc(string $MNPDesc) Set Mini program description.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method string getCreateUser() Obtain Creator.
+ * @method void setCreateUser(string $CreateUser) Set Creator.
+ * @method integer getAccessStatus() Obtain Access status. Valid values: 1: not connected; 2: connected.
+ * @method void setAccessStatus(integer $AccessStatus) Set Access status. Valid values: 1: not connected; 2: connected.
+ * @method string getTeamName() Obtain Team name.
+ * @method void setTeamName(string $TeamName) Set Team name.
+ * @method string getTeamId() Obtain Team ID.
+ * @method void setTeamId(string $TeamId) Set Team ID.
+ * @method integer getStatus() Obtain Mini program available status. Valid values: 1: Available; 2: Removed.
+ * @method void setStatus(integer $Status) Set Mini program available status. Valid values: 1: Available; 2: Removed.
+ * @method array getI18nList() Obtain The mini program name and description in multiple languages.
+ * @method void setI18nList(array $I18nList) Set The mini program name and description in multiple languages.
  */
 class DescribeMNPManagerDetailData extends AbstractModel
 {
     /**
-     * @var string Mini program type 
+     * @var string Mini program category.
      */
     public $MNPType;
 
     /**
-     * @var string Mini program ID
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var string Mini program name
+     * @var string Mini program name.
      */
     public $MNPName;
 
     /**
-     * @var string Mini program icon
+     * @var string Mini program icon.
      */
     public $MNPIcon;
 
     /**
-     * @var string Mini program introduction
+     * @var string Mini program introduction.
      */
     public $MNPIntro;
 
     /**
-     * @var string Mini program description
+     * @var string Mini program description.
      */
     public $MNPDesc;
 
     /**
-     * @var string Creation time, timestamp.
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Creator
+     * @var string Creator.
      */
     public $CreateUser;
 
     /**
-     * @var integer Access status. 1: not connected; 2: connected.
+     * @var integer Access status. Valid values: 1: not connected; 2: connected.
      */
     public $AccessStatus;
 
     /**
-     * @var string Name of the associated team
+     * @var string Team name.
      */
     public $TeamName;
 
     /**
-     * @var string Team ID
+     * @var string Team ID.
      */
     public $TeamId;
 
     /**
-     * @var integer Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+     * @var integer Mini program available status. Valid values: 1: Available; 2: Removed.
      */
     public $Status;
 
     /**
-     * @param string $MNPType Mini program type 
-     * @param string $MNPId Mini program ID
-     * @param string $MNPName Mini program name
-     * @param string $MNPIcon Mini program icon
-     * @param string $MNPIntro Mini program introduction
-     * @param string $MNPDesc Mini program description
-     * @param string $CreateTime Creation time, timestamp.
-     * @param string $CreateUser Creator
-     * @param integer $AccessStatus Access status. 1: not connected; 2: connected.
-     * @param string $TeamName Name of the associated team
-     * @param string $TeamId Team ID
-     * @param integer $Status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+     * @var array The mini program name and description in multiple languages.
+     */
+    public $I18nList;
+
+    /**
+     * @param string $MNPType Mini program category.
+     * @param string $MNPId Mini program appid.
+     * @param string $MNPName Mini program name.
+     * @param string $MNPIcon Mini program icon.
+     * @param string $MNPIntro Mini program introduction.
+     * @param string $MNPDesc Mini program description.
+     * @param string $CreateTime Creation time.
+     * @param string $CreateUser Creator.
+     * @param integer $AccessStatus Access status. Valid values: 1: not connected; 2: connected.
+     * @param string $TeamName Team name.
+     * @param string $TeamId Team ID.
+     * @param integer $Status Mini program available status. Valid values: 1: Available; 2: Removed.
+     * @param array $I18nList The mini program name and description in multiple languages.
      */
     function __construct()
     {
@@ -180,6 +188,15 @@ class DescribeMNPManagerDetailData extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("I18nList",$param) and $param["I18nList"] !== null) {
+            $this->I18nList = [];
+            foreach ($param["I18nList"] as $key => $value){
+                $obj = new MNPDetailI18nVO();
+                $obj->deserialize($value);
+                array_push($this->I18nList, $obj);
+            }
         }
     }
 }

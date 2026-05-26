@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReleaseMNPVersion request structure.
  *
- * @method integer getMNPVersionId() Obtain Mini program version ID
- * @method void setMNPVersionId(integer $MNPVersionId) Set Mini program version ID
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method integer getMNPVersionId() Obtain Mini program version ID.
+ * @method void setMNPVersionId(integer $MNPVersionId) Set Mini program version ID.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
  */
 class ReleaseMNPVersionRequest extends AbstractModel
 {
     /**
-     * @var integer Mini program version ID
+     * @var integer Mini program version ID.
      */
     public $MNPVersionId;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @param integer $MNPVersionId Mini program version ID
-     * @param string $PlatformId Platform ID
+     * @param integer $MNPVersionId Mini program version ID.
+     * @param string $PlatformId Platform ID.
      */
     function __construct()
     {

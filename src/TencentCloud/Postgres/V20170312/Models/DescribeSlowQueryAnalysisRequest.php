@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSlowQueryAnalysis request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID.
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID.
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  * @method string getStartTime() Obtain Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
  * @method void setStartTime(string $StartTime) Set Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
  * @method string getEndTime() Obtain Query end time, in the format of 2018-01-01 00:00:00.
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSlowQueryAnalysisRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
@@ -80,7 +80,7 @@ class DescribeSlowQueryAnalysisRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $DBInstanceId Instance ID.
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      * @param string $StartTime Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
      * @param string $EndTime Query end time, in the format of 2018-01-01 00:00:00.
      * @param string $DatabaseName Database name

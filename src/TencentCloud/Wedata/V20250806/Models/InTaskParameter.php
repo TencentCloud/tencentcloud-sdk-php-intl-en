@@ -20,56 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameter passing - reference parameter.
  *
- * @method string getParamKey() Obtain Parameter name.
-
- * @method void setParamKey(string $ParamKey) Set Parameter name.
-
- * @method string getParamDesc() Obtain Parameter Description: The format is ProjectIdentifier.TaskName.ParameterName
-Example: project_wedata_1.sh_250820_104107.pp_out
- * @method void setParamDesc(string $ParamDesc) Set Parameter Description: The format is ProjectIdentifier.TaskName.ParameterName
-Example: project_wedata_1.sh_250820_104107.pp_out
- * @method string getFromTaskId() Obtain Parent Task ID
-
- * @method void setFromTaskId(string $FromTaskId) Set Parent Task ID
-
- * @method string getFromParamKey() Obtain Parent task parameter key.
-
- * @method void setFromParamKey(string $FromParamKey) Set Parent task parameter key.
+ * @method string getParamKey() Obtain <p>Parameter name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setParamKey(string $ParamKey) Set <p>Parameter name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getParamDesc() Obtain <p>Parameter description: Format is project ID.task name.parameter name; for example: project_wedata_1.sh_250820_104107.pp_out</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setParamDesc(string $ParamDesc) Set <p>Parameter description: Format is project ID.task name.parameter name; for example: project_wedata_1.sh_250820_104107.pp_out</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFromTaskId() Obtain <p>Parent task ID.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFromTaskId(string $FromTaskId) Set <p>Parent task ID.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFromParamKey() Obtain <p>Parent task parameter key</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFromParamKey(string $FromParamKey) Set <p>Parent task parameter key</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain <p>Task input type, by default uses TASK.</p><p>Enumeration value:</p><ul><li>TASK: Source is the parent task.</li><li>CONSTANT: Constant value, currently only supported by for-each node.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setType(string $Type) Set <p>Task input type, by default uses TASK.</p><p>Enumeration value:</p><ul><li>TASK: Source is the parent task.</li><li>CONSTANT: Constant value, currently only supported by for-each node.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InTaskParameter extends AbstractModel
 {
     /**
-     * @var string Parameter name.
-
+     * @var string <p>Parameter name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ParamKey;
 
     /**
-     * @var string Parameter Description: The format is ProjectIdentifier.TaskName.ParameterName
-Example: project_wedata_1.sh_250820_104107.pp_out
+     * @var string <p>Parameter description: Format is project ID.task name.parameter name; for example: project_wedata_1.sh_250820_104107.pp_out</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ParamDesc;
 
     /**
-     * @var string Parent Task ID
-
+     * @var string <p>Parent task ID.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FromTaskId;
 
     /**
-     * @var string Parent task parameter key.
-
+     * @var string <p>Parent task parameter key</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FromParamKey;
 
     /**
-     * @param string $ParamKey Parameter name.
+     * @var string <p>Task input type, by default uses TASK.</p><p>Enumeration value:</p><ul><li>TASK: Source is the parent task.</li><li>CONSTANT: Constant value, currently only supported by for-each node.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Type;
 
-     * @param string $ParamDesc Parameter Description: The format is ProjectIdentifier.TaskName.ParameterName
-Example: project_wedata_1.sh_250820_104107.pp_out
-     * @param string $FromTaskId Parent Task ID
-
-     * @param string $FromParamKey Parent task parameter key.
+    /**
+     * @param string $ParamKey <p>Parameter name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ParamDesc <p>Parameter description: Format is project ID.task name.parameter name; for example: project_wedata_1.sh_250820_104107.pp_out</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FromTaskId <p>Parent task ID.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FromParamKey <p>Parent task parameter key</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Type <p>Task input type, by default uses TASK.</p><p>Enumeration value:</p><ul><li>TASK: Source is the parent task.</li><li>CONSTANT: Constant value, currently only supported by for-each node.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -98,6 +112,10 @@ Example: project_wedata_1.sh_250820_104107.pp_out
 
         if (array_key_exists("FromParamKey",$param) and $param["FromParamKey"] !== null) {
             $this->FromParamKey = $param["FromParamKey"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

@@ -18,108 +18,108 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Team details
+ * Team details.
  *
- * @method string getTeamName() Obtain Team name
- * @method void setTeamName(string $TeamName) Set Team name
- * @method integer getTeamRoleType() Obtain Team role type 1-mini program team 2-application team
- * @method void setTeamRoleType(integer $TeamRoleType) Set Team role type 1-mini program team 2-application team
- * @method string getAdminUserAccount() Obtain Administrator account
- * @method void setAdminUserAccount(string $AdminUserAccount) Set Administrator account
- * @method string getCreateUser() Obtain Creator
- * @method void setCreateUser(string $CreateUser) Set Creator
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method integer getMemberCount() Obtain Number of team members
- * @method void setMemberCount(integer $MemberCount) Set Number of team members
- * @method integer getBindMiniTeamCount() Obtain Number of bound mini program teams
- * @method void setBindMiniTeamCount(integer $BindMiniTeamCount) Set Number of bound mini program teams
- * @method string getBindTeamName() Obtain Name of the bound team
- * @method void setBindTeamName(string $BindTeamName) Set Name of the bound team
- * @method string getRegisterLink() Obtain Team registration link
- * @method void setRegisterLink(string $RegisterLink) Set Team registration link
- * @method string getApplicationName() Obtain Application name. It Is required when querying details of a mini program team.
- * @method void setApplicationName(string $ApplicationName) Set Application name. It Is required when querying details of a mini program team.
- * @method integer getExpireTime() Obtain Team expiration time. 0 means never expire.
- * @method void setExpireTime(integer $ExpireTime) Set Team expiration time. 0 means never expire.
- * @method integer getStatus() Obtain Team status. valid values: 1: normal; 2: disabled; 3: expired.
- * @method void setStatus(integer $Status) Set Team status. valid values: 1: normal; 2: disabled; 3: expired.
+ * @method string getTeamName() Obtain Team name.
+ * @method void setTeamName(string $TeamName) Set Team name.
+ * @method integer getTeamRoleType() Obtain Team role type. Valid values: 1: Mini program team; 2: Superapp team.
+ * @method void setTeamRoleType(integer $TeamRoleType) Set Team role type. Valid values: 1: Mini program team; 2: Superapp team.
+ * @method string getAdminUserAccount() Obtain Admin account.
+ * @method void setAdminUserAccount(string $AdminUserAccount) Set Admin account.
+ * @method string getCreateUser() Obtain Creator.
+ * @method void setCreateUser(string $CreateUser) Set Creator.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method integer getMemberCount() Obtain Number of team members.
+ * @method void setMemberCount(integer $MemberCount) Set Number of team members.
+ * @method integer getBindMiniTeamCount() Obtain Number of bound mini program teams.
+ * @method void setBindMiniTeamCount(integer $BindMiniTeamCount) Set Number of bound mini program teams.
+ * @method string getBindTeamName() Obtain Name of the bound team.
+ * @method void setBindTeamName(string $BindTeamName) Set Name of the bound team.
+ * @method string getRegisterLink() Obtain Team registration link.
+ * @method void setRegisterLink(string $RegisterLink) Set Team registration link.
+ * @method string getApplicationName() Obtain Superapp name. Only returned for mini program teams.
+ * @method void setApplicationName(string $ApplicationName) Set Superapp name. Only returned for mini program teams.
+ * @method integer getExpireTime() Obtain Team expiration time. 0 indicates no expiration. 
+ * @method void setExpireTime(integer $ExpireTime) Set Team expiration time. 0 indicates no expiration. 
+ * @method integer getStatus() Obtain Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
+ * @method void setStatus(integer $Status) Set Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
  */
 class DescribeTeamDetailResp extends AbstractModel
 {
     /**
-     * @var string Team name
+     * @var string Team name.
      */
     public $TeamName;
 
     /**
-     * @var integer Team role type 1-mini program team 2-application team
+     * @var integer Team role type. Valid values: 1: Mini program team; 2: Superapp team.
      */
     public $TeamRoleType;
 
     /**
-     * @var string Administrator account
+     * @var string Admin account.
      */
     public $AdminUserAccount;
 
     /**
-     * @var string Creator
+     * @var string Creator.
      */
     public $CreateUser;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var integer Number of team members
+     * @var integer Number of team members.
      */
     public $MemberCount;
 
     /**
-     * @var integer Number of bound mini program teams
+     * @var integer Number of bound mini program teams.
      */
     public $BindMiniTeamCount;
 
     /**
-     * @var string Name of the bound team
+     * @var string Name of the bound team.
      */
     public $BindTeamName;
 
     /**
-     * @var string Team registration link
+     * @var string Team registration link.
      */
     public $RegisterLink;
 
     /**
-     * @var string Application name. It Is required when querying details of a mini program team.
+     * @var string Superapp name. Only returned for mini program teams.
      */
     public $ApplicationName;
 
     /**
-     * @var integer Team expiration time. 0 means never expire.
+     * @var integer Team expiration time. 0 indicates no expiration. 
      */
     public $ExpireTime;
 
     /**
-     * @var integer Team status. valid values: 1: normal; 2: disabled; 3: expired.
+     * @var integer Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
      */
     public $Status;
 
     /**
-     * @param string $TeamName Team name
-     * @param integer $TeamRoleType Team role type 1-mini program team 2-application team
-     * @param string $AdminUserAccount Administrator account
-     * @param string $CreateUser Creator
-     * @param string $CreateTime Creation time
-     * @param integer $MemberCount Number of team members
-     * @param integer $BindMiniTeamCount Number of bound mini program teams
-     * @param string $BindTeamName Name of the bound team
-     * @param string $RegisterLink Team registration link
-     * @param string $ApplicationName Application name. It Is required when querying details of a mini program team.
-     * @param integer $ExpireTime Team expiration time. 0 means never expire.
-     * @param integer $Status Team status. valid values: 1: normal; 2: disabled; 3: expired.
+     * @param string $TeamName Team name.
+     * @param integer $TeamRoleType Team role type. Valid values: 1: Mini program team; 2: Superapp team.
+     * @param string $AdminUserAccount Admin account.
+     * @param string $CreateUser Creator.
+     * @param string $CreateTime Creation time.
+     * @param integer $MemberCount Number of team members.
+     * @param integer $BindMiniTeamCount Number of bound mini program teams.
+     * @param string $BindTeamName Name of the bound team.
+     * @param string $RegisterLink Team registration link.
+     * @param string $ApplicationName Superapp name. Only returned for mini program teams.
+     * @param integer $ExpireTime Team expiration time. 0 indicates no expiration. 
+     * @param integer $Status Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
      */
     function __construct()
     {

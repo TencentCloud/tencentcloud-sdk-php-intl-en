@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBusinessId() Obtain <p>Task ID returned by the CreateMNPVersion API.</p>
  * @method void setBusinessId(string $BusinessId) Set <p>Task ID returned by the CreateMNPVersion API.</p>
- * @method string getPlatformId() Obtain <p>Platform ID</p>
- * @method void setPlatformId(string $PlatformId) Set <p>Platform ID</p>
+ * @method string getPlatformId() Obtain <p>Platform ID.</p>
+ * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
  */
 class DescribeMNGVersionRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeMNGVersionRequest extends AbstractModel
     public $BusinessId;
 
     /**
-     * @var string <p>Platform ID</p>
+     * @var string <p>Platform ID.</p>
      */
     public $PlatformId;
 
     /**
      * @param string $BusinessId <p>Task ID returned by the CreateMNPVersion API.</p>
-     * @param string $PlatformId <p>Platform ID</p>
+     * @param string $PlatformId <p>Platform ID.</p>
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RebalanceReadOnlyGroup request structure.
  *
- * @method string getReadOnlyGroupId() Obtain RO group ID
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set RO group ID
+ * @method string getReadOnlyGroupId() Obtain ReadOnlyGroupId. specifies the read-only group ID, which can be obtained through the api [DescribeReadOnlyGroups](https://www.tencentcloud.com/document/product/409/39725).
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set ReadOnlyGroupId. specifies the read-only group ID, which can be obtained through the api [DescribeReadOnlyGroups](https://www.tencentcloud.com/document/product/409/39725).
  */
 class RebalanceReadOnlyGroupRequest extends AbstractModel
 {
     /**
-     * @var string RO group ID
+     * @var string ReadOnlyGroupId. specifies the read-only group ID, which can be obtained through the api [DescribeReadOnlyGroups](https://www.tencentcloud.com/document/product/409/39725).
      */
     public $ReadOnlyGroupId;
 
     /**
-     * @param string $ReadOnlyGroupId RO group ID
+     * @param string $ReadOnlyGroupId ReadOnlyGroupId. specifies the read-only group ID, which can be obtained through the api [DescribeReadOnlyGroups](https://www.tencentcloud.com/document/product/409/39725).
      */
     function __construct()
     {

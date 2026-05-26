@@ -18,31 +18,31 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response object for querying the list of sensitive APIs available to the mini game
+ * Response for querying the list of callable sensitive APIs of a mini game.
  *
- * @method integer getTotalCount() Obtain <p>Total number of entries</p>
- * @method void setTotalCount(integer $TotalCount) Set <p>Total number of entries</p>
- * @method array getDataList() Obtain <p>List data</p>
+ * @method integer getTotalCount() Obtain <p>Total number of entries.</p>
+ * @method void setTotalCount(integer $TotalCount) Set <p>Total number of entries.</p>
+ * @method array getDataList() Obtain <p>List data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataList(array $DataList) Set <p>List data</p>
+ * @method void setDataList(array $DataList) Set <p>List data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DescribeMNGSensitiveAPIPermissionListResp extends AbstractModel
 {
     /**
-     * @var integer <p>Total number of entries</p>
+     * @var integer <p>Total number of entries.</p>
      */
     public $TotalCount;
 
     /**
-     * @var array <p>List data</p>
+     * @var array <p>List data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataList;
 
     /**
-     * @param integer $TotalCount <p>Total number of entries</p>
-     * @param array $DataList <p>List data</p>
+     * @param integer $TotalCount <p>Total number of entries.</p>
+     * @param array $DataList <p>List data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

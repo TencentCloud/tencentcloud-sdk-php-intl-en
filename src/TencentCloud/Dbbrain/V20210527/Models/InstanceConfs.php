@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setKeyDelimiters(array $KeyDelimiters) Set Custom big key analysis separator for Redis only
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getShardNum() Obtain 
+ * @method void setShardNum(string $ShardNum) Set 
+ * @method string getAnalysisTopKey() Obtain 
+ * @method void setAnalysisTopKey(string $AnalysisTopKey) Set 
  */
 class InstanceConfs extends AbstractModel
 {
@@ -48,10 +52,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $KeyDelimiters;
 
     /**
+     * @var string 
+     */
+    public $ShardNum;
+
+    /**
+     * @var string 
+     */
+    public $AnalysisTopKey;
+
+    /**
      * @param string $DailyInspection Whether to enable database inspection. Valid values: Yes, No.
      * @param string $OverviewDisplay Whether to enable instance overview. Valid values: Yes, No.
      * @param array $KeyDelimiters Custom big key analysis separator for Redis only
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ShardNum 
+     * @param string $AnalysisTopKey 
      */
     function __construct()
     {
@@ -76,6 +92,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("KeyDelimiters",$param) and $param["KeyDelimiters"] !== null) {
             $this->KeyDelimiters = $param["KeyDelimiters"];
+        }
+
+        if (array_key_exists("ShardNum",$param) and $param["ShardNum"] !== null) {
+            $this->ShardNum = $param["ShardNum"];
+        }
+
+        if (array_key_exists("AnalysisTopKey",$param) and $param["AnalysisTopKey"] !== null) {
+            $this->AnalysisTopKey = $param["AnalysisTopKey"];
         }
     }
 }

@@ -20,78 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReadOnlyGroup request structure.
  *
- * @method string getMasterDBInstanceId() Obtain Primary instance ID
- * @method void setMasterDBInstanceId(string $MasterDBInstanceId) Set Primary instance ID
- * @method string getName() Obtain RO group name
- * @method void setName(string $Name) Set RO group name
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method string getVpcId() Obtain VPC ID
- * @method void setVpcId(string $VpcId) Set VPC ID
- * @method string getSubnetId() Obtain Subnet ID
- * @method void setSubnetId(string $SubnetId) Set Subnet ID
- * @method integer getReplayLagEliminate() Obtain Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
- * @method void setReplayLagEliminate(integer $ReplayLagEliminate) Set Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
- * @method integer getReplayLatencyEliminate() Obtain Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
- * @method void setReplayLatencyEliminate(integer $ReplayLatencyEliminate) Set Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
- * @method integer getMaxReplayLag() Obtain Delay threshold in ms
- * @method void setMaxReplayLag(integer $MaxReplayLag) Set Delay threshold in ms
- * @method integer getMaxReplayLatency() Obtain Delayed log size threshold in MB
- * @method void setMaxReplayLatency(integer $MaxReplayLatency) Set Delayed log size threshold in MB
- * @method integer getMinDelayEliminateReserve() Obtain The minimum number of read-only replicas that must be retained in an RO group
- * @method void setMinDelayEliminateReserve(integer $MinDelayEliminateReserve) Set The minimum number of read-only replicas that must be retained in an RO group
+ * @method string getMasterDBInstanceId() Obtain Primary instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setMasterDBInstanceId(string $MasterDBInstanceId) Set Primary instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method string getName() Obtain Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
+ * @method void setName(string $Name) Set Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
+ * @method integer getProjectId() Obtain Project ID. default value is 0, means it belongs to the default project.
+ * @method void setProjectId(integer $ProjectId) Set Project ID. default value is 0, means it belongs to the default project.
+ * @method string getVpcId() Obtain VPC ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
+ * @method void setVpcId(string $VpcId) Set VPC ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
+ * @method string getSubnetId() Obtain Subnet ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
+ * @method integer getReplayLagEliminate() Obtain Delay time size switch: 0 for off, 1 for on. this parameter is required.
+ * @method void setReplayLagEliminate(integer $ReplayLagEliminate) Set Delay time size switch: 0 for off, 1 for on. this parameter is required.
+ * @method integer getReplayLatencyEliminate() Obtain Delay space size switch: 0 for off, 1 for on. this parameter must match ReplayLagEliminate.
+ * @method void setReplayLatencyEliminate(integer $ReplayLatencyEliminate) Set Delay space size switch: 0 for off, 1 for on. this parameter must match ReplayLagEliminate.
+ * @method integer getMaxReplayLag() Obtain The size threshold of the delay time, a positive integer with unit: s. this parameter is required when ReplayLagEliminate is 1 and must be set to 0 when ReplayLagEliminate is 0.
+ * @method void setMaxReplayLag(integer $MaxReplayLag) Set The size threshold of the delay time, a positive integer with unit: s. this parameter is required when ReplayLagEliminate is 1 and must be set to 0 when ReplayLagEliminate is 0.
+ * @method integer getMaxReplayLatency() Obtain Delay threshold for space size, a positive integer in MB. this parameter is required when ReplayLatencyEliminate is 1 and must be set to 0 when ReplayLatencyEliminate is 0.
+ * @method void setMaxReplayLatency(integer $MaxReplayLatency) Set Delay threshold for space size, a positive integer in MB. this parameter is required when ReplayLatencyEliminate is 1 and must be set to 0 when ReplayLatencyEliminate is 0.
+ * @method integer getMinDelayEliminateReserve() Obtain Specifies the minimum number of instances to retain with delay removal. value range [0,100]. this parameter is required when ReplayLatencyEliminate is 1 and invalid when ReplayLagEliminate is 0.
+ * @method void setMinDelayEliminateReserve(integer $MinDelayEliminateReserve) Set Specifies the minimum number of instances to retain with delay removal. value range [0,100]. this parameter is required when ReplayLatencyEliminate is 1 and invalid when ReplayLagEliminate is 0.
  * @method array getSecurityGroupIds() Obtain Security group ID
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group ID
  */
 class CreateReadOnlyGroupRequest extends AbstractModel
 {
     /**
-     * @var string Primary instance ID
+     * @var string Primary instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $MasterDBInstanceId;
 
     /**
-     * @var string RO group name
+     * @var string Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
      */
     public $Name;
 
     /**
-     * @var integer Project ID
+     * @var integer Project ID. default value is 0, means it belongs to the default project.
      */
     public $ProjectId;
 
     /**
-     * @var string VPC ID
+     * @var string VPC ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID
+     * @var string Subnet ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
      */
     public $SubnetId;
 
     /**
-     * @var integer Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+     * @var integer Delay time size switch: 0 for off, 1 for on. this parameter is required.
      */
     public $ReplayLagEliminate;
 
     /**
-     * @var integer Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+     * @var integer Delay space size switch: 0 for off, 1 for on. this parameter must match ReplayLagEliminate.
      */
     public $ReplayLatencyEliminate;
 
     /**
-     * @var integer Delay threshold in ms
+     * @var integer The size threshold of the delay time, a positive integer with unit: s. this parameter is required when ReplayLagEliminate is 1 and must be set to 0 when ReplayLagEliminate is 0.
      */
     public $MaxReplayLag;
 
     /**
-     * @var integer Delayed log size threshold in MB
+     * @var integer Delay threshold for space size, a positive integer in MB. this parameter is required when ReplayLatencyEliminate is 1 and must be set to 0 when ReplayLatencyEliminate is 0.
      */
     public $MaxReplayLatency;
 
     /**
-     * @var integer The minimum number of read-only replicas that must be retained in an RO group
+     * @var integer Specifies the minimum number of instances to retain with delay removal. value range [0,100]. this parameter is required when ReplayLatencyEliminate is 1 and invalid when ReplayLagEliminate is 0.
      */
     public $MinDelayEliminateReserve;
 
@@ -101,16 +101,16 @@ class CreateReadOnlyGroupRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @param string $MasterDBInstanceId Primary instance ID
-     * @param string $Name RO group name
-     * @param integer $ProjectId Project ID
-     * @param string $VpcId VPC ID
-     * @param string $SubnetId Subnet ID
-     * @param integer $ReplayLagEliminate Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-     * @param integer $ReplayLatencyEliminate Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-     * @param integer $MaxReplayLag Delay threshold in ms
-     * @param integer $MaxReplayLatency Delayed log size threshold in MB
-     * @param integer $MinDelayEliminateReserve The minimum number of read-only replicas that must be retained in an RO group
+     * @param string $MasterDBInstanceId Primary instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param string $Name Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
+     * @param integer $ProjectId Project ID. default value is 0, means it belongs to the default project.
+     * @param string $VpcId VPC ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
+     * @param string $SubnetId Subnet ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
+     * @param integer $ReplayLagEliminate Delay time size switch: 0 for off, 1 for on. this parameter is required.
+     * @param integer $ReplayLatencyEliminate Delay space size switch: 0 for off, 1 for on. this parameter must match ReplayLagEliminate.
+     * @param integer $MaxReplayLag The size threshold of the delay time, a positive integer with unit: s. this parameter is required when ReplayLagEliminate is 1 and must be set to 0 when ReplayLagEliminate is 0.
+     * @param integer $MaxReplayLatency Delay threshold for space size, a positive integer in MB. this parameter is required when ReplayLatencyEliminate is 1 and must be set to 0 when ReplayLatencyEliminate is 0.
+     * @param integer $MinDelayEliminateReserve Specifies the minimum number of instances to retain with delay removal. value range [0,100]. this parameter is required when ReplayLatencyEliminate is 1 and invalid when ReplayLagEliminate is 0.
      * @param array $SecurityGroupIds Security group ID
      */
     function __construct()

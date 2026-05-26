@@ -18,28 +18,28 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Global domain name page list
+ * Paginated global domain list.
  *
- * @method integer getTotalCount() Obtain Total number
- * @method void setTotalCount(integer $TotalCount) Set Total number
- * @method array getDataList() Obtain Describes the domain information.
- * @method void setDataList(array $DataList) Set Describes the domain information.
+ * @method integer getTotalCount() Obtain Total number of entries.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of entries.
+ * @method array getDataList() Obtain Domain information.
+ * @method void setDataList(array $DataList) Set Domain information.
  */
 class DescribeGlobalDomainsResp extends AbstractModel
 {
     /**
-     * @var integer Total number
+     * @var integer Total number of entries.
      */
     public $TotalCount;
 
     /**
-     * @var array Describes the domain information.
+     * @var array Domain information.
      */
     public $DataList;
 
     /**
-     * @param integer $TotalCount Total number
-     * @param array $DataList Describes the domain information.
+     * @param integer $TotalCount Total number of entries.
+     * @param array $DataList Domain information.
      */
     function __construct()
     {

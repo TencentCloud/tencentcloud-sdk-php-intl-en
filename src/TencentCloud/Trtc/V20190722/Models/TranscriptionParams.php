@@ -18,52 +18,68 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI Transcription Params
+ * AI transcribe parameters.
  *
- * @method string getUserId() Obtain The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
- * @method void setUserId(string $UserId) Set The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
- * @method string getUserSig() Obtain The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
- * @method void setUserSig(string $UserSig) Set The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
- * @method integer getMaxIdleTime() Obtain If there is no streaming in the room for more than MaxIdleTime, the background will automatically close the task. The default value is 60s.
- * @method void setMaxIdleTime(integer $MaxIdleTime) Set If there is no streaming in the room for more than MaxIdleTime, the background will automatically close the task. The default value is 60s.
- * @method integer getTranscriptionMode() Obtain 1 means the robot subscribes to the stream of only one person, 0 means the robot subscribes to the stream of the entire room. If it is not filled in, the robot subscribes to the stream of the entire room by default.
- * @method void setTranscriptionMode(integer $TranscriptionMode) Set 1 means the robot subscribes to the stream of only one person, 0 means the robot subscribes to the stream of the entire room. If it is not filled in, the robot subscribes to the stream of the entire room by default.
- * @method string getTargetUserId() Obtain Required when TranscriptionMode is 1. The robot will only pull the stream of the userid and ignore other users in the room.
- * @method void setTargetUserId(string $TargetUserId) Set Required when TranscriptionMode is 1. The robot will only pull the stream of the userid and ignore other users in the room.
+ * @method string getUserId() Obtain The transcription robot's UserId is used to enter the room and trigger a transcription task. note that this UserId cannot be the same as the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple transcription tasks are initiated in a room, the robot's UserId must also be unique to avoid interrupting the previous task. ensure the transcription robot's UserId is unique in the room.
+ * @method void setUserId(string $UserId) Set The transcription robot's UserId is used to enter the room and trigger a transcription task. note that this UserId cannot be the same as the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple transcription tasks are initiated in a room, the robot's UserId must also be unique to avoid interrupting the previous task. ensure the transcription robot's UserId is unique in the room.
+ * @method string getUserSig() Obtain Verification signature corresponding to the transcription bot's UserId, namely, the UserId and UserSig serve as the login password for the transcription bot to enter the room. for specific calculation methods, see TRTC solution for calculating.
+ * @method void setUserSig(string $UserSig) Set Verification signature corresponding to the transcription bot's UserId, namely, the UserId and UserSig serve as the login password for the transcription bot to enter the room. for specific calculation methods, see TRTC solution for calculating.
+ * @method integer getMaxIdleTime() Obtain After all push users exit the room and exceed MaxIdleTime seconds, the backend automation shuts down the transcription task. default value is 60s.
+ * @method void setMaxIdleTime(integer $MaxIdleTime) Set After all push users exit the room and exceed MaxIdleTime seconds, the backend automation shuts down the transcription task. default value is 60s.
+ * @method integer getTranscriptionMode() Obtain 1 means the robot subscribes to the stream of an individual, and 0 means the robot subscribes to the stream of the entire room. if left empty, it defaults to subscribing to the stream of the entire room.
+ * @method void setTranscriptionMode(integer $TranscriptionMode) Set 1 means the robot subscribes to the stream of an individual, and 0 means the robot subscribes to the stream of the entire room. if left empty, it defaults to subscribing to the stream of the entire room.
+ * @method string getTargetUserId() Obtain Required when TranscriptionMode is 1, the robot only pulls streams from this userid and ignores other users in the room.
+ * @method void setTargetUserId(string $TargetUserId) Set Required when TranscriptionMode is 1, the robot only pulls streams from this userid and ignores other users in the room.
+ * @method VoicePrint getVoicePrint() Obtain Voiceprint configuration.
+ * @method void setVoicePrint(VoicePrint $VoicePrint) Set Voiceprint configuration.
+ * @method TurnDetection getTurnDetection() Obtain Semantic sentence segmentation detection.
+ * @method void setTurnDetection(TurnDetection $TurnDetection) Set Semantic sentence segmentation detection.
  */
 class TranscriptionParams extends AbstractModel
 {
     /**
-     * @var string The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
+     * @var string The transcription robot's UserId is used to enter the room and trigger a transcription task. note that this UserId cannot be the same as the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple transcription tasks are initiated in a room, the robot's UserId must also be unique to avoid interrupting the previous task. ensure the transcription robot's UserId is unique in the room.
      */
     public $UserId;
 
     /**
-     * @var string The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
+     * @var string Verification signature corresponding to the transcription bot's UserId, namely, the UserId and UserSig serve as the login password for the transcription bot to enter the room. for specific calculation methods, see TRTC solution for calculating.
      */
     public $UserSig;
 
     /**
-     * @var integer If there is no streaming in the room for more than MaxIdleTime, the background will automatically close the task. The default value is 60s.
+     * @var integer After all push users exit the room and exceed MaxIdleTime seconds, the backend automation shuts down the transcription task. default value is 60s.
      */
     public $MaxIdleTime;
 
     /**
-     * @var integer 1 means the robot subscribes to the stream of only one person, 0 means the robot subscribes to the stream of the entire room. If it is not filled in, the robot subscribes to the stream of the entire room by default.
+     * @var integer 1 means the robot subscribes to the stream of an individual, and 0 means the robot subscribes to the stream of the entire room. if left empty, it defaults to subscribing to the stream of the entire room.
      */
     public $TranscriptionMode;
 
     /**
-     * @var string Required when TranscriptionMode is 1. The robot will only pull the stream of the userid and ignore other users in the room.
+     * @var string Required when TranscriptionMode is 1, the robot only pulls streams from this userid and ignores other users in the room.
      */
     public $TargetUserId;
 
     /**
-     * @param string $UserId The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
-     * @param string $UserSig The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
-     * @param integer $MaxIdleTime If there is no streaming in the room for more than MaxIdleTime, the background will automatically close the task. The default value is 60s.
-     * @param integer $TranscriptionMode 1 means the robot subscribes to the stream of only one person, 0 means the robot subscribes to the stream of the entire room. If it is not filled in, the robot subscribes to the stream of the entire room by default.
-     * @param string $TargetUserId Required when TranscriptionMode is 1. The robot will only pull the stream of the userid and ignore other users in the room.
+     * @var VoicePrint Voiceprint configuration.
+     */
+    public $VoicePrint;
+
+    /**
+     * @var TurnDetection Semantic sentence segmentation detection.
+     */
+    public $TurnDetection;
+
+    /**
+     * @param string $UserId The transcription robot's UserId is used to enter the room and trigger a transcription task. note that this UserId cannot be the same as the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple transcription tasks are initiated in a room, the robot's UserId must also be unique to avoid interrupting the previous task. ensure the transcription robot's UserId is unique in the room.
+     * @param string $UserSig Verification signature corresponding to the transcription bot's UserId, namely, the UserId and UserSig serve as the login password for the transcription bot to enter the room. for specific calculation methods, see TRTC solution for calculating.
+     * @param integer $MaxIdleTime After all push users exit the room and exceed MaxIdleTime seconds, the backend automation shuts down the transcription task. default value is 60s.
+     * @param integer $TranscriptionMode 1 means the robot subscribes to the stream of an individual, and 0 means the robot subscribes to the stream of the entire room. if left empty, it defaults to subscribing to the stream of the entire room.
+     * @param string $TargetUserId Required when TranscriptionMode is 1, the robot only pulls streams from this userid and ignores other users in the room.
+     * @param VoicePrint $VoicePrint Voiceprint configuration.
+     * @param TurnDetection $TurnDetection Semantic sentence segmentation detection.
      */
     function __construct()
     {
@@ -96,6 +112,16 @@ class TranscriptionParams extends AbstractModel
 
         if (array_key_exists("TargetUserId",$param) and $param["TargetUserId"] !== null) {
             $this->TargetUserId = $param["TargetUserId"];
+        }
+
+        if (array_key_exists("VoicePrint",$param) and $param["VoicePrint"] !== null) {
+            $this->VoicePrint = new VoicePrint();
+            $this->VoicePrint->deserialize($param["VoicePrint"]);
+        }
+
+        if (array_key_exists("TurnDetection",$param) and $param["TurnDetection"] !== null) {
+            $this->TurnDetection = new TurnDetection();
+            $this->TurnDetection->deserialize($param["TurnDetection"]);
         }
     }
 }

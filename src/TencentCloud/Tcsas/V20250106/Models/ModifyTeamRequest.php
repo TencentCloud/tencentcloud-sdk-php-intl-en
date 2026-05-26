@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTeam request structure.
  *
- * @method string getTeamId() Obtain Team ID
- * @method void setTeamId(string $TeamId) Set Team ID
- * @method string getTeamName() Obtain Team name
- * @method void setTeamName(string $TeamName) Set Team name
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getAdminUserId() Obtain Team administrator
- * @method void setAdminUserId(string $AdminUserId) Set Team administrator
+ * @method string getTeamId() Obtain Team ID.
+ * @method void setTeamId(string $TeamId) Set Team ID.
+ * @method string getTeamName() Obtain Team name.
+ * @method void setTeamName(string $TeamName) Set Team name.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method string getAdminUserId() Obtain Team administrator.
+ * @method void setAdminUserId(string $AdminUserId) Set Team administrator.
  */
 class ModifyTeamRequest extends AbstractModel
 {
     /**
-     * @var string Team ID
+     * @var string Team ID.
      */
     public $TeamId;
 
     /**
-     * @var string Team name
+     * @var string Team name.
      */
     public $TeamName;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Team administrator
+     * @var string Team administrator.
      */
     public $AdminUserId;
 
     /**
-     * @param string $TeamId Team ID
-     * @param string $TeamName Team name
-     * @param string $PlatformId Platform ID
-     * @param string $AdminUserId Team administrator
+     * @param string $TeamId Team ID.
+     * @param string $TeamName Team name.
+     * @param string $PlatformId Platform ID.
+     * @param string $AdminUserId Team administrator.
      */
     function __construct()
     {

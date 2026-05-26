@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeParameterTemplates request structure.
  *
- * @method array getFilters() Obtain Filter conditions. Valid values: `TemplateName`, `TemplateId`, `DBMajorVersion`, `DBEngine`.
- * @method void setFilters(array $Filters) Set Filter conditions. Valid values: `TemplateName`, `TemplateId`, `DBMajorVersion`, `DBEngine`.
+ * @method array getFilters() Obtain Filter criteria currently supported: TemplateName, TemplateId, DBMajorVersion, DBEngine. fuzzy matching is not supported for TemplateName.
+ * @method void setFilters(array $Filters) Set Filter criteria currently supported: TemplateName, TemplateId, DBMajorVersion, DBEngine. fuzzy matching is not supported for TemplateName.
  * @method integer getLimit() Obtain The maximum number of results returned per page. Value range: 0-100. Default: `20`.
  * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Value range: 0-100. Default: `20`.
  * @method integer getOffset() Obtain Data offset
  * @method void setOffset(integer $Offset) Set Data offset
- * @method string getOrderBy() Obtain Sorting metric. Valid values: `CreateTime`, `TemplateName`, `DBMajorVersion`.
- * @method void setOrderBy(string $OrderBy) Set Sorting metric. Valid values: `CreateTime`, `TemplateName`, `DBMajorVersion`.
- * @method string getOrderByType() Obtain Sorting order. Valid values: `asc` (ascending order),`desc` (descending order).
- * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `asc` (ascending order),`desc` (descending order).
+ * @method string getOrderBy() Obtain Sorting metric, enumeration value, supports: CreateTime, TemplateName, DBMajorVersion. if this parameter is not set, it defaults to sorting by the parameter template number in reverse order, which means that newly added parameter templates appear at the top.
+ * @method void setOrderBy(string $OrderBy) Set Sorting metric, enumeration value, supports: CreateTime, TemplateName, DBMajorVersion. if this parameter is not set, it defaults to sorting by the parameter template number in reverse order, which means that newly added parameter templates appear at the top.
+ * @method string getOrderByType() Obtain Sorting method, enumeration value, supports: `asc` (ascending) and `desc` (descending). the default value is `asc`. when OrderBy is not specified, this parameter becomes invalid, at which point the sorting method follows the default sorting order provided in the OrderBy parameter description.
+ * @method void setOrderByType(string $OrderByType) Set Sorting method, enumeration value, supports: `asc` (ascending) and `desc` (descending). the default value is `asc`. when OrderBy is not specified, this parameter becomes invalid, at which point the sorting method follows the default sorting order provided in the OrderBy parameter description.
  */
 class DescribeParameterTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Filter conditions. Valid values: `TemplateName`, `TemplateId`, `DBMajorVersion`, `DBEngine`.
+     * @var array Filter criteria currently supported: TemplateName, TemplateId, DBMajorVersion, DBEngine. fuzzy matching is not supported for TemplateName.
      */
     public $Filters;
 
@@ -49,21 +49,21 @@ class DescribeParameterTemplatesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string Sorting metric. Valid values: `CreateTime`, `TemplateName`, `DBMajorVersion`.
+     * @var string Sorting metric, enumeration value, supports: CreateTime, TemplateName, DBMajorVersion. if this parameter is not set, it defaults to sorting by the parameter template number in reverse order, which means that newly added parameter templates appear at the top.
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting order. Valid values: `asc` (ascending order),`desc` (descending order).
+     * @var string Sorting method, enumeration value, supports: `asc` (ascending) and `desc` (descending). the default value is `asc`. when OrderBy is not specified, this parameter becomes invalid, at which point the sorting method follows the default sorting order provided in the OrderBy parameter description.
      */
     public $OrderByType;
 
     /**
-     * @param array $Filters Filter conditions. Valid values: `TemplateName`, `TemplateId`, `DBMajorVersion`, `DBEngine`.
+     * @param array $Filters Filter criteria currently supported: TemplateName, TemplateId, DBMajorVersion, DBEngine. fuzzy matching is not supported for TemplateName.
      * @param integer $Limit The maximum number of results returned per page. Value range: 0-100. Default: `20`.
      * @param integer $Offset Data offset
-     * @param string $OrderBy Sorting metric. Valid values: `CreateTime`, `TemplateName`, `DBMajorVersion`.
-     * @param string $OrderByType Sorting order. Valid values: `asc` (ascending order),`desc` (descending order).
+     * @param string $OrderBy Sorting metric, enumeration value, supports: CreateTime, TemplateName, DBMajorVersion. if this parameter is not set, it defaults to sorting by the parameter template number in reverse order, which means that newly added parameter templates appear at the top.
+     * @param string $OrderByType Sorting method, enumeration value, supports: `asc` (ascending) and `desc` (descending). the default value is `asc`. when OrderBy is not specified, this parameter becomes invalid, at which point the sorting method follows the default sorting order provided in the OrderBy parameter description.
      */
     function __construct()
     {

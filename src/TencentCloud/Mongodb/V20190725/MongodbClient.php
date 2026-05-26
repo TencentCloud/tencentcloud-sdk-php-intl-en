@@ -30,8 +30,11 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\CreateBackupDownloadTaskResponse CreateBackupDownloadTask(Models\CreateBackupDownloadTaskRequest $req) This API is used to create a backup download task.
  * @method Models\CreateDBInstanceResponse CreateDBInstance(Models\CreateDBInstanceRequest $req) This API is used to create a yearly/monthly subscription TencentDB for MongoDB instance. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/34701) API can be called to query and obtain the supported sales specifications.
  * @method Models\CreateDBInstanceHourResponse CreateDBInstanceHour(Models\CreateDBInstanceHourRequest $req) This API is used to create a pay-as-you-go TencentDB for MongoDB instance.
+ * @method Models\CreateDBInstanceParamTplResponse CreateDBInstanceParamTpl(Models\CreateDBInstanceParamTplRequest $req) This API is used to create a parameter template for TencentDB for MongoDB.
+**Description:** The CreateDBInstanceParamTpl API is in public beta. During this period, this API is only applicable to beta test participants.
  * @method Models\CreateLogDownloadTaskResponse CreateLogDownloadTask(Models\CreateLogDownloadTaskRequest $req) This API is used to create a log download task.
  * @method Models\DeleteAccountUserResponse DeleteAccountUser(Models\DeleteAccountUserRequest $req) This API is used to delete a custom account of an instance.
+ * @method Models\DeleteDBBackupsResponse DeleteDBBackups(Models\DeleteDBBackupsRequest $req) This API is used to delete full backups.
  * @method Models\DeleteLogDownloadTaskResponse DeleteLogDownloadTask(Models\DeleteLogDownloadTaskRequest $req) This API is used to delete a log download task.
  * @method Models\DescribeAccountUsersResponse DescribeAccountUsers(Models\DescribeAccountUsersRequest $req) This API is used to obtain all accounts of the current instance.
  * @method Models\DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(Models\DescribeAsyncRequestInfoRequest $req) This API is used to query the asynchronous task status.
@@ -46,18 +49,24 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DescribeDBInstanceDealResponse DescribeDBInstanceDeal(Models\DescribeDBInstanceDealRequest $req) This API is used to get order details of purchase, renewal, and specification adjustment of a MongoDB instance.
  * @method Models\DescribeDBInstanceNamespaceResponse DescribeDBInstanceNamespace(Models\DescribeDBInstanceNamespaceRequest $req) This API is used to query the table information on a database.
  * @method Models\DescribeDBInstanceNodePropertyResponse DescribeDBInstanceNodeProperty(Models\DescribeDBInstanceNodePropertyRequest $req) This API is used to query node attributes, such as the AZ, node name, address, role, status, delay between primary and secondary nodes, priority, voting right, and tags.
+ * @method Models\DescribeDBInstanceParamTplResponse DescribeDBInstanceParamTpl(Models\DescribeDBInstanceParamTplRequest $req) This API is used to query ALL MongoDB database parameter templates under the current account.
+**Description:** The DescribeDBInstanceParamTpl API is in public beta. During this period, this API is only applicable to beta test participants.
+ * @method Models\DescribeDBInstanceParamTplDetailResponse DescribeDBInstanceParamTplDetail(Models\DescribeDBInstanceParamTplDetailRequest $req) This API is used to query parameter template details of a cloud database instance for MongoDB.
+**Description:** The DescribeDBInstanceParamTplDetail API is in public beta. During this period, this interface is only applicable to beta test participants.
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) This API is used to query the list of TencentDB for MongoDB instances. It supports filtering primary instances, disaster recovery instances, and read-only instances by project ID, instance ID, instance status, and other conditions.
  * @method Models\DescribeDetailedSlowLogsResponse DescribeDetailedSlowLogs(Models\DescribeDetailedSlowLogsRequest $req) This API is used to query slow log details of the instance.
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) This API is used to query the list of parameters that can be modified for the current instance.
  * @method Models\DescribeInstanceSSLResponse DescribeInstanceSSL(Models\DescribeInstanceSSLRequest $req) This API is used to view the enabling status of Secure Sockets Layer (SSL) for an instance.
  * @method Models\DescribeLogDownloadTasksResponse DescribeLogDownloadTasks(Models\DescribeLogDownloadTasksRequest $req) This API is used to query a log download task.
  * @method Models\DescribeMongodbLogsResponse DescribeMongodbLogs(Models\DescribeMongodbLogsRequest $req) This API is used to query running logs.
+ * @method Models\DescribePasswordRotationResponse DescribePasswordRotation(Models\DescribePasswordRotationRequest $req) Retrieve the rotation status info
  * @method Models\DescribeSRVConnectionDomainResponse DescribeSRVConnectionDomain(Models\DescribeSRVConnectionDomainRequest $req) This API is used to query the current domain information of the MongoDB database.
  * @method Models\DescribeSecurityGroupResponse DescribeSecurityGroup(Models\DescribeSecurityGroupRequest $req) This API is used to query security groups bound to an instance.
  * @method Models\DescribeSlowLogPatternsResponse DescribeSlowLogPatterns(Models\DescribeSlowLogPatternsRequest $req) This API is used to get the slow log statistics of a database instance.
  * @method Models\DescribeSlowLogsResponse DescribeSlowLogs(Models\DescribeSlowLogsRequest $req) This API is used to get the slow log information of a TencentDB instance. Only slow logs for the last 7 days can be queried.
  * @method Models\DescribeSpecInfoResponse DescribeSpecInfo(Models\DescribeSpecInfoRequest $req) This API is used to query the sales specification of an instance.
  * @method Models\DisableSRVConnectionUrlResponse DisableSRVConnectionUrl(Models\DisableSRVConnectionUrlRequest $req) This API is used to close the SRV Access Address of the MongoDB database.
+ * @method Models\EnablePasswordRotationResponse EnablePasswordRotation(Models\EnablePasswordRotationRequest $req) Enable password rotation
  * @method Models\EnableSRVConnectionUrlResponse EnableSRVConnectionUrl(Models\EnableSRVConnectionUrlRequest $req) This API is used to enable the SRV Access Address for MongoDB database.
  * @method Models\EnableTransparentDataEncryptionResponse EnableTransparentDataEncryption(Models\EnableTransparentDataEncryptionRequest $req) This API is used to enable the transparent data encryption (TDE) capability for TencentDB for MongoDB.
  * @method Models\EnableWanServiceResponse EnableWanService(Models\EnableWanServiceRequest $req) This API is used to enable the public network access address of the current instance.
@@ -68,6 +77,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\InstanceEnableSSLResponse InstanceEnableSSL(Models\InstanceEnableSSLRequest $req) This API is used to set the SSL status for an instance.
  * @method Models\IsolateDBInstanceResponse IsolateDBInstance(Models\IsolateDBInstanceRequest $req) This API is used to isolate a pay-as-you-go TencentDB for MongoDB instance. After isolation, the instance is retained in the recycle bin, and data cannot be written into it. After a certain period of isolation, the instance is deleted permanently. For the retention time in the recycle bin, see the pay-as-you-go service terms. The deleted pay-as-you-go instance cannot be recovered. Proceed with caution.
  * @method Models\KillOpsResponse KillOps(Models\KillOpsRequest $req) This API is used to terminate a specific operation performed on a TencentDB for MongoDB instance.
+ * @method Models\ModifyBackupExpireTimeResponse ModifyBackupExpireTime(Models\ModifyBackupExpireTimeRequest $req) Modify backup expiration time
  * @method Models\ModifyDBInstanceNetworkAddressResponse ModifyDBInstanceNetworkAddress(Models\ModifyDBInstanceNetworkAddressRequest $req) This API is used to modify the network information on a TencentDB for MongoDB instance. It supports switching from a basic network to a VPC network or from one VPC network to another VPC network.
  * @method Models\ModifyDBInstanceSecurityGroupResponse ModifyDBInstanceSecurityGroup(Models\ModifyDBInstanceSecurityGroupRequest $req) This API is used to modify security groups bound to an instance.
  * @method Models\ModifyDBInstanceSpecResponse ModifyDBInstanceSpec(Models\ModifyDBInstanceSpecRequest $req) This API is used to adjust the TencentDB for MongoDB instance configuration. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.

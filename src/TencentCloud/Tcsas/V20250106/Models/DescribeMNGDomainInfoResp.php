@@ -18,28 +18,28 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response parameters for querying domain information
+ * Response parameters for querying domain information.
  *
- * @method string getDomainUrl() Obtain <p>Multiple domain names are concatenated with the separator ;</p>
- * @method void setDomainUrl(string $DomainUrl) Set <p>Multiple domain names are concatenated with the separator ;</p>
- * @method integer getDomainType() Obtain <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain</p>
- * @method void setDomainType(integer $DomainType) Set <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain</p>
+ * @method string getDomainUrl() Obtain <p>Multiple domains concatenated with semicolons (;).</p>
+ * @method void setDomainUrl(string $DomainUrl) Set <p>Multiple domains concatenated with semicolons (;).</p>
+ * @method integer getDomainType() Obtain <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain.</p>
+ * @method void setDomainType(integer $DomainType) Set <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain.</p>
  */
 class DescribeMNGDomainInfoResp extends AbstractModel
 {
     /**
-     * @var string <p>Multiple domain names are concatenated with the separator ;</p>
+     * @var string <p>Multiple domains concatenated with semicolons (;).</p>
      */
     public $DomainUrl;
 
     /**
-     * @var integer <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain</p>
+     * @var integer <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain.</p>
      */
     public $DomainType;
 
     /**
-     * @param string $DomainUrl <p>Multiple domain names are concatenated with the separator ;</p>
-     * @param integer $DomainType <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain</p>
+     * @param string $DomainUrl <p>Multiple domains concatenated with semicolons (;).</p>
+     * @param integer $DomainType <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain.</p>
      */
     function __construct()
     {

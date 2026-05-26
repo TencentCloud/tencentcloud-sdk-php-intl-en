@@ -18,108 +18,108 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Payment active retention data
+ * Payment user active retention data.
  *
- * @method integer getOneDayRetentionUsers() Obtain Day 1 active retention of paying users
- * @method void setOneDayRetentionUsers(integer $OneDayRetentionUsers) Set Day 1 active retention of paying users
- * @method integer getTwoDayRetentionUsers() Obtain Day 2 active retention of paying users
- * @method void setTwoDayRetentionUsers(integer $TwoDayRetentionUsers) Set Day 2 active retention of paying users
- * @method integer getThreeDayRetentionUsers() Obtain Day 3 active retention of paying users
- * @method void setThreeDayRetentionUsers(integer $ThreeDayRetentionUsers) Set Day 3 active retention of paying users
- * @method integer getFourDayRetentionUsers() Obtain Day 4 active retention of paying users
- * @method void setFourDayRetentionUsers(integer $FourDayRetentionUsers) Set Day 4 active retention of paying users
- * @method integer getFiveDayRetentionUsers() Obtain Day 5 active retention of paying users
- * @method void setFiveDayRetentionUsers(integer $FiveDayRetentionUsers) Set Day 5 active retention of paying users
- * @method integer getSixDayRetentionUsers() Obtain Day 6 active retention of paying users
- * @method void setSixDayRetentionUsers(integer $SixDayRetentionUsers) Set Day 6 active retention of paying users
- * @method integer getSevenDayRetentionUsers() Obtain Day 7 active retention of paying users
- * @method void setSevenDayRetentionUsers(integer $SevenDayRetentionUsers) Set Day 7 active retention of paying users
- * @method integer getFourteenDayRetentionUsers() Obtain Day 14 active retention of paying users
- * @method void setFourteenDayRetentionUsers(integer $FourteenDayRetentionUsers) Set Day 14 active retention of paying users
- * @method integer getFifteenDayRetentionUsers() Obtain Day 15 active retention of paying users
- * @method void setFifteenDayRetentionUsers(integer $FifteenDayRetentionUsers) Set Day 15 active retention of paying users
- * @method integer getThirtyDayRetentionUsers() Obtain Day 30 active retention of paying users
- * @method void setThirtyDayRetentionUsers(integer $ThirtyDayRetentionUsers) Set Day 30 active retention of paying users
- * @method integer getPaymentUserNum() Obtain Number of paying users
- * @method void setPaymentUserNum(integer $PaymentUserNum) Set Number of paying users
- * @method string getDataTime() Obtain Data time in YYYYMMDD format
- * @method void setDataTime(string $DataTime) Set Data time in YYYYMMDD format
+ * @method integer getOneDayRetentionUsers() Obtain Day 1 active retention of paying users.
+ * @method void setOneDayRetentionUsers(integer $OneDayRetentionUsers) Set Day 1 active retention of paying users.
+ * @method integer getTwoDayRetentionUsers() Obtain Day 2 active retention of paying users.
+ * @method void setTwoDayRetentionUsers(integer $TwoDayRetentionUsers) Set Day 2 active retention of paying users.
+ * @method integer getThreeDayRetentionUsers() Obtain Day 3 active retention of paying users.
+ * @method void setThreeDayRetentionUsers(integer $ThreeDayRetentionUsers) Set Day 3 active retention of paying users.
+ * @method integer getFourDayRetentionUsers() Obtain Day 4 active retention of paying users.
+ * @method void setFourDayRetentionUsers(integer $FourDayRetentionUsers) Set Day 4 active retention of paying users.
+ * @method integer getFiveDayRetentionUsers() Obtain Day 5 active retention of paying users.
+ * @method void setFiveDayRetentionUsers(integer $FiveDayRetentionUsers) Set Day 5 active retention of paying users.
+ * @method integer getSixDayRetentionUsers() Obtain Day 6 active retention of paying users.
+ * @method void setSixDayRetentionUsers(integer $SixDayRetentionUsers) Set Day 6 active retention of paying users.
+ * @method integer getSevenDayRetentionUsers() Obtain Day 7 active retention of paying users.
+ * @method void setSevenDayRetentionUsers(integer $SevenDayRetentionUsers) Set Day 7 active retention of paying users.
+ * @method integer getFourteenDayRetentionUsers() Obtain Day 14 active retention of paying users.
+ * @method void setFourteenDayRetentionUsers(integer $FourteenDayRetentionUsers) Set Day 14 active retention of paying users.
+ * @method integer getFifteenDayRetentionUsers() Obtain Day 15 active retention of paying users.
+ * @method void setFifteenDayRetentionUsers(integer $FifteenDayRetentionUsers) Set Day 15 active retention of paying users.
+ * @method integer getThirtyDayRetentionUsers() Obtain Day 30 active retention of paying users.
+ * @method void setThirtyDayRetentionUsers(integer $ThirtyDayRetentionUsers) Set Day 30 active retention of paying users.
+ * @method integer getPaymentUserNum() Obtain Number of paying users.
+ * @method void setPaymentUserNum(integer $PaymentUserNum) Set Number of paying users.
+ * @method string getDataTime() Obtain Data time in YYYYMMDD format.
+ * @method void setDataTime(string $DataTime) Set Data time in YYYYMMDD format.
  */
 class PaymentActiveRetention extends AbstractModel
 {
     /**
-     * @var integer Day 1 active retention of paying users
+     * @var integer Day 1 active retention of paying users.
      */
     public $OneDayRetentionUsers;
 
     /**
-     * @var integer Day 2 active retention of paying users
+     * @var integer Day 2 active retention of paying users.
      */
     public $TwoDayRetentionUsers;
 
     /**
-     * @var integer Day 3 active retention of paying users
+     * @var integer Day 3 active retention of paying users.
      */
     public $ThreeDayRetentionUsers;
 
     /**
-     * @var integer Day 4 active retention of paying users
+     * @var integer Day 4 active retention of paying users.
      */
     public $FourDayRetentionUsers;
 
     /**
-     * @var integer Day 5 active retention of paying users
+     * @var integer Day 5 active retention of paying users.
      */
     public $FiveDayRetentionUsers;
 
     /**
-     * @var integer Day 6 active retention of paying users
+     * @var integer Day 6 active retention of paying users.
      */
     public $SixDayRetentionUsers;
 
     /**
-     * @var integer Day 7 active retention of paying users
+     * @var integer Day 7 active retention of paying users.
      */
     public $SevenDayRetentionUsers;
 
     /**
-     * @var integer Day 14 active retention of paying users
+     * @var integer Day 14 active retention of paying users.
      */
     public $FourteenDayRetentionUsers;
 
     /**
-     * @var integer Day 15 active retention of paying users
+     * @var integer Day 15 active retention of paying users.
      */
     public $FifteenDayRetentionUsers;
 
     /**
-     * @var integer Day 30 active retention of paying users
+     * @var integer Day 30 active retention of paying users.
      */
     public $ThirtyDayRetentionUsers;
 
     /**
-     * @var integer Number of paying users
+     * @var integer Number of paying users.
      */
     public $PaymentUserNum;
 
     /**
-     * @var string Data time in YYYYMMDD format
+     * @var string Data time in YYYYMMDD format.
      */
     public $DataTime;
 
     /**
-     * @param integer $OneDayRetentionUsers Day 1 active retention of paying users
-     * @param integer $TwoDayRetentionUsers Day 2 active retention of paying users
-     * @param integer $ThreeDayRetentionUsers Day 3 active retention of paying users
-     * @param integer $FourDayRetentionUsers Day 4 active retention of paying users
-     * @param integer $FiveDayRetentionUsers Day 5 active retention of paying users
-     * @param integer $SixDayRetentionUsers Day 6 active retention of paying users
-     * @param integer $SevenDayRetentionUsers Day 7 active retention of paying users
-     * @param integer $FourteenDayRetentionUsers Day 14 active retention of paying users
-     * @param integer $FifteenDayRetentionUsers Day 15 active retention of paying users
-     * @param integer $ThirtyDayRetentionUsers Day 30 active retention of paying users
-     * @param integer $PaymentUserNum Number of paying users
-     * @param string $DataTime Data time in YYYYMMDD format
+     * @param integer $OneDayRetentionUsers Day 1 active retention of paying users.
+     * @param integer $TwoDayRetentionUsers Day 2 active retention of paying users.
+     * @param integer $ThreeDayRetentionUsers Day 3 active retention of paying users.
+     * @param integer $FourDayRetentionUsers Day 4 active retention of paying users.
+     * @param integer $FiveDayRetentionUsers Day 5 active retention of paying users.
+     * @param integer $SixDayRetentionUsers Day 6 active retention of paying users.
+     * @param integer $SevenDayRetentionUsers Day 7 active retention of paying users.
+     * @param integer $FourteenDayRetentionUsers Day 14 active retention of paying users.
+     * @param integer $FifteenDayRetentionUsers Day 15 active retention of paying users.
+     * @param integer $ThirtyDayRetentionUsers Day 30 active retention of paying users.
+     * @param integer $PaymentUserNum Number of paying users.
+     * @param string $DataTime Data time in YYYYMMDD format.
      */
     function __construct()
     {

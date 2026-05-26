@@ -18,76 +18,76 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Global overview data
+ * Global overview data.
  *
- * @method integer getAppNum() Obtain Superapps
- * @method void setAppNum(integer $AppNum) Set Superapps
- * @method integer getCorpNum() Obtain Teams
- * @method void setCorpNum(integer $CorpNum) Set Teams
- * @method string getFlushTime() Obtain Refresh time
- * @method void setFlushTime(string $FlushTime) Set Refresh time
- * @method integer getMiniAppNum() Obtain Mini programs
- * @method void setMiniAppNum(integer $MiniAppNum) Set Mini programs
- * @method integer getMiniGameNum() Obtain Mini games
- * @method void setMiniGameNum(integer $MiniGameNum) Set Mini games
- * @method integer getMiniGameVisitNum() Obtain Mini game visits
- * @method void setMiniGameVisitNum(integer $MiniGameVisitNum) Set Mini game visits
- * @method integer getUpdateNum() Obtain Mini program updates
- * @method void setUpdateNum(integer $UpdateNum) Set Mini program updates
- * @method integer getVisitNum() Obtain Mini program visits
- * @method void setVisitNum(integer $VisitNum) Set Mini program visits
+ * @method integer getAppNum() Obtain Number of superapps.
+ * @method void setAppNum(integer $AppNum) Set Number of superapps.
+ * @method integer getCorpNum() Obtain Number of teams.
+ * @method void setCorpNum(integer $CorpNum) Set Number of teams.
+ * @method string getFlushTime() Obtain Refresh timestamp.
+ * @method void setFlushTime(string $FlushTime) Set Refresh timestamp.
+ * @method integer getMiniAppNum() Obtain Number of mini programs.
+ * @method void setMiniAppNum(integer $MiniAppNum) Set Number of mini programs.
+ * @method integer getMiniGameNum() Obtain Number of mini games.
+ * @method void setMiniGameNum(integer $MiniGameNum) Set Number of mini games.
+ * @method integer getMiniGameVisitNum() Obtain Number of mini game visits.
+ * @method void setMiniGameVisitNum(integer $MiniGameVisitNum) Set Number of mini game visits.
+ * @method integer getUpdateNum() Obtain Number of mini program updates.
+ * @method void setUpdateNum(integer $UpdateNum) Set Number of mini program updates.
+ * @method integer getVisitNum() Obtain Number of mini program visits.
+ * @method void setVisitNum(integer $VisitNum) Set Number of mini program visits.
  */
 class Overview extends AbstractModel
 {
     /**
-     * @var integer Superapps
+     * @var integer Number of superapps.
      */
     public $AppNum;
 
     /**
-     * @var integer Teams
+     * @var integer Number of teams.
      */
     public $CorpNum;
 
     /**
-     * @var string Refresh time
+     * @var string Refresh timestamp.
      */
     public $FlushTime;
 
     /**
-     * @var integer Mini programs
+     * @var integer Number of mini programs.
      */
     public $MiniAppNum;
 
     /**
-     * @var integer Mini games
+     * @var integer Number of mini games.
      */
     public $MiniGameNum;
 
     /**
-     * @var integer Mini game visits
+     * @var integer Number of mini game visits.
      */
     public $MiniGameVisitNum;
 
     /**
-     * @var integer Mini program updates
+     * @var integer Number of mini program updates.
      */
     public $UpdateNum;
 
     /**
-     * @var integer Mini program visits
+     * @var integer Number of mini program visits.
      */
     public $VisitNum;
 
     /**
-     * @param integer $AppNum Superapps
-     * @param integer $CorpNum Teams
-     * @param string $FlushTime Refresh time
-     * @param integer $MiniAppNum Mini programs
-     * @param integer $MiniGameNum Mini games
-     * @param integer $MiniGameVisitNum Mini game visits
-     * @param integer $UpdateNum Mini program updates
-     * @param integer $VisitNum Mini program visits
+     * @param integer $AppNum Number of superapps.
+     * @param integer $CorpNum Number of teams.
+     * @param string $FlushTime Refresh timestamp.
+     * @param integer $MiniAppNum Number of mini programs.
+     * @param integer $MiniGameNum Number of mini games.
+     * @param integer $MiniGameVisitNum Number of mini game visits.
+     * @param integer $UpdateNum Number of mini program updates.
+     * @param integer $VisitNum Number of mini program visits.
      */
     function __construct()
     {

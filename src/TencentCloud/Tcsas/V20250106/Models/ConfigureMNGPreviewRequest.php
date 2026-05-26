@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ConfigureMNGPreview request structure.
  *
- * @method string getMNPId() Obtain <p>Mini game appid</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini game appid</p>
- * @method integer getActionType() Obtain <p>1 Set 2 Cancel</p>
- * @method void setActionType(integer $ActionType) Set <p>1 Set 2 Cancel</p>
- * @method integer getMNPVersionId() Obtain <p>Mini game version ID</p>
- * @method void setMNPVersionId(integer $MNPVersionId) Set <p>Mini game version ID</p>
- * @method string getPlatformId() Obtain <p>Platform ID</p>
- * @method void setPlatformId(string $PlatformId) Set <p>Platform ID</p>
- * @method string getPreviewEntrancePath() Obtain <p>Preview path</p>
- * @method void setPreviewEntrancePath(string $PreviewEntrancePath) Set <p>Preview path</p>
+ * @method string getMNPId() Obtain <p>Mini game appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini game appid.</p>
+ * @method integer getActionType() Obtain <p>Action type. Valid values: 1: Set; 2: Cancel.</p>
+ * @method void setActionType(integer $ActionType) Set <p>Action type. Valid values: 1: Set; 2: Cancel.</p>
+ * @method integer getMNPVersionId() Obtain <p>Mini game version ID.</p>
+ * @method void setMNPVersionId(integer $MNPVersionId) Set <p>Mini game version ID.</p>
+ * @method string getPlatformId() Obtain <p>Platform ID.</p>
+ * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
+ * @method string getPreviewEntrancePath() Obtain <p>Preview path.</p>
+ * @method void setPreviewEntrancePath(string $PreviewEntrancePath) Set <p>Preview path.</p>
  */
 class ConfigureMNGPreviewRequest extends AbstractModel
 {
     /**
-     * @var string <p>Mini game appid</p>
+     * @var string <p>Mini game appid.</p>
      */
     public $MNPId;
 
     /**
-     * @var integer <p>1 Set 2 Cancel</p>
+     * @var integer <p>Action type. Valid values: 1: Set; 2: Cancel.</p>
      */
     public $ActionType;
 
     /**
-     * @var integer <p>Mini game version ID</p>
+     * @var integer <p>Mini game version ID.</p>
      */
     public $MNPVersionId;
 
     /**
-     * @var string <p>Platform ID</p>
+     * @var string <p>Platform ID.</p>
      */
     public $PlatformId;
 
     /**
-     * @var string <p>Preview path</p>
+     * @var string <p>Preview path.</p>
      */
     public $PreviewEntrancePath;
 
     /**
-     * @param string $MNPId <p>Mini game appid</p>
-     * @param integer $ActionType <p>1 Set 2 Cancel</p>
-     * @param integer $MNPVersionId <p>Mini game version ID</p>
-     * @param string $PlatformId <p>Platform ID</p>
-     * @param string $PreviewEntrancePath <p>Preview path</p>
+     * @param string $MNPId <p>Mini game appid.</p>
+     * @param integer $ActionType <p>Action type. Valid values: 1: Set; 2: Cancel.</p>
+     * @param integer $MNPVersionId <p>Mini game version ID.</p>
+     * @param string $PlatformId <p>Platform ID.</p>
+     * @param string $PreviewEntrancePath <p>Preview path.</p>
      */
     function __construct()
     {

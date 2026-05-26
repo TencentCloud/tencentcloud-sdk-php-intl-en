@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientAddr(string $ClientAddr) Set The address of the client that executes the slow query statement
  * @method integer getCallNum() Obtain The number of executions of the slow query statement during the specified period of time
  * @method void setCallNum(integer $CallNum) Set The number of executions of the slow query statement during the specified period of time
- * @method float getCallPercent() Obtain The ratio (in decimal form) of the number of executions of the slow query statement to that of all slow query statements during the specified period of time
- * @method void setCallPercent(float $CallPercent) Set The ratio (in decimal form) of the number of executions of the slow query statement to that of all slow query statements during the specified period of time
+ * @method float getCallPercent() Obtain Number of slow SQL statement executions within the specified time range as a percentage of all slow SQL.
+ * @method void setCallPercent(float $CallPercent) Set Number of slow SQL statement executions within the specified time range as a percentage of all slow SQL.
  * @method float getCostTime() Obtain The total execution time of the slow query statement during the specified period of time
  * @method void setCostTime(float $CostTime) Set The total execution time of the slow query statement during the specified period of time
  * @method float getCostPercent() Obtain The ratio (in decimal form) of the total execution time of the slow query statement to that of all slow query statements during the specified period of time
@@ -42,10 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxCostTime(float $MaxCostTime) Set The longest execution time (in ms) of the slow query statement during the specified period of time
  * @method float getAvgCostTime() Obtain The average execution time (in ms) of the slow query statement during the specified period of time
  * @method void setAvgCostTime(float $AvgCostTime) Set The average execution time (in ms) of the slow query statement during the specified period of time
- * @method string getFirstTime() Obtain The timestamp when the slow query statement starts to execute for the first time during the specified period of time
- * @method void setFirstTime(string $FirstTime) Set The timestamp when the slow query statement starts to execute for the first time during the specified period of time
- * @method string getLastTime() Obtain The timestamp when the slow query statement starts to execute for the last time during the specified period of time
- * @method void setLastTime(string $LastTime) Set The timestamp when the slow query statement starts to execute for the last time during the specified period of time
+ * @method string getFirstTime() Obtain Start execution time of the first slow SQL within the specified time range.
+ * @method void setFirstTime(string $FirstTime) Set Start execution time of the first slow SQL within the specified time range.
+ * @method string getLastTime() Obtain Start execution time of the last slow SQL within the specified time range.
+ * @method void setLastTime(string $LastTime) Set Start execution time of the last slow SQL within the specified time range.
  */
 class AnalysisItems extends AbstractModel
 {
@@ -75,7 +75,7 @@ class AnalysisItems extends AbstractModel
     public $CallNum;
 
     /**
-     * @var float The ratio (in decimal form) of the number of executions of the slow query statement to that of all slow query statements during the specified period of time
+     * @var float Number of slow SQL statement executions within the specified time range as a percentage of all slow SQL.
      */
     public $CallPercent;
 
@@ -105,12 +105,12 @@ class AnalysisItems extends AbstractModel
     public $AvgCostTime;
 
     /**
-     * @var string The timestamp when the slow query statement starts to execute for the first time during the specified period of time
+     * @var string Start execution time of the first slow SQL within the specified time range.
      */
     public $FirstTime;
 
     /**
-     * @var string The timestamp when the slow query statement starts to execute for the last time during the specified period of time
+     * @var string Start execution time of the last slow SQL within the specified time range.
      */
     public $LastTime;
 
@@ -120,14 +120,14 @@ class AnalysisItems extends AbstractModel
      * @param string $NormalQuery The slow query statement whose parameter values are abstracted
      * @param string $ClientAddr The address of the client that executes the slow query statement
      * @param integer $CallNum The number of executions of the slow query statement during the specified period of time
-     * @param float $CallPercent The ratio (in decimal form) of the number of executions of the slow query statement to that of all slow query statements during the specified period of time
+     * @param float $CallPercent Number of slow SQL statement executions within the specified time range as a percentage of all slow SQL.
      * @param float $CostTime The total execution time of the slow query statement during the specified period of time
      * @param float $CostPercent The ratio (in decimal form) of the total execution time of the slow query statement to that of all slow query statements during the specified period of time
      * @param float $MinCostTime The shortest execution time (in ms) of the slow query statement during the specified period of time
      * @param float $MaxCostTime The longest execution time (in ms) of the slow query statement during the specified period of time
      * @param float $AvgCostTime The average execution time (in ms) of the slow query statement during the specified period of time
-     * @param string $FirstTime The timestamp when the slow query statement starts to execute for the first time during the specified period of time
-     * @param string $LastTime The timestamp when the slow query statement starts to execute for the last time during the specified period of time
+     * @param string $FirstTime Start execution time of the first slow SQL within the specified time range.
+     * @param string $LastTime Start execution time of the last slow SQL within the specified time range.
      */
     function __construct()
     {

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTeamMember request structure.
  *
- * @method string getTeamId() Obtain Team ID
- * @method void setTeamId(string $TeamId) Set Team ID
- * @method string getUserId() Obtain User ID
- * @method void setUserId(string $UserId) Set User ID
- * @method integer getRoleId() Obtain Role ID
- * @method void setRoleId(integer $RoleId) Set Role ID
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method string getTeamId() Obtain Team ID.
+ * @method void setTeamId(string $TeamId) Set Team ID.
+ * @method string getUserId() Obtain User ID.
+ * @method void setUserId(string $UserId) Set User ID.
+ * @method integer getRoleId() Obtain Role ID.
+ * @method void setRoleId(integer $RoleId) Set Role ID.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
  */
 class ModifyTeamMemberRequest extends AbstractModel
 {
     /**
-     * @var string Team ID
+     * @var string Team ID.
      */
     public $TeamId;
 
     /**
-     * @var string User ID
+     * @var string User ID.
      */
     public $UserId;
 
     /**
-     * @var integer Role ID
+     * @var integer Role ID.
      */
     public $RoleId;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @param string $TeamId Team ID
-     * @param string $UserId User ID
-     * @param integer $RoleId Role ID
-     * @param string $PlatformId Platform ID
+     * @param string $TeamId Team ID.
+     * @param string $UserId User ID.
+     * @param integer $RoleId Role ID.
+     * @param string $PlatformId Platform ID.
      */
     function __construct()
     {

@@ -18,44 +18,44 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Application configuration info
+ * Superapp configuration infomation.
  *
- * @method integer getApplicationType() Obtain Superapp configuration type: 1 Non-production, 2 Production
- * @method void setApplicationType(integer $ApplicationType) Set Superapp configuration type: 1 Non-production, 2 Production
- * @method string getAppKey() Obtain Superapp package name
- * @method void setAppKey(string $AppKey) Set Superapp package name
- * @method string getAppURL() Obtain Superapp URL
- * @method void setAppURL(string $AppURL) Set Superapp URL
- * @method integer getId() Obtain Superapp configuration ID
- * @method void setId(integer $Id) Set Superapp configuration ID
+ * @method integer getApplicationType() Obtain Superapp configuration type. Valid values: 1 Non-production; 2 Production.
+ * @method void setApplicationType(integer $ApplicationType) Set Superapp configuration type. Valid values: 1 Non-production; 2 Production.
+ * @method string getAppKey() Obtain Superapp package name.
+ * @method void setAppKey(string $AppKey) Set Superapp package name.
+ * @method string getAppURL() Obtain Superapp URL.
+ * @method void setAppURL(string $AppURL) Set Superapp URL.
+ * @method integer getId() Obtain Superapp configuration ID.
+ * @method void setId(integer $Id) Set Superapp configuration ID.
  */
 class ApplicationConfigInfo extends AbstractModel
 {
     /**
-     * @var integer Superapp configuration type: 1 Non-production, 2 Production
+     * @var integer Superapp configuration type. Valid values: 1 Non-production; 2 Production.
      */
     public $ApplicationType;
 
     /**
-     * @var string Superapp package name
+     * @var string Superapp package name.
      */
     public $AppKey;
 
     /**
-     * @var string Superapp URL
+     * @var string Superapp URL.
      */
     public $AppURL;
 
     /**
-     * @var integer Superapp configuration ID
+     * @var integer Superapp configuration ID.
      */
     public $Id;
 
     /**
-     * @param integer $ApplicationType Superapp configuration type: 1 Non-production, 2 Production
-     * @param string $AppKey Superapp package name
-     * @param string $AppURL Superapp URL
-     * @param integer $Id Superapp configuration ID
+     * @param integer $ApplicationType Superapp configuration type. Valid values: 1 Non-production; 2 Production.
+     * @param string $AppKey Superapp package name.
+     * @param string $AppURL Superapp URL.
+     * @param integer $Id Superapp configuration ID.
      */
     function __construct()
     {

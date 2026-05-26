@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RollbackMNPVersion request structure.
  *
- * @method string getMNPId() Obtain Mini program ID
- * @method void setMNPId(string $MNPId) Set Mini program ID
- * @method integer getMNPVersionId() Obtain Mini program version ID
- * @method void setMNPVersionId(integer $MNPVersionId) Set Mini program version ID
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getMNPVersion() Obtain Mini program version number
- * @method void setMNPVersion(string $MNPVersion) Set Mini program version number
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method integer getMNPVersionId() Obtain Mini program version ID.
+ * @method void setMNPVersionId(integer $MNPVersionId) Set Mini program version ID.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method string getMNPVersion() Obtain Mini program version number.
+ * @method void setMNPVersion(string $MNPVersion) Set Mini program version number.
  */
 class RollbackMNPVersionRequest extends AbstractModel
 {
     /**
-     * @var string Mini program ID
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var integer Mini program version ID
+     * @var integer Mini program version ID.
      */
     public $MNPVersionId;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Mini program version number
+     * @var string Mini program version number.
      */
     public $MNPVersion;
 
     /**
-     * @param string $MNPId Mini program ID
-     * @param integer $MNPVersionId Mini program version ID
-     * @param string $PlatformId Platform ID
-     * @param string $MNPVersion Mini program version number
+     * @param string $MNPId Mini program appid.
+     * @param integer $MNPVersionId Mini program version ID.
+     * @param string $PlatformId Platform ID.
+     * @param string $MNPVersion Mini program version number.
      */
     function __construct()
     {

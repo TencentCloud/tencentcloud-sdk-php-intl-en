@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionIds(string $RegionIds) Set Region ID: Resource region ID
  * @method string getProjectIds() Obtain Project ID: Project ID of the resource
  * @method void setProjectIds(string $ProjectIds) Set Project ID: Project ID of the resource
- * @method string getPayModes() Obtain Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
- * @method void setPayModes(string $PayModes) Set Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+ * @method string getPayModes() Obtain Billing mode prePay (yearly/monthly subscription)/postPay (pay-as-you-go billing)
+ * @method void setPayModes(string $PayModes) Set Billing mode prePay (yearly/monthly subscription)/postPay (pay-as-you-go billing)
  * @method string getActionTypes() Obtain Transaction type. Query transaction type (please use transaction type code as input parameter).
  * @method void setActionTypes(string $ActionTypes) Set Transaction type. Query transaction type (please use transaction type code as input parameter).
- * @method string getTags() Obtain Cost allocation tag key
- * @method void setTags(string $Tags) Set Cost allocation tag key
+ * @method string getTags() Obtain Cost allocation tag key and value
+ * @method void setTags(string $Tags) Set Cost allocation tag key and value
  * @method string getFeeType() Obtain Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 
@@ -90,7 +90,7 @@ class AnalyseConditions extends AbstractModel
     public $ProjectIds;
 
     /**
-     * @var string Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+     * @var string Billing mode prePay (yearly/monthly subscription)/postPay (pay-as-you-go billing)
      */
     public $PayModes;
 
@@ -100,7 +100,7 @@ class AnalyseConditions extends AbstractModel
     public $ActionTypes;
 
     /**
-     * @var string Cost allocation tag key
+     * @var string Cost allocation tag key and value
      */
     public $Tags;
 
@@ -136,9 +136,9 @@ costBeforeTax: pre-tax price
      * @param string $ZoneIds Availability zone ID: The availability zone ID where the resource is located.
      * @param string $RegionIds Region ID: Resource region ID
      * @param string $ProjectIds Project ID: Project ID of the resource
-     * @param string $PayModes Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+     * @param string $PayModes Billing mode prePay (yearly/monthly subscription)/postPay (pay-as-you-go billing)
      * @param string $ActionTypes Transaction type. Query transaction type (please use transaction type code as input parameter).
-     * @param string $Tags Cost allocation tag key
+     * @param string $Tags Cost allocation tag key and value
      * @param string $FeeType Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 

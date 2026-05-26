@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceSpec request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-6bwgamo3.
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-6bwgamo3.
+ * @method string getDBInstanceId() Obtain Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  * @method integer getMemory() Obtain Instance memory size in GiB after modification.
  * @method void setMemory(integer $Memory) Set Instance memory size in GiB after modification.
- * @method integer getStorage() Obtain Instance disk size in GiB after modification.
- * @method void setStorage(integer $Storage) Set Instance disk size in GiB after modification.
+ * @method integer getStorage() Obtain Instance disk size after modification in GiB. specifies the step length for parameter settings as 10.
+ * @method void setStorage(integer $Storage) Set Instance disk size after modification in GiB. specifies the step length for parameter settings as 10.
  * @method integer getAutoVoucher() Obtain Whether to automatically use coupons:
 <li>`0`: no</li>
 <li>`1`: yes</li>
@@ -52,13 +52,13 @@ Default value: 0
  * @method void setSwitchStartTime(string $SwitchStartTime) Set Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
  * @method string getSwitchEndTime() Obtain Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
  * @method void setSwitchEndTime(string $SwitchEndTime) Set Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
- * @method integer getCpu() Obtain Instance CPU size in Cores after modification.
- * @method void setCpu(integer $Cpu) Set Instance CPU size in Cores after modification.
+ * @method integer getCpu() Obtain Instance CPU size in cores after modification. if this parameter is not specified, the CPU size is determined based on Memory by default. for example, if Memory is 2 and the supported specifications include 1 Core 2 GiB, the default CPU value is 1 when not imported.
+ * @method void setCpu(integer $Cpu) Set Instance CPU size in cores after modification. if this parameter is not specified, the CPU size is determined based on Memory by default. for example, if Memory is 2 and the supported specifications include 1 Core 2 GiB, the default CPU value is 1 when not imported.
  */
 class ModifyDBInstanceSpecRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of postgres-6bwgamo3.
+     * @var string Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
@@ -68,7 +68,7 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     public $Memory;
 
     /**
-     * @var integer Instance disk size in GiB after modification.
+     * @var integer Instance disk size after modification in GiB. specifies the step length for parameter settings as 10.
      */
     public $Storage;
 
@@ -110,14 +110,14 @@ Default value: 0
     public $SwitchEndTime;
 
     /**
-     * @var integer Instance CPU size in Cores after modification.
+     * @var integer Instance CPU size in cores after modification. if this parameter is not specified, the CPU size is determined based on Memory by default. for example, if Memory is 2 and the supported specifications include 1 Core 2 GiB, the default CPU value is 1 when not imported.
      */
     public $Cpu;
 
     /**
-     * @param string $DBInstanceId Instance ID in the format of postgres-6bwgamo3.
+     * @param string $DBInstanceId Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      * @param integer $Memory Instance memory size in GiB after modification.
-     * @param integer $Storage Instance disk size in GiB after modification.
+     * @param integer $Storage Instance disk size after modification in GiB. specifies the step length for parameter settings as 10.
      * @param integer $AutoVoucher Whether to automatically use coupons:
 <li>`0`: no</li>
 <li>`1`: yes</li>
@@ -131,7 +131,7 @@ Default value: 0
 Default value: 0
      * @param string $SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
      * @param string $SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
-     * @param integer $Cpu Instance CPU size in Cores after modification.
+     * @param integer $Cpu Instance CPU size in cores after modification. if this parameter is not specified, the CPU size is determined based on Memory by default. for example, if Memory is 2 and the supported specifications include 1 Core 2 GiB, the default CPU value is 1 when not imported.
      */
     function __construct()
     {

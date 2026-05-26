@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGlobalOverviewDataSummary request structure.
  *
- * @method string getDataType() Obtain string: Overview
- * @method void setDataType(string $DataType) Set string: Overview
- * @method string getPlatformId() Obtain Tenant ID
- * @method void setPlatformId(string $PlatformId) Set Tenant ID
- * @method integer getDataTime() Obtain Date in YYYYMMDD format
- * @method void setDataTime(integer $DataTime) Set Date in YYYYMMDD format
+ * @method string getDataType() Obtain string: Overview.
+ * @method void setDataType(string $DataType) Set string: Overview.
+ * @method string getPlatformId() Obtain Tenant ID.
+ * @method void setPlatformId(string $PlatformId) Set Tenant ID.
+ * @method integer getDataTime() Obtain Date in YYYYMMDD format.
+ * @method void setDataTime(integer $DataTime) Set Date in YYYYMMDD format.
  */
 class DescribeGlobalOverviewDataSummaryRequest extends AbstractModel
 {
     /**
-     * @var string string: Overview
+     * @var string string: Overview.
      */
     public $DataType;
 
     /**
-     * @var string Tenant ID
+     * @var string Tenant ID.
      */
     public $PlatformId;
 
     /**
-     * @var integer Date in YYYYMMDD format
+     * @var integer Date in YYYYMMDD format.
      */
     public $DataTime;
 
     /**
-     * @param string $DataType string: Overview
-     * @param string $PlatformId Tenant ID
-     * @param integer $DataTime Date in YYYYMMDD format
+     * @param string $DataType string: Overview.
+     * @param string $PlatformId Tenant ID.
+     * @param integer $DataTime Date in YYYYMMDD format.
      */
     function __construct()
     {

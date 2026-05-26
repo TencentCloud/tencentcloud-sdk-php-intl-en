@@ -18,68 +18,68 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * User list data
+ * User list data.
  *
- * @method string getUserId() Obtain User ID
- * @method void setUserId(string $UserId) Set User ID
- * @method string getUserAccount() Obtain User account
- * @method void setUserAccount(string $UserAccount) Set User account
- * @method integer getAccountType() Obtain Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
- * @method void setAccountType(integer $AccountType) Set Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
- * @method string getUserName() Obtain User name
- * @method void setUserName(string $UserName) Set User name
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method integer getStatus() Obtain Status. 1: normal; 2: disabled.
- * @method void setStatus(integer $Status) Set Status. 1: normal; 2: disabled.
- * @method string getTeamName() Obtain Team name
- * @method void setTeamName(string $TeamName) Set Team name
+ * @method string getUserId() Obtain User ID.
+ * @method void setUserId(string $UserId) Set User ID.
+ * @method string getUserAccount() Obtain User account.
+ * @method void setUserAccount(string $UserAccount) Set User account.
+ * @method integer getAccountType() Obtain User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
+ * @method void setAccountType(integer $AccountType) Set User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
+ * @method string getUserName() Obtain User name.
+ * @method void setUserName(string $UserName) Set User name.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method integer getStatus() Obtain Status. Valid values: 1: Active; 2: Disabled.
+ * @method void setStatus(integer $Status) Set Status. Valid values: 1: Active; 2: Disabled.
+ * @method string getTeamName() Obtain Team name.
+ * @method void setTeamName(string $TeamName) Set Team name.
  */
 class DescribeUserListData extends AbstractModel
 {
     /**
-     * @var string User ID
+     * @var string User ID.
      */
     public $UserId;
 
     /**
-     * @var string User account
+     * @var string User account.
      */
     public $UserAccount;
 
     /**
-     * @var integer Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
+     * @var integer User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
      */
     public $AccountType;
 
     /**
-     * @var string User name
+     * @var string User name.
      */
     public $UserName;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var integer Status. 1: normal; 2: disabled.
+     * @var integer Status. Valid values: 1: Active; 2: Disabled.
      */
     public $Status;
 
     /**
-     * @var string Team name
+     * @var string Team name.
      */
     public $TeamName;
 
     /**
-     * @param string $UserId User ID
-     * @param string $UserAccount User account
-     * @param integer $AccountType Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
-     * @param string $UserName User name
-     * @param string $CreateTime Creation time
-     * @param integer $Status Status. 1: normal; 2: disabled.
-     * @param string $TeamName Team name
+     * @param string $UserId User ID.
+     * @param string $UserAccount User account.
+     * @param integer $AccountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
+     * @param string $UserName User name.
+     * @param string $CreateTime Creation time.
+     * @param integer $Status Status. Valid values: 1: Active; 2: Disabled.
+     * @param string $TeamName Team name.
      */
     function __construct()
     {

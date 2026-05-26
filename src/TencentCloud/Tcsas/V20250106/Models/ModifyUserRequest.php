@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUser request structure.
  *
- * @method string getUserId() Obtain User ID
- * @method void setUserId(string $UserId) Set User ID
- * @method string getUserName() Obtain User name
- * @method void setUserName(string $UserName) Set User name
- * @method integer getAccountType() Obtain Account type 2 - Platform admin 3 - Member
- * @method void setAccountType(integer $AccountType) Set Account type 2 - Platform admin 3 - Member
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method string getUserId() Obtain User ID.
+ * @method void setUserId(string $UserId) Set User ID.
+ * @method string getUserName() Obtain User name.
+ * @method void setUserName(string $UserName) Set User name.
+ * @method integer getAccountType() Obtain User account type. Valid values: 2: Platform administrator; 3: Regular member.
+ * @method void setAccountType(integer $AccountType) Set User account type. Valid values: 2: Platform administrator; 3: Regular member.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
  */
 class ModifyUserRequest extends AbstractModel
 {
     /**
-     * @var string User ID
+     * @var string User ID.
      */
     public $UserId;
 
     /**
-     * @var string User name
+     * @var string User name.
      */
     public $UserName;
 
     /**
-     * @var integer Account type 2 - Platform admin 3 - Member
+     * @var integer User account type. Valid values: 2: Platform administrator; 3: Regular member.
      */
     public $AccountType;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @param string $UserId User ID
-     * @param string $UserName User name
-     * @param integer $AccountType Account type 2 - Platform admin 3 - Member
-     * @param string $PlatformId Platform ID
+     * @param string $UserId User ID.
+     * @param string $UserName User name.
+     * @param integer $AccountType User account type. Valid values: 2: Platform administrator; 3: Regular member.
+     * @param string $PlatformId Platform ID.
      */
     function __construct()
     {

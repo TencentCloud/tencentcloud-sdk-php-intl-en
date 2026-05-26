@@ -18,108 +18,108 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mini program payment detailed data
+ * Mini program payment detailed data.
  *
- * @method string getDataTime() Obtain Date in YYYYMMDD format
- * @method void setDataTime(string $DataTime) Set Date in YYYYMMDD format
- * @method integer getOrderMNPNum() Obtain Number of mini programs involved in the order
- * @method void setOrderMNPNum(integer $OrderMNPNum) Set Number of mini programs involved in the order
- * @method integer getOrderNum() Obtain Total orders
- * @method void setOrderNum(integer $OrderNum) Set Total orders
- * @method integer getOrderPaidNum() Obtain Paid orders
- * @method void setOrderPaidNum(integer $OrderPaidNum) Set Paid orders
- * @method integer getOrderRefundNum() Obtain Total refunded orders
- * @method void setOrderRefundNum(integer $OrderRefundNum) Set Total refunded orders
- * @method integer getOrderUnpaidNum() Obtain Unpaid orders
- * @method void setOrderUnpaidNum(integer $OrderUnpaidNum) Set Unpaid orders
- * @method integer getOrderUserNum() Obtain Number of users placing orders (openid)
- * @method void setOrderUserNum(integer $OrderUserNum) Set Number of users placing orders (openid)
- * @method string getPaidAmount() Obtain Amount paid
- * @method void setPaidAmount(string $PaidAmount) Set Amount paid
- * @method string getRefundAmount() Obtain Amount refunded
- * @method void setRefundAmount(string $RefundAmount) Set Amount refunded
- * @method string getTotalAmount() Obtain Total order amount
- * @method void setTotalAmount(string $TotalAmount) Set Total order amount
- * @method string getUnpaidAmount() Obtain Unpaid amount
- * @method void setUnpaidAmount(string $UnpaidAmount) Set Unpaid amount
- * @method integer getUpdateTime() Obtain Data update timestamp
- * @method void setUpdateTime(integer $UpdateTime) Set Data update timestamp
+ * @method string getDataTime() Obtain Date in YYYYMMDD format.
+ * @method void setDataTime(string $DataTime) Set Date in YYYYMMDD format.
+ * @method integer getOrderMNPNum() Obtain Mini program count with orders.
+ * @method void setOrderMNPNum(integer $OrderMNPNum) Set Mini program count with orders.
+ * @method integer getOrderNum() Obtain Total orders.
+ * @method void setOrderNum(integer $OrderNum) Set Total orders.
+ * @method integer getOrderPaidNum() Obtain Paid orders.
+ * @method void setOrderPaidNum(integer $OrderPaidNum) Set Paid orders.
+ * @method integer getOrderRefundNum() Obtain Number of refund orders.
+ * @method void setOrderRefundNum(integer $OrderRefundNum) Set Number of refund orders.
+ * @method integer getOrderUnpaidNum() Obtain Total unpaid orders.
+ * @method void setOrderUnpaidNum(integer $OrderUnpaidNum) Set Total unpaid orders.
+ * @method integer getOrderUserNum() Obtain Number of ordering users (by OpenID).
+ * @method void setOrderUserNum(integer $OrderUserNum) Set Number of ordering users (by OpenID).
+ * @method string getPaidAmount() Obtain Amount paid.
+ * @method void setPaidAmount(string $PaidAmount) Set Amount paid.
+ * @method string getRefundAmount() Obtain Amount refunded.
+ * @method void setRefundAmount(string $RefundAmount) Set Amount refunded.
+ * @method string getTotalAmount() Obtain Total amount.
+ * @method void setTotalAmount(string $TotalAmount) Set Total amount.
+ * @method string getUnpaidAmount() Obtain Unpaid amount.
+ * @method void setUnpaidAmount(string $UnpaidAmount) Set Unpaid amount.
+ * @method integer getUpdateTime() Obtain Data update timestamp.
+ * @method void setUpdateTime(integer $UpdateTime) Set Data update timestamp.
  */
 class PaymentDetail extends AbstractModel
 {
     /**
-     * @var string Date in YYYYMMDD format
+     * @var string Date in YYYYMMDD format.
      */
     public $DataTime;
 
     /**
-     * @var integer Number of mini programs involved in the order
+     * @var integer Mini program count with orders.
      */
     public $OrderMNPNum;
 
     /**
-     * @var integer Total orders
+     * @var integer Total orders.
      */
     public $OrderNum;
 
     /**
-     * @var integer Paid orders
+     * @var integer Paid orders.
      */
     public $OrderPaidNum;
 
     /**
-     * @var integer Total refunded orders
+     * @var integer Number of refund orders.
      */
     public $OrderRefundNum;
 
     /**
-     * @var integer Unpaid orders
+     * @var integer Total unpaid orders.
      */
     public $OrderUnpaidNum;
 
     /**
-     * @var integer Number of users placing orders (openid)
+     * @var integer Number of ordering users (by OpenID).
      */
     public $OrderUserNum;
 
     /**
-     * @var string Amount paid
+     * @var string Amount paid.
      */
     public $PaidAmount;
 
     /**
-     * @var string Amount refunded
+     * @var string Amount refunded.
      */
     public $RefundAmount;
 
     /**
-     * @var string Total order amount
+     * @var string Total amount.
      */
     public $TotalAmount;
 
     /**
-     * @var string Unpaid amount
+     * @var string Unpaid amount.
      */
     public $UnpaidAmount;
 
     /**
-     * @var integer Data update timestamp
+     * @var integer Data update timestamp.
      */
     public $UpdateTime;
 
     /**
-     * @param string $DataTime Date in YYYYMMDD format
-     * @param integer $OrderMNPNum Number of mini programs involved in the order
-     * @param integer $OrderNum Total orders
-     * @param integer $OrderPaidNum Paid orders
-     * @param integer $OrderRefundNum Total refunded orders
-     * @param integer $OrderUnpaidNum Unpaid orders
-     * @param integer $OrderUserNum Number of users placing orders (openid)
-     * @param string $PaidAmount Amount paid
-     * @param string $RefundAmount Amount refunded
-     * @param string $TotalAmount Total order amount
-     * @param string $UnpaidAmount Unpaid amount
-     * @param integer $UpdateTime Data update timestamp
+     * @param string $DataTime Date in YYYYMMDD format.
+     * @param integer $OrderMNPNum Mini program count with orders.
+     * @param integer $OrderNum Total orders.
+     * @param integer $OrderPaidNum Paid orders.
+     * @param integer $OrderRefundNum Number of refund orders.
+     * @param integer $OrderUnpaidNum Total unpaid orders.
+     * @param integer $OrderUserNum Number of ordering users (by OpenID).
+     * @param string $PaidAmount Amount paid.
+     * @param string $RefundAmount Amount refunded.
+     * @param string $TotalAmount Total amount.
+     * @param string $UnpaidAmount Unpaid amount.
+     * @param integer $UpdateTime Data update timestamp.
      */
     function __construct()
     {

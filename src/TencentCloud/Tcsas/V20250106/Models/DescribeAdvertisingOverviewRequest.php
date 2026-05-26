@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAdvertisingOverview request structure.
  *
- * @method string getTimeBegin() Obtain Start time in YYYYMMDD format
- * @method void setTimeBegin(string $TimeBegin) Set Start time in YYYYMMDD format
- * @method string getMNPId() Obtain Mini program appid
- * @method void setMNPId(string $MNPId) Set Mini program appid
- * @method string getPlatformId() Obtain Tenant ID
- * @method void setPlatformId(string $PlatformId) Set Tenant ID
- * @method string getTimeEnd() Obtain End time in YYYYMMDD format
- * @method void setTimeEnd(string $TimeEnd) Set End time in YYYYMMDD format
- * @method integer getPlatform() Obtain // 0 All, 2-Android, 3 iOS
- * @method void setPlatform(integer $Platform) Set // 0 All, 2-Android, 3 iOS
- * @method string getAdUnitType() Obtain //1-BANNER  2-REWARDED
- * @method void setAdUnitType(string $AdUnitType) Set //1-BANNER  2-REWARDED
+ * @method string getTimeBegin() Obtain Start time in YYYYMMDD format.
+ * @method void setTimeBegin(string $TimeBegin) Set Start time in YYYYMMDD format.
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method string getPlatformId() Obtain Tenant ID.
+ * @method void setPlatformId(string $PlatformId) Set Tenant ID.
+ * @method string getTimeEnd() Obtain End time in YYYYMMDD format.
+ * @method void setTimeEnd(string $TimeEnd) Set End time in YYYYMMDD format.
+ * @method integer getPlatform() Obtain Operating system. Valid values: 0: All; 2: Android; 3: iOS.
+ * @method void setPlatform(integer $Platform) Set Operating system. Valid values: 0: All; 2: Android; 3: iOS.
+ * @method string getAdUnitType() Obtain Ad unit type. Valid values: 1: Banner; 2: Rewarded.
+ * @method void setAdUnitType(string $AdUnitType) Set Ad unit type. Valid values: 1: Banner; 2: Rewarded.
  */
 class DescribeAdvertisingOverviewRequest extends AbstractModel
 {
     /**
-     * @var string Start time in YYYYMMDD format
+     * @var string Start time in YYYYMMDD format.
      */
     public $TimeBegin;
 
     /**
-     * @var string Mini program appid
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var string Tenant ID
+     * @var string Tenant ID.
      */
     public $PlatformId;
 
     /**
-     * @var string End time in YYYYMMDD format
+     * @var string End time in YYYYMMDD format.
      */
     public $TimeEnd;
 
     /**
-     * @var integer // 0 All, 2-Android, 3 iOS
+     * @var integer Operating system. Valid values: 0: All; 2: Android; 3: iOS.
      */
     public $Platform;
 
     /**
-     * @var string //1-BANNER  2-REWARDED
+     * @var string Ad unit type. Valid values: 1: Banner; 2: Rewarded.
      */
     public $AdUnitType;
 
     /**
-     * @param string $TimeBegin Start time in YYYYMMDD format
-     * @param string $MNPId Mini program appid
-     * @param string $PlatformId Tenant ID
-     * @param string $TimeEnd End time in YYYYMMDD format
-     * @param integer $Platform // 0 All, 2-Android, 3 iOS
-     * @param string $AdUnitType //1-BANNER  2-REWARDED
+     * @param string $TimeBegin Start time in YYYYMMDD format.
+     * @param string $MNPId Mini program appid.
+     * @param string $PlatformId Tenant ID.
+     * @param string $TimeEnd End time in YYYYMMDD format.
+     * @param integer $Platform Operating system. Valid values: 0: All; 2: Android; 3: iOS.
+     * @param string $AdUnitType Ad unit type. Valid values: 1: Banner; 2: Rewarded.
      */
     function __construct()
     {

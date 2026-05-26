@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMNPSensitiveAPIPermissionApprovalList request structure.
  *
- * @method integer getOffset() Obtain Page offset
- * @method void setOffset(integer $Offset) Set Page offset
- * @method integer getLimit() Obtain Number of results per page
- * @method void setLimit(integer $Limit) Set Number of results per page
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method array getApprovalStatusList() Obtain Approval status. 1: Processing; 20: Rejected; 30: Approved
- * @method void setApprovalStatusList(array $ApprovalStatusList) Set Approval status. 1: Processing; 20: Rejected; 30: Approved
- * @method string getKeyword() Obtain Keywords for search (API name, API method or application name)
- * @method void setKeyword(string $Keyword) Set Keywords for search (API name, API method or application name)
+ * @method integer getOffset() Obtain Pagination offset.
+ * @method void setOffset(integer $Offset) Set Pagination offset.
+ * @method integer getLimit() Obtain Number of entries per page.
+ * @method void setLimit(integer $Limit) Set Number of entries per page.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method array getApprovalStatusList() Obtain Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+ * @method void setApprovalStatusList(array $ApprovalStatusList) Set Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+ * @method string getKeyword() Obtain Search keyword (API name, API method or superapp name).
+ * @method void setKeyword(string $Keyword) Set Search keyword (API name, API method or superapp name).
  */
 class DescribeMNPSensitiveAPIPermissionApprovalListRequest extends AbstractModel
 {
     /**
-     * @var integer Page offset
+     * @var integer Pagination offset.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results per page
+     * @var integer Number of entries per page.
      */
     public $Limit;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var array Approval status. 1: Processing; 20: Rejected; 30: Approved
+     * @var array Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
      */
     public $ApprovalStatusList;
 
     /**
-     * @var string Keywords for search (API name, API method or application name)
+     * @var string Search keyword (API name, API method or superapp name).
      */
     public $Keyword;
 
     /**
-     * @param integer $Offset Page offset
-     * @param integer $Limit Number of results per page
-     * @param string $PlatformId Platform ID
-     * @param array $ApprovalStatusList Approval status. 1: Processing; 20: Rejected; 30: Approved
-     * @param string $Keyword Keywords for search (API name, API method or application name)
+     * @param integer $Offset Pagination offset.
+     * @param integer $Limit Number of entries per page.
+     * @param string $PlatformId Platform ID.
+     * @param array $ApprovalStatusList Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+     * @param string $Keyword Search keyword (API name, API method or superapp name).
      */
     function __construct()
     {

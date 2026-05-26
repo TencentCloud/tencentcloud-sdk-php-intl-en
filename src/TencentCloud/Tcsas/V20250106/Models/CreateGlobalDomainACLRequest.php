@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGlobalDomainACL request structure.
  *
- * @method array getDomainUrlList() Obtain Domain name list
- * @method void setDomainUrlList(array $DomainUrlList) Set Domain name list
- * @method integer getDomainType() Obtain Domain type. 1: Allowed; 2: Blocked
- * @method void setDomainType(integer $DomainType) Set Domain type. 1: Allowed; 2: Blocked
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method array getDomainUrlList() Obtain Domain list.
+ * @method void setDomainUrlList(array $DomainUrlList) Set Domain list.
+ * @method integer getDomainType() Obtain Domain type. Valid value: 1: Allowed; 2: Blocked.
+ * @method void setDomainType(integer $DomainType) Set Domain type. Valid value: 1: Allowed; 2: Blocked.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
  */
 class CreateGlobalDomainACLRequest extends AbstractModel
 {
     /**
-     * @var array Domain name list
+     * @var array Domain list.
      */
     public $DomainUrlList;
 
     /**
-     * @var integer Domain type. 1: Allowed; 2: Blocked
+     * @var integer Domain type. Valid value: 1: Allowed; 2: Blocked.
      */
     public $DomainType;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @param array $DomainUrlList Domain name list
-     * @param integer $DomainType Domain type. 1: Allowed; 2: Blocked
-     * @param string $PlatformId Platform ID
+     * @param array $DomainUrlList Domain list.
+     * @param integer $DomainType Domain type. Valid value: 1: Allowed; 2: Blocked.
+     * @param string $PlatformId Platform ID.
      */
     function __construct()
     {

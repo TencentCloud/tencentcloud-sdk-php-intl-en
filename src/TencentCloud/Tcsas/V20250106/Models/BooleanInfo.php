@@ -18,23 +18,23 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Used for Data object when no data is returned after the a successful action.
+ * Used for Data object when no data is returned after a successful action.
  *
- * @method boolean getResult() Obtain Bool type response object
+ * @method boolean getResult() Obtain The Boolean response object. 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResult(boolean $Result) Set Bool type response object
+ * @method void setResult(boolean $Result) Set The Boolean response object. 
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BooleanInfo extends AbstractModel
 {
     /**
-     * @var boolean Bool type response object
+     * @var boolean The Boolean response object. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Result;
 
     /**
-     * @param boolean $Result Bool type response object
+     * @param boolean $Result The Boolean response object. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

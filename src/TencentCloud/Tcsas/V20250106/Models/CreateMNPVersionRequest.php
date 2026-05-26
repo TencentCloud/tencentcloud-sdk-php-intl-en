@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMNPVersion request structure.
  *
- * @method string getMNPId() Obtain <p>Mini-program appid</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini-program appid</p>
- * @method string getMNPVersion() Obtain <p>Version number</p>
- * @method void setMNPVersion(string $MNPVersion) Set <p>Version number</p>
+ * @method string getMNPId() Obtain <p>Mini-program appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini-program appid.</p>
+ * @method string getMNPVersion() Obtain <p>Version number.</p>
+ * @method void setMNPVersion(string $MNPVersion) Set <p>Version number.</p>
  * @method string getFileUrl() Obtain <p>URL of the mini program file exported from the IDE and uploaded to the file server.<p>
  * @method void setFileUrl(string $FileUrl) Set <p>URL of the mini program file exported from the IDE and uploaded to the file server.<p>
- * @method string getPlatformId() Obtain <p>Platform ID</p>
- * @method void setPlatformId(string $PlatformId) Set <p>Platform ID</p>
- * @method string getMNPVersionIntro() Obtain <p>Version description</p>
- * @method void setMNPVersionIntro(string $MNPVersionIntro) Set <p>Version description</p>
+ * @method string getPlatformId() Obtain <p>Platform ID.</p>
+ * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
+ * @method string getMNPVersionIntro() Obtain <p>Version description.</p>
+ * @method void setMNPVersionIntro(string $MNPVersionIntro) Set <p>Version description.</p>
  */
 class CreateMNPVersionRequest extends AbstractModel
 {
     /**
-     * @var string <p>Mini-program appid</p>
+     * @var string <p>Mini-program appid.</p>
      */
     public $MNPId;
 
     /**
-     * @var string <p>Version number</p>
+     * @var string <p>Version number.</p>
      */
     public $MNPVersion;
 
@@ -49,21 +49,21 @@ class CreateMNPVersionRequest extends AbstractModel
     public $FileUrl;
 
     /**
-     * @var string <p>Platform ID</p>
+     * @var string <p>Platform ID.</p>
      */
     public $PlatformId;
 
     /**
-     * @var string <p>Version description</p>
+     * @var string <p>Version description.</p>
      */
     public $MNPVersionIntro;
 
     /**
-     * @param string $MNPId <p>Mini-program appid</p>
-     * @param string $MNPVersion <p>Version number</p>
+     * @param string $MNPId <p>Mini-program appid.</p>
+     * @param string $MNPVersion <p>Version number.</p>
      * @param string $FileUrl <p>URL of the mini program file exported from the IDE and uploaded to the file server.<p>
-     * @param string $PlatformId <p>Platform ID</p>
-     * @param string $MNPVersionIntro <p>Version description</p>
+     * @param string $PlatformId <p>Platform ID.</p>
+     * @param string $MNPVersionIntro <p>Version description.</p>
      */
     function __construct()
     {

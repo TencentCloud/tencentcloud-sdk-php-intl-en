@@ -50,6 +50,18 @@ Output stream:
  * @method void setDbGuid(string $DbGuid) Set Database unique id..
  * @method string getTableGuid() Obtain Unique id of the table.
  * @method void setTableGuid(string $TableGuid) Set Unique id of the table.
+ * @method string getCatalogName() Obtain Catalog name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCatalogName(string $CatalogName) Set Catalog name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDatasourceName() Obtain Data source name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDatasourceName(string $DatasourceName) Set Data source name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getQualifiedName() Obtain Catalog (if any).Database (if any).Table name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setQualifiedName(string $QualifiedName) Set Catalog (if any).Database (if any).Table name
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TaskDataRegistry extends AbstractModel
 {
@@ -101,6 +113,24 @@ Output stream:
     public $TableGuid;
 
     /**
+     * @var string Catalog name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CatalogName;
+
+    /**
+     * @var string Data source name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DatasourceName;
+
+    /**
+     * @var string Catalog (if any).Database (if any).Table name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $QualifiedName;
+
+    /**
      * @param string $DatasourceId Data source ID.
      * @param string $DatabaseName Database name.
 
@@ -116,6 +146,12 @@ Output stream:
      * @param string $TablePhysicalId Physical unique ID..
      * @param string $DbGuid Database unique id..
      * @param string $TableGuid Unique id of the table.
+     * @param string $CatalogName Catalog name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DatasourceName Data source name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $QualifiedName Catalog (if any).Database (if any).Table name
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -160,6 +196,18 @@ Output stream:
 
         if (array_key_exists("TableGuid",$param) and $param["TableGuid"] !== null) {
             $this->TableGuid = $param["TableGuid"];
+        }
+
+        if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
+            $this->CatalogName = $param["CatalogName"];
+        }
+
+        if (array_key_exists("DatasourceName",$param) and $param["DatasourceName"] !== null) {
+            $this->DatasourceName = $param["DatasourceName"];
+        }
+
+        if (array_key_exists("QualifiedName",$param) and $param["QualifiedName"] !== null) {
+            $this->QualifiedName = $param["QualifiedName"];
         }
     }
 }

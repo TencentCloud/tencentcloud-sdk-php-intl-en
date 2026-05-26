@@ -20,324 +20,265 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Creates task scheduling configuration info.
  *
- * @method string getCycleType() Obtain Period type: defaults to DAY_CYCLE.
-
-Supported types. 
-
-ONEOFF_CYCLE: specifies a one-time cycle.
-YEAR_CYCLE: specifies the year cycle.
-MONTH_CYCLE: specifies the monthly cycle.
-WEEK_CYCLE: specifies the week cycle.
-DAY_CYCLE: specifies the day cycle.
-HOUR_CYCLE: specifies the hour cycle.
-MINUTE_CYCLE: specifies the minute cycle.
-CRONTAB_CYCLE: specifies the crontab expression type.
- * @method void setCycleType(string $CycleType) Set Period type: defaults to DAY_CYCLE.
-
-Supported types. 
-
-ONEOFF_CYCLE: specifies a one-time cycle.
-YEAR_CYCLE: specifies the year cycle.
-MONTH_CYCLE: specifies the monthly cycle.
-WEEK_CYCLE: specifies the week cycle.
-DAY_CYCLE: specifies the day cycle.
-HOUR_CYCLE: specifies the hour cycle.
-MINUTE_CYCLE: specifies the minute cycle.
-CRONTAB_CYCLE: specifies the crontab expression type.
- * @method string getScheduleTimeZone() Obtain Time zone, defaults to UTC+8.
- * @method void setScheduleTimeZone(string $ScheduleTimeZone) Set Time zone, defaults to UTC+8.
- * @method string getCrontabExpression() Obtain Cron expression, defaults to 0 0 0 * * ? *.
- * @method void setCrontabExpression(string $CrontabExpression) Set Cron expression, defaults to 0 0 0 * * ? *.
- * @method string getStartTime() Obtain Effective date, defaults to 00:00:00 of the current date.
- * @method void setStartTime(string $StartTime) Set Effective date, defaults to 00:00:00 of the current date.
- * @method string getEndTime() Obtain End date, defaults to 2099-12-31 23:59:59.
- * @method void setEndTime(string $EndTime) Set End date, defaults to 2099-12-31 23:59:59.
- * @method string getExecutionStartTime() Obtain Execution time: the left-closed interval. Default: 00:00.
- * @method void setExecutionStartTime(string $ExecutionStartTime) Set Execution time: the left-closed interval. Default: 00:00.
- * @method string getExecutionEndTime() Obtain Execution time: the right closed interval. Default: 23:59.
- * @method void setExecutionEndTime(string $ExecutionEndTime) Set Execution time: the right closed interval. Default: 23:59.
- * @method string getCalendarOpen() Obtain Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
- * @method void setCalendarOpen(string $CalendarOpen) Set Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
- * @method string getCalendarId() Obtain Calendar scheduling:  the calendar ID.
- * @method void setCalendarId(string $CalendarId) Set Calendar scheduling:  the calendar ID.
- * @method string getSelfDepend() Obtain Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
- * @method void setSelfDepend(string $SelfDepend) Set Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
- * @method array getUpstreamDependencyConfigList() Obtain Specifies the upstream dependency list.
- * @method void setUpstreamDependencyConfigList(array $UpstreamDependencyConfigList) Set Specifies the upstream dependency list.
- * @method array getEventListenerList() Obtain List of Events
- * @method void setEventListenerList(array $EventListenerList) Set List of Events
- * @method string getAllowRedoType() Obtain Rerun & Refill Configuration: Default: ALL;
-
-* ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
-
-* FAILURE: Rerun or refill is allowed only if the task fails; not allowed if the task succeeds.
-
-* NONE: Rerun or refill is not allowed regardless of success or failure.
- * @method void setAllowRedoType(string $AllowRedoType) Set Rerun & Refill Configuration: Default: ALL;
-
-* ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
-
-* FAILURE: Rerun or refill is allowed only if the task fails; not allowed if the task succeeds.
-
-* NONE: Rerun or refill is not allowed regardless of success or failure.
- * @method array getParamTaskOutList() Obtain Output parameter list.
- * @method void setParamTaskOutList(array $ParamTaskOutList) Set Output parameter list.
- * @method array getParamTaskInList() Obtain Input parameter list.
- * @method void setParamTaskInList(array $ParamTaskInList) Set Input parameter list.
- * @method array getTaskOutputRegistryList() Obtain Output registration.
- * @method void setTaskOutputRegistryList(array $TaskOutputRegistryList) Set Output registration.
- * @method string getInitStrategy() Obtain **Instance generation policy**.
-T_PLUS_0: specifies t+0 generation. default policy.
-T_PLUS_1: specifies t+1 generation.
- * @method void setInitStrategy(string $InitStrategy) Set **Instance generation policy**.
-T_PLUS_0: specifies t+0 generation. default policy.
-T_PLUS_1: specifies t+1 generation.
- * @method string getScheduleRunType() Obtain Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
- * @method void setScheduleRunType(string $ScheduleRunType) Set Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
- * @method string getRunPriority() Obtain Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
- * @method void setRunPriority(string $RunPriority) Set Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
- * @method string getRetryWait() Obtain Retry Policy: Retry Wait Time (in minutes): Default 5
- * @method void setRetryWait(string $RetryWait) Set Retry Policy: Retry Wait Time (in minutes): Default 5
- * @method string getMaxRetryAttempts() Obtain Retry Policy: maximum attempts. Default: 4.
- * @method void setMaxRetryAttempts(string $MaxRetryAttempts) Set Retry Policy: maximum attempts. Default: 4.
- * @method string getExecutionTTL() Obtain Timeout Handling Policy: Execution Timeout (in minutes), default: -1
- * @method void setExecutionTTL(string $ExecutionTTL) Set Timeout Handling Policy: Execution Timeout (in minutes), default: -1
- * @method string getWaitExecutionTotalTTL() Obtain Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
- * @method void setWaitExecutionTotalTTL(string $WaitExecutionTotalTTL) Set Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
- * @method integer getScheduleType() Obtain Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
- * @method void setScheduleType(integer $ScheduleType) Set Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
- * @method integer getRunPriorityType() Obtain Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
- * @method void setRunPriorityType(integer $RunPriorityType) Set Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
- * @method integer getRetryWaitMinute() Obtain Retry policy retry wait time, in minutes: default: 5.
- * @method void setRetryWaitMinute(integer $RetryWaitMinute) Set Retry policy retry wait time, in minutes: default: 5.
- * @method integer getMaxRetryNumber() Obtain Maximum attempts of the retry policy. default: 4.
- * @method void setMaxRetryNumber(integer $MaxRetryNumber) Set Maximum attempts of the retry policy. default: 4.
- * @method integer getExecutionTTLMinute() Obtain Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
- * @method void setExecutionTTLMinute(integer $ExecutionTTLMinute) Set Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
- * @method integer getWaitExecutionTotalTTLMinute() Obtain Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
- * @method void setWaitExecutionTotalTTLMinute(integer $WaitExecutionTotalTTLMinute) Set Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
+ * @method string getCycleType() Obtain <p>Period type: Defaults to DAY_CYCLE</p><p>Supported types are </p><ul><li>ONEOFF_CYCLE: One-time</li><li>YEAR_CYCLE: Year</li><li>MONTH_CYCLE: Month</li><li>WEEK_CYCLE: Week</li><li>DAY_CYCLE: Day</li><li>HOUR_CYCLE: Hour</li><li>MINUTE_CYCLE: Minute</li><li>CRONTAB_CYCLE: crontab expression</li></ul>
+ * @method void setCycleType(string $CycleType) Set <p>Period type: Defaults to DAY_CYCLE</p><p>Supported types are </p><ul><li>ONEOFF_CYCLE: One-time</li><li>YEAR_CYCLE: Year</li><li>MONTH_CYCLE: Month</li><li>WEEK_CYCLE: Week</li><li>DAY_CYCLE: Day</li><li>HOUR_CYCLE: Hour</li><li>MINUTE_CYCLE: Minute</li><li>CRONTAB_CYCLE: crontab expression</li></ul>
+ * @method string getScheduleTimeZone() Obtain <p>Time zone, defaults to UTC+8</p>
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) Set <p>Time zone, defaults to UTC+8</p>
+ * @method string getCrontabExpression() Obtain <p>Cron expression, defaults to 0 0 0 * * ? *</p>
+ * @method void setCrontabExpression(string $CrontabExpression) Set <p>Cron expression, defaults to 0 0 0 * * ? *</p>
+ * @method string getStartTime() Obtain <p>Effective date, defaults to 00:00:00 of the current date</p>
+ * @method void setStartTime(string $StartTime) Set <p>Effective date, defaults to 00:00:00 of the current date</p>
+ * @method string getEndTime() Obtain <p>End date, defaults to 2099-12-31 23:59:59</p>
+ * @method void setEndTime(string $EndTime) Set <p>End date, defaults to 2099-12-31 23:59:59</p>
+ * @method string getExecutionStartTime() Obtain <p>Execution time left-closed interval, default 00:00</p>
+ * @method void setExecutionStartTime(string $ExecutionStartTime) Set <p>Execution time left-closed interval, default 00:00</p>
+ * @method string getExecutionEndTime() Obtain <p>Execution time right closed interval, default 23:59</p>
+ * @method void setExecutionEndTime(string $ExecutionEndTime) Set <p>Execution time right closed interval, default 23:59</p>
+ * @method string getCalendarOpen() Obtain <p>Calendar scheduling value is 0 and 1, where 1 is on and 0 is shutdown, with a default value of 0.</p>
+ * @method void setCalendarOpen(string $CalendarOpen) Set <p>Calendar scheduling value is 0 and 1, where 1 is on and 0 is shutdown, with a default value of 0.</p>
+ * @method string getCalendarId() Obtain <p>Calendar scheduling Calendar ID</p>
+ * @method void setCalendarId(string $CalendarId) Set <p>Calendar scheduling Calendar ID</p>
+ * @method string getSelfDepend() Obtain <p>Self-dependent, default value serial, value: parallel, serial, orderly</p>
+ * @method void setSelfDepend(string $SelfDepend) Set <p>Self-dependent, default value serial, value: parallel, serial, orderly</p>
+ * @method array getUpstreamDependencyConfigList() Obtain <p>Upstream dependency array</p>
+ * @method void setUpstreamDependencyConfigList(array $UpstreamDependencyConfigList) Set <p>Upstream dependency array</p>
+ * @method array getEventListenerList() Obtain <p>Event array</p>
+ * @method void setEventListenerList(array $EventListenerList) Set <p>Event array</p>
+ * @method string getAllowRedoType() Obtain <p>Rerun & replenishment configuration, defaults to ALL; , ALL allows rerun or replenishment after successful or failed running, FAILURE cannot rerun or replenish after successful running but allows rerun or replenishment after running FAILURE, NONE does not allow rerun or replenishment after either successful or failed running;</p>
+ * @method void setAllowRedoType(string $AllowRedoType) Set <p>Rerun & replenishment configuration, defaults to ALL; , ALL allows rerun or replenishment after successful or failed running, FAILURE cannot rerun or replenish after successful running but allows rerun or replenishment after running FAILURE, NONE does not allow rerun or replenishment after either successful or failed running;</p>
+ * @method array getParamTaskOutList() Obtain <p>Output parameter array</p>
+ * @method void setParamTaskOutList(array $ParamTaskOutList) Set <p>Output parameter array</p>
+ * @method array getParamTaskInList() Obtain <p>Input parameter array</p>
+ * @method void setParamTaskInList(array $ParamTaskInList) Set <p>Input parameter array</p>
+ * @method array getTaskOutputRegistryList() Obtain <p>Output registration</p>
+ * @method void setTaskOutputRegistryList(array $TaskOutputRegistryList) Set <p>Output registration</p>
+ * @method string getInitStrategy() Obtain <p><strong>Instance Generation Policy</strong></p><ul><li>T_PLUS_0: T+0 generation, default policy</li><li>T_PLUS_1: T+1 generation</li></ul>
+ * @method void setInitStrategy(string $InitStrategy) Set <p><strong>Instance Generation Policy</strong></p><ul><li>T_PLUS_0: T+0 generation, default policy</li><li>T_PLUS_1: T+1 generation</li></ul>
+ * @method string getScheduleRunType() Obtain <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
+ * @method void setScheduleRunType(string $ScheduleRunType) Set <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
+ * @method string getRunPriority() Obtain <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
+ * @method void setRunPriority(string $RunPriority) Set <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
+ * @method string getRetryWait() Obtain <p>Retry policy Retry wait time, in minutes: Default: 5</p>
+ * @method void setRetryWait(string $RetryWait) Set <p>Retry policy Retry wait time, in minutes: Default: 5</p>
+ * @method string getMaxRetryAttempts() Obtain <p>Retry policy Maximum attempts, Default: 4</p>
+ * @method void setMaxRetryAttempts(string $MaxRetryAttempts) Set <p>Retry policy Maximum attempts, Default: 4</p>
+ * @method string getExecutionTTL() Obtain <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
+ * @method void setExecutionTTL(string $ExecutionTTL) Set <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
+ * @method string getWaitExecutionTotalTTL() Obtain <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
+ * @method void setWaitExecutionTotalTTL(string $WaitExecutionTotalTTL) Set <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
+ * @method integer getScheduleType() Obtain <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
+ * @method void setScheduleType(integer $ScheduleType) Set <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
+ * @method integer getRunPriorityType() Obtain <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
+ * @method void setRunPriorityType(integer $RunPriorityType) Set <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
+ * @method integer getRetryWaitMinute() Obtain <p>Retry policy Retry wait time, in minutes: Default: 5</p>
+ * @method void setRetryWaitMinute(integer $RetryWaitMinute) Set <p>Retry policy Retry wait time, in minutes: Default: 5</p>
+ * @method integer getMaxRetryNumber() Obtain <p>Retry policy Maximum attempts, Default: 4</p>
+ * @method void setMaxRetryNumber(integer $MaxRetryNumber) Set <p>Retry policy Maximum attempts, Default: 4</p>
+ * @method integer getExecutionTTLMinute() Obtain <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
+ * @method void setExecutionTTLMinute(integer $ExecutionTTLMinute) Set <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
+ * @method integer getWaitExecutionTotalTTLMinute() Obtain <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
+ * @method void setWaitExecutionTotalTTLMinute(integer $WaitExecutionTotalTTLMinute) Set <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
+ * @method string getDependencyTriggerPolicy() Obtain <ul><li>The task dependency run condition defaults to ALL_SUCCESS. Currently, only workflow scheduling under the project supports configuration.</li><li>ALL_SUCCESS: All successful: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful, the dependency check passes. Otherwise, if one upstream task skips running, it is marked as skipped. In other cases, it is marked as upstream failure.</li><li>ALL_FAILED: All failed: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a failed state or marked as upstream failure, the dependency check passes. Otherwise, it is marked as skipped.</li><li>ALL_DONE: All completed: When all upstream dependency tasks reach the final state, perform a dependency check, and the dependency check passes directly.</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one is successful, the dependency check passes. Otherwise, it skips running.</li><li>ALL_SKIPPED: All upstream tasks skipped: When all upstream dependency tasks reach the final state, perform a dependency check. Only if all upstream tasks are in a skipped state does the dependency check pass. Otherwise, the current node skips running.</li><li>ONE_FAILED: At least one failed: If at least one upstream task fails, perform a dependency check, and the check passes. If all upstream tasks complete but none fail, it skips running.</li><li>ONE_SUCCESS: At least one success: If at least one upstream task succeeds, perform a dependency check, and the check passes. If all upstream tasks complete but none succeed, it skips running.</li><li>ONE_DONE: At least one completed: If at least one upstream task completes, perform a dependency check, and the check passes. Otherwise, it continues waiting for upstream.</li><li>NONE_FAILED: All upstream tasks completed with no failure: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful or skipped, the check passes. Otherwise, it is marked as upstream failure.</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with no failure and at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If no upstream task fails and at least one succeeds, the check passes. Otherwise, it skips running.</li><li>NONE_SKIPPED: All upstream tasks completed with no skipped runs: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a successful, failed, or upstream failure state, the check passes. Otherwise, it skips running.</li><li>ALL_DONE_AT_LEAST_ONE_FAILED: All upstream tasks completed with at least one failure: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one fails, the check passes. Otherwise, it skips running.</li></ul>
+ * @method void setDependencyTriggerPolicy(string $DependencyTriggerPolicy) Set <ul><li>The task dependency run condition defaults to ALL_SUCCESS. Currently, only workflow scheduling under the project supports configuration.</li><li>ALL_SUCCESS: All successful: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful, the dependency check passes. Otherwise, if one upstream task skips running, it is marked as skipped. In other cases, it is marked as upstream failure.</li><li>ALL_FAILED: All failed: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a failed state or marked as upstream failure, the dependency check passes. Otherwise, it is marked as skipped.</li><li>ALL_DONE: All completed: When all upstream dependency tasks reach the final state, perform a dependency check, and the dependency check passes directly.</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one is successful, the dependency check passes. Otherwise, it skips running.</li><li>ALL_SKIPPED: All upstream tasks skipped: When all upstream dependency tasks reach the final state, perform a dependency check. Only if all upstream tasks are in a skipped state does the dependency check pass. Otherwise, the current node skips running.</li><li>ONE_FAILED: At least one failed: If at least one upstream task fails, perform a dependency check, and the check passes. If all upstream tasks complete but none fail, it skips running.</li><li>ONE_SUCCESS: At least one success: If at least one upstream task succeeds, perform a dependency check, and the check passes. If all upstream tasks complete but none succeed, it skips running.</li><li>ONE_DONE: At least one completed: If at least one upstream task completes, perform a dependency check, and the check passes. Otherwise, it continues waiting for upstream.</li><li>NONE_FAILED: All upstream tasks completed with no failure: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful or skipped, the check passes. Otherwise, it is marked as upstream failure.</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with no failure and at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If no upstream task fails and at least one succeeds, the check passes. Otherwise, it skips running.</li><li>NONE_SKIPPED: All upstream tasks completed with no skipped runs: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a successful, failed, or upstream failure state, the check passes. Otherwise, it skips running.</li><li>ALL_DONE_AT_LEAST_ONE_FAILED: All upstream tasks completed with at least one failure: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one fails, the check passes. Otherwise, it skips running.</li></ul>
+ * @method integer getAllowDownstreamDependency() Obtain <p>Whether to allow downstream dependency 1 Allow 0 Do not allow</p><p>Value ranges from 0 to 1</p><p>Default value: 1</p>
+ * @method void setAllowDownstreamDependency(integer $AllowDownstreamDependency) Set <p>Whether to allow downstream dependency 1 Allow 0 Do not allow</p><p>Value ranges from 0 to 1</p><p>Default value: 1</p>
  */
 class CreateTaskSchedulerConfiguration extends AbstractModel
 {
     /**
-     * @var string Period type: defaults to DAY_CYCLE.
-
-Supported types. 
-
-ONEOFF_CYCLE: specifies a one-time cycle.
-YEAR_CYCLE: specifies the year cycle.
-MONTH_CYCLE: specifies the monthly cycle.
-WEEK_CYCLE: specifies the week cycle.
-DAY_CYCLE: specifies the day cycle.
-HOUR_CYCLE: specifies the hour cycle.
-MINUTE_CYCLE: specifies the minute cycle.
-CRONTAB_CYCLE: specifies the crontab expression type.
+     * @var string <p>Period type: Defaults to DAY_CYCLE</p><p>Supported types are </p><ul><li>ONEOFF_CYCLE: One-time</li><li>YEAR_CYCLE: Year</li><li>MONTH_CYCLE: Month</li><li>WEEK_CYCLE: Week</li><li>DAY_CYCLE: Day</li><li>HOUR_CYCLE: Hour</li><li>MINUTE_CYCLE: Minute</li><li>CRONTAB_CYCLE: crontab expression</li></ul>
      */
     public $CycleType;
 
     /**
-     * @var string Time zone, defaults to UTC+8.
+     * @var string <p>Time zone, defaults to UTC+8</p>
      */
     public $ScheduleTimeZone;
 
     /**
-     * @var string Cron expression, defaults to 0 0 0 * * ? *.
+     * @var string <p>Cron expression, defaults to 0 0 0 * * ? *</p>
      */
     public $CrontabExpression;
 
     /**
-     * @var string Effective date, defaults to 00:00:00 of the current date.
+     * @var string <p>Effective date, defaults to 00:00:00 of the current date</p>
      */
     public $StartTime;
 
     /**
-     * @var string End date, defaults to 2099-12-31 23:59:59.
+     * @var string <p>End date, defaults to 2099-12-31 23:59:59</p>
      */
     public $EndTime;
 
     /**
-     * @var string Execution time: the left-closed interval. Default: 00:00.
+     * @var string <p>Execution time left-closed interval, default 00:00</p>
      */
     public $ExecutionStartTime;
 
     /**
-     * @var string Execution time: the right closed interval. Default: 23:59.
+     * @var string <p>Execution time right closed interval, default 23:59</p>
      */
     public $ExecutionEndTime;
 
     /**
-     * @var string Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
+     * @var string <p>Calendar scheduling value is 0 and 1, where 1 is on and 0 is shutdown, with a default value of 0.</p>
      */
     public $CalendarOpen;
 
     /**
-     * @var string Calendar scheduling:  the calendar ID.
+     * @var string <p>Calendar scheduling Calendar ID</p>
      */
     public $CalendarId;
 
     /**
-     * @var string Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
+     * @var string <p>Self-dependent, default value serial, value: parallel, serial, orderly</p>
      */
     public $SelfDepend;
 
     /**
-     * @var array Specifies the upstream dependency list.
+     * @var array <p>Upstream dependency array</p>
      */
     public $UpstreamDependencyConfigList;
 
     /**
-     * @var array List of Events
+     * @var array <p>Event array</p>
      */
     public $EventListenerList;
 
     /**
-     * @var string Rerun & Refill Configuration: Default: ALL;
-
-* ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
-
-* FAILURE: Rerun or refill is allowed only if the task fails; not allowed if the task succeeds.
-
-* NONE: Rerun or refill is not allowed regardless of success or failure.
+     * @var string <p>Rerun & replenishment configuration, defaults to ALL; , ALL allows rerun or replenishment after successful or failed running, FAILURE cannot rerun or replenish after successful running but allows rerun or replenishment after running FAILURE, NONE does not allow rerun or replenishment after either successful or failed running;</p>
      */
     public $AllowRedoType;
 
     /**
-     * @var array Output parameter list.
+     * @var array <p>Output parameter array</p>
      */
     public $ParamTaskOutList;
 
     /**
-     * @var array Input parameter list.
+     * @var array <p>Input parameter array</p>
      */
     public $ParamTaskInList;
 
     /**
-     * @var array Output registration.
+     * @var array <p>Output registration</p>
      */
     public $TaskOutputRegistryList;
 
     /**
-     * @var string **Instance generation policy**.
-T_PLUS_0: specifies t+0 generation. default policy.
-T_PLUS_1: specifies t+1 generation.
+     * @var string <p><strong>Instance Generation Policy</strong></p><ul><li>T_PLUS_0: T+0 generation, default policy</li><li>T_PLUS_1: T+1 generation</li></ul>
      */
     public $InitStrategy;
 
     /**
-     * @var string Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
+     * @var string <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
      * @deprecated
      */
     public $ScheduleRunType;
 
     /**
-     * @var string Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
+     * @var string <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
      * @deprecated
      */
     public $RunPriority;
 
     /**
-     * @var string Retry Policy: Retry Wait Time (in minutes): Default 5
+     * @var string <p>Retry policy Retry wait time, in minutes: Default: 5</p>
      * @deprecated
      */
     public $RetryWait;
 
     /**
-     * @var string Retry Policy: maximum attempts. Default: 4.
+     * @var string <p>Retry policy Maximum attempts, Default: 4</p>
      * @deprecated
      */
     public $MaxRetryAttempts;
 
     /**
-     * @var string Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+     * @var string <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
      * @deprecated
      */
     public $ExecutionTTL;
 
     /**
-     * @var string Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+     * @var string <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
      * @deprecated
      */
     public $WaitExecutionTotalTTL;
 
     /**
-     * @var integer Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+     * @var integer <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
      */
     public $ScheduleType;
 
     /**
-     * @var integer Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+     * @var integer <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
      */
     public $RunPriorityType;
 
     /**
-     * @var integer Retry policy retry wait time, in minutes: default: 5.
+     * @var integer <p>Retry policy Retry wait time, in minutes: Default: 5</p>
      */
     public $RetryWaitMinute;
 
     /**
-     * @var integer Maximum attempts of the retry policy. default: 4.
+     * @var integer <p>Retry policy Maximum attempts, Default: 4</p>
      */
     public $MaxRetryNumber;
 
     /**
-     * @var integer Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+     * @var integer <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
      */
     public $ExecutionTTLMinute;
 
     /**
-     * @var integer Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
+     * @var integer <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
      */
     public $WaitExecutionTotalTTLMinute;
 
     /**
-     * @param string $CycleType Period type: defaults to DAY_CYCLE.
+     * @var string <ul><li>The task dependency run condition defaults to ALL_SUCCESS. Currently, only workflow scheduling under the project supports configuration.</li><li>ALL_SUCCESS: All successful: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful, the dependency check passes. Otherwise, if one upstream task skips running, it is marked as skipped. In other cases, it is marked as upstream failure.</li><li>ALL_FAILED: All failed: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a failed state or marked as upstream failure, the dependency check passes. Otherwise, it is marked as skipped.</li><li>ALL_DONE: All completed: When all upstream dependency tasks reach the final state, perform a dependency check, and the dependency check passes directly.</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one is successful, the dependency check passes. Otherwise, it skips running.</li><li>ALL_SKIPPED: All upstream tasks skipped: When all upstream dependency tasks reach the final state, perform a dependency check. Only if all upstream tasks are in a skipped state does the dependency check pass. Otherwise, the current node skips running.</li><li>ONE_FAILED: At least one failed: If at least one upstream task fails, perform a dependency check, and the check passes. If all upstream tasks complete but none fail, it skips running.</li><li>ONE_SUCCESS: At least one success: If at least one upstream task succeeds, perform a dependency check, and the check passes. If all upstream tasks complete but none succeed, it skips running.</li><li>ONE_DONE: At least one completed: If at least one upstream task completes, perform a dependency check, and the check passes. Otherwise, it continues waiting for upstream.</li><li>NONE_FAILED: All upstream tasks completed with no failure: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful or skipped, the check passes. Otherwise, it is marked as upstream failure.</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with no failure and at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If no upstream task fails and at least one succeeds, the check passes. Otherwise, it skips running.</li><li>NONE_SKIPPED: All upstream tasks completed with no skipped runs: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a successful, failed, or upstream failure state, the check passes. Otherwise, it skips running.</li><li>ALL_DONE_AT_LEAST_ONE_FAILED: All upstream tasks completed with at least one failure: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one fails, the check passes. Otherwise, it skips running.</li></ul>
+     */
+    public $DependencyTriggerPolicy;
 
-Supported types. 
+    /**
+     * @var integer <p>Whether to allow downstream dependency 1 Allow 0 Do not allow</p><p>Value ranges from 0 to 1</p><p>Default value: 1</p>
+     * @deprecated
+     */
+    public $AllowDownstreamDependency;
 
-ONEOFF_CYCLE: specifies a one-time cycle.
-YEAR_CYCLE: specifies the year cycle.
-MONTH_CYCLE: specifies the monthly cycle.
-WEEK_CYCLE: specifies the week cycle.
-DAY_CYCLE: specifies the day cycle.
-HOUR_CYCLE: specifies the hour cycle.
-MINUTE_CYCLE: specifies the minute cycle.
-CRONTAB_CYCLE: specifies the crontab expression type.
-     * @param string $ScheduleTimeZone Time zone, defaults to UTC+8.
-     * @param string $CrontabExpression Cron expression, defaults to 0 0 0 * * ? *.
-     * @param string $StartTime Effective date, defaults to 00:00:00 of the current date.
-     * @param string $EndTime End date, defaults to 2099-12-31 23:59:59.
-     * @param string $ExecutionStartTime Execution time: the left-closed interval. Default: 00:00.
-     * @param string $ExecutionEndTime Execution time: the right closed interval. Default: 23:59.
-     * @param string $CalendarOpen Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
-     * @param string $CalendarId Calendar scheduling:  the calendar ID.
-     * @param string $SelfDepend Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
-     * @param array $UpstreamDependencyConfigList Specifies the upstream dependency list.
-     * @param array $EventListenerList List of Events
-     * @param string $AllowRedoType Rerun & Refill Configuration: Default: ALL;
-
-* ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
-
-* FAILURE: Rerun or refill is allowed only if the task fails; not allowed if the task succeeds.
-
-* NONE: Rerun or refill is not allowed regardless of success or failure.
-     * @param array $ParamTaskOutList Output parameter list.
-     * @param array $ParamTaskInList Input parameter list.
-     * @param array $TaskOutputRegistryList Output registration.
-     * @param string $InitStrategy **Instance generation policy**.
-T_PLUS_0: specifies t+0 generation. default policy.
-T_PLUS_1: specifies t+1 generation.
-     * @param string $ScheduleRunType Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
-     * @param string $RunPriority Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
-     * @param string $RetryWait Retry Policy: Retry Wait Time (in minutes): Default 5
-     * @param string $MaxRetryAttempts Retry Policy: maximum attempts. Default: 4.
-     * @param string $ExecutionTTL Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-     * @param string $WaitExecutionTotalTTL Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
-     * @param integer $ScheduleType Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
-     * @param integer $RunPriorityType Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
-     * @param integer $RetryWaitMinute Retry policy retry wait time, in minutes: default: 5.
-     * @param integer $MaxRetryNumber Maximum attempts of the retry policy. default: 4.
-     * @param integer $ExecutionTTLMinute Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
-     * @param integer $WaitExecutionTotalTTLMinute Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
+    /**
+     * @param string $CycleType <p>Period type: Defaults to DAY_CYCLE</p><p>Supported types are </p><ul><li>ONEOFF_CYCLE: One-time</li><li>YEAR_CYCLE: Year</li><li>MONTH_CYCLE: Month</li><li>WEEK_CYCLE: Week</li><li>DAY_CYCLE: Day</li><li>HOUR_CYCLE: Hour</li><li>MINUTE_CYCLE: Minute</li><li>CRONTAB_CYCLE: crontab expression</li></ul>
+     * @param string $ScheduleTimeZone <p>Time zone, defaults to UTC+8</p>
+     * @param string $CrontabExpression <p>Cron expression, defaults to 0 0 0 * * ? *</p>
+     * @param string $StartTime <p>Effective date, defaults to 00:00:00 of the current date</p>
+     * @param string $EndTime <p>End date, defaults to 2099-12-31 23:59:59</p>
+     * @param string $ExecutionStartTime <p>Execution time left-closed interval, default 00:00</p>
+     * @param string $ExecutionEndTime <p>Execution time right closed interval, default 23:59</p>
+     * @param string $CalendarOpen <p>Calendar scheduling value is 0 and 1, where 1 is on and 0 is shutdown, with a default value of 0.</p>
+     * @param string $CalendarId <p>Calendar scheduling Calendar ID</p>
+     * @param string $SelfDepend <p>Self-dependent, default value serial, value: parallel, serial, orderly</p>
+     * @param array $UpstreamDependencyConfigList <p>Upstream dependency array</p>
+     * @param array $EventListenerList <p>Event array</p>
+     * @param string $AllowRedoType <p>Rerun & replenishment configuration, defaults to ALL; , ALL allows rerun or replenishment after successful or failed running, FAILURE cannot rerun or replenish after successful running but allows rerun or replenishment after running FAILURE, NONE does not allow rerun or replenishment after either successful or failed running;</p>
+     * @param array $ParamTaskOutList <p>Output parameter array</p>
+     * @param array $ParamTaskInList <p>Input parameter array</p>
+     * @param array $TaskOutputRegistryList <p>Output registration</p>
+     * @param string $InitStrategy <p><strong>Instance Generation Policy</strong></p><ul><li>T_PLUS_0: T+0 generation, default policy</li><li>T_PLUS_1: T+1 generation</li></ul>
+     * @param string $ScheduleRunType <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
+     * @param string $RunPriority <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
+     * @param string $RetryWait <p>Retry policy Retry wait time, in minutes: Default: 5</p>
+     * @param string $MaxRetryAttempts <p>Retry policy Maximum attempts, Default: 4</p>
+     * @param string $ExecutionTTL <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
+     * @param string $WaitExecutionTotalTTL <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
+     * @param integer $ScheduleType <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
+     * @param integer $RunPriorityType <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
+     * @param integer $RetryWaitMinute <p>Retry policy Retry wait time, in minutes: Default: 5</p>
+     * @param integer $MaxRetryNumber <p>Retry policy Maximum attempts, Default: 4</p>
+     * @param integer $ExecutionTTLMinute <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
+     * @param integer $WaitExecutionTotalTTLMinute <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
+     * @param string $DependencyTriggerPolicy <ul><li>The task dependency run condition defaults to ALL_SUCCESS. Currently, only workflow scheduling under the project supports configuration.</li><li>ALL_SUCCESS: All successful: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful, the dependency check passes. Otherwise, if one upstream task skips running, it is marked as skipped. In other cases, it is marked as upstream failure.</li><li>ALL_FAILED: All failed: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a failed state or marked as upstream failure, the dependency check passes. Otherwise, it is marked as skipped.</li><li>ALL_DONE: All completed: When all upstream dependency tasks reach the final state, perform a dependency check, and the dependency check passes directly.</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one is successful, the dependency check passes. Otherwise, it skips running.</li><li>ALL_SKIPPED: All upstream tasks skipped: When all upstream dependency tasks reach the final state, perform a dependency check. Only if all upstream tasks are in a skipped state does the dependency check pass. Otherwise, the current node skips running.</li><li>ONE_FAILED: At least one failed: If at least one upstream task fails, perform a dependency check, and the check passes. If all upstream tasks complete but none fail, it skips running.</li><li>ONE_SUCCESS: At least one success: If at least one upstream task succeeds, perform a dependency check, and the check passes. If all upstream tasks complete but none succeed, it skips running.</li><li>ONE_DONE: At least one completed: If at least one upstream task completes, perform a dependency check, and the check passes. Otherwise, it continues waiting for upstream.</li><li>NONE_FAILED: All upstream tasks completed with no failure: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful or skipped, the check passes. Otherwise, it is marked as upstream failure.</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with no failure and at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If no upstream task fails and at least one succeeds, the check passes. Otherwise, it skips running.</li><li>NONE_SKIPPED: All upstream tasks completed with no skipped runs: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a successful, failed, or upstream failure state, the check passes. Otherwise, it skips running.</li><li>ALL_DONE_AT_LEAST_ONE_FAILED: All upstream tasks completed with at least one failure: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one fails, the check passes. Otherwise, it skips running.</li></ul>
+     * @param integer $AllowDownstreamDependency <p>Whether to allow downstream dependency 1 Allow 0 Do not allow</p><p>Value ranges from 0 to 1</p><p>Default value: 1</p>
      */
     function __construct()
     {
@@ -491,6 +432,14 @@ T_PLUS_1: specifies t+1 generation.
 
         if (array_key_exists("WaitExecutionTotalTTLMinute",$param) and $param["WaitExecutionTotalTTLMinute"] !== null) {
             $this->WaitExecutionTotalTTLMinute = $param["WaitExecutionTotalTTLMinute"];
+        }
+
+        if (array_key_exists("DependencyTriggerPolicy",$param) and $param["DependencyTriggerPolicy"] !== null) {
+            $this->DependencyTriggerPolicy = $param["DependencyTriggerPolicy"];
+        }
+
+        if (array_key_exists("AllowDownstreamDependency",$param) and $param["AllowDownstreamDependency"] !== null) {
+            $this->AllowDownstreamDependency = $param["AllowDownstreamDependency"];
         }
     }
 }

@@ -18,27 +18,27 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of a permission request to allow a mini program to call sensitive APIs
+ * Detail data for querying mini program sensitive API permission approval.
  *
- * @method string getAPIId() Obtain API ID
- * @method void setAPIId(string $APIId) Set API ID
+ * @method string getAPIId() Obtain API ID.
+ * @method void setAPIId(string $APIId) Set API ID.
  * @method string getAPIMethod() Obtain API method.
  * @method void setAPIMethod(string $APIMethod) Set API method.
- * @method string getApplyReason() Obtain Reason for application
- * @method void setApplyReason(string $ApplyReason) Set Reason for application
+ * @method string getApplyReason() Obtain Reason for request.
+ * @method void setApplyReason(string $ApplyReason) Set Reason for request.
  * @method string getRejectReason() Obtain Reason for rejection.
  * @method void setRejectReason(string $RejectReason) Set Reason for rejection.
- * @method integer getApprovalStatus() Obtain Approval status. valid values: 20 (rejected), 30 (approved).
- * @method void setApprovalStatus(integer $ApprovalStatus) Set Approval status. valid values: 20 (rejected), 30 (approved).
+ * @method integer getApprovalStatus() Obtain Approval status. Valid values: 20: Rejected; 30: Approved.
+ * @method void setApprovalStatus(integer $ApprovalStatus) Set Approval status. Valid values: 20: Rejected; 30: Approved.
  * @method string getAPIDesc() Obtain API feature description.
  * @method void setAPIDesc(string $APIDesc) Set API feature description.
- * @method integer getAPIType() Obtain API type. 1: system; 2: custom.
- * @method void setAPIType(integer $APIType) Set API type. 1: system; 2: custom.
+ * @method integer getAPIType() Obtain API type. Valid values: 1: System; 2: Custom.
+ * @method void setAPIType(integer $APIType) Set API type. Valid values: 1: System; 2: Custom.
  */
 class DescribeMNPSensitiveAPIPermissionApprovalData extends AbstractModel
 {
     /**
-     * @var string API ID
+     * @var string API ID.
      */
     public $APIId;
 
@@ -48,7 +48,7 @@ class DescribeMNPSensitiveAPIPermissionApprovalData extends AbstractModel
     public $APIMethod;
 
     /**
-     * @var string Reason for application
+     * @var string Reason for request.
      */
     public $ApplyReason;
 
@@ -58,7 +58,7 @@ class DescribeMNPSensitiveAPIPermissionApprovalData extends AbstractModel
     public $RejectReason;
 
     /**
-     * @var integer Approval status. valid values: 20 (rejected), 30 (approved).
+     * @var integer Approval status. Valid values: 20: Rejected; 30: Approved.
      */
     public $ApprovalStatus;
 
@@ -68,18 +68,18 @@ class DescribeMNPSensitiveAPIPermissionApprovalData extends AbstractModel
     public $APIDesc;
 
     /**
-     * @var integer API type. 1: system; 2: custom.
+     * @var integer API type. Valid values: 1: System; 2: Custom.
      */
     public $APIType;
 
     /**
-     * @param string $APIId API ID
+     * @param string $APIId API ID.
      * @param string $APIMethod API method.
-     * @param string $ApplyReason Reason for application
+     * @param string $ApplyReason Reason for request.
      * @param string $RejectReason Reason for rejection.
-     * @param integer $ApprovalStatus Approval status. valid values: 20 (rejected), 30 (approved).
+     * @param integer $ApprovalStatus Approval status. Valid values: 20: Rejected; 30: Approved.
      * @param string $APIDesc API feature description.
-     * @param integer $APIType API type. 1: system; 2: custom.
+     * @param integer $APIType API type. Valid values: 1: System; 2: Custom.
      */
     function __construct()
     {

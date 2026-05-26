@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApplicationConfig request structure.
  *
- * @method string getApplicationId() Obtain Superapp ID
- * @method void setApplicationId(string $ApplicationId) Set Superapp ID
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method integer getId() Obtain Superapp configuration ID
- * @method void setId(integer $Id) Set Superapp configuration ID
- * @method string getAppKey() Obtain Package name: corresponds to packageName on Android and bundleId on iOS
- * @method void setAppKey(string $AppKey) Set Package name: corresponds to packageName on Android and bundleId on iOS
- * @method string getAppURL() Obtain Superapp URL
- * @method void setAppURL(string $AppURL) Set Superapp URL
+ * @method string getApplicationId() Obtain Superapp ID.
+ * @method void setApplicationId(string $ApplicationId) Set Superapp ID.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method integer getId() Obtain Superapp configuration ID.
+ * @method void setId(integer $Id) Set Superapp configuration ID.
+ * @method string getAppKey() Obtain Package name. Corresponds to the package name on Android and the bundle ID on iOS.
+ * @method void setAppKey(string $AppKey) Set Package name. Corresponds to the package name on Android and the bundle ID on iOS.
+ * @method string getAppURL() Obtain Superapp URL.
+ * @method void setAppURL(string $AppURL) Set Superapp URL.
  */
 class ModifyApplicationConfigRequest extends AbstractModel
 {
     /**
-     * @var string Superapp ID
+     * @var string Superapp ID.
      */
     public $ApplicationId;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var integer Superapp configuration ID
+     * @var integer Superapp configuration ID.
      */
     public $Id;
 
     /**
-     * @var string Package name: corresponds to packageName on Android and bundleId on iOS
+     * @var string Package name. Corresponds to the package name on Android and the bundle ID on iOS.
      */
     public $AppKey;
 
     /**
-     * @var string Superapp URL
+     * @var string Superapp URL.
      */
     public $AppURL;
 
     /**
-     * @param string $ApplicationId Superapp ID
-     * @param string $PlatformId Platform ID
-     * @param integer $Id Superapp configuration ID
-     * @param string $AppKey Package name: corresponds to packageName on Android and bundleId on iOS
-     * @param string $AppURL Superapp URL
+     * @param string $ApplicationId Superapp ID.
+     * @param string $PlatformId Platform ID.
+     * @param integer $Id Superapp configuration ID.
+     * @param string $AppKey Package name. Corresponds to the package name on Android and the bundle ID on iOS.
+     * @param string $AppURL Superapp URL.
      */
     function __construct()
     {

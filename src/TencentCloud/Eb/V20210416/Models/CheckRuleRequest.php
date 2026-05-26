@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckRule request structure.
  *
- * @method string getEvent() Obtain Event Information
- * @method void setEvent(string $Event) Set Event Information
- * @method string getEventPattern() Obtain EventPattern Information
- * @method void setEventPattern(string $EventPattern) Set EventPattern Information
+ * @method string getEvent() Obtain 
+ * @method void setEvent(string $Event) Set 
+ * @method string getEventPattern() Obtain 
+ * @method void setEventPattern(string $EventPattern) Set 
  */
 class CheckRuleRequest extends AbstractModel
 {
     /**
-     * @var string Event Information
+     * @var string 
      */
     public $Event;
 
     /**
-     * @var string EventPattern Information
+     * @var string 
      */
     public $EventPattern;
 
     /**
-     * @param string $Event Event Information
-     * @param string $EventPattern EventPattern Information
+     * @param string $Event 
+     * @param string $EventPattern 
      */
     function __construct()
     {

@@ -36,12 +36,14 @@ use TencentCloud\Common\AbstractModel;
 TDE: Supports data encryption.
  * @method void setSupportedFeatureNames(array $SupportedFeatureNames) Set List of features supported by the database kernel, such as:
 TDE: Supports data encryption.
- * @method string getStatus() Obtain Database version status. Valid values:
-`AVAILABLE`.
-`DEPRECATED`.
- * @method void setStatus(string $Status) Set Database version status. Valid values:
-`AVAILABLE`.
-`DEPRECATED`.
+ * @method string getStatus() Obtain Database version status, including:.
+AVAILABLE: available.
+UPGRADE_ONLY: specifies that creation is not allowed. this version is only available for upgrade to a higher version.
+DEPRECATED.
+ * @method void setStatus(string $Status) Set Database version status, including:.
+AVAILABLE: available.
+UPGRADE_ONLY: specifies that creation is not allowed. this version is only available for upgrade to a higher version.
+DEPRECATED.
  * @method array getAvailableUpgradeTarget() Obtain List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
  * @method void setAvailableUpgradeTarget(array $AvailableUpgradeTarget) Set List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
  */
@@ -76,9 +78,10 @@ TDE: Supports data encryption.
     public $SupportedFeatureNames;
 
     /**
-     * @var string Database version status. Valid values:
-`AVAILABLE`.
-`DEPRECATED`.
+     * @var string Database version status, including:.
+AVAILABLE: available.
+UPGRADE_ONLY: specifies that creation is not allowed. this version is only available for upgrade to a higher version.
+DEPRECATED.
      */
     public $Status;
 
@@ -96,9 +99,10 @@ TDE: Supports data encryption.
      * @param string $DBKernelVersion Database kernel version, such as v12.4_r1.3.
      * @param array $SupportedFeatureNames List of features supported by the database kernel, such as:
 TDE: Supports data encryption.
-     * @param string $Status Database version status. Valid values:
-`AVAILABLE`.
-`DEPRECATED`.
+     * @param string $Status Database version status, including:.
+AVAILABLE: available.
+UPGRADE_ONLY: specifies that creation is not allowed. this version is only available for upgrade to a higher version.
+DEPRECATED.
      * @param array $AvailableUpgradeTarget List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
      */
     function __construct()

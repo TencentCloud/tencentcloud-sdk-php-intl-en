@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApplicationMNPList request structure.
  *
- * @method integer getOffset() Obtain Page offset
- * @method void setOffset(integer $Offset) Set Page offset
- * @method integer getLimit() Obtain Number of results per page
- * @method void setLimit(integer $Limit) Set Number of results per page
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method string getApplicationId() Obtain Superapp ID
- * @method void setApplicationId(string $ApplicationId) Set Superapp ID
- * @method integer getOnlineStatus() Obtain Online status. 0 All (default); 1 Available; 2 In canary release
- * @method void setOnlineStatus(integer $OnlineStatus) Set Online status. 0 All (default); 1 Available; 2 In canary release
- * @method array getEngineTypeList() Obtain Engine type. 0 Mini program; 1 Mini game
- * @method void setEngineTypeList(array $EngineTypeList) Set Engine type. 0 Mini program; 1 Mini game
- * @method string getSubCategory() Obtain Secondary category name
- * @method void setSubCategory(string $SubCategory) Set Secondary category name
- * @method string getPrimaryCategory() Obtain Primary category name
- * @method void setPrimaryCategory(string $PrimaryCategory) Set Primary category name
- * @method string getKeyword() Obtain Keywords
- * @method void setKeyword(string $Keyword) Set Keywords
+ * @method integer getOffset() Obtain Pagination offset.
+ * @method void setOffset(integer $Offset) Set Pagination offset.
+ * @method integer getLimit() Obtain Number of entries per page.
+ * @method void setLimit(integer $Limit) Set Number of entries per page.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method string getApplicationId() Obtain Superapp ID.
+ * @method void setApplicationId(string $ApplicationId) Set Superapp ID.
+ * @method integer getOnlineStatus() Obtain Available status. Valid value: 0: All; 1 Available; 2: In canary release.
+ * @method void setOnlineStatus(integer $OnlineStatus) Set Available status. Valid value: 0: All; 1 Available; 2: In canary release.
+ * @method array getEngineTypeList() Obtain Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
+ * @method void setEngineTypeList(array $EngineTypeList) Set Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
+ * @method string getSubCategory() Obtain Secondary category name.
+ * @method void setSubCategory(string $SubCategory) Set Secondary category name.
+ * @method string getPrimaryCategory() Obtain Primary category name.
+ * @method void setPrimaryCategory(string $PrimaryCategory) Set Primary category name.
+ * @method string getKeyword() Obtain Keyword.
+ * @method void setKeyword(string $Keyword) Set Keyword.
  */
 class DescribeApplicationMNPListRequest extends AbstractModel
 {
     /**
-     * @var integer Page offset
+     * @var integer Pagination offset.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results per page
+     * @var integer Number of entries per page.
      */
     public $Limit;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var string Superapp ID
+     * @var string Superapp ID.
      */
     public $ApplicationId;
 
     /**
-     * @var integer Online status. 0 All (default); 1 Available; 2 In canary release
+     * @var integer Available status. Valid value: 0: All; 1 Available; 2: In canary release.
      */
     public $OnlineStatus;
 
     /**
-     * @var array Engine type. 0 Mini program; 1 Mini game
+     * @var array Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
      */
     public $EngineTypeList;
 
     /**
-     * @var string Secondary category name
+     * @var string Secondary category name.
      */
     public $SubCategory;
 
     /**
-     * @var string Primary category name
+     * @var string Primary category name.
      */
     public $PrimaryCategory;
 
     /**
-     * @var string Keywords
+     * @var string Keyword.
      */
     public $Keyword;
 
     /**
-     * @param integer $Offset Page offset
-     * @param integer $Limit Number of results per page
-     * @param string $PlatformId Platform ID
-     * @param string $ApplicationId Superapp ID
-     * @param integer $OnlineStatus Online status. 0 All (default); 1 Available; 2 In canary release
-     * @param array $EngineTypeList Engine type. 0 Mini program; 1 Mini game
-     * @param string $SubCategory Secondary category name
-     * @param string $PrimaryCategory Primary category name
-     * @param string $Keyword Keywords
+     * @param integer $Offset Pagination offset.
+     * @param integer $Limit Number of entries per page.
+     * @param string $PlatformId Platform ID.
+     * @param string $ApplicationId Superapp ID.
+     * @param integer $OnlineStatus Available status. Valid value: 0: All; 1 Available; 2: In canary release.
+     * @param array $EngineTypeList Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
+     * @param string $SubCategory Secondary category name.
+     * @param string $PrimaryCategory Primary category name.
+     * @param string $Keyword Keyword.
      */
     function __construct()
     {

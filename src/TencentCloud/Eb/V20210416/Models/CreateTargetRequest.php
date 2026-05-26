@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetDescription(TargetDescription $TargetDescription) Set Target description
  * @method string getRuleId() Obtain Event rule ID
  * @method void setRuleId(string $RuleId) Set Event rule ID
+ * @method integer getBatchTimeout() Obtain 
+ * @method void setBatchTimeout(integer $BatchTimeout) Set 
+ * @method integer getBatchEventCount() Obtain 
+ * @method void setBatchEventCount(integer $BatchEventCount) Set 
+ * @method boolean getEnableBatchDelivery() Obtain 
+ * @method void setEnableBatchDelivery(boolean $EnableBatchDelivery) Set 
  */
 class CreateTargetRequest extends AbstractModel
 {
@@ -52,10 +58,28 @@ class CreateTargetRequest extends AbstractModel
     public $RuleId;
 
     /**
+     * @var integer 
+     */
+    public $BatchTimeout;
+
+    /**
+     * @var integer 
+     */
+    public $BatchEventCount;
+
+    /**
+     * @var boolean 
+     */
+    public $EnableBatchDelivery;
+
+    /**
      * @param string $EventBusId Event bus ID
      * @param string $Type Target type
      * @param TargetDescription $TargetDescription Target description
      * @param string $RuleId Event rule ID
+     * @param integer $BatchTimeout 
+     * @param integer $BatchEventCount 
+     * @param boolean $EnableBatchDelivery 
      */
     function __construct()
     {
@@ -85,6 +109,18 @@ class CreateTargetRequest extends AbstractModel
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("BatchTimeout",$param) and $param["BatchTimeout"] !== null) {
+            $this->BatchTimeout = $param["BatchTimeout"];
+        }
+
+        if (array_key_exists("BatchEventCount",$param) and $param["BatchEventCount"] !== null) {
+            $this->BatchEventCount = $param["BatchEventCount"];
+        }
+
+        if (array_key_exists("EnableBatchDelivery",$param) and $param["EnableBatchDelivery"] !== null) {
+            $this->EnableBatchDelivery = $param["EnableBatchDelivery"];
         }
     }
 }

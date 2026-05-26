@@ -18,28 +18,28 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Line chart data values
+ * Trend data value.
  *
- * @method string getDataTime() Obtain Time
- * @method void setDataTime(string $DataTime) Set Time
- * @method string getNumber() Obtain Value
- * @method void setNumber(string $Number) Set Value
+ * @method string getDataTime() Obtain Data time.
+ * @method void setDataTime(string $DataTime) Set Data time.
+ * @method string getNumber() Obtain Data value.
+ * @method void setNumber(string $Number) Set Data value.
  */
 class AnalysisData extends AbstractModel
 {
     /**
-     * @var string Time
+     * @var string Data time.
      */
     public $DataTime;
 
     /**
-     * @var string Value
+     * @var string Data value.
      */
     public $Number;
 
     /**
-     * @param string $DataTime Time
-     * @param string $Number Value
+     * @param string $DataTime Data time.
+     * @param string $Number Data value.
      */
     function __construct()
     {

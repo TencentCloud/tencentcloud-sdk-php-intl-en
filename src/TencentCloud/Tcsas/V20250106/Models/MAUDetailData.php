@@ -18,76 +18,76 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * MAU detailed data
+ * MAU detailed data.
  *
- * @method string getDataTime() Obtain Date
- * @method void setDataTime(string $DataTime) Set Date
- * @method string getMNPName() Obtain Mini program name
- * @method void setMNPName(string $MNPName) Set Mini program name
- * @method string getMNPType() Obtain Mini program type
- * @method void setMNPType(string $MNPType) Set Mini program type
- * @method string getEstimatedEarnings() Obtain Estimated revenue
- * @method void setEstimatedEarnings(string $EstimatedEarnings) Set Estimated revenue
- * @method integer getRequestsNumber() Obtain Requests
- * @method void setRequestsNumber(integer $RequestsNumber) Set Requests
- * @method integer getImpressions() Obtain Impressions
- * @method void setImpressions(integer $Impressions) Set Impressions
- * @method string getECPM() Obtain Effective Cost Per Mille
- * @method void setECPM(string $ECPM) Set Effective Cost Per Mille
- * @method integer getClicksNumber() Obtain Taps
- * @method void setClicksNumber(integer $ClicksNumber) Set Taps
+ * @method string getDataTime() Obtain Date.
+ * @method void setDataTime(string $DataTime) Set Date.
+ * @method string getMNPName() Obtain Mini program name.
+ * @method void setMNPName(string $MNPName) Set Mini program name.
+ * @method string getMNPType() Obtain Mini program category.
+ * @method void setMNPType(string $MNPType) Set Mini program category.
+ * @method string getEstimatedEarnings() Obtain Estimated revenue.
+ * @method void setEstimatedEarnings(string $EstimatedEarnings) Set Estimated revenue.
+ * @method integer getRequestsNumber() Obtain Number of requests.
+ * @method void setRequestsNumber(integer $RequestsNumber) Set Number of requests.
+ * @method integer getImpressions() Obtain Number of impressions.
+ * @method void setImpressions(integer $Impressions) Set Number of impressions.
+ * @method string getECPM() Obtain eCPM (effective cost per mille).
+ * @method void setECPM(string $ECPM) Set eCPM (effective cost per mille).
+ * @method integer getClicksNumber() Obtain Number of taps.
+ * @method void setClicksNumber(integer $ClicksNumber) Set Number of taps.
  */
 class MAUDetailData extends AbstractModel
 {
     /**
-     * @var string Date
+     * @var string Date.
      */
     public $DataTime;
 
     /**
-     * @var string Mini program name
+     * @var string Mini program name.
      */
     public $MNPName;
 
     /**
-     * @var string Mini program type
+     * @var string Mini program category.
      */
     public $MNPType;
 
     /**
-     * @var string Estimated revenue
+     * @var string Estimated revenue.
      */
     public $EstimatedEarnings;
 
     /**
-     * @var integer Requests
+     * @var integer Number of requests.
      */
     public $RequestsNumber;
 
     /**
-     * @var integer Impressions
+     * @var integer Number of impressions.
      */
     public $Impressions;
 
     /**
-     * @var string Effective Cost Per Mille
+     * @var string eCPM (effective cost per mille).
      */
     public $ECPM;
 
     /**
-     * @var integer Taps
+     * @var integer Number of taps.
      */
     public $ClicksNumber;
 
     /**
-     * @param string $DataTime Date
-     * @param string $MNPName Mini program name
-     * @param string $MNPType Mini program type
-     * @param string $EstimatedEarnings Estimated revenue
-     * @param integer $RequestsNumber Requests
-     * @param integer $Impressions Impressions
-     * @param string $ECPM Effective Cost Per Mille
-     * @param integer $ClicksNumber Taps
+     * @param string $DataTime Date.
+     * @param string $MNPName Mini program name.
+     * @param string $MNPType Mini program category.
+     * @param string $EstimatedEarnings Estimated revenue.
+     * @param integer $RequestsNumber Number of requests.
+     * @param integer $Impressions Number of impressions.
+     * @param string $ECPM eCPM (effective cost per mille).
+     * @param integer $ClicksNumber Number of taps.
      */
     function __construct()
     {

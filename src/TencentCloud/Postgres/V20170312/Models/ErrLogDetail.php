@@ -20,42 +20,126 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Error log details
  *
- * @method string getUserName() Obtain Username
- * @method void setUserName(string $UserName) Set Username
- * @method string getDatabase() Obtain Database name
- * @method void setDatabase(string $Database) Set Database name
- * @method string getErrTime() Obtain Error occurrence time
- * @method void setErrTime(string $ErrTime) Set Error occurrence time
- * @method string getErrMsg() Obtain Error message
- * @method void setErrMsg(string $ErrMsg) Set Error message
+ * @method string getUserName() Obtain <p>userName</p>
+ * @method void setUserName(string $UserName) Set <p>userName</p>
+ * @method string getDatabase() Obtain <p>Database name</p>
+ * @method void setDatabase(string $Database) Set <p>Database name</p>
+ * @method string getErrTime() Obtain <p>Error occurrence time</p>
+ * @method void setErrTime(string $ErrTime) Set <p>Error occurrence time</p>
+ * @method string getErrMsg() Obtain <p>Error message</p>
+ * @method void setErrMsg(string $ErrMsg) Set <p>Error message</p>
+ * @method integer getProcessId() Obtain <p>Process ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProcessId(integer $ProcessId) Set <p>Process ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getClientAddr() Obtain <p>client address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setClientAddr(string $ClientAddr) Set <p>client address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSessionId() Obtain <p>Session ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSessionId(string $SessionId) Set <p>Session ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSessionStartTime() Obtain <p>Session start time</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSessionStartTime(string $SessionStartTime) Set <p>Session start time</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVirtualTransactionId() Obtain <p>Virtual transaction ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVirtualTransactionId(string $VirtualTransactionId) Set <p>Virtual transaction ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSqlStateCode() Obtain <p>SQLSTATE error code</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSqlStateCode(string $SqlStateCode) Set <p>SQLSTATE error code</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getApplicationName() Obtain <p>client application name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setApplicationName(string $ApplicationName) Set <p>client application name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ErrLogDetail extends AbstractModel
 {
     /**
-     * @var string Username
+     * @var string <p>userName</p>
      */
     public $UserName;
 
     /**
-     * @var string Database name
+     * @var string <p>Database name</p>
      */
     public $Database;
 
     /**
-     * @var string Error occurrence time
+     * @var string <p>Error occurrence time</p>
      */
     public $ErrTime;
 
     /**
-     * @var string Error message
+     * @var string <p>Error message</p>
      */
     public $ErrMsg;
 
     /**
-     * @param string $UserName Username
-     * @param string $Database Database name
-     * @param string $ErrTime Error occurrence time
-     * @param string $ErrMsg Error message
+     * @var integer <p>Process ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProcessId;
+
+    /**
+     * @var string <p>client address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ClientAddr;
+
+    /**
+     * @var string <p>Session ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SessionId;
+
+    /**
+     * @var string <p>Session start time</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SessionStartTime;
+
+    /**
+     * @var string <p>Virtual transaction ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $VirtualTransactionId;
+
+    /**
+     * @var string <p>SQLSTATE error code</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SqlStateCode;
+
+    /**
+     * @var string <p>client application name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ApplicationName;
+
+    /**
+     * @param string $UserName <p>userName</p>
+     * @param string $Database <p>Database name</p>
+     * @param string $ErrTime <p>Error occurrence time</p>
+     * @param string $ErrMsg <p>Error message</p>
+     * @param integer $ProcessId <p>Process ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ClientAddr <p>client address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SessionId <p>Session ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SessionStartTime <p>Session start time</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VirtualTransactionId <p>Virtual transaction ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SqlStateCode <p>SQLSTATE error code</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ApplicationName <p>client application name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -84,6 +168,34 @@ class ErrLogDetail extends AbstractModel
 
         if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
             $this->ErrMsg = $param["ErrMsg"];
+        }
+
+        if (array_key_exists("ProcessId",$param) and $param["ProcessId"] !== null) {
+            $this->ProcessId = $param["ProcessId"];
+        }
+
+        if (array_key_exists("ClientAddr",$param) and $param["ClientAddr"] !== null) {
+            $this->ClientAddr = $param["ClientAddr"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("SessionStartTime",$param) and $param["SessionStartTime"] !== null) {
+            $this->SessionStartTime = $param["SessionStartTime"];
+        }
+
+        if (array_key_exists("VirtualTransactionId",$param) and $param["VirtualTransactionId"] !== null) {
+            $this->VirtualTransactionId = $param["VirtualTransactionId"];
+        }
+
+        if (array_key_exists("SqlStateCode",$param) and $param["SqlStateCode"] !== null) {
+            $this->SqlStateCode = $param["SqlStateCode"];
+        }
+
+        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
+            $this->ApplicationName = $param["ApplicationName"];
         }
     }
 }

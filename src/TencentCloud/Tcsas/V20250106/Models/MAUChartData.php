@@ -18,36 +18,36 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * MAU line chart data
+ * MAU line chart data.
  *
- * @method integer getDataTime() Obtain Year and month: 2024-12
- * @method void setDataTime(integer $DataTime) Set Year and month: 2024-12
- * @method integer getMAUCount() Obtain Value
- * @method void setMAUCount(integer $MAUCount) Set Value
- * @method integer getUpdateTime() Obtain Data update time, only available when MAUCount is greater than 0.
- * @method void setUpdateTime(integer $UpdateTime) Set Data update time, only available when MAUCount is greater than 0.
+ * @method integer getDataTime() Obtain Date in YYYYMM format.
+ * @method void setDataTime(integer $DataTime) Set Date in YYYYMM format.
+ * @method integer getMAUCount() Obtain MAU count.
+ * @method void setMAUCount(integer $MAUCount) Set MAU count.
+ * @method integer getUpdateTime() Obtain Data update time. Only has a value when MAUCount is greater than 0.
+ * @method void setUpdateTime(integer $UpdateTime) Set Data update time. Only has a value when MAUCount is greater than 0.
  */
 class MAUChartData extends AbstractModel
 {
     /**
-     * @var integer Year and month: 2024-12
+     * @var integer Date in YYYYMM format.
      */
     public $DataTime;
 
     /**
-     * @var integer Value
+     * @var integer MAU count.
      */
     public $MAUCount;
 
     /**
-     * @var integer Data update time, only available when MAUCount is greater than 0.
+     * @var integer Data update time. Only has a value when MAUCount is greater than 0.
      */
     public $UpdateTime;
 
     /**
-     * @param integer $DataTime Year and month: 2024-12
-     * @param integer $MAUCount Value
-     * @param integer $UpdateTime Data update time, only available when MAUCount is greater than 0.
+     * @param integer $DataTime Date in YYYYMM format.
+     * @param integer $MAUCount MAU count.
+     * @param integer $UpdateTime Data update time. Only has a value when MAUCount is greater than 0.
      */
     function __construct()
     {

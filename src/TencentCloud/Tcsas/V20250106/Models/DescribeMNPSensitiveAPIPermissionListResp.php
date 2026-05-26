@@ -18,31 +18,31 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of sensitive APIs that can be called by a mini program
+ * Response for querying the list of callable sensitive APIs of a mini program.
  *
- * @method integer getTotalCount() Obtain Total number of entries
- * @method void setTotalCount(integer $TotalCount) Set Total number of entries
- * @method array getDataList() Obtain List data
+ * @method integer getTotalCount() Obtain Total number of entries.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of entries.
+ * @method array getDataList() Obtain List data.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataList(array $DataList) Set List data
+ * @method void setDataList(array $DataList) Set List data.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DescribeMNPSensitiveAPIPermissionListResp extends AbstractModel
 {
     /**
-     * @var integer Total number of entries
+     * @var integer Total number of entries.
      */
     public $TotalCount;
 
     /**
-     * @var array List data
+     * @var array List data.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataList;
 
     /**
-     * @param integer $TotalCount Total number of entries
-     * @param array $DataList List data
+     * @param integer $TotalCount Total number of entries.
+     * @param array $DataList List data.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

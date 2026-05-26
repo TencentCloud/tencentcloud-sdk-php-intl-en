@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMNPDomain request structure.
  *
- * @method string getMNPId() Obtain Mini program ID
- * @method void setMNPId(string $MNPId) Set Mini program ID
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method array getDomain() Obtain Domain list
- * @method void setDomain(array $Domain) Set Domain list
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method array getDomain() Obtain Domain list.
+ * @method void setDomain(array $Domain) Set Domain list.
  */
 class ModifyMNPDomainRequest extends AbstractModel
 {
     /**
-     * @var string Mini program ID
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var array Domain list
+     * @var array Domain list.
      */
     public $Domain;
 
     /**
-     * @param string $MNPId Mini program ID
-     * @param string $PlatformId Platform ID
-     * @param array $Domain Domain list
+     * @param string $MNPId Mini program appid.
+     * @param string $PlatformId Platform ID.
+     * @param array $Domain Domain list.
      */
     function __construct()
     {

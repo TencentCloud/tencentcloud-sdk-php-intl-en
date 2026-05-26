@@ -18,28 +18,28 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response object of querying the rollback version list
+ * Response of querying the rollback version list.
  *
- * @method integer getTotalCount() Obtain <p>Total number of entries</p>
- * @method void setTotalCount(integer $TotalCount) Set <p>Total number of entries</p>
- * @method array getDataList() Obtain <p>List information</p>
- * @method void setDataList(array $DataList) Set <p>List information</p>
+ * @method integer getTotalCount() Obtain <p>Total number of entries.</p>
+ * @method void setTotalCount(integer $TotalCount) Set <p>Total number of entries.</p>
+ * @method array getDataList() Obtain <p>List data.</p>
+ * @method void setDataList(array $DataList) Set <p>List data.</p>
  */
 class DescribeMNGRevertOnlineVersionPageResp extends AbstractModel
 {
     /**
-     * @var integer <p>Total number of entries</p>
+     * @var integer <p>Total number of entries.</p>
      */
     public $TotalCount;
 
     /**
-     * @var array <p>List information</p>
+     * @var array <p>List data.</p>
      */
     public $DataList;
 
     /**
-     * @param integer $TotalCount <p>Total number of entries</p>
-     * @param array $DataList <p>List information</p>
+     * @param integer $TotalCount <p>Total number of entries.</p>
+     * @param array $DataList <p>List data.</p>
      */
     function __construct()
     {

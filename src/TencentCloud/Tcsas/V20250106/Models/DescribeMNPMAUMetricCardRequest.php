@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMNPMAUMetricCard request structure.
  *
- * @method integer getSourceMonth() Obtain Start time in YYYYMMDD format
- * @method void setSourceMonth(integer $SourceMonth) Set Start time in YYYYMMDD format
- * @method integer getDataType() Obtain Type: 0 Non-production data, 1 Production data 
- * @method void setDataType(integer $DataType) Set Type: 0 Non-production data, 1 Production data 
- * @method string getPlatformId() Obtain Tenant ID
- * @method void setPlatformId(string $PlatformId) Set Tenant ID
- * @method integer getTargetMonth() Obtain End time in YYYYMMDD format
- * @method void setTargetMonth(integer $TargetMonth) Set End time in YYYYMMDD format
- * @method string getApplicationId() Obtain Superapp ID starting with App
- * @method void setApplicationId(string $ApplicationId) Set Superapp ID starting with App
- * @method string getMNPId() Obtain Mini program appid, required. When provided, the query is performed based on the mini program.
- * @method void setMNPId(string $MNPId) Set Mini program appid, required. When provided, the query is performed based on the mini program.
- * @method integer getMNPTeamId() Obtain Mini program team ID, required. When provided, the query is performed based on the mini program team.
- * @method void setMNPTeamId(integer $MNPTeamId) Set Mini program team ID, required. When provided, the query is performed based on the mini program team.
+ * @method integer getSourceMonth() Obtain Start time in YYYYMMDD format.
+ * @method void setSourceMonth(integer $SourceMonth) Set Start time in YYYYMMDD format.
+ * @method integer getDataType() Obtain Data type. Valid values: 0: Non-production data; 1: Production data.
+ * @method void setDataType(integer $DataType) Set Data type. Valid values: 0: Non-production data; 1: Production data.
+ * @method string getPlatformId() Obtain Tenant ID.
+ * @method void setPlatformId(string $PlatformId) Set Tenant ID.
+ * @method integer getTargetMonth() Obtain End time in YYYYMMDD format.
+ * @method void setTargetMonth(integer $TargetMonth) Set End time in YYYYMMDD format.
+ * @method string getApplicationId() Obtain Superapp ID prefixed with "app".
+ * @method void setApplicationId(string $ApplicationId) Set Superapp ID prefixed with "app".
+ * @method string getMNPId() Obtain Mini program appid. If not empty, results are filtered by mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid. If not empty, results are filtered by mini program appid.
+ * @method integer getMNPTeamId() Obtain Mini program team ID. If not empty, results are filtered by mini program team ID.
+ * @method void setMNPTeamId(integer $MNPTeamId) Set Mini program team ID. If not empty, results are filtered by mini program team ID.
  */
 class DescribeMNPMAUMetricCardRequest extends AbstractModel
 {
     /**
-     * @var integer Start time in YYYYMMDD format
+     * @var integer Start time in YYYYMMDD format.
      */
     public $SourceMonth;
 
     /**
-     * @var integer Type: 0 Non-production data, 1 Production data 
+     * @var integer Data type. Valid values: 0: Non-production data; 1: Production data.
      */
     public $DataType;
 
     /**
-     * @var string Tenant ID
+     * @var string Tenant ID.
      */
     public $PlatformId;
 
     /**
-     * @var integer End time in YYYYMMDD format
+     * @var integer End time in YYYYMMDD format.
      */
     public $TargetMonth;
 
     /**
-     * @var string Superapp ID starting with App
+     * @var string Superapp ID prefixed with "app".
      */
     public $ApplicationId;
 
     /**
-     * @var string Mini program appid, required. When provided, the query is performed based on the mini program.
+     * @var string Mini program appid. If not empty, results are filtered by mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var integer Mini program team ID, required. When provided, the query is performed based on the mini program team.
+     * @var integer Mini program team ID. If not empty, results are filtered by mini program team ID.
      */
     public $MNPTeamId;
 
     /**
-     * @param integer $SourceMonth Start time in YYYYMMDD format
-     * @param integer $DataType Type: 0 Non-production data, 1 Production data 
-     * @param string $PlatformId Tenant ID
-     * @param integer $TargetMonth End time in YYYYMMDD format
-     * @param string $ApplicationId Superapp ID starting with App
-     * @param string $MNPId Mini program appid, required. When provided, the query is performed based on the mini program.
-     * @param integer $MNPTeamId Mini program team ID, required. When provided, the query is performed based on the mini program team.
+     * @param integer $SourceMonth Start time in YYYYMMDD format.
+     * @param integer $DataType Data type. Valid values: 0: Non-production data; 1: Production data.
+     * @param string $PlatformId Tenant ID.
+     * @param integer $TargetMonth End time in YYYYMMDD format.
+     * @param string $ApplicationId Superapp ID prefixed with "app".
+     * @param string $MNPId Mini program appid. If not empty, results are filtered by mini program appid.
+     * @param integer $MNPTeamId Mini program team ID. If not empty, results are filtered by mini program team ID.
      */
     function __construct()
     {

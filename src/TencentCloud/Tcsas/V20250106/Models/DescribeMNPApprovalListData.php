@@ -18,66 +18,66 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of mini program approval requests of the application
+ * Mini program approval list information.
  *
- * @method string getApprovalNo() Obtain Approval ticket ID
- * @method void setApprovalNo(string $ApprovalNo) Set Approval ticket ID
- * @method string getApplicationId() Obtain Application ID
- * @method void setApplicationId(string $ApplicationId) Set Application ID
- * @method integer getApprovalStatus() Obtain Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
- * @method void setApprovalStatus(integer $ApprovalStatus) Set Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
- * @method string getMNPId() Obtain Mini program ID
- * @method void setMNPId(string $MNPId) Set Mini program ID
+ * @method string getApprovalNo() Obtain Approval number.
+ * @method void setApprovalNo(string $ApprovalNo) Set Approval number.
+ * @method string getApplicationId() Obtain Superapp ID.
+ * @method void setApplicationId(string $ApplicationId) Set Superapp ID.
+ * @method integer getApprovalStatus() Obtain Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+ * @method void setApprovalStatus(integer $ApprovalStatus) Set Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
  * @method string getMNPVersion() Obtain Mini program version.
  * @method void setMNPVersion(string $MNPVersion) Set Mini program version.
- * @method integer getMNPVersionId() Obtain Mini program version ID
- * @method void setMNPVersionId(integer $MNPVersionId) Set Mini program version ID
- * @method string getApplyUser() Obtain Applicant
- * @method void setApplyUser(string $ApplyUser) Set Applicant
- * @method string getApplyTime() Obtain Application time
- * @method void setApplyTime(string $ApplyTime) Set Application time
- * @method string getMNPName() Obtain Mini program name
- * @method void setMNPName(string $MNPName) Set Mini program name
- * @method string getMNPIcon() Obtain Mini program icon
- * @method void setMNPIcon(string $MNPIcon) Set Mini program icon
- * @method string getApplicationName() Obtain Application name
- * @method void setApplicationName(string $ApplicationName) Set Application name
- * @method string getApplicationLogo() Obtain Specifies the application icon.
- * @method void setApplicationLogo(string $ApplicationLogo) Set Specifies the application icon.
- * @method string getTeamId() Obtain Team ID
- * @method void setTeamId(string $TeamId) Set Team ID
- * @method string getTeamName() Obtain Team name
- * @method void setTeamName(string $TeamName) Set Team name
- * @method string getMNPQrCodeUrl() Obtain Mini program review qr code.
- * @method void setMNPQrCodeUrl(string $MNPQrCodeUrl) Set Mini program review qr code.
- * @method string getMNPType() Obtain Mini program type
- * @method void setMNPType(string $MNPType) Set Mini program type
- * @method string getApprovalUser() Obtain Specifies the reviewer.
- * @method void setApprovalUser(string $ApprovalUser) Set Specifies the reviewer.
+ * @method integer getMNPVersionId() Obtain Mini program version ID.
+ * @method void setMNPVersionId(integer $MNPVersionId) Set Mini program version ID.
+ * @method string getApplyUser() Obtain Applicant.
+ * @method void setApplyUser(string $ApplyUser) Set Applicant.
+ * @method string getApplyTime() Obtain Application time.
+ * @method void setApplyTime(string $ApplyTime) Set Application time.
+ * @method string getMNPName() Obtain Mini program name.
+ * @method void setMNPName(string $MNPName) Set Mini program name.
+ * @method string getMNPIcon() Obtain Mini program icon.
+ * @method void setMNPIcon(string $MNPIcon) Set Mini program icon.
+ * @method string getApplicationName() Obtain Superapp name.
+ * @method void setApplicationName(string $ApplicationName) Set Superapp name.
+ * @method string getApplicationLogo() Obtain Superapp icon.
+ * @method void setApplicationLogo(string $ApplicationLogo) Set Superapp icon.
+ * @method string getTeamId() Obtain Team ID.
+ * @method void setTeamId(string $TeamId) Set Team ID.
+ * @method string getTeamName() Obtain Team name.
+ * @method void setTeamName(string $TeamName) Set Team name.
+ * @method string getMNPQrCodeUrl() Obtain Mini program approval QR code URL.
+ * @method void setMNPQrCodeUrl(string $MNPQrCodeUrl) Set Mini program approval QR code URL.
+ * @method string getMNPType() Obtain Mini program category.
+ * @method void setMNPType(string $MNPType) Set Mini program category.
+ * @method string getApprovalUser() Obtain Approver.
+ * @method void setApprovalUser(string $ApprovalUser) Set Approver.
  * @method string getApprovalTime() Obtain Approval time.
  * @method void setApprovalTime(string $ApprovalTime) Set Approval time.
- * @method string getApprovalNote() Obtain Approval notes
- * @method void setApprovalNote(string $ApprovalNote) Set Approval notes
+ * @method string getApprovalNote() Obtain Approval note.
+ * @method void setApprovalNote(string $ApprovalNote) Set Approval note.
  */
 class DescribeMNPApprovalListData extends AbstractModel
 {
     /**
-     * @var string Approval ticket ID
+     * @var string Approval number.
      */
     public $ApprovalNo;
 
     /**
-     * @var string Application ID
+     * @var string Superapp ID.
      */
     public $ApplicationId;
 
     /**
-     * @var integer Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
+     * @var integer Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
      */
     public $ApprovalStatus;
 
     /**
-     * @var string Mini program ID
+     * @var string Mini program appid.
      */
     public $MNPId;
 
@@ -87,62 +87,62 @@ class DescribeMNPApprovalListData extends AbstractModel
     public $MNPVersion;
 
     /**
-     * @var integer Mini program version ID
+     * @var integer Mini program version ID.
      */
     public $MNPVersionId;
 
     /**
-     * @var string Applicant
+     * @var string Applicant.
      */
     public $ApplyUser;
 
     /**
-     * @var string Application time
+     * @var string Application time.
      */
     public $ApplyTime;
 
     /**
-     * @var string Mini program name
+     * @var string Mini program name.
      */
     public $MNPName;
 
     /**
-     * @var string Mini program icon
+     * @var string Mini program icon.
      */
     public $MNPIcon;
 
     /**
-     * @var string Application name
+     * @var string Superapp name.
      */
     public $ApplicationName;
 
     /**
-     * @var string Specifies the application icon.
+     * @var string Superapp icon.
      */
     public $ApplicationLogo;
 
     /**
-     * @var string Team ID
+     * @var string Team ID.
      */
     public $TeamId;
 
     /**
-     * @var string Team name
+     * @var string Team name.
      */
     public $TeamName;
 
     /**
-     * @var string Mini program review qr code.
+     * @var string Mini program approval QR code URL.
      */
     public $MNPQrCodeUrl;
 
     /**
-     * @var string Mini program type
+     * @var string Mini program category.
      */
     public $MNPType;
 
     /**
-     * @var string Specifies the reviewer.
+     * @var string Approver.
      */
     public $ApprovalUser;
 
@@ -152,30 +152,30 @@ class DescribeMNPApprovalListData extends AbstractModel
     public $ApprovalTime;
 
     /**
-     * @var string Approval notes
+     * @var string Approval note.
      */
     public $ApprovalNote;
 
     /**
-     * @param string $ApprovalNo Approval ticket ID
-     * @param string $ApplicationId Application ID
-     * @param integer $ApprovalStatus Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
-     * @param string $MNPId Mini program ID
+     * @param string $ApprovalNo Approval number.
+     * @param string $ApplicationId Superapp ID.
+     * @param integer $ApprovalStatus Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+     * @param string $MNPId Mini program appid.
      * @param string $MNPVersion Mini program version.
-     * @param integer $MNPVersionId Mini program version ID
-     * @param string $ApplyUser Applicant
-     * @param string $ApplyTime Application time
-     * @param string $MNPName Mini program name
-     * @param string $MNPIcon Mini program icon
-     * @param string $ApplicationName Application name
-     * @param string $ApplicationLogo Specifies the application icon.
-     * @param string $TeamId Team ID
-     * @param string $TeamName Team name
-     * @param string $MNPQrCodeUrl Mini program review qr code.
-     * @param string $MNPType Mini program type
-     * @param string $ApprovalUser Specifies the reviewer.
+     * @param integer $MNPVersionId Mini program version ID.
+     * @param string $ApplyUser Applicant.
+     * @param string $ApplyTime Application time.
+     * @param string $MNPName Mini program name.
+     * @param string $MNPIcon Mini program icon.
+     * @param string $ApplicationName Superapp name.
+     * @param string $ApplicationLogo Superapp icon.
+     * @param string $TeamId Team ID.
+     * @param string $TeamName Team name.
+     * @param string $MNPQrCodeUrl Mini program approval QR code URL.
+     * @param string $MNPType Mini program category.
+     * @param string $ApprovalUser Approver.
      * @param string $ApprovalTime Approval time.
-     * @param string $ApprovalNote Approval notes
+     * @param string $ApprovalNote Approval note.
      */
     function __construct()
     {

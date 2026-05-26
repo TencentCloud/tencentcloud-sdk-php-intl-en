@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMNPDomainACL request structure.
  *
- * @method string getMNPId() Obtain Mini program ID
- * @method void setMNPId(string $MNPId) Set Mini program ID
- * @method array getDomain() Obtain Domain name list
- * @method void setDomain(array $Domain) Set Domain name list
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
+ * @method string getMNPId() Obtain Mini program appid.
+ * @method void setMNPId(string $MNPId) Set Mini program appid.
+ * @method array getDomain() Obtain List of domains.
+ * @method void setDomain(array $Domain) Set List of domains.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
  */
 class CreateMNPDomainACLRequest extends AbstractModel
 {
     /**
-     * @var string Mini program ID
+     * @var string Mini program appid.
      */
     public $MNPId;
 
     /**
-     * @var array Domain name list
+     * @var array List of domains.
      */
     public $Domain;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @param string $MNPId Mini program ID
-     * @param array $Domain Domain name list
-     * @param string $PlatformId Platform ID
+     * @param string $MNPId Mini program appid.
+     * @param array $Domain List of domains.
+     * @param string $PlatformId Platform ID.
      */
     function __construct()
     {

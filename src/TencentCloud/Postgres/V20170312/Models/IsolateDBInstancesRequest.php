@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IsolateDBInstances request structure.
  *
- * @method array getDBInstanceIdSet() Obtain List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
+ * @method array getDBInstanceIdSet() Obtain <p>Instance ID collection, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API. Note: Simultaneous isolation of multiple instances is not recommended. It is advisable to import a single instance ID per operation.</p>
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set <p>Instance ID collection, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API. Note: Simultaneous isolation of multiple instances is not recommended. It is advisable to import a single instance ID per operation.</p>
  */
 class IsolateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
+     * @var array <p>Instance ID collection, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API. Note: Simultaneous isolation of multiple instances is not recommended. It is advisable to import a single instance ID per operation.</p>
      */
     public $DBInstanceIdSet;
 
     /**
-     * @param array $DBInstanceIdSet List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
+     * @param array $DBInstanceIdSet <p>Instance ID collection, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API. Note: Simultaneous isolation of multiple instances is not recommended. It is advisable to import a single instance ID per operation.</p>
      */
     function __construct()
     {

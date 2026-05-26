@@ -47,13 +47,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTags() Obtain List of tags to bind with a compute environment. Each compute environment can have up to 10 tags.
  * @method void setTags(array $Tags) Set List of tags to bind with a compute environment. Each compute environment can have up to 10 tags.
  * @method string getNotificationTarget() Obtain Target of the notification
-Values: `CMQ`, `TDMQ_CMQ`
-`CMQ`: Tencent Cloud CMQ (default)
-`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.<br/>Note: CMQ has been discontinued. Please use `TDMQ_CMQ`. See [CMQ Queue Migration to TDMQ for CMQ](https://intl.cloud.tencent.com/document/product/406/60860?from_cn_redirect=1)
+Values: `TDMQ_CMQ`
+`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.
  * @method void setNotificationTarget(string $NotificationTarget) Set Target of the notification
-Values: `CMQ`, `TDMQ_CMQ`
-`CMQ`: Tencent Cloud CMQ (default)
-`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.<br/>Note: CMQ has been discontinued. Please use `TDMQ_CMQ`. See [CMQ Queue Migration to TDMQ for CMQ](https://intl.cloud.tencent.com/document/product/406/60860?from_cn_redirect=1)
+Values: `TDMQ_CMQ`
+`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.
  */
 class NamedComputeEnv extends AbstractModel
 {
@@ -124,9 +122,8 @@ class NamedComputeEnv extends AbstractModel
 
     /**
      * @var string Target of the notification
-Values: `CMQ`, `TDMQ_CMQ`
-`CMQ`: Tencent Cloud CMQ (default)
-`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.<br/>Note: CMQ has been discontinued. Please use `TDMQ_CMQ`. See [CMQ Queue Migration to TDMQ for CMQ](https://intl.cloud.tencent.com/document/product/406/60860?from_cn_redirect=1)
+Values: `TDMQ_CMQ`
+`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.
      */
     public $NotificationTarget;
 
@@ -145,9 +142,8 @@ Values: `CMQ`, `TDMQ_CMQ`
      * @param integer $ResourceMaxRetryCount When the instances are failed to be created or returned because of exceptions, the related compute node will retry to create instances periodically. This parameter specifies the maximum retry attempts. The max value is 100 and the default value is `7`.
      * @param array $Tags List of tags to bind with a compute environment. Each compute environment can have up to 10 tags.
      * @param string $NotificationTarget Target of the notification
-Values: `CMQ`, `TDMQ_CMQ`
-`CMQ`: Tencent Cloud CMQ (default)
-`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.<br/>Note: CMQ has been discontinued. Please use `TDMQ_CMQ`. See [CMQ Queue Migration to TDMQ for CMQ](https://intl.cloud.tencent.com/document/product/406/60860?from_cn_redirect=1)
+Values: `TDMQ_CMQ`
+`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.
      */
     function __construct()
     {

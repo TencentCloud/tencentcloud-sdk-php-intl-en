@@ -22,16 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAccountName() Obtain Database account name
  * @method void setAccountName(string $AccountName) Set Database account name
+ * @method string getHost() Obtain Host
+ * @method void setHost(string $Host) Set Host
  * @method string getDescription() Obtain Database account description
  * @method void setDescription(string $Description) Set Database account description
  * @method string getCreateTime() Obtain Creation time
  * @method void setCreateTime(string $CreateTime) Set Creation time
  * @method string getUpdateTime() Obtain Update time
  * @method void setUpdateTime(string $UpdateTime) Set Update time
- * @method string getHost() Obtain Host
- * @method void setHost(string $Host) Set Host
  * @method integer getMaxUserConnections() Obtain The max connections
  * @method void setMaxUserConnections(integer $MaxUserConnections) Set The max connections
+ * @method integer getPasswordRotation() Obtain Whether password rotation is enabled (0: turn off; 1: turn on)
+ * @method void setPasswordRotation(integer $PasswordRotation) Set Whether password rotation is enabled (0: turn off; 1: turn on)
  */
 class Account extends AbstractModel
 {
@@ -39,6 +41,11 @@ class Account extends AbstractModel
      * @var string Database account name
      */
     public $AccountName;
+
+    /**
+     * @var string Host
+     */
+    public $Host;
 
     /**
      * @var string Database account description
@@ -56,22 +63,23 @@ class Account extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string Host
-     */
-    public $Host;
-
-    /**
      * @var integer The max connections
      */
     public $MaxUserConnections;
 
     /**
+     * @var integer Whether password rotation is enabled (0: turn off; 1: turn on)
+     */
+    public $PasswordRotation;
+
+    /**
      * @param string $AccountName Database account name
+     * @param string $Host Host
      * @param string $Description Database account description
      * @param string $CreateTime Creation time
      * @param string $UpdateTime Update time
-     * @param string $Host Host
      * @param integer $MaxUserConnections The max connections
+     * @param integer $PasswordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
      */
     function __construct()
     {
@@ -90,6 +98,10 @@ class Account extends AbstractModel
             $this->AccountName = $param["AccountName"];
         }
 
+        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
+            $this->Host = $param["Host"];
+        }
+
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
         }
@@ -102,12 +114,12 @@ class Account extends AbstractModel
             $this->UpdateTime = $param["UpdateTime"];
         }
 
-        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
-            $this->Host = $param["Host"];
-        }
-
         if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
             $this->MaxUserConnections = $param["MaxUserConnections"];
+        }
+
+        if (array_key_exists("PasswordRotation",$param) and $param["PasswordRotation"] !== null) {
+            $this->PasswordRotation = $param["PasswordRotation"];
         }
     }
 }

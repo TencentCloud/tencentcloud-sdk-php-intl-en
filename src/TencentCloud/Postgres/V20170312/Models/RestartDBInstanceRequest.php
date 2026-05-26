@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RestartDBInstance request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-6r233v55
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-6r233v55
+ * @method string getDBInstanceId() Obtain Specifies the instance ID, such as postgres-6r233v55. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Specifies the instance ID, such as postgres-6r233v55. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  */
 class RestartDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of postgres-6r233v55
+     * @var string Specifies the instance ID, such as postgres-6r233v55. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
     /**
-     * @param string $DBInstanceId Instance ID in the format of postgres-6r233v55
+     * @param string $DBInstanceId Specifies the instance ID, such as postgres-6r233v55. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     function __construct()
     {

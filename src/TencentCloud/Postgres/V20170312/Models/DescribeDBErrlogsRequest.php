@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBErrlogs request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
- * @method string getStartTime() Obtain u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
- * @method void setStartTime(string $StartTime) Set u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
- * @method string getEndTime() Obtain u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
- * @method void setEndTime(string $EndTime) Set u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
- * @method string getDatabaseName() Obtain Database name
- * @method void setDatabaseName(string $DatabaseName) Set Database name
- * @method array getSearchKeys() Obtain Keywords used for search
- * @method void setSearchKeys(array $SearchKeys) Set Keywords used for search
- * @method integer getLimit() Obtain Number of results returned per page. Value range: 1-100. Default value: `50`.	
- * @method void setLimit(integer $Limit) Set Number of results returned per page. Value range: 1-100. Default value: `50`.	
- * @method integer getOffset() Obtain Data offset, which starts from 0. Default value: `0`.	
- * @method void setOffset(integer $Offset) Set Data offset, which starts from 0. Default value: `0`.	
+ * @method string getDBInstanceId() Obtain <p>Instance ID. It can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+ * @method void setDBInstanceId(string $DBInstanceId) Set <p>Instance ID. It can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+ * @method string getStartTime() Obtain <p>Query start time, such as 2018-01-01 00:00:00. Log retention time defaults to 7 days. Start time cannot exceed the retention period.</p>
+ * @method void setStartTime(string $StartTime) Set <p>Query start time, such as 2018-01-01 00:00:00. Log retention time defaults to 7 days. Start time cannot exceed the retention period.</p>
+ * @method string getEndTime() Obtain <p>Query end time, in the format of 2018-01-01 00:00:00.</p>
+ * @method void setEndTime(string $EndTime) Set <p>Query end time, in the format of 2018-01-01 00:00:00.</p>
+ * @method string getDatabaseName() Obtain <p>Database name</p>
+ * @method void setDatabaseName(string $DatabaseName) Set <p>Database name</p>
+ * @method array getSearchKeys() Obtain <p>Search keywords.</p>
+ * @method void setSearchKeys(array $SearchKeys) Set <p>Search keywords.</p>
+ * @method integer getLimit() Obtain <p>Number of results returned per page, with a value range of 1-100. The default value is `50`.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of results returned per page, with a value range of 1-100. The default value is `50`.</p>
+ * @method integer getOffset() Obtain <p>Data offset, which starts from 0. The default value is 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Data offset, which starts from 0. The default value is 0.</p>
+ * @method array getLogFilters() Obtain <p>Log filter criteria. Format is [{Type: "ApplicationName", Compare: "INC", Value: ["123"]}].</p>
+ * @method void setLogFilters(array $LogFilters) Set <p>Log filter criteria. Format is [{Type: "ApplicationName", Compare: "INC", Value: ["123"]}].</p>
  */
 class DescribeDBErrlogsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+     * @var string <p>Instance ID. It can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
      */
     public $DBInstanceId;
 
     /**
-     * @var string u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
+     * @var string <p>Query start time, such as 2018-01-01 00:00:00. Log retention time defaults to 7 days. Start time cannot exceed the retention period.</p>
      */
     public $StartTime;
 
     /**
-     * @var string u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
+     * @var string <p>Query end time, in the format of 2018-01-01 00:00:00.</p>
      */
     public $EndTime;
 
     /**
-     * @var string Database name
+     * @var string <p>Database name</p>
      */
     public $DatabaseName;
 
     /**
-     * @var array Keywords used for search
+     * @var array <p>Search keywords.</p>
      */
     public $SearchKeys;
 
     /**
-     * @var integer Number of results returned per page. Value range: 1-100. Default value: `50`.	
+     * @var integer <p>Number of results returned per page, with a value range of 1-100. The default value is `50`.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Data offset, which starts from 0. Default value: `0`.	
+     * @var integer <p>Data offset, which starts from 0. The default value is 0.</p>
      */
     public $Offset;
 
     /**
-     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
-     * @param string $StartTime u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
-     * @param string $EndTime u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
-     * @param string $DatabaseName Database name
-     * @param array $SearchKeys Keywords used for search
-     * @param integer $Limit Number of results returned per page. Value range: 1-100. Default value: `50`.	
-     * @param integer $Offset Data offset, which starts from 0. Default value: `0`.	
+     * @var array <p>Log filter criteria. Format is [{Type: "ApplicationName", Compare: "INC", Value: ["123"]}].</p>
+     */
+    public $LogFilters;
+
+    /**
+     * @param string $DBInstanceId <p>Instance ID. It can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+     * @param string $StartTime <p>Query start time, such as 2018-01-01 00:00:00. Log retention time defaults to 7 days. Start time cannot exceed the retention period.</p>
+     * @param string $EndTime <p>Query end time, in the format of 2018-01-01 00:00:00.</p>
+     * @param string $DatabaseName <p>Database name</p>
+     * @param array $SearchKeys <p>Search keywords.</p>
+     * @param integer $Limit <p>Number of results returned per page, with a value range of 1-100. The default value is `50`.</p>
+     * @param integer $Offset <p>Data offset, which starts from 0. The default value is 0.</p>
+     * @param array $LogFilters <p>Log filter criteria. Format is [{Type: "ApplicationName", Compare: "INC", Value: ["123"]}].</p>
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class DescribeDBErrlogsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("LogFilters",$param) and $param["LogFilters"] !== null) {
+            $this->LogFilters = [];
+            foreach ($param["LogFilters"] as $key => $value){
+                $obj = new LogFilter();
+                $obj->deserialize($value);
+                array_push($this->LogFilters, $obj);
+            }
         }
     }
 }

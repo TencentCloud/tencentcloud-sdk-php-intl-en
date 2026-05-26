@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RO group information
  *
- * @method string getReadOnlyGroupId() Obtain RO group identifier
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set RO group identifier
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getReadOnlyGroupName() Obtain RO group name
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setReadOnlyGroupName(string $ReadOnlyGroupName) Set RO group name
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getProjectId() Obtain Project ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setProjectId(integer $ProjectId) Set Project ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getMasterDBInstanceId() Obtain Primary instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setMasterDBInstanceId(string $MasterDBInstanceId) Set Primary instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getMinDelayEliminateReserve() Obtain The minimum number of read-only replicas that must be retained in an RO group
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setMinDelayEliminateReserve(integer $MinDelayEliminateReserve) Set The minimum number of read-only replicas that must be retained in an RO group
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getMaxReplayLatency() Obtain Delayed log size threshold
- * @method void setMaxReplayLatency(integer $MaxReplayLatency) Set Delayed log size threshold
- * @method integer getReplayLatencyEliminate() Obtain Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
- * @method void setReplayLatencyEliminate(integer $ReplayLatencyEliminate) Set Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
- * @method float getMaxReplayLag() Obtain Delay threshold
- * @method void setMaxReplayLag(float $MaxReplayLag) Set Delay threshold
- * @method integer getReplayLagEliminate() Obtain Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
- * @method void setReplayLagEliminate(integer $ReplayLagEliminate) Set Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+ * @method string getReadOnlyGroupId() Obtain RO group identifier.
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set RO group identifier.
+ * @method string getReadOnlyGroupName() Obtain Specifies the read-only group name.
+ * @method void setReadOnlyGroupName(string $ReadOnlyGroupName) Set Specifies the read-only group name.
+ * @method integer getProjectId() Obtain Project ID.
+ * @method void setProjectId(integer $ProjectId) Set Project ID.
+ * @method string getMasterDBInstanceId() Obtain Primary instance id.
+ * @method void setMasterDBInstanceId(string $MasterDBInstanceId) Set Primary instance id.
+ * @method integer getMinDelayEliminateReserve() Obtain Specifies the minimum number of instances to retain.
+ * @method void setMinDelayEliminateReserve(integer $MinDelayEliminateReserve) Set Specifies the minimum number of instances to retain.
+ * @method integer getMaxReplayLatency() Obtain Specifies the delay threshold for space size in MB.
+ * @method void setMaxReplayLatency(integer $MaxReplayLatency) Set Specifies the delay threshold for space size in MB.
+ * @method integer getReplayLatencyEliminate() Obtain Specifies the delay size switch. valid values: 0 - turn off; 1 - turn on.
+ * @method void setReplayLatencyEliminate(integer $ReplayLatencyEliminate) Set Specifies the delay size switch. valid values: 0 - turn off; 1 - turn on.
+ * @method float getMaxReplayLag() Obtain Delay time size threshold, in seconds.
+ * @method void setMaxReplayLag(float $MaxReplayLag) Set Delay time size threshold, in seconds.
+ * @method integer getReplayLagEliminate() Obtain Delay time switch. 0 - turn off. 1 - turn on.
+ * @method void setReplayLagEliminate(integer $ReplayLagEliminate) Set Delay time switch. 0 - turn off. 1 - turn on.
  * @method string getVpcId() Obtain VPC ID
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method string getSubnetId() Obtain Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRegion() Obtain Region ID
  * @method void setRegion(string $Region) Set Region ID
  * @method string getZone() Obtain Availability zone ID
  * @method void setZone(string $Zone) Set Availability zone ID
- * @method string getStatus() Obtain Status
- * @method void setStatus(string $Status) Set Status
+ * @method string getStatus() Obtain Status. valid values: creating, ok, modifying, deleting, deleted.
+ * @method void setStatus(string $Status) Set Status. valid values: creating, ok, modifying, deleting, deleted.
  * @method array getReadOnlyDBInstanceList() Obtain Instance details
  * @method void setReadOnlyDBInstanceList(array $ReadOnlyDBInstanceList) Set Instance details
  * @method integer getRebalance() Obtain Whether to enable automatic load balancing
@@ -74,52 +62,47 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class ReadOnlyGroup extends AbstractModel
 {
     /**
-     * @var string RO group identifier
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string RO group identifier.
      */
     public $ReadOnlyGroupId;
 
     /**
-     * @var string RO group name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Specifies the read-only group name.
      */
     public $ReadOnlyGroupName;
 
     /**
-     * @var integer Project ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Project ID.
      */
     public $ProjectId;
 
     /**
-     * @var string Primary instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Primary instance id.
      */
     public $MasterDBInstanceId;
 
     /**
-     * @var integer The minimum number of read-only replicas that must be retained in an RO group
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Specifies the minimum number of instances to retain.
      */
     public $MinDelayEliminateReserve;
 
     /**
-     * @var integer Delayed log size threshold
+     * @var integer Specifies the delay threshold for space size in MB.
      */
     public $MaxReplayLatency;
 
     /**
-     * @var integer Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+     * @var integer Specifies the delay size switch. valid values: 0 - turn off; 1 - turn on.
      */
     public $ReplayLatencyEliminate;
 
     /**
-     * @var float Delay threshold
+     * @var float Delay time size threshold, in seconds.
      */
     public $MaxReplayLag;
 
     /**
-     * @var integer Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+     * @var integer Delay time switch. 0 - turn off. 1 - turn on.
      */
     public $ReplayLagEliminate;
 
@@ -130,7 +113,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @var string Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $SubnetId;
 
@@ -145,7 +127,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Zone;
 
     /**
-     * @var string Status
+     * @var string Status. valid values: creating, ok, modifying, deleting, deleted.
      */
     public $Status;
 
@@ -171,26 +153,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $NetworkAccessList;
 
     /**
-     * @param string $ReadOnlyGroupId RO group identifier
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ReadOnlyGroupName RO group name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $ProjectId Project ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $MasterDBInstanceId Primary instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $MinDelayEliminateReserve The minimum number of read-only replicas that must be retained in an RO group
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $MaxReplayLatency Delayed log size threshold
-     * @param integer $ReplayLatencyEliminate Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-     * @param float $MaxReplayLag Delay threshold
-     * @param integer $ReplayLagEliminate Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+     * @param string $ReadOnlyGroupId RO group identifier.
+     * @param string $ReadOnlyGroupName Specifies the read-only group name.
+     * @param integer $ProjectId Project ID.
+     * @param string $MasterDBInstanceId Primary instance id.
+     * @param integer $MinDelayEliminateReserve Specifies the minimum number of instances to retain.
+     * @param integer $MaxReplayLatency Specifies the delay threshold for space size in MB.
+     * @param integer $ReplayLatencyEliminate Specifies the delay size switch. valid values: 0 - turn off; 1 - turn on.
+     * @param float $MaxReplayLag Delay time size threshold, in seconds.
+     * @param integer $ReplayLagEliminate Delay time switch. 0 - turn off. 1 - turn on.
      * @param string $VpcId VPC ID
      * @param string $SubnetId Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Region Region ID
      * @param string $Zone Availability zone ID
-     * @param string $Status Status
+     * @param string $Status Status. valid values: creating, ok, modifying, deleting, deleted.
      * @param array $ReadOnlyDBInstanceList Instance details
      * @param integer $Rebalance Whether to enable automatic load balancing
      * @param array $DBInstanceNetInfo Network information

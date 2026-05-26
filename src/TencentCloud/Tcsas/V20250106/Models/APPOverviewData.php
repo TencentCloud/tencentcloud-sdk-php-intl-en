@@ -18,124 +18,124 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Superapp overview data details
+ * Superapp overview data details.
  *
- * @method integer getAllActiveDeviceNum() Obtain Superapp active device count
- * @method void setAllActiveDeviceNum(integer $AllActiveDeviceNum) Set Superapp active device count
- * @method integer getAllNewDeviceNum() Obtain Superapp new device count
- * @method void setAllNewDeviceNum(integer $AllNewDeviceNum) Set Superapp new device count
- * @method integer getCorpNum() Obtain Mini program team count
- * @method void setCorpNum(integer $CorpNum) Set Mini program team count
- * @method integer getGameActiveDeviceNum() Obtain Mini game active device count
- * @method void setGameActiveDeviceNum(integer $GameActiveDeviceNum) Set Mini game active device count
- * @method integer getGameNewDeviceNum() Obtain Mini game new device count
- * @method void setGameNewDeviceNum(integer $GameNewDeviceNum) Set Mini game new device count
- * @method integer getMiniAppNum() Obtain Created mini program count
+ * @method integer getAllActiveDeviceNum() Obtain Superapp active device count.
+ * @method void setAllActiveDeviceNum(integer $AllActiveDeviceNum) Set Superapp active device count.
+ * @method integer getAllNewDeviceNum() Obtain Superapp new device count.
+ * @method void setAllNewDeviceNum(integer $AllNewDeviceNum) Set Superapp new device count.
+ * @method integer getCorpNum() Obtain Mini program team count.
+ * @method void setCorpNum(integer $CorpNum) Set Mini program team count.
+ * @method integer getGameActiveDeviceNum() Obtain Mini game active device count.
+ * @method void setGameActiveDeviceNum(integer $GameActiveDeviceNum) Set Mini game active device count.
+ * @method integer getGameNewDeviceNum() Obtain Mini game new device count.
+ * @method void setGameNewDeviceNum(integer $GameNewDeviceNum) Set Mini game new device count.
+ * @method integer getMiniAppNum() Obtain Created mini program count.
 
- * @method void setMiniAppNum(integer $MiniAppNum) Set Created mini program count
+ * @method void setMiniAppNum(integer $MiniAppNum) Set Created mini program count.
 
- * @method integer getMngNum() Obtain Created mini game count
+ * @method integer getMngNum() Obtain Created mini game count.
 
- * @method void setMngNum(integer $MngNum) Set Created mini game count
+ * @method void setMngNum(integer $MngNum) Set Created mini game count.
 
- * @method integer getNewDeviceNum() Obtain Mini program new device count
- * @method void setNewDeviceNum(integer $NewDeviceNum) Set Mini program new device count
- * @method integer getOnlineMiniAppNum() Obtain Released mini program count
+ * @method integer getNewDeviceNum() Obtain Mini program new device count.
+ * @method void setNewDeviceNum(integer $NewDeviceNum) Set Mini program new device count.
+ * @method integer getOnlineMiniAppNum() Obtain Released mini program count.
 
- * @method void setOnlineMiniAppNum(integer $OnlineMiniAppNum) Set Released mini program count
+ * @method void setOnlineMiniAppNum(integer $OnlineMiniAppNum) Set Released mini program count.
 
- * @method integer getOnlineMngNum() Obtain Released mini game count
+ * @method integer getOnlineMngNum() Obtain Released mini game count.
 
- * @method void setOnlineMngNum(integer $OnlineMngNum) Set Released mini game count
+ * @method void setOnlineMngNum(integer $OnlineMngNum) Set Released mini game count.
 
- * @method integer getVisitNum() Obtain Mini program active device count
- * @method void setVisitNum(integer $VisitNum) Set Mini program active device count
- * @method string getFlushTime() Obtain Data refresh timestamp
- * @method void setFlushTime(string $FlushTime) Set Data refresh timestamp
+ * @method integer getVisitNum() Obtain Mini program active device count.
+ * @method void setVisitNum(integer $VisitNum) Set Mini program active device count.
+ * @method string getFlushTime() Obtain Data refresh timestamp.
+ * @method void setFlushTime(string $FlushTime) Set Data refresh timestamp.
  */
 class APPOverviewData extends AbstractModel
 {
     /**
-     * @var integer Superapp active device count
+     * @var integer Superapp active device count.
      */
     public $AllActiveDeviceNum;
 
     /**
-     * @var integer Superapp new device count
+     * @var integer Superapp new device count.
      */
     public $AllNewDeviceNum;
 
     /**
-     * @var integer Mini program team count
+     * @var integer Mini program team count.
      */
     public $CorpNum;
 
     /**
-     * @var integer Mini game active device count
+     * @var integer Mini game active device count.
      */
     public $GameActiveDeviceNum;
 
     /**
-     * @var integer Mini game new device count
+     * @var integer Mini game new device count.
      */
     public $GameNewDeviceNum;
 
     /**
-     * @var integer Created mini program count
+     * @var integer Created mini program count.
 
      */
     public $MiniAppNum;
 
     /**
-     * @var integer Created mini game count
+     * @var integer Created mini game count.
 
      */
     public $MngNum;
 
     /**
-     * @var integer Mini program new device count
+     * @var integer Mini program new device count.
      */
     public $NewDeviceNum;
 
     /**
-     * @var integer Released mini program count
+     * @var integer Released mini program count.
 
      */
     public $OnlineMiniAppNum;
 
     /**
-     * @var integer Released mini game count
+     * @var integer Released mini game count.
 
      */
     public $OnlineMngNum;
 
     /**
-     * @var integer Mini program active device count
+     * @var integer Mini program active device count.
      */
     public $VisitNum;
 
     /**
-     * @var string Data refresh timestamp
+     * @var string Data refresh timestamp.
      */
     public $FlushTime;
 
     /**
-     * @param integer $AllActiveDeviceNum Superapp active device count
-     * @param integer $AllNewDeviceNum Superapp new device count
-     * @param integer $CorpNum Mini program team count
-     * @param integer $GameActiveDeviceNum Mini game active device count
-     * @param integer $GameNewDeviceNum Mini game new device count
-     * @param integer $MiniAppNum Created mini program count
+     * @param integer $AllActiveDeviceNum Superapp active device count.
+     * @param integer $AllNewDeviceNum Superapp new device count.
+     * @param integer $CorpNum Mini program team count.
+     * @param integer $GameActiveDeviceNum Mini game active device count.
+     * @param integer $GameNewDeviceNum Mini game new device count.
+     * @param integer $MiniAppNum Created mini program count.
 
-     * @param integer $MngNum Created mini game count
+     * @param integer $MngNum Created mini game count.
 
-     * @param integer $NewDeviceNum Mini program new device count
-     * @param integer $OnlineMiniAppNum Released mini program count
+     * @param integer $NewDeviceNum Mini program new device count.
+     * @param integer $OnlineMiniAppNum Released mini program count.
 
-     * @param integer $OnlineMngNum Released mini game count
+     * @param integer $OnlineMngNum Released mini game count.
 
-     * @param integer $VisitNum Mini program active device count
-     * @param string $FlushTime Data refresh timestamp
+     * @param integer $VisitNum Mini program active device count.
+     * @param string $FlushTime Data refresh timestamp.
      */
     function __construct()
     {

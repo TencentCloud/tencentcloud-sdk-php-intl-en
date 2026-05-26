@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeDBInstanceMajorVersion request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID.
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID.
- * @method string getTargetDBKernelVersion() Obtain Target kernel version number, where upgradeable target kernel version numbers can be acquired through API DescribeDBVersions.
- * @method void setTargetDBKernelVersion(string $TargetDBKernelVersion) Set Target kernel version number, where upgradeable target kernel version numbers can be acquired through API DescribeDBVersions.
+ * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+ * @method string getTargetDBKernelVersion() Obtain Specifies the target kernel version number, where upgradeable target kernel version numbers can be obtained through API [DescribeDBVersions](https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1).
+ * @method void setTargetDBKernelVersion(string $TargetDBKernelVersion) Set Specifies the target kernel version number, where upgradeable target kernel version numbers can be obtained through API [DescribeDBVersions](https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1).
  * @method boolean getUpgradeCheck() Obtain Whether it is verification mode: if UpgradeCheck is True, it means only kernel version compatibility check will be conducted, without actual upgrade operations, and there will be no affect on the original instance. The check results can be viewed through the upgrade logs.
  * @method void setUpgradeCheck(boolean $UpgradeCheck) Set Whether it is verification mode: if UpgradeCheck is True, it means only kernel version compatibility check will be conducted, without actual upgrade operations, and there will be no affect on the original instance. The check results can be viewed through the upgrade logs.
  * @method boolean getBackupBeforeUpgrade() Obtain Pre-upgrade backup option: True means a full backup is required before upgrade, and False means a full backup is not required before upgrade. If there is an existing backup set that can restore the instance to its pre-upgrade state, False can be selected; otherwise, True should be specified. This parameter is invalid when UpgradeCheck is True.
@@ -70,12 +70,12 @@ This parameter is invalid when UpgradeCheck is True.
 class UpgradeDBInstanceMajorVersionRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public $DBInstanceId;
 
     /**
-     * @var string Target kernel version number, where upgradeable target kernel version numbers can be acquired through API DescribeDBVersions.
+     * @var string Specifies the target kernel version number, where upgradeable target kernel version numbers can be obtained through API [DescribeDBVersions](https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1).
      */
     public $TargetDBKernelVersion;
 
@@ -129,8 +129,8 @@ This parameter is invalid when UpgradeCheck is True.
     public $UpgradeTimeEnd;
 
     /**
-     * @param string $DBInstanceId Instance ID.
-     * @param string $TargetDBKernelVersion Target kernel version number, where upgradeable target kernel version numbers can be acquired through API DescribeDBVersions.
+     * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param string $TargetDBKernelVersion Specifies the target kernel version number, where upgradeable target kernel version numbers can be obtained through API [DescribeDBVersions](https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1).
      * @param boolean $UpgradeCheck Whether it is verification mode: if UpgradeCheck is True, it means only kernel version compatibility check will be conducted, without actual upgrade operations, and there will be no affect on the original instance. The check results can be viewed through the upgrade logs.
      * @param boolean $BackupBeforeUpgrade Pre-upgrade backup option: True means a full backup is required before upgrade, and False means a full backup is not required before upgrade. If there is an existing backup set that can restore the instance to its pre-upgrade state, False can be selected; otherwise, True should be specified. This parameter is invalid when UpgradeCheck is True.
      * @param integer $StatisticsRefreshOption Statistics collection option, which is used to run ANALYZE on the primary instance to update system statistics after the upgrade. Valid values include:

@@ -22,7 +22,7 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLanguage() Obtain Convert speech to text supported languages, "zh" chinese is selected by default.
 
-You can unlock different languages by purchasing the "AI intelligent recognition duration package" or claiming the trial version of the monthly subscription package. for detailed instructions, see: [AI intelligent recognition billing description](https://www.tencentcloud.com/document/product/647/111976?from_cn_redirect=1).
+You can unlock different languages by purchasing the "AI intelligent recognition duration package" or claiming the trial version of the monthly subscription package. 
 
 Supported languages for different speech to text package versions are as follows:.
 
@@ -67,7 +67,7 @@ Basic language engine:.
 If the language you need is not available, contact our technical staff.
  * @method void setLanguage(string $Language) Set Convert speech to text supported languages, "zh" chinese is selected by default.
 
-You can unlock different languages by purchasing the "AI intelligent recognition duration package" or claiming the trial version of the monthly subscription package. for detailed instructions, see: [AI intelligent recognition billing description](https://www.tencentcloud.com/document/product/647/111976?from_cn_redirect=1).
+You can unlock different languages by purchasing the "AI intelligent recognition duration package" or claiming the trial version of the monthly subscription package. 
 
 Supported languages for different speech to text package versions are as follows:.
 
@@ -130,7 +130,7 @@ class STTConfig extends AbstractModel
     /**
      * @var string Convert speech to text supported languages, "zh" chinese is selected by default.
 
-You can unlock different languages by purchasing the "AI intelligent recognition duration package" or claiming the trial version of the monthly subscription package. for detailed instructions, see: [AI intelligent recognition billing description](https://www.tencentcloud.com/document/product/647/111976?from_cn_redirect=1).
+You can unlock different languages by purchasing the "AI intelligent recognition duration package" or claiming the trial version of the monthly subscription package. 
 
 Supported languages for different speech to text package versions are as follows:.
 
@@ -202,7 +202,7 @@ Note: does not support entering "zh-dialect", "16k_zh_edu", "16k_zh_medical", "1
     /**
      * @param string $Language Convert speech to text supported languages, "zh" chinese is selected by default.
 
-You can unlock different languages by purchasing the "AI intelligent recognition duration package" or claiming the trial version of the monthly subscription package. for detailed instructions, see: [AI intelligent recognition billing description](https://www.tencentcloud.com/document/product/647/111976?from_cn_redirect=1).
+You can unlock different languages by purchasing the "AI intelligent recognition duration package" or claiming the trial version of the monthly subscription package. 
 
 Supported languages for different speech to text package versions are as follows:.
 

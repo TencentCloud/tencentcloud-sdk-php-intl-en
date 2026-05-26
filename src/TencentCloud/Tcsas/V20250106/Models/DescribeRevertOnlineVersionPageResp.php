@@ -18,28 +18,28 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response of querying the rollback version list
+ * Response of querying the rollback version list.
  *
- * @method integer getTotalCount() Obtain Total number of entries
- * @method void setTotalCount(integer $TotalCount) Set Total number of entries
- * @method array getDataList() Obtain List information
- * @method void setDataList(array $DataList) Set List information
+ * @method integer getTotalCount() Obtain Total number of entries.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of entries.
+ * @method array getDataList() Obtain List data.
+ * @method void setDataList(array $DataList) Set List data.
  */
 class DescribeRevertOnlineVersionPageResp extends AbstractModel
 {
     /**
-     * @var integer Total number of entries
+     * @var integer Total number of entries.
      */
     public $TotalCount;
 
     /**
-     * @var array List information
+     * @var array List data.
      */
     public $DataList;
 
     /**
-     * @param integer $TotalCount Total number of entries
-     * @param array $DataList List information
+     * @param integer $TotalCount Total number of entries.
+     * @param array $DataList List data.
      */
     function __construct()
     {

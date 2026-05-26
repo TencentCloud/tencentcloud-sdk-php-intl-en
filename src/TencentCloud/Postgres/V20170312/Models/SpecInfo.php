@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set AZ abbreviate, which corresponds to the `Zone` field of `ZoneSet`
  * @method array getSpecItemInfoList() Obtain Specification details list
  * @method void setSpecItemInfoList(array $SpecItemInfoList) Set Specification details list
- * @method array getSupportKMSRegions() Obtain Regions where KMS is supported
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setSupportKMSRegions(array $SupportKMSRegions) Set Regions where KMS is supported
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method array getSupportKMSRegions() Obtain Specifies the region that supports KMS.
+ * @method void setSupportKMSRegions(array $SupportKMSRegions) Set Specifies the region that supports KMS.
  */
 class SpecInfo extends AbstractModel
 {
@@ -49,8 +47,7 @@ class SpecInfo extends AbstractModel
     public $SpecItemInfoList;
 
     /**
-     * @var array Regions where KMS is supported
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array Specifies the region that supports KMS.
      */
     public $SupportKMSRegions;
 
@@ -58,8 +55,7 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $Region Region abbreviation, which corresponds to the `Region` field of `RegionSet`
      * @param string $Zone AZ abbreviate, which corresponds to the `Zone` field of `ZoneSet`
      * @param array $SpecItemInfoList Specification details list
-     * @param array $SupportKMSRegions Regions where KMS is supported
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param array $SupportKMSRegions Specifies the region that supports KMS.
      */
     function __construct()
     {

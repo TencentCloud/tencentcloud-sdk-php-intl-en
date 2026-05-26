@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstancesDeniedActions request structure.
  *
- * @method array getInstanceIdSet() Obtain None
- * @method void setInstanceIdSet(array $InstanceIdSet) Set None
+ * @method array getInstanceIdSet() Obtain Nothing
+ * @method void setInstanceIdSet(array $InstanceIdSet) Set Nothing
  */
 class DescribeInstancesDeniedActionsRequest extends AbstractModel
 {
     /**
-     * @var array None
+     * @var array Nothing
      */
     public $InstanceIdSet;
 
     /**
-     * @param array $InstanceIdSet None
+     * @param array $InstanceIdSet Nothing
      */
     function __construct()
     {

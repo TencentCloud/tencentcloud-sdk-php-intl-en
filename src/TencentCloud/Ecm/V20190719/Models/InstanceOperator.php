@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Executable operations for the instance
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain This is Instance ID
+ * @method void setInstanceId(string $InstanceId) Set This is Instance ID
  * @method array getDeniedActions() Obtain Prohibited operations for the instance
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDeniedActions(array $DeniedActions) Set Prohibited operations for the instance
@@ -30,7 +30,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class InstanceOperator extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string This is Instance ID
      */
     public $InstanceId;
 
@@ -41,7 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DeniedActions;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId This is Instance ID
      * @param array $DeniedActions Prohibited operations for the instance
 Note: this field may return null, indicating that no valid values can be obtained.
      */

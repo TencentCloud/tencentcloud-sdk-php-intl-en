@@ -18,28 +18,28 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mini program MAU details
+ * Mini program MAU details.
  *
- * @method string getMNPName() Obtain Mini program name
- * @method void setMNPName(string $MNPName) Set Mini program name
- * @method array getDataList() Obtain MAU details
- * @method void setDataList(array $DataList) Set MAU details
+ * @method string getMNPName() Obtain Mini program name.
+ * @method void setMNPName(string $MNPName) Set Mini program name.
+ * @method array getDataList() Obtain MAU details.
+ * @method void setDataList(array $DataList) Set MAU details.
  */
 class MAUDetail extends AbstractModel
 {
     /**
-     * @var string Mini program name
+     * @var string Mini program name.
      */
     public $MNPName;
 
     /**
-     * @var array MAU details
+     * @var array MAU details.
      */
     public $DataList;
 
     /**
-     * @param string $MNPName Mini program name
-     * @param array $DataList MAU details
+     * @param string $MNPName Mini program name.
+     * @param array $DataList MAU details.
      */
     function __construct()
     {

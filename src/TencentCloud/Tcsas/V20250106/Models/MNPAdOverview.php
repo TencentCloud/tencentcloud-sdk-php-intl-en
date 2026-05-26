@@ -18,71 +18,71 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mini program advertisement overview
+ * Mini program ad overview.
  *
- * @method string getEstimatedEarnings() Obtain Estimated revenue
+ * @method string getEstimatedEarnings() Obtain Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEstimatedEarnings(string $EstimatedEarnings) Set Estimated revenue
+ * @method void setEstimatedEarnings(string $EstimatedEarnings) Set Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getECPM() Obtain Effective Cost Per Mille
+ * @method string getECPM() Obtain eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setECPM(string $ECPM) Set Effective Cost Per Mille
+ * @method void setECPM(string $ECPM) Set eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRequestsNumber() Obtain Requests
+ * @method integer getRequestsNumber() Obtain Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRequestsNumber(integer $RequestsNumber) Set Requests
+ * @method void setRequestsNumber(integer $RequestsNumber) Set Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getImpressions() Obtain Impressions
+ * @method integer getImpressions() Obtain Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setImpressions(integer $Impressions) Set Impressions
+ * @method void setImpressions(integer $Impressions) Set Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getClicksNumber() Obtain Taps
+ * @method integer getClicksNumber() Obtain Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClicksNumber(integer $ClicksNumber) Set Taps
+ * @method void setClicksNumber(integer $ClicksNumber) Set Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MNPAdOverview extends AbstractModel
 {
     /**
-     * @var string Estimated revenue
+     * @var string Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EstimatedEarnings;
 
     /**
-     * @var string Effective Cost Per Mille
+     * @var string eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ECPM;
 
     /**
-     * @var integer Requests
+     * @var integer Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RequestsNumber;
 
     /**
-     * @var integer Impressions
+     * @var integer Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Impressions;
 
     /**
-     * @var integer Taps
+     * @var integer Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClicksNumber;
 
     /**
-     * @param string $EstimatedEarnings Estimated revenue
+     * @param string $EstimatedEarnings Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ECPM Effective Cost Per Mille
+     * @param string $ECPM eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RequestsNumber Requests
+     * @param integer $RequestsNumber Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Impressions Impressions
+     * @param integer $Impressions Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ClicksNumber Taps
+     * @param integer $ClicksNumber Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

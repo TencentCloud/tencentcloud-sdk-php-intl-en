@@ -18,179 +18,179 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Payment overview data
+ * Payment overview data.
  *
- * @method integer getOrderMNPNum() Obtain Number of mini programs involved in the order
+ * @method integer getOrderMNPNum() Obtain Mini program count with orders.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOrderMNPNum(integer $OrderMNPNum) Set Number of mini programs involved in the order
+ * @method void setOrderMNPNum(integer $OrderMNPNum) Set Mini program count with orders.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getOrderNum() Obtain Total orders
+ * @method integer getOrderNum() Obtain Total orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOrderNum(integer $OrderNum) Set Total orders
+ * @method void setOrderNum(integer $OrderNum) Set Total orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getOrderPaidNum() Obtain Total paid orders
+ * @method integer getOrderPaidNum() Obtain Total paid orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOrderPaidNum(integer $OrderPaidNum) Set Total paid orders
+ * @method void setOrderPaidNum(integer $OrderPaidNum) Set Total paid orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getOrderRefundNum() Obtain Total refunded orders
+ * @method integer getOrderRefundNum() Obtain Number of refund orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOrderRefundNum(integer $OrderRefundNum) Set Total refunded orders
+ * @method void setOrderRefundNum(integer $OrderRefundNum) Set Number of refund orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getOrderUnpaidNum() Obtain Total unpaid orders
+ * @method integer getOrderUnpaidNum() Obtain Total unpaid orders.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOrderUnpaidNum(integer $OrderUnpaidNum) Set Total unpaid orders
+ * @method void setOrderUnpaidNum(integer $OrderUnpaidNum) Set Total unpaid orders.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getOrderUserNum() Obtain Total order users
+ * @method integer getOrderUserNum() Obtain Total order users.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOrderUserNum(integer $OrderUserNum) Set Total order users
+ * @method void setOrderUserNum(integer $OrderUserNum) Set Total order users.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getPaidUserNum() Obtain Total paying users
+ * @method integer getPaidUserNum() Obtain Total paying users.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPaidUserNum(integer $PaidUserNum) Set Total paying users
+ * @method void setPaidUserNum(integer $PaidUserNum) Set Total paying users.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPaidAmount() Obtain Amount paid
+ * @method string getPaidAmount() Obtain Amount paid.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPaidAmount(string $PaidAmount) Set Amount paid
+ * @method void setPaidAmount(string $PaidAmount) Set Amount paid.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRefundAmount() Obtain Total amount refunded
+ * @method string getRefundAmount() Obtain Total amount refunded.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRefundAmount(string $RefundAmount) Set Total amount refunded
+ * @method void setRefundAmount(string $RefundAmount) Set Total amount refunded.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTotalAmount() Obtain Total order amount
+ * @method string getTotalAmount() Obtain Total order amount.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTotalAmount(string $TotalAmount) Set Total order amount
+ * @method void setTotalAmount(string $TotalAmount) Set Total order amount.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUnpaidAmount() Obtain Unpaid amount
+ * @method string getUnpaidAmount() Obtain Unpaid amount.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUnpaidAmount(string $UnpaidAmount) Set Unpaid amount
+ * @method void setUnpaidAmount(string $UnpaidAmount) Set Unpaid amount.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getUpdateTime() Obtain Timestamp
+ * @method integer getUpdateTime() Obtain Timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateTime(integer $UpdateTime) Set Timestamp
+ * @method void setUpdateTime(integer $UpdateTime) Set Timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDataTime() Obtain Data date
+ * @method string getDataTime() Obtain Data time.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataTime(string $DataTime) Set Data date
+ * @method void setDataTime(string $DataTime) Set Data time.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MNPPaymentOverview extends AbstractModel
 {
     /**
-     * @var integer Number of mini programs involved in the order
+     * @var integer Mini program count with orders.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OrderMNPNum;
 
     /**
-     * @var integer Total orders
+     * @var integer Total orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OrderNum;
 
     /**
-     * @var integer Total paid orders
+     * @var integer Total paid orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OrderPaidNum;
 
     /**
-     * @var integer Total refunded orders
+     * @var integer Number of refund orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OrderRefundNum;
 
     /**
-     * @var integer Total unpaid orders
+     * @var integer Total unpaid orders.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OrderUnpaidNum;
 
     /**
-     * @var integer Total order users
+     * @var integer Total order users.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OrderUserNum;
 
     /**
-     * @var integer Total paying users
+     * @var integer Total paying users.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PaidUserNum;
 
     /**
-     * @var string Amount paid
+     * @var string Amount paid.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PaidAmount;
 
     /**
-     * @var string Total amount refunded
+     * @var string Total amount refunded.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RefundAmount;
 
     /**
-     * @var string Total order amount
+     * @var string Total order amount.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TotalAmount;
 
     /**
-     * @var string Unpaid amount
+     * @var string Unpaid amount.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UnpaidAmount;
 
     /**
-     * @var integer Timestamp
+     * @var integer Timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
     /**
-     * @var string Data date
+     * @var string Data time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataTime;
 
     /**
-     * @param integer $OrderMNPNum Number of mini programs involved in the order
+     * @param integer $OrderMNPNum Mini program count with orders.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $OrderNum Total orders
+     * @param integer $OrderNum Total orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $OrderPaidNum Total paid orders
+     * @param integer $OrderPaidNum Total paid orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $OrderRefundNum Total refunded orders
+     * @param integer $OrderRefundNum Number of refund orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $OrderUnpaidNum Total unpaid orders
+     * @param integer $OrderUnpaidNum Total unpaid orders.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $OrderUserNum Total order users
+     * @param integer $OrderUserNum Total order users.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $PaidUserNum Total paying users
+     * @param integer $PaidUserNum Total paying users.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PaidAmount Amount paid
+     * @param string $PaidAmount Amount paid.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RefundAmount Total amount refunded
+     * @param string $RefundAmount Total amount refunded.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TotalAmount Total order amount
+     * @param string $TotalAmount Total order amount.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UnpaidAmount Unpaid amount
+     * @param string $UnpaidAmount Unpaid amount.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $UpdateTime Timestamp
+     * @param integer $UpdateTime Timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DataTime Data date
+     * @param string $DataTime Data time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

@@ -18,32 +18,20 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Unified operation success ID - integer
+ * Unified ID data returned on successful operation (Integer type).
  *
- * @method integer getResourceId() Obtain Specifies the resource ID returned by the business.
-0: no trial version available.
-A trial version is currently available and uploaded by the current user.
-2: a trial version is currently available and uploaded by another user.
- * @method void setResourceId(integer $ResourceId) Set Specifies the resource ID returned by the business.
-0: no trial version available.
-A trial version is currently available and uploaded by the current user.
-2: a trial version is currently available and uploaded by another user.
+ * @method integer getResourceId() Obtain Resource ID returned by the operation. Valid values: 0: No preview exists; 1: Preview exists and was uploaded by the current user; 2: Preview exists and was uploaded by another user. Example value: 2940.
+ * @method void setResourceId(integer $ResourceId) Set Resource ID returned by the operation. Valid values: 0: No preview exists; 1: Preview exists and was uploaded by the current user; 2: Preview exists and was uploaded by another user. Example value: 2940.
  */
 class ResourceIdInfo extends AbstractModel
 {
     /**
-     * @var integer Specifies the resource ID returned by the business.
-0: no trial version available.
-A trial version is currently available and uploaded by the current user.
-2: a trial version is currently available and uploaded by another user.
+     * @var integer Resource ID returned by the operation. Valid values: 0: No preview exists; 1: Preview exists and was uploaded by the current user; 2: Preview exists and was uploaded by another user. Example value: 2940.
      */
     public $ResourceId;
 
     /**
-     * @param integer $ResourceId Specifies the resource ID returned by the business.
-0: no trial version available.
-A trial version is currently available and uploaded by the current user.
-2: a trial version is currently available and uploaded by another user.
+     * @param integer $ResourceId Resource ID returned by the operation. Valid values: 0: No preview exists; 1: Preview exists and was uploaded by the current user; 2: Preview exists and was uploaded by another user. Example value: 2940.
      */
     function __construct()
     {

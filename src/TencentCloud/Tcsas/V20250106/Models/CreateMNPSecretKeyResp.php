@@ -18,28 +18,28 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Creates secret key response.
+ * Response for creating a mini program secret key.
  *
- * @method string getKeyId() Obtain <p>Secret ID</p>
- * @method void setKeyId(string $KeyId) Set <p>Secret ID</p>
- * @method string getSecretKey() Obtain <p>Secret key</p>
- * @method void setSecretKey(string $SecretKey) Set <p>Secret key</p>
+ * @method string getKeyId() Obtain <p>Key ID.</p>
+ * @method void setKeyId(string $KeyId) Set <p>Key ID.</p>
+ * @method string getSecretKey() Obtain <p>Secret key.</p>
+ * @method void setSecretKey(string $SecretKey) Set <p>Secret key.</p>
  */
 class CreateMNPSecretKeyResp extends AbstractModel
 {
     /**
-     * @var string <p>Secret ID</p>
+     * @var string <p>Key ID.</p>
      */
     public $KeyId;
 
     /**
-     * @var string <p>Secret key</p>
+     * @var string <p>Secret key.</p>
      */
     public $SecretKey;
 
     /**
-     * @param string $KeyId <p>Secret ID</p>
-     * @param string $SecretKey <p>Secret key</p>
+     * @param string $KeyId <p>Key ID.</p>
+     * @param string $SecretKey <p>Secret key.</p>
      */
     function __construct()
     {

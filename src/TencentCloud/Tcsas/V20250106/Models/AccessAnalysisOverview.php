@@ -18,59 +18,59 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Overview of mini game visit analysis data
+ * Access analysis overview.
  *
- * @method AccessAnalysisDetail getBaseData() Obtain Overview of visit analysis data
+ * @method AccessAnalysisDetail getBaseData() Obtain Access analysis overview data. 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBaseData(AccessAnalysisDetail $BaseData) Set Overview of visit analysis data
+ * @method void setBaseData(AccessAnalysisDetail $BaseData) Set Access analysis overview data. 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method Overview getOverview() Obtain This API does not respond.
+ * @method Overview getOverview() Obtain Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOverview(Overview $Overview) Set This API does not respond.
+ * @method void setOverview(Overview $Overview) Set Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method AccessAnalysisDetail getPageData() Obtain This API does not respond.
+ * @method AccessAnalysisDetail getPageData() Obtain Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPageData(AccessAnalysisDetail $PageData) Set This API does not respond.
+ * @method void setPageData(AccessAnalysisDetail $PageData) Set Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method AccessAnalysisDetail getPayment() Obtain This API does not respond.
+ * @method AccessAnalysisDetail getPayment() Obtain Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPayment(AccessAnalysisDetail $Payment) Set This API does not respond.
+ * @method void setPayment(AccessAnalysisDetail $Payment) Set Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AccessAnalysisOverview extends AbstractModel
 {
     /**
-     * @var AccessAnalysisDetail Overview of visit analysis data
+     * @var AccessAnalysisDetail Access analysis overview data. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BaseData;
 
     /**
-     * @var Overview This API does not respond.
+     * @var Overview Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Overview;
 
     /**
-     * @var AccessAnalysisDetail This API does not respond.
+     * @var AccessAnalysisDetail Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PageData;
 
     /**
-     * @var AccessAnalysisDetail This API does not respond.
+     * @var AccessAnalysisDetail Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Payment;
 
     /**
-     * @param AccessAnalysisDetail $BaseData Overview of visit analysis data
+     * @param AccessAnalysisDetail $BaseData Access analysis overview data. 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Overview $Overview This API does not respond.
+     * @param Overview $Overview Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AccessAnalysisDetail $PageData This API does not respond.
+     * @param AccessAnalysisDetail $PageData Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AccessAnalysisDetail $Payment This API does not respond.
+     * @param AccessAnalysisDetail $Payment Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

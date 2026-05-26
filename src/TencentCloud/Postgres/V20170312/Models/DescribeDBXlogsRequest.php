@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBXlogs request structure.
  *
- * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-4wdeb0zv.
- * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-4wdeb0zv.
- * @method string getStartTime() Obtain Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
- * @method void setStartTime(string $StartTime) Set Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
- * @method string getEndTime() Obtain Query end time in the format of 2018-06-10 17:06:38
- * @method void setEndTime(string $EndTime) Set Query end time in the format of 2018-06-10 17:06:38
- * @method integer getOffset() Obtain Page number for data return in paged query. Pagination starts from 0
- * @method void setOffset(integer $Offset) Set Page number for data return in paged query. Pagination starts from 0
- * @method integer getLimit() Obtain Number of entries returned per page in paged query. Value range: 1-100.
- * @method void setLimit(integer $Limit) Set Number of entries returned per page in paged query. Value range: 1-100.
+ * @method string getDBInstanceId() Obtain Instance ID. for example, postgres-4wdeb0zv.
+ * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. for example, postgres-4wdeb0zv.
+ * @method string getStartTime() Obtain Query start time, such as 2018-06-10 17:06:38. start time should not be less than 7 days ago.
+ * @method void setStartTime(string $StartTime) Set Query start time, such as 2018-06-10 17:06:38. start time should not be less than 7 days ago.
+ * @method string getEndTime() Obtain Query end time, in the format of 2018-06-10 17:06:38.
+ * @method void setEndTime(string $EndTime) Set Query end time, in the format of 2018-06-10 17:06:38.
+ * @method integer getOffset() Obtain Pagination return indicates which page of entries to return. counting begins from page 0.
+ * @method void setOffset(integer $Offset) Set Pagination return indicates which page of entries to return. counting begins from page 0.
+ * @method integer getLimit() Obtain Pagination return indicates how many items per page. value range: 1-100.
+ * @method void setLimit(integer $Limit) Set Pagination return indicates how many items per page. value range: 1-100.
  */
 class DescribeDBXlogsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of postgres-4wdeb0zv.
+     * @var string Instance ID. for example, postgres-4wdeb0zv.
      */
     public $DBInstanceId;
 
     /**
-     * @var string Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
+     * @var string Query start time, such as 2018-06-10 17:06:38. start time should not be less than 7 days ago.
      */
     public $StartTime;
 
     /**
-     * @var string Query end time in the format of 2018-06-10 17:06:38
+     * @var string Query end time, in the format of 2018-06-10 17:06:38.
      */
     public $EndTime;
 
     /**
-     * @var integer Page number for data return in paged query. Pagination starts from 0
+     * @var integer Pagination return indicates which page of entries to return. counting begins from page 0.
      */
     public $Offset;
 
     /**
-     * @var integer Number of entries returned per page in paged query. Value range: 1-100.
+     * @var integer Pagination return indicates how many items per page. value range: 1-100.
      */
     public $Limit;
 
     /**
-     * @param string $DBInstanceId Instance ID in the format of postgres-4wdeb0zv.
-     * @param string $StartTime Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
-     * @param string $EndTime Query end time in the format of 2018-06-10 17:06:38
-     * @param integer $Offset Page number for data return in paged query. Pagination starts from 0
-     * @param integer $Limit Number of entries returned per page in paged query. Value range: 1-100.
+     * @param string $DBInstanceId Instance ID. for example, postgres-4wdeb0zv.
+     * @param string $StartTime Query start time, such as 2018-06-10 17:06:38. start time should not be less than 7 days ago.
+     * @param string $EndTime Query end time, in the format of 2018-06-10 17:06:38.
+     * @param integer $Offset Pagination return indicates which page of entries to return. counting begins from page 0.
+     * @param integer $Limit Pagination return indicates how many items per page. value range: 1-100.
      */
     function __construct()
     {

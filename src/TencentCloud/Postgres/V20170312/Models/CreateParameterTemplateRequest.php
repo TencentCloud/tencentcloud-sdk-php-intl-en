@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTemplateName() Obtain Template name, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@).
  * @method void setTemplateName(string $TemplateName) Set Template name, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@).
- * @method string getDBMajorVersion() Obtain The major database version number, such as 11, 12, 13.
- * @method void setDBMajorVersion(string $DBMajorVersion) Set The major database version number, such as 11, 12, 13.
+ * @method string getDBMajorVersion() Obtain Specifies the major version of database, such as 11, 12, 13. can be obtained through the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
+ * @method void setDBMajorVersion(string $DBMajorVersion) Set Specifies the major version of database, such as 11, 12, 13. can be obtained through the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
  * @method string getDBEngine() Obtain Database engine, such as postgresql, mssql_compatible.
  * @method void setDBEngine(string $DBEngine) Set Database engine, such as postgresql, mssql_compatible.
  * @method string getTemplateDescription() Obtain Parameter template description, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@).
@@ -37,7 +37,7 @@ class CreateParameterTemplateRequest extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var string The major database version number, such as 11, 12, 13.
+     * @var string Specifies the major version of database, such as 11, 12, 13. can be obtained through the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
      */
     public $DBMajorVersion;
 
@@ -53,7 +53,7 @@ class CreateParameterTemplateRequest extends AbstractModel
 
     /**
      * @param string $TemplateName Template name, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@).
-     * @param string $DBMajorVersion The major database version number, such as 11, 12, 13.
+     * @param string $DBMajorVersion Specifies the major version of database, such as 11, 12, 13. can be obtained through the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
      * @param string $DBEngine Database engine, such as postgresql, mssql_compatible.
      * @param string $TemplateDescription Parameter template description, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@).
      */

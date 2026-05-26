@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGlobalDomainACL request structure.
  *
- * @method integer getOffset() Obtain Page offset
- * @method void setOffset(integer $Offset) Set Page offset
- * @method integer getLimit() Obtain Number of results per page
- * @method void setLimit(integer $Limit) Set Number of results per page
- * @method string getPlatformId() Obtain Platform ID
- * @method void setPlatformId(string $PlatformId) Set Platform ID
- * @method array getDomainTypes() Obtain Domain type. 1: Allowed; 2: Blocked
- * @method void setDomainTypes(array $DomainTypes) Set Domain type. 1: Allowed; 2: Blocked
- * @method string getKeyword() Obtain Domain names to be queried
- * @method void setKeyword(string $Keyword) Set Domain names to be queried
+ * @method integer getOffset() Obtain Pagination offset. 
+ * @method void setOffset(integer $Offset) Set Pagination offset. 
+ * @method integer getLimit() Obtain Number of entries per page.
+ * @method void setLimit(integer $Limit) Set Number of entries per page.
+ * @method string getPlatformId() Obtain Platform ID.
+ * @method void setPlatformId(string $PlatformId) Set Platform ID.
+ * @method array getDomainTypes() Obtain Domain type. Valid value: 1: Allowed; 2: Blocked.
+ * @method void setDomainTypes(array $DomainTypes) Set Domain type. Valid value: 1: Allowed; 2: Blocked.
+ * @method string getKeyword() Obtain Search keyword (domain).
+ * @method void setKeyword(string $Keyword) Set Search keyword (domain).
  */
 class DescribeGlobalDomainACLRequest extends AbstractModel
 {
     /**
-     * @var integer Page offset
+     * @var integer Pagination offset. 
      */
     public $Offset;
 
     /**
-     * @var integer Number of results per page
+     * @var integer Number of entries per page.
      */
     public $Limit;
 
     /**
-     * @var string Platform ID
+     * @var string Platform ID.
      */
     public $PlatformId;
 
     /**
-     * @var array Domain type. 1: Allowed; 2: Blocked
+     * @var array Domain type. Valid value: 1: Allowed; 2: Blocked.
      */
     public $DomainTypes;
 
     /**
-     * @var string Domain names to be queried
+     * @var string Search keyword (domain).
      */
     public $Keyword;
 
     /**
-     * @param integer $Offset Page offset
-     * @param integer $Limit Number of results per page
-     * @param string $PlatformId Platform ID
-     * @param array $DomainTypes Domain type. 1: Allowed; 2: Blocked
-     * @param string $Keyword Domain names to be queried
+     * @param integer $Offset Pagination offset. 
+     * @param integer $Limit Number of entries per page.
+     * @param string $PlatformId Platform ID.
+     * @param array $DomainTypes Domain type. Valid value: 1: Allowed; 2: Blocked.
+     * @param string $Keyword Search keyword (domain).
      */
     function __construct()
     {
