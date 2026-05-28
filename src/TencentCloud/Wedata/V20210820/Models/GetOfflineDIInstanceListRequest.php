@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPageIndex() Obtain Which Page
  * @method void setPageIndex(integer $PageIndex) Set Which Page
- * @method integer getPageSize() Obtain Number of Items per Page
- * @method void setPageSize(integer $PageSize) Set Number of Items per Page
+ * @method integer getPageSize() Obtain Number of Items per Page.
+ * @method void setPageSize(integer $PageSize) Set Number of Items per Page.
  * @method string getProjectId() Obtain Project ID
  * @method void setProjectId(string $ProjectId) Set Project ID
  * @method SearchConditionNew getSearchCondition() Obtain No
@@ -37,7 +37,7 @@ class GetOfflineDIInstanceListRequest extends AbstractModel
     public $PageIndex;
 
     /**
-     * @var integer Number of Items per Page
+     * @var integer Number of Items per Page.
      */
     public $PageSize;
 
@@ -53,7 +53,7 @@ class GetOfflineDIInstanceListRequest extends AbstractModel
 
     /**
      * @param integer $PageIndex Which Page
-     * @param integer $PageSize Number of Items per Page
+     * @param integer $PageSize Number of Items per Page.
      * @param string $ProjectId Project ID
      * @param SearchConditionNew $SearchCondition No
      */

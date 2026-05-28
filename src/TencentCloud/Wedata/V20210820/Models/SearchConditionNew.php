@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Query Instance Criteria (new)
  *
- * @method SearchConditionInstanceNew getInstance() Obtain Query Framework, required
- * @method void setInstance(SearchConditionInstanceNew $Instance) Set Query Framework, required
+ * @method SearchConditionInstanceNew getInstance() Obtain Query Framework, required.
+ * @method void setInstance(SearchConditionInstanceNew $Instance) Set Query Framework, required.
  * @method string getKeyword() Obtain Query keyword (Task ID exact match, Task Name fuzzy match), optional
  * @method void setKeyword(string $Keyword) Set Query keyword (Task ID exact match, Task Name fuzzy match), optional
  * @method string getSort() Obtain Sorting Order (asc, desc)
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class SearchConditionNew extends AbstractModel
 {
     /**
-     * @var SearchConditionInstanceNew Query Framework, required
+     * @var SearchConditionInstanceNew Query Framework, required.
      */
     public $Instance;
 
@@ -52,7 +52,7 @@ class SearchConditionNew extends AbstractModel
     public $SortCol;
 
     /**
-     * @param SearchConditionInstanceNew $Instance Query Framework, required
+     * @param SearchConditionInstanceNew $Instance Query Framework, required.
      * @param string $Keyword Query keyword (Task ID exact match, Task Name fuzzy match), optional
      * @param string $Sort Sorting Order (asc, desc)
      * @param string $SortCol Sort Column (costTime Runtime duration, startTime Start Time, state Instance status, curRunDate Data Timestamp)
