@@ -20,74 +20,75 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Access proxy configuration.
  *
- * @method integer getProxyCount() Obtain Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
- * @method void setProxyCount(integer $ProxyCount) Set Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
- * @method integer getCpu() Obtain Number of CPU cores
- * @method void setCpu(integer $Cpu) Set Number of CPU cores
- * @method integer getMem() Obtain Memory.
- * @method void setMem(integer $Mem) Set Memory.
- * @method string getConnectionPoolType() Obtain Connection pool type: SessionConnectionPool (session-level connection pool).
- * @method void setConnectionPoolType(string $ConnectionPoolType) Set Connection pool type: SessionConnectionPool (session-level connection pool).
- * @method string getOpenConnectionPool() Obtain Whether to enable the connection pool. valid values: yes (enable), no (not enabled).
- * @method void setOpenConnectionPool(string $OpenConnectionPool) Set Whether to enable the connection pool. valid values: yes (enable), no (not enabled).
- * @method integer getConnectionPoolTimeOut() Obtain Connection pool threshold. measurement unit (seconds).
- * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set Connection pool threshold. measurement unit (seconds).
- * @method string getDescription() Obtain Description.
- * @method void setDescription(string $Description) Set Description.
- * @method array getProxyZones() Obtain Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
- * @method void setProxyZones(array $ProxyZones) Set Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+ * @method integer getProxyCount() Obtain <p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p>
+ * @method void setProxyCount(integer $ProxyCount) Set <p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p>
+ * @method integer getCpu() Obtain <p>cpu cores</p>
+ * @method void setCpu(integer $Cpu) Set <p>cpu cores</p>
+ * @method integer getMem() Obtain <p>Memory</p>
+ * @method void setMem(integer $Mem) Set <p>Memory</p>
+ * @method string getConnectionPoolType() Obtain <p>Connection pool type: SessionConnectionPool (session-level connection pool)</p>
+ * @method void setConnectionPoolType(string $ConnectionPoolType) Set <p>Connection pool type: SessionConnectionPool (session-level connection pool)</p>
+ * @method string getOpenConnectionPool() Obtain <p>Whether the connection pool is enabled, yes-enable, no-disable</p>
+ * @method void setOpenConnectionPool(string $OpenConnectionPool) Set <p>Whether the connection pool is enabled, yes-enable, no-disable</p>
+ * @method integer getConnectionPoolTimeOut() Obtain <p>Connection pool threshold: Measurement unit (seconds)</p>
+ * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set <p>Connection pool threshold: Measurement unit (seconds)</p>
+ * @method string getDescription() Obtain <p>description</p>
+ * @method void setDescription(string $Description) Set <p>description</p>
+ * @method array getProxyZones() Obtain <p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p>
+ * @method void setProxyZones(array $ProxyZones) Set <p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p>
  */
 class ProxyConfig extends AbstractModel
 {
     /**
-     * @var integer Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+     * @var integer <p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p>
+     * @deprecated
      */
     public $ProxyCount;
 
     /**
-     * @var integer Number of CPU cores
+     * @var integer <p>cpu cores</p>
      */
     public $Cpu;
 
     /**
-     * @var integer Memory.
+     * @var integer <p>Memory</p>
      */
     public $Mem;
 
     /**
-     * @var string Connection pool type: SessionConnectionPool (session-level connection pool).
+     * @var string <p>Connection pool type: SessionConnectionPool (session-level connection pool)</p>
      */
     public $ConnectionPoolType;
 
     /**
-     * @var string Whether to enable the connection pool. valid values: yes (enable), no (not enabled).
+     * @var string <p>Whether the connection pool is enabled, yes-enable, no-disable</p>
      */
     public $OpenConnectionPool;
 
     /**
-     * @var integer Connection pool threshold. measurement unit (seconds).
+     * @var integer <p>Connection pool threshold: Measurement unit (seconds)</p>
      */
     public $ConnectionPoolTimeOut;
 
     /**
-     * @var string Description.
+     * @var string <p>description</p>
      */
     public $Description;
 
     /**
-     * @var array Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+     * @var array <p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p>
      */
     public $ProxyZones;
 
     /**
-     * @param integer $ProxyCount Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
-     * @param integer $Cpu Number of CPU cores
-     * @param integer $Mem Memory.
-     * @param string $ConnectionPoolType Connection pool type: SessionConnectionPool (session-level connection pool).
-     * @param string $OpenConnectionPool Whether to enable the connection pool. valid values: yes (enable), no (not enabled).
-     * @param integer $ConnectionPoolTimeOut Connection pool threshold. measurement unit (seconds).
-     * @param string $Description Description.
-     * @param array $ProxyZones Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+     * @param integer $ProxyCount <p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p>
+     * @param integer $Cpu <p>cpu cores</p>
+     * @param integer $Mem <p>Memory</p>
+     * @param string $ConnectionPoolType <p>Connection pool type: SessionConnectionPool (session-level connection pool)</p>
+     * @param string $OpenConnectionPool <p>Whether the connection pool is enabled, yes-enable, no-disable</p>
+     * @param integer $ConnectionPoolTimeOut <p>Connection pool threshold: Measurement unit (seconds)</p>
+     * @param string $Description <p>description</p>
+     * @param array $ProxyZones <p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p>
      */
     function __construct()
     {

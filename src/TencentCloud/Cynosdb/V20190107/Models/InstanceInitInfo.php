@@ -20,90 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance initialization configuration information
  *
- * @method integer getCpu() Obtain Instance CPU
- * @method void setCpu(integer $Cpu) Set Instance CPU
- * @method integer getMemory() Obtain Instance memory
- * @method void setMemory(integer $Memory) Set Instance memory
- * @method string getInstanceType() Obtain Instance type. Valid values:`rw`, `ro`.
- * @method void setInstanceType(string $InstanceType) Set Instance type. Valid values:`rw`, `ro`.
- * @method integer getInstanceCount() Obtain Number of the instances. Value range: 1-15.
- * @method void setInstanceCount(integer $InstanceCount) Set Number of the instances. Value range: 1-15.
- * @method integer getMinRoCount() Obtain Minimum number of serverless instances. Value range: 1-15.
- * @method void setMinRoCount(integer $MinRoCount) Set Minimum number of serverless instances. Value range: 1-15.
- * @method integer getMaxRoCount() Obtain Maximum number of serverless instances. Value range: 1-15.
- * @method void setMaxRoCount(integer $MaxRoCount) Set Maximum number of serverless instances. Value range: 1-15.
- * @method float getMinRoCpu() Obtain Minimum specifications for serverless instance
- * @method void setMinRoCpu(float $MinRoCpu) Set Minimum specifications for serverless instance
- * @method float getMaxRoCpu() Obtain Maximum specifications for serverless instance
- * @method void setMaxRoCpu(float $MaxRoCpu) Set Maximum specifications for serverless instance
- * @method string getDeviceType() Obtain Instance machine type.
-1. common: general.
-2. exclusive: exclusive.
- * @method void setDeviceType(string $DeviceType) Set Instance machine type.
-1. common: general.
-2. exclusive: exclusive.
+ * @method integer getCpu() Obtain <p>Instance cpu</p>
+ * @method void setCpu(integer $Cpu) Set <p>Instance cpu</p>
+ * @method integer getMemory() Obtain <p>Instance memory</p>
+ * @method void setMemory(integer $Memory) Set <p>Instance memory</p>
+ * @method string getInstanceType() Obtain <p>Instance type rw/ro</p>
+ * @method void setInstanceType(string $InstanceType) Set <p>Instance type rw/ro</p>
+ * @method integer getInstanceCount() Obtain <p>Number of instances, range [1,15]</p>
+ * @method void setInstanceCount(integer $InstanceCount) Set <p>Number of instances, range [1,15]</p>
+ * @method integer getMinRoCount() Obtain <p>Minimum count of Serverless instance, range [1,15]</p>
+ * @method void setMinRoCount(integer $MinRoCount) Set <p>Minimum count of Serverless instance, range [1,15]</p>
+ * @method integer getMaxRoCount() Obtain <p>Maximum count of Serverless instances, range [1,15]</p>
+ * @method void setMaxRoCount(integer $MaxRoCount) Set <p>Maximum count of Serverless instances, range [1,15]</p>
+ * @method float getMinRoCpu() Obtain <p>Minimum specification of Serverless instance</p>
+ * @method void setMinRoCpu(float $MinRoCpu) Set <p>Minimum specification of Serverless instance</p>
+ * @method float getMaxRoCpu() Obtain <p>Maximum specification of Serverless instance</p>
+ * @method void setMaxRoCpu(float $MaxRoCpu) Set <p>Maximum specification of Serverless instance</p>
+ * @method string getDeviceType() Obtain <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
+ * @method void setDeviceType(string $DeviceType) Set <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
  */
 class InstanceInitInfo extends AbstractModel
 {
     /**
-     * @var integer Instance CPU
+     * @var integer <p>Instance cpu</p>
      */
     public $Cpu;
 
     /**
-     * @var integer Instance memory
+     * @var integer <p>Instance memory</p>
      */
     public $Memory;
 
     /**
-     * @var string Instance type. Valid values:`rw`, `ro`.
+     * @var string <p>Instance type rw/ro</p>
      */
     public $InstanceType;
 
     /**
-     * @var integer Number of the instances. Value range: 1-15.
+     * @var integer <p>Number of instances, range [1,15]</p>
      */
     public $InstanceCount;
 
     /**
-     * @var integer Minimum number of serverless instances. Value range: 1-15.
+     * @var integer <p>Minimum count of Serverless instance, range [1,15]</p>
      */
     public $MinRoCount;
 
     /**
-     * @var integer Maximum number of serverless instances. Value range: 1-15.
+     * @var integer <p>Maximum count of Serverless instances, range [1,15]</p>
      */
     public $MaxRoCount;
 
     /**
-     * @var float Minimum specifications for serverless instance
+     * @var float <p>Minimum specification of Serverless instance</p>
      */
     public $MinRoCpu;
 
     /**
-     * @var float Maximum specifications for serverless instance
+     * @var float <p>Maximum specification of Serverless instance</p>
      */
     public $MaxRoCpu;
 
     /**
-     * @var string Instance machine type.
-1. common: general.
-2. exclusive: exclusive.
+     * @var string <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
      */
     public $DeviceType;
 
     /**
-     * @param integer $Cpu Instance CPU
-     * @param integer $Memory Instance memory
-     * @param string $InstanceType Instance type. Valid values:`rw`, `ro`.
-     * @param integer $InstanceCount Number of the instances. Value range: 1-15.
-     * @param integer $MinRoCount Minimum number of serverless instances. Value range: 1-15.
-     * @param integer $MaxRoCount Maximum number of serverless instances. Value range: 1-15.
-     * @param float $MinRoCpu Minimum specifications for serverless instance
-     * @param float $MaxRoCpu Maximum specifications for serverless instance
-     * @param string $DeviceType Instance machine type.
-1. common: general.
-2. exclusive: exclusive.
+     * @param integer $Cpu <p>Instance cpu</p>
+     * @param integer $Memory <p>Instance memory</p>
+     * @param string $InstanceType <p>Instance type rw/ro</p>
+     * @param integer $InstanceCount <p>Number of instances, range [1,15]</p>
+     * @param integer $MinRoCount <p>Minimum count of Serverless instance, range [1,15]</p>
+     * @param integer $MaxRoCount <p>Maximum count of Serverless instances, range [1,15]</p>
+     * @param float $MinRoCpu <p>Minimum specification of Serverless instance</p>
+     * @param float $MaxRoCpu <p>Maximum specification of Serverless instance</p>
+     * @param string $DeviceType <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
      */
     function __construct()
     {

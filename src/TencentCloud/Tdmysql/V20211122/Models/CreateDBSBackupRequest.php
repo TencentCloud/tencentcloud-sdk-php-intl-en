@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDBSBackup request structure.
  *
- * @method string getBackupMethod() Obtain <p>Backup method: physical, snapshot. this value should be consistent with the backupMethod in the api response of DescribeDBSBackupPolicy.</p>enumeration value:<ul><li> physical: physical backup</li><li> snapshot: snapshot backup</li></ul>
- * @method void setBackupMethod(string $BackupMethod) Set <p>Backup method: physical, snapshot. this value should be consistent with the backupMethod in the api response of DescribeDBSBackupPolicy.</p>enumeration value:<ul><li> physical: physical backup</li><li> snapshot: snapshot backup</li></ul>
+ * @method string getBackupMethod() Obtain <p>Backup method: physical, snapshot. This value should be consistent with the backupMethod in the API response of DescribeDBSBackupPolicy.</p><p>Enumeration value:</p><ul><li>physical: Physical backup</li><li>snapshot: Snapshot backup</li></ul>
+ * @method void setBackupMethod(string $BackupMethod) Set <p>Backup method: physical, snapshot. This value should be consistent with the backupMethod in the API response of DescribeDBSBackupPolicy.</p><p>Enumeration value:</p><ul><li>physical: Physical backup</li><li>snapshot: Snapshot backup</li></ul>
  * @method string getBackupType() Obtain <P>Backup type: currently, only supports full.</p>
  * @method void setBackupType(string $BackupType) Set <P>Backup type: currently, only supports full.</p>
  * @method string getInstanceId() Obtain <p>Instance ID.</p>
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDBSBackupRequest extends AbstractModel
 {
     /**
-     * @var string <p>Backup method: physical, snapshot. this value should be consistent with the backupMethod in the api response of DescribeDBSBackupPolicy.</p>enumeration value:<ul><li> physical: physical backup</li><li> snapshot: snapshot backup</li></ul>
+     * @var string <p>Backup method: physical, snapshot. This value should be consistent with the backupMethod in the API response of DescribeDBSBackupPolicy.</p><p>Enumeration value:</p><ul><li>physical: Physical backup</li><li>snapshot: Snapshot backup</li></ul>
      */
     public $BackupMethod;
 
@@ -52,7 +52,7 @@ class CreateDBSBackupRequest extends AbstractModel
     public $BackupName;
 
     /**
-     * @param string $BackupMethod <p>Backup method: physical, snapshot. this value should be consistent with the backupMethod in the api response of DescribeDBSBackupPolicy.</p>enumeration value:<ul><li> physical: physical backup</li><li> snapshot: snapshot backup</li></ul>
+     * @param string $BackupMethod <p>Backup method: physical, snapshot. This value should be consistent with the backupMethod in the API response of DescribeDBSBackupPolicy.</p><p>Enumeration value:</p><ul><li>physical: Physical backup</li><li>snapshot: Snapshot backup</li></ul>
      * @param string $BackupType <P>Backup type: currently, only supports full.</p>
      * @param string $InstanceId <p>Instance ID.</p>
      * @param string $BackupName <P>Backup notes.</p>

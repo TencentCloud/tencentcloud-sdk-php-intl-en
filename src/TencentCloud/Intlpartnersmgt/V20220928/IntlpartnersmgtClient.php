@@ -73,6 +73,7 @@ Invocation Role: first-level reseller, second-level reseller, reseller.
 Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\DescribeCustomerInfoResponse DescribeCustomerInfo(Models\DescribeCustomerInfoRequest $req) This API is used to query sub-customer information.
 Invocation roles: reseller, first-level distributor.
+ * @method Models\DescribeCustomerOwnCostExplorerFilterResponse DescribeCustomerOwnCostExplorerFilter(Models\DescribeCustomerOwnCostExplorerFilterRequest $req) Cost analysis API advanced filtering
  * @method Models\DescribeCustomerOwnVoucherListResponse DescribeCustomerOwnVoucherList(Models\DescribeCustomerOwnVoucherListRequest $req) This API is used to query the voucher list by Customer. 
 Callable roles: Customer.
  * @method Models\DescribeCustomerOwnVoucherUsageDetailsResponse DescribeCustomerOwnVoucherUsageDetails(Models\DescribeCustomerOwnVoucherUsageDetailsRequest $req) Description: The current API is used to query usage details of customer's own voucher by the customer self.

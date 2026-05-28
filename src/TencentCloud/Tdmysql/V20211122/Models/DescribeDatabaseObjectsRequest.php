@@ -20,26 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatabaseObjects request structure.
  *
- * @method string getInstanceId() Obtain Instance ID, for example: tdsql3-42f40429.
- * @method void setInstanceId(string $InstanceId) Set Instance ID, for example: tdsql3-42f40429.
- * @method string getDbName() Obtain Database name, obtained via the DescribeDatabases api.
- * @method void setDbName(string $DbName) Set Database name, obtained via the DescribeDatabases api.
+ * @method string getInstanceId() Obtain <p>Instance ID, such as tdsql3-42f40429.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID, such as tdsql3-42f40429.</p>
+ * @method string getDbName() Obtain <p>Database name, obtained via the DescribeDatabases API.</p>
+ * @method void setDbName(string $DbName) Set <p>Database name, obtained via the DescribeDatabases API.</p>
+ * @method integer getOffset() Obtain <p>Pagination index</p>
+ * @method void setOffset(integer $Offset) Set <p>Pagination index</p>
+ * @method integer getLimit() Obtain <p>Number of items per page</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of items per page</p>
+ * @method string getTableRegexp() Obtain <p>Table name matching expression</p>
+ * @method void setTableRegexp(string $TableRegexp) Set <p>Table name matching expression</p>
  */
 class DescribeDatabaseObjectsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID, for example: tdsql3-42f40429.
+     * @var string <p>Instance ID, such as tdsql3-42f40429.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Database name, obtained via the DescribeDatabases api.
+     * @var string <p>Database name, obtained via the DescribeDatabases API.</p>
      */
     public $DbName;
 
     /**
-     * @param string $InstanceId Instance ID, for example: tdsql3-42f40429.
-     * @param string $DbName Database name, obtained via the DescribeDatabases api.
+     * @var integer <p>Pagination index</p>
+     */
+    public $Offset;
+
+    /**
+     * @var integer <p>Number of items per page</p>
+     */
+    public $Limit;
+
+    /**
+     * @var string <p>Table name matching expression</p>
+     */
+    public $TableRegexp;
+
+    /**
+     * @param string $InstanceId <p>Instance ID, such as tdsql3-42f40429.</p>
+     * @param string $DbName <p>Database name, obtained via the DescribeDatabases API.</p>
+     * @param integer $Offset <p>Pagination index</p>
+     * @param integer $Limit <p>Number of items per page</p>
+     * @param string $TableRegexp <p>Table name matching expression</p>
      */
     function __construct()
     {
@@ -60,6 +84,18 @@ class DescribeDatabaseObjectsRequest extends AbstractModel
 
         if (array_key_exists("DbName",$param) and $param["DbName"] !== null) {
             $this->DbName = $param["DbName"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TableRegexp",$param) and $param["TableRegexp"] !== null) {
+            $this->TableRegexp = $param["TableRegexp"];
         }
     }
 }

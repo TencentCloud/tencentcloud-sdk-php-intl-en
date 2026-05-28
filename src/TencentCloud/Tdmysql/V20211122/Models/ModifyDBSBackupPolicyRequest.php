@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBSBackupPolicy request structure.
  *
- * @method BackupPolicyModelInput getBackupPolicy() Obtain Backup policy.
- * @method void setBackupPolicy(BackupPolicyModelInput $BackupPolicy) Set Backup policy.
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method BackupPolicyModelInput getBackupPolicy() Obtain <p>Backup policy</p>
+ * @method void setBackupPolicy(BackupPolicyModelInput $BackupPolicy) Set <p>Backup policy</p>
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
  */
 class ModifyDBSBackupPolicyRequest extends AbstractModel
 {
     /**
-     * @var BackupPolicyModelInput Backup policy.
+     * @var BackupPolicyModelInput <p>Backup policy</p>
      */
     public $BackupPolicy;
 
     /**
-     * @var string Instance ID.
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @param BackupPolicyModelInput $BackupPolicy Backup policy.
-     * @param string $InstanceId Instance ID.
+     * @param BackupPolicyModelInput $BackupPolicy <p>Backup policy</p>
+     * @param string $InstanceId <p>Instance ID.</p>
      */
     function __construct()
     {

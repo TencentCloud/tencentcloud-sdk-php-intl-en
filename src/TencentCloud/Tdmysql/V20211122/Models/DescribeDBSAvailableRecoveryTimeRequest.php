@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBSAvailableRecoveryTime request structure.
  *
- * @method string getInstanceId() Obtain <p>db instance ID.</p>
- * @method void setInstanceId(string $InstanceId) Set <p>db instance ID.</p>
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
  * @method integer getBackupSetId() Obtain <p>Backup set ID. the value comes from the DescribeDBSBackupSets api response.</p>
  * @method void setBackupSetId(integer $BackupSetId) Set <p>Backup set ID. the value comes from the DescribeDBSBackupSets api response.</p>
  */
 class DescribeDBSAvailableRecoveryTimeRequest extends AbstractModel
 {
     /**
-     * @var string <p>db instance ID.</p>
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class DescribeDBSAvailableRecoveryTimeRequest extends AbstractModel
     public $BackupSetId;
 
     /**
-     * @param string $InstanceId <p>db instance ID.</p>
+     * @param string $InstanceId <p>Instance ID.</p>
      * @param integer $BackupSetId <p>Backup set ID. the value comes from the DescribeDBSBackupSets api response.</p>
      */
     function __construct()

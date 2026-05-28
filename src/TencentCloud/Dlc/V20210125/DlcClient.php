@@ -50,6 +50,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) This API is used to create and execute a SQL task. (`CreateTasks` is recommended.)
  * @method Models\CreateTasksResponse CreateTasks(Models\CreateTasksRequest $req) This API is used to create and execute SQL tasks in batches.
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) This API is used to create users.
+ * @method Models\CreateUserRoleResponse CreateUserRole(Models\CreateUserRoleRequest $req) This API is used to create a user role.
  * @method Models\CreateWorkGroupResponse CreateWorkGroup(Models\CreateWorkGroupRequest $req) This API is used to create working groups.
  * @method Models\DeleteCHDFSBindingProductResponse DeleteCHDFSBindingProduct(Models\DeleteCHDFSBindingProductRequest $req) This API is used to delete the binding relationship between metadata acceleration buckets and products.
  * @method Models\DeleteDataEngineResponse DeleteDataEngine(Models\DeleteDataEngineRequest $req) This API is used to delete the data engine.
