@@ -18,39 +18,39 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Amazon S3 destination setting.
+ * Amazon S3 address configuration
  *
- * @method string getAccessKeyID() Obtain Access key ID of the S3 sub-account.
- * @method void setAccessKeyID(string $AccessKeyID) Set Access key ID of the S3 sub-account.
- * @method string getSecretAccessKey() Obtain Secret access key of the S3 sub-account.
- * @method void setSecretAccessKey(string $SecretAccessKey) Set Secret access key of the S3 sub-account.
- * @method string getRegion() Obtain Region of S3.
- * @method void setRegion(string $Region) Set Region of S3.
+ * @method string getAccessKeyID() Obtain Access key ID of the S3 sub-user.
+ * @method void setAccessKeyID(string $AccessKeyID) Set Access key ID of the S3 sub-user.
+ * @method string getSecretAccessKey() Obtain Secret access key of the S3 sub-user.
+ * @method void setSecretAccessKey(string $SecretAccessKey) Set Secret access key of the S3 sub-user.
+ * @method string getRegion() Obtain S3 region.
+ * @method void setRegion(string $Region) Set S3 region.
  * @method string getBucket() Obtain Bucket name of S3.
  * @method void setBucket(string $Bucket) Set Bucket name of S3.
- * @method string getFilePath() Obtain File output path, which can be empty. If it is not empty, it starts with / and ends with /.
- * @method void setFilePath(string $FilePath) Set File output path, which can be empty. If it is not empty, it starts with / and ends with /.
- * @method string getFileName() Obtain User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
- * @method void setFileName(string $FileName) Set User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
- * @method string getFileExt() Obtain File suffix, only supports `jpg`.
- * @method void setFileExt(string $FileExt) Set File suffix, only supports `jpg`.
- * @method string getTimeFormat() Obtain Support `unix` or `utc0`, default unix.
- * @method void setTimeFormat(string $TimeFormat) Set Support `unix` or `utc0`, default unix.
+ * @method string getFilePath() Obtain File output path, can be empty, starts and ends with / if not empty.
+ * @method void setFilePath(string $FilePath) Set File output path, can be empty, starts and ends with / if not empty.
+ * @method string getFileName() Obtain User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
+ * @method void setFileName(string $FileName) Set User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
+ * @method string getFileExt() Obtain File suffix only supports jpg.
+ * @method void setFileExt(string $FileExt) Set File suffix only supports jpg.
+ * @method string getTimeFormat() Obtain Support [unix|utc0]. Default is unix.
+ * @method void setTimeFormat(string $TimeFormat) Set Support [unix|utc0]. Default is unix.
  */
 class AmazonS3Settings extends AbstractModel
 {
     /**
-     * @var string Access key ID of the S3 sub-account.
+     * @var string Access key ID of the S3 sub-user.
      */
     public $AccessKeyID;
 
     /**
-     * @var string Secret access key of the S3 sub-account.
+     * @var string Secret access key of the S3 sub-user.
      */
     public $SecretAccessKey;
 
     /**
-     * @var string Region of S3.
+     * @var string S3 region.
      */
     public $Region;
 
@@ -60,34 +60,34 @@ class AmazonS3Settings extends AbstractModel
     public $Bucket;
 
     /**
-     * @var string File output path, which can be empty. If it is not empty, it starts with / and ends with /.
+     * @var string File output path, can be empty, starts and ends with / if not empty.
      */
     public $FilePath;
 
     /**
-     * @var string User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
+     * @var string User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
      */
     public $FileName;
 
     /**
-     * @var string File suffix, only supports `jpg`.
+     * @var string File suffix only supports jpg.
      */
     public $FileExt;
 
     /**
-     * @var string Support `unix` or `utc0`, default unix.
+     * @var string Support [unix|utc0]. Default is unix.
      */
     public $TimeFormat;
 
     /**
-     * @param string $AccessKeyID Access key ID of the S3 sub-account.
-     * @param string $SecretAccessKey Secret access key of the S3 sub-account.
-     * @param string $Region Region of S3.
+     * @param string $AccessKeyID Access key ID of the S3 sub-user.
+     * @param string $SecretAccessKey Secret access key of the S3 sub-user.
+     * @param string $Region S3 region.
      * @param string $Bucket Bucket name of S3.
-     * @param string $FilePath File output path, which can be empty. If it is not empty, it starts with / and ends with /.
-     * @param string $FileName User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
-     * @param string $FileExt File suffix, only supports `jpg`.
-     * @param string $TimeFormat Support `unix` or `utc0`, default unix.
+     * @param string $FilePath File output path, can be empty, starts and ends with / if not empty.
+     * @param string $FileName User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
+     * @param string $FileExt File suffix only supports jpg.
+     * @param string $TimeFormat Support [unix|utc0]. Default is unix.
      */
     function __construct()
     {

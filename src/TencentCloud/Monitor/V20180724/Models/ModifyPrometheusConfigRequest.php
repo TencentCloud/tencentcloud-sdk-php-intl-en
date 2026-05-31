@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodMonitors(array $PodMonitors) Set Configuration of pod monitors
  * @method array getRawJobs() Obtain Configuration of Prometheus raw jobs
  * @method void setRawJobs(array $RawJobs) Set Configuration of Prometheus raw jobs
+ * @method integer getUpdateImage() Obtain 
+ * @method void setUpdateImage(integer $UpdateImage) Set 
  */
 class ModifyPrometheusConfigRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyPrometheusConfigRequest extends AbstractModel
     public $RawJobs;
 
     /**
+     * @var integer 
+     */
+    public $UpdateImage;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $ClusterType Cluster type
      * @param string $ClusterId Cluster ID
      * @param array $ServiceMonitors Configuration of service monitors
      * @param array $PodMonitors Configuration of pod monitors
      * @param array $RawJobs Configuration of Prometheus raw jobs
+     * @param integer $UpdateImage 
      */
     function __construct()
     {
@@ -123,6 +131,10 @@ class ModifyPrometheusConfigRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RawJobs, $obj);
             }
+        }
+
+        if (array_key_exists("UpdateImage",$param) and $param["UpdateImage"] !== null) {
+            $this->UpdateImage = $param["UpdateImage"];
         }
     }
 }

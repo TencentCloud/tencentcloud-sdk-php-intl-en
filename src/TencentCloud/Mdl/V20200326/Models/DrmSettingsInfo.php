@@ -20,110 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DRM configuration information, which takes effect only for HLS and DASH.
  *
- * @method string getState() Obtain Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
- * @method void setState(string $State) Set Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
- * @method string getScheme() Obtain Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
-`CustomDRMKeys` means encryption keys customized by users.
-`SDMCDRM` means the DRM key management system of SDMC.
- * @method void setScheme(string $Scheme) Set Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
-`CustomDRMKeys` means encryption keys customized by users.
-`SDMCDRM` means the DRM key management system of SDMC.
- * @method string getContentId() Obtain If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
-If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
- * @method void setContentId(string $ContentId) Set If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
-If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
- * @method array getKeys() Obtain The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setKeys(array $Keys) Set The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method SDMCSettingsInfo getSDMCSettings() Obtain SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setSDMCSettings(SDMCSettingsInfo $SDMCSettings) Set SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getDrmType() Obtain Optional Types:
-`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
-
+ * @method string getState() Obtain Whether DRM encryption is enabled. Option: CLOSE/OPEN. Default: CLOSE.
+Currently only support HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_MEDIAPACKAGE/DASH_MEDIAPACKAGE.
+ * @method void setState(string $State) Set Whether DRM encryption is enabled. Option: CLOSE/OPEN. Default: CLOSE.
+Currently only support HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_MEDIAPACKAGE/DASH_MEDIAPACKAGE.
+ * @method string getScheme() Obtain Optional [CustomDRMKeys|SDMCDRM], defaults to CustomDRMKeys.
+CustomDRMKeys refers to the custom encryption key.
+SDMCDRM refers to the DRM key management system using SMDC.
+ * @method void setScheme(string $Scheme) Set Optional [CustomDRMKeys|SDMCDRM], defaults to CustomDRMKeys.
+CustomDRMKeys refers to the custom encryption key.
+SDMCDRM refers to the DRM key management system using SMDC.
+ * @method string getContentId() Obtain Scheme is CustomDRMKeys, required, filled in by the user.
+Scheme is SDMCDRM, optional, defaults to ChannelId. The format supports digits, upper- and lower-case letters, hyphens, and underscores, with a length of [1, 36].
+ * @method void setContentId(string $ContentId) Set Scheme is CustomDRMKeys, required, filled in by the user.
+Scheme is SDMCDRM, optional, defaults to ChannelId. The format supports digits, upper- and lower-case letters, hyphens, and underscores, with a length of [1, 36].
+ * @method array getKeys() Obtain Required when Scheme is CustomDRMKeys. The content is the key customized by users.
+ * @method void setKeys(array $Keys) Set Required when Scheme is CustomDRMKeys. The content is the key customized by users.
+ * @method SDMCSettingsInfo getSDMCSettings() Obtain SDMC key configuration information, used when Scheme is SDMCDRM.
+ * @method void setSDMCSettings(SDMCSettingsInfo $SDMCSettings) Set SDMC key configuration information, used when Scheme is SDMCDRM.
+ * @method string getDrmType() Obtain Optional type:
+`FAIRPLAY` `WIDEVINE` `PLAYREADY` `AES128`
 HLS-TS supports `FAIRPLAY` and `AES128`.
-
-HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
-
-DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
- * @method void setDrmType(string $DrmType) Set Optional Types:
-`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
-
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and permutation and combination of two or three from `FAIRPLAY`, `WIDEVINE`, `PLAYREADY` (use commas to concatenate, such as "FAIRPLAY,WIDEVINE,PLAYREADY").
+DASH supports `WIDEVINE`, `PLAYREADY`, and the permutation and combination of `PLAYREADY` and `WIDEVINE` (use commas to concatenate, such as "PLAYREADY,WIDEVINE").
+ * @method void setDrmType(string $DrmType) Set Optional type:
+`FAIRPLAY` `WIDEVINE` `PLAYREADY` `AES128`
 HLS-TS supports `FAIRPLAY` and `AES128`.
-
-HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
-
-DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and permutation and combination of two or three from `FAIRPLAY`, `WIDEVINE`, `PLAYREADY` (use commas to concatenate, such as "FAIRPLAY,WIDEVINE,PLAYREADY").
+DASH supports `WIDEVINE`, `PLAYREADY`, and the permutation and combination of `PLAYREADY` and `WIDEVINE` (use commas to concatenate, such as "PLAYREADY,WIDEVINE").
  */
 class DrmSettingsInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
+     * @var string Whether DRM encryption is enabled. Option: CLOSE/OPEN. Default: CLOSE.
+Currently only support HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_MEDIAPACKAGE/DASH_MEDIAPACKAGE.
      */
     public $State;
 
     /**
-     * @var string Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
-`CustomDRMKeys` means encryption keys customized by users.
-`SDMCDRM` means the DRM key management system of SDMC.
+     * @var string Optional [CustomDRMKeys|SDMCDRM], defaults to CustomDRMKeys.
+CustomDRMKeys refers to the custom encryption key.
+SDMCDRM refers to the DRM key management system using SMDC.
      */
     public $Scheme;
 
     /**
-     * @var string If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
-If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
+     * @var string Scheme is CustomDRMKeys, required, filled in by the user.
+Scheme is SDMCDRM, optional, defaults to ChannelId. The format supports digits, upper- and lower-case letters, hyphens, and underscores, with a length of [1, 36].
      */
     public $ContentId;
 
     /**
-     * @var array The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Required when Scheme is CustomDRMKeys. The content is the key customized by users.
      */
     public $Keys;
 
     /**
-     * @var SDMCSettingsInfo SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var SDMCSettingsInfo SDMC key configuration information, used when Scheme is SDMCDRM.
      */
     public $SDMCSettings;
 
     /**
-     * @var string Optional Types:
-`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
-
+     * @var string Optional type:
+`FAIRPLAY` `WIDEVINE` `PLAYREADY` `AES128`
 HLS-TS supports `FAIRPLAY` and `AES128`.
-
-HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
-
-DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and permutation and combination of two or three from `FAIRPLAY`, `WIDEVINE`, `PLAYREADY` (use commas to concatenate, such as "FAIRPLAY,WIDEVINE,PLAYREADY").
+DASH supports `WIDEVINE`, `PLAYREADY`, and the permutation and combination of `PLAYREADY` and `WIDEVINE` (use commas to concatenate, such as "PLAYREADY,WIDEVINE").
      */
     public $DrmType;
 
     /**
-     * @param string $State Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
-     * @param string $Scheme Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
-`CustomDRMKeys` means encryption keys customized by users.
-`SDMCDRM` means the DRM key management system of SDMC.
-     * @param string $ContentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
-If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
-     * @param array $Keys The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SDMCSettingsInfo $SDMCSettings SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $DrmType Optional Types:
-`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
-
+     * @param string $State Whether DRM encryption is enabled. Option: CLOSE/OPEN. Default: CLOSE.
+Currently only support HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_MEDIAPACKAGE/DASH_MEDIAPACKAGE.
+     * @param string $Scheme Optional [CustomDRMKeys|SDMCDRM], defaults to CustomDRMKeys.
+CustomDRMKeys refers to the custom encryption key.
+SDMCDRM refers to the DRM key management system using SMDC.
+     * @param string $ContentId Scheme is CustomDRMKeys, required, filled in by the user.
+Scheme is SDMCDRM, optional, defaults to ChannelId. The format supports digits, upper- and lower-case letters, hyphens, and underscores, with a length of [1, 36].
+     * @param array $Keys Required when Scheme is CustomDRMKeys. The content is the key customized by users.
+     * @param SDMCSettingsInfo $SDMCSettings SDMC key configuration information, used when Scheme is SDMCDRM.
+     * @param string $DrmType Optional type:
+`FAIRPLAY` `WIDEVINE` `PLAYREADY` `AES128`
 HLS-TS supports `FAIRPLAY` and `AES128`.
-
-HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
-
-DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and permutation and combination of two or three from `FAIRPLAY`, `WIDEVINE`, `PLAYREADY` (use commas to concatenate, such as "FAIRPLAY,WIDEVINE,PLAYREADY").
+DASH supports `WIDEVINE`, `PLAYREADY`, and the permutation and combination of `PLAYREADY` and `WIDEVINE` (use commas to concatenate, such as "PLAYREADY,WIDEVINE").
      */
     function __construct()
     {

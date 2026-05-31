@@ -48,8 +48,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTimeUnit(string $TimeUnit) Set Duration unit.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDeviceType() Obtain Machine type.
- * @method void setDeviceType(string $DeviceType) Set Machine type.
+ * @method string getDeviceType() Obtain Instance machine type
+1. common, universal type.
+2. exclusive, dedicated.
+ * @method void setDeviceType(string $DeviceType) Set Instance machine type
+1. common, universal type.
+2. exclusive, dedicated.
  */
 class GoodsSpec extends AbstractModel
 {
@@ -96,7 +100,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TimeUnit;
 
     /**
-     * @var string Machine type.
+     * @var string Instance machine type
+1. common, universal type.
+2. exclusive, dedicated.
      */
     public $DeviceType;
 
@@ -115,7 +121,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TimeUnit Duration unit.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DeviceType Machine type.
+     * @param string $DeviceType Instance machine type
+1. common, universal type.
+2. exclusive, dedicated.
      */
     function __construct()
     {

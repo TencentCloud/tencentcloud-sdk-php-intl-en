@@ -18,36 +18,36 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * General setting.
+ * Common configuration.
  *
- * @method StaticImageSettings getStaticImageSettings() Obtain Static graphic overlay configuration.
- * @method void setStaticImageSettings(StaticImageSettings $StaticImageSettings) Set Static graphic overlay configuration.
- * @method MotionGraphicsSetting getMotionGraphicsSettings() Obtain Dynamic graphic overlay configuration.
- * @method void setMotionGraphicsSettings(MotionGraphicsSetting $MotionGraphicsSettings) Set Dynamic graphic overlay configuration.
- * @method ThumbnailSettings getThumbnailSettings() Obtain Thumbnail Configuration.
- * @method void setThumbnailSettings(ThumbnailSettings $ThumbnailSettings) Set Thumbnail Configuration.
+ * @method StaticImageSettings getStaticImageSettings() Obtain Static image overlay configuration.
+ * @method void setStaticImageSettings(StaticImageSettings $StaticImageSettings) Set Static image overlay configuration.
+ * @method MotionGraphicsSetting getMotionGraphicsSettings() Obtain Real-time graphic overlay configuration.
+ * @method void setMotionGraphicsSettings(MotionGraphicsSetting $MotionGraphicsSettings) Set Real-time graphic overlay configuration.
+ * @method ThumbnailSettings getThumbnailSettings() Obtain Thumbnail configuration
+ * @method void setThumbnailSettings(ThumbnailSettings $ThumbnailSettings) Set Thumbnail configuration
  */
 class GeneralSetting extends AbstractModel
 {
     /**
-     * @var StaticImageSettings Static graphic overlay configuration.
+     * @var StaticImageSettings Static image overlay configuration.
      */
     public $StaticImageSettings;
 
     /**
-     * @var MotionGraphicsSetting Dynamic graphic overlay configuration.
+     * @var MotionGraphicsSetting Real-time graphic overlay configuration.
      */
     public $MotionGraphicsSettings;
 
     /**
-     * @var ThumbnailSettings Thumbnail Configuration.
+     * @var ThumbnailSettings Thumbnail configuration
      */
     public $ThumbnailSettings;
 
     /**
-     * @param StaticImageSettings $StaticImageSettings Static graphic overlay configuration.
-     * @param MotionGraphicsSetting $MotionGraphicsSettings Dynamic graphic overlay configuration.
-     * @param ThumbnailSettings $ThumbnailSettings Thumbnail Configuration.
+     * @param StaticImageSettings $StaticImageSettings Static image overlay configuration.
+     * @param MotionGraphicsSetting $MotionGraphicsSettings Real-time graphic overlay configuration.
+     * @param ThumbnailSettings $ThumbnailSettings Thumbnail configuration
      */
     function __construct()
     {

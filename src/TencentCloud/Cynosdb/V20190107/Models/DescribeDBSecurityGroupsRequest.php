@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
  * @method void setInstanceId(string $InstanceId) Set Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
- * @method string getInstanceGroupId() Obtain Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
- * @method void setInstanceGroupId(string $InstanceGroupId) Set Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+ * @method string getInstanceGroupId() Obtain Instance group ID, which can be obtained through the [DescribeClusterInstanceGroups](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1) API.
+ * @method void setInstanceGroupId(string $InstanceGroupId) Set Instance group ID, which can be obtained through the [DescribeClusterInstanceGroups](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1) API.
  */
 class DescribeDBSecurityGroupsRequest extends AbstractModel
 {
@@ -34,13 +34,13 @@ class DescribeDBSecurityGroupsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+     * @var string Instance group ID, which can be obtained through the [DescribeClusterInstanceGroups](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1) API.
      */
     public $InstanceGroupId;
 
     /**
      * @param string $InstanceId Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
-     * @param string $InstanceGroupId Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+     * @param string $InstanceGroupId Instance group ID, which can be obtained through the [DescribeClusterInstanceGroups](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1) API.
      */
     function __construct()
     {

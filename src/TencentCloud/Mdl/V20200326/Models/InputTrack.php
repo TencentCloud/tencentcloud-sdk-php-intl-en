@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio track configuration.
  *
- * @method integer getTrackIndex() Obtain Audio track index 1-based index mapping to the specified audio track integer starting from 1.
- * @method void setTrackIndex(integer $TrackIndex) Set Audio track index 1-based index mapping to the specified audio track integer starting from 1.
+ * @method integer getTrackIndex() Obtain Audio track index  1-based index mapping to the specified audio track  Integer starting from 1.
+ * @method void setTrackIndex(integer $TrackIndex) Set Audio track index  1-based index mapping to the specified audio track  Integer starting from 1.
  */
 class InputTrack extends AbstractModel
 {
     /**
-     * @var integer Audio track index 1-based index mapping to the specified audio track integer starting from 1.
+     * @var integer Audio track index  1-based index mapping to the specified audio track  Integer starting from 1.
      */
     public $TrackIndex;
 
     /**
-     * @param integer $TrackIndex Audio track index 1-based index mapping to the specified audio track integer starting from 1.
+     * @param integer $TrackIndex Audio track index  1-based index mapping to the specified audio track  Integer starting from 1.
      */
     function __construct()
     {

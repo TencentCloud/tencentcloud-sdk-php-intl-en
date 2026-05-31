@@ -18,28 +18,28 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Caption selector.
+ * Subtitle selector.
  *
- * @method string getName() Obtain Caption selector name, which can contain 1-32 letters, digits, and underscores.
- * @method void setName(string $Name) Set Caption selector name, which can contain 1-32 letters, digits, and underscores.
- * @method string getCaptionSourceType() Obtain Caption source type, only support `SCTE-128`.
- * @method void setCaptionSourceType(string $CaptionSourceType) Set Caption source type, only support `SCTE-128`.
+ * @method string getName() Obtain Digits, uppercase and lowercase letters, underscore, length 1-32.
+ * @method void setName(string $Name) Set Digits, uppercase and lowercase letters, underscore, length 1-32.
+ * @method string getCaptionSourceType() Obtain Supports only `SCTE-128`.
+ * @method void setCaptionSourceType(string $CaptionSourceType) Set Supports only `SCTE-128`.
  */
 class CaptionSelector extends AbstractModel
 {
     /**
-     * @var string Caption selector name, which can contain 1-32 letters, digits, and underscores.
+     * @var string Digits, uppercase and lowercase letters, underscore, length 1-32.
      */
     public $Name;
 
     /**
-     * @var string Caption source type, only support `SCTE-128`.
+     * @var string Supports only `SCTE-128`.
      */
     public $CaptionSourceType;
 
     /**
-     * @param string $Name Caption selector name, which can contain 1-32 letters, digits, and underscores.
-     * @param string $CaptionSourceType Caption source type, only support `SCTE-128`.
+     * @param string $Name Digits, uppercase and lowercase letters, underscore, length 1-32.
+     * @param string $CaptionSourceType Supports only `SCTE-128`.
      */
     function __construct()
     {

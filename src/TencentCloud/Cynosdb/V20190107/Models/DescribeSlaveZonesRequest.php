@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set Availability zone
  * @method integer getOssClusterId() Obtain Cloud frame cluster ID.
  * @method void setOssClusterId(integer $OssClusterId) Set Cloud frame cluster ID.
+ * @method string getStorageVersion() Obtain Storage architecture type. Enumeration value: 1.0/2.0. Default value: 1.0.
+ * @method void setStorageVersion(string $StorageVersion) Set Storage architecture type. Enumeration value: 1.0/2.0. Default value: 1.0.
  */
 class DescribeSlaveZonesRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeSlaveZonesRequest extends AbstractModel
     public $OssClusterId;
 
     /**
+     * @var string Storage architecture type. Enumeration value: 1.0/2.0. Default value: 1.0.
+     */
+    public $StorageVersion;
+
+    /**
      * @param string $Zone Availability zone
      * @param integer $OssClusterId Cloud frame cluster ID.
+     * @param string $StorageVersion Storage architecture type. Enumeration value: 1.0/2.0. Default value: 1.0.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeSlaveZonesRequest extends AbstractModel
 
         if (array_key_exists("OssClusterId",$param) and $param["OssClusterId"] !== null) {
             $this->OssClusterId = $param["OssClusterId"];
+        }
+
+        if (array_key_exists("StorageVersion",$param) and $param["StorageVersion"] !== null) {
+            $this->StorageVersion = $param["StorageVersion"];
         }
     }
 }

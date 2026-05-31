@@ -18,20 +18,20 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Thumbnail configuration
  *
- * @method integer getThumbnailEnabled() Obtain Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0
- * @method void setThumbnailEnabled(integer $ThumbnailEnabled) Set Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0
+ * @method integer getThumbnailEnabled() Obtain Whether to generate thumbnails  0: disabled  1: enabled  Default value: 0
+ * @method void setThumbnailEnabled(integer $ThumbnailEnabled) Set Whether to generate thumbnails  0: disabled  1: enabled  Default value: 0
  */
 class ThumbnailSettings extends AbstractModel
 {
     /**
-     * @var integer Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0
+     * @var integer Whether to generate thumbnails  0: disabled  1: enabled  Default value: 0
      */
     public $ThumbnailEnabled;
 
     /**
-     * @param integer $ThumbnailEnabled Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0
+     * @param integer $ThumbnailEnabled Whether to generate thumbnails  0: disabled  1: enabled  Default value: 0
      */
     function __construct()
     {

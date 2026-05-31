@@ -23,29 +23,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() Obtain Output name.
  * @method void setName(string $Name) Set Output name.
  * @method array getAudioTemplateNames() Obtain Audio transcoding template name array.
-Quantity limit: [0,1] for RTMP; [0,20] for others.
-Note: this field may return null, indicating that no valid values can be obtained.
+RTMP limit [0, 1], other limits [0, 20].
  * @method void setAudioTemplateNames(array $AudioTemplateNames) Set Audio transcoding template name array.
-Quantity limit: [0,1] for RTMP; [0,20] for others.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getVideoTemplateNames() Obtain Video transcoding template name array. Quantity limit: [0,1].
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVideoTemplateNames(array $VideoTemplateNames) Set Video transcoding template name array. Quantity limit: [0,1].
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method Scte35SettingsInfo getScte35Settings() Obtain SCTE-35 information configuration.
- * @method void setScte35Settings(Scte35SettingsInfo $Scte35Settings) Set SCTE-35 information configuration.
- * @method array getAVTemplateNames() Obtain Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setAVTemplateNames(array $AVTemplateNames) Set Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
-Note: this field may return `null`, indicating that no valid value was found.
- * @method array getCaptionTemplateNames() Obtain For the subtitle template used, only the AVTemplateNames is valid.
- * @method void setCaptionTemplateNames(array $CaptionTemplateNames) Set For the subtitle template used, only the AVTemplateNames is valid.
- * @method TimedMetadataSettingInfo getTimedMetadataSettings() Obtain Meta information controls configuration.
- * @method void setTimedMetadataSettings(TimedMetadataSettingInfo $TimedMetadataSettings) Set Meta information controls configuration.
- * @method array getFrameCaptureTemplateNames() Obtain Frame capture template name array. Quantity limit: [0,1].
- * @method void setFrameCaptureTemplateNames(array $FrameCaptureTemplateNames) Set Frame capture template name array. Quantity limit: [0,1].
- * @method string getNameModifier() Obtain Name modification for sub m3u8.
- * @method void setNameModifier(string $NameModifier) Set Name modification for sub m3u8.
+RTMP limit [0, 1], other limits [0, 20].
+ * @method array getVideoTemplateNames() Obtain Video transcoding template name array, with the maximum number of [0, 1].
+ * @method void setVideoTemplateNames(array $VideoTemplateNames) Set Video transcoding template name array, with the maximum number of [0, 1].
+ * @method Scte35SettingsInfo getScte35Settings() Obtain Scte-35 information configuration.
+ * @method void setScte35Settings(Scte35SettingsInfo $Scte35Settings) Set Scte-35 information configuration.
+ * @method array getAVTemplateNames() Obtain Audio/video transcoding template name array, with the maximum number of 1.
+ * @method void setAVTemplateNames(array $AVTemplateNames) Set Audio/video transcoding template name array, with the maximum number of 1.
+ * @method array getCaptionTemplateNames() Obtain The used subtitle template is only valid for merge template.
+ * @method void setCaptionTemplateNames(array $CaptionTemplateNames) Set The used subtitle template is only valid for merge template.
+ * @method TimedMetadataSettingInfo getTimedMetadataSettings() Obtain Meta-information control configuration.
+ * @method void setTimedMetadataSettings(TimedMetadataSettingInfo $TimedMetadataSettings) Set Meta-information control configuration.
+ * @method array getFrameCaptureTemplateNames() Obtain Screenshot transcode template name array. Limit: 1.
+ * @method void setFrameCaptureTemplateNames(array $FrameCaptureTemplateNames) Set Screenshot transcode template name array. Limit: 1.
+ * @method string getNameModifier() Obtain Modify the name of the sub-m3u8.
+ * @method void setNameModifier(string $NameModifier) Set Modify the name of the sub-m3u8.
  */
 class OutputInfo extends AbstractModel
 {
@@ -56,62 +50,56 @@ class OutputInfo extends AbstractModel
 
     /**
      * @var array Audio transcoding template name array.
-Quantity limit: [0,1] for RTMP; [0,20] for others.
-Note: this field may return null, indicating that no valid values can be obtained.
+RTMP limit [0, 1], other limits [0, 20].
      */
     public $AudioTemplateNames;
 
     /**
-     * @var array Video transcoding template name array. Quantity limit: [0,1].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Video transcoding template name array, with the maximum number of [0, 1].
      */
     public $VideoTemplateNames;
 
     /**
-     * @var Scte35SettingsInfo SCTE-35 information configuration.
+     * @var Scte35SettingsInfo Scte-35 information configuration.
      */
     public $Scte35Settings;
 
     /**
-     * @var array Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var array Audio/video transcoding template name array, with the maximum number of 1.
      */
     public $AVTemplateNames;
 
     /**
-     * @var array For the subtitle template used, only the AVTemplateNames is valid.
+     * @var array The used subtitle template is only valid for merge template.
      */
     public $CaptionTemplateNames;
 
     /**
-     * @var TimedMetadataSettingInfo Meta information controls configuration.
+     * @var TimedMetadataSettingInfo Meta-information control configuration.
      */
     public $TimedMetadataSettings;
 
     /**
-     * @var array Frame capture template name array. Quantity limit: [0,1].
+     * @var array Screenshot transcode template name array. Limit: 1.
      */
     public $FrameCaptureTemplateNames;
 
     /**
-     * @var string Name modification for sub m3u8.
+     * @var string Modify the name of the sub-m3u8.
      */
     public $NameModifier;
 
     /**
      * @param string $Name Output name.
      * @param array $AudioTemplateNames Audio transcoding template name array.
-Quantity limit: [0,1] for RTMP; [0,20] for others.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $VideoTemplateNames Video transcoding template name array. Quantity limit: [0,1].
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Scte35SettingsInfo $Scte35Settings SCTE-35 information configuration.
-     * @param array $AVTemplateNames Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param array $CaptionTemplateNames For the subtitle template used, only the AVTemplateNames is valid.
-     * @param TimedMetadataSettingInfo $TimedMetadataSettings Meta information controls configuration.
-     * @param array $FrameCaptureTemplateNames Frame capture template name array. Quantity limit: [0,1].
-     * @param string $NameModifier Name modification for sub m3u8.
+RTMP limit [0, 1], other limits [0, 20].
+     * @param array $VideoTemplateNames Video transcoding template name array, with the maximum number of [0, 1].
+     * @param Scte35SettingsInfo $Scte35Settings Scte-35 information configuration.
+     * @param array $AVTemplateNames Audio/video transcoding template name array, with the maximum number of 1.
+     * @param array $CaptionTemplateNames The used subtitle template is only valid for merge template.
+     * @param TimedMetadataSettingInfo $TimedMetadataSettings Meta-information control configuration.
+     * @param array $FrameCaptureTemplateNames Screenshot transcode template name array. Limit: 1.
+     * @param string $NameModifier Modify the name of the sub-m3u8.
      */
     function __construct()
     {

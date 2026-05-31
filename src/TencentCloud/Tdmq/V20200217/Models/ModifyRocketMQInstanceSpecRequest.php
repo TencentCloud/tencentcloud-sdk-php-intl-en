@@ -20,58 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRocketMQInstanceSpec request structure.
  *
- * @method string getInstanceId() Obtain ID of the exclusive instance
- * @method void setInstanceId(string $InstanceId) Set ID of the exclusive instance
- * @method string getSpecification() Obtain Instance specification.
-Valid values: `rocket-vip-basic-1` (Basic),
-`rocket-vip-basic-2` (Standard),
-`rocket-vip-basic-3` (Advanced I),
-`rocket-vip-basic-4` (Advanced II).
- * @method void setSpecification(string $Specification) Set Instance specification.
-Valid values: `rocket-vip-basic-1` (Basic),
-`rocket-vip-basic-2` (Standard),
-`rocket-vip-basic-3` (Advanced I),
-`rocket-vip-basic-4` (Advanced II).
- * @method integer getNodeCount() Obtain Node count
- * @method void setNodeCount(integer $NodeCount) Set Node count
- * @method integer getStorageSize() Obtain Storage space in GB
- * @method void setStorageSize(integer $StorageSize) Set Storage space in GB
+ * @method string getInstanceId() Obtain <p>Dedicated Instance ID</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Dedicated Instance ID</p>
+ * @method string getSpecification() Obtain <p>Instance specification,<br>rocket-vip-basic-1 basic<br>rocket-vip-basic-2 standard type<br>rocket-vip-basic-3 higher-order type I<br>rocket-vip-basic-4 higher-order type II</p>
+ * @method void setSpecification(string $Specification) Set <p>Instance specification,<br>rocket-vip-basic-1 basic<br>rocket-vip-basic-2 standard type<br>rocket-vip-basic-3 higher-order type I<br>rocket-vip-basic-4 higher-order type II</p>
+ * @method integer getNodeCount() Obtain <p>Node count</p>
+ * @method void setNodeCount(integer $NodeCount) Set <p>Node count</p>
+ * @method integer getStorageSize() Obtain <p>Storage space in GB</p>
+ * @method void setStorageSize(integer $StorageSize) Set <p>Storage space in GB</p>
+ * @method array getZoneIds() Obtain <p>Deploy availability zone list</p>
+ * @method void setZoneIds(array $ZoneIds) Set <p>Deploy availability zone list</p>
  */
 class ModifyRocketMQInstanceSpecRequest extends AbstractModel
 {
     /**
-     * @var string ID of the exclusive instance
+     * @var string <p>Dedicated Instance ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Instance specification.
-Valid values: `rocket-vip-basic-1` (Basic),
-`rocket-vip-basic-2` (Standard),
-`rocket-vip-basic-3` (Advanced I),
-`rocket-vip-basic-4` (Advanced II).
+     * @var string <p>Instance specification,<br>rocket-vip-basic-1 basic<br>rocket-vip-basic-2 standard type<br>rocket-vip-basic-3 higher-order type I<br>rocket-vip-basic-4 higher-order type II</p>
      */
     public $Specification;
 
     /**
-     * @var integer Node count
+     * @var integer <p>Node count</p>
      */
     public $NodeCount;
 
     /**
-     * @var integer Storage space in GB
+     * @var integer <p>Storage space in GB</p>
      */
     public $StorageSize;
 
     /**
-     * @param string $InstanceId ID of the exclusive instance
-     * @param string $Specification Instance specification.
-Valid values: `rocket-vip-basic-1` (Basic),
-`rocket-vip-basic-2` (Standard),
-`rocket-vip-basic-3` (Advanced I),
-`rocket-vip-basic-4` (Advanced II).
-     * @param integer $NodeCount Node count
-     * @param integer $StorageSize Storage space in GB
+     * @var array <p>Deploy availability zone list</p>
+     */
+    public $ZoneIds;
+
+    /**
+     * @param string $InstanceId <p>Dedicated Instance ID</p>
+     * @param string $Specification <p>Instance specification,<br>rocket-vip-basic-1 basic<br>rocket-vip-basic-2 standard type<br>rocket-vip-basic-3 higher-order type I<br>rocket-vip-basic-4 higher-order type II</p>
+     * @param integer $NodeCount <p>Node count</p>
+     * @param integer $StorageSize <p>Storage space in GB</p>
+     * @param array $ZoneIds <p>Deploy availability zone list</p>
      */
     function __construct()
     {
@@ -100,6 +92,10 @@ Valid values: `rocket-vip-basic-1` (Basic),
 
         if (array_key_exists("StorageSize",$param) and $param["StorageSize"] !== null) {
             $this->StorageSize = $param["StorageSize"];
+        }
+
+        if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
+            $this->ZoneIds = $param["ZoneIds"];
         }
     }
 }

@@ -30,8 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsistencyTimeOut(string $ConsistencyTimeOut) Set Consistency timeout period
  * @method string getWeightMode() Obtain Assignment mode of read/write weights. Valid values: `system` (auto-assigned), `custom`
  * @method void setWeightMode(string $WeightMode) Set Assignment mode of read/write weights. Valid values: `system` (auto-assigned), `custom`
- * @method array getInstanceWeights() Obtain Read-Only weight of an instance
- * @method void setInstanceWeights(array $InstanceWeights) Set Read-Only weight of an instance
+ * @method array getInstanceWeights() Obtain Instance Read-Only Weight.
+
+ * @method void setInstanceWeights(array $InstanceWeights) Set Instance Read-Only Weight.
+
  * @method string getFailOver() Obtain Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`.
  * @method void setFailOver(string $FailOver) Set Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`.
  * @method string getAutoAddRo() Obtain Whether to automatically add read-only instances. Valid values: `true`, `false`
@@ -58,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 `ConnectionPoolType`, `SessionConnectionPool`.
  * @method integer getConnectionPoolTimeOut() Obtain Connection persistence timeout
  * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set Connection persistence timeout
+ * @method boolean getApNodeAsRoNode() Obtain Whether to treat the libra node as an ordinary RO node
+ * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) Set Whether to treat the libra node as an ordinary RO node
+ * @method boolean getApQueryToOtherNode() Obtain libra node fault, whether to forward to other nodes
+ * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) Set libra node fault, whether to forward to other nodes
  */
 class ModifyProxyRwSplitRequest extends AbstractModel
 {
@@ -87,7 +93,8 @@ class ModifyProxyRwSplitRequest extends AbstractModel
     public $WeightMode;
 
     /**
-     * @var array Read-Only weight of an instance
+     * @var array Instance Read-Only Weight.
+
      */
     public $InstanceWeights;
 
@@ -141,12 +148,23 @@ class ModifyProxyRwSplitRequest extends AbstractModel
     public $ConnectionPoolTimeOut;
 
     /**
+     * @var boolean Whether to treat the libra node as an ordinary RO node
+     */
+    public $ApNodeAsRoNode;
+
+    /**
+     * @var boolean libra node fault, whether to forward to other nodes
+     */
+    public $ApQueryToOtherNode;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ProxyGroupId Database proxy group ID
      * @param string $ConsistencyType Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
      * @param string $ConsistencyTimeOut Consistency timeout period
      * @param string $WeightMode Assignment mode of read/write weights. Valid values: `system` (auto-assigned), `custom`
-     * @param array $InstanceWeights Read-Only weight of an instance
+     * @param array $InstanceWeights Instance Read-Only Weight.
+
      * @param string $FailOver Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`.
      * @param string $AutoAddRo Whether to automatically add read-only instances. Valid values: `true`, `false`
      * @param string $OpenRw Whether to enable read/write separation
@@ -160,6 +178,8 @@ class ModifyProxyRwSplitRequest extends AbstractModel
      * @param string $ConnectionPoolType Connection pool type. Valid values:
 `ConnectionPoolType`, `SessionConnectionPool`.
      * @param integer $ConnectionPoolTimeOut Connection persistence timeout
+     * @param boolean $ApNodeAsRoNode Whether to treat the libra node as an ordinary RO node
+     * @param boolean $ApQueryToOtherNode libra node fault, whether to forward to other nodes
      */
     function __construct()
     {
@@ -237,6 +257,14 @@ class ModifyProxyRwSplitRequest extends AbstractModel
 
         if (array_key_exists("ConnectionPoolTimeOut",$param) and $param["ConnectionPoolTimeOut"] !== null) {
             $this->ConnectionPoolTimeOut = $param["ConnectionPoolTimeOut"];
+        }
+
+        if (array_key_exists("ApNodeAsRoNode",$param) and $param["ApNodeAsRoNode"] !== null) {
+            $this->ApNodeAsRoNode = $param["ApNodeAsRoNode"];
+        }
+
+        if (array_key_exists("ApQueryToOtherNode",$param) and $param["ApQueryToOtherNode"] !== null) {
+            $this->ApQueryToOtherNode = $param["ApQueryToOtherNode"];
         }
     }
 }

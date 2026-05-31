@@ -18,17 +18,17 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VideoEnhanceSetting
+ * Video enhancement configuration
  *
- * @method string getType() Obtain Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
- * @method void setType(string $Type) Set Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
+ * @method string getType() Obtain Video enhancement type. Option: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance".
+ * @method void setType(string $Type) Set Video enhancement type. Option: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance".
  * @method float getStrength() Obtain Video enhancement intensity, 0-1.0, granularity 0.1
  * @method void setStrength(float $Strength) Set Video enhancement intensity, 0-1.0, granularity 0.1
  */
 class VideoEnhanceSetting extends AbstractModel
 {
     /**
-     * @var string Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
+     * @var string Video enhancement type. Option: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance".
      */
     public $Type;
 
@@ -38,7 +38,7 @@ class VideoEnhanceSetting extends AbstractModel
     public $Strength;
 
     /**
-     * @param string $Type Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
+     * @param string $Type Video enhancement type. Option: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance".
      * @param float $Strength Video enhancement intensity, 0-1.0, granularity 0.1
      */
     function __construct()

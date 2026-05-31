@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Transparent transmission of ID3 information configuration.
  *
- * @method integer getBehavior() Obtain Whether to transparently transmit ID3 information, optional values: 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
- * @method void setBehavior(integer $Behavior) Set Whether to transparently transmit ID3 information, optional values: 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
+ * @method integer getBehavior() Obtain Whether to pass through ID3 info. Available values:
+0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
+ * @method void setBehavior(integer $Behavior) Set Whether to pass through ID3 info. Available values:
+0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
  */
 class TimedMetadataSettingInfo extends AbstractModel
 {
     /**
-     * @var integer Whether to transparently transmit ID3 information, optional values: 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
+     * @var integer Whether to pass through ID3 info. Available values:
+0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
      */
     public $Behavior;
 
     /**
-     * @param integer $Behavior Whether to transparently transmit ID3 information, optional values: 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
+     * @param integer $Behavior Whether to pass through ID3 info. Available values:
+0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
      */
     function __construct()
     {

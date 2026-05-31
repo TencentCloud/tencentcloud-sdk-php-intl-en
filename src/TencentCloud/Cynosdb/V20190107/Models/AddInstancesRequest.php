@@ -20,50 +20,52 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddInstances request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method integer getCpu() Obtain Number of CPU cores
- * @method void setCpu(integer $Cpu) Set Number of CPU cores
+ * @method string getClusterId() Obtain <p>Cluster ID.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method integer getCpu() Obtain <p>Cpu cores</p>
+ * @method void setCpu(integer $Cpu) Set <p>Cpu cores</p>
  * @method integer getMemory() Obtain Memory in GB
  * @method void setMemory(integer $Memory) Set Memory in GB
  * @method integer getReadOnlyCount() Obtain Number of added read-only instances. Value range: (0,16].
  * @method void setReadOnlyCount(integer $ReadOnlyCount) Set Number of added read-only instances. Value range: (0,16].
- * @method string getInstanceGrpId() Obtain Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
- * @method void setInstanceGrpId(string $InstanceGrpId) Set Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
- * @method string getVpcId() Obtain VPC ID
- * @method void setVpcId(string $VpcId) Set VPC ID
- * @method string getSubnetId() Obtain Subnet ID. If `VpcId` is set, `SubnetId` is required.
- * @method void setSubnetId(string $SubnetId) Set Subnet ID. If `VpcId` is set, `SubnetId` is required.
+ * @method string getDeviceType() Obtain <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+ * @method void setDeviceType(string $DeviceType) Set <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+ * @method string getInstanceGrpId() Obtain <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+ * @method void setInstanceGrpId(string $InstanceGrpId) Set <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+ * @method string getVpcId() Obtain <p>ID of the associated VPC network.</p>
+ * @method void setVpcId(string $VpcId) Set <p>ID of the associated VPC network.</p>
+ * @method string getSubnetId() Obtain <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
+ * @method void setSubnetId(string $SubnetId) Set <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
  * @method integer getPort() Obtain The port used when adding an RO group. Value range: [0,65535).
  * @method void setPort(integer $Port) Set The port used when adding an RO group. Value range: [0,65535).
  * @method string getInstanceName() Obtain Instance name. String length range: [0,64).
  * @method void setInstanceName(string $InstanceName) Set Instance name. String length range: [0,64).
- * @method integer getAutoVoucher() Obtain Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
- * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
- * @method string getDbType() Obtain Database type. Valid values: 
-<li> MYSQL </li>
- * @method void setDbType(string $DbType) Set Database type. Valid values: 
-<li> MYSQL </li>
- * @method string getOrderSource() Obtain Order source. String length range: [0,64).
- * @method void setOrderSource(string $OrderSource) Set Order source. String length range: [0,64).
- * @method integer getDealMode() Obtain Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
- * @method void setDealMode(integer $DealMode) Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
- * @method integer getParamTemplateId() Obtain Parameter template ID
- * @method void setParamTemplateId(integer $ParamTemplateId) Set Parameter template ID
- * @method array getInstanceParams() Obtain Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
- * @method void setInstanceParams(array $InstanceParams) Set Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
- * @method array getSecurityGroupIds() Obtain Security group ID. You can specify an security group when creating a read-only instance.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group ID. You can specify an security group when creating a read-only instance.
+ * @method integer getAutoVoucher() Obtain <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
+ * @method void setAutoVoucher(integer $AutoVoucher) Set <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
+ * @method string getDbType() Obtain <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+ * @method void setDbType(string $DbType) Set <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+ * @method string getOrderSource() Obtain <p>Order source, string length range [0,64)</p>
+ * @method void setOrderSource(string $OrderSource) Set <p>Order source, string length range [0,64)</p>
+ * @method integer getDealMode() Obtain <p>Transaction mode. 0: place order and pay; 1: place order</p>
+ * @method void setDealMode(integer $DealMode) Set <p>Transaction mode. 0: place order and pay; 1: place order</p>
+ * @method integer getParamTemplateId() Obtain <p>Parameter template ID</p>
+ * @method void setParamTemplateId(integer $ParamTemplateId) Set <p>Parameter template ID</p>
+ * @method array getInstanceParams() Obtain <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
+ * @method void setInstanceParams(array $InstanceParams) Set <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
+ * @method array getSecurityGroupIds() Obtain <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
+ * @method UpgradeProxy getUpgradeProxy() Obtain <p>proxy sync upgrade</p>
+ * @method void setUpgradeProxy(UpgradeProxy $UpgradeProxy) Set <p>proxy sync upgrade</p>
  */
 class AddInstancesRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer Number of CPU cores
+     * @var integer <p>Cpu cores</p>
      */
     public $Cpu;
 
@@ -78,18 +80,23 @@ class AddInstancesRequest extends AbstractModel
     public $ReadOnlyCount;
 
     /**
-     * @var string Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
+     * @var string <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+     */
+    public $DeviceType;
+
+    /**
+     * @var string <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
      * @deprecated
      */
     public $InstanceGrpId;
 
     /**
-     * @var string VPC ID
+     * @var string <p>ID of the associated VPC network.</p>
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID. If `VpcId` is set, `SubnetId` is required.
+     * @var string <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
      */
     public $SubnetId;
 
@@ -104,59 +111,64 @@ class AddInstancesRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+     * @var integer <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
      */
     public $AutoVoucher;
 
     /**
-     * @var string Database type. Valid values: 
-<li> MYSQL </li>
+     * @var string <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
      */
     public $DbType;
 
     /**
-     * @var string Order source. String length range: [0,64).
+     * @var string <p>Order source, string length range [0,64)</p>
      */
     public $OrderSource;
 
     /**
-     * @var integer Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     * @var integer <p>Transaction mode. 0: place order and pay; 1: place order</p>
      */
     public $DealMode;
 
     /**
-     * @var integer Parameter template ID
+     * @var integer <p>Parameter template ID</p>
      */
     public $ParamTemplateId;
 
     /**
-     * @var array Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+     * @var array <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
      */
     public $InstanceParams;
 
     /**
-     * @var array Security group ID. You can specify an security group when creating a read-only instance.
+     * @var array <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param integer $Cpu Number of CPU cores
+     * @var UpgradeProxy <p>proxy sync upgrade</p>
+     */
+    public $UpgradeProxy;
+
+    /**
+     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param integer $Cpu <p>Cpu cores</p>
      * @param integer $Memory Memory in GB
      * @param integer $ReadOnlyCount Number of added read-only instances. Value range: (0,16].
-     * @param string $InstanceGrpId Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
-     * @param string $VpcId VPC ID
-     * @param string $SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required.
+     * @param string $DeviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+     * @param string $InstanceGrpId <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+     * @param string $VpcId <p>ID of the associated VPC network.</p>
+     * @param string $SubnetId <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
      * @param integer $Port The port used when adding an RO group. Value range: [0,65535).
      * @param string $InstanceName Instance name. String length range: [0,64).
-     * @param integer $AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
-     * @param string $DbType Database type. Valid values: 
-<li> MYSQL </li>
-     * @param string $OrderSource Order source. String length range: [0,64).
-     * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
-     * @param integer $ParamTemplateId Parameter template ID
-     * @param array $InstanceParams Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
-     * @param array $SecurityGroupIds Security group ID. You can specify an security group when creating a read-only instance.
+     * @param integer $AutoVoucher <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
+     * @param string $DbType <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+     * @param string $OrderSource <p>Order source, string length range [0,64)</p>
+     * @param integer $DealMode <p>Transaction mode. 0: place order and pay; 1: place order</p>
+     * @param integer $ParamTemplateId <p>Parameter template ID</p>
+     * @param array $InstanceParams <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
+     * @param array $SecurityGroupIds <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
+     * @param UpgradeProxy $UpgradeProxy <p>proxy sync upgrade</p>
      */
     function __construct()
     {
@@ -185,6 +197,10 @@ class AddInstancesRequest extends AbstractModel
 
         if (array_key_exists("ReadOnlyCount",$param) and $param["ReadOnlyCount"] !== null) {
             $this->ReadOnlyCount = $param["ReadOnlyCount"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
         }
 
         if (array_key_exists("InstanceGrpId",$param) and $param["InstanceGrpId"] !== null) {
@@ -238,6 +254,11 @@ class AddInstancesRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("UpgradeProxy",$param) and $param["UpgradeProxy"] !== null) {
+            $this->UpgradeProxy = new UpgradeProxy();
+            $this->UpgradeProxy->deserialize($param["UpgradeProxy"]);
         }
     }
 }

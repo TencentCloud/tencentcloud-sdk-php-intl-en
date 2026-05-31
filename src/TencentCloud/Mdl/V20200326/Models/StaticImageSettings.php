@@ -18,20 +18,20 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Static graphic overlay configuration.
+ * Static image overlay configuration.
  *
- * @method integer getGlobalImageOverlayEnabled() Obtain Whether to enable global static image overlay, 0: Disable, 1: Enable; Default value: 0.
- * @method void setGlobalImageOverlayEnabled(integer $GlobalImageOverlayEnabled) Set Whether to enable global static image overlay, 0: Disable, 1: Enable; Default value: 0.
+ * @method integer getGlobalImageOverlayEnabled() Obtain Whether global static image overlay is enabled. 0: not enabled, 1: enabled. Default value: 0.
+ * @method void setGlobalImageOverlayEnabled(integer $GlobalImageOverlayEnabled) Set Whether global static image overlay is enabled. 0: not enabled, 1: enabled. Default value: 0.
  */
 class StaticImageSettings extends AbstractModel
 {
     /**
-     * @var integer Whether to enable global static image overlay, 0: Disable, 1: Enable; Default value: 0.
+     * @var integer Whether global static image overlay is enabled. 0: not enabled, 1: enabled. Default value: 0.
      */
     public $GlobalImageOverlayEnabled;
 
     /**
-     * @param integer $GlobalImageOverlayEnabled Whether to enable global static image overlay, 0: Disable, 1: Enable; Default value: 0.
+     * @param integer $GlobalImageOverlayEnabled Whether global static image overlay is enabled. 0: not enabled, 1: enabled. Default value: 0.
      */
     function __construct()
     {

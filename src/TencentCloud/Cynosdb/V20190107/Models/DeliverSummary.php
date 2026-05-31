@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeliverConsumer(string $DeliverConsumer) Set Sender.
  * @method string getDeliverConsumerName() Obtain Specifies the name of the sender.
  * @method void setDeliverConsumerName(string $DeliverConsumerName) Set Specifies the name of the sender.
+ * @method string getDeliverError() Obtain Exception error in delivery
+ * @method void setDeliverError(string $DeliverError) Set Exception error in delivery
  */
 class DeliverSummary extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DeliverSummary extends AbstractModel
     public $DeliverConsumerName;
 
     /**
+     * @var string Exception error in delivery
+     */
+    public $DeliverError;
+
+    /**
      * @param string $DeliverType Select the delivery type, storage class, message channel.
      * @param string $DeliverSubType Specifies the delivery subtype: cls, ckafka.
      * @param string $DeliverConsumer Sender.
      * @param string $DeliverConsumerName Specifies the name of the sender.
+     * @param string $DeliverError Exception error in delivery
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DeliverSummary extends AbstractModel
 
         if (array_key_exists("DeliverConsumerName",$param) and $param["DeliverConsumerName"] !== null) {
             $this->DeliverConsumerName = $param["DeliverConsumerName"];
+        }
+
+        if (array_key_exists("DeliverError",$param) and $param["DeliverError"] !== null) {
+            $this->DeliverError = $param["DeliverError"];
         }
     }
 }

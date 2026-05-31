@@ -18,76 +18,84 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Collection configuration.
+ * Highlight configuration.
  *
- * @method integer getHighlightEnabled() Obtain Whether to enable input recognition 0: Disable 1 Enable Default value 0 Disable.
- * @method void setHighlightEnabled(integer $HighlightEnabled) Set Whether to enable input recognition 0: Disable 1 Enable Default value 0 Disable.
- * @method string getType() Obtain The product where the results are saved, optional: COS. Currently, only Tencent Cloud COS is supported. In the future, it will be connected to AWS S3 and COS will be used by default.
- * @method void setType(string $Type) Set The product where the results are saved, optional: COS. Currently, only Tencent Cloud COS is supported. In the future, it will be connected to AWS S3 and COS will be used by default.
- * @method string getRegion() Obtain Valid when Type is COS, the region where COS is stored.
- * @method void setRegion(string $Region) Set Valid when Type is COS, the region where COS is stored.
- * @method string getBucket() Obtain Valid when Type is COS, the bucket name stored in COS.
- * @method void setBucket(string $Bucket) Set Valid when Type is COS, the bucket name stored in COS.
- * @method string getPath() Obtain Valid when Type is COS, the path where cos is stored.
- * @method void setPath(string $Path) Set Valid when Type is COS, the path where cos is stored.
- * @method string getFilename() Obtain Valid when Type is COS, the file name stored in cos.
- * @method void setFilename(string $Filename) Set Valid when Type is COS, the file name stored in cos.
- * @method string getTimestampFormat() Obtain Valid when Type is COS, the file name suffix stored in COS is automatically generated in the time format, optional values: unix, utc. Unix is the second-level timestamp and UTC is the year, month and day represented by the zero time zone.
- * @method void setTimestampFormat(string $TimestampFormat) Set Valid when Type is COS, the file name suffix stored in COS is automatically generated in the time format, optional values: unix, utc. Unix is the second-level timestamp and UTC is the year, month and day represented by the zero time zone.
- * @method array getAudioSelectorNames() Obtain Audio selector list is optional and can be empty. If not filled in, an audio will be used as the output of the recognition result by default.
- * @method void setAudioSelectorNames(array $AudioSelectorNames) Set Audio selector list is optional and can be empty. If not filled in, an audio will be used as the output of the recognition result by default.
+ * @method integer getHighlightEnabled() Obtain Whether to enable input recognition  0: disabled  1: enabled  Default value: 0.
+ * @method void setHighlightEnabled(integer $HighlightEnabled) Set Whether to enable input recognition  0: disabled  1: enabled  Default value: 0.
+ * @method string getType() Obtain Products to save results. Option: COS.
+Currently supports Tencent Cloud COS only. AWS S3 integration will be supported later. Default is COS.
+ * @method void setType(string $Type) Set Products to save results. Option: COS.
+Currently supports Tencent Cloud COS only. AWS S3 integration will be supported later. Default is COS.
+ * @method string getRegion() Obtain Valid when Type is COS. Region of COS storage.
+ * @method void setRegion(string $Region) Set Valid when Type is COS. Region of COS storage.
+ * @method string getBucket() Obtain Valid when Type is COS. Bucket name of COS storage.
+ * @method void setBucket(string $Bucket) Set Valid when Type is COS. Bucket name of COS storage.
+ * @method string getPath() Obtain Valid when Type is COS. Path of COS storage.
+ * @method void setPath(string $Path) Set Valid when Type is COS. Path of COS storage.
+ * @method string getFilename() Obtain Valid when Type is COS. Name of the stored file in COS.
+ * @method void setFilename(string $Filename) Set Valid when Type is COS. Name of the stored file in COS.
+ * @method string getTimestampFormat() Obtain Valid when Type is COS. The file extension of COS storage is automatically generated in time format. Available values: unix, utc.
+unix is a second-level timestamp. utc 0 represents the year, month, day.
+ * @method void setTimestampFormat(string $TimestampFormat) Set Valid when Type is COS. The file extension of COS storage is automatically generated in time format. Available values: unix, utc.
+unix is a second-level timestamp. utc 0 represents the year, month, day.
+ * @method array getAudioSelectorNames() Obtain Audio selector list, selectable, can be left blank. By default, an audio is used as the output of the recognition result.
+ * @method void setAudioSelectorNames(array $AudioSelectorNames) Set Audio selector list, selectable, can be left blank. By default, an audio is used as the output of the recognition result.
  */
 class HighlightInfo extends AbstractModel
 {
     /**
-     * @var integer Whether to enable input recognition 0: Disable 1 Enable Default value 0 Disable.
+     * @var integer Whether to enable input recognition  0: disabled  1: enabled  Default value: 0.
      */
     public $HighlightEnabled;
 
     /**
-     * @var string The product where the results are saved, optional: COS. Currently, only Tencent Cloud COS is supported. In the future, it will be connected to AWS S3 and COS will be used by default.
+     * @var string Products to save results. Option: COS.
+Currently supports Tencent Cloud COS only. AWS S3 integration will be supported later. Default is COS.
      */
     public $Type;
 
     /**
-     * @var string Valid when Type is COS, the region where COS is stored.
+     * @var string Valid when Type is COS. Region of COS storage.
      */
     public $Region;
 
     /**
-     * @var string Valid when Type is COS, the bucket name stored in COS.
+     * @var string Valid when Type is COS. Bucket name of COS storage.
      */
     public $Bucket;
 
     /**
-     * @var string Valid when Type is COS, the path where cos is stored.
+     * @var string Valid when Type is COS. Path of COS storage.
      */
     public $Path;
 
     /**
-     * @var string Valid when Type is COS, the file name stored in cos.
+     * @var string Valid when Type is COS. Name of the stored file in COS.
      */
     public $Filename;
 
     /**
-     * @var string Valid when Type is COS, the file name suffix stored in COS is automatically generated in the time format, optional values: unix, utc. Unix is the second-level timestamp and UTC is the year, month and day represented by the zero time zone.
+     * @var string Valid when Type is COS. The file extension of COS storage is automatically generated in time format. Available values: unix, utc.
+unix is a second-level timestamp. utc 0 represents the year, month, day.
      */
     public $TimestampFormat;
 
     /**
-     * @var array Audio selector list is optional and can be empty. If not filled in, an audio will be used as the output of the recognition result by default.
+     * @var array Audio selector list, selectable, can be left blank. By default, an audio is used as the output of the recognition result.
      */
     public $AudioSelectorNames;
 
     /**
-     * @param integer $HighlightEnabled Whether to enable input recognition 0: Disable 1 Enable Default value 0 Disable.
-     * @param string $Type The product where the results are saved, optional: COS. Currently, only Tencent Cloud COS is supported. In the future, it will be connected to AWS S3 and COS will be used by default.
-     * @param string $Region Valid when Type is COS, the region where COS is stored.
-     * @param string $Bucket Valid when Type is COS, the bucket name stored in COS.
-     * @param string $Path Valid when Type is COS, the path where cos is stored.
-     * @param string $Filename Valid when Type is COS, the file name stored in cos.
-     * @param string $TimestampFormat Valid when Type is COS, the file name suffix stored in COS is automatically generated in the time format, optional values: unix, utc. Unix is the second-level timestamp and UTC is the year, month and day represented by the zero time zone.
-     * @param array $AudioSelectorNames Audio selector list is optional and can be empty. If not filled in, an audio will be used as the output of the recognition result by default.
+     * @param integer $HighlightEnabled Whether to enable input recognition  0: disabled  1: enabled  Default value: 0.
+     * @param string $Type Products to save results. Option: COS.
+Currently supports Tencent Cloud COS only. AWS S3 integration will be supported later. Default is COS.
+     * @param string $Region Valid when Type is COS. Region of COS storage.
+     * @param string $Bucket Valid when Type is COS. Bucket name of COS storage.
+     * @param string $Path Valid when Type is COS. Path of COS storage.
+     * @param string $Filename Valid when Type is COS. Name of the stored file in COS.
+     * @param string $TimestampFormat Valid when Type is COS. The file extension of COS storage is automatically generated in time format. Available values: unix, utc.
+unix is a second-level timestamp. utc 0 represents the year, month, day.
+     * @param array $AudioSelectorNames Audio selector list, selectable, can be left blank. By default, an audio is used as the output of the recognition result.
      */
     function __construct()
     {

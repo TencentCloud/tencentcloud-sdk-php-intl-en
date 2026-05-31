@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Audio name, which can contain 1-32 letters, digits, and underscores.
  * @method AudioPidSelectionInfo getAudioPidSelection() Obtain Audio `Pid` selection.
  * @method void setAudioPidSelection(AudioPidSelectionInfo $AudioPidSelection) Set Audio `Pid` selection.
- * @method string getAudioSelectorType() Obtain Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
- * @method void setAudioSelectorType(string $AudioSelectorType) Set Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+ * @method string getAudioSelectorType() Obtain Audio input type. Value range: 'PID_SELECTOR' | 'TRACK_SELECTOR'. Default value: PID_SELECTOR.
+ * @method void setAudioSelectorType(string $AudioSelectorType) Set Audio input type. Value range: 'PID_SELECTOR' | 'TRACK_SELECTOR'. Default value: PID_SELECTOR.
  * @method InputTracks getAudioTrackSelection() Obtain AudioTrack configuration.
  * @method void setAudioTrackSelection(InputTracks $AudioTrackSelection) Set AudioTrack configuration.
  */
@@ -42,7 +42,7 @@ class AudioSelectorInfo extends AbstractModel
     public $AudioPidSelection;
 
     /**
-     * @var string Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+     * @var string Audio input type. Value range: 'PID_SELECTOR' | 'TRACK_SELECTOR'. Default value: PID_SELECTOR.
      */
     public $AudioSelectorType;
 
@@ -54,7 +54,7 @@ class AudioSelectorInfo extends AbstractModel
     /**
      * @param string $Name Audio name, which can contain 1-32 letters, digits, and underscores.
      * @param AudioPidSelectionInfo $AudioPidSelection Audio `Pid` selection.
-     * @param string $AudioSelectorType Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+     * @param string $AudioSelectorType Audio input type. Value range: 'PID_SELECTOR' | 'TRACK_SELECTOR'. Default value: PID_SELECTOR.
      * @param InputTracks $AudioTrackSelection AudioTrack configuration.
      */
     function __construct()

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackageType(string $PackageType) Set Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
  * @method string getPackageVersion() Obtain Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
  * @method void setPackageVersion(string $PackageVersion) Set Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
- * @method float getPackageSpec() Obtain Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB
- * @method void setPackageSpec(float $PackageSpec) Set Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB
+ * @method float getPackageSpec() Obtain Resource package size. Compute resource unit: unit; storage resource: GB.
+ * @method void setPackageSpec(float $PackageSpec) Set Resource package size. Compute resource unit: unit; storage resource: GB.
  * @method integer getExpireDay() Obtain Validity period of a resource pack in days
  * @method void setExpireDay(integer $ExpireDay) Set Validity period of a resource pack in days
  * @method integer getPackageCount() Obtain Number of the resource packs to be purchased
@@ -60,7 +60,7 @@ class CreateResourcePackageRequest extends AbstractModel
     public $PackageVersion;
 
     /**
-     * @var float Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB
+     * @var float Resource package size. Compute resource unit: unit; storage resource: GB.
      */
     public $PackageSpec;
 
@@ -84,7 +84,7 @@ class CreateResourcePackageRequest extends AbstractModel
      * @param string $PackageRegion Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
      * @param string $PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
      * @param string $PackageVersion Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
-     * @param float $PackageSpec Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB
+     * @param float $PackageSpec Resource package size. Compute resource unit: unit; storage resource: GB.
      * @param integer $ExpireDay Validity period of a resource pack in days
      * @param integer $PackageCount Number of the resource packs to be purchased
      * @param string $PackageName Resource pack name

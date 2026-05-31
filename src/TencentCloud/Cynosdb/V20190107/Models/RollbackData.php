@@ -18,32 +18,32 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rollback Task Information
+ * 
  *
- * @method integer getCpu() Obtain Instance CPU
- * @method void setCpu(integer $Cpu) Set Instance CPU
- * @method integer getMemory() Obtain Instance Memory
- * @method void setMemory(integer $Memory) Set Instance Memory
- * @method integer getStorageLimit() Obtain Cluster storage limit
- * @method void setStorageLimit(integer $StorageLimit) Set Cluster storage limit
- * @method string getOriginalClusterId() Obtain Original Cluster id
- * @method void setOriginalClusterId(string $OriginalClusterId) Set Original Cluster id
- * @method string getOriginalClusterName() Obtain Original Cluster Name
- * @method void setOriginalClusterName(string $OriginalClusterName) Set Original Cluster Name
- * @method string getRollbackStrategy() Obtain Rollback Method
- * @method void setRollbackStrategy(string $RollbackStrategy) Set Rollback Method
- * @method string getSnapshotTime() Obtain Snapshot Time
- * @method void setSnapshotTime(string $SnapshotTime) Set Snapshot Time
- * @method integer getMinCpu() Obtain Minimum CPU when rolling back to a serverlessls cluster.
- * @method void setMinCpu(integer $MinCpu) Set Minimum CPU when rolling back to a serverlessls cluster.
- * @method integer getMaxCpu() Obtain Maximum CPU when rolling back to a serverlessls cluster.
- * @method void setMaxCpu(integer $MaxCpu) Set Maximum CPU when rolling back to a serverlessls cluster.
+ * @method integer getCpu() Obtain 
+ * @method void setCpu(integer $Cpu) Set 
+ * @method integer getMemory() Obtain 
+ * @method void setMemory(integer $Memory) Set 
+ * @method integer getStorageLimit() Obtain 
+ * @method void setStorageLimit(integer $StorageLimit) Set 
+ * @method string getOriginalClusterId() Obtain 
+ * @method void setOriginalClusterId(string $OriginalClusterId) Set 
+ * @method string getOriginalClusterName() Obtain 
+ * @method void setOriginalClusterName(string $OriginalClusterName) Set 
+ * @method string getRollbackStrategy() Obtain 
+ * @method void setRollbackStrategy(string $RollbackStrategy) Set 
+ * @method string getSnapshotTime() Obtain 
+ * @method void setSnapshotTime(string $SnapshotTime) Set 
+ * @method integer getMinCpu() Obtain Roll back to the Serverless cluster with minimum CPU
+ * @method void setMinCpu(integer $MinCpu) Set Roll back to the Serverless cluster with minimum CPU
+ * @method integer getMaxCpu() Obtain Roll back to the Serverless cluster with maximum CPU
+ * @method void setMaxCpu(integer $MaxCpu) Set Roll back to the Serverless cluster with maximum CPU
  * @method integer getSnapShotId() Obtain Snapshot ID.
  * @method void setSnapShotId(integer $SnapShotId) Set Snapshot ID.
- * @method array getRollbackDatabases() Obtain Rollback Database
- * @method void setRollbackDatabases(array $RollbackDatabases) Set Rollback Database
- * @method array getRollbackTables() Obtain Rollback Data Table
- * @method void setRollbackTables(array $RollbackTables) Set Rollback Data Table
+ * @method array getRollbackDatabases() Obtain 
+ * @method void setRollbackDatabases(array $RollbackDatabases) Set 
+ * @method array getRollbackTables() Obtain 
+ * @method void setRollbackTables(array $RollbackTables) Set 
  * @method string getBackupFileName() Obtain Specifies the backup file name.
  * @method void setBackupFileName(string $BackupFileName) Set Specifies the backup file name.
  * @method RollbackProcessInfo getRollbackProcess() Obtain Rollback process.
@@ -52,47 +52,47 @@ use TencentCloud\Common\AbstractModel;
 class RollbackData extends AbstractModel
 {
     /**
-     * @var integer Instance CPU
+     * @var integer 
      */
     public $Cpu;
 
     /**
-     * @var integer Instance Memory
+     * @var integer 
      */
     public $Memory;
 
     /**
-     * @var integer Cluster storage limit
+     * @var integer 
      */
     public $StorageLimit;
 
     /**
-     * @var string Original Cluster id
+     * @var string 
      */
     public $OriginalClusterId;
 
     /**
-     * @var string Original Cluster Name
+     * @var string 
      */
     public $OriginalClusterName;
 
     /**
-     * @var string Rollback Method
+     * @var string 
      */
     public $RollbackStrategy;
 
     /**
-     * @var string Snapshot Time
+     * @var string 
      */
     public $SnapshotTime;
 
     /**
-     * @var integer Minimum CPU when rolling back to a serverlessls cluster.
+     * @var integer Roll back to the Serverless cluster with minimum CPU
      */
     public $MinCpu;
 
     /**
-     * @var integer Maximum CPU when rolling back to a serverlessls cluster.
+     * @var integer Roll back to the Serverless cluster with maximum CPU
      */
     public $MaxCpu;
 
@@ -102,12 +102,12 @@ class RollbackData extends AbstractModel
     public $SnapShotId;
 
     /**
-     * @var array Rollback Database
+     * @var array 
      */
     public $RollbackDatabases;
 
     /**
-     * @var array Rollback Data Table
+     * @var array 
      */
     public $RollbackTables;
 
@@ -122,18 +122,18 @@ class RollbackData extends AbstractModel
     public $RollbackProcess;
 
     /**
-     * @param integer $Cpu Instance CPU
-     * @param integer $Memory Instance Memory
-     * @param integer $StorageLimit Cluster storage limit
-     * @param string $OriginalClusterId Original Cluster id
-     * @param string $OriginalClusterName Original Cluster Name
-     * @param string $RollbackStrategy Rollback Method
-     * @param string $SnapshotTime Snapshot Time
-     * @param integer $MinCpu Minimum CPU when rolling back to a serverlessls cluster.
-     * @param integer $MaxCpu Maximum CPU when rolling back to a serverlessls cluster.
+     * @param integer $Cpu 
+     * @param integer $Memory 
+     * @param integer $StorageLimit 
+     * @param string $OriginalClusterId 
+     * @param string $OriginalClusterName 
+     * @param string $RollbackStrategy 
+     * @param string $SnapshotTime 
+     * @param integer $MinCpu Roll back to the Serverless cluster with minimum CPU
+     * @param integer $MaxCpu Roll back to the Serverless cluster with maximum CPU
      * @param integer $SnapShotId Snapshot ID.
-     * @param array $RollbackDatabases Rollback Database
-     * @param array $RollbackTables Rollback Data Table
+     * @param array $RollbackDatabases 
+     * @param array $RollbackTables 
      * @param string $BackupFileName Specifies the backup file name.
      * @param RollbackProcessInfo $RollbackProcess Rollback process.
      */

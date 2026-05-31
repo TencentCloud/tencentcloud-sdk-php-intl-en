@@ -20,81 +20,81 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStreamLiveChannel request structure.
  *
- * @method string getName() Obtain Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
- * @method void setName(string $Name) Set Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
- * @method array getAttachedInputs() Obtain Inputs to attach. You can attach 1 to 5 inputs.
- * @method void setAttachedInputs(array $AttachedInputs) Set Inputs to attach. You can attach 1 to 5 inputs.
- * @method array getOutputGroups() Obtain Configuration information of the channel's output groups. Quantity: [1, 10]
- * @method void setOutputGroups(array $OutputGroups) Set Configuration information of the channel's output groups. Quantity: [1, 10]
- * @method array getAudioTemplates() Obtain Audio transcoding templates. Quantity: [1, 20]
- * @method void setAudioTemplates(array $AudioTemplates) Set Audio transcoding templates. Quantity: [1, 20]
- * @method array getVideoTemplates() Obtain Video transcoding templates. Quantity: [1, 10]
- * @method void setVideoTemplates(array $VideoTemplates) Set Video transcoding templates. Quantity: [1, 10]
- * @method array getAVTemplates() Obtain Audio/Video transcoding templates. Quantity: [1, 10]
- * @method void setAVTemplates(array $AVTemplates) Set Audio/Video transcoding templates. Quantity: [1, 10]
- * @method array getCaptionTemplates() Obtain Subtitle template configuration.
- * @method void setCaptionTemplates(array $CaptionTemplates) Set Subtitle template configuration.
- * @method PlanSettings getPlanSettings() Obtain Event settings
- * @method void setPlanSettings(PlanSettings $PlanSettings) Set Event settings
- * @method EventNotifySetting getEventNotifySettings() Obtain The callback settings.
- * @method void setEventNotifySettings(EventNotifySetting $EventNotifySettings) Set The callback settings.
+ * @method string getName() Obtain Channel name, limited to lowercase letters, digits, and underscores, length [1, 32], unique in each Region.
+ * @method void setName(string $Name) Set Channel name, limited to lowercase letters, digits, and underscores, length [1, 32], unique in each Region.
+ * @method array getAttachedInputs() Obtain Associated media input, limit on the number [1, 5].
+ * @method void setAttachedInputs(array $AttachedInputs) Set Associated media input, limit on the number [1, 5].
+ * @method array getOutputGroups() Obtain Configuration message of the output group for the channel. Limit on the number [1, 10].
+ * @method void setOutputGroups(array $OutputGroups) Set Configuration message of the output group for the channel. Limit on the number [1, 10].
+ * @method array getAudioTemplates() Obtain Audio transcoding template array, with the maximum number of [1, 20].
+ * @method void setAudioTemplates(array $AudioTemplates) Set Audio transcoding template array, with the maximum number of [1, 20].
+ * @method array getVideoTemplates() Obtain Video transcoding template array, with the maximum number of [1, 10].
+ * @method void setVideoTemplates(array $VideoTemplates) Set Video transcoding template array, with the maximum number of [1, 10].
+ * @method array getAVTemplates() Obtain Audio and video transcoding template array, with a limit on the number between 1 and 10.
+ * @method void setAVTemplates(array $AVTemplates) Set Audio and video transcoding template array, with a limit on the number between 1 and 10.
+ * @method array getCaptionTemplates() Obtain Subtitle template configuration is only valid for joint transcoding template.
+ * @method void setCaptionTemplates(array $CaptionTemplates) Set Subtitle template configuration is only valid for joint transcoding template.
+ * @method PlanSettings getPlanSettings() Obtain Configuration message of the scheduled task.
+ * @method void setPlanSettings(PlanSettings $PlanSettings) Set Configuration message of the scheduled task.
+ * @method EventNotifySetting getEventNotifySettings() Obtain Callback configuration information.
+ * @method void setEventNotifySettings(EventNotifySetting $EventNotifySettings) Set Callback configuration information.
  * @method InputLossBehaviorInfo getInputLossBehavior() Obtain Complement the last video frame settings.
  * @method void setInputLossBehavior(InputLossBehaviorInfo $InputLossBehavior) Set Complement the last video frame settings.
  * @method PipelineInputSettingsInfo getPipelineInputSettings() Obtain Pipeline configuration.
  * @method void setPipelineInputSettings(PipelineInputSettingsInfo $PipelineInputSettings) Set Pipeline configuration.
- * @method InputAnalysisInfo getInputAnalysisSettings() Obtain Recognition configuration for input content.
- * @method void setInputAnalysisSettings(InputAnalysisInfo $InputAnalysisSettings) Set Recognition configuration for input content.
- * @method array getTags() Obtain Console tag list.
- * @method void setTags(array $Tags) Set Console tag list.
- * @method array getFrameCaptureTemplates() Obtain Frame capture templates.
- * @method void setFrameCaptureTemplates(array $FrameCaptureTemplates) Set Frame capture templates.
- * @method GeneralSetting getGeneralSettings() Obtain General settings.
- * @method void setGeneralSettings(GeneralSetting $GeneralSettings) Set General settings.
+ * @method InputAnalysisInfo getInputAnalysisSettings() Obtain Input content identification configuration.
+ * @method void setInputAnalysisSettings(InputAnalysisInfo $InputAnalysisSettings) Set Input content identification configuration.
+ * @method array getTags() Obtain Console tag list
+ * @method void setTags(array $Tags) Set Console tag list
+ * @method array getFrameCaptureTemplates() Obtain chart template
+ * @method void setFrameCaptureTemplates(array $FrameCaptureTemplates) Set chart template
+ * @method GeneralSetting getGeneralSettings() Obtain Common configuration.
+ * @method void setGeneralSettings(GeneralSetting $GeneralSettings) Set Common configuration.
  */
 class CreateStreamLiveChannelRequest extends AbstractModel
 {
     /**
-     * @var string Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+     * @var string Channel name, limited to lowercase letters, digits, and underscores, length [1, 32], unique in each Region.
      */
     public $Name;
 
     /**
-     * @var array Inputs to attach. You can attach 1 to 5 inputs.
+     * @var array Associated media input, limit on the number [1, 5].
      */
     public $AttachedInputs;
 
     /**
-     * @var array Configuration information of the channel's output groups. Quantity: [1, 10]
+     * @var array Configuration message of the output group for the channel. Limit on the number [1, 10].
      */
     public $OutputGroups;
 
     /**
-     * @var array Audio transcoding templates. Quantity: [1, 20]
+     * @var array Audio transcoding template array, with the maximum number of [1, 20].
      */
     public $AudioTemplates;
 
     /**
-     * @var array Video transcoding templates. Quantity: [1, 10]
+     * @var array Video transcoding template array, with the maximum number of [1, 10].
      */
     public $VideoTemplates;
 
     /**
-     * @var array Audio/Video transcoding templates. Quantity: [1, 10]
+     * @var array Audio and video transcoding template array, with a limit on the number between 1 and 10.
      */
     public $AVTemplates;
 
     /**
-     * @var array Subtitle template configuration.
+     * @var array Subtitle template configuration is only valid for joint transcoding template.
      */
     public $CaptionTemplates;
 
     /**
-     * @var PlanSettings Event settings
+     * @var PlanSettings Configuration message of the scheduled task.
      */
     public $PlanSettings;
 
     /**
-     * @var EventNotifySetting The callback settings.
+     * @var EventNotifySetting Callback configuration information.
      */
     public $EventNotifySettings;
 
@@ -109,41 +109,41 @@ class CreateStreamLiveChannelRequest extends AbstractModel
     public $PipelineInputSettings;
 
     /**
-     * @var InputAnalysisInfo Recognition configuration for input content.
+     * @var InputAnalysisInfo Input content identification configuration.
      */
     public $InputAnalysisSettings;
 
     /**
-     * @var array Console tag list.
+     * @var array Console tag list
      */
     public $Tags;
 
     /**
-     * @var array Frame capture templates.
+     * @var array chart template
      */
     public $FrameCaptureTemplates;
 
     /**
-     * @var GeneralSetting General settings.
+     * @var GeneralSetting Common configuration.
      */
     public $GeneralSettings;
 
     /**
-     * @param string $Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
-     * @param array $AttachedInputs Inputs to attach. You can attach 1 to 5 inputs.
-     * @param array $OutputGroups Configuration information of the channel's output groups. Quantity: [1, 10]
-     * @param array $AudioTemplates Audio transcoding templates. Quantity: [1, 20]
-     * @param array $VideoTemplates Video transcoding templates. Quantity: [1, 10]
-     * @param array $AVTemplates Audio/Video transcoding templates. Quantity: [1, 10]
-     * @param array $CaptionTemplates Subtitle template configuration.
-     * @param PlanSettings $PlanSettings Event settings
-     * @param EventNotifySetting $EventNotifySettings The callback settings.
+     * @param string $Name Channel name, limited to lowercase letters, digits, and underscores, length [1, 32], unique in each Region.
+     * @param array $AttachedInputs Associated media input, limit on the number [1, 5].
+     * @param array $OutputGroups Configuration message of the output group for the channel. Limit on the number [1, 10].
+     * @param array $AudioTemplates Audio transcoding template array, with the maximum number of [1, 20].
+     * @param array $VideoTemplates Video transcoding template array, with the maximum number of [1, 10].
+     * @param array $AVTemplates Audio and video transcoding template array, with a limit on the number between 1 and 10.
+     * @param array $CaptionTemplates Subtitle template configuration is only valid for joint transcoding template.
+     * @param PlanSettings $PlanSettings Configuration message of the scheduled task.
+     * @param EventNotifySetting $EventNotifySettings Callback configuration information.
      * @param InputLossBehaviorInfo $InputLossBehavior Complement the last video frame settings.
      * @param PipelineInputSettingsInfo $PipelineInputSettings Pipeline configuration.
-     * @param InputAnalysisInfo $InputAnalysisSettings Recognition configuration for input content.
-     * @param array $Tags Console tag list.
-     * @param array $FrameCaptureTemplates Frame capture templates.
-     * @param GeneralSetting $GeneralSettings General settings.
+     * @param InputAnalysisInfo $InputAnalysisSettings Input content identification configuration.
+     * @param array $Tags Console tag list
+     * @param array $FrameCaptureTemplates chart template
+     * @param GeneralSetting $GeneralSettings Common configuration.
      */
     function __construct()
     {

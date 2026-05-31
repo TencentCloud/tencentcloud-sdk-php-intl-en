@@ -20,170 +20,230 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProxyEndPoint request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getUniqueVpcId() Obtain VPC ID, which is the same as that of the cluster by default.
- * @method void setUniqueVpcId(string $UniqueVpcId) Set VPC ID, which is the same as that of the cluster by default.
- * @method string getUniqueSubnetId() Obtain VPCe subnet ID, which is the same as that of the cluster by default.
- * @method void setUniqueSubnetId(string $UniqueSubnetId) Set VPCe subnet ID, which is the same as that of the cluster by default.
- * @method string getConnectionPoolType() Obtain Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
- * @method void setConnectionPoolType(string $ConnectionPoolType) Set Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
- * @method string getOpenConnectionPool() Obtain Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
- * @method void setOpenConnectionPool(string $OpenConnectionPool) Set Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
- * @method integer getConnectionPoolTimeOut() Obtain Connection pool threshold in seconds
- * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set Connection pool threshold in seconds
- * @method array getSecurityGroupIds() Obtain Array of security group IDs
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Array of security group IDs
- * @method string getDescription() Obtain Description
- * @method void setDescription(string $Description) Set Description
- * @method string getVip() Obtain VIP information
- * @method void setVip(string $Vip) Set VIP information
- * @method string getWeightMode() Obtain Weight mode. 
-Valid values: `system` (system-assigned), `custom` (custom).
- * @method void setWeightMode(string $WeightMode) Set Weight mode. 
-Valid values: `system` (system-assigned), `custom` (custom).
- * @method string getAutoAddRo() Obtain Whether to automatically add read-only instance. Valid value: `yes`, `no`.
- * @method void setAutoAddRo(string $AutoAddRo) Set Whether to automatically add read-only instance. Valid value: `yes`, `no`.
- * @method string getFailOver() Obtain Whether to enable failover
- * @method void setFailOver(string $FailOver) Set Whether to enable failover
- * @method string getConsistencyType() Obtain Consistency type. Valid values: 
-`eventual`, `global`, `session`.
- * @method void setConsistencyType(string $ConsistencyType) Set Consistency type. Valid values: 
-`eventual`, `global`, `session`.
- * @method string getRwType() Obtain Read-write attribute. Valid values: 
-`READWRITE`, `READONLY`.
- * @method void setRwType(string $RwType) Set Read-write attribute. Valid values: 
-`READWRITE`, `READONLY`.
- * @method integer getConsistencyTimeOut() Obtain Consistency timeout period
- * @method void setConsistencyTimeOut(integer $ConsistencyTimeOut) Set Consistency timeout period
- * @method boolean getTransSplit() Obtain Transaction split
- * @method void setTransSplit(boolean $TransSplit) Set Transaction split
- * @method string getAccessMode() Obtain Connection mode. Valid values:
-`nearby`, `balance`.
- * @method void setAccessMode(string $AccessMode) Set Connection mode. Valid values:
-`nearby`, `balance`.
- * @method array getInstanceWeights() Obtain Instance weight
- * @method void setInstanceWeights(array $InstanceWeights) Set Instance weight
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method string getUniqueVpcId() Obtain VPC ID. By default, it remains consistent with the VPC ID of the cluster.
+ * @method void setUniqueVpcId(string $UniqueVpcId) Set VPC ID. By default, it remains consistent with the VPC ID of the cluster.
+ * @method string getUniqueSubnetId() Obtain Subnet ID of the VPC. By default, it remains consistent with the subnet ID of the cluster.
+ * @method void setUniqueSubnetId(string $UniqueSubnetId) Set Subnet ID of the VPC. By default, it remains consistent with the subnet ID of the cluster.
+ * @method string getConnectionPoolType() Obtain Type of connection pool: SessionConnectionPool (session-level connection pool).
+ * @method void setConnectionPoolType(string $ConnectionPoolType) Set Type of connection pool: SessionConnectionPool (session-level connection pool).
+ * @method string getOpenConnectionPool() Obtain Whether to enable the connection pool.
+yes: indicates enabled.
+no: indicates not enabled.
+ * @method void setOpenConnectionPool(string $OpenConnectionPool) Set Whether to enable the connection pool.
+yes: indicates enabled.
+no: indicates not enabled.
+ * @method integer getConnectionPoolTimeOut() Obtain Threshold of the connection pool: unit (seconds). Valid values: 0 - 300 seconds.
+ * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) Set Threshold of the connection pool: unit (seconds). Valid values: 0 - 300 seconds.
+ * @method array getSecurityGroupIds() Obtain Array of bound security group IDs.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Array of bound security group IDs.
+ * @method string getDescription() Obtain Description.
+ * @method void setDescription(string $Description) Set Description.
+ * @method string getVip() Obtain The vip information to be bound must correspond to the UniqueVpcId.
+ * @method void setVip(string $Vip) Set The vip information to be bound must correspond to the UniqueVpcId.
+ * @method string getWeightMode() Obtain Weight mode:
+system: system-assigned.
+custom: custom.
+ * @method void setWeightMode(string $WeightMode) Set Weight mode:
+system: system-assigned.
+custom: custom.
+ * @method string getAutoAddRo() Obtain Whether to automatically add a read-only instance.
+yes: indicates automatically adding a read-only instance.
+no: indicates not to automatically add a read-only instance.
+ * @method void setAutoAddRo(string $AutoAddRo) Set Whether to automatically add a read-only instance.
+yes: indicates automatically adding a read-only instance.
+no: indicates not to automatically add a read-only instance.
+ * @method string getFailOver() Obtain Whether to enable failover.
+yes: indicates enabled. After it is enabled, when the database proxy encounters faults, the connection address will be routed to the primary instance.
+no: indicates not enabled.
+Description:
+Only when the value of the RwType parameter is READWRITE can this option be configured.
+ * @method void setFailOver(string $FailOver) Set Whether to enable failover.
+yes: indicates enabled. After it is enabled, when the database proxy encounters faults, the connection address will be routed to the primary instance.
+no: indicates not enabled.
+Description:
+Only when the value of the RwType parameter is READWRITE can this option be configured.
+ * @method string getConsistencyType() Obtain Consistency Type:
+eventual: eventual consistency.
+global: global consistency.
+session: session consistency.
+Description:
+Only when the RwType parameter value is READWRITE can this option be configured.
+ * @method void setConsistencyType(string $ConsistencyType) Set Consistency Type:
+eventual: eventual consistency.
+global: global consistency.
+session: session consistency.
+Description:
+Only when the RwType parameter value is READWRITE can this option be configured.
+ * @method string getRwType() Obtain Read-Write Attribute:
+READWRITE: indicates read/write splitting. Only when this parameter value is READWRITE can the FailOver and ConsistencyType parameters be configured.
+READONLY: indicates read-only.
+ * @method void setRwType(string $RwType) Set Read-Write Attribute:
+READWRITE: indicates read/write splitting. Only when this parameter value is READWRITE can the FailOver and ConsistencyType parameters be configured.
+READONLY: indicates read-only.
+ * @method integer getConsistencyTimeOut() Obtain The consistency timeout period. Value range: 0 - 1000000 (microseconds). When set to 0, if a read-only instance experiences latency causing the consistency policy to be unsatisfied, the request will wait indefinitely.
+ * @method void setConsistencyTimeOut(integer $ConsistencyTimeOut) Set The consistency timeout period. Value range: 0 - 1000000 (microseconds). When set to 0, if a read-only instance experiences latency causing the consistency policy to be unsatisfied, the request will wait indefinitely.
+ * @method boolean getTransSplit() Obtain Whether to enable transaction split. After it is enabled, read and write operations in a transaction are split to different instances for execution.
+ * @method void setTransSplit(boolean $TransSplit) Set Whether to enable transaction split. After it is enabled, read and write operations in a transaction are split to different instances for execution.
+ * @method string getAccessMode() Obtain Access mode:
+nearby: nearby access.
+balance: balanced allocation.
+ * @method void setAccessMode(string $AccessMode) Set Access mode:
+nearby: nearby access.
+balance: balanced allocation.
+ * @method array getInstanceWeights() Obtain Instance weight.
+ * @method void setInstanceWeights(array $InstanceWeights) Set Instance weight.
  */
 class CreateProxyEndPointRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var string VPC ID, which is the same as that of the cluster by default.
+     * @var string VPC ID. By default, it remains consistent with the VPC ID of the cluster.
      */
     public $UniqueVpcId;
 
     /**
-     * @var string VPCe subnet ID, which is the same as that of the cluster by default.
+     * @var string Subnet ID of the VPC. By default, it remains consistent with the subnet ID of the cluster.
      */
     public $UniqueSubnetId;
 
     /**
-     * @var string Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
+     * @var string Type of connection pool: SessionConnectionPool (session-level connection pool).
      */
     public $ConnectionPoolType;
 
     /**
-     * @var string Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
+     * @var string Whether to enable the connection pool.
+yes: indicates enabled.
+no: indicates not enabled.
      */
     public $OpenConnectionPool;
 
     /**
-     * @var integer Connection pool threshold in seconds
+     * @var integer Threshold of the connection pool: unit (seconds). Valid values: 0 - 300 seconds.
      */
     public $ConnectionPoolTimeOut;
 
     /**
-     * @var array Array of security group IDs
+     * @var array Array of bound security group IDs.
      */
     public $SecurityGroupIds;
 
     /**
-     * @var string Description
+     * @var string Description.
      */
     public $Description;
 
     /**
-     * @var string VIP information
+     * @var string The vip information to be bound must correspond to the UniqueVpcId.
      */
     public $Vip;
 
     /**
-     * @var string Weight mode. 
-Valid values: `system` (system-assigned), `custom` (custom).
+     * @var string Weight mode:
+system: system-assigned.
+custom: custom.
      */
     public $WeightMode;
 
     /**
-     * @var string Whether to automatically add read-only instance. Valid value: `yes`, `no`.
+     * @var string Whether to automatically add a read-only instance.
+yes: indicates automatically adding a read-only instance.
+no: indicates not to automatically add a read-only instance.
      */
     public $AutoAddRo;
 
     /**
-     * @var string Whether to enable failover
+     * @var string Whether to enable failover.
+yes: indicates enabled. After it is enabled, when the database proxy encounters faults, the connection address will be routed to the primary instance.
+no: indicates not enabled.
+Description:
+Only when the value of the RwType parameter is READWRITE can this option be configured.
      */
     public $FailOver;
 
     /**
-     * @var string Consistency type. Valid values: 
-`eventual`, `global`, `session`.
+     * @var string Consistency Type:
+eventual: eventual consistency.
+global: global consistency.
+session: session consistency.
+Description:
+Only when the RwType parameter value is READWRITE can this option be configured.
      */
     public $ConsistencyType;
 
     /**
-     * @var string Read-write attribute. Valid values: 
-`READWRITE`, `READONLY`.
+     * @var string Read-Write Attribute:
+READWRITE: indicates read/write splitting. Only when this parameter value is READWRITE can the FailOver and ConsistencyType parameters be configured.
+READONLY: indicates read-only.
      */
     public $RwType;
 
     /**
-     * @var integer Consistency timeout period
+     * @var integer The consistency timeout period. Value range: 0 - 1000000 (microseconds). When set to 0, if a read-only instance experiences latency causing the consistency policy to be unsatisfied, the request will wait indefinitely.
      */
     public $ConsistencyTimeOut;
 
     /**
-     * @var boolean Transaction split
+     * @var boolean Whether to enable transaction split. After it is enabled, read and write operations in a transaction are split to different instances for execution.
      */
     public $TransSplit;
 
     /**
-     * @var string Connection mode. Valid values:
-`nearby`, `balance`.
+     * @var string Access mode:
+nearby: nearby access.
+balance: balanced allocation.
      */
     public $AccessMode;
 
     /**
-     * @var array Instance weight
+     * @var array Instance weight.
      */
     public $InstanceWeights;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param string $UniqueVpcId VPC ID, which is the same as that of the cluster by default.
-     * @param string $UniqueSubnetId VPCe subnet ID, which is the same as that of the cluster by default.
-     * @param string $ConnectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
-     * @param string $OpenConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
-     * @param integer $ConnectionPoolTimeOut Connection pool threshold in seconds
-     * @param array $SecurityGroupIds Array of security group IDs
-     * @param string $Description Description
-     * @param string $Vip VIP information
-     * @param string $WeightMode Weight mode. 
-Valid values: `system` (system-assigned), `custom` (custom).
-     * @param string $AutoAddRo Whether to automatically add read-only instance. Valid value: `yes`, `no`.
-     * @param string $FailOver Whether to enable failover
-     * @param string $ConsistencyType Consistency type. Valid values: 
-`eventual`, `global`, `session`.
-     * @param string $RwType Read-write attribute. Valid values: 
-`READWRITE`, `READONLY`.
-     * @param integer $ConsistencyTimeOut Consistency timeout period
-     * @param boolean $TransSplit Transaction split
-     * @param string $AccessMode Connection mode. Valid values:
-`nearby`, `balance`.
-     * @param array $InstanceWeights Instance weight
+     * @param string $ClusterId Cluster ID.
+     * @param string $UniqueVpcId VPC ID. By default, it remains consistent with the VPC ID of the cluster.
+     * @param string $UniqueSubnetId Subnet ID of the VPC. By default, it remains consistent with the subnet ID of the cluster.
+     * @param string $ConnectionPoolType Type of connection pool: SessionConnectionPool (session-level connection pool).
+     * @param string $OpenConnectionPool Whether to enable the connection pool.
+yes: indicates enabled.
+no: indicates not enabled.
+     * @param integer $ConnectionPoolTimeOut Threshold of the connection pool: unit (seconds). Valid values: 0 - 300 seconds.
+     * @param array $SecurityGroupIds Array of bound security group IDs.
+     * @param string $Description Description.
+     * @param string $Vip The vip information to be bound must correspond to the UniqueVpcId.
+     * @param string $WeightMode Weight mode:
+system: system-assigned.
+custom: custom.
+     * @param string $AutoAddRo Whether to automatically add a read-only instance.
+yes: indicates automatically adding a read-only instance.
+no: indicates not to automatically add a read-only instance.
+     * @param string $FailOver Whether to enable failover.
+yes: indicates enabled. After it is enabled, when the database proxy encounters faults, the connection address will be routed to the primary instance.
+no: indicates not enabled.
+Description:
+Only when the value of the RwType parameter is READWRITE can this option be configured.
+     * @param string $ConsistencyType Consistency Type:
+eventual: eventual consistency.
+global: global consistency.
+session: session consistency.
+Description:
+Only when the RwType parameter value is READWRITE can this option be configured.
+     * @param string $RwType Read-Write Attribute:
+READWRITE: indicates read/write splitting. Only when this parameter value is READWRITE can the FailOver and ConsistencyType parameters be configured.
+READONLY: indicates read-only.
+     * @param integer $ConsistencyTimeOut The consistency timeout period. Value range: 0 - 1000000 (microseconds). When set to 0, if a read-only instance experiences latency causing the consistency policy to be unsatisfied, the request will wait indefinitely.
+     * @param boolean $TransSplit Whether to enable transaction split. After it is enabled, read and write operations in a transaction are split to different instances for execution.
+     * @param string $AccessMode Access mode:
+nearby: nearby access.
+balance: balanced allocation.
+     * @param array $InstanceWeights Instance weight.
      */
     function __construct()
     {

@@ -36,9 +36,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setServiceType(string $ServiceType) Set Service type, for example, CVM
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getRegionId() Obtain Region ID
+ * @method integer getRegionId() Obtain Region ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setRegionId(string $RegionId) Set Region ID
+ * @method void setRegionId(integer $RegionId) Set Region ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method integer getBindingStatus() Obtain Binding status. 2: bound; 1: binding
 Note: This field may return `null`, indicating that no valid values can be obtained.
@@ -76,7 +76,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $ServiceType;
 
     /**
-     * @var string Region ID
+     * @var integer Region ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $RegionId;
@@ -102,7 +102,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $ServiceType Service type, for example, CVM
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $RegionId Region ID
+     * @param integer $RegionId Region ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $BindingStatus Binding status. 2: bound; 1: binding
 Note: This field may return `null`, indicating that no valid values can be obtained.

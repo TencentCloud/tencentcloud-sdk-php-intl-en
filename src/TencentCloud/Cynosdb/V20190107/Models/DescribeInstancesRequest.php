@@ -58,6 +58,8 @@ offlining: Eliminating the instance
 offlined: Instance eliminated
  * @method array getInstanceIds() Obtain Instance ID list
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID list
+ * @method string getClusterType() Obtain Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+ * @method void setClusterType(string $ClusterType) Set Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -113,6 +115,11 @@ offlined: Instance eliminated
     public $InstanceIds;
 
     /**
+     * @var string Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+     */
+    public $ClusterType;
+
+    /**
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100
      * @param integer $Offset Record offset. Default value: 0
      * @param string $OrderBy Sort by field. Valid values:
@@ -132,6 +139,7 @@ activating: Removing the instance from isolation
 offlining: Eliminating the instance
 offlined: Instance eliminated
      * @param array $InstanceIds Instance ID list
+     * @param string $ClusterType Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
      */
     function __construct()
     {
@@ -181,6 +189,10 @@ offlined: Instance eliminated
 
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
     }
 }

@@ -20,42 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Time-shift configuration. This parameter is valid only for HLS_ARCHIVE and DASH_ARCHIVE output groups.
  *
- * @method string getState() Obtain Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setState(string $State) Set Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getPlayDomain() Obtain Domain name bound for time shifting
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setPlayDomain(string $PlayDomain) Set Domain name bound for time shifting
-Note: This field may return `null`, indicating that no valid value was found.
- * @method integer getStartoverWindow() Obtain Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
- * @method void setStartoverWindow(integer $StartoverWindow) Set Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getState() Obtain Whether to enable time shifting. Option [OPEN|CLOSE].
+ * @method void setState(string $State) Set Whether to enable time shifting. Option [OPEN|CLOSE].
+ * @method string getPlayDomain() Obtain Enable time-shift bound domain name.
+ * @method void setPlayDomain(string $PlayDomain) Set Enable time-shift bound domain name.
+ * @method integer getStartoverWindow() Obtain The time when time-shift replay starts, in seconds, range [300, 1209600], default value 300.
+ * @method void setStartoverWindow(integer $StartoverWindow) Set The time when time-shift replay starts, in seconds, range [300, 1209600], default value 300.
  */
 class TimeShiftSettingsInfo extends AbstractModel
 {
     /**
-     * @var string Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string Whether to enable time shifting. Option [OPEN|CLOSE].
      */
     public $State;
 
     /**
-     * @var string Domain name bound for time shifting
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string Enable time-shift bound domain name.
      */
     public $PlayDomain;
 
     /**
-     * @var integer Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
+     * @var integer The time when time-shift replay starts, in seconds, range [300, 1209600], default value 300.
      */
     public $StartoverWindow;
 
     /**
-     * @param string $State Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $PlayDomain Domain name bound for time shifting
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param integer $StartoverWindow Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $State Whether to enable time shifting. Option [OPEN|CLOSE].
+     * @param string $PlayDomain Enable time-shift bound domain name.
+     * @param integer $StartoverWindow The time when time-shift replay starts, in seconds, range [300, 1209600], default value 300.
      */
     function __construct()
     {

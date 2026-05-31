@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFinishTime(string $FinishTime) Set Transaction end time
  * @method integer getBinlogId() Obtain Binlog file ID
  * @method void setBinlogId(integer $BinlogId) Set Binlog file ID
+ * @method array getCrossRegions() Obtain binlog cross-region coverage
+ * @method void setCrossRegions(array $CrossRegions) Set binlog cross-region coverage
+ * @method string getCopyStatus() Obtain Backup delivery status
+ * @method void setCopyStatus(string $CopyStatus) Set Backup delivery status
+ * @method array getVaultInfos() Obtain Safe info
+ * @method void setVaultInfos(array $VaultInfos) Set Safe info
+ * @method string getEncryptKeyId() Obtain Encryption key
+ * @method void setEncryptKeyId(string $EncryptKeyId) Set Encryption key
+ * @method string getEncryptRegion() Obtain Encrypt key region
+ * @method void setEncryptRegion(string $EncryptRegion) Set Encrypt key region
  */
 class BinlogItem extends AbstractModel
 {
@@ -59,11 +69,41 @@ class BinlogItem extends AbstractModel
     public $BinlogId;
 
     /**
+     * @var array binlog cross-region coverage
+     */
+    public $CrossRegions;
+
+    /**
+     * @var string Backup delivery status
+     */
+    public $CopyStatus;
+
+    /**
+     * @var array Safe info
+     */
+    public $VaultInfos;
+
+    /**
+     * @var string Encryption key
+     */
+    public $EncryptKeyId;
+
+    /**
+     * @var string Encrypt key region
+     */
+    public $EncryptRegion;
+
+    /**
      * @param string $FileName Binlog filename
      * @param integer $FileSize File size in bytes
      * @param string $StartTime Transaction start time
      * @param string $FinishTime Transaction end time
      * @param integer $BinlogId Binlog file ID
+     * @param array $CrossRegions binlog cross-region coverage
+     * @param string $CopyStatus Backup delivery status
+     * @param array $VaultInfos Safe info
+     * @param string $EncryptKeyId Encryption key
+     * @param string $EncryptRegion Encrypt key region
      */
     function __construct()
     {
@@ -96,6 +136,31 @@ class BinlogItem extends AbstractModel
 
         if (array_key_exists("BinlogId",$param) and $param["BinlogId"] !== null) {
             $this->BinlogId = $param["BinlogId"];
+        }
+
+        if (array_key_exists("CrossRegions",$param) and $param["CrossRegions"] !== null) {
+            $this->CrossRegions = $param["CrossRegions"];
+        }
+
+        if (array_key_exists("CopyStatus",$param) and $param["CopyStatus"] !== null) {
+            $this->CopyStatus = $param["CopyStatus"];
+        }
+
+        if (array_key_exists("VaultInfos",$param) and $param["VaultInfos"] !== null) {
+            $this->VaultInfos = [];
+            foreach ($param["VaultInfos"] as $key => $value){
+                $obj = new VaultInfo();
+                $obj->deserialize($value);
+                array_push($this->VaultInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("EncryptKeyId",$param) and $param["EncryptKeyId"] !== null) {
+            $this->EncryptKeyId = $param["EncryptKeyId"];
+        }
+
+        if (array_key_exists("EncryptRegion",$param) and $param["EncryptRegion"] !== null) {
+            $this->EncryptRegion = $param["EncryptRegion"];
         }
     }
 }

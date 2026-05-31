@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceSlowQueries request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getStartTime() Obtain Transaction start time
- * @method void setStartTime(string $StartTime) Set Transaction start time
- * @method string getEndTime() Obtain Transaction end time
- * @method void setEndTime(string $EndTime) Set Transaction end time
- * @method integer getLimit() Obtain Maximum number
- * @method void setLimit(integer $Limit) Set Maximum number
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
- * @method string getUsername() Obtain Username
- * @method void setUsername(string $Username) Set Username
- * @method string getHost() Obtain Client host
- * @method void setHost(string $Host) Set Client host
- * @method string getDatabase() Obtain Database name
- * @method void setDatabase(string $Database) Set Database name
- * @method string getOrderBy() Obtain Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent.
- * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent.
- * @method string getOrderByType() Obtain Sorting order. Valid values: asc, desc.
- * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: asc, desc.
- * @method string getSqlText() Obtain sql statement.
- * @method void setSqlText(string $SqlText) Set sql statement.
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method string getStartTime() Obtain <p>Earliest transaction start time.</p>
+ * @method void setStartTime(string $StartTime) Set <p>Earliest transaction start time.</p>
+ * @method string getEndTime() Obtain <p>Latest transaction start time.</p>
+ * @method void setEndTime(string $EndTime) Set <p>Latest transaction start time.</p>
+ * @method integer getLimit() Obtain <p>Limit.</p><p>It is recommended to control the limit size. Large limits may cause truncation due to the platform's size limit for return results.</p>
+ * @method void setLimit(integer $Limit) Set <p>Limit.</p><p>It is recommended to control the limit size. Large limits may cause truncation due to the platform's size limit for return results.</p>
+ * @method integer getOffset() Obtain <p>Offset.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset.</p>
+ * @method string getUsername() Obtain <p>Username.</p>
+ * @method void setUsername(string $Username) Set <p>Username.</p>
+ * @method string getHost() Obtain <p>Client host.</p>
+ * @method void setHost(string $Host) Set <p>Client host.</p>
+ * @method string getDatabase() Obtain <p>Database name.</p>
+ * @method void setDatabase(string $Database) Set <p>Database name.</p>
+ * @method string getOrderBy() Obtain <p>Sorting field.</p><p>Enumeration values:</p><ul><li>QueryTime: sorts by the total execution time of the SQL statements.</li><li>LockTime: sorts by the time consumed by the SQL statements waiting for locks (such as table locks or row locks).</li><li>RowsExamined: sorts by the number of rows scanned during SQL statement execution.</li><li>RowsSent: sorts by the number of result rows returned to the client for the SQL statements.</li><li>Timestamp: sorts by the timestamp when the slow query statement occurs.</li></ul>
+ * @method void setOrderBy(string $OrderBy) Set <p>Sorting field.</p><p>Enumeration values:</p><ul><li>QueryTime: sorts by the total execution time of the SQL statements.</li><li>LockTime: sorts by the time consumed by the SQL statements waiting for locks (such as table locks or row locks).</li><li>RowsExamined: sorts by the number of rows scanned during SQL statement execution.</li><li>RowsSent: sorts by the number of result rows returned to the client for the SQL statements.</li><li>Timestamp: sorts by the timestamp when the slow query statement occurs.</li></ul>
+ * @method string getOrderByType() Obtain <p>Sorting type. Valid values: asc and desc.</p>
+ * @method void setOrderByType(string $OrderByType) Set <p>Sorting type. Valid values: asc and desc.</p>
+ * @method string getSqlText() Obtain <p>SQL statement.</p>
+ * @method void setSqlText(string $SqlText) Set <p>SQL statement.</p>
  */
 class DescribeInstanceSlowQueriesRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Transaction start time
+     * @var string <p>Earliest transaction start time.</p>
      */
     public $StartTime;
 
     /**
-     * @var string Transaction end time
+     * @var string <p>Latest transaction start time.</p>
      */
     public $EndTime;
 
     /**
-     * @var integer Maximum number
+     * @var integer <p>Limit.</p><p>It is recommended to control the limit size. Large limits may cause truncation due to the platform's size limit for return results.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Offset
+     * @var integer <p>Offset.</p>
      */
     public $Offset;
 
     /**
-     * @var string Username
+     * @var string <p>Username.</p>
      */
     public $Username;
 
     /**
-     * @var string Client host
+     * @var string <p>Client host.</p>
      */
     public $Host;
 
     /**
-     * @var string Database name
+     * @var string <p>Database name.</p>
      */
     public $Database;
 
     /**
-     * @var string Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent.
+     * @var string <p>Sorting field.</p><p>Enumeration values:</p><ul><li>QueryTime: sorts by the total execution time of the SQL statements.</li><li>LockTime: sorts by the time consumed by the SQL statements waiting for locks (such as table locks or row locks).</li><li>RowsExamined: sorts by the number of rows scanned during SQL statement execution.</li><li>RowsSent: sorts by the number of result rows returned to the client for the SQL statements.</li><li>Timestamp: sorts by the timestamp when the slow query statement occurs.</li></ul>
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting order. Valid values: asc, desc.
+     * @var string <p>Sorting type. Valid values: asc and desc.</p>
      */
     public $OrderByType;
 
     /**
-     * @var string sql statement.
+     * @var string <p>SQL statement.</p>
      */
     public $SqlText;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $StartTime Transaction start time
-     * @param string $EndTime Transaction end time
-     * @param integer $Limit Maximum number
-     * @param integer $Offset Offset
-     * @param string $Username Username
-     * @param string $Host Client host
-     * @param string $Database Database name
-     * @param string $OrderBy Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent.
-     * @param string $OrderByType Sorting order. Valid values: asc, desc.
-     * @param string $SqlText sql statement.
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param string $StartTime <p>Earliest transaction start time.</p>
+     * @param string $EndTime <p>Latest transaction start time.</p>
+     * @param integer $Limit <p>Limit.</p><p>It is recommended to control the limit size. Large limits may cause truncation due to the platform's size limit for return results.</p>
+     * @param integer $Offset <p>Offset.</p>
+     * @param string $Username <p>Username.</p>
+     * @param string $Host <p>Client host.</p>
+     * @param string $Database <p>Database name.</p>
+     * @param string $OrderBy <p>Sorting field.</p><p>Enumeration values:</p><ul><li>QueryTime: sorts by the total execution time of the SQL statements.</li><li>LockTime: sorts by the time consumed by the SQL statements waiting for locks (such as table locks or row locks).</li><li>RowsExamined: sorts by the number of rows scanned during SQL statement execution.</li><li>RowsSent: sorts by the number of result rows returned to the client for the SQL statements.</li><li>Timestamp: sorts by the timestamp when the slow query statement occurs.</li></ul>
+     * @param string $OrderByType <p>Sorting type. Valid values: asc and desc.</p>
+     * @param string $SqlText <p>SQL statement.</p>
      */
     function __construct()
     {

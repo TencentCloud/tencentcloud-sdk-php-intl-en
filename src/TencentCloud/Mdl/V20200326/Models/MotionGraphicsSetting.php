@@ -18,20 +18,24 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Dynamic graphic configuration.
  *
- * @method integer getMotionGraphicsOverlayEnabled() Obtain Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.
- * @method void setMotionGraphicsOverlayEnabled(integer $MotionGraphicsOverlayEnabled) Set Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.
+ * @method integer getMotionGraphicsOverlayEnabled() Obtain Whether to enable dynamic graphic overlay. `0`: not enabled, `1`: enabled. Default: 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMotionGraphicsOverlayEnabled(integer $MotionGraphicsOverlayEnabled) Set Whether to enable dynamic graphic overlay. `0`: not enabled, `1`: enabled. Default: 0.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MotionGraphicsSetting extends AbstractModel
 {
     /**
-     * @var integer Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.
+     * @var integer Whether to enable dynamic graphic overlay. `0`: not enabled, `1`: enabled. Default: 0.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MotionGraphicsOverlayEnabled;
 
     /**
-     * @param integer $MotionGraphicsOverlayEnabled Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.
+     * @param integer $MotionGraphicsOverlayEnabled Whether to enable dynamic graphic overlay. `0`: not enabled, `1`: enabled. Default: 0.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

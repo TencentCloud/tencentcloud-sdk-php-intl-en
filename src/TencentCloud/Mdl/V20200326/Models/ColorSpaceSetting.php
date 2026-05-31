@@ -18,20 +18,20 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Color space setting.
+ * Colorspace configuration.
  *
- * @method string getColorSpace() Obtain Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
- * @method void setColorSpace(string $ColorSpace) Set Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
+ * @method string getColorSpace() Obtain Colorspace, supports PASSTHROUGH (passthrough, only supports H265). Can be empty.
+ * @method void setColorSpace(string $ColorSpace) Set Colorspace, supports PASSTHROUGH (passthrough, only supports H265). Can be empty.
  */
 class ColorSpaceSetting extends AbstractModel
 {
     /**
-     * @var string Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
+     * @var string Colorspace, supports PASSTHROUGH (passthrough, only supports H265). Can be empty.
      */
     public $ColorSpace;
 
     /**
-     * @param string $ColorSpace Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
+     * @param string $ColorSpace Colorspace, supports PASSTHROUGH (passthrough, only supports H265). Can be empty.
      */
     function __construct()
     {

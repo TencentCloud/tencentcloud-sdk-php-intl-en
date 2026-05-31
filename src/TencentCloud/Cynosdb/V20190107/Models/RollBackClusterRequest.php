@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRollbackTables(array $RollbackTables) Set List of rollback databases and tables.
  * @method string getRollbackMode() Obtain Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
  * @method void setRollbackMode(string $RollbackMode) Set Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
+ * @method string getVaultId() Obtain Safe id
+ * @method void setVaultId(string $VaultId) Set Safe id
  */
 class RollBackClusterRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class RollBackClusterRequest extends AbstractModel
     public $RollbackMode;
 
     /**
+     * @var string Safe id
+     */
+    public $VaultId;
+
+    /**
      * @param string $ClusterId Cluster ID.
      * @param string $RollbackStrategy Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file.
      * @param integer $RollbackId Backup file ID. This parameter is required when the rollback policy is rolling back by backup file.
@@ -88,6 +95,7 @@ class RollBackClusterRequest extends AbstractModel
      * @param array $RollbackDatabases List of rollback databases.
      * @param array $RollbackTables List of rollback databases and tables.
      * @param string $RollbackMode Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
+     * @param string $VaultId Safe id
      */
     function __construct()
     {
@@ -142,6 +150,10 @@ class RollBackClusterRequest extends AbstractModel
 
         if (array_key_exists("RollbackMode",$param) and $param["RollbackMode"] !== null) {
             $this->RollbackMode = $param["RollbackMode"];
+        }
+
+        if (array_key_exists("VaultId",$param) and $param["VaultId"] !== null) {
+            $this->VaultId = $param["VaultId"];
         }
     }
 }

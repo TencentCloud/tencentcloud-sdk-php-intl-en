@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeBegin(string $StartTimeBegin) Set Starting value of the task start time.
  * @method string getStartTimeEnd() Obtain End value of the task start time.
  * @method void setStartTimeEnd(string $StartTimeEnd) Set End value of the task start time.
- * @method array getFilters() Obtain Filtering conditions. Supported fields for searching: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", and "TaskType".
- * @method void setFilters(array $Filters) Set Filtering conditions. Supported fields for searching: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", and "TaskType".
+ * @method array getFilters() Obtain Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
+ * @method void setFilters(array $Filters) Set Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
  * @method integer getLimit() Obtain Length of the list to be queried.
  * @method void setLimit(integer $Limit) Set Length of the list to be queried.
  * @method integer getOffset() Obtain Offset of the list to be queried.
@@ -44,7 +44,7 @@ class DescribeTasksRequest extends AbstractModel
     public $StartTimeEnd;
 
     /**
-     * @var array Filtering conditions. Supported fields for searching: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", and "TaskType".
+     * @var array Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
      */
     public $Filters;
 
@@ -61,7 +61,7 @@ class DescribeTasksRequest extends AbstractModel
     /**
      * @param string $StartTimeBegin Starting value of the task start time.
      * @param string $StartTimeEnd End value of the task start time.
-     * @param array $Filters Filtering conditions. Supported fields for searching: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", and "TaskType".
+     * @param array $Filters Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
      * @param integer $Limit Length of the list to be queried.
      * @param integer $Offset Offset of the list to be queried.
      */

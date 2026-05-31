@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) Set Database memory in GB
  * @method string getUpgradeType() Obtain Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
  * @method void setUpgradeType(string $UpgradeType) Set Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
+ * @method string getDeviceType() Obtain Instance Machine Type
+1. common: general.
+2. exclusive, dedicated.
+ * @method void setDeviceType(string $DeviceType) Set Instance Machine Type
+1. common: general.
+2. exclusive, dedicated.
  * @method integer getStorageLimit() Obtain This parameter has been disused.
  * @method void setStorageLimit(integer $StorageLimit) Set This parameter has been disused.
  * @method integer getAutoVoucher() Obtain Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
@@ -38,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDealMode(integer $DealMode) Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
  * @method string getUpgradeMode() Obtain Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
  * @method void setUpgradeMode(string $UpgradeMode) Set Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+ * @method UpgradeProxy getUpgradeProxy() Obtain 
+ * @method void setUpgradeProxy(UpgradeProxy $UpgradeProxy) Set 
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -60,6 +68,13 @@ class UpgradeInstanceRequest extends AbstractModel
      * @var string Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
      */
     public $UpgradeType;
+
+    /**
+     * @var string Instance Machine Type
+1. common: general.
+2. exclusive, dedicated.
+     */
+    public $DeviceType;
 
     /**
      * @var integer This parameter has been disused.
@@ -87,15 +102,24 @@ class UpgradeInstanceRequest extends AbstractModel
     public $UpgradeMode;
 
     /**
+     * @var UpgradeProxy 
+     */
+    public $UpgradeProxy;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param integer $Cpu Database CPU
      * @param integer $Memory Database memory in GB
      * @param string $UpgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
+     * @param string $DeviceType Instance Machine Type
+1. common: general.
+2. exclusive, dedicated.
      * @param integer $StorageLimit This parameter has been disused.
      * @param integer $AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
      * @param string $DbType This parameter has been disused.
      * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
      * @param string $UpgradeMode Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+     * @param UpgradeProxy $UpgradeProxy 
      */
     function __construct()
     {
@@ -126,6 +150,10 @@ class UpgradeInstanceRequest extends AbstractModel
             $this->UpgradeType = $param["UpgradeType"];
         }
 
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
+        }
+
         if (array_key_exists("StorageLimit",$param) and $param["StorageLimit"] !== null) {
             $this->StorageLimit = $param["StorageLimit"];
         }
@@ -144,6 +172,11 @@ class UpgradeInstanceRequest extends AbstractModel
 
         if (array_key_exists("UpgradeMode",$param) and $param["UpgradeMode"] !== null) {
             $this->UpgradeMode = $param["UpgradeMode"];
+        }
+
+        if (array_key_exists("UpgradeProxy",$param) and $param["UpgradeProxy"] !== null) {
+            $this->UpgradeProxy = new UpgradeProxy();
+            $this->UpgradeProxy->deserialize($param["UpgradeProxy"]);
         }
     }
 }

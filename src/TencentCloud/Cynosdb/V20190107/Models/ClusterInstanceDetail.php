@@ -20,170 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cluster instance information
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method string getInstanceType() Obtain Engine type
- * @method void setInstanceType(string $InstanceType) Set Engine type
- * @method string getInstanceStatus() Obtain Instance status
- * @method void setInstanceStatus(string $InstanceStatus) Set Instance status
- * @method string getInstanceStatusDesc() Obtain Instance status description
- * @method void setInstanceStatusDesc(string $InstanceStatusDesc) Set Instance status description
- * @method integer getInstanceCpu() Obtain Number of CPU cores
- * @method void setInstanceCpu(integer $InstanceCpu) Set Number of CPU cores
- * @method integer getInstanceMemory() Obtain Memory
- * @method void setInstanceMemory(integer $InstanceMemory) Set Memory
- * @method integer getInstanceStorage() Obtain Disk
- * @method void setInstanceStorage(integer $InstanceStorage) Set Disk
- * @method string getInstanceRole() Obtain Instance role
- * @method void setInstanceRole(string $InstanceRole) Set Instance role
- * @method integer getMaintainStartTime() Obtain Execution start time (seconds from 0 o'clock).	
- * @method void setMaintainStartTime(integer $MaintainStartTime) Set Execution start time (seconds from 0 o'clock).	
- * @method integer getMaintainDuration() Obtain Specifies the continuous time. the unit is second.	
- * @method void setMaintainDuration(integer $MaintainDuration) Set Specifies the continuous time. the unit is second.	
- * @method array getMaintainWeekDays() Obtain Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
- * @method void setMaintainWeekDays(array $MaintainWeekDays) Set Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
- * @method string getServerlessStatus() Obtain serverless instance substatus.
- * @method void setServerlessStatus(string $ServerlessStatus) Set serverless instance substatus.
- * @method array getInstanceTasks() Obtain Instance task information.
- * @method void setInstanceTasks(array $InstanceTasks) Set Instance task information.
- * @method string getInstanceDeviceType() Obtain Instance machine type.
-1. common: general.
-2. exclusive, dedicated.
- * @method void setInstanceDeviceType(string $InstanceDeviceType) Set Instance machine type.
-1. common: general.
-2. exclusive, dedicated.
- * @method string getInstanceStorageType() Obtain Instance storage type.
-Description: this parameter returns a value only when querying resources belonging to LibraDB.
- * @method void setInstanceStorageType(string $InstanceStorageType) Set Instance storage type.
-Description: this parameter returns a value only when querying resources belonging to LibraDB.
- * @method string getDbMode() Obtain Database type.
- * @method void setDbMode(string $DbMode) Set Database type.
- * @method array getNodeList() Obtain Node list
-Description: this parameter returns a value only when querying LibraDB resources.
- * @method void setNodeList(array $NodeList) Set Node list
-Description: this parameter returns a value only when querying LibraDB resources.
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method string getInstanceName() Obtain <p>Instance name</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name</p>
+ * @method string getInstanceType() Obtain <p>Engine type</p>
+ * @method void setInstanceType(string $InstanceType) Set <p>Engine type</p>
+ * @method string getInstanceStatus() Obtain <p>Instance status</p>
+ * @method void setInstanceStatus(string $InstanceStatus) Set <p>Instance status</p>
+ * @method string getInstanceStatusDesc() Obtain <p>Instance status description</p>
+ * @method void setInstanceStatusDesc(string $InstanceStatusDesc) Set <p>Instance status description</p>
+ * @method integer getInstanceCpu() Obtain <p>cpu cores</p>
+ * @method void setInstanceCpu(integer $InstanceCpu) Set <p>cpu cores</p>
+ * @method integer getInstanceMemory() Obtain <p>Memory</p>
+ * @method void setInstanceMemory(integer $InstanceMemory) Set <p>Memory</p>
+ * @method integer getInstanceStorage() Obtain <p>hard disk</p>
+ * @method void setInstanceStorage(integer $InstanceStorage) Set <p>hard disk</p>
+ * @method string getInstanceRole() Obtain <p>Instance role</p>
+ * @method void setInstanceRole(string $InstanceRole) Set <p>Instance role</p>
+ * @method integer getMaintainStartTime() Obtain <p>Execution start time (seconds from 00:00).</p>
+ * @method void setMaintainStartTime(integer $MaintainStartTime) Set <p>Execution start time (seconds from 00:00).</p>
+ * @method integer getMaintainDuration() Obtain <p>Duration (unit: s)</p>
+ * @method void setMaintainDuration(integer $MaintainDuration) Set <p>Duration (unit: s)</p>
+ * @method array getMaintainWeekDays() Obtain <p>The time when it can be executed, enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]</p>
+ * @method void setMaintainWeekDays(array $MaintainWeekDays) Set <p>The time when it can be executed, enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]</p>
+ * @method string getServerlessStatus() Obtain <p>serverless instance substatus</p>
+ * @method void setServerlessStatus(string $ServerlessStatus) Set <p>serverless instance substatus</p>
+ * @method array getInstanceTasks() Obtain <p>Instance task information</p>
+ * @method void setInstanceTasks(array $InstanceTasks) Set <p>Instance task information</p>
+ * @method string getInstanceDeviceType() Obtain <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
+ * @method void setInstanceDeviceType(string $InstanceDeviceType) Set <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
+ * @method string getInstanceStorageType() Obtain <p>Instance storage type<br>Description: This parameter returns a value only when the resource belonging to the query is LibraDB.</p>
+ * @method void setInstanceStorageType(string $InstanceStorageType) Set <p>Instance storage type<br>Description: This parameter returns a value only when the resource belonging to the query is LibraDB.</p>
+ * @method string getDbMode() Obtain <p>Database type</p>
+ * @method void setDbMode(string $DbMode) Set <p>Database type</p>
+ * @method array getNodeList() Obtain <p>Node list<br>Description: This parameter returns a value only when querying resources belonging to LibraDB.</p>
+ * @method void setNodeList(array $NodeList) Set <p>Node list<br>Description: This parameter returns a value only when querying resources belonging to LibraDB.</p>
+ * @method AIOptimizerStatus getAIOptimizerStatus() Obtain <p>AI optimizer status</p>
+ * @method void setAIOptimizerStatus(AIOptimizerStatus $AIOptimizerStatus) Set <p>AI optimizer status</p>
  */
 class ClusterInstanceDetail extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string <p>Instance name</p>
      */
     public $InstanceName;
 
     /**
-     * @var string Engine type
+     * @var string <p>Engine type</p>
      */
     public $InstanceType;
 
     /**
-     * @var string Instance status
+     * @var string <p>Instance status</p>
      */
     public $InstanceStatus;
 
     /**
-     * @var string Instance status description
+     * @var string <p>Instance status description</p>
      */
     public $InstanceStatusDesc;
 
     /**
-     * @var integer Number of CPU cores
+     * @var integer <p>cpu cores</p>
      */
     public $InstanceCpu;
 
     /**
-     * @var integer Memory
+     * @var integer <p>Memory</p>
      */
     public $InstanceMemory;
 
     /**
-     * @var integer Disk
+     * @var integer <p>hard disk</p>
      */
     public $InstanceStorage;
 
     /**
-     * @var string Instance role
+     * @var string <p>Instance role</p>
      */
     public $InstanceRole;
 
     /**
-     * @var integer Execution start time (seconds from 0 o'clock).	
+     * @var integer <p>Execution start time (seconds from 00:00).</p>
      */
     public $MaintainStartTime;
 
     /**
-     * @var integer Specifies the continuous time. the unit is second.	
+     * @var integer <p>Duration (unit: s)</p>
      */
     public $MaintainDuration;
 
     /**
-     * @var array Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+     * @var array <p>The time when it can be executed, enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]</p>
      */
     public $MaintainWeekDays;
 
     /**
-     * @var string serverless instance substatus.
+     * @var string <p>serverless instance substatus</p>
      */
     public $ServerlessStatus;
 
     /**
-     * @var array Instance task information.
+     * @var array <p>Instance task information</p>
      */
     public $InstanceTasks;
 
     /**
-     * @var string Instance machine type.
-1. common: general.
-2. exclusive, dedicated.
+     * @var string <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
      */
     public $InstanceDeviceType;
 
     /**
-     * @var string Instance storage type.
-Description: this parameter returns a value only when querying resources belonging to LibraDB.
+     * @var string <p>Instance storage type<br>Description: This parameter returns a value only when the resource belonging to the query is LibraDB.</p>
      */
     public $InstanceStorageType;
 
     /**
-     * @var string Database type.
+     * @var string <p>Database type</p>
      */
     public $DbMode;
 
     /**
-     * @var array Node list
-Description: this parameter returns a value only when querying LibraDB resources.
+     * @var array <p>Node list<br>Description: This parameter returns a value only when querying resources belonging to LibraDB.</p>
      */
     public $NodeList;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
-     * @param string $InstanceType Engine type
-     * @param string $InstanceStatus Instance status
-     * @param string $InstanceStatusDesc Instance status description
-     * @param integer $InstanceCpu Number of CPU cores
-     * @param integer $InstanceMemory Memory
-     * @param integer $InstanceStorage Disk
-     * @param string $InstanceRole Instance role
-     * @param integer $MaintainStartTime Execution start time (seconds from 0 o'clock).	
-     * @param integer $MaintainDuration Specifies the continuous time. the unit is second.	
-     * @param array $MaintainWeekDays Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
-     * @param string $ServerlessStatus serverless instance substatus.
-     * @param array $InstanceTasks Instance task information.
-     * @param string $InstanceDeviceType Instance machine type.
-1. common: general.
-2. exclusive, dedicated.
-     * @param string $InstanceStorageType Instance storage type.
-Description: this parameter returns a value only when querying resources belonging to LibraDB.
-     * @param string $DbMode Database type.
-     * @param array $NodeList Node list
-Description: this parameter returns a value only when querying LibraDB resources.
+     * @var AIOptimizerStatus <p>AI optimizer status</p>
+     */
+    public $AIOptimizerStatus;
+
+    /**
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param string $InstanceName <p>Instance name</p>
+     * @param string $InstanceType <p>Engine type</p>
+     * @param string $InstanceStatus <p>Instance status</p>
+     * @param string $InstanceStatusDesc <p>Instance status description</p>
+     * @param integer $InstanceCpu <p>cpu cores</p>
+     * @param integer $InstanceMemory <p>Memory</p>
+     * @param integer $InstanceStorage <p>hard disk</p>
+     * @param string $InstanceRole <p>Instance role</p>
+     * @param integer $MaintainStartTime <p>Execution start time (seconds from 00:00).</p>
+     * @param integer $MaintainDuration <p>Duration (unit: s)</p>
+     * @param array $MaintainWeekDays <p>The time when it can be executed, enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]</p>
+     * @param string $ServerlessStatus <p>serverless instance substatus</p>
+     * @param array $InstanceTasks <p>Instance task information</p>
+     * @param string $InstanceDeviceType <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
+     * @param string $InstanceStorageType <p>Instance storage type<br>Description: This parameter returns a value only when the resource belonging to the query is LibraDB.</p>
+     * @param string $DbMode <p>Database type</p>
+     * @param array $NodeList <p>Node list<br>Description: This parameter returns a value only when querying resources belonging to LibraDB.</p>
+     * @param AIOptimizerStatus $AIOptimizerStatus <p>AI optimizer status</p>
      */
     function __construct()
     {
@@ -273,6 +265,11 @@ Description: this parameter returns a value only when querying LibraDB resources
 
         if (array_key_exists("NodeList",$param) and $param["NodeList"] !== null) {
             $this->NodeList = $param["NodeList"];
+        }
+
+        if (array_key_exists("AIOptimizerStatus",$param) and $param["AIOptimizerStatus"] !== null) {
+            $this->AIOptimizerStatus = new AIOptimizerStatus();
+            $this->AIOptimizerStatus->deserialize($param["AIOptimizerStatus"]);
         }
     }
 }

@@ -18,36 +18,36 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameter Modification Information
+ * 
  *
- * @method string getName() Obtain Parameter Name
- * @method void setName(string $Name) Set Parameter Name
- * @method string getOldValue() Obtain Parameter Value Before Modification
- * @method void setOldValue(string $OldValue) Set Parameter Value Before Modification
- * @method string getCurValue() Obtain Parameter Value After Modification
- * @method void setCurValue(string $CurValue) Set Parameter Value After Modification
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getOldValue() Obtain 
+ * @method void setOldValue(string $OldValue) Set 
+ * @method string getCurValue() Obtain 
+ * @method void setCurValue(string $CurValue) Set 
  */
 class ModifyParamsData extends AbstractModel
 {
     /**
-     * @var string Parameter Name
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Parameter Value Before Modification
+     * @var string 
      */
     public $OldValue;
 
     /**
-     * @var string Parameter Value After Modification
+     * @var string 
      */
     public $CurValue;
 
     /**
-     * @param string $Name Parameter Name
-     * @param string $OldValue Parameter Value Before Modification
-     * @param string $CurValue Parameter Value After Modification
+     * @param string $Name 
+     * @param string $OldValue 
+     * @param string $CurValue 
      */
     function __construct()
     {

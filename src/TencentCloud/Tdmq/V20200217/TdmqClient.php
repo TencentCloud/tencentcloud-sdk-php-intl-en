@@ -44,6 +44,7 @@ This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, 
 This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [CreateConsumerGroup](https://www.tencentcloud.com/document/api/1493/97943?from_cn_redirect=1) to create a consumer group.
  * @method Models\CreateRocketMQGroupV2Response CreateRocketMQGroupV2(Models\CreateRocketMQGroupV2Request $req) This API is used to create a RocketMQ consumption group.
 This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, and 4.x generic cluster. For 5.x clusters, refer to the API documentation [CreateConsumerGroup](https://www.tencentcloud.com/document/api/1493/97943?from_cn_redirect=1) to create a consumer group.
+ * @method Models\CreateRocketMQMigrationTaskResponse CreateRocketMQMigrationTask(Models\CreateRocketMQMigrationTaskRequest $req) Create a RocketMQ metadata migration task to batch create topics and consumer group data.
  * @method Models\CreateRocketMQNamespaceResponse CreateRocketMQNamespace(Models\CreateRocketMQNamespaceRequest $req) This API is used to create a RocketMQ namespace.
 This API is applicable to clusters: 4.x virtual cluster and 4.x dedicated cluster. Other cluster types do not support this feature.
  * @method Models\CreateRocketMQRoleResponse CreateRocketMQRole(Models\CreateRocketMQRoleRequest $req) Create a role.

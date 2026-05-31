@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio codec configuration.
  *
- * @method string getChannelMode() Obtain Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).
- * @method void setChannelMode(string $ChannelMode) Set Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).
- * @method string getProfile() Obtain Level in aac case, optional values: "LC" "HE-AAC" "HE-AACV2".
- * @method void setProfile(string $Profile) Set Level in aac case, optional values: "LC" "HE-AAC" "HE-AACV2".
+ * @method string getChannelMode() Obtain Sound track configuration. Available values: MONO, STEREO, 5.1.
+ * @method void setChannelMode(string $ChannelMode) Set Sound track configuration. Available values: MONO, STEREO, 5.1.
+ * @method string getProfile() Obtain Level in aac, available values: "LC", "HE-aac", "HE-AACV2".
+ * @method void setProfile(string $Profile) Set Level in aac, available values: "LC", "HE-aac", "HE-AACV2".
  */
 class AudioCodecDetail extends AbstractModel
 {
     /**
-     * @var string Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).
+     * @var string Sound track configuration. Available values: MONO, STEREO, 5.1.
      */
     public $ChannelMode;
 
     /**
-     * @var string Level in aac case, optional values: "LC" "HE-AAC" "HE-AACV2".
+     * @var string Level in aac, available values: "LC", "HE-aac", "HE-AACV2".
      */
     public $Profile;
 
     /**
-     * @param string $ChannelMode Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).
-     * @param string $Profile Level in aac case, optional values: "LC" "HE-AAC" "HE-AACV2".
+     * @param string $ChannelMode Sound track configuration. Available values: MONO, STEREO, 5.1.
+     * @param string $Profile Level in aac, available values: "LC", "HE-aac", "HE-AACV2".
      */
     function __construct()
     {

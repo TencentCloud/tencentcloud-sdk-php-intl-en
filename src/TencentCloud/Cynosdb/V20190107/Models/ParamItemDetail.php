@@ -20,114 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance parameter information
  *
- * @method string getCurrentValue() Obtain Current value
- * @method void setCurrentValue(string $CurrentValue) Set Current value
- * @method string getDefault() Obtain Default value
- * @method void setDefault(string $Default) Set Default value
- * @method array getEnumValue() Obtain Enumerated values of the parameter It is null if the parameter is non-enumerated.
- * @method void setEnumValue(array $EnumValue) Set Enumerated values of the parameter It is null if the parameter is non-enumerated.
- * @method integer getIsGlobal() Obtain Valid values: `1` (global parameter),  `0`  (non-global parameter).
- * @method void setIsGlobal(integer $IsGlobal) Set Valid values: `1` (global parameter),  `0`  (non-global parameter).
- * @method string getMax() Obtain Maximum value
- * @method void setMax(string $Max) Set Maximum value
- * @method string getMin() Obtain Minimum value
- * @method void setMin(string $Min) Set Minimum value
- * @method integer getNeedReboot() Obtain Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes)
- * @method void setNeedReboot(integer $NeedReboot) Set Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes)
- * @method string getParamName() Obtain Parameter name
- * @method void setParamName(string $ParamName) Set Parameter name
- * @method string getParamType() Obtain Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
- * @method void setParamType(string $ParamType) Set Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
- * @method string getDescription() Obtain Parameter description
- * @method void setDescription(string $Description) Set Parameter description
- * @method boolean getIsFunc() Obtain Whether the type is a formula.
- * @method void setIsFunc(boolean $IsFunc) Set Whether the type is a formula.
- * @method string getFunc() Obtain Parameter configuration formula.
- * @method void setFunc(string $Func) Set Parameter configuration formula.
- * @method string getFuncPattern() Obtain The default formula style of parameters that support formulas.
- * @method void setFuncPattern(string $FuncPattern) Set The default formula style of parameters that support formulas.
+ * @method string getCurrentValue() Obtain <p>Current value</p>
+ * @method void setCurrentValue(string $CurrentValue) Set <p>Current value</p>
+ * @method string getDefault() Obtain <p>Default value</p>
+ * @method void setDefault(string $Default) Set <p>Default value</p>
+ * @method array getEnumValue() Obtain <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
+ * @method void setEnumValue(array $EnumValue) Set <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
+ * @method integer getIsGlobal() Obtain <p>1: Global parameter, 0: Non-global parameter</p>
+ * @method void setIsGlobal(integer $IsGlobal) Set <p>1: Global parameter, 0: Non-global parameter</p>
+ * @method string getMax() Obtain <p>Maximum value</p>
+ * @method void setMax(string $Max) Set <p>Maximum value</p>
+ * @method string getMin() Obtain <p>Minimum value</p>
+ * @method void setMin(string $Min) Set <p>Minimum value</p>
+ * @method integer getNeedReboot() Obtain <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
+ * @method void setNeedReboot(integer $NeedReboot) Set <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
+ * @method string getParamName() Obtain <p>Parameter name</p>
+ * @method void setParamName(string $ParamName) Set <p>Parameter name</p>
+ * @method string getParamType() Obtain <p>Parameter type: integer, enum, float, string, func</p>
+ * @method void setParamType(string $ParamType) Set <p>Parameter type: integer, enum, float, string, func</p>
+ * @method ModifiableInfo getModifiableInfo() Obtain <p>Whether the parameter is modifiable</p>
+ * @method void setModifiableInfo(ModifiableInfo $ModifiableInfo) Set <p>Whether the parameter is modifiable</p>
+ * @method string getDescription() Obtain <p>Parameter description</p>
+ * @method void setDescription(string $Description) Set <p>Parameter description</p>
+ * @method boolean getIsFunc() Obtain <p>Whether the type is formula</p>
+ * @method void setIsFunc(boolean $IsFunc) Set <p>Whether the type is formula</p>
+ * @method string getFunc() Obtain <p>Parameter configuration formula</p>
+ * @method void setFunc(string $Func) Set <p>Parameter configuration formula</p>
+ * @method string getFuncPattern() Obtain <p>Default formula style for parameters that support formulas</p>
+ * @method void setFuncPattern(string $FuncPattern) Set <p>Default formula style for parameters that support formulas</p>
  */
 class ParamItemDetail extends AbstractModel
 {
     /**
-     * @var string Current value
+     * @var string <p>Current value</p>
      */
     public $CurrentValue;
 
     /**
-     * @var string Default value
+     * @var string <p>Default value</p>
      */
     public $Default;
 
     /**
-     * @var array Enumerated values of the parameter It is null if the parameter is non-enumerated.
+     * @var array <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
      */
     public $EnumValue;
 
     /**
-     * @var integer Valid values: `1` (global parameter),  `0`  (non-global parameter).
+     * @var integer <p>1: Global parameter, 0: Non-global parameter</p>
      */
     public $IsGlobal;
 
     /**
-     * @var string Maximum value
+     * @var string <p>Maximum value</p>
      */
     public $Max;
 
     /**
-     * @var string Minimum value
+     * @var string <p>Minimum value</p>
      */
     public $Min;
 
     /**
-     * @var integer Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes)
+     * @var integer <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
      */
     public $NeedReboot;
 
     /**
-     * @var string Parameter name
+     * @var string <p>Parameter name</p>
      */
     public $ParamName;
 
     /**
-     * @var string Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
+     * @var string <p>Parameter type: integer, enum, float, string, func</p>
      */
     public $ParamType;
 
     /**
-     * @var string Parameter description
+     * @var ModifiableInfo <p>Whether the parameter is modifiable</p>
+     */
+    public $ModifiableInfo;
+
+    /**
+     * @var string <p>Parameter description</p>
      */
     public $Description;
 
     /**
-     * @var boolean Whether the type is a formula.
+     * @var boolean <p>Whether the type is formula</p>
      */
     public $IsFunc;
 
     /**
-     * @var string Parameter configuration formula.
+     * @var string <p>Parameter configuration formula</p>
      */
     public $Func;
 
     /**
-     * @var string The default formula style of parameters that support formulas.
+     * @var string <p>Default formula style for parameters that support formulas</p>
      */
     public $FuncPattern;
 
     /**
-     * @param string $CurrentValue Current value
-     * @param string $Default Default value
-     * @param array $EnumValue Enumerated values of the parameter It is null if the parameter is non-enumerated.
-     * @param integer $IsGlobal Valid values: `1` (global parameter),  `0`  (non-global parameter).
-     * @param string $Max Maximum value
-     * @param string $Min Minimum value
-     * @param integer $NeedReboot Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes)
-     * @param string $ParamName Parameter name
-     * @param string $ParamType Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
-     * @param string $Description Parameter description
-     * @param boolean $IsFunc Whether the type is a formula.
-     * @param string $Func Parameter configuration formula.
-     * @param string $FuncPattern The default formula style of parameters that support formulas.
+     * @param string $CurrentValue <p>Current value</p>
+     * @param string $Default <p>Default value</p>
+     * @param array $EnumValue <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
+     * @param integer $IsGlobal <p>1: Global parameter, 0: Non-global parameter</p>
+     * @param string $Max <p>Maximum value</p>
+     * @param string $Min <p>Minimum value</p>
+     * @param integer $NeedReboot <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
+     * @param string $ParamName <p>Parameter name</p>
+     * @param string $ParamType <p>Parameter type: integer, enum, float, string, func</p>
+     * @param ModifiableInfo $ModifiableInfo <p>Whether the parameter is modifiable</p>
+     * @param string $Description <p>Parameter description</p>
+     * @param boolean $IsFunc <p>Whether the type is formula</p>
+     * @param string $Func <p>Parameter configuration formula</p>
+     * @param string $FuncPattern <p>Default formula style for parameters that support formulas</p>
      */
     function __construct()
     {
@@ -176,6 +184,11 @@ class ParamItemDetail extends AbstractModel
 
         if (array_key_exists("ParamType",$param) and $param["ParamType"] !== null) {
             $this->ParamType = $param["ParamType"];
+        }
+
+        if (array_key_exists("ModifiableInfo",$param) and $param["ModifiableInfo"] !== null) {
+            $this->ModifiableInfo = new ModifiableInfo();
+            $this->ModifiableInfo->deserialize($param["ModifiableInfo"]);
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

@@ -18,52 +18,52 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video codec additional configuration.
+ * Additional configuration for video codec.
  *
- * @method string getProfile() Obtain The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.
- * @method void setProfile(string $Profile) Set The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.
- * @method string getLevel() Obtain Profile corresponding codec performance, options include: 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
- * @method void setLevel(string $Level) Set Profile corresponding codec performance, options include: 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
- * @method string getEntropyEncoding() Obtain Codecs include entropy coding and lossless coding, and options include: CABAC and CAVLC. The default option is CABAC. .
- * @method void setEntropyEncoding(string $EntropyEncoding) Set Codecs include entropy coding and lossless coding, and options include: CABAC and CAVLC. The default option is CABAC. .
- * @method string getAdaptiveQuantization() Obtain Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. The default option is: AUTO. .
- * @method void setAdaptiveQuantization(string $AdaptiveQuantization) Set Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. The default option is: AUTO. .
- * @method string getLookAheadRateControl() Obtain Analyze subsequent encoded frames in advance, options include: HIGH, LOW, MEDIUM. The default option is: MEDIUM. .
- * @method void setLookAheadRateControl(string $LookAheadRateControl) Set Analyze subsequent encoded frames in advance, options include: HIGH, LOW, MEDIUM. The default option is: MEDIUM. .
+ * @method string getProfile() Obtain Three image quality levels for H264, options include: BASELINE, HIGH, MAIN. The default option is MAIN.
+ * @method void setProfile(string $Profile) Set Three image quality levels for H264, options include: BASELINE, HIGH, MAIN. The default option is MAIN.
+ * @method string getLevel() Obtain Decoding performance of the profile. Options include 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
+ * @method void setLevel(string $Level) Set Decoding performance of the profile. Options include 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
+ * @method string getEntropyEncoding() Obtain Encoding/decoding includes entropy encoding and lossless encoding. Options include CABAC and CAVLC. The default option is CABAC.
+ * @method void setEntropyEncoding(string $EntropyEncoding) Set Encoding/decoding includes entropy encoding and lossless encoding. Options include CABAC and CAVLC. The default option is CABAC.
+ * @method string getAdaptiveQuantization() Obtain Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. Default option: AUTO.
+ * @method void setAdaptiveQuantization(string $AdaptiveQuantization) Set Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. Default option: AUTO.
+ * @method string getLookAheadRateControl() Obtain Analyze subsequent coding frames in advance. Options include HIGH, LOW, and MEDIUM. Default option is MEDIUM.
+ * @method void setLookAheadRateControl(string $LookAheadRateControl) Set Analyze subsequent coding frames in advance. Options include HIGH, LOW, and MEDIUM. Default option is MEDIUM.
  */
 class VideoCodecDetail extends AbstractModel
 {
     /**
-     * @var string The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.
+     * @var string Three image quality levels for H264, options include: BASELINE, HIGH, MAIN. The default option is MAIN.
      */
     public $Profile;
 
     /**
-     * @var string Profile corresponding codec performance, options include: 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
+     * @var string Decoding performance of the profile. Options include 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
      */
     public $Level;
 
     /**
-     * @var string Codecs include entropy coding and lossless coding, and options include: CABAC and CAVLC. The default option is CABAC. .
+     * @var string Encoding/decoding includes entropy encoding and lossless encoding. Options include CABAC and CAVLC. The default option is CABAC.
      */
     public $EntropyEncoding;
 
     /**
-     * @var string Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. The default option is: AUTO. .
+     * @var string Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. Default option: AUTO.
      */
     public $AdaptiveQuantization;
 
     /**
-     * @var string Analyze subsequent encoded frames in advance, options include: HIGH, LOW, MEDIUM. The default option is: MEDIUM. .
+     * @var string Analyze subsequent coding frames in advance. Options include HIGH, LOW, and MEDIUM. Default option is MEDIUM.
      */
     public $LookAheadRateControl;
 
     /**
-     * @param string $Profile The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.
-     * @param string $Level Profile corresponding codec performance, options include: 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
-     * @param string $EntropyEncoding Codecs include entropy coding and lossless coding, and options include: CABAC and CAVLC. The default option is CABAC. .
-     * @param string $AdaptiveQuantization Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. The default option is: AUTO. .
-     * @param string $LookAheadRateControl Analyze subsequent encoded frames in advance, options include: HIGH, LOW, MEDIUM. The default option is: MEDIUM. .
+     * @param string $Profile Three image quality levels for H264, options include: BASELINE, HIGH, MAIN. The default option is MAIN.
+     * @param string $Level Decoding performance of the profile. Options include 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
+     * @param string $EntropyEncoding Encoding/decoding includes entropy encoding and lossless encoding. Options include CABAC and CAVLC. The default option is CABAC.
+     * @param string $AdaptiveQuantization Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. Default option: AUTO.
+     * @param string $LookAheadRateControl Analyze subsequent coding frames in advance. Options include HIGH, LOW, and MEDIUM. Default option is MEDIUM.
      */
     function __construct()
     {

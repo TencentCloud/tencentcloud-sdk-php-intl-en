@@ -20,490 +20,494 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance information
  *
- * @method string getUin() Obtain User `Uin`
- * @method void setUin(string $Uin) Set User `Uin`
- * @method integer getAppId() Obtain User `AppId`
- * @method void setAppId(integer $AppId) Set User `AppId`
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getClusterName() Obtain Cluster name
- * @method void setClusterName(string $ClusterName) Set Cluster name
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method string getRegion() Obtain Region
- * @method void setRegion(string $Region) Set Region
- * @method string getZone() Obtain AZ
- * @method void setZone(string $Zone) Set AZ
- * @method string getStatus() Obtain Instance status
- * @method void setStatus(string $Status) Set Instance status
- * @method string getStatusDesc() Obtain Instance status description
- * @method void setStatusDesc(string $StatusDesc) Set Instance status description
- * @method string getDbMode() Obtain Instance type, which is used to indicate whether it is a serverless instance.
- * @method void setDbMode(string $DbMode) Set Instance type, which is used to indicate whether it is a serverless instance.
- * @method string getDbType() Obtain Database type
- * @method void setDbType(string $DbType) Set Database type
- * @method string getDbVersion() Obtain Database version
- * @method void setDbVersion(string $DbVersion) Set Database version
- * @method integer getCpu() Obtain Number of CPU cores
- * @method void setCpu(integer $Cpu) Set Number of CPU cores
- * @method integer getMemory() Obtain Memory in GB
- * @method void setMemory(integer $Memory) Set Memory in GB
- * @method integer getStorage() Obtain Storage capacity in GB
- * @method void setStorage(integer $Storage) Set Storage capacity in GB
- * @method string getInstanceType() Obtain Instance type
- * @method void setInstanceType(string $InstanceType) Set Instance type
- * @method string getInstanceRole() Obtain Current instance role
- * @method void setInstanceRole(string $InstanceRole) Set Current instance role
- * @method string getUpdateTime() Obtain Update time
- * @method void setUpdateTime(string $UpdateTime) Set Update time
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getVpcId() Obtain VPC ID
- * @method void setVpcId(string $VpcId) Set VPC ID
- * @method string getSubnetId() Obtain Subnet ID
- * @method void setSubnetId(string $SubnetId) Set Subnet ID
- * @method string getVip() Obtain Private IP of instance
- * @method void setVip(string $Vip) Set Private IP of instance
- * @method integer getVport() Obtain Private port of instance
- * @method void setVport(integer $Vport) Set Private port of instance
- * @method integer getPayMode() Obtain Billing mode
- * @method void setPayMode(integer $PayMode) Set Billing mode
- * @method string getPeriodEndTime() Obtain Instance expiration time
- * @method void setPeriodEndTime(string $PeriodEndTime) Set Instance expiration time
- * @method string getDestroyDeadlineText() Obtain Termination deadline
- * @method void setDestroyDeadlineText(string $DestroyDeadlineText) Set Termination deadline
- * @method string getIsolateTime() Obtain Isolation time
- * @method void setIsolateTime(string $IsolateTime) Set Isolation time
- * @method integer getNetType() Obtain Network type
- * @method void setNetType(integer $NetType) Set Network type
- * @method string getWanDomain() Obtain Public domain name
- * @method void setWanDomain(string $WanDomain) Set Public domain name
- * @method string getWanIP() Obtain Public IP
- * @method void setWanIP(string $WanIP) Set Public IP
- * @method integer getWanPort() Obtain Public port
- * @method void setWanPort(integer $WanPort) Set Public port
- * @method string getWanStatus() Obtain Public network status
- * @method void setWanStatus(string $WanStatus) Set Public network status
- * @method string getDestroyTime() Obtain Instance termination time
- * @method void setDestroyTime(string $DestroyTime) Set Instance termination time
- * @method string getCynosVersion() Obtain TDSQL-C kernel version
- * @method void setCynosVersion(string $CynosVersion) Set TDSQL-C kernel version
- * @method string getProcessingTask() Obtain Task in progress
- * @method void setProcessingTask(string $ProcessingTask) Set Task in progress
- * @method integer getRenewFlag() Obtain Renewal flag
- * @method void setRenewFlag(integer $RenewFlag) Set Renewal flag
- * @method float getMinCpu() Obtain Minimum number of CPU cores for serverless instance
- * @method void setMinCpu(float $MinCpu) Set Minimum number of CPU cores for serverless instance
- * @method float getMaxCpu() Obtain Maximum number of CPU cores for serverless instance
- * @method void setMaxCpu(float $MaxCpu) Set Maximum number of CPU cores for serverless instance
- * @method string getServerlessStatus() Obtain Serverless instance status. Valid values:
-resume
-pause
- * @method void setServerlessStatus(string $ServerlessStatus) Set Serverless instance status. Valid values:
-resume
-pause
- * @method string getStorageId() Obtain Prepayment storage Id.
- * @method void setStorageId(string $StorageId) Set Prepayment storage Id.
- * @method integer getStoragePayMode() Obtain Storage billing mode
- * @method void setStoragePayMode(integer $StoragePayMode) Set Storage billing mode
- * @method string getPhysicalZone() Obtain Physical zone
- * @method void setPhysicalZone(string $PhysicalZone) Set Physical zone
- * @method string getBusinessType() Obtain Business type.
- * @method void setBusinessType(string $BusinessType) Set Business type.
- * @method array getTasks() Obtain Task
- * @method void setTasks(array $Tasks) Set Task
- * @method string getIsFreeze() Obtain Whether to freeze.
- * @method void setIsFreeze(string $IsFreeze) Set Whether to freeze.
- * @method array getResourceTags() Obtain The resource tag
+ * @method string getUin() Obtain <p>User Uin</p>
+ * @method void setUin(string $Uin) Set <p>User Uin</p>
+ * @method integer getAppId() Obtain <p>User AppId</p>
+ * @method void setAppId(integer $AppId) Set <p>User AppId</p>
+ * @method string getClusterId() Obtain <p>Cluster ID.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method string getClusterName() Obtain <p>Cluster name.</p>
+ * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method string getInstanceName() Obtain <p>Instance name</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name</p>
+ * @method integer getProjectId() Obtain <p>Project ID</p>
+ * @method void setProjectId(integer $ProjectId) Set <p>Project ID</p>
+ * @method string getRegion() Obtain <p>Region</p>
+ * @method void setRegion(string $Region) Set <p>Region</p>
+ * @method string getZone() Obtain <p>AZ.</p>
+ * @method void setZone(string $Zone) Set <p>AZ.</p>
+ * @method string getStatus() Obtain <p>Instance status</p>
+ * @method void setStatus(string $Status) Set <p>Instance status</p>
+ * @method string getStatusDesc() Obtain <p>Instance status description in Chinese</p>
+ * @method void setStatusDesc(string $StatusDesc) Set <p>Instance status description in Chinese</p>
+ * @method string getDbMode() Obtain <p>Instance form, whether it is a serverless instance</p>
+ * @method void setDbMode(string $DbMode) Set <p>Instance form, whether it is a serverless instance</p>
+ * @method string getDbType() Obtain <p>Database type</p>
+ * @method void setDbType(string $DbType) Set <p>Database type</p>
+ * @method string getDbVersion() Obtain <p>Database version.</p>
+ * @method void setDbVersion(string $DbVersion) Set <p>Database version.</p>
+ * @method integer getCpu() Obtain <p>Cpu, unit: core</p>
+ * @method void setCpu(integer $Cpu) Set <p>Cpu, unit: core</p>
+ * @method integer getMemory() Obtain <p>Memory, unit: GB</p>
+ * @method void setMemory(integer $Memory) Set <p>Memory, unit: GB</p>
+ * @method integer getStorage() Obtain <p>Stored amount, unit: GB</p>
+ * @method void setStorage(integer $Storage) Set <p>Stored amount, unit: GB</p>
+ * @method string getInstanceType() Obtain <p>Instance type</p><p>Enumeration value:</p><ul><li>rw: Read-write instance</li><li>ro: Read-only instance</li></ul>
+ * @method void setInstanceType(string $InstanceType) Set <p>Instance type</p><p>Enumeration value:</p><ul><li>rw: Read-write instance</li><li>ro: Read-only instance</li></ul>
+ * @method string getInstanceRole() Obtain <p>Current instance role</p>
+ * @method void setInstanceRole(string $InstanceRole) Set <p>Current instance role</p>
+ * @method string getUpdateTime() Obtain <p>Update time.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Update time.</p>
+ * @method string getCreateTime() Obtain <p>Creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
+ * @method string getVpcId() Obtain <p>VPC network ID</p>
+ * @method void setVpcId(string $VpcId) Set <p>VPC network ID</p>
+ * @method string getSubnetId() Obtain <p>Subnet ID.</p>
+ * @method void setSubnetId(string $SubnetId) Set <p>Subnet ID.</p>
+ * @method string getVip() Obtain <p>Instance private IP address</p>
+ * @method void setVip(string $Vip) Set <p>Instance private IP address</p>
+ * @method integer getVport() Obtain <p>Instance Intranet Port</p>
+ * @method void setVport(integer $Vport) Set <p>Instance Intranet Port</p>
+ * @method integer getPayMode() Obtain <p>Payment mode</p>
+ * @method void setPayMode(integer $PayMode) Set <p>Payment mode</p>
+ * @method string getPeriodEndTime() Obtain <p>Instance expiration time</p>
+ * @method void setPeriodEndTime(string $PeriodEndTime) Set <p>Instance expiration time</p>
+ * @method string getDestroyDeadlineText() Obtain <p>Termination phase</p>
+ * @method void setDestroyDeadlineText(string $DestroyDeadlineText) Set <p>Termination phase</p>
+ * @method string getIsolateTime() Obtain <p>Isolation time</p>
+ * @method void setIsolateTime(string $IsolateTime) Set <p>Isolation time</p>
+ * @method integer getNetType() Obtain <p>Network type</p>
+ * @method void setNetType(integer $NetType) Set <p>Network type</p>
+ * @method string getWanDomain() Obtain <p>Public network domain name</p>
+ * @method void setWanDomain(string $WanDomain) Set <p>Public network domain name</p>
+ * @method string getWanIP() Obtain <p>Public network IP</p>
+ * @method void setWanIP(string $WanIP) Set <p>Public network IP</p>
+ * @method integer getWanPort() Obtain <p>Public network port</p>
+ * @method void setWanPort(integer $WanPort) Set <p>Public network port</p>
+ * @method string getWanStatus() Obtain <p>Public network status</p>
+ * @method void setWanStatus(string $WanStatus) Set <p>Public network status</p>
+ * @method string getDestroyTime() Obtain <p>Instance destruction time</p>
+ * @method void setDestroyTime(string $DestroyTime) Set <p>Instance destruction time</p>
+ * @method string getCynosVersion() Obtain <p>Cynos kernel version</p>
+ * @method void setCynosVersion(string $CynosVersion) Set <p>Cynos kernel version</p>
+ * @method string getProcessingTask() Obtain <p>Currently processing task</p>
+ * @method void setProcessingTask(string $ProcessingTask) Set <p>Currently processing task</p>
+ * @method integer getRenewFlag() Obtain <p>Renewal flag</p>
+ * @method void setRenewFlag(integer $RenewFlag) Set <p>Renewal flag</p>
+ * @method float getMinCpu() Obtain <p>serverless instance cpu minimum</p>
+ * @method void setMinCpu(float $MinCpu) Set <p>serverless instance cpu minimum</p>
+ * @method float getMaxCpu() Obtain <p>cpu cap of the serverless instance</p>
+ * @method void setMaxCpu(float $MaxCpu) Set <p>cpu cap of the serverless instance</p>
+ * @method string getServerlessStatus() Obtain <p>serverless instance status, available values:<br>resume<br>pause</p>
+ * @method void setServerlessStatus(string $ServerlessStatus) Set <p>serverless instance status, available values:<br>resume<br>pause</p>
+ * @method string getStorageId() Obtain <p>Prepayment storage Id</p>
+ * @method void setStorageId(string $StorageId) Set <p>Prepayment storage Id</p>
+ * @method integer getStoragePayMode() Obtain <p>Storage billing type</p>
+ * @method void setStoragePayMode(integer $StoragePayMode) Set <p>Storage billing type</p>
+ * @method string getPhysicalZone() Obtain <p>Physical zone</p>
+ * @method void setPhysicalZone(string $PhysicalZone) Set <p>Physical zone</p>
+ * @method string getBusinessType() Obtain <p>Business type</p>
+ * @method void setBusinessType(string $BusinessType) Set <p>Business type</p>
+ * @method array getTasks() Obtain <p>Task</p>
+ * @method void setTasks(array $Tasks) Set <p>Task</p>
+ * @method string getIsFreeze() Obtain <p>Whether to freeze</p>
+ * @method void setIsFreeze(string $IsFreeze) Set <p>Whether to freeze</p>
+ * @method array getResourceTags() Obtain <p>Resource tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResourceTags(array $ResourceTags) Set The resource tag
+ * @method void setResourceTags(array $ResourceTags) Set <p>Resource tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMasterZone() Obtain Primary AZ.
- * @method void setMasterZone(string $MasterZone) Set Primary AZ.
- * @method array getSlaveZones() Obtain Replica AZ
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSlaveZones(array $SlaveZones) Set Replica AZ
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getInstanceNetInfo() Obtain Network information of the instance.
- * @method void setInstanceNetInfo(array $InstanceNetInfo) Set Network information of the instance.
- * @method array getResourcePackages() Obtain Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResourcePackages(array $ResourcePackages) Set Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceIndexMode() Obtain Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
- * @method void setInstanceIndexMode(string $InstanceIndexMode) Set Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
- * @method InstanceAbility getInstanceAbility() Obtain Supported capabilities of the existing instance.
- * @method void setInstanceAbility(InstanceAbility $InstanceAbility) Set Supported capabilities of the existing instance.
- * @method string getDeviceType() Obtain Instance machine type.
- * @method void setDeviceType(string $DeviceType) Set Instance machine type.
- * @method string getInstanceStorageType() Obtain Specifies the instance storage type.
- * @method void setInstanceStorageType(string $InstanceStorageType) Set Specifies the instance storage type.
- * @method string getCynosVersionTag() Obtain Unknown field.
- * @method void setCynosVersionTag(string $CynosVersionTag) Set Unknown field.
- * @method array getNodeList() Obtain Specifies the node information of libradb.
- * @method void setNodeList(array $NodeList) Set Specifies the node information of libradb.
+ * @method string getMasterZone() Obtain <p>Primary AZ</p>
+ * @method void setMasterZone(string $MasterZone) Set <p>Primary AZ</p>
+ * @method array getSlaveZones() Obtain <p>Standby availability zone</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSlaveZones(array $SlaveZones) Set <p>Standby availability zone</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getInstanceNetInfo() Obtain <p>Instance network info</p>
+ * @method void setInstanceNetInfo(array $InstanceNetInfo) Set <p>Instance network info</p>
+ * @method array getResourcePackages() Obtain <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResourcePackages(array $ResourcePackages) Set <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceIndexMode() Obtain <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
+ * @method void setInstanceIndexMode(string $InstanceIndexMode) Set <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
+ * @method InstanceAbility getInstanceAbility() Obtain <p>Supported capabilities of the current instance</p>
+ * @method void setInstanceAbility(InstanceAbility $InstanceAbility) Set <p>Supported capabilities of the current instance</p>
+ * @method string getDeviceType() Obtain <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
+ * @method void setDeviceType(string $DeviceType) Set <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
+ * @method string getInstanceStorageType() Obtain <p>Instance storage type</p>
+ * @method void setInstanceStorageType(string $InstanceStorageType) Set <p>Instance storage type</p>
+ * @method string getCynosVersionTag() Obtain <p>Unknown field</p>
+ * @method void setCynosVersionTag(string $CynosVersionTag) Set <p>Unknown field</p>
+ * @method array getNodeList() Obtain <p>libradb node information</p>
+ * @method void setNodeList(array $NodeList) Set <p>libradb node information</p>
+ * @method string getGdnId() Obtain <p>Unique ID of the global database</p>
+ * @method void setGdnId(string $GdnId) Set <p>Unique ID of the global database</p>
  */
 class CynosdbInstance extends AbstractModel
 {
     /**
-     * @var string User `Uin`
+     * @var string <p>User Uin</p>
      */
     public $Uin;
 
     /**
-     * @var integer User `AppId`
+     * @var integer <p>User AppId</p>
      */
     public $AppId;
 
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterId;
 
     /**
-     * @var string Cluster name
+     * @var string <p>Cluster name.</p>
      */
     public $ClusterName;
 
     /**
-     * @var string Instance ID
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string <p>Instance name</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer Project ID
+     * @var integer <p>Project ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string Region
+     * @var string <p>Region</p>
      */
     public $Region;
 
     /**
-     * @var string AZ
+     * @var string <p>AZ.</p>
      */
     public $Zone;
 
     /**
-     * @var string Instance status
+     * @var string <p>Instance status</p>
      */
     public $Status;
 
     /**
-     * @var string Instance status description
+     * @var string <p>Instance status description in Chinese</p>
      */
     public $StatusDesc;
 
     /**
-     * @var string Instance type, which is used to indicate whether it is a serverless instance.
+     * @var string <p>Instance form, whether it is a serverless instance</p>
      */
     public $DbMode;
 
     /**
-     * @var string Database type
+     * @var string <p>Database type</p>
      */
     public $DbType;
 
     /**
-     * @var string Database version
+     * @var string <p>Database version.</p>
      */
     public $DbVersion;
 
     /**
-     * @var integer Number of CPU cores
+     * @var integer <p>Cpu, unit: core</p>
      */
     public $Cpu;
 
     /**
-     * @var integer Memory in GB
+     * @var integer <p>Memory, unit: GB</p>
      */
     public $Memory;
 
     /**
-     * @var integer Storage capacity in GB
+     * @var integer <p>Stored amount, unit: GB</p>
      */
     public $Storage;
 
     /**
-     * @var string Instance type
+     * @var string <p>Instance type</p><p>Enumeration value:</p><ul><li>rw: Read-write instance</li><li>ro: Read-only instance</li></ul>
      */
     public $InstanceType;
 
     /**
-     * @var string Current instance role
+     * @var string <p>Current instance role</p>
      */
     public $InstanceRole;
 
     /**
-     * @var string Update time
+     * @var string <p>Update time.</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string Creation time
+     * @var string <p>Creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string VPC ID
+     * @var string <p>VPC network ID</p>
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID
+     * @var string <p>Subnet ID.</p>
      */
     public $SubnetId;
 
     /**
-     * @var string Private IP of instance
+     * @var string <p>Instance private IP address</p>
      */
     public $Vip;
 
     /**
-     * @var integer Private port of instance
+     * @var integer <p>Instance Intranet Port</p>
      */
     public $Vport;
 
     /**
-     * @var integer Billing mode
+     * @var integer <p>Payment mode</p>
      */
     public $PayMode;
 
     /**
-     * @var string Instance expiration time
+     * @var string <p>Instance expiration time</p>
      */
     public $PeriodEndTime;
 
     /**
-     * @var string Termination deadline
+     * @var string <p>Termination phase</p>
      */
     public $DestroyDeadlineText;
 
     /**
-     * @var string Isolation time
+     * @var string <p>Isolation time</p>
      */
     public $IsolateTime;
 
     /**
-     * @var integer Network type
+     * @var integer <p>Network type</p>
      */
     public $NetType;
 
     /**
-     * @var string Public domain name
+     * @var string <p>Public network domain name</p>
      */
     public $WanDomain;
 
     /**
-     * @var string Public IP
+     * @var string <p>Public network IP</p>
      */
     public $WanIP;
 
     /**
-     * @var integer Public port
+     * @var integer <p>Public network port</p>
      */
     public $WanPort;
 
     /**
-     * @var string Public network status
+     * @var string <p>Public network status</p>
      */
     public $WanStatus;
 
     /**
-     * @var string Instance termination time
+     * @var string <p>Instance destruction time</p>
      */
     public $DestroyTime;
 
     /**
-     * @var string TDSQL-C kernel version
+     * @var string <p>Cynos kernel version</p>
      */
     public $CynosVersion;
 
     /**
-     * @var string Task in progress
+     * @var string <p>Currently processing task</p>
      */
     public $ProcessingTask;
 
     /**
-     * @var integer Renewal flag
+     * @var integer <p>Renewal flag</p>
      */
     public $RenewFlag;
 
     /**
-     * @var float Minimum number of CPU cores for serverless instance
+     * @var float <p>serverless instance cpu minimum</p>
      */
     public $MinCpu;
 
     /**
-     * @var float Maximum number of CPU cores for serverless instance
+     * @var float <p>cpu cap of the serverless instance</p>
      */
     public $MaxCpu;
 
     /**
-     * @var string Serverless instance status. Valid values:
-resume
-pause
+     * @var string <p>serverless instance status, available values:<br>resume<br>pause</p>
      */
     public $ServerlessStatus;
 
     /**
-     * @var string Prepayment storage Id.
+     * @var string <p>Prepayment storage Id</p>
      */
     public $StorageId;
 
     /**
-     * @var integer Storage billing mode
+     * @var integer <p>Storage billing type</p>
      */
     public $StoragePayMode;
 
     /**
-     * @var string Physical zone
+     * @var string <p>Physical zone</p>
      */
     public $PhysicalZone;
 
     /**
-     * @var string Business type.
+     * @var string <p>Business type</p>
      */
     public $BusinessType;
 
     /**
-     * @var array Task
+     * @var array <p>Task</p>
      */
     public $Tasks;
 
     /**
-     * @var string Whether to freeze.
+     * @var string <p>Whether to freeze</p>
      */
     public $IsFreeze;
 
     /**
-     * @var array The resource tag
+     * @var array <p>Resource tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ResourceTags;
 
     /**
-     * @var string Primary AZ.
+     * @var string <p>Primary AZ</p>
      */
     public $MasterZone;
 
     /**
-     * @var array Replica AZ
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array <p>Standby availability zone</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SlaveZones;
 
     /**
-     * @var array Network information of the instance.
+     * @var array <p>Instance network info</p>
      */
     public $InstanceNetInfo;
 
     /**
-     * @var array Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ResourcePackages;
 
     /**
-     * @var string Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+     * @var string <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
      */
     public $InstanceIndexMode;
 
     /**
-     * @var InstanceAbility Supported capabilities of the existing instance.
+     * @var InstanceAbility <p>Supported capabilities of the current instance</p>
      */
     public $InstanceAbility;
 
     /**
-     * @var string Instance machine type.
+     * @var string <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
      */
     public $DeviceType;
 
     /**
-     * @var string Specifies the instance storage type.
+     * @var string <p>Instance storage type</p>
      */
     public $InstanceStorageType;
 
     /**
-     * @var string Unknown field.
+     * @var string <p>Unknown field</p>
      */
     public $CynosVersionTag;
 
     /**
-     * @var array Specifies the node information of libradb.
+     * @var array <p>libradb node information</p>
      */
     public $NodeList;
 
     /**
-     * @param string $Uin User `Uin`
-     * @param integer $AppId User `AppId`
-     * @param string $ClusterId Cluster ID
-     * @param string $ClusterName Cluster name
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
-     * @param integer $ProjectId Project ID
-     * @param string $Region Region
-     * @param string $Zone AZ
-     * @param string $Status Instance status
-     * @param string $StatusDesc Instance status description
-     * @param string $DbMode Instance type, which is used to indicate whether it is a serverless instance.
-     * @param string $DbType Database type
-     * @param string $DbVersion Database version
-     * @param integer $Cpu Number of CPU cores
-     * @param integer $Memory Memory in GB
-     * @param integer $Storage Storage capacity in GB
-     * @param string $InstanceType Instance type
-     * @param string $InstanceRole Current instance role
-     * @param string $UpdateTime Update time
-     * @param string $CreateTime Creation time
-     * @param string $VpcId VPC ID
-     * @param string $SubnetId Subnet ID
-     * @param string $Vip Private IP of instance
-     * @param integer $Vport Private port of instance
-     * @param integer $PayMode Billing mode
-     * @param string $PeriodEndTime Instance expiration time
-     * @param string $DestroyDeadlineText Termination deadline
-     * @param string $IsolateTime Isolation time
-     * @param integer $NetType Network type
-     * @param string $WanDomain Public domain name
-     * @param string $WanIP Public IP
-     * @param integer $WanPort Public port
-     * @param string $WanStatus Public network status
-     * @param string $DestroyTime Instance termination time
-     * @param string $CynosVersion TDSQL-C kernel version
-     * @param string $ProcessingTask Task in progress
-     * @param integer $RenewFlag Renewal flag
-     * @param float $MinCpu Minimum number of CPU cores for serverless instance
-     * @param float $MaxCpu Maximum number of CPU cores for serverless instance
-     * @param string $ServerlessStatus Serverless instance status. Valid values:
-resume
-pause
-     * @param string $StorageId Prepayment storage Id.
-     * @param integer $StoragePayMode Storage billing mode
-     * @param string $PhysicalZone Physical zone
-     * @param string $BusinessType Business type.
-     * @param array $Tasks Task
-     * @param string $IsFreeze Whether to freeze.
-     * @param array $ResourceTags The resource tag
+     * @var string <p>Unique ID of the global database</p>
+     */
+    public $GdnId;
+
+    /**
+     * @param string $Uin <p>User Uin</p>
+     * @param integer $AppId <p>User AppId</p>
+     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param string $ClusterName <p>Cluster name.</p>
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param string $InstanceName <p>Instance name</p>
+     * @param integer $ProjectId <p>Project ID</p>
+     * @param string $Region <p>Region</p>
+     * @param string $Zone <p>AZ.</p>
+     * @param string $Status <p>Instance status</p>
+     * @param string $StatusDesc <p>Instance status description in Chinese</p>
+     * @param string $DbMode <p>Instance form, whether it is a serverless instance</p>
+     * @param string $DbType <p>Database type</p>
+     * @param string $DbVersion <p>Database version.</p>
+     * @param integer $Cpu <p>Cpu, unit: core</p>
+     * @param integer $Memory <p>Memory, unit: GB</p>
+     * @param integer $Storage <p>Stored amount, unit: GB</p>
+     * @param string $InstanceType <p>Instance type</p><p>Enumeration value:</p><ul><li>rw: Read-write instance</li><li>ro: Read-only instance</li></ul>
+     * @param string $InstanceRole <p>Current instance role</p>
+     * @param string $UpdateTime <p>Update time.</p>
+     * @param string $CreateTime <p>Creation time.</p>
+     * @param string $VpcId <p>VPC network ID</p>
+     * @param string $SubnetId <p>Subnet ID.</p>
+     * @param string $Vip <p>Instance private IP address</p>
+     * @param integer $Vport <p>Instance Intranet Port</p>
+     * @param integer $PayMode <p>Payment mode</p>
+     * @param string $PeriodEndTime <p>Instance expiration time</p>
+     * @param string $DestroyDeadlineText <p>Termination phase</p>
+     * @param string $IsolateTime <p>Isolation time</p>
+     * @param integer $NetType <p>Network type</p>
+     * @param string $WanDomain <p>Public network domain name</p>
+     * @param string $WanIP <p>Public network IP</p>
+     * @param integer $WanPort <p>Public network port</p>
+     * @param string $WanStatus <p>Public network status</p>
+     * @param string $DestroyTime <p>Instance destruction time</p>
+     * @param string $CynosVersion <p>Cynos kernel version</p>
+     * @param string $ProcessingTask <p>Currently processing task</p>
+     * @param integer $RenewFlag <p>Renewal flag</p>
+     * @param float $MinCpu <p>serverless instance cpu minimum</p>
+     * @param float $MaxCpu <p>cpu cap of the serverless instance</p>
+     * @param string $ServerlessStatus <p>serverless instance status, available values:<br>resume<br>pause</p>
+     * @param string $StorageId <p>Prepayment storage Id</p>
+     * @param integer $StoragePayMode <p>Storage billing type</p>
+     * @param string $PhysicalZone <p>Physical zone</p>
+     * @param string $BusinessType <p>Business type</p>
+     * @param array $Tasks <p>Task</p>
+     * @param string $IsFreeze <p>Whether to freeze</p>
+     * @param array $ResourceTags <p>Resource tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MasterZone Primary AZ.
-     * @param array $SlaveZones Replica AZ
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $InstanceNetInfo Network information of the instance.
-     * @param array $ResourcePackages Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceIndexMode Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
-     * @param InstanceAbility $InstanceAbility Supported capabilities of the existing instance.
-     * @param string $DeviceType Instance machine type.
-     * @param string $InstanceStorageType Specifies the instance storage type.
-     * @param string $CynosVersionTag Unknown field.
-     * @param array $NodeList Specifies the node information of libradb.
+     * @param string $MasterZone <p>Primary AZ</p>
+     * @param array $SlaveZones <p>Standby availability zone</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $InstanceNetInfo <p>Instance network info</p>
+     * @param array $ResourcePackages <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceIndexMode <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
+     * @param InstanceAbility $InstanceAbility <p>Supported capabilities of the current instance</p>
+     * @param string $DeviceType <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
+     * @param string $InstanceStorageType <p>Instance storage type</p>
+     * @param string $CynosVersionTag <p>Unknown field</p>
+     * @param array $NodeList <p>libradb node information</p>
+     * @param string $GdnId <p>Unique ID of the global database</p>
      */
     function __construct()
     {
@@ -769,6 +773,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("NodeList",$param) and $param["NodeList"] !== null) {
             $this->NodeList = $param["NodeList"];
+        }
+
+        if (array_key_exists("GdnId",$param) and $param["GdnId"] !== null) {
+            $this->GdnId = $param["GdnId"];
         }
     }
 }

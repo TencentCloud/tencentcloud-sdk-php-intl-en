@@ -22,28 +22,28 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getLineSpacing() Obtain Line spacing.
  * @method void setLineSpacing(integer $LineSpacing) Set Line spacing.
- * @method integer getMargins() Obtain Margins.
- * @method void setMargins(integer $Margins) Set Margins.
- * @method integer getLines() Obtain Rows.
- * @method void setLines(integer $Lines) Set Rows.
+ * @method integer getMargins() Obtain Margin.
+ * @method void setMargins(integer $Margins) Set Margin.
+ * @method integer getLines() Obtain Number of rows.
+ * @method void setLines(integer $Lines) Set Number of rows.
  * @method integer getCharactersPerLine() Obtain Number of characters per line.
  * @method void setCharactersPerLine(integer $CharactersPerLine) Set Number of characters per line.
- * @method string getSourceTextFont() Obtain Original font Helvetica: simhei.ttf Song Dynasty: simsun.ttc Dynacw Diamond Black: hkjgh.ttf Helvetica font: helvetica.ttf; Need to be set in Source or Source+Target mode
- * @method void setSourceTextFont(string $SourceTextFont) Set Original font Helvetica: simhei.ttf Song Dynasty: simsun.ttc Dynacw Diamond Black: hkjgh.ttf Helvetica font: helvetica.ttf; Need to be set in Source or Source+Target mode
- * @method string getTextColor() Obtain Font color is represented by 6 RGB hexadecimal characters.
- * @method void setTextColor(string $TextColor) Set Font color is represented by 6 RGB hexadecimal characters.
- * @method string getBackgroundColor() Obtain The background color is represented by 6 RGB hexadecimal characters.
- * @method void setBackgroundColor(string $BackgroundColor) Set The background color is represented by 6 RGB hexadecimal characters.
- * @method integer getBackgroundAlpha() Obtain Background transparency, a number from 0-100.
- * @method void setBackgroundAlpha(integer $BackgroundAlpha) Set Background transparency, a number from 0-100.
- * @method string getPreviewContent() Obtain Preview copy.
- * @method void setPreviewContent(string $PreviewContent) Set Preview copy.
+ * @method string getSourceTextFont() Obtain Original font    Heiti: simhei.ttf    Song Typeface: simsun.ttc    Huakang Diamond Black (Dynacw Diamond Black): hkjgh.ttf    Helvetica: helvetica.ttf; Needs to be set in Source or Source+Target mode.
+ * @method void setSourceTextFont(string $SourceTextFont) Set Original font    Heiti: simhei.ttf    Song Typeface: simsun.ttc    Huakang Diamond Black (Dynacw Diamond Black): hkjgh.ttf    Helvetica: helvetica.ttf; Needs to be set in Source or Source+Target mode.
+ * @method string getTextColor() Obtain Font color, represented by 6 characters in hexadecimal RGB.
+ * @method void setTextColor(string $TextColor) Set Font color, represented by 6 characters in hexadecimal RGB.
+ * @method string getBackgroundColor() Obtain Background color, represented by 6 characters in hexadecimal RGB.
+ * @method void setBackgroundColor(string $BackgroundColor) Set Background color, represented by 6 characters in hexadecimal RGB.
+ * @method integer getBackgroundAlpha() Obtain Background opacity. A number from 0 to 100.
+ * @method void setBackgroundAlpha(integer $BackgroundAlpha) Set Background opacity. A number from 0 to 100.
+ * @method string getPreviewContent() Obtain Preview the copywriting.
+ * @method void setPreviewContent(string $PreviewContent) Set Preview the copywriting.
  * @method integer getPreviewWindowHeight() Obtain Preview window height.
  * @method void setPreviewWindowHeight(integer $PreviewWindowHeight) Set Preview window height.
  * @method integer getPreviewWindowWidth() Obtain Preview window width.
  * @method void setPreviewWindowWidth(integer $PreviewWindowWidth) Set Preview window width.
- * @method string getTranslatedTextFont() Obtain Translation language font, the enumeration value is the same as Font, the fonts supported by the language need to be distinguished; TextColor needs to be set in Target or Source+Target mode
- * @method void setTranslatedTextFont(string $TranslatedTextFont) Set Translation language font, the enumeration value is the same as Font, the fonts supported by the language need to be distinguished; TextColor needs to be set in Target or Source+Target mode
+ * @method string getTranslatedTextFont() Obtain Font for the target language. The enumeration value is the same as SourceTextFont. Case-sensitive language support for fonts. TextColor needs to be set in Target or Source+Target mode.
+ * @method void setTranslatedTextFont(string $TranslatedTextFont) Set Font for the target language. The enumeration value is the same as SourceTextFont. Case-sensitive language support for fonts. TextColor needs to be set in Target or Source+Target mode.
  */
 class SubtitleFontConf extends AbstractModel
 {
@@ -53,12 +53,12 @@ class SubtitleFontConf extends AbstractModel
     public $LineSpacing;
 
     /**
-     * @var integer Margins.
+     * @var integer Margin.
      */
     public $Margins;
 
     /**
-     * @var integer Rows.
+     * @var integer Number of rows.
      */
     public $Lines;
 
@@ -68,27 +68,27 @@ class SubtitleFontConf extends AbstractModel
     public $CharactersPerLine;
 
     /**
-     * @var string Original font Helvetica: simhei.ttf Song Dynasty: simsun.ttc Dynacw Diamond Black: hkjgh.ttf Helvetica font: helvetica.ttf; Need to be set in Source or Source+Target mode
+     * @var string Original font    Heiti: simhei.ttf    Song Typeface: simsun.ttc    Huakang Diamond Black (Dynacw Diamond Black): hkjgh.ttf    Helvetica: helvetica.ttf; Needs to be set in Source or Source+Target mode.
      */
     public $SourceTextFont;
 
     /**
-     * @var string Font color is represented by 6 RGB hexadecimal characters.
+     * @var string Font color, represented by 6 characters in hexadecimal RGB.
      */
     public $TextColor;
 
     /**
-     * @var string The background color is represented by 6 RGB hexadecimal characters.
+     * @var string Background color, represented by 6 characters in hexadecimal RGB.
      */
     public $BackgroundColor;
 
     /**
-     * @var integer Background transparency, a number from 0-100.
+     * @var integer Background opacity. A number from 0 to 100.
      */
     public $BackgroundAlpha;
 
     /**
-     * @var string Preview copy.
+     * @var string Preview the copywriting.
      */
     public $PreviewContent;
 
@@ -103,23 +103,23 @@ class SubtitleFontConf extends AbstractModel
     public $PreviewWindowWidth;
 
     /**
-     * @var string Translation language font, the enumeration value is the same as Font, the fonts supported by the language need to be distinguished; TextColor needs to be set in Target or Source+Target mode
+     * @var string Font for the target language. The enumeration value is the same as SourceTextFont. Case-sensitive language support for fonts. TextColor needs to be set in Target or Source+Target mode.
      */
     public $TranslatedTextFont;
 
     /**
      * @param integer $LineSpacing Line spacing.
-     * @param integer $Margins Margins.
-     * @param integer $Lines Rows.
+     * @param integer $Margins Margin.
+     * @param integer $Lines Number of rows.
      * @param integer $CharactersPerLine Number of characters per line.
-     * @param string $SourceTextFont Original font Helvetica: simhei.ttf Song Dynasty: simsun.ttc Dynacw Diamond Black: hkjgh.ttf Helvetica font: helvetica.ttf; Need to be set in Source or Source+Target mode
-     * @param string $TextColor Font color is represented by 6 RGB hexadecimal characters.
-     * @param string $BackgroundColor The background color is represented by 6 RGB hexadecimal characters.
-     * @param integer $BackgroundAlpha Background transparency, a number from 0-100.
-     * @param string $PreviewContent Preview copy.
+     * @param string $SourceTextFont Original font    Heiti: simhei.ttf    Song Typeface: simsun.ttc    Huakang Diamond Black (Dynacw Diamond Black): hkjgh.ttf    Helvetica: helvetica.ttf; Needs to be set in Source or Source+Target mode.
+     * @param string $TextColor Font color, represented by 6 characters in hexadecimal RGB.
+     * @param string $BackgroundColor Background color, represented by 6 characters in hexadecimal RGB.
+     * @param integer $BackgroundAlpha Background opacity. A number from 0 to 100.
+     * @param string $PreviewContent Preview the copywriting.
      * @param integer $PreviewWindowHeight Preview window height.
      * @param integer $PreviewWindowWidth Preview window width.
-     * @param string $TranslatedTextFont Translation language font, the enumeration value is the same as Font, the fonts supported by the language need to be distinguished; TextColor needs to be set in Target or Source+Target mode
+     * @param string $TranslatedTextFont Font for the target language. The enumeration value is the same as SourceTextFont. Case-sensitive language support for fonts. TextColor needs to be set in Target or Source+Target mode.
      */
     function __construct()
     {

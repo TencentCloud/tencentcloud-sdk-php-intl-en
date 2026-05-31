@@ -142,6 +142,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setTagInstances(array $TagInstances) Set Tag
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method AlarmConditionFilter getFilter() Obtain 
+ * @method void setFilter(AlarmConditionFilter $Filter) Set 
+ * @method array getGroupBy() Obtain 
+ * @method void setGroupBy(array $GroupBy) Set 
  * @method string getFilterDimensionsParam() Obtain Information on the filter dimension associated with a policy.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setFilterDimensionsParam(string $FilterDimensionsParam) Set Information on the filter dimension associated with a policy.
@@ -347,6 +351,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $TagInstances;
 
     /**
+     * @var AlarmConditionFilter 
+     */
+    public $Filter;
+
+    /**
+     * @var array 
+     */
+    public $GroupBy;
+
+    /**
      * @var string Information on the filter dimension associated with a policy.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
@@ -444,6 +458,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $TagInstances Tag
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param AlarmConditionFilter $Filter 
+     * @param array $GroupBy 
      * @param string $FilterDimensionsParam Information on the filter dimension associated with a policy.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $IsOneClick Whether it is a quick alarm policy.
@@ -601,6 +617,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj = new TagInstance();
                 $obj->deserialize($value);
                 array_push($this->TagInstances, $obj);
+            }
+        }
+
+        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
+            $this->Filter = new AlarmConditionFilter();
+            $this->Filter->deserialize($param["Filter"]);
+        }
+
+        if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
+            $this->GroupBy = [];
+            foreach ($param["GroupBy"] as $key => $value){
+                $obj = new AlarmGroupByItem();
+                $obj->deserialize($value);
+                array_push($this->GroupBy, $obj);
             }
         }
 

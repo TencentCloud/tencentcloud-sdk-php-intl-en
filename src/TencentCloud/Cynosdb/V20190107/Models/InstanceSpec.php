@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneStockInfos(array $ZoneStockInfos) Set Regional inventory information.
  * @method integer getStockCount() Obtain Inventory quantity.
  * @method void setStockCount(integer $StockCount) Set Inventory quantity.
+ * @method float getMaxCpu() Obtain Maximum cpu
+ * @method void setMaxCpu(float $MaxCpu) Set Maximum cpu
+ * @method float getMinCpu() Obtain Minimum cpu
+ * @method void setMinCpu(float $MinCpu) Set Minimum cpu
  */
 class InstanceSpec extends AbstractModel
 {
@@ -94,6 +98,16 @@ class InstanceSpec extends AbstractModel
     public $StockCount;
 
     /**
+     * @var float Maximum cpu
+     */
+    public $MaxCpu;
+
+    /**
+     * @var float Minimum cpu
+     */
+    public $MinCpu;
+
+    /**
      * @param integer $Cpu Number of instance CPU cores
      * @param integer $Memory Instance memory in GB
      * @param integer $MaxStorageSize Maximum instance storage capacity GB
@@ -104,6 +118,8 @@ class InstanceSpec extends AbstractModel
      * @param integer $MaxIoBandWidth Maximum bandwidth
      * @param array $ZoneStockInfos Regional inventory information.
      * @param integer $StockCount Inventory quantity.
+     * @param float $MaxCpu Maximum cpu
+     * @param float $MinCpu Minimum cpu
      */
     function __construct()
     {
@@ -161,6 +177,14 @@ class InstanceSpec extends AbstractModel
 
         if (array_key_exists("StockCount",$param) and $param["StockCount"] !== null) {
             $this->StockCount = $param["StockCount"];
+        }
+
+        if (array_key_exists("MaxCpu",$param) and $param["MaxCpu"] !== null) {
+            $this->MaxCpu = $param["MaxCpu"];
+        }
+
+        if (array_key_exists("MinCpu",$param) and $param["MinCpu"] !== null) {
+            $this->MinCpu = $param["MinCpu"];
         }
     }
 }

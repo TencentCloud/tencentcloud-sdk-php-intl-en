@@ -22,24 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOutputUrl() Obtain Relay destination address. Length limit: [1,512].
  * @method void setOutputUrl(string $OutputUrl) Set Relay destination address. Length limit: [1,512].
- * @method string getAuthKey() Obtain Authentication key. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAuthKey(string $AuthKey) Set Authentication key. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getUsername() Obtain Authentication username. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUsername(string $Username) Set Authentication username. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getPassword() Obtain Authentication password. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPassword(string $Password) Set Authentication password. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDestinationType() Obtain The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
- * @method void setDestinationType(string $DestinationType) Set The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
- * @method AmazonS3Settings getAmazonS3Settings() Obtain Aws S3 destination setting.
- * @method void setAmazonS3Settings(AmazonS3Settings $AmazonS3Settings) Set Aws S3 destination setting.
- * @method CosSettings getCosSettings() Obtain Cos destination setting.
- * @method void setCosSettings(CosSettings $CosSettings) Set Cos destination setting.
+ * @method string getAuthKey() Obtain Authentication key, length limited to [1, 128].
+ * @method void setAuthKey(string $AuthKey) Set Authentication key, length limited to [1, 128].
+ * @method string getUsername() Obtain Authentication username, length limited to [1, 128].
+ * @method void setUsername(string $Username) Set Authentication username, length limited to [1, 128].
+ * @method string getPassword() Obtain Authentication password, length limited to [1, 128].
+ * @method void setPassword(string $Password) Set Authentication password, length limited to [1, 128].
+ * @method string getDestinationType() Obtain The destination type for relay. Available values: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. Default: Standard. AWS_AmazonS3 or COS is supported when FrameCapture group is selected.
+ * @method void setDestinationType(string $DestinationType) Set The destination type for relay. Available values: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. Default: Standard. AWS_AmazonS3 or COS is supported when FrameCapture group is selected.
+ * @method AmazonS3Settings getAmazonS3Settings() Obtain Forward the Aws S3 address information.
+ * @method void setAmazonS3Settings(AmazonS3Settings $AmazonS3Settings) Set Forward the Aws S3 address information.
+ * @method CosSettings getCosSettings() Obtain Forward COS address information.
+ * @method void setCosSettings(CosSettings $CosSettings) Set Forward COS address information.
  */
 class DestinationInfo extends AbstractModel
 {
@@ -49,49 +43,43 @@ class DestinationInfo extends AbstractModel
     public $OutputUrl;
 
     /**
-     * @var string Authentication key. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Authentication key, length limited to [1, 128].
      */
     public $AuthKey;
 
     /**
-     * @var string Authentication username. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Authentication username, length limited to [1, 128].
      */
     public $Username;
 
     /**
-     * @var string Authentication password. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Authentication password, length limited to [1, 128].
      */
     public $Password;
 
     /**
-     * @var string The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
+     * @var string The destination type for relay. Available values: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. Default: Standard. AWS_AmazonS3 or COS is supported when FrameCapture group is selected.
      */
     public $DestinationType;
 
     /**
-     * @var AmazonS3Settings Aws S3 destination setting.
+     * @var AmazonS3Settings Forward the Aws S3 address information.
      */
     public $AmazonS3Settings;
 
     /**
-     * @var CosSettings Cos destination setting.
+     * @var CosSettings Forward COS address information.
      */
     public $CosSettings;
 
     /**
      * @param string $OutputUrl Relay destination address. Length limit: [1,512].
-     * @param string $AuthKey Authentication key. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Username Authentication username. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Password Authentication password. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
-     * @param AmazonS3Settings $AmazonS3Settings Aws S3 destination setting.
-     * @param CosSettings $CosSettings Cos destination setting.
+     * @param string $AuthKey Authentication key, length limited to [1, 128].
+     * @param string $Username Authentication username, length limited to [1, 128].
+     * @param string $Password Authentication password, length limited to [1, 128].
+     * @param string $DestinationType The destination type for relay. Available values: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. Default: Standard. AWS_AmazonS3 or COS is supported when FrameCapture group is selected.
+     * @param AmazonS3Settings $AmazonS3Settings Forward the Aws S3 address information.
+     * @param CosSettings $CosSettings Forward COS address information.
      */
     function __construct()
     {

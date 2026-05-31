@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End time
  * @method integer getOffset() Obtain Offset
  * @method void setOffset(integer $Offset) Set Offset
- * @method integer getLimit() Obtain Maximum number
- * @method void setLimit(integer $Limit) Set Maximum number
+ * @method integer getLimit() Obtain Limit on the number of records. The default value is 20.
+ * @method void setLimit(integer $Limit) Set Limit on the number of records. The default value is 20.
  */
 class DescribeBinlogsRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeBinlogsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Maximum number
+     * @var integer Limit on the number of records. The default value is 20.
      */
     public $Limit;
 
@@ -63,7 +63,7 @@ class DescribeBinlogsRequest extends AbstractModel
      * @param string $StartTime Start time
      * @param string $EndTime End time
      * @param integer $Offset Offset
-     * @param integer $Limit Maximum number
+     * @param integer $Limit Limit on the number of records. The default value is 20.
      */
     function __construct()
     {

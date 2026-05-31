@@ -20,242 +20,210 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RabbitMQ managed instance information.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method string getInstanceVersion() Obtain Instance version.
- * @method void setInstanceVersion(string $InstanceVersion) Set Instance version.
- * @method integer getStatus() Obtain Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
- * @method void setStatus(integer $Status) Set Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
- * @method integer getNodeCount() Obtain Number of nodes
- * @method void setNodeCount(integer $NodeCount) Set Number of nodes
- * @method string getConfigDisplay() Obtain Instance specification name
- * @method void setConfigDisplay(string $ConfigDisplay) Set Instance specification name
- * @method integer getMaxTps() Obtain Peak TPS
- * @method void setMaxTps(integer $MaxTps) Set Peak TPS
- * @method integer getMaxBandWidth() Obtain Peak bandwidth in Mbps
- * @method void setMaxBandWidth(integer $MaxBandWidth) Set Peak bandwidth in Mbps
- * @method integer getMaxStorage() Obtain Storage capacity in GB
- * @method void setMaxStorage(integer $MaxStorage) Set Storage capacity in GB
- * @method integer getExpireTime() Obtain Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
- * @method void setExpireTime(integer $ExpireTime) Set Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
- * @method integer getAutoRenewFlag() Obtain Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
- * @method integer getPayMode() Obtain 1 indicates prepaid mode, 0 indicates postpaid.
- * @method void setPayMode(integer $PayMode) Set 1 indicates prepaid mode, 0 indicates postpaid.
- * @method string getRemark() Obtain Remarks
- * @method void setRemark(string $Remark) Set Remarks
- * @method string getSpecName() Obtain Node specification of the cluster. specifies the corresponding flag.
-2C8G:rabbit-vip-profession-2c8g
-4C16G:rabbit-vip-profession-4c16g
-8C32G:rabbit-vip-profession-8c32g
-16C32G:rabbit-vip-basic-4
-16C64G:rabbit-vip-profession-16c64g
-2C4G:rabbit-vip-basic-5
-4C8G:rabbit-vip-basic-1
-8C16G (sold out): rabbit-vip-basic-2.
-Specifies the default value as 4C8G: rabbit-vip-basic-1.
- * @method void setSpecName(string $SpecName) Set Node specification of the cluster. specifies the corresponding flag.
-2C8G:rabbit-vip-profession-2c8g
-4C16G:rabbit-vip-profession-4c16g
-8C32G:rabbit-vip-profession-8c32g
-16C32G:rabbit-vip-basic-4
-16C64G:rabbit-vip-profession-16c64g
-2C4G:rabbit-vip-basic-5
-4C8G:rabbit-vip-basic-1
-8C16G (sold out): rabbit-vip-basic-2.
-Specifies the default value as 4C8G: rabbit-vip-basic-1.
- * @method string getExceptionInformation() Obtain Cluster exception information.
+ * @method string getInstanceId() Obtain <p>Instance ID</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID</p>
+ * @method string getInstanceName() Obtain <p>Instance name</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name</p>
+ * @method string getInstanceVersion() Obtain <p>Instance version</p>
+ * @method void setInstanceVersion(string $InstanceVersion) Set <p>Instance version</p>
+ * @method integer getStatus() Obtain <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
+ * @method void setStatus(integer $Status) Set <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
+ * @method integer getNodeCount() Obtain <p>Node count</p>
+ * @method void setNodeCount(integer $NodeCount) Set <p>Node count</p>
+ * @method string getConfigDisplay() Obtain <p>Instance configuration specification name</p>
+ * @method void setConfigDisplay(string $ConfigDisplay) Set <p>Instance configuration specification name</p>
+ * @method integer getMaxTps() Obtain <p>Peak TPS</p>
+ * @method void setMaxTps(integer $MaxTps) Set <p>Peak TPS</p>
+ * @method integer getMaxBandWidth() Obtain <p>Peak bandwidth in Mbps</p>
+ * @method void setMaxBandWidth(integer $MaxBandWidth) Set <p>Peak bandwidth in Mbps</p>
+ * @method integer getMaxStorage() Obtain <p>Storage capacity in GB</p>
+ * @method void setMaxStorage(integer $MaxStorage) Set <p>Storage capacity in GB</p>
+ * @method integer getExpireTime() Obtain <p>Instance expiration time. The value is 0 for pay-as-you-go instances, in milliseconds. unix timestamp.</p>
+ * @method void setExpireTime(integer $ExpireTime) Set <p>Instance expiration time. The value is 0 for pay-as-you-go instances, in milliseconds. unix timestamp.</p>
+ * @method integer getAutoRenewFlag() Obtain <p>Auto-renewal flag. 0 means default state (not set by the user, i.e., initial state is manual renewal), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user)</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set <p>Auto-renewal flag. 0 means default state (not set by the user, i.e., initial state is manual renewal), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user)</p>
+ * @method integer getPayMode() Obtain <p>1 indicates prepaid mode, 0 indicates postpaid</p>
+ * @method void setPayMode(integer $PayMode) Set <p>1 indicates prepaid mode, 0 indicates postpaid</p>
+ * @method string getRemark() Obtain <p>Remark information</p>
+ * @method void setRemark(string $Remark) Set <p>Remark information</p>
+ * @method string getSpecName() Obtain <p>Node specification of the cluster with corresponding flag:<br>2C8G: rabbit-vip-profession-2c8g<br>4C16G: rabbit-vip-profession-4c16g<br>8C32G: rabbit-vip-profession-8c32g<br>16C32G: rabbit-vip-basic-4<br>16C64G: rabbit-vip-profession-16c64g<br>2C4G: rabbit-vip-basic-5<br>4C8G: rabbit-vip-basic-1<br>8C16G (sold out): rabbit-vip-basic-2<br>Defaults to 4C8G: rabbit-vip-basic-1 if not specified</p>
+ * @method void setSpecName(string $SpecName) Set <p>Node specification of the cluster with corresponding flag:<br>2C8G: rabbit-vip-profession-2c8g<br>4C16G: rabbit-vip-profession-4c16g<br>8C32G: rabbit-vip-profession-8c32g<br>16C32G: rabbit-vip-basic-4<br>16C64G: rabbit-vip-profession-16c64g<br>2C4G: rabbit-vip-basic-5<br>4C8G: rabbit-vip-basic-1<br>8C16G (sold out): rabbit-vip-basic-2<br>Defaults to 4C8G: rabbit-vip-basic-1 if not specified</p>
+ * @method string getExceptionInformation() Obtain <p>Cluster exception information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExceptionInformation(string $ExceptionInformation) Set Cluster exception information.
+ * @method void setExceptionInformation(string $ExceptionInformation) Set <p>Cluster exception information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getClusterStatus() Obtain Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
-This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
- * @method void setClusterStatus(integer $ClusterStatus) Set Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
-This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
- * @method string getPublicAccessEndpoint() Obtain Public network access point.
+ * @method integer getClusterStatus() Obtain <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed<br>To separate from the billing area, enable an additional status bit for display.</p>
+ * @method void setClusterStatus(integer $ClusterStatus) Set <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed<br>To separate from the billing area, enable an additional status bit for display.</p>
+ * @method string getPublicAccessEndpoint() Obtain <p>public network access point</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) Set Public network access point.
+ * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) Set <p>public network access point</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getVpcs() Obtain VPC access point list.
- * @method void setVpcs(array $Vpcs) Set VPC access point list.
- * @method integer getCreateTime() Obtain Creation time in milliseconds. unix timestamp.
- * @method void setCreateTime(integer $CreateTime) Set Creation time in milliseconds. unix timestamp.
- * @method integer getInstanceType() Obtain Instance type. valid values: 0 (managed), 1 (Serverless).
- * @method void setInstanceType(integer $InstanceType) Set Instance type. valid values: 0 (managed), 1 (Serverless).
- * @method integer getIsolatedTime() Obtain Isolation time, in milliseconds. unix timestamp.
- * @method void setIsolatedTime(integer $IsolatedTime) Set Isolation time, in milliseconds. unix timestamp.
- * @method boolean getEnableDeletionProtection() Obtain Whether deletion protection is enabled.
- * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) Set Whether deletion protection is enabled.
- * @method array getTags() Obtain Tag list
- * @method void setTags(array $Tags) Set Tag list
+ * @method array getVpcs() Obtain <p>VPC access point list</p>
+ * @method void setVpcs(array $Vpcs) Set <p>VPC access point list</p>
+ * @method integer getCreateTime() Obtain <p>Creation time in milliseconds. unix timestamp</p>
+ * @method void setCreateTime(integer $CreateTime) Set <p>Creation time in milliseconds. unix timestamp</p>
+ * @method integer getInstanceType() Obtain <p>Instance type</p><p>Enumeration value:</p><ul><li>0: Managed version instance</li></ul>
+ * @method void setInstanceType(integer $InstanceType) Set <p>Instance type</p><p>Enumeration value:</p><ul><li>0: Managed version instance</li></ul>
+ * @method integer getIsolatedTime() Obtain <p>Isolation time in milliseconds. unix timestamp</p>
+ * @method void setIsolatedTime(integer $IsolatedTime) Set <p>Isolation time in milliseconds. unix timestamp</p>
+ * @method boolean getEnableDeletionProtection() Obtain <p>Whether deletion protection is enabled</p>
+ * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) Set <p>Whether deletion protection is enabled</p>
+ * @method array getTags() Obtain <p>Tag list</p>
+ * @method void setTags(array $Tags) Set <p>Tag list</p>
+ * @method string getPublicStreamAccessEndpoint() Obtain <p>public data stream Stream access point</p>
+ * @method void setPublicStreamAccessEndpoint(string $PublicStreamAccessEndpoint) Set <p>public data stream Stream access point</p>
  */
 class RabbitMQVipInstance extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string <p>Instance ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string <p>Instance name</p>
      */
     public $InstanceName;
 
     /**
-     * @var string Instance version.
+     * @var string <p>Instance version</p>
      */
     public $InstanceVersion;
 
     /**
-     * @var integer Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+     * @var integer <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
      */
     public $Status;
 
     /**
-     * @var integer Number of nodes
+     * @var integer <p>Node count</p>
      */
     public $NodeCount;
 
     /**
-     * @var string Instance specification name
+     * @var string <p>Instance configuration specification name</p>
      */
     public $ConfigDisplay;
 
     /**
-     * @var integer Peak TPS
+     * @var integer <p>Peak TPS</p>
      */
     public $MaxTps;
 
     /**
-     * @var integer Peak bandwidth in Mbps
+     * @var integer <p>Peak bandwidth in Mbps</p>
      */
     public $MaxBandWidth;
 
     /**
-     * @var integer Storage capacity in GB
+     * @var integer <p>Storage capacity in GB</p>
      */
     public $MaxStorage;
 
     /**
-     * @var integer Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
+     * @var integer <p>Instance expiration time. The value is 0 for pay-as-you-go instances, in milliseconds. unix timestamp.</p>
      */
     public $ExpireTime;
 
     /**
-     * @var integer Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
+     * @var integer <p>Auto-renewal flag. 0 means default state (not set by the user, i.e., initial state is manual renewal), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user)</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer 1 indicates prepaid mode, 0 indicates postpaid.
+     * @var integer <p>1 indicates prepaid mode, 0 indicates postpaid</p>
      */
     public $PayMode;
 
     /**
-     * @var string Remarks
+     * @var string <p>Remark information</p>
      */
     public $Remark;
 
     /**
-     * @var string Node specification of the cluster. specifies the corresponding flag.
-2C8G:rabbit-vip-profession-2c8g
-4C16G:rabbit-vip-profession-4c16g
-8C32G:rabbit-vip-profession-8c32g
-16C32G:rabbit-vip-basic-4
-16C64G:rabbit-vip-profession-16c64g
-2C4G:rabbit-vip-basic-5
-4C8G:rabbit-vip-basic-1
-8C16G (sold out): rabbit-vip-basic-2.
-Specifies the default value as 4C8G: rabbit-vip-basic-1.
+     * @var string <p>Node specification of the cluster with corresponding flag:<br>2C8G: rabbit-vip-profession-2c8g<br>4C16G: rabbit-vip-profession-4c16g<br>8C32G: rabbit-vip-profession-8c32g<br>16C32G: rabbit-vip-basic-4<br>16C64G: rabbit-vip-profession-16c64g<br>2C4G: rabbit-vip-basic-5<br>4C8G: rabbit-vip-basic-1<br>8C16G (sold out): rabbit-vip-basic-2<br>Defaults to 4C8G: rabbit-vip-basic-1 if not specified</p>
      */
     public $SpecName;
 
     /**
-     * @var string Cluster exception information.
+     * @var string <p>Cluster exception information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExceptionInformation;
 
     /**
-     * @var integer Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
-This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+     * @var integer <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed<br>To separate from the billing area, enable an additional status bit for display.</p>
      */
     public $ClusterStatus;
 
     /**
-     * @var string Public network access point.
+     * @var string <p>public network access point</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PublicAccessEndpoint;
 
     /**
-     * @var array VPC access point list.
+     * @var array <p>VPC access point list</p>
      */
     public $Vpcs;
 
     /**
-     * @var integer Creation time in milliseconds. unix timestamp.
+     * @var integer <p>Creation time in milliseconds. unix timestamp</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer Instance type. valid values: 0 (managed), 1 (Serverless).
+     * @var integer <p>Instance type</p><p>Enumeration value:</p><ul><li>0: Managed version instance</li></ul>
      */
     public $InstanceType;
 
     /**
-     * @var integer Isolation time, in milliseconds. unix timestamp.
+     * @var integer <p>Isolation time in milliseconds. unix timestamp</p>
      */
     public $IsolatedTime;
 
     /**
-     * @var boolean Whether deletion protection is enabled.
+     * @var boolean <p>Whether deletion protection is enabled</p>
      */
     public $EnableDeletionProtection;
 
     /**
-     * @var array Tag list
+     * @var array <p>Tag list</p>
      */
     public $Tags;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
-     * @param string $InstanceVersion Instance version.
-     * @param integer $Status Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
-     * @param integer $NodeCount Number of nodes
-     * @param string $ConfigDisplay Instance specification name
-     * @param integer $MaxTps Peak TPS
-     * @param integer $MaxBandWidth Peak bandwidth in Mbps
-     * @param integer $MaxStorage Storage capacity in GB
-     * @param integer $ExpireTime Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
-     * @param integer $AutoRenewFlag Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
-     * @param integer $PayMode 1 indicates prepaid mode, 0 indicates postpaid.
-     * @param string $Remark Remarks
-     * @param string $SpecName Node specification of the cluster. specifies the corresponding flag.
-2C8G:rabbit-vip-profession-2c8g
-4C16G:rabbit-vip-profession-4c16g
-8C32G:rabbit-vip-profession-8c32g
-16C32G:rabbit-vip-basic-4
-16C64G:rabbit-vip-profession-16c64g
-2C4G:rabbit-vip-basic-5
-4C8G:rabbit-vip-basic-1
-8C16G (sold out): rabbit-vip-basic-2.
-Specifies the default value as 4C8G: rabbit-vip-basic-1.
-     * @param string $ExceptionInformation Cluster exception information.
+     * @var string <p>public data stream Stream access point</p>
+     */
+    public $PublicStreamAccessEndpoint;
+
+    /**
+     * @param string $InstanceId <p>Instance ID</p>
+     * @param string $InstanceName <p>Instance name</p>
+     * @param string $InstanceVersion <p>Instance version</p>
+     * @param integer $Status <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
+     * @param integer $NodeCount <p>Node count</p>
+     * @param string $ConfigDisplay <p>Instance configuration specification name</p>
+     * @param integer $MaxTps <p>Peak TPS</p>
+     * @param integer $MaxBandWidth <p>Peak bandwidth in Mbps</p>
+     * @param integer $MaxStorage <p>Storage capacity in GB</p>
+     * @param integer $ExpireTime <p>Instance expiration time. The value is 0 for pay-as-you-go instances, in milliseconds. unix timestamp.</p>
+     * @param integer $AutoRenewFlag <p>Auto-renewal flag. 0 means default state (not set by the user, i.e., initial state is manual renewal), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user)</p>
+     * @param integer $PayMode <p>1 indicates prepaid mode, 0 indicates postpaid</p>
+     * @param string $Remark <p>Remark information</p>
+     * @param string $SpecName <p>Node specification of the cluster with corresponding flag:<br>2C8G: rabbit-vip-profession-2c8g<br>4C16G: rabbit-vip-profession-4c16g<br>8C32G: rabbit-vip-profession-8c32g<br>16C32G: rabbit-vip-basic-4<br>16C64G: rabbit-vip-profession-16c64g<br>2C4G: rabbit-vip-basic-5<br>4C8G: rabbit-vip-basic-1<br>8C16G (sold out): rabbit-vip-basic-2<br>Defaults to 4C8G: rabbit-vip-basic-1 if not specified</p>
+     * @param string $ExceptionInformation <p>Cluster exception information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ClusterStatus Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
-This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
-     * @param string $PublicAccessEndpoint Public network access point.
+     * @param integer $ClusterStatus <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed<br>To separate from the billing area, enable an additional status bit for display.</p>
+     * @param string $PublicAccessEndpoint <p>public network access point</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Vpcs VPC access point list.
-     * @param integer $CreateTime Creation time in milliseconds. unix timestamp.
-     * @param integer $InstanceType Instance type. valid values: 0 (managed), 1 (Serverless).
-     * @param integer $IsolatedTime Isolation time, in milliseconds. unix timestamp.
-     * @param boolean $EnableDeletionProtection Whether deletion protection is enabled.
-     * @param array $Tags Tag list
+     * @param array $Vpcs <p>VPC access point list</p>
+     * @param integer $CreateTime <p>Creation time in milliseconds. unix timestamp</p>
+     * @param integer $InstanceType <p>Instance type</p><p>Enumeration value:</p><ul><li>0: Managed version instance</li></ul>
+     * @param integer $IsolatedTime <p>Isolation time in milliseconds. unix timestamp</p>
+     * @param boolean $EnableDeletionProtection <p>Whether deletion protection is enabled</p>
+     * @param array $Tags <p>Tag list</p>
+     * @param string $PublicStreamAccessEndpoint <p>public data stream Stream access point</p>
      */
     function __construct()
     {
@@ -370,6 +338,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("PublicStreamAccessEndpoint",$param) and $param["PublicStreamAccessEndpoint"] !== null) {
+            $this->PublicStreamAccessEndpoint = $param["PublicStreamAccessEndpoint"];
         }
     }
 }

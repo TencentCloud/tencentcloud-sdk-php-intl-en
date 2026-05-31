@@ -18,20 +18,20 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cos destination setting.
+ * Cos address configuration
  *
  * @method string getRegion() Obtain Region of COS.
  * @method void setRegion(string $Region) Set Region of COS.
  * @method string getBucket() Obtain Bucket name of COS.
  * @method void setBucket(string $Bucket) Set Bucket name of COS.
- * @method string getFilePath() Obtain File output path, which can be empty. If it is not empty, it  ends with /.
- * @method void setFilePath(string $FilePath) Set File output path, which can be empty. If it is not empty, it  ends with /.
- * @method string getFileName() Obtain User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
- * @method void setFileName(string $FileName) Set User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
- * @method string getFileExt() Obtain File suffix, only supports `jpg`.
- * @method void setFileExt(string $FileExt) Set File suffix, only supports `jpg`.
- * @method string getTimeFormat() Obtain Support `unix` or `utc0`, default unix.
- * @method void setTimeFormat(string $TimeFormat) Set Support `unix` or `utc0`, default unix.
+ * @method string getFilePath() Obtain COS file output path, can be empty, ends with / if not empty.
+ * @method void setFilePath(string $FilePath) Set COS file output path, can be empty, ends with / if not empty.
+ * @method string getFileName() Obtain User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
+ * @method void setFileName(string $FileName) Set User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
+ * @method string getFileExt() Obtain COS file suffix is only supported for jpg.
+ * @method void setFileExt(string $FileExt) Set COS file suffix is only supported for jpg.
+ * @method string getTimeFormat() Obtain Support [unix|utc0]. Default is unix.
+ * @method void setTimeFormat(string $TimeFormat) Set Support [unix|utc0]. Default is unix.
  */
 class CosSettings extends AbstractModel
 {
@@ -46,32 +46,32 @@ class CosSettings extends AbstractModel
     public $Bucket;
 
     /**
-     * @var string File output path, which can be empty. If it is not empty, it  ends with /.
+     * @var string COS file output path, can be empty, ends with / if not empty.
      */
     public $FilePath;
 
     /**
-     * @var string User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
+     * @var string User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
      */
     public $FileName;
 
     /**
-     * @var string File suffix, only supports `jpg`.
+     * @var string COS file suffix is only supported for jpg.
      */
     public $FileExt;
 
     /**
-     * @var string Support `unix` or `utc0`, default unix.
+     * @var string Support [unix|utc0]. Default is unix.
      */
     public $TimeFormat;
 
     /**
      * @param string $Region Region of COS.
      * @param string $Bucket Bucket name of COS.
-     * @param string $FilePath File output path, which can be empty. If it is not empty, it  ends with /.
-     * @param string $FileName User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
-     * @param string $FileExt File suffix, only supports `jpg`.
-     * @param string $TimeFormat Support `unix` or `utc0`, default unix.
+     * @param string $FilePath COS file output path, can be empty, ends with / if not empty.
+     * @param string $FileName User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
+     * @param string $FileExt COS file suffix is only supported for jpg.
+     * @param string $TimeFormat Support [unix|utc0]. Default is unix.
      */
     function __construct()
     {

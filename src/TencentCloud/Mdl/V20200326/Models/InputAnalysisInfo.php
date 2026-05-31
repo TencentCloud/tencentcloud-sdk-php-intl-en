@@ -18,20 +18,20 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Recognition configuration for input content.
+ * Input content identification configuration.
  *
- * @method HighlightInfo getHighlightSetting() Obtain Highlight configuration.
- * @method void setHighlightSetting(HighlightInfo $HighlightSetting) Set Highlight configuration.
+ * @method HighlightInfo getHighlightSetting() Obtain Highlights configuration.
+ * @method void setHighlightSetting(HighlightInfo $HighlightSetting) Set Highlights configuration.
  */
 class InputAnalysisInfo extends AbstractModel
 {
     /**
-     * @var HighlightInfo Highlight configuration.
+     * @var HighlightInfo Highlights configuration.
      */
     public $HighlightSetting;
 
     /**
-     * @param HighlightInfo $HighlightSetting Highlight configuration.
+     * @param HighlightInfo $HighlightSetting Highlights configuration.
      */
     function __construct()
     {

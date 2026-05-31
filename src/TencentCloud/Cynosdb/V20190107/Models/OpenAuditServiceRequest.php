@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogExpireDay(integer $LogExpireDay) Set Log retention period
  * @method integer getHighLogExpireDay() Obtain Frequent log retention period
  * @method void setHighLogExpireDay(integer $HighLogExpireDay) Set Frequent log retention period
- * @method array getAuditRuleFilters() Obtain Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
- * @method void setAuditRuleFilters(array $AuditRuleFilters) Set Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+ * @method array getAuditRuleFilters() Obtain Audit rule (deprecated).
+ * @method void setAuditRuleFilters(array $AuditRuleFilters) Set Audit rule (deprecated).
  * @method array getRuleTemplateIds() Obtain Rule template ID. If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
  * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Rule template ID. If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+ * @method boolean getAuditAll() Obtain 
+ * @method void setAuditAll(boolean $AuditAll) Set 
  */
 class OpenAuditServiceRequest extends AbstractModel
 {
@@ -49,7 +51,7 @@ class OpenAuditServiceRequest extends AbstractModel
     public $HighLogExpireDay;
 
     /**
-     * @var array Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+     * @var array Audit rule (deprecated).
      * @deprecated
      */
     public $AuditRuleFilters;
@@ -60,11 +62,17 @@ class OpenAuditServiceRequest extends AbstractModel
     public $RuleTemplateIds;
 
     /**
+     * @var boolean 
+     */
+    public $AuditAll;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param integer $LogExpireDay Log retention period
      * @param integer $HighLogExpireDay Frequent log retention period
-     * @param array $AuditRuleFilters Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+     * @param array $AuditRuleFilters Audit rule (deprecated).
      * @param array $RuleTemplateIds Rule template ID. If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+     * @param boolean $AuditAll 
      */
     function __construct()
     {
@@ -102,6 +110,10 @@ class OpenAuditServiceRequest extends AbstractModel
 
         if (array_key_exists("RuleTemplateIds",$param) and $param["RuleTemplateIds"] !== null) {
             $this->RuleTemplateIds = $param["RuleTemplateIds"];
+        }
+
+        if (array_key_exists("AuditAll",$param) and $param["AuditAll"] !== null) {
+            $this->AuditAll = $param["AuditAll"];
         }
     }
 }

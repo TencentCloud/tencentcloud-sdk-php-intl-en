@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleTemplateName(string $RuleTemplateName) Set New name of the rule template
  * @method string getDescription() Obtain New description of the rule template
  * @method void setDescription(string $Description) Set New description of the rule template
+ * @method integer getAlarmLevel() Obtain Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+ * @method void setAlarmLevel(integer $AlarmLevel) Set Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+ * @method integer getAlarmPolicy() Obtain Alert policy. 0 - No alert, 1 - Alert.
+ * @method void setAlarmPolicy(integer $AlarmPolicy) Set Alert policy. 0 - No alert, 1 - Alert.
  */
 class ModifyAuditRuleTemplatesRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class ModifyAuditRuleTemplatesRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var integer Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+     */
+    public $AlarmLevel;
+
+    /**
+     * @var integer Alert policy. 0 - No alert, 1 - Alert.
+     */
+    public $AlarmPolicy;
+
+    /**
      * @param array $RuleTemplateIds Audit rule template ID
      * @param array $RuleFilters Audit rule after modification
      * @param string $RuleTemplateName New name of the rule template
      * @param string $Description New description of the rule template
+     * @param integer $AlarmLevel Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+     * @param integer $AlarmPolicy Alert policy. 0 - No alert, 1 - Alert.
      */
     function __construct()
     {
@@ -89,6 +105,14 @@ class ModifyAuditRuleTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
+            $this->AlarmLevel = $param["AlarmLevel"];
+        }
+
+        if (array_key_exists("AlarmPolicy",$param) and $param["AlarmPolicy"] !== null) {
+            $this->AlarmPolicy = $param["AlarmPolicy"];
         }
     }
 }

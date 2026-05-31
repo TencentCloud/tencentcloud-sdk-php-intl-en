@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTs(integer $CreateTs) Set Creation timestamp.
  * @method integer getModifyTs() Obtain Modification timestamp.
  * @method void setModifyTs(integer $ModifyTs) Set Modification timestamp.
+ * @method RabbitMQVHostBaseQuota getQuota() Obtain Basic quota information.
+ * @method void setQuota(RabbitMQVHostBaseQuota $Quota) Set Basic quota information.
  */
 class RabbitMQVirtualHostInfo extends AbstractModel
 {
@@ -129,6 +131,11 @@ class RabbitMQVirtualHostInfo extends AbstractModel
     public $ModifyTs;
 
     /**
+     * @var RabbitMQVHostBaseQuota Basic quota information.
+     */
+    public $Quota;
+
+    /**
      * @param string $InstanceId Cluster instance ID
      * @param string $VirtualHost Vhost name
      * @param string $Description Vhost description information.
@@ -144,6 +151,7 @@ class RabbitMQVirtualHostInfo extends AbstractModel
      * @param boolean $MirrorQueuePolicyFlag Whether an image queue policy exists. true: Exists; false: Does not exist.
      * @param integer $CreateTs Creation timestamp.
      * @param integer $ModifyTs Modification timestamp.
+     * @param RabbitMQVHostBaseQuota $Quota Basic quota information.
      */
     function __construct()
     {
@@ -217,6 +225,11 @@ class RabbitMQVirtualHostInfo extends AbstractModel
 
         if (array_key_exists("ModifyTs",$param) and $param["ModifyTs"] !== null) {
             $this->ModifyTs = $param["ModifyTs"];
+        }
+
+        if (array_key_exists("Quota",$param) and $param["Quota"] !== null) {
+            $this->Quota = new RabbitMQVHostBaseQuota();
+            $this->Quota->deserialize($param["Quota"]);
         }
     }
 }

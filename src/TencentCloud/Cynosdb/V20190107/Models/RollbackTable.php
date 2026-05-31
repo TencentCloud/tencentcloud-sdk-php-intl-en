@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rollback Database and Tables
+ * 
  *
- * @method string getDatabase() Obtain Database Name
- * @method void setDatabase(string $Database) Set Database Name
- * @method array getTables() Obtain Database Table
- * @method void setTables(array $Tables) Set Database Table
+ * @method string getDatabase() Obtain 
+ * @method void setDatabase(string $Database) Set 
+ * @method array getTables() Obtain 
+ * @method void setTables(array $Tables) Set 
  */
 class RollbackTable extends AbstractModel
 {
     /**
-     * @var string Database Name
+     * @var string 
      */
     public $Database;
 
     /**
-     * @var array Database Table
+     * @var array 
      */
     public $Tables;
 
     /**
-     * @param string $Database Database Name
-     * @param array $Tables Database Table
+     * @param string $Database 
+     * @param array $Tables 
      */
     function __construct()
     {

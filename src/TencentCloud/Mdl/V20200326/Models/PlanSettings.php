@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Event settings
  *
- * @method TimedRecordSettings getTimedRecordSettings() Obtain Timed recording settings
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setTimedRecordSettings(TimedRecordSettings $TimedRecordSettings) Set Timed recording settings
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method TimedRecordSettings getTimedRecordSettings() Obtain Configuration message of the scheduled recording task.
+ * @method void setTimedRecordSettings(TimedRecordSettings $TimedRecordSettings) Set Configuration message of the scheduled recording task.
  */
 class PlanSettings extends AbstractModel
 {
     /**
-     * @var TimedRecordSettings Timed recording settings
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var TimedRecordSettings Configuration message of the scheduled recording task.
      */
     public $TimedRecordSettings;
 
     /**
-     * @param TimedRecordSettings $TimedRecordSettings Timed recording settings
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param TimedRecordSettings $TimedRecordSettings Configuration message of the scheduled recording task.
      */
     function __construct()
     {

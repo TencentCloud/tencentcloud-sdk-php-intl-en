@@ -18,36 +18,36 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Console Tag, for documentation please refer to: https://www.tencentcloud.com/document/product/651.
+ * Console tag, documentation link: https://www.tencentcloud.com/document/product/651.?from_cn_redirect=1
  *
- * @method string getTagKey() Obtain Tag key, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
- * @method void setTagKey(string $TagKey) Set Tag key, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
- * @method string getTagValue() Obtain Tag value, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
- * @method void setTagValue(string $TagValue) Set Tag value, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
- * @method string getCategory() Obtain Tag type, optional; for documentation please refer to: https://www.tencentcloud.com/document/product/651/33023#tag.
- * @method void setCategory(string $Category) Set Tag type, optional; for documentation please refer to: https://www.tencentcloud.com/document/product/651/33023#tag.
+ * @method string getTagKey() Obtain Tag key. Refer to the tag document (https://www.tencentcloud.com/document/product/651/13354?from_cn_redirect=1) for limits.
+ * @method void setTagKey(string $TagKey) Set Tag key. Refer to the tag document (https://www.tencentcloud.com/document/product/651/13354?from_cn_redirect=1) for limits.
+ * @method string getTagValue() Obtain Tag value. For reference, see the tag document at https://www.tencentcloud.com/document/product/651/13354.?from_cn_redirect=1
+ * @method void setTagValue(string $TagValue) Set Tag value. For reference, see the tag document at https://www.tencentcloud.com/document/product/651/13354.?from_cn_redirect=1
+ * @method string getCategory() Obtain Tag type, optional. See the tag document for reference (https://www.tencentcloud.com/document/product/651/35327?from_cn_redirect=1#Tag).
+ * @method void setCategory(string $Category) Set Tag type, optional. See the tag document for reference (https://www.tencentcloud.com/document/product/651/35327?from_cn_redirect=1#Tag).
  */
 class Tag extends AbstractModel
 {
     /**
-     * @var string Tag key, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
+     * @var string Tag key. Refer to the tag document (https://www.tencentcloud.com/document/product/651/13354?from_cn_redirect=1) for limits.
      */
     public $TagKey;
 
     /**
-     * @var string Tag value, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
+     * @var string Tag value. For reference, see the tag document at https://www.tencentcloud.com/document/product/651/13354.?from_cn_redirect=1
      */
     public $TagValue;
 
     /**
-     * @var string Tag type, optional; for documentation please refer to: https://www.tencentcloud.com/document/product/651/33023#tag.
+     * @var string Tag type, optional. See the tag document for reference (https://www.tencentcloud.com/document/product/651/35327?from_cn_redirect=1#Tag).
      */
     public $Category;
 
     /**
-     * @param string $TagKey Tag key, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
-     * @param string $TagValue Tag value, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
-     * @param string $Category Tag type, optional; for documentation please refer to: https://www.tencentcloud.com/document/product/651/33023#tag.
+     * @param string $TagKey Tag key. Refer to the tag document (https://www.tencentcloud.com/document/product/651/13354?from_cn_redirect=1) for limits.
+     * @param string $TagValue Tag value. For reference, see the tag document at https://www.tencentcloud.com/document/product/651/13354.?from_cn_redirect=1
+     * @param string $Category Tag type, optional. See the tag document for reference (https://www.tencentcloud.com/document/product/651/35327?from_cn_redirect=1#Tag).
      */
     function __construct()
     {

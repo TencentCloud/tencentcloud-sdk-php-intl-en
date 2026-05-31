@@ -20,74 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBackupConfig request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method integer getBackupTimeBeg() Obtain Full backup start time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
- * @method void setBackupTimeBeg(integer $BackupTimeBeg) Set Full backup start time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
- * @method integer getBackupTimeEnd() Obtain Full backup end time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively.
- * @method void setBackupTimeEnd(integer $BackupTimeEnd) Set Full backup end time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively.
- * @method integer getReserveDuration() Obtain Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
- * @method void setReserveDuration(integer $ReserveDuration) Set Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
- * @method array getBackupFreq() Obtain Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
- * @method void setBackupFreq(array $BackupFreq) Set Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
- * @method string getBackupType() Obtain Currently, this parameter does not support modification and is not required.
- * @method void setBackupType(string $BackupType) Set Currently, this parameter does not support modification and is not required.
- * @method LogicBackupConfigInfo getLogicBackupConfig() Obtain Logical Backup Configuration
- * @method void setLogicBackupConfig(LogicBackupConfigInfo $LogicBackupConfig) Set Logical Backup Configuration
- * @method boolean getDeleteAutoLogicBackup() Obtain Whether to delete the automatic logical backup
- * @method void setDeleteAutoLogicBackup(boolean $DeleteAutoLogicBackup) Set Whether to delete the automatic logical backup
+ * @method string getClusterId() Obtain <p>Cluster ID.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method integer getBackupTimeBeg() Obtain <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+ * @method void setBackupTimeBeg(integer $BackupTimeBeg) Set <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+ * @method integer getBackupTimeEnd() Obtain <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+ * @method void setBackupTimeEnd(integer $BackupTimeEnd) Set <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+ * @method integer getReserveDuration() Obtain <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. Seven days is represented as 3600<em>24</em>7=604800. The maximum value is 158112000.</p>
+ * @method void setReserveDuration(integer $ReserveDuration) Set <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. Seven days is represented as 3600<em>24</em>7=604800. The maximum value is 158112000.</p>
+ * @method array getBackupFreq() Obtain <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup.</p>
+ * @method void setBackupFreq(array $BackupFreq) Set <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup.</p>
+ * @method string getBackupType() Obtain <p>This parameter currently does not support modification. No need to specify.</p>
+ * @method void setBackupType(string $BackupType) Set <p>This parameter currently does not support modification. No need to specify.</p>
+ * @method LogicBackupConfigInfo getLogicBackupConfig() Obtain <p>Logical backup configuration</p>
+ * @method void setLogicBackupConfig(LogicBackupConfigInfo $LogicBackupConfig) Set <p>Logical backup configuration</p>
+ * @method boolean getDeleteAutoLogicBackup() Obtain <p>Whether to delete automatic logical backup</p>
+ * @method void setDeleteAutoLogicBackup(boolean $DeleteAutoLogicBackup) Set <p>Whether to delete automatic logical backup</p>
+ * @method SnapshotBackupConfig getSnapshotSecondaryBackupConfig() Obtain <p>Second-level snapshot backup parameter</p>
+ * @method void setSnapshotSecondaryBackupConfig(SnapshotBackupConfig $SnapshotSecondaryBackupConfig) Set <p>Second-level snapshot backup parameter</p>
+ * @method SparseBackupConfig getSparseBackupConfig() Obtain <p>Sparse backup configuration</p>
+ * @method void setSparseBackupConfig(SparseBackupConfig $SparseBackupConfig) Set <p>Sparse backup configuration</p>
  */
 class ModifyBackupConfigRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer Full backup start time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
+     * @var integer <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
      */
     public $BackupTimeBeg;
 
     /**
-     * @var integer Full backup end time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively.
+     * @var integer <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
      */
     public $BackupTimeEnd;
 
     /**
-     * @var integer Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
+     * @var integer <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. Seven days is represented as 3600<em>24</em>7=604800. The maximum value is 158112000.</p>
      */
     public $ReserveDuration;
 
     /**
-     * @var array Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
+     * @var array <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup.</p>
      */
     public $BackupFreq;
 
     /**
-     * @var string Currently, this parameter does not support modification and is not required.
+     * @var string <p>This parameter currently does not support modification. No need to specify.</p>
      */
     public $BackupType;
 
     /**
-     * @var LogicBackupConfigInfo Logical Backup Configuration
+     * @var LogicBackupConfigInfo <p>Logical backup configuration</p>
      */
     public $LogicBackupConfig;
 
     /**
-     * @var boolean Whether to delete the automatic logical backup
+     * @var boolean <p>Whether to delete automatic logical backup</p>
      */
     public $DeleteAutoLogicBackup;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param integer $BackupTimeBeg Full backup start time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
-     * @param integer $BackupTimeEnd Full backup end time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively.
-     * @param integer $ReserveDuration Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
-     * @param array $BackupFreq Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
-     * @param string $BackupType Currently, this parameter does not support modification and is not required.
-     * @param LogicBackupConfigInfo $LogicBackupConfig Logical Backup Configuration
-     * @param boolean $DeleteAutoLogicBackup Whether to delete the automatic logical backup
+     * @var SnapshotBackupConfig <p>Second-level snapshot backup parameter</p>
+     */
+    public $SnapshotSecondaryBackupConfig;
+
+    /**
+     * @var SparseBackupConfig <p>Sparse backup configuration</p>
+     */
+    public $SparseBackupConfig;
+
+    /**
+     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param integer $BackupTimeBeg <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * @param integer $BackupTimeEnd <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * @param integer $ReserveDuration <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. Seven days is represented as 3600<em>24</em>7=604800. The maximum value is 158112000.</p>
+     * @param array $BackupFreq <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup.</p>
+     * @param string $BackupType <p>This parameter currently does not support modification. No need to specify.</p>
+     * @param LogicBackupConfigInfo $LogicBackupConfig <p>Logical backup configuration</p>
+     * @param boolean $DeleteAutoLogicBackup <p>Whether to delete automatic logical backup</p>
+     * @param SnapshotBackupConfig $SnapshotSecondaryBackupConfig <p>Second-level snapshot backup parameter</p>
+     * @param SparseBackupConfig $SparseBackupConfig <p>Sparse backup configuration</p>
      */
     function __construct()
     {
@@ -133,6 +149,16 @@ class ModifyBackupConfigRequest extends AbstractModel
 
         if (array_key_exists("DeleteAutoLogicBackup",$param) and $param["DeleteAutoLogicBackup"] !== null) {
             $this->DeleteAutoLogicBackup = $param["DeleteAutoLogicBackup"];
+        }
+
+        if (array_key_exists("SnapshotSecondaryBackupConfig",$param) and $param["SnapshotSecondaryBackupConfig"] !== null) {
+            $this->SnapshotSecondaryBackupConfig = new SnapshotBackupConfig();
+            $this->SnapshotSecondaryBackupConfig->deserialize($param["SnapshotSecondaryBackupConfig"]);
+        }
+
+        if (array_key_exists("SparseBackupConfig",$param) and $param["SparseBackupConfig"] !== null) {
+            $this->SparseBackupConfig = new SparseBackupConfig();
+            $this->SparseBackupConfig->deserialize($param["SparseBackupConfig"]);
         }
     }
 }

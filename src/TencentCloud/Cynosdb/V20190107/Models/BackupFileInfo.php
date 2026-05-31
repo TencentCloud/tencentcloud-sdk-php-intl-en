@@ -20,106 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Backup file information
  *
- * @method integer getSnapshotId() Obtain Snapshot file ID, which is deprecated. You need to use `BackupId`.
- * @method void setSnapshotId(integer $SnapshotId) Set Snapshot file ID, which is deprecated. You need to use `BackupId`.
- * @method string getFileName() Obtain Backup file name
- * @method void setFileName(string $FileName) Set Backup file name
- * @method integer getFileSize() Obtain Backup file size
- * @method void setFileSize(integer $FileSize) Set Backup file size
- * @method string getStartTime() Obtain Backup start time
- * @method void setStartTime(string $StartTime) Set Backup start time
- * @method string getFinishTime() Obtain Backup end time
- * @method void setFinishTime(string $FinishTime) Set Backup end time
- * @method string getBackupType() Obtain Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
- * @method void setBackupType(string $BackupType) Set Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
- * @method string getBackupMethod() Obtain Back mode. auto: auto backup; manual: manual backup
- * @method void setBackupMethod(string $BackupMethod) Set Back mode. auto: auto backup; manual: manual backup
- * @method string getBackupStatus() Obtain Backup file status. success: backup succeeded; fail: backup failed; creating: creating backup file; deleting: deleting backup file
- * @method void setBackupStatus(string $BackupStatus) Set Backup file status. success: backup succeeded; fail: backup failed; creating: creating backup file; deleting: deleting backup file
- * @method string getSnapshotTime() Obtain Backup file time
- * @method void setSnapshotTime(string $SnapshotTime) Set Backup file time
- * @method integer getBackupId() Obtain Backup ID.
- * @method void setBackupId(integer $BackupId) Set Backup ID.
- * @method string getSnapShotType() Obtain Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
- * @method void setSnapShotType(string $SnapShotType) Set Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
- * @method string getBackupName() Obtain Specifies the remark of the backup file.
- * @method void setBackupName(string $BackupName) Set Specifies the remark of the backup file.
+ * @method integer getSnapshotId() Obtain <p>Snapshot file ID, abandoned, please use BackupId</p>
+ * @method void setSnapshotId(integer $SnapshotId) Set <p>Snapshot file ID, abandoned, please use BackupId</p>
+ * @method string getFileName() Obtain <p>Backup file name</p>
+ * @method void setFileName(string $FileName) Set <p>Backup file name</p>
+ * @method integer getFileSize() Obtain <p>Backup file size</p>
+ * @method void setFileSize(integer $FileSize) Set <p>Backup file size</p>
+ * @method string getStartTime() Obtain <p>Backup start time.</p>
+ * @method void setStartTime(string $StartTime) Set <p>Backup start time.</p>
+ * @method string getFinishTime() Obtain <p>Backup completion time.</p>
+ * @method void setFinishTime(string $FinishTime) Set <p>Backup completion time.</p>
+ * @method string getBackupType() Obtain <p>Backup type: snapshot, snapshot backup; logic, logical backup</p>
+ * @method void setBackupType(string $BackupType) Set <p>Backup type: snapshot, snapshot backup; logic, logical backup</p>
+ * @method string getBackupMethod() Obtain <p>Backup method: auto, automatic backup; manual, manual backup</p>
+ * @method void setBackupMethod(string $BackupMethod) Set <p>Backup method: auto, automatic backup; manual, manual backup</p>
+ * @method string getBackupStatus() Obtain <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p>
+ * @method void setBackupStatus(string $BackupStatus) Set <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p>
+ * @method string getSnapshotTime() Obtain <p>Backup file time</p>
+ * @method void setSnapshotTime(string $SnapshotTime) Set <p>Backup file time</p>
+ * @method integer getBackupId() Obtain <p>Backup ID</p>
+ * @method void setBackupId(integer $BackupId) Set <p>Backup ID</p>
+ * @method string getSnapShotType() Obtain <p>Snapshot type. Value range: full, full; increment, incremental</p>
+ * @method void setSnapShotType(string $SnapShotType) Set <p>Snapshot type. Value range: full, full; increment, incremental</p>
+ * @method string getBackupName() Obtain <p>Backup file remark</p>
+ * @method void setBackupName(string $BackupName) Set <p>Backup file remark</p>
+ * @method string getCopyStatus() Obtain <p>Delivery status</p>
+ * @method void setCopyStatus(string $CopyStatus) Set <p>Delivery status</p>
+ * @method string getEncryptKeyId() Obtain <p>Key id</p>
+ * @method void setEncryptKeyId(string $EncryptKeyId) Set <p>Key id</p>
+ * @method string getEncryptRegion() Obtain <p>Key region</p>
+ * @method void setEncryptRegion(string $EncryptRegion) Set <p>Key region</p>
+ * @method array getVaultInfos() Obtain <p>Safe info</p>
+ * @method void setVaultInfos(array $VaultInfos) Set <p>Safe info</p>
+ * @method string getBackupPeriodStrategy() Obtain <p>Backup cycle policy</p>
+ * @method void setBackupPeriodStrategy(string $BackupPeriodStrategy) Set <p>Backup cycle policy</p>
  */
 class BackupFileInfo extends AbstractModel
 {
     /**
-     * @var integer Snapshot file ID, which is deprecated. You need to use `BackupId`.
+     * @var integer <p>Snapshot file ID, abandoned, please use BackupId</p>
      */
     public $SnapshotId;
 
     /**
-     * @var string Backup file name
+     * @var string <p>Backup file name</p>
      */
     public $FileName;
 
     /**
-     * @var integer Backup file size
+     * @var integer <p>Backup file size</p>
      */
     public $FileSize;
 
     /**
-     * @var string Backup start time
+     * @var string <p>Backup start time.</p>
      */
     public $StartTime;
 
     /**
-     * @var string Backup end time
+     * @var string <p>Backup completion time.</p>
      */
     public $FinishTime;
 
     /**
-     * @var string Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+     * @var string <p>Backup type: snapshot, snapshot backup; logic, logical backup</p>
      */
     public $BackupType;
 
     /**
-     * @var string Back mode. auto: auto backup; manual: manual backup
+     * @var string <p>Backup method: auto, automatic backup; manual, manual backup</p>
      */
     public $BackupMethod;
 
     /**
-     * @var string Backup file status. success: backup succeeded; fail: backup failed; creating: creating backup file; deleting: deleting backup file
+     * @var string <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p>
      */
     public $BackupStatus;
 
     /**
-     * @var string Backup file time
+     * @var string <p>Backup file time</p>
      */
     public $SnapshotTime;
 
     /**
-     * @var integer Backup ID.
+     * @var integer <p>Backup ID</p>
      */
     public $BackupId;
 
     /**
-     * @var string Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
+     * @var string <p>Snapshot type. Value range: full, full; increment, incremental</p>
      */
     public $SnapShotType;
 
     /**
-     * @var string Specifies the remark of the backup file.
+     * @var string <p>Backup file remark</p>
      */
     public $BackupName;
 
     /**
-     * @param integer $SnapshotId Snapshot file ID, which is deprecated. You need to use `BackupId`.
-     * @param string $FileName Backup file name
-     * @param integer $FileSize Backup file size
-     * @param string $StartTime Backup start time
-     * @param string $FinishTime Backup end time
-     * @param string $BackupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
-     * @param string $BackupMethod Back mode. auto: auto backup; manual: manual backup
-     * @param string $BackupStatus Backup file status. success: backup succeeded; fail: backup failed; creating: creating backup file; deleting: deleting backup file
-     * @param string $SnapshotTime Backup file time
-     * @param integer $BackupId Backup ID.
-     * @param string $SnapShotType Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
-     * @param string $BackupName Specifies the remark of the backup file.
+     * @var string <p>Delivery status</p>
+     */
+    public $CopyStatus;
+
+    /**
+     * @var string <p>Key id</p>
+     */
+    public $EncryptKeyId;
+
+    /**
+     * @var string <p>Key region</p>
+     */
+    public $EncryptRegion;
+
+    /**
+     * @var array <p>Safe info</p>
+     */
+    public $VaultInfos;
+
+    /**
+     * @var string <p>Backup cycle policy</p>
+     */
+    public $BackupPeriodStrategy;
+
+    /**
+     * @param integer $SnapshotId <p>Snapshot file ID, abandoned, please use BackupId</p>
+     * @param string $FileName <p>Backup file name</p>
+     * @param integer $FileSize <p>Backup file size</p>
+     * @param string $StartTime <p>Backup start time.</p>
+     * @param string $FinishTime <p>Backup completion time.</p>
+     * @param string $BackupType <p>Backup type: snapshot, snapshot backup; logic, logical backup</p>
+     * @param string $BackupMethod <p>Backup method: auto, automatic backup; manual, manual backup</p>
+     * @param string $BackupStatus <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p>
+     * @param string $SnapshotTime <p>Backup file time</p>
+     * @param integer $BackupId <p>Backup ID</p>
+     * @param string $SnapShotType <p>Snapshot type. Value range: full, full; increment, incremental</p>
+     * @param string $BackupName <p>Backup file remark</p>
+     * @param string $CopyStatus <p>Delivery status</p>
+     * @param string $EncryptKeyId <p>Key id</p>
+     * @param string $EncryptRegion <p>Key region</p>
+     * @param array $VaultInfos <p>Safe info</p>
+     * @param string $BackupPeriodStrategy <p>Backup cycle policy</p>
      */
     function __construct()
     {
@@ -180,6 +220,31 @@ class BackupFileInfo extends AbstractModel
 
         if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
             $this->BackupName = $param["BackupName"];
+        }
+
+        if (array_key_exists("CopyStatus",$param) and $param["CopyStatus"] !== null) {
+            $this->CopyStatus = $param["CopyStatus"];
+        }
+
+        if (array_key_exists("EncryptKeyId",$param) and $param["EncryptKeyId"] !== null) {
+            $this->EncryptKeyId = $param["EncryptKeyId"];
+        }
+
+        if (array_key_exists("EncryptRegion",$param) and $param["EncryptRegion"] !== null) {
+            $this->EncryptRegion = $param["EncryptRegion"];
+        }
+
+        if (array_key_exists("VaultInfos",$param) and $param["VaultInfos"] !== null) {
+            $this->VaultInfos = [];
+            foreach ($param["VaultInfos"] as $key => $value){
+                $obj = new VaultInfo();
+                $obj->deserialize($value);
+                array_push($this->VaultInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("BackupPeriodStrategy",$param) and $param["BackupPeriodStrategy"] !== null) {
+            $this->BackupPeriodStrategy = $param["BackupPeriodStrategy"];
         }
     }
 }

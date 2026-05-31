@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Logical Backup Configuration Information
+ * 
  *
  * @method string getLogicBackupEnable() Obtain Whether automatic logical backup is enabled.
  * @method void setLogicBackupEnable(string $LogicBackupEnable) Set Whether automatic logical backup is enabled.
@@ -26,12 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogicBackupTimeBeg(integer $LogicBackupTimeBeg) Set Specifies the automatic logic backup start time.
  * @method integer getLogicBackupTimeEnd() Obtain Specifies the termination time of automatic logical backup.
  * @method void setLogicBackupTimeEnd(integer $LogicBackupTimeEnd) Set Specifies the termination time of automatic logical backup.
- * @method integer getLogicReserveDuration() Obtain Specifies the retention time for automatic logical backup.
- * @method void setLogicReserveDuration(integer $LogicReserveDuration) Set Specifies the retention time for automatic logical backup.
- * @method string getLogicCrossRegionsEnable() Obtain Whether cross-regional logical backup is enabled.
- * @method void setLogicCrossRegionsEnable(string $LogicCrossRegionsEnable) Set Whether cross-regional logical backup is enabled.
- * @method array getLogicCrossRegions() Obtain Logical Backup Cross-Region
- * @method void setLogicCrossRegions(array $LogicCrossRegions) Set Logical Backup Cross-Region
+ * @method integer getLogicReserveDuration() Obtain Automatic logical backup retention time.
+Unit: seconds.
+ * @method void setLogicReserveDuration(integer $LogicReserveDuration) Set Automatic logical backup retention time.
+Unit: seconds.
+ * @method string getLogicCrossRegionsEnable() Obtain Is cross-regional logical backup enabled?.
+Valid values: ON/OFF.
+ * @method void setLogicCrossRegionsEnable(string $LogicCrossRegionsEnable) Set Is cross-regional logical backup enabled?.
+Valid values: ON/OFF.
+ * @method array getLogicCrossRegions() Obtain 
+ * @method void setLogicCrossRegions(array $LogicCrossRegions) Set 
+ * @method array getAutoCopyVaults() Obtain Backup delivery relationship
+ * @method void setAutoCopyVaults(array $AutoCopyVaults) Set Backup delivery relationship
  */
 class LogicBackupConfigInfo extends AbstractModel
 {
@@ -51,27 +57,37 @@ class LogicBackupConfigInfo extends AbstractModel
     public $LogicBackupTimeEnd;
 
     /**
-     * @var integer Specifies the retention time for automatic logical backup.
+     * @var integer Automatic logical backup retention time.
+Unit: seconds.
      */
     public $LogicReserveDuration;
 
     /**
-     * @var string Whether cross-regional logical backup is enabled.
+     * @var string Is cross-regional logical backup enabled?.
+Valid values: ON/OFF.
      */
     public $LogicCrossRegionsEnable;
 
     /**
-     * @var array Logical Backup Cross-Region
+     * @var array 
      */
     public $LogicCrossRegions;
+
+    /**
+     * @var array Backup delivery relationship
+     */
+    public $AutoCopyVaults;
 
     /**
      * @param string $LogicBackupEnable Whether automatic logical backup is enabled.
      * @param integer $LogicBackupTimeBeg Specifies the automatic logic backup start time.
      * @param integer $LogicBackupTimeEnd Specifies the termination time of automatic logical backup.
-     * @param integer $LogicReserveDuration Specifies the retention time for automatic logical backup.
-     * @param string $LogicCrossRegionsEnable Whether cross-regional logical backup is enabled.
-     * @param array $LogicCrossRegions Logical Backup Cross-Region
+     * @param integer $LogicReserveDuration Automatic logical backup retention time.
+Unit: seconds.
+     * @param string $LogicCrossRegionsEnable Is cross-regional logical backup enabled?.
+Valid values: ON/OFF.
+     * @param array $LogicCrossRegions 
+     * @param array $AutoCopyVaults Backup delivery relationship
      */
     function __construct()
     {
@@ -108,6 +124,15 @@ class LogicBackupConfigInfo extends AbstractModel
 
         if (array_key_exists("LogicCrossRegions",$param) and $param["LogicCrossRegions"] !== null) {
             $this->LogicCrossRegions = $param["LogicCrossRegions"];
+        }
+
+        if (array_key_exists("AutoCopyVaults",$param) and $param["AutoCopyVaults"] !== null) {
+            $this->AutoCopyVaults = [];
+            foreach ($param["AutoCopyVaults"] as $key => $value){
+                $obj = new CreateBackupVaultItem();
+                $obj->deserialize($value);
+                array_push($this->AutoCopyVaults, $obj);
+            }
         }
     }
 }

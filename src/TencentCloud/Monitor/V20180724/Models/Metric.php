@@ -58,8 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPeriods(array $Periods) Set Metric monitoring granularity
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsLatenessMetric() Obtain Whether delay metrics
- * @method void setIsLatenessMetric(integer $IsLatenessMetric) Set Whether delay metrics
+ * @method integer getIsLatenessMetric() Obtain 
+ * @method void setIsLatenessMetric(integer $IsLatenessMetric) Set 
  */
 class Metric extends AbstractModel
 {
@@ -135,7 +135,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Periods;
 
     /**
-     * @var integer Whether delay metrics
+     * @var integer 
      */
     public $IsLatenessMetric;
 
@@ -159,7 +159,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Periods Metric monitoring granularity
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsLatenessMetric Whether delay metrics
+     * @param integer $IsLatenessMetric 
      */
     function __construct()
     {

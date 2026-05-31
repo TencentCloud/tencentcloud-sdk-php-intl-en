@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values:
 <li> `ASC`: Ascending.</li>
 <li> `DESC`: Descending</li>
- * @method array getFilters() Obtain Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
- * @method void setFilters(array $Filters) Set Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+ * @method array getFilters() Obtain Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+ * @method void setFilters(array $Filters) Set Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
  */
 class DescribeProxyNodesRequest extends AbstractModel
 {
@@ -66,7 +66,7 @@ class DescribeProxyNodesRequest extends AbstractModel
     public $OrderByType;
 
     /**
-     * @var array Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+     * @var array Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
      */
     public $Filters;
 
@@ -79,7 +79,7 @@ class DescribeProxyNodesRequest extends AbstractModel
      * @param string $OrderByType Sorting order. Valid values:
 <li> `ASC`: Ascending.</li>
 <li> `DESC`: Descending</li>
-     * @param array $Filters Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+     * @param array $Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
      */
     function __construct()
     {

@@ -18,26 +18,34 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance Resizing Task Information
+ * 
  *
- * @method integer getCpu() Obtain CPU After Resizing
- * @method void setCpu(integer $Cpu) Set CPU After Resizing
- * @method integer getMemory() Obtain Memory After Resizing
- * @method void setMemory(integer $Memory) Set Memory After Resizing
- * @method integer getStorageLimit() Obtain Storage Limit After Resizing
- * @method void setStorageLimit(integer $StorageLimit) Set Storage Limit After Resizing
- * @method integer getOldCpu() Obtain CPU Before Resizing
- * @method void setOldCpu(integer $OldCpu) Set CPU Before Resizing
- * @method integer getOldMemory() Obtain Memory Before Resizing
- * @method void setOldMemory(integer $OldMemory) Set Memory Before Resizing
- * @method integer getOldStorageLimit() Obtain Storage Limit Before Resizing
- * @method void setOldStorageLimit(integer $OldStorageLimit) Set Storage Limit Before Resizing
- * @method string getOldDeviceType() Obtain Instance machine type before scaling.
- * @method void setOldDeviceType(string $OldDeviceType) Set Instance machine type before scaling.
- * @method string getDeviceType() Obtain Instance machine type after scaling.
- * @method void setDeviceType(string $DeviceType) Set Instance machine type after scaling.
- * @method string getUpgradeType() Obtain Upgrade Method. Switchover is performed after upgrade completion or during maintenance windows
- * @method void setUpgradeType(string $UpgradeType) Set Upgrade Method. Switchover is performed after upgrade completion or during maintenance windows
+ * @method integer getCpu() Obtain 
+ * @method void setCpu(integer $Cpu) Set 
+ * @method integer getMemory() Obtain 
+ * @method void setMemory(integer $Memory) Set 
+ * @method integer getStorageLimit() Obtain 
+ * @method void setStorageLimit(integer $StorageLimit) Set 
+ * @method integer getOldCpu() Obtain 
+ * @method void setOldCpu(integer $OldCpu) Set 
+ * @method integer getOldMemory() Obtain 
+ * @method void setOldMemory(integer $OldMemory) Set 
+ * @method integer getOldStorageLimit() Obtain 
+ * @method void setOldStorageLimit(integer $OldStorageLimit) Set 
+ * @method string getOldDeviceType() Obtain Instance Machine Type Before Scaling
+1. common, universal type.
+2. exclusive, dedicated.
+ * @method void setOldDeviceType(string $OldDeviceType) Set Instance Machine Type Before Scaling
+1. common, universal type.
+2. exclusive, dedicated.
+ * @method string getDeviceType() Obtain Instance Machine Type After Scaling
+1. common, universal type.
+2. exclusive, dedicated.
+ * @method void setDeviceType(string $DeviceType) Set Instance Machine Type After Scaling
+1. common, universal type.
+2. exclusive, dedicated.
+ * @method string getUpgradeType() Obtain 
+ * @method void setUpgradeType(string $UpgradeType) Set 
  * @method integer getLibraNodeCount() Obtain Specifies the quantity of libra nodes.
  * @method void setLibraNodeCount(integer $LibraNodeCount) Set Specifies the quantity of libra nodes.
  * @method integer getOldLibraNodeCount() Obtain Specifies the original quantity of libra nodes.
@@ -46,47 +54,51 @@ use TencentCloud\Common\AbstractModel;
 class ModifyInstanceData extends AbstractModel
 {
     /**
-     * @var integer CPU After Resizing
+     * @var integer 
      */
     public $Cpu;
 
     /**
-     * @var integer Memory After Resizing
+     * @var integer 
      */
     public $Memory;
 
     /**
-     * @var integer Storage Limit After Resizing
+     * @var integer 
      */
     public $StorageLimit;
 
     /**
-     * @var integer CPU Before Resizing
+     * @var integer 
      */
     public $OldCpu;
 
     /**
-     * @var integer Memory Before Resizing
+     * @var integer 
      */
     public $OldMemory;
 
     /**
-     * @var integer Storage Limit Before Resizing
+     * @var integer 
      */
     public $OldStorageLimit;
 
     /**
-     * @var string Instance machine type before scaling.
+     * @var string Instance Machine Type Before Scaling
+1. common, universal type.
+2. exclusive, dedicated.
      */
     public $OldDeviceType;
 
     /**
-     * @var string Instance machine type after scaling.
+     * @var string Instance Machine Type After Scaling
+1. common, universal type.
+2. exclusive, dedicated.
      */
     public $DeviceType;
 
     /**
-     * @var string Upgrade Method. Switchover is performed after upgrade completion or during maintenance windows
+     * @var string 
      */
     public $UpgradeType;
 
@@ -101,15 +113,19 @@ class ModifyInstanceData extends AbstractModel
     public $OldLibraNodeCount;
 
     /**
-     * @param integer $Cpu CPU After Resizing
-     * @param integer $Memory Memory After Resizing
-     * @param integer $StorageLimit Storage Limit After Resizing
-     * @param integer $OldCpu CPU Before Resizing
-     * @param integer $OldMemory Memory Before Resizing
-     * @param integer $OldStorageLimit Storage Limit Before Resizing
-     * @param string $OldDeviceType Instance machine type before scaling.
-     * @param string $DeviceType Instance machine type after scaling.
-     * @param string $UpgradeType Upgrade Method. Switchover is performed after upgrade completion or during maintenance windows
+     * @param integer $Cpu 
+     * @param integer $Memory 
+     * @param integer $StorageLimit 
+     * @param integer $OldCpu 
+     * @param integer $OldMemory 
+     * @param integer $OldStorageLimit 
+     * @param string $OldDeviceType Instance Machine Type Before Scaling
+1. common, universal type.
+2. exclusive, dedicated.
+     * @param string $DeviceType Instance Machine Type After Scaling
+1. common, universal type.
+2. exclusive, dedicated.
+     * @param string $UpgradeType 
      * @param integer $LibraNodeCount Specifies the quantity of libra nodes.
      * @param integer $OldLibraNodeCount Specifies the original quantity of libra nodes.
      */

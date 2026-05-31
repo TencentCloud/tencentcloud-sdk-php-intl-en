@@ -36,18 +36,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupType(string $BackupType) Set Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
  * @method string getBackupMethod() Obtain Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
  * @method void setBackupMethod(string $BackupMethod) Set Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
- * @method string getSnapShotType() Obtain Snapshot type. Optional values: full, full backup; increment, incremental backup
- * @method void setSnapShotType(string $SnapShotType) Set Snapshot type. Optional values: full, full backup; increment, incremental backup
+ * @method string getSnapShotType() Obtain 
+ * @method void setSnapShotType(string $SnapShotType) Set 
  * @method string getStartTime() Obtain Backup start time
  * @method void setStartTime(string $StartTime) Set Backup start time
  * @method string getEndTime() Obtain Backup end time
  * @method void setEndTime(string $EndTime) Set Backup end time
- * @method array getFileNames() Obtain Backup file name, fuzzy search
- * @method void setFileNames(array $FileNames) Set Backup file name, fuzzy search
+ * @method array getFileNames() Obtain 
+ * @method void setFileNames(array $FileNames) Set 
  * @method array getBackupNames() Obtain Backup alias, which supports fuzzy query.
  * @method void setBackupNames(array $BackupNames) Set Backup alias, which supports fuzzy query.
  * @method array getSnapshotIdList() Obtain ID list of the snapshot backup
  * @method void setSnapshotIdList(array $SnapshotIdList) Set ID list of the snapshot backup
+ * @method string getBackupRegion() Obtain 
+ * @method void setBackupRegion(string $BackupRegion) Set 
+ * @method string getIsCrossRegionsBackup() Obtain 
+ * @method void setIsCrossRegionsBackup(string $IsCrossRegionsBackup) Set 
+ * @method array getBackupStatus() Obtain Status you want to query
+ * @method void setBackupStatus(array $BackupStatus) Set Status you want to query
  */
 class DescribeBackupListRequest extends AbstractModel
 {
@@ -88,7 +94,7 @@ class DescribeBackupListRequest extends AbstractModel
     public $BackupMethod;
 
     /**
-     * @var string Snapshot type. Optional values: full, full backup; increment, incremental backup
+     * @var string 
      */
     public $SnapShotType;
 
@@ -103,7 +109,7 @@ class DescribeBackupListRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array Backup file name, fuzzy search
+     * @var array 
      */
     public $FileNames;
 
@@ -118,6 +124,21 @@ class DescribeBackupListRequest extends AbstractModel
     public $SnapshotIdList;
 
     /**
+     * @var string 
+     */
+    public $BackupRegion;
+
+    /**
+     * @var string 
+     */
+    public $IsCrossRegionsBackup;
+
+    /**
+     * @var array Status you want to query
+     */
+    public $BackupStatus;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param integer $Limit The number of results to be returned. Value range: (0,100]
      * @param integer $Offset Record offset. Value range: [0,INF)
@@ -126,12 +147,15 @@ class DescribeBackupListRequest extends AbstractModel
      * @param array $BackupIds Backup ID
      * @param string $BackupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
      * @param string $BackupMethod Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
-     * @param string $SnapShotType Snapshot type. Optional values: full, full backup; increment, incremental backup
+     * @param string $SnapShotType 
      * @param string $StartTime Backup start time
      * @param string $EndTime Backup end time
-     * @param array $FileNames Backup file name, fuzzy search
+     * @param array $FileNames 
      * @param array $BackupNames Backup alias, which supports fuzzy query.
      * @param array $SnapshotIdList ID list of the snapshot backup
+     * @param string $BackupRegion 
+     * @param string $IsCrossRegionsBackup 
+     * @param array $BackupStatus Status you want to query
      */
     function __construct()
     {
@@ -196,6 +220,18 @@ class DescribeBackupListRequest extends AbstractModel
 
         if (array_key_exists("SnapshotIdList",$param) and $param["SnapshotIdList"] !== null) {
             $this->SnapshotIdList = $param["SnapshotIdList"];
+        }
+
+        if (array_key_exists("BackupRegion",$param) and $param["BackupRegion"] !== null) {
+            $this->BackupRegion = $param["BackupRegion"];
+        }
+
+        if (array_key_exists("IsCrossRegionsBackup",$param) and $param["IsCrossRegionsBackup"] !== null) {
+            $this->IsCrossRegionsBackup = $param["IsCrossRegionsBackup"];
+        }
+
+        if (array_key_exists("BackupStatus",$param) and $param["BackupStatus"] !== null) {
+            $this->BackupStatus = $param["BackupStatus"];
         }
     }
 }

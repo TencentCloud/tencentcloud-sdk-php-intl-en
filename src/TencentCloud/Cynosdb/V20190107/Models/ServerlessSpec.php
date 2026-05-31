@@ -20,69 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * serverless specification.
  *
- * @method float getMinCpu() Obtain Specifies the minimum value of the cpu.
- * @method void setMinCpu(float $MinCpu) Set Specifies the minimum value of the cpu.
- * @method float getMaxCpu() Obtain Maximum value of cpu.
- * @method void setMaxCpu(float $MaxCpu) Set Maximum value of cpu.
- * @method integer getMaxStorageSize() Obtain Maximum storage space.
- * @method void setMaxStorageSize(integer $MaxStorageSize) Set Maximum storage space.
- * @method integer getIsDefault() Obtain Specifies whether it is the default specification.
- * @method void setIsDefault(integer $IsDefault) Set Specifies whether it is the default specification.
- * @method boolean getHasStock() Obtain Whether there is inventory.
- * @method void setHasStock(boolean $HasStock) Set Whether there is inventory.
- * @method integer getStockCount() Obtain Inventory quantity.
- * @method void setStockCount(integer $StockCount) Set Inventory quantity.
- * @method array getZoneStockInfos() Obtain Availability zone inventory information.
+ * @method float getMinCpu() Obtain <p>cpu minimum value</p>
+ * @method void setMinCpu(float $MinCpu) Set <p>cpu minimum value</p>
+ * @method float getMaxCpu() Obtain <p>Maximum value of cpu</p>
+ * @method void setMaxCpu(float $MaxCpu) Set <p>Maximum value of cpu</p>
+ * @method integer getMaxStorageSize() Obtain <p>Maximum storage space</p>
+ * @method void setMaxStorageSize(integer $MaxStorageSize) Set <p>Maximum storage space</p>
+ * @method integer getIsDefault() Obtain <p>Is the default specification</p>
+ * @method void setIsDefault(integer $IsDefault) Set <p>Is the default specification</p>
+ * @method boolean getHasStock() Obtain <p>Whether there is inventory</p>
+ * @method void setHasStock(boolean $HasStock) Set <p>Whether there is inventory</p>
+ * @method integer getStockCount() Obtain <p>Inventory quantity</p>
+ * @method void setStockCount(integer $StockCount) Set <p>Inventory quantity</p>
+ * @method array getZoneStockInfos() Obtain <p>Availability zone inventory information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneStockInfos(array $ZoneStockInfos) Set Availability zone inventory information.
+ * @method void setZoneStockInfos(array $ZoneStockInfos) Set <p>Availability zone inventory information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ServerlessSpec extends AbstractModel
 {
     /**
-     * @var float Specifies the minimum value of the cpu.
+     * @var float <p>cpu minimum value</p>
      */
     public $MinCpu;
 
     /**
-     * @var float Maximum value of cpu.
+     * @var float <p>Maximum value of cpu</p>
      */
     public $MaxCpu;
 
     /**
-     * @var integer Maximum storage space.
+     * @var integer <p>Maximum storage space</p>
      */
     public $MaxStorageSize;
 
     /**
-     * @var integer Specifies whether it is the default specification.
+     * @var integer <p>Is the default specification</p>
      */
     public $IsDefault;
 
     /**
-     * @var boolean Whether there is inventory.
+     * @var boolean <p>Whether there is inventory</p>
      */
     public $HasStock;
 
     /**
-     * @var integer Inventory quantity.
+     * @var integer <p>Inventory quantity</p>
      */
     public $StockCount;
 
     /**
-     * @var array Availability zone inventory information.
+     * @var array <p>Availability zone inventory information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ZoneStockInfos;
 
     /**
-     * @param float $MinCpu Specifies the minimum value of the cpu.
-     * @param float $MaxCpu Maximum value of cpu.
-     * @param integer $MaxStorageSize Maximum storage space.
-     * @param integer $IsDefault Specifies whether it is the default specification.
-     * @param boolean $HasStock Whether there is inventory.
-     * @param integer $StockCount Inventory quantity.
-     * @param array $ZoneStockInfos Availability zone inventory information.
+     * @param float $MinCpu <p>cpu minimum value</p>
+     * @param float $MaxCpu <p>Maximum value of cpu</p>
+     * @param integer $MaxStorageSize <p>Maximum storage space</p>
+     * @param integer $IsDefault <p>Is the default specification</p>
+     * @param boolean $HasStock <p>Whether there is inventory</p>
+     * @param integer $StockCount <p>Inventory quantity</p>
+     * @param array $ZoneStockInfos <p>Availability zone inventory information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

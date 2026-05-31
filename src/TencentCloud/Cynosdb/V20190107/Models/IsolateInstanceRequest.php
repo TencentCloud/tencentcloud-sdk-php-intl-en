@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIdList(array $InstanceIdList) Set Instance ID array
  * @method string getDbType() Obtain This parameter has been disused.
  * @method void setDbType(string $DbType) Set This parameter has been disused.
+ * @method array getIsolateReasonTypes() Obtain Instance Refund Reason Types
+ * @method void setIsolateReasonTypes(array $IsolateReasonTypes) Set Instance Refund Reason Types
+ * @method string getIsolateReason() Obtain Instance Refund Reason Supplement
+ * @method void setIsolateReason(string $IsolateReason) Set Instance Refund Reason Supplement
+ * @method boolean getSaveBackup() Obtain Backup retention
+ * @method void setSaveBackup(boolean $SaveBackup) Set Backup retention
  */
 class IsolateInstanceRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class IsolateInstanceRequest extends AbstractModel
     public $DbType;
 
     /**
+     * @var array Instance Refund Reason Types
+     */
+    public $IsolateReasonTypes;
+
+    /**
+     * @var string Instance Refund Reason Supplement
+     */
+    public $IsolateReason;
+
+    /**
+     * @var boolean Backup retention
+     */
+    public $SaveBackup;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param array $InstanceIdList Instance ID array
      * @param string $DbType This parameter has been disused.
+     * @param array $IsolateReasonTypes Instance Refund Reason Types
+     * @param string $IsolateReason Instance Refund Reason Supplement
+     * @param boolean $SaveBackup Backup retention
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class IsolateInstanceRequest extends AbstractModel
 
         if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
             $this->DbType = $param["DbType"];
+        }
+
+        if (array_key_exists("IsolateReasonTypes",$param) and $param["IsolateReasonTypes"] !== null) {
+            $this->IsolateReasonTypes = $param["IsolateReasonTypes"];
+        }
+
+        if (array_key_exists("IsolateReason",$param) and $param["IsolateReason"] !== null) {
+            $this->IsolateReason = $param["IsolateReason"];
+        }
+
+        if (array_key_exists("SaveBackup",$param) and $param["SaveBackup"] !== null) {
+            $this->SaveBackup = $param["SaveBackup"];
         }
     }
 }

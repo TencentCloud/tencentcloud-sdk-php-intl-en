@@ -20,70 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRabbitMQUser request structure.
  *
- * @method string getInstanceId() Obtain Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
- * @method void setInstanceId(string $InstanceId) Set Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
- * @method string getUser() Obtain Username, such as rabbitmq. To find an effective username, log in to the [TDMQ RabbitMQ Console](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), click a cluster in the list, enter cluster details, and find the list of users in the user and permission management tab, so as to locate the username. Modifying the admin password is not supported currently.
- * @method void setUser(string $User) Set Username, such as rabbitmq. To find an effective username, log in to the [TDMQ RabbitMQ Console](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), click a cluster in the list, enter cluster details, and find the list of users in the user and permission management tab, so as to locate the username. Modifying the admin password is not supported currently.
- * @method string getPassword() Obtain Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
- * @method void setPassword(string $Password) Set Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
- * @method string getDescription() Obtain Description. If this parameter is not passed in, it won't be modified.
- * @method void setDescription(string $Description) Set Description. If this parameter is not passed in, it won't be modified.
- * @method array getTags() Obtain User tag, used to determine the access permission of the user for RabbitMQ Management.
-management: ordinary console user. monitoring: administrative console user. other value: non-console user.
- * @method void setTags(array $Tags) Set User tag, used to determine the access permission of the user for RabbitMQ Management.
-management: ordinary console user. monitoring: administrative console user. other value: non-console user.
- * @method integer getMaxConnections() Obtain The maximum number of connections for the user. If this parameter is not passed in, it won't be modified.
- * @method void setMaxConnections(integer $MaxConnections) Set The maximum number of connections for the user. If this parameter is not passed in, it won't be modified.
- * @method integer getMaxChannels() Obtain The maximum number of channels for the user. If this parameter is not passed in, it won't be modified.
- * @method void setMaxChannels(integer $MaxChannels) Set The maximum number of channels for the user. If this parameter is not passed in, it won't be modified.
+ * @method string getInstanceId() Obtain <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
+ * @method string getUser() Obtain <p>Username, such as rabbitmq. To find an effective userName, log in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a>, click a cluster in the list, enter cluster details, and locate the list of users under the user and permission management tab so as to find the username. Modification of the admin password is not supported currently.</p>
+ * @method void setUser(string $User) Set <p>Username, such as rabbitmq. To find an effective userName, log in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a>, click a cluster in the list, enter cluster details, and locate the list of users under the user and permission management tab so as to find the username. Modification of the admin password is not supported currently.</p>
+ * @method string getPassword() Obtain <p>Password, used when logging in. Requirements: Cannot be empty, 8-64 characters, must contain at least two of the following: lowercase letter, uppercase letter, digit, special character [()`~!@#$%^&*_=|{}[]:;',.?/].</p>
+ * @method void setPassword(string $Password) Set <p>Password, used when logging in. Requirements: Cannot be empty, 8-64 characters, must contain at least two of the following: lowercase letter, uppercase letter, digit, special character [()`~!@#$%^&*_=|{}[]:;',.?/].</p>
+ * @method string getDescription() Obtain <p>Description. Leave it empty to keep it unchanged.</p>
+ * @method void setDescription(string $Description) Set <p>Description. Leave it empty to keep it unchanged.</p>
+ * @method array getTags() Obtain <p>User tag, used to determine the access permission of the user to RabbitMQ Management<br>management: ordinary console user, monitoring: console user with management privileges, other value: non-console user</p>
+ * @method void setTags(array $Tags) Set <p>User tag, used to determine the access permission of the user to RabbitMQ Management<br>management: ordinary console user, monitoring: console user with management privileges, other value: non-console user</p>
+ * @method integer getMaxConnections() Obtain <p>Maximum number of connections for this user. Leave it blank to keep unchanged.</p>
+ * @method void setMaxConnections(integer $MaxConnections) Set <p>Maximum number of connections for this user. Leave it blank to keep unchanged.</p>
+ * @method integer getMaxChannels() Obtain <p>Maximum number of channels for the user's. Leave blank to keep unchanged.</p>
+ * @method void setMaxChannels(integer $MaxChannels) Set <p>Maximum number of channels for the user's. Leave blank to keep unchanged.</p>
+ * @method boolean getEnableCamAuth() Obtain <p>Whether cam authentication is enabled</p>
+ * @method void setEnableCamAuth(boolean $EnableCamAuth) Set <p>Whether cam authentication is enabled</p>
  */
 class ModifyRabbitMQUserRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * @var string <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Username, such as rabbitmq. To find an effective username, log in to the [TDMQ RabbitMQ Console](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), click a cluster in the list, enter cluster details, and find the list of users in the user and permission management tab, so as to locate the username. Modifying the admin password is not supported currently.
+     * @var string <p>Username, such as rabbitmq. To find an effective userName, log in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a>, click a cluster in the list, enter cluster details, and locate the list of users under the user and permission management tab so as to find the username. Modification of the admin password is not supported currently.</p>
      */
     public $User;
 
     /**
-     * @var string Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
+     * @var string <p>Password, used when logging in. Requirements: Cannot be empty, 8-64 characters, must contain at least two of the following: lowercase letter, uppercase letter, digit, special character [()`~!@#$%^&*_=|{}[]:;',.?/].</p>
      */
     public $Password;
 
     /**
-     * @var string Description. If this parameter is not passed in, it won't be modified.
+     * @var string <p>Description. Leave it empty to keep it unchanged.</p>
      */
     public $Description;
 
     /**
-     * @var array User tag, used to determine the access permission of the user for RabbitMQ Management.
-management: ordinary console user. monitoring: administrative console user. other value: non-console user.
+     * @var array <p>User tag, used to determine the access permission of the user to RabbitMQ Management<br>management: ordinary console user, monitoring: console user with management privileges, other value: non-console user</p>
      */
     public $Tags;
 
     /**
-     * @var integer The maximum number of connections for the user. If this parameter is not passed in, it won't be modified.
+     * @var integer <p>Maximum number of connections for this user. Leave it blank to keep unchanged.</p>
      */
     public $MaxConnections;
 
     /**
-     * @var integer The maximum number of channels for the user. If this parameter is not passed in, it won't be modified.
+     * @var integer <p>Maximum number of channels for the user's. Leave blank to keep unchanged.</p>
      */
     public $MaxChannels;
 
     /**
-     * @param string $InstanceId Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
-     * @param string $User Username, such as rabbitmq. To find an effective username, log in to the [TDMQ RabbitMQ Console](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), click a cluster in the list, enter cluster details, and find the list of users in the user and permission management tab, so as to locate the username. Modifying the admin password is not supported currently.
-     * @param string $Password Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
-     * @param string $Description Description. If this parameter is not passed in, it won't be modified.
-     * @param array $Tags User tag, used to determine the access permission of the user for RabbitMQ Management.
-management: ordinary console user. monitoring: administrative console user. other value: non-console user.
-     * @param integer $MaxConnections The maximum number of connections for the user. If this parameter is not passed in, it won't be modified.
-     * @param integer $MaxChannels The maximum number of channels for the user. If this parameter is not passed in, it won't be modified.
+     * @var boolean <p>Whether cam authentication is enabled</p>
+     */
+    public $EnableCamAuth;
+
+    /**
+     * @param string $InstanceId <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
+     * @param string $User <p>Username, such as rabbitmq. To find an effective userName, log in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a>, click a cluster in the list, enter cluster details, and locate the list of users under the user and permission management tab so as to find the username. Modification of the admin password is not supported currently.</p>
+     * @param string $Password <p>Password, used when logging in. Requirements: Cannot be empty, 8-64 characters, must contain at least two of the following: lowercase letter, uppercase letter, digit, special character [()`~!@#$%^&*_=|{}[]:;',.?/].</p>
+     * @param string $Description <p>Description. Leave it empty to keep it unchanged.</p>
+     * @param array $Tags <p>User tag, used to determine the access permission of the user to RabbitMQ Management<br>management: ordinary console user, monitoring: console user with management privileges, other value: non-console user</p>
+     * @param integer $MaxConnections <p>Maximum number of connections for this user. Leave it blank to keep unchanged.</p>
+     * @param integer $MaxChannels <p>Maximum number of channels for the user's. Leave blank to keep unchanged.</p>
+     * @param boolean $EnableCamAuth <p>Whether cam authentication is enabled</p>
      */
     function __construct()
     {
@@ -124,6 +128,10 @@ management: ordinary console user. monitoring: administrative console user. othe
 
         if (array_key_exists("MaxChannels",$param) and $param["MaxChannels"] !== null) {
             $this->MaxChannels = $param["MaxChannels"];
+        }
+
+        if (array_key_exists("EnableCamAuth",$param) and $param["EnableCamAuth"] !== null) {
+            $this->EnableCamAuth = $param["EnableCamAuth"];
         }
     }
 }

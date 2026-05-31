@@ -22,12 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFormat() Obtain Advertising type, currently supports L-SQUEEZE
  * @method void setFormat(string $Format) Set Advertising type, currently supports L-SQUEEZE
- * @method integer getDuration() Obtain Duration, in milliseconds, requires 1000<duration<=600000. The current accuracy is seconds, which is a multiple of 1000
- * @method void setDuration(integer $Duration) Set Duration, in milliseconds, requires 1000<duration<=600000. The current accuracy is seconds, which is a multiple of 1000
- * @method LSqueezeSetting getLSqueezeSetting() Obtain L-type compression recovery configuration
- * @method void setLSqueezeSetting(LSqueezeSetting $LSqueezeSetting) Set L-type compression recovery configuration
+ * @method integer getDuration() Obtain Duration, in milliseconds, requires 1000&lt;duration&lt;=600000 The current accuracy is seconds, which is a multiple of 1000
+ * @method void setDuration(integer $Duration) Set Duration, in milliseconds, requires 1000&lt;duration&lt;=600000 The current accuracy is seconds, which is a multiple of 1000
  * @method string getAdSource() Obtain AdSource type, supports UPLOAD_CREATIVES
  * @method void setAdSource(string $AdSource) Set AdSource type, supports UPLOAD_CREATIVES
+ * @method LSqueezeSetting getLSqueezeSetting() Obtain L-type compression recovery configuration
+ * @method void setLSqueezeSetting(LSqueezeSetting $LSqueezeSetting) Set L-type compression recovery configuration
+ * @method PipSetting getPipSetting() Obtain 
+ * @method void setPipSetting(PipSetting $PipSetting) Set 
+ * @method BorderFrameSetting getBorderFrameSetting() Obtain 
+ * @method void setBorderFrameSetting(BorderFrameSetting $BorderFrameSetting) Set 
  */
 class AdBreakSetting extends AbstractModel
 {
@@ -37,14 +41,9 @@ class AdBreakSetting extends AbstractModel
     public $Format;
 
     /**
-     * @var integer Duration, in milliseconds, requires 1000<duration<=600000. The current accuracy is seconds, which is a multiple of 1000
+     * @var integer Duration, in milliseconds, requires 1000&lt;duration&lt;=600000 The current accuracy is seconds, which is a multiple of 1000
      */
     public $Duration;
-
-    /**
-     * @var LSqueezeSetting L-type compression recovery configuration
-     */
-    public $LSqueezeSetting;
 
     /**
      * @var string AdSource type, supports UPLOAD_CREATIVES
@@ -52,10 +51,27 @@ class AdBreakSetting extends AbstractModel
     public $AdSource;
 
     /**
+     * @var LSqueezeSetting L-type compression recovery configuration
+     */
+    public $LSqueezeSetting;
+
+    /**
+     * @var PipSetting 
+     */
+    public $PipSetting;
+
+    /**
+     * @var BorderFrameSetting 
+     */
+    public $BorderFrameSetting;
+
+    /**
      * @param string $Format Advertising type, currently supports L-SQUEEZE
-     * @param integer $Duration Duration, in milliseconds, requires 1000<duration<=600000. The current accuracy is seconds, which is a multiple of 1000
-     * @param LSqueezeSetting $LSqueezeSetting L-type compression recovery configuration
+     * @param integer $Duration Duration, in milliseconds, requires 1000&lt;duration&lt;=600000 The current accuracy is seconds, which is a multiple of 1000
      * @param string $AdSource AdSource type, supports UPLOAD_CREATIVES
+     * @param LSqueezeSetting $LSqueezeSetting L-type compression recovery configuration
+     * @param PipSetting $PipSetting 
+     * @param BorderFrameSetting $BorderFrameSetting 
      */
     function __construct()
     {
@@ -78,13 +94,23 @@ class AdBreakSetting extends AbstractModel
             $this->Duration = $param["Duration"];
         }
 
+        if (array_key_exists("AdSource",$param) and $param["AdSource"] !== null) {
+            $this->AdSource = $param["AdSource"];
+        }
+
         if (array_key_exists("LSqueezeSetting",$param) and $param["LSqueezeSetting"] !== null) {
             $this->LSqueezeSetting = new LSqueezeSetting();
             $this->LSqueezeSetting->deserialize($param["LSqueezeSetting"]);
         }
 
-        if (array_key_exists("AdSource",$param) and $param["AdSource"] !== null) {
-            $this->AdSource = $param["AdSource"];
+        if (array_key_exists("PipSetting",$param) and $param["PipSetting"] !== null) {
+            $this->PipSetting = new PipSetting();
+            $this->PipSetting->deserialize($param["PipSetting"]);
+        }
+
+        if (array_key_exists("BorderFrameSetting",$param) and $param["BorderFrameSetting"] !== null) {
+            $this->BorderFrameSetting = new BorderFrameSetting();
+            $this->BorderFrameSetting->deserialize($param["BorderFrameSetting"]);
         }
     }
 }

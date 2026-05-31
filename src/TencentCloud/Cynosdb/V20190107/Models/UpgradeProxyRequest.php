@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
  * @method array getProxyZones() Obtain Node information of the atabase proxy
  * @method void setProxyZones(array $ProxyZones) Set Node information of the atabase proxy
+ * @method string getIsRollUpgrade() Obtain whether rolling upgrade
+ * @method void setIsRollUpgrade(string $IsRollUpgrade) Set whether rolling upgrade
+ * @method integer getRollUpgradeWaitingTime() Obtain Rolling upgrade waiting time, unit: second
+ * @method void setRollUpgradeWaitingTime(integer $RollUpgradeWaitingTime) Set Rolling upgrade waiting time, unit: second
  */
 class UpgradeProxyRequest extends AbstractModel
 {
@@ -80,6 +84,16 @@ class UpgradeProxyRequest extends AbstractModel
     public $ProxyZones;
 
     /**
+     * @var string whether rolling upgrade
+     */
+    public $IsRollUpgrade;
+
+    /**
+     * @var integer Rolling upgrade waiting time, unit: second
+     */
+    public $RollUpgradeWaitingTime;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param integer $Cpu Number of CPU cores
      * @param integer $Mem Memory
@@ -88,6 +102,8 @@ class UpgradeProxyRequest extends AbstractModel
      * @param string $ReloadBalance Load rebalance mode. Valid values: `auto`, `manual`
      * @param string $IsInMaintainPeriod Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
      * @param array $ProxyZones Node information of the atabase proxy
+     * @param string $IsRollUpgrade whether rolling upgrade
+     * @param integer $RollUpgradeWaitingTime Rolling upgrade waiting time, unit: second
      */
     function __construct()
     {
@@ -137,6 +153,14 @@ class UpgradeProxyRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ProxyZones, $obj);
             }
+        }
+
+        if (array_key_exists("IsRollUpgrade",$param) and $param["IsRollUpgrade"] !== null) {
+            $this->IsRollUpgrade = $param["IsRollUpgrade"];
+        }
+
+        if (array_key_exists("RollUpgradeWaitingTime",$param) and $param["RollUpgradeWaitingTime"] !== null) {
+            $this->RollUpgradeWaitingTime = $param["RollUpgradeWaitingTime"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Filters for query
  *
- * @method array getNames() Obtain Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
- * @method void setNames(array $Names) Set Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
+ * @method array getNames() Obtain Search field. Currently supports: ProxyGroupId
+ * @method void setNames(array $Names) Set Search field. Currently supports: ProxyGroupId
  * @method array getValues() Obtain Search string
  * @method void setValues(array $Values) Set Search string
  * @method boolean getExactMatch() Obtain Whether to use exact match
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class QueryParamFilter extends AbstractModel
 {
     /**
-     * @var array Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
+     * @var array Search field. Currently supports: ProxyGroupId
      */
     public $Names;
 
@@ -45,7 +45,7 @@ class QueryParamFilter extends AbstractModel
     public $ExactMatch;
 
     /**
-     * @param array $Names Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
+     * @param array $Names Search field. Currently supports: ProxyGroupId
      * @param array $Values Search string
      * @param boolean $ExactMatch Whether to use exact match
      */

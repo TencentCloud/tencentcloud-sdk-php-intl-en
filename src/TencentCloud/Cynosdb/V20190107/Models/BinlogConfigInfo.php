@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBinlogCrossRegions(array $BinlogCrossRegions) Set binlog in a different region.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getAutoCopyVaults() Obtain Safe info
+ * @method void setAutoCopyVaults(array $AutoCopyVaults) Set Safe info
  */
 class BinlogConfigInfo extends AbstractModel
 {
@@ -48,10 +50,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $BinlogCrossRegions;
 
     /**
+     * @var array Safe info
+     */
+    public $AutoCopyVaults;
+
+    /**
      * @param integer $BinlogSaveDays Specifies the retention time of binlogs.
      * @param string $BinlogCrossRegionsEnable Whether binlog cross-region backup is enabled.
      * @param array $BinlogCrossRegions binlog in a different region.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $AutoCopyVaults Safe info
      */
     function __construct()
     {
@@ -76,6 +84,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("BinlogCrossRegions",$param) and $param["BinlogCrossRegions"] !== null) {
             $this->BinlogCrossRegions = $param["BinlogCrossRegions"];
+        }
+
+        if (array_key_exists("AutoCopyVaults",$param) and $param["AutoCopyVaults"] !== null) {
+            $this->AutoCopyVaults = [];
+            foreach ($param["AutoCopyVaults"] as $key => $value){
+                $obj = new CreateBackupVaultItem();
+                $obj->deserialize($value);
+                array_push($this->AutoCopyVaults, $obj);
+            }
         }
     }
 }

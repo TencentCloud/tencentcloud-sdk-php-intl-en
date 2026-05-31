@@ -20,26 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Timed recording settings
  *
- * @method string getAutoClear() Obtain Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
-If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setAutoClear(string $AutoClear) Set Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
-If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getAutoClear() Obtain Whether to automatically clear ended recording tasks. Options: [CLOSE|OPEN]. Default is CLOSE.
+If enabled, the task will be cleared 7 days after completion.
+ * @method void setAutoClear(string $AutoClear) Set Whether to automatically clear ended recording tasks. Options: [CLOSE|OPEN]. Default is CLOSE.
+If enabled, the task will be cleared 7 days after completion.
  */
 class TimedRecordSettings extends AbstractModel
 {
     /**
-     * @var string Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
-If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string Whether to automatically clear ended recording tasks. Options: [CLOSE|OPEN]. Default is CLOSE.
+If enabled, the task will be cleared 7 days after completion.
      */
     public $AutoClear;
 
     /**
-     * @param string $AutoClear Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
-If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $AutoClear Whether to automatically clear ended recording tasks. Options: [CLOSE|OPEN]. Default is CLOSE.
+If enabled, the task will be cleared 7 days after completion.
      */
     function __construct()
     {

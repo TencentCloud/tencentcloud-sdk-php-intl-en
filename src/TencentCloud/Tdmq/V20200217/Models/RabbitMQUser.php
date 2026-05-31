@@ -20,114 +20,134 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TDMQ for RabbitMQ user entity details
  *
- * @method string getInstanceId() Obtain Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
- * @method void setInstanceId(string $InstanceId) Set Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
- * @method string getUser() Obtain Username, which is used for login.
- * @method void setUser(string $User) Set Username, which is used for login.
- * @method string getPassword() Obtain Password, which is used for login.
- * @method void setPassword(string $Password) Set Password, which is used for login.
- * @method string getDescription() Obtain User description
- * @method void setDescription(string $Description) Set User description
- * @method array getTags() Obtain User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
- * @method void setTags(array $Tags) Set User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
- * @method string getCreateTime() Obtain User creation time
- * @method void setCreateTime(string $CreateTime) Set User creation time
- * @method string getModifyTime() Obtain Last user modification time
- * @method void setModifyTime(string $ModifyTime) Set Last user modification time
- * @method string getType() Obtain User type. Valid values: `System` (Created by system), `User` (Created by user).
- * @method void setType(string $Type) Set User type. Valid values: `System` (Created by system), `User` (Created by user).
- * @method integer getMaxConnections() Obtain Maximum number of available connections per user.
+ * @method string getInstanceId() Obtain <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
+ * @method string getUser() Obtain <p>Username, used when logging in</p>
+ * @method void setUser(string $User) Set <p>Username, used when logging in</p>
+ * @method string getPassword() Obtain <p>Password, used when logging in</p>
+ * @method void setPassword(string $Password) Set <p>Password, used when logging in</p>
+ * @method string getDescription() Obtain <p>user description</p>
+ * @method void setDescription(string $Description) Set <p>user description</p>
+ * @method array getTags() Obtain <p>User tag, used to determine the access permission of the user to RabbitMQ Management</p>
+ * @method void setTags(array $Tags) Set <p>User tag, used to determine the access permission of the user to RabbitMQ Management</p>
+ * @method string getCreateTime() Obtain <p>User creation time</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>User creation time</p>
+ * @method string getModifyTime() Obtain <p>User last modification time</p>
+ * @method void setModifyTime(string $ModifyTime) Set <p>User last modification time</p>
+ * @method string getType() Obtain <p>Type of user, System: system creation, User: user creation</p>
+ * @method void setType(string $Type) Set <p>Type of user, System: system creation, User: user creation</p>
+ * @method integer getMaxConnections() Obtain <p>Maximum available connections per user</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMaxConnections(integer $MaxConnections) Set Maximum number of available connections per user.
+ * @method void setMaxConnections(integer $MaxConnections) Set <p>Maximum available connections per user</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxChannels() Obtain Maximum number of available channels per user.
+ * @method integer getMaxChannels() Obtain <p>Maximum available channels per user</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMaxChannels(integer $MaxChannels) Set Maximum number of available channels per user.
+ * @method void setMaxChannels(integer $MaxChannels) Set <p>Maximum available channels per user</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCreateTs() Obtain Creation timestamp.
- * @method void setCreateTs(integer $CreateTs) Set Creation timestamp.
- * @method integer getModifyTs() Obtain Modification timestamp.
- * @method void setModifyTs(integer $ModifyTs) Set Modification timestamp.
+ * @method integer getCreateTs() Obtain <p>Creation time timestamp</p>
+ * @method void setCreateTs(integer $CreateTs) Set <p>Creation time timestamp</p>
+ * @method integer getModifyTs() Obtain <p>Modification time timestamp</p>
+ * @method void setModifyTs(integer $ModifyTs) Set <p>Modification time timestamp</p>
+ * @method boolean getCamAuthEnabled() Obtain <p>Whether cam authentication is enabled</p><p>Default value: false</p>
+ * @method void setCamAuthEnabled(boolean $CamAuthEnabled) Set <p>Whether cam authentication is enabled</p><p>Default value: false</p>
+ * @method string getCamCredentialName() Obtain <p>cam credential name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCamCredentialName(string $CamCredentialName) Set <p>cam credential name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RabbitMQUser extends AbstractModel
 {
     /**
-     * @var string Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * @var string <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Username, which is used for login.
+     * @var string <p>Username, used when logging in</p>
      */
     public $User;
 
     /**
-     * @var string Password, which is used for login.
+     * @var string <p>Password, used when logging in</p>
      */
     public $Password;
 
     /**
-     * @var string User description
+     * @var string <p>user description</p>
      */
     public $Description;
 
     /**
-     * @var array User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
+     * @var array <p>User tag, used to determine the access permission of the user to RabbitMQ Management</p>
      */
     public $Tags;
 
     /**
-     * @var string User creation time
+     * @var string <p>User creation time</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Last user modification time
+     * @var string <p>User last modification time</p>
      */
     public $ModifyTime;
 
     /**
-     * @var string User type. Valid values: `System` (Created by system), `User` (Created by user).
+     * @var string <p>Type of user, System: system creation, User: user creation</p>
      */
     public $Type;
 
     /**
-     * @var integer Maximum number of available connections per user.
+     * @var integer <p>Maximum available connections per user</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MaxConnections;
 
     /**
-     * @var integer Maximum number of available channels per user.
+     * @var integer <p>Maximum available channels per user</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MaxChannels;
 
     /**
-     * @var integer Creation timestamp.
+     * @var integer <p>Creation time timestamp</p>
      */
     public $CreateTs;
 
     /**
-     * @var integer Modification timestamp.
+     * @var integer <p>Modification time timestamp</p>
      */
     public $ModifyTs;
 
     /**
-     * @param string $InstanceId Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
-     * @param string $User Username, which is used for login.
-     * @param string $Password Password, which is used for login.
-     * @param string $Description User description
-     * @param array $Tags User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
-     * @param string $CreateTime User creation time
-     * @param string $ModifyTime Last user modification time
-     * @param string $Type User type. Valid values: `System` (Created by system), `User` (Created by user).
-     * @param integer $MaxConnections Maximum number of available connections per user.
+     * @var boolean <p>Whether cam authentication is enabled</p><p>Default value: false</p>
+     */
+    public $CamAuthEnabled;
+
+    /**
+     * @var string <p>cam credential name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxChannels Maximum number of available channels per user.
+     */
+    public $CamCredentialName;
+
+    /**
+     * @param string $InstanceId <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
+     * @param string $User <p>Username, used when logging in</p>
+     * @param string $Password <p>Password, used when logging in</p>
+     * @param string $Description <p>user description</p>
+     * @param array $Tags <p>User tag, used to determine the access permission of the user to RabbitMQ Management</p>
+     * @param string $CreateTime <p>User creation time</p>
+     * @param string $ModifyTime <p>User last modification time</p>
+     * @param string $Type <p>Type of user, System: system creation, User: user creation</p>
+     * @param integer $MaxConnections <p>Maximum available connections per user</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CreateTs Creation timestamp.
-     * @param integer $ModifyTs Modification timestamp.
+     * @param integer $MaxChannels <p>Maximum available channels per user</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $CreateTs <p>Creation time timestamp</p>
+     * @param integer $ModifyTs <p>Modification time timestamp</p>
+     * @param boolean $CamAuthEnabled <p>Whether cam authentication is enabled</p><p>Default value: false</p>
+     * @param string $CamCredentialName <p>cam credential name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -188,6 +208,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ModifyTs",$param) and $param["ModifyTs"] !== null) {
             $this->ModifyTs = $param["ModifyTs"];
+        }
+
+        if (array_key_exists("CamAuthEnabled",$param) and $param["CamAuthEnabled"] !== null) {
+            $this->CamAuthEnabled = $param["CamAuthEnabled"];
+        }
+
+        if (array_key_exists("CamCredentialName",$param) and $param["CamCredentialName"] !== null) {
+            $this->CamCredentialName = $param["CamCredentialName"];
         }
     }
 }

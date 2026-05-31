@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTransSplit(boolean $TransSplit) Set Transaction split
  * @method string getAccessMode() Obtain Connection mode. Valid values: `balance`, `nearby`.
  * @method void setAccessMode(string $AccessMode) Set Connection mode. Valid values: `balance`, `nearby`.
+ * @method boolean getApNodeAsRoNode() Obtain Whether to treat the libra node as an ordinary RO node
+ * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) Set Whether to treat the libra node as an ordinary RO node
+ * @method boolean getApQueryToOtherNode() Obtain libra node fault, whether to forward to other nodes
+ * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) Set libra node fault, whether to forward to other nodes
  */
 class ProxyGroupRwInfo extends AbstractModel
 {
@@ -94,6 +98,16 @@ class ProxyGroupRwInfo extends AbstractModel
     public $AccessMode;
 
     /**
+     * @var boolean Whether to treat the libra node as an ordinary RO node
+     */
+    public $ApNodeAsRoNode;
+
+    /**
+     * @var boolean libra node fault, whether to forward to other nodes
+     */
+    public $ApQueryToOtherNode;
+
+    /**
      * @param string $ConsistencyType Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
      * @param integer $ConsistencyTimeOut Consistency timeout period
      * @param string $WeightMode Weight mode. Valid values: `system` (auto-assigned), `custom`.
@@ -104,6 +118,8 @@ class ProxyGroupRwInfo extends AbstractModel
      * @param string $RwType Read/write attribute. Valid values: `READWRITE`, `READONLY`.
      * @param boolean $TransSplit Transaction split
      * @param string $AccessMode Connection mode. Valid values: `balance`, `nearby`.
+     * @param boolean $ApNodeAsRoNode Whether to treat the libra node as an ordinary RO node
+     * @param boolean $ApQueryToOtherNode libra node fault, whether to forward to other nodes
      */
     function __construct()
     {
@@ -161,6 +177,14 @@ class ProxyGroupRwInfo extends AbstractModel
 
         if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
             $this->AccessMode = $param["AccessMode"];
+        }
+
+        if (array_key_exists("ApNodeAsRoNode",$param) and $param["ApNodeAsRoNode"] !== null) {
+            $this->ApNodeAsRoNode = $param["ApNodeAsRoNode"];
+        }
+
+        if (array_key_exists("ApQueryToOtherNode",$param) and $param["ApQueryToOtherNode"] !== null) {
+            $this->ApQueryToOtherNode = $param["ApQueryToOtherNode"];
         }
     }
 }

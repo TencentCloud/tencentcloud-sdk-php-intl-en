@@ -24,22 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioSelectorName(string $AudioSelectorName) Set Only `AttachedInputs.AudioSelectors.Name` can be selected. This parameter is required for RTP_PUSH and UDP_PUSH.
  * @method string getName() Obtain Audio transcoding template name, which can contain 1-20 letters and digits.
  * @method void setName(string $Name) Set Audio transcoding template name, which can contain 1-20 letters and digits.
- * @method string getAcodec() Obtain Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
- * @method void setAcodec(string $Acodec) Set Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+ * @method string getAcodec() Obtain Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
+ * @method void setAcodec(string $Acodec) Set Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
  * @method integer getAudioBitrate() Obtain Audio bitrate. If this parameter is left empty, the original value will be used.
 Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 288000, 320000, 384000, 448000, 512000, 576000, 640000, 768000, 896000, 1024000
  * @method void setAudioBitrate(integer $AudioBitrate) Set Audio bitrate. If this parameter is left empty, the original value will be used.
 Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 288000, 320000, 384000, 448000, 512000, 576000, 640000, 768000, 896000, 1024000
- * @method string getLanguageCode() Obtain Audio language code, which length is between 2 and 20.
- * @method void setLanguageCode(string $LanguageCode) Set Audio language code, which length is between 2 and 20.
+ * @method string getLanguageCode() Obtain Audio language Code, length 2-20.
+ * @method void setLanguageCode(string $LanguageCode) Set Audio language Code, length 2-20.
  * @method AudioNormalizationSettings getAudioNormalization() Obtain Audio transcoding special configuration information.
  * @method void setAudioNormalization(AudioNormalizationSettings $AudioNormalization) Set Audio transcoding special configuration information.
  * @method integer getAudioSampleRate() Obtain Audio sampling rate, unit HZ.
  * @method void setAudioSampleRate(integer $AudioSampleRate) Set Audio sampling rate, unit HZ.
  * @method AudioCodecDetail getAudioCodecDetails() Obtain Audio encoding parameters.
  * @method void setAudioCodecDetails(AudioCodecDetail $AudioCodecDetails) Set Audio encoding parameters.
- * @method string getLanguageDescription() Obtain Audio language description, which maximum length is 100.
- * @method void setLanguageDescription(string $LanguageDescription) Set Audio language description, which maximum length is 100.
+ * @method string getLanguageDescription() Obtain Audio language description, maximum length 100
+ * @method void setLanguageDescription(string $LanguageDescription) Set Audio language description, maximum length 100
  */
 class AudioTemplateInfo extends AbstractModel
 {
@@ -54,7 +54,7 @@ class AudioTemplateInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var string Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+     * @var string Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
      */
     public $Acodec;
 
@@ -65,7 +65,7 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
     public $AudioBitrate;
 
     /**
-     * @var string Audio language code, which length is between 2 and 20.
+     * @var string Audio language Code, length 2-20.
      */
     public $LanguageCode;
 
@@ -85,21 +85,21 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
     public $AudioCodecDetails;
 
     /**
-     * @var string Audio language description, which maximum length is 100.
+     * @var string Audio language description, maximum length 100
      */
     public $LanguageDescription;
 
     /**
      * @param string $AudioSelectorName Only `AttachedInputs.AudioSelectors.Name` can be selected. This parameter is required for RTP_PUSH and UDP_PUSH.
      * @param string $Name Audio transcoding template name, which can contain 1-20 letters and digits.
-     * @param string $Acodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+     * @param string $Acodec Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
      * @param integer $AudioBitrate Audio bitrate. If this parameter is left empty, the original value will be used.
 Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 288000, 320000, 384000, 448000, 512000, 576000, 640000, 768000, 896000, 1024000
-     * @param string $LanguageCode Audio language code, which length is between 2 and 20.
+     * @param string $LanguageCode Audio language Code, length 2-20.
      * @param AudioNormalizationSettings $AudioNormalization Audio transcoding special configuration information.
      * @param integer $AudioSampleRate Audio sampling rate, unit HZ.
      * @param AudioCodecDetail $AudioCodecDetails Audio encoding parameters.
-     * @param string $LanguageDescription Audio language description, which maximum length is 100.
+     * @param string $LanguageDescription Audio language description, maximum length 100
      */
     function __construct()
     {

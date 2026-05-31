@@ -26,46 +26,44 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVcodec(string $Vcodec) Set Video codec. Valid values: H264/H265. If this parameter is left empty, the original value will be used.
  * @method integer getVideoBitrate() Obtain Video bitrate. Value range: [50000,40000000]. The value can only be a multiple of 1,000. If this parameter is left empty, the original value will be used.
  * @method void setVideoBitrate(integer $VideoBitrate) Set Video bitrate. Value range: [50000,40000000]. The value can only be a multiple of 1,000. If this parameter is left empty, the original value will be used.
- * @method integer getWidth() Obtain Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
- * @method void setWidth(integer $Width) Set Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
- * @method integer getHeight() Obtain Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
- * @method void setHeight(integer $Height) Set Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
- * @method integer getFps() Obtain Video frame rate. Value range: [1,240]. If this parameter is left empty, the original value will be used.
- * @method void setFps(integer $Fps) Set Video frame rate. Value range: [1,240]. If this parameter is left empty, the original value will be used.
+ * @method integer getWidth() Obtain Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
+ * @method void setWidth(integer $Width) Set Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
+ * @method integer getHeight() Obtain Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
+ * @method void setHeight(integer $Height) Set Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
+ * @method integer getFps() Obtain Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
+ * @method void setFps(integer $Fps) Set Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
  * @method string getTopSpeed() Obtain Whether to enable top speed codec. Valid value: CLOSE/OPEN. Default value: CLOSE.
  * @method void setTopSpeed(string $TopSpeed) Set Whether to enable top speed codec. Valid value: CLOSE/OPEN. Default value: CLOSE.
  * @method integer getBitrateCompressionRatio() Obtain Top speed codec compression ratio. Value range: [0,50]. The lower the compression ratio, the higher the image quality.
  * @method void setBitrateCompressionRatio(integer $BitrateCompressionRatio) Set Top speed codec compression ratio. Value range: [0,50]. The lower the compression ratio, the higher the image quality.
- * @method string getRateControlMode() Obtain Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
- * @method void setRateControlMode(string $RateControlMode) Set Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
- * @method string getWatermarkId() Obtain Watermark ID
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setWatermarkId(string $WatermarkId) Set Watermark ID
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getRateControlMode() Obtain Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
+ * @method void setRateControlMode(string $RateControlMode) Set Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
+ * @method string getWatermarkId() Obtain Watermark Id.
+ * @method void setWatermarkId(string $WatermarkId) Set Watermark Id.
  * @method integer getFaceBlurringEnabled() Obtain Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
  * @method void setFaceBlurringEnabled(integer $FaceBlurringEnabled) Set Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
- * @method string getFrameRateType() Obtain This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
- * @method void setFrameRateType(string $FrameRateType) Set This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
- * @method integer getFrameRateNumerator() Obtain Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
- * @method void setFrameRateNumerator(integer $FrameRateNumerator) Set Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
- * @method integer getFrameRateDenominator() Obtain Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
- * @method void setFrameRateDenominator(integer $FrameRateDenominator) Set Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
- * @method integer getBFramesNum() Obtain The number of B frames can be selected from 1 to 3.
- * @method void setBFramesNum(integer $BFramesNum) Set The number of B frames can be selected from 1 to 3.
- * @method integer getRefFramesNum() Obtain The number of reference frames can be selected from 1 to 16.
- * @method void setRefFramesNum(integer $RefFramesNum) Set The number of reference frames can be selected from 1 to 16.
- * @method AdditionalRateSetting getAdditionalRateSettings() Obtain Additional video bitrate configuration.
- * @method void setAdditionalRateSettings(AdditionalRateSetting $AdditionalRateSettings) Set Additional video bitrate configuration.
- * @method VideoCodecDetail getVideoCodecDetails() Obtain Video encoding configuration.
- * @method void setVideoCodecDetails(VideoCodecDetail $VideoCodecDetails) Set Video encoding configuration.
- * @method integer getVideoEnhanceEnabled() Obtain Video enhancement switch, 1: on 0: off.
- * @method void setVideoEnhanceEnabled(integer $VideoEnhanceEnabled) Set Video enhancement switch, 1: on 0: off.
- * @method array getVideoEnhanceSettings() Obtain Video enhancement parameter array.
- * @method void setVideoEnhanceSettings(array $VideoEnhanceSettings) Set Video enhancement parameter array.
- * @method ColorSpaceSetting getColorSpaceSettings() Obtain Color space setting.
- * @method void setColorSpaceSettings(ColorSpaceSetting $ColorSpaceSettings) Set Color space setting.
- * @method array getForensicWatermarkIds() Obtain Traceability watermark.
- * @method void setForensicWatermarkIds(array $ForensicWatermarkIds) Set Traceability watermark.
+ * @method string getFrameRateType() Obtain This field indicates how to specify the output video frame rate. If selected FOLLOW_SOURCE, the output video frame rate is set to equal the frame rate of the first input video. If selected SPECIFIED_FRACTION, the output video frame rate is determined by the fraction (frame rate molecular and frame rate denominator). If selected SPECIFIED_HZ, the frame rate of the output video is determined by the HZ you input.
+ * @method void setFrameRateType(string $FrameRateType) Set This field indicates how to specify the output video frame rate. If selected FOLLOW_SOURCE, the output video frame rate is set to equal the frame rate of the first input video. If selected SPECIFIED_FRACTION, the output video frame rate is determined by the fraction (frame rate molecular and frame rate denominator). If selected SPECIFIED_HZ, the frame rate of the output video is determined by the HZ you input.
+ * @method integer getFrameRateNumerator() Obtain Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.
+ * @method void setFrameRateNumerator(integer $FrameRateNumerator) Set Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.
+ * @method integer getFrameRateDenominator() Obtain Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.
+ * @method void setFrameRateDenominator(integer $FrameRateDenominator) Set Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.
+ * @method integer getBFramesNum() Obtain Number of B-frames 1-3.	
+ * @method void setBFramesNum(integer $BFramesNum) Set Number of B-frames 1-3.	
+ * @method integer getRefFramesNum() Obtain Refer to the number of frames 1-16.	
+ * @method void setRefFramesNum(integer $RefFramesNum) Set Refer to the number of frames 1-16.	
+ * @method AdditionalRateSetting getAdditionalRateSettings() Obtain Additional video bitrate configuration.	
+ * @method void setAdditionalRateSettings(AdditionalRateSetting $AdditionalRateSettings) Set Additional video bitrate configuration.	
+ * @method VideoCodecDetail getVideoCodecDetails() Obtain Video encoding configuration.	
+ * @method void setVideoCodecDetails(VideoCodecDetail $VideoCodecDetails) Set Video encoding configuration.	
+ * @method integer getVideoEnhanceEnabled() Obtain Video enhancement switch, 1: enable 0: disable.
+ * @method void setVideoEnhanceEnabled(integer $VideoEnhanceEnabled) Set Video enhancement switch, 1: enable 0: disable.
+ * @method array getVideoEnhanceSettings() Obtain Video enhancement parameters array.
+ * @method void setVideoEnhanceSettings(array $VideoEnhanceSettings) Set Video enhancement parameters array.
+ * @method ColorSpaceSetting getColorSpaceSettings() Obtain Colorspace configuration.
+ * @method void setColorSpaceSettings(ColorSpaceSetting $ColorSpaceSettings) Set Colorspace configuration.
+ * @method array getForensicWatermarkIds() Obtain Traceable watermark.
+ * @method void setForensicWatermarkIds(array $ForensicWatermarkIds) Set Traceable watermark.
  */
 class VideoTemplateInfo extends AbstractModel
 {
@@ -85,17 +83,17 @@ class VideoTemplateInfo extends AbstractModel
     public $VideoBitrate;
 
     /**
-     * @var integer Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
+     * @var integer Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
      */
     public $Width;
 
     /**
-     * @var integer Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
+     * @var integer Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
      */
     public $Height;
 
     /**
-     * @var integer Video frame rate. Value range: [1,240]. If this parameter is left empty, the original value will be used.
+     * @var integer Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
      */
     public $Fps;
 
@@ -110,13 +108,12 @@ class VideoTemplateInfo extends AbstractModel
     public $BitrateCompressionRatio;
 
     /**
-     * @var string Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
+     * @var string Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
      */
     public $RateControlMode;
 
     /**
-     * @var string Watermark ID
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string Watermark Id.
      */
     public $WatermarkId;
 
@@ -126,57 +123,57 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $FaceBlurringEnabled;
 
     /**
-     * @var string This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+     * @var string This field indicates how to specify the output video frame rate. If selected FOLLOW_SOURCE, the output video frame rate is set to equal the frame rate of the first input video. If selected SPECIFIED_FRACTION, the output video frame rate is determined by the fraction (frame rate molecular and frame rate denominator). If selected SPECIFIED_HZ, the frame rate of the output video is determined by the HZ you input.
      */
     public $FrameRateType;
 
     /**
-     * @var integer Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+     * @var integer Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.
      */
     public $FrameRateNumerator;
 
     /**
-     * @var integer Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+     * @var integer Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.
      */
     public $FrameRateDenominator;
 
     /**
-     * @var integer The number of B frames can be selected from 1 to 3.
+     * @var integer Number of B-frames 1-3.	
      */
     public $BFramesNum;
 
     /**
-     * @var integer The number of reference frames can be selected from 1 to 16.
+     * @var integer Refer to the number of frames 1-16.	
      */
     public $RefFramesNum;
 
     /**
-     * @var AdditionalRateSetting Additional video bitrate configuration.
+     * @var AdditionalRateSetting Additional video bitrate configuration.	
      */
     public $AdditionalRateSettings;
 
     /**
-     * @var VideoCodecDetail Video encoding configuration.
+     * @var VideoCodecDetail Video encoding configuration.	
      */
     public $VideoCodecDetails;
 
     /**
-     * @var integer Video enhancement switch, 1: on 0: off.
+     * @var integer Video enhancement switch, 1: enable 0: disable.
      */
     public $VideoEnhanceEnabled;
 
     /**
-     * @var array Video enhancement parameter array.
+     * @var array Video enhancement parameters array.
      */
     public $VideoEnhanceSettings;
 
     /**
-     * @var ColorSpaceSetting Color space setting.
+     * @var ColorSpaceSetting Colorspace configuration.
      */
     public $ColorSpaceSettings;
 
     /**
-     * @var array Traceability watermark.
+     * @var array Traceable watermark.
      */
     public $ForensicWatermarkIds;
 
@@ -184,26 +181,25 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $Name Video transcoding template name, which can contain 1-20 letters and digits.
      * @param string $Vcodec Video codec. Valid values: H264/H265. If this parameter is left empty, the original value will be used.
      * @param integer $VideoBitrate Video bitrate. Value range: [50000,40000000]. The value can only be a multiple of 1,000. If this parameter is left empty, the original value will be used.
-     * @param integer $Width Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
-     * @param integer $Height Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
-     * @param integer $Fps Video frame rate. Value range: [1,240]. If this parameter is left empty, the original value will be used.
+     * @param integer $Width Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
+     * @param integer $Height Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
+     * @param integer $Fps Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
      * @param string $TopSpeed Whether to enable top speed codec. Valid value: CLOSE/OPEN. Default value: CLOSE.
      * @param integer $BitrateCompressionRatio Top speed codec compression ratio. Value range: [0,50]. The lower the compression ratio, the higher the image quality.
-     * @param string $RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
-     * @param string $WatermarkId Watermark ID
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $RateControlMode Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
+     * @param string $WatermarkId Watermark Id.
      * @param integer $FaceBlurringEnabled Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
-     * @param string $FrameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
-     * @param integer $FrameRateNumerator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
-     * @param integer $FrameRateDenominator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
-     * @param integer $BFramesNum The number of B frames can be selected from 1 to 3.
-     * @param integer $RefFramesNum The number of reference frames can be selected from 1 to 16.
-     * @param AdditionalRateSetting $AdditionalRateSettings Additional video bitrate configuration.
-     * @param VideoCodecDetail $VideoCodecDetails Video encoding configuration.
-     * @param integer $VideoEnhanceEnabled Video enhancement switch, 1: on 0: off.
-     * @param array $VideoEnhanceSettings Video enhancement parameter array.
-     * @param ColorSpaceSetting $ColorSpaceSettings Color space setting.
-     * @param array $ForensicWatermarkIds Traceability watermark.
+     * @param string $FrameRateType This field indicates how to specify the output video frame rate. If selected FOLLOW_SOURCE, the output video frame rate is set to equal the frame rate of the first input video. If selected SPECIFIED_FRACTION, the output video frame rate is determined by the fraction (frame rate molecular and frame rate denominator). If selected SPECIFIED_HZ, the frame rate of the output video is determined by the HZ you input.
+     * @param integer $FrameRateNumerator Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.
+     * @param integer $FrameRateDenominator Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.
+     * @param integer $BFramesNum Number of B-frames 1-3.	
+     * @param integer $RefFramesNum Refer to the number of frames 1-16.	
+     * @param AdditionalRateSetting $AdditionalRateSettings Additional video bitrate configuration.	
+     * @param VideoCodecDetail $VideoCodecDetails Video encoding configuration.	
+     * @param integer $VideoEnhanceEnabled Video enhancement switch, 1: enable 0: disable.
+     * @param array $VideoEnhanceSettings Video enhancement parameters array.
+     * @param ColorSpaceSetting $ColorSpaceSettings Colorspace configuration.
+     * @param array $ForensicWatermarkIds Traceable watermark.
      */
     function __construct()
     {

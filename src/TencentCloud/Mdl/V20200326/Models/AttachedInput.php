@@ -34,8 +34,10 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setFailOverSettings(FailOverSettings $FailOverSettings) Set Input failover configuration
 Note: this field may return `null`, indicating that no valid value was found.
- * @method array getCaptionSelectors() Obtain Caption selector for the input. There can be 0 to 1 audio selectors.
- * @method void setCaptionSelectors(array $CaptionSelectors) Set Caption selector for the input. There can be 0 to 1 audio selectors.
+ * @method array getCaptionSelectors() Obtain Subtitle selector.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCaptionSelectors(array $CaptionSelectors) Set Subtitle selector.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AttachedInput extends AbstractModel
 {
@@ -63,7 +65,8 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $FailOverSettings;
 
     /**
-     * @var array Caption selector for the input. There can be 0 to 1 audio selectors.
+     * @var array Subtitle selector.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CaptionSelectors;
 
@@ -75,7 +78,8 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
      * @param FailOverSettings $FailOverSettings Input failover configuration
 Note: this field may return `null`, indicating that no valid value was found.
-     * @param array $CaptionSelectors Caption selector for the input. There can be 0 to 1 audio selectors.
+     * @param array $CaptionSelectors Subtitle selector.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

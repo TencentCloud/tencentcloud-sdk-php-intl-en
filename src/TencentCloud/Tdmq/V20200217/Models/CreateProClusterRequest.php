@@ -20,106 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProCluster request structure.
  *
- * @method array getZoneIds() Obtain Specifies multi-az deployment with three azs, for example [200002,200003,200004].
-
-Single-AZ deployment selects an availability zone. example: [200002].
- * @method void setZoneIds(array $ZoneIds) Set Specifies multi-az deployment with three azs, for example [200002,200003,200004].
-
-Single-AZ deployment selects an availability zone. example: [200002].
- * @method string getProductName() Obtain Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
- * @method void setProductName(string $ProductName) Set Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
- * @method integer getAutoRenewFlag() Obtain `1`: true. enables automatic monthly renewal.
-
-false. disables automatic monthly renewal.
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set `1`: true. enables automatic monthly renewal.
-
-false. disables automatic monthly renewal.
- * @method integer getTimeSpan() Obtain Purchase duration. value range: 1–50.
- * @method void setTimeSpan(integer $TimeSpan) Set Purchase duration. value range: 1–50.
- * @method string getClusterName() Obtain Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
- * @method void setClusterName(string $ClusterName) Set Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
- * @method integer getAutoVoucher() Obtain Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
- * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
- * @method integer getStorageSize() Obtain Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
- * @method void setStorageSize(integer $StorageSize) Set Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
- * @method VpcInfo getVpc() Obtain Specifies the vpc network tag.
- * @method void setVpc(VpcInfo $Vpc) Set Specifies the vpc network tag.
- * @method array getTags() Obtain Tag list of the cluster (abandoned).
- * @method void setTags(array $Tags) Set Tag list of the cluster (abandoned).
+ * @method array getZoneIds() Obtain <p>Multi-AZ deployment selects three AZs, example [200002,200003,200004]<br>Single-AZ deployment selects one availability zone, example [200002]</p><p>When PULSAR.P2.MINI1 is selected, it only supports two AZs. Other models support three AZs.</p>
+ * @method void setZoneIds(array $ZoneIds) Set <p>Multi-AZ deployment selects three AZs, example [200002,200003,200004]<br>Single-AZ deployment selects one availability zone, example [200002]</p><p>When PULSAR.P2.MINI1 is selected, it only supports two AZs. Other models support three AZs.</p>
+ * @method string getProductName() Obtain <p>Cluster specification code<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
+ * @method void setProductName(string $ProductName) Set <p>Cluster specification code<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
+ * @method integer getAutoRenewFlag() Obtain <p>1: true, enable automatic monthly renewal</p><p>0: false, disable automatic monthly renewal</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set <p>1: true, enable automatic monthly renewal</p><p>0: false, disable automatic monthly renewal</p>
+ * @method integer getTimeSpan() Obtain <p>Purchase period, value ranges from 1 to 50</p>
+ * @method void setTimeSpan(integer $TimeSpan) Set <p>Purchase period, value ranges from 1 to 50</p>
+ * @method string getClusterName() Obtain <p>Cluster name cannot be empty. It supports numbers, letters, Chinese, and symbols "-_=:.", with length not exceeding 64 characters.</p>
+ * @method void setClusterName(string $ClusterName) Set <p>Cluster name cannot be empty. It supports numbers, letters, Chinese, and symbols "-_=:.", with length not exceeding 64 characters.</p>
+ * @method integer getAutoVoucher() Obtain <p>Whether to automatically select voucher 1 Yes 0 No Default is 0</p>
+ * @method void setAutoVoucher(integer $AutoVoucher) Set <p>Whether to automatically select voucher 1 Yes 0 No Default is 0</p>
+ * @method integer getStorageSize() Obtain <p>Storage specification<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
+ * @method void setStorageSize(integer $StorageSize) Set <p>Storage specification<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
+ * @method VpcInfo getVpc() Obtain <p>vpc network tag</p>
+ * @method void setVpc(VpcInfo $Vpc) Set <p>vpc network tag</p>
+ * @method array getTags() Obtain <p>Tag list of the cluster (abandoned)</p>
+ * @method void setTags(array $Tags) Set <p>Tag list of the cluster (abandoned)</p>
+ * @method string getInstanceVersion() Obtain <p>Cluster version information</p>
+ * @method void setInstanceVersion(string $InstanceVersion) Set <p>Cluster version information</p>
  */
 class CreateProClusterRequest extends AbstractModel
 {
     /**
-     * @var array Specifies multi-az deployment with three azs, for example [200002,200003,200004].
-
-Single-AZ deployment selects an availability zone. example: [200002].
+     * @var array <p>Multi-AZ deployment selects three AZs, example [200002,200003,200004]<br>Single-AZ deployment selects one availability zone, example [200002]</p><p>When PULSAR.P2.MINI1 is selected, it only supports two AZs. Other models support three AZs.</p>
      */
     public $ZoneIds;
 
     /**
-     * @var string Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+     * @var string <p>Cluster specification code<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
      */
     public $ProductName;
 
     /**
-     * @var integer `1`: true. enables automatic monthly renewal.
-
-false. disables automatic monthly renewal.
+     * @var integer <p>1: true, enable automatic monthly renewal</p><p>0: false, disable automatic monthly renewal</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer Purchase duration. value range: 1–50.
+     * @var integer <p>Purchase period, value ranges from 1 to 50</p>
      */
     public $TimeSpan;
 
     /**
-     * @var string Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
+     * @var string <p>Cluster name cannot be empty. It supports numbers, letters, Chinese, and symbols "-_=:.", with length not exceeding 64 characters.</p>
      */
     public $ClusterName;
 
     /**
-     * @var integer Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
+     * @var integer <p>Whether to automatically select voucher 1 Yes 0 No Default is 0</p>
      */
     public $AutoVoucher;
 
     /**
-     * @var integer Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+     * @var integer <p>Storage specification<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
      */
     public $StorageSize;
 
     /**
-     * @var VpcInfo Specifies the vpc network tag.
+     * @var VpcInfo <p>vpc network tag</p>
      */
     public $Vpc;
 
     /**
-     * @var array Tag list of the cluster (abandoned).
+     * @var array <p>Tag list of the cluster (abandoned)</p>
      */
     public $Tags;
 
     /**
-     * @param array $ZoneIds Specifies multi-az deployment with three azs, for example [200002,200003,200004].
+     * @var string <p>Cluster version information</p>
+     */
+    public $InstanceVersion;
 
-Single-AZ deployment selects an availability zone. example: [200002].
-     * @param string $ProductName Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
-     * @param integer $AutoRenewFlag `1`: true. enables automatic monthly renewal.
-
-false. disables automatic monthly renewal.
-     * @param integer $TimeSpan Purchase duration. value range: 1–50.
-     * @param string $ClusterName Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
-     * @param integer $AutoVoucher Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
-     * @param integer $StorageSize Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
-     * @param VpcInfo $Vpc Specifies the vpc network tag.
-     * @param array $Tags Tag list of the cluster (abandoned).
+    /**
+     * @param array $ZoneIds <p>Multi-AZ deployment selects three AZs, example [200002,200003,200004]<br>Single-AZ deployment selects one availability zone, example [200002]</p><p>When PULSAR.P2.MINI1 is selected, it only supports two AZs. Other models support three AZs.</p>
+     * @param string $ProductName <p>Cluster specification code<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
+     * @param integer $AutoRenewFlag <p>1: true, enable automatic monthly renewal</p><p>0: false, disable automatic monthly renewal</p>
+     * @param integer $TimeSpan <p>Purchase period, value ranges from 1 to 50</p>
+     * @param string $ClusterName <p>Cluster name cannot be empty. It supports numbers, letters, Chinese, and symbols "-_=:.", with length not exceeding 64 characters.</p>
+     * @param integer $AutoVoucher <p>Whether to automatically select voucher 1 Yes 0 No Default is 0</p>
+     * @param integer $StorageSize <p>Storage specification<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
+     * @param VpcInfo $Vpc <p>vpc network tag</p>
+     * @param array $Tags <p>Tag list of the cluster (abandoned)</p>
+     * @param string $InstanceVersion <p>Cluster version information</p>
      */
     function __construct()
     {
@@ -174,6 +158,10 @@ Refers to professional cluster specifications (https://www.tencentcloud.com/docu
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceVersion",$param) and $param["InstanceVersion"] !== null) {
+            $this->InstanceVersion = $param["InstanceVersion"];
         }
     }
 }

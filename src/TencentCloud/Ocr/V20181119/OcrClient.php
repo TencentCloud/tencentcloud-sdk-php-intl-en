@@ -466,6 +466,7 @@ This interface supports regional scope: countries with machine-readable passport
  * @method Models\MainlandPermitOCRResponse MainlandPermitOCR(Models\MainlandPermitOCRRequest $req) This API is used to recognize all fields on the front of a mainland travel permit for Hong Kong, Macao, or Taiwan residents: name in Chinese, name in English, gender, date of birth, issuing authority, validity period, document number, place of issuance, number of issues, and document type.
 
 A maximum of 20 requests can be initiated per second for this API.
+ * @method Models\PODAuditAIResponse PODAuditAI(Models\PODAuditAIRequest $req) The POD intelligent review deeply integrates multimodal large model image understanding technology, targeting the logistics last-mile delivery scenario to provide high-precision POD compliance audit service. The system auto-recognizes ticket imperfections and risks of non-compliance, helping businesses achieve standardized control in the delivery process and effectively avoid customer complaints and disputes caused by non-compliant credentials.
  * @method Models\PermitOCRResponse PermitOCR(Models\PermitOCRRequest $req) This API is used to recognize the fields on an exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan, including place of issuance, issuing authority, validity period, gender, date of birth, name in English, name in Chinese, and document number.
 
 A maximum of 10 requests can be initiated per second for this API.

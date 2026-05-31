@@ -22,42 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Output group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the channel level
  * @method void setName(string $Name) Set Output group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the channel level
- * @method string getType() Obtain Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
- `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
- `DASH_STREAM_PACKAGE`, 
- `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
- * @method void setType(string $Type) Set Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
- `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
- `DASH_STREAM_PACKAGE`, 
- `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
- * @method array getOutputs() Obtain Output information
-If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
- * @method void setOutputs(array $Outputs) Set Output information
-If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+ * @method string getType() Obtain Output protocol type.
+Selectable HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_STREAM_PACKAGE/DASH_STREAM_PACKAGE/FRAME_CAPTURE/RTP/RTMP/M2TS.
+ * @method void setType(string $Type) Set Output protocol type.
+Selectable HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_STREAM_PACKAGE/DASH_STREAM_PACKAGE/FRAME_CAPTURE/RTP/RTMP/M2TS.
+ * @method array getOutputs() Obtain Output information.
+RTMP/RTP/FRAME_CAPTURE limit [1,1], HLS/DASH limit [1,10].
+ * @method void setOutputs(array $Outputs) Set Output information.
+RTMP/RTP/FRAME_CAPTURE limit [1,1], HLS/DASH limit [1,10].
  * @method array getDestinations() Obtain Relay destinations. Quantity: [1, 2]
  * @method void setDestinations(array $Destinations) Set Relay destinations. Quantity: [1, 2]
- * @method HlsRemuxSettingsInfo getHlsRemuxSettings() Obtain HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setHlsRemuxSettings(HlsRemuxSettingsInfo $HlsRemuxSettings) Set HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
-Note: this field may return `null`, indicating that no valid value was found.
- * @method DrmSettingsInfo getDrmSettings() Obtain DRM configuration information
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setDrmSettings(DrmSettingsInfo $DrmSettings) Set DRM configuration information
-Note: this field may return `null`, indicating that no valid value was found.
- * @method DashRemuxSettingsInfo getDashRemuxSettings() Obtain DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setDashRemuxSettings(DashRemuxSettingsInfo $DashRemuxSettings) Set DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
-Note: this field may return `null`, indicating that no valid value was found.
- * @method StreamPackageSettingsInfo getStreamPackageSettings() Obtain StreamPackage configuration information, which is required if the output type is StreamPackage
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setStreamPackageSettings(StreamPackageSettingsInfo $StreamPackageSettings) Set StreamPackage configuration information, which is required if the output type is StreamPackage
-Note: this field may return `null`, indicating that no valid value was found.
- * @method TimeShiftSettingsInfo getTimeShiftSettings() Obtain Time-shift configuration information
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setTimeShiftSettings(TimeShiftSettingsInfo $TimeShiftSettings) Set Time-shift configuration information
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method HlsRemuxSettingsInfo getHlsRemuxSettings() Obtain HLS protocol configuration info, valid only for HLS/HLS_ARCHIVE.
+ * @method void setHlsRemuxSettings(HlsRemuxSettingsInfo $HlsRemuxSettings) Set HLS protocol configuration info, valid only for HLS/HLS_ARCHIVE.
+ * @method DrmSettingsInfo getDrmSettings() Obtain DRM configuration message.
+ * @method void setDrmSettings(DrmSettingsInfo $DrmSettings) Set DRM configuration message.
+ * @method DashRemuxSettingsInfo getDashRemuxSettings() Obtain DASH protocol configuration info, valid only for DASH/DSAH_ARCHIVE.
+ * @method void setDashRemuxSettings(DashRemuxSettingsInfo $DashRemuxSettings) Set DASH protocol configuration info, valid only for DASH/DSAH_ARCHIVE.
+ * @method StreamPackageSettingsInfo getStreamPackageSettings() Obtain Configuration message for media encapsulation. Requires filling in when Type is related to StreamPackage.
+ * @method void setStreamPackageSettings(StreamPackageSettingsInfo $StreamPackageSettings) Set Configuration message for media encapsulation. Requires filling in when Type is related to StreamPackage.
+ * @method TimeShiftSettingsInfo getTimeShiftSettings() Obtain Time shift configuration information.
+ * @method void setTimeShiftSettings(TimeShiftSettingsInfo $TimeShiftSettings) Set Time shift configuration information.
  */
 class StreamLiveOutputGroupsInfo extends AbstractModel
 {
@@ -67,17 +51,14 @@ class StreamLiveOutputGroupsInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var string Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
- `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
- `DASH_STREAM_PACKAGE`, 
- `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
+     * @var string Output protocol type.
+Selectable HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_STREAM_PACKAGE/DASH_STREAM_PACKAGE/FRAME_CAPTURE/RTP/RTMP/M2TS.
      */
     public $Type;
 
     /**
-     * @var array Output information
-If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+     * @var array Output information.
+RTMP/RTP/FRAME_CAPTURE limit [1,1], HLS/DASH limit [1,10].
      */
     public $Outputs;
 
@@ -87,55 +68,42 @@ If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is 
     public $Destinations;
 
     /**
-     * @var HlsRemuxSettingsInfo HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var HlsRemuxSettingsInfo HLS protocol configuration info, valid only for HLS/HLS_ARCHIVE.
      */
     public $HlsRemuxSettings;
 
     /**
-     * @var DrmSettingsInfo DRM configuration information
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var DrmSettingsInfo DRM configuration message.
      */
     public $DrmSettings;
 
     /**
-     * @var DashRemuxSettingsInfo DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var DashRemuxSettingsInfo DASH protocol configuration info, valid only for DASH/DSAH_ARCHIVE.
      */
     public $DashRemuxSettings;
 
     /**
-     * @var StreamPackageSettingsInfo StreamPackage configuration information, which is required if the output type is StreamPackage
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var StreamPackageSettingsInfo Configuration message for media encapsulation. Requires filling in when Type is related to StreamPackage.
      */
     public $StreamPackageSettings;
 
     /**
-     * @var TimeShiftSettingsInfo Time-shift configuration information
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var TimeShiftSettingsInfo Time shift configuration information.
      */
     public $TimeShiftSettings;
 
     /**
      * @param string $Name Output group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the channel level
-     * @param string $Type Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
- `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
- `DASH_STREAM_PACKAGE`, 
- `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
-     * @param array $Outputs Output information
-If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+     * @param string $Type Output protocol type.
+Selectable HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_STREAM_PACKAGE/DASH_STREAM_PACKAGE/FRAME_CAPTURE/RTP/RTMP/M2TS.
+     * @param array $Outputs Output information.
+RTMP/RTP/FRAME_CAPTURE limit [1,1], HLS/DASH limit [1,10].
      * @param array $Destinations Relay destinations. Quantity: [1, 2]
-     * @param HlsRemuxSettingsInfo $HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param DrmSettingsInfo $DrmSettings DRM configuration information
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param DashRemuxSettingsInfo $DashRemuxSettings DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param StreamPackageSettingsInfo $StreamPackageSettings StreamPackage configuration information, which is required if the output type is StreamPackage
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param TimeShiftSettingsInfo $TimeShiftSettings Time-shift configuration information
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param HlsRemuxSettingsInfo $HlsRemuxSettings HLS protocol configuration info, valid only for HLS/HLS_ARCHIVE.
+     * @param DrmSettingsInfo $DrmSettings DRM configuration message.
+     * @param DashRemuxSettingsInfo $DashRemuxSettings DASH protocol configuration info, valid only for DASH/DSAH_ARCHIVE.
+     * @param StreamPackageSettingsInfo $StreamPackageSettings Configuration message for media encapsulation. Requires filling in when Type is related to StreamPackage.
+     * @param TimeShiftSettingsInfo $TimeShiftSettings Time shift configuration information.
      */
     function __construct()
     {

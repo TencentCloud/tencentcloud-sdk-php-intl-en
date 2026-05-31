@@ -20,70 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRabbitMQUser request structure.
  *
- * @method string getInstanceId() Obtain Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
- * @method void setInstanceId(string $InstanceId) Set Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
- * @method string getUser() Obtain Username, which is used for login.
- * @method void setUser(string $User) Set Username, which is used for login.
- * @method string getPassword() Obtain Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
- * @method void setPassword(string $Password) Set Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
- * @method string getDescription() Obtain Description
- * @method void setDescription(string $Description) Set Description
- * @method array getTags() Obtain User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
-Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
- * @method void setTags(array $Tags) Set User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
-Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
- * @method integer getMaxConnections() Obtain The maximum number of connections for the user. If this parameter is left empty, there's no limit for the number.
- * @method void setMaxConnections(integer $MaxConnections) Set The maximum number of connections for the user. If this parameter is left empty, there's no limit for the number.
- * @method integer getMaxChannels() Obtain The maximum number of channels for the user. If this parameter is left empty, there's no limit for the number.
- * @method void setMaxChannels(integer $MaxChannels) Set The maximum number of channels for the user. If this parameter is left empty, there's no limit for the number.
+ * @method string getInstanceId() Obtain <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
+ * @method string getUser() Obtain <p>Username, used when logging in</p>
+ * @method void setUser(string $User) Set <p>Username, used when logging in</p>
+ * @method string getPassword() Obtain <p>Password, used when logging in. Requirements: Cannot be empty, 8-64 characters, must contain at least two of the following: lowercase letter, uppercase letter, digit, special character [()`~!@#$%^&*_=|{}[]:;',.?/].</p>
+ * @method void setPassword(string $Password) Set <p>Password, used when logging in. Requirements: Cannot be empty, 8-64 characters, must contain at least two of the following: lowercase letter, uppercase letter, digit, special character [()`~!@#$%^&*_=|{}[]:;',.?/].</p>
+ * @method string getDescription() Obtain <p>Description.</p>
+ * @method void setDescription(string $Description) Set <p>Description.</p>
+ * @method array getTags() Obtain <p>User tag, used to determine the access permission of the user to RabbitMQ Management<br>management: ordinary console user, monitoring: console user with management privileges, other value: non-console user</p>
+ * @method void setTags(array $Tags) Set <p>User tag, used to determine the access permission of the user to RabbitMQ Management<br>management: ordinary console user, monitoring: console user with management privileges, other value: non-console user</p>
+ * @method integer getMaxConnections() Obtain <p>Maximum number of connections for this user. Leave it blank to set as unlimited.</p>
+ * @method void setMaxConnections(integer $MaxConnections) Set <p>Maximum number of connections for this user. Leave it blank to set as unlimited.</p>
+ * @method integer getMaxChannels() Obtain <p>Maximum number of channels for the user. Not specified means no limit.</p>
+ * @method void setMaxChannels(integer $MaxChannels) Set <p>Maximum number of channels for the user. Not specified means no limit.</p>
+ * @method boolean getEnableCamAuth() Obtain <p>Whether cam authentication is enabled</p>
+ * @method void setEnableCamAuth(boolean $EnableCamAuth) Set <p>Whether cam authentication is enabled</p>
  */
 class CreateRabbitMQUserRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * @var string <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Username, which is used for login.
+     * @var string <p>Username, used when logging in</p>
      */
     public $User;
 
     /**
-     * @var string Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
+     * @var string <p>Password, used when logging in. Requirements: Cannot be empty, 8-64 characters, must contain at least two of the following: lowercase letter, uppercase letter, digit, special character [()`~!@#$%^&*_=|{}[]:;',.?/].</p>
      */
     public $Password;
 
     /**
-     * @var string Description
+     * @var string <p>Description.</p>
      */
     public $Description;
 
     /**
-     * @var array User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
-Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
+     * @var array <p>User tag, used to determine the access permission of the user to RabbitMQ Management<br>management: ordinary console user, monitoring: console user with management privileges, other value: non-console user</p>
      */
     public $Tags;
 
     /**
-     * @var integer The maximum number of connections for the user. If this parameter is left empty, there's no limit for the number.
+     * @var integer <p>Maximum number of connections for this user. Leave it blank to set as unlimited.</p>
      */
     public $MaxConnections;
 
     /**
-     * @var integer The maximum number of channels for the user. If this parameter is left empty, there's no limit for the number.
+     * @var integer <p>Maximum number of channels for the user. Not specified means no limit.</p>
      */
     public $MaxChannels;
 
     /**
-     * @param string $InstanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
-     * @param string $User Username, which is used for login.
-     * @param string $Password Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
-     * @param string $Description Description
-     * @param array $Tags User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
-Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
-     * @param integer $MaxConnections The maximum number of connections for the user. If this parameter is left empty, there's no limit for the number.
-     * @param integer $MaxChannels The maximum number of channels for the user. If this parameter is left empty, there's no limit for the number.
+     * @var boolean <p>Whether cam authentication is enabled</p>
+     */
+    public $EnableCamAuth;
+
+    /**
+     * @param string $InstanceId <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
+     * @param string $User <p>Username, used when logging in</p>
+     * @param string $Password <p>Password, used when logging in. Requirements: Cannot be empty, 8-64 characters, must contain at least two of the following: lowercase letter, uppercase letter, digit, special character [()`~!@#$%^&*_=|{}[]:;',.?/].</p>
+     * @param string $Description <p>Description.</p>
+     * @param array $Tags <p>User tag, used to determine the access permission of the user to RabbitMQ Management<br>management: ordinary console user, monitoring: console user with management privileges, other value: non-console user</p>
+     * @param integer $MaxConnections <p>Maximum number of connections for this user. Leave it blank to set as unlimited.</p>
+     * @param integer $MaxChannels <p>Maximum number of channels for the user. Not specified means no limit.</p>
+     * @param boolean $EnableCamAuth <p>Whether cam authentication is enabled</p>
      */
     function __construct()
     {
@@ -124,6 +128,10 @@ Valid values: `management` (Common console user), monitoring` (Console admin use
 
         if (array_key_exists("MaxChannels",$param) and $param["MaxChannels"] !== null) {
             $this->MaxChannels = $param["MaxChannels"];
+        }
+
+        if (array_key_exists("EnableCamAuth",$param) and $param["EnableCamAuth"] !== null) {
+            $this->EnableCamAuth = $param["EnableCamAuth"];
         }
     }
 }

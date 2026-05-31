@@ -20,166 +20,174 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 
  *
- * @method string getPublicAccessEndpoint() Obtain 
- * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) Set 
- * @method string getWebConsoleEndpoint() Obtain 
- * @method void setWebConsoleEndpoint(string $WebConsoleEndpoint) Set 
- * @method string getWebConsoleUsername() Obtain 
- * @method void setWebConsoleUsername(string $WebConsoleUsername) Set 
- * @method string getWebConsolePassword() Obtain 
- * @method void setWebConsolePassword(string $WebConsolePassword) Set 
- * @method boolean getPublicAccessEndpointStatus() Obtain 
- * @method void setPublicAccessEndpointStatus(boolean $PublicAccessEndpointStatus) Set 
- * @method boolean getPublicControlConsoleSwitchStatus() Obtain 
- * @method void setPublicControlConsoleSwitchStatus(boolean $PublicControlConsoleSwitchStatus) Set 
- * @method boolean getVpcControlConsoleSwitchStatus() Obtain 
- * @method void setVpcControlConsoleSwitchStatus(boolean $VpcControlConsoleSwitchStatus) Set 
- * @method string getVpcWebConsoleEndpoint() Obtain 
- * @method void setVpcWebConsoleEndpoint(string $VpcWebConsoleEndpoint) Set 
- * @method string getPublicWebConsoleSwitchStatus() Obtain Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
- * @method void setPublicWebConsoleSwitchStatus(string $PublicWebConsoleSwitchStatus) Set Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
- * @method string getVpcWebConsoleSwitchStatus() Obtain Vpc console switch state. example value.
-OFF/ON/CREATING/DELETING
- * @method void setVpcWebConsoleSwitchStatus(string $VpcWebConsoleSwitchStatus) Set Vpc console switch state. example value.
-OFF/ON/CREATING/DELETING
- * @method string getPublicDataStreamStatus() Obtain Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
- * @method void setPublicDataStreamStatus(string $PublicDataStreamStatus) Set Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
- * @method PrometheusEndpointInfo getPrometheusEndpointInfo() Obtain Prometheus information.
- * @method void setPrometheusEndpointInfo(PrometheusEndpointInfo $PrometheusEndpointInfo) Set Prometheus information.
- * @method string getWebConsoleDomainEndpoint() Obtain Public domain name access point.
- * @method void setWebConsoleDomainEndpoint(string $WebConsoleDomainEndpoint) Set Public domain name access point.
- * @method VpcEndpointInfo getControlPlaneEndpointInfo() Obtain VPC information used by the control plane.
- * @method void setControlPlaneEndpointInfo(VpcEndpointInfo $ControlPlaneEndpointInfo) Set VPC information used by the control plane.
- * @method string getPublicTlsAccessEndpoint() Obtain Encrypted TLS data stream public network access point.
- * @method void setPublicTlsAccessEndpoint(string $PublicTlsAccessEndpoint) Set Encrypted TLS data stream public network access point.
- * @method boolean getPublicIpReused() Obtain Specifies whether to reuse the public IP address.
- * @method void setPublicIpReused(boolean $PublicIpReused) Set Specifies whether to reuse the public IP address.
- * @method string getPublicWebConsoleErrorMessage() Obtain Error message for public network console access point operations.
- * @method void setPublicWebConsoleErrorMessage(string $PublicWebConsoleErrorMessage) Set Error message for public network console access point operations.
- * @method string getVpcWebConsoleErrorMessage() Obtain Error message for private network console access point operations.
- * @method void setVpcWebConsoleErrorMessage(string $VpcWebConsoleErrorMessage) Set Error message for private network console access point operations.
- * @method string getPublicDataStreamErrorMessage() Obtain Error message for public network access point operation failure.
- * @method void setPublicDataStreamErrorMessage(string $PublicDataStreamErrorMessage) Set Error message for public network access point operation failure.
+ * @method string getPublicAccessEndpoint() Obtain <p>Cluster public network access address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) Set <p>Cluster public network access address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getWebConsoleEndpoint() Obtain <p>Public network access URL of the cluster Web console</p>
+ * @method void setWebConsoleEndpoint(string $WebConsoleEndpoint) Set <p>Public network access URL of the cluster Web console</p>
+ * @method string getWebConsoleUsername() Obtain <p>Cluster Web console login username</p>
+ * @method void setWebConsoleUsername(string $WebConsoleUsername) Set <p>Cluster Web console login username</p>
+ * @method string getWebConsolePassword() Obtain <p>Cluster Web console login password</p>
+ * @method void setWebConsolePassword(string $WebConsolePassword) Set <p>Cluster Web console login password</p>
+ * @method boolean getPublicAccessEndpointStatus() Obtain <p>Abandoned</p>
+ * @method void setPublicAccessEndpointStatus(boolean $PublicAccessEndpointStatus) Set <p>Abandoned</p>
+ * @method boolean getPublicControlConsoleSwitchStatus() Obtain <p>Deprecated</p>
+ * @method void setPublicControlConsoleSwitchStatus(boolean $PublicControlConsoleSwitchStatus) Set <p>Deprecated</p>
+ * @method boolean getVpcControlConsoleSwitchStatus() Obtain <p>Abandoned</p>
+ * @method void setVpcControlConsoleSwitchStatus(boolean $VpcControlConsoleSwitchStatus) Set <p>Abandoned</p>
+ * @method string getVpcWebConsoleEndpoint() Obtain <p>VPC access URL of the Web console</p>
+ * @method void setVpcWebConsoleEndpoint(string $VpcWebConsoleEndpoint) Set <p>VPC access URL of the Web console</p>
+ * @method string getPublicWebConsoleSwitchStatus() Obtain <p>Status of the public network access switch in the Web console</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: ON</li><li>CREATING: CREATING</li><li>DELETING: DELETING</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
+ * @method void setPublicWebConsoleSwitchStatus(string $PublicWebConsoleSwitchStatus) Set <p>Status of the public network access switch in the Web console</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: ON</li><li>CREATING: CREATING</li><li>DELETING: DELETING</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
+ * @method string getVpcWebConsoleSwitchStatus() Obtain <p>Web console VPC access switch status</p><p>Enumeration values:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
+ * @method void setVpcWebConsoleSwitchStatus(string $VpcWebConsoleSwitchStatus) Set <p>Web console VPC access switch status</p><p>Enumeration values:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
+ * @method string getPublicDataStreamStatus() Obtain <p>Public network access point switch state</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failure</li><li>DELETE_FAILURE: Deletion failure</li></ul>
+ * @method void setPublicDataStreamStatus(string $PublicDataStreamStatus) Set <p>Public network access point switch state</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failure</li><li>DELETE_FAILURE: Deletion failure</li></ul>
+ * @method PrometheusEndpointInfo getPrometheusEndpointInfo() Obtain <p>Prometheus info</p>
+ * @method void setPrometheusEndpointInfo(PrometheusEndpointInfo $PrometheusEndpointInfo) Set <p>Prometheus info</p>
+ * @method string getWebConsoleDomainEndpoint() Obtain <p>public domain name access point</p>
+ * @method void setWebConsoleDomainEndpoint(string $WebConsoleDomainEndpoint) Set <p>public domain name access point</p>
+ * @method VpcEndpointInfo getControlPlaneEndpointInfo() Obtain <p>VPC information used by the control plane</p>
+ * @method void setControlPlaneEndpointInfo(VpcEndpointInfo $ControlPlaneEndpointInfo) Set <p>VPC information used by the control plane</p>
+ * @method string getPublicTlsAccessEndpoint() Obtain <p>TLS encrypted data stream public network access point</p>
+ * @method void setPublicTlsAccessEndpoint(string $PublicTlsAccessEndpoint) Set <p>TLS encrypted data stream public network access point</p>
+ * @method boolean getPublicIpReused() Obtain <p>Whether to reuse the public IP address</p>
+ * @method void setPublicIpReused(boolean $PublicIpReused) Set <p>Whether to reuse the public IP address</p>
+ * @method string getPublicWebConsoleErrorMessage() Obtain <p>Error information of public network access operations for the Web console</p>
+ * @method void setPublicWebConsoleErrorMessage(string $PublicWebConsoleErrorMessage) Set <p>Error information of public network access operations for the Web console</p>
+ * @method string getVpcWebConsoleErrorMessage() Obtain <p>Error information of VPC access operations in the Web console</p>
+ * @method void setVpcWebConsoleErrorMessage(string $VpcWebConsoleErrorMessage) Set <p>Error information of VPC access operations in the Web console</p>
+ * @method string getPublicDataStreamErrorMessage() Obtain <p>Error information of public network access point operations</p>
+ * @method void setPublicDataStreamErrorMessage(string $PublicDataStreamErrorMessage) Set <p>Error information of public network access point operations</p>
+ * @method string getPublicStreamAccessEndpoint() Obtain <p>Public network Stream access point</p>
+ * @method void setPublicStreamAccessEndpoint(string $PublicStreamAccessEndpoint) Set <p>Public network Stream access point</p>
  */
 class RabbitMQClusterAccessInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Cluster public network access address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PublicAccessEndpoint;
 
     /**
-     * @var string 
+     * @var string <p>Public network access URL of the cluster Web console</p>
      */
     public $WebConsoleEndpoint;
 
     /**
-     * @var string 
+     * @var string <p>Cluster Web console login username</p>
      */
     public $WebConsoleUsername;
 
     /**
-     * @var string 
+     * @var string <p>Cluster Web console login password</p>
      */
     public $WebConsolePassword;
 
     /**
-     * @var boolean 
+     * @var boolean <p>Abandoned</p>
      */
     public $PublicAccessEndpointStatus;
 
     /**
-     * @var boolean 
+     * @var boolean <p>Deprecated</p>
      */
     public $PublicControlConsoleSwitchStatus;
 
     /**
-     * @var boolean 
+     * @var boolean <p>Abandoned</p>
      */
     public $VpcControlConsoleSwitchStatus;
 
     /**
-     * @var string 
+     * @var string <p>VPC access URL of the Web console</p>
      */
     public $VpcWebConsoleEndpoint;
 
     /**
-     * @var string Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+     * @var string <p>Status of the public network access switch in the Web console</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: ON</li><li>CREATING: CREATING</li><li>DELETING: DELETING</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
      */
     public $PublicWebConsoleSwitchStatus;
 
     /**
-     * @var string Vpc console switch state. example value.
-OFF/ON/CREATING/DELETING
+     * @var string <p>Web console VPC access switch status</p><p>Enumeration values:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
      */
     public $VpcWebConsoleSwitchStatus;
 
     /**
-     * @var string Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+     * @var string <p>Public network access point switch state</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failure</li><li>DELETE_FAILURE: Deletion failure</li></ul>
      */
     public $PublicDataStreamStatus;
 
     /**
-     * @var PrometheusEndpointInfo Prometheus information.
+     * @var PrometheusEndpointInfo <p>Prometheus info</p>
      */
     public $PrometheusEndpointInfo;
 
     /**
-     * @var string Public domain name access point.
+     * @var string <p>public domain name access point</p>
      */
     public $WebConsoleDomainEndpoint;
 
     /**
-     * @var VpcEndpointInfo VPC information used by the control plane.
+     * @var VpcEndpointInfo <p>VPC information used by the control plane</p>
      */
     public $ControlPlaneEndpointInfo;
 
     /**
-     * @var string Encrypted TLS data stream public network access point.
+     * @var string <p>TLS encrypted data stream public network access point</p>
      */
     public $PublicTlsAccessEndpoint;
 
     /**
-     * @var boolean Specifies whether to reuse the public IP address.
+     * @var boolean <p>Whether to reuse the public IP address</p>
      */
     public $PublicIpReused;
 
     /**
-     * @var string Error message for public network console access point operations.
+     * @var string <p>Error information of public network access operations for the Web console</p>
      */
     public $PublicWebConsoleErrorMessage;
 
     /**
-     * @var string Error message for private network console access point operations.
+     * @var string <p>Error information of VPC access operations in the Web console</p>
      */
     public $VpcWebConsoleErrorMessage;
 
     /**
-     * @var string Error message for public network access point operation failure.
+     * @var string <p>Error information of public network access point operations</p>
      */
     public $PublicDataStreamErrorMessage;
 
     /**
-     * @param string $PublicAccessEndpoint 
-     * @param string $WebConsoleEndpoint 
-     * @param string $WebConsoleUsername 
-     * @param string $WebConsolePassword 
-     * @param boolean $PublicAccessEndpointStatus 
-     * @param boolean $PublicControlConsoleSwitchStatus 
-     * @param boolean $VpcControlConsoleSwitchStatus 
-     * @param string $VpcWebConsoleEndpoint 
-     * @param string $PublicWebConsoleSwitchStatus Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
-     * @param string $VpcWebConsoleSwitchStatus Vpc console switch state. example value.
-OFF/ON/CREATING/DELETING
-     * @param string $PublicDataStreamStatus Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
-     * @param PrometheusEndpointInfo $PrometheusEndpointInfo Prometheus information.
-     * @param string $WebConsoleDomainEndpoint Public domain name access point.
-     * @param VpcEndpointInfo $ControlPlaneEndpointInfo VPC information used by the control plane.
-     * @param string $PublicTlsAccessEndpoint Encrypted TLS data stream public network access point.
-     * @param boolean $PublicIpReused Specifies whether to reuse the public IP address.
-     * @param string $PublicWebConsoleErrorMessage Error message for public network console access point operations.
-     * @param string $VpcWebConsoleErrorMessage Error message for private network console access point operations.
-     * @param string $PublicDataStreamErrorMessage Error message for public network access point operation failure.
+     * @var string <p>Public network Stream access point</p>
+     */
+    public $PublicStreamAccessEndpoint;
+
+    /**
+     * @param string $PublicAccessEndpoint <p>Cluster public network access address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $WebConsoleEndpoint <p>Public network access URL of the cluster Web console</p>
+     * @param string $WebConsoleUsername <p>Cluster Web console login username</p>
+     * @param string $WebConsolePassword <p>Cluster Web console login password</p>
+     * @param boolean $PublicAccessEndpointStatus <p>Abandoned</p>
+     * @param boolean $PublicControlConsoleSwitchStatus <p>Deprecated</p>
+     * @param boolean $VpcControlConsoleSwitchStatus <p>Abandoned</p>
+     * @param string $VpcWebConsoleEndpoint <p>VPC access URL of the Web console</p>
+     * @param string $PublicWebConsoleSwitchStatus <p>Status of the public network access switch in the Web console</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: ON</li><li>CREATING: CREATING</li><li>DELETING: DELETING</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
+     * @param string $VpcWebConsoleSwitchStatus <p>Web console VPC access switch status</p><p>Enumeration values:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
+     * @param string $PublicDataStreamStatus <p>Public network access point switch state</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failure</li><li>DELETE_FAILURE: Deletion failure</li></ul>
+     * @param PrometheusEndpointInfo $PrometheusEndpointInfo <p>Prometheus info</p>
+     * @param string $WebConsoleDomainEndpoint <p>public domain name access point</p>
+     * @param VpcEndpointInfo $ControlPlaneEndpointInfo <p>VPC information used by the control plane</p>
+     * @param string $PublicTlsAccessEndpoint <p>TLS encrypted data stream public network access point</p>
+     * @param boolean $PublicIpReused <p>Whether to reuse the public IP address</p>
+     * @param string $PublicWebConsoleErrorMessage <p>Error information of public network access operations for the Web console</p>
+     * @param string $VpcWebConsoleErrorMessage <p>Error information of VPC access operations in the Web console</p>
+     * @param string $PublicDataStreamErrorMessage <p>Error information of public network access point operations</p>
+     * @param string $PublicStreamAccessEndpoint <p>Public network Stream access point</p>
      */
     function __construct()
     {
@@ -270,6 +278,10 @@ OFF/ON/CREATING/DELETING
 
         if (array_key_exists("PublicDataStreamErrorMessage",$param) and $param["PublicDataStreamErrorMessage"] !== null) {
             $this->PublicDataStreamErrorMessage = $param["PublicDataStreamErrorMessage"];
+        }
+
+        if (array_key_exists("PublicStreamAccessEndpoint",$param) and $param["PublicStreamAccessEndpoint"] !== null) {
+            $this->PublicStreamAccessEndpoint = $param["PublicStreamAccessEndpoint"];
         }
     }
 }

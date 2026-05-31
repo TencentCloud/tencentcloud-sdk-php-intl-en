@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio track configuration.
  *
- * @method string getTrackName() Obtain User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
- * @method void setTrackName(string $TrackName) Set User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
- * @method string getAudioCodec() Obtain Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
- * @method void setAudioCodec(string $AudioCodec) Set Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+ * @method string getTrackName() Obtain User input, limited to letters and digits, length not exceeding 20, non-repeating in the same channel.
+ * @method void setTrackName(string $TrackName) Set User input, limited to letters and digits, length not exceeding 20, non-repeating in the same channel.
+ * @method string getAudioCodec() Obtain Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
+ * @method void setAudioCodec(string $AudioCodec) Set Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
  * @method integer getAudioBitrate() Obtain Audio bitrate.
  * @method void setAudioBitrate(integer $AudioBitrate) Set Audio bitrate.
  * @method integer getAudioSampleRate() Obtain Audio sample rate.
  * @method void setAudioSampleRate(integer $AudioSampleRate) Set Audio sample rate.
- * @method string getAudioSelectorName() Obtain Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
- * @method void setAudioSelectorName(string $AudioSelectorName) Set Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
+ * @method string getAudioSelectorName() Obtain Input Only the value defined in AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid.
+ * @method void setAudioSelectorName(string $AudioSelectorName) Set Input Only the value defined in AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid.
  * @method AudioNormalizationSettings getAudioNormalization() Obtain Audio loudness configuration.
  * @method void setAudioNormalization(AudioNormalizationSettings $AudioNormalization) Set Audio loudness configuration.
- * @method AudioCodecDetail getAudioCodecDetails() Obtain Audio encoding configuration.
- * @method void setAudioCodecDetails(AudioCodecDetail $AudioCodecDetails) Set Audio encoding configuration.
+ * @method AudioCodecDetail getAudioCodecDetails() Obtain Additional audio mode and sound channel configuration.
+ * @method void setAudioCodecDetails(AudioCodecDetail $AudioCodecDetails) Set Additional audio mode and sound channel configuration.
  */
 class AudioTrackInfo extends AbstractModel
 {
     /**
-     * @var string User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
+     * @var string User input, limited to letters and digits, length not exceeding 20, non-repeating in the same channel.
      */
     public $TrackName;
 
     /**
-     * @var string Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+     * @var string Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
      */
     public $AudioCodec;
 
@@ -58,7 +58,7 @@ class AudioTrackInfo extends AbstractModel
     public $AudioSampleRate;
 
     /**
-     * @var string Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
+     * @var string Input Only the value defined in AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid.
      */
     public $AudioSelectorName;
 
@@ -68,18 +68,18 @@ class AudioTrackInfo extends AbstractModel
     public $AudioNormalization;
 
     /**
-     * @var AudioCodecDetail Audio encoding configuration.
+     * @var AudioCodecDetail Additional audio mode and sound channel configuration.
      */
     public $AudioCodecDetails;
 
     /**
-     * @param string $TrackName User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
-     * @param string $AudioCodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+     * @param string $TrackName User input, limited to letters and digits, length not exceeding 20, non-repeating in the same channel.
+     * @param string $AudioCodec Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
      * @param integer $AudioBitrate Audio bitrate.
      * @param integer $AudioSampleRate Audio sample rate.
-     * @param string $AudioSelectorName Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
+     * @param string $AudioSelectorName Input Only the value defined in AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid.
      * @param AudioNormalizationSettings $AudioNormalization Audio loudness configuration.
-     * @param AudioCodecDetail $AudioCodecDetails Audio encoding configuration.
+     * @param AudioCodecDetail $AudioCodecDetails Additional audio mode and sound channel configuration.
      */
     function __construct()
     {

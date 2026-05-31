@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupTables(array $BackupTables) Set Backup table, which is valid when `BackupType` is `logic`.
  * @method string getBackupName() Obtain Backup name
  * @method void setBackupName(string $BackupName) Set Backup name
+ * @method array getVaults() Obtain 	Message sent to safe
+ * @method void setVaults(array $Vaults) Set 	Message sent to safe
  */
 class CreateBackupRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateBackupRequest extends AbstractModel
     public $BackupName;
 
     /**
+     * @var array 	Message sent to safe
+     */
+    public $Vaults;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $BackupType Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
      * @param array $BackupDatabases Backup database, which is valid when `BackupType` is `logic`.
      * @param array $BackupTables Backup table, which is valid when `BackupType` is `logic`.
      * @param string $BackupName Backup name
+     * @param array $Vaults 	Message sent to safe
      */
     function __construct()
     {
@@ -101,6 +109,15 @@ class CreateBackupRequest extends AbstractModel
 
         if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
             $this->BackupName = $param["BackupName"];
+        }
+
+        if (array_key_exists("Vaults",$param) and $param["Vaults"] !== null) {
+            $this->Vaults = [];
+            foreach ($param["Vaults"] as $key => $value){
+                $obj = new CreateBackupVaultItem();
+                $obj->deserialize($value);
+                array_push($this->Vaults, $obj);
+            }
         }
     }
 }

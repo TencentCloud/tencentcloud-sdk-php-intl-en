@@ -18,36 +18,36 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * additional bit rate configuration.
+ * Additional bitrate configuration for video template.
  *
- * @method integer getVideoMaxBitrate() Obtain The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.
- * @method void setVideoMaxBitrate(integer $VideoMaxBitrate) Set The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.
- * @method integer getBufferSize() Obtain Cache configuration supports configuring a Max Bitrate value of 1-4 times.
- * @method void setBufferSize(integer $BufferSize) Set Cache configuration supports configuring a Max Bitrate value of 1-4 times.
- * @method integer getQualityLevel() Obtain VBR scene is valid, video quality level, only supports user input numbers between 1-51.
- * @method void setQualityLevel(integer $QualityLevel) Set VBR scene is valid, video quality level, only supports user input numbers between 1-51.
+ * @method integer getVideoMaxBitrate() Obtain The maximum bitrate in the VBR scenario must be a multiple of 1000 and between 50000 and 40000000.
+ * @method void setVideoMaxBitrate(integer $VideoMaxBitrate) Set The maximum bitrate in the VBR scenario must be a multiple of 1000 and between 50000 and 40000000.
+ * @method integer getBufferSize() Obtain Cache configuration supports configuration as 1-4x the Max Bitrate value.
+ * @method void setBufferSize(integer $BufferSize) Set Cache configuration supports configuration as 1-4x the Max Bitrate value.
+ * @method integer getQualityLevel() Obtain Valid in VBR scenarios. Video quality level. Only supports user input of numbers between 1 and 51.
+ * @method void setQualityLevel(integer $QualityLevel) Set Valid in VBR scenarios. Video quality level. Only supports user input of numbers between 1 and 51.
  */
 class AdditionalRateSetting extends AbstractModel
 {
     /**
-     * @var integer The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.
+     * @var integer The maximum bitrate in the VBR scenario must be a multiple of 1000 and between 50000 and 40000000.
      */
     public $VideoMaxBitrate;
 
     /**
-     * @var integer Cache configuration supports configuring a Max Bitrate value of 1-4 times.
+     * @var integer Cache configuration supports configuration as 1-4x the Max Bitrate value.
      */
     public $BufferSize;
 
     /**
-     * @var integer VBR scene is valid, video quality level, only supports user input numbers between 1-51.
+     * @var integer Valid in VBR scenarios. Video quality level. Only supports user input of numbers between 1 and 51.
      */
     public $QualityLevel;
 
     /**
-     * @param integer $VideoMaxBitrate The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.
-     * @param integer $BufferSize Cache configuration supports configuring a Max Bitrate value of 1-4 times.
-     * @param integer $QualityLevel VBR scene is valid, video quality level, only supports user input numbers between 1-51.
+     * @param integer $VideoMaxBitrate The maximum bitrate in the VBR scenario must be a multiple of 1000 and between 50000 and 40000000.
+     * @param integer $BufferSize Cache configuration supports configuration as 1-4x the Max Bitrate value.
+     * @param integer $QualityLevel Valid in VBR scenarios. Video quality level. Only supports user input of numbers between 1 and 51.
      */
     function __construct()
     {

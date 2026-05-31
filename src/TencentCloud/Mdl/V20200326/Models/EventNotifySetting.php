@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The callback settings.
  *
- * @method PushEventSetting getPushEventSettings() Obtain The callback configuration for push events.
- * @method void setPushEventSettings(PushEventSetting $PushEventSettings) Set The callback configuration for push events.
+ * @method PushEventSetting getPushEventSettings() Obtain Inference stream callback configuration. Currently supports rtmp_push, rtmps_push, and rtmp_pull input types.
+ * @method void setPushEventSettings(PushEventSetting $PushEventSettings) Set Inference stream callback configuration. Currently supports rtmp_push, rtmps_push, and rtmp_pull input types.
  */
 class EventNotifySetting extends AbstractModel
 {
     /**
-     * @var PushEventSetting The callback configuration for push events.
+     * @var PushEventSetting Inference stream callback configuration. Currently supports rtmp_push, rtmps_push, and rtmp_pull input types.
      */
     public $PushEventSettings;
 
     /**
-     * @param PushEventSetting $PushEventSettings The callback configuration for push events.
+     * @param PushEventSetting $PushEventSettings Inference stream callback configuration. Currently supports rtmp_push, rtmps_push, and rtmp_pull input types.
      */
     function __construct()
     {

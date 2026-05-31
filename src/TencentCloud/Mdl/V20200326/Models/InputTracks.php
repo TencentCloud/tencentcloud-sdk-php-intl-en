@@ -18,20 +18,20 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Audio track configuration list.
  *
- * @method array getTracks() Obtain Audio track configuration information.
- * @method void setTracks(array $Tracks) Set Audio track configuration information.
+ * @method array getTracks() Obtain Audio track configuration message.
+ * @method void setTracks(array $Tracks) Set Audio track configuration message.
  */
 class InputTracks extends AbstractModel
 {
     /**
-     * @var array Audio track configuration information.
+     * @var array Audio track configuration message.
      */
     public $Tracks;
 
     /**
-     * @param array $Tracks Audio track configuration information.
+     * @param array $Tracks Audio track configuration message.
      */
     function __construct()
     {

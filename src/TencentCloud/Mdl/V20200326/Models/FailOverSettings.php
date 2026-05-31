@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input failover settings
  *
- * @method string getSecondaryInputId() Obtain ID of the backup input
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setSecondaryInputId(string $SecondaryInputId) Set ID of the backup input
-Note: this field may return `null`, indicating that no valid value was found.
+ * @method string getSecondaryInputId() Obtain Input Id of the backup stream.
+ * @method void setSecondaryInputId(string $SecondaryInputId) Set Input Id of the backup stream.
  * @method integer getLossThreshold() Obtain The wait time (ms) for triggering failover after the primary input becomes unavailable. Value range: [1000, 86400000]. Default value: `3000`
  * @method void setLossThreshold(integer $LossThreshold) Set The wait time (ms) for triggering failover after the primary input becomes unavailable. Value range: [1000, 86400000]. Default value: `3000`
  * @method string getRecoverBehavior() Obtain Failover policy. Valid values: `CURRENT_PREFERRED` (default), `PRIMARY_PREFERRED`
@@ -32,8 +30,7 @@ Note: this field may return `null`, indicating that no valid value was found.
 class FailOverSettings extends AbstractModel
 {
     /**
-     * @var string ID of the backup input
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var string Input Id of the backup stream.
      */
     public $SecondaryInputId;
 
@@ -48,8 +45,7 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $RecoverBehavior;
 
     /**
-     * @param string $SecondaryInputId ID of the backup input
-Note: this field may return `null`, indicating that no valid value was found.
+     * @param string $SecondaryInputId Input Id of the backup stream.
      * @param integer $LossThreshold The wait time (ms) for triggering failover after the primary input becomes unavailable. Value range: [1000, 86400000]. Default value: `3000`
      * @param string $RecoverBehavior Failover policy. Valid values: `CURRENT_PREFERRED` (default), `PRIMARY_PREFERRED`
      */

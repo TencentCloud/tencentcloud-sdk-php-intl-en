@@ -18,68 +18,68 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Frame capture template.
+ * Chart template.
  *
- * @method string getName() Obtain Name of frame capture template, limited to uppercase and lowercase letters and numbers, with a length between 1 and 20 characters.
- * @method void setName(string $Name) Set Name of frame capture template, limited to uppercase and lowercase letters and numbers, with a length between 1 and 20 characters.
- * @method integer getWidth() Obtain Width of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
- * @method void setWidth(integer $Width) Set Width of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
- * @method integer getHeight() Obtain Height of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
- * @method void setHeight(integer $Height) Set Height of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
- * @method integer getCaptureInterval() Obtain Interval of frame capture, an integer between 1 and 3600.
- * @method void setCaptureInterval(integer $CaptureInterval) Set Interval of frame capture, an integer between 1 and 3600.
- * @method string getCaptureIntervalUnits() Obtain Interval units of frame capture, only supports SECONDS.
- * @method void setCaptureIntervalUnits(string $CaptureIntervalUnits) Set Interval units of frame capture, only supports SECONDS.
- * @method string getScalingBehavior() Obtain Scaling behavior of frame capture, supports DEFAULT or STRETCH_TO_OUTPUT, with DEFAULT being the default option.
- * @method void setScalingBehavior(string $ScalingBehavior) Set Scaling behavior of frame capture, supports DEFAULT or STRETCH_TO_OUTPUT, with DEFAULT being the default option.
- * @method integer getSharpness() Obtain Sharpness, an integer between 0 and 100.
- * @method void setSharpness(integer $Sharpness) Set Sharpness, an integer between 0 and 100.
+ * @method string getName() Obtain Screenshot template name. Limited to uppercase and lowercase letters and digits. Length [1, 20].
+ * @method void setName(string $Name) Set Screenshot template name. Limited to uppercase and lowercase letters and digits. Length [1, 20].
+ * @method integer getWidth() Obtain Screenshot width. Optional. The input range is [0, 3000] and must be a multiple of 2.
+ * @method void setWidth(integer $Width) Set Screenshot width. Optional. The input range is [0, 3000] and must be a multiple of 2.
+ * @method integer getHeight() Obtain Screenshot height, optional, input range [0, 3000], must be a multiple of 2
+ * @method void setHeight(integer $Height) Set Screenshot height, optional, input range [0, 3000], must be a multiple of 2
+ * @method integer getCaptureInterval() Obtain Screenshot interval, an integer between 1 and 3600.
+ * @method void setCaptureInterval(integer $CaptureInterval) Set Screenshot interval, an integer between 1 and 3600.
+ * @method string getCaptureIntervalUnits() Obtain Screenshot measurement unit, supports only SECONDS.
+ * @method void setCaptureIntervalUnits(string $CaptureIntervalUnits) Set Screenshot measurement unit, supports only SECONDS.
+ * @method string getScalingBehavior() Obtain Stretch behavior, supports [DEFAULT|STRETCH_TO_OUTPUT], default is DEFAULT.
+ * @method void setScalingBehavior(string $ScalingBehavior) Set Stretch behavior, supports [DEFAULT|STRETCH_TO_OUTPUT], default is DEFAULT.
+ * @method integer getSharpness() Obtain Sharpening degree, an integer between 0 and 100.
+ * @method void setSharpness(integer $Sharpness) Set Sharpening degree, an integer between 0 and 100.
  */
 class FrameCaptureTemplate extends AbstractModel
 {
     /**
-     * @var string Name of frame capture template, limited to uppercase and lowercase letters and numbers, with a length between 1 and 20 characters.
+     * @var string Screenshot template name. Limited to uppercase and lowercase letters and digits. Length [1, 20].
      */
     public $Name;
 
     /**
-     * @var integer Width of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
+     * @var integer Screenshot width. Optional. The input range is [0, 3000] and must be a multiple of 2.
      */
     public $Width;
 
     /**
-     * @var integer Height of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
+     * @var integer Screenshot height, optional, input range [0, 3000], must be a multiple of 2
      */
     public $Height;
 
     /**
-     * @var integer Interval of frame capture, an integer between 1 and 3600.
+     * @var integer Screenshot interval, an integer between 1 and 3600.
      */
     public $CaptureInterval;
 
     /**
-     * @var string Interval units of frame capture, only supports SECONDS.
+     * @var string Screenshot measurement unit, supports only SECONDS.
      */
     public $CaptureIntervalUnits;
 
     /**
-     * @var string Scaling behavior of frame capture, supports DEFAULT or STRETCH_TO_OUTPUT, with DEFAULT being the default option.
+     * @var string Stretch behavior, supports [DEFAULT|STRETCH_TO_OUTPUT], default is DEFAULT.
      */
     public $ScalingBehavior;
 
     /**
-     * @var integer Sharpness, an integer between 0 and 100.
+     * @var integer Sharpening degree, an integer between 0 and 100.
      */
     public $Sharpness;
 
     /**
-     * @param string $Name Name of frame capture template, limited to uppercase and lowercase letters and numbers, with a length between 1 and 20 characters.
-     * @param integer $Width Width of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
-     * @param integer $Height Height of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
-     * @param integer $CaptureInterval Interval of frame capture, an integer between 1 and 3600.
-     * @param string $CaptureIntervalUnits Interval units of frame capture, only supports SECONDS.
-     * @param string $ScalingBehavior Scaling behavior of frame capture, supports DEFAULT or STRETCH_TO_OUTPUT, with DEFAULT being the default option.
-     * @param integer $Sharpness Sharpness, an integer between 0 and 100.
+     * @param string $Name Screenshot template name. Limited to uppercase and lowercase letters and digits. Length [1, 20].
+     * @param integer $Width Screenshot width. Optional. The input range is [0, 3000] and must be a multiple of 2.
+     * @param integer $Height Screenshot height, optional, input range [0, 3000], must be a multiple of 2
+     * @param integer $CaptureInterval Screenshot interval, an integer between 1 and 3600.
+     * @param string $CaptureIntervalUnits Screenshot measurement unit, supports only SECONDS.
+     * @param string $ScalingBehavior Stretch behavior, supports [DEFAULT|STRETCH_TO_OUTPUT], default is DEFAULT.
+     * @param integer $Sharpness Sharpening degree, an integer between 0 and 100.
      */
     function __construct()
     {

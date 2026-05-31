@@ -20,126 +20,142 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HLS protocol configuration.
  *
- * @method integer getSegmentDuration() Obtain Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
- * @method void setSegmentDuration(integer $SegmentDuration) Set Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
- * @method integer getSegmentNumber() Obtain Number of segments. Value range: [3,30]. Default value: 5.
- * @method void setSegmentNumber(integer $SegmentNumber) Set Number of segments. Value range: [3,30]. Default value: 5.
- * @method string getPdtInsertion() Obtain Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
- * @method void setPdtInsertion(string $PdtInsertion) Set Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
- * @method integer getPdtDuration() Obtain PDT duration in seconds. Value range: (0,3000]. Default value: 600.
- * @method void setPdtDuration(integer $PdtDuration) Set PDT duration in seconds. Value range: (0,3000]. Default value: 600.
- * @method string getScheme() Obtain Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
- * @method void setScheme(string $Scheme) Set Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
- * @method string getSegmentType() Obtain The segment type. Valid values: `ts` (default), `fmp4`.
-Currently, fMP4 segments do not support DRM or time shifting.
- * @method void setSegmentType(string $SegmentType) Set The segment type. Valid values: `ts` (default), `fmp4`.
-Currently, fMP4 segments do not support DRM or time shifting.
- * @method string getH265PackageType() Obtain The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
- * @method void setH265PackageType(string $H265PackageType) Set The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
- * @method integer getLowLatency() Obtain Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
- * @method void setLowLatency(integer $LowLatency) Set Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
- * @method integer getPartialSegmentDuration() Obtain Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
- * @method void setPartialSegmentDuration(integer $PartialSegmentDuration) Set Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
- * @method integer getPartialSegmentPlaySite() Obtain Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
- * @method void setPartialSegmentPlaySite(integer $PartialSegmentPlaySite) Set Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
- * @method integer getStreamOrder() Obtain Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
- * @method void setStreamOrder(integer $StreamOrder) Set Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
- * @method integer getVideoResolution() Obtain Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
- * @method void setVideoResolution(integer $VideoResolution) Set Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
- * @method integer getEndListTag() Obtain Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
- * @method void setEndListTag(integer $EndListTag) Set Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
- * @method string getAdMarkupType() Obtain Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
- * @method void setAdMarkupType(string $AdMarkupType) Set Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+ * @method integer getSegmentDuration() Obtain Segment duration in milliseconds. Input range is [1000, 30000], default 4000, can only be a multiple of 1000.
+ * @method void setSegmentDuration(integer $SegmentDuration) Set Segment duration in milliseconds. Input range is [1000, 30000], default 4000, can only be a multiple of 1000.
+ * @method integer getSegmentNumber() Obtain Number of shards. Input range [3, 30]. Default is 5.
+ * @method void setSegmentNumber(integer $SegmentNumber) Set Number of shards. Input range [3, 30]. Default is 5.
+ * @method string getPdtInsertion() Obtain Whether to enable Pdt insertion. CLOSE/OPEN. Default is CLOSE.
+ * @method void setPdtInsertion(string $PdtInsertion) Set Whether to enable Pdt insertion. CLOSE/OPEN. Default is CLOSE.
+ * @method integer getPdtDuration() Obtain Pdt duration in seconds. Input range (0, 3000]. Default 600.
+ * @method void setPdtDuration(integer $PdtDuration) Set Pdt duration in seconds. Input range (0, 3000]. Default 600.
+ * @method string getScheme() Obtain Video packaging type, selectable SEPARATE|MERGE.
+ * @method void setScheme(string $Scheme) Set Video packaging type, selectable SEPARATE|MERGE.
+ * @method string getSegmentType() Obtain Segment type, supports [ts|fmp4], default ts.
+fmp4 does not currently support DRM and time shifting.
+ * @method void setSegmentType(string $SegmentType) Set Segment type, supports [ts|fmp4], default ts.
+fmp4 does not currently support DRM and time shifting.
+ * @method string getH265PackageType() Obtain When the transcoding type is H265, the HLS H265 encapsulation type is selectable [hvc1|hev1], default is hev1.
+ * @method void setH265PackageType(string $H265PackageType) Set When the transcoding type is H265, the HLS H265 encapsulation type is selectable [hvc1|hev1], default is hev1.
+ * @method integer getLowLatency() Obtain Whether to enable low delay. 0:CLOSE. Default is 0. 1:OPEN.
+ * @method void setLowLatency(integer $LowLatency) Set Whether to enable low delay. 0:CLOSE. Default is 0. 1:OPEN.
+ * @method integer getPartialSegmentDuration() Obtain Small slice size in milliseconds. Value ranges from 200 to SegmentDuration (integer). Default value: 500 ms.
+ * @method void setPartialSegmentDuration(integer $PartialSegmentDuration) Set Small slice size in milliseconds. Value ranges from 200 to SegmentDuration (integer). Default value: 500 ms.
+ * @method integer getPartialSegmentPlaySite() Obtain Small slice playback position in milliseconds. Value ranges from 3*PartiSegmentDuration to 3*SegmentDuration (integer). Default value: 3*PartiSegmentDuration.
+ * @method void setPartialSegmentPlaySite(integer $PartialSegmentPlaySite) Set Small slice playback position in milliseconds. Value ranges from 3*PartiSegmentDuration to 3*SegmentDuration (integer). Default value: 3*PartiSegmentDuration.
+ * @method integer getStreamOrder() Obtain Hls master m3u8 file sorting rule by bitrate. Available values:
+1: Video bitrate ascending 2: Video bitrate descending
+Default value: 1
+ * @method void setStreamOrder(integer $StreamOrder) Set Hls master m3u8 file sorting rule by bitrate. Available values:
+1: Video bitrate ascending 2: Video bitrate descending
+Default value: 1
+ * @method integer getVideoResolution() Obtain Whether the Hls master m3u8 file contains resolution information. Available values:
+1: INCLUDE includes video resolution 2: EXCLUDE excludes video resolution.
+Default value: 1.
+ * @method void setVideoResolution(integer $VideoResolution) Set Whether the Hls master m3u8 file contains resolution information. Available values:
+1: INCLUDE includes video resolution 2: EXCLUDE excludes video resolution.
+Default value: 1.
+ * @method integer getEndListTag() Obtain Whether the content contains the `EXT-X-ENDLIST` tag. 1: contains; 2: does not contain. Default: 1.
+ * @method void setEndListTag(integer $EndListTag) Set Whether the content contains the `EXT-X-ENDLIST` tag. 1: contains; 2: does not contain. Default: 1.
+ * @method string getAdMarkupType() Obtain Option: `ENHANCED_SCTE35`, `DATERANGE`; default `ENHANCED_SCTE35`.
+ * @method void setAdMarkupType(string $AdMarkupType) Set Option: `ENHANCED_SCTE35`, `DATERANGE`; default `ENHANCED_SCTE35`.
  */
 class HlsRemuxSettingsInfo extends AbstractModel
 {
     /**
-     * @var integer Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
+     * @var integer Segment duration in milliseconds. Input range is [1000, 30000], default 4000, can only be a multiple of 1000.
      */
     public $SegmentDuration;
 
     /**
-     * @var integer Number of segments. Value range: [3,30]. Default value: 5.
+     * @var integer Number of shards. Input range [3, 30]. Default is 5.
      */
     public $SegmentNumber;
 
     /**
-     * @var string Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
+     * @var string Whether to enable Pdt insertion. CLOSE/OPEN. Default is CLOSE.
      */
     public $PdtInsertion;
 
     /**
-     * @var integer PDT duration in seconds. Value range: (0,3000]. Default value: 600.
+     * @var integer Pdt duration in seconds. Input range (0, 3000]. Default 600.
      */
     public $PdtDuration;
 
     /**
-     * @var string Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
+     * @var string Video packaging type, selectable SEPARATE|MERGE.
      */
     public $Scheme;
 
     /**
-     * @var string The segment type. Valid values: `ts` (default), `fmp4`.
-Currently, fMP4 segments do not support DRM or time shifting.
+     * @var string Segment type, supports [ts|fmp4], default ts.
+fmp4 does not currently support DRM and time shifting.
      */
     public $SegmentType;
 
     /**
-     * @var string The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+     * @var string When the transcoding type is H265, the HLS H265 encapsulation type is selectable [hvc1|hev1], default is hev1.
      */
     public $H265PackageType;
 
     /**
-     * @var integer Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
+     * @var integer Whether to enable low delay. 0:CLOSE. Default is 0. 1:OPEN.
      */
     public $LowLatency;
 
     /**
-     * @var integer Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
+     * @var integer Small slice size in milliseconds. Value ranges from 200 to SegmentDuration (integer). Default value: 500 ms.
      */
     public $PartialSegmentDuration;
 
     /**
-     * @var integer Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
+     * @var integer Small slice playback position in milliseconds. Value ranges from 3*PartiSegmentDuration to 3*SegmentDuration (integer). Default value: 3*PartiSegmentDuration.
      */
     public $PartialSegmentPlaySite;
 
     /**
-     * @var integer Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+     * @var integer Hls master m3u8 file sorting rule by bitrate. Available values:
+1: Video bitrate ascending 2: Video bitrate descending
+Default value: 1
      */
     public $StreamOrder;
 
     /**
-     * @var integer Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+     * @var integer Whether the Hls master m3u8 file contains resolution information. Available values:
+1: INCLUDE includes video resolution 2: EXCLUDE excludes video resolution.
+Default value: 1.
      */
     public $VideoResolution;
 
     /**
-     * @var integer Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+     * @var integer Whether the content contains the `EXT-X-ENDLIST` tag. 1: contains; 2: does not contain. Default: 1.
      */
     public $EndListTag;
 
     /**
-     * @var string Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+     * @var string Option: `ENHANCED_SCTE35`, `DATERANGE`; default `ENHANCED_SCTE35`.
      */
     public $AdMarkupType;
 
     /**
-     * @param integer $SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
-     * @param integer $SegmentNumber Number of segments. Value range: [3,30]. Default value: 5.
-     * @param string $PdtInsertion Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
-     * @param integer $PdtDuration PDT duration in seconds. Value range: (0,3000]. Default value: 600.
-     * @param string $Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
-     * @param string $SegmentType The segment type. Valid values: `ts` (default), `fmp4`.
-Currently, fMP4 segments do not support DRM or time shifting.
-     * @param string $H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
-     * @param integer $LowLatency Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
-     * @param integer $PartialSegmentDuration Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
-     * @param integer $PartialSegmentPlaySite Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
-     * @param integer $StreamOrder Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
-     * @param integer $VideoResolution Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
-     * @param integer $EndListTag Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
-     * @param string $AdMarkupType Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+     * @param integer $SegmentDuration Segment duration in milliseconds. Input range is [1000, 30000], default 4000, can only be a multiple of 1000.
+     * @param integer $SegmentNumber Number of shards. Input range [3, 30]. Default is 5.
+     * @param string $PdtInsertion Whether to enable Pdt insertion. CLOSE/OPEN. Default is CLOSE.
+     * @param integer $PdtDuration Pdt duration in seconds. Input range (0, 3000]. Default 600.
+     * @param string $Scheme Video packaging type, selectable SEPARATE|MERGE.
+     * @param string $SegmentType Segment type, supports [ts|fmp4], default ts.
+fmp4 does not currently support DRM and time shifting.
+     * @param string $H265PackageType When the transcoding type is H265, the HLS H265 encapsulation type is selectable [hvc1|hev1], default is hev1.
+     * @param integer $LowLatency Whether to enable low delay. 0:CLOSE. Default is 0. 1:OPEN.
+     * @param integer $PartialSegmentDuration Small slice size in milliseconds. Value ranges from 200 to SegmentDuration (integer). Default value: 500 ms.
+     * @param integer $PartialSegmentPlaySite Small slice playback position in milliseconds. Value ranges from 3*PartiSegmentDuration to 3*SegmentDuration (integer). Default value: 3*PartiSegmentDuration.
+     * @param integer $StreamOrder Hls master m3u8 file sorting rule by bitrate. Available values:
+1: Video bitrate ascending 2: Video bitrate descending
+Default value: 1
+     * @param integer $VideoResolution Whether the Hls master m3u8 file contains resolution information. Available values:
+1: INCLUDE includes video resolution 2: EXCLUDE excludes video resolution.
+Default value: 1.
+     * @param integer $EndListTag Whether the content contains the `EXT-X-ENDLIST` tag. 1: contains; 2: does not contain. Default: 1.
+     * @param string $AdMarkupType Option: `ENHANCED_SCTE35`, `DATERANGE`; default `ENHANCED_SCTE35`.
      */
     function __construct()
     {

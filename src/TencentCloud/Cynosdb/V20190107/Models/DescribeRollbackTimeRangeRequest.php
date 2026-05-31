@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getVaultId() Obtain Safe id
+ * @method void setVaultId(string $VaultId) Set Safe id
+ * @method string getVaultRegion() Obtain Safe region
+ * @method void setVaultRegion(string $VaultRegion) Set Safe region
  */
 class DescribeRollbackTimeRangeRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeRollbackTimeRangeRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var string Safe id
+     */
+    public $VaultId;
+
+    /**
+     * @var string Safe region
+     */
+    public $VaultRegion;
+
+    /**
      * @param string $ClusterId Cluster ID
+     * @param string $VaultId Safe id
+     * @param string $VaultRegion Safe region
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeRollbackTimeRangeRequest extends AbstractModel
         }
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("VaultId",$param) and $param["VaultId"] !== null) {
+            $this->VaultId = $param["VaultId"];
+        }
+
+        if (array_key_exists("VaultRegion",$param) and $param["VaultRegion"] !== null) {
+            $this->VaultRegion = $param["VaultRegion"];
         }
     }
 }
