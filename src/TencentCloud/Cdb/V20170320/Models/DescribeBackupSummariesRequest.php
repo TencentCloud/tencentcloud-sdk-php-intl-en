@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupSummaries request structure.
  *
- * @method string getProduct() Obtain TencentDB product type to be queried. Currently, only `mysql` is supported.
- * @method void setProduct(string $Product) Set TencentDB product type to be queried. Currently, only `mysql` is supported.
+ * @method string getProduct() Obtain The cloud database product type for which real-time backup statistics need to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
+ * @method void setProduct(string $Product) Set The cloud database product type for which real-time backup statistics need to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
  * @method integer getOffset() Obtain Paginated query offset. Default value: `0`.
  * @method void setOffset(integer $Offset) Set Paginated query offset. Default value: `0`.
  * @method integer getLimit() Obtain Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBackupSummariesRequest extends AbstractModel
 {
     /**
-     * @var string TencentDB product type to be queried. Currently, only `mysql` is supported.
+     * @var string The cloud database product type for which real-time backup statistics need to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
      */
     public $Product;
 
@@ -59,7 +59,7 @@ class DescribeBackupSummariesRequest extends AbstractModel
     public $OrderDirection;
 
     /**
-     * @param string $Product TencentDB product type to be queried. Currently, only `mysql` is supported.
+     * @param string $Product The cloud database product type for which real-time backup statistics need to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
      * @param integer $Offset Paginated query offset. Default value: `0`.
      * @param integer $Limit Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
      * @param string $OrderBy Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.

@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDefaultParams request structure.
  *
- * @method string getEngineVersion() Obtain Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
- * @method void setEngineVersion(string $EngineVersion) Set Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
- * @method string getTemplateType() Obtain Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
- * @method void setTemplateType(string $TemplateType) Set Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
- * @method string getEngineType() Obtain Parameter template engine. Default value: `InnoDB`.
- * @method void setEngineType(string $EngineType) Set Parameter template engine. Default value: `InnoDB`.
+ * @method string getEngineVersion() Obtain Engine version. Currently supports ["5.1", "5.5", "5.6", "5.7", "8.0"].
+Description: Engine version is required.
+ * @method void setEngineVersion(string $EngineVersion) Set Engine version. Currently supports ["5.1", "5.5", "5.6", "5.7", "8.0"].
+Description: Engine version is required.
+ * @method string getTemplateType() Obtain Default parameter template type. Supported values include "HIGH_STABILITY" - high-stability template, "HIGH_PERFORMANCE" - high-performance template. Default value: HIGH_STABILITY.
+ * @method void setTemplateType(string $TemplateType) Set Default parameter template type. Supported values include "HIGH_STABILITY" - high-stability template, "HIGH_PERFORMANCE" - high-performance template. Default value: HIGH_STABILITY.
+ * @method string getEngineType() Obtain Parameter template engine, default value: InnoDB, valid values: InnoDB, RocksDB.
+ * @method void setEngineType(string $EngineType) Set Parameter template engine, default value: InnoDB, valid values: InnoDB, RocksDB.
  */
 class DescribeDefaultParamsRequest extends AbstractModel
 {
     /**
-     * @var string Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
+     * @var string Engine version. Currently supports ["5.1", "5.5", "5.6", "5.7", "8.0"].
+Description: Engine version is required.
      */
     public $EngineVersion;
 
     /**
-     * @var string Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     * @var string Default parameter template type. Supported values include "HIGH_STABILITY" - high-stability template, "HIGH_PERFORMANCE" - high-performance template. Default value: HIGH_STABILITY.
      */
     public $TemplateType;
 
     /**
-     * @var string Parameter template engine. Default value: `InnoDB`.
+     * @var string Parameter template engine, default value: InnoDB, valid values: InnoDB, RocksDB.
      */
     public $EngineType;
 
     /**
-     * @param string $EngineVersion Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
-     * @param string $TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
-     * @param string $EngineType Parameter template engine. Default value: `InnoDB`.
+     * @param string $EngineVersion Engine version. Currently supports ["5.1", "5.5", "5.6", "5.7", "8.0"].
+Description: Engine version is required.
+     * @param string $TemplateType Default parameter template type. Supported values include "HIGH_STABILITY" - high-stability template, "HIGH_PERFORMANCE" - high-performance template. Default value: HIGH_STABILITY.
+     * @param string $EngineType Parameter template engine, default value: InnoDB, valid values: InnoDB, RocksDB.
      */
     function __construct()
     {

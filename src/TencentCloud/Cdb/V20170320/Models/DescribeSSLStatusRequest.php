@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSSLStatus request structure.
  *
- * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API. Note: Either the instance ID or read-only group ID parameter needs to be specified. To query the enabling status of the SSL for two-node or three-node instances, you need to specify the instance ID parameter. Single-node (cloud disk) and Cluster Edition instances do not support enabling SSL; thus, queries are not supported.
- * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API. Note: Either the instance ID or read-only group ID parameter needs to be specified. To query the enabling status of the SSL for two-node or three-node instances, you need to specify the instance ID parameter. Single-node (cloud disk) and Cluster Edition instances do not support enabling SSL; thus, queries are not supported.
- * @method string getRoGroupId() Obtain Read-only group ID, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/product/236/35704) API. Note: Either the instance ID or read-only group ID parameter needs to be specified. To query the enabling status of the SSL for read-only instances or groups, you need to specify the RoGroupId parameter. Note that the value should be the read-only group ID. Single-node (cloud disk) and Cluster Edition instances do not support enabling SSL; thus, queries are not supported.
- * @method void setRoGroupId(string $RoGroupId) Set Read-only group ID, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/product/236/35704) API. Note: Either the instance ID or read-only group ID parameter needs to be specified. To query the enabling status of the SSL for read-only instances or groups, you need to specify the RoGroupId parameter. Note that the value should be the read-only group ID. Single-node (cloud disk) and Cluster Edition instances do not support enabling SSL; thus, queries are not supported.
+ * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+Description: Fill in either the instance ID or the read-only group ID. To query the SSL activation status of two-node or three-node instances, enter the instance ID parameter. Single-node (cloud disk) and cloud disk edition instances do not support enabling SSL, so queries are not supported.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+Description: Fill in either the instance ID or the read-only group ID. To query the SSL activation status of two-node or three-node instances, enter the instance ID parameter. Single-node (cloud disk) and cloud disk edition instances do not support enabling SSL, so queries are not supported.
+ * @method string getRoGroupId() Obtain Read-only group ID. Obtain through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
+Description: Fill in either the instance ID or the read-only group ID. To query the SSL activation status of a read-only instance or read-only group, fill in the RoGroupId parameter. Note that you should always enter the read-only group ID. Single-node (cloud disk) and cloud disk edition instances do not support enabling SSL, so they do not support querying.
+ * @method void setRoGroupId(string $RoGroupId) Set Read-only group ID. Obtain through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
+Description: Fill in either the instance ID or the read-only group ID. To query the SSL activation status of a read-only instance or read-only group, fill in the RoGroupId parameter. Note that you should always enter the read-only group ID. Single-node (cloud disk) and cloud disk edition instances do not support enabling SSL, so they do not support querying.
  */
 class DescribeSSLStatusRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API. Note: Either the instance ID or read-only group ID parameter needs to be specified. To query the enabling status of the SSL for two-node or three-node instances, you need to specify the instance ID parameter. Single-node (cloud disk) and Cluster Edition instances do not support enabling SSL; thus, queries are not supported.
+     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+Description: Fill in either the instance ID or the read-only group ID. To query the SSL activation status of two-node or three-node instances, enter the instance ID parameter. Single-node (cloud disk) and cloud disk edition instances do not support enabling SSL, so queries are not supported.
      */
     public $InstanceId;
 
     /**
-     * @var string Read-only group ID, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/product/236/35704) API. Note: Either the instance ID or read-only group ID parameter needs to be specified. To query the enabling status of the SSL for read-only instances or groups, you need to specify the RoGroupId parameter. Note that the value should be the read-only group ID. Single-node (cloud disk) and Cluster Edition instances do not support enabling SSL; thus, queries are not supported.
+     * @var string Read-only group ID. Obtain through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
+Description: Fill in either the instance ID or the read-only group ID. To query the SSL activation status of a read-only instance or read-only group, fill in the RoGroupId parameter. Note that you should always enter the read-only group ID. Single-node (cloud disk) and cloud disk edition instances do not support enabling SSL, so they do not support querying.
      */
     public $RoGroupId;
 
     /**
-     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API. Note: Either the instance ID or read-only group ID parameter needs to be specified. To query the enabling status of the SSL for two-node or three-node instances, you need to specify the instance ID parameter. Single-node (cloud disk) and Cluster Edition instances do not support enabling SSL; thus, queries are not supported.
-     * @param string $RoGroupId Read-only group ID, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/product/236/35704) API. Note: Either the instance ID or read-only group ID parameter needs to be specified. To query the enabling status of the SSL for read-only instances or groups, you need to specify the RoGroupId parameter. Note that the value should be the read-only group ID. Single-node (cloud disk) and Cluster Edition instances do not support enabling SSL; thus, queries are not supported.
+     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+Description: Fill in either the instance ID or the read-only group ID. To query the SSL activation status of two-node or three-node instances, enter the instance ID parameter. Single-node (cloud disk) and cloud disk edition instances do not support enabling SSL, so queries are not supported.
+     * @param string $RoGroupId Read-only group ID. Obtain through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
+Description: Fill in either the instance ID or the read-only group ID. To query the SSL activation status of a read-only instance or read-only group, fill in the RoGroupId parameter. Note that you should always enter the read-only group ID. Single-node (cloud disk) and cloud disk edition instances do not support enabling SSL, so they do not support querying.
      */
     function __construct()
     {

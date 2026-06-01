@@ -30,28 +30,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) Set IP address
  * @method integer getVPort() Obtain Port
  * @method void setVPort(integer $VPort) Set Port
- * @method string getWeightMode() Obtain Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWeightMode(string $WeightMode) Set Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsKickOut() Obtain Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsKickOut(boolean $IsKickOut) Set Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMinCount() Obtain Least read-only instances. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMinCount(integer $MinCount) Set Least read-only instances. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxDelay() Obtain The delay threshold. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMaxDelay(integer $MaxDelay) Set The delay threshold. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getAutoAddRo() Obtain Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAutoAddRo(boolean $AutoAddRo) Set Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getReadOnly() Obtain Whether it is read-only. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReadOnly(boolean $ReadOnly) Set Whether it is read-only. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getTransSplit() Obtain Whether to enable transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransSplit(boolean $TransSplit) Set Whether to enable transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getFailOver() Obtain Whether to enable failover Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFailOver(boolean $FailOver) Set Whether to enable failover Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getConnectionPool() Obtain Whether to enable the connection pool Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConnectionPool(boolean $ConnectionPool) Set Whether to enable the connection pool Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDesc() Obtain Note:  This field may return null, indicating that no valid values can be obtained.
- * @method void setDesc(string $Desc) Set Note:  This field may return null, indicating that no valid values can be obtained.
- * @method array getProxyAllocation() Obtain Read weight assignment for an instance Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProxyAllocation(array $ProxyAllocation) Set Read weight assignment for an instance Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getWeightMode() Obtain Weight allocation mode.
+System Auto-Assignment: "system", Custom: "custom"
+ * @method void setWeightMode(string $WeightMode) Set Weight allocation mode.
+System Auto-Assignment: "system", Custom: "custom"
+ * @method boolean getIsKickOut() Obtain Whether to enable delay removal. Parameter value: "true" | "false"
+ * @method void setIsKickOut(boolean $IsKickOut) Set Whether to enable delay removal. Parameter value: "true" | "false"
+ * @method integer getMinCount() Obtain Minimum retention quantity, minimum value: 0.
+ * @method void setMinCount(integer $MinCount) Set Minimum retention quantity, minimum value: 0.
+ * @method integer getMaxDelay() Obtain Delay removal threshold, minimum value: 0
+ * @method void setMaxDelay(integer $MaxDelay) Set Delay removal threshold, minimum value: 0
+ * @method boolean getAutoAddRo() Obtain Automatically add RO. Value: "true" | "false"
+ * @method void setAutoAddRo(boolean $AutoAddRo) Set Automatically add RO. Value: "true" | "false"
+ * @method boolean getReadOnly() Obtain Whether it is read-only. Value: "true" | "false".
+ * @method void setReadOnly(boolean $ReadOnly) Set Whether it is read-only. Value: "true" | "false".
+ * @method boolean getTransSplit() Obtain Whether transaction splitting is enabled
+ * @method void setTransSplit(boolean $TransSplit) Set Whether transaction splitting is enabled
+ * @method boolean getFailOver() Obtain Whether fault migration is enabled
+ * @method void setFailOver(boolean $FailOver) Set Whether fault migration is enabled
+ * @method boolean getConnectionPool() Obtain Whether to enable connection pool
+ * @method void setConnectionPool(boolean $ConnectionPool) Set Whether to enable connection pool
+ * @method string getDesc() Obtain Description
+ * @method void setDesc(string $Desc) Set Description
+ * @method array getProxyAllocation() Obtain Read weight distribution of an instance
+ * @method void setProxyAllocation(array $ProxyAllocation) Set Read weight distribution of an instance
+ * @method string getAccessMode() Obtain Access mode
+ * @method void setAccessMode(string $AccessMode) Set Access mode
+ * @method boolean getAutoLoadBalance() Obtain Whether automatic CLB is enabled
+ * @method void setAutoLoadBalance(boolean $AutoLoadBalance) Set Whether automatic CLB is enabled
+ * @method boolean getApNodeAsRoNode() Obtain Whether to treat libra as a read-only node
+ * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) Set Whether to treat libra as a read-only node
+ * @method boolean getApQueryToOtherNode() Obtain libra node fault, whether to forward to other nodes
+ * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) Set libra node fault, whether to forward to other nodes
  */
 class ProxyAddress extends AbstractModel
 {
@@ -81,59 +91,80 @@ class ProxyAddress extends AbstractModel
     public $VPort;
 
     /**
-     * @var string Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Weight allocation mode.
+System Auto-Assignment: "system", Custom: "custom"
      */
     public $WeightMode;
 
     /**
-     * @var boolean Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether to enable delay removal. Parameter value: "true" | "false"
      */
     public $IsKickOut;
 
     /**
-     * @var integer Least read-only instances. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Minimum retention quantity, minimum value: 0.
      */
     public $MinCount;
 
     /**
-     * @var integer The delay threshold. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Delay removal threshold, minimum value: 0
      */
     public $MaxDelay;
 
     /**
-     * @var boolean Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Automatically add RO. Value: "true" | "false"
      */
     public $AutoAddRo;
 
     /**
-     * @var boolean Whether it is read-only. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether it is read-only. Value: "true" | "false".
      */
     public $ReadOnly;
 
     /**
-     * @var boolean Whether to enable transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether transaction splitting is enabled
      */
     public $TransSplit;
 
     /**
-     * @var boolean Whether to enable failover Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether fault migration is enabled
      */
     public $FailOver;
 
     /**
-     * @var boolean Whether to enable the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether to enable connection pool
      */
     public $ConnectionPool;
 
     /**
-     * @var string Note:  This field may return null, indicating that no valid values can be obtained.
+     * @var string Description
      */
     public $Desc;
 
     /**
-     * @var array Read weight assignment for an instance Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Read weight distribution of an instance
      */
     public $ProxyAllocation;
+
+    /**
+     * @var string Access mode
+     */
+    public $AccessMode;
+
+    /**
+     * @var boolean Whether automatic CLB is enabled
+     */
+    public $AutoLoadBalance;
+
+    /**
+     * @var boolean Whether to treat libra as a read-only node
+     */
+    public $ApNodeAsRoNode;
+
+    /**
+     * @var boolean libra node fault, whether to forward to other nodes
+     */
+    public $ApQueryToOtherNode;
 
     /**
      * @param string $ProxyAddressId Address ID of the proxy group
@@ -141,17 +172,22 @@ class ProxyAddress extends AbstractModel
      * @param string $UniqSubnetId VPC subnet ID
      * @param string $Vip IP address
      * @param integer $VPort Port
-     * @param string $WeightMode Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsKickOut Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MinCount Least read-only instances. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxDelay The delay threshold. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $AutoAddRo Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $ReadOnly Whether it is read-only. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $TransSplit Whether to enable transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $FailOver Whether to enable failover Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $ConnectionPool Whether to enable the connection pool Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Desc Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param array $ProxyAllocation Read weight assignment for an instance Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $WeightMode Weight allocation mode.
+System Auto-Assignment: "system", Custom: "custom"
+     * @param boolean $IsKickOut Whether to enable delay removal. Parameter value: "true" | "false"
+     * @param integer $MinCount Minimum retention quantity, minimum value: 0.
+     * @param integer $MaxDelay Delay removal threshold, minimum value: 0
+     * @param boolean $AutoAddRo Automatically add RO. Value: "true" | "false"
+     * @param boolean $ReadOnly Whether it is read-only. Value: "true" | "false".
+     * @param boolean $TransSplit Whether transaction splitting is enabled
+     * @param boolean $FailOver Whether fault migration is enabled
+     * @param boolean $ConnectionPool Whether to enable connection pool
+     * @param string $Desc Description
+     * @param array $ProxyAllocation Read weight distribution of an instance
+     * @param string $AccessMode Access mode
+     * @param boolean $AutoLoadBalance Whether automatic CLB is enabled
+     * @param boolean $ApNodeAsRoNode Whether to treat libra as a read-only node
+     * @param boolean $ApQueryToOtherNode libra node fault, whether to forward to other nodes
      */
     function __construct()
     {
@@ -233,6 +269,22 @@ class ProxyAddress extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ProxyAllocation, $obj);
             }
+        }
+
+        if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
+            $this->AccessMode = $param["AccessMode"];
+        }
+
+        if (array_key_exists("AutoLoadBalance",$param) and $param["AutoLoadBalance"] !== null) {
+            $this->AutoLoadBalance = $param["AutoLoadBalance"];
+        }
+
+        if (array_key_exists("ApNodeAsRoNode",$param) and $param["ApNodeAsRoNode"] !== null) {
+            $this->ApNodeAsRoNode = $param["ApNodeAsRoNode"];
+        }
+
+        if (array_key_exists("ApQueryToOtherNode",$param) and $param["ApQueryToOtherNode"] !== null) {
+            $this->ApQueryToOtherNode = $param["ApQueryToOtherNode"];
         }
     }
 }

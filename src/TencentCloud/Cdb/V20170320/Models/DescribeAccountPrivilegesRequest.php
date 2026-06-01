@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method string getUser() Obtain Database user account.
- * @method void setUser(string $User) Set Database user account.
- * @method string getHost() Obtain Database account domain name.
- * @method void setHost(string $Host) Set Database account domain name.
+ * @method string getUser() Obtain Account name of the database. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+ * @method void setUser(string $User) Set Account name of the database. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+ * @method string getHost() Obtain Domain name of the database account. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
+ * @method void setHost(string $Host) Set Domain name of the database account. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
  */
 class DescribeAccountPrivilegesRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Database user account.
+     * @var string Account name of the database. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
      */
     public $User;
 
     /**
-     * @var string Database account domain name.
+     * @var string Domain name of the database account. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
      */
     public $Host;
 
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param string $User Database user account.
-     * @param string $Host Database account domain name.
+     * @param string $User Account name of the database. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+     * @param string $Host Domain name of the database account. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
      */
     function __construct()
     {

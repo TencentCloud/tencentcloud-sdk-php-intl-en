@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Import task records
  *
- * @method integer getStatus() Obtain Status value
- * @method void setStatus(integer $Status) Set Status value
- * @method integer getCode() Obtain Status value
- * @method void setCode(integer $Code) Set Status value
- * @method integer getCostTime() Obtain Execution duration
- * @method void setCostTime(integer $CostTime) Set Execution duration
+ * @method integer getStatus() Obtain Status value. 0 - Initializing, 1 - Running, 2 - Operation successful, 3 - Operation failure.
+ * @method void setStatus(integer $Status) Set Status value. 0 - Initializing, 1 - Running, 2 - Operation successful, 3 - Operation failure.
+ * @method integer getCode() Obtain Status value. Task exception when the value is negative.
+ * @method void setCode(integer $Code) Set Status value. Task exception when the value is negative.
+ * @method integer getCostTime() Obtain Execution time, unit: seconds.
+ * @method void setCostTime(integer $CostTime) Set Execution time, unit: seconds.
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getWorkId() Obtain Backend task ID
  * @method void setWorkId(string $WorkId) Set Backend task ID
  * @method string getFileName() Obtain Name of the file to be imported
  * @method void setFileName(string $FileName) Set Name of the file to be imported
- * @method integer getProcess() Obtain Execution progress
- * @method void setProcess(integer $Process) Set Execution progress
+ * @method integer getProcess() Obtain Execution progress, measurement unit: percentage.
+ * @method void setProcess(integer $Process) Set Execution progress, measurement unit: percentage.
  * @method string getCreateTime() Obtain Task creation time
  * @method void setCreateTime(string $CreateTime) Set Task creation time
- * @method string getFileSize() Obtain File size
- * @method void setFileSize(string $FileSize) Set File size
+ * @method string getFileSize() Obtain File size, unit: byte.
+ * @method void setFileSize(string $FileSize) Set File size, unit: byte.
  * @method string getMessage() Obtain Task execution information
  * @method void setMessage(string $Message) Set Task execution information
  * @method integer getJobId() Obtain Task ID
@@ -50,17 +50,17 @@ use TencentCloud\Common\AbstractModel;
 class ImportRecord extends AbstractModel
 {
     /**
-     * @var integer Status value
+     * @var integer Status value. 0 - Initializing, 1 - Running, 2 - Operation successful, 3 - Operation failure.
      */
     public $Status;
 
     /**
-     * @var integer Status value
+     * @var integer Status value. Task exception when the value is negative.
      */
     public $Code;
 
     /**
-     * @var integer Execution duration
+     * @var integer Execution time, unit: seconds.
      */
     public $CostTime;
 
@@ -80,7 +80,7 @@ class ImportRecord extends AbstractModel
     public $FileName;
 
     /**
-     * @var integer Execution progress
+     * @var integer Execution progress, measurement unit: percentage.
      */
     public $Process;
 
@@ -90,7 +90,7 @@ class ImportRecord extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string File size
+     * @var string File size, unit: byte.
      */
     public $FileSize;
 
@@ -115,15 +115,15 @@ class ImportRecord extends AbstractModel
     public $AsyncRequestId;
 
     /**
-     * @param integer $Status Status value
-     * @param integer $Code Status value
-     * @param integer $CostTime Execution duration
+     * @param integer $Status Status value. 0 - Initializing, 1 - Running, 2 - Operation successful, 3 - Operation failure.
+     * @param integer $Code Status value. Task exception when the value is negative.
+     * @param integer $CostTime Execution time, unit: seconds.
      * @param string $InstanceId Instance ID
      * @param string $WorkId Backend task ID
      * @param string $FileName Name of the file to be imported
-     * @param integer $Process Execution progress
+     * @param integer $Process Execution progress, measurement unit: percentage.
      * @param string $CreateTime Task creation time
-     * @param string $FileSize File size
+     * @param string $FileSize File size, unit: byte.
      * @param string $Message Task execution information
      * @param integer $JobId Task ID
      * @param string $DbName Name of the table to be imported

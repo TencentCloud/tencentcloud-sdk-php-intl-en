@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopRollback request structure.
  *
- * @method string getInstanceId() Obtain ID of the instance whose rollback task is canceled
- * @method void setInstanceId(string $InstanceId) Set ID of the instance whose rollback task is canceled
+ * @method string getInstanceId() Obtain Revoke the corresponding instance ID of the rollback task. Obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1).
+ * @method void setInstanceId(string $InstanceId) Set Revoke the corresponding instance ID of the rollback task. Obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1).
  */
 class StopRollbackRequest extends AbstractModel
 {
     /**
-     * @var string ID of the instance whose rollback task is canceled
+     * @var string Revoke the corresponding instance ID of the rollback task. Obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1).
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId ID of the instance whose rollback task is canceled
+     * @param string $InstanceId Revoke the corresponding instance ID of the rollback task. Obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1).
      */
     function __construct()
     {

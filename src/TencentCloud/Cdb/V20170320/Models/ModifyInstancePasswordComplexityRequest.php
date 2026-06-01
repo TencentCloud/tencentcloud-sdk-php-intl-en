@@ -20,26 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstancePasswordComplexity request structure.
  *
- * @method array getInstanceIds() Obtain Instance ID list
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID list
- * @method array getParamList() Obtain List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value). Valid values for `Name` of version 8.0: `validate_password.policy`, `validate_password.lengt`, `validate_password.mixed_case_coun`, `validate_password.number_coun`, `validate_password.special_char_count`. Valid values for `Name` of version 5.6 and 5.7: `validate_password_polic`, `validate_password_lengt` `validate_password_mixed_case_coun`, `validate_password_number_coun`, `validate_password_special_char_coun`.
- * @method void setParamList(array $ParamList) Set List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value). Valid values for `Name` of version 8.0: `validate_password.policy`, `validate_password.lengt`, `validate_password.mixed_case_coun`, `validate_password.number_coun`, `validate_password.special_char_count`. Valid values for `Name` of version 5.6 and 5.7: `validate_password_polic`, `validate_password_lengt` `validate_password_mixed_case_coun`, `validate_password_number_coun`, `validate_password_special_char_coun`.
+ * @method array getInstanceIds() Obtain Instance ID of the instance for which the password complexity needs to be modified. The [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API can be called to obtain it.
+Description: Support multiple instance IDs for modification.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID of the instance for which the password complexity needs to be modified. The [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API can be called to obtain it.
+Description: Support multiple instance IDs for modification.
+ * @method array getParamList() Obtain Options to modify password complexity. Each option is written in metric combinations. A group includes Name and CurrentValue. Among them, Name refers to the parameter name of the corresponding option, and CurrentValue represents the parameter value. For example: [{"Name": "validate_password.length", "CurrentValue": "10"}] means changing the minimum number of characters in a password to 10.
+Description: The options for modifying password complexity vary by database version of instances as follows.
+1. MySQL 8.0:
+The option validate_password.policy means the switch for password complexity. A value of LOW means disabling; a value of MEDIUM means enabling.
+The option validate_password.length indicates the minimum number of characters for the total code length.
+The option validate_password.mixed_case_count indicates the minimum number of lowercase and uppercase letters.
+Option validate_password.number_count indicates the minimum number of digits.
+The option validate_password.special_char_count indicates the minimum number of special characters.
+2. MySQL 5.6,MySQL 5.7:
+The option validate_password_policy means the password complexity switch. A value of LOW means disabling; a value of MEDIUM means enabling.
+The option validate_password_length indicates the minimum number of characters for the total code length.
+The option validate_password_mixed_case_count means the minimum number of uppercase and lowercase letters.
+Option validate_password_number_count means the minimum number of digits.
+Option validate_password_special_char_count indicates the minimum number of special characters.
+ * @method void setParamList(array $ParamList) Set Options to modify password complexity. Each option is written in metric combinations. A group includes Name and CurrentValue. Among them, Name refers to the parameter name of the corresponding option, and CurrentValue represents the parameter value. For example: [{"Name": "validate_password.length", "CurrentValue": "10"}] means changing the minimum number of characters in a password to 10.
+Description: The options for modifying password complexity vary by database version of instances as follows.
+1. MySQL 8.0:
+The option validate_password.policy means the switch for password complexity. A value of LOW means disabling; a value of MEDIUM means enabling.
+The option validate_password.length indicates the minimum number of characters for the total code length.
+The option validate_password.mixed_case_count indicates the minimum number of lowercase and uppercase letters.
+Option validate_password.number_count indicates the minimum number of digits.
+The option validate_password.special_char_count indicates the minimum number of special characters.
+2. MySQL 5.6,MySQL 5.7:
+The option validate_password_policy means the password complexity switch. A value of LOW means disabling; a value of MEDIUM means enabling.
+The option validate_password_length indicates the minimum number of characters for the total code length.
+The option validate_password_mixed_case_count means the minimum number of uppercase and lowercase letters.
+Option validate_password_number_count means the minimum number of digits.
+Option validate_password_special_char_count indicates the minimum number of special characters.
  */
 class ModifyInstancePasswordComplexityRequest extends AbstractModel
 {
     /**
-     * @var array Instance ID list
+     * @var array Instance ID of the instance for which the password complexity needs to be modified. The [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API can be called to obtain it.
+Description: Support multiple instance IDs for modification.
      */
     public $InstanceIds;
 
     /**
-     * @var array List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value). Valid values for `Name` of version 8.0: `validate_password.policy`, `validate_password.lengt`, `validate_password.mixed_case_coun`, `validate_password.number_coun`, `validate_password.special_char_count`. Valid values for `Name` of version 5.6 and 5.7: `validate_password_polic`, `validate_password_lengt` `validate_password_mixed_case_coun`, `validate_password_number_coun`, `validate_password_special_char_coun`.
+     * @var array Options to modify password complexity. Each option is written in metric combinations. A group includes Name and CurrentValue. Among them, Name refers to the parameter name of the corresponding option, and CurrentValue represents the parameter value. For example: [{"Name": "validate_password.length", "CurrentValue": "10"}] means changing the minimum number of characters in a password to 10.
+Description: The options for modifying password complexity vary by database version of instances as follows.
+1. MySQL 8.0:
+The option validate_password.policy means the switch for password complexity. A value of LOW means disabling; a value of MEDIUM means enabling.
+The option validate_password.length indicates the minimum number of characters for the total code length.
+The option validate_password.mixed_case_count indicates the minimum number of lowercase and uppercase letters.
+Option validate_password.number_count indicates the minimum number of digits.
+The option validate_password.special_char_count indicates the minimum number of special characters.
+2. MySQL 5.6,MySQL 5.7:
+The option validate_password_policy means the password complexity switch. A value of LOW means disabling; a value of MEDIUM means enabling.
+The option validate_password_length indicates the minimum number of characters for the total code length.
+The option validate_password_mixed_case_count means the minimum number of uppercase and lowercase letters.
+Option validate_password_number_count means the minimum number of digits.
+Option validate_password_special_char_count indicates the minimum number of special characters.
      */
     public $ParamList;
 
     /**
-     * @param array $InstanceIds Instance ID list
-     * @param array $ParamList List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value). Valid values for `Name` of version 8.0: `validate_password.policy`, `validate_password.lengt`, `validate_password.mixed_case_coun`, `validate_password.number_coun`, `validate_password.special_char_count`. Valid values for `Name` of version 5.6 and 5.7: `validate_password_polic`, `validate_password_lengt` `validate_password_mixed_case_coun`, `validate_password_number_coun`, `validate_password_special_char_coun`.
+     * @param array $InstanceIds Instance ID of the instance for which the password complexity needs to be modified. The [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API can be called to obtain it.
+Description: Support multiple instance IDs for modification.
+     * @param array $ParamList Options to modify password complexity. Each option is written in metric combinations. A group includes Name and CurrentValue. Among them, Name refers to the parameter name of the corresponding option, and CurrentValue represents the parameter value. For example: [{"Name": "validate_password.length", "CurrentValue": "10"}] means changing the minimum number of characters in a password to 10.
+Description: The options for modifying password complexity vary by database version of instances as follows.
+1. MySQL 8.0:
+The option validate_password.policy means the switch for password complexity. A value of LOW means disabling; a value of MEDIUM means enabling.
+The option validate_password.length indicates the minimum number of characters for the total code length.
+The option validate_password.mixed_case_count indicates the minimum number of lowercase and uppercase letters.
+Option validate_password.number_count indicates the minimum number of digits.
+The option validate_password.special_char_count indicates the minimum number of special characters.
+2. MySQL 5.6,MySQL 5.7:
+The option validate_password_policy means the password complexity switch. A value of LOW means disabling; a value of MEDIUM means enabling.
+The option validate_password_length indicates the minimum number of characters for the total code length.
+The option validate_password_mixed_case_count means the minimum number of uppercase and lowercase letters.
+Option validate_password_number_count means the minimum number of digits.
+Option validate_password_special_char_count indicates the minimum number of special characters.
      */
     function __construct()
     {

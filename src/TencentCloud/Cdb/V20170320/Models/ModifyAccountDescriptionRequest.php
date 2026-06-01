@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method array getAccounts() Obtain TencentDB account
- * @method void setAccounts(array $Accounts) Set TencentDB account
- * @method string getDescription() Obtain Database account remarks
- * @method void setDescription(string $Description) Set Database account remarks
+ * @method array getAccounts() Obtain TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+ * @method void setAccounts(array $Accounts) Set TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+ * @method string getDescription() Obtain Remark information of the database account. Input limit: 255 characters.
+ * @method void setDescription(string $Description) Set Remark information of the database account. Input limit: 255 characters.
  */
 class ModifyAccountDescriptionRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyAccountDescriptionRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array TencentDB account
+     * @var array TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
      */
     public $Accounts;
 
     /**
-     * @var string Database account remarks
+     * @var string Remark information of the database account. Input limit: 255 characters.
      */
     public $Description;
 
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param array $Accounts TencentDB account
-     * @param string $Description Database account remarks
+     * @param array $Accounts TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+     * @param string $Description Remark information of the database account. Input limit: 255 characters.
      */
     function __construct()
     {

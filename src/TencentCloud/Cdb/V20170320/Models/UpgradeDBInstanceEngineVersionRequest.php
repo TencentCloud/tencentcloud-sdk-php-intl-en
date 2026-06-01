@@ -20,50 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeDBInstanceEngineVersion request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
- * @method string getEngineVersion() Obtain Version of primary instance database engine. Value range: 5.6, 5.7
- * @method void setEngineVersion(string $EngineVersion) Set Version of primary instance database engine. Value range: 5.6, 5.7
- * @method integer getWaitSwitch() Obtain Switch mode for accessing the new instance.  Valid values:  `0` (switch immediately), `1` (switch within a time window). Default value: `0`. If the value is `1`, the switch process will be performed within a time window. Or, you can call the [SwitchForUpgrade](https://intl.cloud.tencent.com/document/product/236/15864?from_cn_redirect=1) API to trigger the process.
- * @method void setWaitSwitch(integer $WaitSwitch) Set Switch mode for accessing the new instance.  Valid values:  `0` (switch immediately), `1` (switch within a time window). Default value: `0`. If the value is `1`, the switch process will be performed within a time window. Or, you can call the [SwitchForUpgrade](https://intl.cloud.tencent.com/document/product/236/15864?from_cn_redirect=1) API to trigger the process.
- * @method integer getUpgradeSubversion() Obtain Whether to upgrade kernel minor version. Valid values: 1 (upgrade kernel minor version), 0 (upgrade database engine).
- * @method void setUpgradeSubversion(integer $UpgradeSubversion) Set Whether to upgrade kernel minor version. Valid values: 1 (upgrade kernel minor version), 0 (upgrade database engine).
- * @method integer getMaxDelayTime() Obtain Delay threshold. Value range: 1-10
- * @method void setMaxDelayTime(integer $MaxDelayTime) Set Delay threshold. Value range: 1-10
+ * @method string getInstanceId() Obtain <p>Instance ID, in the format such as cdb-c1nl9rpv or cdbro-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. You can obtain it through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">Query Instance List</a> API, with its value being the InstanceId field in the output parameter.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID, in the format such as cdb-c1nl9rpv or cdbro-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. You can obtain it through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">Query Instance List</a> API, with its value being the InstanceId field in the output parameter.</p>
+ * @method string getEngineVersion() Obtain <p>Database engine version of the primary instance. Supported values include 5.6, 5.7, 8.0.<br>Description: Cross-version upgrade is not supported. Downgrade is not supported after upgrade.</p>
+ * @method void setEngineVersion(string $EngineVersion) Set <p>Database engine version of the primary instance. Supported values include 5.6, 5.7, 8.0.<br>Description: Cross-version upgrade is not supported. Downgrade is not supported after upgrade.</p>
+ * @method integer getWaitSwitch() Obtain <p>The way to switch to a new instance defaults to 0. Supported values include: 0 - switch immediately, 1 - switch in a time window. When the value is 1, during the upgrade process, the switchover to a new instance will be performed in the time window, or the user can proactively call the API <a href="https://www.tencentcloud.com/document/product/236/15864?from_cn_redirect=1">switch to a new instance</a> to trigger the process.</p>
+ * @method void setWaitSwitch(integer $WaitSwitch) Set <p>The way to switch to a new instance defaults to 0. Supported values include: 0 - switch immediately, 1 - switch in a time window. When the value is 1, during the upgrade process, the switchover to a new instance will be performed in the time window, or the user can proactively call the API <a href="https://www.tencentcloud.com/document/product/236/15864?from_cn_redirect=1">switch to a new instance</a> to trigger the process.</p>
+ * @method integer getUpgradeSubversion() Obtain <p>Whether to upgrade the kernel subversion. Supported values: 1 - upgrade kernel subversion; 0 - upgrade database engine version. No default value. Specify the version type to upgrade.</p>
+ * @method void setUpgradeSubversion(integer $UpgradeSubversion) Set <p>Whether to upgrade the kernel subversion. Supported values: 1 - upgrade kernel subversion; 0 - upgrade database engine version. No default value. Specify the version type to upgrade.</p>
+ * @method integer getMaxDelayTime() Obtain <p>Delay threshold. Value ranges from 1 to 10. No default value. When not specified, the delay threshold is 0, which means the delay threshold is not set.</p>
+ * @method void setMaxDelayTime(integer $MaxDelayTime) Set <p>Delay threshold. Value ranges from 1 to 10. No default value. When not specified, the delay threshold is 0, which means the delay threshold is not set.</p>
+ * @method integer getIgnoreErrKeyword() Obtain <p>Whether to ignore keyword errors when upgrading from 5.7 to 8.0. The value ranges from 0 to 1. 1 means ignored, 0 means not ignored. No default value. Not specified means no action taken.</p>
+ * @method void setIgnoreErrKeyword(integer $IgnoreErrKeyword) Set <p>Whether to ignore keyword errors when upgrading from 5.7 to 8.0. The value ranges from 0 to 1. 1 means ignored, 0 means not ignored. No default value. Not specified means no action taken.</p>
+ * @method array getParamList() Obtain <p>Upgrade support for specified parameters</p>
+ * @method void setParamList(array $ParamList) Set <p>Upgrade support for specified parameters</p>
  */
 class UpgradeDBInstanceEngineVersionRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
+     * @var string <p>Instance ID, in the format such as cdb-c1nl9rpv or cdbro-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. You can obtain it through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">Query Instance List</a> API, with its value being the InstanceId field in the output parameter.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Version of primary instance database engine. Value range: 5.6, 5.7
+     * @var string <p>Database engine version of the primary instance. Supported values include 5.6, 5.7, 8.0.<br>Description: Cross-version upgrade is not supported. Downgrade is not supported after upgrade.</p>
      */
     public $EngineVersion;
 
     /**
-     * @var integer Switch mode for accessing the new instance.  Valid values:  `0` (switch immediately), `1` (switch within a time window). Default value: `0`. If the value is `1`, the switch process will be performed within a time window. Or, you can call the [SwitchForUpgrade](https://intl.cloud.tencent.com/document/product/236/15864?from_cn_redirect=1) API to trigger the process.
+     * @var integer <p>The way to switch to a new instance defaults to 0. Supported values include: 0 - switch immediately, 1 - switch in a time window. When the value is 1, during the upgrade process, the switchover to a new instance will be performed in the time window, or the user can proactively call the API <a href="https://www.tencentcloud.com/document/product/236/15864?from_cn_redirect=1">switch to a new instance</a> to trigger the process.</p>
      */
     public $WaitSwitch;
 
     /**
-     * @var integer Whether to upgrade kernel minor version. Valid values: 1 (upgrade kernel minor version), 0 (upgrade database engine).
+     * @var integer <p>Whether to upgrade the kernel subversion. Supported values: 1 - upgrade kernel subversion; 0 - upgrade database engine version. No default value. Specify the version type to upgrade.</p>
      */
     public $UpgradeSubversion;
 
     /**
-     * @var integer Delay threshold. Value range: 1-10
+     * @var integer <p>Delay threshold. Value ranges from 1 to 10. No default value. When not specified, the delay threshold is 0, which means the delay threshold is not set.</p>
      */
     public $MaxDelayTime;
 
     /**
-     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
-     * @param string $EngineVersion Version of primary instance database engine. Value range: 5.6, 5.7
-     * @param integer $WaitSwitch Switch mode for accessing the new instance.  Valid values:  `0` (switch immediately), `1` (switch within a time window). Default value: `0`. If the value is `1`, the switch process will be performed within a time window. Or, you can call the [SwitchForUpgrade](https://intl.cloud.tencent.com/document/product/236/15864?from_cn_redirect=1) API to trigger the process.
-     * @param integer $UpgradeSubversion Whether to upgrade kernel minor version. Valid values: 1 (upgrade kernel minor version), 0 (upgrade database engine).
-     * @param integer $MaxDelayTime Delay threshold. Value range: 1-10
+     * @var integer <p>Whether to ignore keyword errors when upgrading from 5.7 to 8.0. The value ranges from 0 to 1. 1 means ignored, 0 means not ignored. No default value. Not specified means no action taken.</p>
+     */
+    public $IgnoreErrKeyword;
+
+    /**
+     * @var array <p>Upgrade support for specified parameters</p>
+     */
+    public $ParamList;
+
+    /**
+     * @param string $InstanceId <p>Instance ID, in the format such as cdb-c1nl9rpv or cdbro-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. You can obtain it through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">Query Instance List</a> API, with its value being the InstanceId field in the output parameter.</p>
+     * @param string $EngineVersion <p>Database engine version of the primary instance. Supported values include 5.6, 5.7, 8.0.<br>Description: Cross-version upgrade is not supported. Downgrade is not supported after upgrade.</p>
+     * @param integer $WaitSwitch <p>The way to switch to a new instance defaults to 0. Supported values include: 0 - switch immediately, 1 - switch in a time window. When the value is 1, during the upgrade process, the switchover to a new instance will be performed in the time window, or the user can proactively call the API <a href="https://www.tencentcloud.com/document/product/236/15864?from_cn_redirect=1">switch to a new instance</a> to trigger the process.</p>
+     * @param integer $UpgradeSubversion <p>Whether to upgrade the kernel subversion. Supported values: 1 - upgrade kernel subversion; 0 - upgrade database engine version. No default value. Specify the version type to upgrade.</p>
+     * @param integer $MaxDelayTime <p>Delay threshold. Value ranges from 1 to 10. No default value. When not specified, the delay threshold is 0, which means the delay threshold is not set.</p>
+     * @param integer $IgnoreErrKeyword <p>Whether to ignore keyword errors when upgrading from 5.7 to 8.0. The value ranges from 0 to 1. 1 means ignored, 0 means not ignored. No default value. Not specified means no action taken.</p>
+     * @param array $ParamList <p>Upgrade support for specified parameters</p>
      */
     function __construct()
     {
@@ -96,6 +112,19 @@ class UpgradeDBInstanceEngineVersionRequest extends AbstractModel
 
         if (array_key_exists("MaxDelayTime",$param) and $param["MaxDelayTime"] !== null) {
             $this->MaxDelayTime = $param["MaxDelayTime"];
+        }
+
+        if (array_key_exists("IgnoreErrKeyword",$param) and $param["IgnoreErrKeyword"] !== null) {
+            $this->IgnoreErrKeyword = $param["IgnoreErrKeyword"];
+        }
+
+        if (array_key_exists("ParamList",$param) and $param["ParamList"] !== null) {
+            $this->ParamList = [];
+            foreach ($param["ParamList"] as $key => $value){
+                $obj = new UpgradeEngineVersionParams();
+                $obj->deserialize($value);
+                array_push($this->ParamList, $obj);
+            }
         }
     }
 }

@@ -20,66 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Proxy instance
  *
- * @method string getInstanceId() Obtain Instance ID Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance ID Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceName() Obtain Instance name Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceName(string $InstanceName) Set Instance name Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getInstanceType() Obtain Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceType(integer $InstanceType) Set Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getWeight() Obtain Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWeight(integer $Weight) Set Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegion() Obtain Instance region Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Instance region Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getZone() Obtain Instance AZ Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZone(string $Zone) Set Instance AZ Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
+ * @method integer getInstanceType() Obtain Instance type: 1 master primary instance; 2 read-only instance; 3 dr disaster recovery instance; 4 sdr (small disaster recovery) instance
+ * @method void setInstanceType(integer $InstanceType) Set Instance type: 1 master primary instance; 2 read-only instance; 3 dr disaster recovery instance; 4 sdr (small disaster recovery) instance
+ * @method integer getStatus() Obtain Instance status. Valid values: 0: creating; 1: running; 4: isolation; 5: isolated.
+ * @method void setStatus(integer $Status) Set Instance status. Valid values: 0: creating; 1: running; 4: isolation; 5: isolated.
+ * @method integer getWeight() Obtain Read-only weight. If the weight is automatically assigned by the system, this value does not take effect and only indicates whether the instance is enabled or not.
+ * @method void setWeight(integer $Weight) Set Read-only weight. If the weight is automatically assigned by the system, this value does not take effect and only indicates whether the instance is enabled or not.
+ * @method string getRegion() Obtain Instance region
+ * @method void setRegion(string $Region) Set Instance region
+ * @method string getZone() Obtain Availability zone to which the instance belongs
+ * @method void setZone(string $Zone) Set Availability zone to which the instance belongs
+ * @method string getInstNodeId() Obtain Instance Node ID
+ * @method void setInstNodeId(string $InstNodeId) Set Instance Node ID
+ * @method string getInstNodeRole() Obtain Node role
+ * @method void setInstNodeRole(string $InstNodeRole) Set Node role
  */
 class ProxyInst extends AbstractModel
 {
     /**
-     * @var string Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
-     * @var integer Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Instance type: 1 master primary instance; 2 read-only instance; 3 dr disaster recovery instance; 4 sdr (small disaster recovery) instance
      */
     public $InstanceType;
 
     /**
-     * @var integer Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Instance status. Valid values: 0: creating; 1: running; 4: isolation; 5: isolated.
      */
     public $Status;
 
     /**
-     * @var integer Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Read-only weight. If the weight is automatically assigned by the system, this value does not take effect and only indicates whether the instance is enabled or not.
      */
     public $Weight;
 
     /**
-     * @var string Instance region Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance region
      */
     public $Region;
 
     /**
-     * @var string Instance AZ Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Availability zone to which the instance belongs
      */
     public $Zone;
 
     /**
-     * @param string $InstanceId Instance ID Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceName Instance name Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $InstanceType Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Weight Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Region Instance region Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Zone Instance AZ Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance Node ID
+     */
+    public $InstNodeId;
+
+    /**
+     * @var string Node role
+     */
+    public $InstNodeRole;
+
+    /**
+     * @param string $InstanceId Instance ID.
+     * @param string $InstanceName Instance name.
+     * @param integer $InstanceType Instance type: 1 master primary instance; 2 read-only instance; 3 dr disaster recovery instance; 4 sdr (small disaster recovery) instance
+     * @param integer $Status Instance status. Valid values: 0: creating; 1: running; 4: isolation; 5: isolated.
+     * @param integer $Weight Read-only weight. If the weight is automatically assigned by the system, this value does not take effect and only indicates whether the instance is enabled or not.
+     * @param string $Region Instance region
+     * @param string $Zone Availability zone to which the instance belongs
+     * @param string $InstNodeId Instance Node ID
+     * @param string $InstNodeRole Node role
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class ProxyInst extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("InstNodeId",$param) and $param["InstNodeId"] !== null) {
+            $this->InstNodeId = $param["InstNodeId"];
+        }
+
+        if (array_key_exists("InstNodeRole",$param) and $param["InstNodeRole"] !== null) {
+            $this->InstNodeRole = $param["InstNodeRole"];
         }
     }
 }

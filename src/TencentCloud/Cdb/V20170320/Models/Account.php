@@ -20,26 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TencentDB account information
  *
- * @method string getUser() Obtain New account name
- * @method void setUser(string $User) Set New account name
- * @method string getHost() Obtain New account domain name
- * @method void setHost(string $Host) Set New account domain name
+ * @method string getUser() Obtain Account name, enter 1-32 characters.
+ * @method void setUser(string $User) Set Account name, enter 1-32 characters.
+ * @method string getHost() Obtain Account's host.
+Note:
+1. IP format. You can specify a percent sign (%).
+2. Multiple hosts are separated by a separator, which supports ;, |, line break, and space.
+ * @method void setHost(string $Host) Set Account's host.
+Note:
+1. IP format. You can specify a percent sign (%).
+2. Multiple hosts are separated by a separator, which supports ;, |, line break, and space.
  */
 class Account extends AbstractModel
 {
     /**
-     * @var string New account name
+     * @var string Account name, enter 1-32 characters.
      */
     public $User;
 
     /**
-     * @var string New account domain name
+     * @var string Account's host.
+Note:
+1. IP format. You can specify a percent sign (%).
+2. Multiple hosts are separated by a separator, which supports ;, |, line break, and space.
      */
     public $Host;
 
     /**
-     * @param string $User New account name
-     * @param string $Host New account domain name
+     * @param string $User Account name, enter 1-32 characters.
+     * @param string $Host Account's host.
+Note:
+1. IP format. You can specify a percent sign (%).
+2. Multiple hosts are separated by a separator, which supports ;, |, line break, and space.
      */
     function __construct()
     {

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Backup filename
  * @method integer getSize() Obtain Backup file size in bytes
  * @method void setSize(integer $Size) Set Backup file size in bytes
- * @method string getDate() Obtain Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
- * @method void setDate(string $Date) Set Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
+ * @method string getDate() Obtain Backup snapshot time. Time format: 2016-03-17.
+ * @method void setDate(string $Date) Set Backup snapshot time. Time format: 2016-03-17.
  * @method string getIntranetUrl() Obtain Download address on the private network
  * @method void setIntranetUrl(string $IntranetUrl) Set Download address on the private network
  * @method string getInternetUrl() Obtain Download address on the public network
@@ -46,7 +46,7 @@ class SlowLogInfo extends AbstractModel
     public $Size;
 
     /**
-     * @var string Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
+     * @var string Backup snapshot time. Time format: 2016-03-17.
      */
     public $Date;
 
@@ -68,7 +68,7 @@ class SlowLogInfo extends AbstractModel
     /**
      * @param string $Name Backup filename
      * @param integer $Size Backup file size in bytes
-     * @param string $Date Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
+     * @param string $Date Backup snapshot time. Time format: 2016-03-17.
      * @param string $IntranetUrl Download address on the private network
      * @param string $InternetUrl Download address on the public network
      * @param string $Type Log type. Value range: slowlog (slow log)

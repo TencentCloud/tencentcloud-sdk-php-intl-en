@@ -42,14 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyName(string $PolicyName) Set Audit policy name
  * @method string getRuleId() Obtain Audit rule ID
  * @method void setRuleId(string $RuleId) Set Audit rule ID
- * @method string getRuleName() Obtain Audit rule name
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setRuleName(string $RuleName) Set Audit rule name
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getRuleName() Obtain Audit rule name.
+ * @method void setRuleName(string $RuleName) Set Audit rule name.
  * @method string getInstanceName() Obtain Database instance name
-Note: This field may return `null`, indicating that no valid value was found.
  * @method void setInstanceName(string $InstanceName) Set Database instance name
-Note: This field may return `null`, indicating that no valid value was found.
  */
 class AuditPolicy extends AbstractModel
 {
@@ -93,14 +89,12 @@ class AuditPolicy extends AbstractModel
     public $RuleId;
 
     /**
-     * @var string Audit rule name
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string Audit rule name.
      */
     public $RuleName;
 
     /**
      * @var string Database instance name
-Note: This field may return `null`, indicating that no valid value was found.
      */
     public $InstanceName;
 
@@ -116,10 +110,8 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $ModifyTime Last modified time of audit policy in the format of 2019-03-20 17:09:13
      * @param string $PolicyName Audit policy name
      * @param string $RuleId Audit rule ID
-     * @param string $RuleName Audit rule name
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $RuleName Audit rule name.
      * @param string $InstanceName Database instance name
-Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {

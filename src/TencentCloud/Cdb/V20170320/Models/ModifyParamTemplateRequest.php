@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyParamTemplate request structure.
  *
- * @method integer getTemplateId() Obtain Template ID.
- * @method void setTemplateId(integer $TemplateId) Set Template ID.
- * @method string getName() Obtain Template name (up to 64 characters)
- * @method void setName(string $Name) Set Template name (up to 64 characters)
+ * @method integer getTemplateId() Obtain Template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
+ * @method void setTemplateId(integer $TemplateId) Set Template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
+ * @method string getName() Obtain Template name, supports numbers, English uppercase and lowercase letters, Chinese, and special characters _-./()[]+=:@, and the length cannot exceed 60.
+ * @method void setName(string $Name) Set Template name, supports numbers, English uppercase and lowercase letters, Chinese, and special characters _-./()[]+=:@, and the length cannot exceed 60.
  * @method string getDescription() Obtain Template description (up to 255 characters)
  * @method void setDescription(string $Description) Set Template description (up to 255 characters)
  * @method array getParamList() Obtain List of parameters.
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyParamTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Template ID.
+     * @var integer Template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
      */
     public $TemplateId;
 
     /**
-     * @var string Template name (up to 64 characters)
+     * @var string Template name, supports numbers, English uppercase and lowercase letters, Chinese, and special characters _-./()[]+=:@, and the length cannot exceed 60.
      */
     public $Name;
 
@@ -52,8 +52,8 @@ class ModifyParamTemplateRequest extends AbstractModel
     public $ParamList;
 
     /**
-     * @param integer $TemplateId Template ID.
-     * @param string $Name Template name (up to 64 characters)
+     * @param integer $TemplateId Template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
+     * @param string $Name Template name, supports numbers, English uppercase and lowercase letters, Chinese, and special characters _-./()[]+=:@, and the length cannot exceed 60.
      * @param string $Description Template description (up to 255 characters)
      * @param array $ParamList List of parameters.
      */

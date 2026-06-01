@@ -20,174 +20,194 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Backup details
  *
- * @method string getName() Obtain Backup filename
- * @method void setName(string $Name) Set Backup filename
- * @method integer getSize() Obtain Backup file size in bytes
- * @method void setSize(integer $Size) Set Backup file size in bytes
- * @method string getDate() Obtain Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
- * @method void setDate(string $Date) Set Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
- * @method string getIntranetUrl() Obtain Download address
- * @method void setIntranetUrl(string $IntranetUrl) Set Download address
- * @method string getInternetUrl() Obtain Download address
- * @method void setInternetUrl(string $InternetUrl) Set Download address
- * @method string getType() Obtain Log type. Valid values: `logical` (logical cold backup), `physical` (physical cold backup).
- * @method void setType(string $Type) Set Log type. Valid values: `logical` (logical cold backup), `physical` (physical cold backup).
- * @method integer getBackupId() Obtain Backup subtask ID, which is used when backup files are deleted
- * @method void setBackupId(integer $BackupId) Set Backup subtask ID, which is used when backup files are deleted
- * @method string getStatus() Obtain Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
- * @method void setStatus(string $Status) Set Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
- * @method string getFinishTime() Obtain Backup task completion time
- * @method void setFinishTime(string $FinishTime) Set Backup task completion time
- * @method string getCreator() Obtain (This field will be disused and is thus not recommended) backup creator. Valid values: `SYSTEM` (created by system), `Uin` (initiator's `Uin` value).
- * @method void setCreator(string $Creator) Set (This field will be disused and is thus not recommended) backup creator. Valid values: `SYSTEM` (created by system), `Uin` (initiator's `Uin` value).
- * @method string getStartTime() Obtain Backup task start time
- * @method void setStartTime(string $StartTime) Set Backup task start time
- * @method string getMethod() Obtain Backup method. Valid values: `full` (full backup), `partial` (partial backup).
- * @method void setMethod(string $Method) Set Backup method. Valid values: `full` (full backup), `partial` (partial backup).
- * @method string getWay() Obtain Backup mode. Valid values: `manual` (manual backup), `automatic` (automatic backup).
- * @method void setWay(string $Way) Set Backup mode. Valid values: `manual` (manual backup), `automatic` (automatic backup).
- * @method string getManualBackupName() Obtain Manual backup alias
- * @method void setManualBackupName(string $ManualBackupName) Set Manual backup alias
- * @method string getSaveMode() Obtain Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
- * @method void setSaveMode(string $SaveMode) Set Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
- * @method string getRegion() Obtain The region where local backup resides
- * @method void setRegion(string $Region) Set The region where local backup resides
- * @method array getRemoteInfo() Obtain Detailed information of remote backups
- * @method void setRemoteInfo(array $RemoteInfo) Set Detailed information of remote backups
- * @method integer getCosStorageType() Obtain Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
- * @method void setCosStorageType(integer $CosStorageType) Set Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
- * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
- * @method string getEncryptionFlag() Obtain Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEncryptionFlag(string $EncryptionFlag) Set Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain <p>Backup file name</p>
+ * @method void setName(string $Name) Set <p>Backup file name</p>
+ * @method integer getSize() Obtain <p>Backup file size, unit: Byte</p>
+ * @method void setSize(integer $Size) Set <p>Backup file size, unit: Byte</p>
+ * @method string getDate() Obtain <p>Backup snapshot time. Time format: 2016-03-17 02:10:37</p>
+ * @method void setDate(string $Date) Set <p>Backup snapshot time. Time format: 2016-03-17 02:10:37</p>
+ * @method string getIntranetUrl() Obtain <p>Download link</p>
+ * @method void setIntranetUrl(string $IntranetUrl) Set <p>Download link</p>
+ * @method string getInternetUrl() Obtain <p>Download link</p>
+ * @method void setInternetUrl(string $InternetUrl) Set <p>Download link</p>
+ * @method string getType() Obtain <p>Specific type of logs. Possible values: "logical": logical cold backup, "physical": physical cold backup.</p>
+ * @method void setType(string $Type) Set <p>Specific type of logs. Possible values: "logical": logical cold backup, "physical": physical cold backup.</p>
+ * @method integer getBackupId() Obtain <p>ID of the backup subtask, used when deleting backup files</p>
+ * @method void setBackupId(integer $BackupId) Set <p>ID of the backup subtask, used when deleting backup files</p>
+ * @method string getStatus() Obtain <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
+ * @method void setStatus(string $Status) Set <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
+ * @method string getFinishTime() Obtain <p>Backup task completion time</p>
+ * @method void setFinishTime(string $FinishTime) Set <p>Backup task completion time</p>
+ * @method string getCreator() Obtain <p>(This value will be deprecated and is not recommended for use) Creator of the backup. Valid values: SYSTEM - generated by the system, Uin - Uin value of the initiator.</p>
+ * @method void setCreator(string $Creator) Set <p>(This value will be deprecated and is not recommended for use) Creator of the backup. Valid values: SYSTEM - generated by the system, Uin - Uin value of the initiator.</p>
+ * @method string getStartTime() Obtain <p>Start time of the backup task</p>
+ * @method void setStartTime(string $StartTime) Set <p>Start time of the backup task</p>
+ * @method string getMethod() Obtain <p>Backup method. Possible values are "full": full backup, "partial": partial backup.</p>
+ * @method void setMethod(string $Method) Set <p>Backup method. Possible values are "full": full backup, "partial": partial backup.</p>
+ * @method string getWay() Obtain <p>Backup method. Possible values are "manual": manual backup, "automatic": automatic backup.</p>
+ * @method void setWay(string $Way) Set <p>Backup method. Possible values are "manual": manual backup, "automatic": automatic backup.</p>
+ * @method string getManualBackupName() Obtain <p>Manual backup alias</p>
+ * @method void setManualBackupName(string $ManualBackupName) Set <p>Manual backup alias</p>
+ * @method string getSaveMode() Obtain <p>Backup retention type, save_mode_regular - Regular backup saving, save_mode_period - Periodic backup</p>
+ * @method void setSaveMode(string $SaveMode) Set <p>Backup retention type, save_mode_regular - Regular backup saving, save_mode_period - Periodic backup</p>
+ * @method string getRegion() Obtain <p>Local backup region</p>
+ * @method void setRegion(string $Region) Set <p>Local backup region</p>
+ * @method array getRemoteInfo() Obtain <p>Detailed information of offsite backup</p>
+ * @method void setRemoteInfo(array $RemoteInfo) Set <p>Detailed information of offsite backup</p>
+ * @method integer getCosStorageType() Obtain <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
+ * @method void setCosStorageType(integer $CosStorageType) Set <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
+ * @method string getInstanceId() Obtain <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
+ * @method integer getProgress() Obtain <p>Backup completion progress</p>
+ * @method void setProgress(integer $Progress) Set <p>Backup completion progress</p>
+ * @method string getEncryptionFlag() Obtain <p>Whether the backup file is encrypted, on-encrypted, off-unencrypted</p>
+ * @method void setEncryptionFlag(string $EncryptionFlag) Set <p>Whether the backup file is encrypted, on-encrypted, off-unencrypted</p>
+ * @method string getExecutedGTIDSet() Obtain <p>Backup GTID position</p>
+ * @method void setExecutedGTIDSet(string $ExecutedGTIDSet) Set <p>Backup GTID position</p>
+ * @method string getMD5() Obtain <p>MD5 value of the backup file</p>
+ * @method void setMD5(string $MD5) Set <p>MD5 value of the backup file</p>
  */
 class BackupInfo extends AbstractModel
 {
     /**
-     * @var string Backup filename
+     * @var string <p>Backup file name</p>
      */
     public $Name;
 
     /**
-     * @var integer Backup file size in bytes
+     * @var integer <p>Backup file size, unit: Byte</p>
      */
     public $Size;
 
     /**
-     * @var string Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
+     * @var string <p>Backup snapshot time. Time format: 2016-03-17 02:10:37</p>
      */
     public $Date;
 
     /**
-     * @var string Download address
+     * @var string <p>Download link</p>
      */
     public $IntranetUrl;
 
     /**
-     * @var string Download address
+     * @var string <p>Download link</p>
      */
     public $InternetUrl;
 
     /**
-     * @var string Log type. Valid values: `logical` (logical cold backup), `physical` (physical cold backup).
+     * @var string <p>Specific type of logs. Possible values: "logical": logical cold backup, "physical": physical cold backup.</p>
      */
     public $Type;
 
     /**
-     * @var integer Backup subtask ID, which is used when backup files are deleted
+     * @var integer <p>ID of the backup subtask, used when deleting backup files</p>
      */
     public $BackupId;
 
     /**
-     * @var string Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+     * @var string <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
      */
     public $Status;
 
     /**
-     * @var string Backup task completion time
+     * @var string <p>Backup task completion time</p>
      */
     public $FinishTime;
 
     /**
-     * @var string (This field will be disused and is thus not recommended) backup creator. Valid values: `SYSTEM` (created by system), `Uin` (initiator's `Uin` value).
+     * @var string <p>(This value will be deprecated and is not recommended for use) Creator of the backup. Valid values: SYSTEM - generated by the system, Uin - Uin value of the initiator.</p>
      */
     public $Creator;
 
     /**
-     * @var string Backup task start time
+     * @var string <p>Start time of the backup task</p>
      */
     public $StartTime;
 
     /**
-     * @var string Backup method. Valid values: `full` (full backup), `partial` (partial backup).
+     * @var string <p>Backup method. Possible values are "full": full backup, "partial": partial backup.</p>
      */
     public $Method;
 
     /**
-     * @var string Backup mode. Valid values: `manual` (manual backup), `automatic` (automatic backup).
+     * @var string <p>Backup method. Possible values are "manual": manual backup, "automatic": automatic backup.</p>
      */
     public $Way;
 
     /**
-     * @var string Manual backup alias
+     * @var string <p>Manual backup alias</p>
      */
     public $ManualBackupName;
 
     /**
-     * @var string Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
+     * @var string <p>Backup retention type, save_mode_regular - Regular backup saving, save_mode_period - Periodic backup</p>
      */
     public $SaveMode;
 
     /**
-     * @var string The region where local backup resides
+     * @var string <p>Local backup region</p>
      */
     public $Region;
 
     /**
-     * @var array Detailed information of remote backups
+     * @var array <p>Detailed information of offsite backup</p>
      */
     public $RemoteInfo;
 
     /**
-     * @var integer Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+     * @var integer <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
      */
     public $CosStorageType;
 
     /**
-     * @var string Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @var string <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Backup completion progress</p>
+     */
+    public $Progress;
+
+    /**
+     * @var string <p>Whether the backup file is encrypted, on-encrypted, off-unencrypted</p>
      */
     public $EncryptionFlag;
 
     /**
-     * @param string $Name Backup filename
-     * @param integer $Size Backup file size in bytes
-     * @param string $Date Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
-     * @param string $IntranetUrl Download address
-     * @param string $InternetUrl Download address
-     * @param string $Type Log type. Valid values: `logical` (logical cold backup), `physical` (physical cold backup).
-     * @param integer $BackupId Backup subtask ID, which is used when backup files are deleted
-     * @param string $Status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
-     * @param string $FinishTime Backup task completion time
-     * @param string $Creator (This field will be disused and is thus not recommended) backup creator. Valid values: `SYSTEM` (created by system), `Uin` (initiator's `Uin` value).
-     * @param string $StartTime Backup task start time
-     * @param string $Method Backup method. Valid values: `full` (full backup), `partial` (partial backup).
-     * @param string $Way Backup mode. Valid values: `manual` (manual backup), `automatic` (automatic backup).
-     * @param string $ManualBackupName Manual backup alias
-     * @param string $SaveMode Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
-     * @param string $Region The region where local backup resides
-     * @param array $RemoteInfo Detailed information of remote backups
-     * @param integer $CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
-     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
-     * @param string $EncryptionFlag Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Backup GTID position</p>
+     */
+    public $ExecutedGTIDSet;
+
+    /**
+     * @var string <p>MD5 value of the backup file</p>
+     */
+    public $MD5;
+
+    /**
+     * @param string $Name <p>Backup file name</p>
+     * @param integer $Size <p>Backup file size, unit: Byte</p>
+     * @param string $Date <p>Backup snapshot time. Time format: 2016-03-17 02:10:37</p>
+     * @param string $IntranetUrl <p>Download link</p>
+     * @param string $InternetUrl <p>Download link</p>
+     * @param string $Type <p>Specific type of logs. Possible values: "logical": logical cold backup, "physical": physical cold backup.</p>
+     * @param integer $BackupId <p>ID of the backup subtask, used when deleting backup files</p>
+     * @param string $Status <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
+     * @param string $FinishTime <p>Backup task completion time</p>
+     * @param string $Creator <p>(This value will be deprecated and is not recommended for use) Creator of the backup. Valid values: SYSTEM - generated by the system, Uin - Uin value of the initiator.</p>
+     * @param string $StartTime <p>Start time of the backup task</p>
+     * @param string $Method <p>Backup method. Possible values are "full": full backup, "partial": partial backup.</p>
+     * @param string $Way <p>Backup method. Possible values are "manual": manual backup, "automatic": automatic backup.</p>
+     * @param string $ManualBackupName <p>Manual backup alias</p>
+     * @param string $SaveMode <p>Backup retention type, save_mode_regular - Regular backup saving, save_mode_period - Periodic backup</p>
+     * @param string $Region <p>Local backup region</p>
+     * @param array $RemoteInfo <p>Detailed information of offsite backup</p>
+     * @param integer $CosStorageType <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
+     * @param string $InstanceId <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
+     * @param integer $Progress <p>Backup completion progress</p>
+     * @param string $EncryptionFlag <p>Whether the backup file is encrypted, on-encrypted, off-unencrypted</p>
+     * @param string $ExecutedGTIDSet <p>Backup GTID position</p>
+     * @param string $MD5 <p>MD5 value of the backup file</p>
      */
     function __construct()
     {
@@ -283,8 +303,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->InstanceId = $param["InstanceId"];
         }
 
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
+        }
+
         if (array_key_exists("EncryptionFlag",$param) and $param["EncryptionFlag"] !== null) {
             $this->EncryptionFlag = $param["EncryptionFlag"];
+        }
+
+        if (array_key_exists("ExecutedGTIDSet",$param) and $param["ExecutedGTIDSet"] !== null) {
+            $this->ExecutedGTIDSet = $param["ExecutedGTIDSet"];
+        }
+
+        if (array_key_exists("MD5",$param) and $param["MD5"] !== null) {
+            $this->MD5 = $param["MD5"];
         }
     }
 }

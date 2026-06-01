@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeErrorLogData request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method integer getStartTime() Obtain Start timestamp, such as 1585142640.
- * @method void setStartTime(integer $StartTime) Set Start timestamp, such as 1585142640.
- * @method integer getEndTime() Obtain End timestamp, such as 1585142640.
- * @method void setEndTime(integer $EndTime) Set End timestamp, such as 1585142640.
- * @method array getKeyWords() Obtain List of keywords to match. Up to 15 keywords are supported.
- * @method void setKeyWords(array $KeyWords) Set List of keywords to match. Up to 15 keywords are supported.
+ * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method integer getStartTime() Obtain Start timestamp. For example, 1585142640, in seconds.
+ * @method void setStartTime(integer $StartTime) Set Start timestamp. For example, 1585142640, in seconds.
+ * @method integer getEndTime() Obtain End timestamp. For example, 1585142640, in seconds.
+ * @method void setEndTime(integer $EndTime) Set End timestamp. For example, 1585142640, in seconds.
+ * @method array getKeyWords() Obtain Keyword list to match, supports up to 15 keywords with fuzzy matching support.
+ * @method void setKeyWords(array $KeyWords) Set Keyword list to match, supports up to 15 keywords with fuzzy matching support.
  * @method integer getLimit() Obtain The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
  * @method void setLimit(integer $Limit) Set The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
  * @method integer getOffset() Obtain Offset. Default value: 0.
@@ -38,22 +38,22 @@ use TencentCloud\Common\AbstractModel;
 class DescribeErrorLogDataRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
     /**
-     * @var integer Start timestamp, such as 1585142640.
+     * @var integer Start timestamp. For example, 1585142640, in seconds.
      */
     public $StartTime;
 
     /**
-     * @var integer End timestamp, such as 1585142640.
+     * @var integer End timestamp. For example, 1585142640, in seconds.
      */
     public $EndTime;
 
     /**
-     * @var array List of keywords to match. Up to 15 keywords are supported.
+     * @var array Keyword list to match, supports up to 15 keywords with fuzzy matching support.
      */
     public $KeyWords;
 
@@ -73,10 +73,10 @@ class DescribeErrorLogDataRequest extends AbstractModel
     public $InstType;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param integer $StartTime Start timestamp, such as 1585142640.
-     * @param integer $EndTime End timestamp, such as 1585142640.
-     * @param array $KeyWords List of keywords to match. Up to 15 keywords are supported.
+     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param integer $StartTime Start timestamp. For example, 1585142640, in seconds.
+     * @param integer $EndTime End timestamp. For example, 1585142640, in seconds.
+     * @param array $KeyWords Keyword list to match, supports up to 15 keywords with fuzzy matching support.
      * @param integer $Limit The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
      * @param integer $Offset Offset. Default value: 0.
      * @param string $InstType This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.

@@ -20,58 +20,65 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceConfig response structure.
  *
- * @method integer getProtectMode() Obtain Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
- * @method void setProtectMode(integer $ProtectMode) Set Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
- * @method integer getDeployMode() Obtain Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
- * @method void setDeployMode(integer $DeployMode) Set Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
- * @method string getZone() Obtain Instance AZ information in the format of "ap-shanghai-2".
- * @method void setZone(string $Zone) Set Instance AZ information in the format of "ap-shanghai-2".
- * @method SlaveConfig getSlaveConfig() Obtain Configurations of the replica node
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setSlaveConfig(SlaveConfig $SlaveConfig) Set Configurations of the replica node
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method BackupConfig getBackupConfig() Obtain Configurations of the second replica node of a strong-sync instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setBackupConfig(BackupConfig $BackupConfig) Set Configurations of the second replica node of a strong-sync instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method boolean getSwitched() Obtain This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
- * @method void setSwitched(boolean $Switched) Set This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
+ * @method integer getProtectMode() Obtain <p>Data protection method of the primary instance, possible returned values: 0 - asynchronous replication mode, 1 - semi-sync replication mode, 2 - strong sync replication mode.</p>
+ * @method void setProtectMode(integer $ProtectMode) Set <p>Data protection method of the primary instance, possible returned values: 0 - asynchronous replication mode, 1 - semi-sync replication mode, 2 - strong sync replication mode.</p>
+ * @method integer getDeployMode() Obtain <p>Primary instance deployment mode. Possible returned values: 0 - single AZ deployment, 1 - multi-AZ deployment.</p>
+ * @method void setDeployMode(integer $DeployMode) Set <p>Primary instance deployment mode. Possible returned values: 0 - single AZ deployment, 1 - multi-AZ deployment.</p>
+ * @method string getZone() Obtain <p>Primary AZ information of the instance, in the format of "ap-shanghai-2".</p>
+ * @method void setZone(string $Zone) Set <p>Primary AZ information of the instance, in the format of "ap-shanghai-2".</p>
+ * @method SlaveConfig getSlaveConfig() Obtain <p>Configuration message of the first standby for two-node, three-node, and four-node instances.</p><p>When querying a two-node instance, this parameter returns the standby information of the two-node instance. When querying a three-node or four-node instance, this parameter returns the first standby information of the instance.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSlaveConfig(SlaveConfig $SlaveConfig) Set <p>Configuration message of the first standby for two-node, three-node, and four-node instances.</p><p>When querying a two-node instance, this parameter returns the standby information of the two-node instance. When querying a three-node or four-node instance, this parameter returns the first standby information of the instance.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method BackupConfig getBackupConfig() Obtain <p>Configuration message of the second standby database for three-node and 4-node instances.</p><p>When querying three-node and 4-node instances, this parameter returns the information of the second standby database.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBackupConfig(BackupConfig $BackupConfig) Set <p>Configuration message of the second standby database for three-node and 4-node instances.</p><p>When querying three-node and 4-node instances, this parameter returns the information of the second standby database.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getSwitched() Obtain <p>Whether to switch over to the standby database.</p>
+ * @method void setSwitched(boolean $Switched) Set <p>Whether to switch over to the standby database.</p>
+ * @method BackupConfig getFourthConfig() Obtain <p>Configuration message of the third standby database in a 4-node instance.</p><p>When querying a 4-node instance, this parameter returns the info of the third standby database.</p>
+ * @method void setFourthConfig(BackupConfig $FourthConfig) Set <p>Configuration message of the third standby database in a 4-node instance.</p><p>When querying a 4-node instance, this parameter returns the info of the third standby database.</p>
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribeDBInstanceConfigResponse extends AbstractModel
 {
     /**
-     * @var integer Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+     * @var integer <p>Data protection method of the primary instance, possible returned values: 0 - asynchronous replication mode, 1 - semi-sync replication mode, 2 - strong sync replication mode.</p>
      */
     public $ProtectMode;
 
     /**
-     * @var integer Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
+     * @var integer <p>Primary instance deployment mode. Possible returned values: 0 - single AZ deployment, 1 - multi-AZ deployment.</p>
      */
     public $DeployMode;
 
     /**
-     * @var string Instance AZ information in the format of "ap-shanghai-2".
+     * @var string <p>Primary AZ information of the instance, in the format of "ap-shanghai-2".</p>
      */
     public $Zone;
 
     /**
-     * @var SlaveConfig Configurations of the replica node
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var SlaveConfig <p>Configuration message of the first standby for two-node, three-node, and four-node instances.</p><p>When querying a two-node instance, this parameter returns the standby information of the two-node instance. When querying a three-node or four-node instance, this parameter returns the first standby information of the instance.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SlaveConfig;
 
     /**
-     * @var BackupConfig Configurations of the second replica node of a strong-sync instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var BackupConfig <p>Configuration message of the second standby database for three-node and 4-node instances.</p><p>When querying three-node and 4-node instances, this parameter returns the information of the second standby database.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BackupConfig;
 
     /**
-     * @var boolean This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
+     * @var boolean <p>Whether to switch over to the standby database.</p>
      */
     public $Switched;
+
+    /**
+     * @var BackupConfig <p>Configuration message of the third standby database in a 4-node instance.</p><p>When querying a 4-node instance, this parameter returns the info of the third standby database.</p>
+     */
+    public $FourthConfig;
 
     /**
      * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -79,14 +86,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $RequestId;
 
     /**
-     * @param integer $ProtectMode Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
-     * @param integer $DeployMode Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
-     * @param string $Zone Instance AZ information in the format of "ap-shanghai-2".
-     * @param SlaveConfig $SlaveConfig Configurations of the replica node
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param BackupConfig $BackupConfig Configurations of the second replica node of a strong-sync instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param boolean $Switched This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
+     * @param integer $ProtectMode <p>Data protection method of the primary instance, possible returned values: 0 - asynchronous replication mode, 1 - semi-sync replication mode, 2 - strong sync replication mode.</p>
+     * @param integer $DeployMode <p>Primary instance deployment mode. Possible returned values: 0 - single AZ deployment, 1 - multi-AZ deployment.</p>
+     * @param string $Zone <p>Primary AZ information of the instance, in the format of "ap-shanghai-2".</p>
+     * @param SlaveConfig $SlaveConfig <p>Configuration message of the first standby for two-node, three-node, and four-node instances.</p><p>When querying a two-node instance, this parameter returns the standby information of the two-node instance. When querying a three-node or four-node instance, this parameter returns the first standby information of the instance.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BackupConfig $BackupConfig <p>Configuration message of the second standby database for three-node and 4-node instances.</p><p>When querying three-node and 4-node instances, this parameter returns the information of the second standby database.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $Switched <p>Whether to switch over to the standby database.</p>
+     * @param BackupConfig $FourthConfig <p>Configuration message of the third standby database in a 4-node instance.</p><p>When querying a 4-node instance, this parameter returns the info of the third standby database.</p>
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -126,6 +134,11 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
         if (array_key_exists("Switched",$param) and $param["Switched"] !== null) {
             $this->Switched = $param["Switched"];
+        }
+
+        if (array_key_exists("FourthConfig",$param) and $param["FourthConfig"] !== null) {
+            $this->FourthConfig = new BackupConfig();
+            $this->FourthConfig->deserialize($param["FourthConfig"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

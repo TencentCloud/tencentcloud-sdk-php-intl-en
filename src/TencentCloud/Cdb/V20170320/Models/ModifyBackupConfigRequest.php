@@ -20,20 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBackupConfig request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method integer getExpireDays() Obtain Backup file retention period in days. Value range: 7-1830.
- * @method void setExpireDays(integer $ExpireDays) Set Backup file retention period in days. Value range: 7-1830.
+ * @method string getInstanceId() Obtain Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+ * @method integer getExpireDays() Obtain Retention time of the data backup file, in days.
+1. MySQL two-node, three-node, and cloud disk edition data backup files can be retained for 7-1830 days.
+2. MySQL single-node (cloud disk) data backup files can be retained for 7-30 days.
+ * @method void setExpireDays(integer $ExpireDays) Set Retention time of the data backup file, in days.
+1. MySQL two-node, three-node, and cloud disk edition data backup files can be retained for 7-1830 days.
+2. MySQL single-node (cloud disk) data backup files can be retained for 7-30 days.
  * @method string getStartTime() Obtain (This parameter will be disused. The `BackupTimeWindow` parameter is recommended.) Backup time range in the format of 02:00-06:00, with the start time and end time on the hour. Valid values: 00:00-12:00, 02:00-06:00, 06:00-10:00, 10:00-14:00, 14:00-18:00, 18:00-22:00, 22:00-02:00.
  * @method void setStartTime(string $StartTime) Set (This parameter will be disused. The `BackupTimeWindow` parameter is recommended.) Backup time range in the format of 02:00-06:00, with the start time and end time on the hour. Valid values: 00:00-12:00, 02:00-06:00, 06:00-10:00, 10:00-14:00, 14:00-18:00, 18:00-22:00, 22:00-02:00.
  * @method string getBackupMethod() Obtain Automatic backup mode. Only `physical` (physical cold backup) is supported
  * @method void setBackupMethod(string $BackupMethod) Set Automatic backup mode. Only `physical` (physical cold backup) is supported
- * @method integer getBinlogExpireDays() Obtain Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files.
- * @method void setBinlogExpireDays(integer $BinlogExpireDays) Set Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files.
+ * @method integer getBinlogExpireDays() Obtain binlog retention time in days.
+1. MySQL two-node, three-node, and cloud disk log backup files can be retained for 7 to 3650 days.
+2. MySQL single-node (cloud disk) log backup files can be retained for 7-30 days.
+ * @method void setBinlogExpireDays(integer $BinlogExpireDays) Set binlog retention time in days.
+1. MySQL two-node, three-node, and cloud disk log backup files can be retained for 7 to 3650 days.
+2. MySQL single-node (cloud disk) log backup files can be retained for 7-30 days.
  * @method CommonTimeWindow getBackupTimeWindow() Obtain Backup time window; for example, to set up backup between 10:00 and 14:00 on every Tuesday and Sunday, you should set this parameter as follows: {"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"} (Note: You can set up backup on different days, but the backup time windows need to be the same. If this field is set, the `StartTime` field will be ignored)
  * @method void setBackupTimeWindow(CommonTimeWindow $BackupTimeWindow) Set Backup time window; for example, to set up backup between 10:00 and 14:00 on every Tuesday and Sunday, you should set this parameter as follows: {"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"} (Note: You can set up backup on different days, but the backup time windows need to be the same. If this field is set, the `StartTime` field will be ignored)
- * @method string getEnableBackupPeriodSave() Obtain Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
- * @method void setEnableBackupPeriodSave(string $EnableBackupPeriodSave) Set Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
+ * @method string getEnableBackupPeriodSave() Obtain Periodic backup retention switch. off - periodic backup retention policy is not enabled, on - periodic backup retention policy is enabled. Default is off.
+ * @method void setEnableBackupPeriodSave(string $EnableBackupPeriodSave) Set Periodic backup retention switch. off - periodic backup retention policy is not enabled, on - periodic backup retention policy is enabled. Default is off.
  * @method string getEnableBackupPeriodLongTermSave() Obtain Switch for long-term backup retention (This field can be ignored, for its feature hasn’t been launched). Valid values: `off` (disable), `on` (enable). Default value: `off`. Once enabled, the parameters (BackupPeriodSaveDays, BackupPeriodSaveInterval, and BackupPeriodSaveCount) will be invalid.
  * @method void setEnableBackupPeriodLongTermSave(string $EnableBackupPeriodLongTermSave) Set Switch for long-term backup retention (This field can be ignored, for its feature hasn’t been launched). Valid values: `off` (disable), `on` (enable). Default value: `off`. Once enabled, the parameters (BackupPeriodSaveDays, BackupPeriodSaveInterval, and BackupPeriodSaveCount) will be invalid.
  * @method integer getBackupPeriodSaveDays() Obtain Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
@@ -44,32 +52,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupPeriodSaveCount(integer $BackupPeriodSaveCount) Set Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
  * @method string getStartBackupPeriodSaveDate() Obtain The start time in the format of yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
  * @method void setStartBackupPeriodSaveDate(string $StartBackupPeriodSaveDate) Set The start time in the format of yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
- * @method string getEnableBackupArchive() Obtain Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
- * @method void setEnableBackupArchive(string $EnableBackupArchive) Set Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+ * @method string getEnableBackupArchive() Obtain Whether the data backup/archive policy is enabled. off - disabled, on - enabled. If not specified, remain unchanged.
+ * @method void setEnableBackupArchive(string $EnableBackupArchive) Set Whether the data backup/archive policy is enabled. off - disabled, on - enabled. If not specified, remain unchanged.
  * @method integer getBackupArchiveDays() Obtain The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
  * @method void setBackupArchiveDays(integer $BackupArchiveDays) Set The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
  * @method integer getBinlogArchiveDays() Obtain The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
  * @method void setBinlogArchiveDays(integer $BinlogArchiveDays) Set The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
- * @method string getEnableBinlogArchive() Obtain Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
- * @method void setEnableBinlogArchive(string $EnableBinlogArchive) Set Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
- * @method string getEnableBackupStandby() Obtain Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
- * @method void setEnableBackupStandby(string $EnableBackupStandby) Set Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+ * @method string getEnableBinlogArchive() Obtain Whether to enable log backup archive strategy. off - off, on - on. If not specified, remain unchanged.
+ * @method void setEnableBinlogArchive(string $EnableBinlogArchive) Set Whether to enable log backup archive strategy. off - off, on - on. If not specified, remain unchanged.
+ * @method string getEnableBackupStandby() Obtain Whether to enable the standard storage policy for data backup. off - disabled, on - enabled. If not specified, it remains unchanged.
+ * @method void setEnableBackupStandby(string $EnableBackupStandby) Set Whether to enable the standard storage policy for data backup. off - disabled, on - enabled. If not specified, it remains unchanged.
  * @method integer getBackupStandbyDays() Obtain The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
  * @method void setBackupStandbyDays(integer $BackupStandbyDays) Set The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
- * @method string getEnableBinlogStandby() Obtain Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
- * @method void setEnableBinlogStandby(string $EnableBinlogStandby) Set Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+ * @method string getEnableBinlogStandby() Obtain Whether to enable log backup standard storage policy. off - off, on - on. If not specified, remain unchanged.
+ * @method void setEnableBinlogStandby(string $EnableBinlogStandby) Set Whether to enable log backup standard storage policy. off - off, on - on. If not specified, remain unchanged.
  * @method integer getBinlogStandbyDays() Obtain The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
  * @method void setBinlogStandbyDays(integer $BinlogStandbyDays) Set The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
  */
 class ModifyBackupConfigRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * @var string Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public $InstanceId;
 
     /**
-     * @var integer Backup file retention period in days. Value range: 7-1830.
+     * @var integer Retention time of the data backup file, in days.
+1. MySQL two-node, three-node, and cloud disk edition data backup files can be retained for 7-1830 days.
+2. MySQL single-node (cloud disk) data backup files can be retained for 7-30 days.
      */
     public $ExpireDays;
 
@@ -84,7 +94,9 @@ class ModifyBackupConfigRequest extends AbstractModel
     public $BackupMethod;
 
     /**
-     * @var integer Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files.
+     * @var integer binlog retention time in days.
+1. MySQL two-node, three-node, and cloud disk log backup files can be retained for 7 to 3650 days.
+2. MySQL single-node (cloud disk) log backup files can be retained for 7-30 days.
      */
     public $BinlogExpireDays;
 
@@ -94,7 +106,7 @@ class ModifyBackupConfigRequest extends AbstractModel
     public $BackupTimeWindow;
 
     /**
-     * @var string Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
+     * @var string Periodic backup retention switch. off - periodic backup retention policy is not enabled, on - periodic backup retention policy is enabled. Default is off.
      */
     public $EnableBackupPeriodSave;
 
@@ -124,7 +136,7 @@ class ModifyBackupConfigRequest extends AbstractModel
     public $StartBackupPeriodSaveDate;
 
     /**
-     * @var string Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * @var string Whether the data backup/archive policy is enabled. off - disabled, on - enabled. If not specified, remain unchanged.
      */
     public $EnableBackupArchive;
 
@@ -139,12 +151,12 @@ class ModifyBackupConfigRequest extends AbstractModel
     public $BinlogArchiveDays;
 
     /**
-     * @var string Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * @var string Whether to enable log backup archive strategy. off - off, on - on. If not specified, remain unchanged.
      */
     public $EnableBinlogArchive;
 
     /**
-     * @var string Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * @var string Whether to enable the standard storage policy for data backup. off - disabled, on - enabled. If not specified, it remains unchanged.
      */
     public $EnableBackupStandby;
 
@@ -154,7 +166,7 @@ class ModifyBackupConfigRequest extends AbstractModel
     public $BackupStandbyDays;
 
     /**
-     * @var string Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * @var string Whether to enable log backup standard storage policy. off - off, on - on. If not specified, remain unchanged.
      */
     public $EnableBinlogStandby;
 
@@ -164,25 +176,29 @@ class ModifyBackupConfigRequest extends AbstractModel
     public $BinlogStandbyDays;
 
     /**
-     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param integer $ExpireDays Backup file retention period in days. Value range: 7-1830.
+     * @param string $InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+     * @param integer $ExpireDays Retention time of the data backup file, in days.
+1. MySQL two-node, three-node, and cloud disk edition data backup files can be retained for 7-1830 days.
+2. MySQL single-node (cloud disk) data backup files can be retained for 7-30 days.
      * @param string $StartTime (This parameter will be disused. The `BackupTimeWindow` parameter is recommended.) Backup time range in the format of 02:00-06:00, with the start time and end time on the hour. Valid values: 00:00-12:00, 02:00-06:00, 06:00-10:00, 10:00-14:00, 14:00-18:00, 18:00-22:00, 22:00-02:00.
      * @param string $BackupMethod Automatic backup mode. Only `physical` (physical cold backup) is supported
-     * @param integer $BinlogExpireDays Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files.
+     * @param integer $BinlogExpireDays binlog retention time in days.
+1. MySQL two-node, three-node, and cloud disk log backup files can be retained for 7 to 3650 days.
+2. MySQL single-node (cloud disk) log backup files can be retained for 7-30 days.
      * @param CommonTimeWindow $BackupTimeWindow Backup time window; for example, to set up backup between 10:00 and 14:00 on every Tuesday and Sunday, you should set this parameter as follows: {"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"} (Note: You can set up backup on different days, but the backup time windows need to be the same. If this field is set, the `StartTime` field will be ignored)
-     * @param string $EnableBackupPeriodSave Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
+     * @param string $EnableBackupPeriodSave Periodic backup retention switch. off - periodic backup retention policy is not enabled, on - periodic backup retention policy is enabled. Default is off.
      * @param string $EnableBackupPeriodLongTermSave Switch for long-term backup retention (This field can be ignored, for its feature hasn’t been launched). Valid values: `off` (disable), `on` (enable). Default value: `off`. Once enabled, the parameters (BackupPeriodSaveDays, BackupPeriodSaveInterval, and BackupPeriodSaveCount) will be invalid.
      * @param integer $BackupPeriodSaveDays Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
      * @param string $BackupPeriodSaveInterval Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
      * @param integer $BackupPeriodSaveCount Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
      * @param string $StartBackupPeriodSaveDate The start time in the format of yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
-     * @param string $EnableBackupArchive Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * @param string $EnableBackupArchive Whether the data backup/archive policy is enabled. off - disabled, on - enabled. If not specified, remain unchanged.
      * @param integer $BackupArchiveDays The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
      * @param integer $BinlogArchiveDays The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
-     * @param string $EnableBinlogArchive Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
-     * @param string $EnableBackupStandby Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * @param string $EnableBinlogArchive Whether to enable log backup archive strategy. off - off, on - on. If not specified, remain unchanged.
+     * @param string $EnableBackupStandby Whether to enable the standard storage policy for data backup. off - disabled, on - enabled. If not specified, it remains unchanged.
      * @param integer $BackupStandbyDays The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
-     * @param string $EnableBinlogStandby Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * @param string $EnableBinlogStandby Whether to enable log backup standard storage policy. off - off, on - on. If not specified, remain unchanged.
      * @param integer $BinlogStandbyDays The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
      */
     function __construct()

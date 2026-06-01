@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxyCustomConf request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
  * @method integer getOffset() Obtain Paginated query offset
  * @method void setOffset(integer $Offset) Set Paginated query offset
  * @method integer getLimit() Obtain Maximum entries returned per page
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeProxyCustomConfRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class DescribeProxyCustomConfRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      * @param integer $Offset Paginated query offset
      * @param integer $Limit Maximum entries returned per page
      */

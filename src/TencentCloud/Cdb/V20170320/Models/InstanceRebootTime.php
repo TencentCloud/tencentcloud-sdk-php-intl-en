@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Estimated time of instance restart
  *
- * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method integer getTimeInSeconds() Obtain Estimated restart time
- * @method void setTimeInSeconds(integer $TimeInSeconds) Set Estimated restart time
+ * @method string getInstanceId() Obtain Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+ * @method integer getTimeInSeconds() Obtain Expected restart time, unit: second.
+ * @method void setTimeInSeconds(integer $TimeInSeconds) Set Expected restart time, unit: second.
  */
 class InstanceRebootTime extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * @var string Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public $InstanceId;
 
     /**
-     * @var integer Estimated restart time
+     * @var integer Expected restart time, unit: second.
      */
     public $TimeInSeconds;
 
     /**
-     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param integer $TimeInSeconds Estimated restart time
+     * @param string $InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+     * @param integer $TimeInSeconds Expected restart time, unit: second.
      */
     function __construct()
     {

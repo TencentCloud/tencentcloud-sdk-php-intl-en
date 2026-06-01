@@ -20,42 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTimeWindow request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method array getTimeRanges() Obtain Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
- * @method void setTimeRanges(array $TimeRanges) Set Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
- * @method array getWeekdays() Obtain Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
- * @method void setWeekdays(array $Weekdays) Set Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
- * @method integer getMaxDelayTime() Obtain Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
- * @method void setMaxDelayTime(integer $MaxDelayTime) Set Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+ * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method array getTimeRanges() Obtain The modified maintenance time slot. Among them, each time period is in the format of 10:00-12:00. The start and end time is aligned by half hour. The shortest is half hour and the longest is three hours. Up to two time periods can be set. The start and end time ranges from [00:00, 24:00].
+Description: The following is an example of setting two time periods in json.
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
+ * @method void setTimeRanges(array $TimeRanges) Set The modified maintenance time slot. Among them, each time period is in the format of 10:00-12:00. The start and end time is aligned by half hour. The shortest is half hour and the longest is three hours. Up to two time periods can be set. The start and end time ranges from [00:00, 24:00].
+Description: The following is an example of setting two time periods in json.
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
+ * @method array getWeekdays() Obtain Specify which day to modify the maintenance time slot. Possible values are: monday, tuesday, wednesday, thursday, friday, saturday, sunday. If not specified or empty, modify all seven days of the week by default.
+Description: The json example for modifying more than one day is as follows.
+[
+    "monday",
+    "tuesday"
+  ]
+ * @method void setWeekdays(array $Weekdays) Set Specify which day to modify the maintenance time slot. Possible values are: monday, tuesday, wednesday, thursday, friday, saturday, sunday. If not specified or empty, modify all seven days of the week by default.
+Description: The json example for modifying more than one day is as follows.
+[
+    "monday",
+    "tuesday"
+  ]
+ * @method integer getMaxDelayTime() Obtain Data latency threshold (seconds), only applicable to primary instance and disaster recovery instance. No modification by default to keep the original threshold. Value ranges from 1 to 10 integers.
+ * @method void setMaxDelayTime(integer $MaxDelayTime) Set Data latency threshold (seconds), only applicable to primary instance and disaster recovery instance. No modification by default to keep the original threshold. Value ranges from 1 to 10 integers.
  */
 class ModifyTimeWindowRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
     /**
-     * @var array Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
+     * @var array The modified maintenance time slot. Among them, each time period is in the format of 10:00-12:00. The start and end time is aligned by half hour. The shortest is half hour and the longest is three hours. Up to two time periods can be set. The start and end time ranges from [00:00, 24:00].
+Description: The following is an example of setting two time periods in json.
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
      */
     public $TimeRanges;
 
     /**
-     * @var array Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
+     * @var array Specify which day to modify the maintenance time slot. Possible values are: monday, tuesday, wednesday, thursday, friday, saturday, sunday. If not specified or empty, modify all seven days of the week by default.
+Description: The json example for modifying more than one day is as follows.
+[
+    "monday",
+    "tuesday"
+  ]
      */
     public $Weekdays;
 
     /**
-     * @var integer Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+     * @var integer Data latency threshold (seconds), only applicable to primary instance and disaster recovery instance. No modification by default to keep the original threshold. Value ranges from 1 to 10 integers.
      */
     public $MaxDelayTime;
 
     /**
-     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param array $TimeRanges Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
-     * @param array $Weekdays Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
-     * @param integer $MaxDelayTime Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param array $TimeRanges The modified maintenance time slot. Among them, each time period is in the format of 10:00-12:00. The start and end time is aligned by half hour. The shortest is half hour and the longest is three hours. Up to two time periods can be set. The start and end time ranges from [00:00, 24:00].
+Description: The following is an example of setting two time periods in json.
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
+     * @param array $Weekdays Specify which day to modify the maintenance time slot. Possible values are: monday, tuesday, wednesday, thursday, friday, saturday, sunday. If not specified or empty, modify all seven days of the week by default.
+Description: The json example for modifying more than one day is as follows.
+[
+    "monday",
+    "tuesday"
+  ]
+     * @param integer $MaxDelayTime Data latency threshold (seconds), only applicable to primary instance and disaster recovery instance. No modification by default to keep the original threshold. Value ranges from 1 to 10 integers.
      */
     function __construct()
     {

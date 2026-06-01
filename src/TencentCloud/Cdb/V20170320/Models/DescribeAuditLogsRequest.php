@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditLogs request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getStartTime() Obtain Start time
- * @method void setStartTime(string $StartTime) Set Start time
- * @method string getEndTime() Obtain End time
- * @method void setEndTime(string $EndTime) Set End time
+ * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method string getStartTime() Obtain Start time. We recommend that the interval between start and end time does not exceed 7 days.
+ * @method void setStartTime(string $StartTime) Set Start time. We recommend that the interval between start and end time does not exceed 7 days.
+ * @method string getEndTime() Obtain End time. We recommend that the interval between start and end time does not exceed 7 days.
+ * @method void setEndTime(string $EndTime) Set End time. We recommend that the interval between start and end time does not exceed 7 days.
  * @method integer getLimit() Obtain The pagination parameter, which specifies the number of entries per page. Maximum value: 100 (default).
  * @method void setLimit(integer $Limit) Set The pagination parameter, which specifies the number of entries per page. Maximum value: 100 (default).
- * @method integer getOffset() Obtain Pagination offset
- * @method void setOffset(integer $Offset) Set Pagination offset
- * @method string getOrder() Obtain Sorting order Valid values: `ASC (ascending), `DESC` (descending).
- * @method void setOrder(string $Order) Set Sorting order Valid values: `ASC (ascending), `DESC` (descending).
- * @method string getOrderBy() Obtain Sorting field Valid values: 
-`timestamp`: Timestamp,
-`affectRows`: Number of affected rows,
-`execTime`: Execution time.
- * @method void setOrderBy(string $OrderBy) Set Sorting field Valid values: 
-`timestamp`: Timestamp,
-`affectRows`: Number of affected rows,
-`execTime`: Execution time.
+ * @method integer getOffset() Obtain Log offset, supports up to 65535 log entries for offset querying. Fill in the range: 0 - 65535.
+ * @method void setOffset(integer $Offset) Set Log offset, supports up to 65535 log entries for offset querying. Fill in the range: 0 - 65535.
+ * @method string getOrder() Obtain Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC".
+ * @method void setOrder(string $Order) Set Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC".
+ * @method string getOrderBy() Obtain Field to sort by. Valid values:
+"timestamp" - timestamp;
+"affectRows" - Number of affected rows.
+"execTime" - Execution time.
+ * @method void setOrderBy(string $OrderBy) Set Field to sort by. Valid values:
+"timestamp" - timestamp;
+"affectRows" - Number of affected rows.
+"execTime" - Execution time.
  * @method array getLogFilter() Obtain Filter. Multiple values are in `AND` relationship.
  * @method void setLogFilter(array $LogFilter) Set Filter. Multiple values are in `AND` relationship.
  */
 class DescribeAuditLogsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
     /**
-     * @var string Start time
+     * @var string Start time. We recommend that the interval between start and end time does not exceed 7 days.
      */
     public $StartTime;
 
     /**
-     * @var string End time
+     * @var string End time. We recommend that the interval between start and end time does not exceed 7 days.
      */
     public $EndTime;
 
@@ -66,20 +66,20 @@ class DescribeAuditLogsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer Pagination offset
+     * @var integer Log offset, supports up to 65535 log entries for offset querying. Fill in the range: 0 - 65535.
      */
     public $Offset;
 
     /**
-     * @var string Sorting order Valid values: `ASC (ascending), `DESC` (descending).
+     * @var string Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC".
      */
     public $Order;
 
     /**
-     * @var string Sorting field Valid values: 
-`timestamp`: Timestamp,
-`affectRows`: Number of affected rows,
-`execTime`: Execution time.
+     * @var string Field to sort by. Valid values:
+"timestamp" - timestamp;
+"affectRows" - Number of affected rows.
+"execTime" - Execution time.
      */
     public $OrderBy;
 
@@ -89,16 +89,16 @@ class DescribeAuditLogsRequest extends AbstractModel
     public $LogFilter;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $StartTime Start time
-     * @param string $EndTime End time
+     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param string $StartTime Start time. We recommend that the interval between start and end time does not exceed 7 days.
+     * @param string $EndTime End time. We recommend that the interval between start and end time does not exceed 7 days.
      * @param integer $Limit The pagination parameter, which specifies the number of entries per page. Maximum value: 100 (default).
-     * @param integer $Offset Pagination offset
-     * @param string $Order Sorting order Valid values: `ASC (ascending), `DESC` (descending).
-     * @param string $OrderBy Sorting field Valid values: 
-`timestamp`: Timestamp,
-`affectRows`: Number of affected rows,
-`execTime`: Execution time.
+     * @param integer $Offset Log offset, supports up to 65535 log entries for offset querying. Fill in the range: 0 - 65535.
+     * @param string $Order Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC".
+     * @param string $OrderBy Field to sort by. Valid values:
+"timestamp" - timestamp;
+"affectRows" - Number of affected rows.
+"execTime" - Execution time.
      * @param array $LogFilter Filter. Multiple values are in `AND` relationship.
      */
     function __construct()

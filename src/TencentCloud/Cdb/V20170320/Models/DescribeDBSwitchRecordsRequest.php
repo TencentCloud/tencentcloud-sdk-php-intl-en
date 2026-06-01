@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method integer getOffset() Obtain Pagination offset.
  * @method void setOffset(integer $Offset) Set Pagination offset.
- * @method integer getLimit() Obtain Number of entries per page. Value range: 1-2,000. Default value: 50.
- * @method void setLimit(integer $Limit) Set Number of entries per page. Value range: 1-2,000. Default value: 50.
+ * @method integer getLimit() Obtain Page size. Default value: 50. Minimum value: 1. Maximum value: 1000.
+ * @method void setLimit(integer $Limit) Set Page size. Default value: 50. Minimum value: 1. Maximum value: 1000.
  */
 class DescribeDBSwitchRecordsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeDBSwitchRecordsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of entries per page. Value range: 1-2,000. Default value: 50.
+     * @var integer Page size. Default value: 50. Minimum value: 1. Maximum value: 1000.
      */
     public $Limit;
 
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param integer $Offset Pagination offset.
-     * @param integer $Limit Number of entries per page. Value range: 1-2,000. Default value: 50.
+     * @param integer $Limit Page size. Default value: 50. Minimum value: 1. Maximum value: 1000.
      */
     function __construct()
     {

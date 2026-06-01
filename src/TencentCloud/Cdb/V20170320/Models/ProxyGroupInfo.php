@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProxyGroupId() Obtain Proxy group ID
  * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID
- * @method string getProxyVersion() Obtain Proxy version Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProxyVersion(string $ProxyVersion) Set Proxy version Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSupportUpgradeProxyVersion() Obtain Supported proxy upgrade version Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSupportUpgradeProxyVersion(string $SupportUpgradeProxyVersion) Set Supported proxy upgrade version Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain Proxy status Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Proxy status Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTaskStatus() Obtain Proxy task status Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskStatus(string $TaskStatus) Set Proxy task status Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getProxyNode() Obtain Node information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProxyNode(array $ProxyNode) Set Node information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getProxyAddress() Obtain Address information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProxyAddress(array $ProxyAddress) Set Address information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getConnectionPoolLimit() Obtain Connection pool threshold Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConnectionPoolLimit(integer $ConnectionPoolLimit) Set Connection pool threshold Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getSupportCreateProxyAddress() Obtain Whether to support address creation Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSupportCreateProxyAddress(boolean $SupportCreateProxyAddress) Set Whether to support address creation Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSupportUpgradeProxyMysqlVersion() Obtain TencentDB versions supporting proxy versions upgrade Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSupportUpgradeProxyMysqlVersion(string $SupportUpgradeProxyMysqlVersion) Set TencentDB versions supporting proxy versions upgrade Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProxyVersion() Obtain proxy version
+ * @method void setProxyVersion(string $ProxyVersion) Set proxy version
+ * @method string getSupportUpgradeProxyVersion() Obtain Proxy supports edition upgrade
+ * @method void setSupportUpgradeProxyVersion(string $SupportUpgradeProxyVersion) Set Proxy supports edition upgrade
+ * @method string getStatus() Obtain Agent status. 0 - Initializing, 1 - Online, 2 - Online - Read-write separation, 3 - Offline, 4 - Terminated.
+ * @method void setStatus(string $Status) Set Agent status. 0 - Initializing, 1 - Online, 2 - Online - Read-write separation, 3 - Offline, 4 - Terminated.
+ * @method string getTaskStatus() Obtain Agent task status, Upgrading - upgrading, UpgradeTo - upgrade pending switch, UpgradeSwitching - upgrade and switch in progress, ProxyCreateAddress - configuring address, ProxyModifyAddress - changing address, ProxyCloseAddress - closing address.
+ * @method void setTaskStatus(string $TaskStatus) Set Agent task status, Upgrading - upgrading, UpgradeTo - upgrade pending switch, UpgradeSwitching - upgrade and switch in progress, ProxyCreateAddress - configuring address, ProxyModifyAddress - changing address, ProxyCloseAddress - closing address.
+ * @method array getProxyNode() Obtain Proxy group node information
+ * @method void setProxyNode(array $ProxyNode) Set Proxy group node information
+ * @method array getProxyAddress() Obtain Proxy group address information
+ * @method void setProxyAddress(array $ProxyAddress) Set Proxy group address information
+ * @method integer getConnectionPoolLimit() Obtain Connection pool threshold
+ * @method void setConnectionPoolLimit(integer $ConnectionPoolLimit) Set Connection pool threshold
+ * @method boolean getSupportCreateProxyAddress() Obtain Support creating an address
+ * @method void setSupportCreateProxyAddress(boolean $SupportCreateProxyAddress) Set Support creating an address
+ * @method string getSupportUpgradeProxyMysqlVersion() Obtain cdb version required for proxy version upgrade
+ * @method void setSupportUpgradeProxyMysqlVersion(string $SupportUpgradeProxyMysqlVersion) Set cdb version required for proxy version upgrade
  */
 class ProxyGroupInfo extends AbstractModel
 {
@@ -49,61 +49,61 @@ class ProxyGroupInfo extends AbstractModel
     public $ProxyGroupId;
 
     /**
-     * @var string Proxy version Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string proxy version
      */
     public $ProxyVersion;
 
     /**
-     * @var string Supported proxy upgrade version Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Proxy supports edition upgrade
      */
     public $SupportUpgradeProxyVersion;
 
     /**
-     * @var string Proxy status Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Agent status. 0 - Initializing, 1 - Online, 2 - Online - Read-write separation, 3 - Offline, 4 - Terminated.
      */
     public $Status;
 
     /**
-     * @var string Proxy task status Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Agent task status, Upgrading - upgrading, UpgradeTo - upgrade pending switch, UpgradeSwitching - upgrade and switch in progress, ProxyCreateAddress - configuring address, ProxyModifyAddress - changing address, ProxyCloseAddress - closing address.
      */
     public $TaskStatus;
 
     /**
-     * @var array Node information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Proxy group node information
      */
     public $ProxyNode;
 
     /**
-     * @var array Address information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Proxy group address information
      */
     public $ProxyAddress;
 
     /**
-     * @var integer Connection pool threshold Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Connection pool threshold
      */
     public $ConnectionPoolLimit;
 
     /**
-     * @var boolean Whether to support address creation Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Support creating an address
      */
     public $SupportCreateProxyAddress;
 
     /**
-     * @var string TencentDB versions supporting proxy versions upgrade Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string cdb version required for proxy version upgrade
      */
     public $SupportUpgradeProxyMysqlVersion;
 
     /**
      * @param string $ProxyGroupId Proxy group ID
-     * @param string $ProxyVersion Proxy version Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SupportUpgradeProxyVersion Supported proxy upgrade version Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status Proxy status Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TaskStatus Proxy task status Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ProxyNode Node information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ProxyAddress Address information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ConnectionPoolLimit Connection pool threshold Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $SupportCreateProxyAddress Whether to support address creation Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SupportUpgradeProxyMysqlVersion TencentDB versions supporting proxy versions upgrade Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProxyVersion proxy version
+     * @param string $SupportUpgradeProxyVersion Proxy supports edition upgrade
+     * @param string $Status Agent status. 0 - Initializing, 1 - Online, 2 - Online - Read-write separation, 3 - Offline, 4 - Terminated.
+     * @param string $TaskStatus Agent task status, Upgrading - upgrading, UpgradeTo - upgrade pending switch, UpgradeSwitching - upgrade and switch in progress, ProxyCreateAddress - configuring address, ProxyModifyAddress - changing address, ProxyCloseAddress - closing address.
+     * @param array $ProxyNode Proxy group node information
+     * @param array $ProxyAddress Proxy group address information
+     * @param integer $ConnectionPoolLimit Connection pool threshold
+     * @param boolean $SupportCreateProxyAddress Support creating an address
+     * @param string $SupportUpgradeProxyMysqlVersion cdb version required for proxy version upgrade
      */
     function __construct()
     {

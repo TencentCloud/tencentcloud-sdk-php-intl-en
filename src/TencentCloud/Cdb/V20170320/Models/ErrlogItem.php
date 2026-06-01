@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Structured error log details
  *
- * @method integer getTimestamp() Obtain Error occurrence time.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTimestamp(integer $Timestamp) Set Error occurrence time.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getTimestamp() Obtain Error occurrence time. Timestamp in seconds.
+ * @method void setTimestamp(integer $Timestamp) Set Error occurrence time. Timestamp in seconds.
  * @method string getContent() Obtain Error details
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setContent(string $Content) Set Error details
-Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ErrlogItem extends AbstractModel
 {
     /**
-     * @var integer Error occurrence time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Error occurrence time. Timestamp in seconds.
      */
     public $Timestamp;
 
     /**
      * @var string Error details
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Content;
 
     /**
-     * @param integer $Timestamp Error occurrence time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Timestamp Error occurrence time. Timestamp in seconds.
      * @param string $Content Error details
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

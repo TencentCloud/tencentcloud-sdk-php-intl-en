@@ -20,110 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDBInstanceHour request structure.
  *
- * @method integer getGoodsNum() Obtain Number of instances. Value range: 1-100. Default value: 1.
- * @method void setGoodsNum(integer $GoodsNum) Set Number of instances. Value range: 1-100. Default value: 1.
- * @method integer getMemory() Obtain Instance memory size in MB. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported memory specifications.
- * @method void setMemory(integer $Memory) Set Instance memory size in MB. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported memory specifications.
- * @method integer getVolume() Obtain Instance disk size in GB. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported disk specifications.
- * @method void setVolume(integer $Volume) Set Instance disk size in GB. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported disk specifications.
- * @method string getEngineVersion() Obtain MySQL version. Valid values: `5.5`, `5.6`, `5.7`, `8.0`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported versions.
- * @method void setEngineVersion(string $EngineVersion) Set MySQL version. Valid values: `5.5`, `5.6`, `5.7`, `8.0`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported versions.
- * @method string getUniqVpcId() Obtain VPC ID. If this parameter is not passed in, the basic network will be selected by default. Please use the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API to query the VPCs.
- * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID. If this parameter is not passed in, the basic network will be selected by default. Please use the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API to query the VPCs.
- * @method string getUniqSubnetId() Obtain VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. Please use the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API to query the subnet lists.
- * @method void setUniqSubnetId(string $UniqSubnetId) Set VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. Please use the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API to query the subnet lists.
+ * @method integer getGoodsNum() Obtain <p>Instance count. Default value is 1, minimum value 1, maximum value 100.</p>
+ * @method void setGoodsNum(integer $GoodsNum) Set <p>Instance count. Default value is 1, minimum value 1, maximum value 100.</p>
+ * @method integer getMemory() Obtain <p>Instance memory size. Unit: MB. Please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to obtain creatable memory specifications.</p>
+ * @method void setMemory(integer $Memory) Set <p>Instance memory size. Unit: MB. Please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to obtain creatable memory specifications.</p>
+ * @method integer getVolume() Obtain <p>Instance disk size, unit: GB. Please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the creatable disk range.</p>
+ * @method void setVolume(integer $Volume) Set <p>Instance disk size, unit: GB. Please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the creatable disk range.</p>
+ * @method string getEngineVersion() Obtain <p>MySQL version, including 5.5, 5.6, 5.7, and 8.0. Please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the instance version created.<br>Note: When creating a non-cloud disk edition instance, specify the instance version as needed (recommend 5.7 or 8.0). If this parameter is left blank, the default value is 8.0. If creating a cloud disk edition instance, this parameter can only be set to 5.7 or 8.0.</p>
+ * @method void setEngineVersion(string $EngineVersion) Set <p>MySQL version, including 5.5, 5.6, 5.7, and 8.0. Please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the instance version created.<br>Note: When creating a non-cloud disk edition instance, specify the instance version as needed (recommend 5.7 or 8.0). If this parameter is left blank, the default value is 8.0. If creating a cloud disk edition instance, this parameter can only be set to 5.7 or 8.0.</p>
+ * @method string getUniqVpcId() Obtain <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.<br>Description: If you create a cloud disk edition instance, this item is required and must be VPC type. If this item is left blank, the system will select the default VPC by default.</p>
+ * @method void setUniqVpcId(string $UniqVpcId) Set <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.<br>Description: If you create a cloud disk edition instance, this item is required and must be VPC type. If this item is left blank, the system will select the default VPC by default.</p>
+ * @method string getUniqSubnetId() Obtain <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.<br>Description: If this item is not filled, the system will select the default subnet in the Default VPC.</p>
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.<br>Description: If this item is not filled, the system will select the default subnet in the Default VPC.</p>
  * @method integer getProjectId() Obtain Project ID. If this is left empty, the default project will be used.
  * @method void setProjectId(integer $ProjectId) Set Project ID. If this is left empty, the default project will be used.
- * @method string getZone() Obtain AZ information. By default, the system will automatically select an AZ. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported AZs.
- * @method void setZone(string $Zone) Set AZ information. By default, the system will automatically select an AZ. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported AZs.
- * @method string getMasterInstanceId() Obtain Instance ID, which is required and the same as the primary instance ID when purchasing read-only or disaster recovery instances. Please use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the instance IDs.
- * @method void setMasterInstanceId(string $MasterInstanceId) Set Instance ID, which is required and the same as the primary instance ID when purchasing read-only or disaster recovery instances. Please use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the instance IDs.
- * @method string getInstanceRole() Obtain Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
- * @method void setInstanceRole(string $InstanceRole) Set Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
- * @method string getMasterRegion() Obtain Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
- * @method void setMasterRegion(string $MasterRegion) Set Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
- * @method integer getPort() Obtain Custom port. Value range: [1024-65535].
- * @method void setPort(integer $Port) Set Custom port. Value range: [1024-65535].
- * @method string getPassword() Obtain Sets the root account password. Rule: the password can contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
- * @method void setPassword(string $Password) Set Sets the root account password. Rule: the password can contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
- * @method array getParamList() Obtain List of parameters in the format of `ParamList.0.Name=auto_increment&ParamList.0.Value=1`. You can use the [DescribeDefaultParams](https://intl.cloud.tencent.com/document/api/236/32662?from_cn_redirect=1) API to query the configurable parameters.
- * @method void setParamList(array $ParamList) Set List of parameters in the format of `ParamList.0.Name=auto_increment&ParamList.0.Value=1`. You can use the [DescribeDefaultParams](https://intl.cloud.tencent.com/document/api/236/32662?from_cn_redirect=1) API to query the configurable parameters.
- * @method integer getProtectMode() Obtain Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0. This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
- * @method void setProtectMode(integer $ProtectMode) Set Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0. This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
- * @method integer getDeployMode() Obtain Multi-AZ. Valid value: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
- * @method void setDeployMode(integer $DeployMode) Set Multi-AZ. Valid value: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
- * @method string getSlaveZone() Obtain AZ information of secondary database 1, which is the `Zone` value by default. This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
- * @method void setSlaveZone(string $SlaveZone) Set AZ information of secondary database 1, which is the `Zone` value by default. This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
- * @method string getBackupZone() Obtain The availability zone information of Replica 2, which is left empty by default. Specify this parameter when purchasing a source instance in the one-source-two-replica architecture.
- * @method void setBackupZone(string $BackupZone) Set The availability zone information of Replica 2, which is left empty by default. Specify this parameter when purchasing a source instance in the one-source-two-replica architecture.
- * @method array getSecurityGroup() Obtain Security group parameter. You can use the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API to query the security group details of a project.
- * @method void setSecurityGroup(array $SecurityGroup) Set Security group parameter. You can use the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API to query the security group details of a project.
- * @method RoGroup getRoGroup() Obtain Read-only instance information. This parameter must be passed in when purchasing read-only instances.
- * @method void setRoGroup(RoGroup $RoGroup) Set Read-only instance information. This parameter must be passed in when purchasing read-only instances.
- * @method integer getAutoRenewFlag() Obtain This field is meaningless when purchasing pay-as-you-go instances.
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set This field is meaningless when purchasing pay-as-you-go instances.
- * @method string getInstanceName() Obtain Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
- * @method void setInstanceName(string $InstanceName) Set Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
- * @method array getResourceTags() Obtain Instance tag information.
- * @method void setResourceTags(array $ResourceTags) Set Instance tag information.
- * @method string getDeployGroupId() Obtain Placement group ID.
- * @method void setDeployGroupId(string $DeployGroupId) Set Placement group ID.
- * @method string getClientToken() Obtain A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
- * @method void setClientToken(string $ClientToken) Set A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
- * @method string getDeviceType() Obtain Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.
- * @method void setDeviceType(string $DeviceType) Set Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.
- * @method integer getParamTemplateId() Obtain Parameter template ID.
- * @method void setParamTemplateId(integer $ParamTemplateId) Set Parameter template ID.
- * @method array getAlarmPolicyList() Obtain Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
- * @method void setAlarmPolicyList(array $AlarmPolicyList) Set Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
- * @method integer getInstanceNodes() Obtain The number of nodes of the instance. To purchase a read-only replica or a basic instance, set this parameter to `1` or leave it empty. To purchase a three-node instance, set this parameter to `3` or specify the `BackupZone` parameter. If the instance to be purchased is a source instance and both `BackupZone` and this parameter are left empty, the value `2` will be used, which indicates the source instance will have two nodes.
- * @method void setInstanceNodes(integer $InstanceNodes) Set The number of nodes of the instance. To purchase a read-only replica or a basic instance, set this parameter to `1` or leave it empty. To purchase a three-node instance, set this parameter to `3` or specify the `BackupZone` parameter. If the instance to be purchased is a source instance and both `BackupZone` and this parameter are left empty, the value `2` will be used, which indicates the source instance will have two nodes.
- * @method integer getCpu() Obtain The number of CPU cores of the instance. If this parameter is left empty, the number of CPU cores depends on the `Memory` value.
- * @method void setCpu(integer $Cpu) Set The number of CPU cores of the instance. If this parameter is left empty, the number of CPU cores depends on the `Memory` value.
- * @method integer getAutoSyncFlag() Obtain Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes). Default value: `0`.
- * @method void setAutoSyncFlag(integer $AutoSyncFlag) Set Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes). Default value: `0`.
- * @method string getCageId() Obtain Financial cage ID.
- * @method void setCageId(string $CageId) Set Financial cage ID.
- * @method string getParamTemplateType() Obtain Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template). Default value: `HIGH_STABILITY`.
- * @method void setParamTemplateType(string $ParamTemplateType) Set Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template). Default value: `HIGH_STABILITY`.
- * @method array getAlarmPolicyIdList() Obtain The array of alarm policy names, such as ["policy-uyoee9wg"]. If the `AlarmPolicyList` parameter is specified, this parameter is invalid.
- * @method void setAlarmPolicyIdList(array $AlarmPolicyIdList) Set The array of alarm policy names, such as ["policy-uyoee9wg"]. If the `AlarmPolicyList` parameter is specified, this parameter is invalid.
- * @method boolean getDryRun() Obtain Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
- * @method void setDryRun(boolean $DryRun) Set Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
- * @method string getEngineType() Obtain Instance engine type. Valid values: `InnoDB` (default); `RocksDB`.
- * @method void setEngineType(string $EngineType) Set Instance engine type. Valid values: `InnoDB` (default); `RocksDB`.
- * @method array getVips() Obtain The list of IPs for sources instances. Only one IP address can be assigned to a single source instance. If all IPs are used up, the system will automatically assign IPs to the remaining source instances that do not have one.
- * @method void setVips(array $Vips) Set The list of IPs for sources instances. Only one IP address can be assigned to a single source instance. If all IPs are used up, the system will automatically assign IPs to the remaining source instances that do not have one.
+ * @method string getZone() Obtain <p>For availability zone information, please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the availability zones where instances can be created.</p><p>If you create a single-node, two-node, three-node, or four-node instance, this parameter is required. Please specify an availability zone. If you do not specify one, the system will automatically select an availability zone (which may not be the one you want to deploy in). If you create a cloud disk edition instance, leave this parameter blank and configure the availability zones for read-write nodes and read-only nodes with parameter ClusterTopology.</p>
+ * @method void setZone(string $Zone) Set <p>For availability zone information, please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the availability zones where instances can be created.</p><p>If you create a single-node, two-node, three-node, or four-node instance, this parameter is required. Please specify an availability zone. If you do not specify one, the system will automatically select an availability zone (which may not be the one you want to deploy in). If you create a cloud disk edition instance, leave this parameter blank and configure the availability zones for read-write nodes and read-only nodes with parameter ClusterTopology.</p>
+ * @method string getMasterInstanceId() Obtain <p>Instance ID, required when you purchase a read-only instance or disaster recovery instance. This field represents the primary instance ID of the read-only instance or disaster recovery instance. Please use the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">Query Instance List</a> API to query the cloud database instance ID.</p>
+ * @method void setMasterInstanceId(string $MasterInstanceId) Set <p>Instance ID, required when you purchase a read-only instance or disaster recovery instance. This field represents the primary instance ID of the read-only instance or disaster recovery instance. Please use the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">Query Instance List</a> API to query the cloud database instance ID.</p>
+ * @method string getInstanceRole() Obtain <p>Instance type. Supported values include: master - primary instance, dr - disaster recovery instance, ro - read-only instance.<br>Description: Select instance type. master is selected by default if left blank.</p>
+ * @method void setInstanceRole(string $InstanceRole) Set <p>Instance type. Supported values include: master - primary instance, dr - disaster recovery instance, ro - read-only instance.<br>Description: Select instance type. master is selected by default if left blank.</p>
+ * @method string getMasterRegion() Obtain <p>Region of the primary instance. This field is required when you purchase a disaster recovery or RO instance.</p>
+ * @method void setMasterRegion(string $MasterRegion) Set <p>Region of the primary instance. This field is required when you purchase a disaster recovery or RO instance.</p>
+ * @method integer getPort() Obtain <p>Custom port. Supported range: [1024-65535].<br>Description: If left blank, it defaults to 3306.</p>
+ * @method void setPort(integer $Port) Set <p>Custom port. Supported range: [1024-65535].<br>Description: If left blank, it defaults to 3306.</p>
+ * @method string getPassword() Obtain <p>Set the root account password. The password must contain 8 to 64 characters and at least two of the following: letters, digits, or characters (supported characters: _+-&amp;=!@#$%^*()). You can specify this parameter when purchasing a primary instance. This parameter is invalid when purchasing a read-only instance or disaster recovery instance.</p>
+ * @method void setPassword(string $Password) Set <p>Set the root account password. The password must contain 8 to 64 characters and at least two of the following: letters, digits, or characters (supported characters: _+-&amp;=!@#$%^*()). You can specify this parameter when purchasing a primary instance. This parameter is invalid when purchasing a read-only instance or disaster recovery instance.</p>
+ * @method array getParamList() Obtain <p>Parameter list. The parameter format is ParamList.0.Name=auto_increment&amp;ParamList.0.Value=1.</p><p>Query the configurable parameters by referring to <a href="https://www.tencentcloud.com/document/api/236/32662?from_cn_redirect=1">querying the default configurable parameter list</a>.<br>Note: table Name case sensitivity can be enabled or disabled with the parameter lower_case_table_names. a parameter Value of 0 means enabling, and a Value of 1 means disabling. If not set, the default Value is 0. If you create a MySQL 8.0 edition instance, you need to set the lower_case_table_names parameter when creating the instance to enable or disable table Name case sensitivity. After the instance is created, the parameter cannot be modified, meaning table Name case sensitivity cannot be changed once created. Instances of other database versions support modifying the lower_case_table_names parameter after creation. For the function invocation method to set table Name case sensitivity when creating an instance, please see examples in this document.</p>
+ * @method void setParamList(array $ParamList) Set <p>Parameter list. The parameter format is ParamList.0.Name=auto_increment&amp;ParamList.0.Value=1.</p><p>Query the configurable parameters by referring to <a href="https://www.tencentcloud.com/document/api/236/32662?from_cn_redirect=1">querying the default configurable parameter list</a>.<br>Note: table Name case sensitivity can be enabled or disabled with the parameter lower_case_table_names. a parameter Value of 0 means enabling, and a Value of 1 means disabling. If not set, the default Value is 0. If you create a MySQL 8.0 edition instance, you need to set the lower_case_table_names parameter when creating the instance to enable or disable table Name case sensitivity. After the instance is created, the parameter cannot be modified, meaning table Name case sensitivity cannot be changed once created. Instances of other database versions support modifying the lower_case_table_names parameter after creation. For the function invocation method to set table Name case sensitivity when creating an instance, please see examples in this document.</p>
+ * @method integer getProtectMode() Obtain <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication. You can specify this parameter when purchasing a primary instance. This parameter is invalid when purchasing a read-only instance or disaster recovery instance.</p>
+ * @method void setProtectMode(integer $ProtectMode) Set <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication. You can specify this parameter when purchasing a primary instance. This parameter is invalid when purchasing a read-only instance or disaster recovery instance.</p>
+ * @method integer getDeployMode() Obtain <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone. Specify this parameter when purchasing the primary instance. This parameter is invalid when purchasing a read-only instance or disaster recovery instance.</p>
+ * @method void setDeployMode(integer $DeployMode) Set <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone. Specify this parameter when purchasing the primary instance. This parameter is invalid when purchasing a read-only instance or disaster recovery instance.</p>
+ * @method string getSlaveZone() Obtain <p>AZ information of standby database 1.</p><p>For two-node, three-node, or four-node instances, specify this parameter. If not specified, it defaults to the Zone value. For cloud disk edition instances, this parameter is optional. Configure the AZ for read-write and read-only nodes with parameter ClusterTopology. Single-node instances are in a single availability zone, so no need to specify this parameter.</p>
+ * @method void setSlaveZone(string $SlaveZone) Set <p>AZ information of standby database 1.</p><p>For two-node, three-node, or four-node instances, specify this parameter. If not specified, it defaults to the Zone value. For cloud disk edition instances, this parameter is optional. Configure the AZ for read-write and read-only nodes with parameter ClusterTopology. Single-node instances are in a single availability zone, so no need to specify this parameter.</p>
+ * @method string getBackupZone() Obtain <p>AZ information of standby 2, empty by default.</p><p>Specify this parameter when you proceed to purchase a three-node primary instance or a four-node primary instance.</p>
+ * @method void setBackupZone(string $BackupZone) Set <p>AZ information of standby 2, empty by default.</p><p>Specify this parameter when you proceed to purchase a three-node primary instance or a four-node primary instance.</p>
+ * @method array getSecurityGroup() Obtain <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
+ * @method void setSecurityGroup(array $SecurityGroup) Set <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
+ * @method RoGroup getRoGroup() Obtain <p>Read-only instance information. This parameter is required when you purchase a read-only instance.</p>
+ * @method void setRoGroup(RoGroup $RoGroup) Set <p>Read-only instance information. This parameter is required when you purchase a read-only instance.</p>
+ * @method integer getAutoRenewFlag() Obtain <p>This field is meaningless for pay-as-you-go instances.</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set <p>This field is meaningless for pay-as-you-go instances.</p>
+ * @method string getInstanceName() Obtain <p>Instance name. When you purchase multiple instances only once, suffix numbers are used for case-sensitive instance naming. For example, instanceName=db and goodsNum=3, the instance names are db1, db2, and db3 respectively.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name. When you purchase multiple instances only once, suffix numbers are used for case-sensitive instance naming. For example, instanceName=db and goodsNum=3, the instance names are db1, db2, and db3 respectively.</p>
+ * @method array getResourceTags() Obtain <p>Tag information of the instance.</p>
+ * @method void setResourceTags(array $ResourceTags) Set <p>Tag information of the instance.</p>
+ * @method string getDeployGroupId() Obtain <p>Placement group ID.</p>
+ * @method void setDeployGroupId(string $DeployGroupId) Set <p>Placement group ID.</p>
+ * @method string getClientToken() Obtain <p>String used to ensure request idempotency. This string is generated by the customer and must be unique between different requests within 48 hours, with a maximum value of 64 ASCII characters. If not specified, request idempotency cannot be guaranteed.</p>
+ * @method void setClientToken(string $ClientToken) Set <p>String used to ensure request idempotency. This string is generated by the customer and must be unique between different requests within 48 hours, with a maximum value of 64 ASCII characters. If not specified, request idempotency cannot be guaranteed.</p>
+ * @method string getDeviceType() Obtain <p>Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - ONTKE single-node instance, "CLOUD_NATIVE_CLUSTER" - CLOUD disk edition standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - CLOUD disk edition enhanced. If not specified, it defaults to general-purpose instance.<br>Description: If a CLOUD disk edition instance is created, this parameter is required.</p>
+ * @method void setDeviceType(string $DeviceType) Set <p>Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - ONTKE single-node instance, "CLOUD_NATIVE_CLUSTER" - CLOUD disk edition standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - CLOUD disk edition enhanced. If not specified, it defaults to general-purpose instance.<br>Description: If a CLOUD disk edition instance is created, this parameter is required.</p>
+ * @method integer getParamTemplateId() Obtain <p>Parameter template ID.<br>Remark: If you use a custom parameter template ID, you can input the custom parameter template ID. If you plan to use the default parameter template, the input ID is invalid and you need to set ParamTemplateType.</p>
+ * @method void setParamTemplateId(integer $ParamTemplateId) Set <p>Parameter template ID.<br>Remark: If you use a custom parameter template ID, you can input the custom parameter template ID. If you plan to use the default parameter template, the input ID is invalid and you need to set ParamTemplateType.</p>
+ * @method array getAlarmPolicyList() Obtain <p>Array of alarm policy IDs. OriginId returned by the Tencent Cloud observability platform DescribeAlarmPolicy API.</p>
+ * @method void setAlarmPolicyList(array $AlarmPolicyList) Set <p>Array of alarm policy IDs. OriginId returned by the Tencent Cloud observability platform DescribeAlarmPolicy API.</p>
+ * @method integer getInstanceNodes() Obtain <p>Number of instance nodes.</p><p>For RO and basic edition instances, the value defaults to 1. To purchase a three-node instance, set this value to 3 or specify the BackupZone parameter. When purchasing a primary instance without specifying this parameter or the BackupZone parameter, the default value is 2, which means purchasing a dual-node instance. To purchase a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
+ * @method void setInstanceNodes(integer $InstanceNodes) Set <p>Number of instance nodes.</p><p>For RO and basic edition instances, the value defaults to 1. To purchase a three-node instance, set this value to 3 or specify the BackupZone parameter. When purchasing a primary instance without specifying this parameter or the BackupZone parameter, the default value is 2, which means purchasing a dual-node instance. To purchase a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
+ * @method integer getCpu() Obtain <p>Number of Cpu cores of the instance.</p><p>When multiple Cpu configurations exist for the Memory specification (for example, 64000MB Memory corresponds to 8-core/16-core/32-core), the Cpu parameter must be provided.</p>
+ * @method void setCpu(integer $Cpu) Set <p>Number of Cpu cores of the instance.</p><p>When multiple Cpu configurations exist for the Memory specification (for example, 64000MB Memory corresponds to 8-core/16-core/32-core), the Cpu parameter must be provided.</p>
+ * @method integer getAutoSyncFlag() Obtain <p>Whether to automatically initiate disaster recovery sync. This parameter only takes effect when purchasing a disaster recovery instance. Available values are: 0 - Do not automatically initiate disaster recovery sync; 1 - Automatically initiate disaster recovery sync. The default is 0.</p>
+ * @method void setAutoSyncFlag(integer $AutoSyncFlag) Set <p>Whether to automatically initiate disaster recovery sync. This parameter only takes effect when purchasing a disaster recovery instance. Available values are: 0 - Do not automatically initiate disaster recovery sync; 1 - Automatically initiate disaster recovery sync. The default is 0.</p>
+ * @method string getCageId() Obtain <p>Financial Enclosure ID.</p>
+ * @method void setCageId(string $CageId) Set <p>Financial Enclosure ID.</p>
+ * @method string getParamTemplateType() Obtain <p>Default parameter template type. Supported values include "HIGH_STABILITY" - HIGH-STABILITY template, "HIGH_PERFORMANCE" - HIGH-PERFORMANCE template. Default value is "HIGH_STABILITY".<br>Remark: If you need to use the cloud database MySQL default parameter template, set up ParamTemplateType.</p>
+ * @method void setParamTemplateType(string $ParamTemplateType) Set <p>Default parameter template type. Supported values include "HIGH_STABILITY" - HIGH-STABILITY template, "HIGH_PERFORMANCE" - HIGH-PERFORMANCE template. Default value is "HIGH_STABILITY".<br>Remark: If you need to use the cloud database MySQL default parameter template, set up ParamTemplateType.</p>
+ * @method array getAlarmPolicyIdList() Obtain <p>Alarm policy name array, such as ["policy-uyoee9wg"]. This parameter is invalid when AlarmPolicyList is not empty.</p>
+ * @method void setAlarmPolicyIdList(array $AlarmPolicyIdList) Set <p>Alarm policy name array, such as ["policy-uyoee9wg"]. This parameter is invalid when AlarmPolicyList is not empty.</p>
+ * @method boolean getDryRun() Obtain <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
+ * @method void setDryRun(boolean $DryRun) Set <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
+ * @method string getEngineType() Obtain <p>Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".</p>
+ * @method void setEngineType(string $EngineType) Set <p>Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".</p>
+ * @method array getVips() Obtain <p>Specify the IP list of the instance. Only the primary instance is supported. Process by instance sequence. Handle as unspecified if insufficient.</p>
+ * @method void setVips(array $Vips) Set <p>Specify the IP list of the instance. Only the primary instance is supported. Process by instance sequence. Handle as unspecified if insufficient.</p>
+ * @method integer getDataProtectVolume() Obtain <p>The data protection space size of the cloud disk edition instance, in GB, has a setting range of 1 - 10.</p>
+ * @method void setDataProtectVolume(integer $DataProtectVolume) Set <p>The data protection space size of the cloud disk edition instance, in GB, has a setting range of 1 - 10.</p>
+ * @method ClusterTopology getClusterTopology() Obtain <p>Topology configuration for cloud disk edition nodes.<br>Description: If a cloud disk edition instance is purchased, this parameter is required. Set the topology for RW and RO nodes of the cloud disk edition instance. The node scope for RO nodes is 1-5. Set at least 1 RO node.</p>
+ * @method void setClusterTopology(ClusterTopology $ClusterTopology) Set <p>Topology configuration for cloud disk edition nodes.<br>Description: If a cloud disk edition instance is purchased, this parameter is required. Set the topology for RW and RO nodes of the cloud disk edition instance. The node scope for RO nodes is 1-5. Set at least 1 RO node.</p>
+ * @method string getDiskType() Obtain <p>Disk type. This parameter can be specified for single-node (cloud disk) or cloud disk edition instances. CLOUD_SSD means SSD Cloud Block Storage, CLOUD_HSSD means enhanced SSD cloud disk, and CLOUD_PREMIUM means high-performance cloud block storage.<br>Note: The supported regions for disk types of single-node (cloud disk) and cloud disk edition instances vary slightly. For specific support situation, refer to <a href="https://www.tencentcloud.com/document/product/236/8458?from_cn_redirect=1">Regions and Availability Zones</a>.</p>
+ * @method void setDiskType(string $DiskType) Set <p>Disk type. This parameter can be specified for single-node (cloud disk) or cloud disk edition instances. CLOUD_SSD means SSD Cloud Block Storage, CLOUD_HSSD means enhanced SSD cloud disk, and CLOUD_PREMIUM means high-performance cloud block storage.<br>Note: The supported regions for disk types of single-node (cloud disk) and cloud disk edition instances vary slightly. For specific support situation, refer to <a href="https://www.tencentcloud.com/document/product/236/8458?from_cn_redirect=1">Regions and Availability Zones</a>.</p>
+ * @method string getClusterType() Obtain <p>ClusterType: cage—Financial Enclosure, cdc—CDB ON CDC; dedicate—dedicated cluster</p>
+ * @method void setClusterType(string $ClusterType) Set <p>ClusterType: cage—Financial Enclosure, cdc—CDB ON CDC; dedicate—dedicated cluster</p>
+ * @method string getDestroyProtect() Obtain <p>Turn on or off instance destruction protection. on - turn on, off - turn off.</p>
+ * @method void setDestroyProtect(string $DestroyProtect) Set <p>Turn on or off instance destruction protection. on - turn on, off - turn off.</p>
+ * @method string getFourthZone() Obtain <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
+ * @method void setFourthZone(string $FourthZone) Set <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
  */
 class CreateDBInstanceHourRequest extends AbstractModel
 {
     /**
-     * @var integer Number of instances. Value range: 1-100. Default value: 1.
+     * @var integer <p>Instance count. Default value is 1, minimum value 1, maximum value 100.</p>
      */
     public $GoodsNum;
 
     /**
-     * @var integer Instance memory size in MB. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported memory specifications.
+     * @var integer <p>Instance memory size. Unit: MB. Please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to obtain creatable memory specifications.</p>
      */
     public $Memory;
 
     /**
-     * @var integer Instance disk size in GB. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported disk specifications.
+     * @var integer <p>Instance disk size, unit: GB. Please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the creatable disk range.</p>
      */
     public $Volume;
 
     /**
-     * @var string MySQL version. Valid values: `5.5`, `5.6`, `5.7`, `8.0`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported versions.
+     * @var string <p>MySQL version, including 5.5, 5.6, 5.7, and 8.0. Please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the instance version created.<br>Note: When creating a non-cloud disk edition instance, specify the instance version as needed (recommend 5.7 or 8.0). If this parameter is left blank, the default value is 8.0. If creating a cloud disk edition instance, this parameter can only be set to 5.7 or 8.0.</p>
      */
     public $EngineVersion;
 
     /**
-     * @var string VPC ID. If this parameter is not passed in, the basic network will be selected by default. Please use the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API to query the VPCs.
+     * @var string <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.<br>Description: If you create a cloud disk edition instance, this item is required and must be VPC type. If this item is left blank, the system will select the default VPC by default.</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var string VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. Please use the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API to query the subnet lists.
+     * @var string <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.<br>Description: If this item is not filled, the system will select the default subnet in the Default VPC.</p>
      */
     public $UniqSubnetId;
 
@@ -133,193 +145,229 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string AZ information. By default, the system will automatically select an AZ. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported AZs.
+     * @var string <p>For availability zone information, please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the availability zones where instances can be created.</p><p>If you create a single-node, two-node, three-node, or four-node instance, this parameter is required. Please specify an availability zone. If you do not specify one, the system will automatically select an availability zone (which may not be the one you want to deploy in). If you create a cloud disk edition instance, leave this parameter blank and configure the availability zones for read-write nodes and read-only nodes with parameter ClusterTopology.</p>
      */
     public $Zone;
 
     /**
-     * @var string Instance ID, which is required and the same as the primary instance ID when purchasing read-only or disaster recovery instances. Please use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the instance IDs.
+     * @var string <p>Instance ID, required when you purchase a read-only instance or disaster recovery instance. This field represents the primary instance ID of the read-only instance or disaster recovery instance. Please use the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">Query Instance List</a> API to query the cloud database instance ID.</p>
      */
     public $MasterInstanceId;
 
     /**
-     * @var string Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
+     * @var string <p>Instance type. Supported values include: master - primary instance, dr - disaster recovery instance, ro - read-only instance.<br>Description: Select instance type. master is selected by default if left blank.</p>
      */
     public $InstanceRole;
 
     /**
-     * @var string Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
+     * @var string <p>Region of the primary instance. This field is required when you purchase a disaster recovery or RO instance.</p>
      */
     public $MasterRegion;
 
     /**
-     * @var integer Custom port. Value range: [1024-65535].
+     * @var integer <p>Custom port. Supported range: [1024-65535].<br>Description: If left blank, it defaults to 3306.</p>
      */
     public $Port;
 
     /**
-     * @var string Sets the root account password. Rule: the password can contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
+     * @var string <p>Set the root account password. The password must contain 8 to 64 characters and at least two of the following: letters, digits, or characters (supported characters: _+-&amp;=!@#$%^*()). You can specify this parameter when purchasing a primary instance. This parameter is invalid when purchasing a read-only instance or disaster recovery instance.</p>
      */
     public $Password;
 
     /**
-     * @var array List of parameters in the format of `ParamList.0.Name=auto_increment&ParamList.0.Value=1`. You can use the [DescribeDefaultParams](https://intl.cloud.tencent.com/document/api/236/32662?from_cn_redirect=1) API to query the configurable parameters.
+     * @var array <p>Parameter list. The parameter format is ParamList.0.Name=auto_increment&amp;ParamList.0.Value=1.</p><p>Query the configurable parameters by referring to <a href="https://www.tencentcloud.com/document/api/236/32662?from_cn_redirect=1">querying the default configurable parameter list</a>.<br>Note: table Name case sensitivity can be enabled or disabled with the parameter lower_case_table_names. a parameter Value of 0 means enabling, and a Value of 1 means disabling. If not set, the default Value is 0. If you create a MySQL 8.0 edition instance, you need to set the lower_case_table_names parameter when creating the instance to enable or disable table Name case sensitivity. After the instance is created, the parameter cannot be modified, meaning table Name case sensitivity cannot be changed once created. Instances of other database versions support modifying the lower_case_table_names parameter after creation. For the function invocation method to set table Name case sensitivity when creating an instance, please see examples in this document.</p>
      */
     public $ParamList;
 
     /**
-     * @var integer Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0. This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
+     * @var integer <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication. You can specify this parameter when purchasing a primary instance. This parameter is invalid when purchasing a read-only instance or disaster recovery instance.</p>
      */
     public $ProtectMode;
 
     /**
-     * @var integer Multi-AZ. Valid value: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
+     * @var integer <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone. Specify this parameter when purchasing the primary instance. This parameter is invalid when purchasing a read-only instance or disaster recovery instance.</p>
      */
     public $DeployMode;
 
     /**
-     * @var string AZ information of secondary database 1, which is the `Zone` value by default. This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
+     * @var string <p>AZ information of standby database 1.</p><p>For two-node, three-node, or four-node instances, specify this parameter. If not specified, it defaults to the Zone value. For cloud disk edition instances, this parameter is optional. Configure the AZ for read-write and read-only nodes with parameter ClusterTopology. Single-node instances are in a single availability zone, so no need to specify this parameter.</p>
      */
     public $SlaveZone;
 
     /**
-     * @var string The availability zone information of Replica 2, which is left empty by default. Specify this parameter when purchasing a source instance in the one-source-two-replica architecture.
+     * @var string <p>AZ information of standby 2, empty by default.</p><p>Specify this parameter when you proceed to purchase a three-node primary instance or a four-node primary instance.</p>
      */
     public $BackupZone;
 
     /**
-     * @var array Security group parameter. You can use the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API to query the security group details of a project.
+     * @var array <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
      */
     public $SecurityGroup;
 
     /**
-     * @var RoGroup Read-only instance information. This parameter must be passed in when purchasing read-only instances.
+     * @var RoGroup <p>Read-only instance information. This parameter is required when you purchase a read-only instance.</p>
      */
     public $RoGroup;
 
     /**
-     * @var integer This field is meaningless when purchasing pay-as-you-go instances.
+     * @var integer <p>This field is meaningless for pay-as-you-go instances.</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
+     * @var string <p>Instance name. When you purchase multiple instances only once, suffix numbers are used for case-sensitive instance naming. For example, instanceName=db and goodsNum=3, the instance names are db1, db2, and db3 respectively.</p>
      */
     public $InstanceName;
 
     /**
-     * @var array Instance tag information.
+     * @var array <p>Tag information of the instance.</p>
      */
     public $ResourceTags;
 
     /**
-     * @var string Placement group ID.
+     * @var string <p>Placement group ID.</p>
      */
     public $DeployGroupId;
 
     /**
-     * @var string A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
+     * @var string <p>String used to ensure request idempotency. This string is generated by the customer and must be unique between different requests within 48 hours, with a maximum value of 64 ASCII characters. If not specified, request idempotency cannot be guaranteed.</p>
      */
     public $ClientToken;
 
     /**
-     * @var string Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.
+     * @var string <p>Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - ONTKE single-node instance, "CLOUD_NATIVE_CLUSTER" - CLOUD disk edition standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - CLOUD disk edition enhanced. If not specified, it defaults to general-purpose instance.<br>Description: If a CLOUD disk edition instance is created, this parameter is required.</p>
      */
     public $DeviceType;
 
     /**
-     * @var integer Parameter template ID.
+     * @var integer <p>Parameter template ID.<br>Remark: If you use a custom parameter template ID, you can input the custom parameter template ID. If you plan to use the default parameter template, the input ID is invalid and you need to set ParamTemplateType.</p>
      */
     public $ParamTemplateId;
 
     /**
-     * @var array Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+     * @var array <p>Array of alarm policy IDs. OriginId returned by the Tencent Cloud observability platform DescribeAlarmPolicy API.</p>
      */
     public $AlarmPolicyList;
 
     /**
-     * @var integer The number of nodes of the instance. To purchase a read-only replica or a basic instance, set this parameter to `1` or leave it empty. To purchase a three-node instance, set this parameter to `3` or specify the `BackupZone` parameter. If the instance to be purchased is a source instance and both `BackupZone` and this parameter are left empty, the value `2` will be used, which indicates the source instance will have two nodes.
+     * @var integer <p>Number of instance nodes.</p><p>For RO and basic edition instances, the value defaults to 1. To purchase a three-node instance, set this value to 3 or specify the BackupZone parameter. When purchasing a primary instance without specifying this parameter or the BackupZone parameter, the default value is 2, which means purchasing a dual-node instance. To purchase a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
      */
     public $InstanceNodes;
 
     /**
-     * @var integer The number of CPU cores of the instance. If this parameter is left empty, the number of CPU cores depends on the `Memory` value.
+     * @var integer <p>Number of Cpu cores of the instance.</p><p>When multiple Cpu configurations exist for the Memory specification (for example, 64000MB Memory corresponds to 8-core/16-core/32-core), the Cpu parameter must be provided.</p>
      */
     public $Cpu;
 
     /**
-     * @var integer Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes). Default value: `0`.
+     * @var integer <p>Whether to automatically initiate disaster recovery sync. This parameter only takes effect when purchasing a disaster recovery instance. Available values are: 0 - Do not automatically initiate disaster recovery sync; 1 - Automatically initiate disaster recovery sync. The default is 0.</p>
      */
     public $AutoSyncFlag;
 
     /**
-     * @var string Financial cage ID.
+     * @var string <p>Financial Enclosure ID.</p>
      */
     public $CageId;
 
     /**
-     * @var string Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template). Default value: `HIGH_STABILITY`.
+     * @var string <p>Default parameter template type. Supported values include "HIGH_STABILITY" - HIGH-STABILITY template, "HIGH_PERFORMANCE" - HIGH-PERFORMANCE template. Default value is "HIGH_STABILITY".<br>Remark: If you need to use the cloud database MySQL default parameter template, set up ParamTemplateType.</p>
      */
     public $ParamTemplateType;
 
     /**
-     * @var array The array of alarm policy names, such as ["policy-uyoee9wg"]. If the `AlarmPolicyList` parameter is specified, this parameter is invalid.
+     * @var array <p>Alarm policy name array, such as ["policy-uyoee9wg"]. This parameter is invalid when AlarmPolicyList is not empty.</p>
      */
     public $AlarmPolicyIdList;
 
     /**
-     * @var boolean Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
+     * @var boolean <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
      */
     public $DryRun;
 
     /**
-     * @var string Instance engine type. Valid values: `InnoDB` (default); `RocksDB`.
+     * @var string <p>Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".</p>
      */
     public $EngineType;
 
     /**
-     * @var array The list of IPs for sources instances. Only one IP address can be assigned to a single source instance. If all IPs are used up, the system will automatically assign IPs to the remaining source instances that do not have one.
+     * @var array <p>Specify the IP list of the instance. Only the primary instance is supported. Process by instance sequence. Handle as unspecified if insufficient.</p>
      */
     public $Vips;
 
     /**
-     * @param integer $GoodsNum Number of instances. Value range: 1-100. Default value: 1.
-     * @param integer $Memory Instance memory size in MB. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported memory specifications.
-     * @param integer $Volume Instance disk size in GB. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported disk specifications.
-     * @param string $EngineVersion MySQL version. Valid values: `5.5`, `5.6`, `5.7`, `8.0`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported versions.
-     * @param string $UniqVpcId VPC ID. If this parameter is not passed in, the basic network will be selected by default. Please use the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API to query the VPCs.
-     * @param string $UniqSubnetId VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. Please use the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API to query the subnet lists.
+     * @var integer <p>The data protection space size of the cloud disk edition instance, in GB, has a setting range of 1 - 10.</p>
+     */
+    public $DataProtectVolume;
+
+    /**
+     * @var ClusterTopology <p>Topology configuration for cloud disk edition nodes.<br>Description: If a cloud disk edition instance is purchased, this parameter is required. Set the topology for RW and RO nodes of the cloud disk edition instance. The node scope for RO nodes is 1-5. Set at least 1 RO node.</p>
+     */
+    public $ClusterTopology;
+
+    /**
+     * @var string <p>Disk type. This parameter can be specified for single-node (cloud disk) or cloud disk edition instances. CLOUD_SSD means SSD Cloud Block Storage, CLOUD_HSSD means enhanced SSD cloud disk, and CLOUD_PREMIUM means high-performance cloud block storage.<br>Note: The supported regions for disk types of single-node (cloud disk) and cloud disk edition instances vary slightly. For specific support situation, refer to <a href="https://www.tencentcloud.com/document/product/236/8458?from_cn_redirect=1">Regions and Availability Zones</a>.</p>
+     */
+    public $DiskType;
+
+    /**
+     * @var string <p>ClusterType: cage—Financial Enclosure, cdc—CDB ON CDC; dedicate—dedicated cluster</p>
+     */
+    public $ClusterType;
+
+    /**
+     * @var string <p>Turn on or off instance destruction protection. on - turn on, off - turn off.</p>
+     */
+    public $DestroyProtect;
+
+    /**
+     * @var string <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
+     */
+    public $FourthZone;
+
+    /**
+     * @param integer $GoodsNum <p>Instance count. Default value is 1, minimum value 1, maximum value 100.</p>
+     * @param integer $Memory <p>Instance memory size. Unit: MB. Please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to obtain creatable memory specifications.</p>
+     * @param integer $Volume <p>Instance disk size, unit: GB. Please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the creatable disk range.</p>
+     * @param string $EngineVersion <p>MySQL version, including 5.5, 5.6, 5.7, and 8.0. Please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the instance version created.<br>Note: When creating a non-cloud disk edition instance, specify the instance version as needed (recommend 5.7 or 8.0). If this parameter is left blank, the default value is 8.0. If creating a cloud disk edition instance, this parameter can only be set to 5.7 or 8.0.</p>
+     * @param string $UniqVpcId <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.<br>Description: If you create a cloud disk edition instance, this item is required and must be VPC type. If this item is left blank, the system will select the default VPC by default.</p>
+     * @param string $UniqSubnetId <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.<br>Description: If this item is not filled, the system will select the default subnet in the Default VPC.</p>
      * @param integer $ProjectId Project ID. If this is left empty, the default project will be used.
-     * @param string $Zone AZ information. By default, the system will automatically select an AZ. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported AZs.
-     * @param string $MasterInstanceId Instance ID, which is required and the same as the primary instance ID when purchasing read-only or disaster recovery instances. Please use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the instance IDs.
-     * @param string $InstanceRole Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
-     * @param string $MasterRegion Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
-     * @param integer $Port Custom port. Value range: [1024-65535].
-     * @param string $Password Sets the root account password. Rule: the password can contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
-     * @param array $ParamList List of parameters in the format of `ParamList.0.Name=auto_increment&ParamList.0.Value=1`. You can use the [DescribeDefaultParams](https://intl.cloud.tencent.com/document/api/236/32662?from_cn_redirect=1) API to query the configurable parameters.
-     * @param integer $ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0. This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
-     * @param integer $DeployMode Multi-AZ. Valid value: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
-     * @param string $SlaveZone AZ information of secondary database 1, which is the `Zone` value by default. This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
-     * @param string $BackupZone The availability zone information of Replica 2, which is left empty by default. Specify this parameter when purchasing a source instance in the one-source-two-replica architecture.
-     * @param array $SecurityGroup Security group parameter. You can use the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API to query the security group details of a project.
-     * @param RoGroup $RoGroup Read-only instance information. This parameter must be passed in when purchasing read-only instances.
-     * @param integer $AutoRenewFlag This field is meaningless when purchasing pay-as-you-go instances.
-     * @param string $InstanceName Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
-     * @param array $ResourceTags Instance tag information.
-     * @param string $DeployGroupId Placement group ID.
-     * @param string $ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
-     * @param string $DeviceType Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.
-     * @param integer $ParamTemplateId Parameter template ID.
-     * @param array $AlarmPolicyList Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
-     * @param integer $InstanceNodes The number of nodes of the instance. To purchase a read-only replica or a basic instance, set this parameter to `1` or leave it empty. To purchase a three-node instance, set this parameter to `3` or specify the `BackupZone` parameter. If the instance to be purchased is a source instance and both `BackupZone` and this parameter are left empty, the value `2` will be used, which indicates the source instance will have two nodes.
-     * @param integer $Cpu The number of CPU cores of the instance. If this parameter is left empty, the number of CPU cores depends on the `Memory` value.
-     * @param integer $AutoSyncFlag Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes). Default value: `0`.
-     * @param string $CageId Financial cage ID.
-     * @param string $ParamTemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template). Default value: `HIGH_STABILITY`.
-     * @param array $AlarmPolicyIdList The array of alarm policy names, such as ["policy-uyoee9wg"]. If the `AlarmPolicyList` parameter is specified, this parameter is invalid.
-     * @param boolean $DryRun Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
-     * @param string $EngineType Instance engine type. Valid values: `InnoDB` (default); `RocksDB`.
-     * @param array $Vips The list of IPs for sources instances. Only one IP address can be assigned to a single source instance. If all IPs are used up, the system will automatically assign IPs to the remaining source instances that do not have one.
+     * @param string $Zone <p>For availability zone information, please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the availability zones where instances can be created.</p><p>If you create a single-node, two-node, three-node, or four-node instance, this parameter is required. Please specify an availability zone. If you do not specify one, the system will automatically select an availability zone (which may not be the one you want to deploy in). If you create a cloud disk edition instance, leave this parameter blank and configure the availability zones for read-write nodes and read-only nodes with parameter ClusterTopology.</p>
+     * @param string $MasterInstanceId <p>Instance ID, required when you purchase a read-only instance or disaster recovery instance. This field represents the primary instance ID of the read-only instance or disaster recovery instance. Please use the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">Query Instance List</a> API to query the cloud database instance ID.</p>
+     * @param string $InstanceRole <p>Instance type. Supported values include: master - primary instance, dr - disaster recovery instance, ro - read-only instance.<br>Description: Select instance type. master is selected by default if left blank.</p>
+     * @param string $MasterRegion <p>Region of the primary instance. This field is required when you purchase a disaster recovery or RO instance.</p>
+     * @param integer $Port <p>Custom port. Supported range: [1024-65535].<br>Description: If left blank, it defaults to 3306.</p>
+     * @param string $Password <p>Set the root account password. The password must contain 8 to 64 characters and at least two of the following: letters, digits, or characters (supported characters: _+-&amp;=!@#$%^*()). You can specify this parameter when purchasing a primary instance. This parameter is invalid when purchasing a read-only instance or disaster recovery instance.</p>
+     * @param array $ParamList <p>Parameter list. The parameter format is ParamList.0.Name=auto_increment&amp;ParamList.0.Value=1.</p><p>Query the configurable parameters by referring to <a href="https://www.tencentcloud.com/document/api/236/32662?from_cn_redirect=1">querying the default configurable parameter list</a>.<br>Note: table Name case sensitivity can be enabled or disabled with the parameter lower_case_table_names. a parameter Value of 0 means enabling, and a Value of 1 means disabling. If not set, the default Value is 0. If you create a MySQL 8.0 edition instance, you need to set the lower_case_table_names parameter when creating the instance to enable or disable table Name case sensitivity. After the instance is created, the parameter cannot be modified, meaning table Name case sensitivity cannot be changed once created. Instances of other database versions support modifying the lower_case_table_names parameter after creation. For the function invocation method to set table Name case sensitivity when creating an instance, please see examples in this document.</p>
+     * @param integer $ProtectMode <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication. You can specify this parameter when purchasing a primary instance. This parameter is invalid when purchasing a read-only instance or disaster recovery instance.</p>
+     * @param integer $DeployMode <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone. Specify this parameter when purchasing the primary instance. This parameter is invalid when purchasing a read-only instance or disaster recovery instance.</p>
+     * @param string $SlaveZone <p>AZ information of standby database 1.</p><p>For two-node, three-node, or four-node instances, specify this parameter. If not specified, it defaults to the Zone value. For cloud disk edition instances, this parameter is optional. Configure the AZ for read-write and read-only nodes with parameter ClusterTopology. Single-node instances are in a single availability zone, so no need to specify this parameter.</p>
+     * @param string $BackupZone <p>AZ information of standby 2, empty by default.</p><p>Specify this parameter when you proceed to purchase a three-node primary instance or a four-node primary instance.</p>
+     * @param array $SecurityGroup <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
+     * @param RoGroup $RoGroup <p>Read-only instance information. This parameter is required when you purchase a read-only instance.</p>
+     * @param integer $AutoRenewFlag <p>This field is meaningless for pay-as-you-go instances.</p>
+     * @param string $InstanceName <p>Instance name. When you purchase multiple instances only once, suffix numbers are used for case-sensitive instance naming. For example, instanceName=db and goodsNum=3, the instance names are db1, db2, and db3 respectively.</p>
+     * @param array $ResourceTags <p>Tag information of the instance.</p>
+     * @param string $DeployGroupId <p>Placement group ID.</p>
+     * @param string $ClientToken <p>String used to ensure request idempotency. This string is generated by the customer and must be unique between different requests within 48 hours, with a maximum value of 64 ASCII characters. If not specified, request idempotency cannot be guaranteed.</p>
+     * @param string $DeviceType <p>Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - ONTKE single-node instance, "CLOUD_NATIVE_CLUSTER" - CLOUD disk edition standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - CLOUD disk edition enhanced. If not specified, it defaults to general-purpose instance.<br>Description: If a CLOUD disk edition instance is created, this parameter is required.</p>
+     * @param integer $ParamTemplateId <p>Parameter template ID.<br>Remark: If you use a custom parameter template ID, you can input the custom parameter template ID. If you plan to use the default parameter template, the input ID is invalid and you need to set ParamTemplateType.</p>
+     * @param array $AlarmPolicyList <p>Array of alarm policy IDs. OriginId returned by the Tencent Cloud observability platform DescribeAlarmPolicy API.</p>
+     * @param integer $InstanceNodes <p>Number of instance nodes.</p><p>For RO and basic edition instances, the value defaults to 1. To purchase a three-node instance, set this value to 3 or specify the BackupZone parameter. When purchasing a primary instance without specifying this parameter or the BackupZone parameter, the default value is 2, which means purchasing a dual-node instance. To purchase a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
+     * @param integer $Cpu <p>Number of Cpu cores of the instance.</p><p>When multiple Cpu configurations exist for the Memory specification (for example, 64000MB Memory corresponds to 8-core/16-core/32-core), the Cpu parameter must be provided.</p>
+     * @param integer $AutoSyncFlag <p>Whether to automatically initiate disaster recovery sync. This parameter only takes effect when purchasing a disaster recovery instance. Available values are: 0 - Do not automatically initiate disaster recovery sync; 1 - Automatically initiate disaster recovery sync. The default is 0.</p>
+     * @param string $CageId <p>Financial Enclosure ID.</p>
+     * @param string $ParamTemplateType <p>Default parameter template type. Supported values include "HIGH_STABILITY" - HIGH-STABILITY template, "HIGH_PERFORMANCE" - HIGH-PERFORMANCE template. Default value is "HIGH_STABILITY".<br>Remark: If you need to use the cloud database MySQL default parameter template, set up ParamTemplateType.</p>
+     * @param array $AlarmPolicyIdList <p>Alarm policy name array, such as ["policy-uyoee9wg"]. This parameter is invalid when AlarmPolicyList is not empty.</p>
+     * @param boolean $DryRun <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
+     * @param string $EngineType <p>Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".</p>
+     * @param array $Vips <p>Specify the IP list of the instance. Only the primary instance is supported. Process by instance sequence. Handle as unspecified if insufficient.</p>
+     * @param integer $DataProtectVolume <p>The data protection space size of the cloud disk edition instance, in GB, has a setting range of 1 - 10.</p>
+     * @param ClusterTopology $ClusterTopology <p>Topology configuration for cloud disk edition nodes.<br>Description: If a cloud disk edition instance is purchased, this parameter is required. Set the topology for RW and RO nodes of the cloud disk edition instance. The node scope for RO nodes is 1-5. Set at least 1 RO node.</p>
+     * @param string $DiskType <p>Disk type. This parameter can be specified for single-node (cloud disk) or cloud disk edition instances. CLOUD_SSD means SSD Cloud Block Storage, CLOUD_HSSD means enhanced SSD cloud disk, and CLOUD_PREMIUM means high-performance cloud block storage.<br>Note: The supported regions for disk types of single-node (cloud disk) and cloud disk edition instances vary slightly. For specific support situation, refer to <a href="https://www.tencentcloud.com/document/product/236/8458?from_cn_redirect=1">Regions and Availability Zones</a>.</p>
+     * @param string $ClusterType <p>ClusterType: cage—Financial Enclosure, cdc—CDB ON CDC; dedicate—dedicated cluster</p>
+     * @param string $DestroyProtect <p>Turn on or off instance destruction protection. on - turn on, off - turn off.</p>
+     * @param string $FourthZone <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
      */
     function __construct()
     {
@@ -491,6 +539,31 @@ class CreateDBInstanceHourRequest extends AbstractModel
 
         if (array_key_exists("Vips",$param) and $param["Vips"] !== null) {
             $this->Vips = $param["Vips"];
+        }
+
+        if (array_key_exists("DataProtectVolume",$param) and $param["DataProtectVolume"] !== null) {
+            $this->DataProtectVolume = $param["DataProtectVolume"];
+        }
+
+        if (array_key_exists("ClusterTopology",$param) and $param["ClusterTopology"] !== null) {
+            $this->ClusterTopology = new ClusterTopology();
+            $this->ClusterTopology->deserialize($param["ClusterTopology"]);
+        }
+
+        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
+            $this->DiskType = $param["DiskType"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("DestroyProtect",$param) and $param["DestroyProtect"] !== null) {
+            $this->DestroyProtect = $param["DestroyProtect"];
+        }
+
+        if (array_key_exists("FourthZone",$param) and $param["FourthZone"] !== null) {
+            $this->FourthZone = $param["FourthZone"];
         }
     }
 }

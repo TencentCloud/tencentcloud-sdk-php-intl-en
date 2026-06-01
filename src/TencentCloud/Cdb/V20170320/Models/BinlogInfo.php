@@ -20,114 +20,123 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Binlog information
  *
- * @method string getName() Obtain Binlog backup filename
- * @method void setName(string $Name) Set Binlog backup filename
- * @method integer getSize() Obtain Backup file size in bytes
- * @method void setSize(integer $Size) Set Backup file size in bytes
- * @method string getDate() Obtain File stored time in the format of 2016-03-17 02:10:37
- * @method void setDate(string $Date) Set File stored time in the format of 2016-03-17 02:10:37
- * @method string getIntranetUrl() Obtain Download address
- * @method void setIntranetUrl(string $IntranetUrl) Set Download address
- * @method string getInternetUrl() Obtain Download address
- * @method void setInternetUrl(string $InternetUrl) Set Download address
- * @method string getType() Obtain Log type. Value range: binlog
- * @method void setType(string $Type) Set Log type. Value range: binlog
- * @method string getBinlogStartTime() Obtain Binlog file start file
- * @method void setBinlogStartTime(string $BinlogStartTime) Set Binlog file start file
- * @method string getBinlogFinishTime() Obtain Binlog file end time
- * @method void setBinlogFinishTime(string $BinlogFinishTime) Set Binlog file end time
- * @method string getRegion() Obtain The region where the binlog file resides
- * @method void setRegion(string $Region) Set The region where the binlog file resides
- * @method string getStatus() Obtain Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
- * @method void setStatus(string $Status) Set Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
- * @method array getRemoteInfo() Obtain The detailed information of remote binlog backups
- * @method void setRemoteInfo(array $RemoteInfo) Set The detailed information of remote binlog backups
- * @method integer getCosStorageType() Obtain Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
- * @method void setCosStorageType(integer $CosStorageType) Set Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
- * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+ * @method string getName() Obtain <p>binlog backup file name</p>
+ * @method void setName(string $Name) Set <p>binlog backup file name</p>
+ * @method integer getSize() Obtain <p>Backup file size, unit: Byte</p>
+ * @method void setSize(integer $Size) Set <p>Backup file size, unit: Byte</p>
+ * @method string getDate() Obtain <p>File storage time. Time format: 2016-03-17 02:10:37</p>
+ * @method void setDate(string $Date) Set <p>File storage time. Time format: 2016-03-17 02:10:37</p>
+ * @method string getIntranetUrl() Obtain <p>Download link<br>Description: This download link is the same as the download address of the parameter InternetUrl.</p>
+ * @method void setIntranetUrl(string $IntranetUrl) Set <p>Download link<br>Description: This download link is the same as the download address of the parameter InternetUrl.</p>
+ * @method string getInternetUrl() Obtain <p>Download address<br>Description: This download address is the same as the IntranetUrl download address.</p>
+ * @method void setInternetUrl(string $InternetUrl) Set <p>Download address<br>Description: This download address is the same as the IntranetUrl download address.</p>
+ * @method string getType() Obtain <p>Log specific type. Possible values: binlog - binary log</p>
+ * @method void setType(string $Type) Set <p>Log specific type. Possible values: binlog - binary log</p>
+ * @method string getBinlogStartTime() Obtain <p>binlog file start time</p>
+ * @method void setBinlogStartTime(string $BinlogStartTime) Set <p>binlog file start time</p>
+ * @method string getBinlogFinishTime() Obtain <p>binlog file expiration time</p>
+ * @method void setBinlogFinishTime(string $BinlogFinishTime) Set <p>binlog file expiration time</p>
+ * @method string getRegion() Obtain <p>Region where local binlog files are located</p>
+ * @method void setRegion(string $Region) Set <p>Region where local binlog files are located</p>
+ * @method string getStatus() Obtain <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
+ * @method void setStatus(string $Status) Set <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
+ * @method array getRemoteInfo() Obtain <p>Detailed information of binlog offsite backup</p>
+ * @method void setRemoteInfo(array $RemoteInfo) Set <p>Detailed information of binlog offsite backup</p>
+ * @method integer getCosStorageType() Obtain <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
+ * @method void setCosStorageType(integer $CosStorageType) Set <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
+ * @method string getInstanceId() Obtain <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
+ * @method integer getProgress() Obtain <p>Backup completion progress</p>
+ * @method void setProgress(integer $Progress) Set <p>Backup completion progress</p>
  */
 class BinlogInfo extends AbstractModel
 {
     /**
-     * @var string Binlog backup filename
+     * @var string <p>binlog backup file name</p>
      */
     public $Name;
 
     /**
-     * @var integer Backup file size in bytes
+     * @var integer <p>Backup file size, unit: Byte</p>
      */
     public $Size;
 
     /**
-     * @var string File stored time in the format of 2016-03-17 02:10:37
+     * @var string <p>File storage time. Time format: 2016-03-17 02:10:37</p>
      */
     public $Date;
 
     /**
-     * @var string Download address
+     * @var string <p>Download link<br>Description: This download link is the same as the download address of the parameter InternetUrl.</p>
      */
     public $IntranetUrl;
 
     /**
-     * @var string Download address
+     * @var string <p>Download address<br>Description: This download address is the same as the IntranetUrl download address.</p>
      */
     public $InternetUrl;
 
     /**
-     * @var string Log type. Value range: binlog
+     * @var string <p>Log specific type. Possible values: binlog - binary log</p>
      */
     public $Type;
 
     /**
-     * @var string Binlog file start file
+     * @var string <p>binlog file start time</p>
      */
     public $BinlogStartTime;
 
     /**
-     * @var string Binlog file end time
+     * @var string <p>binlog file expiration time</p>
      */
     public $BinlogFinishTime;
 
     /**
-     * @var string The region where the binlog file resides
+     * @var string <p>Region where local binlog files are located</p>
      */
     public $Region;
 
     /**
-     * @var string Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+     * @var string <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
      */
     public $Status;
 
     /**
-     * @var array The detailed information of remote binlog backups
+     * @var array <p>Detailed information of binlog offsite backup</p>
      */
     public $RemoteInfo;
 
     /**
-     * @var integer Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+     * @var integer <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
      */
     public $CosStorageType;
 
     /**
-     * @var string Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @var string <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
+     * @deprecated
      */
     public $InstanceId;
 
     /**
-     * @param string $Name Binlog backup filename
-     * @param integer $Size Backup file size in bytes
-     * @param string $Date File stored time in the format of 2016-03-17 02:10:37
-     * @param string $IntranetUrl Download address
-     * @param string $InternetUrl Download address
-     * @param string $Type Log type. Value range: binlog
-     * @param string $BinlogStartTime Binlog file start file
-     * @param string $BinlogFinishTime Binlog file end time
-     * @param string $Region The region where the binlog file resides
-     * @param string $Status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
-     * @param array $RemoteInfo The detailed information of remote binlog backups
-     * @param integer $CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
-     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @var integer <p>Backup completion progress</p>
+     */
+    public $Progress;
+
+    /**
+     * @param string $Name <p>binlog backup file name</p>
+     * @param integer $Size <p>Backup file size, unit: Byte</p>
+     * @param string $Date <p>File storage time. Time format: 2016-03-17 02:10:37</p>
+     * @param string $IntranetUrl <p>Download link<br>Description: This download link is the same as the download address of the parameter InternetUrl.</p>
+     * @param string $InternetUrl <p>Download address<br>Description: This download address is the same as the IntranetUrl download address.</p>
+     * @param string $Type <p>Log specific type. Possible values: binlog - binary log</p>
+     * @param string $BinlogStartTime <p>binlog file start time</p>
+     * @param string $BinlogFinishTime <p>binlog file expiration time</p>
+     * @param string $Region <p>Region where local binlog files are located</p>
+     * @param string $Status <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
+     * @param array $RemoteInfo <p>Detailed information of binlog offsite backup</p>
+     * @param integer $CosStorageType <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
+     * @param string $InstanceId <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
+     * @param integer $Progress <p>Backup completion progress</p>
      */
     function __construct()
     {
@@ -197,6 +206,10 @@ class BinlogInfo extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
     }
 }

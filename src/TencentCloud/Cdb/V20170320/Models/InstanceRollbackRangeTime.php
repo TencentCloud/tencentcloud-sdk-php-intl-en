@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Time range available for instance rollback
  *
- * @method integer getCode() Obtain Queries database error code
- * @method void setCode(integer $Code) Set Queries database error code
+ * @method integer getCode() Obtain Query database error codes. 0 - Normal, 1600001 - Internal error, 1600003 - Input parameter exception, 1600009 - Instance does not exist, 1624001 - DB access exception.
+ * @method void setCode(integer $Code) Set Query database error codes. 0 - Normal, 1600001 - Internal error, 1600003 - Input parameter exception, 1600009 - Instance does not exist, 1624001 - DB access exception.
  * @method string getMessage() Obtain Queries database error message
  * @method void setMessage(string $Message) Set Queries database error message
  * @method string getInstanceId() Obtain List of instance IDs. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class InstanceRollbackRangeTime extends AbstractModel
 {
     /**
-     * @var integer Queries database error code
+     * @var integer Query database error codes. 0 - Normal, 1600001 - Internal error, 1600003 - Input parameter exception, 1600009 - Instance does not exist, 1624001 - DB access exception.
      */
     public $Code;
 
@@ -52,7 +52,7 @@ class InstanceRollbackRangeTime extends AbstractModel
     public $Times;
 
     /**
-     * @param integer $Code Queries database error code
+     * @param integer $Code Query database error codes. 0 - Normal, 1600001 - Internal error, 1600003 - Input parameter exception, 1600009 - Instance does not exist, 1624001 - DB access exception.
      * @param string $Message Queries database error message
      * @param string $InstanceId List of instance IDs. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
      * @param array $Times Time range available for rollback

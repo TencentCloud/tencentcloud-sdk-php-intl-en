@@ -20,122 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AdjustCdbProxyAddress request structure.
  *
- * @method string getProxyGroupId() Obtain Proxy group ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID
- * @method string getWeightMode() Obtain Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
- * @method void setWeightMode(string $WeightMode) Set Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
- * @method boolean getIsKickOut() Obtain Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`.
- * @method void setIsKickOut(boolean $IsKickOut) Set Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`.
- * @method integer getMinCount() Obtain Least read-only instances. Minimum value:  `0`
- * @method void setMinCount(integer $MinCount) Set Least read-only instances. Minimum value:  `0`
- * @method integer getMaxDelay() Obtain The delay threshold. Minimum value:  `0`
- * @method void setMaxDelay(integer $MaxDelay) Set The delay threshold. Minimum value:  `0`
- * @method boolean getFailOver() Obtain Whether to enable failover. Valid values: `true`, `false`.
- * @method void setFailOver(boolean $FailOver) Set Whether to enable failover. Valid values: `true`, `false`.
- * @method boolean getAutoAddRo() Obtain Whether to automatically add newly created read-only instances. Valid values: `true`, `false`.
- * @method void setAutoAddRo(boolean $AutoAddRo) Set Whether to automatically add newly created read-only instances. Valid values: `true`, `false`.
- * @method boolean getReadOnly() Obtain Whether it is read-only. Valid values: `true`, `false`.
- * @method void setReadOnly(boolean $ReadOnly) Set Whether it is read-only. Valid values: `true`, `false`.
- * @method string getProxyAddressId() Obtain Address ID of the proxy group
- * @method void setProxyAddressId(string $ProxyAddressId) Set Address ID of the proxy group
- * @method boolean getTransSplit() Obtain Whether to enable transaction splitting. Valid values: `true`, `false`.
- * @method void setTransSplit(boolean $TransSplit) Set Whether to enable transaction splitting. Valid values: `true`, `false`.
- * @method boolean getConnectionPool() Obtain Whether to enable the connection pool
- * @method void setConnectionPool(boolean $ConnectionPool) Set Whether to enable the connection pool
- * @method array getProxyAllocation() Obtain Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
- * @method void setProxyAllocation(array $ProxyAllocation) Set Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
- * @method boolean getAutoLoadBalance() Obtain Whether to enable adaptive load balancing. Disabled by default.
- * @method void setAutoLoadBalance(boolean $AutoLoadBalance) Set Whether to enable adaptive load balancing. Disabled by default.
- * @method string getAccessMode() Obtain Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
- * @method void setAccessMode(string $AccessMode) Set Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
+ * @method string getProxyGroupId() Obtain <p>Proxy group ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
+ * @method void setProxyGroupId(string $ProxyGroupId) Set <p>Proxy group ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
+ * @method string getWeightMode() Obtain <p>Weight allocation mode,<br>system Auto-Assignment: "system", custom: "custom"</p>
+ * @method void setWeightMode(string $WeightMode) Set <p>Weight allocation mode,<br>system Auto-Assignment: "system", custom: "custom"</p>
+ * @method boolean getIsKickOut() Obtain <p>Whether delay removal is enabled. Value: "true" | "false"</p>
+ * @method void setIsKickOut(boolean $IsKickOut) Set <p>Whether delay removal is enabled. Value: "true" | "false"</p>
+ * @method integer getMinCount() Obtain <p>Minimum retention quantity, minimum value: 0.<br>Description: Valid only when IsKickOut is true.</p>
+ * @method void setMinCount(integer $MinCount) Set <p>Minimum retention quantity, minimum value: 0.<br>Description: Valid only when IsKickOut is true.</p>
+ * @method integer getMaxDelay() Obtain <p>Delay removal threshold, minimum value: 1, value ranges from 1 to 10000, integer.</p>
+ * @method void setMaxDelay(integer $MaxDelay) Set <p>Delay removal threshold, minimum value: 1, value ranges from 1 to 10000, integer.</p>
+ * @method boolean getFailOver() Obtain <p>Whether fault migration is enabled, value: "true" | "false"</p>
+ * @method void setFailOver(boolean $FailOver) Set <p>Whether fault migration is enabled, value: "true" | "false"</p>
+ * @method boolean getAutoAddRo() Obtain <p>Automatically add RO. Parameter: "true" | "false"</p>
+ * @method void setAutoAddRo(boolean $AutoAddRo) Set <p>Automatically add RO. Parameter: "true" | "false"</p>
+ * @method boolean getReadOnly() Obtain <p>Whether it is read-only. Value: "true" | "false".</p>
+ * @method void setReadOnly(boolean $ReadOnly) Set <p>Whether it is read-only. Value: "true" | "false".</p>
+ * @method string getProxyAddressId() Obtain <p>Proxy group address ID. Obtain through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
+ * @method void setProxyAddressId(string $ProxyAddressId) Set <p>Proxy group address ID. Obtain through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
+ * @method boolean getTransSplit() Obtain <p>Whether transaction splitting is enabled. Value: "true" | "false". Default value: false.</p>
+ * @method void setTransSplit(boolean $TransSplit) Set <p>Whether transaction splitting is enabled. Value: "true" | "false". Default value: false.</p>
+ * @method boolean getConnectionPool() Obtain <p>Whether the connection pool is enabled. Off by default.<br>Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be at least MySQL 8.0 20230630.</p>
+ * @method void setConnectionPool(boolean $ConnectionPool) Set <p>Whether the connection pool is enabled. Off by default.<br>Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be at least MySQL 8.0 20230630.</p>
+ * @method array getProxyAllocation() Obtain <p>Read-write weight allocation. If WeightMode is passed in as system, the passed-in weight does not take effect and the default weight is assigned by the system.</p>
+ * @method void setProxyAllocation(array $ProxyAllocation) Set <p>Read-write weight allocation. If WeightMode is passed in as system, the passed-in weight does not take effect and the default weight is assigned by the system.</p>
+ * @method boolean getAutoLoadBalance() Obtain <p>Whether self-adaptive load balancing is enabled. Off by default.</p>
+ * @method void setAutoLoadBalance(boolean $AutoLoadBalance) Set <p>Whether self-adaptive load balancing is enabled. Off by default.</p>
+ * @method string getAccessMode() Obtain <p>Access mode: nearby - proximity access, balance - balanced allocation. Default is proximity access.</p>
+ * @method void setAccessMode(string $AccessMode) Set <p>Access mode: nearby - proximity access, balance - balanced allocation. Default is proximity access.</p>
+ * @method boolean getApNodeAsRoNode() Obtain <p>Whether to treat the libra node as an ordinary RO node</p>
+ * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) Set <p>Whether to treat the libra node as an ordinary RO node</p>
+ * @method boolean getApQueryToOtherNode() Obtain <p>Whether to forward to other nodes in case of a libra node fault</p>
+ * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) Set <p>Whether to forward to other nodes in case of a libra node fault</p>
  */
 class AdjustCdbProxyAddressRequest extends AbstractModel
 {
     /**
-     * @var string Proxy group ID
+     * @var string <p>Proxy group ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
      */
     public $ProxyGroupId;
 
     /**
-     * @var string Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
+     * @var string <p>Weight allocation mode,<br>system Auto-Assignment: "system", custom: "custom"</p>
      */
     public $WeightMode;
 
     /**
-     * @var boolean Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`.
+     * @var boolean <p>Whether delay removal is enabled. Value: "true" | "false"</p>
      */
     public $IsKickOut;
 
     /**
-     * @var integer Least read-only instances. Minimum value:  `0`
+     * @var integer <p>Minimum retention quantity, minimum value: 0.<br>Description: Valid only when IsKickOut is true.</p>
      */
     public $MinCount;
 
     /**
-     * @var integer The delay threshold. Minimum value:  `0`
+     * @var integer <p>Delay removal threshold, minimum value: 1, value ranges from 1 to 10000, integer.</p>
      */
     public $MaxDelay;
 
     /**
-     * @var boolean Whether to enable failover. Valid values: `true`, `false`.
+     * @var boolean <p>Whether fault migration is enabled, value: "true" | "false"</p>
      */
     public $FailOver;
 
     /**
-     * @var boolean Whether to automatically add newly created read-only instances. Valid values: `true`, `false`.
+     * @var boolean <p>Automatically add RO. Parameter: "true" | "false"</p>
      */
     public $AutoAddRo;
 
     /**
-     * @var boolean Whether it is read-only. Valid values: `true`, `false`.
+     * @var boolean <p>Whether it is read-only. Value: "true" | "false".</p>
      */
     public $ReadOnly;
 
     /**
-     * @var string Address ID of the proxy group
+     * @var string <p>Proxy group address ID. Obtain through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
      */
     public $ProxyAddressId;
 
     /**
-     * @var boolean Whether to enable transaction splitting. Valid values: `true`, `false`.
+     * @var boolean <p>Whether transaction splitting is enabled. Value: "true" | "false". Default value: false.</p>
      */
     public $TransSplit;
 
     /**
-     * @var boolean Whether to enable the connection pool
+     * @var boolean <p>Whether the connection pool is enabled. Off by default.<br>Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be at least MySQL 8.0 20230630.</p>
      */
     public $ConnectionPool;
 
     /**
-     * @var array Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
+     * @var array <p>Read-write weight allocation. If WeightMode is passed in as system, the passed-in weight does not take effect and the default weight is assigned by the system.</p>
      */
     public $ProxyAllocation;
 
     /**
-     * @var boolean Whether to enable adaptive load balancing. Disabled by default.
+     * @var boolean <p>Whether self-adaptive load balancing is enabled. Off by default.</p>
      */
     public $AutoLoadBalance;
 
     /**
-     * @var string Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
+     * @var string <p>Access mode: nearby - proximity access, balance - balanced allocation. Default is proximity access.</p>
      */
     public $AccessMode;
 
     /**
-     * @param string $ProxyGroupId Proxy group ID
-     * @param string $WeightMode Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
-     * @param boolean $IsKickOut Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`.
-     * @param integer $MinCount Least read-only instances. Minimum value:  `0`
-     * @param integer $MaxDelay The delay threshold. Minimum value:  `0`
-     * @param boolean $FailOver Whether to enable failover. Valid values: `true`, `false`.
-     * @param boolean $AutoAddRo Whether to automatically add newly created read-only instances. Valid values: `true`, `false`.
-     * @param boolean $ReadOnly Whether it is read-only. Valid values: `true`, `false`.
-     * @param string $ProxyAddressId Address ID of the proxy group
-     * @param boolean $TransSplit Whether to enable transaction splitting. Valid values: `true`, `false`.
-     * @param boolean $ConnectionPool Whether to enable the connection pool
-     * @param array $ProxyAllocation Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
-     * @param boolean $AutoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
-     * @param string $AccessMode Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
+     * @var boolean <p>Whether to treat the libra node as an ordinary RO node</p>
+     */
+    public $ApNodeAsRoNode;
+
+    /**
+     * @var boolean <p>Whether to forward to other nodes in case of a libra node fault</p>
+     */
+    public $ApQueryToOtherNode;
+
+    /**
+     * @param string $ProxyGroupId <p>Proxy group ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
+     * @param string $WeightMode <p>Weight allocation mode,<br>system Auto-Assignment: "system", custom: "custom"</p>
+     * @param boolean $IsKickOut <p>Whether delay removal is enabled. Value: "true" | "false"</p>
+     * @param integer $MinCount <p>Minimum retention quantity, minimum value: 0.<br>Description: Valid only when IsKickOut is true.</p>
+     * @param integer $MaxDelay <p>Delay removal threshold, minimum value: 1, value ranges from 1 to 10000, integer.</p>
+     * @param boolean $FailOver <p>Whether fault migration is enabled, value: "true" | "false"</p>
+     * @param boolean $AutoAddRo <p>Automatically add RO. Parameter: "true" | "false"</p>
+     * @param boolean $ReadOnly <p>Whether it is read-only. Value: "true" | "false".</p>
+     * @param string $ProxyAddressId <p>Proxy group address ID. Obtain through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
+     * @param boolean $TransSplit <p>Whether transaction splitting is enabled. Value: "true" | "false". Default value: false.</p>
+     * @param boolean $ConnectionPool <p>Whether the connection pool is enabled. Off by default.<br>Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be at least MySQL 8.0 20230630.</p>
+     * @param array $ProxyAllocation <p>Read-write weight allocation. If WeightMode is passed in as system, the passed-in weight does not take effect and the default weight is assigned by the system.</p>
+     * @param boolean $AutoLoadBalance <p>Whether self-adaptive load balancing is enabled. Off by default.</p>
+     * @param string $AccessMode <p>Access mode: nearby - proximity access, balance - balanced allocation. Default is proximity access.</p>
+     * @param boolean $ApNodeAsRoNode <p>Whether to treat the libra node as an ordinary RO node</p>
+     * @param boolean $ApQueryToOtherNode <p>Whether to forward to other nodes in case of a libra node fault</p>
      */
     function __construct()
     {
@@ -209,6 +225,14 @@ class AdjustCdbProxyAddressRequest extends AbstractModel
 
         if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
             $this->AccessMode = $param["AccessMode"];
+        }
+
+        if (array_key_exists("ApNodeAsRoNode",$param) and $param["ApNodeAsRoNode"] !== null) {
+            $this->ApNodeAsRoNode = $param["ApNodeAsRoNode"];
+        }
+
+        if (array_key_exists("ApQueryToOtherNode",$param) and $param["ApQueryToOtherNode"] !== null) {
+            $this->ApQueryToOtherNode = $param["ApQueryToOtherNode"];
         }
     }
 }

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Analysis result of an audit log
  *
  * @method string getAggregationField() Obtain Aggregation dimension
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAggregationField(string $AggregationField) Set Aggregation dimension
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getBuckets() Obtain Result set of an aggregation bucket
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBuckets(array $Buckets) Set Result set of an aggregation bucket
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getBuckets() Obtain Aggregate bucket result set
+ * @method void setBuckets(array $Buckets) Set Aggregate bucket result set
  */
 class AuditLogAggregationResult extends AbstractModel
 {
     /**
      * @var string Aggregation dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AggregationField;
 
     /**
-     * @var array Result set of an aggregation bucket
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Aggregate bucket result set
      */
     public $Buckets;
 
     /**
      * @param string $AggregationField Aggregation dimension
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Buckets Result set of an aggregation bucket
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Buckets Aggregate bucket result set
      */
     function __construct()
     {

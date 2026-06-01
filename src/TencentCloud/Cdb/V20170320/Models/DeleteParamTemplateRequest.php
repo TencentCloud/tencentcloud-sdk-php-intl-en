@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteParamTemplate request structure.
  *
- * @method integer getTemplateId() Obtain Parameter template ID.
- * @method void setTemplateId(integer $TemplateId) Set Parameter template ID.
+ * @method integer getTemplateId() Obtain Parameter template ID, which can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
+ * @method void setTemplateId(integer $TemplateId) Set Parameter template ID, which can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
  */
 class DeleteParamTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Parameter template ID.
+     * @var integer Parameter template ID, which can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
      */
     public $TemplateId;
 
     /**
-     * @param integer $TemplateId Parameter template ID.
+     * @param integer $TemplateId Parameter template ID, which can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
      */
     function __construct()
     {

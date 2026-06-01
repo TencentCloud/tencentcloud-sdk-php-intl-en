@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAccountMaxUserConnections request structure.
  *
- * @method array getAccounts() Obtain List of TencentDB accounts
- * @method void setAccounts(array $Accounts) Set List of TencentDB accounts
+ * @method array getAccounts() Obtain Cloud Database account. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+ * @method void setAccounts(array $Accounts) Set Cloud Database account. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
  * @method integer getMaxUserConnections() Obtain Maximum connections of the account. Maximum value: `10240`.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAccountMaxUserConnectionsRequest extends AbstractModel
 {
     /**
-     * @var array List of TencentDB accounts
+     * @var array Cloud Database account. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
      */
     public $Accounts;
 
@@ -45,7 +45,7 @@ class ModifyAccountMaxUserConnectionsRequest extends AbstractModel
     public $MaxUserConnections;
 
     /**
-     * @param array $Accounts List of TencentDB accounts
+     * @param array $Accounts Cloud Database account. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      * @param integer $MaxUserConnections Maximum connections of the account. Maximum value: `10240`.
      */

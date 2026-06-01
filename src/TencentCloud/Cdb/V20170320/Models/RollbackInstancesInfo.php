@@ -20,62 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of the instance for rollback
  *
- * @method string getInstanceId() Obtain TencentDB instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set TencentDB instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStrategy() Obtain Rollback policy. Valid values: `table` (ultrafast mode), `db` (faster mode), and `full` (fast mode). Default value: `full`. In the ultrafast mode, only backups and binlogs of the tables specified by the `Tables` parameter are imported; if `Tables` does not include all of the tables involved in cross-table operations, the rollback may fail; and the `Database` parameter must be left empty. In the faster mode, only backups and binlogs of the databases specified by the `Databases` parameter are imported, and if `Databases` does not include all of the databases involved in cross-database operations, the rollback may fail. In the fast mode, backups and binlogs of the entire instance will be imported in a speed slower than the other modes.
- * @method void setStrategy(string $Strategy) Set Rollback policy. Valid values: `table` (ultrafast mode), `db` (faster mode), and `full` (fast mode). Default value: `full`. In the ultrafast mode, only backups and binlogs of the tables specified by the `Tables` parameter are imported; if `Tables` does not include all of the tables involved in cross-table operations, the rollback may fail; and the `Database` parameter must be left empty. In the faster mode, only backups and binlogs of the databases specified by the `Databases` parameter are imported, and if `Databases` does not include all of the databases involved in cross-database operations, the rollback may fail. In the fast mode, backups and binlogs of the entire instance will be imported in a speed slower than the other modes.
- * @method string getRollbackTime() Obtain Database rollback time in the format of yyyy-mm-dd hh:mm:ss
- * @method void setRollbackTime(string $RollbackTime) Set Database rollback time in the format of yyyy-mm-dd hh:mm:ss
- * @method array getDatabases() Obtain Information of the databases to be rolled back, which means rollback at the database level
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDatabases(array $Databases) Set Information of the databases to be rolled back, which means rollback at the database level
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getTables() Obtain Information of the tables to be rolled back, which means rollback at the table level
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTables(array $Tables) Set Information of the tables to be rolled back, which means rollback at the table level
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceId() Obtain Cloud database instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Cloud database instance ID.
+ * @method string getStrategy() Obtain Rollback strategy. Optional values: table, db, full. table - Ultra-fast rollback mode, only imports selected table-level backups and binlog. If there are cross-table operations and the associated table hasn't been selected, it will cause rollback failure. In this mode, parameter Databases must be empty. db - Quick mode, only imports selected database-level backups and binlog. If there are cross-database operations and the associated database hasn't been selected, it will cause rollback failure. full - Standard rollback mode, imports backups and binlog of the entire instance, speed is not as fast.
+ * @method void setStrategy(string $Strategy) Set Rollback strategy. Optional values: table, db, full. table - Ultra-fast rollback mode, only imports selected table-level backups and binlog. If there are cross-table operations and the associated table hasn't been selected, it will cause rollback failure. In this mode, parameter Databases must be empty. db - Quick mode, only imports selected database-level backups and binlog. If there are cross-database operations and the associated database hasn't been selected, it will cause rollback failure. full - Standard rollback mode, imports backups and binlog of the entire instance, speed is not as fast.
+ * @method string getRollbackTime() Obtain Database rollback time in the format of yyyy-mm-dd hh:mm:ss.
+ * @method void setRollbackTime(string $RollbackTime) Set Database rollback time in the format of yyyy-mm-dd hh:mm:ss.
+ * @method array getDatabases() Obtain Database information to be rolled back, which means database rollback.
+ * @method void setDatabases(array $Databases) Set Database information to be rolled back, which means database rollback.
+ * @method array getTables() Obtain Database table information to be rolled back, which means rollback by table.
+ * @method void setTables(array $Tables) Set Database table information to be rolled back, which means rollback by table.
  */
 class RollbackInstancesInfo extends AbstractModel
 {
     /**
-     * @var string TencentDB instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Cloud database instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Rollback policy. Valid values: `table` (ultrafast mode), `db` (faster mode), and `full` (fast mode). Default value: `full`. In the ultrafast mode, only backups and binlogs of the tables specified by the `Tables` parameter are imported; if `Tables` does not include all of the tables involved in cross-table operations, the rollback may fail; and the `Database` parameter must be left empty. In the faster mode, only backups and binlogs of the databases specified by the `Databases` parameter are imported, and if `Databases` does not include all of the databases involved in cross-database operations, the rollback may fail. In the fast mode, backups and binlogs of the entire instance will be imported in a speed slower than the other modes.
+     * @var string Rollback strategy. Optional values: table, db, full. table - Ultra-fast rollback mode, only imports selected table-level backups and binlog. If there are cross-table operations and the associated table hasn't been selected, it will cause rollback failure. In this mode, parameter Databases must be empty. db - Quick mode, only imports selected database-level backups and binlog. If there are cross-database operations and the associated database hasn't been selected, it will cause rollback failure. full - Standard rollback mode, imports backups and binlog of the entire instance, speed is not as fast.
      */
     public $Strategy;
 
     /**
-     * @var string Database rollback time in the format of yyyy-mm-dd hh:mm:ss
+     * @var string Database rollback time in the format of yyyy-mm-dd hh:mm:ss.
      */
     public $RollbackTime;
 
     /**
-     * @var array Information of the databases to be rolled back, which means rollback at the database level
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Database information to be rolled back, which means database rollback.
      */
     public $Databases;
 
     /**
-     * @var array Information of the tables to be rolled back, which means rollback at the table level
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Database table information to be rolled back, which means rollback by table.
      */
     public $Tables;
 
     /**
-     * @param string $InstanceId TencentDB instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Strategy Rollback policy. Valid values: `table` (ultrafast mode), `db` (faster mode), and `full` (fast mode). Default value: `full`. In the ultrafast mode, only backups and binlogs of the tables specified by the `Tables` parameter are imported; if `Tables` does not include all of the tables involved in cross-table operations, the rollback may fail; and the `Database` parameter must be left empty. In the faster mode, only backups and binlogs of the databases specified by the `Databases` parameter are imported, and if `Databases` does not include all of the databases involved in cross-database operations, the rollback may fail. In the fast mode, backups and binlogs of the entire instance will be imported in a speed slower than the other modes.
-     * @param string $RollbackTime Database rollback time in the format of yyyy-mm-dd hh:mm:ss
-     * @param array $Databases Information of the databases to be rolled back, which means rollback at the database level
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Tables Information of the tables to be rolled back, which means rollback at the table level
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceId Cloud database instance ID.
+     * @param string $Strategy Rollback strategy. Optional values: table, db, full. table - Ultra-fast rollback mode, only imports selected table-level backups and binlog. If there are cross-table operations and the associated table hasn't been selected, it will cause rollback failure. In this mode, parameter Databases must be empty. db - Quick mode, only imports selected database-level backups and binlog. If there are cross-database operations and the associated database hasn't been selected, it will cause rollback failure. full - Standard rollback mode, imports backups and binlog of the entire instance, speed is not as fast.
+     * @param string $RollbackTime Database rollback time in the format of yyyy-mm-dd hh:mm:ss.
+     * @param array $Databases Database information to be rolled back, which means database rollback.
+     * @param array $Tables Database table information to be rolled back, which means rollback by table.
      */
     function __construct()
     {

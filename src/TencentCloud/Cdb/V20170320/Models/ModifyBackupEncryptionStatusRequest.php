@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-XXXX, which is the same as that displayed in the TencentDB console.
  * @method string getEncryptionStatus() Obtain Default encryption status for the new auto-generated physical backup files. Valid values: `on`, `off`.
  * @method void setEncryptionStatus(string $EncryptionStatus) Set Default encryption status for the new auto-generated physical backup files. Valid values: `on`, `off`.
+ * @method string getBinlogEncryptionStatus() Obtain Set the default encryption status of the newly-added automated log backup file for the instance. Available values are on or off.
+ * @method void setBinlogEncryptionStatus(string $BinlogEncryptionStatus) Set Set the default encryption status of the newly-added automated log backup file for the instance. Available values are on or off.
  */
 class ModifyBackupEncryptionStatusRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyBackupEncryptionStatusRequest extends AbstractModel
     public $EncryptionStatus;
 
     /**
+     * @var string Set the default encryption status of the newly-added automated log backup file for the instance. Available values are on or off.
+     */
+    public $BinlogEncryptionStatus;
+
+    /**
      * @param string $InstanceId Instance ID in the format of cdb-XXXX, which is the same as that displayed in the TencentDB console.
      * @param string $EncryptionStatus Default encryption status for the new auto-generated physical backup files. Valid values: `on`, `off`.
+     * @param string $BinlogEncryptionStatus Set the default encryption status of the newly-added automated log backup file for the instance. Available values are on or off.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyBackupEncryptionStatusRequest extends AbstractModel
 
         if (array_key_exists("EncryptionStatus",$param) and $param["EncryptionStatus"] !== null) {
             $this->EncryptionStatus = $param["EncryptionStatus"];
+        }
+
+        if (array_key_exists("BinlogEncryptionStatus",$param) and $param["BinlogEncryptionStatus"] !== null) {
+            $this->BinlogEncryptionStatus = $param["BinlogEncryptionStatus"];
         }
     }
 }

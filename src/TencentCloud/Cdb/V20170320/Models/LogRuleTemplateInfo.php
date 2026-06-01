@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Basic information on the rule template hit by the audit log.
  *
- * @method string getRuleTemplateId() Obtain Template ID. 
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method void setRuleTemplateId(string $RuleTemplateId) Set Template ID. 
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method string getRuleTemplateName() Obtain Template name.
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method void setRuleTemplateName(string $RuleTemplateName) Set Template name.
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method string getAlarmLevel() Obtain Alarm level. Valid values: 1: Low risk; 2: Medium risk; 3: High risk. 
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method void setAlarmLevel(string $AlarmLevel) Set Alarm level. Valid values: 1: Low risk; 2: Medium risk; 3: High risk. 
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method integer getRuleTemplateStatus() Obtain Template change status. Valid values: 0: Unchanged; 1: Changed; 2: Deleted.
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method void setRuleTemplateStatus(integer $RuleTemplateStatus) Set Template change status. Valid values: 0: Unchanged; 1: Changed; 2: Deleted.
-Note: The return value may be null, indicating that no valid data can be obtained.
+ * @method string getRuleTemplateId() Obtain Template ID.
+ * @method void setRuleTemplateId(string $RuleTemplateId) Set Template ID.
+ * @method string getRuleTemplateName() Obtain Rule template name
+ * @method void setRuleTemplateName(string $RuleTemplateName) Set Rule template name
+ * @method string getAlarmLevel() Obtain Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+ * @method void setAlarmLevel(string $AlarmLevel) Set Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+ * @method integer getRuleTemplateStatus() Obtain Rule template change status. Valid values: 0 - Not changed, 1 - changed, 2 - deleted.
+ * @method void setRuleTemplateStatus(integer $RuleTemplateStatus) Set Rule template change status. Valid values: 0 - Not changed, 1 - changed, 2 - deleted.
  */
 class LogRuleTemplateInfo extends AbstractModel
 {
     /**
-     * @var string Template ID. 
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @var string Template ID.
      */
     public $RuleTemplateId;
 
     /**
-     * @var string Template name.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @var string Rule template name
      */
     public $RuleTemplateName;
 
     /**
-     * @var string Alarm level. Valid values: 1: Low risk; 2: Medium risk; 3: High risk. 
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @var string Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
      */
     public $AlarmLevel;
 
     /**
-     * @var integer Template change status. Valid values: 0: Unchanged; 1: Changed; 2: Deleted.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @var integer Rule template change status. Valid values: 0 - Not changed, 1 - changed, 2 - deleted.
      */
     public $RuleTemplateStatus;
 
     /**
-     * @param string $RuleTemplateId Template ID. 
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param string $RuleTemplateName Template name.
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param string $AlarmLevel Alarm level. Valid values: 1: Low risk; 2: Medium risk; 3: High risk. 
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param integer $RuleTemplateStatus Template change status. Valid values: 0: Unchanged; 1: Changed; 2: Deleted.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @param string $RuleTemplateId Template ID.
+     * @param string $RuleTemplateName Rule template name
+     * @param string $AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     * @param integer $RuleTemplateStatus Rule template change status. Valid values: 0 - Not changed, 1 - changed, 2 - deleted.
      */
     function __construct()
     {

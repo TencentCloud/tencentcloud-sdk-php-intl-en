@@ -20,32 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartCpuExpand request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getType() Obtain Scale-out mode. Valid values: auto and
-manual.
- * @method void setType(string $Type) Set Scale-out mode. Valid values: auto and
-manual.
- * @method integer getExpandCpu() Obtain Number of CPU cores to increase during manual scale-out. This parameter is required when Type is set to manual.
- * @method void setExpandCpu(integer $ExpandCpu) Set Number of CPU cores to increase during manual scale-out. This parameter is required when Type is set to manual.
+ * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method string getType() Obtain Scale-out type supports auto-scaling and custom scaling.
+Description: 1. auto means automatic scaling. 2. manual means custom scaling with immediate effect. 3. timeInterval means custom scaling by time. 4. period means custom scaling by cycle.
+ * @method void setType(string $Type) Set Scale-out type supports auto-scaling and custom scaling.
+Description: 1. auto means automatic scaling. 2. manual means custom scaling with immediate effect. 3. timeInterval means custom scaling by time. 4. period means custom scaling by cycle.
+ * @method integer getExpandCpu() Obtain Number of CPU cores for scale-out during customization.
+Description: 1. This parameter is required when Type is set to manual, timeInterval, or period. 2. The maximum number of CPU cores to increase is the current instance's CPU core number. For example, an 8-core 16GB instance can scale out up to 8 CPU cores, with a range of 1 - 8.
+ * @method void setExpandCpu(integer $ExpandCpu) Set Number of CPU cores for scale-out during customization.
+Description: 1. This parameter is required when Type is set to manual, timeInterval, or period. 2. The maximum number of CPU cores to increase is the current instance's CPU core number. For example, an 8-core 16GB instance can scale out up to 8 CPU cores, with a range of 1 - 8.
  * @method AutoStrategy getAutoStrategy() Obtain Automatic scale-out policy. This parameter is required when Type is set to auto.
  * @method void setAutoStrategy(AutoStrategy $AutoStrategy) Set Automatic scale-out policy. This parameter is required when Type is set to auto.
+ * @method TimeIntervalStrategy getTimeIntervalStrategy() Obtain Scaling policy by time period.
+Description: When Type is timeInterval, TimeIntervalStrategy is required.
+ * @method void setTimeIntervalStrategy(TimeIntervalStrategy $TimeIntervalStrategy) Set Scaling policy by time period.
+Description: When Type is timeInterval, TimeIntervalStrategy is required.
+ * @method PeriodStrategy getPeriodStrategy() Obtain Scale by cycle.
+Description: When Type is period, PeriodStrategy is required.
+ * @method void setPeriodStrategy(PeriodStrategy $PeriodStrategy) Set Scale by cycle.
+Description: When Type is period, PeriodStrategy is required.
  */
 class StartCpuExpandRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
     /**
-     * @var string Scale-out mode. Valid values: auto and
-manual.
+     * @var string Scale-out type supports auto-scaling and custom scaling.
+Description: 1. auto means automatic scaling. 2. manual means custom scaling with immediate effect. 3. timeInterval means custom scaling by time. 4. period means custom scaling by cycle.
      */
     public $Type;
 
     /**
-     * @var integer Number of CPU cores to increase during manual scale-out. This parameter is required when Type is set to manual.
+     * @var integer Number of CPU cores for scale-out during customization.
+Description: 1. This parameter is required when Type is set to manual, timeInterval, or period. 2. The maximum number of CPU cores to increase is the current instance's CPU core number. For example, an 8-core 16GB instance can scale out up to 8 CPU cores, with a range of 1 - 8.
      */
     public $ExpandCpu;
 
@@ -55,11 +66,28 @@ manual.
     public $AutoStrategy;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param string $Type Scale-out mode. Valid values: auto and
-manual.
-     * @param integer $ExpandCpu Number of CPU cores to increase during manual scale-out. This parameter is required when Type is set to manual.
+     * @var TimeIntervalStrategy Scaling policy by time period.
+Description: When Type is timeInterval, TimeIntervalStrategy is required.
+     */
+    public $TimeIntervalStrategy;
+
+    /**
+     * @var PeriodStrategy Scale by cycle.
+Description: When Type is period, PeriodStrategy is required.
+     */
+    public $PeriodStrategy;
+
+    /**
+     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param string $Type Scale-out type supports auto-scaling and custom scaling.
+Description: 1. auto means automatic scaling. 2. manual means custom scaling with immediate effect. 3. timeInterval means custom scaling by time. 4. period means custom scaling by cycle.
+     * @param integer $ExpandCpu Number of CPU cores for scale-out during customization.
+Description: 1. This parameter is required when Type is set to manual, timeInterval, or period. 2. The maximum number of CPU cores to increase is the current instance's CPU core number. For example, an 8-core 16GB instance can scale out up to 8 CPU cores, with a range of 1 - 8.
      * @param AutoStrategy $AutoStrategy Automatic scale-out policy. This parameter is required when Type is set to auto.
+     * @param TimeIntervalStrategy $TimeIntervalStrategy Scaling policy by time period.
+Description: When Type is timeInterval, TimeIntervalStrategy is required.
+     * @param PeriodStrategy $PeriodStrategy Scale by cycle.
+Description: When Type is period, PeriodStrategy is required.
      */
     function __construct()
     {
@@ -89,6 +117,16 @@ manual.
         if (array_key_exists("AutoStrategy",$param) and $param["AutoStrategy"] !== null) {
             $this->AutoStrategy = new AutoStrategy();
             $this->AutoStrategy->deserialize($param["AutoStrategy"]);
+        }
+
+        if (array_key_exists("TimeIntervalStrategy",$param) and $param["TimeIntervalStrategy"] !== null) {
+            $this->TimeIntervalStrategy = new TimeIntervalStrategy();
+            $this->TimeIntervalStrategy->deserialize($param["TimeIntervalStrategy"]);
+        }
+
+        if (array_key_exists("PeriodStrategy",$param) and $param["PeriodStrategy"] !== null) {
+            $this->PeriodStrategy = new PeriodStrategy();
+            $this->PeriodStrategy->deserialize($param["PeriodStrategy"]);
         }
     }
 }

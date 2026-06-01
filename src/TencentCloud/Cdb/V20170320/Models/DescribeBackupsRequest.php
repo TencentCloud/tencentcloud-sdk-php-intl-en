@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackups request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+ * @method string getInstanceId() Obtain Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
  * @method integer getOffset() Obtain Offset. Minimum value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Minimum value: 0.
- * @method integer getLimit() Obtain Number of entries per page. Value range: 1-100. Default value: 20.
- * @method void setLimit(integer $Limit) Set Number of entries per page. Value range: 1-100. Default value: 20.
+ * @method integer getLimit() Obtain Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
+ * @method void setLimit(integer $Limit) Set Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
  */
 class DescribeBackupsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * @var string Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public $InstanceId;
 
@@ -40,14 +40,14 @@ class DescribeBackupsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of entries per page. Value range: 1-100. Default value: 20.
+     * @var integer Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * @param string $InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      * @param integer $Offset Offset. Minimum value: 0.
-     * @param integer $Limit Number of entries per page. Value range: 1-100. Default value: 20.
+     * @param integer $Limit Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
      */
     function __construct()
     {

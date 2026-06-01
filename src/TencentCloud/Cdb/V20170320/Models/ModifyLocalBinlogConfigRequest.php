@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLocalBinlogConfig request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
- * @method integer getSaveHours() Obtain Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
- * @method void setSaveHours(integer $SaveHours) Set Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
- * @method integer getMaxUsage() Obtain Space utilization of local binlog. Value range: [30,50].
- * @method void setMaxUsage(integer $MaxUsage) Set Space utilization of local binlog. Value range: [30,50].
+ * @method string getInstanceId() Obtain Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+ * @method integer getSaveHours() Obtain Local binlog retention duration. Values for different instances are as follows:
+1. The local binlog retention duration (hr) for cloud disk edition instances, dual-node instances, and three-node instances defaults to 120, with a range of 6 - 168.
+2. The retention duration of local binlog for disaster recovery instance defaults to 120 hr, with a range of 120 - 168.
+3. The retention duration (hr) of local binlog for a single-node cloud disk instance defaults to 120, with a range of 0 - 168.
+4. If a dual-node instance or three-node instance has no disaster recovery instance, the retention duration (hr) of local binlog for the primary instance ranges from 6 to 168. If a dual-node instance or three-node instance has a disaster recovery instance, or you want to add a disaster recovery instance to a dual-node instance or three-node instance, to avoid synchronization exception, the retention duration (hr) of local binlog for the primary instance cannot be set to less than 120 hr, ranging from 120 to 168.
+ * @method void setSaveHours(integer $SaveHours) Set Local binlog retention duration. Values for different instances are as follows:
+1. The local binlog retention duration (hr) for cloud disk edition instances, dual-node instances, and three-node instances defaults to 120, with a range of 6 - 168.
+2. The retention duration of local binlog for disaster recovery instance defaults to 120 hr, with a range of 120 - 168.
+3. The retention duration (hr) of local binlog for a single-node cloud disk instance defaults to 120, with a range of 0 - 168.
+4. If a dual-node instance or three-node instance has no disaster recovery instance, the retention duration (hr) of local binlog for the primary instance ranges from 6 to 168. If a dual-node instance or three-node instance has a disaster recovery instance, or you want to add a disaster recovery instance to a dual-node instance or three-node instance, to avoid synchronization exception, the retention duration (hr) of local binlog for the primary instance cannot be set to less than 120 hr, ranging from 120 to 168.
+ * @method integer getMaxUsage() Obtain Local binlog space utilization. Valid values: [30,50].
+ * @method void setMaxUsage(integer $MaxUsage) Set Local binlog space utilization. Valid values: [30,50].
  */
 class ModifyLocalBinlogConfigRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @var string Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public $InstanceId;
 
     /**
-     * @var integer Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
+     * @var integer Local binlog retention duration. Values for different instances are as follows:
+1. The local binlog retention duration (hr) for cloud disk edition instances, dual-node instances, and three-node instances defaults to 120, with a range of 6 - 168.
+2. The retention duration of local binlog for disaster recovery instance defaults to 120 hr, with a range of 120 - 168.
+3. The retention duration (hr) of local binlog for a single-node cloud disk instance defaults to 120, with a range of 0 - 168.
+4. If a dual-node instance or three-node instance has no disaster recovery instance, the retention duration (hr) of local binlog for the primary instance ranges from 6 to 168. If a dual-node instance or three-node instance has a disaster recovery instance, or you want to add a disaster recovery instance to a dual-node instance or three-node instance, to avoid synchronization exception, the retention duration (hr) of local binlog for the primary instance cannot be set to less than 120 hr, ranging from 120 to 168.
      */
     public $SaveHours;
 
     /**
-     * @var integer Space utilization of local binlog. Value range: [30,50].
+     * @var integer Local binlog space utilization. Valid values: [30,50].
      */
     public $MaxUsage;
 
     /**
-     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
-     * @param integer $SaveHours Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
-     * @param integer $MaxUsage Space utilization of local binlog. Value range: [30,50].
+     * @param string $InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+     * @param integer $SaveHours Local binlog retention duration. Values for different instances are as follows:
+1. The local binlog retention duration (hr) for cloud disk edition instances, dual-node instances, and three-node instances defaults to 120, with a range of 6 - 168.
+2. The retention duration of local binlog for disaster recovery instance defaults to 120 hr, with a range of 120 - 168.
+3. The retention duration (hr) of local binlog for a single-node cloud disk instance defaults to 120, with a range of 0 - 168.
+4. If a dual-node instance or three-node instance has no disaster recovery instance, the retention duration (hr) of local binlog for the primary instance ranges from 6 to 168. If a dual-node instance or three-node instance has a disaster recovery instance, or you want to add a disaster recovery instance to a dual-node instance or three-node instance, to avoid synchronization exception, the retention duration (hr) of local binlog for the primary instance cannot be set to less than 120 hr, ranging from 120 to 168.
+     * @param integer $MaxUsage Local binlog space utilization. Valid values: [30,50].
      */
     function __construct()
     {

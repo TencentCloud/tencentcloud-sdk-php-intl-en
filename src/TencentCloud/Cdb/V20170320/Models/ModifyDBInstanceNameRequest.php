@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
- * @method string getInstanceName() Obtain The modified instance name.
- * @method void setInstanceName(string $InstanceName) Set The modified instance name.
+ * @method string getInstanceName() Obtain Modified instance name, which can only contain digits, English uppercase and lowercase letters, Chinese, and special characters -_./()[]（）+=:：@. Its length cannot exceed 60.
+ * @method void setInstanceName(string $InstanceName) Set Modified instance name, which can only contain digits, English uppercase and lowercase letters, Chinese, and special characters -_./()[]（）+=:：@. Its length cannot exceed 60.
  */
 class ModifyDBInstanceNameRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyDBInstanceNameRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string The modified instance name.
+     * @var string Modified instance name, which can only contain digits, English uppercase and lowercase letters, Chinese, and special characters -_./()[]（）+=:：@. Its length cannot exceed 60.
      */
     public $InstanceName;
 
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
-     * @param string $InstanceName The modified instance name.
+     * @param string $InstanceName Modified instance name, which can only contain digits, English uppercase and lowercase letters, Chinese, and special characters -_./()[]（）+=:：@. Its length cannot exceed 60.
      */
     function __construct()
     {

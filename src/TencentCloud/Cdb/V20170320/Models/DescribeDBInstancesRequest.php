@@ -22,80 +22,76 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getProjectId() Obtain Project ID.
  * @method void setProjectId(integer $ProjectId) Set Project ID.
- * @method array getInstanceTypes() Obtain Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
- * @method void setInstanceTypes(array $InstanceTypes) Set Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
- * @method array getVips() Obtain Private IP address of the instance.
- * @method void setVips(array $Vips) Set Private IP address of the instance.
- * @method array getStatus() Obtain Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
- * @method void setStatus(array $Status) Set Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
- * @method integer getOffset() Obtain Offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
- * @method integer getLimit() Obtain Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
- * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
- * @method string getSecurityGroupId() Obtain Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
- * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
- * @method array getPayTypes() Obtain Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
- * @method void setPayTypes(array $PayTypes) Set Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
- * @method array getInstanceNames() Obtain Instance name.
- * @method void setInstanceNames(array $InstanceNames) Set Instance name.
- * @method array getTaskStatus() Obtain Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
- * @method void setTaskStatus(array $TaskStatus) Set Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
- * @method array getEngineVersions() Obtain Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
- * @method void setEngineVersions(array $EngineVersions) Set Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
- * @method array getVpcIds() Obtain VPC ID.
- * @method void setVpcIds(array $VpcIds) Set VPC ID.
- * @method array getZoneIds() Obtain AZ ID.
- * @method void setZoneIds(array $ZoneIds) Set AZ ID.
- * @method array getSubnetIds() Obtain Subnet ID.
- * @method void setSubnetIds(array $SubnetIds) Set Subnet ID.
- * @method array getCdbErrors() Obtain Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
- * @method void setCdbErrors(array $CdbErrors) Set Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
- * @method string getOrderBy() Obtain Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
- * @method void setOrderBy(string $OrderBy) Set Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
- * @method string getOrderDirection() Obtain Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
- * @method void setOrderDirection(string $OrderDirection) Set Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
- * @method integer getWithSecurityGroup() Obtain Whether to use the security group ID as the filter condition.
-Note: 0 indicates no; 1 indicates yes.
- * @method void setWithSecurityGroup(integer $WithSecurityGroup) Set Whether to use the security group ID as the filter condition.
-Note: 0 indicates no; 1 indicates yes.
- * @method integer getWithExCluster() Obtain Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
- * @method void setWithExCluster(integer $WithExCluster) Set Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
- * @method string getExClusterId() Obtain Exclusive cluster ID.
- * @method void setExClusterId(string $ExClusterId) Set Exclusive cluster ID.
- * @method array getInstanceIds() Obtain Instance ID.
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID.
- * @method integer getInitFlag() Obtain Initialization flag. Value range: 0 (not initialized), 1 (initialized).
- * @method void setInitFlag(integer $InitFlag) Set Initialization flag. Value range: 0 (not initialized), 1 (initialized).
- * @method integer getWithDr() Obtain Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
- * @method void setWithDr(integer $WithDr) Set Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
- * @method integer getWithRo() Obtain Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
- * @method void setWithRo(integer $WithRo) Set Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
- * @method integer getWithMaster() Obtain Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
- * @method void setWithMaster(integer $WithMaster) Set Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
- * @method array getDeployGroupIds() Obtain Placement group ID list.
- * @method void setDeployGroupIds(array $DeployGroupIds) Set Placement group ID list.
- * @method array getTagKeysForSearch() Obtain Whether to use the tag key as a filter condition
- * @method void setTagKeysForSearch(array $TagKeysForSearch) Set Whether to use the tag key as a filter condition
- * @method array getCageIds() Obtain Financial cage IDs.
- * @method void setCageIds(array $CageIds) Set Financial cage IDs.
- * @method array getTagValues() Obtain Tag value
- * @method void setTagValues(array $TagValues) Set Tag value
- * @method array getUniqueVpcIds() Obtain VPC character vpcId
- * @method void setUniqueVpcIds(array $UniqueVpcIds) Set VPC character vpcId
- * @method array getUniqSubnetIds() Obtain VPC character subnetId
- * @method void setUniqSubnetIds(array $UniqSubnetIds) Set VPC character subnetId
- * @method array getTags() Obtain Tag key value.
-Note that tags cannot be queried for instances being created.
- * @method void setTags(array $Tags) Set Tag key value.
-Note that tags cannot be queried for instances being created.
- * @method array getProxyVips() Obtain Database proxy IP
- * @method void setProxyVips(array $ProxyVips) Set Database proxy IP
- * @method array getProxyIds() Obtain Database proxy ID
- * @method void setProxyIds(array $ProxyIds) Set Database proxy ID
- * @method array getEngineTypes() Obtain Database engine type. Valid values: InnoDB; RocksDB.
- * @method void setEngineTypes(array $EngineTypes) Set Database engine type. Valid values: InnoDB; RocksDB.
- * @method boolean getQueryClusterInfo() Obtain Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
- * @method void setQueryClusterInfo(boolean $QueryClusterInfo) Set Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+ * @method array getInstanceTypes() Obtain <p>Instance type. Valid values: 1 - Primary instance, 2 - Disaster recovery instance, 3 - Read-only instance.</p>
+ * @method void setInstanceTypes(array $InstanceTypes) Set <p>Instance type. Valid values: 1 - Primary instance, 2 - Disaster recovery instance, 3 - Read-only instance.</p>
+ * @method array getVips() Obtain <p>Private IP address of the instance.</p>
+ * @method void setVips(array $Vips) Set <p>Private IP address of the instance.</p>
+ * @method array getStatus() Obtain <p>Instance status. Valid values:<br>0 - Creating<br>1 - Running<br>4 - Isolation operation in progress<br>5 - Isolated (can be restored from the Recycle Bin)</p>
+ * @method void setStatus(array $Status) Set <p>Instance status. Valid values:<br>0 - Creating<br>1 - Running<br>4 - Isolation operation in progress<br>5 - Isolated (can be restored from the Recycle Bin)</p>
+ * @method integer getOffset() Obtain <p>Offset. Default value is 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset. Default value is 0.</p>
+ * @method integer getLimit() Obtain <p>Number of items returned per request. Default value: 20. Maximum value: 2000.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of items returned per request. Default value: 20. Maximum value: 2000.</p>
+ * @method string getSecurityGroupId() Obtain <p>Security group ID. When using security group ID as the filter condition, the WithSecurityGroup parameter needs to be specified as 1.</p>
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set <p>Security group ID. When using security group ID as the filter condition, the WithSecurityGroup parameter needs to be specified as 1.</p>
+ * @method array getPayTypes() Obtain <p>Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.</p>
+ * @method void setPayTypes(array $PayTypes) Set <p>Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.</p>
+ * @method array getInstanceNames() Obtain <p>Instance name.</p>
+ * @method void setInstanceNames(array $InstanceNames) Set <p>Instance name.</p>
+ * @method array getTaskStatus() Obtain <p>Instance task status, possible values:<br>0 - No tasks<br>1 - Upgrading<br>2 - Data import in progress<br>3 - Enabling Slave<br>4 - Enabling public network access<br>5 - Batch operation in progress<br>6 - Rolling back<br>7 - Disabling public network access<br>8 - Password change in progress<br>9 - Renaming instance<br>10 - Restarting<br>12 - Self-built migration in progress<br>13 - Deleting database table<br>14 - Disaster recovery instance creation sync in progress<br>15 - Upgrade pending switch<br>16 - Upgrade and switch in progress<br>17 - Switch completed<br>19 - Parameter setting pending execution<br>34 - Node in-place upgrade to be executed</p>
+ * @method void setTaskStatus(array $TaskStatus) Set <p>Instance task status, possible values:<br>0 - No tasks<br>1 - Upgrading<br>2 - Data import in progress<br>3 - Enabling Slave<br>4 - Enabling public network access<br>5 - Batch operation in progress<br>6 - Rolling back<br>7 - Disabling public network access<br>8 - Password change in progress<br>9 - Renaming instance<br>10 - Restarting<br>12 - Self-built migration in progress<br>13 - Deleting database table<br>14 - Disaster recovery instance creation sync in progress<br>15 - Upgrade pending switch<br>16 - Upgrade and switch in progress<br>17 - Switch completed<br>19 - Parameter setting pending execution<br>34 - Node in-place upgrade to be executed</p>
+ * @method array getEngineVersions() Obtain <p>Database engine version of the instance. Possible values: 5.1, 5.5, 5.6, and 5.7.</p>
+ * @method void setEngineVersions(array $EngineVersions) Set <p>Database engine version of the instance. Possible values: 5.1, 5.5, 5.6, and 5.7.</p>
+ * @method array getVpcIds() Obtain <p>VPC ID.</p>
+ * @method void setVpcIds(array $VpcIds) Set <p>VPC ID.</p>
+ * @method array getZoneIds() Obtain <p>Availability zone ID.</p>
+ * @method void setZoneIds(array $ZoneIds) Set <p>Availability zone ID.</p>
+ * @method array getSubnetIds() Obtain <p>Subnet ID.</p>
+ * @method void setSubnetIds(array $SubnetIds) Set <p>Subnet ID.</p>
+ * @method array getCdbErrors() Obtain <p>Whether to set the lock flag. Available values: 0 - not lock, 1 - lock. Default is 0.</p>
+ * @method void setCdbErrors(array $CdbErrors) Set <p>Whether to set the lock flag. Available values: 0 - not lock, 1 - lock. Default is 0.</p>
+ * @method string getOrderBy() Obtain <p>Sorting field of the returned result set. Currently supports: "instanceId", "instanceName", "createTime", and "deadlineTime".</p>
+ * @method void setOrderBy(string $OrderBy) Set <p>Sorting field of the returned result set. Currently supports: "instanceId", "instanceName", "createTime", and "deadlineTime".</p>
+ * @method string getOrderDirection() Obtain <p>Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default is "DESC".</p>
+ * @method void setOrderDirection(string $OrderDirection) Set <p>Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default is "DESC".</p>
+ * @method integer getWithSecurityGroup() Obtain <p>Whether to use security group ID as the filter condition.<br>Description: 0 indicates no, 1 indicates yes.</p>
+ * @method void setWithSecurityGroup(integer $WithSecurityGroup) Set <p>Whether to use security group ID as the filter condition.<br>Description: 0 indicates no, 1 indicates yes.</p>
+ * @method integer getWithExCluster() Obtain <p>Whether the exclusive cluster detail is included. Value range: 0 - not contained, 1 - contained.</p>
+ * @method void setWithExCluster(integer $WithExCluster) Set <p>Whether the exclusive cluster detail is included. Value range: 0 - not contained, 1 - contained.</p>
+ * @method string getExClusterId() Obtain <p>Dedicated cluster ID.</p>
+ * @method void setExClusterId(string $ExClusterId) Set <p>Dedicated cluster ID.</p>
+ * @method array getInstanceIds() Obtain <p>Instance ID.</p>
+ * @method void setInstanceIds(array $InstanceIds) Set <p>Instance ID.</p>
+ * @method integer getInitFlag() Obtain <p>Initialization flag. Valid values: 0 - uninitialized, 1 - initialized.</p>
+ * @method void setInitFlag(integer $InitFlag) Set <p>Initialization flag. Valid values: 0 - uninitialized, 1 - initialized.</p>
+ * @method integer getWithDr() Obtain <p>Whether the corresponding instance in the disaster recovery relationship is included. Valid values: 0 - excluding, 1 - included. Default value: 1. If pulling the primary instance, the data of the disaster recovery relationship is in the DrInfo field. If pulling the disaster recovery instance, the data of the disaster recovery relationship is in the MasterInfo field. The disaster recovery relationship only contains partial basic data. Detailed data must be pulled manually via the interface.</p>
+ * @method void setWithDr(integer $WithDr) Set <p>Whether the corresponding instance in the disaster recovery relationship is included. Valid values: 0 - excluding, 1 - included. Default value: 1. If pulling the primary instance, the data of the disaster recovery relationship is in the DrInfo field. If pulling the disaster recovery instance, the data of the disaster recovery relationship is in the MasterInfo field. The disaster recovery relationship only contains partial basic data. Detailed data must be pulled manually via the interface.</p>
+ * @method integer getWithRo() Obtain <p>Whether it contains read-only instances. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
+ * @method void setWithRo(integer $WithRo) Set <p>Whether it contains read-only instances. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
+ * @method integer getWithMaster() Obtain <p>Whether the primary instance is included. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
+ * @method void setWithMaster(integer $WithMaster) Set <p>Whether the primary instance is included. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
+ * @method array getDeployGroupIds() Obtain <p>Placement group ID list.</p>
+ * @method void setDeployGroupIds(array $DeployGroupIds) Set <p>Placement group ID list.</p>
+ * @method array getTagKeysForSearch() Obtain <p>Filter by tag key.</p>
+ * @method void setTagKeysForSearch(array $TagKeysForSearch) Set <p>Filter by tag key.</p>
+ * @method array getCageIds() Obtain <p>Financial Enclosure ID.</p>
+ * @method void setCageIds(array $CageIds) Set <p>Financial Enclosure ID.</p>
+ * @method array getTagValues() Obtain <p>Tag value</p>
+ * @method void setTagValues(array $TagValues) Set <p>Tag value</p>
+ * @method array getUniqueVpcIds() Obtain <p>Character type VPC ID</p>
+ * @method void setUniqueVpcIds(array $UniqueVpcIds) Set <p>Character type VPC ID</p>
+ * @method array getUniqSubnetIds() Obtain <p>VPC character type subnetId</p>
+ * @method void setUniqSubnetIds(array $UniqSubnetIds) Set <p>VPC character type subnetId</p>
+ * @method array getTags() Obtain <p>Tag key value<br>Please note, tags of the instance being created are unable to query.</p>
+ * @method void setTags(array $Tags) Set <p>Tag key value<br>Please note, tags of the instance being created are unable to query.</p>
+ * @method array getProxyVips() Obtain <p>Database proxy IP.</p>
+ * @method void setProxyVips(array $ProxyVips) Set <p>Database proxy IP.</p>
+ * @method array getProxyIds() Obtain <p>Database proxy ID.</p>
+ * @method void setProxyIds(array $ProxyIds) Set <p>Database proxy ID.</p>
+ * @method array getEngineTypes() Obtain <p>Database engine type. Valid values: InnoDB, RocksDB.</p>
+ * @method void setEngineTypes(array $EngineTypes) Set <p>Database engine type. Valid values: InnoDB, RocksDB.</p>
+ * @method boolean getQueryClusterInfo() Obtain <p>Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.</p>
+ * @method void setQueryClusterInfo(boolean $QueryClusterInfo) Set <p>Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.</p>
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -105,221 +101,217 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
+     * @var array <p>Instance type. Valid values: 1 - Primary instance, 2 - Disaster recovery instance, 3 - Read-only instance.</p>
      */
     public $InstanceTypes;
 
     /**
-     * @var array Private IP address of the instance.
+     * @var array <p>Private IP address of the instance.</p>
      */
     public $Vips;
 
     /**
-     * @var array Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
+     * @var array <p>Instance status. Valid values:<br>0 - Creating<br>1 - Running<br>4 - Isolation operation in progress<br>5 - Isolated (can be restored from the Recycle Bin)</p>
      */
     public $Status;
 
     /**
-     * @var integer Offset. Default value: 0.
+     * @var integer <p>Offset. Default value is 0.</p>
      */
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
+     * @var integer <p>Number of items returned per request. Default value: 20. Maximum value: 2000.</p>
      */
     public $Limit;
 
     /**
-     * @var string Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
+     * @var string <p>Security group ID. When using security group ID as the filter condition, the WithSecurityGroup parameter needs to be specified as 1.</p>
      */
     public $SecurityGroupId;
 
     /**
-     * @var array Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
+     * @var array <p>Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.</p>
      */
     public $PayTypes;
 
     /**
-     * @var array Instance name.
+     * @var array <p>Instance name.</p>
      */
     public $InstanceNames;
 
     /**
-     * @var array Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
+     * @var array <p>Instance task status, possible values:<br>0 - No tasks<br>1 - Upgrading<br>2 - Data import in progress<br>3 - Enabling Slave<br>4 - Enabling public network access<br>5 - Batch operation in progress<br>6 - Rolling back<br>7 - Disabling public network access<br>8 - Password change in progress<br>9 - Renaming instance<br>10 - Restarting<br>12 - Self-built migration in progress<br>13 - Deleting database table<br>14 - Disaster recovery instance creation sync in progress<br>15 - Upgrade pending switch<br>16 - Upgrade and switch in progress<br>17 - Switch completed<br>19 - Parameter setting pending execution<br>34 - Node in-place upgrade to be executed</p>
      */
     public $TaskStatus;
 
     /**
-     * @var array Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
+     * @var array <p>Database engine version of the instance. Possible values: 5.1, 5.5, 5.6, and 5.7.</p>
      */
     public $EngineVersions;
 
     /**
-     * @var array VPC ID.
+     * @var array <p>VPC ID.</p>
      */
     public $VpcIds;
 
     /**
-     * @var array AZ ID.
+     * @var array <p>Availability zone ID.</p>
      */
     public $ZoneIds;
 
     /**
-     * @var array Subnet ID.
+     * @var array <p>Subnet ID.</p>
      */
     public $SubnetIds;
 
     /**
-     * @var array Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
+     * @var array <p>Whether to set the lock flag. Available values: 0 - not lock, 1 - lock. Default is 0.</p>
      */
     public $CdbErrors;
 
     /**
-     * @var string Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
+     * @var string <p>Sorting field of the returned result set. Currently supports: "instanceId", "instanceName", "createTime", and "deadlineTime".</p>
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
+     * @var string <p>Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default is "DESC".</p>
      */
     public $OrderDirection;
 
     /**
-     * @var integer Whether to use the security group ID as the filter condition.
-Note: 0 indicates no; 1 indicates yes.
+     * @var integer <p>Whether to use security group ID as the filter condition.<br>Description: 0 indicates no, 1 indicates yes.</p>
      */
     public $WithSecurityGroup;
 
     /**
-     * @var integer Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
+     * @var integer <p>Whether the exclusive cluster detail is included. Value range: 0 - not contained, 1 - contained.</p>
      */
     public $WithExCluster;
 
     /**
-     * @var string Exclusive cluster ID.
+     * @var string <p>Dedicated cluster ID.</p>
      */
     public $ExClusterId;
 
     /**
-     * @var array Instance ID.
+     * @var array <p>Instance ID.</p>
      */
     public $InstanceIds;
 
     /**
-     * @var integer Initialization flag. Value range: 0 (not initialized), 1 (initialized).
+     * @var integer <p>Initialization flag. Valid values: 0 - uninitialized, 1 - initialized.</p>
      */
     public $InitFlag;
 
     /**
-     * @var integer Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+     * @var integer <p>Whether the corresponding instance in the disaster recovery relationship is included. Valid values: 0 - excluding, 1 - included. Default value: 1. If pulling the primary instance, the data of the disaster recovery relationship is in the DrInfo field. If pulling the disaster recovery instance, the data of the disaster recovery relationship is in the MasterInfo field. The disaster recovery relationship only contains partial basic data. Detailed data must be pulled manually via the interface.</p>
      */
     public $WithDr;
 
     /**
-     * @var integer Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+     * @var integer <p>Whether it contains read-only instances. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
      */
     public $WithRo;
 
     /**
-     * @var integer Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+     * @var integer <p>Whether the primary instance is included. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
      */
     public $WithMaster;
 
     /**
-     * @var array Placement group ID list.
+     * @var array <p>Placement group ID list.</p>
      */
     public $DeployGroupIds;
 
     /**
-     * @var array Whether to use the tag key as a filter condition
+     * @var array <p>Filter by tag key.</p>
      */
     public $TagKeysForSearch;
 
     /**
-     * @var array Financial cage IDs.
+     * @var array <p>Financial Enclosure ID.</p>
      */
     public $CageIds;
 
     /**
-     * @var array Tag value
+     * @var array <p>Tag value</p>
      */
     public $TagValues;
 
     /**
-     * @var array VPC character vpcId
+     * @var array <p>Character type VPC ID</p>
      */
     public $UniqueVpcIds;
 
     /**
-     * @var array VPC character subnetId
+     * @var array <p>VPC character type subnetId</p>
      */
     public $UniqSubnetIds;
 
     /**
-     * @var array Tag key value.
-Note that tags cannot be queried for instances being created.
+     * @var array <p>Tag key value<br>Please note, tags of the instance being created are unable to query.</p>
      */
     public $Tags;
 
     /**
-     * @var array Database proxy IP
+     * @var array <p>Database proxy IP.</p>
      */
     public $ProxyVips;
 
     /**
-     * @var array Database proxy ID
+     * @var array <p>Database proxy ID.</p>
      */
     public $ProxyIds;
 
     /**
-     * @var array Database engine type. Valid values: InnoDB; RocksDB.
+     * @var array <p>Database engine type. Valid values: InnoDB, RocksDB.</p>
      */
     public $EngineTypes;
 
     /**
-     * @var boolean Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+     * @var boolean <p>Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.</p>
      */
     public $QueryClusterInfo;
 
     /**
      * @param integer $ProjectId Project ID.
-     * @param array $InstanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
-     * @param array $Vips Private IP address of the instance.
-     * @param array $Status Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
-     * @param integer $Offset Offset. Default value: 0.
-     * @param integer $Limit Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
-     * @param string $SecurityGroupId Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
-     * @param array $PayTypes Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
-     * @param array $InstanceNames Instance name.
-     * @param array $TaskStatus Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
-     * @param array $EngineVersions Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
-     * @param array $VpcIds VPC ID.
-     * @param array $ZoneIds AZ ID.
-     * @param array $SubnetIds Subnet ID.
-     * @param array $CdbErrors Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
-     * @param string $OrderBy Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
-     * @param string $OrderDirection Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
-     * @param integer $WithSecurityGroup Whether to use the security group ID as the filter condition.
-Note: 0 indicates no; 1 indicates yes.
-     * @param integer $WithExCluster Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
-     * @param string $ExClusterId Exclusive cluster ID.
-     * @param array $InstanceIds Instance ID.
-     * @param integer $InitFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized).
-     * @param integer $WithDr Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
-     * @param integer $WithRo Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
-     * @param integer $WithMaster Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
-     * @param array $DeployGroupIds Placement group ID list.
-     * @param array $TagKeysForSearch Whether to use the tag key as a filter condition
-     * @param array $CageIds Financial cage IDs.
-     * @param array $TagValues Tag value
-     * @param array $UniqueVpcIds VPC character vpcId
-     * @param array $UniqSubnetIds VPC character subnetId
-     * @param array $Tags Tag key value.
-Note that tags cannot be queried for instances being created.
-     * @param array $ProxyVips Database proxy IP
-     * @param array $ProxyIds Database proxy ID
-     * @param array $EngineTypes Database engine type. Valid values: InnoDB; RocksDB.
-     * @param boolean $QueryClusterInfo Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+     * @param array $InstanceTypes <p>Instance type. Valid values: 1 - Primary instance, 2 - Disaster recovery instance, 3 - Read-only instance.</p>
+     * @param array $Vips <p>Private IP address of the instance.</p>
+     * @param array $Status <p>Instance status. Valid values:<br>0 - Creating<br>1 - Running<br>4 - Isolation operation in progress<br>5 - Isolated (can be restored from the Recycle Bin)</p>
+     * @param integer $Offset <p>Offset. Default value is 0.</p>
+     * @param integer $Limit <p>Number of items returned per request. Default value: 20. Maximum value: 2000.</p>
+     * @param string $SecurityGroupId <p>Security group ID. When using security group ID as the filter condition, the WithSecurityGroup parameter needs to be specified as 1.</p>
+     * @param array $PayTypes <p>Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.</p>
+     * @param array $InstanceNames <p>Instance name.</p>
+     * @param array $TaskStatus <p>Instance task status, possible values:<br>0 - No tasks<br>1 - Upgrading<br>2 - Data import in progress<br>3 - Enabling Slave<br>4 - Enabling public network access<br>5 - Batch operation in progress<br>6 - Rolling back<br>7 - Disabling public network access<br>8 - Password change in progress<br>9 - Renaming instance<br>10 - Restarting<br>12 - Self-built migration in progress<br>13 - Deleting database table<br>14 - Disaster recovery instance creation sync in progress<br>15 - Upgrade pending switch<br>16 - Upgrade and switch in progress<br>17 - Switch completed<br>19 - Parameter setting pending execution<br>34 - Node in-place upgrade to be executed</p>
+     * @param array $EngineVersions <p>Database engine version of the instance. Possible values: 5.1, 5.5, 5.6, and 5.7.</p>
+     * @param array $VpcIds <p>VPC ID.</p>
+     * @param array $ZoneIds <p>Availability zone ID.</p>
+     * @param array $SubnetIds <p>Subnet ID.</p>
+     * @param array $CdbErrors <p>Whether to set the lock flag. Available values: 0 - not lock, 1 - lock. Default is 0.</p>
+     * @param string $OrderBy <p>Sorting field of the returned result set. Currently supports: "instanceId", "instanceName", "createTime", and "deadlineTime".</p>
+     * @param string $OrderDirection <p>Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default is "DESC".</p>
+     * @param integer $WithSecurityGroup <p>Whether to use security group ID as the filter condition.<br>Description: 0 indicates no, 1 indicates yes.</p>
+     * @param integer $WithExCluster <p>Whether the exclusive cluster detail is included. Value range: 0 - not contained, 1 - contained.</p>
+     * @param string $ExClusterId <p>Dedicated cluster ID.</p>
+     * @param array $InstanceIds <p>Instance ID.</p>
+     * @param integer $InitFlag <p>Initialization flag. Valid values: 0 - uninitialized, 1 - initialized.</p>
+     * @param integer $WithDr <p>Whether the corresponding instance in the disaster recovery relationship is included. Valid values: 0 - excluding, 1 - included. Default value: 1. If pulling the primary instance, the data of the disaster recovery relationship is in the DrInfo field. If pulling the disaster recovery instance, the data of the disaster recovery relationship is in the MasterInfo field. The disaster recovery relationship only contains partial basic data. Detailed data must be pulled manually via the interface.</p>
+     * @param integer $WithRo <p>Whether it contains read-only instances. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
+     * @param integer $WithMaster <p>Whether the primary instance is included. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
+     * @param array $DeployGroupIds <p>Placement group ID list.</p>
+     * @param array $TagKeysForSearch <p>Filter by tag key.</p>
+     * @param array $CageIds <p>Financial Enclosure ID.</p>
+     * @param array $TagValues <p>Tag value</p>
+     * @param array $UniqueVpcIds <p>Character type VPC ID</p>
+     * @param array $UniqSubnetIds <p>VPC character type subnetId</p>
+     * @param array $Tags <p>Tag key value<br>Please note, tags of the instance being created are unable to query.</p>
+     * @param array $ProxyVips <p>Database proxy IP.</p>
+     * @param array $ProxyIds <p>Database proxy ID.</p>
+     * @param array $EngineTypes <p>Database engine type. Valid values: InnoDB, RocksDB.</p>
+     * @param boolean $QueryClusterInfo <p>Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.</p>
      */
     function __construct()
     {

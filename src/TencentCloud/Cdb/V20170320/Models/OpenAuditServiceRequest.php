@@ -20,58 +20,119 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenAuditService request structure.
  *
- * @method string getInstanceId() Obtain TencentDB for MySQL instance ID
- * @method void setInstanceId(string $InstanceId) Set TencentDB for MySQL instance ID
- * @method integer getLogExpireDay() Obtain Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
- * @method void setLogExpireDay(integer $LogExpireDay) Set Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
- * @method integer getHighLogExpireDay() Obtain Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
- * @method void setHighLogExpireDay(integer $HighLogExpireDay) Set Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
- * @method array getAuditRuleFilters() Obtain Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
- * @method void setAuditRuleFilters(array $AuditRuleFilters) Set Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
- * @method array getRuleTemplateIds() Obtain Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
- * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
- * @method boolean getAuditAll() Obtain Audit type. Valid values: true: Record all; false: Record by rules (default value).
- * @method void setAuditAll(boolean $AuditAll) Set Audit type. Valid values: true: Record all; false: Record by rules (default value).
+ * @method string getInstanceId() Obtain CDB instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set CDB instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method integer getLogExpireDay() Obtain Audit log retention period. Supported values include:
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
+ * @method void setLogExpireDay(integer $LogExpireDay) Set Audit log retention period. Supported values include:
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
+ * @method integer getHighLogExpireDay() Obtain High frequency audit log retention period. Default value is 7. This item must take value less than or equal to LogExpireDay. Supported values include:
+3 - 3 days;
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
+ * @method void setHighLogExpireDay(integer $HighLogExpireDay) Set High frequency audit log retention period. Default value is 7. This item must take value less than or equal to LogExpireDay. Supported values include:
+3 - 3 days;
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
+ * @method array getAuditRuleFilters() Obtain Audit rule (deprecated, no longer effective).
+ * @method void setAuditRuleFilters(array $AuditRuleFilters) Set Audit rule (deprecated, no longer effective).
+ * @method array getRuleTemplateIds() Obtain Rule template ID.
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) Set Rule template ID.
+ * @method boolean getAuditAll() Obtain Audit type. true - full audit; default false - rule audit.
+ * @method void setAuditAll(boolean $AuditAll) Set Audit type. true - full audit; default false - rule audit.
  */
 class OpenAuditServiceRequest extends AbstractModel
 {
     /**
-     * @var string TencentDB for MySQL instance ID
+     * @var string CDB instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
     /**
-     * @var integer Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
+     * @var integer Audit log retention period. Supported values include:
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
      */
     public $LogExpireDay;
 
     /**
-     * @var integer Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
+     * @var integer High frequency audit log retention period. Default value is 7. This item must take value less than or equal to LogExpireDay. Supported values include:
+3 - 3 days;
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
      */
     public $HighLogExpireDay;
 
     /**
-     * @var array Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+     * @var array Audit rule (deprecated, no longer effective).
+     * @deprecated
      */
     public $AuditRuleFilters;
 
     /**
-     * @var array Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
+     * @var array Rule template ID.
      */
     public $RuleTemplateIds;
 
     /**
-     * @var boolean Audit type. Valid values: true: Record all; false: Record by rules (default value).
+     * @var boolean Audit type. true - full audit; default false - rule audit.
      */
     public $AuditAll;
 
     /**
-     * @param string $InstanceId TencentDB for MySQL instance ID
-     * @param integer $LogExpireDay Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
-     * @param integer $HighLogExpireDay Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
-     * @param array $AuditRuleFilters Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
-     * @param array $RuleTemplateIds Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
-     * @param boolean $AuditAll Audit type. Valid values: true: Record all; false: Record by rules (default value).
+     * @param string $InstanceId CDB instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param integer $LogExpireDay Audit log retention period. Supported values include:
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
+     * @param integer $HighLogExpireDay High frequency audit log retention period. Default value is 7. This item must take value less than or equal to LogExpireDay. Supported values include:
+3 - 3 days;
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
+     * @param array $AuditRuleFilters Audit rule (deprecated, no longer effective).
+     * @param array $RuleTemplateIds Rule template ID.
+     * @param boolean $AuditAll Audit type. true - full audit; default false - rule audit.
      */
     function __construct()
     {

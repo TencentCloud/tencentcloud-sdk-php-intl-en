@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Slave server information
  *
- * @method SlaveInstanceInfo getFirst() Obtain Information of secondary server 1
- * @method void setFirst(SlaveInstanceInfo $First) Set Information of secondary server 1
- * @method SlaveInstanceInfo getSecond() Obtain Second secondary server information.
- * @method void setSecond(SlaveInstanceInfo $Second) Set Second secondary server information.
+ * @method SlaveInstanceInfo getFirst() Obtain <p>Secondary server information of the top spot</p>
+ * @method void setFirst(SlaveInstanceInfo $First) Set <p>Secondary server information of the top spot</p>
+ * @method SlaveInstanceInfo getSecond() Obtain <p>Second standby machine information</p>
+ * @method void setSecond(SlaveInstanceInfo $Second) Set <p>Second standby machine information</p>
  */
 class SlaveInfo extends AbstractModel
 {
     /**
-     * @var SlaveInstanceInfo Information of secondary server 1
+     * @var SlaveInstanceInfo <p>Secondary server information of the top spot</p>
      */
     public $First;
 
     /**
-     * @var SlaveInstanceInfo Second secondary server information.
+     * @var SlaveInstanceInfo <p>Second standby machine information</p>
      */
     public $Second;
 
     /**
-     * @param SlaveInstanceInfo $First Information of secondary server 1
-     * @param SlaveInstanceInfo $Second Second secondary server information.
+     * @param SlaveInstanceInfo $First <p>Secondary server information of the top spot</p>
+     * @param SlaveInstanceInfo $Second <p>Second standby machine information</p>
      */
     function __construct()
     {

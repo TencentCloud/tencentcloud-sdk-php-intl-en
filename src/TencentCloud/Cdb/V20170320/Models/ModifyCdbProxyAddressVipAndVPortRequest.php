@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCdbProxyAddressVipAndVPort request structure.
  *
- * @method string getProxyGroupId() Obtain Proxy group ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID
- * @method string getProxyAddressId() Obtain Address ID of the proxy group
- * @method void setProxyAddressId(string $ProxyAddressId) Set Address ID of the proxy group
- * @method string getUniqVpcId() Obtain VPC ID
- * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID
- * @method string getUniqSubnetId() Obtain VPC subnet ID
- * @method void setUniqSubnetId(string $UniqSubnetId) Set VPC subnet ID
- * @method string getVip() Obtain IP address
- * @method void setVip(string $Vip) Set IP address
- * @method integer getVPort() Obtain Port
- * @method void setVPort(integer $VPort) Set Port
- * @method integer getReleaseDuration() Obtain Valid Hours of Old IP
- * @method void setReleaseDuration(integer $ReleaseDuration) Set Valid Hours of Old IP
+ * @method string getProxyGroupId() Obtain Proxy group ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+ * @method string getProxyAddressId() Obtain Proxy group address ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+ * @method void setProxyAddressId(string $ProxyAddressId) Set Proxy group address ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+ * @method string getUniqVpcId() Obtain VPC ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method string getUniqSubnetId() Obtain Private subnet ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set Private subnet ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method string getVip() Obtain IP. If not specified, the system will assign an available IP under subnet.
+ * @method void setVip(string $Vip) Set IP. If not specified, the system will assign an available IP under subnet.
+ * @method integer getVPort() Obtain Port. Default value 3306, value ranges from 1024 to 65535.
+ * @method void setVPort(integer $VPort) Set Port. Default value 3306, value ranges from 1024 to 65535.
+ * @method integer getReleaseDuration() Obtain Old IP valid hours. Measurement unit: hr, default value: 24, value ranges from 0 to 168.
+ * @method void setReleaseDuration(integer $ReleaseDuration) Set Old IP valid hours. Measurement unit: hr, default value: 24, value ranges from 0 to 168.
  */
 class ModifyCdbProxyAddressVipAndVPortRequest extends AbstractModel
 {
     /**
-     * @var string Proxy group ID
+     * @var string Proxy group ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public $ProxyGroupId;
 
     /**
-     * @var string Address ID of the proxy group
+     * @var string Proxy group address ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public $ProxyAddressId;
 
     /**
-     * @var string VPC ID
+     * @var string VPC ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $UniqVpcId;
 
     /**
-     * @var string VPC subnet ID
+     * @var string Private subnet ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $UniqSubnetId;
 
     /**
-     * @var string IP address
+     * @var string IP. If not specified, the system will assign an available IP under subnet.
      */
     public $Vip;
 
     /**
-     * @var integer Port
+     * @var integer Port. Default value 3306, value ranges from 1024 to 65535.
      */
     public $VPort;
 
     /**
-     * @var integer Valid Hours of Old IP
+     * @var integer Old IP valid hours. Measurement unit: hr, default value: 24, value ranges from 0 to 168.
      */
     public $ReleaseDuration;
 
     /**
-     * @param string $ProxyGroupId Proxy group ID
-     * @param string $ProxyAddressId Address ID of the proxy group
-     * @param string $UniqVpcId VPC ID
-     * @param string $UniqSubnetId VPC subnet ID
-     * @param string $Vip IP address
-     * @param integer $VPort Port
-     * @param integer $ReleaseDuration Valid Hours of Old IP
+     * @param string $ProxyGroupId Proxy group ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+     * @param string $ProxyAddressId Proxy group address ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+     * @param string $UniqVpcId VPC ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param string $UniqSubnetId Private subnet ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param string $Vip IP. If not specified, the system will assign an available IP under subnet.
+     * @param integer $VPort Port. Default value 3306, value ranges from 1024 to 65535.
+     * @param integer $ReleaseDuration Old IP valid hours. Measurement unit: hr, default value: 24, value ranges from 0 to 168.
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProjectSecurityGroups request structure.
  *
- * @method integer getProjectId() Obtain Project ID.
- * @method void setProjectId(integer $ProjectId) Set Project ID.
+ * @method integer getProjectId() Obtain Project ID. You can obtain it through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) API.
+ * @method void setProjectId(integer $ProjectId) Set Project ID. You can obtain it through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) API.
  */
 class DescribeProjectSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var integer Project ID.
+     * @var integer Project ID. You can obtain it through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) API.
      */
     public $ProjectId;
 
     /**
-     * @param integer $ProjectId Project ID.
+     * @param integer $ProjectId Project ID. You can obtain it through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) API.
      */
     function __construct()
     {

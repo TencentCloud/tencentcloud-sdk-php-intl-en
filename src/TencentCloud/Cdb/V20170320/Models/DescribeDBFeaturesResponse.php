@@ -30,8 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryptionNeedUpgrade(boolean $EncryptionNeedUpgrade) Set Whether enabling encryption requires a kernel version upgrade
  * @method boolean getIsRemoteRo() Obtain Whether the instance is a remote read-only instance
  * @method void setIsRemoteRo(boolean $IsRemoteRo) Set Whether the instance is a remote read-only instance
- * @method string getMasterRegion() Obtain Region of the source instance
- * @method void setMasterRegion(string $MasterRegion) Set Region of the source instance
+ * @method string getMasterRegion() Obtain Primary instance region.
+Description: This parameter may return null. You can ignore this return value. If needed, you can call the [Query Instance List](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API to obtain the instance region details.
+ * @method void setMasterRegion(string $MasterRegion) Set Primary instance region.
+Description: This parameter may return null. You can ignore this return value. If needed, you can call the [Query Instance List](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API to obtain the instance region details.
  * @method boolean getIsSupportUpdateSubVersion() Obtain Whether minor version upgrade is supported
  * @method void setIsSupportUpdateSubVersion(boolean $IsSupportUpdateSubVersion) Set Whether minor version upgrade is supported
  * @method string getCurrentSubVersion() Obtain The current kernel version
@@ -69,7 +71,8 @@ class DescribeDBFeaturesResponse extends AbstractModel
     public $IsRemoteRo;
 
     /**
-     * @var string Region of the source instance
+     * @var string Primary instance region.
+Description: This parameter may return null. You can ignore this return value. If needed, you can call the [Query Instance List](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API to obtain the instance region details.
      */
     public $MasterRegion;
 
@@ -99,7 +102,8 @@ class DescribeDBFeaturesResponse extends AbstractModel
      * @param boolean $IsSupportEncryption Whether database encryption is supported
      * @param boolean $EncryptionNeedUpgrade Whether enabling encryption requires a kernel version upgrade
      * @param boolean $IsRemoteRo Whether the instance is a remote read-only instance
-     * @param string $MasterRegion Region of the source instance
+     * @param string $MasterRegion Primary instance region.
+Description: This parameter may return null. You can ignore this return value. If needed, you can call the [Query Instance List](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API to obtain the instance region details.
      * @param boolean $IsSupportUpdateSubVersion Whether minor version upgrade is supported
      * @param string $CurrentSubVersion The current kernel version
      * @param string $TargetSubVersion Available kernel version for upgrade

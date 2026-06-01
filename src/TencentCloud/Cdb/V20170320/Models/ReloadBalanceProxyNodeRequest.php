@@ -20,26 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReloadBalanceProxyNode request structure.
  *
- * @method string getProxyGroupId() Obtain Proxy group ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID
- * @method string getProxyAddressId() Obtain Address ID of the proxy group
- * @method void setProxyAddressId(string $ProxyAddressId) Set Address ID of the proxy group
+ * @method string getProxyGroupId() Obtain Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+ * @method string getProxyAddressId() Obtain Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
+Note:
+1. For dual-node instances, this parameter is optional. If not provided, load balancing will be performed for ALL proxy group addresses.
+2. For cloud disk edition instances, this parameter is required.
+ * @method void setProxyAddressId(string $ProxyAddressId) Set Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
+Note:
+1. For dual-node instances, this parameter is optional. If not provided, load balancing will be performed for ALL proxy group addresses.
+2. For cloud disk edition instances, this parameter is required.
  */
 class ReloadBalanceProxyNodeRequest extends AbstractModel
 {
     /**
-     * @var string Proxy group ID
+     * @var string Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public $ProxyGroupId;
 
     /**
-     * @var string Address ID of the proxy group
+     * @var string Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
+Note:
+1. For dual-node instances, this parameter is optional. If not provided, load balancing will be performed for ALL proxy group addresses.
+2. For cloud disk edition instances, this parameter is required.
      */
     public $ProxyAddressId;
 
     /**
-     * @param string $ProxyGroupId Proxy group ID
-     * @param string $ProxyAddressId Address ID of the proxy group
+     * @param string $ProxyGroupId Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+     * @param string $ProxyAddressId Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
+Note:
+1. For dual-node instances, this parameter is optional. If not provided, load balancing will be performed for ALL proxy group addresses.
+2. For cloud disk edition instances, this parameter is required.
      */
     function __construct()
     {

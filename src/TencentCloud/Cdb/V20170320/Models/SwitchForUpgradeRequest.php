@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+ * @method boolean getIsRelatedSwitch() Obtain Whether to enable association switchover. Enable for true and shutdown for false. Default false.
+ * @method void setIsRelatedSwitch(boolean $IsRelatedSwitch) Set Whether to enable association switchover. Enable for true and shutdown for false. Default false.
  */
 class SwitchForUpgradeRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class SwitchForUpgradeRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var boolean Whether to enable association switchover. Enable for true and shutdown for false. Default false.
+     */
+    public $IsRelatedSwitch;
+
+    /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * @param boolean $IsRelatedSwitch Whether to enable association switchover. Enable for true and shutdown for false. Default false.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class SwitchForUpgradeRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("IsRelatedSwitch",$param) and $param["IsRelatedSwitch"] !== null) {
+            $this->IsRelatedSwitch = $param["IsRelatedSwitch"];
         }
     }
 }

@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceParam request structure.
  *
- * @method array getInstanceIds() Obtain List of short instance IDs.
- * @method void setInstanceIds(array $InstanceIds) Set List of short instance IDs.
+ * @method array getInstanceIds() Obtain Instance ID list, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID list, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
  * @method array getParamList() Obtain List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value).
  * @method void setParamList(array $ParamList) Set List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value).
- * @method integer getTemplateId() Obtain Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
- * @method void setTemplateId(integer $TemplateId) Set Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+ * @method integer getTemplateId() Obtain Template ID. At least one of ParamList and TemplateId must be provided. It can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
+ * @method void setTemplateId(integer $TemplateId) Set Template ID. At least one of ParamList and TemplateId must be provided. It can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
  * @method integer getWaitSwitch() Obtain When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
  * @method void setWaitSwitch(integer $WaitSwitch) Set When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
  * @method boolean getNotSyncRo() Obtain Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyInstanceParamRequest extends AbstractModel
 {
     /**
-     * @var array List of short instance IDs.
+     * @var array Instance ID list, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceIds;
 
@@ -46,7 +46,7 @@ class ModifyInstanceParamRequest extends AbstractModel
     public $ParamList;
 
     /**
-     * @var integer Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+     * @var integer Template ID. At least one of ParamList and TemplateId must be provided. It can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
      */
     public $TemplateId;
 
@@ -66,9 +66,9 @@ class ModifyInstanceParamRequest extends AbstractModel
     public $NotSyncDr;
 
     /**
-     * @param array $InstanceIds List of short instance IDs.
+     * @param array $InstanceIds Instance ID list, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      * @param array $ParamList List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value).
-     * @param integer $TemplateId Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+     * @param integer $TemplateId Template ID. At least one of ParamList and TemplateId must be provided. It can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
      * @param integer $WaitSwitch When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
      * @param boolean $NotSyncRo Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
      * @param boolean $NotSyncDr Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.

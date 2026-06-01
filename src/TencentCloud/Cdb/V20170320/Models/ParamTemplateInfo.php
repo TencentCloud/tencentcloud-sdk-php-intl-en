@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameter template information
  *
- * @method integer getTemplateId() Obtain Parameter template ID
- * @method void setTemplateId(integer $TemplateId) Set Parameter template ID
+ * @method integer getTemplateId() Obtain parameter template ID
+ * @method void setTemplateId(integer $TemplateId) Set parameter template ID
  * @method string getName() Obtain Parameter template name
  * @method void setName(string $Name) Set Parameter template name
  * @method string getDescription() Obtain Parameter template description
  * @method void setDescription(string $Description) Set Parameter template description
- * @method string getEngineVersion() Obtain Instance engine version
- * @method void setEngineVersion(string $EngineVersion) Set Instance engine version
- * @method string getTemplateType() Obtain Parameter template type
- * @method void setTemplateType(string $TemplateType) Set Parameter template type
- * @method string getEngineType() Obtain Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEngineType(string $EngineType) Set Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEngineVersion() Obtain Instance engine version. Values: 5.5, 5.6, 5.7, and 8.0.
+ * @method void setEngineVersion(string $EngineVersion) Set Instance engine version. Values: 5.5, 5.6, 5.7, and 8.0.
+ * @method string getTemplateType() Obtain Parameter template type. Valid values: HIGH_STABILITY, HIGH_PERFORMANCE.
+ * @method void setTemplateType(string $TemplateType) Set Parameter template type. Valid values: HIGH_STABILITY, HIGH_PERFORMANCE.
+ * @method string getEngineType() Obtain Parameter template engine, values: InnoDB, RocksDB.
+ * @method void setEngineType(string $EngineType) Set Parameter template engine, values: InnoDB, RocksDB.
  */
 class ParamTemplateInfo extends AbstractModel
 {
     /**
-     * @var integer Parameter template ID
+     * @var integer parameter template ID
      */
     public $TemplateId;
 
@@ -51,27 +51,27 @@ class ParamTemplateInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var string Instance engine version
+     * @var string Instance engine version. Values: 5.5, 5.6, 5.7, and 8.0.
      */
     public $EngineVersion;
 
     /**
-     * @var string Parameter template type
+     * @var string Parameter template type. Valid values: HIGH_STABILITY, HIGH_PERFORMANCE.
      */
     public $TemplateType;
 
     /**
-     * @var string Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Parameter template engine, values: InnoDB, RocksDB.
      */
     public $EngineType;
 
     /**
-     * @param integer $TemplateId Parameter template ID
+     * @param integer $TemplateId parameter template ID
      * @param string $Name Parameter template name
      * @param string $Description Parameter template description
-     * @param string $EngineVersion Instance engine version
-     * @param string $TemplateType Parameter template type
-     * @param string $EngineType Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EngineVersion Instance engine version. Values: 5.5, 5.6, 5.7, and 8.0.
+     * @param string $TemplateType Parameter template type. Valid values: HIGH_STABILITY, HIGH_PERFORMANCE.
+     * @param string $EngineType Parameter template engine, values: InnoDB, RocksDB.
      */
     function __construct()
     {

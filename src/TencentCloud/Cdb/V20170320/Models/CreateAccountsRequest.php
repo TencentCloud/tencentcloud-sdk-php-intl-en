@@ -24,10 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
  * @method array getAccounts() Obtain List of TencentDB accounts
  * @method void setAccounts(array $Accounts) Set List of TencentDB accounts
- * @method string getPassword() Obtain Password of the new account
- * @method void setPassword(string $Password) Set Password of the new account
- * @method string getDescription() Obtain Remarks
- * @method void setDescription(string $Description) Set Remarks
+ * @method string getPassword() Obtain Password of the new account.
+Note:
+1. Within 8–64 characters (recommend not exceeding 12).
+2. At least two of the following items: lowercase letter a – z or uppercase letter A – Z, digit 0 – 9, _+-,&=!@#$%^*().|.
+3. Cannot contain invalid characters.
+ * @method void setPassword(string $Password) Set Password of the new account.
+Note:
+1. Within 8–64 characters (recommend not exceeding 12).
+2. At least two of the following items: lowercase letter a – z or uppercase letter A – Z, digit 0 – 9, _+-,&=!@#$%^*().|.
+3. Cannot contain invalid characters.
+ * @method string getDescription() Obtain Remark information. Input limit: 255 characters.
+ * @method void setDescription(string $Description) Set Remark information. Input limit: 255 characters.
  * @method integer getMaxUserConnections() Obtain Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
  * @method void setMaxUserConnections(integer $MaxUserConnections) Set Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
  */
@@ -44,12 +52,16 @@ class CreateAccountsRequest extends AbstractModel
     public $Accounts;
 
     /**
-     * @var string Password of the new account
+     * @var string Password of the new account.
+Note:
+1. Within 8–64 characters (recommend not exceeding 12).
+2. At least two of the following items: lowercase letter a – z or uppercase letter A – Z, digit 0 – 9, _+-,&=!@#$%^*().|.
+3. Cannot contain invalid characters.
      */
     public $Password;
 
     /**
-     * @var string Remarks
+     * @var string Remark information. Input limit: 255 characters.
      */
     public $Description;
 
@@ -61,8 +73,12 @@ class CreateAccountsRequest extends AbstractModel
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      * @param array $Accounts List of TencentDB accounts
-     * @param string $Password Password of the new account
-     * @param string $Description Remarks
+     * @param string $Password Password of the new account.
+Note:
+1. Within 8–64 characters (recommend not exceeding 12).
+2. At least two of the following items: lowercase letter a – z or uppercase letter A – Z, digit 0 – 9, _+-,&=!@#$%^*().|.
+3. Cannot contain invalid characters.
+     * @param string $Description Remark information. Input limit: 255 characters.
      * @param integer $MaxUserConnections Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
      */
     function __construct()

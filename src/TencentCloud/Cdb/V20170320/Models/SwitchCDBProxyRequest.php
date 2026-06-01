@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SwitchCDBProxy request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getProxyGroupId() Obtain Database proxy ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy ID
+ * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method string getProxyGroupId() Obtain Database proxy ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
  */
 class SwitchCDBProxyRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
     /**
-     * @var string Database proxy ID
+     * @var string Database proxy ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public $ProxyGroupId;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $ProxyGroupId Database proxy ID
+     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param string $ProxyGroupId Database proxy ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     function __construct()
     {

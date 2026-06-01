@@ -20,182 +20,243 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloneInstance request structure.
  *
- * @method string getInstanceId() Obtain ID of the instance to be cloned from
- * @method void setInstanceId(string $InstanceId) Set ID of the instance to be cloned from
- * @method string getSpecifiedRollbackTime() Obtain To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
- * @method void setSpecifiedRollbackTime(string $SpecifiedRollbackTime) Set To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
- * @method integer getSpecifiedBackupId() Obtain To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
- * @method void setSpecifiedBackupId(integer $SpecifiedBackupId) Set To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
- * @method string getUniqVpcId() Obtain VPC ID, which can be obtained by the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API. If this parameter is left empty, the classic network will be used by default.
- * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID, which can be obtained by the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API. If this parameter is left empty, the classic network will be used by default.
- * @method string getUniqSubnetId() Obtain VPC subnet ID, which can be obtained by the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. If `UniqVpcId` is set, `UniqSubnetId` will be required.
- * @method void setUniqSubnetId(string $UniqSubnetId) Set VPC subnet ID, which can be obtained by the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. If `UniqVpcId` is set, `UniqSubnetId` will be required.
- * @method integer getMemory() Obtain Memory of the cloned instance in MB, which should be equal to (by default) or larger than that of the original instance
- * @method void setMemory(integer $Memory) Set Memory of the cloned instance in MB, which should be equal to (by default) or larger than that of the original instance
- * @method integer getVolume() Obtain Disk capacity of the cloned instance in GB, which should be equal to (by default) or larger than that of the original instance
- * @method void setVolume(integer $Volume) Set Disk capacity of the cloned instance in GB, which should be equal to (by default) or larger than that of the original instance
- * @method string getInstanceName() Obtain Name of the cloned instance
- * @method void setInstanceName(string $InstanceName) Set Name of the cloned instance
- * @method array getSecurityGroup() Obtain Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
- * @method void setSecurityGroup(array $SecurityGroup) Set Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
- * @method array getResourceTags() Obtain Information of the cloned instance tag
- * @method void setResourceTags(array $ResourceTags) Set Information of the cloned instance tag
- * @method integer getCpu() Obtain The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
- * @method void setCpu(integer $Cpu) Set The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
- * @method integer getProtectMode() Obtain Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
- * @method void setProtectMode(integer $ProtectMode) Set Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
- * @method integer getDeployMode() Obtain Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
- * @method void setDeployMode(integer $DeployMode) Set Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
- * @method string getSlaveZone() Obtain Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default
- * @method void setSlaveZone(string $SlaveZone) Set Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default
- * @method string getBackupZone() Obtain Availability zone information of replica 2 of the cloned instance, 
-which is left empty by default. Specify this parameter when cloning a strong sync source instance.
- * @method void setBackupZone(string $BackupZone) Set Availability zone information of replica 2 of the cloned instance, 
-which is left empty by default. Specify this parameter when cloning a strong sync source instance.
- * @method string getDeviceType() Obtain Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
- * @method void setDeviceType(string $DeviceType) Set Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
- * @method integer getInstanceNodes() Obtain The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
- * @method void setInstanceNodes(integer $InstanceNodes) Set The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
- * @method string getDeployGroupId() Obtain Placement group ID.
- * @method void setDeployGroupId(string $DeployGroupId) Set Placement group ID.
- * @method boolean getDryRun() Obtain Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
- * @method void setDryRun(boolean $DryRun) Set Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
- * @method string getCageId() Obtain Financial cage ID.
- * @method void setCageId(string $CageId) Set Financial cage ID.
- * @method integer getProjectId() Obtain Project ID. Default value: 0.
- * @method void setProjectId(integer $ProjectId) Set Project ID. Default value: 0.
+ * @method string getInstanceId() Obtain <p>Clone source instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Clone source instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+ * @method string getSpecifiedRollbackTime() Obtain <p>If necessary, specify this value when cloning an instance and rolling back to a specified time. The time format is yyyy-mm-dd hh:mm:ss.<br>Note: This parameter and the SpecifiedBackupId parameter require a choice between the two for configuration.</p>
+ * @method void setSpecifiedRollbackTime(string $SpecifiedRollbackTime) Set <p>If necessary, specify this value when cloning an instance and rolling back to a specified time. The time format is yyyy-mm-dd hh:mm:ss.<br>Note: This parameter and the SpecifiedBackupId parameter require a choice between the two for configuration.</p>
+ * @method integer getSpecifiedBackupId() Obtain <p>If necessary to clone an instance and roll back to a designated backup set, specify this value as the Id of the backup file. Please use <a href="/document/api/236/15842">query data backup file list</a>.</p><p>If it is a clone of a two-node, three-node, or four-node instance, the backup file is a physical backup. If it is a clone of a single-node or cloud disk edition instance, the backup file is a snapshot backup.</p>
+ * @method void setSpecifiedBackupId(integer $SpecifiedBackupId) Set <p>If necessary to clone an instance and roll back to a designated backup set, specify this value as the Id of the backup file. Please use <a href="/document/api/236/15842">query data backup file list</a>.</p><p>If it is a clone of a two-node, three-node, or four-node instance, the backup file is a physical backup. If it is a clone of a single-node or cloud disk edition instance, the backup file is a snapshot backup.</p>
+ * @method string getUniqVpcId() Obtain <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.</p>
+ * @method void setUniqVpcId(string $UniqVpcId) Set <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.</p>
+ * @method string getUniqSubnetId() Obtain <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.</p>
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.</p>
+ * @method integer getMemory() Obtain <p>Instance memory size, unit: MB, must not be less than the clone source instance. Default is same as the source instance.</p>
+ * @method void setMemory(integer $Memory) Set <p>Instance memory size, unit: MB, must not be less than the clone source instance. Default is same as the source instance.</p>
+ * @method integer getVolume() Obtain <p>Instance disk size, unit: GB, must not be less than the clone source instance. Default is same as the source instance.</p>
+ * @method void setVolume(integer $Volume) Set <p>Instance disk size, unit: GB, must not be less than the clone source instance. Default is same as the source instance.</p>
+ * @method string getInstanceName() Obtain <p>Name of the newly generated clone instance. Support input of up to 60 characters.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Name of the newly generated clone instance. Support input of up to 60 characters.</p>
+ * @method array getSecurityGroup() Obtain <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
+ * @method void setSecurityGroup(array $SecurityGroup) Set <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
+ * @method array getResourceTags() Obtain <p>Tag information of the instance.</p>
+ * @method void setResourceTags(array $ResourceTags) Set <p>Tag information of the instance.</p>
+ * @method integer getCpu() Obtain <p>Instance Cpu cores, must not be less than the clone source instance. Default is same as the source instance.</p>
+ * @method void setCpu(integer $Cpu) Set <p>Instance Cpu cores, must not be less than the clone source instance. Default is same as the source instance.</p>
+ * @method integer getProtectMode() Obtain <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication.</p>
+ * @method void setProtectMode(integer $ProtectMode) Set <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication.</p>
+ * @method integer getDeployMode() Obtain <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone.</p>
+ * @method void setDeployMode(integer $DeployMode) Set <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone.</p>
+ * @method string getSlaveZone() Obtain <p>The AZ information of the newly generated clone instance standby 1 is the same as the source instance Zone by default.</p>
+ * @method void setSlaveZone(string $SlaveZone) Set <p>The AZ information of the newly generated clone instance standby 1 is the same as the source instance Zone by default.</p>
+ * @method string getBackupZone() Obtain <p>AZ information of standby 2, empty by default. Specify this parameter when you clone a strong sync primary instance.</p>
+ * @method void setBackupZone(string $BackupZone) Set <p>AZ information of standby 2, empty by default. Specify this parameter when you clone a strong sync primary instance.</p>
+ * @method string getDeviceType() Obtain <p>Clone instance type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "CLOUD_NATIVE_CLUSTER" - standard type for CLOUD disk, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - enhanced type for CLOUD disk. If not specified, it defaults to general-purpose instance.</p>
+ * @method void setDeviceType(string $DeviceType) Set <p>Clone instance type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "CLOUD_NATIVE_CLUSTER" - standard type for CLOUD disk, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - enhanced type for CLOUD disk. If not specified, it defaults to general-purpose instance.</p>
+ * @method integer getInstanceNodes() Obtain <p>Number of nodes in the new clone instance.</p><p>To clone a three-node instance, set this value to 3 or specify the BackupZone parameter. To clone a dual-node instance, set this value to 2. By default, a dual-node instance is cloned. To clone a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
+ * @method void setInstanceNodes(integer $InstanceNodes) Set <p>Number of nodes in the new clone instance.</p><p>To clone a three-node instance, set this value to 3 or specify the BackupZone parameter. To clone a dual-node instance, set this value to 2. By default, a dual-node instance is cloned. To clone a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
+ * @method string getDeployGroupId() Obtain <p>Placement group ID.</p>
+ * @method void setDeployGroupId(string $DeployGroupId) Set <p>Placement group ID.</p>
+ * @method boolean getDryRun() Obtain <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
+ * @method void setDryRun(boolean $DryRun) Set <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
+ * @method string getCageId() Obtain <p>Financial Enclosure ID.</p>
+ * @method void setCageId(string $CageId) Set <p>Financial Enclosure ID.</p>
+ * @method integer getProjectId() Obtain <p>Project ID. Default project ID 0.</p>
+ * @method void setProjectId(integer $ProjectId) Set <p>Project ID. Default project ID 0.</p>
+ * @method string getPayType() Obtain <p>Payment type. Valid values: PRE_PAID (prepaid, also known as yearly/monthly subscription) and USED_PAID (pay-as-you-go). Default billing mode is pay-as-you-go.</p>
+ * @method void setPayType(string $PayType) Set <p>Payment type. Valid values: PRE_PAID (prepaid, also known as yearly/monthly subscription) and USED_PAID (pay-as-you-go). Default billing mode is pay-as-you-go.</p>
+ * @method integer getPeriod() Obtain <p>Instance duration, required when PayType is PRE_PAID, measurement unit: month, optional values include [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p>
+ * @method void setPeriod(integer $Period) Set <p>Instance duration, required when PayType is PRE_PAID, measurement unit: month, optional values include [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p>
+ * @method ClusterTopology getClusterTopology() Obtain <p>Topology configuration for cloud disk edition nodes.</p>
+ * @method void setClusterTopology(ClusterTopology $ClusterTopology) Set <p>Topology configuration for cloud disk edition nodes.</p>
+ * @method string getSrcRegion() Obtain <p>Original instance region. Required when importing a remote backup, for example: ap-guangzhou</p>
+ * @method void setSrcRegion(string $SrcRegion) Set <p>Original instance region. Required when importing a remote backup, for example: ap-guangzhou</p>
+ * @method integer getSpecifiedSubBackupId() Obtain <p>Offsite data backup id</p>
+ * @method void setSpecifiedSubBackupId(integer $SpecifiedSubBackupId) Set <p>Offsite data backup id</p>
+ * @method string getMasterZone() Obtain <p>The AZ information of the newly generated clone instance primary database is the same as the source instance Zone by default.</p>
+ * @method void setMasterZone(string $MasterZone) Set <p>The AZ information of the newly generated clone instance primary database is the same as the source instance Zone by default.</p>
+ * @method string getZone() Obtain <p>The AZ information of the newly generated clone instance's primary database defaults to the same as the source instance's Zone.</p>
+ * @method void setZone(string $Zone) Set <p>The AZ information of the newly generated clone instance's primary database defaults to the same as the source instance's Zone.</p>
+ * @method string getFourthZone() Obtain <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
+ * @method void setFourthZone(string $FourthZone) Set <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
  */
 class CreateCloneInstanceRequest extends AbstractModel
 {
     /**
-     * @var string ID of the instance to be cloned from
+     * @var string <p>Clone source instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
+     * @var string <p>If necessary, specify this value when cloning an instance and rolling back to a specified time. The time format is yyyy-mm-dd hh:mm:ss.<br>Note: This parameter and the SpecifiedBackupId parameter require a choice between the two for configuration.</p>
      */
     public $SpecifiedRollbackTime;
 
     /**
-     * @var integer To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
+     * @var integer <p>If necessary to clone an instance and roll back to a designated backup set, specify this value as the Id of the backup file. Please use <a href="/document/api/236/15842">query data backup file list</a>.</p><p>If it is a clone of a two-node, three-node, or four-node instance, the backup file is a physical backup. If it is a clone of a single-node or cloud disk edition instance, the backup file is a snapshot backup.</p>
      */
     public $SpecifiedBackupId;
 
     /**
-     * @var string VPC ID, which can be obtained by the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API. If this parameter is left empty, the classic network will be used by default.
+     * @var string <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var string VPC subnet ID, which can be obtained by the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. If `UniqVpcId` is set, `UniqSubnetId` will be required.
+     * @var string <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.</p>
      */
     public $UniqSubnetId;
 
     /**
-     * @var integer Memory of the cloned instance in MB, which should be equal to (by default) or larger than that of the original instance
+     * @var integer <p>Instance memory size, unit: MB, must not be less than the clone source instance. Default is same as the source instance.</p>
      */
     public $Memory;
 
     /**
-     * @var integer Disk capacity of the cloned instance in GB, which should be equal to (by default) or larger than that of the original instance
+     * @var integer <p>Instance disk size, unit: GB, must not be less than the clone source instance. Default is same as the source instance.</p>
      */
     public $Volume;
 
     /**
-     * @var string Name of the cloned instance
+     * @var string <p>Name of the newly generated clone instance. Support input of up to 60 characters.</p>
      */
     public $InstanceName;
 
     /**
-     * @var array Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
+     * @var array <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
      */
     public $SecurityGroup;
 
     /**
-     * @var array Information of the cloned instance tag
+     * @var array <p>Tag information of the instance.</p>
      */
     public $ResourceTags;
 
     /**
-     * @var integer The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
+     * @var integer <p>Instance Cpu cores, must not be less than the clone source instance. Default is same as the source instance.</p>
      */
     public $Cpu;
 
     /**
-     * @var integer Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
+     * @var integer <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication.</p>
      */
     public $ProtectMode;
 
     /**
-     * @var integer Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
+     * @var integer <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone.</p>
      */
     public $DeployMode;
 
     /**
-     * @var string Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default
+     * @var string <p>The AZ information of the newly generated clone instance standby 1 is the same as the source instance Zone by default.</p>
      */
     public $SlaveZone;
 
     /**
-     * @var string Availability zone information of replica 2 of the cloned instance, 
-which is left empty by default. Specify this parameter when cloning a strong sync source instance.
+     * @var string <p>AZ information of standby 2, empty by default. Specify this parameter when you clone a strong sync primary instance.</p>
      */
     public $BackupZone;
 
     /**
-     * @var string Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
+     * @var string <p>Clone instance type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "CLOUD_NATIVE_CLUSTER" - standard type for CLOUD disk, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - enhanced type for CLOUD disk. If not specified, it defaults to general-purpose instance.</p>
      */
     public $DeviceType;
 
     /**
-     * @var integer The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+     * @var integer <p>Number of nodes in the new clone instance.</p><p>To clone a three-node instance, set this value to 3 or specify the BackupZone parameter. To clone a dual-node instance, set this value to 2. By default, a dual-node instance is cloned. To clone a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
      */
     public $InstanceNodes;
 
     /**
-     * @var string Placement group ID.
+     * @var string <p>Placement group ID.</p>
      */
     public $DeployGroupId;
 
     /**
-     * @var boolean Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
+     * @var boolean <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
      */
     public $DryRun;
 
     /**
-     * @var string Financial cage ID.
+     * @var string <p>Financial Enclosure ID.</p>
      */
     public $CageId;
 
     /**
-     * @var integer Project ID. Default value: 0.
+     * @var integer <p>Project ID. Default project ID 0.</p>
      */
     public $ProjectId;
 
     /**
-     * @param string $InstanceId ID of the instance to be cloned from
-     * @param string $SpecifiedRollbackTime To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
-     * @param integer $SpecifiedBackupId To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
-     * @param string $UniqVpcId VPC ID, which can be obtained by the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API. If this parameter is left empty, the classic network will be used by default.
-     * @param string $UniqSubnetId VPC subnet ID, which can be obtained by the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. If `UniqVpcId` is set, `UniqSubnetId` will be required.
-     * @param integer $Memory Memory of the cloned instance in MB, which should be equal to (by default) or larger than that of the original instance
-     * @param integer $Volume Disk capacity of the cloned instance in GB, which should be equal to (by default) or larger than that of the original instance
-     * @param string $InstanceName Name of the cloned instance
-     * @param array $SecurityGroup Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
-     * @param array $ResourceTags Information of the cloned instance tag
-     * @param integer $Cpu The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
-     * @param integer $ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
-     * @param integer $DeployMode Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
-     * @param string $SlaveZone Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default
-     * @param string $BackupZone Availability zone information of replica 2 of the cloned instance, 
-which is left empty by default. Specify this parameter when cloning a strong sync source instance.
-     * @param string $DeviceType Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
-     * @param integer $InstanceNodes The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
-     * @param string $DeployGroupId Placement group ID.
-     * @param boolean $DryRun Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
-     * @param string $CageId Financial cage ID.
-     * @param integer $ProjectId Project ID. Default value: 0.
+     * @var string <p>Payment type. Valid values: PRE_PAID (prepaid, also known as yearly/monthly subscription) and USED_PAID (pay-as-you-go). Default billing mode is pay-as-you-go.</p>
+     */
+    public $PayType;
+
+    /**
+     * @var integer <p>Instance duration, required when PayType is PRE_PAID, measurement unit: month, optional values include [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p>
+     */
+    public $Period;
+
+    /**
+     * @var ClusterTopology <p>Topology configuration for cloud disk edition nodes.</p>
+     */
+    public $ClusterTopology;
+
+    /**
+     * @var string <p>Original instance region. Required when importing a remote backup, for example: ap-guangzhou</p>
+     */
+    public $SrcRegion;
+
+    /**
+     * @var integer <p>Offsite data backup id</p>
+     */
+    public $SpecifiedSubBackupId;
+
+    /**
+     * @var string <p>The AZ information of the newly generated clone instance primary database is the same as the source instance Zone by default.</p>
+     * @deprecated
+     */
+    public $MasterZone;
+
+    /**
+     * @var string <p>The AZ information of the newly generated clone instance's primary database defaults to the same as the source instance's Zone.</p>
+     */
+    public $Zone;
+
+    /**
+     * @var string <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
+     */
+    public $FourthZone;
+
+    /**
+     * @param string $InstanceId <p>Clone source instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+     * @param string $SpecifiedRollbackTime <p>If necessary, specify this value when cloning an instance and rolling back to a specified time. The time format is yyyy-mm-dd hh:mm:ss.<br>Note: This parameter and the SpecifiedBackupId parameter require a choice between the two for configuration.</p>
+     * @param integer $SpecifiedBackupId <p>If necessary to clone an instance and roll back to a designated backup set, specify this value as the Id of the backup file. Please use <a href="/document/api/236/15842">query data backup file list</a>.</p><p>If it is a clone of a two-node, three-node, or four-node instance, the backup file is a physical backup. If it is a clone of a single-node or cloud disk edition instance, the backup file is a snapshot backup.</p>
+     * @param string $UniqVpcId <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.</p>
+     * @param string $UniqSubnetId <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.</p>
+     * @param integer $Memory <p>Instance memory size, unit: MB, must not be less than the clone source instance. Default is same as the source instance.</p>
+     * @param integer $Volume <p>Instance disk size, unit: GB, must not be less than the clone source instance. Default is same as the source instance.</p>
+     * @param string $InstanceName <p>Name of the newly generated clone instance. Support input of up to 60 characters.</p>
+     * @param array $SecurityGroup <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
+     * @param array $ResourceTags <p>Tag information of the instance.</p>
+     * @param integer $Cpu <p>Instance Cpu cores, must not be less than the clone source instance. Default is same as the source instance.</p>
+     * @param integer $ProtectMode <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication.</p>
+     * @param integer $DeployMode <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone.</p>
+     * @param string $SlaveZone <p>The AZ information of the newly generated clone instance standby 1 is the same as the source instance Zone by default.</p>
+     * @param string $BackupZone <p>AZ information of standby 2, empty by default. Specify this parameter when you clone a strong sync primary instance.</p>
+     * @param string $DeviceType <p>Clone instance type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "CLOUD_NATIVE_CLUSTER" - standard type for CLOUD disk, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - enhanced type for CLOUD disk. If not specified, it defaults to general-purpose instance.</p>
+     * @param integer $InstanceNodes <p>Number of nodes in the new clone instance.</p><p>To clone a three-node instance, set this value to 3 or specify the BackupZone parameter. To clone a dual-node instance, set this value to 2. By default, a dual-node instance is cloned. To clone a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
+     * @param string $DeployGroupId <p>Placement group ID.</p>
+     * @param boolean $DryRun <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
+     * @param string $CageId <p>Financial Enclosure ID.</p>
+     * @param integer $ProjectId <p>Project ID. Default project ID 0.</p>
+     * @param string $PayType <p>Payment type. Valid values: PRE_PAID (prepaid, also known as yearly/monthly subscription) and USED_PAID (pay-as-you-go). Default billing mode is pay-as-you-go.</p>
+     * @param integer $Period <p>Instance duration, required when PayType is PRE_PAID, measurement unit: month, optional values include [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p>
+     * @param ClusterTopology $ClusterTopology <p>Topology configuration for cloud disk edition nodes.</p>
+     * @param string $SrcRegion <p>Original instance region. Required when importing a remote backup, for example: ap-guangzhou</p>
+     * @param integer $SpecifiedSubBackupId <p>Offsite data backup id</p>
+     * @param string $MasterZone <p>The AZ information of the newly generated clone instance primary database is the same as the source instance Zone by default.</p>
+     * @param string $Zone <p>The AZ information of the newly generated clone instance's primary database defaults to the same as the source instance's Zone.</p>
+     * @param string $FourthZone <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
      */
     function __construct()
     {
@@ -297,6 +358,39 @@ which is left empty by default. Specify this parameter when cloning a strong syn
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("PayType",$param) and $param["PayType"] !== null) {
+            $this->PayType = $param["PayType"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
+        }
+
+        if (array_key_exists("ClusterTopology",$param) and $param["ClusterTopology"] !== null) {
+            $this->ClusterTopology = new ClusterTopology();
+            $this->ClusterTopology->deserialize($param["ClusterTopology"]);
+        }
+
+        if (array_key_exists("SrcRegion",$param) and $param["SrcRegion"] !== null) {
+            $this->SrcRegion = $param["SrcRegion"];
+        }
+
+        if (array_key_exists("SpecifiedSubBackupId",$param) and $param["SpecifiedSubBackupId"] !== null) {
+            $this->SpecifiedSubBackupId = $param["SpecifiedSubBackupId"];
+        }
+
+        if (array_key_exists("MasterZone",$param) and $param["MasterZone"] !== null) {
+            $this->MasterZone = $param["MasterZone"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("FourthZone",$param) and $param["FourthZone"] !== null) {
+            $this->FourthZone = $param["FourthZone"];
         }
     }
 }

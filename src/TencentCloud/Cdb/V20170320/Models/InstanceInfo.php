@@ -20,251 +20,249 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance details
  *
- * @method integer getWanStatus() Obtain Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
- * @method void setWanStatus(integer $WanStatus) Set Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
- * @method string getZone() Obtain AZ information
- * @method void setZone(string $Zone) Set AZ information
- * @method integer getInitFlag() Obtain Initialization flag. Value range: 0 (not initialized), 1 (initialized)
- * @method void setInitFlag(integer $InitFlag) Set Initialization flag. Value range: 0 (not initialized), 1 (initialized)
- * @method RoVipInfo getRoVipInfo() Obtain Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
- * @method void setRoVipInfo(RoVipInfo $RoVipInfo) Set Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
- * @method integer getMemory() Obtain Memory capacity in MB
- * @method void setMemory(integer $Memory) Set Memory capacity in MB
- * @method integer getStatus() Obtain Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
- * @method void setStatus(integer $Status) Set Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
- * @method integer getVpcId() Obtain VPC ID, such as 51102
- * @method void setVpcId(integer $VpcId) Set VPC ID, such as 51102
- * @method SlaveInfo getSlaveInfo() Obtain Secondary server information.
- * @method void setSlaveInfo(SlaveInfo $SlaveInfo) Set Secondary server information.
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getVolume() Obtain Disk capacity in GB
- * @method void setVolume(integer $Volume) Set Disk capacity in GB
- * @method integer getAutoRenew() Obtain Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
- * @method void setAutoRenew(integer $AutoRenew) Set Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
- * @method integer getProtectMode() Obtain Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync)
- * @method void setProtectMode(integer $ProtectMode) Set Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync)
- * @method array getRoGroups() Obtain Detailed information about the read-only group.
- * @method void setRoGroups(array $RoGroups) Set Detailed information about the read-only group.
- * @method integer getSubnetId() Obtain Subnet ID, such as 2333
- * @method void setSubnetId(integer $SubnetId) Set Subnet ID, such as 2333
- * @method integer getInstanceType() Obtain Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
- * @method void setInstanceType(integer $InstanceType) Set Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method string getRegion() Obtain Region information
- * @method void setRegion(string $Region) Set Region information
- * @method string getDeadlineTime() Obtain Instance expiration time
- * @method void setDeadlineTime(string $DeadlineTime) Set Instance expiration time
- * @method integer getDeployMode() Obtain AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
- * @method void setDeployMode(integer $DeployMode) Set AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
- * @method integer getTaskStatus() Obtain Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
- * @method void setTaskStatus(integer $TaskStatus) Set Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
- * @method MasterInfo getMasterInfo() Obtain Detailed information about the primary instance.
- * @method void setMasterInfo(MasterInfo $MasterInfo) Set Detailed information about the primary instance.
- * @method string getDeviceType() Obtain Instance type
- * @method void setDeviceType(string $DeviceType) Set Instance type
- * @method string getEngineVersion() Obtain Kernel version
- * @method void setEngineVersion(string $EngineVersion) Set Kernel version
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method array getDrInfo() Obtain Detailed information about the disaster recovery instance.
- * @method void setDrInfo(array $DrInfo) Set Detailed information about the disaster recovery instance.
- * @method string getWanDomain() Obtain Public domain name
- * @method void setWanDomain(string $WanDomain) Set Public domain name
- * @method integer getWanPort() Obtain Public network port number
- * @method void setWanPort(integer $WanPort) Set Public network port number
+ * @method integer getWanStatus() Obtain <p>Public network status. Possible returned values: 0 - External network not enabled; 1 - Public network enabled; 2 - Public network disabled</p>
+ * @method void setWanStatus(integer $WanStatus) Set <p>Public network status. Possible returned values: 0 - External network not enabled; 1 - Public network enabled; 2 - Public network disabled</p>
+ * @method string getZone() Obtain <p>AZ information</p>
+ * @method void setZone(string $Zone) Set <p>AZ information</p>
+ * @method integer getInitFlag() Obtain <p>Initialization flag. Possible returned values: 0 - uninitialized; 1 - initialized.</p>
+ * @method void setInitFlag(integer $InitFlag) Set <p>Initialization flag. Possible returned values: 0 - uninitialized; 1 - initialized.</p>
+ * @method RoVipInfo getRoVipInfo() Obtain <p>Read-only vip information. This field is available only for read-only instances with separate instance access enabled.</p>
+ * @method void setRoVipInfo(RoVipInfo $RoVipInfo) Set <p>Read-only vip information. This field is available only for read-only instances with separate instance access enabled.</p>
+ * @method integer getMemory() Obtain <p>Memory capacity, in MB.</p>
+ * @method void setMemory(integer $Memory) Set <p>Memory capacity, in MB.</p>
+ * @method integer getStatus() Obtain <p>Instance status. Valid values: 0: creating; 1: running; 4: isolation operation in progress; 5: isolated.</p>
+ * @method void setStatus(integer $Status) Set <p>Instance status. Valid values: 0: creating; 1: running; 4: isolation operation in progress; 5: isolated.</p>
+ * @method integer getVpcId() Obtain <p>VPC ID, for example: 51102</p>
+ * @method void setVpcId(integer $VpcId) Set <p>VPC ID, for example: 51102</p>
+ * @method SlaveInfo getSlaveInfo() Obtain <p>Secondary server information</p>
+ * @method void setSlaveInfo(SlaveInfo $SlaveInfo) Set <p>Secondary server information</p>
+ * @method string getInstanceId() Obtain <p>Instance ID</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID</p>
+ * @method integer getVolume() Obtain <p>Disk capacity, in GB.</p>
+ * @method void setVolume(integer $Volume) Set <p>Disk capacity, in GB.</p>
+ * @method integer getAutoRenew() Obtain <p>Auto-renewal flag. Possible returned values: 0 - auto-renewal is not enabled; 1 - auto-renewal is enabled; 2 - automatic renewal is disabled.</p>
+ * @method void setAutoRenew(integer $AutoRenew) Set <p>Auto-renewal flag. Possible returned values: 0 - auto-renewal is not enabled; 1 - auto-renewal is enabled; 2 - automatic renewal is disabled.</p>
+ * @method integer getProtectMode() Obtain <p>Data replication mode. 0 - async replication; 1 - semi-sync replication; 2 - strong sync replication</p>
+ * @method void setProtectMode(integer $ProtectMode) Set <p>Data replication mode. 0 - async replication; 1 - semi-sync replication; 2 - strong sync replication</p>
+ * @method array getRoGroups() Obtain <p>Read-only group detailed information</p>
+ * @method void setRoGroups(array $RoGroups) Set <p>Read-only group detailed information</p>
+ * @method integer getSubnetId() Obtain <p>Subnet ID, for example: 2333</p>
+ * @method void setSubnetId(integer $SubnetId) Set <p>Subnet ID, for example: 2333</p>
+ * @method integer getInstanceType() Obtain <p>Instance type. Possible returned values: 1 - Primary instance; 2 - Disaster recovery instance; 3 - Read-only instance.</p>
+ * @method void setInstanceType(integer $InstanceType) Set <p>Instance type. Possible returned values: 1 - Primary instance; 2 - Disaster recovery instance; 3 - Read-only instance.</p>
+ * @method integer getProjectId() Obtain <p>Project ID</p>
+ * @method void setProjectId(integer $ProjectId) Set <p>Project ID</p>
+ * @method string getRegion() Obtain <p>Regional information</p>
+ * @method void setRegion(string $Region) Set <p>Regional information</p>
+ * @method string getDeadlineTime() Obtain <p>Instance expiration time</p>
+ * @method void setDeadlineTime(string $DeadlineTime) Set <p>Instance expiration time</p>
+ * @method integer getDeployMode() Obtain <p>Availability Zone Deployment method. Valid values: 0 - single availability zone; 1 - multi-availability zone.</p>
+ * @method void setDeployMode(integer $DeployMode) Set <p>Availability Zone Deployment method. Valid values: 0 - single availability zone; 1 - multi-availability zone.</p>
+ * @method integer getTaskStatus() Obtain <p>Instance task status. 0 - No tasks, 1 - Upgrading, 2 - Data import, 3 - Opening Slave, 4 - Public network access enabling, 5 - Batch operation executing, 6 - Rolling back, 7 - Public network access disabling, 8 - Password modification, 9 - Renaming instance, 10 - Restarting, 12 - Self-built migration, 13 - Database deletion, 14 - Disaster recovery instance creation sync, 15 - Upgrade pending switch, 16 - Upgrade and switch, 17 - Upgrade and switch completed</p>
+ * @method void setTaskStatus(integer $TaskStatus) Set <p>Instance task status. 0 - No tasks, 1 - Upgrading, 2 - Data import, 3 - Opening Slave, 4 - Public network access enabling, 5 - Batch operation executing, 6 - Rolling back, 7 - Public network access disabling, 8 - Password modification, 9 - Renaming instance, 10 - Restarting, 12 - Self-built migration, 13 - Database deletion, 14 - Disaster recovery instance creation sync, 15 - Upgrade pending switch, 16 - Upgrade and switch, 17 - Upgrade and switch completed</p>
+ * @method MasterInfo getMasterInfo() Obtain <p>Detailed information about the primary instance.</p>
+ * @method void setMasterInfo(MasterInfo $MasterInfo) Set <p>Detailed information about the primary instance.</p>
+ * @method string getDeviceType() Obtain <p>Instance type</p>
+ * @method void setDeviceType(string $DeviceType) Set <p>Instance type</p>
+ * @method string getEngineVersion() Obtain <p>Kernel version</p>
+ * @method void setEngineVersion(string $EngineVersion) Set <p>Kernel version</p>
+ * @method string getInstanceName() Obtain <p>Instance name</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name</p>
+ * @method array getDrInfo() Obtain <p>Disaster recovery instance details</p>
+ * @method void setDrInfo(array $DrInfo) Set <p>Disaster recovery instance details</p>
+ * @method string getWanDomain() Obtain <p>public network domain name</p>
+ * @method void setWanDomain(string $WanDomain) Set <p>public network domain name</p>
+ * @method integer getWanPort() Obtain <p>Public network port number</p>
+ * @method void setWanPort(integer $WanPort) Set <p>Public network port number</p>
  * @method integer getPayType() Obtain Billing type
  * @method void setPayType(integer $PayType) Set Billing type
- * @method string getCreateTime() Obtain Instance creation time
- * @method void setCreateTime(string $CreateTime) Set Instance creation time
- * @method string getVip() Obtain Instance IP
- * @method void setVip(string $Vip) Set Instance IP
- * @method integer getVport() Obtain Port number
- * @method void setVport(integer $Vport) Set Port number
- * @method integer getCdbError() Obtain Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
- * @method void setCdbError(integer $CdbError) Set Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
- * @method string getUniqVpcId() Obtain VPC descriptor, such as "vpc-5v8wn9mg"
- * @method void setUniqVpcId(string $UniqVpcId) Set VPC descriptor, such as "vpc-5v8wn9mg"
- * @method string getUniqSubnetId() Obtain Subnet descriptor, such as "subnet-1typ0s7d"
- * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet descriptor, such as "subnet-1typ0s7d"
- * @method string getPhysicalId() Obtain Physical ID
- * @method void setPhysicalId(string $PhysicalId) Set Physical ID
- * @method integer getCpu() Obtain Number of cores
- * @method void setCpu(integer $Cpu) Set Number of cores
- * @method integer getQps() Obtain Queries per second
- * @method void setQps(integer $Qps) Set Queries per second
- * @method string getZoneName() Obtain AZ name
- * @method void setZoneName(string $ZoneName) Set AZ name
- * @method string getDeviceClass() Obtain Physical server model.
- * @method void setDeviceClass(string $DeviceClass) Set Physical server model.
- * @method string getDeployGroupId() Obtain Placement group ID.
- * @method void setDeployGroupId(string $DeployGroupId) Set Placement group ID.
- * @method integer getZoneId() Obtain AZ ID.
- * @method void setZoneId(integer $ZoneId) Set AZ ID.
- * @method integer getInstanceNodes() Obtain Number of nodes
- * @method void setInstanceNodes(integer $InstanceNodes) Set Number of nodes
- * @method array getTagList() Obtain Tag list.
- * @method void setTagList(array $TagList) Set Tag list.
- * @method string getEngineType() Obtain Engine type.
- * @method void setEngineType(string $EngineType) Set Engine type.
- * @method integer getMaxDelayTime() Obtain Maximum delay threshold.
- * @method void setMaxDelayTime(integer $MaxDelayTime) Set Maximum delay threshold.
- * @method string getDiskType() Obtain Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
-Note:
-1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
-2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
-3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
- * @method void setDiskType(string $DiskType) Set Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
-Note:
-1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
-2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
-3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
- * @method integer getExpandCpu() Obtain Current number of CPU cores for scale-out.
- * @method void setExpandCpu(integer $ExpandCpu) Set Current number of CPU cores for scale-out.
- * @method array getClusterInfo() Obtain Cluster Edition instance node information.
- * @method void setClusterInfo(array $ClusterInfo) Set Cluster Edition instance node information.
- * @method array getAnalysisNodeInfos() Obtain Analysis engine node list.
- * @method void setAnalysisNodeInfos(array $AnalysisNodeInfos) Set Analysis engine node list.
- * @method integer getDeviceBandwidth() Obtain Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
- * @method void setDeviceBandwidth(integer $DeviceBandwidth) Set Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
- * @method string getDestroyProtect() Obtain Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
- * @method void setDestroyProtect(string $DestroyProtect) Set Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+ * @method string getCreateTime() Obtain <p>Instance creation time</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Instance creation time</p>
+ * @method string getVip() Obtain <p>Instance IP</p>
+ * @method void setVip(string $Vip) Set <p>Instance IP</p>
+ * @method integer getVport() Obtain <p>Port number</p>
+ * @method void setVport(integer $Vport) Set <p>Port number</p>
+ * @method integer getCdbError() Obtain <p>Whether disk write is locked (data write volume of the instance exceeds disk quota). 0 - Unlocked 1 - Locked</p>
+ * @method void setCdbError(integer $CdbError) Set <p>Whether disk write is locked (data write volume of the instance exceeds disk quota). 0 - Unlocked 1 - Locked</p>
+ * @method string getUniqVpcId() Obtain <p>Private network descriptor, for example: "vpc-5v8wn9mg"</p>
+ * @method void setUniqVpcId(string $UniqVpcId) Set <p>Private network descriptor, for example: "vpc-5v8wn9mg"</p>
+ * @method string getUniqSubnetId() Obtain <p>Subnet descriptor, such as "subnet-1typ0s7d"</p>
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set <p>Subnet descriptor, such as "subnet-1typ0s7d"</p>
+ * @method string getPhysicalId() Obtain <p>Physical ID</p>
+ * @method void setPhysicalId(string $PhysicalId) Set <p>Physical ID</p>
+ * @method integer getCpu() Obtain <p>Core count</p>
+ * @method void setCpu(integer $Cpu) Set <p>Core count</p>
+ * @method integer getQps() Obtain <p>Queries per second.</p>
+ * @method void setQps(integer $Qps) Set <p>Queries per second.</p>
+ * @method string getZoneName() Obtain <p>Chinese Name of Availability Zone</p>
+ * @method void setZoneName(string $ZoneName) Set <p>Chinese Name of Availability Zone</p>
+ * @method string getDeviceClass() Obtain <p>Physical machine model</p>
+ * @method void setDeviceClass(string $DeviceClass) Set <p>Physical machine model</p>
+ * @method string getDeployGroupId() Obtain <p>Placement group ID</p>
+ * @method void setDeployGroupId(string $DeployGroupId) Set <p>Placement group ID</p>
+ * @method integer getZoneId() Obtain <p>Availability zone ID</p>
+ * @method void setZoneId(integer $ZoneId) Set <p>Availability zone ID</p>
+ * @method integer getInstanceNodes() Obtain <p>Number of nodes</p>
+ * @method void setInstanceNodes(integer $InstanceNodes) Set <p>Number of nodes</p>
+ * @method array getTagList() Obtain <p>Tag list</p>
+ * @method void setTagList(array $TagList) Set <p>Tag list</p>
+ * @method string getEngineType() Obtain <p>Engine type</p>
+ * @method void setEngineType(string $EngineType) Set <p>Engine type</p>
+ * @method integer getMaxDelayTime() Obtain <p>Maximum delay threshold</p>
+ * @method void setMaxDelayTime(integer $MaxDelayTime) Set <p>Maximum delay threshold</p>
+ * @method string getDiskType() Obtain <p>Instance disk type. Only CLOUD disk edition and single-node (CLOUD disk) instances will return a valid value.<br>Description:</p><ol><li>If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is enhanced SSD CLOUD disk.</li><li>If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is SSD CLOUD Block Storage.</li><li>If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it means that the instance uses local SSD.</li></ol>
+ * @method void setDiskType(string $DiskType) Set <p>Instance disk type. Only CLOUD disk edition and single-node (CLOUD disk) instances will return a valid value.<br>Description:</p><ol><li>If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is enhanced SSD CLOUD disk.</li><li>If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is SSD CLOUD Block Storage.</li><li>If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it means that the instance uses local SSD.</li></ol>
+ * @method integer getExpandCpu() Obtain <p>Current number of CPU cores for scale-out.</p>
+ * @method void setExpandCpu(integer $ExpandCpu) Set <p>Current number of CPU cores for scale-out.</p>
+ * @method array getClusterInfo() Obtain <p>Cloud Disk Edition instance node information</p>
+ * @method void setClusterInfo(array $ClusterInfo) Set <p>Cloud Disk Edition instance node information</p>
+ * @method array getAnalysisNodeInfos() Obtain <p>Analysis engine node list</p>
+ * @method void setAnalysisNodeInfos(array $AnalysisNodeInfos) Set <p>Analysis engine node list</p>
+ * @method integer getDeviceBandwidth() Obtain <p>Device bandwidth, in G. This parameter is valid only when DeviceClass is not empty. For example, 25 means the current device bandwidth is 25G; 10 means the current device bandwidth is 10G.</p>
+ * @method void setDeviceBandwidth(integer $DeviceBandwidth) Set <p>Device bandwidth, in G. This parameter is valid only when DeviceClass is not empty. For example, 25 means the current device bandwidth is 25G; 10 means the current device bandwidth is 10G.</p>
+ * @method string getDestroyProtect() Obtain <p>Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.</p>
+ * @method void setDestroyProtect(string $DestroyProtect) Set <p>Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.</p>
+ * @method string getCpuModel() Obtain <p>TDSQL engine parameters</p>
+ * @method void setCpuModel(string $CpuModel) Set <p>TDSQL engine parameters</p>
+ * @method UpgradeAnalysisInstanceVersionInfo getAnalysisUpgradeVersionInfo() Obtain <p>Analysis engine instance version upgrade information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAnalysisUpgradeVersionInfo(UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo) Set <p>Analysis engine instance version upgrade information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceInfo extends AbstractModel
 {
     /**
-     * @var integer Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
+     * @var integer <p>Public network status. Possible returned values: 0 - External network not enabled; 1 - Public network enabled; 2 - Public network disabled</p>
      */
     public $WanStatus;
 
     /**
-     * @var string AZ information
+     * @var string <p>AZ information</p>
      */
     public $Zone;
 
     /**
-     * @var integer Initialization flag. Value range: 0 (not initialized), 1 (initialized)
+     * @var integer <p>Initialization flag. Possible returned values: 0 - uninitialized; 1 - initialized.</p>
      */
     public $InitFlag;
 
     /**
-     * @var RoVipInfo Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
+     * @var RoVipInfo <p>Read-only vip information. This field is available only for read-only instances with separate instance access enabled.</p>
      */
     public $RoVipInfo;
 
     /**
-     * @var integer Memory capacity in MB
+     * @var integer <p>Memory capacity, in MB.</p>
      */
     public $Memory;
 
     /**
-     * @var integer Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
+     * @var integer <p>Instance status. Valid values: 0: creating; 1: running; 4: isolation operation in progress; 5: isolated.</p>
      */
     public $Status;
 
     /**
-     * @var integer VPC ID, such as 51102
+     * @var integer <p>VPC ID, for example: 51102</p>
      */
     public $VpcId;
 
     /**
-     * @var SlaveInfo Secondary server information.
+     * @var SlaveInfo <p>Secondary server information</p>
      */
     public $SlaveInfo;
 
     /**
-     * @var string Instance ID
+     * @var string <p>Instance ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer Disk capacity in GB
+     * @var integer <p>Disk capacity, in GB.</p>
      */
     public $Volume;
 
     /**
-     * @var integer Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
+     * @var integer <p>Auto-renewal flag. Possible returned values: 0 - auto-renewal is not enabled; 1 - auto-renewal is enabled; 2 - automatic renewal is disabled.</p>
      */
     public $AutoRenew;
 
     /**
-     * @var integer Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync)
+     * @var integer <p>Data replication mode. 0 - async replication; 1 - semi-sync replication; 2 - strong sync replication</p>
      */
     public $ProtectMode;
 
     /**
-     * @var array Detailed information about the read-only group.
+     * @var array <p>Read-only group detailed information</p>
      */
     public $RoGroups;
 
     /**
-     * @var integer Subnet ID, such as 2333
+     * @var integer <p>Subnet ID, for example: 2333</p>
      */
     public $SubnetId;
 
     /**
-     * @var integer Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+     * @var integer <p>Instance type. Possible returned values: 1 - Primary instance; 2 - Disaster recovery instance; 3 - Read-only instance.</p>
      */
     public $InstanceType;
 
     /**
-     * @var integer Project ID
+     * @var integer <p>Project ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string Region information
+     * @var string <p>Regional information</p>
      */
     public $Region;
 
     /**
-     * @var string Instance expiration time
+     * @var string <p>Instance expiration time</p>
      */
     public $DeadlineTime;
 
     /**
-     * @var integer AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
+     * @var integer <p>Availability Zone Deployment method. Valid values: 0 - single availability zone; 1 - multi-availability zone.</p>
      */
     public $DeployMode;
 
     /**
-     * @var integer Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+     * @var integer <p>Instance task status. 0 - No tasks, 1 - Upgrading, 2 - Data import, 3 - Opening Slave, 4 - Public network access enabling, 5 - Batch operation executing, 6 - Rolling back, 7 - Public network access disabling, 8 - Password modification, 9 - Renaming instance, 10 - Restarting, 12 - Self-built migration, 13 - Database deletion, 14 - Disaster recovery instance creation sync, 15 - Upgrade pending switch, 16 - Upgrade and switch, 17 - Upgrade and switch completed</p>
      */
     public $TaskStatus;
 
     /**
-     * @var MasterInfo Detailed information about the primary instance.
+     * @var MasterInfo <p>Detailed information about the primary instance.</p>
      */
     public $MasterInfo;
 
     /**
-     * @var string Instance type
+     * @var string <p>Instance type</p>
      */
     public $DeviceType;
 
     /**
-     * @var string Kernel version
+     * @var string <p>Kernel version</p>
      */
     public $EngineVersion;
 
     /**
-     * @var string Instance name
+     * @var string <p>Instance name</p>
      */
     public $InstanceName;
 
     /**
-     * @var array Detailed information about the disaster recovery instance.
+     * @var array <p>Disaster recovery instance details</p>
      */
     public $DrInfo;
 
     /**
-     * @var string Public domain name
+     * @var string <p>public network domain name</p>
      */
     public $WanDomain;
 
     /**
-     * @var integer Public network port number
+     * @var integer <p>Public network port number</p>
      */
     public $WanPort;
 
@@ -274,180 +272,186 @@ class InstanceInfo extends AbstractModel
     public $PayType;
 
     /**
-     * @var string Instance creation time
+     * @var string <p>Instance creation time</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Instance IP
+     * @var string <p>Instance IP</p>
      */
     public $Vip;
 
     /**
-     * @var integer Port number
+     * @var integer <p>Port number</p>
      */
     public $Vport;
 
     /**
-     * @var integer Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
+     * @var integer <p>Whether disk write is locked (data write volume of the instance exceeds disk quota). 0 - Unlocked 1 - Locked</p>
      */
     public $CdbError;
 
     /**
-     * @var string VPC descriptor, such as "vpc-5v8wn9mg"
+     * @var string <p>Private network descriptor, for example: "vpc-5v8wn9mg"</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var string Subnet descriptor, such as "subnet-1typ0s7d"
+     * @var string <p>Subnet descriptor, such as "subnet-1typ0s7d"</p>
      */
     public $UniqSubnetId;
 
     /**
-     * @var string Physical ID
+     * @var string <p>Physical ID</p>
      */
     public $PhysicalId;
 
     /**
-     * @var integer Number of cores
+     * @var integer <p>Core count</p>
      */
     public $Cpu;
 
     /**
-     * @var integer Queries per second
+     * @var integer <p>Queries per second.</p>
      */
     public $Qps;
 
     /**
-     * @var string AZ name
+     * @var string <p>Chinese Name of Availability Zone</p>
      */
     public $ZoneName;
 
     /**
-     * @var string Physical server model.
+     * @var string <p>Physical machine model</p>
      */
     public $DeviceClass;
 
     /**
-     * @var string Placement group ID.
+     * @var string <p>Placement group ID</p>
      */
     public $DeployGroupId;
 
     /**
-     * @var integer AZ ID.
+     * @var integer <p>Availability zone ID</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer Number of nodes
+     * @var integer <p>Number of nodes</p>
      */
     public $InstanceNodes;
 
     /**
-     * @var array Tag list.
+     * @var array <p>Tag list</p>
      */
     public $TagList;
 
     /**
-     * @var string Engine type.
+     * @var string <p>Engine type</p>
      */
     public $EngineType;
 
     /**
-     * @var integer Maximum delay threshold.
+     * @var integer <p>Maximum delay threshold</p>
      */
     public $MaxDelayTime;
 
     /**
-     * @var string Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
-Note:
-1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
-2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
-3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
+     * @var string <p>Instance disk type. Only CLOUD disk edition and single-node (CLOUD disk) instances will return a valid value.<br>Description:</p><ol><li>If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is enhanced SSD CLOUD disk.</li><li>If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is SSD CLOUD Block Storage.</li><li>If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it means that the instance uses local SSD.</li></ol>
      */
     public $DiskType;
 
     /**
-     * @var integer Current number of CPU cores for scale-out.
+     * @var integer <p>Current number of CPU cores for scale-out.</p>
      */
     public $ExpandCpu;
 
     /**
-     * @var array Cluster Edition instance node information.
+     * @var array <p>Cloud Disk Edition instance node information</p>
      */
     public $ClusterInfo;
 
     /**
-     * @var array Analysis engine node list.
+     * @var array <p>Analysis engine node list</p>
      */
     public $AnalysisNodeInfos;
 
     /**
-     * @var integer Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
+     * @var integer <p>Device bandwidth, in G. This parameter is valid only when DeviceClass is not empty. For example, 25 means the current device bandwidth is 25G; 10 means the current device bandwidth is 10G.</p>
      */
     public $DeviceBandwidth;
 
     /**
-     * @var string Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+     * @var string <p>Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.</p>
      */
     public $DestroyProtect;
 
     /**
-     * @param integer $WanStatus Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
-     * @param string $Zone AZ information
-     * @param integer $InitFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized)
-     * @param RoVipInfo $RoVipInfo Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
-     * @param integer $Memory Memory capacity in MB
-     * @param integer $Status Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
-     * @param integer $VpcId VPC ID, such as 51102
-     * @param SlaveInfo $SlaveInfo Secondary server information.
-     * @param string $InstanceId Instance ID
-     * @param integer $Volume Disk capacity in GB
-     * @param integer $AutoRenew Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
-     * @param integer $ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync)
-     * @param array $RoGroups Detailed information about the read-only group.
-     * @param integer $SubnetId Subnet ID, such as 2333
-     * @param integer $InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
-     * @param integer $ProjectId Project ID
-     * @param string $Region Region information
-     * @param string $DeadlineTime Instance expiration time
-     * @param integer $DeployMode AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
-     * @param integer $TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
-     * @param MasterInfo $MasterInfo Detailed information about the primary instance.
-     * @param string $DeviceType Instance type
-     * @param string $EngineVersion Kernel version
-     * @param string $InstanceName Instance name
-     * @param array $DrInfo Detailed information about the disaster recovery instance.
-     * @param string $WanDomain Public domain name
-     * @param integer $WanPort Public network port number
+     * @var string <p>TDSQL engine parameters</p>
+     */
+    public $CpuModel;
+
+    /**
+     * @var UpgradeAnalysisInstanceVersionInfo <p>Analysis engine instance version upgrade information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AnalysisUpgradeVersionInfo;
+
+    /**
+     * @param integer $WanStatus <p>Public network status. Possible returned values: 0 - External network not enabled; 1 - Public network enabled; 2 - Public network disabled</p>
+     * @param string $Zone <p>AZ information</p>
+     * @param integer $InitFlag <p>Initialization flag. Possible returned values: 0 - uninitialized; 1 - initialized.</p>
+     * @param RoVipInfo $RoVipInfo <p>Read-only vip information. This field is available only for read-only instances with separate instance access enabled.</p>
+     * @param integer $Memory <p>Memory capacity, in MB.</p>
+     * @param integer $Status <p>Instance status. Valid values: 0: creating; 1: running; 4: isolation operation in progress; 5: isolated.</p>
+     * @param integer $VpcId <p>VPC ID, for example: 51102</p>
+     * @param SlaveInfo $SlaveInfo <p>Secondary server information</p>
+     * @param string $InstanceId <p>Instance ID</p>
+     * @param integer $Volume <p>Disk capacity, in GB.</p>
+     * @param integer $AutoRenew <p>Auto-renewal flag. Possible returned values: 0 - auto-renewal is not enabled; 1 - auto-renewal is enabled; 2 - automatic renewal is disabled.</p>
+     * @param integer $ProtectMode <p>Data replication mode. 0 - async replication; 1 - semi-sync replication; 2 - strong sync replication</p>
+     * @param array $RoGroups <p>Read-only group detailed information</p>
+     * @param integer $SubnetId <p>Subnet ID, for example: 2333</p>
+     * @param integer $InstanceType <p>Instance type. Possible returned values: 1 - Primary instance; 2 - Disaster recovery instance; 3 - Read-only instance.</p>
+     * @param integer $ProjectId <p>Project ID</p>
+     * @param string $Region <p>Regional information</p>
+     * @param string $DeadlineTime <p>Instance expiration time</p>
+     * @param integer $DeployMode <p>Availability Zone Deployment method. Valid values: 0 - single availability zone; 1 - multi-availability zone.</p>
+     * @param integer $TaskStatus <p>Instance task status. 0 - No tasks, 1 - Upgrading, 2 - Data import, 3 - Opening Slave, 4 - Public network access enabling, 5 - Batch operation executing, 6 - Rolling back, 7 - Public network access disabling, 8 - Password modification, 9 - Renaming instance, 10 - Restarting, 12 - Self-built migration, 13 - Database deletion, 14 - Disaster recovery instance creation sync, 15 - Upgrade pending switch, 16 - Upgrade and switch, 17 - Upgrade and switch completed</p>
+     * @param MasterInfo $MasterInfo <p>Detailed information about the primary instance.</p>
+     * @param string $DeviceType <p>Instance type</p>
+     * @param string $EngineVersion <p>Kernel version</p>
+     * @param string $InstanceName <p>Instance name</p>
+     * @param array $DrInfo <p>Disaster recovery instance details</p>
+     * @param string $WanDomain <p>public network domain name</p>
+     * @param integer $WanPort <p>Public network port number</p>
      * @param integer $PayType Billing type
-     * @param string $CreateTime Instance creation time
-     * @param string $Vip Instance IP
-     * @param integer $Vport Port number
-     * @param integer $CdbError Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
-     * @param string $UniqVpcId VPC descriptor, such as "vpc-5v8wn9mg"
-     * @param string $UniqSubnetId Subnet descriptor, such as "subnet-1typ0s7d"
-     * @param string $PhysicalId Physical ID
-     * @param integer $Cpu Number of cores
-     * @param integer $Qps Queries per second
-     * @param string $ZoneName AZ name
-     * @param string $DeviceClass Physical server model.
-     * @param string $DeployGroupId Placement group ID.
-     * @param integer $ZoneId AZ ID.
-     * @param integer $InstanceNodes Number of nodes
-     * @param array $TagList Tag list.
-     * @param string $EngineType Engine type.
-     * @param integer $MaxDelayTime Maximum delay threshold.
-     * @param string $DiskType Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
-Note:
-1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
-2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
-3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
-     * @param integer $ExpandCpu Current number of CPU cores for scale-out.
-     * @param array $ClusterInfo Cluster Edition instance node information.
-     * @param array $AnalysisNodeInfos Analysis engine node list.
-     * @param integer $DeviceBandwidth Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
-     * @param string $DestroyProtect Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+     * @param string $CreateTime <p>Instance creation time</p>
+     * @param string $Vip <p>Instance IP</p>
+     * @param integer $Vport <p>Port number</p>
+     * @param integer $CdbError <p>Whether disk write is locked (data write volume of the instance exceeds disk quota). 0 - Unlocked 1 - Locked</p>
+     * @param string $UniqVpcId <p>Private network descriptor, for example: "vpc-5v8wn9mg"</p>
+     * @param string $UniqSubnetId <p>Subnet descriptor, such as "subnet-1typ0s7d"</p>
+     * @param string $PhysicalId <p>Physical ID</p>
+     * @param integer $Cpu <p>Core count</p>
+     * @param integer $Qps <p>Queries per second.</p>
+     * @param string $ZoneName <p>Chinese Name of Availability Zone</p>
+     * @param string $DeviceClass <p>Physical machine model</p>
+     * @param string $DeployGroupId <p>Placement group ID</p>
+     * @param integer $ZoneId <p>Availability zone ID</p>
+     * @param integer $InstanceNodes <p>Number of nodes</p>
+     * @param array $TagList <p>Tag list</p>
+     * @param string $EngineType <p>Engine type</p>
+     * @param integer $MaxDelayTime <p>Maximum delay threshold</p>
+     * @param string $DiskType <p>Instance disk type. Only CLOUD disk edition and single-node (CLOUD disk) instances will return a valid value.<br>Description:</p><ol><li>If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is enhanced SSD CLOUD disk.</li><li>If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is SSD CLOUD Block Storage.</li><li>If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it means that the instance uses local SSD.</li></ol>
+     * @param integer $ExpandCpu <p>Current number of CPU cores for scale-out.</p>
+     * @param array $ClusterInfo <p>Cloud Disk Edition instance node information</p>
+     * @param array $AnalysisNodeInfos <p>Analysis engine node list</p>
+     * @param integer $DeviceBandwidth <p>Device bandwidth, in G. This parameter is valid only when DeviceClass is not empty. For example, 25 means the current device bandwidth is 25G; 10 means the current device bandwidth is 10G.</p>
+     * @param string $DestroyProtect <p>Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.</p>
+     * @param string $CpuModel <p>TDSQL engine parameters</p>
+     * @param UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo <p>Analysis engine instance version upgrade information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -692,6 +696,15 @@ Note:
 
         if (array_key_exists("DestroyProtect",$param) and $param["DestroyProtect"] !== null) {
             $this->DestroyProtect = $param["DestroyProtect"];
+        }
+
+        if (array_key_exists("CpuModel",$param) and $param["CpuModel"] !== null) {
+            $this->CpuModel = $param["CpuModel"];
+        }
+
+        if (array_key_exists("AnalysisUpgradeVersionInfo",$param) and $param["AnalysisUpgradeVersionInfo"] !== null) {
+            $this->AnalysisUpgradeVersionInfo = new UpgradeAnalysisInstanceVersionInfo();
+            $this->AnalysisUpgradeVersionInfo->deserialize($param["AnalysisUpgradeVersionInfo"]);
         }
     }
 }

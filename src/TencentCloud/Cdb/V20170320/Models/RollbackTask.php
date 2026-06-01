@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Task start time.
  * @method string getEndTime() Obtain Task end time.
  * @method void setEndTime(string $EndTime) Set Task end time.
- * @method array getDetail() Obtain Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDetail(array $Detail) Set Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getDetail() Obtain Rollback task detail.
+ * @method void setDetail(array $Detail) Set Rollback task detail.
  */
 class RollbackTask extends AbstractModel
 {
@@ -63,8 +61,7 @@ class RollbackTask extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Rollback task detail.
      */
     public $Detail;
 
@@ -74,8 +71,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Progress Task execution progress. Value range: [0,100].
      * @param string $StartTime Task start time.
      * @param string $EndTime Task end time.
-     * @param array $Detail Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Detail Rollback task detail.
      */
     function __construct()
     {

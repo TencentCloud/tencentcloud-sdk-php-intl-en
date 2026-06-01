@@ -18,28 +18,28 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Default retention policy of local binlog.
+ * Default configuration of local binlog retention policy
  *
- * @method integer getSaveHours() Obtain Retention period of local binlog. Value range: [72,168].
- * @method void setSaveHours(integer $SaveHours) Set Retention period of local binlog. Value range: [72,168].
- * @method integer getMaxUsage() Obtain Space utilization of local binlog. Value range: [30,50].
- * @method void setMaxUsage(integer $MaxUsage) Set Space utilization of local binlog. Value range: [30,50].
+ * @method integer getSaveHours() Obtain Local binlog retention duration. Valid values: [6,168].
+ * @method void setSaveHours(integer $SaveHours) Set Local binlog retention duration. Valid values: [6,168].
+ * @method integer getMaxUsage() Obtain Local binlog space utilization. Valid values: [30,50].
+ * @method void setMaxUsage(integer $MaxUsage) Set Local binlog space utilization. Valid values: [30,50].
  */
 class LocalBinlogConfigDefault extends AbstractModel
 {
     /**
-     * @var integer Retention period of local binlog. Value range: [72,168].
+     * @var integer Local binlog retention duration. Valid values: [6,168].
      */
     public $SaveHours;
 
     /**
-     * @var integer Space utilization of local binlog. Value range: [30,50].
+     * @var integer Local binlog space utilization. Valid values: [30,50].
      */
     public $MaxUsage;
 
     /**
-     * @param integer $SaveHours Retention period of local binlog. Value range: [72,168].
-     * @param integer $MaxUsage Space utilization of local binlog. Value range: [30,50].
+     * @param integer $SaveHours Local binlog retention duration. Valid values: [6,168].
+     * @param integer $MaxUsage Local binlog space utilization. Valid values: [30,50].
      */
     function __construct()
     {

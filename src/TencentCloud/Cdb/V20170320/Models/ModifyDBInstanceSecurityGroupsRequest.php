@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method array getSecurityGroupIds() Obtain List of IDs of security groups to be modified, which is an array of one or more security group IDs.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set List of IDs of security groups to be modified, which is an array of one or more security group IDs.
- * @method boolean getForReadonlyInstance() Obtain This parameter takes effect only when the ID of read-only replica is passed in. If this parameter is set to `False` or left empty, the security groups bound with the RO group of the read-only replicas will be modified. If this parameter is set to `True`, the security groups bound with the read-only replica itself will be modified.
- * @method void setForReadonlyInstance(boolean $ForReadonlyInstance) Set This parameter takes effect only when the ID of read-only replica is passed in. If this parameter is set to `False` or left empty, the security groups bound with the RO group of the read-only replicas will be modified. If this parameter is set to `True`, the security groups bound with the read-only replica itself will be modified.
+ * @method array getSecurityGroupIds() Obtain List of security group IDs to modify, an array of security group IDs. It can be obtained through the API [DescribeDBSecurityGroups](https://www.tencentcloud.com/document/product/236/15854?from_cn_redirect=1). The input security group ID array has no length limit.
+**Note**: This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set List of security group IDs to modify, an array of security group IDs. It can be obtained through the API [DescribeDBSecurityGroups](https://www.tencentcloud.com/document/product/236/15854?from_cn_redirect=1). The input security group ID array has no length limit.
+**Note**: This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+ * @method boolean getForReadonlyInstance() Obtain When importing a read-only instance ID, the default operation is performed on the corresponding security group of the read-only group. If necessary to operate the security group of the read-only instance ID, set this input parameter to True. Default False.
+ * @method void setForReadonlyInstance(boolean $ForReadonlyInstance) Set When importing a read-only instance ID, the default operation is performed on the corresponding security group of the read-only group. If necessary to operate the security group of the read-only instance ID, set this input parameter to True. Default False.
+ * @method string getOpResourceId() Obtain When updating the read-only group of a cloud disk edition instance, specify the instance ID in InstanceId and this parameter to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+ * @method void setOpResourceId(string $OpResourceId) Set When updating the read-only group of a cloud disk edition instance, specify the instance ID in InstanceId and this parameter to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
  */
 class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 {
@@ -35,19 +39,27 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+     * @var array List of security group IDs to modify, an array of security group IDs. It can be obtained through the API [DescribeDBSecurityGroups](https://www.tencentcloud.com/document/product/236/15854?from_cn_redirect=1). The input security group ID array has no length limit.
+**Note**: This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
      */
     public $SecurityGroupIds;
 
     /**
-     * @var boolean This parameter takes effect only when the ID of read-only replica is passed in. If this parameter is set to `False` or left empty, the security groups bound with the RO group of the read-only replicas will be modified. If this parameter is set to `True`, the security groups bound with the read-only replica itself will be modified.
+     * @var boolean When importing a read-only instance ID, the default operation is performed on the corresponding security group of the read-only group. If necessary to operate the security group of the read-only instance ID, set this input parameter to True. Default False.
      */
     public $ForReadonlyInstance;
 
     /**
+     * @var string When updating the read-only group of a cloud disk edition instance, specify the instance ID in InstanceId and this parameter to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+     */
+    public $OpResourceId;
+
+    /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param array $SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
-     * @param boolean $ForReadonlyInstance This parameter takes effect only when the ID of read-only replica is passed in. If this parameter is set to `False` or left empty, the security groups bound with the RO group of the read-only replicas will be modified. If this parameter is set to `True`, the security groups bound with the read-only replica itself will be modified.
+     * @param array $SecurityGroupIds List of security group IDs to modify, an array of security group IDs. It can be obtained through the API [DescribeDBSecurityGroups](https://www.tencentcloud.com/document/product/236/15854?from_cn_redirect=1). The input security group ID array has no length limit.
+**Note**: This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+     * @param boolean $ForReadonlyInstance When importing a read-only instance ID, the default operation is performed on the corresponding security group of the read-only group. If necessary to operate the security group of the read-only instance ID, set this input parameter to True. Default False.
+     * @param string $OpResourceId When updating the read-only group of a cloud disk edition instance, specify the instance ID in InstanceId and this parameter to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 
         if (array_key_exists("ForReadonlyInstance",$param) and $param["ForReadonlyInstance"] !== null) {
             $this->ForReadonlyInstance = $param["ForReadonlyInstance"];
+        }
+
+        if (array_key_exists("OpResourceId",$param) and $param["OpResourceId"] !== null) {
+            $this->OpResourceId = $param["OpResourceId"];
         }
     }
 }

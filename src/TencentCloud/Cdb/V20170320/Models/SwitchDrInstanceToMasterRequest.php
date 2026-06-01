@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SwitchDrInstanceToMaster request structure.
  *
- * @method string getInstanceId() Obtain Disaster recovery instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
- * @method void setInstanceId(string $InstanceId) Set Disaster recovery instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+ * @method string getInstanceId() Obtain Disaster recovery instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Disaster recovery instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
  */
 class SwitchDrInstanceToMasterRequest extends AbstractModel
 {
     /**
-     * @var string Disaster recovery instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @var string Disaster recovery instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Disaster recovery instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @param string $InstanceId Disaster recovery instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     function __construct()
     {

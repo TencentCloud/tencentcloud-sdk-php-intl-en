@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAffectRows(integer $AffectRows) Set Number of affected rows
  * @method integer getErrCode() Obtain The error code
  * @method void setErrCode(integer $ErrCode) Set The error code
- * @method string getSqlType() Obtain SQL Type.
- * @method void setSqlType(string $SqlType) Set SQL Type.
+ * @method string getSqlType() Obtain 
+ * @method void setSqlType(string $SqlType) Set 
  * @method string getPolicyName() Obtain Audit policy name, which will be unavailable soon.
  * @method void setPolicyName(string $PolicyName) Set Audit policy name, which will be unavailable soon.
- * @method string getDBName() Obtain Database Name.
- * @method void setDBName(string $DBName) Set Database Name.
- * @method string getSql() Obtain SQL Statement.
- * @method void setSql(string $Sql) Set SQL Statement.
+ * @method string getDBName() Obtain 
+ * @method void setDBName(string $DBName) Set 
+ * @method string getSql() Obtain 
+ * @method void setSql(string $Sql) Set 
  * @method string getHost() Obtain Client address
  * @method void setHost(string $Host) Set Client address
  * @method string getUser() Obtain Username
@@ -44,34 +44,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSentRows(integer $SentRows) Set Number of returned rows
  * @method integer getThreadId() Obtain Thread ID
  * @method void setThreadId(integer $ThreadId) Set Thread ID
- * @method integer getCheckRows() Obtain Number of scanned rows
+ * @method integer getCheckRows() Obtain Number of scanned rows.
+ * @method void setCheckRows(integer $CheckRows) Set Number of scanned rows.
+ * @method float getCpuTime() Obtain cpu execution time, µs.
+ * @method void setCpuTime(float $CpuTime) Set cpu execution time, µs.
+ * @method integer getIoWaitTime() Obtain IO wait time, µs.
+ * @method void setIoWaitTime(integer $IoWaitTime) Set IO wait time, µs.
+ * @method integer getLockWaitTime() Obtain Lock waiting time (unit: microsecond).
+ * @method void setLockWaitTime(integer $LockWaitTime) Set Lock waiting time (unit: microsecond).
+ * @method integer getNsTime() Obtain Start time, which combines with timestamp to form a time accurate to nanoseconds.
+ * @method void setNsTime(integer $NsTime) Set Start time, which combines with timestamp to form a time accurate to nanoseconds.
+ * @method integer getTrxLivingTime() Obtain Transaction duration, µs.
+ * @method void setTrxLivingTime(integer $TrxLivingTime) Set Transaction duration, µs.
+ * @method array getTemplateInfo() Obtain Basic info of the log hit rule template
+ * @method void setTemplateInfo(array $TemplateInfo) Set Basic info of the log hit rule template
+ * @method integer getTrxId() Obtain Transaction ID
+ * @method void setTrxId(integer $TrxId) Set Transaction ID
+ * @method integer getClientPort() Obtain Port.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCheckRows(integer $CheckRows) Set Number of scanned rows
+ * @method void setClientPort(integer $ClientPort) Set Port.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getCpuTime() Obtain CPU execution time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCpuTime(float $CpuTime) Set CPU execution time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIoWaitTime() Obtain IO wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIoWaitTime(integer $IoWaitTime) Set IO wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getLockWaitTime() Obtain Lock wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLockWaitTime(integer $LockWaitTime) Set Lock wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getNsTime() Obtain Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNsTime(integer $NsTime) Set Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTrxLivingTime() Obtain Transaction duration (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTrxLivingTime(integer $TrxLivingTime) Set Transaction duration (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTemplateInfo() Obtain Basic information on the rule template hit by the log.
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method void setTemplateInfo(array $TemplateInfo) Set Basic information on the rule template hit by the log.
-Note: The return value may be null, indicating that no valid data can be obtained.
  */
 class AuditLog extends AbstractModel
 {
@@ -86,7 +78,7 @@ class AuditLog extends AbstractModel
     public $ErrCode;
 
     /**
-     * @var string SQL Type.
+     * @var string 
      */
     public $SqlType;
 
@@ -96,12 +88,12 @@ class AuditLog extends AbstractModel
     public $PolicyName;
 
     /**
-     * @var string Database Name.
+     * @var string 
      */
     public $DBName;
 
     /**
-     * @var string SQL Statement.
+     * @var string 
      */
     public $Sql;
 
@@ -136,74 +128,74 @@ class AuditLog extends AbstractModel
     public $ThreadId;
 
     /**
-     * @var integer Number of scanned rows
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of scanned rows.
      */
     public $CheckRows;
 
     /**
-     * @var float CPU execution time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float cpu execution time, µs.
      */
     public $CpuTime;
 
     /**
-     * @var integer IO wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer IO wait time, µs.
      */
     public $IoWaitTime;
 
     /**
-     * @var integer Lock wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Lock waiting time (unit: microsecond).
      */
     public $LockWaitTime;
 
     /**
-     * @var integer Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Start time, which combines with timestamp to form a time accurate to nanoseconds.
      */
     public $NsTime;
 
     /**
-     * @var integer Transaction duration (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Transaction duration, µs.
      */
     public $TrxLivingTime;
 
     /**
-     * @var array Basic information on the rule template hit by the log.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @var array Basic info of the log hit rule template
      */
     public $TemplateInfo;
 
     /**
+     * @var integer Transaction ID
+     */
+    public $TrxId;
+
+    /**
+     * @var integer Port.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ClientPort;
+
+    /**
      * @param integer $AffectRows Number of affected rows
      * @param integer $ErrCode The error code
-     * @param string $SqlType SQL Type.
+     * @param string $SqlType 
      * @param string $PolicyName Audit policy name, which will be unavailable soon.
-     * @param string $DBName Database Name.
-     * @param string $Sql SQL Statement.
+     * @param string $DBName 
+     * @param string $Sql 
      * @param string $Host Client address
      * @param string $User Username
      * @param integer $ExecTime Execution time (μs)
      * @param string $Timestamp Time
      * @param integer $SentRows Number of returned rows
      * @param integer $ThreadId Thread ID
-     * @param integer $CheckRows Number of scanned rows
+     * @param integer $CheckRows Number of scanned rows.
+     * @param float $CpuTime cpu execution time, µs.
+     * @param integer $IoWaitTime IO wait time, µs.
+     * @param integer $LockWaitTime Lock waiting time (unit: microsecond).
+     * @param integer $NsTime Start time, which combines with timestamp to form a time accurate to nanoseconds.
+     * @param integer $TrxLivingTime Transaction duration, µs.
+     * @param array $TemplateInfo Basic info of the log hit rule template
+     * @param integer $TrxId Transaction ID
+     * @param integer $ClientPort Port.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $CpuTime CPU execution time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IoWaitTime IO wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $LockWaitTime Lock wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $NsTime Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TrxLivingTime Transaction duration (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $TemplateInfo Basic information on the rule template hit by the log.
-Note: The return value may be null, indicating that no valid data can be obtained.
      */
     function __construct()
     {
@@ -297,6 +289,14 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                 $obj->deserialize($value);
                 array_push($this->TemplateInfo, $obj);
             }
+        }
+
+        if (array_key_exists("TrxId",$param) and $param["TrxId"] !== null) {
+            $this->TrxId = $param["TrxId"];
+        }
+
+        if (array_key_exists("ClientPort",$param) and $param["ClientPort"] !== null) {
+            $this->ClientPort = $param["ClientPort"];
         }
     }
 }

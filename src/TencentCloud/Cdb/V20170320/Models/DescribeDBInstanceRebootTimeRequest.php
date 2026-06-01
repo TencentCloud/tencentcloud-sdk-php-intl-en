@@ -20,18 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceRebootTime request structure.
  *
- * @method array getInstanceIds() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+ * @method array getInstanceIds() Obtain Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+Description: Multiple instance IDs allowed for query. json format as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+Description: Multiple instance IDs allowed for query. json format as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
  */
 class DescribeDBInstanceRebootTimeRequest extends AbstractModel
 {
     /**
-     * @var array Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * @var array Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+Description: Multiple instance IDs allowed for query. json format as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * @param array $InstanceIds Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+Description: Multiple instance IDs allowed for query. json format as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     function __construct()
     {

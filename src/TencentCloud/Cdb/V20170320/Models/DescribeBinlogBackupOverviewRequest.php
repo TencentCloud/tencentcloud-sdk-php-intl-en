@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBinlogBackupOverview request structure.
  *
- * @method string getProduct() Obtain TencentDB product type to be queried. Currently, only `mysql` is supported.
- * @method void setProduct(string $Product) Set TencentDB product type to be queried. Currently, only `mysql` is supported.
+ * @method string getProduct() Obtain The cloud database product type for which a log backup overview needs to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
+ * @method void setProduct(string $Product) Set The cloud database product type for which a log backup overview needs to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
  */
 class DescribeBinlogBackupOverviewRequest extends AbstractModel
 {
     /**
-     * @var string TencentDB product type to be queried. Currently, only `mysql` is supported.
+     * @var string The cloud database product type for which a log backup overview needs to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
      */
     public $Product;
 
     /**
-     * @param string $Product TencentDB product type to be queried. Currently, only `mysql` is supported.
+     * @param string $Product The cloud database product type for which a log backup overview needs to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
      */
     function __construct()
     {

@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method string getNewPassword() Obtain New password of the database account. It can only contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special characters (_+-&=!@#$%^*()).
  * @method void setNewPassword(string $NewPassword) Set New password of the database account. It can only contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special characters (_+-&=!@#$%^*()).
- * @method array getAccounts() Obtain TencentDB account
- * @method void setAccounts(array $Accounts) Set TencentDB account
+ * @method array getAccounts() Obtain TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+ * @method void setAccounts(array $Accounts) Set TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+ * @method boolean getSkipValidatePassword() Obtain Deprecated.
+ * @method void setSkipValidatePassword(boolean $SkipValidatePassword) Set Deprecated.
  */
 class ModifyAccountPasswordRequest extends AbstractModel
 {
@@ -40,14 +42,21 @@ class ModifyAccountPasswordRequest extends AbstractModel
     public $NewPassword;
 
     /**
-     * @var array TencentDB account
+     * @var array TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
      */
     public $Accounts;
 
     /**
+     * @var boolean Deprecated.
+     * @deprecated
+     */
+    public $SkipValidatePassword;
+
+    /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param string $NewPassword New password of the database account. It can only contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special characters (_+-&=!@#$%^*()).
-     * @param array $Accounts TencentDB account
+     * @param array $Accounts TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+     * @param boolean $SkipValidatePassword Deprecated.
      */
     function __construct()
     {
@@ -77,6 +86,10 @@ class ModifyAccountPasswordRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Accounts, $obj);
             }
+        }
+
+        if (array_key_exists("SkipValidatePassword",$param) and $param["SkipValidatePassword"] !== null) {
+            $this->SkipValidatePassword = $param["SkipValidatePassword"];
         }
     }
 }

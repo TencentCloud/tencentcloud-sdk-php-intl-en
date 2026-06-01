@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceInfo request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+Description: Only the primary instance supports querying. This item only supports input of the primary instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+Description: Only the primary instance supports querying. This item only supports input of the primary instance ID.
  */
 class DescribeDBInstanceInfoRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+Description: Only the primary instance supports querying. This item only supports input of the primary instance ID.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID.
+     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+Description: Only the primary instance supports querying. This item only supports input of the primary instance ID.
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Details of the table for rollback
  *
  * @method string getDatabase() Obtain Database name
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDatabase(string $Database) Set Database name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getTable() Obtain Table details
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTable(array $Table) Set Table details
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTable() Obtain Database table details
+ * @method void setTable(array $Table) Set Database table details
  */
 class RollbackTables extends AbstractModel
 {
     /**
      * @var string Database name
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Database;
 
     /**
-     * @var array Table details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Database table details
      */
     public $Table;
 
     /**
      * @param string $Database Database name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Table Table details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Table Database table details
      */
     function __construct()
     {

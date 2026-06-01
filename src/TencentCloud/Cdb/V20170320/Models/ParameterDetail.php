@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxFunc(string $MaxFunc) Set Maximum parameter value, which is valid only when `ParamType` is set to `func`
  * @method string getMinFunc() Obtain Minimum parameter value, which is valid only when `ParamType` is set to `func`
  * @method void setMinFunc(string $MinFunc) Set Minimum parameter value, which is valid only when `ParamType` is set to `func`
- * @method boolean getIsNotSupportEdit() Obtain Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsNotSupportEdit(boolean $IsNotSupportEdit) Set Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsNotSupportEdit() Obtain Whether the parameter cannot be modified
+ * @method void setIsNotSupportEdit(boolean $IsNotSupportEdit) Set Whether the parameter cannot be modified
  */
 class ParameterDetail extends AbstractModel
 {
@@ -103,7 +103,7 @@ class ParameterDetail extends AbstractModel
     public $MinFunc;
 
     /**
-     * @var boolean Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether the parameter cannot be modified
      */
     public $IsNotSupportEdit;
 
@@ -119,7 +119,7 @@ class ParameterDetail extends AbstractModel
      * @param array $EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
      * @param string $MaxFunc Maximum parameter value, which is valid only when `ParamType` is set to `func`
      * @param string $MinFunc Minimum parameter value, which is valid only when `ParamType` is set to `func`
-     * @param boolean $IsNotSupportEdit Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsNotSupportEdit Whether the parameter cannot be modified
      */
     function __construct()
     {

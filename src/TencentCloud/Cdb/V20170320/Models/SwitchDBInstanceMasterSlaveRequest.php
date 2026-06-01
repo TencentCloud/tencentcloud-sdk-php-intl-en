@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForceSwitch(boolean $ForceSwitch) Set Whether to force the switch. Valid values: `True`, `False` (default). If this parameter is set to `True`, instance data may be lost during the switch.
  * @method boolean getWaitSwitch() Obtain Whether to perform the switch during a time window. Valid values: `True`, `False` (default). If `ForceSwitch` is set to `True`, this parameter is invalid.
  * @method void setWaitSwitch(boolean $WaitSwitch) Set Whether to perform the switch during a time window. Valid values: `True`, `False` (default). If `ForceSwitch` is set to `True`, this parameter is invalid.
+ * @method string getDstNodeId() Obtain Trigger primary-secondary switch for the designated node ID of the cluster edition instance.
+ * @method void setDstNodeId(string $DstNodeId) Set Trigger primary-secondary switch for the designated node ID of the cluster edition instance.
  */
 class SwitchDBInstanceMasterSlaveRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class SwitchDBInstanceMasterSlaveRequest extends AbstractModel
     public $WaitSwitch;
 
     /**
+     * @var string Trigger primary-secondary switch for the designated node ID of the cluster edition instance.
+     */
+    public $DstNodeId;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $DstSlave Specifies the replica server to switched to. Valid values: `first` (the first replica server), `second` (the second replica server). Default value: `first`. `second` is valid only for a multi-AZ instance.
      * @param boolean $ForceSwitch Whether to force the switch. Valid values: `True`, `False` (default). If this parameter is set to `True`, instance data may be lost during the switch.
      * @param boolean $WaitSwitch Whether to perform the switch during a time window. Valid values: `True`, `False` (default). If `ForceSwitch` is set to `True`, this parameter is invalid.
+     * @param string $DstNodeId Trigger primary-secondary switch for the designated node ID of the cluster edition instance.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class SwitchDBInstanceMasterSlaveRequest extends AbstractModel
 
         if (array_key_exists("WaitSwitch",$param) and $param["WaitSwitch"] !== null) {
             $this->WaitSwitch = $param["WaitSwitch"];
+        }
+
+        if (array_key_exists("DstNodeId",$param) and $param["DstNodeId"] !== null) {
+            $this->DstNodeId = $param["DstNodeId"];
         }
     }
 }

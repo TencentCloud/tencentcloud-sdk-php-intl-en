@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AnalyzeAuditLogs request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
  * @method string getStartTime() Obtain Start time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
  * @method void setStartTime(string $StartTime) Set Start time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
  * @method string getEndTime() Obtain End time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
  * @method void setEndTime(string $EndTime) Set End time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
  * @method array getAggregationConditions() Obtain Sorting conditions for aggregation dimension
  * @method void setAggregationConditions(array $AggregationConditions) Set Sorting conditions for aggregation dimension
- * @method AuditLogFilter getAuditLogFilter() Obtain This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
- * @method void setAuditLogFilter(AuditLogFilter $AuditLogFilter) Set This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
+ * @method AuditLogFilter getAuditLogFilter() Obtain Deprecated.
+ * @method void setAuditLogFilter(AuditLogFilter $AuditLogFilter) Set Deprecated.
  * @method array getLogFilter() Obtain The result set of the audit log filtered by this condition is set as the analysis Log.
  * @method void setLogFilter(array $LogFilter) Set The result set of the audit log filtered by this condition is set as the analysis Log.
  */
 class AnalyzeAuditLogsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
@@ -56,7 +56,8 @@ class AnalyzeAuditLogsRequest extends AbstractModel
     public $AggregationConditions;
 
     /**
-     * @var AuditLogFilter This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
+     * @var AuditLogFilter Deprecated.
+     * @deprecated
      */
     public $AuditLogFilter;
 
@@ -66,11 +67,11 @@ class AnalyzeAuditLogsRequest extends AbstractModel
     public $LogFilter;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      * @param string $StartTime Start time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
      * @param string $EndTime End time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
      * @param array $AggregationConditions Sorting conditions for aggregation dimension
-     * @param AuditLogFilter $AuditLogFilter This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
+     * @param AuditLogFilter $AuditLogFilter Deprecated.
      * @param array $LogFilter The result set of the audit log filtered by this condition is set as the analysis Log.
      */
     function __construct()

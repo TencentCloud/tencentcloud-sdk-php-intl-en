@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BalanceRoGroupLoad request structure.
  *
- * @method string getRoGroupId() Obtain RO group ID in the format of `cdbrg-c1nl9rpv`.
- * @method void setRoGroupId(string $RoGroupId) Set RO group ID in the format of `cdbrg-c1nl9rpv`.
+ * @method string getRoGroupId() Obtain ID of the RO group, in the format of cdbrg-c1nl9rpv. You can obtain it via [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1).
+ * @method void setRoGroupId(string $RoGroupId) Set ID of the RO group, in the format of cdbrg-c1nl9rpv. You can obtain it via [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1).
  */
 class BalanceRoGroupLoadRequest extends AbstractModel
 {
     /**
-     * @var string RO group ID in the format of `cdbrg-c1nl9rpv`.
+     * @var string ID of the RO group, in the format of cdbrg-c1nl9rpv. You can obtain it via [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1).
      */
     public $RoGroupId;
 
     /**
-     * @param string $RoGroupId RO group ID in the format of `cdbrg-c1nl9rpv`.
+     * @param string $RoGroupId ID of the RO group, in the format of cdbrg-c1nl9rpv. You can obtain it via [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1).
      */
     function __construct()
     {

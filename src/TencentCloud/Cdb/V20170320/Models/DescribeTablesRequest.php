@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabase(string $Database) Set Database name.
  * @method integer getOffset() Obtain Record offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Record offset. Default value: 0.
- * @method integer getLimit() Obtain Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
- * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
+ * @method integer getLimit() Obtain Number of items returned per request. Default value: 20. Maximum value: 5000.
+ * @method void setLimit(integer $Limit) Set Number of items returned per request. Default value: 20. Maximum value: 5000.
  * @method string getTableRegexp() Obtain Regular expression for matching table names, which complies with the rules at MySQL's official website
  * @method void setTableRegexp(string $TableRegexp) Set Regular expression for matching table names, which complies with the rules at MySQL's official website
  */
@@ -49,7 +49,7 @@ class DescribeTablesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
+     * @var integer Number of items returned per request. Default value: 20. Maximum value: 5000.
      */
     public $Limit;
 
@@ -62,7 +62,7 @@ class DescribeTablesRequest extends AbstractModel
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param string $Database Database name.
      * @param integer $Offset Record offset. Default value: 0.
-     * @param integer $Limit Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
+     * @param integer $Limit Number of items returned per request. Default value: 20. Maximum value: 5000.
      * @param string $TableRegexp Regular expression for matching table names, which complies with the rules at MySQL's official website
      */
     function __construct()

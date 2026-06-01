@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDir(string $Dir) Set The direction of the rule, which is INPUT for inbound rules
  * @method string getAddressModule() Obtain Address module
  * @method void setAddressModule(string $AddressModule) Set Address module
+ * @method string getId() Obtain Rule ID, rule ID of the nested security group
+ * @method void setId(string $Id) Set Rule ID, rule ID of the nested security group
  * @method string getDesc() Obtain Rule description
  * @method void setDesc(string $Desc) Set Rule description
  */
@@ -68,6 +70,11 @@ class Inbound extends AbstractModel
     public $AddressModule;
 
     /**
+     * @var string Rule ID, rule ID of the nested security group
+     */
+    public $Id;
+
+    /**
      * @var string Rule description
      */
     public $Desc;
@@ -79,6 +86,7 @@ class Inbound extends AbstractModel
      * @param string $IpProtocol Network protocol. UDP and TCP are supported.
      * @param string $Dir The direction of the rule, which is INPUT for inbound rules
      * @param string $AddressModule Address module
+     * @param string $Id Rule ID, rule ID of the nested security group
      * @param string $Desc Rule description
      */
     function __construct()
@@ -116,6 +124,10 @@ class Inbound extends AbstractModel
 
         if (array_key_exists("AddressModule",$param) and $param["AddressModule"] !== null) {
             $this->AddressModule = $param["AddressModule"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
         if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {

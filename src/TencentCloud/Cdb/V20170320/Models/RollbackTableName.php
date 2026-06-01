@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Name of the table for rollback
  *
- * @method string getTableName() Obtain Original table name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTableName(string $TableName) Set Original table name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getNewTableName() Obtain New table name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setNewTableName(string $NewTableName) Set New table name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getTableName() Obtain Original database table name before rollback
+ * @method void setTableName(string $TableName) Set Original database table name before rollback
+ * @method string getNewTableName() Obtain Rolled back database table name
+ * @method void setNewTableName(string $NewTableName) Set Rolled back database table name
  */
 class RollbackTableName extends AbstractModel
 {
     /**
-     * @var string Original table name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Original database table name before rollback
      */
     public $TableName;
 
     /**
-     * @var string New table name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Rolled back database table name
      */
     public $NewTableName;
 
     /**
-     * @param string $TableName Original table name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $NewTableName New table name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $TableName Original database table name before rollback
+     * @param string $NewTableName Rolled back database table name
      */
     function __construct()
     {

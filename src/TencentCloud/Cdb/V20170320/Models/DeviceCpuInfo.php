@@ -18,7 +18,7 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  CPU load
+ * CPU load
  *
  * @method array getRate() Obtain Average instance CPU utilization
  * @method void setRate(array $Rate) Set Average instance CPU utilization

@@ -65,11 +65,13 @@ class DescribeBackupConfigResponse extends AbstractModel
 {
     /**
      * @var integer Earliest start time point of automatic backup, such as 2 (for 2:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
+     * @deprecated
      */
     public $StartTimeMin;
 
     /**
      * @var integer Latest start time point of automatic backup, such as 6 (for 6:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
+     * @deprecated
      */
     public $StartTimeMax;
 

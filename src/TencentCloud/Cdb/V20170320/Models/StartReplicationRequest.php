@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartReplication request structure.
  *
- * @method string getInstanceId() Obtain Read-Only instance ID.
- * @method void setInstanceId(string $InstanceId) Set Read-Only instance ID.
+ * @method string getInstanceId() Obtain Instance ID. It only supports read-only instances. It can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. It only supports read-only instances. It can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
  */
 class StartReplicationRequest extends AbstractModel
 {
     /**
-     * @var string Read-Only instance ID.
+     * @var string Instance ID. It only supports read-only instances. It can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Read-Only instance ID.
+     * @param string $InstanceId Instance ID. It only supports read-only instances. It can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     function __construct()
     {

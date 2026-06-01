@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method boolean getForReadonlyInstance() Obtain This parameter takes effect only when the ID of a read-only instance is passed in. If the parameter is set to `False` or left empty, the security groups bound with the RO groups of the read-only instance can only be queried. If it is set to `True`, the security groups can be modified.
  * @method void setForReadonlyInstance(boolean $ForReadonlyInstance) Set This parameter takes effect only when the ID of a read-only instance is passed in. If the parameter is set to `False` or left empty, the security groups bound with the RO groups of the read-only instance can only be queried. If it is set to `True`, the security groups can be modified.
+ * @method string getOpResourceId() Obtain When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+ * @method void setOpResourceId(string $OpResourceId) Set When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
  */
 class DescribeDBSecurityGroupsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeDBSecurityGroupsRequest extends AbstractModel
     public $ForReadonlyInstance;
 
     /**
+     * @var string When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+     */
+    public $OpResourceId;
+
+    /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param boolean $ForReadonlyInstance This parameter takes effect only when the ID of a read-only instance is passed in. If the parameter is set to `False` or left empty, the security groups bound with the RO groups of the read-only instance can only be queried. If it is set to `True`, the security groups can be modified.
+     * @param string $OpResourceId When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeDBSecurityGroupsRequest extends AbstractModel
 
         if (array_key_exists("ForReadonlyInstance",$param) and $param["ForReadonlyInstance"] !== null) {
             $this->ForReadonlyInstance = $param["ForReadonlyInstance"];
+        }
+
+        if (array_key_exists("OpResourceId",$param) and $param["OpResourceId"] !== null) {
+            $this->OpResourceId = $param["OpResourceId"];
         }
     }
 }

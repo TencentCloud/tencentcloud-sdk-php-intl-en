@@ -20,15 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAutoRenewFlag request structure.
  *
- * @method array getInstanceIds() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+ * @method array getInstanceIds() Obtain Instance ID, in the format of cdb-c1nl9rpv. This is identical to the instance ID displayed on the TencentDB console.
+Description: Multiple instance IDs can be entered for modification. The json format is as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID, in the format of cdb-c1nl9rpv. This is identical to the instance ID displayed on the TencentDB console.
+Description: Multiple instance IDs can be entered for modification. The json format is as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
  * @method integer getAutoRenew() Obtain Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled).
  * @method void setAutoRenew(integer $AutoRenew) Set Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled).
  */
 class ModifyAutoRenewFlagRequest extends AbstractModel
 {
     /**
-     * @var array Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * @var array Instance ID, in the format of cdb-c1nl9rpv. This is identical to the instance ID displayed on the TencentDB console.
+Description: Multiple instance IDs can be entered for modification. The json format is as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     public $InstanceIds;
 
@@ -38,7 +53,12 @@ class ModifyAutoRenewFlagRequest extends AbstractModel
     public $AutoRenew;
 
     /**
-     * @param array $InstanceIds Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * @param array $InstanceIds Instance ID, in the format of cdb-c1nl9rpv. This is identical to the instance ID displayed on the TencentDB console.
+Description: Multiple instance IDs can be entered for modification. The json format is as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      * @param integer $AutoRenew Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled).
      */
     function __construct()

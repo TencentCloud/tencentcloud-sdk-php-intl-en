@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDataBackupOverview request structure.
  *
- * @method string getProduct() Obtain TencentDB product type to be queried. Currently, only `mysql` is supported.
- * @method void setProduct(string $Product) Set TencentDB product type to be queried. Currently, only `mysql` is supported.
+ * @method string getProduct() Obtain The cloud database product type for which you need to query the data backup overview. Value is: mysql refers to two-node/three-node high-availability instances, mysql-basic refers to single-node (cloud disk) instances, mysql-cluster refers to cloud disk edition instances.
+ * @method void setProduct(string $Product) Set The cloud database product type for which you need to query the data backup overview. Value is: mysql refers to two-node/three-node high-availability instances, mysql-basic refers to single-node (cloud disk) instances, mysql-cluster refers to cloud disk edition instances.
  */
 class DescribeDataBackupOverviewRequest extends AbstractModel
 {
     /**
-     * @var string TencentDB product type to be queried. Currently, only `mysql` is supported.
+     * @var string The cloud database product type for which you need to query the data backup overview. Value is: mysql refers to two-node/three-node high-availability instances, mysql-basic refers to single-node (cloud disk) instances, mysql-cluster refers to cloud disk edition instances.
      */
     public $Product;
 
     /**
-     * @param string $Product TencentDB product type to be queried. Currently, only `mysql` is supported.
+     * @param string $Product The cloud database product type for which you need to query the data backup overview. Value is: mysql refers to two-node/three-node high-availability instances, mysql-basic refers to single-node (cloud disk) instances, mysql-cluster refers to cloud disk edition instances.
      */
     function __construct()
     {

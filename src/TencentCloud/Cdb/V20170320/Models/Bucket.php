@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * Information of an aggregation bucket
  *
  * @method string getKey() Obtain None
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setKey(string $Key) Set None
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getCount() Obtain Number of occurrences of the key value
  * @method void setCount(integer $Count) Set Number of occurrences of the key value
  */
@@ -31,7 +29,6 @@ class Bucket extends AbstractModel
 {
     /**
      * @var string None
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Key;
 
@@ -42,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $Key None
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Count Number of occurrences of the key value
      */
     function __construct()

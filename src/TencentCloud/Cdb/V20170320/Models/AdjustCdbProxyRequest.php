@@ -20,12 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AdjustCdbProxy request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getProxyGroupId() Obtain Proxy group ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID
- * @method array getProxyNodeCustom() Obtain The specification configuration of a node
- * @method void setProxyNodeCustom(array $ProxyNodeCustom) Set The specification configuration of a node
+ * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method string getProxyGroupId() Obtain Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+ * @method array getProxyNodeCustom() Obtain Node specification configuration
+Remark: Database proxy supported node specifications are 2C4000MB, 4C8000MB, 8C16000MB.
+Parameter description in the example.
+NodeCount: Number of nodes
+Region: Node region
+Zone: Node availability zone
+Cpu: Number of node cores for one agent (Unit: core)
+Mem: Memory size of each proxy node (unit: MB)
+ * @method void setProxyNodeCustom(array $ProxyNodeCustom) Set Node specification configuration
+Remark: Database proxy supported node specifications are 2C4000MB, 4C8000MB, 8C16000MB.
+Parameter description in the example.
+NodeCount: Number of nodes
+Region: Node region
+Zone: Node availability zone
+Cpu: Number of node cores for one agent (Unit: core)
+Mem: Memory size of each proxy node (unit: MB)
  * @method string getReloadBalance() Obtain Rebalance. Valid values:  `auto` (automatic), `manual` (manual).
  * @method void setReloadBalance(string $ReloadBalance) Set Rebalance. Valid values:  `auto` (automatic), `manual` (manual).
  * @method string getUpgradeTime() Obtain The upgrade switch time. Valid values:  `nowTime` (upgrade immediately), `timeWindow` (upgrade during instance maintenance time).
@@ -34,17 +48,24 @@ use TencentCloud\Common\AbstractModel;
 class AdjustCdbProxyRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
     /**
-     * @var string Proxy group ID
+     * @var string Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public $ProxyGroupId;
 
     /**
-     * @var array The specification configuration of a node
+     * @var array Node specification configuration
+Remark: Database proxy supported node specifications are 2C4000MB, 4C8000MB, 8C16000MB.
+Parameter description in the example.
+NodeCount: Number of nodes
+Region: Node region
+Zone: Node availability zone
+Cpu: Number of node cores for one agent (Unit: core)
+Mem: Memory size of each proxy node (unit: MB)
      */
     public $ProxyNodeCustom;
 
@@ -59,9 +80,16 @@ class AdjustCdbProxyRequest extends AbstractModel
     public $UpgradeTime;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $ProxyGroupId Proxy group ID
-     * @param array $ProxyNodeCustom The specification configuration of a node
+     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param string $ProxyGroupId Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+     * @param array $ProxyNodeCustom Node specification configuration
+Remark: Database proxy supported node specifications are 2C4000MB, 4C8000MB, 8C16000MB.
+Parameter description in the example.
+NodeCount: Number of nodes
+Region: Node region
+Zone: Node availability zone
+Cpu: Number of node cores for one agent (Unit: core)
+Mem: Memory size of each proxy node (unit: MB)
      * @param string $ReloadBalance Rebalance. Valid values:  `auto` (automatic), `manual` (manual).
      * @param string $UpgradeTime The upgrade switch time. Valid values:  `nowTime` (upgrade immediately), `timeWindow` (upgrade during instance maintenance time).
      */

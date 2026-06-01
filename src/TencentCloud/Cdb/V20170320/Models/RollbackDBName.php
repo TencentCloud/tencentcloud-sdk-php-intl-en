@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Name of the database for rollback
  *
  * @method string getDatabaseName() Obtain Original database name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDatabaseName(string $DatabaseName) Set Original database name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getNewDatabaseName() Obtain New database name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setNewDatabaseName(string $NewDatabaseName) Set New database name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getNewDatabaseName() Obtain Name of the rolled back database
+ * @method void setNewDatabaseName(string $NewDatabaseName) Set Name of the rolled back database
  */
 class RollbackDBName extends AbstractModel
 {
     /**
      * @var string Original database name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DatabaseName;
 
     /**
-     * @var string New database name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Name of the rolled back database
      */
     public $NewDatabaseName;
 
     /**
      * @param string $DatabaseName Original database name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $NewDatabaseName New database name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $NewDatabaseName Name of the rolled back database
      */
     function __construct()
     {

@@ -20,25 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateParamTemplate request structure.
  *
- * @method string getName() Obtain Parameter template name.
- * @method void setName(string $Name) Set Parameter template name.
+ * @method string getName() Obtain Parameter template name. Up to 60 characters are allowed.
+ * @method void setName(string $Name) Set Parameter template name. Up to 60 characters are allowed.
  * @method string getDescription() Obtain Parameter template description.
  * @method void setDescription(string $Description) Set Parameter template description.
- * @method string getEngineVersion() Obtain MySQL version number.
- * @method void setEngineVersion(string $EngineVersion) Set MySQL version number.
- * @method integer getTemplateId() Obtain Source parameter template ID.
- * @method void setTemplateId(integer $TemplateId) Set Source parameter template ID.
+ * @method string getEngineVersion() Obtain MySQL version number. Available values: 5.6, 5.7, and 8.0.
+ * @method void setEngineVersion(string $EngineVersion) Set MySQL version number. Available values: 5.6, 5.7, and 8.0.
+ * @method integer getTemplateId() Obtain Source parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
+ * @method void setTemplateId(integer $TemplateId) Set Source parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
  * @method array getParamList() Obtain List of parameters.
  * @method void setParamList(array $ParamList) Set List of parameters.
  * @method string getTemplateType() Obtain Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
  * @method void setTemplateType(string $TemplateType) Set Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
- * @method string getEngineType() Obtain Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
- * @method void setEngineType(string $EngineType) Set Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+ * @method string getEngineType() Obtain Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".
+Description: RocksDB is only supported in database versions MySQL 5.7 and MySQL 8.0.
+ * @method void setEngineType(string $EngineType) Set Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".
+Description: RocksDB is only supported in database versions MySQL 5.7 and MySQL 8.0.
  */
 class CreateParamTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Parameter template name.
+     * @var string Parameter template name. Up to 60 characters are allowed.
      */
     public $Name;
 
@@ -48,12 +50,12 @@ class CreateParamTemplateRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string MySQL version number.
+     * @var string MySQL version number. Available values: 5.6, 5.7, and 8.0.
      */
     public $EngineVersion;
 
     /**
-     * @var integer Source parameter template ID.
+     * @var integer Source parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
      */
     public $TemplateId;
 
@@ -68,18 +70,20 @@ class CreateParamTemplateRequest extends AbstractModel
     public $TemplateType;
 
     /**
-     * @var string Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+     * @var string Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".
+Description: RocksDB is only supported in database versions MySQL 5.7 and MySQL 8.0.
      */
     public $EngineType;
 
     /**
-     * @param string $Name Parameter template name.
+     * @param string $Name Parameter template name. Up to 60 characters are allowed.
      * @param string $Description Parameter template description.
-     * @param string $EngineVersion MySQL version number.
-     * @param integer $TemplateId Source parameter template ID.
+     * @param string $EngineVersion MySQL version number. Available values: 5.6, 5.7, and 8.0.
+     * @param integer $TemplateId Source parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
      * @param array $ParamList List of parameters.
      * @param string $TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
-     * @param string $EngineType Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+     * @param string $EngineType Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".
+Description: RocksDB is only supported in database versions MySQL 5.7 and MySQL 8.0.
      */
     function __construct()
     {

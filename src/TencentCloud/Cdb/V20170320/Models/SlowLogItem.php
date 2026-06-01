@@ -20,142 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Structured slow log details
  *
- * @method integer getTimestamp() Obtain SQL execution time.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTimestamp(integer $Timestamp) Set SQL execution time.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method float getQueryTime() Obtain SQL execution duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setQueryTime(float $QueryTime) Set SQL execution duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getSqlText() Obtain SQL statement.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSqlText(string $SqlText) Set SQL statement.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getUserHost() Obtain Client address.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUserHost(string $UserHost) Set Client address.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getTimestamp() Obtain Sql execution time. Unix second-level timestamp.
+ * @method void setTimestamp(integer $Timestamp) Set Sql execution time. Unix second-level timestamp.
+ * @method float getQueryTime() Obtain Execution duration of Sql (seconds).
+ * @method void setQueryTime(float $QueryTime) Set Execution duration of Sql (seconds).
+ * @method string getSqlText() Obtain Sql statement.
+ * @method void setSqlText(string $SqlText) Set Sql statement.
+ * @method string getUserHost() Obtain Client IP address.
+ * @method void setUserHost(string $UserHost) Set Client IP address.
  * @method string getUserName() Obtain Username.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUserName(string $UserName) Set Username.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getDatabase() Obtain Database name.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDatabase(string $Database) Set Database name.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method float getLockTime() Obtain Lock duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setLockTime(float $LockTime) Set Lock duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method float getLockTime() Obtain Lock duration (unit: second).
+ * @method void setLockTime(float $LockTime) Set Lock duration (unit: second).
  * @method integer getRowsExamined() Obtain Number of scanned rows.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRowsExamined(integer $RowsExamined) Set Number of scanned rows.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getRowsSent() Obtain Number of rows in result set.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRowsSent(integer $RowsSent) Set Number of rows in result set.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSqlTemplate() Obtain SQL template.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSqlTemplate(string $SqlTemplate) Set SQL template.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMd5() Obtain SQL statement MD5.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMd5(string $Md5) Set SQL statement MD5.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getRowsSent() Obtain Result set row count.
+ * @method void setRowsSent(integer $RowsSent) Set Result set row count.
+ * @method string getSqlTemplate() Obtain Sql Template.
+ * @method void setSqlTemplate(string $SqlTemplate) Set Sql Template.
+ * @method string getMd5() Obtain md5 of the Sql statement.
+ * @method void setMd5(string $Md5) Set md5 of the Sql statement.
  */
 class SlowLogItem extends AbstractModel
 {
     /**
-     * @var integer SQL execution time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Sql execution time. Unix second-level timestamp.
      */
     public $Timestamp;
 
     /**
-     * @var float SQL execution duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var float Execution duration of Sql (seconds).
      */
     public $QueryTime;
 
     /**
-     * @var string SQL statement.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Sql statement.
      */
     public $SqlText;
 
     /**
-     * @var string Client address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Client IP address.
      */
     public $UserHost;
 
     /**
      * @var string Username.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $UserName;
 
     /**
      * @var string Database name.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Database;
 
     /**
-     * @var float Lock duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var float Lock duration (unit: second).
      */
     public $LockTime;
 
     /**
      * @var integer Number of scanned rows.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RowsExamined;
 
     /**
-     * @var integer Number of rows in result set.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Result set row count.
      */
     public $RowsSent;
 
     /**
-     * @var string SQL template.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Sql Template.
      */
     public $SqlTemplate;
 
     /**
-     * @var string SQL statement MD5.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string md5 of the Sql statement.
      */
     public $Md5;
 
     /**
-     * @param integer $Timestamp SQL execution time.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param float $QueryTime SQL execution duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $SqlText SQL statement.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $UserHost Client address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Timestamp Sql execution time. Unix second-level timestamp.
+     * @param float $QueryTime Execution duration of Sql (seconds).
+     * @param string $SqlText Sql statement.
+     * @param string $UserHost Client IP address.
      * @param string $UserName Username.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Database Database name.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param float $LockTime Lock duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param float $LockTime Lock duration (unit: second).
      * @param integer $RowsExamined Number of scanned rows.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $RowsSent Number of rows in result set.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $SqlTemplate SQL template.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Md5 SQL statement MD5.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $RowsSent Result set row count.
+     * @param string $SqlTemplate Sql Template.
+     * @param string $Md5 md5 of the Sql statement.
      */
     function __construct()
     {

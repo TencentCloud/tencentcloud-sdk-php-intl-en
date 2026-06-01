@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set This parameter is deprecated.
  * @method integer getMaxUserConnections() Obtain The maximum number of instance connections supported by an account
  * @method void setMaxUserConnections(integer $MaxUserConnections) Set The maximum number of instance connections supported by an account
+ * @method boolean getOpenCam() Obtain Is password rotation enabled for the user account?
+ * @method void setOpenCam(boolean $OpenCam) Set Is password rotation enabled for the user account?
  */
 class AccountInfo extends AbstractModel
 {
@@ -64,6 +66,7 @@ class AccountInfo extends AbstractModel
 
     /**
      * @var string This parameter is deprecated.
+     * @deprecated
      */
     public $CreateTime;
 
@@ -73,6 +76,11 @@ class AccountInfo extends AbstractModel
     public $MaxUserConnections;
 
     /**
+     * @var boolean Is password rotation enabled for the user account?
+     */
+    public $OpenCam;
+
+    /**
      * @param string $Notes Account remarks
      * @param string $Host Account domain name
      * @param string $User Account name
@@ -80,6 +88,7 @@ class AccountInfo extends AbstractModel
      * @param string $ModifyPasswordTime Password modification time
      * @param string $CreateTime This parameter is deprecated.
      * @param integer $MaxUserConnections The maximum number of instance connections supported by an account
+     * @param boolean $OpenCam Is password rotation enabled for the user account?
      */
     function __construct()
     {
@@ -120,6 +129,10 @@ class AccountInfo extends AbstractModel
 
         if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
             $this->MaxUserConnections = $param["MaxUserConnections"];
+        }
+
+        if (array_key_exists("OpenCam",$param) and $param["OpenCam"] !== null) {
+            $this->OpenCam = $param["OpenCam"];
         }
     }
 }

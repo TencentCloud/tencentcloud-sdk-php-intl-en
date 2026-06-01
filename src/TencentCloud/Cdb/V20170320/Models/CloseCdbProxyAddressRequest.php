@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloseCdbProxyAddress request structure.
  *
- * @method string getProxyGroupId() Obtain Proxy group ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID
- * @method string getProxyAddressId() Obtain Address ID of the proxy group
- * @method void setProxyAddressId(string $ProxyAddressId) Set Address ID of the proxy group
+ * @method string getProxyGroupId() Obtain Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+ * @method string getProxyAddressId() Obtain Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
+ * @method void setProxyAddressId(string $ProxyAddressId) Set Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
  */
 class CloseCdbProxyAddressRequest extends AbstractModel
 {
     /**
-     * @var string Proxy group ID
+     * @var string Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public $ProxyGroupId;
 
     /**
-     * @var string Address ID of the proxy group
+     * @var string Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
      */
     public $ProxyAddressId;
 
     /**
-     * @param string $ProxyGroupId Proxy group ID
-     * @param string $ProxyAddressId Address ID of the proxy group
+     * @param string $ProxyGroupId Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+     * @param string $ProxyAddressId Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
      */
     function __construct()
     {

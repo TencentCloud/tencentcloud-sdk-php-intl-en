@@ -20,70 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Proxy configuration
  *
- * @method string getDevice() Obtain Device
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method void setDevice(string $Device) Set Device
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method string getType() Obtain Type
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method void setType(string $Type) Set Type
-Note: this field may return `null`, indicating that no valid value can be found.
+ * @method string getDevice() Obtain device
+ * @method void setDevice(string $Device) Set device
+ * @method string getType() Obtain Type.
+ * @method void setType(string $Type) Set Type.
  * @method string getDeviceType() Obtain Device type
-Note: this field may return `null`, indicating that no valid value can be found.
  * @method void setDeviceType(string $DeviceType) Set Device type
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method integer getMemory() Obtain Memory
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method void setMemory(integer $Memory) Set Memory
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method integer getCpu() Obtain Number of CPU cores
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method void setCpu(integer $Cpu) Set Number of CPU cores
-Note: this field may return `null`, indicating that no valid value can be found.
+ * @method integer getMemory() Obtain Memory, measured in MB
+ * @method void setMemory(integer $Memory) Set Memory, measured in MB
+ * @method integer getCpu() Obtain Number of cores
+ * @method void setCpu(integer $Cpu) Set Number of cores
  */
 class CustomConfig extends AbstractModel
 {
     /**
-     * @var string Device
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @var string device
      */
     public $Device;
 
     /**
-     * @var string Type
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @var string Type.
      */
     public $Type;
 
     /**
      * @var string Device type
-Note: this field may return `null`, indicating that no valid value can be found.
      */
     public $DeviceType;
 
     /**
-     * @var integer Memory
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @var integer Memory, measured in MB
      */
     public $Memory;
 
     /**
-     * @var integer Number of CPU cores
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @var integer Number of cores
      */
     public $Cpu;
 
     /**
-     * @param string $Device Device
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param string $Type Type
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @param string $Device device
+     * @param string $Type Type.
      * @param string $DeviceType Device type
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param integer $Memory Memory
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param integer $Cpu Number of CPU cores
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @param integer $Memory Memory, measured in MB
+     * @param integer $Cpu Number of cores
      */
     function __construct()
     {

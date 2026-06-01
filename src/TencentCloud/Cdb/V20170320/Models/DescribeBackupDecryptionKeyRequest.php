@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupDecryptionKey request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of  cdb-XXXX,  which is the same as the instance ID displayed in the TencentDB console.
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of  cdb-XXXX,  which is the same as the instance ID displayed in the TencentDB console.
- * @method integer getBackupId() Obtain Instance backup ID, which can be obtained by the `DescribeBackups` API.
- * @method void setBackupId(integer $BackupId) Set Instance backup ID, which can be obtained by the `DescribeBackups` API.
+ * @method string getInstanceId() Obtain Instance ID, in the format such as cdb-fybaegd8. This matches the instance ID displayed on the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, in the format such as cdb-fybaegd8. This matches the instance ID displayed on the TencentDB console.
+ * @method integer getBackupId() Obtain Backup ID of the instance, which can be obtained through the [DescribeBackups](https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) API.
+ * @method void setBackupId(integer $BackupId) Set Backup ID of the instance, which can be obtained through the [DescribeBackups](https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) API.
+ * @method string getBackupType() Obtain Backup type. data - data backup, binlog - log backup. The default value is data.
+ * @method void setBackupType(string $BackupType) Set Backup type. data - data backup, binlog - log backup. The default value is data.
  */
 class DescribeBackupDecryptionKeyRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of  cdb-XXXX,  which is the same as the instance ID displayed in the TencentDB console.
+     * @var string Instance ID, in the format such as cdb-fybaegd8. This matches the instance ID displayed on the TencentDB console.
      */
     public $InstanceId;
 
     /**
-     * @var integer Instance backup ID, which can be obtained by the `DescribeBackups` API.
+     * @var integer Backup ID of the instance, which can be obtained through the [DescribeBackups](https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) API.
      */
     public $BackupId;
 
     /**
-     * @param string $InstanceId Instance ID in the format of  cdb-XXXX,  which is the same as the instance ID displayed in the TencentDB console.
-     * @param integer $BackupId Instance backup ID, which can be obtained by the `DescribeBackups` API.
+     * @var string Backup type. data - data backup, binlog - log backup. The default value is data.
+     */
+    public $BackupType;
+
+    /**
+     * @param string $InstanceId Instance ID, in the format such as cdb-fybaegd8. This matches the instance ID displayed on the TencentDB console.
+     * @param integer $BackupId Backup ID of the instance, which can be obtained through the [DescribeBackups](https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) API.
+     * @param string $BackupType Backup type. data - data backup, binlog - log backup. The default value is data.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeBackupDecryptionKeyRequest extends AbstractModel
 
         if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
             $this->BackupId = $param["BackupId"];
+        }
+
+        if (array_key_exists("BackupType",$param) and $param["BackupType"] !== null) {
+            $this->BackupType = $param["BackupType"];
         }
     }
 }

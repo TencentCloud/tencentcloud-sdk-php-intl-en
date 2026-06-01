@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRotationPassword request structure.
  *
- * @method string getInstanceId() Obtain Instance ID, in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB for MySQL console page.
- * @method void setInstanceId(string $InstanceId) Set Instance ID, in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB for MySQL console page.
- * @method array getAccounts() Obtain Information about the account for which password rotation needs to be enabled. The account and host names are included.
- * @method void setAccounts(array $Accounts) Set Information about the account for which password rotation needs to be enabled. The account and host names are included.
+ * @method string getInstanceId() Obtain Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+ * @method array getAccounts() Obtain Currently, enable password rotation for account information, including account name and host name.
+ * @method void setAccounts(array $Accounts) Set Currently, enable password rotation for account information, including account name and host name.
  */
 class CreateRotationPasswordRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID, in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB for MySQL console page.
+     * @var string Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public $InstanceId;
 
     /**
-     * @var array Information about the account for which password rotation needs to be enabled. The account and host names are included.
+     * @var array Currently, enable password rotation for account information, including account name and host name.
      */
     public $Accounts;
 
     /**
-     * @param string $InstanceId Instance ID, in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB for MySQL console page.
-     * @param array $Accounts Information about the account for which password rotation needs to be enabled. The account and host names are included.
+     * @param string $InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+     * @param array $Accounts Currently, enable password rotation for account information, including account name and host name.
      */
     function __construct()
     {

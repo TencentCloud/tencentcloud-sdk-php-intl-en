@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Value range: 1-100. Default value: `20`.
  * @method string getAccountRegexp() Obtain Regex for matching account names, which complies with the rules at MySQL's official website
  * @method void setAccountRegexp(string $AccountRegexp) Set Regex for matching account names, which complies with the rules at MySQL's official website
+ * @method string getSortBy() Obtain Default none, support: ASC, DESC, asc, desc
+ * @method void setSortBy(string $SortBy) Set Default none, support: ASC, DESC, asc, desc
+ * @method string getOrderBy() Obtain Time field for sorting. Options: CreateTime (account creation time), ModifyTime (update time), ModifyPasswordTime (password modification time).
+ * @method void setOrderBy(string $OrderBy) Set Time field for sorting. Options: CreateTime (account creation time), ModifyTime (update time), ModifyPasswordTime (password modification time).
+ * @method string getHostRegexp() Obtain Regular expression to match the account host address (Host). The rule is the same as that on the MySQL official website.
+ * @method void setHostRegexp(string $HostRegexp) Set Regular expression to match the account host address (Host). The rule is the same as that on the MySQL official website.
  */
 class DescribeAccountsRequest extends AbstractModel
 {
@@ -52,10 +58,28 @@ class DescribeAccountsRequest extends AbstractModel
     public $AccountRegexp;
 
     /**
+     * @var string Default none, support: ASC, DESC, asc, desc
+     */
+    public $SortBy;
+
+    /**
+     * @var string Time field for sorting. Options: CreateTime (account creation time), ModifyTime (update time), ModifyPasswordTime (password modification time).
+     */
+    public $OrderBy;
+
+    /**
+     * @var string Regular expression to match the account host address (Host). The rule is the same as that on the MySQL official website.
+     */
+    public $HostRegexp;
+
+    /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      * @param integer $Offset Record offset. Default value: `0`.
      * @param integer $Limit Number of results to be returned for a single request. Value range: 1-100. Default value: `20`.
      * @param string $AccountRegexp Regex for matching account names, which complies with the rules at MySQL's official website
+     * @param string $SortBy Default none, support: ASC, DESC, asc, desc
+     * @param string $OrderBy Time field for sorting. Options: CreateTime (account creation time), ModifyTime (update time), ModifyPasswordTime (password modification time).
+     * @param string $HostRegexp Regular expression to match the account host address (Host). The rule is the same as that on the MySQL official website.
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class DescribeAccountsRequest extends AbstractModel
 
         if (array_key_exists("AccountRegexp",$param) and $param["AccountRegexp"] !== null) {
             $this->AccountRegexp = $param["AccountRegexp"];
+        }
+
+        if (array_key_exists("SortBy",$param) and $param["SortBy"] !== null) {
+            $this->SortBy = $param["SortBy"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("HostRegexp",$param) and $param["HostRegexp"] !== null) {
+            $this->HostRegexp = $param["HostRegexp"];
         }
     }
 }

@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Configurations of sending slow and error logs of a CDB instance to CLS.
  *
- * @method string getStatus() Obtain Enabling status of the feature.
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method void setStatus(string $Status) Set Enabling status of the feature.
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method string getLogSetId() Obtain CLS log set ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method void setLogSetId(string $LogSetId) Set CLS log set ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method string getLogTopicId() Obtain Log topic ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
- * @method void setLogTopicId(string $LogTopicId) Set Log topic ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+ * @method string getStatus() Obtain Delivery status on or turn off
+ * @method void setStatus(string $Status) Set Delivery status on or turn off
+ * @method string getLogSetId() Obtain CLS Logset ID
+ * @method void setLogSetId(string $LogSetId) Set CLS Logset ID
+ * @method string getLogTopicId() Obtain Log topic ID
+ * @method void setLogTopicId(string $LogTopicId) Set Log topic ID
+ * @method string getClsRegion() Obtain Region of the CLS service
+ * @method void setClsRegion(string $ClsRegion) Set Region of the CLS service
  */
 class LogToCLSConfig extends AbstractModel
 {
     /**
-     * @var string Enabling status of the feature.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @var string Delivery status on or turn off
      */
     public $Status;
 
     /**
-     * @var string CLS log set ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @var string CLS Logset ID
      */
     public $LogSetId;
 
     /**
-     * @var string Log topic ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @var string Log topic ID
      */
     public $LogTopicId;
 
     /**
-     * @param string $Status Enabling status of the feature.
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param string $LogSetId CLS log set ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param string $LogTopicId Log topic ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @var string Region of the CLS service
+     */
+    public $ClsRegion;
+
+    /**
+     * @param string $Status Delivery status on or turn off
+     * @param string $LogSetId CLS Logset ID
+     * @param string $LogTopicId Log topic ID
+     * @param string $ClsRegion Region of the CLS service
      */
     function __construct()
     {
@@ -84,6 +80,10 @@ Note: The return value may be null, indicating that no valid data can be obtaine
 
         if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
             $this->LogTopicId = $param["LogTopicId"];
+        }
+
+        if (array_key_exists("ClsRegion",$param) and $param["ClsRegion"] !== null) {
+            $this->ClsRegion = $param["ClsRegion"];
         }
     }
 }

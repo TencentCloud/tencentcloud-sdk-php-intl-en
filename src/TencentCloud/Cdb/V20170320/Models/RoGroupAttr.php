@@ -22,16 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRoGroupName() Obtain RO group name.
  * @method void setRoGroupName(string $RoGroupName) Set RO group name.
- * @method integer getRoMaxDelayTime() Obtain Maximum delay threshold for RO instances in seconds. Minimum value: 1. Please note that this value will take effect only if an instance removal policy is enabled in the RO group.
- * @method void setRoMaxDelayTime(integer $RoMaxDelayTime) Set Maximum delay threshold for RO instances in seconds. Minimum value: 1. Please note that this value will take effect only if an instance removal policy is enabled in the RO group.
+ * @method integer getRoMaxDelayTime() Obtain Maximum delay threshold for the RO instance. Unit: seconds, minimum value is 1. Range: [1,10000], integer.
+Note: The RO group must have enabled the instance latency removal policy for this value to be valid.
+ * @method void setRoMaxDelayTime(integer $RoMaxDelayTime) Set Maximum delay threshold for the RO instance. Unit: seconds, minimum value is 1. Range: [1,10000], integer.
+Note: The RO group must have enabled the instance latency removal policy for this value to be valid.
  * @method integer getRoOfflineDelay() Obtain Whether to enable instance removal. Valid values: 1 (enabled), 0 (not enabled). Please note that if instance removal is enabled, the delay threshold parameter (`RoMaxDelayTime`) must be set.
  * @method void setRoOfflineDelay(integer $RoOfflineDelay) Set Whether to enable instance removal. Valid values: 1 (enabled), 0 (not enabled). Please note that if instance removal is enabled, the delay threshold parameter (`RoMaxDelayTime`) must be set.
- * @method integer getMinRoInGroup() Obtain Minimum number of instances to be retained, which can be set to any value less than or equal to the number of RO instances in the RO group. Please note that if this value is set to be greater than the number of RO instances, no removal will be performed, and if it is set to 0, all instances with an excessive delay will be removed.
- * @method void setMinRoInGroup(integer $MinRoInGroup) Set Minimum number of instances to be retained, which can be set to any value less than or equal to the number of RO instances in the RO group. Please note that if this value is set to be greater than the number of RO instances, no removal will be performed, and if it is set to 0, all instances with an excessive delay will be removed.
+ * @method integer getMinRoInGroup() Obtain Minimum reserved instances. Can be set to any value ≤ the number of instances in the RO group. Default value: 1.
+Note: If the set value is larger than the RO instance count, do not remove. If set to 0, all instances with delay above the limit will be excluded.
+ * @method void setMinRoInGroup(integer $MinRoInGroup) Set Minimum reserved instances. Can be set to any value ≤ the number of instances in the RO group. Default value: 1.
+Note: If the set value is larger than the RO instance count, do not remove. If set to 0, all instances with delay above the limit will be excluded.
  * @method string getWeightMode() Obtain Weighting mode. Supported values include `system` (automatically assigned by the system) and `custom` (defined by user). Please note that if the `custom` mode is selected, the RO instance weight configuration parameter (RoWeightValues) must be set.
  * @method void setWeightMode(string $WeightMode) Set Weighting mode. Supported values include `system` (automatically assigned by the system) and `custom` (defined by user). Please note that if the `custom` mode is selected, the RO instance weight configuration parameter (RoWeightValues) must be set.
- * @method integer getReplicationDelayTime() Obtain Replication delay.
- * @method void setReplicationDelayTime(integer $ReplicationDelayTime) Set Replication delay.
+ * @method integer getReplicationDelayTime() Obtain Delayed replication time. Unit: second, range: 1 - 259200 seconds, not required to enable delayed replication for the instance.
+ * @method void setReplicationDelayTime(integer $ReplicationDelayTime) Set Delayed replication time. Unit: second, range: 1 - 259200 seconds, not required to enable delayed replication for the instance.
  */
 class RoGroupAttr extends AbstractModel
 {
@@ -41,7 +45,8 @@ class RoGroupAttr extends AbstractModel
     public $RoGroupName;
 
     /**
-     * @var integer Maximum delay threshold for RO instances in seconds. Minimum value: 1. Please note that this value will take effect only if an instance removal policy is enabled in the RO group.
+     * @var integer Maximum delay threshold for the RO instance. Unit: seconds, minimum value is 1. Range: [1,10000], integer.
+Note: The RO group must have enabled the instance latency removal policy for this value to be valid.
      */
     public $RoMaxDelayTime;
 
@@ -51,7 +56,8 @@ class RoGroupAttr extends AbstractModel
     public $RoOfflineDelay;
 
     /**
-     * @var integer Minimum number of instances to be retained, which can be set to any value less than or equal to the number of RO instances in the RO group. Please note that if this value is set to be greater than the number of RO instances, no removal will be performed, and if it is set to 0, all instances with an excessive delay will be removed.
+     * @var integer Minimum reserved instances. Can be set to any value ≤ the number of instances in the RO group. Default value: 1.
+Note: If the set value is larger than the RO instance count, do not remove. If set to 0, all instances with delay above the limit will be excluded.
      */
     public $MinRoInGroup;
 
@@ -61,17 +67,19 @@ class RoGroupAttr extends AbstractModel
     public $WeightMode;
 
     /**
-     * @var integer Replication delay.
+     * @var integer Delayed replication time. Unit: second, range: 1 - 259200 seconds, not required to enable delayed replication for the instance.
      */
     public $ReplicationDelayTime;
 
     /**
      * @param string $RoGroupName RO group name.
-     * @param integer $RoMaxDelayTime Maximum delay threshold for RO instances in seconds. Minimum value: 1. Please note that this value will take effect only if an instance removal policy is enabled in the RO group.
+     * @param integer $RoMaxDelayTime Maximum delay threshold for the RO instance. Unit: seconds, minimum value is 1. Range: [1,10000], integer.
+Note: The RO group must have enabled the instance latency removal policy for this value to be valid.
      * @param integer $RoOfflineDelay Whether to enable instance removal. Valid values: 1 (enabled), 0 (not enabled). Please note that if instance removal is enabled, the delay threshold parameter (`RoMaxDelayTime`) must be set.
-     * @param integer $MinRoInGroup Minimum number of instances to be retained, which can be set to any value less than or equal to the number of RO instances in the RO group. Please note that if this value is set to be greater than the number of RO instances, no removal will be performed, and if it is set to 0, all instances with an excessive delay will be removed.
+     * @param integer $MinRoInGroup Minimum reserved instances. Can be set to any value ≤ the number of instances in the RO group. Default value: 1.
+Note: If the set value is larger than the RO instance count, do not remove. If set to 0, all instances with delay above the limit will be excluded.
      * @param string $WeightMode Weighting mode. Supported values include `system` (automatically assigned by the system) and `custom` (defined by user). Please note that if the `custom` mode is selected, the RO instance weight configuration parameter (RoWeightValues) must be set.
-     * @param integer $ReplicationDelayTime Replication delay.
+     * @param integer $ReplicationDelayTime Delayed replication time. Unit: second, range: 1 - 259200 seconds, not required to enable delayed replication for the instance.
      */
     function __construct()
     {

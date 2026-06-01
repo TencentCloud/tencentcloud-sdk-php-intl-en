@@ -20,18 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReleaseIsolatedDBInstances request structure.
  *
- * @method array getInstanceIds() Obtain Array of instance IDs in the format of `cdb-c1nl9rpv`. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID, whose value is the `InstanceId` value in the output parameters.
- * @method void setInstanceIds(array $InstanceIds) Set Array of instance IDs in the format of `cdb-c1nl9rpv`. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID, whose value is the `InstanceId` value in the output parameters.
+ * @method array getInstanceIds() Obtain Instance ID. The instance ID is in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. You can obtain it through the API for querying the instance list (https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1). The value is the InstanceId field in the output parameter.
+Description: Multiple instance IDs can be entered for operations. The json format is as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID. The instance ID is in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. You can obtain it through the API for querying the instance list (https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1). The value is the InstanceId field in the output parameter.
+Description: Multiple instance IDs can be entered for operations. The json format is as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
  */
 class ReleaseIsolatedDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Array of instance IDs in the format of `cdb-c1nl9rpv`. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID, whose value is the `InstanceId` value in the output parameters.
+     * @var array Instance ID. The instance ID is in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. You can obtain it through the API for querying the instance list (https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1). The value is the InstanceId field in the output parameter.
+Description: Multiple instance IDs can be entered for operations. The json format is as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds Array of instance IDs in the format of `cdb-c1nl9rpv`. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID, whose value is the `InstanceId` value in the output parameters.
+     * @param array $InstanceIds Instance ID. The instance ID is in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. You can obtain it through the API for querying the instance list (https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1). The value is the InstanceId field in the output parameter.
+Description: Multiple instance IDs can be entered for operations. The json format is as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     function __construct()
     {

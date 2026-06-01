@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method integer getBackupId() Obtain Backup task ID, which is the task ID returned by the [TencentDB instance backup creating API](https://intl.cloud.tencent.com/document/api/236/15844?from_cn_redirect=1).
- * @method void setBackupId(integer $BackupId) Set Backup task ID, which is the task ID returned by the [TencentDB instance backup creating API](https://intl.cloud.tencent.com/document/api/236/15844?from_cn_redirect=1).
+ * @method integer getBackupId() Obtain Backup task ID. Confirm it by querying the data backup file list (https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) to get the target backup task ID.
+ * @method void setBackupId(integer $BackupId) Set Backup task ID. Confirm it by querying the data backup file list (https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) to get the target backup task ID.
  */
 class DeleteBackupRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteBackupRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Backup task ID, which is the task ID returned by the [TencentDB instance backup creating API](https://intl.cloud.tencent.com/document/api/236/15844?from_cn_redirect=1).
+     * @var integer Backup task ID. Confirm it by querying the data backup file list (https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) to get the target backup task ID.
      */
     public $BackupId;
 
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param integer $BackupId Backup task ID, which is the task ID returned by the [TencentDB instance backup creating API](https://intl.cloud.tencent.com/document/api/236/15844?from_cn_redirect=1).
+     * @param integer $BackupId Backup task ID. Confirm it by querying the data backup file list (https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) to get the target backup task ID.
      */
     function __construct()
     {

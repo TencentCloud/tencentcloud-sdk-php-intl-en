@@ -1,0 +1,65 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Cdb\V20170320\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * Structure of specified parameters for upgrade from 5.7 to 8.0
+ *
+ * @method string getName() Obtain Parameter name.
+ * @method void setName(string $Name) Set Parameter name.
+ * @method string getValue() Obtain Parameter value.
+ * @method void setValue(string $Value) Set Parameter value.
+ */
+class UpgradeEngineVersionParams extends AbstractModel
+{
+    /**
+     * @var string Parameter name.
+     */
+    public $Name;
+
+    /**
+     * @var string Parameter value.
+     */
+    public $Value;
+
+    /**
+     * @param string $Name Parameter name.
+     * @param string $Value Parameter value.
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
+        }
+    }
+}

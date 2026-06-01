@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloneList request structure.
  *
- * @method string getInstanceId() Obtain ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
- * @method void setInstanceId(string $InstanceId) Set ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
+ * @method string getInstanceId() Obtain Query the cloning task list of the specified source instance. Obtain the instance ID through the [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set Query the cloning task list of the specified source instance. Obtain the instance ID through the [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1) API.
  * @method integer getOffset() Obtain Paginated query offset. Default value: `0`.
  * @method void setOffset(integer $Offset) Set Paginated query offset. Default value: `0`.
- * @method integer getLimit() Obtain Number of results per page. Default value: `20`.
- * @method void setLimit(integer $Limit) Set Number of results per page. Default value: `20`.
+ * @method integer getLimit() Obtain Number of entries per page for paging query. Default value: 20. Maximum value: 100 recommended.
+ * @method void setLimit(integer $Limit) Set Number of entries per page for paging query. Default value: 20. Maximum value: 100 recommended.
  */
 class DescribeCloneListRequest extends AbstractModel
 {
     /**
-     * @var string ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
+     * @var string Query the cloning task list of the specified source instance. Obtain the instance ID through the [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
@@ -40,14 +40,14 @@ class DescribeCloneListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of results per page. Default value: `20`.
+     * @var integer Number of entries per page for paging query. Default value: 20. Maximum value: 100 recommended.
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
+     * @param string $InstanceId Query the cloning task list of the specified source instance. Obtain the instance ID through the [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1) API.
      * @param integer $Offset Paginated query offset. Default value: `0`.
-     * @param integer $Limit Number of results per page. Default value: `20`.
+     * @param integer $Limit Number of entries per page for paging query. Default value: 20. Maximum value: 100 recommended.
      */
     function __construct()
     {

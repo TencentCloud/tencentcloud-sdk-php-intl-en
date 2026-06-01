@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID, which is the same as the instance ID displayed in the TencentDB Console. You can use the [DescribeDBInstances API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID.
  * @method string getAsyncRequestId() Obtain Async task ID.
  * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task ID.
- * @method integer getLimit() Obtain Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
+ * @method integer getLimit() Obtain Pagination parameter. Number of records returned per request. Default value: 20. Maximum value: 100 is recommended.
+ * @method void setLimit(integer $Limit) Set Pagination parameter. Number of records returned per request. Default value: 20. Maximum value: 100 is recommended.
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  */
@@ -42,7 +42,7 @@ class DescribeRollbackTaskDetailRequest extends AbstractModel
     public $AsyncRequestId;
 
     /**
-     * @var integer Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
+     * @var integer Pagination parameter. Number of records returned per request. Default value: 20. Maximum value: 100 is recommended.
      */
     public $Limit;
 
@@ -54,7 +54,7 @@ class DescribeRollbackTaskDetailRequest extends AbstractModel
     /**
      * @param string $InstanceId Instance ID, which is the same as the instance ID displayed in the TencentDB Console. You can use the [DescribeDBInstances API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID.
      * @param string $AsyncRequestId Async task ID.
-     * @param integer $Limit Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
+     * @param integer $Limit Pagination parameter. Number of records returned per request. Default value: 20. Maximum value: 100 is recommended.
      * @param integer $Offset Pagination offset. Default value: 0.
      */
     function __construct()

@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Weight rule
  *
- * @method integer getLessThan() Obtain The maximum weight
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method void setLessThan(integer $LessThan) Set The maximum weight
-Note: this field may return `null`, indicating that no valid value can be found.
+ * @method integer getLessThan() Obtain Division ceiling
+ * @method void setLessThan(integer $LessThan) Set Division ceiling
  * @method integer getWeight() Obtain Weight
-Note: this field may return `null`, indicating that no valid value can be found.
  * @method void setWeight(integer $Weight) Set Weight
-Note: this field may return `null`, indicating that no valid value can be found.
  */
 class Rule extends AbstractModel
 {
     /**
-     * @var integer The maximum weight
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @var integer Division ceiling
      */
     public $LessThan;
 
     /**
      * @var integer Weight
-Note: this field may return `null`, indicating that no valid value can be found.
      */
     public $Weight;
 
     /**
-     * @param integer $LessThan The maximum weight
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @param integer $LessThan Division ceiling
      * @param integer $Weight Weight
-Note: this field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {

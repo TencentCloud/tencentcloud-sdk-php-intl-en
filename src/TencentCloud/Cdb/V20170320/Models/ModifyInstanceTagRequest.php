@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceTag request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method array getReplaceTags() Obtain Tag to be added or modified.
- * @method void setReplaceTags(array $ReplaceTags) Set Tag to be added or modified.
- * @method array getDeleteTags() Obtain Tag to be deleted.
- * @method void setDeleteTags(array $DeleteTags) Set Tag to be deleted.
+ * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method array getReplaceTags() Obtain Tags to add or modify. ReplaceTags or DeleteTags is mandatory to fill in one.
+ * @method void setReplaceTags(array $ReplaceTags) Set Tags to add or modify. ReplaceTags or DeleteTags is mandatory to fill in one.
+ * @method array getDeleteTags() Obtain Tag to delete. ReplaceTags or DeleteTags is mandatory to fill in one.
+ * @method void setDeleteTags(array $DeleteTags) Set Tag to delete. ReplaceTags or DeleteTags is mandatory to fill in one.
  */
 class ModifyInstanceTagRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
     /**
-     * @var array Tag to be added or modified.
+     * @var array Tags to add or modify. ReplaceTags or DeleteTags is mandatory to fill in one.
      */
     public $ReplaceTags;
 
     /**
-     * @var array Tag to be deleted.
+     * @var array Tag to delete. ReplaceTags or DeleteTags is mandatory to fill in one.
      */
     public $DeleteTags;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param array $ReplaceTags Tag to be added or modified.
-     * @param array $DeleteTags Tag to be deleted.
+     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param array $ReplaceTags Tags to add or modify. ReplaceTags or DeleteTags is mandatory to fill in one.
+     * @param array $DeleteTags Tag to delete. ReplaceTags or DeleteTags is mandatory to fill in one.
      */
     function __construct()
     {

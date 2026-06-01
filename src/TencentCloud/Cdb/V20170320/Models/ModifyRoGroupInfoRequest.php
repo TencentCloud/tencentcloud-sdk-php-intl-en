@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRoGroupInfo request structure.
  *
- * @method string getRoGroupId() Obtain RO group ID.
- * @method void setRoGroupId(string $RoGroupId) Set RO group ID.
+ * @method string getRoGroupId() Obtain ID of the RO group, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
+ * @method void setRoGroupId(string $RoGroupId) Set ID of the RO group, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
  * @method RoGroupAttr getRoGroupInfo() Obtain RO group details.
  * @method void setRoGroupInfo(RoGroupAttr $RoGroupInfo) Set RO group details.
- * @method array getRoWeightValues() Obtain Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
- * @method void setRoWeightValues(array $RoWeightValues) Set Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
+ * @method array getRoWeightValues() Obtain Weight of instances in the RO group. If modification is needed to set the weight mode of the RO group to user-defined mode (custom), this parameter must be set, and the weight value of each read-only instance needs to be set. The RO instance ID can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
+ * @method void setRoWeightValues(array $RoWeightValues) Set Weight of instances in the RO group. If modification is needed to set the weight mode of the RO group to user-defined mode (custom), this parameter must be set, and the weight value of each read-only instance needs to be set. The RO instance ID can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
  * @method integer getIsBalanceRoLoad() Obtain Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
  * @method void setIsBalanceRoLoad(integer $IsBalanceRoLoad) Set Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
  * @method integer getReplicationDelayTime() Obtain This field has been deprecated.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyRoGroupInfoRequest extends AbstractModel
 {
     /**
-     * @var string RO group ID.
+     * @var string ID of the RO group, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
      */
     public $RoGroupId;
 
@@ -44,7 +44,7 @@ class ModifyRoGroupInfoRequest extends AbstractModel
     public $RoGroupInfo;
 
     /**
-     * @var array Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
+     * @var array Weight of instances in the RO group. If modification is needed to set the weight mode of the RO group to user-defined mode (custom), this parameter must be set, and the weight value of each read-only instance needs to be set. The RO instance ID can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
      */
     public $RoWeightValues;
 
@@ -55,13 +55,14 @@ class ModifyRoGroupInfoRequest extends AbstractModel
 
     /**
      * @var integer This field has been deprecated.
+     * @deprecated
      */
     public $ReplicationDelayTime;
 
     /**
-     * @param string $RoGroupId RO group ID.
+     * @param string $RoGroupId ID of the RO group, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
      * @param RoGroupAttr $RoGroupInfo RO group details.
-     * @param array $RoWeightValues Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
+     * @param array $RoWeightValues Weight of instances in the RO group. If modification is needed to set the weight mode of the RO group to user-defined mode (custom), this parameter must be set, and the weight value of each read-only instance needs to be set. The RO instance ID can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
      * @param integer $IsBalanceRoLoad Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
      * @param integer $ReplicationDelayTime This field has been deprecated.
      */

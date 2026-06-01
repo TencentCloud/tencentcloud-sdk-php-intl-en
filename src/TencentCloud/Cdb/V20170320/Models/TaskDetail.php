@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of an instance task
  *
- * @method integer getCode() Obtain Error code.
- * @method void setCode(integer $Code) Set Error code.
+ * @method integer getCode() Obtain Error code. `0` indicates success. Other values correspond to different error scenarios.
+ * @method void setCode(integer $Code) Set Error code. `0` indicates success. Other values correspond to different error scenarios.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method integer getJobId() Obtain ID of an instance task.
@@ -78,17 +78,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Instance task start time.
  * @method string getEndTime() Obtain Instance task end time.
  * @method void setEndTime(string $EndTime) Set Instance task end time.
- * @method array getInstanceIds() Obtain ID of an instance associated with a task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceIds(array $InstanceIds) Set ID of an instance associated with a task.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getInstanceIds() Obtain ID of the associated instance.
+ * @method void setInstanceIds(array $InstanceIds) Set ID of the associated instance.
  * @method string getAsyncRequestId() Obtain Async task request ID.
  * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task request ID.
+ * @method array getTaskAttachInfo() Obtain Additional information of the task.
+ * @method void setTaskAttachInfo(array $TaskAttachInfo) Set Additional information of the task.
  */
 class TaskDetail extends AbstractModel
 {
     /**
-     * @var integer Error code.
+     * @var integer Error code. `0` indicates success. Other values correspond to different error scenarios.
      */
     public $Code;
 
@@ -149,8 +149,7 @@ class TaskDetail extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array ID of an instance associated with a task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array ID of the associated instance.
      */
     public $InstanceIds;
 
@@ -160,7 +159,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AsyncRequestId;
 
     /**
-     * @param integer $Code Error code.
+     * @var array Additional information of the task.
+     */
+    public $TaskAttachInfo;
+
+    /**
+     * @param integer $Code Error code. `0` indicates success. Other values correspond to different error scenarios.
      * @param string $Message Error message.
      * @param integer $JobId ID of an instance task.
      * @param integer $Progress Instance task progress.
@@ -189,9 +193,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 "SWITCH DR TO MASTER" - promoting a disaster recovery instance.
      * @param string $StartTime Instance task start time.
      * @param string $EndTime Instance task end time.
-     * @param array $InstanceIds ID of an instance associated with a task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $InstanceIds ID of the associated instance.
      * @param string $AsyncRequestId Async task request ID.
+     * @param array $TaskAttachInfo Additional information of the task.
      */
     function __construct()
     {
@@ -244,6 +248,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
             $this->AsyncRequestId = $param["AsyncRequestId"];
+        }
+
+        if (array_key_exists("TaskAttachInfo",$param) and $param["TaskAttachInfo"] !== null) {
+            $this->TaskAttachInfo = [];
+            foreach ($param["TaskAttachInfo"] as $key => $value){
+                $obj = new TaskAttachInfo();
+                $obj->deserialize($value);
+                array_push($this->TaskAttachInfo, $obj);
+            }
         }
     }
 }

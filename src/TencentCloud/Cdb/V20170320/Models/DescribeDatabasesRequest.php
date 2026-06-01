@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method integer getOffset() Obtain Offset. Minimum value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Minimum value: 0.
- * @method integer getLimit() Obtain Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
- * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
+ * @method integer getLimit() Obtain Number of entries per request. Default value: 20. Minimum value: 1. Maximum value: 5000.
+ * @method void setLimit(integer $Limit) Set Number of entries per request. Default value: 20. Minimum value: 1. Maximum value: 5000.
  * @method string getDatabaseRegexp() Obtain Regular expression for matching database names.
  * @method void setDatabaseRegexp(string $DatabaseRegexp) Set Regular expression for matching database names.
  */
@@ -42,7 +42,7 @@ class DescribeDatabasesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
+     * @var integer Number of entries per request. Default value: 20. Minimum value: 1. Maximum value: 5000.
      */
     public $Limit;
 
@@ -54,7 +54,7 @@ class DescribeDatabasesRequest extends AbstractModel
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param integer $Offset Offset. Minimum value: 0.
-     * @param integer $Limit Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
+     * @param integer $Limit Number of entries per request. Default value: 20. Minimum value: 1. Maximum value: 5000.
      * @param string $DatabaseRegexp Regular expression for matching database names.
      */
     function __construct()

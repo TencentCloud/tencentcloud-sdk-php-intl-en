@@ -20,154 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Master instance information
  *
- * @method string getRegion() Obtain Region information
- * @method void setRegion(string $Region) Set Region information
- * @method integer getRegionId() Obtain Region ID
- * @method void setRegionId(integer $RegionId) Set Region ID
- * @method integer getZoneId() Obtain AZ ID
- * @method void setZoneId(integer $ZoneId) Set AZ ID
- * @method string getZone() Obtain AZ information
- * @method void setZone(string $Zone) Set AZ information
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getResourceId() Obtain Long instance ID
- * @method void setResourceId(string $ResourceId) Set Long instance ID
- * @method integer getStatus() Obtain Instance status
- * @method void setStatus(integer $Status) Set Instance status
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method integer getInstanceType() Obtain Instance type
- * @method void setInstanceType(integer $InstanceType) Set Instance type
- * @method integer getTaskStatus() Obtain Task status
- * @method void setTaskStatus(integer $TaskStatus) Set Task status
- * @method integer getMemory() Obtain Memory capacity
- * @method void setMemory(integer $Memory) Set Memory capacity
- * @method integer getVolume() Obtain Disk capacity
- * @method void setVolume(integer $Volume) Set Disk capacity
- * @method string getDeviceType() Obtain Instance model
- * @method void setDeviceType(string $DeviceType) Set Instance model
- * @method integer getQps() Obtain Queries per second
- * @method void setQps(integer $Qps) Set Queries per second
- * @method integer getVpcId() Obtain VPC ID
- * @method void setVpcId(integer $VpcId) Set VPC ID
- * @method integer getSubnetId() Obtain Subnet ID
- * @method void setSubnetId(integer $SubnetId) Set Subnet ID
- * @method string getExClusterId() Obtain Dedicated cluster ID
- * @method void setExClusterId(string $ExClusterId) Set Dedicated cluster ID
- * @method string getExClusterName() Obtain Dedicated cluster name
- * @method void setExClusterName(string $ExClusterName) Set Dedicated cluster name
+ * @method string getRegion() Obtain <p>Regional information</p>
+ * @method void setRegion(string $Region) Set <p>Regional information</p>
+ * @method integer getRegionId() Obtain <p>Region ID</p>
+ * @method void setRegionId(integer $RegionId) Set <p>Region ID</p>
+ * @method integer getZoneId() Obtain <p>Availability zone ID.</p>
+ * @method void setZoneId(integer $ZoneId) Set <p>Availability zone ID.</p>
+ * @method string getZone() Obtain <p>AZ information</p>
+ * @method void setZone(string $Zone) Set <p>AZ information</p>
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method string getResourceId() Obtain <p>Instance long ID</p>
+ * @method void setResourceId(string $ResourceId) Set <p>Instance long ID</p>
+ * @method integer getStatus() Obtain <p>Instance status</p>
+ * @method void setStatus(integer $Status) Set <p>Instance status</p>
+ * @method string getInstanceName() Obtain <p>Instance name</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name</p>
+ * @method integer getInstanceType() Obtain <p>Instance type</p>
+ * @method void setInstanceType(integer $InstanceType) Set <p>Instance type</p>
+ * @method integer getTaskStatus() Obtain <p>Task status.</p>
+ * @method void setTaskStatus(integer $TaskStatus) Set <p>Task status.</p>
+ * @method integer getMemory() Obtain <p>Memory capacity</p>
+ * @method void setMemory(integer $Memory) Set <p>Memory capacity</p>
+ * @method integer getVolume() Obtain <p>Disk capacity</p>
+ * @method void setVolume(integer $Volume) Set <p>Disk capacity</p>
+ * @method string getDeviceType() Obtain <p>Instance model</p>
+ * @method void setDeviceType(string $DeviceType) Set <p>Instance model</p>
+ * @method integer getQps() Obtain <p>Queries per second.</p>
+ * @method void setQps(integer $Qps) Set <p>Queries per second.</p>
+ * @method integer getVpcId() Obtain <p>VPC ID</p>
+ * @method void setVpcId(integer $VpcId) Set <p>VPC ID</p>
+ * @method integer getSubnetId() Obtain <p>subnet ID</p>
+ * @method void setSubnetId(integer $SubnetId) Set <p>subnet ID</p>
+ * @method string getExClusterId() Obtain <p>Dedicated cluster ID</p>
+ * @method void setExClusterId(string $ExClusterId) Set <p>Dedicated cluster ID</p>
+ * @method string getExClusterName() Obtain <p>Dedicated cluster name</p>
+ * @method void setExClusterName(string $ExClusterName) Set <p>Dedicated cluster name</p>
  */
 class MasterInfo extends AbstractModel
 {
     /**
-     * @var string Region information
+     * @var string <p>Regional information</p>
      */
     public $Region;
 
     /**
-     * @var integer Region ID
+     * @var integer <p>Region ID</p>
      */
     public $RegionId;
 
     /**
-     * @var integer AZ ID
+     * @var integer <p>Availability zone ID.</p>
      */
     public $ZoneId;
 
     /**
-     * @var string AZ information
+     * @var string <p>AZ information</p>
      */
     public $Zone;
 
     /**
-     * @var string Instance ID
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Long instance ID
+     * @var string <p>Instance long ID</p>
      */
     public $ResourceId;
 
     /**
-     * @var integer Instance status
+     * @var integer <p>Instance status</p>
      */
     public $Status;
 
     /**
-     * @var string Instance name
+     * @var string <p>Instance name</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer Instance type
+     * @var integer <p>Instance type</p>
      */
     public $InstanceType;
 
     /**
-     * @var integer Task status
+     * @var integer <p>Task status.</p>
      */
     public $TaskStatus;
 
     /**
-     * @var integer Memory capacity
+     * @var integer <p>Memory capacity</p>
      */
     public $Memory;
 
     /**
-     * @var integer Disk capacity
+     * @var integer <p>Disk capacity</p>
      */
     public $Volume;
 
     /**
-     * @var string Instance model
+     * @var string <p>Instance model</p>
      */
     public $DeviceType;
 
     /**
-     * @var integer Queries per second
+     * @var integer <p>Queries per second.</p>
      */
     public $Qps;
 
     /**
-     * @var integer VPC ID
+     * @var integer <p>VPC ID</p>
      */
     public $VpcId;
 
     /**
-     * @var integer Subnet ID
+     * @var integer <p>subnet ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var string Dedicated cluster ID
+     * @var string <p>Dedicated cluster ID</p>
      */
     public $ExClusterId;
 
     /**
-     * @var string Dedicated cluster name
+     * @var string <p>Dedicated cluster name</p>
      */
     public $ExClusterName;
 
     /**
-     * @param string $Region Region information
-     * @param integer $RegionId Region ID
-     * @param integer $ZoneId AZ ID
-     * @param string $Zone AZ information
-     * @param string $InstanceId Instance ID
-     * @param string $ResourceId Long instance ID
-     * @param integer $Status Instance status
-     * @param string $InstanceName Instance name
-     * @param integer $InstanceType Instance type
-     * @param integer $TaskStatus Task status
-     * @param integer $Memory Memory capacity
-     * @param integer $Volume Disk capacity
-     * @param string $DeviceType Instance model
-     * @param integer $Qps Queries per second
-     * @param integer $VpcId VPC ID
-     * @param integer $SubnetId Subnet ID
-     * @param string $ExClusterId Dedicated cluster ID
-     * @param string $ExClusterName Dedicated cluster name
+     * @param string $Region <p>Regional information</p>
+     * @param integer $RegionId <p>Region ID</p>
+     * @param integer $ZoneId <p>Availability zone ID.</p>
+     * @param string $Zone <p>AZ information</p>
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param string $ResourceId <p>Instance long ID</p>
+     * @param integer $Status <p>Instance status</p>
+     * @param string $InstanceName <p>Instance name</p>
+     * @param integer $InstanceType <p>Instance type</p>
+     * @param integer $TaskStatus <p>Task status.</p>
+     * @param integer $Memory <p>Memory capacity</p>
+     * @param integer $Volume <p>Disk capacity</p>
+     * @param string $DeviceType <p>Instance model</p>
+     * @param integer $Qps <p>Queries per second.</p>
+     * @param integer $VpcId <p>VPC ID</p>
+     * @param integer $SubnetId <p>subnet ID</p>
+     * @param string $ExClusterId <p>Dedicated cluster ID</p>
+     * @param string $ExClusterName <p>Dedicated cluster name</p>
      */
     function __construct()
     {

@@ -20,40 +20,71 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCdbProxy request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getUniqVpcId() Obtain VPC ID
- * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID
- * @method string getUniqSubnetId() Obtain VPC subnet ID
- * @method void setUniqSubnetId(string $UniqSubnetId) Set VPC subnet ID
- * @method array getProxyNodeCustom() Obtain The specification configuration of a node
- * @method void setProxyNodeCustom(array $ProxyNodeCustom) Set The specification configuration of a node
+ * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method string getUniqVpcId() Obtain VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method string getUniqSubnetId() Obtain Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method array getProxyNodeCustom() Obtain Node specification configuration.
+Parameter description in the example.
+NodeCount: Number of nodes.
+Region: Node region.
+Zone: Node availability zone.
+Cpu: Number of cores per proxy node (unit: core).
+Mem: Memory size of each proxy node (unit: MB).
+Remarks:
+1. Database proxy supported node specifications are: 2C4000MB, 4C8000MB, 8C16000MB.
+2. The above parameters (such as number of nodes, availability zone) are required. When calling the API, if incomplete, creation may fail.
+ * @method void setProxyNodeCustom(array $ProxyNodeCustom) Set Node specification configuration.
+Parameter description in the example.
+NodeCount: Number of nodes.
+Region: Node region.
+Zone: Node availability zone.
+Cpu: Number of cores per proxy node (unit: core).
+Mem: Memory size of each proxy node (unit: MB).
+Remarks:
+1. Database proxy supported node specifications are: 2C4000MB, 4C8000MB, 8C16000MB.
+2. The above parameters (such as number of nodes, availability zone) are required. When calling the API, if incomplete, creation may fail.
  * @method array getSecurityGroup() Obtain Security group
  * @method void setSecurityGroup(array $SecurityGroup) Set Security group
  * @method string getDesc() Obtain Description
  * @method void setDesc(string $Desc) Set Description
  * @method integer getConnectionPoolLimit() Obtain Connection pool threshold
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
  * @method void setConnectionPoolLimit(integer $ConnectionPoolLimit) Set Connection pool threshold
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
+ * @method string getProxyVersion() Obtain Specify the Linux kernel version of the purchased proxy. Leave it blank to ship the latest version by default.
+ * @method void setProxyVersion(string $ProxyVersion) Set Specify the Linux kernel version of the purchased proxy. Leave it blank to ship the latest version by default.
  */
 class CreateCdbProxyRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
     /**
-     * @var string VPC ID
+     * @var string VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $UniqVpcId;
 
     /**
-     * @var string VPC subnet ID
+     * @var string Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $UniqSubnetId;
 
     /**
-     * @var array The specification configuration of a node
+     * @var array Node specification configuration.
+Parameter description in the example.
+NodeCount: Number of nodes.
+Region: Node region.
+Zone: Node availability zone.
+Cpu: Number of cores per proxy node (unit: core).
+Mem: Memory size of each proxy node (unit: MB).
+Remarks:
+1. Database proxy supported node specifications are: 2C4000MB, 4C8000MB, 8C16000MB.
+2. The above parameters (such as number of nodes, availability zone) are required. When calling the API, if incomplete, creation may fail.
      */
     public $ProxyNodeCustom;
 
@@ -69,17 +100,34 @@ class CreateCdbProxyRequest extends AbstractModel
 
     /**
      * @var integer Connection pool threshold
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
      */
     public $ConnectionPoolLimit;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $UniqVpcId VPC ID
-     * @param string $UniqSubnetId VPC subnet ID
-     * @param array $ProxyNodeCustom The specification configuration of a node
+     * @var string Specify the Linux kernel version of the purchased proxy. Leave it blank to ship the latest version by default.
+     */
+    public $ProxyVersion;
+
+    /**
+     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param string $UniqVpcId VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param string $UniqSubnetId Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param array $ProxyNodeCustom Node specification configuration.
+Parameter description in the example.
+NodeCount: Number of nodes.
+Region: Node region.
+Zone: Node availability zone.
+Cpu: Number of cores per proxy node (unit: core).
+Mem: Memory size of each proxy node (unit: MB).
+Remarks:
+1. Database proxy supported node specifications are: 2C4000MB, 4C8000MB, 8C16000MB.
+2. The above parameters (such as number of nodes, availability zone) are required. When calling the API, if incomplete, creation may fail.
      * @param array $SecurityGroup Security group
      * @param string $Desc Description
      * @param integer $ConnectionPoolLimit Connection pool threshold
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
+     * @param string $ProxyVersion Specify the Linux kernel version of the purchased proxy. Leave it blank to ship the latest version by default.
      */
     function __construct()
     {
@@ -125,6 +173,10 @@ class CreateCdbProxyRequest extends AbstractModel
 
         if (array_key_exists("ConnectionPoolLimit",$param) and $param["ConnectionPoolLimit"] !== null) {
             $this->ConnectionPoolLimit = $param["ConnectionPoolLimit"];
+        }
+
+        if (array_key_exists("ProxyVersion",$param) and $param["ProxyVersion"] !== null) {
+            $this->ProxyVersion = $param["ProxyVersion"];
         }
     }
 }

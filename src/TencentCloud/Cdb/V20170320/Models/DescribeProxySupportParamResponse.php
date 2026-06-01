@@ -20,66 +20,80 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxySupportParam response structure.
  *
- * @method string getProxyVersion() Obtain The supported maximum proxy version Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProxyVersion(string $ProxyVersion) Set The supported maximum proxy version Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getSupportPool() Obtain Whether to support the connection pool Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSupportPool(boolean $SupportPool) Set Whether to support the connection pool Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getPoolMin() Obtain Minimum connections in the connection pool Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPoolMin(integer $PoolMin) Set Minimum connections in the connection pool Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getPoolMax() Obtain Maximum connections in the connection pool Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPoolMax(integer $PoolMax) Set Maximum connections in the connection pool Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getSupportTransSplit() Obtain Whether to support transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSupportTransSplit(boolean $SupportTransSplit) Set Whether to support transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSupportPoolMinVersion() Obtain Minimum proxy version supporting connection pool Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSupportPoolMinVersion(string $SupportPoolMinVersion) Set Minimum proxy version supporting connection pool Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSupportTransSplitMinVersion() Obtain Minimum proxy version supporting transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSupportTransSplitMinVersion(string $SupportTransSplitMinVersion) Set Minimum proxy version supporting transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getSupportReadOnly() Obtain Whether read-only mode is supported Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSupportReadOnly(boolean $SupportReadOnly) Set Whether read-only mode is supported Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProxyVersion() Obtain Proxy supports the maximum version
+ * @method void setProxyVersion(string $ProxyVersion) Set Proxy supports the maximum version
+ * @method boolean getSupportPool() Obtain Whether connection pool is supported
+ * @method void setSupportPool(boolean $SupportPool) Set Whether connection pool is supported
+ * @method integer getPoolMin() Obtain Minimum value of the connection pool
+ * @method void setPoolMin(integer $PoolMin) Set Minimum value of the connection pool
+ * @method integer getPoolMax() Obtain Maximum value of connection pool
+ * @method void setPoolMax(integer $PoolMax) Set Maximum value of connection pool
+ * @method boolean getSupportTransSplit() Obtain Whether transaction split is supported
+ * @method void setSupportTransSplit(boolean $SupportTransSplit) Set Whether transaction split is supported
+ * @method string getSupportPoolMinVersion() Obtain Minimum proxy version that supports connection pool
+ * @method void setSupportPoolMinVersion(string $SupportPoolMinVersion) Set Minimum proxy version that supports connection pool
+ * @method string getSupportTransSplitMinVersion() Obtain Minimum proxy version supporting transaction split
+ * @method void setSupportTransSplitMinVersion(string $SupportTransSplitMinVersion) Set Minimum proxy version supporting transaction split
+ * @method boolean getSupportReadOnly() Obtain Whether setting as read-only is supported.
+ * @method void setSupportReadOnly(boolean $SupportReadOnly) Set Whether setting as read-only is supported.
+ * @method boolean getSupportAutoLoadBalance() Obtain Whether to automatically balance the load
+ * @method void setSupportAutoLoadBalance(boolean $SupportAutoLoadBalance) Set Whether to automatically balance the load
+ * @method boolean getSupportAccessMode() Obtain Whether support access mode
+ * @method void setSupportAccessMode(boolean $SupportAccessMode) Set Whether support access mode
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribeProxySupportParamResponse extends AbstractModel
 {
     /**
-     * @var string The supported maximum proxy version Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Proxy supports the maximum version
      */
     public $ProxyVersion;
 
     /**
-     * @var boolean Whether to support the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether connection pool is supported
      */
     public $SupportPool;
 
     /**
-     * @var integer Minimum connections in the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Minimum value of the connection pool
      */
     public $PoolMin;
 
     /**
-     * @var integer Maximum connections in the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Maximum value of connection pool
      */
     public $PoolMax;
 
     /**
-     * @var boolean Whether to support transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether transaction split is supported
      */
     public $SupportTransSplit;
 
     /**
-     * @var string Minimum proxy version supporting connection pool Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Minimum proxy version that supports connection pool
      */
     public $SupportPoolMinVersion;
 
     /**
-     * @var string Minimum proxy version supporting transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Minimum proxy version supporting transaction split
      */
     public $SupportTransSplitMinVersion;
 
     /**
-     * @var boolean Whether read-only mode is supported Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether setting as read-only is supported.
      */
     public $SupportReadOnly;
+
+    /**
+     * @var boolean Whether to automatically balance the load
+     */
+    public $SupportAutoLoadBalance;
+
+    /**
+     * @var boolean Whether support access mode
+     */
+    public $SupportAccessMode;
 
     /**
      * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -87,14 +101,16 @@ class DescribeProxySupportParamResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ProxyVersion The supported maximum proxy version Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $SupportPool Whether to support the connection pool Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $PoolMin Minimum connections in the connection pool Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $PoolMax Maximum connections in the connection pool Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $SupportTransSplit Whether to support transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SupportPoolMinVersion Minimum proxy version supporting connection pool Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SupportTransSplitMinVersion Minimum proxy version supporting transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $SupportReadOnly Whether read-only mode is supported Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProxyVersion Proxy supports the maximum version
+     * @param boolean $SupportPool Whether connection pool is supported
+     * @param integer $PoolMin Minimum value of the connection pool
+     * @param integer $PoolMax Maximum value of connection pool
+     * @param boolean $SupportTransSplit Whether transaction split is supported
+     * @param string $SupportPoolMinVersion Minimum proxy version that supports connection pool
+     * @param string $SupportTransSplitMinVersion Minimum proxy version supporting transaction split
+     * @param boolean $SupportReadOnly Whether setting as read-only is supported.
+     * @param boolean $SupportAutoLoadBalance Whether to automatically balance the load
+     * @param boolean $SupportAccessMode Whether support access mode
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -140,6 +156,14 @@ class DescribeProxySupportParamResponse extends AbstractModel
 
         if (array_key_exists("SupportReadOnly",$param) and $param["SupportReadOnly"] !== null) {
             $this->SupportReadOnly = $param["SupportReadOnly"];
+        }
+
+        if (array_key_exists("SupportAutoLoadBalance",$param) and $param["SupportAutoLoadBalance"] !== null) {
+            $this->SupportAutoLoadBalance = $param["SupportAutoLoadBalance"];
+        }
+
+        if (array_key_exists("SupportAccessMode",$param) and $param["SupportAccessMode"] !== null) {
+            $this->SupportAccessMode = $param["SupportAccessMode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

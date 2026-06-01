@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddTimeWindow request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+ * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
  * @method array getMonday() Obtain Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
  * @method void setMonday(array $Monday) Set Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
  * @method array getTuesday() Obtain Maintenance window on Tuesday. At least one time window is required in a week.
@@ -36,13 +36,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaturday(array $Saturday) Set Maintenance window on Saturday. At least one time window is required in a week.
  * @method array getSunday() Obtain Maintenance window on Sunday. At least one time window is required in a week.
  * @method void setSunday(array $Sunday) Set Maintenance window on Sunday. At least one time window is required in a week.
- * @method integer getMaxDelayTime() Obtain Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
- * @method void setMaxDelayTime(integer $MaxDelayTime) Set Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+ * @method integer getMaxDelayTime() Obtain Maximum delay threshold (seconds), only applicable to primary instance and disaster recovery instance. Default value: 10. Value ranges from 1 to 10 integers.
+ * @method void setMaxDelayTime(integer $MaxDelayTime) Set Maximum delay threshold (seconds), only applicable to primary instance and disaster recovery instance. Default value: 10. Value ranges from 1 to 10 integers.
  */
 class AddTimeWindowRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public $InstanceId;
 
@@ -82,12 +82,12 @@ class AddTimeWindowRequest extends AbstractModel
     public $Sunday;
 
     /**
-     * @var integer Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+     * @var integer Maximum delay threshold (seconds), only applicable to primary instance and disaster recovery instance. Default value: 10. Value ranges from 1 to 10 integers.
      */
     public $MaxDelayTime;
 
     /**
-     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      * @param array $Monday Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
      * @param array $Tuesday Maintenance window on Tuesday. At least one time window is required in a week.
      * @param array $Wednesday Maintenance window on Wednesday. At least one time window is required in a week.
@@ -95,7 +95,7 @@ class AddTimeWindowRequest extends AbstractModel
      * @param array $Friday Maintenance window on Friday. At least one time window is required in a week.
      * @param array $Saturday Maintenance window on Saturday. At least one time window is required in a week.
      * @param array $Sunday Maintenance window on Sunday. At least one time window is required in a week.
-     * @param integer $MaxDelayTime Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+     * @param integer $MaxDelayTime Maximum delay threshold (seconds), only applicable to primary instance and disaster recovery instance. Default value: 10. Value ranges from 1 to 10 integers.
      */
     function __construct()
     {

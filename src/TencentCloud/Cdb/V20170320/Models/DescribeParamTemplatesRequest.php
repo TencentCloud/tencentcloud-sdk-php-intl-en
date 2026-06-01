@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeParamTemplates request structure.
  *
- * @method array getEngineVersions() Obtain Engine version. If it is left empty, all parameter templates will be queried.
- * @method void setEngineVersions(array $EngineVersions) Set Engine version. If it is left empty, all parameter templates will be queried.
- * @method array getEngineTypes() Obtain Engine type. If it is left empty, all engine types will be queried.
- * @method void setEngineTypes(array $EngineTypes) Set Engine type. If it is left empty, all engine types will be queried.
- * @method array getTemplateNames() Obtain Template name. If it is left empty, all template names will be queried.
- * @method void setTemplateNames(array $TemplateNames) Set Template name. If it is left empty, all template names will be queried.
- * @method array getTemplateIds() Obtain Template ID. If it is left empty, all template IDs will be queried.
- * @method void setTemplateIds(array $TemplateIds) Set Template ID. If it is left empty, all template IDs will be queried.
+ * @method array getEngineVersions() Obtain Engine version. Query all if default. Valid values: 5.5, 5.6, 5.7, 8.0.
+ * @method void setEngineVersions(array $EngineVersions) Set Engine version. Query all if default. Valid values: 5.5, 5.6, 5.7, 8.0.
+ * @method array getEngineTypes() Obtain Engine type. Query all if default. Valid values: InnoDB, RocksDB. Case-insensitive.
+ * @method void setEngineTypes(array $EngineTypes) Set Engine type. Query all if default. Valid values: InnoDB, RocksDB. Case-insensitive.
+ * @method array getTemplateNames() Obtain Template name. Query all if default. Support fuzzy matching.
+ * @method void setTemplateNames(array $TemplateNames) Set Template name. Query all if default. Support fuzzy matching.
+ * @method array getTemplateIds() Obtain Template ID. Query all if default.
+ * @method void setTemplateIds(array $TemplateIds) Set Template ID. Query all if default.
  */
 class DescribeParamTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Engine version. If it is left empty, all parameter templates will be queried.
+     * @var array Engine version. Query all if default. Valid values: 5.5, 5.6, 5.7, 8.0.
      */
     public $EngineVersions;
 
     /**
-     * @var array Engine type. If it is left empty, all engine types will be queried.
+     * @var array Engine type. Query all if default. Valid values: InnoDB, RocksDB. Case-insensitive.
      */
     public $EngineTypes;
 
     /**
-     * @var array Template name. If it is left empty, all template names will be queried.
+     * @var array Template name. Query all if default. Support fuzzy matching.
      */
     public $TemplateNames;
 
     /**
-     * @var array Template ID. If it is left empty, all template IDs will be queried.
+     * @var array Template ID. Query all if default.
      */
     public $TemplateIds;
 
     /**
-     * @param array $EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
-     * @param array $EngineTypes Engine type. If it is left empty, all engine types will be queried.
-     * @param array $TemplateNames Template name. If it is left empty, all template names will be queried.
-     * @param array $TemplateIds Template ID. If it is left empty, all template IDs will be queried.
+     * @param array $EngineVersions Engine version. Query all if default. Valid values: 5.5, 5.6, 5.7, 8.0.
+     * @param array $EngineTypes Engine type. Query all if default. Valid values: InnoDB, RocksDB. Case-insensitive.
+     * @param array $TemplateNames Template name. Query all if default. Support fuzzy matching.
+     * @param array $TemplateIds Template ID. Query all if default.
      */
     function __construct()
     {
