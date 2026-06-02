@@ -18,338 +18,358 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Task Information
  *
- * @method integer getID() Obtain 
- * @method void setID(integer $ID) Set 
- * @method integer getAppId() Obtain 
- * @method void setAppId(integer $AppId) Set 
- * @method string getClusterId() Obtain 
- * @method void setClusterId(string $ClusterId) Set 
- * @method string getRegion() Obtain Region
- * @method void setRegion(string $Region) Set Region
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method string getDelayTime() Obtain Specifies the delayed execution time.
- * @method void setDelayTime(string $DelayTime) Set Specifies the delayed execution time.
- * @method string getErrMsg() Obtain Task failure information.
- * @method void setErrMsg(string $ErrMsg) Set Task failure information.
- * @method integer getFlowId() Obtain 
- * @method void setFlowId(integer $FlowId) Set 
- * @method string getInput() Obtain 
- * @method void setInput(string $Input) Set 
- * @method string getInstanceGrpId() Obtain 
- * @method void setInstanceGrpId(string $InstanceGrpId) Set 
- * @method string getInstanceGroupId() Obtain 
- * @method void setInstanceGroupId(string $InstanceGroupId) Set 
- * @method string getInstanceId() Obtain 
- * @method void setInstanceId(string $InstanceId) Set 
- * @method string getObjectId() Obtain 
- * @method void setObjectId(string $ObjectId) Set 
- * @method string getObjectType() Obtain 
- * @method void setObjectType(string $ObjectType) Set 
- * @method string getOperator() Obtain 
- * @method void setOperator(string $Operator) Set 
- * @method string getOutput() Obtain 
- * @method void setOutput(string $Output) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method string getTaskType() Obtain 
- * @method void setTaskType(string $TaskType) Set 
- * @method integer getTriggerTaskId() Obtain 
- * @method void setTriggerTaskId(integer $TriggerTaskId) Set 
- * @method string getUpdateTime() Obtain 
- * @method void setUpdateTime(string $UpdateTime) Set 
- * @method string getStartTime() Obtain 
- * @method void setStartTime(string $StartTime) Set 
- * @method string getEndTime() Obtain 
- * @method void setEndTime(string $EndTime) Set 
- * @method string getClusterName() Obtain 
- * @method void setClusterName(string $ClusterName) Set 
- * @method string getInstanceName() Obtain 
- * @method void setInstanceName(string $InstanceName) Set 
- * @method integer getProcess() Obtain 
- * @method void setProcess(integer $Process) Set 
- * @method array getModifyParamsData() Obtain 
- * @method void setModifyParamsData(array $ModifyParamsData) Set 
- * @method CreateClustersData getCreateClustersData() Obtain Create cluster task information.
- * @method void setCreateClustersData(CreateClustersData $CreateClustersData) Set Create cluster task information.
- * @method RollbackData getRollbackData() Obtain Cluster rollback task information.
- * @method void setRollbackData(RollbackData $RollbackData) Set Cluster rollback task information.
- * @method ModifyInstanceData getModifyInstanceData() Obtain Instance configuration change task information.
- * @method void setModifyInstanceData(ModifyInstanceData $ModifyInstanceData) Set Instance configuration change task information.
- * @method ManualBackupData getManualBackupData() Obtain 
- * @method void setManualBackupData(ManualBackupData $ManualBackupData) Set 
- * @method ModifyDbVersionData getModifyDbVersionData() Obtain Modify kernel version task information.
- * @method void setModifyDbVersionData(ModifyDbVersionData $ModifyDbVersionData) Set Modify kernel version task information.
- * @method ClusterSlaveData getClusterSlaveData() Obtain Cluster availability zone information.
- * @method void setClusterSlaveData(ClusterSlaveData $ClusterSlaveData) Set Cluster availability zone information.
- * @method SwitchClusterLogBin getSwitchClusterLogBin() Obtain 
- * @method void setSwitchClusterLogBin(SwitchClusterLogBin $SwitchClusterLogBin) Set 
- * @method BizTaskModifyParamsData getModifyInstanceParamsData() Obtain 
- * @method void setModifyInstanceParamsData(BizTaskModifyParamsData $ModifyInstanceParamsData) Set 
- * @method TaskMaintainInfo getTaskMaintainInfo() Obtain Maintenance time.
- * @method void setTaskMaintainInfo(TaskMaintainInfo $TaskMaintainInfo) Set Maintenance time.
- * @method array getInstanceCLSDeliveryInfos() Obtain Instance log delivery information.
-
- * @method void setInstanceCLSDeliveryInfos(array $InstanceCLSDeliveryInfos) Set Instance log delivery information.
-
- * @method TaskProgressInfo getTaskProgressInfo() Obtain Task progress information.
- * @method void setTaskProgressInfo(TaskProgressInfo $TaskProgressInfo) Set Task progress information.
- * @method GdnTaskInfo getGdnTaskInfo() Obtain Global Database Network Task
- * @method void setGdnTaskInfo(GdnTaskInfo $GdnTaskInfo) Set Global Database Network Task
- * @method string getVaultId() Obtain Safe id
- * @method void setVaultId(string $VaultId) Set Safe id
- * @method string getVaultName() Obtain Safe name
- * @method void setVaultName(string $VaultName) Set Safe name
+ * @method integer getID() Obtain <p>Task ID.</p>
+ * @method void setID(integer $ID) Set <p>Task ID.</p>
+ * @method integer getAppId() Obtain <p>User appid</p>
+ * @method void setAppId(integer $AppId) Set <p>User appid</p>
+ * @method string getClusterId() Obtain <p>Cluster ID.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method string getRegion() Obtain <p>Region</p>
+ * @method void setRegion(string $Region) Set <p>Region</p>
+ * @method string getCreateTime() Obtain <p>Task creation time</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Task creation time</p>
+ * @method string getDelayTime() Obtain <p>Delayed execution time</p>
+ * @method void setDelayTime(string $DelayTime) Set <p>Delayed execution time</p>
+ * @method string getErrMsg() Obtain <p>Task failure information</p>
+ * @method void setErrMsg(string $ErrMsg) Set <p>Task failure information</p>
+ * @method integer getFlowId() Obtain <p>Asynchronous task flow id</p>
+ * @method void setFlowId(integer $FlowId) Set <p>Asynchronous task flow id</p>
+ * @method string getInput() Obtain <p>Task input information</p>
+ * @method void setInput(string $Input) Set <p>Task input information</p>
+ * @method string getInstanceGrpId() Obtain <p>Instance group id.</p>
+ * @method void setInstanceGrpId(string $InstanceGrpId) Set <p>Instance group id.</p>
+ * @method string getInstanceGroupId() Obtain <p>Instance group id.</p>
+ * @method void setInstanceGroupId(string $InstanceGroupId) Set <p>Instance group id.</p>
+ * @method string getInstanceId() Obtain <p>Instance id</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance id</p>
+ * @method string getObjectId() Obtain <p>Task operation object id</p>
+ * @method void setObjectId(string $ObjectId) Set <p>Task operation object id</p>
+ * @method string getObjectType() Obtain <p>Task operation object type.</p>
+ * @method void setObjectType(string $ObjectType) Set <p>Task operation object type.</p>
+ * @method string getOperator() Obtain <p>Operator uin</p>
+ * @method void setOperator(string $Operator) Set <p>Operator uin</p>
+ * @method string getOutput() Obtain <p>Task output information</p>
+ * @method void setOutput(string $Output) Set <p>Task output information</p>
+ * @method string getStatus() Obtain <p>Task status</p>
+ * @method void setStatus(string $Status) Set <p>Task status</p>
+ * @method string getTaskType() Obtain <p>Task type</p>
+ * @method void setTaskType(string $TaskType) Set <p>Task type</p>
+ * @method integer getTriggerTaskId() Obtain <p>Parent task ID that triggers this task</p>
+ * @method void setTriggerTaskId(integer $TriggerTaskId) Set <p>Parent task ID that triggers this task</p>
+ * @method string getUpdateTime() Obtain <p>Update time.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Update time.</p>
+ * @method string getStartTime() Obtain <p>Task start time</p>
+ * @method void setStartTime(string $StartTime) Set <p>Task start time</p>
+ * @method string getEndTime() Obtain <p>Task end time</p>
+ * @method void setEndTime(string $EndTime) Set <p>Task end time</p>
+ * @method string getClusterName() Obtain <p>Cluster name.</p>
+ * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
+ * @method string getInstanceName() Obtain <p>Instance name</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name</p>
+ * @method integer getProcess() Obtain <p>Task progress</p>
+ * @method void setProcess(integer $Process) Set <p>Task progress</p>
+ * @method array getModifyParamsData() Obtain <p>Modify parameter task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setModifyParamsData(array $ModifyParamsData) Set <p>Modify parameter task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method CreateClustersData getCreateClustersData() Obtain <p>Create cluster task information</p>
+ * @method void setCreateClustersData(CreateClustersData $CreateClustersData) Set <p>Create cluster task information</p>
+ * @method RollbackData getRollbackData() Obtain <p>Cluster rollback task information</p>
+ * @method void setRollbackData(RollbackData $RollbackData) Set <p>Cluster rollback task information</p>
+ * @method ModifyInstanceData getModifyInstanceData() Obtain <p>Instance configuration change task information</p>
+ * @method void setModifyInstanceData(ModifyInstanceData $ModifyInstanceData) Set <p>Instance configuration change task information</p>
+ * @method ManualBackupData getManualBackupData() Obtain <p>Manual backup task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setManualBackupData(ManualBackupData $ManualBackupData) Set <p>Manual backup task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ModifyDbVersionData getModifyDbVersionData() Obtain <p>Modify kernel version task information</p>
+ * @method void setModifyDbVersionData(ModifyDbVersionData $ModifyDbVersionData) Set <p>Modify kernel version task information</p>
+ * @method ClusterSlaveData getClusterSlaveData() Obtain <p>Cluster Availability Zone Information</p>
+ * @method void setClusterSlaveData(ClusterSlaveData $ClusterSlaveData) Set <p>Cluster Availability Zone Information</p>
+ * @method SwitchClusterLogBin getSwitchClusterLogBin() Obtain <p>Convert cluster logs</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSwitchClusterLogBin(SwitchClusterLogBin $SwitchClusterLogBin) Set <p>Convert cluster logs</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method BizTaskModifyParamsData getModifyInstanceParamsData() Obtain <p>Modify instance parameter data</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setModifyInstanceParamsData(BizTaskModifyParamsData $ModifyInstanceParamsData) Set <p>Modify instance parameter data</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method TaskMaintainInfo getTaskMaintainInfo() Obtain <p>Maintenance time</p>
+ * @method void setTaskMaintainInfo(TaskMaintainInfo $TaskMaintainInfo) Set <p>Maintenance time</p>
+ * @method array getInstanceCLSDeliveryInfos() Obtain <p>Instance Log Delivery Information</p>
+ * @method void setInstanceCLSDeliveryInfos(array $InstanceCLSDeliveryInfos) Set <p>Instance Log Delivery Information</p>
+ * @method TaskProgressInfo getTaskProgressInfo() Obtain <p>Task progress information</p>
+ * @method void setTaskProgressInfo(TaskProgressInfo $TaskProgressInfo) Set <p>Task progress information</p>
+ * @method GdnTaskInfo getGdnTaskInfo() Obtain <p>Global database network task</p>
+ * @method void setGdnTaskInfo(GdnTaskInfo $GdnTaskInfo) Set <p>Global database network task</p>
+ * @method string getVaultId() Obtain <p>Safe id</p>
+ * @method void setVaultId(string $VaultId) Set <p>Safe id</p>
+ * @method string getVaultName() Obtain <p>Safe name</p>
+ * @method void setVaultName(string $VaultName) Set <p>Safe name</p>
+ * @method AIOptimizerTaskData getAIOptimizerTaskData() Obtain <p>AI optimizer task information</p>
+ * @method void setAIOptimizerTaskData(AIOptimizerTaskData $AIOptimizerTaskData) Set <p>AI optimizer task information</p>
  */
 class BizTaskInfo extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Task ID.</p>
      */
     public $ID;
 
     /**
-     * @var integer 
+     * @var integer <p>User appid</p>
      */
     public $AppId;
 
     /**
-     * @var string 
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterId;
 
     /**
-     * @var string Region
+     * @var string <p>Region</p>
      */
     public $Region;
 
     /**
-     * @var string 
+     * @var string <p>Task creation time</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Specifies the delayed execution time.
+     * @var string <p>Delayed execution time</p>
      */
     public $DelayTime;
 
     /**
-     * @var string Task failure information.
+     * @var string <p>Task failure information</p>
      */
     public $ErrMsg;
 
     /**
-     * @var integer 
+     * @var integer <p>Asynchronous task flow id</p>
      */
     public $FlowId;
 
     /**
-     * @var string 
+     * @var string <p>Task input information</p>
      */
     public $Input;
 
     /**
-     * @var string 
+     * @var string <p>Instance group id.</p>
      * @deprecated
      */
     public $InstanceGrpId;
 
     /**
-     * @var string 
+     * @var string <p>Instance group id.</p>
      */
     public $InstanceGroupId;
 
     /**
-     * @var string 
+     * @var string <p>Instance id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 
+     * @var string <p>Task operation object id</p>
      */
     public $ObjectId;
 
     /**
-     * @var string 
+     * @var string <p>Task operation object type.</p>
      */
     public $ObjectType;
 
     /**
-     * @var string 
+     * @var string <p>Operator uin</p>
      */
     public $Operator;
 
     /**
-     * @var string 
+     * @var string <p>Task output information</p>
      */
     public $Output;
 
     /**
-     * @var string 
+     * @var string <p>Task status</p>
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string <p>Task type</p>
      */
     public $TaskType;
 
     /**
-     * @var integer 
+     * @var integer <p>Parent task ID that triggers this task</p>
      */
     public $TriggerTaskId;
 
     /**
-     * @var string 
+     * @var string <p>Update time.</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 
+     * @var string <p>Task start time</p>
      */
     public $StartTime;
 
     /**
-     * @var string 
+     * @var string <p>Task end time</p>
      */
     public $EndTime;
 
     /**
-     * @var string 
+     * @var string <p>Cluster name.</p>
      */
     public $ClusterName;
 
     /**
-     * @var string 
+     * @var string <p>Instance name</p>
      */
     public $InstanceName;
 
     /**
-     * @var integer 
+     * @var integer <p>Task progress</p>
      */
     public $Process;
 
     /**
-     * @var array 
+     * @var array <p>Modify parameter task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     public $ModifyParamsData;
 
     /**
-     * @var CreateClustersData Create cluster task information.
+     * @var CreateClustersData <p>Create cluster task information</p>
      */
     public $CreateClustersData;
 
     /**
-     * @var RollbackData Cluster rollback task information.
+     * @var RollbackData <p>Cluster rollback task information</p>
      */
     public $RollbackData;
 
     /**
-     * @var ModifyInstanceData Instance configuration change task information.
+     * @var ModifyInstanceData <p>Instance configuration change task information</p>
      */
     public $ModifyInstanceData;
 
     /**
-     * @var ManualBackupData 
+     * @var ManualBackupData <p>Manual backup task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ManualBackupData;
 
     /**
-     * @var ModifyDbVersionData Modify kernel version task information.
+     * @var ModifyDbVersionData <p>Modify kernel version task information</p>
      */
     public $ModifyDbVersionData;
 
     /**
-     * @var ClusterSlaveData Cluster availability zone information.
+     * @var ClusterSlaveData <p>Cluster Availability Zone Information</p>
      */
     public $ClusterSlaveData;
 
     /**
-     * @var SwitchClusterLogBin 
+     * @var SwitchClusterLogBin <p>Convert cluster logs</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SwitchClusterLogBin;
 
     /**
-     * @var BizTaskModifyParamsData 
+     * @var BizTaskModifyParamsData <p>Modify instance parameter data</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ModifyInstanceParamsData;
 
     /**
-     * @var TaskMaintainInfo Maintenance time.
+     * @var TaskMaintainInfo <p>Maintenance time</p>
      */
     public $TaskMaintainInfo;
 
     /**
-     * @var array Instance log delivery information.
-
+     * @var array <p>Instance Log Delivery Information</p>
      */
     public $InstanceCLSDeliveryInfos;
 
     /**
-     * @var TaskProgressInfo Task progress information.
+     * @var TaskProgressInfo <p>Task progress information</p>
      */
     public $TaskProgressInfo;
 
     /**
-     * @var GdnTaskInfo Global Database Network Task
+     * @var GdnTaskInfo <p>Global database network task</p>
      */
     public $GdnTaskInfo;
 
     /**
-     * @var string Safe id
+     * @var string <p>Safe id</p>
      */
     public $VaultId;
 
     /**
-     * @var string Safe name
+     * @var string <p>Safe name</p>
      */
     public $VaultName;
 
     /**
-     * @param integer $ID 
-     * @param integer $AppId 
-     * @param string $ClusterId 
-     * @param string $Region Region
-     * @param string $CreateTime 
-     * @param string $DelayTime Specifies the delayed execution time.
-     * @param string $ErrMsg Task failure information.
-     * @param integer $FlowId 
-     * @param string $Input 
-     * @param string $InstanceGrpId 
-     * @param string $InstanceGroupId 
-     * @param string $InstanceId 
-     * @param string $ObjectId 
-     * @param string $ObjectType 
-     * @param string $Operator 
-     * @param string $Output 
-     * @param string $Status 
-     * @param string $TaskType 
-     * @param integer $TriggerTaskId 
-     * @param string $UpdateTime 
-     * @param string $StartTime 
-     * @param string $EndTime 
-     * @param string $ClusterName 
-     * @param string $InstanceName 
-     * @param integer $Process 
-     * @param array $ModifyParamsData 
-     * @param CreateClustersData $CreateClustersData Create cluster task information.
-     * @param RollbackData $RollbackData Cluster rollback task information.
-     * @param ModifyInstanceData $ModifyInstanceData Instance configuration change task information.
-     * @param ManualBackupData $ManualBackupData 
-     * @param ModifyDbVersionData $ModifyDbVersionData Modify kernel version task information.
-     * @param ClusterSlaveData $ClusterSlaveData Cluster availability zone information.
-     * @param SwitchClusterLogBin $SwitchClusterLogBin 
-     * @param BizTaskModifyParamsData $ModifyInstanceParamsData 
-     * @param TaskMaintainInfo $TaskMaintainInfo Maintenance time.
-     * @param array $InstanceCLSDeliveryInfos Instance log delivery information.
+     * @var AIOptimizerTaskData <p>AI optimizer task information</p>
+     */
+    public $AIOptimizerTaskData;
 
-     * @param TaskProgressInfo $TaskProgressInfo Task progress information.
-     * @param GdnTaskInfo $GdnTaskInfo Global Database Network Task
-     * @param string $VaultId Safe id
-     * @param string $VaultName Safe name
+    /**
+     * @param integer $ID <p>Task ID.</p>
+     * @param integer $AppId <p>User appid</p>
+     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param string $Region <p>Region</p>
+     * @param string $CreateTime <p>Task creation time</p>
+     * @param string $DelayTime <p>Delayed execution time</p>
+     * @param string $ErrMsg <p>Task failure information</p>
+     * @param integer $FlowId <p>Asynchronous task flow id</p>
+     * @param string $Input <p>Task input information</p>
+     * @param string $InstanceGrpId <p>Instance group id.</p>
+     * @param string $InstanceGroupId <p>Instance group id.</p>
+     * @param string $InstanceId <p>Instance id</p>
+     * @param string $ObjectId <p>Task operation object id</p>
+     * @param string $ObjectType <p>Task operation object type.</p>
+     * @param string $Operator <p>Operator uin</p>
+     * @param string $Output <p>Task output information</p>
+     * @param string $Status <p>Task status</p>
+     * @param string $TaskType <p>Task type</p>
+     * @param integer $TriggerTaskId <p>Parent task ID that triggers this task</p>
+     * @param string $UpdateTime <p>Update time.</p>
+     * @param string $StartTime <p>Task start time</p>
+     * @param string $EndTime <p>Task end time</p>
+     * @param string $ClusterName <p>Cluster name.</p>
+     * @param string $InstanceName <p>Instance name</p>
+     * @param integer $Process <p>Task progress</p>
+     * @param array $ModifyParamsData <p>Modify parameter task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CreateClustersData $CreateClustersData <p>Create cluster task information</p>
+     * @param RollbackData $RollbackData <p>Cluster rollback task information</p>
+     * @param ModifyInstanceData $ModifyInstanceData <p>Instance configuration change task information</p>
+     * @param ManualBackupData $ManualBackupData <p>Manual backup task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ModifyDbVersionData $ModifyDbVersionData <p>Modify kernel version task information</p>
+     * @param ClusterSlaveData $ClusterSlaveData <p>Cluster Availability Zone Information</p>
+     * @param SwitchClusterLogBin $SwitchClusterLogBin <p>Convert cluster logs</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BizTaskModifyParamsData $ModifyInstanceParamsData <p>Modify instance parameter data</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TaskMaintainInfo $TaskMaintainInfo <p>Maintenance time</p>
+     * @param array $InstanceCLSDeliveryInfos <p>Instance Log Delivery Information</p>
+     * @param TaskProgressInfo $TaskProgressInfo <p>Task progress information</p>
+     * @param GdnTaskInfo $GdnTaskInfo <p>Global database network task</p>
+     * @param string $VaultId <p>Safe id</p>
+     * @param string $VaultName <p>Safe name</p>
+     * @param AIOptimizerTaskData $AIOptimizerTaskData <p>AI optimizer task information</p>
      */
     function __construct()
     {
@@ -543,6 +563,11 @@ class BizTaskInfo extends AbstractModel
 
         if (array_key_exists("VaultName",$param) and $param["VaultName"] !== null) {
             $this->VaultName = $param["VaultName"];
+        }
+
+        if (array_key_exists("AIOptimizerTaskData",$param) and $param["AIOptimizerTaskData"] !== null) {
+            $this->AIOptimizerTaskData = new AIOptimizerTaskData();
+            $this->AIOptimizerTaskData->deserialize($param["AIOptimizerTaskData"]);
         }
     }
 }

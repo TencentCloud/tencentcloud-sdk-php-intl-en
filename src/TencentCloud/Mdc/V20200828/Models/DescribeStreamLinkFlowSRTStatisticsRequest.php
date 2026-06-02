@@ -38,6 +38,8 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
 It must be in UTC format, such as `2020-01-01T12:00:00Z`.
  * @method string getPeriod() Obtain The query interval. Valid values: 5s, 1min, 5min, 15min.
  * @method void setPeriod(string $Period) Set The query interval. Valid values: 5s, 1min, 5min, 15min.
+ * @method string getRemoteIp() Obtain Peer IP address
+ * @method void setRemoteIp(string $RemoteIp) Set Peer IP address
  */
 class DescribeStreamLinkFlowSRTStatisticsRequest extends AbstractModel
 {
@@ -79,6 +81,11 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
     public $Period;
 
     /**
+     * @var string Peer IP address
+     */
+    public $RemoteIp;
+
+    /**
      * @param string $FlowId The flow ID.
      * @param string $Type Whether to query the inputs or outputs. Valid values: input, output.
      * @param string $InputOutputId The input or output ID.
@@ -88,6 +95,7 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
      * @param string $EndTime The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
 It must be in UTC format, such as `2020-01-01T12:00:00Z`.
      * @param string $Period The query interval. Valid values: 5s, 1min, 5min, 15min.
+     * @param string $RemoteIp Peer IP address
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
 
         if (array_key_exists("Period",$param) and $param["Period"] !== null) {
             $this->Period = $param["Period"];
+        }
+
+        if (array_key_exists("RemoteIp",$param) and $param["RemoteIp"] !== null) {
+            $this->RemoteIp = $param["RemoteIp"];
         }
     }
 }
