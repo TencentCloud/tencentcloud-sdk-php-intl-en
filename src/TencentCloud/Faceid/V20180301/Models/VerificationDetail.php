@@ -56,6 +56,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSeq(string $Seq) Set Unique ID of this verification process.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getLivenessInfoTag() Obtain Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+-Details as follows:
+01-User eyes closed throughout
+02-User not completed specified action
+03-Suspected rephotography attack
+04-Suspected Synthesis Attack
+05-Suspected fraudulent template
+06-Suspected watermark
+07-Reflection validation failed
+08 - Suspected change of person midway
+09-Poor face quality
+10 - Distance validation failed
+11-Suspected adversarial sample attack
+12 - Suspected attack traces in the mouth area
+13 - Suspected attack traces exist in the eye area
+14 - Eye or mouth obstruction
+Note: This field may return null, indicating that no valid values can be obtained.
+Example value: ["01"].
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLivenessInfoTag(array $LivenessInfoTag) Set Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+-Details as follows:
+01-User eyes closed throughout
+02-User not completed specified action
+03-Suspected rephotography attack
+04-Suspected Synthesis Attack
+05-Suspected fraudulent template
+06-Suspected watermark
+07-Reflection validation failed
+08 - Suspected change of person midway
+09-Poor face quality
+10 - Distance validation failed
+11-Suspected adversarial sample attack
+12 - Suspected attack traces in the mouth area
+13 - Suspected attack traces exist in the eye area
+14 - Eye or mouth obstruction
+Note: This field may return null, indicating that no valid values can be obtained.
+Example value: ["01"].
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class VerificationDetail extends AbstractModel
 {
@@ -114,6 +152,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Seq;
 
     /**
+     * @var array Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+-Details as follows:
+01-User eyes closed throughout
+02-User not completed specified action
+03-Suspected rephotography attack
+04-Suspected Synthesis Attack
+05-Suspected fraudulent template
+06-Suspected watermark
+07-Reflection validation failed
+08 - Suspected change of person midway
+09-Poor face quality
+10 - Distance validation failed
+11-Suspected adversarial sample attack
+12 - Suspected attack traces in the mouth area
+13 - Suspected attack traces exist in the eye area
+14 - Eye or mouth obstruction
+Note: This field may return null, indicating that no valid values can be obtained.
+Example value: ["01"].
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $LivenessInfoTag;
+
+    /**
      * @param integer $ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ErrorMsg The description of the final verification result.
@@ -131,6 +192,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param float $Similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Seq Unique ID of this verification process.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $LivenessInfoTag Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+-Details as follows:
+01-User eyes closed throughout
+02-User not completed specified action
+03-Suspected rephotography attack
+04-Suspected Synthesis Attack
+05-Suspected fraudulent template
+06-Suspected watermark
+07-Reflection validation failed
+08 - Suspected change of person midway
+09-Poor face quality
+10 - Distance validation failed
+11-Suspected adversarial sample attack
+12 - Suspected attack traces in the mouth area
+13 - Suspected attack traces exist in the eye area
+14 - Eye or mouth obstruction
+Note: This field may return null, indicating that no valid values can be obtained.
+Example value: ["01"].
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -180,6 +260,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Seq",$param) and $param["Seq"] !== null) {
             $this->Seq = $param["Seq"];
+        }
+
+        if (array_key_exists("LivenessInfoTag",$param) and $param["LivenessInfoTag"] !== null) {
+            $this->LivenessInfoTag = $param["LivenessInfoTag"];
         }
     }
 }

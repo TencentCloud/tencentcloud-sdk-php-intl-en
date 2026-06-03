@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) Set Project ID
  * @method array getUserIds() Obtain User UIN
  * @method void setUserIds(array $UserIds) Set User UIN
- * @method array getRoleIds() Obtain Role id
- * @method void setRoleIds(array $RoleIds) Set Role id
+ * @method array getRoleIds() Obtain Role ID
+ * @method void setRoleIds(array $RoleIds) Set Role ID
  */
 class AddProjectUserRoleRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class AddProjectUserRoleRequest extends AbstractModel
     public $UserIds;
 
     /**
-     * @var array Role id
+     * @var array Role ID
      */
     public $RoleIds;
 
     /**
      * @param string $ProjectId Project ID
      * @param array $UserIds User UIN
-     * @param array $RoleIds Role id
+     * @param array $RoleIds Role ID
      */
     function __construct()
     {

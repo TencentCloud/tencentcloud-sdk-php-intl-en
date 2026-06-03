@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceLogToCLS request structure.
  *
- * @method string getInstanceId() Obtain Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
- * @method void setInstanceId(string $InstanceId) Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
- * @method string getLogType() Obtain Log type. error: error log. slowlog: slow log.
- * @method void setLogType(string $LogType) Set Log type. error: error log. slowlog: slow log.
- * @method string getStatus() Obtain Delivery status. ON: Enabled, OFF: Disabled.
- * @method void setStatus(string $Status) Set Delivery status. ON: Enabled, OFF: Disabled.
- * @method boolean getCreateLogset() Obtain Whether required to create logset. Default to false.
- * @method void setCreateLogset(boolean $CreateLogset) Set Whether required to create logset. Default to false.
- * @method string getLogset() Obtain Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
- * @method void setLogset(string $Logset) Set Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
- * @method boolean getCreateLogTopic() Obtain Whether required to create log topic. Default to false.
- * @method void setCreateLogTopic(boolean $CreateLogTopic) Set Whether required to create log topic. Default to false.
- * @method string getLogTopic() Obtain Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
- * @method void setLogTopic(string $LogTopic) Set Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
- * @method integer getPeriod() Obtain Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
- * @method void setPeriod(integer $Period) Set Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
- * @method boolean getCreateIndex() Obtain Whether to create an index when creating a log topic. Default to false.
- * @method void setCreateIndex(boolean $CreateIndex) Set Whether to create an index when creating a log topic. Default to false.
- * @method string getClsRegion() Obtain The region of CLS. If left empty, it defaults to the parameter value of Region.
- * @method void setClsRegion(string $ClsRegion) Set The region of CLS. If left empty, it defaults to the parameter value of Region.
+ * @method string getInstanceId() Obtain <p>Instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+ * @method string getLogType() Obtain <p>Log type. Error: error log, slowlog: slow log.</p>
+ * @method void setLogType(string $LogType) Set <p>Log type. Error: error log, slowlog: slow log.</p>
+ * @method string getStatus() Obtain <p>Delivery status. ON: enabled, OFF: disabled.</p>
+ * @method void setStatus(string $Status) Set <p>Delivery status. ON: enabled, OFF: disabled.</p>
+ * @method boolean getCreateLogset() Obtain <p>Whether required to create logset. Default to false.</p>
+ * @method void setCreateLogset(boolean $CreateLogset) Set <p>Whether required to create logset. Default to false.</p>
+ * @method string getLogset() Obtain <p>Logset name when creating a logset; logset ID when selecting an existing logset. Empty by default.<br>Description: When the Status parameter is ON, either the Logset or LogTopic parameter must be filled.</p>
+ * @method void setLogset(string $Logset) Set <p>Logset name when creating a logset; logset ID when selecting an existing logset. Empty by default.<br>Description: When the Status parameter is ON, either the Logset or LogTopic parameter must be filled.</p>
+ * @method boolean getCreateLogTopic() Obtain <p>Whether required to create log topic. Default to false.</p>
+ * @method void setCreateLogTopic(boolean $CreateLogTopic) Set <p>Whether required to create log topic. Default to false.</p>
+ * @method string getLogTopic() Obtain <p>Enter a log topic name when creating a log topic, or enter a log topic ID when selecting an existing log topic. Empty by default.<br>Description: When the Status parameter is set to ON, either the Logset or LogTopic parameter must be specified.</p>
+ * @method void setLogTopic(string $LogTopic) Set <p>Enter a log topic name when creating a log topic, or enter a log topic ID when selecting an existing log topic. Empty by default.<br>Description: When the Status parameter is set to ON, either the Logset or LogTopic parameter must be specified.</p>
+ * @method integer getPeriod() Obtain <p>Valid period of the log topic. Default value: 30 days if left empty. Maximum value: 3600 days.</p>
+ * @method void setPeriod(integer $Period) Set <p>Valid period of the log topic. Default value: 30 days if left empty. Maximum value: 3600 days.</p>
+ * @method boolean getCreateIndex() Obtain <p>Whether to create an index when creating a log topic. Defaults to false.</p>
+ * @method void setCreateIndex(boolean $CreateIndex) Set <p>Whether to create an index when creating a log topic. Defaults to false.</p>
+ * @method string getClsRegion() Obtain <p>CLS region. If left empty, it defaults to the Region parameter value.</p>
+ * @method void setClsRegion(string $ClsRegion) Set <p>CLS region. If left empty, it defaults to the Region parameter value.</p>
+ * @method array getResourceTags() Obtain <p>Selectable when creating a log topic. Cannot exceed 10 tags</p>
+ * @method void setResourceTags(array $ResourceTags) Set <p>Selectable when creating a log topic. Cannot exceed 10 tags</p>
  */
 class ModifyDBInstanceLogToCLSRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @var string <p>Instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Log type. error: error log. slowlog: slow log.
+     * @var string <p>Log type. Error: error log, slowlog: slow log.</p>
      */
     public $LogType;
 
     /**
-     * @var string Delivery status. ON: Enabled, OFF: Disabled.
+     * @var string <p>Delivery status. ON: enabled, OFF: disabled.</p>
      */
     public $Status;
 
     /**
-     * @var boolean Whether required to create logset. Default to false.
+     * @var boolean <p>Whether required to create logset. Default to false.</p>
      */
     public $CreateLogset;
 
     /**
-     * @var string Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+     * @var string <p>Logset name when creating a logset; logset ID when selecting an existing logset. Empty by default.<br>Description: When the Status parameter is ON, either the Logset or LogTopic parameter must be filled.</p>
      */
     public $Logset;
 
     /**
-     * @var boolean Whether required to create log topic. Default to false.
+     * @var boolean <p>Whether required to create log topic. Default to false.</p>
      */
     public $CreateLogTopic;
 
     /**
-     * @var string Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+     * @var string <p>Enter a log topic name when creating a log topic, or enter a log topic ID when selecting an existing log topic. Empty by default.<br>Description: When the Status parameter is set to ON, either the Logset or LogTopic parameter must be specified.</p>
      */
     public $LogTopic;
 
     /**
-     * @var integer Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
+     * @var integer <p>Valid period of the log topic. Default value: 30 days if left empty. Maximum value: 3600 days.</p>
      */
     public $Period;
 
     /**
-     * @var boolean Whether to create an index when creating a log topic. Default to false.
+     * @var boolean <p>Whether to create an index when creating a log topic. Defaults to false.</p>
      */
     public $CreateIndex;
 
     /**
-     * @var string The region of CLS. If left empty, it defaults to the parameter value of Region.
+     * @var string <p>CLS region. If left empty, it defaults to the Region parameter value.</p>
      */
     public $ClsRegion;
 
     /**
-     * @param string $InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
-     * @param string $LogType Log type. error: error log. slowlog: slow log.
-     * @param string $Status Delivery status. ON: Enabled, OFF: Disabled.
-     * @param boolean $CreateLogset Whether required to create logset. Default to false.
-     * @param string $Logset Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
-     * @param boolean $CreateLogTopic Whether required to create log topic. Default to false.
-     * @param string $LogTopic Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
-     * @param integer $Period Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
-     * @param boolean $CreateIndex Whether to create an index when creating a log topic. Default to false.
-     * @param string $ClsRegion The region of CLS. If left empty, it defaults to the parameter value of Region.
+     * @var array <p>Selectable when creating a log topic. Cannot exceed 10 tags</p>
+     */
+    public $ResourceTags;
+
+    /**
+     * @param string $InstanceId <p>Instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+     * @param string $LogType <p>Log type. Error: error log, slowlog: slow log.</p>
+     * @param string $Status <p>Delivery status. ON: enabled, OFF: disabled.</p>
+     * @param boolean $CreateLogset <p>Whether required to create logset. Default to false.</p>
+     * @param string $Logset <p>Logset name when creating a logset; logset ID when selecting an existing logset. Empty by default.<br>Description: When the Status parameter is ON, either the Logset or LogTopic parameter must be filled.</p>
+     * @param boolean $CreateLogTopic <p>Whether required to create log topic. Default to false.</p>
+     * @param string $LogTopic <p>Enter a log topic name when creating a log topic, or enter a log topic ID when selecting an existing log topic. Empty by default.<br>Description: When the Status parameter is set to ON, either the Logset or LogTopic parameter must be specified.</p>
+     * @param integer $Period <p>Valid period of the log topic. Default value: 30 days if left empty. Maximum value: 3600 days.</p>
+     * @param boolean $CreateIndex <p>Whether to create an index when creating a log topic. Defaults to false.</p>
+     * @param string $ClsRegion <p>CLS region. If left empty, it defaults to the Region parameter value.</p>
+     * @param array $ResourceTags <p>Selectable when creating a log topic. Cannot exceed 10 tags</p>
      */
     function __construct()
     {
@@ -164,6 +164,15 @@ Description: When the parameter Status is set to ON, you must fill in either the
 
         if (array_key_exists("ClsRegion",$param) and $param["ClsRegion"] !== null) {
             $this->ClsRegion = $param["ClsRegion"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new TagInfoItem();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

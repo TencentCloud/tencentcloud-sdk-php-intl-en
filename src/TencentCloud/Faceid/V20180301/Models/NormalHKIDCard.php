@@ -68,9 +68,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCurrentIssueDate(string $CurrentIssueDate) Set The current date of issue
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHKIDVersion() Obtain Hong kong identity card version.
+ * @method string getHKIDVersion() Obtain Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHKIDVersion(string $HKIDVersion) Set Hong kong identity card version.
+ * @method void setHKIDVersion(string $HKIDVersion) Set Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NormalHKIDCard extends AbstractModel
@@ -140,7 +140,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CurrentIssueDate;
 
     /**
-     * @var string Hong kong identity card version.
+     * @var string Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HKIDVersion;
@@ -170,7 +170,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CurrentIssueDate The current date of issue
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HKIDVersion Hong kong identity card version.
+     * @param string $HKIDVersion Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
