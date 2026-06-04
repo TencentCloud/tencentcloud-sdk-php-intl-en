@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  "DRY_RUN"
  * @method void setExecutionSpace(string $ExecutionSpace) Set Execution space, optional 
  "DRY_RUN"
- * @method string getProductName() Obtain Business Products, options: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
- * @method void setProductName(string $ProductName) Set Business Products, options: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+ * @method string getProductName() Obtain Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+ * @method void setProductName(string $ProductName) Set Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
  * @method string getResourceGroup() Obtain Resource Group Information, optional
  * @method void setResourceGroup(string $ResourceGroup) Set Resource Group Information, optional
  */
@@ -38,7 +38,7 @@ class SearchConditionInstanceNew extends AbstractModel
     public $ExecutionSpace;
 
     /**
-     * @var string Business Products, options: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+     * @var string Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
      */
     public $ProductName;
 
@@ -50,7 +50,7 @@ class SearchConditionInstanceNew extends AbstractModel
     /**
      * @param string $ExecutionSpace Execution space, optional 
  "DRY_RUN"
-     * @param string $ProductName Business Products, options: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+     * @param string $ProductName Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
      * @param string $ResourceGroup Resource Group Information, optional
      */
     function __construct()
