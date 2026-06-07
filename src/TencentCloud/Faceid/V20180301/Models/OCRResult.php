@@ -18,7 +18,7 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The content of a single license in the license information.
+ * The content of a single license in the license information
  *
  * @method boolean getIsPass() Obtain <p>Whether the identity authentication or OCR process is successful.</p>
 Note: This field may return null, indicating that no valid values can be obtained.

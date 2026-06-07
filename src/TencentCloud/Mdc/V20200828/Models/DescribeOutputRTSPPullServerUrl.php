@@ -18,20 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Query output RTSP pull stream URL information.
+ * 
  *
- * @method string getUrl() Obtain RTSP pull stream address Url.
- * @method void setUrl(string $Url) Set RTSP pull stream address Url.
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
  */
 class DescribeOutputRTSPPullServerUrl extends AbstractModel
 {
     /**
-     * @var string RTSP pull stream address Url.
+     * @var string 
      */
     public $Url;
 
     /**
-     * @param string $Url RTSP pull stream address Url.
+     * @param string $Url 
      */
     function __construct()
     {

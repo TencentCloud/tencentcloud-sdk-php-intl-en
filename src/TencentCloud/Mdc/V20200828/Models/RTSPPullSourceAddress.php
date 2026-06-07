@@ -18,20 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Created input RTSP pull stream origin server configuration.
+ * 
  *
- * @method string getUrl() Obtain The Url address of the RTSP origin server.
- * @method void setUrl(string $Url) Set The Url address of the RTSP origin server.
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
  */
 class RTSPPullSourceAddress extends AbstractModel
 {
     /**
-     * @var string The Url address of the RTSP origin server.
+     * @var string 
      */
     public $Url;
 
     /**
-     * @param string $Url The Url address of the RTSP origin server.
+     * @param string $Url 
      */
     function __construct()
     {

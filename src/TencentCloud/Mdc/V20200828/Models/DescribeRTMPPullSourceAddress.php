@@ -18,36 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Query the input RTMP configuration.
+ * 
  *
- * @method string getTcUrl() Obtain The TcUrl address of the RTMP origin server.
- * @method void setTcUrl(string $TcUrl) Set The TcUrl address of the RTMP origin server.
- * @method string getStreamKey() Obtain The StreamKey of the RTMP origin server.
-
-The concatenation rule for the RTMP origin server address is: $TcUrl/$StreamKey.
- * @method void setStreamKey(string $StreamKey) Set The StreamKey of the RTMP origin server.
-
-The concatenation rule for the RTMP origin server address is: $TcUrl/$StreamKey.
+ * @method string getTcUrl() Obtain 
+ * @method void setTcUrl(string $TcUrl) Set 
+ * @method string getStreamKey() Obtain 
+ * @method void setStreamKey(string $StreamKey) Set 
  */
 class DescribeRTMPPullSourceAddress extends AbstractModel
 {
     /**
-     * @var string The TcUrl address of the RTMP origin server.
+     * @var string 
      */
     public $TcUrl;
 
     /**
-     * @var string The StreamKey of the RTMP origin server.
-
-The concatenation rule for the RTMP origin server address is: $TcUrl/$StreamKey.
+     * @var string 
      */
     public $StreamKey;
 
     /**
-     * @param string $TcUrl The TcUrl address of the RTMP origin server.
-     * @param string $StreamKey The StreamKey of the RTMP origin server.
-
-The concatenation rule for the RTMP origin server address is: $TcUrl/$StreamKey.
+     * @param string $TcUrl 
+     * @param string $StreamKey 
      */
     function __construct()
     {

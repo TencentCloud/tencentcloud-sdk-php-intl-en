@@ -78,20 +78,20 @@ Note: The returned value of this field may be null, indicating that no valid val
 Note: The returned value of this field may be null, indicating that no valid value is obtained.
  * @method void setOrderType(string $OrderType) Set Order type 
 Note: The returned value of this field may be null, indicating that no valid value is obtained.
- * @method string getCheckStatus() Obtain Acceptance Status
- * @method void setCheckStatus(string $CheckStatus) Set Acceptance Status
- * @method string getDeliverExpectTime() Obtain Expected Delivery Time
- * @method void setDeliverExpectTime(string $DeliverExpectTime) Set Expected Delivery Time
- * @method string getDeliverFinishTime() Obtain Actual Delivery Completion Time
- * @method void setDeliverFinishTime(string $DeliverFinishTime) Set Actual Delivery Completion Time
- * @method string getCheckExpectTime() Obtain Expected Acceptance Time
- * @method void setCheckExpectTime(string $CheckExpectTime) Set Expected Acceptance Time
- * @method string getCheckFinishTime() Obtain Actual Acceptance Completion Time
- * @method void setCheckFinishTime(string $CheckFinishTime) Set Actual Acceptance Completion Time
- * @method string getOrderSLA() Obtain Order SLA
- * @method void setOrderSLA(string $OrderSLA) Set Order SLA
- * @method string getOrderPayPlan() Obtain Order Payment Plan
- * @method void setOrderPayPlan(string $OrderPayPlan) Set Order Payment Plan
+ * @method string getCheckStatus() Obtain 
+ * @method void setCheckStatus(string $CheckStatus) Set 
+ * @method string getDeliverExpectTime() Obtain 
+ * @method void setDeliverExpectTime(string $DeliverExpectTime) Set 
+ * @method string getDeliverFinishTime() Obtain 
+ * @method void setDeliverFinishTime(string $DeliverFinishTime) Set 
+ * @method string getCheckExpectTime() Obtain 
+ * @method void setCheckExpectTime(string $CheckExpectTime) Set 
+ * @method string getCheckFinishTime() Obtain 
+ * @method void setCheckFinishTime(string $CheckFinishTime) Set 
+ * @method string getOrderSLA() Obtain 
+ * @method void setOrderSLA(string $OrderSLA) Set 
+ * @method string getOrderPayPlan() Obtain 
+ * @method void setOrderPayPlan(string $OrderPayPlan) Set 
  */
 class DedicatedClusterOrder extends AbstractModel
 {
@@ -102,21 +102,25 @@ class DedicatedClusterOrder extends AbstractModel
 
     /**
      * @var string CDC type id (moved to the next level, obsolete and will be deleted later)
+     * @deprecated
      */
     public $DedicatedClusterTypeId;
 
     /**
      * @var array List of supported storage types (moved to the next level, obsolete and will be deleted later)
+     * @deprecated
      */
     public $SupportedStorageType;
 
     /**
      * @var array Supported uplink switch transmission rate (GiB) (moved to the next level, obsolete and will be deleted later)
+     * @deprecated
      */
     public $SupportedUplinkSpeed;
 
     /**
      * @var array List of supported instance families (moved to the next level, obsolete and will be deleted later)
+     * @deprecated
      */
     public $SupportedInstanceFamily;
 
@@ -205,37 +209,37 @@ Note: The returned value of this field may be null, indicating that no valid val
     public $OrderType;
 
     /**
-     * @var string Acceptance Status
+     * @var string 
      */
     public $CheckStatus;
 
     /**
-     * @var string Expected Delivery Time
+     * @var string 
      */
     public $DeliverExpectTime;
 
     /**
-     * @var string Actual Delivery Completion Time
+     * @var string 
      */
     public $DeliverFinishTime;
 
     /**
-     * @var string Expected Acceptance Time
+     * @var string 
      */
     public $CheckExpectTime;
 
     /**
-     * @var string Actual Acceptance Completion Time
+     * @var string 
      */
     public $CheckFinishTime;
 
     /**
-     * @var string Order SLA
+     * @var string 
      */
     public $OrderSLA;
 
     /**
-     * @var string Order Payment Plan
+     * @var string 
      */
     public $OrderPayPlan;
 
@@ -269,13 +273,13 @@ Note: The returned value of this field may be null, indicating that no valid val
 Note: The returned value of this field may be null, indicating that no valid value is obtained.
      * @param string $OrderType Order type 
 Note: The returned value of this field may be null, indicating that no valid value is obtained.
-     * @param string $CheckStatus Acceptance Status
-     * @param string $DeliverExpectTime Expected Delivery Time
-     * @param string $DeliverFinishTime Actual Delivery Completion Time
-     * @param string $CheckExpectTime Expected Acceptance Time
-     * @param string $CheckFinishTime Actual Acceptance Completion Time
-     * @param string $OrderSLA Order SLA
-     * @param string $OrderPayPlan Order Payment Plan
+     * @param string $CheckStatus 
+     * @param string $DeliverExpectTime 
+     * @param string $DeliverFinishTime 
+     * @param string $CheckExpectTime 
+     * @param string $CheckFinishTime 
+     * @param string $OrderSLA 
+     * @param string $OrderPayPlan 
      */
     function __construct()
     {

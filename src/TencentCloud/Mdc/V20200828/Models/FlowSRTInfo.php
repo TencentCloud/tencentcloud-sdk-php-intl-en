@@ -38,36 +38,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSendPacketDropNumber(integer $SendPacketDropNumber) Set The number of dropped packets for sending.
  * @method integer getRecvPacketDropNumber() Obtain The number of dropped packets for receiving.
  * @method void setRecvPacketDropNumber(integer $RecvPacketDropNumber) Set The number of dropped packets for receiving.
- * @method float getBandwidth() Obtain bandwidth
- * @method void setBandwidth(float $Bandwidth) Set bandwidth
- * @method float getSendBandwidth() Obtain Transmit bandwidth
- * @method void setSendBandwidth(float $SendBandwidth) Set Transmit bandwidth
- * @method float getRecvBandwidth() Obtain Receive bandwidth
- * @method void setRecvBandwidth(float $RecvBandwidth) Set Receive bandwidth
- * @method integer getSendPackets() Obtain Number of packets sent
- * @method void setSendPackets(integer $SendPackets) Set Number of packets sent
- * @method integer getRecvPackets() Obtain Number of received packets
- * @method void setRecvPackets(integer $RecvPackets) Set Number of received packets
- * @method integer getSendLostPackets() Obtain Send lost package
- * @method void setSendLostPackets(integer $SendLostPackets) Set Send lost package
- * @method integer getRecvLostPackets() Obtain Accept lost packages
- * @method void setRecvLostPackets(integer $RecvLostPackets) Set Accept lost packages
- * @method integer getSendRetransmitPackets() Obtain Number of retransmission packets sent
- * @method void setSendRetransmitPackets(integer $SendRetransmitPackets) Set Number of retransmission packets sent
- * @method integer getRecvRetransmitPackets() Obtain Number of received retransmission packets
- * @method void setRecvRetransmitPackets(integer $RecvRetransmitPackets) Set Number of received retransmission packets
- * @method integer getFlightSize() Obtain Flight window size
- * @method void setFlightSize(integer $FlightSize) Set Flight window size
- * @method integer getCongestionWindow() Obtain congestion window
- * @method void setCongestionWindow(integer $CongestionWindow) Set congestion window
- * @method integer getSendBuffer() Obtain Send buffer (ms)
- * @method void setSendBuffer(integer $SendBuffer) Set Send buffer (ms)
+ * @method float getBandwidth() Obtain Bandwidth
+ * @method void setBandwidth(float $Bandwidth) Set Bandwidth
+ * @method float getSendBandwidth() Obtain transmit bandwidth
+ * @method void setSendBandwidth(float $SendBandwidth) Set transmit bandwidth
+ * @method float getRecvBandwidth() Obtain Receiving bandwidth
+ * @method void setRecvBandwidth(float $RecvBandwidth) Set Receiving bandwidth
+ * @method integer getSendPackets() Obtain Sent packet count
+ * @method void setSendPackets(integer $SendPackets) Set Sent packet count
+ * @method integer getRecvPackets() Obtain Received packets
+ * @method void setRecvPackets(integer $RecvPackets) Set Received packets
+ * @method integer getSendLostPackets() Obtain Sent lost packets
+ * @method void setSendLostPackets(integer $SendLostPackets) Set Sent lost packets
+ * @method integer getRecvLostPackets() Obtain accept lost packets
+ * @method void setRecvLostPackets(integer $RecvLostPackets) Set accept lost packets
+ * @method integer getSendRetransmitPackets() Obtain Retransmitted packet count
+ * @method void setSendRetransmitPackets(integer $SendRetransmitPackets) Set Retransmitted packet count
+ * @method integer getRecvRetransmitPackets() Obtain Retransmitted packets received
+ * @method void setRecvRetransmitPackets(integer $RecvRetransmitPackets) Set Retransmitted packets received
+ * @method integer getFlightSize() Obtain Window size
+ * @method void setFlightSize(integer $FlightSize) Set Window size
+ * @method integer getCongestionWindow() Obtain Congestion window
+ * @method void setCongestionWindow(integer $CongestionWindow) Set Congestion window
+ * @method integer getSendBuffer() Obtain Sending buffer (ms)
+ * @method void setSendBuffer(integer $SendBuffer) Set Sending buffer (ms)
  * @method integer getRecvBuffer() Obtain Receive buffer (ms)
  * @method void setRecvBuffer(integer $RecvBuffer) Set Receive buffer (ms)
- * @method integer getSendLatency() Obtain Sending delay
- * @method void setSendLatency(integer $SendLatency) Set Sending delay
- * @method integer getRecvLatency() Obtain Receiving delay
- * @method void setRecvLatency(integer $RecvLatency) Set Receiving delay
+ * @method integer getSendLatency() Obtain Send delay
+ * @method void setSendLatency(integer $SendLatency) Set Send delay
+ * @method integer getRecvLatency() Obtain receive latency
+ * @method void setRecvLatency(integer $RecvLatency) Set receive latency
  */
 class FlowSRTInfo extends AbstractModel
 {
@@ -117,62 +117,62 @@ class FlowSRTInfo extends AbstractModel
     public $RecvPacketDropNumber;
 
     /**
-     * @var float bandwidth
+     * @var float Bandwidth
      */
     public $Bandwidth;
 
     /**
-     * @var float Transmit bandwidth
+     * @var float transmit bandwidth
      */
     public $SendBandwidth;
 
     /**
-     * @var float Receive bandwidth
+     * @var float Receiving bandwidth
      */
     public $RecvBandwidth;
 
     /**
-     * @var integer Number of packets sent
+     * @var integer Sent packet count
      */
     public $SendPackets;
 
     /**
-     * @var integer Number of received packets
+     * @var integer Received packets
      */
     public $RecvPackets;
 
     /**
-     * @var integer Send lost package
+     * @var integer Sent lost packets
      */
     public $SendLostPackets;
 
     /**
-     * @var integer Accept lost packages
+     * @var integer accept lost packets
      */
     public $RecvLostPackets;
 
     /**
-     * @var integer Number of retransmission packets sent
+     * @var integer Retransmitted packet count
      */
     public $SendRetransmitPackets;
 
     /**
-     * @var integer Number of received retransmission packets
+     * @var integer Retransmitted packets received
      */
     public $RecvRetransmitPackets;
 
     /**
-     * @var integer Flight window size
+     * @var integer Window size
      */
     public $FlightSize;
 
     /**
-     * @var integer congestion window
+     * @var integer Congestion window
      */
     public $CongestionWindow;
 
     /**
-     * @var integer Send buffer (ms)
+     * @var integer Sending buffer (ms)
      */
     public $SendBuffer;
 
@@ -182,12 +182,12 @@ class FlowSRTInfo extends AbstractModel
     public $RecvBuffer;
 
     /**
-     * @var integer Sending delay
+     * @var integer Send delay
      */
     public $SendLatency;
 
     /**
-     * @var integer Receiving delay
+     * @var integer receive latency
      */
     public $RecvLatency;
 
@@ -201,21 +201,21 @@ class FlowSRTInfo extends AbstractModel
      * @param string $SessionId The ID of a push session.
      * @param integer $SendPacketDropNumber The number of dropped packets for sending.
      * @param integer $RecvPacketDropNumber The number of dropped packets for receiving.
-     * @param float $Bandwidth bandwidth
-     * @param float $SendBandwidth Transmit bandwidth
-     * @param float $RecvBandwidth Receive bandwidth
-     * @param integer $SendPackets Number of packets sent
-     * @param integer $RecvPackets Number of received packets
-     * @param integer $SendLostPackets Send lost package
-     * @param integer $RecvLostPackets Accept lost packages
-     * @param integer $SendRetransmitPackets Number of retransmission packets sent
-     * @param integer $RecvRetransmitPackets Number of received retransmission packets
-     * @param integer $FlightSize Flight window size
-     * @param integer $CongestionWindow congestion window
-     * @param integer $SendBuffer Send buffer (ms)
+     * @param float $Bandwidth Bandwidth
+     * @param float $SendBandwidth transmit bandwidth
+     * @param float $RecvBandwidth Receiving bandwidth
+     * @param integer $SendPackets Sent packet count
+     * @param integer $RecvPackets Received packets
+     * @param integer $SendLostPackets Sent lost packets
+     * @param integer $RecvLostPackets accept lost packets
+     * @param integer $SendRetransmitPackets Retransmitted packet count
+     * @param integer $RecvRetransmitPackets Retransmitted packets received
+     * @param integer $FlightSize Window size
+     * @param integer $CongestionWindow Congestion window
+     * @param integer $SendBuffer Sending buffer (ms)
      * @param integer $RecvBuffer Receive buffer (ms)
-     * @param integer $SendLatency Sending delay
-     * @param integer $RecvLatency Receiving delay
+     * @param integer $SendLatency Send delay
+     * @param integer $RecvLatency receive latency
      */
     function __construct()
     {

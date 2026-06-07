@@ -18,20 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Created input HLS pull stream configuration.
+ * 
  *
- * @method array getSourceAddresses() Obtain The origin server address for the HLS origin server. There can be only one.
- * @method void setSourceAddresses(array $SourceAddresses) Set The origin server address for the HLS origin server. There can be only one.
+ * @method array getSourceAddresses() Obtain 
+ * @method void setSourceAddresses(array $SourceAddresses) Set 
  */
 class CreateInputHLSPullSettings extends AbstractModel
 {
     /**
-     * @var array The origin server address for the HLS origin server. There can be only one.
+     * @var array 
      */
     public $SourceAddresses;
 
     /**
-     * @param array $SourceAddresses The origin server address for the HLS origin server. There can be only one.
+     * @param array $SourceAddresses 
      */
     function __construct()
     {

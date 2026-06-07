@@ -49,6 +49,7 @@ class HostInfo extends AbstractModel
 {
     /**
      * @var string Host IP
+     * @deprecated
      */
     public $HostIp;
 

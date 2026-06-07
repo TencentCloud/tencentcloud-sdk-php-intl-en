@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputGroup(array $InputGroup) Set Flow input group
  * @method string getEventId() Obtain The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
  * @method void setEventId(string $EventId) Set The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+ * @method array getOutputGroup() Obtain Flow output group.
+ * @method void setOutputGroup(array $OutputGroup) Set Flow output group.
  */
 class CreateStreamLinkFlowRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateStreamLinkFlowRequest extends AbstractModel
     public $EventId;
 
     /**
+     * @var array Flow output group.
+     */
+    public $OutputGroup;
+
+    /**
      * @param string $FlowName Flow name
      * @param integer $MaxBandwidth Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
      * @param array $InputGroup Flow input group
      * @param string $EventId The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+     * @param array $OutputGroup Flow output group.
      */
     function __construct()
     {
@@ -89,6 +97,15 @@ class CreateStreamLinkFlowRequest extends AbstractModel
 
         if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
             $this->EventId = $param["EventId"];
+        }
+
+        if (array_key_exists("OutputGroup",$param) and $param["OutputGroup"] !== null) {
+            $this->OutputGroup = [];
+            foreach ($param["OutputGroup"] as $key => $value){
+                $obj = new CreateOutputInfo();
+                $obj->deserialize($value);
+                array_push($this->OutputGroup, $obj);
+            }
         }
     }
 }

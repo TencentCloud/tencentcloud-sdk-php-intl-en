@@ -18,52 +18,52 @@ namespace TencentCloud\Cdc\V20201214\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Host Machine Resource Overview Details
+ * 
  *
- * @method string getHostTypeFamily() Obtain Type Family
- * @method void setHostTypeFamily(string $HostTypeFamily) Set Type Family
- * @method float getCpuTotal() Obtain Total CPU
- * @method void setCpuTotal(float $CpuTotal) Set Total CPU
- * @method float getCpuAvailable() Obtain Available CPU
- * @method void setCpuAvailable(float $CpuAvailable) Set Available CPU
- * @method float getMemTotal() Obtain Total Memory
- * @method void setMemTotal(float $MemTotal) Set Total Memory
- * @method float getMemAvailable() Obtain Available Memory
- * @method void setMemAvailable(float $MemAvailable) Set Available Memory
+ * @method string getHostTypeFamily() Obtain 
+ * @method void setHostTypeFamily(string $HostTypeFamily) Set 
+ * @method float getCpuTotal() Obtain 
+ * @method void setCpuTotal(float $CpuTotal) Set 
+ * @method float getCpuAvailable() Obtain 
+ * @method void setCpuAvailable(float $CpuAvailable) Set 
+ * @method float getMemTotal() Obtain 
+ * @method void setMemTotal(float $MemTotal) Set 
+ * @method float getMemAvailable() Obtain 
+ * @method void setMemAvailable(float $MemAvailable) Set 
  */
 class HostDetailInfo extends AbstractModel
 {
     /**
-     * @var string Type Family
+     * @var string 
      */
     public $HostTypeFamily;
 
     /**
-     * @var float Total CPU
+     * @var float 
      */
     public $CpuTotal;
 
     /**
-     * @var float Available CPU
+     * @var float 
      */
     public $CpuAvailable;
 
     /**
-     * @var float Total Memory
+     * @var float 
      */
     public $MemTotal;
 
     /**
-     * @var float Available Memory
+     * @var float 
      */
     public $MemAvailable;
 
     /**
-     * @param string $HostTypeFamily Type Family
-     * @param float $CpuTotal Total CPU
-     * @param float $CpuAvailable Available CPU
-     * @param float $MemTotal Total Memory
-     * @param float $MemAvailable Available Memory
+     * @param string $HostTypeFamily 
+     * @param float $CpuTotal 
+     * @param float $CpuAvailable 
+     * @param float $MemTotal 
+     * @param float $MemAvailable 
      */
     function __construct()
     {
