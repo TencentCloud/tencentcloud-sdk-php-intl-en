@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteClusterDatabase request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getDbNames() Obtain 
- * @method void setDbNames(array $DbNames) Set 
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method array getDbNames() Obtain Database name.
+ * @method void setDbNames(array $DbNames) Set Database name.
  */
 class DeleteClusterDatabaseRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var array 
+     * @var array Database name.
      */
     public $DbNames;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param array $DbNames 
+     * @param string $ClusterId Cluster ID.
+     * @param array $DbNames Database name.
      */
     function __construct()
     {

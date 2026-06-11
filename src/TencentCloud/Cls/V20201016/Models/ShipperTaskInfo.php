@@ -34,8 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) Set Start timestamp of the current shipping task in milliseconds
  * @method integer getEndTime() Obtain End timestamp of the current shipping task in milliseconds
  * @method void setEndTime(integer $EndTime) Set End timestamp of the current shipping task in milliseconds
- * @method string getStatus() Obtain Result of the current shipping task. Valid values: `success`, `running`, `failed`
- * @method void setStatus(string $Status) Set Result of the current shipping task. Valid values: `success`, `running`, `failed`
+ * @method string getStatus() Obtain Result of this shipping: "success", "running", "failed".
+
+-success: Task successful.
+- running: Task processing.
+- failed: Task failure.
+ * @method void setStatus(string $Status) Set Result of this shipping: "success", "running", "failed".
+
+-success: Task successful.
+- running: Task processing.
+- failed: Task failure.
  * @method string getMessage() Obtain Result details
  * @method void setMessage(string $Message) Set Result details
  */
@@ -77,7 +85,11 @@ class ShipperTaskInfo extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string Result of the current shipping task. Valid values: `success`, `running`, `failed`
+     * @var string Result of this shipping: "success", "running", "failed".
+
+-success: Task successful.
+- running: Task processing.
+- failed: Task failure.
      */
     public $Status;
 
@@ -94,7 +106,11 @@ class ShipperTaskInfo extends AbstractModel
      * @param integer $RangeEnd End timestamp of the current batch of shipped logs in milliseconds
      * @param integer $StartTime Start timestamp of the current shipping task in milliseconds
      * @param integer $EndTime End timestamp of the current shipping task in milliseconds
-     * @param string $Status Result of the current shipping task. Valid values: `success`, `running`, `failed`
+     * @param string $Status Result of this shipping: "success", "running", "failed".
+
+-success: Task successful.
+- running: Task processing.
+- failed: Task failure.
      * @param string $Message Result details
      */
     function __construct()

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SwitchClusterZone request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getOldZone() Obtain The current AZ
- * @method void setOldZone(string $OldZone) Set The current AZ
- * @method string getNewZone() Obtain New AZ
- * @method void setNewZone(string $NewZone) Set New AZ
- * @method string getIsInMaintainPeriod() Obtain Valid values: `yes` (execute during maintenance time), `no` (execute now)
- * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Valid values: `yes` (execute during maintenance time), `no` (execute now)
+ * @method string getClusterId() Obtain <p>Cluster Id</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster Id</p>
+ * @method string getOldZone() Obtain <p>Current availability zone</p>
+ * @method void setOldZone(string $OldZone) Set <p>Current availability zone</p>
+ * @method string getNewZone() Obtain <p>Availability zone to switch to</p>
+ * @method void setNewZone(string $NewZone) Set <p>Availability zone to switch to</p>
+ * @method string getIsInMaintainPeriod() Obtain <p>Execute during maintenance period - yes, immediately execute - no</p>
+ * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set <p>Execute during maintenance period - yes, immediately execute - no</p>
  */
 class SwitchClusterZoneRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster Id</p>
      */
     public $ClusterId;
 
     /**
-     * @var string The current AZ
+     * @var string <p>Current availability zone</p>
      */
     public $OldZone;
 
     /**
-     * @var string New AZ
+     * @var string <p>Availability zone to switch to</p>
      */
     public $NewZone;
 
     /**
-     * @var string Valid values: `yes` (execute during maintenance time), `no` (execute now)
+     * @var string <p>Execute during maintenance period - yes, immediately execute - no</p>
      */
     public $IsInMaintainPeriod;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param string $OldZone The current AZ
-     * @param string $NewZone New AZ
-     * @param string $IsInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
+     * @param string $ClusterId <p>Cluster Id</p>
+     * @param string $OldZone <p>Current availability zone</p>
+     * @param string $NewZone <p>Availability zone to switch to</p>
+     * @param string $IsInMaintainPeriod <p>Execute during maintenance period - yes, immediately execute - no</p>
      */
     function __construct()
     {

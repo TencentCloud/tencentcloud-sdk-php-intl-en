@@ -76,12 +76,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsNew(integer $IsNew) Set Whether newly added [0: no|1: yes]
  * @method string getMachineWanIp() Obtain Server Public IP
  * @method void setMachineWanIp(string $MachineWanIp) Set Server Public IP
- * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
+ * @method MachineExtraInfo getMachineExtraInfo() Obtain  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getIsAutoRun() Obtain Start at boot [0: No|1: Yes]
  * @method void setIsAutoRun(integer $IsAutoRun) Set Start at boot [0: No|1: Yes]
  */
@@ -172,9 +170,8 @@ class AssetInitServiceBaseInfo extends AbstractModel
     public $MachineWanIp;
 
     /**
-     * @var MachineExtraInfo Additional information
+     * @var MachineExtraInfo  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -212,9 +209,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $FirstTime First collection time
      * @param integer $IsNew Whether newly added [0: no|1: yes]
      * @param string $MachineWanIp Server Public IP
-     * @param MachineExtraInfo $MachineExtraInfo Additional information
+     * @param MachineExtraInfo $MachineExtraInfo  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $IsAutoRun Start at boot [0: No|1: Yes]
      */
     function __construct()

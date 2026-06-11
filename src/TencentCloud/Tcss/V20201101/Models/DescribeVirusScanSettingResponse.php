@@ -40,10 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanIds(array $ScanIds) Set ID of the specified container or server to be scanned, which is based on `ScanRangeType`.
  * @method array getScanPath() Obtain Specified path to be excluded or scanned
  * @method void setScanPath(array $ScanPath) Set Specified path to be excluded or scanned
- * @method integer getClickTimeout() Obtain Timeout settings of quick check
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClickTimeout(integer $ClickTimeout) Set Timeout settings of quick check
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getClickTimeout() Obtain One-Click Detection Timeout Setting
+ * @method void setClickTimeout(integer $ClickTimeout) Set One-Click Detection Timeout Setting
  * @method string getScanPathMode() Obtain Path scanning mode: 
 `SCAN_PATH_ALL`: Scan all paths
 `SCAN_PATH_DEFAULT`: Scan the default path
@@ -110,8 +108,7 @@ class DescribeVirusScanSettingResponse extends AbstractModel
     public $ScanPath;
 
     /**
-     * @var integer Timeout settings of quick check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer One-Click Detection Timeout Setting
      */
     public $ClickTimeout;
 
@@ -140,8 +137,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param boolean $ScanRangeAll Valid values: `true` (all); `false` (specified).
      * @param array $ScanIds ID of the specified container or server to be scanned, which is based on `ScanRangeType`.
      * @param array $ScanPath Specified path to be excluded or scanned
-     * @param integer $ClickTimeout Timeout settings of quick check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ClickTimeout One-Click Detection Timeout Setting
      * @param string $ScanPathMode Path scanning mode: 
 `SCAN_PATH_ALL`: Scan all paths
 `SCAN_PATH_DEFAULT`: Scan the default path

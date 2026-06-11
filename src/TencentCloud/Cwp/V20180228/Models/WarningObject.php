@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Parameters used to update alarms or inserted into alarms
  *
- * @method integer getType() Obtain Event Alarm Type. 1: Offline; 2: Trojan; 3: Exceptional login; 4: Brute force; 5: Vulnerability (split into four types ranging from 9 to 12); 6: High-risk command; 7: Reverse sell; 8: Local privilege escalation;, 9: System component vulnerabilities; 10: Web application vulnerabilities; 11: Emergency vulnerabilities; 12: Security baseline; 14: Malicious request; 15: Network attack; 16: Windows system vulnerabilities; 17: Linux software vulnerabilities
- * @method void setType(integer $Type) Set Event Alarm Type. 1: Offline; 2: Trojan; 3: Exceptional login; 4: Brute force; 5: Vulnerability (split into four types ranging from 9 to 12); 6: High-risk command; 7: Reverse sell; 8: Local privilege escalation;, 9: System component vulnerabilities; 10: Web application vulnerabilities; 11: Emergency vulnerabilities; 12: Security baseline; 14: Malicious request; 15: Network attack; 16: Windows system vulnerabilities; 17: Linux software vulnerabilities
+ * @method integer getType() Obtain Event alarm type: 1: offline, 2: Trojan, 3: abnormal login, 4: crack, 5: vulnerability (split into four types 9-12), 6: high-risk command, 7: rebound shell, 8: local privilege escalation, 9: system component vulnerability, 10: web application vulnerability, 11: emergency vulnerability, 12: security baseline, 14: malicious request, 15: network attack, 16: Windows system vulnerability, 17: Linux software vulnerability.
+ * @method void setType(integer $Type) Set Event alarm type: 1: offline, 2: Trojan, 3: abnormal login, 4: crack, 5: vulnerability (split into four types 9-12), 6: high-risk command, 7: rebound shell, 8: local privilege escalation, 9: system component vulnerability, 10: web application vulnerability, 11: emergency vulnerability, 12: security baseline, 14: malicious request, 15: network attack, 16: Windows system vulnerability, 17: Linux software vulnerability.
  * @method integer getDisablePhoneWarning() Obtain 1: disable alarm; 0: enable alarm.
  * @method void setDisablePhoneWarning(integer $DisablePhoneWarning) Set 1: disable alarm; 0: enable alarm.
  * @method string getBeginTime() Obtain Start time. Format: HH:mm.
@@ -32,11 +32,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setControlBits(string $ControlBits) Set 1. Vulnerability level control bits in binary. Each bit corresponds to the vulnerability level enabling status on the corresponding page. Level: low, medium, high (0: disabled; 1: enabled). Example: 101, indicating both the low and high levels are enabled. 2. Brute force cracking control bits in binary. 01: notify upon successful brute force cracking; 10: notify upon brute force cracking failure.
  * @method integer getHostRange() Obtain Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
  * @method void setHostRange(integer $HostRange) Set Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
+ * @method string getUnit() Obtain Unit.
+ * @method void setUnit(string $Unit) Set Unit.
  */
 class WarningObject extends AbstractModel
 {
     /**
-     * @var integer Event Alarm Type. 1: Offline; 2: Trojan; 3: Exceptional login; 4: Brute force; 5: Vulnerability (split into four types ranging from 9 to 12); 6: High-risk command; 7: Reverse sell; 8: Local privilege escalation;, 9: System component vulnerabilities; 10: Web application vulnerabilities; 11: Emergency vulnerabilities; 12: Security baseline; 14: Malicious request; 15: Network attack; 16: Windows system vulnerabilities; 17: Linux software vulnerabilities
+     * @var integer Event alarm type: 1: offline, 2: Trojan, 3: abnormal login, 4: crack, 5: vulnerability (split into four types 9-12), 6: high-risk command, 7: rebound shell, 8: local privilege escalation, 9: system component vulnerability, 10: web application vulnerability, 11: emergency vulnerability, 12: security baseline, 14: malicious request, 15: network attack, 16: Windows system vulnerability, 17: Linux software vulnerability.
      */
     public $Type;
 
@@ -66,12 +68,18 @@ class WarningObject extends AbstractModel
     public $HostRange;
 
     /**
-     * @param integer $Type Event Alarm Type. 1: Offline; 2: Trojan; 3: Exceptional login; 4: Brute force; 5: Vulnerability (split into four types ranging from 9 to 12); 6: High-risk command; 7: Reverse sell; 8: Local privilege escalation;, 9: System component vulnerabilities; 10: Web application vulnerabilities; 11: Emergency vulnerabilities; 12: Security baseline; 14: Malicious request; 15: Network attack; 16: Windows system vulnerabilities; 17: Linux software vulnerabilities
+     * @var string Unit.
+     */
+    public $Unit;
+
+    /**
+     * @param integer $Type Event alarm type: 1: offline, 2: Trojan, 3: abnormal login, 4: crack, 5: vulnerability (split into four types 9-12), 6: high-risk command, 7: rebound shell, 8: local privilege escalation, 9: system component vulnerability, 10: web application vulnerability, 11: emergency vulnerability, 12: security baseline, 14: malicious request, 15: network attack, 16: Windows system vulnerability, 17: Linux software vulnerability.
      * @param integer $DisablePhoneWarning 1: disable alarm; 0: enable alarm.
      * @param string $BeginTime Start time. Format: HH:mm.
      * @param string $EndTime End time. Format: HH:mm.
      * @param string $ControlBits 1. Vulnerability level control bits in binary. Each bit corresponds to the vulnerability level enabling status on the corresponding page. Level: low, medium, high (0: disabled; 1: enabled). Example: 101, indicating both the low and high levels are enabled. 2. Brute force cracking control bits in binary. 01: notify upon successful brute force cracking; 10: notify upon brute force cracking failure.
      * @param integer $HostRange Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
+     * @param string $Unit Unit.
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class WarningObject extends AbstractModel
 
         if (array_key_exists("HostRange",$param) and $param["HostRange"] !== null) {
             $this->HostRange = $param["HostRange"];
+        }
+
+        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
+            $this->Unit = $param["Unit"];
         }
     }
 }

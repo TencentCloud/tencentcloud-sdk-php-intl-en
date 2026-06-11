@@ -30,18 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) Set Time of modifying allowlists
  * @method string getCreateTime() Obtain Time of creating allowlists
  * @method void setCreateTime(string $CreateTime) Set Time of creating allowlists
- * @method string getUuid() Obtain Machine associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUuid(string $Uuid) Set Machine associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsGlobal() Obtain Whether the allowlist is global
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsGlobal(boolean $IsGlobal) Set Whether the allowlist is global
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUuid() Obtain Machine associated with the allowlist.
+ * @method void setUuid(string $Uuid) Set Machine associated with the allowlist.
+ * @method boolean getIsGlobal() Obtain Whether the allowlist takes effect globally
+ * @method void setIsGlobal(boolean $IsGlobal) Set Whether the allowlist takes effect globally
  * @method array getQuuids() Obtain Machine list associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQuuids(array $Quuids) Set Machine list associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BanWhiteList extends AbstractModel
 {
@@ -71,20 +65,17 @@ class BanWhiteList extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string Machine associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Machine associated with the allowlist.
      */
     public $Uuid;
 
     /**
-     * @var boolean Whether the allowlist is global
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether the allowlist takes effect globally
      */
     public $IsGlobal;
 
     /**
      * @var array Machine list associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Quuids;
 
@@ -94,12 +85,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SrcIp Block source IP
      * @param string $ModifyTime Time of modifying allowlists
      * @param string $CreateTime Time of creating allowlists
-     * @param string $Uuid Machine associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsGlobal Whether the allowlist is global
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Uuid Machine associated with the allowlist.
+     * @param boolean $IsGlobal Whether the allowlist takes effect globally
      * @param array $Quuids Machine list associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

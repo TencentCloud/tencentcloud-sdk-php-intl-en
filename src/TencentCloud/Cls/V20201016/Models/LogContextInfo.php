@@ -32,20 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPkgLogId(integer $PkgLogId) Set Log number in log package
  * @method integer getBTime() Obtain Log timestamp
  * @method void setBTime(integer $BTime) Set Log timestamp
- * @method string getHostName() Obtain Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setHostName(string $HostName) Set Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getRawLog() Obtain Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRawLog(string $RawLog) Set Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIndexStatus() Obtain The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIndexStatus(string $IndexStatus) Set The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getHighLights() Obtain Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setHighLights(array $HighLights) Set Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHostName() Obtain Log source host name
+ * @method void setHostName(string $HostName) Set Log source host name
+ * @method string getRawLog() Obtain Raw log (only available when there is an error in creating the log index).
+ * @method void setRawLog(string $RawLog) Set Raw log (only available when there is an error in creating the log index).
+ * @method string getIndexStatus() Obtain Cause for log index creation exception. It has a value only when a log index creation exception occurs.
+ * @method void setIndexStatus(string $IndexStatus) Set Cause for log index creation exception. It has a value only when a log index creation exception occurs.
+ * @method array getHighLights() Obtain Highlighted description of the log content
+ * @method void setHighLights(array $HighLights) Set Highlighted description of the log content
  */
 class LogContextInfo extends AbstractModel
 {
@@ -80,25 +74,22 @@ class LogContextInfo extends AbstractModel
     public $BTime;
 
     /**
-     * @var string Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string Log source host name
      */
     public $HostName;
 
     /**
-     * @var string Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Raw log (only available when there is an error in creating the log index).
      */
     public $RawLog;
 
     /**
-     * @var string The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Cause for log index creation exception. It has a value only when a log index creation exception occurs.
      */
     public $IndexStatus;
 
     /**
-     * @var array Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+     * @var array Highlighted description of the log content
      */
     public $HighLights;
 
@@ -109,13 +100,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $PkgId Log package number
      * @param integer $PkgLogId Log number in log package
      * @param integer $BTime Log timestamp
-     * @param string $HostName Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $RawLog Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IndexStatus The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $HighLights Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HostName Log source host name
+     * @param string $RawLog Raw log (only available when there is an error in creating the log index).
+     * @param string $IndexStatus Cause for log index creation exception. It has a value only when a log index creation exception occurs.
+     * @param array $HighLights Highlighted description of the log content
      */
     function __construct()
     {

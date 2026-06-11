@@ -28,10 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainPort(integer $DomainPort) Set Domain Port
  * @method string getVip() Obtain Virtual IP
  * @method void setVip(string $Vip) Set Virtual IP
- * @method integer getVipType() Obtain Virtual IP Type
- * @method void setVipType(integer $VipType) Set Virtual IP Type
+ * @method integer getVipType() Obtain Virtual IP address type. 1: public network TGW; 2: basic network; 3: VPC; 4: supporting network (standard edition); 5: SSL public network access; 6: VPC in the bare metal environment; 7: supporting network (Pro).
+ * @method void setVipType(integer $VipType) Set Virtual IP address type. 1: public network TGW; 2: basic network; 3: VPC; 4: supporting network (standard edition); 5: SSL public network access; 6: VPC in the bare metal environment; 7: supporting network (Pro).
  * @method integer getAccessType() Obtain Access type
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version)
+2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
  * @method void setAccessType(integer $AccessType) Set Access type
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version)
+2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
  */
 class CKafkaRouteInfo extends AbstractModel
 {
@@ -56,12 +64,16 @@ class CKafkaRouteInfo extends AbstractModel
     public $Vip;
 
     /**
-     * @var integer Virtual IP Type
+     * @var integer Virtual IP address type. 1: public network TGW; 2: basic network; 3: VPC; 4: supporting network (standard edition); 5: SSL public network access; 6: VPC in the bare metal environment; 7: supporting network (Pro).
      */
     public $VipType;
 
     /**
      * @var integer Access type
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version)
+2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
      */
     public $AccessType;
 
@@ -70,8 +82,12 @@ class CKafkaRouteInfo extends AbstractModel
      * @param string $Domain Domain name
      * @param integer $DomainPort Domain Port
      * @param string $Vip Virtual IP
-     * @param integer $VipType Virtual IP Type
+     * @param integer $VipType Virtual IP address type. 1: public network TGW; 2: basic network; 3: VPC; 4: supporting network (standard edition); 5: SSL public network access; 6: VPC in the bare metal environment; 7: supporting network (Pro).
      * @param integer $AccessType Access type
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version)
+2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
      */
     function __construct()
     {

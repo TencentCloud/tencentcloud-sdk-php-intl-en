@@ -18,68 +18,92 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * CLS log delivery configuration.
  *
- * @method string getTopicOperation() Obtain 
- * @method void setTopicOperation(string $TopicOperation) Set 
- * @method string getGroupOperation() Obtain 
- * @method void setGroupOperation(string $GroupOperation) Set 
- * @method string getRegion() Obtain 
- * @method void setRegion(string $Region) Set 
- * @method string getTopicId() Obtain 
- * @method void setTopicId(string $TopicId) Set 
- * @method string getTopicName() Obtain 
- * @method void setTopicName(string $TopicName) Set 
- * @method string getGroupId() Obtain 
- * @method void setGroupId(string $GroupId) Set 
- * @method string getGroupName() Obtain 
- * @method void setGroupName(string $GroupName) Set 
+ * @method string getTopicOperation() Obtain Log topic operation: Options are create, reuse. 
+create: Create a new log topic, using TopicName to create the log topic.
+reuse: Use an existing log topic, using TopicId to specify the log topic.
+The combination of using an existing log topic while creating a new logset is not allowed.
+ * @method void setTopicOperation(string $TopicOperation) Set Log topic operation: Options are create, reuse. 
+create: Create a new log topic, using TopicName to create the log topic.
+reuse: Use an existing log topic, using TopicId to specify the log topic.
+The combination of using an existing log topic while creating a new logset is not allowed.
+ * @method string getGroupOperation() Obtain Logset operation: Options are create, reuse.
+create: Create a new logset, using GroupName to create the logset.
+reuse: Use an existing logset, using GroupId to specify the logset.
+The combination of using an existing log topic while creating a new logset is not allowed.
+ * @method void setGroupOperation(string $GroupOperation) Set Logset operation: Options are create, reuse.
+create: Create a new logset, using GroupName to create the logset.
+reuse: Use an existing logset, using GroupId to specify the logset.
+The combination of using an existing log topic while creating a new logset is not allowed.
+ * @method string getRegion() Obtain Log delivery region.
+ * @method void setRegion(string $Region) Set Log delivery region.
+ * @method string getTopicId() Obtain Log topic ID.
+ * @method void setTopicId(string $TopicId) Set Log topic ID.
+ * @method string getTopicName() Obtain Log topic name.
+ * @method void setTopicName(string $TopicName) Set Log topic name.
+ * @method string getGroupId() Obtain Logset ID.
+ * @method void setGroupId(string $GroupId) Set Logset ID.
+ * @method string getGroupName() Obtain Logset name.
+ * @method void setGroupName(string $GroupName) Set Logset name.
  */
 class CLSInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Log topic operation: Options are create, reuse. 
+create: Create a new log topic, using TopicName to create the log topic.
+reuse: Use an existing log topic, using TopicId to specify the log topic.
+The combination of using an existing log topic while creating a new logset is not allowed.
      */
     public $TopicOperation;
 
     /**
-     * @var string 
+     * @var string Logset operation: Options are create, reuse.
+create: Create a new logset, using GroupName to create the logset.
+reuse: Use an existing logset, using GroupId to specify the logset.
+The combination of using an existing log topic while creating a new logset is not allowed.
      */
     public $GroupOperation;
 
     /**
-     * @var string 
+     * @var string Log delivery region.
      */
     public $Region;
 
     /**
-     * @var string 
+     * @var string Log topic ID.
      */
     public $TopicId;
 
     /**
-     * @var string 
+     * @var string Log topic name.
      */
     public $TopicName;
 
     /**
-     * @var string 
+     * @var string Logset ID.
      */
     public $GroupId;
 
     /**
-     * @var string 
+     * @var string Logset name.
      */
     public $GroupName;
 
     /**
-     * @param string $TopicOperation 
-     * @param string $GroupOperation 
-     * @param string $Region 
-     * @param string $TopicId 
-     * @param string $TopicName 
-     * @param string $GroupId 
-     * @param string $GroupName 
+     * @param string $TopicOperation Log topic operation: Options are create, reuse. 
+create: Create a new log topic, using TopicName to create the log topic.
+reuse: Use an existing log topic, using TopicId to specify the log topic.
+The combination of using an existing log topic while creating a new logset is not allowed.
+     * @param string $GroupOperation Logset operation: Options are create, reuse.
+create: Create a new logset, using GroupName to create the logset.
+reuse: Use an existing logset, using GroupId to specify the logset.
+The combination of using an existing log topic while creating a new logset is not allowed.
+     * @param string $Region Log delivery region.
+     * @param string $TopicId Log topic ID.
+     * @param string $TopicName Log topic name.
+     * @param string $GroupId Logset ID.
+     * @param string $GroupName Logset name.
      */
     function __construct()
     {

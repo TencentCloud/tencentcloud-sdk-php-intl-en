@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVirusAutoIsolateExampleSwitch request structure.
  *
- * @method string getMD5() Obtain MD5 checksum of the file
- * @method void setMD5(string $MD5) Set MD5 checksum of the file
+ * @method string getMD5() Obtain File MD5 Value
+ * @method void setMD5(string $MD5) Set File MD5 Value
  * @method boolean getStatus() Obtain Switch. Valid values: `true` (on); `false` (off).
  * @method void setStatus(boolean $Status) Set Switch. Valid values: `true` (on); `false` (off).
  */
 class ModifyVirusAutoIsolateExampleSwitchRequest extends AbstractModel
 {
     /**
-     * @var string MD5 checksum of the file
+     * @var string File MD5 Value
      */
     public $MD5;
 
@@ -38,7 +38,7 @@ class ModifyVirusAutoIsolateExampleSwitchRequest extends AbstractModel
     public $Status;
 
     /**
-     * @param string $MD5 MD5 checksum of the file
+     * @param string $MD5 File MD5 Value
      * @param boolean $Status Switch. Valid values: `true` (on); `false` (off).
      */
     function __construct()

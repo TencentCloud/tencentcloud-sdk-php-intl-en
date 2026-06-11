@@ -35,13 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getControlBits() Obtain Vulnerability level control bits in binary. Each bit indicates the enabling status of the corresponding vulnerability level on the page: low, medium, and high (0: disabled; 1: enabled). For example, 101 indicates that both low and high levels are enabled.
  * @method void setControlBits(string $ControlBits) Set Vulnerability level control bits in binary. Each bit indicates the enabling status of the corresponding vulnerability level on the page: low, medium, and high (0: disabled; 1: enabled). For example, 101 indicates that both low and high levels are enabled.
  * @method integer getHostRange() Obtain Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostRange(integer $HostRange) Set Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getCount() Obtain Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCount(integer $Count) Set Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class WarningInfoObj extends AbstractModel
 {
@@ -82,13 +78,11 @@ class WarningInfoObj extends AbstractModel
 
     /**
      * @var integer Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostRange;
 
     /**
      * @var integer Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Count;
 
@@ -101,9 +95,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ControlBit Vulnerability level control bit (corresponding to the decimal storage in the database)
      * @param string $ControlBits Vulnerability level control bits in binary. Each bit indicates the enabling status of the corresponding vulnerability level on the page: low, medium, and high (0: disabled; 1: enabled). For example, 101 indicates that both low and high levels are enabled.
      * @param integer $HostRange Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Count Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

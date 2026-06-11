@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageName(string $ImageName) Set Image name
  * @method integer getID() Obtain Allowed item ID
  * @method void setID(integer $ID) Set Allowed item ID
- * @method integer getHostCount() Obtain Number of associated servers
- * @method void setHostCount(integer $HostCount) Set Number of associated servers
+ * @method integer getHostCount() Obtain Number of associated hosts (including regular nodes and super nodes).
+ * @method void setHostCount(integer $HostCount) Set Number of associated hosts (including regular nodes and super nodes).
+ * @method integer getSuperNodeCount() Obtain Number of associated super nodes.
+ * @method void setSuperNodeCount(integer $SuperNodeCount) Set Number of associated super nodes.
  * @method integer getContainerCount() Obtain Number of associated containers
  * @method void setContainerCount(integer $ContainerCount) Set Number of associated containers
  * @method array getEventType() Obtain Allowed event type
@@ -57,9 +59,14 @@ class EscapeWhiteListInfo extends AbstractModel
     public $ID;
 
     /**
-     * @var integer Number of associated servers
+     * @var integer Number of associated hosts (including regular nodes and super nodes).
      */
     public $HostCount;
+
+    /**
+     * @var integer Number of associated super nodes.
+     */
+    public $SuperNodeCount;
 
     /**
      * @var integer Number of associated containers
@@ -90,7 +97,8 @@ class EscapeWhiteListInfo extends AbstractModel
      * @param string $ImageID Image ID
      * @param string $ImageName Image name
      * @param integer $ID Allowed item ID
-     * @param integer $HostCount Number of associated servers
+     * @param integer $HostCount Number of associated hosts (including regular nodes and super nodes).
+     * @param integer $SuperNodeCount Number of associated super nodes.
      * @param integer $ContainerCount Number of associated containers
      * @param array $EventType Allowed event type
      * @param string $InsertTime Creation time
@@ -124,6 +132,10 @@ class EscapeWhiteListInfo extends AbstractModel
 
         if (array_key_exists("HostCount",$param) and $param["HostCount"] !== null) {
             $this->HostCount = $param["HostCount"];
+        }
+
+        if (array_key_exists("SuperNodeCount",$param) and $param["SuperNodeCount"] !== null) {
+            $this->SuperNodeCount = $param["SuperNodeCount"];
         }
 
         if (array_key_exists("ContainerCount",$param) and $param["ContainerCount"] !== null) {

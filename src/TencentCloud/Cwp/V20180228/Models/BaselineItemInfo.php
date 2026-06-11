@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getItemName() Obtain Detection Item Name
  * @method void setItemName(string $ItemName) Set Detection Item Name
  * @method integer getRuleId() Obtain ID of the Rule to Which the Detection Item Belongs
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRuleId(integer $RuleId) Set ID of the Rule to Which the Detection Item Belongs
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getItemDesc() Obtain Detection item description
  * @method void setItemDesc(string $ItemDesc) Set Detection item description
  * @method string getFixMethod() Obtain Remediation Method for Inspection Items
@@ -37,13 +35,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method integer getLevel() Obtain Risk level
  * @method void setLevel(integer $Level) Set Risk level
  * @method integer getSysRuleId() Obtain System Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSysRuleId(integer $SysRuleId) Set System Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getRelatedCustomRuleInfo() Obtain Referenced Custom Rule Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRelatedCustomRuleInfo(array $RelatedCustomRuleInfo) Set Referenced Custom Rule Information
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BaselineItemInfo extends AbstractModel
 {
@@ -59,7 +53,6 @@ class BaselineItemInfo extends AbstractModel
 
     /**
      * @var integer ID of the Rule to Which the Detection Item Belongs
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RuleId;
 
@@ -85,13 +78,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var integer System Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SysRuleId;
 
     /**
      * @var array Referenced Custom Rule Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RelatedCustomRuleInfo;
 
@@ -99,15 +90,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ItemId Baseline Detection Item ID
      * @param string $ItemName Detection Item Name
      * @param integer $RuleId ID of the Rule to Which the Detection Item Belongs
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ItemDesc Detection item description
      * @param string $FixMethod Remediation Method for Inspection Items
      * @param string $RuleName Rule Name of Detection Item
      * @param integer $Level Risk level
      * @param integer $SysRuleId System Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $RelatedCustomRuleInfo Referenced Custom Rule Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

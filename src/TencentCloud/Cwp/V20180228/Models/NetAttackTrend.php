@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Attack trend statistics
  *
  * @method string getDateTime() Obtain Time Point, e.g., 2023-05-06
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDateTime(string $DateTime) Set Time Point, e.g., 2023-05-06
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAttackCount() Obtain Number of attacks
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAttackCount(integer $AttackCount) Set Number of attacks
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAttackCount() Obtain Attack count
+ * @method void setAttackCount(integer $AttackCount) Set Attack count
  * @method integer getTryAttackCount() Obtain Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTryAttackCount(integer $TryAttackCount) Set Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getSuccAttackCount() Obtain Attack Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSuccAttackCount(integer $SuccAttackCount) Set Attack Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NetAttackTrend extends AbstractModel
 {
     /**
      * @var string Time Point, e.g., 2023-05-06
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DateTime;
 
     /**
-     * @var integer Number of attacks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Attack count
      */
     public $AttackCount;
 
     /**
      * @var integer Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TryAttackCount;
 
     /**
      * @var integer Attack Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SuccAttackCount;
 
     /**
      * @param string $DateTime Time Point, e.g., 2023-05-06
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AttackCount Number of attacks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AttackCount Attack count
      * @param integer $TryAttackCount Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SuccAttackCount Attack Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -28,14 +28,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `whitelist`: allowlist IPs
 `blacklist`: blocklist IPs
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method array getFilters() Obtain IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setFilters(array $Filters) Set IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getFilters() Obtain IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 500 allowlist or 200 blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFilters(array $Filters) Set IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 500 allowlist or 200 blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRuleType() Obtain Rule types:
 `all`: Effective for all files
 `file`: Effective for specified file suffixes
@@ -60,6 +60,8 @@ For `file`, enter the suffix, such as jpg, txt.
 For `directory`, enter the path, such as /xxx/test/.
 For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getRemark() Obtain Remark information. supports up to 50 characters.
+ * @method void setRemark(string $Remark) Set Remark information. supports up to 50 characters.
  */
 class IpFilterPathRule extends AbstractModel
 {
@@ -72,10 +74,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $FilterType;
 
     /**
-     * @var array IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 500 allowlist or 200 blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Filters;
 
@@ -100,14 +102,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $RulePaths;
 
     /**
+     * @var string Remark information. supports up to 50 characters.
+     */
+    public $Remark;
+
+    /**
      * @param string $FilterType IP blocklist/allowlist type
 `whitelist`: allowlist IPs
 `blacklist`: blocklist IPs
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param array $Filters IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $Filters IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 500 allowlist or 200 blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RuleType Rule types:
 `all`: Effective for all files
 `file`: Effective for specified file suffixes
@@ -120,6 +127,7 @@ For `file`, enter the suffix, such as jpg, txt.
 For `directory`, enter the path, such as /xxx/test/.
 For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Remark Remark information. supports up to 50 characters.
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("RulePaths",$param) and $param["RulePaths"] !== null) {
             $this->RulePaths = $param["RulePaths"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

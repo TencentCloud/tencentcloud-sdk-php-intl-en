@@ -18,28 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Rollback database information.
  *
- * @method string getOldDatabase() Obtain 
- * @method void setOldDatabase(string $OldDatabase) Set 
- * @method string getNewDatabase() Obtain 
- * @method void setNewDatabase(string $NewDatabase) Set 
+ * @method string getOldDatabase() Obtain Old database name.
+ * @method void setOldDatabase(string $OldDatabase) Set Old database name.
+ * @method string getNewDatabase() Obtain New database name.
+ * @method void setNewDatabase(string $NewDatabase) Set New database name.
  */
 class RollbackDatabase extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Old database name.
      */
     public $OldDatabase;
 
     /**
-     * @var string 
+     * @var string New database name.
      */
     public $NewDatabase;
 
     /**
-     * @param string $OldDatabase 
-     * @param string $NewDatabase 
+     * @param string $OldDatabase Old database name.
+     * @param string $NewDatabase New database name.
      */
     function __construct()
     {

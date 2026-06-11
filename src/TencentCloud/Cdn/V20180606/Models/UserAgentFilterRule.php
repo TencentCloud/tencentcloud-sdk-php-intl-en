@@ -36,10 +36,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRulePaths(array $RulePaths) Set Effective access paths
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method array getUserAgents() Obtain `UserAgent` list
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setUserAgents(array $UserAgents) Set `UserAgent` list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getUserAgents() Obtain UserAgent list. the count cannot exceed 10.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUserAgents(array $UserAgents) Set UserAgent list. the count cannot exceed 10.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFilterType() Obtain Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setFilterType(string $FilterType) Set Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
@@ -64,8 +64,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $RulePaths;
 
     /**
-     * @var array `UserAgent` list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array UserAgent list. the count cannot exceed 10.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UserAgents;
 
@@ -84,8 +84,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $RulePaths Effective access paths
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param array $UserAgents `UserAgent` list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $UserAgents UserAgent list. the count cannot exceed 10.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FilterType Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */

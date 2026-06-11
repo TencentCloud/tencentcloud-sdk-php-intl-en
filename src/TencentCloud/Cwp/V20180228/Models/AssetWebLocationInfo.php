@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIp() Obtain Bind IP
  * @method void setIp(string $Ip) Set Bind IP
  * @method string getUpdateTime() Obtain Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AssetWebLocationInfo extends AbstractModel
 {
@@ -92,7 +90,6 @@ class AssetWebLocationInfo extends AbstractModel
 
     /**
      * @var string Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -107,7 +104,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Command Startup command
      * @param string $Ip Bind IP
      * @param string $UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

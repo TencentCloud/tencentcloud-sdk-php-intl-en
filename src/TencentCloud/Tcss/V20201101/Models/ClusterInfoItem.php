@@ -34,10 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterNodeNum(integer $ClusterNodeNum) Set Number of nodes in the cluster
  * @method string getRegion() Obtain Cluster region
  * @method void setRegion(string $Region) Set Cluster region
- * @method string getDefenderStatus() Obtain Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
- * @method void setDefenderStatus(string $DefenderStatus) Set Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
+ * @method string getDefenderStatus() Obtain Protection Status 
+Defended 
+Unprotected
+Partially defended
+ * @method void setDefenderStatus(string $DefenderStatus) Set Protection Status 
+Defended 
+Unprotected
+Partially defended
  * @method string getClusterStatus() Obtain Cluster status
  * @method void setClusterStatus(string $ClusterStatus) Set Cluster status
+ * @method string getClusterSubStatus() Obtain Cluster operation sub-status.
+ * @method void setClusterSubStatus(string $ClusterSubStatus) Set Cluster operation sub-status.
  * @method string getClusterCheckMode() Obtain Cluster check mode. Valid values: `Cluster_Normal`, `Cluster_Actived`.
  * @method void setClusterCheckMode(string $ClusterCheckMode) Set Cluster check mode. Valid values: `Cluster_Normal`, `Cluster_Actived`.
  * @method boolean getClusterAutoCheck() Obtain Whether automatic and regular check is enabled
@@ -60,6 +68,48 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckStatus(string $CheckStatus) Set Check status. Valid values: `Task_Running`, `NoRisk`, `HasRisk`, `Uncheck`, `Task_Error`.
  * @method string getTaskCreateTime() Obtain Task creation time and check time
  * @method void setTaskCreateTime(string $TaskCreateTime) Set Task creation time and check time
+ * @method string getAccessedStatus() Obtain Access status
+Not connected
+Defended
+Unprotected: AccessedInstalled
+Partial protection: AccessedPartialDefence
+Access exception: AccessedException
+Uninstallation Exception: AccessedUninstallException
+ACCESSING: installing
+Uninstalling: AccessedUninstalling
+ * @method void setAccessedStatus(string $AccessedStatus) Set Access status
+Not connected
+Defended
+Unprotected: AccessedInstalled
+Partial protection: AccessedPartialDefence
+Access exception: AccessedException
+Uninstallation Exception: AccessedUninstallException
+ACCESSING: installing
+Uninstalling: AccessedUninstalling
+ * @method string getAccessedSubStatus() Obtain Reason for Access Failure
+ * @method void setAccessedSubStatus(string $AccessedSubStatus) Set Reason for Access Failure
+ * @method string getAccessedErrorReason() Obtain Access/Uninstallation failure reason.
+ * @method void setAccessedErrorReason(string $AccessedErrorReason) Set Access/Uninstallation failure reason.
+ * @method integer getNodeCount() Obtain Total number of nodes
+ * @method void setNodeCount(integer $NodeCount) Set Total number of nodes
+ * @method integer getOffLineNodeCount() Obtain Offline Node Count
+ * @method void setOffLineNodeCount(integer $OffLineNodeCount) Set Offline Node Count
+ * @method integer getUnInstallAgentNodeCount() Obtain Number of Nodes Without Agent Installed
+ * @method void setUnInstallAgentNodeCount(integer $UnInstallAgentNodeCount) Set Number of Nodes Without Agent Installed
+ * @method integer getChargeCoresCnt() Obtain Number of billing cores (elastic billing cores + regular billing cores).
+ * @method void setChargeCoresCnt(integer $ChargeCoresCnt) Set Number of billing cores (elastic billing cores + regular billing cores).
+ * @method array getMasterAddresses() Obtain 
+ * @method void setMasterAddresses(array $MasterAddresses) Set 
+ * @method integer getCoresCnt() Obtain 
+ * @method void setCoresCnt(integer $CoresCnt) Set 
+ * @method string getClusterAuditStatus() Obtain Cluster audit switch status:
+Closed / Closing / CloseFailed / Opened / Opening / OpenFailed
+ * @method void setClusterAuditStatus(string $ClusterAuditStatus) Set Cluster audit switch status:
+Closed / Closing / CloseFailed / Opened / Opening / OpenFailed
+ * @method string getClusterAuditFailedInfo() Obtain Information on the failure to enable/disable cluster audit.
+ * @method void setClusterAuditFailedInfo(string $ClusterAuditFailedInfo) Set Information on the failure to enable/disable cluster audit.
+ * @method string getOwnerName() Obtain Owner name.
+ * @method void setOwnerName(string $OwnerName) Set Owner name.
  */
 class ClusterInfoItem extends AbstractModel
 {
@@ -99,7 +149,10 @@ class ClusterInfoItem extends AbstractModel
     public $Region;
 
     /**
-     * @var string Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
+     * @var string Protection Status 
+Defended 
+Unprotected
+Partially defended
      */
     public $DefenderStatus;
 
@@ -107,6 +160,11 @@ class ClusterInfoItem extends AbstractModel
      * @var string Cluster status
      */
     public $ClusterStatus;
+
+    /**
+     * @var string Cluster operation sub-status.
+     */
+    public $ClusterSubStatus;
 
     /**
      * @var string Cluster check mode. Valid values: `Cluster_Normal`, `Cluster_Actived`.
@@ -164,6 +222,75 @@ class ClusterInfoItem extends AbstractModel
     public $TaskCreateTime;
 
     /**
+     * @var string Access status
+Not connected
+Defended
+Unprotected: AccessedInstalled
+Partial protection: AccessedPartialDefence
+Access exception: AccessedException
+Uninstallation Exception: AccessedUninstallException
+ACCESSING: installing
+Uninstalling: AccessedUninstalling
+     */
+    public $AccessedStatus;
+
+    /**
+     * @var string Reason for Access Failure
+     */
+    public $AccessedSubStatus;
+
+    /**
+     * @var string Access/Uninstallation failure reason.
+     */
+    public $AccessedErrorReason;
+
+    /**
+     * @var integer Total number of nodes
+     */
+    public $NodeCount;
+
+    /**
+     * @var integer Offline Node Count
+     */
+    public $OffLineNodeCount;
+
+    /**
+     * @var integer Number of Nodes Without Agent Installed
+     */
+    public $UnInstallAgentNodeCount;
+
+    /**
+     * @var integer Number of billing cores (elastic billing cores + regular billing cores).
+     */
+    public $ChargeCoresCnt;
+
+    /**
+     * @var array 
+     */
+    public $MasterAddresses;
+
+    /**
+     * @var integer 
+     */
+    public $CoresCnt;
+
+    /**
+     * @var string Cluster audit switch status:
+Closed / Closing / CloseFailed / Opened / Opening / OpenFailed
+     */
+    public $ClusterAuditStatus;
+
+    /**
+     * @var string Information on the failure to enable/disable cluster audit.
+     */
+    public $ClusterAuditFailedInfo;
+
+    /**
+     * @var string Owner name.
+     */
+    public $OwnerName;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $ClusterVersion Cluster version
@@ -171,8 +298,12 @@ class ClusterInfoItem extends AbstractModel
      * @param string $ClusterType Cluster type
      * @param integer $ClusterNodeNum Number of nodes in the cluster
      * @param string $Region Cluster region
-     * @param string $DefenderStatus Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
+     * @param string $DefenderStatus Protection Status 
+Defended 
+Unprotected
+Partially defended
      * @param string $ClusterStatus Cluster status
+     * @param string $ClusterSubStatus Cluster operation sub-status.
      * @param string $ClusterCheckMode Cluster check mode. Valid values: `Cluster_Normal`, `Cluster_Actived`.
      * @param boolean $ClusterAutoCheck Whether automatic and regular check is enabled
      * @param string $DefenderErrorReason Cause of the failure to deploy the defender. When it is `UserDaemonSetNotReady`, `UnreadyNodeNum` is changed to "The defenders on N nodes are ready". If it is another value, the error message is directly displayed.
@@ -184,6 +315,27 @@ class ClusterInfoItem extends AbstractModel
      * @param string $CheckFailReason Check failure cause
      * @param string $CheckStatus Check status. Valid values: `Task_Running`, `NoRisk`, `HasRisk`, `Uncheck`, `Task_Error`.
      * @param string $TaskCreateTime Task creation time and check time
+     * @param string $AccessedStatus Access status
+Not connected
+Defended
+Unprotected: AccessedInstalled
+Partial protection: AccessedPartialDefence
+Access exception: AccessedException
+Uninstallation Exception: AccessedUninstallException
+ACCESSING: installing
+Uninstalling: AccessedUninstalling
+     * @param string $AccessedSubStatus Reason for Access Failure
+     * @param string $AccessedErrorReason Access/Uninstallation failure reason.
+     * @param integer $NodeCount Total number of nodes
+     * @param integer $OffLineNodeCount Offline Node Count
+     * @param integer $UnInstallAgentNodeCount Number of Nodes Without Agent Installed
+     * @param integer $ChargeCoresCnt Number of billing cores (elastic billing cores + regular billing cores).
+     * @param array $MasterAddresses 
+     * @param integer $CoresCnt 
+     * @param string $ClusterAuditStatus Cluster audit switch status:
+Closed / Closing / CloseFailed / Opened / Opening / OpenFailed
+     * @param string $ClusterAuditFailedInfo Information on the failure to enable/disable cluster audit.
+     * @param string $OwnerName Owner name.
      */
     function __construct()
     {
@@ -234,6 +386,10 @@ class ClusterInfoItem extends AbstractModel
             $this->ClusterStatus = $param["ClusterStatus"];
         }
 
+        if (array_key_exists("ClusterSubStatus",$param) and $param["ClusterSubStatus"] !== null) {
+            $this->ClusterSubStatus = $param["ClusterSubStatus"];
+        }
+
         if (array_key_exists("ClusterCheckMode",$param) and $param["ClusterCheckMode"] !== null) {
             $this->ClusterCheckMode = $param["ClusterCheckMode"];
         }
@@ -276,6 +432,54 @@ class ClusterInfoItem extends AbstractModel
 
         if (array_key_exists("TaskCreateTime",$param) and $param["TaskCreateTime"] !== null) {
             $this->TaskCreateTime = $param["TaskCreateTime"];
+        }
+
+        if (array_key_exists("AccessedStatus",$param) and $param["AccessedStatus"] !== null) {
+            $this->AccessedStatus = $param["AccessedStatus"];
+        }
+
+        if (array_key_exists("AccessedSubStatus",$param) and $param["AccessedSubStatus"] !== null) {
+            $this->AccessedSubStatus = $param["AccessedSubStatus"];
+        }
+
+        if (array_key_exists("AccessedErrorReason",$param) and $param["AccessedErrorReason"] !== null) {
+            $this->AccessedErrorReason = $param["AccessedErrorReason"];
+        }
+
+        if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
+            $this->NodeCount = $param["NodeCount"];
+        }
+
+        if (array_key_exists("OffLineNodeCount",$param) and $param["OffLineNodeCount"] !== null) {
+            $this->OffLineNodeCount = $param["OffLineNodeCount"];
+        }
+
+        if (array_key_exists("UnInstallAgentNodeCount",$param) and $param["UnInstallAgentNodeCount"] !== null) {
+            $this->UnInstallAgentNodeCount = $param["UnInstallAgentNodeCount"];
+        }
+
+        if (array_key_exists("ChargeCoresCnt",$param) and $param["ChargeCoresCnt"] !== null) {
+            $this->ChargeCoresCnt = $param["ChargeCoresCnt"];
+        }
+
+        if (array_key_exists("MasterAddresses",$param) and $param["MasterAddresses"] !== null) {
+            $this->MasterAddresses = $param["MasterAddresses"];
+        }
+
+        if (array_key_exists("CoresCnt",$param) and $param["CoresCnt"] !== null) {
+            $this->CoresCnt = $param["CoresCnt"];
+        }
+
+        if (array_key_exists("ClusterAuditStatus",$param) and $param["ClusterAuditStatus"] !== null) {
+            $this->ClusterAuditStatus = $param["ClusterAuditStatus"];
+        }
+
+        if (array_key_exists("ClusterAuditFailedInfo",$param) and $param["ClusterAuditFailedInfo"] !== null) {
+            $this->ClusterAuditFailedInfo = $param["ClusterAuditFailedInfo"];
+        }
+
+        if (array_key_exists("OwnerName",$param) and $param["OwnerName"] !== null) {
+            $this->OwnerName = $param["OwnerName"];
         }
     }
 }

@@ -36,30 +36,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrigger(string $Trigger) Set Trigger condition
  * @method integer getTriggerCount() Obtain Number of cycles for which the alarm lasts. An alarm will be triggered only after the trigger condition is met for the number of cycles specified by `TriggerCount`.
  * @method void setTriggerCount(integer $TriggerCount) Set Number of cycles for which the alarm lasts. An alarm will be triggered only after the trigger condition is met for the number of cycles specified by `TriggerCount`.
- * @method integer getAlarmPeriod() Obtain Alarm notification frequency (minutes)
- * @method void setAlarmPeriod(integer $AlarmPeriod) Set Alarm notification frequency (minutes)
+ * @method integer getAlarmPeriod() Obtain Alert notification sent frequency, in minutes
+ * @method void setAlarmPeriod(integer $AlarmPeriod) Set Alert notification sent frequency, in minutes
  * @method array getNotices() Obtain Notification group
  * @method void setNotices(array $Notices) Set Notification group
- * @method integer getDuration() Obtain Alarm duration (minutes)
- * @method void setDuration(integer $Duration) Set Alarm duration (minutes)
+ * @method integer getDuration() Obtain Duration of the alarm in minutes
+ * @method void setDuration(integer $Duration) Set Duration of the alarm in minutes
  * @method integer getStatus() Obtain Alarm status. Valid values: `0` (uncleared), `1` (cleared), `2` (expired)
  * @method void setStatus(integer $Status) Set Alarm status. Valid values: `0` (uncleared), `1` (cleared), `2` (expired)
- * @method integer getCreateTime() Obtain Alarm generation time, which is a Unix timestamp in ms
- * @method void setCreateTime(integer $CreateTime) Set Alarm generation time, which is a Unix timestamp in ms
- * @method array getGroupTriggerCondition() Obtain Group information corresponding to triggering by group
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroupTriggerCondition(array $GroupTriggerCondition) Set Group information corresponding to triggering by group
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAlarmLevel() Obtain Alarm severity. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm severity. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMonitorObjectType() Obtain Type of the monitored object
-`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement. 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMonitorObjectType(integer $MonitorObjectType) Set Type of the monitored object
-`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement. 
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCreateTime() Obtain Alarm occurrence time, Unix timestamp in milliseconds (ms)
+ * @method void setCreateTime(integer $CreateTime) Set Alarm occurrence time, Unix timestamp in milliseconds (ms)
+ * @method array getGroupTriggerCondition() Obtain Corresponding group information when alarm grouping is triggered
+ * @method void setGroupTriggerCondition(array $GroupTriggerCondition) Set Corresponding group information when alarm grouping is triggered
+ * @method integer getAlarmLevel() Obtain Alarm level. 0: warning (Warn); 1: reminder (Info); 2: urgent (Critical).
+ * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm level. 0: warning (Warn); 1: reminder (Info); 2: urgent (Critical).
+ * @method integer getMonitorObjectType() Obtain Monitored object type.
+`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement.
+ * @method void setMonitorObjectType(integer $MonitorObjectType) Set Monitored object type.
+`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement.
+ * @method integer getSendType() Obtain Notification channel type. 0 represents the internal notification channel of cls. 1 represents the Tencent Cloud observability platform notification channel.
+ * @method void setSendType(integer $SendType) Set Notification channel type. 0 represents the internal notification channel of cls. 1 represents the Tencent Cloud observability platform notification channel.
  */
 class AlertHistoryRecord extends AbstractModel
 {
@@ -104,7 +100,7 @@ class AlertHistoryRecord extends AbstractModel
     public $TriggerCount;
 
     /**
-     * @var integer Alarm notification frequency (minutes)
+     * @var integer Alert notification sent frequency, in minutes
      */
     public $AlarmPeriod;
 
@@ -114,7 +110,7 @@ class AlertHistoryRecord extends AbstractModel
     public $Notices;
 
     /**
-     * @var integer Alarm duration (minutes)
+     * @var integer Duration of the alarm in minutes
      */
     public $Duration;
 
@@ -124,28 +120,30 @@ class AlertHistoryRecord extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Alarm generation time, which is a Unix timestamp in ms
+     * @var integer Alarm occurrence time, Unix timestamp in milliseconds (ms)
      */
     public $CreateTime;
 
     /**
-     * @var array Group information corresponding to triggering by group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Corresponding group information when alarm grouping is triggered
      */
     public $GroupTriggerCondition;
 
     /**
-     * @var integer Alarm severity. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Alarm level. 0: warning (Warn); 1: reminder (Info); 2: urgent (Critical).
      */
     public $AlarmLevel;
 
     /**
-     * @var integer Type of the monitored object
-`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement. 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Monitored object type.
+`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement.
      */
     public $MonitorObjectType;
+
+    /**
+     * @var integer Notification channel type. 0 represents the internal notification channel of cls. 1 represents the Tencent Cloud observability platform notification channel.
+     */
+    public $SendType;
 
     /**
      * @param string $RecordId Alarm record ID
@@ -156,18 +154,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Region Region of the monitored object
      * @param string $Trigger Trigger condition
      * @param integer $TriggerCount Number of cycles for which the alarm lasts. An alarm will be triggered only after the trigger condition is met for the number of cycles specified by `TriggerCount`.
-     * @param integer $AlarmPeriod Alarm notification frequency (minutes)
+     * @param integer $AlarmPeriod Alert notification sent frequency, in minutes
      * @param array $Notices Notification group
-     * @param integer $Duration Alarm duration (minutes)
+     * @param integer $Duration Duration of the alarm in minutes
      * @param integer $Status Alarm status. Valid values: `0` (uncleared), `1` (cleared), `2` (expired)
-     * @param integer $CreateTime Alarm generation time, which is a Unix timestamp in ms
-     * @param array $GroupTriggerCondition Group information corresponding to triggering by group
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AlarmLevel Alarm severity. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MonitorObjectType Type of the monitored object
-`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement. 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $CreateTime Alarm occurrence time, Unix timestamp in milliseconds (ms)
+     * @param array $GroupTriggerCondition Corresponding group information when alarm grouping is triggered
+     * @param integer $AlarmLevel Alarm level. 0: warning (Warn); 1: reminder (Info); 2: urgent (Critical).
+     * @param integer $MonitorObjectType Monitored object type.
+`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement.
+     * @param integer $SendType Notification channel type. 0 represents the internal notification channel of cls. 1 represents the Tencent Cloud observability platform notification channel.
      */
     function __construct()
     {
@@ -254,6 +250,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MonitorObjectType",$param) and $param["MonitorObjectType"] !== null) {
             $this->MonitorObjectType = $param["MonitorObjectType"];
+        }
+
+        if (array_key_exists("SendType",$param) and $param["SendType"] !== null) {
+            $this->SendType = $param["SendType"];
         }
     }
 }

@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setHeuristicCache(HeuristicCache $HeuristicCache) Set Heuristic cache configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getOriginMtimeCheckType() Obtain Whether to enable origin server mtime verification after cache expires. valid values: equal, since, none, and null. default value: equal, which validates the origin server file's mtime and length. domains created prior to 2024-09-12 18:00 default to null, with behavior remaining unchanged.
+equal: the mtime in the origin server response must match the mtime in the cache. if there is a difference in parameter values, purge the cache.
+since: purges cache if the origin server response mtime is larger than the cache mtime.
+none: when the cache expires and the file is retrieved from the origin server again to get the mtime and Length, it does not validate the mtime in the origin response. if the origin response carries a Content-Length header, the cache is updated only when the file size changes. if the origin response does not carry a Content-Length header, the cache is updated.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOriginMtimeCheckType(string $OriginMtimeCheckType) Set Whether to enable origin server mtime verification after cache expires. valid values: equal, since, none, and null. default value: equal, which validates the origin server file's mtime and length. domains created prior to 2024-09-12 18:00 default to null, with behavior remaining unchanged.
+equal: the mtime in the origin server response must match the mtime in the cache. if there is a difference in parameter values, purge the cache.
+since: purges cache if the origin server response mtime is larger than the cache mtime.
+none: when the cache expires and the file is retrieved from the origin server again to get the mtime and Length, it does not validate the mtime in the origin response. if the origin response carries a Content-Length header, the cache is updated only when the file size changes. if the origin response does not carry a Content-Length header, the cache is updated.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CacheConfigFollowOrigin extends AbstractModel
 {
@@ -47,11 +57,25 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $HeuristicCache;
 
     /**
+     * @var string Whether to enable origin server mtime verification after cache expires. valid values: equal, since, none, and null. default value: equal, which validates the origin server file's mtime and length. domains created prior to 2024-09-12 18:00 default to null, with behavior remaining unchanged.
+equal: the mtime in the origin server response must match the mtime in the cache. if there is a difference in parameter values, purge the cache.
+since: purges cache if the origin server response mtime is larger than the cache mtime.
+none: when the cache expires and the file is retrieved from the origin server again to get the mtime and Length, it does not validate the mtime in the origin response. if the origin response carries a Content-Length header, the cache is updated only when the file size changes. if the origin response does not carry a Content-Length header, the cache is updated.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $OriginMtimeCheckType;
+
+    /**
      * @param string $Switch Whether to follow the origin configuration for path cache. Values:
 `on`: Enable
 `off`: Disable
      * @param HeuristicCache $HeuristicCache Heuristic cache configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $OriginMtimeCheckType Whether to enable origin server mtime verification after cache expires. valid values: equal, since, none, and null. default value: equal, which validates the origin server file's mtime and length. domains created prior to 2024-09-12 18:00 default to null, with behavior remaining unchanged.
+equal: the mtime in the origin server response must match the mtime in the cache. if there is a difference in parameter values, purge the cache.
+since: purges cache if the origin server response mtime is larger than the cache mtime.
+none: when the cache expires and the file is retrieved from the origin server again to get the mtime and Length, it does not validate the mtime in the origin response. if the origin response carries a Content-Length header, the cache is updated only when the file size changes. if the origin response does not carry a Content-Length header, the cache is updated.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -73,6 +97,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (array_key_exists("HeuristicCache",$param) and $param["HeuristicCache"] !== null) {
             $this->HeuristicCache = new HeuristicCache();
             $this->HeuristicCache->deserialize($param["HeuristicCache"]);
+        }
+
+        if (array_key_exists("OriginMtimeCheckType",$param) and $param["OriginMtimeCheckType"] !== null) {
+            $this->OriginMtimeCheckType = $param["OriginMtimeCheckType"];
         }
     }
 }

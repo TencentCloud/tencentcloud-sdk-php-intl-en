@@ -34,16 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkPolicyName(string $NetworkPolicyName) Set Policy name
  * @method string getOperationTime() Obtain Operation time
  * @method void setOperationTime(string $OperationTime) Set Operation time
- * @method integer getAppId() Obtain Operator `appid`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAppId(integer $AppId) Set Operator `appid`
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAppId() Obtain Operator App ID
+ * @method void setAppId(integer $AppId) Set Operator App ID
  * @method string getUin() Obtain Operator UIN
  * @method void setUin(string $Uin) Set Operator UIN
- * @method integer getPolicyId() Obtain The policy ID.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
- * @method void setPolicyId(integer $PolicyId) Set The policy ID.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method integer getPolicyId() Obtain Policy ID
+ * @method void setPolicyId(integer $PolicyId) Set Policy ID
  */
 class NetworkAuditRecord extends AbstractModel
 {
@@ -83,8 +79,7 @@ class NetworkAuditRecord extends AbstractModel
     public $OperationTime;
 
     /**
-     * @var integer Operator `appid`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Operator App ID
      */
     public $AppId;
 
@@ -94,8 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Uin;
 
     /**
-     * @var integer The policy ID.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @var integer Policy ID
      */
     public $PolicyId;
 
@@ -107,11 +101,9 @@ Note: This field may return·`null`, indicating that no valid values can be obta
      * @param string $Operation Operator
      * @param string $NetworkPolicyName Policy name
      * @param string $OperationTime Operation time
-     * @param integer $AppId Operator `appid`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AppId Operator App ID
      * @param string $Uin Operator UIN
-     * @param integer $PolicyId The policy ID.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param integer $PolicyId Policy ID
      */
     function __construct()
     {

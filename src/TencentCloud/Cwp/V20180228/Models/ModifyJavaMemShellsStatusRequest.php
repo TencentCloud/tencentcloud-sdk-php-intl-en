@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Target Processing Status: 0 - Pending, 1 - Allowlisted, 2 - Deleted, 3 - Ignored, 4 - Manually Processed
  * @method array getIds() Obtain Event ID Array
  * @method void setIds(array $Ids) Set Event ID Array
+ * @method boolean getUpdateAll() Obtain Whether to update all statuses. This parameter takes effect only when the statuses are Ignored, Processed, and Deleted.
+ * @method void setUpdateAll(boolean $UpdateAll) Set Whether to update all statuses. This parameter takes effect only when the statuses are Ignored, Processed, and Deleted.
  */
 class ModifyJavaMemShellsStatusRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyJavaMemShellsStatusRequest extends AbstractModel
     public $Ids;
 
     /**
+     * @var boolean Whether to update all statuses. This parameter takes effect only when the statuses are Ignored, Processed, and Deleted.
+     */
+    public $UpdateAll;
+
+    /**
      * @param integer $Status Target Processing Status: 0 - Pending, 1 - Allowlisted, 2 - Deleted, 3 - Ignored, 4 - Manually Processed
      * @param array $Ids Event ID Array
+     * @param boolean $UpdateAll Whether to update all statuses. This parameter takes effect only when the statuses are Ignored, Processed, and Deleted.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyJavaMemShellsStatusRequest extends AbstractModel
 
         if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
             $this->Ids = $param["Ids"];
+        }
+
+        if (array_key_exists("UpdateAll",$param) and $param["UpdateAll"] !== null) {
+            $this->UpdateAll = $param["UpdateAll"];
         }
     }
 }

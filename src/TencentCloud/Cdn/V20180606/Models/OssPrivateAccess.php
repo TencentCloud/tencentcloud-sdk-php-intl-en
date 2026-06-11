@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setAccessKey(string $AccessKey) Set Access ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getSecretKey() Obtain Key.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSecretKey(string $SecretKey) Set Key.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getSecretKey() Obtain Key. the field is returned with masking.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSecretKey(string $SecretKey) Set Key. the field is returned with masking.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRegion() Obtain Region
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRegion(string $Region) Set Region
@@ -59,8 +59,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $AccessKey;
 
     /**
-     * @var string Key.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Key. the field is returned with masking.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SecretKey;
 
@@ -82,8 +82,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Disable
      * @param string $AccessKey Access ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $SecretKey Key.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $SecretKey Key. the field is returned with masking.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Region Region
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $Bucket BucketName

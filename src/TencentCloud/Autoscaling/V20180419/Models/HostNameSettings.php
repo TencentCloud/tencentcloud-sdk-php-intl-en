@@ -53,17 +53,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -  hyphen (-)
 - empty string.
 Delimiter used for concatenating host name, index, and suffix. Assuming host name is testGpu4090, index is 0007, and suffix is server.
--The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
--Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
--Delimiter is an empty string, finally concatenated as testGpu4090007server.
+- The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+- Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+- Delimiter is an empty string, finally concatenated as testGpu4090007server.
  * @method void setHostNameDelimiter(string $HostNameDelimiter) Set Specifies the delimiter for the CVM host name. The default delimiter is a dot (.). Valid values: 
 - dot (.)
 -  hyphen (-)
 - empty string.
 Delimiter used for concatenating host name, index, and suffix. Assuming host name is testGpu4090, index is 0007, and suffix is server.
--The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
--Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
--Delimiter is an empty string, finally concatenated as testGpu4090007server.
+- The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+- Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+- Delimiter is an empty string, finally concatenated as testGpu4090007server.
  */
 class HostNameSettings extends AbstractModel
 {
@@ -99,9 +99,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -  hyphen (-)
 - empty string.
 Delimiter used for concatenating host name, index, and suffix. Assuming host name is testGpu4090, index is 0007, and suffix is server.
--The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
--Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
--Delimiter is an empty string, finally concatenated as testGpu4090007server.
+- The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+- Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+- Delimiter is an empty string, finally concatenated as testGpu4090007server.
      */
     public $HostNameDelimiter;
 
@@ -125,9 +125,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -  hyphen (-)
 - empty string.
 Delimiter used for concatenating host name, index, and suffix. Assuming host name is testGpu4090, index is 0007, and suffix is server.
--The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
--Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
--Delimiter is an empty string, finally concatenated as testGpu4090007server.
+- The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+- Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+- Delimiter is an empty string, finally concatenated as testGpu4090007server.
      */
     function __construct()
     {

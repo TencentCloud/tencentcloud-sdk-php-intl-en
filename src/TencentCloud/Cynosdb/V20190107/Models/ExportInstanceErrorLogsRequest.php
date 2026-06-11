@@ -20,61 +20,61 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportInstanceErrorLogs request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getStartTime() Obtain Log start time
- * @method void setStartTime(string $StartTime) Set Log start time
- * @method string getEndTime() Obtain Log end time
- * @method void setEndTime(string $EndTime) Set Log end time
- * @method integer getLimit() Obtain The max number of returned results
- * @method void setLimit(integer $Limit) Set The max number of returned results
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
- * @method array getLogLevels() Obtain Log level
- * @method void setLogLevels(array $LogLevels) Set Log level
- * @method array getKeyWords() Obtain 
- * @method void setKeyWords(array $KeyWords) Set 
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getStartTime() Obtain Log start time.
+ * @method void setStartTime(string $StartTime) Set Log start time.
+ * @method string getEndTime() Obtain Log end time.
+ * @method void setEndTime(string $EndTime) Set Log end time.
+ * @method integer getLimit() Obtain The max number of returned results.
+ * @method void setLimit(integer $Limit) Set The max number of returned results.
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
+ * @method array getLogLevels() Obtain Log level.
+ * @method void setLogLevels(array $LogLevels) Set Log level.
+ * @method array getKeyWords() Obtain KeyWords.
+ * @method void setKeyWords(array $KeyWords) Set KeyWords.
  * @method string getFileType() Obtain The template type. Valid values: `csv`, `original`.
  * @method void setFileType(string $FileType) Set The template type. Valid values: `csv`, `original`.
- * @method string getOrderBy() Obtain Valid value: `Timestamp`
- * @method void setOrderBy(string $OrderBy) Set Valid value: `Timestamp`
+ * @method string getOrderBy() Obtain Valid value: `Timestamp`.
+ * @method void setOrderBy(string $OrderBy) Set Valid value: `Timestamp`.
  * @method string getOrderByType() Obtain Sorting type. valid values: ASC or DESC.
  * @method void setOrderByType(string $OrderByType) Set Sorting type. valid values: ASC or DESC.
  */
 class ExportInstanceErrorLogsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Log start time
+     * @var string Log start time.
      */
     public $StartTime;
 
     /**
-     * @var string Log end time
+     * @var string Log end time.
      */
     public $EndTime;
 
     /**
-     * @var integer The max number of returned results
+     * @var integer The max number of returned results.
      */
     public $Limit;
 
     /**
-     * @var integer Offset
+     * @var integer Offset.
      */
     public $Offset;
 
     /**
-     * @var array Log level
+     * @var array Log level.
      */
     public $LogLevels;
 
     /**
-     * @var array 
+     * @var array KeyWords.
      */
     public $KeyWords;
 
@@ -84,7 +84,7 @@ class ExportInstanceErrorLogsRequest extends AbstractModel
     public $FileType;
 
     /**
-     * @var string Valid value: `Timestamp`
+     * @var string Valid value: `Timestamp`.
      */
     public $OrderBy;
 
@@ -94,15 +94,15 @@ class ExportInstanceErrorLogsRequest extends AbstractModel
     public $OrderByType;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $StartTime Log start time
-     * @param string $EndTime Log end time
-     * @param integer $Limit The max number of returned results
-     * @param integer $Offset Offset
-     * @param array $LogLevels Log level
-     * @param array $KeyWords 
+     * @param string $InstanceId Instance ID.
+     * @param string $StartTime Log start time.
+     * @param string $EndTime Log end time.
+     * @param integer $Limit The max number of returned results.
+     * @param integer $Offset Offset.
+     * @param array $LogLevels Log level.
+     * @param array $KeyWords KeyWords.
      * @param string $FileType The template type. Valid values: `csv`, `original`.
-     * @param string $OrderBy Valid value: `Timestamp`
+     * @param string $OrderBy Valid value: `Timestamp`.
      * @param string $OrderByType Sorting type. valid values: ASC or DESC.
      */
     function __construct()

@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProjectId() Obtain Host business group ID
  * @method void setProjectId(integer $ProjectId) Set Host business group ID
  * @method array getTag() Obtain Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTag(array $Tag) Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getProcessName() Obtain Process name
  * @method void setProcessName(string $ProcessName) Set Process name
  * @method string getProcessVersion() Obtain Process version
@@ -69,17 +67,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method string getMachineName() Obtain Host name
  * @method void setMachineName(string $MachineName) Set Host name
  * @method string getUpdateTime() Obtain Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFirstTime() Obtain First collection time
  * @method void setFirstTime(string $FirstTime) Set First collection time
  * @method integer getIsNew() Obtain Whether to add [0: no | 1: yes]
  * @method void setIsNew(integer $IsNew) Set Whether to add [0: no | 1: yes]
- * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method MachineExtraInfo getMachineExtraInfo() Obtain  Additional information
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set  Additional information
  */
 class AssetPortBaseInfo extends AbstractModel
 {
@@ -115,7 +109,6 @@ class AssetPortBaseInfo extends AbstractModel
 
     /**
      * @var array Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tag;
 
@@ -201,7 +194,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -216,8 +208,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsNew;
 
     /**
-     * @var MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MachineExtraInfo  Additional information
      */
     public $MachineExtraInfo;
 
@@ -229,7 +220,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $OsInfo Operating System Information
      * @param integer $ProjectId Host business group ID
      * @param array $Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ProcessName Process name
      * @param string $ProcessVersion Process version
      * @param string $ProcessPath Process path
@@ -247,11 +237,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $BindIp Bound IP
      * @param string $MachineName Host name
      * @param string $UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FirstTime First collection time
      * @param integer $IsNew Whether to add [0: no | 1: yes]
-     * @param MachineExtraInfo $MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MachineExtraInfo $MachineExtraInfo  Additional information
      */
     function __construct()
     {

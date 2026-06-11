@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAttackType(string $AttackType) Set The attack type.
  * @method integer getAttackStatus() Obtain The attack status.
  * @method void setAttackStatus(integer $AttackStatus) Set The attack status.
- * @method integer getAttackMaxBandWidth() Obtain The maximum attack bandwidth.
- * @method void setAttackMaxBandWidth(integer $AttackMaxBandWidth) Set The maximum attack bandwidth.
- * @method integer getAttackPacketMaxRate() Obtain The peak attack packet rate.
- * @method void setAttackPacketMaxRate(integer $AttackPacketMaxRate) Set The peak attack packet rate.
+ * @method integer getAttackMaxBandWidth() Obtain Maximum bandwidth of the attack in bps.
+ * @method void setAttackMaxBandWidth(integer $AttackMaxBandWidth) Set Maximum bandwidth of the attack in bps.
+ * @method integer getAttackPacketMaxRate() Obtain Peak attack packet rate, unit: pps.
+ * @method void setAttackPacketMaxRate(integer $AttackPacketMaxRate) Set Peak attack packet rate, unit: pps.
  * @method integer getAttackStartTime() Obtain The attack start time recorded in seconds.
  * @method void setAttackStartTime(integer $AttackStartTime) Set The attack start time recorded in seconds.
  * @method integer getAttackEndTime() Obtain The attack end time recorded in seconds.
@@ -73,12 +73,12 @@ class DDoSAttackEvent extends AbstractModel
     public $AttackStatus;
 
     /**
-     * @var integer The maximum attack bandwidth.
+     * @var integer Maximum bandwidth of the attack in bps.
      */
     public $AttackMaxBandWidth;
 
     /**
-     * @var integer The peak attack packet rate.
+     * @var integer Peak attack packet rate, unit: pps.
      */
     public $AttackPacketMaxRate;
 
@@ -122,8 +122,8 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $EventId The event ID.
      * @param string $AttackType The attack type.
      * @param integer $AttackStatus The attack status.
-     * @param integer $AttackMaxBandWidth The maximum attack bandwidth.
-     * @param integer $AttackPacketMaxRate The peak attack packet rate.
+     * @param integer $AttackMaxBandWidth Maximum bandwidth of the attack in bps.
+     * @param integer $AttackPacketMaxRate Peak attack packet rate, unit: pps.
      * @param integer $AttackStartTime The attack start time recorded in seconds.
      * @param integer $AttackEndTime The attack end time recorded in seconds.
      * @param integer $PolicyId The DDoS policy ID. 

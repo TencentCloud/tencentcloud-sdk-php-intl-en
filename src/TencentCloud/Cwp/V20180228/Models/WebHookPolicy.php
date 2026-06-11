@@ -21,129 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * Policy
  *
  * @method integer getId() Obtain id
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setId(integer $Id) Set id
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getName() Obtain Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getEvents() Obtain Event type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEvents(array $Events) Set Event type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getHostLabels() Obtain Host range
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostLabels(array $HostLabels) Set Host range
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getHostLabels() Obtain Host scope
+ * @method void setHostLabels(array $HostLabels) Set Host scope
  * @method array getReceivers() Obtain Recipient
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReceivers(array $Receivers) Set Recipient
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getFormat() Obtain Format. 0: text; 1: JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFormat(integer $Format) Set Format. 0: text; 1: JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getCustomFields() Obtain Custom passthrough field
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCustomFields(array $CustomFields) Set Custom passthrough field
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsDisabled() Obtain Enable/Disable [1-Disable, 0-Enable]
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsDisabled(integer $IsDisabled) Set Enable/Disable [1-Disable, 0-Enable]
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getQuuids() Obtain Host list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQuuids(array $Quuids) Set Host list
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsDisabled() Obtain Whether it is disabled [1: disabled|0: enabled]
+ * @method void setIsDisabled(integer $IsDisabled) Set Whether it is disabled [1: disabled|0: enabled]
+ * @method array getQuuids() Obtain List of hosts
+ * @method void setQuuids(array $Quuids) Set List of hosts
  * @method integer getHostCount() Obtain Number of hosts
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostCount(integer $HostCount) Set Number of hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getExcludedQuuids() Obtain List of machines to be excluded.
+ * @method void setExcludedQuuids(array $ExcludedQuuids) Set List of machines to be excluded.
+ * @method string getMsgLanguage() Obtain Push language type, Chinese zh, English en	
+ * @method void setMsgLanguage(string $MsgLanguage) Set Push language type, Chinese zh, English en	
  */
 class WebHookPolicy extends AbstractModel
 {
     /**
      * @var integer id
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Id;
 
     /**
      * @var string Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
      * @var array Event type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Events;
 
     /**
-     * @var array Host range
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Host scope
      */
     public $HostLabels;
 
     /**
      * @var array Recipient
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Receivers;
 
     /**
      * @var integer Format. 0: text; 1: JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Format;
 
     /**
      * @var array Custom passthrough field
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CustomFields;
 
     /**
-     * @var integer Enable/Disable [1-Disable, 0-Enable]
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether it is disabled [1: disabled|0: enabled]
      */
     public $IsDisabled;
 
     /**
-     * @var array Host list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array List of hosts
      */
     public $Quuids;
 
     /**
      * @var integer Number of hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostCount;
 
     /**
+     * @var array List of machines to be excluded.
+     */
+    public $ExcludedQuuids;
+
+    /**
+     * @var string Push language type, Chinese zh, English en	
+     */
+    public $MsgLanguage;
+
+    /**
      * @param integer $Id id
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Name Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Events Event type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $HostLabels Host range
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $HostLabels Host scope
      * @param array $Receivers Recipient
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Format Format. 0: text; 1: JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $CustomFields Custom passthrough field
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsDisabled Enable/Disable [1-Disable, 0-Enable]
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Quuids Host list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsDisabled Whether it is disabled [1: disabled|0: enabled]
+     * @param array $Quuids List of hosts
      * @param integer $HostCount Number of hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ExcludedQuuids List of machines to be excluded.
+     * @param string $MsgLanguage Push language type, Chinese zh, English en	
      */
     function __construct()
     {
@@ -216,6 +192,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("HostCount",$param) and $param["HostCount"] !== null) {
             $this->HostCount = $param["HostCount"];
+        }
+
+        if (array_key_exists("ExcludedQuuids",$param) and $param["ExcludedQuuids"] !== null) {
+            $this->ExcludedQuuids = $param["ExcludedQuuids"];
+        }
+
+        if (array_key_exists("MsgLanguage",$param) and $param["MsgLanguage"] !== null) {
+            $this->MsgLanguage = $param["MsgLanguage"];
         }
     }
 }

@@ -24,16 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of items to be returned. It is 10 by default, and the maximum value is 100.
  * @method integer getOffset() Obtain Offset, which defaults to 0
  * @method void setOffset(integer $Offset) Set Offset, which defaults to 0
- * @method array getFilters() Obtain Filter criteria
-<li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>ModifyBeginTime - String - required: no - filter by modification time; start time</li>
-<li>ModifyEndTime - String - required: no - Filter by modification time; end time</li>
- * @method void setFilters(array $Filters) Set Filter criteria
-<li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>ModifyBeginTime - String - required: no - filter by modification time; start time</li>
-<li>ModifyEndTime - String - required: no - Filter by modification time; end time</li>
+ * @method array getFilters() Obtain Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
+ * @method void setFilters(array $Filters) Set Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
  */
 class DescribeLoginWhiteCombinedListRequest extends AbstractModel
 {
@@ -48,22 +40,14 @@ class DescribeLoginWhiteCombinedListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array Filter criteria
-<li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>ModifyBeginTime - String - required: no - filter by modification time; start time</li>
-<li>ModifyEndTime - String - required: no - Filter by modification time; end time</li>
+     * @var array Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
      */
     public $Filters;
 
     /**
      * @param integer $Limit Number of items to be returned. It is 10 by default, and the maximum value is 100.
      * @param integer $Offset Offset, which defaults to 0
-     * @param array $Filters Filter criteria
-<li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>ModifyBeginTime - String - required: no - filter by modification time; start time</li>
-<li>ModifyEndTime - String - required: no - Filter by modification time; end time</li>
+     * @param array $Filters Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
      */
     function __construct()
     {

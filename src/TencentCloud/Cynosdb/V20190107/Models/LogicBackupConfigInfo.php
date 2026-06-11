@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Logical backup configuration information.
  *
  * @method string getLogicBackupEnable() Obtain Whether automatic logical backup is enabled.
  * @method void setLogicBackupEnable(string $LogicBackupEnable) Set Whether automatic logical backup is enabled.
@@ -34,8 +34,8 @@ Unit: seconds.
 Valid values: ON/OFF.
  * @method void setLogicCrossRegionsEnable(string $LogicCrossRegionsEnable) Set Is cross-regional logical backup enabled?.
 Valid values: ON/OFF.
- * @method array getLogicCrossRegions() Obtain 
- * @method void setLogicCrossRegions(array $LogicCrossRegions) Set 
+ * @method array getLogicCrossRegions() Obtain Regions covered by logical backup.
+ * @method void setLogicCrossRegions(array $LogicCrossRegions) Set Regions covered by logical backup.
  * @method array getAutoCopyVaults() Obtain Backup delivery relationship
  * @method void setAutoCopyVaults(array $AutoCopyVaults) Set Backup delivery relationship
  */
@@ -69,7 +69,7 @@ Valid values: ON/OFF.
     public $LogicCrossRegionsEnable;
 
     /**
-     * @var array 
+     * @var array Regions covered by logical backup.
      */
     public $LogicCrossRegions;
 
@@ -86,7 +86,7 @@ Valid values: ON/OFF.
 Unit: seconds.
      * @param string $LogicCrossRegionsEnable Is cross-regional logical backup enabled?.
 Valid values: ON/OFF.
-     * @param array $LogicCrossRegions 
+     * @param array $LogicCrossRegions Regions covered by logical backup.
      * @param array $AutoCopyVaults Backup delivery relationship
      */
     function __construct()

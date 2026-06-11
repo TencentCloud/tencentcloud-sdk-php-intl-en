@@ -20,90 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeK8sApiAbnormalEventList request structure.
  *
- * @method array getFilters() Obtain Filters.
-<li>TimeRange - String - Optional - Time range. Example: ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>`MatchRules` - String - Optional - Hit rule</li>
-<li>`RiskLevel` - String - Optional - Threat level</li>
-<li>`Status` - String - Optional - Event status</li>
-<li>`MatchRuleType` - String - Optional - Hit rule type</li>
-<li>`ClusterRunningStatus` - String - Optional - Cluster running status</li>
-<li>`ClusterName` - String - Optional - Cluster name</li>
-<li>`ClusterID` - String - Optional - Cluster ID</li>
- * @method void setFilters(array $Filters) Set Filters.
-<li>TimeRange - String - Optional - Time range. Example: ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>`MatchRules` - String - Optional - Hit rule</li>
-<li>`RiskLevel` - String - Optional - Threat level</li>
-<li>`Status` - String - Optional - Event status</li>
-<li>`MatchRuleType` - String - Optional - Hit rule type</li>
-<li>`ClusterRunningStatus` - String - Optional - Cluster running status</li>
-<li>`ClusterName` - String - Optional - Cluster name</li>
-<li>`ClusterID` - String - Optional - Cluster ID</li>
- * @method integer getLimit() Obtain The number of results returned. Default value: 10. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set The number of results returned. Default value: 10. Maximum value: 100.
- * @method integer getOffset() Obtain Offset. Default value: 0
- * @method void setOffset(integer $Offset) Set Offset. Default value: 0
- * @method string getOrder() Obtain Sort order
- * @method void setOrder(string $Order) Set Sort order
- * @method string getBy() Obtain Sorting field
-`LatestFoundTime`: Last creation time
-`AlarmCount`: Number of alarms
- * @method void setBy(string $By) Set Sorting field
-`LatestFoundTime`: Last creation time
-`AlarmCount`: Number of alarms
+ * @method array getFilters() Obtain <p>Filter conditions.</p><li>TimeRange - String - Required: No - Time range filter ["2022-03-31 16:55:00", "2022-03-31 17:00:00"];</li><li>MatchRules - String - Required: No - Hit rule filter;</li><li>RiskLevel - String - Required: No - Threat level filter;</li><li>Status - String - Required: No - Event status filter;</li><li>MatchRuleType - String - Required: No - Hit rule type filter;</li><li>ClusterRunningStatus - String - Required: No - Cluster running status;</li><li>ClusterName - String - Required: No - Cluster name;</li><li>ClusterID - String - Required: No - Cluster ID.</li>
+ * @method void setFilters(array $Filters) Set <p>Filter conditions.</p><li>TimeRange - String - Required: No - Time range filter ["2022-03-31 16:55:00", "2022-03-31 17:00:00"];</li><li>MatchRules - String - Required: No - Hit rule filter;</li><li>RiskLevel - String - Required: No - Threat level filter;</li><li>Status - String - Required: No - Event status filter;</li><li>MatchRuleType - String - Required: No - Hit rule type filter;</li><li>ClusterRunningStatus - String - Required: No - Cluster running status;</li><li>ClusterName - String - Required: No - Cluster name;</li><li>ClusterID - String - Required: No - Cluster ID.</li>
+ * @method integer getLimit() Obtain <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+ * @method integer getOffset() Obtain <p>Offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset. Default value: 0.</p>
+ * @method string getOrder() Obtain <p>Sorting method.</p>
+ * @method void setOrder(string $Order) Set <p>Sorting method.</p>
+ * @method string getBy() Obtain <p>Sorting field.<br>LatestFoundTime: Last generation time.<br>AlarmCount: Number of alarms.</p>
+ * @method void setBy(string $By) Set <p>Sorting field.<br>LatestFoundTime: Last generation time.<br>AlarmCount: Number of alarms.</p>
  */
 class DescribeK8sApiAbnormalEventListRequest extends AbstractModel
 {
     /**
-     * @var array Filters.
-<li>TimeRange - String - Optional - Time range. Example: ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>`MatchRules` - String - Optional - Hit rule</li>
-<li>`RiskLevel` - String - Optional - Threat level</li>
-<li>`Status` - String - Optional - Event status</li>
-<li>`MatchRuleType` - String - Optional - Hit rule type</li>
-<li>`ClusterRunningStatus` - String - Optional - Cluster running status</li>
-<li>`ClusterName` - String - Optional - Cluster name</li>
-<li>`ClusterID` - String - Optional - Cluster ID</li>
+     * @var array <p>Filter conditions.</p><li>TimeRange - String - Required: No - Time range filter ["2022-03-31 16:55:00", "2022-03-31 17:00:00"];</li><li>MatchRules - String - Required: No - Hit rule filter;</li><li>RiskLevel - String - Required: No - Threat level filter;</li><li>Status - String - Required: No - Event status filter;</li><li>MatchRuleType - String - Required: No - Hit rule type filter;</li><li>ClusterRunningStatus - String - Required: No - Cluster running status;</li><li>ClusterName - String - Required: No - Cluster name;</li><li>ClusterID - String - Required: No - Cluster ID.</li>
      */
     public $Filters;
 
     /**
-     * @var integer The number of results returned. Default value: 10. Maximum value: 100.
+     * @var integer <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Offset. Default value: 0
+     * @var integer <p>Offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var string Sort order
+     * @var string <p>Sorting method.</p>
      */
     public $Order;
 
     /**
-     * @var string Sorting field
-`LatestFoundTime`: Last creation time
-`AlarmCount`: Number of alarms
+     * @var string <p>Sorting field.<br>LatestFoundTime: Last generation time.<br>AlarmCount: Number of alarms.</p>
      */
     public $By;
 
     /**
-     * @param array $Filters Filters.
-<li>TimeRange - String - Optional - Time range. Example: ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>`MatchRules` - String - Optional - Hit rule</li>
-<li>`RiskLevel` - String - Optional - Threat level</li>
-<li>`Status` - String - Optional - Event status</li>
-<li>`MatchRuleType` - String - Optional - Hit rule type</li>
-<li>`ClusterRunningStatus` - String - Optional - Cluster running status</li>
-<li>`ClusterName` - String - Optional - Cluster name</li>
-<li>`ClusterID` - String - Optional - Cluster ID</li>
-     * @param integer $Limit The number of results returned. Default value: 10. Maximum value: 100.
-     * @param integer $Offset Offset. Default value: 0
-     * @param string $Order Sort order
-     * @param string $By Sorting field
-`LatestFoundTime`: Last creation time
-`AlarmCount`: Number of alarms
+     * @param array $Filters <p>Filter conditions.</p><li>TimeRange - String - Required: No - Time range filter ["2022-03-31 16:55:00", "2022-03-31 17:00:00"];</li><li>MatchRules - String - Required: No - Hit rule filter;</li><li>RiskLevel - String - Required: No - Threat level filter;</li><li>Status - String - Required: No - Event status filter;</li><li>MatchRuleType - String - Required: No - Hit rule type filter;</li><li>ClusterRunningStatus - String - Required: No - Cluster running status;</li><li>ClusterName - String - Required: No - Cluster name;</li><li>ClusterID - String - Required: No - Cluster ID.</li>
+     * @param integer $Limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+     * @param integer $Offset <p>Offset. Default value: 0.</p>
+     * @param string $Order <p>Sorting method.</p>
+     * @param string $By <p>Sorting field.<br>LatestFoundTime: Last generation time.<br>AlarmCount: Number of alarms.</p>
      */
     function __construct()
     {

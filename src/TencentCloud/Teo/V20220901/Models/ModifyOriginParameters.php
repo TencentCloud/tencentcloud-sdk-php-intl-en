@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Modifying origin server configuration parameters
  *
- * @method string getOriginType() Obtain The origin type. values:.
-<Li>IPDomain: ipv4, ipv6, or domain name type origin server;</li>.
-<Li>OriginGroup: origin server group type origin server;</li>.
-<Li>LoadBalance: cloud load balancer (clb), this feature is in beta test. to use it, please submit a ticket or contact smart customer service;</li>.
-<Li>COS: tencent cloud COS origin server;</li>.
-<Li>AWSS3: all object storage origin servers that support the aws s3 protocol.</li>.
- * @method void setOriginType(string $OriginType) Set The origin type. values:.
-<Li>IPDomain: ipv4, ipv6, or domain name type origin server;</li>.
-<Li>OriginGroup: origin server group type origin server;</li>.
-<Li>LoadBalance: cloud load balancer (clb), this feature is in beta test. to use it, please submit a ticket or contact smart customer service;</li>.
-<Li>COS: tencent cloud COS origin server;</li>.
-<Li>AWSS3: all object storage origin servers that support the aws s3 protocol.</li>.
- * @method string getOrigin() Obtain Origin server address, which varies according to the value of origintype:.
-<Li>When origintype = ipdomain, fill in an ipv4 address, an ipv6 address, or a domain name;</li>.
-<Li>When origintype = cos, please fill in the access domain name of the cos bucket;</li>.
-<Li>When origintype = awss3, fill in the access domain name of the s3 bucket;</li>.
-<Li>When origintype = origingroup, fill in the origin server group id;</li>.
-<Li>When origintype = loadbalance, fill in the cloud load balancer instance id. this feature is currently only available to the allowlist.</li>.
- * @method void setOrigin(string $Origin) Set Origin server address, which varies according to the value of origintype:.
-<Li>When origintype = ipdomain, fill in an ipv4 address, an ipv6 address, or a domain name;</li>.
-<Li>When origintype = cos, please fill in the access domain name of the cos bucket;</li>.
-<Li>When origintype = awss3, fill in the access domain name of the s3 bucket;</li>.
-<Li>When origintype = origingroup, fill in the origin server group id;</li>.
-<Li>When origintype = loadbalance, fill in the cloud load balancer instance id. this feature is currently only available to the allowlist.</li>.
+ * @method string getOriginType() Obtain Origin server type. Valid values:
+<li>IPDomain: IPV4, IPV6, or domain type origin server;</li>
+<li>OriginGroup: origin server group type origin server;</li>
+<li>LoadBalance: load balancing. This feature is in beta test. If needed, submit a ticket;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWSS3: supports ALL AWS S3-compatible COS origin servers.</li>
+ * @method void setOriginType(string $OriginType) Set Origin server type. Valid values:
+<li>IPDomain: IPV4, IPV6, or domain type origin server;</li>
+<li>OriginGroup: origin server group type origin server;</li>
+<li>LoadBalance: load balancing. This feature is in beta test. If needed, submit a ticket;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWSS3: supports ALL AWS S3-compatible COS origin servers.</li>
+ * @method string getOrigin() Obtain Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IPDomain, specify this parameter with an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When OriginType = COS, specify the cos bucket access domain.</li>
+<li>When OriginType = AWSS3, specify this parameter as the access domain of the S3 bucket;</li>
+<li>When OriginType = OriginGroup, fill in the origin server group ID; when it is an output parameter, if the origin server group of other sites is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = LoadBalance, specify this parameter as the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. When it is an output parameter, if the load balancing of other sites is referenced, the format is {LoadBalancer ID}@{ZoneID}, such as lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
+ * @method void setOrigin(string $Origin) Set Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IPDomain, specify this parameter with an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When OriginType = COS, specify the cos bucket access domain.</li>
+<li>When OriginType = AWSS3, specify this parameter as the access domain of the S3 bucket;</li>
+<li>When OriginType = OriginGroup, fill in the origin server group ID; when it is an output parameter, if the origin server group of other sites is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = LoadBalance, specify this parameter as the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. When it is an output parameter, if the load balancing of other sites is referenced, the format is {LoadBalancer ID}@{ZoneID}, such as lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
  * @method string getOriginProtocol() Obtain Origin-Pull protocol configuration. this parameter is required when origintype is ipdomain, origingroup, or loadbalance. valid values are:.
 <Li>Http: use http protocol;</li>.
 <Li>Https: use https protocol;</li>.
@@ -70,22 +70,22 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 class ModifyOriginParameters extends AbstractModel
 {
     /**
-     * @var string The origin type. values:.
-<Li>IPDomain: ipv4, ipv6, or domain name type origin server;</li>.
-<Li>OriginGroup: origin server group type origin server;</li>.
-<Li>LoadBalance: cloud load balancer (clb), this feature is in beta test. to use it, please submit a ticket or contact smart customer service;</li>.
-<Li>COS: tencent cloud COS origin server;</li>.
-<Li>AWSS3: all object storage origin servers that support the aws s3 protocol.</li>.
+     * @var string Origin server type. Valid values:
+<li>IPDomain: IPV4, IPV6, or domain type origin server;</li>
+<li>OriginGroup: origin server group type origin server;</li>
+<li>LoadBalance: load balancing. This feature is in beta test. If needed, submit a ticket;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWSS3: supports ALL AWS S3-compatible COS origin servers.</li>
      */
     public $OriginType;
 
     /**
-     * @var string Origin server address, which varies according to the value of origintype:.
-<Li>When origintype = ipdomain, fill in an ipv4 address, an ipv6 address, or a domain name;</li>.
-<Li>When origintype = cos, please fill in the access domain name of the cos bucket;</li>.
-<Li>When origintype = awss3, fill in the access domain name of the s3 bucket;</li>.
-<Li>When origintype = origingroup, fill in the origin server group id;</li>.
-<Li>When origintype = loadbalance, fill in the cloud load balancer instance id. this feature is currently only available to the allowlist.</li>.
+     * @var string Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IPDomain, specify this parameter with an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When OriginType = COS, specify the cos bucket access domain.</li>
+<li>When OriginType = AWSS3, specify this parameter as the access domain of the S3 bucket;</li>
+<li>When OriginType = OriginGroup, fill in the origin server group ID; when it is an output parameter, if the origin server group of other sites is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = LoadBalance, specify this parameter as the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. When it is an output parameter, if the load balancing of other sites is referenced, the format is {LoadBalancer ID}@{ZoneID}, such as lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
      */
     public $Origin;
 
@@ -121,18 +121,18 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     public $PrivateParameters;
 
     /**
-     * @param string $OriginType The origin type. values:.
-<Li>IPDomain: ipv4, ipv6, or domain name type origin server;</li>.
-<Li>OriginGroup: origin server group type origin server;</li>.
-<Li>LoadBalance: cloud load balancer (clb), this feature is in beta test. to use it, please submit a ticket or contact smart customer service;</li>.
-<Li>COS: tencent cloud COS origin server;</li>.
-<Li>AWSS3: all object storage origin servers that support the aws s3 protocol.</li>.
-     * @param string $Origin Origin server address, which varies according to the value of origintype:.
-<Li>When origintype = ipdomain, fill in an ipv4 address, an ipv6 address, or a domain name;</li>.
-<Li>When origintype = cos, please fill in the access domain name of the cos bucket;</li>.
-<Li>When origintype = awss3, fill in the access domain name of the s3 bucket;</li>.
-<Li>When origintype = origingroup, fill in the origin server group id;</li>.
-<Li>When origintype = loadbalance, fill in the cloud load balancer instance id. this feature is currently only available to the allowlist.</li>.
+     * @param string $OriginType Origin server type. Valid values:
+<li>IPDomain: IPV4, IPV6, or domain type origin server;</li>
+<li>OriginGroup: origin server group type origin server;</li>
+<li>LoadBalance: load balancing. This feature is in beta test. If needed, submit a ticket;</li>
+<li>COS: Tencent Cloud COS origin server;</li>
+<li>AWSS3: supports ALL AWS S3-compatible COS origin servers.</li>
+     * @param string $Origin Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IPDomain, specify this parameter with an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When OriginType = COS, specify the cos bucket access domain.</li>
+<li>When OriginType = AWSS3, specify this parameter as the access domain of the S3 bucket;</li>
+<li>When OriginType = OriginGroup, fill in the origin server group ID; when it is an output parameter, if the origin server group of other sites is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = LoadBalance, specify this parameter as the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. When it is an output parameter, if the load balancing of other sites is referenced, the format is {LoadBalancer ID}@{ZoneID}, such as lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
      * @param string $OriginProtocol Origin-Pull protocol configuration. this parameter is required when origintype is ipdomain, origingroup, or loadbalance. valid values are:.
 <Li>Http: use http protocol;</li>.
 <Li>Https: use https protocol;</li>.

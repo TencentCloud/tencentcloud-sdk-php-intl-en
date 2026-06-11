@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeExports request structure.
  *
  * @method string getTopicId() Obtain Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
  * @method void setTopicId(string $TopicId) Set Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
  * @method integer getOffset() Obtain Page offset. Default value: 0
  * @method void setOffset(integer $Offset) Set Page offset. Default value: 0
  * @method integer getLimit() Obtain Maximum number of entries per page. Default value: 20. Maximum value: 100
@@ -31,6 +33,7 @@ class DescribeExportsRequest extends AbstractModel
 {
     /**
      * @var string Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
@@ -46,6 +49,7 @@ class DescribeExportsRequest extends AbstractModel
 
     /**
      * @param string $TopicId Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      * @param integer $Offset Page offset. Default value: 0
      * @param integer $Limit Maximum number of entries per page. Default value: 20. Maximum value: 100
      */

@@ -55,11 +55,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOnlineStatus() Obtain Host Online Status
  * @method void setOnlineStatus(integer $OnlineStatus) Set Host Online Status
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUuid() Obtain Host UUID
  * @method void setUuid(string $Uuid) Set Host UUID
+ * @method integer getFirstDetectionMethod() Obtain First time detection method 0 scan;1 real-time monitoring
+ * @method void setFirstDetectionMethod(integer $FirstDetectionMethod) Set First time detection method 0 scan;1 real-time monitoring
  */
 class RiskProcessEvent extends AbstractModel
 {
@@ -150,7 +150,6 @@ class RiskProcessEvent extends AbstractModel
 
     /**
      * @var MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -158,6 +157,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string Host UUID
      */
     public $Uuid;
+
+    /**
+     * @var integer First time detection method 0 scan;1 real-time monitoring
+     */
+    public $FirstDetectionMethod;
 
     /**
      * @param integer $EventId Event ID
@@ -178,8 +182,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $HandleStatus Processing Status [0 Pending; 1 Processed; 2 Scanning; 3 Scanned; 4 Exited; 5 Ignore]
      * @param integer $OnlineStatus Host Online Status
      * @param MachineExtraInfo $MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Uuid Host UUID
+     * @param integer $FirstDetectionMethod First time detection method 0 scan;1 real-time monitoring
      */
     function __construct()
     {
@@ -269,6 +273,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
             $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("FirstDetectionMethod",$param) and $param["FirstDetectionMethod"] !== null) {
+            $this->FirstDetectionMethod = $param["FirstDetectionMethod"];
         }
     }
 }

@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Bot intelligent analysis configuration.
  *
- * @method BotRatings getBotRatings() Obtain Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
- * @method void setBotRatings(BotRatings $BotRatings) Set Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
  * @method string getEnabled() Obtain Specifies the switch for Bot intelligent analysis configuration. valid values:.
 
 on: enabled.
@@ -30,14 +28,13 @@ off: disabled.
 
 on: enabled.
 off: disabled.
+ * @method string getId() Obtain Rule ID of Bot intelligent analysis, returned as an output parameter.
+ * @method void setId(string $Id) Set Rule ID of Bot intelligent analysis, returned as an output parameter.
+ * @method BotRatings getBotRatings() Obtain Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+ * @method void setBotRatings(BotRatings $BotRatings) Set Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
  */
 class BotIntelligence extends AbstractModel
 {
-    /**
-     * @var BotRatings Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
-     */
-    public $BotRatings;
-
     /**
      * @var string Specifies the switch for Bot intelligent analysis configuration. valid values:.
 
@@ -47,11 +44,22 @@ off: disabled.
     public $Enabled;
 
     /**
-     * @param BotRatings $BotRatings Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+     * @var string Rule ID of Bot intelligent analysis, returned as an output parameter.
+     */
+    public $Id;
+
+    /**
+     * @var BotRatings Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+     */
+    public $BotRatings;
+
+    /**
      * @param string $Enabled Specifies the switch for Bot intelligent analysis configuration. valid values:.
 
 on: enabled.
 off: disabled.
+     * @param string $Id Rule ID of Bot intelligent analysis, returned as an output parameter.
+     * @param BotRatings $BotRatings Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
      */
     function __construct()
     {
@@ -66,13 +74,17 @@ off: disabled.
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
         if (array_key_exists("BotRatings",$param) and $param["BotRatings"] !== null) {
             $this->BotRatings = new BotRatings();
             $this->BotRatings->deserialize($param["BotRatings"]);
-        }
-
-        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
-            $this->Enabled = $param["Enabled"];
         }
     }
 }

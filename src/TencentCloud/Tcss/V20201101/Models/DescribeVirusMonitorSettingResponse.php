@@ -22,18 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getEnableScan() Obtain Whether to enable real-time monitoring
  * @method void setEnableScan(boolean $EnableScan) Set Whether to enable real-time monitoring
- * @method boolean getScanPathAll() Obtain Scan all paths
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanPathAll(boolean $ScanPathAll) Set Scan all paths
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getScanPathType() Obtain Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanPathType(integer $ScanPathType) Set Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getScanPath() Obtain Specified path to be excluded or scanned
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanPath(array $ScanPath) Set Specified path to be excluded or scanned
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getScanPathAll() Obtain Scan all paths.
+ * @method void setScanPathAll(boolean $ScanPathAll) Set Scan all paths.
+ * @method integer getScanPathType() Obtain It is effective when ScanPathAll is true. 0: Scan the following paths; 1: Scan the following paths.
+ * @method void setScanPathType(integer $ScanPathType) Set It is effective when ScanPathAll is true. 0: Scan the following paths; 1: Scan the following paths.
+ * @method array getScanPath() Obtain Custom Excluded or Scanned Address
+ * @method void setScanPath(array $ScanPath) Set Custom Excluded or Scanned Address
  * @method string getScanPathMode() Obtain Path scanning mode: 
 `SCAN_PATH_ALL`: Scan all paths
 `SCAN_PATH_DEFAULT`: Scan the default path
@@ -55,20 +49,17 @@ class DescribeVirusMonitorSettingResponse extends AbstractModel
     public $EnableScan;
 
     /**
-     * @var boolean Scan all paths
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Scan all paths.
      */
     public $ScanPathAll;
 
     /**
-     * @var integer Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer It is effective when ScanPathAll is true. 0: Scan the following paths; 1: Scan the following paths.
      */
     public $ScanPathType;
 
     /**
-     * @var array Specified path to be excluded or scanned
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Custom Excluded or Scanned Address
      */
     public $ScanPath;
 
@@ -88,12 +79,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param boolean $EnableScan Whether to enable real-time monitoring
-     * @param boolean $ScanPathAll Scan all paths
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ScanPathType Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ScanPath Specified path to be excluded or scanned
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $ScanPathAll Scan all paths.
+     * @param integer $ScanPathType It is effective when ScanPathAll is true. 0: Scan the following paths; 1: Scan the following paths.
+     * @param array $ScanPath Custom Excluded or Scanned Address
      * @param string $ScanPathMode Path scanning mode: 
 `SCAN_PATH_ALL`: Scan all paths
 `SCAN_PATH_DEFAULT`: Scan the default path

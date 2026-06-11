@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteScheduledSql request structure.
  *
- * @method string getTaskId() Obtain Task ID
- * @method void setTaskId(string $TaskId) Set Task ID
- * @method string getSrcTopicId() Obtain Source Log Topic ID
- * @method void setSrcTopicId(string $SrcTopicId) Set Source Log Topic ID
+ * @method string getTaskId() Obtain Task ID, which can be obtained through [Scheduled SQL Analysis Task List](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+ * @method void setTaskId(string $TaskId) Set Task ID, which can be obtained through [Scheduled SQL Analysis Task List](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+ * @method string getSrcTopicId() Obtain Source log topic ID. Search the scheduled SQL analysis task list (https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
+ * @method void setSrcTopicId(string $SrcTopicId) Set Source log topic ID. Search the scheduled SQL analysis task list (https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
  */
 class DeleteScheduledSqlRequest extends AbstractModel
 {
     /**
-     * @var string Task ID
+     * @var string Task ID, which can be obtained through [Scheduled SQL Analysis Task List](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
      */
     public $TaskId;
 
     /**
-     * @var string Source Log Topic ID
+     * @var string Source log topic ID. Search the scheduled SQL analysis task list (https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
      */
     public $SrcTopicId;
 
     /**
-     * @param string $TaskId Task ID
-     * @param string $SrcTopicId Source Log Topic ID
+     * @param string $TaskId Task ID, which can be obtained through [Scheduled SQL Analysis Task List](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+     * @param string $SrcTopicId Source log topic ID. Search the scheduled SQL analysis task list (https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
      */
     function __construct()
     {

@@ -18,47 +18,49 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Container Security Image Repository List
+ * Container security image repository list
  *
- * @method integer getRegistryId() Obtain Repository id
- * @method void setRegistryId(integer $RegistryId) Set Repository id
+ * @method integer getRegistryId() Obtain Repository ID
+ * @method void setRegistryId(integer $RegistryId) Set Repository ID
  * @method string getName() Obtain Repository Name
  * @method void setName(string $Name) Set Repository Name
- * @method string getRegistryType() Obtain Repository Type, list: harbor, tcr
- * @method void setRegistryType(string $RegistryType) Set Repository Type, list: harbor, tcr
- * @method string getUrl() Obtain Repository url
- * @method void setUrl(string $Url) Set Repository url
- * @method string getNetType() Obtain Network Type, list: public
- * @method void setNetType(string $NetType) Set Network Type, list: public
+ * @method string getRegistryType() Obtain Repository type, list: harbor, tcr
+ * @method void setRegistryType(string $RegistryType) Set Repository type, list: harbor, tcr
+ * @method string getUrl() Obtain Warehouse url
+ * @method void setUrl(string $Url) Set Warehouse url
+ * @method string getNetType() Obtain Network type, list: public
+ * @method void setNetType(string $NetType) Set Network type, list: public
  * @method string getRegistryRegion() Obtain Region, list: default
  * @method void setRegistryRegion(string $RegistryRegion) Set Region, list: default
- * @method string getRegistryVersion() Obtain Repository Version
- * @method void setRegistryVersion(string $RegistryVersion) Set Repository Version
- * @method string getConnectMsg() Obtain Repository connection error message (to be deprecated, use ConnDetectException instead)
- * @method void setConnectMsg(string $ConnectMsg) Set Repository connection error message (to be deprecated, use ConnDetectException instead)
- * @method string getConnDetectType() Obtain Connectivity Detection Method
- * @method void setConnDetectType(string $ConnDetectType) Set Connectivity Detection Method
- * @method integer getConnDetectHostCount() Obtain Connectivity Detection Host Count
- * @method void setConnDetectHostCount(integer $ConnDetectHostCount) Set Connectivity Detection Host Count
- * @method array getConnDetectDetail() Obtain Connectivity Detection Details
- * @method void setConnDetectDetail(array $ConnDetectDetail) Set Connectivity Detection Details
- * @method string getInstanceID() Obtain instance_id in tcr
- * @method void setInstanceID(string $InstanceID) Set instance_id in tcr
- * @method string getLatestSyncTime() Obtain Latest Successful Synchronization Time
- * @method void setLatestSyncTime(string $LatestSyncTime) Set Latest Successful Synchronization Time
- * @method string getSyncStatus() Obtain Synchronization Status
- * @method void setSyncStatus(string $SyncStatus) Set Synchronization Status
+ * @method string getRegistryVersion() Obtain warehouse version
+ * @method void setRegistryVersion(string $RegistryVersion) Set warehouse version
+ * @method string getConnectMsg() Obtain Repository connection error message (to be deprecated). Use ConnDetectException.
+ * @method void setConnectMsg(string $ConnectMsg) Set Repository connection error message (to be deprecated). Use ConnDetectException.
+ * @method string getConnDetectType() Obtain Connectivity Check Method
+ * @method void setConnDetectType(string $ConnDetectType) Set Connectivity Check Method
+ * @method integer getConnDetectHostCount() Obtain Connectivity Check Host Count
+ * @method void setConnDetectHostCount(integer $ConnDetectHostCount) Set Connectivity Check Host Count
+ * @method array getConnDetectDetail() Obtain Connectivity Check Details
+ * @method void setConnDetectDetail(array $ConnDetectDetail) Set Connectivity Check Details
+ * @method string getInstanceID() Obtain Instance ID in TCR Scenario
+ * @method void setInstanceID(string $InstanceID) Set Instance ID in TCR Scenario
+ * @method string getLatestSyncTime() Obtain Most Recent Time for Successful Synchronization
+ * @method void setLatestSyncTime(string $LatestSyncTime) Set Most Recent Time for Successful Synchronization
+ * @method string getSyncStatus() Obtain Synchronization status
+ * @method void setSyncStatus(string $SyncStatus) Set Synchronization status
  * @method string getSyncFailReason() Obtain Synchronization Failure Reason
  * @method void setSyncFailReason(string $SyncFailReason) Set Synchronization Failure Reason
  * @method string getSyncSolution() Obtain Synchronization Failure Solution
  * @method void setSyncSolution(string $SyncSolution) Set Synchronization Failure Solution
- * @method string getSyncMessage() Obtain Synchronization Failure Message
- * @method void setSyncMessage(string $SyncMessage) Set Synchronization Failure Message
+ * @method string getSyncMessage() Obtain Synchronization Failure Information
+ * @method void setSyncMessage(string $SyncMessage) Set Synchronization Failure Information
+ * @method integer getSyncMode() Obtain Synchronization method. 0: full synchronization; 1: incremental synchronization.	
+ * @method void setSyncMode(integer $SyncMode) Set Synchronization method. 0: full synchronization; 1: incremental synchronization.	
  */
 class ImageRepoRegistryInfo extends AbstractModel
 {
     /**
-     * @var integer Repository id
+     * @var integer Repository ID
      */
     public $RegistryId;
 
@@ -68,17 +70,17 @@ class ImageRepoRegistryInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var string Repository Type, list: harbor, tcr
+     * @var string Repository type, list: harbor, tcr
      */
     public $RegistryType;
 
     /**
-     * @var string Repository url
+     * @var string Warehouse url
      */
     public $Url;
 
     /**
-     * @var string Network Type, list: public
+     * @var string Network type, list: public
      */
     public $NetType;
 
@@ -88,42 +90,42 @@ class ImageRepoRegistryInfo extends AbstractModel
     public $RegistryRegion;
 
     /**
-     * @var string Repository Version
+     * @var string warehouse version
      */
     public $RegistryVersion;
 
     /**
-     * @var string Repository connection error message (to be deprecated, use ConnDetectException instead)
+     * @var string Repository connection error message (to be deprecated). Use ConnDetectException.
      */
     public $ConnectMsg;
 
     /**
-     * @var string Connectivity Detection Method
+     * @var string Connectivity Check Method
      */
     public $ConnDetectType;
 
     /**
-     * @var integer Connectivity Detection Host Count
+     * @var integer Connectivity Check Host Count
      */
     public $ConnDetectHostCount;
 
     /**
-     * @var array Connectivity Detection Details
+     * @var array Connectivity Check Details
      */
     public $ConnDetectDetail;
 
     /**
-     * @var string instance_id in tcr
+     * @var string Instance ID in TCR Scenario
      */
     public $InstanceID;
 
     /**
-     * @var string Latest Successful Synchronization Time
+     * @var string Most Recent Time for Successful Synchronization
      */
     public $LatestSyncTime;
 
     /**
-     * @var string Synchronization Status
+     * @var string Synchronization status
      */
     public $SyncStatus;
 
@@ -138,28 +140,34 @@ class ImageRepoRegistryInfo extends AbstractModel
     public $SyncSolution;
 
     /**
-     * @var string Synchronization Failure Message
+     * @var string Synchronization Failure Information
      */
     public $SyncMessage;
 
     /**
-     * @param integer $RegistryId Repository id
+     * @var integer Synchronization method. 0: full synchronization; 1: incremental synchronization.	
+     */
+    public $SyncMode;
+
+    /**
+     * @param integer $RegistryId Repository ID
      * @param string $Name Repository Name
-     * @param string $RegistryType Repository Type, list: harbor, tcr
-     * @param string $Url Repository url
-     * @param string $NetType Network Type, list: public
+     * @param string $RegistryType Repository type, list: harbor, tcr
+     * @param string $Url Warehouse url
+     * @param string $NetType Network type, list: public
      * @param string $RegistryRegion Region, list: default
-     * @param string $RegistryVersion Repository Version
-     * @param string $ConnectMsg Repository connection error message (to be deprecated, use ConnDetectException instead)
-     * @param string $ConnDetectType Connectivity Detection Method
-     * @param integer $ConnDetectHostCount Connectivity Detection Host Count
-     * @param array $ConnDetectDetail Connectivity Detection Details
-     * @param string $InstanceID instance_id in tcr
-     * @param string $LatestSyncTime Latest Successful Synchronization Time
-     * @param string $SyncStatus Synchronization Status
+     * @param string $RegistryVersion warehouse version
+     * @param string $ConnectMsg Repository connection error message (to be deprecated). Use ConnDetectException.
+     * @param string $ConnDetectType Connectivity Check Method
+     * @param integer $ConnDetectHostCount Connectivity Check Host Count
+     * @param array $ConnDetectDetail Connectivity Check Details
+     * @param string $InstanceID Instance ID in TCR Scenario
+     * @param string $LatestSyncTime Most Recent Time for Successful Synchronization
+     * @param string $SyncStatus Synchronization status
      * @param string $SyncFailReason Synchronization Failure Reason
      * @param string $SyncSolution Synchronization Failure Solution
-     * @param string $SyncMessage Synchronization Failure Message
+     * @param string $SyncMessage Synchronization Failure Information
+     * @param integer $SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.	
      */
     function __construct()
     {
@@ -245,6 +253,10 @@ class ImageRepoRegistryInfo extends AbstractModel
 
         if (array_key_exists("SyncMessage",$param) and $param["SyncMessage"] !== null) {
             $this->SyncMessage = $param["SyncMessage"];
+        }
+
+        if (array_key_exists("SyncMode",$param) and $param["SyncMode"] !== null) {
+            $this->SyncMode = $param["SyncMode"];
         }
     }
 }

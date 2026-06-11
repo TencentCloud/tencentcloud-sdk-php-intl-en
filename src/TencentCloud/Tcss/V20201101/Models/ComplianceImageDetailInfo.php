@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageName(string $ImageName) Set Image name
  * @method string getImageTag() Obtain Image tag
  * @method void setImageTag(string $ImageTag) Set Image tag
- * @method string getRepository() Obtain Path of the remote repository of the image
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRepository(string $Repository) Set Path of the remote repository of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRepository() Obtain Path of the remote repository where the mirror resides.
+ * @method void setRepository(string $Repository) Set Path of the remote repository where the mirror resides.
  */
 class ComplianceImageDetailInfo extends AbstractModel
 {
@@ -49,8 +47,7 @@ class ComplianceImageDetailInfo extends AbstractModel
     public $ImageTag;
 
     /**
-     * @var string Path of the remote repository of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Path of the remote repository where the mirror resides.
      */
     public $Repository;
 
@@ -58,8 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ImageId Image ID on the server
      * @param string $ImageName Image name
      * @param string $ImageTag Image tag
-     * @param string $Repository Path of the remote repository of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Repository Path of the remote repository where the mirror resides.
      */
     function __construct()
     {

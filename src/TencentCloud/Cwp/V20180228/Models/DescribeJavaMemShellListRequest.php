@@ -20,17 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeJavaMemShellList request structure.
  *
- * @method array getFilters() Obtain Filtering criteria: Keywords: IP or host name for fuzzy query; Type or status for precise match; CreateBeginTime, CreateEndTime for time period query
- * @method void setFilters(array $Filters) Set Filtering criteria: Keywords: IP or host name for fuzzy query; Type or status for precise match; CreateBeginTime, CreateEndTime for time period query
+ * @method array getFilters() Obtain Filtering criteria: InstanceID and IP
+
+MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
+ * @method void setFilters(array $Filters) Set Filtering criteria: InstanceID and IP
+
+MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
  * @method integer getOffset() Obtain Offset, which defaults to 0
  * @method void setOffset(integer $Offset) Set Offset, which defaults to 0
  * @method integer getLimit() Obtain Number of items to be returned. It is 10 by default, and the maximum value is 100.
  * @method void setLimit(integer $Limit) Set Number of items to be returned. It is 10 by default, and the maximum value is 100.
+ * @method string getOrder() Obtain Sorting method (case insensitive): asc for ascending order; desc for descending order
+ * @method void setOrder(string $Order) Set Sorting method (case insensitive): asc for ascending order; desc for descending order
+ * @method string getBy() Obtain Sort column, strictly equal: Latest detection time RecentFoundTime
+ * @method void setBy(string $By) Set Sort column, strictly equal: Latest detection time RecentFoundTime
  */
 class DescribeJavaMemShellListRequest extends AbstractModel
 {
     /**
-     * @var array Filtering criteria: Keywords: IP or host name for fuzzy query; Type or status for precise match; CreateBeginTime, CreateEndTime for time period query
+     * @var array Filtering criteria: InstanceID and IP
+
+MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
      */
     public $Filters;
 
@@ -45,9 +55,23 @@ class DescribeJavaMemShellListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters Filtering criteria: Keywords: IP or host name for fuzzy query; Type or status for precise match; CreateBeginTime, CreateEndTime for time period query
+     * @var string Sorting method (case insensitive): asc for ascending order; desc for descending order
+     */
+    public $Order;
+
+    /**
+     * @var string Sort column, strictly equal: Latest detection time RecentFoundTime
+     */
+    public $By;
+
+    /**
+     * @param array $Filters Filtering criteria: InstanceID and IP
+
+MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
      * @param integer $Offset Offset, which defaults to 0
      * @param integer $Limit Number of items to be returned. It is 10 by default, and the maximum value is 100.
+     * @param string $Order Sorting method (case insensitive): asc for ascending order; desc for descending order
+     * @param string $By Sort column, strictly equal: Latest detection time RecentFoundTime
      */
     function __construct()
     {
@@ -77,6 +101,14 @@ class DescribeJavaMemShellListRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
         }
     }
 }

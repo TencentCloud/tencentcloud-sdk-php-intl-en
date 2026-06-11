@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of logs to be returned at a time. Maximum value: 100
  * @method string getChannel() Obtain Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
  * @method void setChannel(string $Channel) Set Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
- * @method string getQuery() Obtain Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
- * @method void setQuery(string $Query) Set Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
+ * @method string getQuery() Obtain Query statement. For more details, see [Syntax Rules](https://www.tencentcloud.com/document/product/614/37803).
+ * @method void setQuery(string $Query) Set Query statement. For more details, see [Syntax Rules](https://www.tencentcloud.com/document/product/614/37803).
  * @method string getContext() Obtain This field is used when loading more results. Pass through the last `context` value returned to get more log content. Up to 10,000 logs can be obtained through the cursor. Please narrow down the time range as much as possible.
  * @method void setContext(string $Context) Set This field is used when loading more results. Pass through the last `context` value returned to get more log content. Up to 10,000 logs can be obtained through the cursor. Please narrow down the time range as much as possible.
  * @method string getSort() Obtain Sorting by log time. Valid values: asc (ascending), desc (descending). Default value: desc
@@ -72,7 +72,7 @@ class SearchClsLogRequest extends AbstractModel
     public $Channel;
 
     /**
-     * @var string Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
+     * @var string Query statement. For more details, see [Syntax Rules](https://www.tencentcloud.com/document/product/614/37803).
      */
     public $Query;
 
@@ -93,7 +93,7 @@ class SearchClsLogRequest extends AbstractModel
      * @param string $EndTime Query end time in the format of YYYY-mm-dd HH:MM:SS
      * @param integer $Limit Number of logs to be returned at a time. Maximum value: 100
      * @param string $Channel Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
-     * @param string $Query Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
+     * @param string $Query Query statement. For more details, see [Syntax Rules](https://www.tencentcloud.com/document/product/614/37803).
      * @param string $Context This field is used when loading more results. Pass through the last `context` value returned to get more log content. Up to 10,000 logs can be obtained through the cursor. Please narrow down the time range as much as possible.
      * @param string $Sort Sorting by log time. Valid values: asc (ascending), desc (descending). Default value: desc
      */

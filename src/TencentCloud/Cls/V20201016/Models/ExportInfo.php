@@ -20,122 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Log export information
  *
- * @method string getTopicId() Obtain Log topic ID
- * @method void setTopicId(string $TopicId) Set Log topic ID
- * @method string getExportId() Obtain Log export task ID
- * @method void setExportId(string $ExportId) Set Log export task ID
- * @method string getQuery() Obtain Log export query statement
- * @method void setQuery(string $Query) Set Log export query statement
- * @method string getFileName() Obtain Log export filename
- * @method void setFileName(string $FileName) Set Log export filename
- * @method integer getFileSize() Obtain Log file size
- * @method void setFileSize(integer $FileSize) Set Log file size
- * @method string getOrder() Obtain Log export time sorting
- * @method void setOrder(string $Order) Set Log export time sorting
- * @method string getFormat() Obtain Log export format
- * @method void setFormat(string $Format) Set Log export format
- * @method integer getCount() Obtain Number of logs to be exported
- * @method void setCount(integer $Count) Set Number of logs to be exported
- * @method string getStatus() Obtain Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
- * @method void setStatus(string $Status) Set Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
- * @method integer getFrom() Obtain Log export start time
- * @method void setFrom(integer $From) Set Log export start time
- * @method integer getTo() Obtain Log export end time
- * @method void setTo(integer $To) Set Log export end time
- * @method string getCosPath() Obtain Log export path, valid for one hour. Please download using this path as soon as possible.
- * @method void setCosPath(string $CosPath) Set Log export path, valid for one hour. Please download using this path as soon as possible.
- * @method string getCreateTime() Obtain Log export creation time
- * @method void setCreateTime(string $CreateTime) Set Log export creation time
- * @method integer getSyntaxRule() Obtain Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
- * @method void setSyntaxRule(integer $SyntaxRule) Set Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+ * @method string getTopicId() Obtain <p>Log topic ID.</p>
+ * @method void setTopicId(string $TopicId) Set <p>Log topic ID.</p>
+ * @method string getExportId() Obtain <p>Log export task ID</p>
+ * @method void setExportId(string $ExportId) Set <p>Log export task ID</p>
+ * @method string getQuery() Obtain <p>Query statements of log export</p>
+ * @method void setQuery(string $Query) Set <p>Query statements of log export</p>
+ * @method string getFileName() Obtain <p>Filenames of exported logs</p>
+ * @method void setFileName(string $FileName) Set <p>Filenames of exported logs</p>
+ * @method integer getFileSize() Obtain <p>Log file size</p><p>Unit: Byte</p>
+ * @method void setFileSize(integer $FileSize) Set <p>Log file size</p><p>Unit: Byte</p>
+ * @method string getOrder() Obtain <p>Sorting of log export time</p>
+ * @method void setOrder(string $Order) Set <p>Sorting of log export time</p>
+ * @method string getFormat() Obtain <p>Log export format</p>
+ * @method void setFormat(string $Format) Set <p>Log export format</p>
+ * @method integer getCount() Obtain <p>Number of logs to be exported</p>
+ * @method void setCount(integer $Count) Set <p>Number of logs to be exported</p>
+ * @method string getStatus() Obtain <p>Log download status. Processing: export in progress, Completed: export completed, Failed: export failure, Expired: log export expired (valid for 3 days), Queuing: queuing</p>
+ * @method void setStatus(string $Status) Set <p>Log download status. Processing: export in progress, Completed: export completed, Failed: export failure, Expired: log export expired (valid for 3 days), Queuing: queuing</p>
+ * @method integer getFrom() Obtain <p>Start time of log export, with a timestamp in milliseconds</p>
+ * @method void setFrom(integer $From) Set <p>Start time of log export, with a timestamp in milliseconds</p>
+ * @method integer getTo() Obtain <p>End time of log export, timestamp in milliseconds</p>
+ * @method void setTo(integer $To) Set <p>End time of log export, timestamp in milliseconds</p>
+ * @method string getCosPath() Obtain <p>Log export path, valid for one hour. Please download using this path as soon as possible.</p>
+ * @method void setCosPath(string $CosPath) Set <p>Log export path, valid for one hour. Please download using this path as soon as possible.</p>
+ * @method string getCreateTime() Obtain <p>Log export creation time<br>Date and Time Formats: yyyy-MM-dd HH:mm:ss</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Log export creation time<br>Date and Time Formats: yyyy-MM-dd HH:mm:ss</p>
+ * @method integer getSyntaxRule() Obtain <p>Syntax rule. Default value is 0.<br>0: Lucene syntax, 1: CQL syntax.</p>
+ * @method void setSyntaxRule(integer $SyntaxRule) Set <p>Syntax rule. Default value is 0.<br>0: Lucene syntax, 1: CQL syntax.</p>
+ * @method array getDerivedFields() Obtain <p>Export fields</p>
+ * @method void setDerivedFields(array $DerivedFields) Set <p>Export fields</p>
  */
 class ExportInfo extends AbstractModel
 {
     /**
-     * @var string Log topic ID
+     * @var string <p>Log topic ID.</p>
      */
     public $TopicId;
 
     /**
-     * @var string Log export task ID
+     * @var string <p>Log export task ID</p>
      */
     public $ExportId;
 
     /**
-     * @var string Log export query statement
+     * @var string <p>Query statements of log export</p>
      */
     public $Query;
 
     /**
-     * @var string Log export filename
+     * @var string <p>Filenames of exported logs</p>
      */
     public $FileName;
 
     /**
-     * @var integer Log file size
+     * @var integer <p>Log file size</p><p>Unit: Byte</p>
      */
     public $FileSize;
 
     /**
-     * @var string Log export time sorting
+     * @var string <p>Sorting of log export time</p>
      */
     public $Order;
 
     /**
-     * @var string Log export format
+     * @var string <p>Log export format</p>
      */
     public $Format;
 
     /**
-     * @var integer Number of logs to be exported
+     * @var integer <p>Number of logs to be exported</p>
      */
     public $Count;
 
     /**
-     * @var string Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
+     * @var string <p>Log download status. Processing: export in progress, Completed: export completed, Failed: export failure, Expired: log export expired (valid for 3 days), Queuing: queuing</p>
      */
     public $Status;
 
     /**
-     * @var integer Log export start time
+     * @var integer <p>Start time of log export, with a timestamp in milliseconds</p>
      */
     public $From;
 
     /**
-     * @var integer Log export end time
+     * @var integer <p>End time of log export, timestamp in milliseconds</p>
      */
     public $To;
 
     /**
-     * @var string Log export path, valid for one hour. Please download using this path as soon as possible.
+     * @var string <p>Log export path, valid for one hour. Please download using this path as soon as possible.</p>
      */
     public $CosPath;
 
     /**
-     * @var string Log export creation time
+     * @var string <p>Log export creation time<br>Date and Time Formats: yyyy-MM-dd HH:mm:ss</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+     * @var integer <p>Syntax rule. Default value is 0.<br>0: Lucene syntax, 1: CQL syntax.</p>
      */
     public $SyntaxRule;
 
     /**
-     * @param string $TopicId Log topic ID
-     * @param string $ExportId Log export task ID
-     * @param string $Query Log export query statement
-     * @param string $FileName Log export filename
-     * @param integer $FileSize Log file size
-     * @param string $Order Log export time sorting
-     * @param string $Format Log export format
-     * @param integer $Count Number of logs to be exported
-     * @param string $Status Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
-     * @param integer $From Log export start time
-     * @param integer $To Log export end time
-     * @param string $CosPath Log export path, valid for one hour. Please download using this path as soon as possible.
-     * @param string $CreateTime Log export creation time
-     * @param integer $SyntaxRule Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+     * @var array <p>Export fields</p>
+     */
+    public $DerivedFields;
+
+    /**
+     * @param string $TopicId <p>Log topic ID.</p>
+     * @param string $ExportId <p>Log export task ID</p>
+     * @param string $Query <p>Query statements of log export</p>
+     * @param string $FileName <p>Filenames of exported logs</p>
+     * @param integer $FileSize <p>Log file size</p><p>Unit: Byte</p>
+     * @param string $Order <p>Sorting of log export time</p>
+     * @param string $Format <p>Log export format</p>
+     * @param integer $Count <p>Number of logs to be exported</p>
+     * @param string $Status <p>Log download status. Processing: export in progress, Completed: export completed, Failed: export failure, Expired: log export expired (valid for 3 days), Queuing: queuing</p>
+     * @param integer $From <p>Start time of log export, with a timestamp in milliseconds</p>
+     * @param integer $To <p>End time of log export, timestamp in milliseconds</p>
+     * @param string $CosPath <p>Log export path, valid for one hour. Please download using this path as soon as possible.</p>
+     * @param string $CreateTime <p>Log export creation time<br>Date and Time Formats: yyyy-MM-dd HH:mm:ss</p>
+     * @param integer $SyntaxRule <p>Syntax rule. Default value is 0.<br>0: Lucene syntax, 1: CQL syntax.</p>
+     * @param array $DerivedFields <p>Export fields</p>
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class ExportInfo extends AbstractModel
 
         if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
             $this->SyntaxRule = $param["SyntaxRule"];
+        }
+
+        if (array_key_exists("DerivedFields",$param) and $param["DerivedFields"] !== null) {
+            $this->DerivedFields = $param["DerivedFields"];
         }
     }
 }

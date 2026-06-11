@@ -18,44 +18,44 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The mini program name and description in multiple languages.
+ * Mini program information in multiple languages.
  *
- * @method string getLang() Obtain Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.
- * @method void setLang(string $Lang) Set Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.
- * @method integer getIsDefault() Obtain Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.
- * @method void setIsDefault(integer $IsDefault) Set Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.
- * @method string getMNPName() Obtain Mini program name.
- * @method void setMNPName(string $MNPName) Set Mini program name.
- * @method string getMNPIntro() Obtain Mini program introduction.
- * @method void setMNPIntro(string $MNPIntro) Set Mini program introduction.
+ * @method string getLang() Obtain Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese.
+ * @method void setLang(string $Lang) Set Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese.
+ * @method integer getIsDefault() Obtain <p>Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.</p>
+ * @method void setIsDefault(integer $IsDefault) Set <p>Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.</p>
+ * @method string getMNPName() Obtain <p>Mini program name.</p>
+ * @method void setMNPName(string $MNPName) Set <p>Mini program name.</p>
+ * @method string getMNPIntro() Obtain <p>Mini program introduction.</p>
+ * @method void setMNPIntro(string $MNPIntro) Set <p>Mini program introduction.</p>
  */
 class MNPI18NSyncDto extends AbstractModel
 {
     /**
-     * @var string Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.
+     * @var string Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese.
      */
     public $Lang;
 
     /**
-     * @var integer Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.
+     * @var integer <p>Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.</p>
      */
     public $IsDefault;
 
     /**
-     * @var string Mini program name.
+     * @var string <p>Mini program name.</p>
      */
     public $MNPName;
 
     /**
-     * @var string Mini program introduction.
+     * @var string <p>Mini program introduction.</p>
      */
     public $MNPIntro;
 
     /**
-     * @param string $Lang Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.
-     * @param integer $IsDefault Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.
-     * @param string $MNPName Mini program name.
-     * @param string $MNPIntro Mini program introduction.
+     * @param string $Lang Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese.
+     * @param integer $IsDefault <p>Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.</p>
+     * @param string $MNPName <p>Mini program name.</p>
+     * @param string $MNPIntro <p>Mini program introduction.</p>
      */
     function __construct()
     {

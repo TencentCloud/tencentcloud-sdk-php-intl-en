@@ -40,6 +40,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventId(integer $EventId) Set When it is added to the allowlist, the event ID needs to be passed in.
  * @method integer getDealOldEvents() Obtain Whether to add existing events to the allowlist. 0: no; 1: yes.
  * @method void setDealOldEvents(integer $DealOldEvents) Set Whether to add existing events to the allowlist. 0: no; 1: yes.
+ * @method string getDescript() Obtain Policy description
+ * @method void setDescript(string $Descript) Set Policy description
+ * @method integer getStatus() Obtain Effective or not [0: not effective, 1: effective]
+ * @method void setStatus(integer $Status) Set Effective or not [0: not effective, 1: effective]
+ * @method integer getBashAction() Obtain 0: alarm; 1: allowlist; 2: intercept
+ * @method void setBashAction(integer $BashAction) Set 0: alarm; 1: allowlist; 2: intercept
+ * @method integer getScope() Obtain Effective range (0: a set of quuid 1: all Pro edition hosts 2: all Pro edition and Ultimate edition hosts 3: all hosts)
+ * @method void setScope(integer $Scope) Set Effective range (0: a set of quuid 1: all Pro edition hosts 2: all Pro edition and Ultimate edition hosts 3: all hosts)
+ * @method array getQuuids() Obtain QUUID set for effective hosts
+ * @method void setQuuids(array $Quuids) Set QUUID set for effective hosts
  */
 class EditBashRulesRequest extends AbstractModel
 {
@@ -94,6 +104,31 @@ class EditBashRulesRequest extends AbstractModel
     public $DealOldEvents;
 
     /**
+     * @var string Policy description
+     */
+    public $Descript;
+
+    /**
+     * @var integer Effective or not [0: not effective, 1: effective]
+     */
+    public $Status;
+
+    /**
+     * @var integer 0: alarm; 1: allowlist; 2: intercept
+     */
+    public $BashAction;
+
+    /**
+     * @var integer Effective range (0: a set of quuid 1: all Pro edition hosts 2: all Pro edition and Ultimate edition hosts 3: all hosts)
+     */
+    public $Scope;
+
+    /**
+     * @var array QUUID set for effective hosts
+     */
+    public $Quuids;
+
+    /**
      * @param integer $Id Rule ID (leave this parameter blank for addition)
      * @param array $Uuids Client ID array
      * @param string $HostIp Host IP address
@@ -104,6 +139,11 @@ class EditBashRulesRequest extends AbstractModel
      * @param integer $White 0: blocklist; 1: allowlist
      * @param integer $EventId When it is added to the allowlist, the event ID needs to be passed in.
      * @param integer $DealOldEvents Whether to add existing events to the allowlist. 0: no; 1: yes.
+     * @param string $Descript Policy description
+     * @param integer $Status Effective or not [0: not effective, 1: effective]
+     * @param integer $BashAction 0: alarm; 1: allowlist; 2: intercept
+     * @param integer $Scope Effective range (0: a set of quuid 1: all Pro edition hosts 2: all Pro edition and Ultimate edition hosts 3: all hosts)
+     * @param array $Quuids QUUID set for effective hosts
      */
     function __construct()
     {
@@ -156,6 +196,26 @@ class EditBashRulesRequest extends AbstractModel
 
         if (array_key_exists("DealOldEvents",$param) and $param["DealOldEvents"] !== null) {
             $this->DealOldEvents = $param["DealOldEvents"];
+        }
+
+        if (array_key_exists("Descript",$param) and $param["Descript"] !== null) {
+            $this->Descript = $param["Descript"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("BashAction",$param) and $param["BashAction"] !== null) {
+            $this->BashAction = $param["BashAction"];
+        }
+
+        if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {
+            $this->Scope = $param["Scope"];
+        }
+
+        if (array_key_exists("Quuids",$param) and $param["Quuids"] !== null) {
+            $this->Quuids = $param["Quuids"];
         }
     }
 }

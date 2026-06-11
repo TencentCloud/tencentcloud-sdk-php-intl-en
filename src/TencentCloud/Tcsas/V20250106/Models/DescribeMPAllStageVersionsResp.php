@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMNPVersion(string $MNPVersion) Set Mini program version number.
  * @method string getMNPVersionIntro() Obtain Version introduction.
  * @method void setMNPVersionIntro(string $MNPVersionIntro) Set Version introduction.
- * @method string getPhase() Obtain Stage: Develop, preview, released.
- * @method void setPhase(string $Phase) Set Stage: Develop, preview, released.
+ * @method string getPhase() Obtain Phase: Valid values: Develop; Platform; Online.
+ * @method void setPhase(string $Phase) Set Phase: Valid values: Develop; Platform; Online.
  * @method integer getApprovalStatus() Obtain Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
  * @method void setApprovalStatus(integer $ApprovalStatus) Set Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
  * @method string getApprovalNo() Obtain Approval number.
@@ -115,7 +115,7 @@ class DescribeMPAllStageVersionsResp extends AbstractModel
     public $MNPVersionIntro;
 
     /**
-     * @var string Stage: Develop, preview, released.
+     * @var string Phase: Valid values: Develop; Platform; Online.
      */
     public $Phase;
 
@@ -161,7 +161,7 @@ class DescribeMPAllStageVersionsResp extends AbstractModel
      * @param string $CreateTime Creation time.
      * @param string $MNPVersion Mini program version number.
      * @param string $MNPVersionIntro Version introduction.
-     * @param string $Phase Stage: Develop, preview, released.
+     * @param string $Phase Phase: Valid values: Develop; Platform; Online.
      * @param integer $ApprovalStatus Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
      * @param string $ApprovalNo Approval number.
      * @param integer $ShowCase Whether this is a preview. Valid values: 0: No; 1: Yes.

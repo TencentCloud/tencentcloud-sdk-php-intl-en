@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Host information entity of the log-in audit allowlist
  *
- * @method string getQuuid() Obtain Yunjing client ID
- * @method void setQuuid(string $Quuid) Set Yunjing client ID
- * @method string getUuid() Obtain Host ID
- * @method void setUuid(string $Uuid) Set Host ID
+ * @method string getQuuid() Obtain Machine UUID
+ * @method void setQuuid(string $Quuid) Set Machine UUID
+ * @method string getUuid() Obtain Host Security UUID
+ * @method void setUuid(string $Uuid) Set Host Security UUID
  * @method string getMachineName() Obtain Machine name
  * @method void setMachineName(string $MachineName) Set Machine name
  * @method string getMachineIp() Obtain Machine IP address. This parameter is left blank for terminated servers.
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class HostDesc extends AbstractModel
 {
     /**
-     * @var string Yunjing client ID
+     * @var string Machine UUID
      */
     public $Quuid;
 
     /**
-     * @var string Host ID
+     * @var string Host Security UUID
      */
     public $Uuid;
 
@@ -66,8 +66,8 @@ class HostDesc extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $Quuid Yunjing client ID
-     * @param string $Uuid Host ID
+     * @param string $Quuid Machine UUID
+     * @param string $Uuid Host Security UUID
      * @param string $MachineName Machine name
      * @param string $MachineIp Machine IP address. This parameter is left blank for terminated servers.
      * @param string $MachineWanIp Public IP address. This parameter is left blank for terminated servers.

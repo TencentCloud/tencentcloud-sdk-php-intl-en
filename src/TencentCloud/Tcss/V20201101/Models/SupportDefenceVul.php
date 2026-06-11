@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCVEID(string $CVEID) Set Vulnerability CVE ID
  * @method string getSubmitTime() Obtain Vulnerability disclosure time
  * @method void setSubmitTime(string $SubmitTime) Set Vulnerability disclosure time
+ * @method integer getVulId() Obtain Vulnerability ID
+ * @method void setVulId(integer $VulId) Set Vulnerability ID
+ * @method integer getStatus() Obtain Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+ * @method void setStatus(integer $Status) Set Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
  */
 class SupportDefenceVul extends AbstractModel
 {
@@ -73,6 +77,16 @@ class SupportDefenceVul extends AbstractModel
     public $SubmitTime;
 
     /**
+     * @var integer Vulnerability ID
+     */
+    public $VulId;
+
+    /**
+     * @var integer Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+     */
+    public $Status;
+
+    /**
      * @param string $PocID POC ID
      * @param string $Name Vulnerability name
      * @param array $Tags Vulnerability tag
@@ -80,6 +94,8 @@ class SupportDefenceVul extends AbstractModel
      * @param string $Level Vulnerability severity
      * @param string $CVEID Vulnerability CVE ID
      * @param string $SubmitTime Vulnerability disclosure time
+     * @param integer $VulId Vulnerability ID
+     * @param integer $Status Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class SupportDefenceVul extends AbstractModel
 
         if (array_key_exists("SubmitTime",$param) and $param["SubmitTime"] !== null) {
             $this->SubmitTime = $param["SubmitTime"];
+        }
+
+        if (array_key_exists("VulId",$param) and $param["VulId"] !== null) {
+            $this->VulId = $param["VulId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

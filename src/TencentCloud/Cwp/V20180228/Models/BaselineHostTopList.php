@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Baseline affected servers list data
  *
  * @method array getEventLevelList() Obtain List of event levels and occurrences
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEventLevelList(array $EventLevelList) Set List of event levels and occurrences
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getHostName() Obtain Host name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostName(string $HostName) Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getQuuid() Obtain Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQuuid(string $Quuid) Set Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getScore() Obtain Score for calculating weight
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScore(integer $Score) Set Score for calculating weight
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BaselineHostTopList extends AbstractModel
 {
     /**
      * @var array List of event levels and occurrences
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EventLevelList;
 
     /**
      * @var string Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostName;
 
     /**
      * @var string Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Quuid;
 
     /**
      * @var integer Score for calculating weight
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Score;
 
     /**
      * @param array $EventLevelList List of event levels and occurrences
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Score Score for calculating weight
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

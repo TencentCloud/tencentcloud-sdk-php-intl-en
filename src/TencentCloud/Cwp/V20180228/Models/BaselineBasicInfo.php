@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Basic baseline information
  *
  * @method string getName() Obtain Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getBaselineId() Obtain Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBaselineId(integer $BaselineId) Set Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getParentId() Obtain Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setParentId(integer $ParentId) Set Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getParentId() Obtain Parent id
+ * @method void setParentId(integer $ParentId) Set Parent id
  */
 class BaselineBasicInfo extends AbstractModel
 {
     /**
      * @var string Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
      * @var integer Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BaselineId;
 
     /**
-     * @var integer Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Parent id
      */
     public $ParentId;
 
     /**
      * @param string $Name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $BaselineId Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ParentId Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ParentId Parent id
      */
     function __construct()
     {

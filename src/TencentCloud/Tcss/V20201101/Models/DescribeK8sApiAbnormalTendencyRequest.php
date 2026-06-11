@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeK8sApiAbnormalTendency request structure.
  *
- * @method integer getTendencyPeriod() Obtain Trend period (default value: 7 days)
- * @method void setTendencyPeriod(integer $TendencyPeriod) Set Trend period (default value: 7 days)
+ * @method integer getTendencyPeriod() Obtain <p>Trend period (the default is 7 days).</p>
+ * @method void setTendencyPeriod(integer $TendencyPeriod) Set <p>Trend period (the default is 7 days).</p>
  */
 class DescribeK8sApiAbnormalTendencyRequest extends AbstractModel
 {
     /**
-     * @var integer Trend period (default value: 7 days)
+     * @var integer <p>Trend period (the default is 7 days).</p>
      */
     public $TendencyPeriod;
 
     /**
-     * @param integer $TendencyPeriod Trend period (default value: 7 days)
+     * @param integer $TendencyPeriod <p>Trend period (the default is 7 days).</p>
      */
     function __construct()
     {

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeVulStoreList response structure.
  *
  * @method array getList() Obtain Vulnerability information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setList(array $List) Set Vulnerability information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getTotalCount() Obtain Total number
  * @method void setTotalCount(integer $TotalCount) Set Total number
  * @method integer getRemaining() Obtain Remaining Searches for Today
@@ -37,7 +35,6 @@ class DescribeVulStoreListResponse extends AbstractModel
 {
     /**
      * @var array Vulnerability information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $List;
 
@@ -63,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param array $List Vulnerability information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TotalCount Total number
      * @param integer $Remaining Remaining Searches for Today
      * @param integer $FreeSearchTimes Free Search Count

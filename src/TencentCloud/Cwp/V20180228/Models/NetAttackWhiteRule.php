@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * Network attack allowlist rules
  *
  * @method integer getId() Obtain Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setId(integer $Id) Set Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDescription() Obtain Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getScope() Obtain 0: A group of Quuid 1: All hosts
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScope(integer $Scope) Set 0: A group of Quuid 1: All hosts
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getDealOldEvents() Obtain Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDealOldEvents(integer $DealOldEvents) Set Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getQuuids() Obtain Host QUUIDs, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQuuids(string $Quuids) Set Host QUUIDs, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSrcIP() Obtain Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24, separated by semicolons (;)
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSrcIP(string $SrcIP) Set Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24, separated by semicolons (;)
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getModifyTime() Obtain Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setModifyTime(string $ModifyTime) Set Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NetAttackWhiteRule extends AbstractModel
 {
     /**
      * @var integer Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Id;
 
     /**
      * @var string Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Description;
 
     /**
      * @var integer 0: A group of Quuid 1: All hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Scope;
 
     /**
      * @var integer Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DealOldEvents;
 
     /**
      * @var string Host QUUIDs, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Quuids;
 
     /**
      * @var string Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24, separated by semicolons (;)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SrcIP;
 
     /**
      * @var string Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
      * @var string Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ModifyTime;
 
     /**
      * @param integer $Id Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Description Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Scope 0: A group of Quuid 1: All hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $DealOldEvents Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Quuids Host QUUIDs, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SrcIP Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24, separated by semicolons (;)
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ModifyTime Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Key-value index auto-configuration enables automatic addition of fields from logs into the key-value index, including subsequently added fields in the logs.
  *
- * @method boolean getStatus() Obtain Key-Value Index Auto-Config Switch
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(boolean $Status) Set Key-Value Index Auto-Config Switch
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getStatus() Obtain Automatic configuration switch of the key-value index.
+ * @method void setStatus(boolean $Status) Set Automatic configuration switch of the key-value index.
  */
 class DynamicIndex extends AbstractModel
 {
     /**
-     * @var boolean Key-Value Index Auto-Config Switch
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Automatic configuration switch of the key-value index.
      */
     public $Status;
 
     /**
-     * @param boolean $Status Key-Value Index Auto-Config Switch
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $Status Automatic configuration switch of the key-value index.
      */
     function __construct()
     {

@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 
  *
- * @method string getUserName() Obtain 
- * @method void setUserName(string $UserName) Set 
- * @method array getAuthRole() Obtain 
- * @method void setAuthRole(array $AuthRole) Set 
- * @method string getCreateTime() Obtain 
- * @method void setCreateTime(string $CreateTime) Set 
- * @method string getUpdateTime() Obtain 
- * @method void setUpdateTime(string $UpdateTime) Set 
- * @method string getUserDesc() Obtain 
- * @method void setUserDesc(string $UserDesc) Set 
- * @method string getConsolePassUpdateTime() Obtain Console password update time.
- * @method void setConsolePassUpdateTime(string $ConsolePassUpdateTime) Set Console password update time.
+ * @method string getUserName() Obtain The account name.
+ * @method void setUserName(string $UserName) Set The account name.
+ * @method array getAuthRole() Obtain The account permission details.
+ * @method void setAuthRole(array $AuthRole) Set The account permission details.
+ * @method string getCreateTime() Obtain The time when the account was created.
+ * @method void setCreateTime(string $CreateTime) Set The time when the account was created.
+ * @method string getUpdateTime() Obtain The time when the account was last updated.
+ * @method void setUpdateTime(string $UpdateTime) Set The time when the account was last updated.
+ * @method string getUserDesc() Obtain The remarks for the account.
+ * @method void setUserDesc(string $UserDesc) Set The remarks for the account.
+ * @method string getConsolePassUpdateTime() Obtain The time when the console password was last updated.
+ * @method void setConsolePassUpdateTime(string $ConsolePassUpdateTime) Set The time when the console password was last updated.
  */
 class UserInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The account name.
      */
     public $UserName;
 
     /**
-     * @var array 
+     * @var array The account permission details.
      */
     public $AuthRole;
 
     /**
-     * @var string 
+     * @var string The time when the account was created.
      */
     public $CreateTime;
 
     /**
-     * @var string 
+     * @var string The time when the account was last updated.
      */
     public $UpdateTime;
 
     /**
-     * @var string 
+     * @var string The remarks for the account.
      */
     public $UserDesc;
 
     /**
-     * @var string Console password update time.
+     * @var string The time when the console password was last updated.
      */
     public $ConsolePassUpdateTime;
 
     /**
-     * @param string $UserName 
-     * @param array $AuthRole 
-     * @param string $CreateTime 
-     * @param string $UpdateTime 
-     * @param string $UserDesc 
-     * @param string $ConsolePassUpdateTime Console password update time.
+     * @param string $UserName The account name.
+     * @param array $AuthRole The account permission details.
+     * @param string $CreateTime The time when the account was created.
+     * @param string $UpdateTime The time when the account was last updated.
+     * @param string $UserDesc The remarks for the account.
+     * @param string $ConsolePassUpdateTime The time when the console password was last updated.
      */
     function __construct()
     {

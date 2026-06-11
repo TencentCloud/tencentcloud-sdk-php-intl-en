@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCityId(integer $CityId) Set City ID
  * @method integer getProvinceId() Obtain Province ID
  * @method void setProvinceId(integer $ProvinceId) Set Province ID
- * @method integer getCountryId() Obtain Country ID. Currently, only 1 is supported, indicating China.
- * @method void setCountryId(integer $CountryId) Set Country ID. Currently, only 1 is supported, indicating China.
+ * @method integer getCountryId() Obtain Country ID. Currently, only 1 is supported, indicating domestic.
+ * @method void setCountryId(integer $CountryId) Set Country ID. Currently, only 1 is supported, indicating domestic.
  * @method string getLocation() Obtain Location name
  * @method void setLocation(string $Location) Set Location name
  */
@@ -42,7 +42,7 @@ class Place extends AbstractModel
     public $ProvinceId;
 
     /**
-     * @var integer Country ID. Currently, only 1 is supported, indicating China.
+     * @var integer Country ID. Currently, only 1 is supported, indicating domestic.
      */
     public $CountryId;
 
@@ -54,7 +54,7 @@ class Place extends AbstractModel
     /**
      * @param integer $CityId City ID
      * @param integer $ProvinceId Province ID
-     * @param integer $CountryId Country ID. Currently, only 1 is supported, indicating China.
+     * @param integer $CountryId Country ID. Currently, only 1 is supported, indicating domestic.
      * @param string $Location Location name
      */
     function __construct()

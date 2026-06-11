@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * Information on the ignored baseline check item
  *
  * @method string getRuleName() Obtain Baseline check item name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRuleName(string $RuleName) Set Baseline check item name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRuleId() Obtain Baseline check item ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRuleId(integer $RuleId) Set Baseline check item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRuleId() Obtain Baseline detection item id
+ * @method void setRuleId(integer $RuleId) Set Baseline detection item id
  * @method string getModifyTime() Obtain Update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setModifyTime(string $ModifyTime) Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFix() Obtain Fixing suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFix(string $Fix) Set Fixing suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFix() Obtain Fixing suggestion
+ * @method void setFix(string $Fix) Set Fixing suggestion
  * @method integer getEffectHostCount() Obtain Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEffectHostCount(integer $EffectHostCount) Set Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class IgnoreBaselineRule extends AbstractModel
 {
     /**
      * @var string Baseline check item name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RuleName;
 
     /**
-     * @var integer Baseline check item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Baseline detection item id
      */
     public $RuleId;
 
     /**
      * @var string Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ModifyTime;
 
     /**
-     * @var string Fixing suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Fixing suggestion
      */
     public $Fix;
 
     /**
      * @var integer Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EffectHostCount;
 
     /**
      * @param string $RuleName Baseline check item name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RuleId Baseline check item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RuleId Baseline detection item id
      * @param string $ModifyTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Fix Fixing suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Fix Fixing suggestion
      * @param integer $EffectHostCount Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

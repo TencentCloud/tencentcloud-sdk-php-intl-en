@@ -21,47 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * DescribeLogsets request structure.
  *
  * @method array getFilters() Obtain logsetName
-- Filter by **logset name**
+-Filter by [logset name].
 - Type: String
-- Required: No
-
+-Required: No
+- Obtain the logset name through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 logsetId
-- Filter by **logset ID**
+-Filter by [logset ID].
 - Type: String
-- Required: No
+-Required: No
+-Obtain the logset Id through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 
 tagKey
-- Filter by **tag key**
+- Filter by [Tag key].
 - Type: String
-- Required: No
+-Required: No
 
 tag:tagKey
-- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+-Filter by [tag key-value pair]. Replace tagKey with a specific tag key.
 - Type: String
-- Required: No
+-Required: No
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
  * @method void setFilters(array $Filters) Set logsetName
-- Filter by **logset name**
+-Filter by [logset name].
 - Type: String
-- Required: No
-
+-Required: No
+- Obtain the logset name through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 logsetId
-- Filter by **logset ID**
+-Filter by [logset ID].
 - Type: String
-- Required: No
+-Required: No
+-Obtain the logset Id through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 
 tagKey
-- Filter by **tag key**
+- Filter by [Tag key].
 - Type: String
-- Required: No
+-Required: No
 
 tag:tagKey
-- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+-Filter by [tag key-value pair]. Replace tagKey with a specific tag key.
 - Type: String
-- Required: No
+-Required: No
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
  * @method integer getOffset() Obtain Page offset. Default value: 0
  * @method void setOffset(integer $Offset) Set Page offset. Default value: 0
  * @method integer getLimit() Obtain Maximum number of entries per page. Default value: 20. Maximum value: 100
@@ -71,26 +73,27 @@ class DescribeLogsetsRequest extends AbstractModel
 {
     /**
      * @var array logsetName
-- Filter by **logset name**
+-Filter by [logset name].
 - Type: String
-- Required: No
-
+-Required: No
+- Obtain the logset name through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 logsetId
-- Filter by **logset ID**
+-Filter by [logset ID].
 - Type: String
-- Required: No
+-Required: No
+-Obtain the logset Id through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 
 tagKey
-- Filter by **tag key**
+- Filter by [Tag key].
 - Type: String
-- Required: No
+-Required: No
 
 tag:tagKey
-- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+-Filter by [tag key-value pair]. Replace tagKey with a specific tag key.
 - Type: String
-- Required: No
+-Required: No
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
      */
     public $Filters;
 
@@ -106,26 +109,27 @@ Each request can have up to 10 `Filters` and 5 `Filter.Values`.
 
     /**
      * @param array $Filters logsetName
-- Filter by **logset name**
+-Filter by [logset name].
 - Type: String
-- Required: No
-
+-Required: No
+- Obtain the logset name through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 logsetId
-- Filter by **logset ID**
+-Filter by [logset ID].
 - Type: String
-- Required: No
+-Required: No
+-Obtain the logset Id through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 
 tagKey
-- Filter by **tag key**
+- Filter by [Tag key].
 - Type: String
-- Required: No
+-Required: No
 
 tag:tagKey
-- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+-Filter by [tag key-value pair]. Replace tagKey with a specific tag key.
 - Type: String
-- Required: No
+-Required: No
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
      * @param integer $Offset Page offset. Default value: 0
      * @param integer $Limit Maximum number of entries per page. Default value: 20. Maximum value: 100
      */

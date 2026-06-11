@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrequency(integer $Frequency) Set Execution frequency (days). Valid values: `1`, `3`, `7`.
  * @method string getExecutionTime() Obtain Execution time in the format of "HH:mm:SS"
  * @method void setExecutionTime(string $ExecutionTime) Set Execution time in the format of "HH:mm:SS"
- * @method boolean getEnable() Obtain Whether to enable
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnable(boolean $Enable) Set Whether to enable
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getEnable() Obtain Whether enabled
+ * @method void setEnable(boolean $Enable) Set Whether enabled
  */
 class CompliancePeriodTaskRule extends AbstractModel
 {
@@ -42,16 +40,14 @@ class CompliancePeriodTaskRule extends AbstractModel
     public $ExecutionTime;
 
     /**
-     * @var boolean Whether to enable
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether enabled
      */
     public $Enable;
 
     /**
      * @param integer $Frequency Execution frequency (days). Valid values: `1`, `3`, `7`.
      * @param string $ExecutionTime Execution time in the format of "HH:mm:SS"
-     * @param boolean $Enable Whether to enable
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $Enable Whether enabled
      */
     function __construct()
     {

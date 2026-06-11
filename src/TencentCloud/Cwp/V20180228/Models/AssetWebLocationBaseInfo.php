@@ -57,19 +57,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getId() Obtain Web site ID
  * @method void setId(string $Id) Set Web site ID
  * @method string getUpdateTime() Obtain Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFirstTime() Obtain First collection time
  * @method void setFirstTime(string $FirstTime) Set First collection time
- * @method integer getIsNew() Obtain Whether the web service is newly added [0 - no|1 - yes]
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsNew(integer $IsNew) Set Whether the web service is newly added [0 - no|1 - yes]
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsNew() Obtain Whether it is newly added [0: no | 1: yes]
+ * @method void setIsNew(integer $IsNew) Set Whether it is newly added [0: no | 1: yes]
+ * @method MachineExtraInfo getMachineExtraInfo() Obtain  Additional information
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set  Additional information
  */
 class AssetWebLocationBaseInfo extends AbstractModel
 {
@@ -165,7 +159,6 @@ class AssetWebLocationBaseInfo extends AbstractModel
 
     /**
      * @var string Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -175,14 +168,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $FirstTime;
 
     /**
-     * @var integer Whether the web service is newly added [0 - no|1 - yes]
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether it is newly added [0: no | 1: yes]
      */
     public $IsNew;
 
     /**
-     * @var MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MachineExtraInfo  Additional information
      */
     public $MachineExtraInfo;
 
@@ -206,12 +197,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $Tag Host tag
      * @param string $Id Web site ID
      * @param string $UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FirstTime First collection time
-     * @param integer $IsNew Whether the web service is newly added [0 - no|1 - yes]
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineExtraInfo $MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsNew Whether it is newly added [0: no | 1: yes]
+     * @param MachineExtraInfo $MachineExtraInfo  Additional information
      */
     function __construct()
     {

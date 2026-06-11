@@ -18,28 +18,28 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Highlighted Log Description Information
+ * Keywords that meet search criteria are generally highlighted. Only key-value search is supported, not full-text search.
  *
- * @method string getKey() Obtain Highlighted Log Key
- * @method void setKey(string $Key) Set Highlighted Log Key
- * @method array getValues() Obtain Highlighted Syntax
- * @method void setValues(array $Values) Set Highlighted Syntax
+ * @method string getKey() Obtain Highlighted log field name.
+ * @method void setKey(string $Key) Set Highlighted log field name.
+ * @method array getValues() Obtain Highlighted keywords.
+ * @method void setValues(array $Values) Set Highlighted keywords.
  */
 class HighLightItem extends AbstractModel
 {
     /**
-     * @var string Highlighted Log Key
+     * @var string Highlighted log field name.
      */
     public $Key;
 
     /**
-     * @var array Highlighted Syntax
+     * @var array Highlighted keywords.
      */
     public $Values;
 
     /**
-     * @param string $Key Highlighted Log Key
-     * @param array $Values Highlighted Syntax
+     * @param string $Key Highlighted log field name.
+     * @param array $Values Highlighted keywords.
      */
     function __construct()
     {

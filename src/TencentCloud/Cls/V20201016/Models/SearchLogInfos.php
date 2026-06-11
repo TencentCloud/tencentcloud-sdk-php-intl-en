@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) Set Log Topic ID
  * @method integer getPeriod() Obtain Log storage lifetime
  * @method void setPeriod(integer $Period) Set Log storage lifetime
- * @method string getContext() Obtain You can pass through the Context value returned by this API to continue to get more logs. Expire time: 1 hour.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContext(string $Context) Set You can pass through the Context value returned by this API to continue to get more logs. Expire time: 1 hour.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getContext() Obtain Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.
+ * @method void setContext(string $Context) Set Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.
  */
 class SearchLogInfos extends AbstractModel
 {
@@ -40,14 +40,14 @@ class SearchLogInfos extends AbstractModel
     public $Period;
 
     /**
-     * @var string You can pass through the Context value returned by this API to continue to get more logs. Expire time: 1 hour.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.
      */
     public $Context;
 
     /**
      * @param string $TopicId Log Topic ID
      * @param integer $Period Log storage lifetime
-     * @param string $Context You can pass through the Context value returned by this API to continue to get more logs. Expire time: 1 hour.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Context Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.
      */
     function __construct()
     {

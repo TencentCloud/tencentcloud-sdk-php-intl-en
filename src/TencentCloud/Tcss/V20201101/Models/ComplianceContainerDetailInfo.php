@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getContainerId() Obtain Container ID on the server
  * @method void setContainerId(string $ContainerId) Set Container ID on the server
- * @method string getPodName() Obtain Pod name of the container
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPodName(string $PodName) Set Pod name of the container
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPodName() Obtain Name of the Pod the container belongs to.
+ * @method void setPodName(string $PodName) Set Name of the Pod the container belongs to.
  */
 class ComplianceContainerDetailInfo extends AbstractModel
 {
@@ -35,15 +33,13 @@ class ComplianceContainerDetailInfo extends AbstractModel
     public $ContainerId;
 
     /**
-     * @var string Pod name of the container
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name of the Pod the container belongs to.
      */
     public $PodName;
 
     /**
      * @param string $ContainerId Container ID on the server
-     * @param string $PodName Pod name of the container
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PodName Name of the Pod the container belongs to.
      */
     function __construct()
     {

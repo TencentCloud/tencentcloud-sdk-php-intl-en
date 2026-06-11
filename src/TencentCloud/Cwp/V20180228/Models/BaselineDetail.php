@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * Baseline details
  *
  * @method string getDescription() Obtain Baseline description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Baseline description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getLevel() Obtain Severity level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLevel(integer $Level) Set Severity level
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPackageName() Obtain Package name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPackageName(string $PackageName) Set Package name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getParentId() Obtain Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setParentId(integer $ParentId) Set Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPackageName() Obtain package name
+ * @method void setPackageName(string $PackageName) Set package name
+ * @method integer getParentId() Obtain Parent id
+ * @method void setParentId(integer $ParentId) Set Parent id
  * @method string getName() Obtain Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BaselineDetail extends AbstractModel
 {
     /**
      * @var string Baseline description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Description;
 
     /**
      * @var integer Severity level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Level;
 
     /**
-     * @var string Package name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string package name
      */
     public $PackageName;
 
     /**
-     * @var integer Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Parent id
      */
     public $ParentId;
 
     /**
      * @var string Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
      * @param string $Description Baseline description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Level Severity level
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PackageName Package name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ParentId Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PackageName package name
+     * @param integer $ParentId Parent id
      * @param string $Name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

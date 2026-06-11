@@ -20,86 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Alarm notification recipient information
  *
- * @method string getReceiverType() Obtain Recipient type. Valid values:
-<br><li> `Uin`: user ID
-<br><li> `Group`: user group ID
-Currently, other recipient types are not supported.
- * @method void setReceiverType(string $ReceiverType) Set Recipient type. Valid values:
-<br><li> `Uin`: user ID
-<br><li> `Group`: user group ID
-Currently, other recipient types are not supported.
- * @method array getReceiverIds() Obtain Recipient
- * @method void setReceiverIds(array $ReceiverIds) Set Recipient
- * @method array getReceiverChannels() Obtain Notification method
-<br><li> `Email`: email
-<br><li> `Sms`: SMS
-<br><li> `WeChat`: WeChat
-<br><li> `Phone`: phone
- * @method void setReceiverChannels(array $ReceiverChannels) Set Notification method
-<br><li> `Email`: email
-<br><li> `Sms`: SMS
-<br><li> `WeChat`: WeChat
-<br><li> `Phone`: phone
- * @method string getStartTime() Obtain Start time for allowed message receipt
- * @method void setStartTime(string $StartTime) Set Start time for allowed message receipt
- * @method string getEndTime() Obtain End time for allowed message receipt
- * @method void setEndTime(string $EndTime) Set End time for allowed message receipt
- * @method integer getIndex() Obtain Index
- * @method void setIndex(integer $Index) Set Index
+ * @method string getReceiverType() Obtain Recipient type. Available values:
+-Uin - User ID
+-Group - User group ID
+Other recipient types are not currently supported.
+ * @method void setReceiverType(string $ReceiverType) Set Recipient type. Available values:
+-Uin - User ID
+-Group - User group ID
+Other recipient types are not currently supported.
+ * @method array getReceiverIds() Obtain Recipient.
+When ReceiverType is Uin, the value of ReceiverIds is the user uid. [Sub-user information query](https://www.tencentcloud.com/document/api/598/53486?from_cn_redirect=1)
+When ReceiverType is Group, ReceiverIds is the user Group id. [CAM User Group](https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1)
+ * @method void setReceiverIds(array $ReceiverIds) Set Recipient.
+When ReceiverType is Uin, the value of ReceiverIds is the user uid. [Sub-user information query](https://www.tencentcloud.com/document/api/598/53486?from_cn_redirect=1)
+When ReceiverType is Group, ReceiverIds is the user Group id. [CAM User Group](https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1)
+ * @method array getReceiverChannels() Obtain Notification receiving channel
+-Mail
+-Sms
+-WeChat
+-Phone - phone
+ * @method void setReceiverChannels(array $ReceiverChannels) Set Notification receiving channel
+-Mail
+-Sms
+-WeChat
+-Phone - phone
+ * @method string getNoticeContentId() Obtain Notification content template ID. Use Default-zh to refer to the Default template (Chinese). Use Default-en to refer to DefaultTemplate (English). Get the notification content template ID by searching the notification content template (https://www.tencentcloud.com/document/product/614/111714?from_cn_redirect=1).
+ * @method void setNoticeContentId(string $NoticeContentId) Set Notification content template ID. Use Default-zh to refer to the Default template (Chinese). Use Default-en to refer to DefaultTemplate (English). Get the notification content template ID by searching the notification content template (https://www.tencentcloud.com/document/product/614/111714?from_cn_redirect=1).
+ * @method string getStartTime() Obtain Start time to allow receipt of information. Format: `15:04:05`. Required.
+ * @method void setStartTime(string $StartTime) Set Start time to allow receipt of information. Format: `15:04:05`. Required.
+ * @method string getEndTime() Obtain Allow receipt of information end time. Format: `15:04:05`. Required
+ * @method void setEndTime(string $EndTime) Set Allow receipt of information end time. Format: `15:04:05`. Required
+ * @method integer getIndex() Obtain Bit order.
+
+-Invalid when passed as an input parameter.
+-Valid at that time.
+ * @method void setIndex(integer $Index) Set Bit order.
+
+-Invalid when passed as an input parameter.
+-Valid at that time.
  */
 class NoticeReceiver extends AbstractModel
 {
     /**
-     * @var string Recipient type. Valid values:
-<br><li> `Uin`: user ID
-<br><li> `Group`: user group ID
-Currently, other recipient types are not supported.
+     * @var string Recipient type. Available values:
+-Uin - User ID
+-Group - User group ID
+Other recipient types are not currently supported.
      */
     public $ReceiverType;
 
     /**
-     * @var array Recipient
+     * @var array Recipient.
+When ReceiverType is Uin, the value of ReceiverIds is the user uid. [Sub-user information query](https://www.tencentcloud.com/document/api/598/53486?from_cn_redirect=1)
+When ReceiverType is Group, ReceiverIds is the user Group id. [CAM User Group](https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1)
      */
     public $ReceiverIds;
 
     /**
-     * @var array Notification method
-<br><li> `Email`: email
-<br><li> `Sms`: SMS
-<br><li> `WeChat`: WeChat
-<br><li> `Phone`: phone
+     * @var array Notification receiving channel
+-Mail
+-Sms
+-WeChat
+-Phone - phone
      */
     public $ReceiverChannels;
 
     /**
-     * @var string Start time for allowed message receipt
+     * @var string Notification content template ID. Use Default-zh to refer to the Default template (Chinese). Use Default-en to refer to DefaultTemplate (English). Get the notification content template ID by searching the notification content template (https://www.tencentcloud.com/document/product/614/111714?from_cn_redirect=1).
+     */
+    public $NoticeContentId;
+
+    /**
+     * @var string Start time to allow receipt of information. Format: `15:04:05`. Required.
      */
     public $StartTime;
 
     /**
-     * @var string End time for allowed message receipt
+     * @var string Allow receipt of information end time. Format: `15:04:05`. Required
      */
     public $EndTime;
 
     /**
-     * @var integer Index
+     * @var integer Bit order.
+
+-Invalid when passed as an input parameter.
+-Valid at that time.
      */
     public $Index;
 
     /**
-     * @param string $ReceiverType Recipient type. Valid values:
-<br><li> `Uin`: user ID
-<br><li> `Group`: user group ID
-Currently, other recipient types are not supported.
-     * @param array $ReceiverIds Recipient
-     * @param array $ReceiverChannels Notification method
-<br><li> `Email`: email
-<br><li> `Sms`: SMS
-<br><li> `WeChat`: WeChat
-<br><li> `Phone`: phone
-     * @param string $StartTime Start time for allowed message receipt
-     * @param string $EndTime End time for allowed message receipt
-     * @param integer $Index Index
+     * @param string $ReceiverType Recipient type. Available values:
+-Uin - User ID
+-Group - User group ID
+Other recipient types are not currently supported.
+     * @param array $ReceiverIds Recipient.
+When ReceiverType is Uin, the value of ReceiverIds is the user uid. [Sub-user information query](https://www.tencentcloud.com/document/api/598/53486?from_cn_redirect=1)
+When ReceiverType is Group, ReceiverIds is the user Group id. [CAM User Group](https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1)
+     * @param array $ReceiverChannels Notification receiving channel
+-Mail
+-Sms
+-WeChat
+-Phone - phone
+     * @param string $NoticeContentId Notification content template ID. Use Default-zh to refer to the Default template (Chinese). Use Default-en to refer to DefaultTemplate (English). Get the notification content template ID by searching the notification content template (https://www.tencentcloud.com/document/product/614/111714?from_cn_redirect=1).
+     * @param string $StartTime Start time to allow receipt of information. Format: `15:04:05`. Required.
+     * @param string $EndTime Allow receipt of information end time. Format: `15:04:05`. Required
+     * @param integer $Index Bit order.
+
+-Invalid when passed as an input parameter.
+-Valid at that time.
      */
     function __construct()
     {
@@ -124,6 +152,10 @@ Currently, other recipient types are not supported.
 
         if (array_key_exists("ReceiverChannels",$param) and $param["ReceiverChannels"] !== null) {
             $this->ReceiverChannels = $param["ReceiverChannels"];
+        }
+
+        if (array_key_exists("NoticeContentId",$param) and $param["NoticeContentId"] !== null) {
+            $this->NoticeContentId = $param["NoticeContentId"];
         }
 
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {

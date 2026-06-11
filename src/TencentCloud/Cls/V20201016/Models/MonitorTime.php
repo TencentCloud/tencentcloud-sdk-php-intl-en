@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Monitoring task execution time point in alarm policy
  *
- * @method string getType() Obtain Valid values:
-<br><li> `Period`: periodic execution
-<br><li> `Fixed`: scheduled execution
- * @method void setType(string $Type) Set Valid values:
-<br><li> `Period`: periodic execution
-<br><li> `Fixed`: scheduled execution
- * @method integer getTime() Obtain Execution interval or scheduled time point in minutes. Value range: 1–1440.
- * @method void setTime(integer $Time) Set Execution interval or scheduled time point in minutes. Value range: 1–1440.
+ * @method string getType() Obtain <p>Execution cycle. Value range: <code>Period</code>, <code>Fixed</code>, <code>Cron</code>.</p><ul><li>Period: at a fixed frequency</li><li>Fixed: fixed time</li><li>Cron: cron expression</li></ul>
+ * @method void setType(string $Type) Set <p>Execution cycle. Value range: <code>Period</code>, <code>Fixed</code>, <code>Cron</code>.</p><ul><li>Period: at a fixed frequency</li><li>Fixed: fixed time</li><li>Cron: cron expression</li></ul>
+ * @method integer getTime() Obtain <p>Execution period or custom execution time point. Unit: minutes, value range: 1-1440.<br>When type is <code>Period</code> or <code>Fixed</code>, the time field takes effect.</p>
+ * @method void setTime(integer $Time) Set <p>Execution period or custom execution time point. Unit: minutes, value range: 1-1440.<br>When type is <code>Period</code> or <code>Fixed</code>, the time field takes effect.</p>
+ * @method string getCronExpression() Obtain <p>The cron expression for the execution period. Example: <code>0/1 * * * *</code>. From left to right, each field represents Minutes field, Hours field, Day of month field, Month field, Day of week field. No support for second level. When the type is <code>Cron</code>, the CronExpression field takes effect.</p>
+ * @method void setCronExpression(string $CronExpression) Set <p>The cron expression for the execution period. Example: <code>0/1 * * * *</code>. From left to right, each field represents Minutes field, Hours field, Day of month field, Month field, Day of week field. No support for second level. When the type is <code>Cron</code>, the CronExpression field takes effect.</p>
  */
 class MonitorTime extends AbstractModel
 {
     /**
-     * @var string Valid values:
-<br><li> `Period`: periodic execution
-<br><li> `Fixed`: scheduled execution
+     * @var string <p>Execution cycle. Value range: <code>Period</code>, <code>Fixed</code>, <code>Cron</code>.</p><ul><li>Period: at a fixed frequency</li><li>Fixed: fixed time</li><li>Cron: cron expression</li></ul>
      */
     public $Type;
 
     /**
-     * @var integer Execution interval or scheduled time point in minutes. Value range: 1–1440.
+     * @var integer <p>Execution period or custom execution time point. Unit: minutes, value range: 1-1440.<br>When type is <code>Period</code> or <code>Fixed</code>, the time field takes effect.</p>
      */
     public $Time;
 
     /**
-     * @param string $Type Valid values:
-<br><li> `Period`: periodic execution
-<br><li> `Fixed`: scheduled execution
-     * @param integer $Time Execution interval or scheduled time point in minutes. Value range: 1–1440.
+     * @var string <p>The cron expression for the execution period. Example: <code>0/1 * * * *</code>. From left to right, each field represents Minutes field, Hours field, Day of month field, Month field, Day of week field. No support for second level. When the type is <code>Cron</code>, the CronExpression field takes effect.</p>
+     */
+    public $CronExpression;
+
+    /**
+     * @param string $Type <p>Execution cycle. Value range: <code>Period</code>, <code>Fixed</code>, <code>Cron</code>.</p><ul><li>Period: at a fixed frequency</li><li>Fixed: fixed time</li><li>Cron: cron expression</li></ul>
+     * @param integer $Time <p>Execution period or custom execution time point. Unit: minutes, value range: 1-1440.<br>When type is <code>Period</code> or <code>Fixed</code>, the time field takes effect.</p>
+     * @param string $CronExpression <p>The cron expression for the execution period. Example: <code>0/1 * * * *</code>. From left to right, each field represents Minutes field, Hours field, Day of month field, Month field, Day of week field. No support for second level. When the type is <code>Cron</code>, the CronExpression field takes effect.</p>
      */
     function __construct()
     {
@@ -68,6 +68,10 @@ class MonitorTime extends AbstractModel
 
         if (array_key_exists("Time",$param) and $param["Time"] !== null) {
             $this->Time = $param["Time"];
+        }
+
+        if (array_key_exists("CronExpression",$param) and $param["CronExpression"] !== null) {
+            $this->CronExpression = $param["CronExpression"];
         }
     }
 }

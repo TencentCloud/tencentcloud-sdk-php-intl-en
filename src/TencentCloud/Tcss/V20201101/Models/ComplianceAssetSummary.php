@@ -46,10 +46,8 @@ use TencentCloud\Common\AbstractModel;
 `CHECK_FINISHED`: Checked.
 
 `CHECK_FAILED`: Check failed.
- * @method float getCheckProgress() Obtain Check progress. Value range: 0-100. This field is valid only if the check is running.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCheckProgress(float $CheckProgress) Set Check progress. Value range: 0-100. This field is valid only if the check is running.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getCheckProgress() Obtain The detection progress of this category is a number between 0 and 100. If not in progress, field not found.
+ * @method void setCheckProgress(float $CheckProgress) Set The detection progress of this category is a number between 0 and 100. If not in progress, field not found.
  * @method integer getPassedPolicyItemCount() Obtain Number of check items that the asset passed
  * @method void setPassedPolicyItemCount(integer $PassedPolicyItemCount) Set Number of check items that the asset passed
  * @method integer getFailedPolicyItemCount() Obtain Number of check items that the asset failed
@@ -72,24 +70,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setAssetPassedRate(float $AssetPassedRate) Set Asset compliance rate. Value range: 0-100.
  * @method integer getScanFailedAssetCount() Obtain Number of assets that failed the check
  * @method void setScanFailedAssetCount(integer $ScanFailedAssetCount) Set Number of assets that failed the check
- * @method float getCheckCostTime() Obtain Last check duration in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCheckCostTime(float $CheckCostTime) Set Last check duration in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLastCheckTime() Obtain Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLastCheckTime(string $LastCheckTime) Set Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getCheckCostTime() Obtain Time taken for last detection, in seconds.
+ * @method void setCheckCostTime(float $CheckCostTime) Set Time taken for last detection, in seconds.
+ * @method string getLastCheckTime() Obtain Last detection time.
+ * @method void setLastCheckTime(string $LastCheckTime) Set Last detection time.
  * @method CompliancePeriodTaskRule getPeriodRule() Obtain Scheduled check rule
  * @method void setPeriodRule(CompliancePeriodTaskRule $PeriodRule) Set Scheduled check rule
- * @method integer getOpenPolicyItemCount() Obtain Total number of enabled check items
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOpenPolicyItemCount(integer $OpenPolicyItemCount) Set Total number of enabled check items
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIgnoredPolicyItemCount() Obtain Total number of ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIgnoredPolicyItemCount(integer $IgnoredPolicyItemCount) Set Total number of ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getOpenPolicyItemCount() Obtain Total Number of Enabled Check Items
+ * @method void setOpenPolicyItemCount(integer $OpenPolicyItemCount) Set Total Number of Enabled Check Items
+ * @method integer getIgnoredPolicyItemCount() Obtain Total Number of Ignored Check Items
+ * @method void setIgnoredPolicyItemCount(integer $IgnoredPolicyItemCount) Set Total Number of Ignored Check Items
+ * @method integer getTotalPolicyItemCount() Obtain Total number of detection items.
+ * @method void setTotalPolicyItemCount(integer $TotalPolicyItemCount) Set Total number of detection items.
+ * @method integer getDetectHostCount() Obtain Detection hosts
+ * @method void setDetectHostCount(integer $DetectHostCount) Set Detection hosts
+ * @method integer getLeftTime() Obtain Remaining time of the current task, in seconds.
+ * @method void setLeftTime(integer $LeftTime) Set Remaining time of the current task, in seconds.
  */
 class ComplianceAssetSummary extends AbstractModel
 {
@@ -119,8 +115,7 @@ class ComplianceAssetSummary extends AbstractModel
     public $CheckStatus;
 
     /**
-     * @var float Check progress. Value range: 0-100. This field is valid only if the check is running.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float The detection progress of this category is a number between 0 and 100. If not in progress, field not found.
      */
     public $CheckProgress;
 
@@ -180,14 +175,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ScanFailedAssetCount;
 
     /**
-     * @var float Last check duration in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Time taken for last detection, in seconds.
      */
     public $CheckCostTime;
 
     /**
-     * @var string Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Last detection time.
      */
     public $LastCheckTime;
 
@@ -197,16 +190,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PeriodRule;
 
     /**
-     * @var integer Total number of enabled check items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Total Number of Enabled Check Items
      */
     public $OpenPolicyItemCount;
 
     /**
-     * @var integer Total number of ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Total Number of Ignored Check Items
      */
     public $IgnoredPolicyItemCount;
+
+    /**
+     * @var integer Total number of detection items.
+     */
+    public $TotalPolicyItemCount;
+
+    /**
+     * @var integer Detection hosts
+     */
+    public $DetectHostCount;
+
+    /**
+     * @var integer Remaining time of the current task, in seconds.
+     */
+    public $LeftTime;
 
     /**
      * @param string $AssetType Asset type
@@ -222,8 +228,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `CHECK_FINISHED`: Checked.
 
 `CHECK_FAILED`: Check failed.
-     * @param float $CheckProgress Check progress. Value range: 0-100. This field is valid only if the check is running.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $CheckProgress The detection progress of this category is a number between 0 and 100. If not in progress, field not found.
      * @param integer $PassedPolicyItemCount Number of check items that the asset passed
      * @param integer $FailedPolicyItemCount Number of check items that the asset failed
      * @param integer $FailedCriticalPolicyItemCount Number of critical check items that the asset failed
@@ -235,15 +240,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $FailedAssetCount Number of assets that failed the check
      * @param float $AssetPassedRate Asset compliance rate. Value range: 0-100.
      * @param integer $ScanFailedAssetCount Number of assets that failed the check
-     * @param float $CheckCostTime Last check duration in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $CheckCostTime Time taken for last detection, in seconds.
+     * @param string $LastCheckTime Last detection time.
      * @param CompliancePeriodTaskRule $PeriodRule Scheduled check rule
-     * @param integer $OpenPolicyItemCount Total number of enabled check items
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IgnoredPolicyItemCount Total number of ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $OpenPolicyItemCount Total Number of Enabled Check Items
+     * @param integer $IgnoredPolicyItemCount Total Number of Ignored Check Items
+     * @param integer $TotalPolicyItemCount Total number of detection items.
+     * @param integer $DetectHostCount Detection hosts
+     * @param integer $LeftTime Remaining time of the current task, in seconds.
      */
     function __construct()
     {
@@ -337,6 +341,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IgnoredPolicyItemCount",$param) and $param["IgnoredPolicyItemCount"] !== null) {
             $this->IgnoredPolicyItemCount = $param["IgnoredPolicyItemCount"];
+        }
+
+        if (array_key_exists("TotalPolicyItemCount",$param) and $param["TotalPolicyItemCount"] !== null) {
+            $this->TotalPolicyItemCount = $param["TotalPolicyItemCount"];
+        }
+
+        if (array_key_exists("DetectHostCount",$param) and $param["DetectHostCount"] !== null) {
+            $this->DetectHostCount = $param["DetectHostCount"];
+        }
+
+        if (array_key_exists("LeftTime",$param) and $param["LeftTime"] !== null) {
+            $this->LeftTime = $param["LeftTime"];
         }
     }
 }

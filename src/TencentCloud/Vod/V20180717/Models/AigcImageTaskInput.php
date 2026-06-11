@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelVersion(string $ModelVersion) Set <p>Model version.</p>
  * @method array getFileInfos() Obtain <p>File information for AIGC image generation task input.</p>
  * @method void setFileInfos(array $FileInfos) Set <p>File information for AIGC image generation task input.</p>
- * @method string getPrompt() Obtain <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
- * @method void setPrompt(string $Prompt) Set <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
- * @method string getNegativePrompt() Obtain <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
- * @method void setNegativePrompt(string $NegativePrompt) Set <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
+ * @method string getPrompt() Obtain <p>Prompt content for image generation. This parameter is required when FileInfos is empty.</p>
+ * @method void setPrompt(string $Prompt) Set <p>Prompt content for image generation. This parameter is required when FileInfos is empty.</p>
+ * @method string getNegativePrompt() Obtain <p>To prevent the model from generating image prompts.</p>
+ * @method void setNegativePrompt(string $NegativePrompt) Set <p>To prevent the model from generating image prompts.</p>
  * @method string getEnhancePrompt() Obtain <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
  * @method void setEnhancePrompt(string $EnhancePrompt) Set <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
  * @method string getGenerationMode() Obtain <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
@@ -59,12 +59,12 @@ class AigcImageTaskInput extends AbstractModel
     public $FileInfos;
 
     /**
-     * @var string <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+     * @var string <p>Prompt content for image generation. This parameter is required when FileInfos is empty.</p>
      */
     public $Prompt;
 
     /**
-     * @var string <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
+     * @var string <p>To prevent the model from generating image prompts.</p>
      */
     public $NegativePrompt;
 
@@ -97,8 +97,8 @@ class AigcImageTaskInput extends AbstractModel
      * @param string $ModelName <p>Model name.</p>
      * @param string $ModelVersion <p>Model version.</p>
      * @param array $FileInfos <p>File information for AIGC image generation task input.</p>
-     * @param string $Prompt <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
-     * @param string $NegativePrompt <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
+     * @param string $Prompt <p>Prompt content for image generation. This parameter is required when FileInfos is empty.</p>
+     * @param string $NegativePrompt <p>To prevent the model from generating image prompts.</p>
      * @param string $EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
      * @param string $GenerationMode <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
      * @param AigcImageOutputConfig $OutputConfig <p>Output result file for AIGC image generation.</p>

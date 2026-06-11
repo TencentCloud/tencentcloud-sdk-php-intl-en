@@ -22,38 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getQuuid() Obtain Query information of a specified QUUID host
  * @method void setQuuid(string $Quuid) Set Query information of a specified QUUID host
- * @method array getFilters() Obtain Filter criteria
-<li>AppName - string - required: no - application name for search</li>
-<li>IP - String - required: no - host IP address</li>
-<li>MachineName - String - required: no - host name</li>
-<li>InstanceID - string - required: no - instance ID</li>
-<li>Type - int - required: no - type	: Linux only
-0: all
-1: operations
-2: database
-3: Security
-4: suspicious application
-5: system architecture
-6: system application
-7: web service
-99: other</li>
-<li>OsType - uint64 - required: no - Windows/Linux</li>
- * @method void setFilters(array $Filters) Set Filter criteria
-<li>AppName - string - required: no - application name for search</li>
-<li>IP - String - required: no - host IP address</li>
-<li>MachineName - String - required: no - host name</li>
-<li>InstanceID - string - required: no - instance ID</li>
-<li>Type - int - required: no - type	: Linux only
-0: all
-1: operations
-2: database
-3: Security
-4: suspicious application
-5: system architecture
-6: system application
-7: web service
-99: other</li>
-<li>OsType - uint64 - required: no - Windows/Linux</li>
+ * @method array getFilters() Obtain Filtering conditions.<li>AppName - string - required: no - application name for search.</li><li>IP - String - required: no - host IP address.</li><li>MachineName - String - required: no - host name.</li><li>InstanceID - string - required: no - instance ID.</li><li>Type - int - required: no - Type	: for Linux only. 0: all; 1: Ops; 2: database; 3: security; 4: suspicious application; 5: system architecture; 6: system application; 7: web service; 99: others.</li><li>OsType - uint64 - required: no - Windows or Linux.</li>
+ * @method void setFilters(array $Filters) Set Filtering conditions.<li>AppName - string - required: no - application name for search.</li><li>IP - String - required: no - host IP address.</li><li>MachineName - String - required: no - host name.</li><li>InstanceID - string - required: no - instance ID.</li><li>Type - int - required: no - Type	: for Linux only. 0: all; 1: Ops; 2: database; 3: security; 4: suspicious application; 5: system architecture; 6: system application; 7: web service; 99: others.</li><li>OsType - uint64 - required: no - Windows or Linux.</li>
  * @method string getOrder() Obtain Sorting method: asc for ascending order or desc for descending order
  * @method void setOrder(string $Order) Set Sorting method: asc for ascending order or desc for descending order
  * @method string getBy() Obtain Sorting field: [FirstTime|ProcessCount]
@@ -67,22 +37,7 @@ class ExportAssetAppListRequest extends AbstractModel
     public $Quuid;
 
     /**
-     * @var array Filter criteria
-<li>AppName - string - required: no - application name for search</li>
-<li>IP - String - required: no - host IP address</li>
-<li>MachineName - String - required: no - host name</li>
-<li>InstanceID - string - required: no - instance ID</li>
-<li>Type - int - required: no - type	: Linux only
-0: all
-1: operations
-2: database
-3: Security
-4: suspicious application
-5: system architecture
-6: system application
-7: web service
-99: other</li>
-<li>OsType - uint64 - required: no - Windows/Linux</li>
+     * @var array Filtering conditions.<li>AppName - string - required: no - application name for search.</li><li>IP - String - required: no - host IP address.</li><li>MachineName - String - required: no - host name.</li><li>InstanceID - string - required: no - instance ID.</li><li>Type - int - required: no - Type	: for Linux only. 0: all; 1: Ops; 2: database; 3: security; 4: suspicious application; 5: system architecture; 6: system application; 7: web service; 99: others.</li><li>OsType - uint64 - required: no - Windows or Linux.</li>
      */
     public $Filters;
 
@@ -98,22 +53,7 @@ class ExportAssetAppListRequest extends AbstractModel
 
     /**
      * @param string $Quuid Query information of a specified QUUID host
-     * @param array $Filters Filter criteria
-<li>AppName - string - required: no - application name for search</li>
-<li>IP - String - required: no - host IP address</li>
-<li>MachineName - String - required: no - host name</li>
-<li>InstanceID - string - required: no - instance ID</li>
-<li>Type - int - required: no - type	: Linux only
-0: all
-1: operations
-2: database
-3: Security
-4: suspicious application
-5: system architecture
-6: system application
-7: web service
-99: other</li>
-<li>OsType - uint64 - required: no - Windows/Linux</li>
+     * @param array $Filters Filtering conditions.<li>AppName - string - required: no - application name for search.</li><li>IP - String - required: no - host IP address.</li><li>MachineName - String - required: no - host name.</li><li>InstanceID - string - required: no - instance ID.</li><li>Type - int - required: no - Type	: for Linux only. 0: all; 1: Ops; 2: database; 3: security; 4: suspicious application; 5: system architecture; 6: system application; 7: web service; 99: others.</li><li>OsType - uint64 - required: no - Windows or Linux.</li>
      * @param string $Order Sorting method: asc for ascending order or desc for descending order
      * @param string $By Sorting field: [FirstTime|ProcessCount]
      */

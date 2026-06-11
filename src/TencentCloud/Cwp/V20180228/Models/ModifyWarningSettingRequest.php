@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyWarningSetting request structure.
  *
- * @method array getWarningObjects() Obtain Modified alarm setting content
- * @method void setWarningObjects(array $WarningObjects) Set Modified alarm setting content
+ * @method array getWarningObjects() Obtain Modify alarm settings.
+ * @method void setWarningObjects(array $WarningObjects) Set Modify alarm settings.
  */
 class ModifyWarningSettingRequest extends AbstractModel
 {
     /**
-     * @var array Modified alarm setting content
+     * @var array Modify alarm settings.
      */
     public $WarningObjects;
 
     /**
-     * @param array $WarningObjects Modified alarm setting content
+     * @param array $WarningObjects Modify alarm settings.
      */
     function __construct()
     {

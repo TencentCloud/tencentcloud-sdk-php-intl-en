@@ -31,15 +31,19 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\CreateApplicationSensitiveAPIResponse CreateApplicationSensitiveAPI(Models\CreateApplicationSensitiveAPIRequest $req) This API is used to create a superapp sensitive API.
  * @method Models\CreateGlobalDomainACLResponse CreateGlobalDomainACL(Models\CreateGlobalDomainACLRequest $req) This API is used to create a global domain allowlist or blocklist.
  * @method Models\CreateMNGResponse CreateMNG(Models\CreateMNGRequest $req) This API is used to create a mini game.
+ * @method Models\CreateMNGAppSecretResponse CreateMNGAppSecret(Models\CreateMNGAppSecretRequest $req) This API is used to generate a mini game secret key.
  * @method Models\CreateMNGApprovalResponse CreateMNGApproval(Models\CreateMNGApprovalRequest $req) This API is used to create a mini game approval request.
  * @method Models\CreateMNGDomainACLResponse CreateMNGDomainACL(Models\CreateMNGDomainACLRequest $req) This API is used to create a domain allowlist/blocklist for a mini game.
  * @method Models\CreateMNGSensitiveAPIPermissionApprovalResponse CreateMNGSensitiveAPIPermissionApproval(Models\CreateMNGSensitiveAPIPermissionApprovalRequest $req) This API is used to create a permission request to allow a mini game to call sensitive APIs.
+ * @method Models\CreateMNGSubscribeMessageTemplateResponse CreateMNGSubscribeMessageTemplate(Models\CreateMNGSubscribeMessageTemplateRequest $req) This API is used to create a mini game subscription message template.
  * @method Models\CreateMNGVersionResponse CreateMNGVersion(Models\CreateMNGVersionRequest $req) This API is used to create a mini game version.
  * @method Models\CreateMNPResponse CreateMNP(Models\CreateMNPRequest $req) This API is used to create a mini program.
+ * @method Models\CreateMNPAppSecretResponse CreateMNPAppSecret(Models\CreateMNPAppSecretRequest $req) This API is used to generate a mini program secret key.
  * @method Models\CreateMNPApprovalResponse CreateMNPApproval(Models\CreateMNPApprovalRequest $req) This API is used to create a mini program approval request.
  * @method Models\CreateMNPDomainACLResponse CreateMNPDomainACL(Models\CreateMNPDomainACLRequest $req) This API is used to create a domain allowlist/blocklist for a mini program.
  * @method Models\CreateMNPSecretKeyResponse CreateMNPSecretKey(Models\CreateMNPSecretKeyRequest $req) This API is used to create a package secret key for a mini program or mini game.
  * @method Models\CreateMNPSensitiveAPIPermissionApprovalResponse CreateMNPSensitiveAPIPermissionApproval(Models\CreateMNPSensitiveAPIPermissionApprovalRequest $req) This API is used to create a permission request to allow a mini program to call sensitive APIs.
+ * @method Models\CreateMNPSubscribeMessageTemplateResponse CreateMNPSubscribeMessageTemplate(Models\CreateMNPSubscribeMessageTemplateRequest $req) This API is used to create a mini program subscription message template.
  * @method Models\CreateMNPVersionResponse CreateMNPVersion(Models\CreateMNPVersionRequest $req) This API is used to create a mini program version.
  * @method Models\CreatePresetKeyResponse CreatePresetKey(Models\CreatePresetKeyRequest $req) This API is used to obtain the encryption key.
  * @method Models\CreateTeamResponse CreateTeam(Models\CreateTeamRequest $req) This API is used to create a team.
@@ -48,7 +52,9 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\DeleteApplicationSensitiveAPIResponse DeleteApplicationSensitiveAPI(Models\DeleteApplicationSensitiveAPIRequest $req) This API is used to delete a superapp sensitive API.
  * @method Models\DeleteGlobalDomainResponse DeleteGlobalDomain(Models\DeleteGlobalDomainRequest $req) This API is used to delete domains from the allowlist or blocklist.
  * @method Models\DeleteMNGResponse DeleteMNG(Models\DeleteMNGRequest $req) This API is used to delete a mini game.
+ * @method Models\DeleteMNGSubscribeMessageTemplateResponse DeleteMNGSubscribeMessageTemplate(Models\DeleteMNGSubscribeMessageTemplateRequest $req) This API is used to delete a mini game subscription message template.
  * @method Models\DeleteMNPResponse DeleteMNP(Models\DeleteMNPRequest $req) This API is used to delete a mini program.
+ * @method Models\DeleteMNPSubscribeMessageTemplateResponse DeleteMNPSubscribeMessageTemplate(Models\DeleteMNPSubscribeMessageTemplateRequest $req) This API is used to delete a mini program subscription message template.
  * @method Models\DeleteTeamResponse DeleteTeam(Models\DeleteTeamRequest $req) This API is used to deletes a team.
  * @method Models\DeleteTeamMemberResponse DeleteTeamMember(Models\DeleteTeamMemberRequest $req) This API is used to delete a team member.
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) This API is used to delete a user.
@@ -73,7 +79,8 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\DescribeMNGAdvertisingDetailResponse DescribeMNGAdvertisingDetail(Models\DescribeMNGAdvertisingDetailRequest $req) This API is used to query the detailed mini game advertising data over a specified period.
  * @method Models\DescribeMNGAdvertisingLineChartResponse DescribeMNGAdvertisingLineChart(Models\DescribeMNGAdvertisingLineChartRequest $req) This API is used to query the mini game advertising data in a line chart format.
  * @method Models\DescribeMNGAdvertisingOverviewResponse DescribeMNGAdvertisingOverview(Models\DescribeMNGAdvertisingOverviewRequest $req) This API is used to query an overview of mini game ad metrics within a specified date range.
- * @method Models\DescribeMNGAllStageVersionsResponse DescribeMNGAllStageVersions(Models\DescribeMNGAllStageVersionsRequest $req) This API is used to query the mini game version information.
+ * @method Models\DescribeMNGAllStageVersionsResponse DescribeMNGAllStageVersions(Models\DescribeMNGAllStageVersionsRequest $req) This API is used to query mini game version information across all phases.
+ * @method Models\DescribeMNGAppSecretResponse DescribeMNGAppSecret(Models\DescribeMNGAppSecretRequest $req) This API is used to query mini game secret keys.
  * @method Models\DescribeMNGCategoryResponse DescribeMNGCategory(Models\DescribeMNGCategoryRequest $req) This API is used to query the mini game categories.
  * @method Models\DescribeMNGDomainACLResponse DescribeMNGDomainACL(Models\DescribeMNGDomainACLRequest $req) This API is used to query the domain name allowlist/blocklist of a mini game.
  * @method Models\DescribeMNGListResponse DescribeMNGList(Models\DescribeMNGListRequest $req) This API is used to query the list of mini games.
@@ -90,12 +97,17 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\DescribeMNGRetentionDataResponse DescribeMNGRetentionData(Models\DescribeMNGRetentionDataRequest $req) This API is used to query the user retention data for a mini game within a specified date range.
  * @method Models\DescribeMNGSensitiveAPIPermissionApprovalResponse DescribeMNGSensitiveAPIPermissionApproval(Models\DescribeMNGSensitiveAPIPermissionApprovalRequest $req) This API is used to query the details of permission requests to allow a mini game to call sensitive APIs.
  * @method Models\DescribeMNGSensitiveAPIPermissionListResponse DescribeMNGSensitiveAPIPermissionList(Models\DescribeMNGSensitiveAPIPermissionListRequest $req) This API is used to query a list of sensitive APIs that are available to the mini game.
+ * @method Models\DescribeMNGSubscribeMessageTemplateResponse DescribeMNGSubscribeMessageTemplate(Models\DescribeMNGSubscribeMessageTemplateRequest $req) This API is used to query mini game subscription message template details.
+ * @method Models\DescribeMNGSubscribeMessageTemplateLibraryResponse DescribeMNGSubscribeMessageTemplateLibrary(Models\DescribeMNGSubscribeMessageTemplateLibraryRequest $req) This API is used to query mini game subscription message template library details.
+ * @method Models\DescribeMNGSubscribeMessageTemplateLibraryListResponse DescribeMNGSubscribeMessageTemplateLibraryList(Models\DescribeMNGSubscribeMessageTemplateLibraryListRequest $req) This API is used to query the mini game subscription message template library list.
+ * @method Models\DescribeMNGSubscribeMessageTemplateListResponse DescribeMNGSubscribeMessageTemplateList(Models\DescribeMNGSubscribeMessageTemplateListRequest $req) This API is used to query the mini game subscription message template list.
  * @method Models\DescribeMNGVersionResponse DescribeMNGVersion(Models\DescribeMNGVersionRequest $req) This API is used to query the mini game version creation results.
  * @method Models\DescribeMNPResponse DescribeMNP(Models\DescribeMNPRequest $req) This API is used to query the mini program details.
  * @method Models\DescribeMNPAccessAnalysisOverviewResponse DescribeMNPAccessAnalysisOverview(Models\DescribeMNPAccessAnalysisOverviewRequest $req) This API is used to query the overview of mini program visit analysis data within a specified date range.
  * @method Models\DescribeMNPActiveUserRealTimeStatisticsResponse DescribeMNPActiveUserRealTimeStatistics(Models\DescribeMNPActiveUserRealTimeStatisticsRequest $req) This API is used to query the mini program real-time active user statistics.
  * @method Models\DescribeMNPAdvertisingDetailResponse DescribeMNPAdvertisingDetail(Models\DescribeMNPAdvertisingDetailRequest $req) This API is used to query the detailed advertising data for a mini program within a specified date range.
- * @method Models\DescribeMNPAllStageVersionsResponse DescribeMNPAllStageVersions(Models\DescribeMNPAllStageVersionsRequest $req) This API is used to query versions of a mini program across all stages.
+ * @method Models\DescribeMNPAllStageVersionsResponse DescribeMNPAllStageVersions(Models\DescribeMNPAllStageVersionsRequest $req) This API is used to query mini program version information across all phases.
+ * @method Models\DescribeMNPAppSecretResponse DescribeMNPAppSecret(Models\DescribeMNPAppSecretRequest $req) This API is used to query mini program secret keys.
  * @method Models\DescribeMNPApprovalListResponse DescribeMNPApprovalList(Models\DescribeMNPApprovalListRequest $req) This API is used to query a list of approval requests related with a mini program.
  * @method Models\DescribeMNPCategoryResponse DescribeMNPCategory(Models\DescribeMNPCategoryRequest $req) This API is used to query the mini program category list.
  * @method Models\DescribeMNPDomainACLResponse DescribeMNPDomainACL(Models\DescribeMNPDomainACLRequest $req) This API is used to query the domain allowlist/blocklist of a mini program.
@@ -113,6 +125,10 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\DescribeMNPSensitiveAPIPermissionApprovalResponse DescribeMNPSensitiveAPIPermissionApproval(Models\DescribeMNPSensitiveAPIPermissionApprovalRequest $req) This API is used to query the details of a sensitive API permission request for a mini program.
  * @method Models\DescribeMNPSensitiveAPIPermissionApprovalListResponse DescribeMNPSensitiveAPIPermissionApprovalList(Models\DescribeMNPSensitiveAPIPermissionApprovalListRequest $req) This API is used to query a list of permission requests to allow a mini program to call sensitive APIs.
  * @method Models\DescribeMNPSensitiveAPIPermissionListResponse DescribeMNPSensitiveAPIPermissionList(Models\DescribeMNPSensitiveAPIPermissionListRequest $req) This API is used to query the list of sensitive APIs that available to a mini program.
+ * @method Models\DescribeMNPSubscribeMessageTemplateResponse DescribeMNPSubscribeMessageTemplate(Models\DescribeMNPSubscribeMessageTemplateRequest $req) This API is used to query mini program subscription message template details.
+ * @method Models\DescribeMNPSubscribeMessageTemplateLibraryResponse DescribeMNPSubscribeMessageTemplateLibrary(Models\DescribeMNPSubscribeMessageTemplateLibraryRequest $req) This API is used to query mini program subscription message template library details.
+ * @method Models\DescribeMNPSubscribeMessageTemplateLibraryListResponse DescribeMNPSubscribeMessageTemplateLibraryList(Models\DescribeMNPSubscribeMessageTemplateLibraryListRequest $req) This API is used to query the mini program subscription message template library list.
+ * @method Models\DescribeMNPSubscribeMessageTemplateListResponse DescribeMNPSubscribeMessageTemplateList(Models\DescribeMNPSubscribeMessageTemplateListRequest $req) This API is used to query the mini program subscription message template list.
  * @method Models\DescribeMNPVersionResponse DescribeMNPVersion(Models\DescribeMNPVersionRequest $req) This API is used to query the mini program version creation results.
  * @method Models\DescribePaymentDataDetailResponse DescribePaymentDataDetail(Models\DescribePaymentDataDetailRequest $req) This API is used to query the mini program payment data details within a specified date range.
  * @method Models\DescribePaymentDataLineChartResponse DescribePaymentDataLineChart(Models\DescribePaymentDataLineChartRequest $req) This API is used to query the mini program payment line chart within a specified date range.
@@ -130,8 +146,10 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\ModifyApplicationConfigResponse ModifyApplicationConfig(Models\ModifyApplicationConfigRequest $req) This API is used to edit the configuration of a superapp.
  * @method Models\ModifyGlobalDomainResponse ModifyGlobalDomain(Models\ModifyGlobalDomainRequest $req) This API is used to modify the domain allowlist or blocklist.
  * @method Models\ModifyMNGResponse ModifyMNG(Models\ModifyMNGRequest $req) This API is used to edit the mini game information.
+ * @method Models\ModifyMNGAppSecretStatusResponse ModifyMNGAppSecretStatus(Models\ModifyMNGAppSecretStatusRequest $req) This API is used to modify the secret key status of a mini game.
  * @method Models\ModifyMNGDomainResponse ModifyMNGDomain(Models\ModifyMNGDomainRequest $req) This API is used to edit the mini game domain information.
  * @method Models\ModifyMNPResponse ModifyMNP(Models\ModifyMNPRequest $req) This API is used to edit the mini program information.
+ * @method Models\ModifyMNPAppSecretStatusResponse ModifyMNPAppSecretStatus(Models\ModifyMNPAppSecretStatusRequest $req) This API is used to modify the secret key status of a mini program.
  * @method Models\ModifyMNPDomainResponse ModifyMNPDomain(Models\ModifyMNPDomainRequest $req) This API is used to edit the mini program domain information.
  * @method Models\ModifyTeamResponse ModifyTeam(Models\ModifyTeamRequest $req) This API is used to change the team information.
  * @method Models\ModifyTeamMemberResponse ModifyTeamMember(Models\ModifyTeamMemberRequest $req) This API is used to modify the team member information.
@@ -142,6 +160,8 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\ReleaseMNPVersionResponse ReleaseMNPVersion(Models\ReleaseMNPVersionRequest $req) This API is used to release a mini program version.
  * @method Models\RemoveMNGResponse RemoveMNG(Models\RemoveMNGRequest $req) This API is used to remove a mini game.
  * @method Models\RemoveMNPResponse RemoveMNP(Models\RemoveMNPRequest $req) This API is used to remove a mini program.
+ * @method Models\ResetMNGAppSecretResponse ResetMNGAppSecret(Models\ResetMNGAppSecretRequest $req) This API is used to reset a mini game secret key.
+ * @method Models\ResetMNPAppSecretResponse ResetMNPAppSecret(Models\ResetMNPAppSecretRequest $req) This API is used to reset a mini program secret key.
  * @method Models\RollbackMNGVersionResponse RollbackMNGVersion(Models\RollbackMNGVersionRequest $req) This API is used to roll back the released version of a mini game to a specified version.
  * @method Models\RollbackMNPVersionResponse RollbackMNPVersion(Models\RollbackMNPVersionRequest $req) This API is used to roll back the released version of a mini program to a specified version.
  */

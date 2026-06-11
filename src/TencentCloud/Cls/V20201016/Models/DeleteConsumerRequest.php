@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteConsumer request structure.
  *
- * @method string getTopicId() Obtain Log topic ID bound to the task
- * @method void setTopicId(string $TopicId) Set Log topic ID bound to the task
+ * @method string getTopicId() Obtain Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
  */
 class DeleteConsumerRequest extends AbstractModel
 {
     /**
-     * @var string Log topic ID bound to the task
+     * @var string Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     public $TopicId;
 
     /**
-     * @param string $TopicId Log topic ID bound to the task
+     * @param string $TopicId Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     function __construct()
     {

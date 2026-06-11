@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCount() Obtain Number of Association Rules
  * @method void setCount(integer $Count) Set Number of Association Rules
  * @method string getName() Obtain Name of the Association Rule (Show Only One of Them)
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Name of the Association Rule (Show Only One of Them)
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class FileTamperRuleCount extends AbstractModel
 {
@@ -43,7 +41,6 @@ class FileTamperRuleCount extends AbstractModel
 
     /**
      * @var string Name of the Association Rule (Show Only One of Them)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
@@ -51,7 +48,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Uuid Host UUID
      * @param integer $Count Number of Association Rules
      * @param string $Name Name of the Association Rule (Show Only One of Them)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

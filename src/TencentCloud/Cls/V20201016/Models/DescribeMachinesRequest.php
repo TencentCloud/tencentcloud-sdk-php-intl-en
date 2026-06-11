@@ -20,18 +20,158 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMachines request structure.
  *
- * @method string getGroupId() Obtain ID of the machine group to be queried
- * @method void setGroupId(string $GroupId) Set ID of the machine group to be queried
+ * @method string getGroupId() Obtain Machine group ID to query.
+
+-Obtain the machine group ID by searching the machine group list (https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
+ * @method void setGroupId(string $GroupId) Set Machine group ID to query.
+
+-Obtain the machine group ID by searching the machine group list (https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
+ * @method array getFilters() Obtain ip
+-Filter by ip.
+-Type: String
+-Required: No
+
+instance
+-Filter by instance id.
+-Type: String
+-Required: No
+
+version
+- Filter by LogListener version.
+-Type: String
+-Required: No
+
+status
+- Filter by machine status.
+-Type: String
+-Optional: No.
+-Available values: 0: offline, 1: normal
+
+offlineTime
+- Filter by machine offline time.
+-Type: String
+-Optional: No.
+-Available values: 0: no offline time, 12: within 12 hours, 24: within a day, 48: within two days, 99: before two days
+
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
+ * @method void setFilters(array $Filters) Set ip
+-Filter by ip.
+-Type: String
+-Required: No
+
+instance
+-Filter by instance id.
+-Type: String
+-Required: No
+
+version
+- Filter by LogListener version.
+-Type: String
+-Required: No
+
+status
+- Filter by machine status.
+-Type: String
+-Optional: No.
+-Available values: 0: offline, 1: normal
+
+offlineTime
+- Filter by machine offline time.
+-Type: String
+-Optional: No.
+-Available values: 0: no offline time, 12: within 12 hours, 24: within a day, 48: within two days, 99: before two days
+
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
+ * @method integer getOffset() Obtain Pagination offset.
+ * @method void setOffset(integer $Offset) Set Pagination offset.
+ * @method integer getLimit() Obtain Limit on the number of entries per page. A maximum of 100 entries are supported.
+ * @method void setLimit(integer $Limit) Set Limit on the number of entries per page. A maximum of 100 entries are supported.
  */
 class DescribeMachinesRequest extends AbstractModel
 {
     /**
-     * @var string ID of the machine group to be queried
+     * @var string Machine group ID to query.
+
+-Obtain the machine group ID by searching the machine group list (https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
      */
     public $GroupId;
 
     /**
-     * @param string $GroupId ID of the machine group to be queried
+     * @var array ip
+-Filter by ip.
+-Type: String
+-Required: No
+
+instance
+-Filter by instance id.
+-Type: String
+-Required: No
+
+version
+- Filter by LogListener version.
+-Type: String
+-Required: No
+
+status
+- Filter by machine status.
+-Type: String
+-Optional: No.
+-Available values: 0: offline, 1: normal
+
+offlineTime
+- Filter by machine offline time.
+-Type: String
+-Optional: No.
+-Available values: 0: no offline time, 12: within 12 hours, 24: within a day, 48: within two days, 99: before two days
+
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
+     */
+    public $Filters;
+
+    /**
+     * @var integer Pagination offset.
+     */
+    public $Offset;
+
+    /**
+     * @var integer Limit on the number of entries per page. A maximum of 100 entries are supported.
+     */
+    public $Limit;
+
+    /**
+     * @param string $GroupId Machine group ID to query.
+
+-Obtain the machine group ID by searching the machine group list (https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
+     * @param array $Filters ip
+-Filter by ip.
+-Type: String
+-Required: No
+
+instance
+-Filter by instance id.
+-Type: String
+-Required: No
+
+version
+- Filter by LogListener version.
+-Type: String
+-Required: No
+
+status
+- Filter by machine status.
+-Type: String
+-Optional: No.
+-Available values: 0: offline, 1: normal
+
+offlineTime
+- Filter by machine offline time.
+-Type: String
+-Optional: No.
+-Available values: 0: no offline time, 12: within 12 hours, 24: within a day, 48: within two days, 99: before two days
+
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
+     * @param integer $Offset Pagination offset.
+     * @param integer $Limit Limit on the number of entries per page. A maximum of 100 entries are supported.
      */
     function __construct()
     {
@@ -48,6 +188,23 @@ class DescribeMachinesRequest extends AbstractModel
         }
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

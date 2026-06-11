@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom Cache Key configuration parameters.
+ * Custom Cache Key config.
  *
  * @method string getFullURLCache() Obtain Switch for retaining the complete query string. values:.
 <Li>`On`: enable;</li>

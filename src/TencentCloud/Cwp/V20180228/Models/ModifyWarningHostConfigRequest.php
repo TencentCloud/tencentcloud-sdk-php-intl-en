@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuuids(array $Quuids) Set Machine list
  * @method array getItemLabelIds() Obtain List of Project or Tag IDs, empty for custom hosts
  * @method void setItemLabelIds(array $ItemLabelIds) Set List of Project or Tag IDs, empty for custom hosts
- * @method array getExcludedQuuids() Obtain Machines to be excluded
- * @method void setExcludedQuuids(array $ExcludedQuuids) Set Machines to be excluded
+ * @method array getExcludedQuuids() Obtain List of machines to be excluded.
+ * @method void setExcludedQuuids(array $ExcludedQuuids) Set List of machines to be excluded.
  */
 class ModifyWarningHostConfigRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class ModifyWarningHostConfigRequest extends AbstractModel
     public $ItemLabelIds;
 
     /**
-     * @var array Machines to be excluded
+     * @var array List of machines to be excluded.
      */
     public $ExcludedQuuids;
 
@@ -71,7 +71,7 @@ class ModifyWarningHostConfigRequest extends AbstractModel
      * @param array $ItemLabels List of Project or Tag Names, empty for custom hosts
      * @param array $Quuids Machine list
      * @param array $ItemLabelIds List of Project or Tag IDs, empty for custom hosts
-     * @param array $ExcludedQuuids Machines to be excluded
+     * @param array $ExcludedQuuids List of machines to be excluded.
      */
     function __construct()
     {

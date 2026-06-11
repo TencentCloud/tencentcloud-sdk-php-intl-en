@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Runtime security - Basic process information
  *
- * @method string getProcessStartUser() Obtain Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProcessStartUser(string $ProcessStartUser) Set Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProcessStartUser() Obtain process startup user
+ * @method void setProcessStartUser(string $ProcessStartUser) Set process startup user
  * @method string getProcessUserGroup() Obtain Process user group
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProcessUserGroup(string $ProcessUserGroup) Set Process user group
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getProcessPath() Obtain Process path
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProcessPath(string $ProcessPath) Set Process path
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProcessParam() Obtain Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProcessParam(string $ProcessParam) Set Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProcessParam() Obtain Process command line parameters
+ * @method void setProcessParam(string $ProcessParam) Set Process command line parameters
  */
 class ProcessBaseInfo extends AbstractModel
 {
     /**
-     * @var string Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string process startup user
      */
     public $ProcessStartUser;
 
     /**
      * @var string Process user group
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProcessUserGroup;
 
     /**
      * @var string Process path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProcessPath;
 
     /**
-     * @var string Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Process command line parameters
      */
     public $ProcessParam;
 
     /**
-     * @param string $ProcessStartUser Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProcessStartUser process startup user
      * @param string $ProcessUserGroup Process user group
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ProcessPath Process path
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProcessParam Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProcessParam Process command line parameters
      */
     function __construct()
     {

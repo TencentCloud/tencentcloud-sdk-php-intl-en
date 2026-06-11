@@ -21,113 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * Baseline Information
  *
  * @method string getName() Obtain Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getLevel() Obtain Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLevel(integer $Level) Set Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getRuleCount() Obtain Number of check items
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRuleCount(integer $RuleCount) Set Number of check items
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getHostCount() Obtain Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostCount(integer $HostCount) Set Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Pass status. 0: passed; 1: failed.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Pass status. 0: passed; 1: failed.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Pass status: 0: Failed, 1: Approved
+ * @method void setStatus(integer $Status) Set Pass status: 0: Failed, 1: Approved
  * @method integer getCategoryId() Obtain Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCategoryId(integer $CategoryId) Set Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLastScanTime() Obtain Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLastScanTime(string $LastScanTime) Set Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxStatus() Obtain 5: checking
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMaxStatus(integer $MaxStatus) Set 5: checking
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getBaselineFailCount() Obtain Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBaselineFailCount(integer $BaselineFailCount) Set Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLastScanTime() Obtain Last detection time
+ * @method void setLastScanTime(string $LastScanTime) Set Last detection time
+ * @method integer getMaxStatus() Obtain 5: detecting
+ * @method void setMaxStatus(integer $MaxStatus) Set 5: detecting
+ * @method integer getBaselineFailCount() Obtain Baseline risk items
+ * @method void setBaselineFailCount(integer $BaselineFailCount) Set Baseline risk items
  */
 class BaselineInfo extends AbstractModel
 {
     /**
      * @var string Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
      * @var integer Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Level;
 
     /**
      * @var integer Number of check items
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RuleCount;
 
     /**
      * @var integer Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostCount;
 
     /**
-     * @var integer Pass status. 0: passed; 1: failed.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Pass status: 0: Failed, 1: Approved
      */
     public $Status;
 
     /**
      * @var integer Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CategoryId;
 
     /**
-     * @var string Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Last detection time
      */
     public $LastScanTime;
 
     /**
-     * @var integer 5: checking
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 5: detecting
      */
     public $MaxStatus;
 
     /**
-     * @var integer Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Baseline risk items
      */
     public $BaselineFailCount;
 
     /**
      * @param string $Name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Level Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RuleCount Number of check items
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $HostCount Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Pass status. 0: passed; 1: failed.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Pass status: 0: Failed, 1: Approved
      * @param integer $CategoryId Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LastScanTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxStatus 5: checking
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $BaselineFailCount Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LastScanTime Last detection time
+     * @param integer $MaxStatus 5: detecting
+     * @param integer $BaselineFailCount Baseline risk items
      */
     function __construct()
     {

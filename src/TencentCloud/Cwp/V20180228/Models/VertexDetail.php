@@ -20,238 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Detailed node information
  *
- * @method integer getType() Obtain Node type. process - 1; network - 2; file - 3; SSH - 4
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(integer $Type) Set Node type. process - 1; network - 2; file - 3; SSH - 4
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTime() Obtain Time used for each node type, which is in the format of 2022-11-29 00:00:00.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTime(string $Time) Set Time used for each node type, which is in the format of 2022-11-29 00:00:00.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getAlarmInfo() Obtain Alarm information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAlarmInfo(array $AlarmInfo) Set Alarm information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProcName() Obtain Process name, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProcName(string $ProcName) Set Process name, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCmdLine() Obtain Command line, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCmdLine(string $CmdLine) Set Command line, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPid() Obtain Process ID, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPid(string $Pid) Set Process ID, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFileMd5() Obtain File MD5, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileMd5(string $FileMd5) Set File MD5, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFileContent() Obtain Content written to the file, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileContent(string $FileContent) Set Content written to the file, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFilePath() Obtain File path, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFilePath(string $FilePath) Set File path, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFileCreateTime() Obtain File creation time, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileCreateTime(string $FileCreateTime) Set File creation time, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAddress() Obtain Request destination address, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddress(string $Address) Set Request destination address, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDstPort() Obtain Target port, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDstPort(integer $DstPort) Set Target port, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSrcIP() Obtain Log-in source IP, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSrcIP(string $SrcIP) Set Log-in source IP, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUser() Obtain Log-in username and user group, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUser(string $User) Set Log-in username and user group, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVulName() Obtain Vulnerability name, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVulName(string $VulName) Set Vulnerability name, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVulTime() Obtain Vulnerability exploitation time, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVulTime(string $VulTime) Set Vulnerability exploitation time, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHttpContent() Obtain HTTP request content, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHttpContent(string $HttpContent) Set HTTP request content, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVulSrcIP() Obtain Vulnerability exploiter source IP, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVulSrcIP(string $VulSrcIP) Set Vulnerability exploiter source IP, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVertexId() Obtain Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVertexId(string $VertexId) Set Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getType() Obtain Node type. 1: process, 2: network, 3: file, 4: SSH.
+ * @method void setType(integer $Type) Set Node type. 1: process, 2: network, 3: file, 4: SSH.
+ * @method string getTime() Obtain Time used by each node type, in the format of 2022-11-29 00:00:00.
+ * @method void setTime(string $Time) Set Time used by each node type, in the format of 2022-11-29 00:00:00.
+ * @method array getAlarmInfo() Obtain Alarm information.
+ * @method void setAlarmInfo(array $AlarmInfo) Set Alarm information.
+ * @method string getProcName() Obtain Process name. This parameter takes effect when this node is a process.
+ * @method void setProcName(string $ProcName) Set Process name. This parameter takes effect when this node is a process.
+ * @method string getCmdLine() Obtain Command line. This parameter takes effect when this node is a process.
+ * @method void setCmdLine(string $CmdLine) Set Command line. This parameter takes effect when this node is a process.
+ * @method string getPid() Obtain Process ID. This parameter takes effect when this node is a process.
+ * @method void setPid(string $Pid) Set Process ID. This parameter takes effect when this node is a process.
+ * @method string getFileMd5() Obtain File MD5. This parameter takes effect when this node is a file.
+ * @method void setFileMd5(string $FileMd5) Set File MD5. This parameter takes effect when this node is a file.
+ * @method string getFileContent() Obtain File write content. This parameter takes effect when this node is a file.
+ * @method void setFileContent(string $FileContent) Set File write content. This parameter takes effect when this node is a file.
+ * @method string getFilePath() Obtain File path. This parameter takes effect when this node is a file.
+ * @method void setFilePath(string $FilePath) Set File path. This parameter takes effect when this node is a file.
+ * @method string getFileCreateTime() Obtain File creation time. This parameter takes effect when this node is a file.
+ * @method void setFileCreateTime(string $FileCreateTime) Set File creation time. This parameter takes effect when this node is a file.
+ * @method string getAddress() Obtain Request destination address. This parameter takes effect when this node is a network.
+ * @method void setAddress(string $Address) Set Request destination address. This parameter takes effect when this node is a network.
+ * @method integer getDstPort() Obtain Target port. This parameter takes effect when this node is a network.
+ * @method void setDstPort(integer $DstPort) Set Target port. This parameter takes effect when this node is a network.
+ * @method string getSrcIP() Obtain Login source IP address. This parameter takes effect when this node is ssh.
+ * @method void setSrcIP(string $SrcIP) Set Login source IP address. This parameter takes effect when this node is ssh.
+ * @method string getUser() Obtain Login username and user group. This parameter takes effect when this node is ssh.
+ * @method void setUser(string $User) Set Login username and user group. This parameter takes effect when this node is ssh.
+ * @method string getVulName() Obtain Vulnerability name. This parameter takes effect when this node is a vulnerability.
+ * @method void setVulName(string $VulName) Set Vulnerability name. This parameter takes effect when this node is a vulnerability.
+ * @method string getVulTime() Obtain Vulnerability exploitation time. This parameter takes effect when this node is a vulnerability.
+ * @method void setVulTime(string $VulTime) Set Vulnerability exploitation time. This parameter takes effect when this node is a vulnerability.
+ * @method string getHttpContent() Obtain HTTP request content. This parameter takes effect when this node is a vulnerability.
+ * @method void setHttpContent(string $HttpContent) Set HTTP request content. This parameter takes effect when this node is a vulnerability.
+ * @method string getVulSrcIP() Obtain Source IP address of the vulnerability exploiter. This parameter takes effect when this node is a vulnerability.
+ * @method void setVulSrcIP(string $VulSrcIP) Set Source IP address of the vulnerability exploiter. This parameter takes effect when this node is a vulnerability.
+ * @method string getVertexId() Obtain Node ID.
+ * @method void setVertexId(string $VertexId) Set Node ID.
  */
 class VertexDetail extends AbstractModel
 {
     /**
-     * @var integer Node type. process - 1; network - 2; file - 3; SSH - 4
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Node type. 1: process, 2: network, 3: file, 4: SSH.
      */
     public $Type;
 
     /**
-     * @var string Time used for each node type, which is in the format of 2022-11-29 00:00:00.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Time used by each node type, in the format of 2022-11-29 00:00:00.
      */
     public $Time;
 
     /**
-     * @var array Alarm information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Alarm information.
      */
     public $AlarmInfo;
 
     /**
-     * @var string Process name, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Process name. This parameter takes effect when this node is a process.
      */
     public $ProcName;
 
     /**
-     * @var string Command line, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Command line. This parameter takes effect when this node is a process.
      */
     public $CmdLine;
 
     /**
-     * @var string Process ID, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Process ID. This parameter takes effect when this node is a process.
      */
     public $Pid;
 
     /**
-     * @var string File MD5, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File MD5. This parameter takes effect when this node is a file.
      */
     public $FileMd5;
 
     /**
-     * @var string Content written to the file, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File write content. This parameter takes effect when this node is a file.
      */
     public $FileContent;
 
     /**
-     * @var string File path, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File path. This parameter takes effect when this node is a file.
      */
     public $FilePath;
 
     /**
-     * @var string File creation time, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File creation time. This parameter takes effect when this node is a file.
      */
     public $FileCreateTime;
 
     /**
-     * @var string Request destination address, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Request destination address. This parameter takes effect when this node is a network.
      */
     public $Address;
 
     /**
-     * @var integer Target port, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Target port. This parameter takes effect when this node is a network.
      */
     public $DstPort;
 
     /**
-     * @var string Log-in source IP, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Login source IP address. This parameter takes effect when this node is ssh.
      */
     public $SrcIP;
 
     /**
-     * @var string Log-in username and user group, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Login username and user group. This parameter takes effect when this node is ssh.
      */
     public $User;
 
     /**
-     * @var string Vulnerability name, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Vulnerability name. This parameter takes effect when this node is a vulnerability.
      */
     public $VulName;
 
     /**
-     * @var string Vulnerability exploitation time, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Vulnerability exploitation time. This parameter takes effect when this node is a vulnerability.
      */
     public $VulTime;
 
     /**
-     * @var string HTTP request content, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string HTTP request content. This parameter takes effect when this node is a vulnerability.
      */
     public $HttpContent;
 
     /**
-     * @var string Vulnerability exploiter source IP, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Source IP address of the vulnerability exploiter. This parameter takes effect when this node is a vulnerability.
      */
     public $VulSrcIP;
 
     /**
-     * @var string Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Node ID.
      */
     public $VertexId;
 
     /**
-     * @param integer $Type Node type. process - 1; network - 2; file - 3; SSH - 4
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Time Time used for each node type, which is in the format of 2022-11-29 00:00:00.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $AlarmInfo Alarm information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProcName Process name, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CmdLine Command line, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Pid Process ID, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FileMd5 File MD5, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FileContent Content written to the file, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FilePath File path, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FileCreateTime File creation time, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Address Request destination address, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DstPort Target port, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SrcIP Log-in source IP, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $User Log-in username and user group, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VulName Vulnerability name, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VulTime Vulnerability exploitation time, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HttpContent HTTP request content, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VulSrcIP Vulnerability exploiter source IP, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VertexId Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Type Node type. 1: process, 2: network, 3: file, 4: SSH.
+     * @param string $Time Time used by each node type, in the format of 2022-11-29 00:00:00.
+     * @param array $AlarmInfo Alarm information.
+     * @param string $ProcName Process name. This parameter takes effect when this node is a process.
+     * @param string $CmdLine Command line. This parameter takes effect when this node is a process.
+     * @param string $Pid Process ID. This parameter takes effect when this node is a process.
+     * @param string $FileMd5 File MD5. This parameter takes effect when this node is a file.
+     * @param string $FileContent File write content. This parameter takes effect when this node is a file.
+     * @param string $FilePath File path. This parameter takes effect when this node is a file.
+     * @param string $FileCreateTime File creation time. This parameter takes effect when this node is a file.
+     * @param string $Address Request destination address. This parameter takes effect when this node is a network.
+     * @param integer $DstPort Target port. This parameter takes effect when this node is a network.
+     * @param string $SrcIP Login source IP address. This parameter takes effect when this node is ssh.
+     * @param string $User Login username and user group. This parameter takes effect when this node is ssh.
+     * @param string $VulName Vulnerability name. This parameter takes effect when this node is a vulnerability.
+     * @param string $VulTime Vulnerability exploitation time. This parameter takes effect when this node is a vulnerability.
+     * @param string $HttpContent HTTP request content. This parameter takes effect when this node is a vulnerability.
+     * @param string $VulSrcIP Source IP address of the vulnerability exploiter. This parameter takes effect when this node is a vulnerability.
+     * @param string $VertexId Node ID.
      */
     function __construct()
     {

@@ -20,170 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of the asset affected by the check item
  *
- * @method integer getCustomerAssetId() Obtain Unique ID of the customer asset
- * @method void setCustomerAssetId(integer $CustomerAssetId) Set Unique ID of the customer asset
- * @method string getAssetName() Obtain Asset name
- * @method void setAssetName(string $AssetName) Set Asset name
- * @method string getAssetType() Obtain Asset type
- * @method void setAssetType(string $AssetType) Set Asset type
- * @method string getCheckStatus() Obtain Check status
-
-`CHECK_INIT`: To be checked.
-
-`CHECK_RUNNING`: Checking.
-
-`CHECK_FINISHED`: Checked.
-
-`CHECK_FAILED`: Check failed.
- * @method void setCheckStatus(string $CheckStatus) Set Check status
-
-`CHECK_INIT`: To be checked.
-
-`CHECK_RUNNING`: Checking.
-
-`CHECK_FINISHED`: Checked.
-
-`CHECK_FAILED`: Check failed.
- * @method string getNodeName() Obtain Node name
- * @method void setNodeName(string $NodeName) Set Node name
- * @method string getLastCheckTime() Obtain Last check time in the format of "YYYY-MM-DD HH:m::SS"
-
-It is "0000-00-00 00:00:00" if no check has been performed.
- * @method void setLastCheckTime(string $LastCheckTime) Set Last check time in the format of "YYYY-MM-DD HH:m::SS"
-
-It is "0000-00-00 00:00:00" if no check has been performed.
- * @method string getCheckResult() Obtain Check result. Valid values:
-
-`RESULT_FAILED`: Failed.
-
-`RESULT_PASSED`: Passed.
- * @method void setCheckResult(string $CheckResult) Set Check result. Valid values:
-
-`RESULT_FAILED`: Failed.
-
-`RESULT_PASSED`: Passed.
- * @method string getHostIP() Obtain Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostIP(string $HostIP) Set Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getImageTag() Obtain Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setImageTag(string $ImageTag) Set Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVerifyInfo() Obtain Verification information of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVerifyInfo(string $VerifyInfo) Set Verification information of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain Instance ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getCustomerAssetId() Obtain <p>Unique asset item ID allocated to the customer.</p>
+ * @method void setCustomerAssetId(integer $CustomerAssetId) Set <p>Unique asset item ID allocated to the customer.</p>
+ * @method string getAssetName() Obtain <p>Asset item name.</p>
+ * @method void setAssetName(string $AssetName) Set <p>Asset item name.</p>
+ * @method string getAssetType() Obtain <p>Asset item type.</p>
+ * @method void setAssetType(string $AssetType) Set <p>Asset item type.</p>
+ * @method string getCheckStatus() Obtain <p>Check status.</p><p>CHECK_INIT: pending check</p><p>CHECK_RUNNING: checking</p><p>CHECK_FINISHED: check completed</p><p>CHECK_FAILED: check failed</p>
+ * @method void setCheckStatus(string $CheckStatus) Set <p>Check status.</p><p>CHECK_INIT: pending check</p><p>CHECK_RUNNING: checking</p><p>CHECK_FINISHED: check completed</p><p>CHECK_FAILED: check failed</p>
+ * @method string getNodeName() Obtain <p>Node name.</p>
+ * @method void setNodeName(string $NodeName) Set <p>Node name.</p>
+ * @method string getLastCheckTime() Obtain <p>Last check time in the format of YYYY-MM-DD HH:m::SS.</p><p>If never checked, this field will be 0000-00-00 00:00:00.</p>
+ * @method void setLastCheckTime(string $LastCheckTime) Set <p>Last check time in the format of YYYY-MM-DD HH:m::SS.</p><p>If never checked, this field will be 0000-00-00 00:00:00.</p>
+ * @method string getCheckResult() Obtain <p>Check result. Valid values:</p><p>RESULT_FAILED: failed</p><p>RESULT_PASSED: passed</p>
+ * @method void setCheckResult(string $CheckResult) Set <p>Check result. Valid values:</p><p>RESULT_FAILED: failed</p><p>RESULT_PASSED: passed</p>
+ * @method string getHostIP() Obtain <p>Host IP address.</p>
+ * @method void setHostIP(string $HostIP) Set <p>Host IP address.</p>
+ * @method string getImageTag() Obtain <p>Image tag.</p>
+ * @method void setImageTag(string $ImageTag) Set <p>Image tag.</p>
+ * @method string getVerifyInfo() Obtain <p>Check item verification information.</p>
+ * @method void setVerifyInfo(string $VerifyInfo) Set <p>Check item verification information.</p>
+ * @method string getInstanceId() Obtain <p>Host instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Host instance ID.</p>
+ * @method ImageRegistryInfo getImageRegistryInfo() Obtain <p>Image repository information.</p>
+ * @method void setImageRegistryInfo(ImageRegistryInfo $ImageRegistryInfo) Set <p>Image repository information.</p>
+ * @method string getClusterID() Obtain <p>Cluster ID.</p>
+ * @method void setClusterID(string $ClusterID) Set <p>Cluster ID.</p>
+ * @method string getClusterName() Obtain <p>Cluster name.</p>
+ * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
+ * @method string getAssetUniqueID() Obtain <p>Unique asset ID.</p><p>Default value: -</p>
+ * @method void setAssetUniqueID(string $AssetUniqueID) Set <p>Unique asset ID.</p><p>Default value: -</p>
  */
 class ComplianceAffectedAsset extends AbstractModel
 {
     /**
-     * @var integer Unique ID of the customer asset
+     * @var integer <p>Unique asset item ID allocated to the customer.</p>
      */
     public $CustomerAssetId;
 
     /**
-     * @var string Asset name
+     * @var string <p>Asset item name.</p>
      */
     public $AssetName;
 
     /**
-     * @var string Asset type
+     * @var string <p>Asset item type.</p>
      */
     public $AssetType;
 
     /**
-     * @var string Check status
-
-`CHECK_INIT`: To be checked.
-
-`CHECK_RUNNING`: Checking.
-
-`CHECK_FINISHED`: Checked.
-
-`CHECK_FAILED`: Check failed.
+     * @var string <p>Check status.</p><p>CHECK_INIT: pending check</p><p>CHECK_RUNNING: checking</p><p>CHECK_FINISHED: check completed</p><p>CHECK_FAILED: check failed</p>
      */
     public $CheckStatus;
 
     /**
-     * @var string Node name
+     * @var string <p>Node name.</p>
      */
     public $NodeName;
 
     /**
-     * @var string Last check time in the format of "YYYY-MM-DD HH:m::SS"
-
-It is "0000-00-00 00:00:00" if no check has been performed.
+     * @var string <p>Last check time in the format of YYYY-MM-DD HH:m::SS.</p><p>If never checked, this field will be 0000-00-00 00:00:00.</p>
      */
     public $LastCheckTime;
 
     /**
-     * @var string Check result. Valid values:
-
-`RESULT_FAILED`: Failed.
-
-`RESULT_PASSED`: Passed.
+     * @var string <p>Check result. Valid values:</p><p>RESULT_FAILED: failed</p><p>RESULT_PASSED: passed</p>
      */
     public $CheckResult;
 
     /**
-     * @var string Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Host IP address.</p>
      */
     public $HostIP;
 
     /**
-     * @var string Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Image tag.</p>
      */
     public $ImageTag;
 
     /**
-     * @var string Verification information of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Check item verification information.</p>
      */
     public $VerifyInfo;
 
     /**
-     * @var string Instance ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string <p>Host instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @param integer $CustomerAssetId Unique ID of the customer asset
-     * @param string $AssetName Asset name
-     * @param string $AssetType Asset type
-     * @param string $CheckStatus Check status
+     * @var ImageRegistryInfo <p>Image repository information.</p>
+     */
+    public $ImageRegistryInfo;
 
-`CHECK_INIT`: To be checked.
+    /**
+     * @var string <p>Cluster ID.</p>
+     */
+    public $ClusterID;
 
-`CHECK_RUNNING`: Checking.
+    /**
+     * @var string <p>Cluster name.</p>
+     */
+    public $ClusterName;
 
-`CHECK_FINISHED`: Checked.
+    /**
+     * @var string <p>Unique asset ID.</p><p>Default value: -</p>
+     */
+    public $AssetUniqueID;
 
-`CHECK_FAILED`: Check failed.
-     * @param string $NodeName Node name
-     * @param string $LastCheckTime Last check time in the format of "YYYY-MM-DD HH:m::SS"
-
-It is "0000-00-00 00:00:00" if no check has been performed.
-     * @param string $CheckResult Check result. Valid values:
-
-`RESULT_FAILED`: Failed.
-
-`RESULT_PASSED`: Passed.
-     * @param string $HostIP Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ImageTag Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VerifyInfo Verification information of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId Instance ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    /**
+     * @param integer $CustomerAssetId <p>Unique asset item ID allocated to the customer.</p>
+     * @param string $AssetName <p>Asset item name.</p>
+     * @param string $AssetType <p>Asset item type.</p>
+     * @param string $CheckStatus <p>Check status.</p><p>CHECK_INIT: pending check</p><p>CHECK_RUNNING: checking</p><p>CHECK_FINISHED: check completed</p><p>CHECK_FAILED: check failed</p>
+     * @param string $NodeName <p>Node name.</p>
+     * @param string $LastCheckTime <p>Last check time in the format of YYYY-MM-DD HH:m::SS.</p><p>If never checked, this field will be 0000-00-00 00:00:00.</p>
+     * @param string $CheckResult <p>Check result. Valid values:</p><p>RESULT_FAILED: failed</p><p>RESULT_PASSED: passed</p>
+     * @param string $HostIP <p>Host IP address.</p>
+     * @param string $ImageTag <p>Image tag.</p>
+     * @param string $VerifyInfo <p>Check item verification information.</p>
+     * @param string $InstanceId <p>Host instance ID.</p>
+     * @param ImageRegistryInfo $ImageRegistryInfo <p>Image repository information.</p>
+     * @param string $ClusterID <p>Cluster ID.</p>
+     * @param string $ClusterName <p>Cluster name.</p>
+     * @param string $AssetUniqueID <p>Unique asset ID.</p><p>Default value: -</p>
      */
     function __construct()
     {
@@ -240,6 +200,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ImageRegistryInfo",$param) and $param["ImageRegistryInfo"] !== null) {
+            $this->ImageRegistryInfo = new ImageRegistryInfo();
+            $this->ImageRegistryInfo->deserialize($param["ImageRegistryInfo"]);
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("AssetUniqueID",$param) and $param["AssetUniqueID"] !== null) {
+            $this->AssetUniqueID = $param["AssetUniqueID"];
         }
     }
 }

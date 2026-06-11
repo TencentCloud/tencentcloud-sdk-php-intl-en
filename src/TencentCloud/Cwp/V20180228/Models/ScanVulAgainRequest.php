@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventIds(string $EventIds) Set Vulnerability event ID string (Multiple entries are separated by English commas.)
  * @method string getUuids() Obtain Recheck machine UUID (Multiple entries are separated by commas.)
  * @method void setUuids(string $Uuids) Set Recheck machine UUID (Multiple entries are separated by commas.)
+ * @method integer getEventType() Obtain 0 vulnerabilities, 1 windows patch
+ * @method void setEventType(integer $EventType) Set 0 vulnerabilities, 1 windows patch
  */
 class ScanVulAgainRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ScanVulAgainRequest extends AbstractModel
     public $Uuids;
 
     /**
+     * @var integer 0 vulnerabilities, 1 windows patch
+     */
+    public $EventType;
+
+    /**
      * @param string $EventIds Vulnerability event ID string (Multiple entries are separated by English commas.)
      * @param string $Uuids Recheck machine UUID (Multiple entries are separated by commas.)
+     * @param integer $EventType 0 vulnerabilities, 1 windows patch
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ScanVulAgainRequest extends AbstractModel
 
         if (array_key_exists("Uuids",$param) and $param["Uuids"] !== null) {
             $this->Uuids = $param["Uuids"];
+        }
+
+        if (array_key_exists("EventType",$param) and $param["EventType"] !== null) {
+            $this->EventType = $param["EventType"];
         }
     }
 }

@@ -18,36 +18,36 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Authentication-free condition information
+ * Authentication-free conditional information.
  *
- * @method string getAttributes() Obtain Condition attribute, currently supports only VpcID
- * @method void setAttributes(string $Attributes) Set Condition attribute, currently supports only VpcID
- * @method integer getRule() Obtain Condition rule, 1: equal to, 2: not equal to
- * @method void setRule(integer $Rule) Set Condition rule, 1: equal to, 2: not equal to
- * @method string getConditionValue() Obtain Value of the corresponding condition attribute
- * @method void setConditionValue(string $ConditionValue) Set Value of the corresponding condition attribute
+ * @method string getAttributes() Obtain Condition attribute. Currently, only VpcID is supported.
+ * @method void setAttributes(string $Attributes) Set Condition attribute. Currently, only VpcID is supported.
+ * @method integer getRule() Obtain Conditional rule. 1: equal to; 2: not equal to.
+ * @method void setRule(integer $Rule) Set Conditional rule. 1: equal to; 2: not equal to.
+ * @method string getConditionValue() Obtain Value corresponding to the condition attribute.
+ * @method void setConditionValue(string $ConditionValue) Set Value corresponding to the condition attribute.
  */
 class ConditionInfo extends AbstractModel
 {
     /**
-     * @var string Condition attribute, currently supports only VpcID
+     * @var string Condition attribute. Currently, only VpcID is supported.
      */
     public $Attributes;
 
     /**
-     * @var integer Condition rule, 1: equal to, 2: not equal to
+     * @var integer Conditional rule. 1: equal to; 2: not equal to.
      */
     public $Rule;
 
     /**
-     * @var string Value of the corresponding condition attribute
+     * @var string Value corresponding to the condition attribute.
      */
     public $ConditionValue;
 
     /**
-     * @param string $Attributes Condition attribute, currently supports only VpcID
-     * @param integer $Rule Condition rule, 1: equal to, 2: not equal to
-     * @param string $ConditionValue Value of the corresponding condition attribute
+     * @param string $Attributes Condition attribute. Currently, only VpcID is supported.
+     * @param integer $Rule Conditional rule. 1: equal to; 2: not equal to.
+     * @param string $ConditionValue Value corresponding to the condition attribute.
      */
     function __construct()
     {

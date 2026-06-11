@@ -20,106 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Read/write separation information of the database proxy group
  *
- * @method string getConsistencyType() Obtain Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
- * @method void setConsistencyType(string $ConsistencyType) Set Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
- * @method integer getConsistencyTimeOut() Obtain Consistency timeout period
- * @method void setConsistencyTimeOut(integer $ConsistencyTimeOut) Set Consistency timeout period
- * @method string getWeightMode() Obtain Weight mode. Valid values: `system` (auto-assigned), `custom`.
- * @method void setWeightMode(string $WeightMode) Set Weight mode. Valid values: `system` (auto-assigned), `custom`.
- * @method string getFailOver() Obtain Whether to enable failover
- * @method void setFailOver(string $FailOver) Set Whether to enable failover
- * @method string getAutoAddRo() Obtain Whether to automatically add read-only instance. Valid value: `yes`, `no`.
- * @method void setAutoAddRo(string $AutoAddRo) Set Whether to automatically add read-only instance. Valid value: `yes`, `no`.
- * @method array getInstanceWeights() Obtain Instance weight array
- * @method void setInstanceWeights(array $InstanceWeights) Set Instance weight array
- * @method string getOpenRw() Obtain Whether to enable read-write nodes. valid values: yes, no.
- * @method void setOpenRw(string $OpenRw) Set Whether to enable read-write nodes. valid values: yes, no.
- * @method string getRwType() Obtain Read/write attribute. Valid values: `READWRITE`, `READONLY`.
- * @method void setRwType(string $RwType) Set Read/write attribute. Valid values: `READWRITE`, `READONLY`.
- * @method boolean getTransSplit() Obtain Transaction split
- * @method void setTransSplit(boolean $TransSplit) Set Transaction split
- * @method string getAccessMode() Obtain Connection mode. Valid values: `balance`, `nearby`.
- * @method void setAccessMode(string $AccessMode) Set Connection mode. Valid values: `balance`, `nearby`.
- * @method boolean getApNodeAsRoNode() Obtain Whether to treat the libra node as an ordinary RO node
- * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) Set Whether to treat the libra node as an ordinary RO node
- * @method boolean getApQueryToOtherNode() Obtain libra node fault, whether to forward to other nodes
- * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) Set libra node fault, whether to forward to other nodes
+ * @method string getConsistencyType() Obtain <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
+ * @method void setConsistencyType(string $ConsistencyType) Set <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
+ * @method integer getConsistencyTimeOut() Obtain <p>Consistency timeout</p>
+ * @method void setConsistencyTimeOut(integer $ConsistencyTimeOut) Set <p>Consistency timeout</p>
+ * @method string getWeightMode() Obtain <p>Weight mode system-system-assigned, custom-custom</p>
+ * @method void setWeightMode(string $WeightMode) Set <p>Weight mode system-system-assigned, custom-custom</p>
+ * @method string getFailOver() Obtain <p>Whether fault migration is enabled</p>
+ * @method void setFailOver(string $FailOver) Set <p>Whether fault migration is enabled</p>
+ * @method string getAutoAddRo() Obtain <p>Automatically add read-only instance, yes-yes, no-no</p>
+ * @method void setAutoAddRo(string $AutoAddRo) Set <p>Automatically add read-only instance, yes-yes, no-no</p>
+ * @method array getInstanceWeights() Obtain <p>Instance weight array</p>
+ * @method void setInstanceWeights(array $InstanceWeights) Set <p>Instance weight array</p>
+ * @method string getOpenRw() Obtain <p>Whether to enable the read-write node, yes - enable, no - disable</p>
+ * @method void setOpenRw(string $OpenRw) Set <p>Whether to enable the read-write node, yes - enable, no - disable</p>
+ * @method string getRwType() Obtain <p>Read-write attribute, value range: READWRITE, READONLY</p>
+ * @method void setRwType(string $RwType) Set <p>Read-write attribute, value range: READWRITE, READONLY</p>
+ * @method boolean getTransSplit() Obtain <p>Transaction split</p>
+ * @method void setTransSplit(boolean $TransSplit) Set <p>Transaction split</p>
+ * @method string getAccessMode() Obtain <p>Connection mode, available values: balance, nearby</p>
+ * @method void setAccessMode(string $AccessMode) Set <p>Connection mode, available values: balance, nearby</p>
+ * @method boolean getApNodeAsRoNode() Obtain <p>Whether to treat the libra node as an ordinary RO node</p>
+ * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) Set <p>Whether to treat the libra node as an ordinary RO node</p>
+ * @method boolean getApQueryToOtherNode() Obtain <p>Whether to forward to other nodes when a libra node fault occurs</p>
+ * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) Set <p>Whether to forward to other nodes when a libra node fault occurs</p>
+ * @method string getLoadBalanceMode() Obtain 
+ * @method void setLoadBalanceMode(string $LoadBalanceMode) Set 
  */
 class ProxyGroupRwInfo extends AbstractModel
 {
     /**
-     * @var string Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
+     * @var string <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
      */
     public $ConsistencyType;
 
     /**
-     * @var integer Consistency timeout period
+     * @var integer <p>Consistency timeout</p>
      */
     public $ConsistencyTimeOut;
 
     /**
-     * @var string Weight mode. Valid values: `system` (auto-assigned), `custom`.
+     * @var string <p>Weight mode system-system-assigned, custom-custom</p>
      */
     public $WeightMode;
 
     /**
-     * @var string Whether to enable failover
+     * @var string <p>Whether fault migration is enabled</p>
      */
     public $FailOver;
 
     /**
-     * @var string Whether to automatically add read-only instance. Valid value: `yes`, `no`.
+     * @var string <p>Automatically add read-only instance, yes-yes, no-no</p>
      */
     public $AutoAddRo;
 
     /**
-     * @var array Instance weight array
+     * @var array <p>Instance weight array</p>
      */
     public $InstanceWeights;
 
     /**
-     * @var string Whether to enable read-write nodes. valid values: yes, no.
+     * @var string <p>Whether to enable the read-write node, yes - enable, no - disable</p>
      */
     public $OpenRw;
 
     /**
-     * @var string Read/write attribute. Valid values: `READWRITE`, `READONLY`.
+     * @var string <p>Read-write attribute, value range: READWRITE, READONLY</p>
      */
     public $RwType;
 
     /**
-     * @var boolean Transaction split
+     * @var boolean <p>Transaction split</p>
      */
     public $TransSplit;
 
     /**
-     * @var string Connection mode. Valid values: `balance`, `nearby`.
+     * @var string <p>Connection mode, available values: balance, nearby</p>
      */
     public $AccessMode;
 
     /**
-     * @var boolean Whether to treat the libra node as an ordinary RO node
+     * @var boolean <p>Whether to treat the libra node as an ordinary RO node</p>
      */
     public $ApNodeAsRoNode;
 
     /**
-     * @var boolean libra node fault, whether to forward to other nodes
+     * @var boolean <p>Whether to forward to other nodes when a libra node fault occurs</p>
      */
     public $ApQueryToOtherNode;
 
     /**
-     * @param string $ConsistencyType Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
-     * @param integer $ConsistencyTimeOut Consistency timeout period
-     * @param string $WeightMode Weight mode. Valid values: `system` (auto-assigned), `custom`.
-     * @param string $FailOver Whether to enable failover
-     * @param string $AutoAddRo Whether to automatically add read-only instance. Valid value: `yes`, `no`.
-     * @param array $InstanceWeights Instance weight array
-     * @param string $OpenRw Whether to enable read-write nodes. valid values: yes, no.
-     * @param string $RwType Read/write attribute. Valid values: `READWRITE`, `READONLY`.
-     * @param boolean $TransSplit Transaction split
-     * @param string $AccessMode Connection mode. Valid values: `balance`, `nearby`.
-     * @param boolean $ApNodeAsRoNode Whether to treat the libra node as an ordinary RO node
-     * @param boolean $ApQueryToOtherNode libra node fault, whether to forward to other nodes
+     * @var string 
+     */
+    public $LoadBalanceMode;
+
+    /**
+     * @param string $ConsistencyType <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
+     * @param integer $ConsistencyTimeOut <p>Consistency timeout</p>
+     * @param string $WeightMode <p>Weight mode system-system-assigned, custom-custom</p>
+     * @param string $FailOver <p>Whether fault migration is enabled</p>
+     * @param string $AutoAddRo <p>Automatically add read-only instance, yes-yes, no-no</p>
+     * @param array $InstanceWeights <p>Instance weight array</p>
+     * @param string $OpenRw <p>Whether to enable the read-write node, yes - enable, no - disable</p>
+     * @param string $RwType <p>Read-write attribute, value range: READWRITE, READONLY</p>
+     * @param boolean $TransSplit <p>Transaction split</p>
+     * @param string $AccessMode <p>Connection mode, available values: balance, nearby</p>
+     * @param boolean $ApNodeAsRoNode <p>Whether to treat the libra node as an ordinary RO node</p>
+     * @param boolean $ApQueryToOtherNode <p>Whether to forward to other nodes when a libra node fault occurs</p>
+     * @param string $LoadBalanceMode 
      */
     function __construct()
     {
@@ -185,6 +193,10 @@ class ProxyGroupRwInfo extends AbstractModel
 
         if (array_key_exists("ApQueryToOtherNode",$param) and $param["ApQueryToOtherNode"] !== null) {
             $this->ApQueryToOtherNode = $param["ApQueryToOtherNode"];
+        }
+
+        if (array_key_exists("LoadBalanceMode",$param) and $param["LoadBalanceMode"] !== null) {
+            $this->LoadBalanceMode = $param["LoadBalanceMode"];
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 <li> MYSQL </li>
  * @method boolean getIncludeZoneStocks() Obtain Whether to return the AZ information.
  * @method void setIncludeZoneStocks(boolean $IncludeZoneStocks) Set Whether to return the AZ information.
+ * @method string getDeviceType() Obtain Instance machine type.
+ * @method void setDeviceType(string $DeviceType) Set Instance machine type.
  */
 class DescribeInstanceSpecsRequest extends AbstractModel
 {
@@ -41,9 +43,15 @@ class DescribeInstanceSpecsRequest extends AbstractModel
     public $IncludeZoneStocks;
 
     /**
+     * @var string Instance machine type.
+     */
+    public $DeviceType;
+
+    /**
      * @param string $DbType Database type. Valid values: 
 <li> MYSQL </li>
      * @param boolean $IncludeZoneStocks Whether to return the AZ information.
+     * @param string $DeviceType Instance machine type.
      */
     function __construct()
     {
@@ -64,6 +72,10 @@ class DescribeInstanceSpecsRequest extends AbstractModel
 
         if (array_key_exists("IncludeZoneStocks",$param) and $param["IncludeZoneStocks"] !== null) {
             $this->IncludeZoneStocks = $param["IncludeZoneStocks"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
         }
     }
 }

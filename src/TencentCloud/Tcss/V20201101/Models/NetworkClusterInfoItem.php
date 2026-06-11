@@ -42,14 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableRuleCount(integer $EnableRuleCount) Set Number of enabled policies
  * @method string getNetworkPolicyPluginStatus() Obtain Status of the cluster network plugin. Valid values: `Running` (normal); `Error` (abnormal).
  * @method void setNetworkPolicyPluginStatus(string $NetworkPolicyPluginStatus) Set Status of the cluster network plugin. Valid values: `Running` (normal); `Error` (abnormal).
- * @method string getNetworkPolicyPluginError() Obtain Error message of the cluster network plugin
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNetworkPolicyPluginError(string $NetworkPolicyPluginError) Set Error message of the cluster network plugin
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getClusterNetworkSettings() Obtain Cluster network plugin
-Note: This field may return·`null`, indicating that no valid values can be obtained.
- * @method void setClusterNetworkSettings(string $ClusterNetworkSettings) Set Cluster network plugin
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method string getNetworkPolicyPluginError() Obtain Cluster Network Plugin Error Message
+ * @method void setNetworkPolicyPluginError(string $NetworkPolicyPluginError) Set Cluster Network Plugin Error Message
+ * @method string getClusterNetworkSettings() Obtain container network plugin
+ * @method void setClusterNetworkSettings(string $ClusterNetworkSettings) Set container network plugin
  */
 class NetworkClusterInfoItem extends AbstractModel
 {
@@ -109,14 +105,12 @@ class NetworkClusterInfoItem extends AbstractModel
     public $NetworkPolicyPluginStatus;
 
     /**
-     * @var string Error message of the cluster network plugin
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Cluster Network Plugin Error Message
      */
     public $NetworkPolicyPluginError;
 
     /**
-     * @var string Cluster network plugin
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @var string container network plugin
      */
     public $ClusterNetworkSettings;
 
@@ -132,10 +126,8 @@ Note: This field may return·`null`, indicating that no valid values can be obta
      * @param integer $TotalRuleCount Total number of policies
      * @param integer $EnableRuleCount Number of enabled policies
      * @param string $NetworkPolicyPluginStatus Status of the cluster network plugin. Valid values: `Running` (normal); `Error` (abnormal).
-     * @param string $NetworkPolicyPluginError Error message of the cluster network plugin
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ClusterNetworkSettings Cluster network plugin
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param string $NetworkPolicyPluginError Cluster Network Plugin Error Message
+     * @param string $ClusterNetworkSettings container network plugin
      */
     function __construct()
     {

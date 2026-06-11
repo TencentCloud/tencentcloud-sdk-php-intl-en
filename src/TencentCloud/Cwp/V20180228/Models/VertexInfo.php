@@ -28,42 +28,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParentVid(string $ParentVid) Set Parent node VID of this node
  * @method boolean getIsLeaf() Obtain Whether a leaf node
  * @method void setIsLeaf(boolean $IsLeaf) Set Whether a leaf node
- * @method string getProcNamePrefix() Obtain Process name, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProcNamePrefix(string $ProcNamePrefix) Set Process name, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProcNameMd5() Obtain Process name MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProcNameMd5(string $ProcNameMd5) Set Process name MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCmdLinePrefix() Obtain Command line, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCmdLinePrefix(string $CmdLinePrefix) Set Command line, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCmdLineMd5() Obtain Command line MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCmdLineMd5(string $CmdLineMd5) Set Command line MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFilePathPrefix() Obtain File path, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFilePathPrefix(string $FilePathPrefix) Set File path, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAddressPrefix() Obtain Request destination address, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddressPrefix(string $AddressPrefix) Set Request destination address, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProcNamePrefix() Obtain Process name. This parameter is used when Type is 1.
+ * @method void setProcNamePrefix(string $ProcNamePrefix) Set Process name. This parameter is used when Type is 1.
+ * @method string getProcNameMd5() Obtain Process name MD5. This parameter is used when Type is 1.
+ * @method void setProcNameMd5(string $ProcNameMd5) Set Process name MD5. This parameter is used when Type is 1.
+ * @method string getCmdLinePrefix() Obtain Command line. This parameter is used when Type is 1.
+ * @method void setCmdLinePrefix(string $CmdLinePrefix) Set Command line. This parameter is used when Type is 1.
+ * @method string getCmdLineMd5() Obtain Command line MD5. This parameter is used when Type is 1.
+ * @method void setCmdLineMd5(string $CmdLineMd5) Set Command line MD5. This parameter is used when Type is 1.
+ * @method string getFilePathPrefix() Obtain File path. This parameter is used when Type is 3.
+ * @method void setFilePathPrefix(string $FilePathPrefix) Set File path. This parameter is used when Type is 3.
+ * @method string getAddressPrefix() Obtain Request destination address. This parameter is used when Type is 2.
+ * @method void setAddressPrefix(string $AddressPrefix) Set Request destination address. This parameter is used when Type is 2.
  * @method boolean getIsWeDetect() Obtain Whether a vulnerability node
  * @method void setIsWeDetect(boolean $IsWeDetect) Set Whether a vulnerability node
  * @method boolean getIsAlarm() Obtain Whether an alarm node
  * @method void setIsAlarm(boolean $IsAlarm) Set Whether an alarm node
- * @method string getFilePathMd5() Obtain File path MD5, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFilePathMd5(string $FilePathMd5) Set File path MD5, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAddressMd5() Obtain Request destination address MD5, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddressMd5(string $AddressMd5) Set Request destination address MD5, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFilePathMd5() Obtain File path MD5. This parameter is used when Type is 3.
+ * @method void setFilePathMd5(string $FilePathMd5) Set File path MD5. This parameter is used when Type is 3.
+ * @method string getAddressMd5() Obtain Request destination address MD5. This parameter is used when Type is 2.
+ * @method void setAddressMd5(string $AddressMd5) Set Request destination address MD5. This parameter is used when Type is 2.
  */
 class VertexInfo extends AbstractModel
 {
@@ -88,38 +72,32 @@ class VertexInfo extends AbstractModel
     public $IsLeaf;
 
     /**
-     * @var string Process name, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Process name. This parameter is used when Type is 1.
      */
     public $ProcNamePrefix;
 
     /**
-     * @var string Process name MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Process name MD5. This parameter is used when Type is 1.
      */
     public $ProcNameMd5;
 
     /**
-     * @var string Command line, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Command line. This parameter is used when Type is 1.
      */
     public $CmdLinePrefix;
 
     /**
-     * @var string Command line MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Command line MD5. This parameter is used when Type is 1.
      */
     public $CmdLineMd5;
 
     /**
-     * @var string File path, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File path. This parameter is used when Type is 3.
      */
     public $FilePathPrefix;
 
     /**
-     * @var string Request destination address, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Request destination address. This parameter is used when Type is 2.
      */
     public $AddressPrefix;
 
@@ -134,14 +112,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsAlarm;
 
     /**
-     * @var string File path MD5, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File path MD5. This parameter is used when Type is 3.
      */
     public $FilePathMd5;
 
     /**
-     * @var string Request destination address MD5, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Request destination address MD5. This parameter is used when Type is 2.
      */
     public $AddressMd5;
 
@@ -150,24 +126,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Vid VID contained in this node
      * @param string $ParentVid Parent node VID of this node
      * @param boolean $IsLeaf Whether a leaf node
-     * @param string $ProcNamePrefix Process name, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProcNameMd5 Process name MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CmdLinePrefix Command line, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CmdLineMd5 Command line MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FilePathPrefix File path, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AddressPrefix Request destination address, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProcNamePrefix Process name. This parameter is used when Type is 1.
+     * @param string $ProcNameMd5 Process name MD5. This parameter is used when Type is 1.
+     * @param string $CmdLinePrefix Command line. This parameter is used when Type is 1.
+     * @param string $CmdLineMd5 Command line MD5. This parameter is used when Type is 1.
+     * @param string $FilePathPrefix File path. This parameter is used when Type is 3.
+     * @param string $AddressPrefix Request destination address. This parameter is used when Type is 2.
      * @param boolean $IsWeDetect Whether a vulnerability node
      * @param boolean $IsAlarm Whether an alarm node
-     * @param string $FilePathMd5 File path MD5, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AddressMd5 Request destination address MD5, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FilePathMd5 File path MD5. This parameter is used when Type is 3.
+     * @param string $AddressMd5 Request destination address MD5. This parameter is used when Type is 2.
      */
     function __construct()
     {

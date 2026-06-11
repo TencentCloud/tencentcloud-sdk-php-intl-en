@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Output info of the AIGC video generation task.
  *
- * @method array getFileInfos() Obtain Output file information of the AIGC video task.	
- * @method void setFileInfos(array $FileInfos) Set Output file information of the AIGC video task.	
+ * @method array getFileInfos() Obtain <p>Output file info of the AIGC video task.</p>
+ * @method void setFileInfos(array $FileInfos) Set <p>Output file info of the AIGC video task.</p>
+ * @method array getProcedureTaskIds() Obtain <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+ * @method void setProcedureTaskIds(array $ProcedureTaskIds) Set <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
  */
 class AigcVideoTaskOutput extends AbstractModel
 {
     /**
-     * @var array Output file information of the AIGC video task.	
+     * @var array <p>Output file info of the AIGC video task.</p>
      */
     public $FileInfos;
 
     /**
-     * @param array $FileInfos Output file information of the AIGC video task.	
+     * @var array <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+     */
+    public $ProcedureTaskIds;
+
+    /**
+     * @param array $FileInfos <p>Output file info of the AIGC video task.</p>
+     * @param array $ProcedureTaskIds <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class AigcVideoTaskOutput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FileInfos, $obj);
             }
+        }
+
+        if (array_key_exists("ProcedureTaskIds",$param) and $param["ProcedureTaskIds"] !== null) {
+            $this->ProcedureTaskIds = $param["ProcedureTaskIds"];
         }
     }
 }

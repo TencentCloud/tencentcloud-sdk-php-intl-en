@@ -20,34 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeKafkaRecharges request structure.
  *
- * @method string getTopicId() Obtain Log topic ID
- * @method void setTopicId(string $TopicId) Set Log topic ID
- * @method string getId() Obtain Import configuration ID
- * @method void setId(string $Id) Set Import configuration ID
- * @method integer getStatus() Obtain Status. Valid values: 1 (running) and 2 (suspended).
- * @method void setStatus(integer $Status) Set Status. Valid values: 1 (running) and 2 (suspended).
+ * @method string getTopicId() Obtain Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method string getId() Obtain Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+ * @method void setId(string $Id) Set Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+ * @method integer getStatus() Obtain Status. 1: Running, 2: Suspension, 3: Error.
+ * @method void setStatus(integer $Status) Set Status. 1: Running, 2: Suspension, 3: Error.
  */
 class DescribeKafkaRechargesRequest extends AbstractModel
 {
     /**
-     * @var string Log topic ID
+     * @var string Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
     /**
-     * @var string Import configuration ID
+     * @var string Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
      */
     public $Id;
 
     /**
-     * @var integer Status. Valid values: 1 (running) and 2 (suspended).
+     * @var integer Status. 1: Running, 2: Suspension, 3: Error.
      */
     public $Status;
 
     /**
-     * @param string $TopicId Log topic ID
-     * @param string $Id Import configuration ID
-     * @param integer $Status Status. Valid values: 1 (running) and 2 (suspended).
+     * @param string $TopicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param string $Id Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+     * @param integer $Status Status. 1: Running, 2: Suspension, 3: Error.
      */
     function __construct()
     {

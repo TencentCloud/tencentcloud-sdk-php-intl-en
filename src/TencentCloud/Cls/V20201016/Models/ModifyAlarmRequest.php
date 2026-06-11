@@ -20,186 +20,179 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAlarm request structure.
  *
- * @method string getAlarmId() Obtain Alarm policy ID
- * @method void setAlarmId(string $AlarmId) Set Alarm policy ID
- * @method string getName() Obtain Alarm policy name
- * @method void setName(string $Name) Set Alarm policy name
- * @method MonitorTime getMonitorTime() Obtain Monitoring task running time point
- * @method void setMonitorTime(MonitorTime $MonitorTime) Set Monitoring task running time point
- * @method string getCondition() Obtain Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
- * @method void setCondition(string $Condition) Set Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
- * @method integer getAlarmLevel() Obtain Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
-
-Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
- * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
-
-Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
- * @method array getMultiConditions() Obtain Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
- * @method void setMultiConditions(array $MultiConditions) Set Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
- * @method integer getTriggerCount() Obtain Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
- * @method void setTriggerCount(integer $TriggerCount) Set Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
- * @method integer getAlarmPeriod() Obtain Repeated alarm interval in minutes. Value range: 0 to 1440
- * @method void setAlarmPeriod(integer $AlarmPeriod) Set Repeated alarm interval in minutes. Value range: 0 to 1440
- * @method array getAlarmNoticeIds() Obtain List of associated alarm notification templates
- * @method void setAlarmNoticeIds(array $AlarmNoticeIds) Set List of associated alarm notification templates
- * @method array getAlarmTargets() Obtain Monitoring object list
- * @method void setAlarmTargets(array $AlarmTargets) Set Monitoring object list
- * @method boolean getStatus() Obtain Whether to enable the alarm policy
- * @method void setStatus(boolean $Status) Set Whether to enable the alarm policy
- * @method boolean getEnable() Obtain This parameter has been deprecated. Use the Status parameter to control whether to enable the alarm policy.
- * @method void setEnable(boolean $Enable) Set This parameter has been deprecated. Use the Status parameter to control whether to enable the alarm policy.
- * @method string getMessageTemplate() Obtain Custom alarm content
- * @method void setMessageTemplate(string $MessageTemplate) Set Custom alarm content
- * @method CallBackInfo getCallBack() Obtain Custom callback
- * @method void setCallBack(CallBackInfo $CallBack) Set Custom callback
- * @method array getAnalysis() Obtain Multi-Dimensional analysis
- * @method void setAnalysis(array $Analysis) Set Multi-Dimensional analysis
- * @method boolean getGroupTriggerStatus() Obtain Group trigger status. true: enabled; false: disabled (default)
- * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) Set Group trigger status. true: enabled; false: disabled (default)
- * @method array getGroupTriggerCondition() Obtain Grouping trigger conditions.
- * @method void setGroupTriggerCondition(array $GroupTriggerCondition) Set Grouping trigger conditions.
- * @method array getTags() Obtain Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
- * @method void setTags(array $Tags) Set Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
- * @method integer getMonitorObjectType() Obtain Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.
-
- * @method void setMonitorObjectType(integer $MonitorObjectType) Set Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.
-
- * @method array getClassifications() Obtain Alarm additional classification information list.
-The number of Classifications elements cannot exceed 20.The Key of Classifications element must not be empty and duplicated, and its length cannot exceed 50 characters, complying with the regular expression ^[a-z]([a-z0-9_]{0,49})$.The Value length of Classifications element cannot exceed 200 characters.
- * @method void setClassifications(array $Classifications) Set Alarm additional classification information list.
-The number of Classifications elements cannot exceed 20.The Key of Classifications element must not be empty and duplicated, and its length cannot exceed 50 characters, complying with the regular expression ^[a-z]([a-z0-9_]{0,49})$.The Value length of Classifications element cannot exceed 200 characters.
+ * @method string getAlarmId() Obtain <p>Alert policy ID. - Search the alert policy ID by <a href="https://www.tencentcloud.com/document/product/614/56461?from_cn_redirect=1">obtaining the alarm policy list</a>.</p>
+ * @method void setAlarmId(string $AlarmId) Set <p>Alert policy ID. - Search the alert policy ID by <a href="https://www.tencentcloud.com/document/product/614/56461?from_cn_redirect=1">obtaining the alarm policy list</a>.</p>
+ * @method string getName() Obtain <p>Alarm policy name. Supports a maximum of 255 bytes. The '|' character is unsupported.</p>
+ * @method void setName(string $Name) Set <p>Alarm policy name. Supports a maximum of 255 bytes. The '|' character is unsupported.</p>
+ * @method MonitorTime getMonitorTime() Obtain <p>Monitoring task execution time point.</p>
+ * @method void setMonitorTime(MonitorTime $MonitorTime) Set <p>Monitoring task execution time point.</p>
+ * @method string getCondition() Obtain <p>Trigger condition for sending alarm information.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions is another set of configurations. The two sets are mutually exclusive.</li></ul>
+ * @method void setCondition(string $Condition) Set <p>Trigger condition for sending alarm information.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions is another set of configurations. The two sets are mutually exclusive.</li></ul>
+ * @method integer getAlarmLevel() Obtain <p>Alarm level.</p><p>0: Warning (Warn); 1: Reminder (Info); 2: Emergency (Critical)</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets are mutually exclusive.</li></ul>
+ * @method void setAlarmLevel(integer $AlarmLevel) Set <p>Alarm level.</p><p>0: Warning (Warn); 1: Reminder (Info); 2: Emergency (Critical)</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets are mutually exclusive.</li></ul>
+ * @method array getMultiConditions() Obtain <p>Multiple trigger conditions.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets of configurations are mutually exclusive.</li></ul>
+ * @method void setMultiConditions(array $MultiConditions) Set <p>Multiple trigger conditions.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets of configurations are mutually exclusive.</li></ul>
+ * @method integer getTriggerCount() Obtain <p>Duration cycle. An alarm is triggered after the trigger conditions are constantly met for TriggerCount cycles. The minimum value is 1, and the maximum value is 2000.</p>
+ * @method void setTriggerCount(integer $TriggerCount) Set <p>Duration cycle. An alarm is triggered after the trigger conditions are constantly met for TriggerCount cycles. The minimum value is 1, and the maximum value is 2000.</p>
+ * @method integer getAlarmPeriod() Obtain <p>Alarm repeat cycle. In minutes. Value ranges from 0 to 1440.</p>
+ * @method void setAlarmPeriod(integer $AlarmPeriod) Set <p>Alarm repeat cycle. In minutes. Value ranges from 0 to 1440.</p>
+ * @method array getAlarmTargets() Obtain <p>Monitoring object list.</p>
+ * @method void setAlarmTargets(array $AlarmTargets) Set <p>Monitoring object list.</p>
+ * @method boolean getStatus() Obtain <p>Whether to enable alarm policy.</p>
+ * @method void setStatus(boolean $Status) Set <p>Whether to enable alarm policy.</p>
+ * @method boolean getEnable() Obtain <p>This parameter has been deprecated, please use the Status parameter to control whether to enable the alarm policy.</p>
+ * @method void setEnable(boolean $Enable) Set <p>This parameter has been deprecated, please use the Status parameter to control whether to enable the alarm policy.</p>
+ * @method string getMessageTemplate() Obtain <p>User-defined alarm content</p>
+ * @method void setMessageTemplate(string $MessageTemplate) Set <p>User-defined alarm content</p>
+ * @method CallBackInfo getCallBack() Obtain <p>user-defined callback</p>
+ * @method void setCallBack(CallBackInfo $CallBack) Set <p>user-defined callback</p>
+ * @method array getAnalysis() Obtain <p>Multi-dimensional analysis</p>
+ * @method void setAnalysis(array $Analysis) Set <p>Multi-dimensional analysis</p>
+ * @method boolean getGroupTriggerStatus() Obtain <p>Group trigger status. true: enabled, false: disabled (default)</p>
+ * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) Set <p>Group trigger status. true: enabled, false: disabled (default)</p>
+ * @method array getGroupTriggerCondition() Obtain <p>Group trigger conditions.</p>
+ * @method void setGroupTriggerCondition(array $GroupTriggerCondition) Set <p>Group trigger conditions.</p>
+ * @method array getTags() Obtain <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding alarm policy. Up to 10 tag key-value pairs are supported, and no duplicate key-value pairs are allowed.</p>
+ * @method void setTags(array $Tags) Set <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding alarm policy. Up to 10 tag key-value pairs are supported, and no duplicate key-value pairs are allowed.</p>
+ * @method integer getMonitorObjectType() Obtain <p>Monitored object type. 0: Common monitoring object for execution statements; 1: Each execution statement selects its own monitored object.<br>When the value is 1, the number of elements in AlarmTargets cannot exceed 10. The Number in AlarmTargets must be consecutive positive integers starting from 1 and must be unique.</p>
+ * @method void setMonitorObjectType(integer $MonitorObjectType) Set <p>Monitored object type. 0: Common monitoring object for execution statements; 1: Each execution statement selects its own monitored object.<br>When the value is 1, the number of elements in AlarmTargets cannot exceed 10. The Number in AlarmTargets must be consecutive positive integers starting from 1 and must be unique.</p>
+ * @method array getClassifications() Obtain <p>Alert additional classification information list.<br>Number of Classifications Elements cannot exceed 20.<br>The Key of Classifications elements cannot be empty, must be unique, length cannot exceed 50 characters, and complies with the regular expression <code>^[a-z]([a-z0-9_]{0,49})$</code>.<br>Value of Classifications elements cannot exceed 200 characters.</p>
+ * @method void setClassifications(array $Classifications) Set <p>Alert additional classification information list.<br>Number of Classifications Elements cannot exceed 20.<br>The Key of Classifications elements cannot be empty, must be unique, length cannot exceed 50 characters, and complies with the regular expression <code>^[a-z]([a-z0-9_]{0,49})$</code>.<br>Value of Classifications elements cannot exceed 200 characters.</p>
+ * @method array getAlarmNoticeIds() Obtain <p>List of associated CLS alarm notification channel groups. - Search the list of associated alarm notification channel groups via <a href="https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1">Query notification channel group list</a>. It is mutually exclusive with MonitorNotice.</p>
+ * @method void setAlarmNoticeIds(array $AlarmNoticeIds) Set <p>List of associated CLS alarm notification channel groups. - Search the list of associated alarm notification channel groups via <a href="https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1">Query notification channel group list</a>. It is mutually exclusive with MonitorNotice.</p>
+ * @method MonitorNotice getMonitorNotice() Obtain <p>The associated observability platform notification template is mutually exclusive with the AlarmNoticeIds parameter and cannot include both.</p>
+ * @method void setMonitorNotice(MonitorNotice $MonitorNotice) Set <p>The associated observability platform notification template is mutually exclusive with the AlarmNoticeIds parameter and cannot include both.</p>
  */
 class ModifyAlarmRequest extends AbstractModel
 {
     /**
-     * @var string Alarm policy ID
+     * @var string <p>Alert policy ID. - Search the alert policy ID by <a href="https://www.tencentcloud.com/document/product/614/56461?from_cn_redirect=1">obtaining the alarm policy list</a>.</p>
      */
     public $AlarmId;
 
     /**
-     * @var string Alarm policy name
+     * @var string <p>Alarm policy name. Supports a maximum of 255 bytes. The '|' character is unsupported.</p>
      */
     public $Name;
 
     /**
-     * @var MonitorTime Monitoring task running time point
+     * @var MonitorTime <p>Monitoring task execution time point.</p>
      */
     public $MonitorTime;
 
     /**
-     * @var string Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * @var string <p>Trigger condition for sending alarm information.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions is another set of configurations. The two sets are mutually exclusive.</li></ul>
      */
     public $Condition;
 
     /**
-     * @var integer Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
-
-Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * @var integer <p>Alarm level.</p><p>0: Warning (Warn); 1: Reminder (Info); 2: Emergency (Critical)</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets are mutually exclusive.</li></ul>
      */
     public $AlarmLevel;
 
     /**
-     * @var array Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * @var array <p>Multiple trigger conditions.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets of configurations are mutually exclusive.</li></ul>
      */
     public $MultiConditions;
 
     /**
-     * @var integer Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
+     * @var integer <p>Duration cycle. An alarm is triggered after the trigger conditions are constantly met for TriggerCount cycles. The minimum value is 1, and the maximum value is 2000.</p>
      */
     public $TriggerCount;
 
     /**
-     * @var integer Repeated alarm interval in minutes. Value range: 0 to 1440
+     * @var integer <p>Alarm repeat cycle. In minutes. Value ranges from 0 to 1440.</p>
      */
     public $AlarmPeriod;
 
     /**
-     * @var array List of associated alarm notification templates
-     */
-    public $AlarmNoticeIds;
-
-    /**
-     * @var array Monitoring object list
+     * @var array <p>Monitoring object list.</p>
      */
     public $AlarmTargets;
 
     /**
-     * @var boolean Whether to enable the alarm policy
+     * @var boolean <p>Whether to enable alarm policy.</p>
      */
     public $Status;
 
     /**
-     * @var boolean This parameter has been deprecated. Use the Status parameter to control whether to enable the alarm policy.
+     * @var boolean <p>This parameter has been deprecated, please use the Status parameter to control whether to enable the alarm policy.</p>
+     * @deprecated
      */
     public $Enable;
 
     /**
-     * @var string Custom alarm content
+     * @var string <p>User-defined alarm content</p>
      */
     public $MessageTemplate;
 
     /**
-     * @var CallBackInfo Custom callback
+     * @var CallBackInfo <p>user-defined callback</p>
      */
     public $CallBack;
 
     /**
-     * @var array Multi-Dimensional analysis
+     * @var array <p>Multi-dimensional analysis</p>
      */
     public $Analysis;
 
     /**
-     * @var boolean Group trigger status. true: enabled; false: disabled (default)
+     * @var boolean <p>Group trigger status. true: enabled, false: disabled (default)</p>
      */
     public $GroupTriggerStatus;
 
     /**
-     * @var array Grouping trigger conditions.
+     * @var array <p>Group trigger conditions.</p>
      */
     public $GroupTriggerCondition;
 
     /**
-     * @var array Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
+     * @var array <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding alarm policy. Up to 10 tag key-value pairs are supported, and no duplicate key-value pairs are allowed.</p>
      */
     public $Tags;
 
     /**
-     * @var integer Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.
-
+     * @var integer <p>Monitored object type. 0: Common monitoring object for execution statements; 1: Each execution statement selects its own monitored object.<br>When the value is 1, the number of elements in AlarmTargets cannot exceed 10. The Number in AlarmTargets must be consecutive positive integers starting from 1 and must be unique.</p>
      */
     public $MonitorObjectType;
 
     /**
-     * @var array Alarm additional classification information list.
-The number of Classifications elements cannot exceed 20.The Key of Classifications element must not be empty and duplicated, and its length cannot exceed 50 characters, complying with the regular expression ^[a-z]([a-z0-9_]{0,49})$.The Value length of Classifications element cannot exceed 200 characters.
+     * @var array <p>Alert additional classification information list.<br>Number of Classifications Elements cannot exceed 20.<br>The Key of Classifications elements cannot be empty, must be unique, length cannot exceed 50 characters, and complies with the regular expression <code>^[a-z]([a-z0-9_]{0,49})$</code>.<br>Value of Classifications elements cannot exceed 200 characters.</p>
      */
     public $Classifications;
 
     /**
-     * @param string $AlarmId Alarm policy ID
-     * @param string $Name Alarm policy name
-     * @param MonitorTime $MonitorTime Monitoring task running time point
-     * @param string $Condition Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-     * @param integer $AlarmLevel Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
+     * @var array <p>List of associated CLS alarm notification channel groups. - Search the list of associated alarm notification channel groups via <a href="https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1">Query notification channel group list</a>. It is mutually exclusive with MonitorNotice.</p>
+     */
+    public $AlarmNoticeIds;
 
-Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-     * @param array $MultiConditions Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-     * @param integer $TriggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
-     * @param integer $AlarmPeriod Repeated alarm interval in minutes. Value range: 0 to 1440
-     * @param array $AlarmNoticeIds List of associated alarm notification templates
-     * @param array $AlarmTargets Monitoring object list
-     * @param boolean $Status Whether to enable the alarm policy
-     * @param boolean $Enable This parameter has been deprecated. Use the Status parameter to control whether to enable the alarm policy.
-     * @param string $MessageTemplate Custom alarm content
-     * @param CallBackInfo $CallBack Custom callback
-     * @param array $Analysis Multi-Dimensional analysis
-     * @param boolean $GroupTriggerStatus Group trigger status. true: enabled; false: disabled (default)
-     * @param array $GroupTriggerCondition Grouping trigger conditions.
-     * @param array $Tags Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
-     * @param integer $MonitorObjectType Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.
+    /**
+     * @var MonitorNotice <p>The associated observability platform notification template is mutually exclusive with the AlarmNoticeIds parameter and cannot include both.</p>
+     */
+    public $MonitorNotice;
 
-     * @param array $Classifications Alarm additional classification information list.
-The number of Classifications elements cannot exceed 20.The Key of Classifications element must not be empty and duplicated, and its length cannot exceed 50 characters, complying with the regular expression ^[a-z]([a-z0-9_]{0,49})$.The Value length of Classifications element cannot exceed 200 characters.
+    /**
+     * @param string $AlarmId <p>Alert policy ID. - Search the alert policy ID by <a href="https://www.tencentcloud.com/document/product/614/56461?from_cn_redirect=1">obtaining the alarm policy list</a>.</p>
+     * @param string $Name <p>Alarm policy name. Supports a maximum of 255 bytes. The '|' character is unsupported.</p>
+     * @param MonitorTime $MonitorTime <p>Monitoring task execution time point.</p>
+     * @param string $Condition <p>Trigger condition for sending alarm information.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions is another set of configurations. The two sets are mutually exclusive.</li></ul>
+     * @param integer $AlarmLevel <p>Alarm level.</p><p>0: Warning (Warn); 1: Reminder (Info); 2: Emergency (Critical)</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets are mutually exclusive.</li></ul>
+     * @param array $MultiConditions <p>Multiple trigger conditions.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets of configurations are mutually exclusive.</li></ul>
+     * @param integer $TriggerCount <p>Duration cycle. An alarm is triggered after the trigger conditions are constantly met for TriggerCount cycles. The minimum value is 1, and the maximum value is 2000.</p>
+     * @param integer $AlarmPeriod <p>Alarm repeat cycle. In minutes. Value ranges from 0 to 1440.</p>
+     * @param array $AlarmTargets <p>Monitoring object list.</p>
+     * @param boolean $Status <p>Whether to enable alarm policy.</p>
+     * @param boolean $Enable <p>This parameter has been deprecated, please use the Status parameter to control whether to enable the alarm policy.</p>
+     * @param string $MessageTemplate <p>User-defined alarm content</p>
+     * @param CallBackInfo $CallBack <p>user-defined callback</p>
+     * @param array $Analysis <p>Multi-dimensional analysis</p>
+     * @param boolean $GroupTriggerStatus <p>Group trigger status. true: enabled, false: disabled (default)</p>
+     * @param array $GroupTriggerCondition <p>Group trigger conditions.</p>
+     * @param array $Tags <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding alarm policy. Up to 10 tag key-value pairs are supported, and no duplicate key-value pairs are allowed.</p>
+     * @param integer $MonitorObjectType <p>Monitored object type. 0: Common monitoring object for execution statements; 1: Each execution statement selects its own monitored object.<br>When the value is 1, the number of elements in AlarmTargets cannot exceed 10. The Number in AlarmTargets must be consecutive positive integers starting from 1 and must be unique.</p>
+     * @param array $Classifications <p>Alert additional classification information list.<br>Number of Classifications Elements cannot exceed 20.<br>The Key of Classifications elements cannot be empty, must be unique, length cannot exceed 50 characters, and complies with the regular expression <code>^[a-z]([a-z0-9_]{0,49})$</code>.<br>Value of Classifications elements cannot exceed 200 characters.</p>
+     * @param array $AlarmNoticeIds <p>List of associated CLS alarm notification channel groups. - Search the list of associated alarm notification channel groups via <a href="https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1">Query notification channel group list</a>. It is mutually exclusive with MonitorNotice.</p>
+     * @param MonitorNotice $MonitorNotice <p>The associated observability platform notification template is mutually exclusive with the AlarmNoticeIds parameter and cannot include both.</p>
      */
     function __construct()
     {
@@ -250,10 +243,6 @@ The number of Classifications elements cannot exceed 20.The Key of Classificatio
 
         if (array_key_exists("AlarmPeriod",$param) and $param["AlarmPeriod"] !== null) {
             $this->AlarmPeriod = $param["AlarmPeriod"];
-        }
-
-        if (array_key_exists("AlarmNoticeIds",$param) and $param["AlarmNoticeIds"] !== null) {
-            $this->AlarmNoticeIds = $param["AlarmNoticeIds"];
         }
 
         if (array_key_exists("AlarmTargets",$param) and $param["AlarmTargets"] !== null) {
@@ -319,6 +308,15 @@ The number of Classifications elements cannot exceed 20.The Key of Classificatio
                 $obj->deserialize($value);
                 array_push($this->Classifications, $obj);
             }
+        }
+
+        if (array_key_exists("AlarmNoticeIds",$param) and $param["AlarmNoticeIds"] !== null) {
+            $this->AlarmNoticeIds = $param["AlarmNoticeIds"];
+        }
+
+        if (array_key_exists("MonitorNotice",$param) and $param["MonitorNotice"] !== null) {
+            $this->MonitorNotice = new MonitorNotice();
+            $this->MonitorNotice->deserialize($param["MonitorNotice"]);
         }
     }
 }

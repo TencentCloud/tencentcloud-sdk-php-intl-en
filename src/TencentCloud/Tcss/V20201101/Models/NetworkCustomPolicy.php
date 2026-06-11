@@ -22,34 +22,30 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDirection() Obtain Network policy direction. Valid values: `FROM`, `TO`.
  * @method void setDirection(string $Direction) Set Network policy direction. Valid values: `FROM`, `TO`.
- * @method array getPorts() Obtain Network policy port
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPorts(array $Ports) Set Network policy port
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getPorts() Obtain Network Policy Port
+ * @method void setPorts(array $Ports) Set Network Policy Port
  * @method array getPeer() Obtain Network policy object
 
-`PublishedNoConfirm`: Enabled and to be confirmed.
+Enable but not confirmed: PublishedNoConfirm
 
-`PublishedConfirmed`: Enabled and confirmed.
+Enabled and confirmed: PublishedConfirmed
 
-`unPublishing`: Disabled.
+Disabling: unPublishing
 
-`Publishing`: Enabled.
+Enabled: Publishing
 
-`unPublishEdit`: To be enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+Enable: unPublishEdit
  * @method void setPeer(array $Peer) Set Network policy object
 
-`PublishedNoConfirm`: Enabled and to be confirmed.
+Enable but not confirmed: PublishedNoConfirm
 
-`PublishedConfirmed`: Enabled and confirmed.
+Enabled and confirmed: PublishedConfirmed
 
-`unPublishing`: Disabled.
+Disabling: unPublishing
 
-`Publishing`: Enabled.
+Enabled: Publishing
 
-`unPublishEdit`: To be enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+Enable: unPublishEdit
  */
 class NetworkCustomPolicy extends AbstractModel
 {
@@ -59,43 +55,39 @@ class NetworkCustomPolicy extends AbstractModel
     public $Direction;
 
     /**
-     * @var array Network policy port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Network Policy Port
      */
     public $Ports;
 
     /**
      * @var array Network policy object
 
-`PublishedNoConfirm`: Enabled and to be confirmed.
+Enable but not confirmed: PublishedNoConfirm
 
-`PublishedConfirmed`: Enabled and confirmed.
+Enabled and confirmed: PublishedConfirmed
 
-`unPublishing`: Disabled.
+Disabling: unPublishing
 
-`Publishing`: Enabled.
+Enabled: Publishing
 
-`unPublishEdit`: To be enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+Enable: unPublishEdit
      */
     public $Peer;
 
     /**
      * @param string $Direction Network policy direction. Valid values: `FROM`, `TO`.
-     * @param array $Ports Network policy port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Ports Network Policy Port
      * @param array $Peer Network policy object
 
-`PublishedNoConfirm`: Enabled and to be confirmed.
+Enable but not confirmed: PublishedNoConfirm
 
-`PublishedConfirmed`: Enabled and confirmed.
+Enabled and confirmed: PublishedConfirmed
 
-`unPublishing`: Disabled.
+Disabling: unPublishing
 
-`Publishing`: Enabled.
+Enabled: Publishing
 
-`unPublishEdit`: To be enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+Enable: unPublishEdit
      */
     function __construct()
     {

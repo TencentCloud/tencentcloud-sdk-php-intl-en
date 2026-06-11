@@ -18,20 +18,20 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Instance resizing task information.
  *
- * @method integer getCpu() Obtain 
- * @method void setCpu(integer $Cpu) Set 
- * @method integer getMemory() Obtain 
- * @method void setMemory(integer $Memory) Set 
- * @method integer getStorageLimit() Obtain 
- * @method void setStorageLimit(integer $StorageLimit) Set 
- * @method integer getOldCpu() Obtain 
- * @method void setOldCpu(integer $OldCpu) Set 
- * @method integer getOldMemory() Obtain 
- * @method void setOldMemory(integer $OldMemory) Set 
- * @method integer getOldStorageLimit() Obtain 
- * @method void setOldStorageLimit(integer $OldStorageLimit) Set 
+ * @method integer getCpu() Obtain CPU after resizing.
+ * @method void setCpu(integer $Cpu) Set CPU after resizing.
+ * @method integer getMemory() Obtain Memory after resizing.
+ * @method void setMemory(integer $Memory) Set Memory after resizing.
+ * @method integer getStorageLimit() Obtain Storage upper limit after resizing.
+ * @method void setStorageLimit(integer $StorageLimit) Set Storage upper limit after resizing.
+ * @method integer getOldCpu() Obtain CPU before resizing.
+ * @method void setOldCpu(integer $OldCpu) Set CPU before resizing.
+ * @method integer getOldMemory() Obtain Memory before resizing.
+ * @method void setOldMemory(integer $OldMemory) Set Memory before resizing.
+ * @method integer getOldStorageLimit() Obtain Storage upper limit before resizing.
+ * @method void setOldStorageLimit(integer $OldStorageLimit) Set Storage upper limit before resizing.
  * @method string getOldDeviceType() Obtain Instance Machine Type Before Scaling
 1. common, universal type.
 2. exclusive, dedicated.
@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceType(string $DeviceType) Set Instance Machine Type After Scaling
 1. common, universal type.
 2. exclusive, dedicated.
- * @method string getUpgradeType() Obtain 
- * @method void setUpgradeType(string $UpgradeType) Set 
+ * @method string getUpgradeType() Obtain Upgrade method. Switch after upgrade completes or switch within maintenance window.
+ * @method void setUpgradeType(string $UpgradeType) Set Upgrade method. Switch after upgrade completes or switch within maintenance window.
  * @method integer getLibraNodeCount() Obtain Specifies the quantity of libra nodes.
  * @method void setLibraNodeCount(integer $LibraNodeCount) Set Specifies the quantity of libra nodes.
  * @method integer getOldLibraNodeCount() Obtain Specifies the original quantity of libra nodes.
@@ -54,32 +54,32 @@ use TencentCloud\Common\AbstractModel;
 class ModifyInstanceData extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer CPU after resizing.
      */
     public $Cpu;
 
     /**
-     * @var integer 
+     * @var integer Memory after resizing.
      */
     public $Memory;
 
     /**
-     * @var integer 
+     * @var integer Storage upper limit after resizing.
      */
     public $StorageLimit;
 
     /**
-     * @var integer 
+     * @var integer CPU before resizing.
      */
     public $OldCpu;
 
     /**
-     * @var integer 
+     * @var integer Memory before resizing.
      */
     public $OldMemory;
 
     /**
-     * @var integer 
+     * @var integer Storage upper limit before resizing.
      */
     public $OldStorageLimit;
 
@@ -98,7 +98,7 @@ class ModifyInstanceData extends AbstractModel
     public $DeviceType;
 
     /**
-     * @var string 
+     * @var string Upgrade method. Switch after upgrade completes or switch within maintenance window.
      */
     public $UpgradeType;
 
@@ -113,19 +113,19 @@ class ModifyInstanceData extends AbstractModel
     public $OldLibraNodeCount;
 
     /**
-     * @param integer $Cpu 
-     * @param integer $Memory 
-     * @param integer $StorageLimit 
-     * @param integer $OldCpu 
-     * @param integer $OldMemory 
-     * @param integer $OldStorageLimit 
+     * @param integer $Cpu CPU after resizing.
+     * @param integer $Memory Memory after resizing.
+     * @param integer $StorageLimit Storage upper limit after resizing.
+     * @param integer $OldCpu CPU before resizing.
+     * @param integer $OldMemory Memory before resizing.
+     * @param integer $OldStorageLimit Storage upper limit before resizing.
      * @param string $OldDeviceType Instance Machine Type Before Scaling
 1. common, universal type.
 2. exclusive, dedicated.
      * @param string $DeviceType Instance Machine Type After Scaling
 1. common, universal type.
 2. exclusive, dedicated.
-     * @param string $UpgradeType 
+     * @param string $UpgradeType Upgrade method. Switch after upgrade completes or switch within maintenance window.
      * @param integer $LibraNodeCount Specifies the quantity of libra nodes.
      * @param integer $OldLibraNodeCount Specifies the original quantity of libra nodes.
      */

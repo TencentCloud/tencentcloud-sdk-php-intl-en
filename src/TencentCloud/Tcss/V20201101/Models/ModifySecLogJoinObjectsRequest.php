@@ -28,10 +28,10 @@ K8s API: k8s_api
 Container bash: container_bash
 Container startup: container_launch
 K8s API: k8s_api
- * @method array getBindList() Obtain List of QUuids of bound servers
- * @method void setBindList(array $BindList) Set List of QUuids of bound servers
- * @method array getUnBindList() Obtain List of QUuids of servers to be unbound
- * @method void setUnBindList(array $UnBindList) Set List of QUuids of servers to be unbound
+ * @method array getBindList() Obtain Bound list
+ * @method void setBindList(array $BindList) Set Bound list
+ * @method array getUnBindList() Obtain List of assets to be unbound. When the node scope involves all nodes, this parameter indicates the list of assets to be excluded.
+ * @method void setUnBindList(array $UnBindList) Set List of assets to be unbound. When the node scope involves all nodes, this parameter indicates the list of assets to be excluded.
  * @method string getNodeType() Obtain Node type.
 `NORMAL`: General node (default)
 `SUPER`: Super node
@@ -39,6 +39,11 @@ K8s API: k8s_api
  * @method void setNodeType(string $NodeType) Set Node type.
 `NORMAL`: General node (default)
 `SUPER`: Super node
+
+ * @method integer getRangeType() Obtain Log node scope type. 0: specified; 1: all.
+ * @method void setRangeType(integer $RangeType) Set Log node scope type. 0: specified; 1: all.
+ * @method boolean getAutoJoin() Obtain Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
+ * @method void setAutoJoin(boolean $AutoJoin) Set Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
  */
 class ModifySecLogJoinObjectsRequest extends AbstractModel
 {
@@ -51,12 +56,12 @@ K8s API: k8s_api
     public $LogType;
 
     /**
-     * @var array List of QUuids of bound servers
+     * @var array Bound list
      */
     public $BindList;
 
     /**
-     * @var array List of QUuids of servers to be unbound
+     * @var array List of assets to be unbound. When the node scope involves all nodes, this parameter indicates the list of assets to be excluded.
      */
     public $UnBindList;
 
@@ -69,15 +74,28 @@ K8s API: k8s_api
     public $NodeType;
 
     /**
+     * @var integer Log node scope type. 0: specified; 1: all.
+     */
+    public $RangeType;
+
+    /**
+     * @var boolean Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
+     */
+    public $AutoJoin;
+
+    /**
      * @param string $LogType Log type
 Container bash: container_bash
 Container startup: container_launch
 K8s API: k8s_api
-     * @param array $BindList List of QUuids of bound servers
-     * @param array $UnBindList List of QUuids of servers to be unbound
+     * @param array $BindList Bound list
+     * @param array $UnBindList List of assets to be unbound. When the node scope involves all nodes, this parameter indicates the list of assets to be excluded.
      * @param string $NodeType Node type.
 `NORMAL`: General node (default)
 `SUPER`: Super node
+
+     * @param integer $RangeType Log node scope type. 0: specified; 1: all.
+     * @param boolean $AutoJoin Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
      */
     function __construct()
     {
@@ -106,6 +124,14 @@ K8s API: k8s_api
 
         if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
             $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("RangeType",$param) and $param["RangeType"] !== null) {
+            $this->RangeType = $param["RangeType"];
+        }
+
+        if (array_key_exists("AutoJoin",$param) and $param["AutoJoin"] !== null) {
+            $this->AutoJoin = $param["AutoJoin"];
         }
     }
 }

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
  * @method string getMNPIcon() Obtain <p>Mini game icon.</p>
  * @method void setMNPIcon(string $MNPIcon) Set <p>Mini game icon.</p>
- * @method array getI18nList() Obtain <p>The mini game name and description in multiple languages.	</p>
- * @method void setI18nList(array $I18nList) Set <p>The mini game name and description in multiple languages.	</p>
+ * @method array getI18nList() Obtain <p>Mini game name and introduction in multiple languages.</p>
+ * @method void setI18nList(array $I18nList) Set <p>Mini game name and introduction in multiple languages.</p>
  */
 class ModifyMNGRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class ModifyMNGRequest extends AbstractModel
     public $MNPIcon;
 
     /**
-     * @var array <p>The mini game name and description in multiple languages.	</p>
+     * @var array <p>Mini game name and introduction in multiple languages.</p>
      */
     public $I18nList;
 
@@ -87,7 +87,7 @@ class ModifyMNGRequest extends AbstractModel
      * @param string $MNPId <p>Mini game appid.</p>
      * @param string $PlatformId <p>Platform ID.</p>
      * @param string $MNPIcon <p>Mini game icon.</p>
-     * @param array $I18nList <p>The mini game name and description in multiple languages.	</p>
+     * @param array $I18nList <p>Mini game name and introduction in multiple languages.</p>
      */
     function __construct()
     {

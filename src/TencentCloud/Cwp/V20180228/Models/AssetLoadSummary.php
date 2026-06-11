@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
 80%～100%
 ]
  * @method array getTop5() Obtain Top 5 Load
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTop5(array $Top5) Set Top 5 Load
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AssetLoadSummary extends AbstractModel
 {
@@ -57,7 +55,6 @@ class AssetLoadSummary extends AbstractModel
 
     /**
      * @var array Top 5 Load
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Top5;
 
@@ -71,7 +68,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 80%～100%
 ]
      * @param array $Top5 Top 5 Load
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -20,58 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVulScanTask request structure.
  *
- * @method string getLocalImageScanType() Obtain Local image scan scope. Valid values: `ALL` (all local images); `NOT_SCAN` (all licensed but not scanned local images); `IMAGEIDS` (IDs of specified local images).
- * @method void setLocalImageScanType(string $LocalImageScanType) Set Local image scan scope. Valid values: `ALL` (all local images); `NOT_SCAN` (all licensed but not scanned local images); `IMAGEIDS` (IDs of specified local images).
- * @method array getLocalImageIDs() Obtain Scan by licensed local image ID, with a higher priority than scan by licensed local image that meets the condition.
- * @method void setLocalImageIDs(array $LocalImageIDs) Set Scan by licensed local image ID, with a higher priority than scan by licensed local image that meets the condition.
- * @method string getRegistryImageScanType() Obtain Repository image scan scope. Valid values: `ALL` (all repository images); `NOT_SCAN` (all licensed but not scanned repository images); `IMAGEIDS` (IDs of specified repository images).
- * @method void setRegistryImageScanType(string $RegistryImageScanType) Set Repository image scan scope. Valid values: `ALL` (all repository images); `NOT_SCAN` (all licensed but not scanned repository images); `IMAGEIDS` (IDs of specified repository images).
- * @method array getRegistryImageIDs() Obtain Scan by licensed repository image ID, with a higher priority than scan by licensed repository image that meets the condition.
- * @method void setRegistryImageIDs(array $RegistryImageIDs) Set Scan by licensed repository image ID, with a higher priority than scan by licensed repository image that meets the condition.
- * @method integer getLocalTaskID() Obtain ID of the task to scan local images again for vulnerabilities
- * @method void setLocalTaskID(integer $LocalTaskID) Set ID of the task to scan local images again for vulnerabilities
- * @method integer getRegistryTaskID() Obtain ID of the task to scan repository images again for vulnerabilities
- * @method void setRegistryTaskID(integer $RegistryTaskID) Set ID of the task to scan repository images again for vulnerabilities
+ * @method string getLocalImageScanType() Obtain <p>Local image scan range type</p><p>Enumeration value:</p><ul><li>ALL: All local images</li><li>NOT_SCAN: All authorized unscanned local images</li><li>IMAGEIDS: Selected local image IDs</li><li>CLUSTER: Cluster filtering</li></ul>
+ * @method void setLocalImageScanType(string $LocalImageScanType) Set <p>Local image scan range type</p><p>Enumeration value:</p><ul><li>ALL: All local images</li><li>NOT_SCAN: All authorized unscanned local images</li><li>IMAGEIDS: Selected local image IDs</li><li>CLUSTER: Cluster filtering</li></ul>
+ * @method array getLocalImageIDs() Obtain <p>Scan by authorized local image IDs, which takes precedence over scanning by authorized local images that meet the conditions.</p>
+ * @method void setLocalImageIDs(array $LocalImageIDs) Set <p>Scan by authorized local image IDs, which takes precedence over scanning by authorized local images that meet the conditions.</p>
+ * @method string getRegistryImageScanType() Obtain <p>Repository image scan range type. ALL: All repository images. NOT_SCAN: Total authorized unscanned repository images. IMAGEIDS: Selected repository image IDs.</p>
+ * @method void setRegistryImageScanType(string $RegistryImageScanType) Set <p>Repository image scan range type. ALL: All repository images. NOT_SCAN: Total authorized unscanned repository images. IMAGEIDS: Selected repository image IDs.</p>
+ * @method array getRegistryImageIDs() Obtain <p>Scan by authorized repository image IDs, which takes precedence over scanning by authorized repository images that meet the conditions.</p>
+ * @method void setRegistryImageIDs(array $RegistryImageIDs) Set <p>Scan by authorized repository image IDs, which takes precedence over scanning by authorized repository images that meet the conditions.</p>
+ * @method integer getLocalTaskID() Obtain <p>Task ID for local image re-vulnerability scanning</p>
+ * @method void setLocalTaskID(integer $LocalTaskID) Set <p>Task ID for local image re-vulnerability scanning</p>
+ * @method integer getRegistryTaskID() Obtain <p>Task ID for repository image re-vulnerability scanning</p>
+ * @method void setRegistryTaskID(integer $RegistryTaskID) Set <p>Task ID for repository image re-vulnerability scanning</p>
+ * @method boolean getLocalImageContainerRunning() Obtain <p>Local image container runtime</p>
+ * @method void setLocalImageContainerRunning(boolean $LocalImageContainerRunning) Set <p>Local image container runtime</p>
+ * @method boolean getRegistryImageContainerRunning() Obtain <p>Image Container in repository is running</p>
+ * @method void setRegistryImageContainerRunning(boolean $RegistryImageContainerRunning) Set <p>Image Container in repository is running</p>
+ * @method boolean getIsLatest() Obtain <p>Whether the repository image is the latest</p>
+ * @method void setIsLatest(boolean $IsLatest) Set <p>Whether the repository image is the latest</p>
+ * @method array getExcludeLocalImageIDs() Obtain <p>Local image id to remove</p>
+ * @method void setExcludeLocalImageIDs(array $ExcludeLocalImageIDs) Set <p>Local image id to remove</p>
+ * @method array getExcludeRegistryImageIDs() Obtain <p>id of the repository image to remove</p>
+ * @method void setExcludeRegistryImageIDs(array $ExcludeRegistryImageIDs) Set <p>id of the repository image to remove</p>
+ * @method array getLocalClusterIDs() Obtain <p>Cluster ID.</p>
+ * @method void setLocalClusterIDs(array $LocalClusterIDs) Set <p>Cluster ID.</p>
  */
 class CreateVulScanTaskRequest extends AbstractModel
 {
     /**
-     * @var string Local image scan scope. Valid values: `ALL` (all local images); `NOT_SCAN` (all licensed but not scanned local images); `IMAGEIDS` (IDs of specified local images).
+     * @var string <p>Local image scan range type</p><p>Enumeration value:</p><ul><li>ALL: All local images</li><li>NOT_SCAN: All authorized unscanned local images</li><li>IMAGEIDS: Selected local image IDs</li><li>CLUSTER: Cluster filtering</li></ul>
      */
     public $LocalImageScanType;
 
     /**
-     * @var array Scan by licensed local image ID, with a higher priority than scan by licensed local image that meets the condition.
+     * @var array <p>Scan by authorized local image IDs, which takes precedence over scanning by authorized local images that meet the conditions.</p>
      */
     public $LocalImageIDs;
 
     /**
-     * @var string Repository image scan scope. Valid values: `ALL` (all repository images); `NOT_SCAN` (all licensed but not scanned repository images); `IMAGEIDS` (IDs of specified repository images).
+     * @var string <p>Repository image scan range type. ALL: All repository images. NOT_SCAN: Total authorized unscanned repository images. IMAGEIDS: Selected repository image IDs.</p>
      */
     public $RegistryImageScanType;
 
     /**
-     * @var array Scan by licensed repository image ID, with a higher priority than scan by licensed repository image that meets the condition.
+     * @var array <p>Scan by authorized repository image IDs, which takes precedence over scanning by authorized repository images that meet the conditions.</p>
      */
     public $RegistryImageIDs;
 
     /**
-     * @var integer ID of the task to scan local images again for vulnerabilities
+     * @var integer <p>Task ID for local image re-vulnerability scanning</p>
      */
     public $LocalTaskID;
 
     /**
-     * @var integer ID of the task to scan repository images again for vulnerabilities
+     * @var integer <p>Task ID for repository image re-vulnerability scanning</p>
      */
     public $RegistryTaskID;
 
     /**
-     * @param string $LocalImageScanType Local image scan scope. Valid values: `ALL` (all local images); `NOT_SCAN` (all licensed but not scanned local images); `IMAGEIDS` (IDs of specified local images).
-     * @param array $LocalImageIDs Scan by licensed local image ID, with a higher priority than scan by licensed local image that meets the condition.
-     * @param string $RegistryImageScanType Repository image scan scope. Valid values: `ALL` (all repository images); `NOT_SCAN` (all licensed but not scanned repository images); `IMAGEIDS` (IDs of specified repository images).
-     * @param array $RegistryImageIDs Scan by licensed repository image ID, with a higher priority than scan by licensed repository image that meets the condition.
-     * @param integer $LocalTaskID ID of the task to scan local images again for vulnerabilities
-     * @param integer $RegistryTaskID ID of the task to scan repository images again for vulnerabilities
+     * @var boolean <p>Local image container runtime</p>
+     */
+    public $LocalImageContainerRunning;
+
+    /**
+     * @var boolean <p>Image Container in repository is running</p>
+     */
+    public $RegistryImageContainerRunning;
+
+    /**
+     * @var boolean <p>Whether the repository image is the latest</p>
+     */
+    public $IsLatest;
+
+    /**
+     * @var array <p>Local image id to remove</p>
+     */
+    public $ExcludeLocalImageIDs;
+
+    /**
+     * @var array <p>id of the repository image to remove</p>
+     */
+    public $ExcludeRegistryImageIDs;
+
+    /**
+     * @var array <p>Cluster ID.</p>
+     */
+    public $LocalClusterIDs;
+
+    /**
+     * @param string $LocalImageScanType <p>Local image scan range type</p><p>Enumeration value:</p><ul><li>ALL: All local images</li><li>NOT_SCAN: All authorized unscanned local images</li><li>IMAGEIDS: Selected local image IDs</li><li>CLUSTER: Cluster filtering</li></ul>
+     * @param array $LocalImageIDs <p>Scan by authorized local image IDs, which takes precedence over scanning by authorized local images that meet the conditions.</p>
+     * @param string $RegistryImageScanType <p>Repository image scan range type. ALL: All repository images. NOT_SCAN: Total authorized unscanned repository images. IMAGEIDS: Selected repository image IDs.</p>
+     * @param array $RegistryImageIDs <p>Scan by authorized repository image IDs, which takes precedence over scanning by authorized repository images that meet the conditions.</p>
+     * @param integer $LocalTaskID <p>Task ID for local image re-vulnerability scanning</p>
+     * @param integer $RegistryTaskID <p>Task ID for repository image re-vulnerability scanning</p>
+     * @param boolean $LocalImageContainerRunning <p>Local image container runtime</p>
+     * @param boolean $RegistryImageContainerRunning <p>Image Container in repository is running</p>
+     * @param boolean $IsLatest <p>Whether the repository image is the latest</p>
+     * @param array $ExcludeLocalImageIDs <p>Local image id to remove</p>
+     * @param array $ExcludeRegistryImageIDs <p>id of the repository image to remove</p>
+     * @param array $LocalClusterIDs <p>Cluster ID.</p>
      */
     function __construct()
     {
@@ -108,6 +156,30 @@ class CreateVulScanTaskRequest extends AbstractModel
 
         if (array_key_exists("RegistryTaskID",$param) and $param["RegistryTaskID"] !== null) {
             $this->RegistryTaskID = $param["RegistryTaskID"];
+        }
+
+        if (array_key_exists("LocalImageContainerRunning",$param) and $param["LocalImageContainerRunning"] !== null) {
+            $this->LocalImageContainerRunning = $param["LocalImageContainerRunning"];
+        }
+
+        if (array_key_exists("RegistryImageContainerRunning",$param) and $param["RegistryImageContainerRunning"] !== null) {
+            $this->RegistryImageContainerRunning = $param["RegistryImageContainerRunning"];
+        }
+
+        if (array_key_exists("IsLatest",$param) and $param["IsLatest"] !== null) {
+            $this->IsLatest = $param["IsLatest"];
+        }
+
+        if (array_key_exists("ExcludeLocalImageIDs",$param) and $param["ExcludeLocalImageIDs"] !== null) {
+            $this->ExcludeLocalImageIDs = $param["ExcludeLocalImageIDs"];
+        }
+
+        if (array_key_exists("ExcludeRegistryImageIDs",$param) and $param["ExcludeRegistryImageIDs"] !== null) {
+            $this->ExcludeRegistryImageIDs = $param["ExcludeRegistryImageIDs"];
+        }
+
+        if (array_key_exists("LocalClusterIDs",$param) and $param["LocalClusterIDs"] !== null) {
+            $this->LocalClusterIDs = $param["LocalClusterIDs"];
         }
     }
 }

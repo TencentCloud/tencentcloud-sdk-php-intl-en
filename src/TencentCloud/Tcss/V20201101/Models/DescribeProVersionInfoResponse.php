@@ -20,22 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProVersionInfo response structure.
  *
- * @method string getStartTime() Obtain Start time of the Pro Edition, which is not empty only when the edition is purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(string $StartTime) Set Start time of the Pro Edition, which is not empty only when the edition is purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEndTime() Obtain End time of the Pro Edition, which is not empty only when more resources are purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(string $EndTime) Set End time of the Pro Edition, which is not empty only when more resources are purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStartTime() Obtain Pro Edition start time, not null during supplement purchase
+ * @method void setStartTime(string $StartTime) Set Pro Edition start time, not null during supplement purchase
+ * @method string getEndTime() Obtain Pro Edition end time, not null when supplement purchase is made
+ * @method void setEndTime(string $EndTime) Set Pro Edition end time, not null when supplement purchase is made
  * @method integer getCoresCnt() Obtain Number of cores to be purchased
  * @method void setCoresCnt(integer $CoresCnt) Set Number of cores to be purchased
  * @method integer getMaxPostPayCoresCnt() Obtain Upper limit for elastic billing
  * @method void setMaxPostPayCoresCnt(integer $MaxPostPayCoresCnt) Set Upper limit for elastic billing
  * @method string getResourceId() Obtain Resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setResourceId(string $ResourceId) Set Resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getBuyStatus() Obtain Purchase status
 `Pending`: To be purchased.
 `Normal`: Purchased.
@@ -52,14 +46,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class DescribeProVersionInfoResponse extends AbstractModel
 {
     /**
-     * @var string Start time of the Pro Edition, which is not empty only when the edition is purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Pro Edition start time, not null during supplement purchase
      */
     public $StartTime;
 
     /**
-     * @var string End time of the Pro Edition, which is not empty only when more resources are purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Pro Edition end time, not null when supplement purchase is made
      */
     public $EndTime;
 
@@ -75,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ResourceId;
 
@@ -98,14 +89,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $StartTime Start time of the Pro Edition, which is not empty only when the edition is purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EndTime End time of the Pro Edition, which is not empty only when more resources are purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $StartTime Pro Edition start time, not null during supplement purchase
+     * @param string $EndTime Pro Edition end time, not null when supplement purchase is made
      * @param integer $CoresCnt Number of cores to be purchased
      * @param integer $MaxPostPayCoresCnt Upper limit for elastic billing
      * @param string $ResourceId Resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $BuyStatus Purchase status
 `Pending`: To be purchased.
 `Normal`: Purchased.

@@ -21,177 +21,121 @@ use TencentCloud\Common\AbstractModel;
  * Baseline detection item
  *
  * @method integer getItemId() Obtain Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setItemId(integer $ItemId) Set Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getItemName() Obtain Item Name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setItemName(string $ItemName) Set Item Name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getItemDesc() Obtain Item Description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setItemDesc(string $ItemDesc) Set Item Description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFixMethod() Obtain Fixing Method
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFixMethod(string $FixMethod) Set Fixing Method
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRuleName() Obtain Rule
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRuleName(string $RuleName) Set Rule
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getDetectStatus() Obtain 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDetectStatus(integer $DetectStatus) Set 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getLevel() Obtain Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLevel(integer $Level) Set Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getHostCount() Obtain Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostCount(integer $HostCount) Set Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFirstTime() Obtain First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFirstTime(string $FirstTime) Set First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLastTime() Obtain Last Detection Time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLastTime(string $LastTime) Set Last Detection Time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDetectResult() Obtain Detection result, JSON string
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDetectResult(string $DetectResult) Set Detection result, JSON string
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRuleId() Obtain Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRuleId(integer $RuleId) Set Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getPassedHostCount() Obtain Number of servers passed
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPassedHostCount(integer $PassedHostCount) Set Number of servers passed
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getNotPassedHostCount() Obtain Number of servers failed
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNotPassedHostCount(integer $NotPassedHostCount) Set Number of servers failed
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLastTime() Obtain Last detection time
+ * @method void setLastTime(string $LastTime) Set Last detection time
+ * @method string getDetectResult() Obtain Detection result; JSON string.
+ * @method void setDetectResult(string $DetectResult) Set Detection result; JSON string.
+ * @method integer getRuleId() Obtain Rule ID.
+ * @method void setRuleId(integer $RuleId) Set Rule ID.
+ * @method integer getPassedHostCount() Obtain Number of servers passed.
+ * @method void setPassedHostCount(integer $PassedHostCount) Set Number of servers passed.
+ * @method integer getNotPassedHostCount() Obtain Number of servers failed.
+ * @method void setNotPassedHostCount(integer $NotPassedHostCount) Set Number of servers failed.
  */
 class BaselineItemDetect extends AbstractModel
 {
     /**
      * @var integer Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ItemId;
 
     /**
      * @var string Item Name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ItemName;
 
     /**
      * @var string Item Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ItemDesc;
 
     /**
      * @var string Fixing Method
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FixMethod;
 
     /**
      * @var string Rule
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RuleName;
 
     /**
      * @var integer 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DetectStatus;
 
     /**
      * @var integer Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Level;
 
     /**
      * @var integer Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostCount;
 
     /**
      * @var string First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FirstTime;
 
     /**
-     * @var string Last Detection Time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Last detection time
      */
     public $LastTime;
 
     /**
-     * @var string Detection result, JSON string
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Detection result; JSON string.
      */
     public $DetectResult;
 
     /**
-     * @var integer Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Rule ID.
      */
     public $RuleId;
 
     /**
-     * @var integer Number of servers passed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of servers passed.
      */
     public $PassedHostCount;
 
     /**
-     * @var integer Number of servers failed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of servers failed.
      */
     public $NotPassedHostCount;
 
     /**
      * @param integer $ItemId Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ItemName Item Name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ItemDesc Item Description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FixMethod Fixing Method
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RuleName Rule
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $DetectStatus 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $HostCount Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FirstTime First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LastTime Last Detection Time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DetectResult Detection result, JSON string
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RuleId Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $PassedHostCount Number of servers passed
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $NotPassedHostCount Number of servers failed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LastTime Last detection time
+     * @param string $DetectResult Detection result; JSON string.
+     * @param integer $RuleId Rule ID.
+     * @param integer $PassedHostCount Number of servers passed.
+     * @param integer $NotPassedHostCount Number of servers failed.
      */
     function __construct()
     {

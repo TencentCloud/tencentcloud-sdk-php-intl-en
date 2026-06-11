@@ -46,8 +46,8 @@ If you want to quickly submit targets urls under different sites, you can set it
 Note that if it’s enabled, the purging is based on the converted URLs.
  * @method void setEncodeUrl(boolean $EncodeUrl) Set Specifies whether to transcode non-ASCII URLs according to RFC3986.
 Note that if it’s enabled, the purging is based on the converted URLs.
- * @method CacheTag getCacheTag() Obtain The information attached when the node cache purge type is set to purge_cache_tag.
- * @method void setCacheTag(CacheTag $CacheTag) Set The information attached when the node cache purge type is set to purge_cache_tag.
+ * @method CacheTag getCacheTag() Obtain The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
+ * @method void setCacheTag(CacheTag $CacheTag) Set The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
  */
 class CreatePurgeTaskRequest extends AbstractModel
 {
@@ -86,7 +86,7 @@ Note that if it’s enabled, the purging is based on the converted URLs.
     public $EncodeUrl;
 
     /**
-     * @var CacheTag The information attached when the node cache purge type is set to purge_cache_tag.
+     * @var CacheTag The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
      */
     public $CacheTag;
 
@@ -104,7 +104,7 @@ If you want to quickly submit targets urls under different sites, you can set it
      * @param array $Targets The list of resources to purge cache, such as https://www.example.com/example.jpg, must carry protocol information. the format for multi-elements depends on the type of cache purging. refer to the following API call example.  <li>the number of tasks that can be submitted at a time is limited by the billing package quota. check [EO billing package](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>.
      * @param boolean $EncodeUrl Specifies whether to transcode non-ASCII URLs according to RFC3986.
 Note that if it’s enabled, the purging is based on the converted URLs.
-     * @param CacheTag $CacheTag The information attached when the node cache purge type is set to purge_cache_tag.
+     * @param CacheTag $CacheTag The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
      */
     function __construct()
     {

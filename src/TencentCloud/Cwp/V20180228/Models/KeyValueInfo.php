@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getCaseSensitive() Obtain Whether case-sensitive
  * @method void setCaseSensitive(boolean $CaseSensitive) Set Whether case-sensitive
- * @method array getKeyValues() Obtain Information about the key-value pair to be indexed
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKeyValues(array $KeyValues) Set Information about the key-value pair to be indexed
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getKeyValues() Obtain Information about the key-value pair that requires index creation.
+ * @method void setKeyValues(array $KeyValues) Set Information about the key-value pair that requires index creation.
  */
 class KeyValueInfo extends AbstractModel
 {
@@ -35,15 +33,13 @@ class KeyValueInfo extends AbstractModel
     public $CaseSensitive;
 
     /**
-     * @var array Information about the key-value pair to be indexed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Information about the key-value pair that requires index creation.
      */
     public $KeyValues;
 
     /**
      * @param boolean $CaseSensitive Whether case-sensitive
-     * @param array $KeyValues Information about the key-value pair to be indexed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $KeyValues Information about the key-value pair that requires index creation.
      */
     function __construct()
     {

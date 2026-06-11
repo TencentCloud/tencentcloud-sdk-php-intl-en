@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Custom passthrough field structure
  *
  * @method string getKey() Obtain key
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setKey(string $Key) Set key
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getValue() Obtain value
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setValue(string $Value) Set value
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class WebHookCustomField extends AbstractModel
 {
     /**
      * @var string key
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Key;
 
     /**
      * @var string value
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Value;
 
     /**
      * @param string $Key key
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Value value
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -22,18 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPodName() Obtain Pod name
  * @method void setPodName(string $PodName) Set Pod name
- * @method string getNamespace() Obtain Pod space
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNamespace(string $Namespace) Set Pod space
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLabels() Obtain Pod label
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLabels(string $Labels) Set Pod label
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getWorkloadKind() Obtain Pod type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWorkloadKind(string $WorkloadKind) Set Pod type
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNamespace() Obtain Pod Space
+ * @method void setNamespace(string $Namespace) Set Pod Space
+ * @method string getLabels() Obtain pod tag
+ * @method void setLabels(string $Labels) Set pod tag
+ * @method string getWorkloadKind() Obtain Pod Type
+ * @method void setWorkloadKind(string $WorkloadKind) Set Pod Type
  */
 class NetworkClusterPodInfo extends AbstractModel
 {
@@ -43,31 +37,25 @@ class NetworkClusterPodInfo extends AbstractModel
     public $PodName;
 
     /**
-     * @var string Pod space
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Pod Space
      */
     public $Namespace;
 
     /**
-     * @var string Pod label
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string pod tag
      */
     public $Labels;
 
     /**
-     * @var string Pod type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Pod Type
      */
     public $WorkloadKind;
 
     /**
      * @param string $PodName Pod name
-     * @param string $Namespace Pod space
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Labels Pod label
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $WorkloadKind Pod type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Namespace Pod Space
+     * @param string $Labels pod tag
+     * @param string $WorkloadKind Pod Type
      */
     function __construct()
     {

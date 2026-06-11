@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Network policy name
  * @method void setName(string $Name) Set Network policy name
- * @method string getDescription() Obtain Network policy description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDescription(string $Description) Set Network policy description
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDescription() Obtain Network Policy Description
+ * @method void setDescription(string $Description) Set Network Policy Description
  * @method string getPublishStatus() Obtain Publishing status:
 
 `PublishedNoConfirm`: Enabled and to be confirmed.
@@ -72,10 +70,8 @@ cilium: Cilium
 kube-router: KubeRouter
 
 cilium: Cilium
- * @method string getPublishResult() Obtain Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPublishResult(string $PublishResult) Set Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPublishResult() Obtain Policy Distribution Result
+ * @method void setPublishResult(string $PublishResult) Set Policy Distribution Result
  * @method integer getFromPolicyRule() Obtain Inbound rule
 
 `1`: Allow all.
@@ -104,10 +100,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `2`: Reject all.
 
 `3`: Custom.
- * @method string getPodSelector() Obtain Object
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPodSelector(string $PodSelector) Set Object
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPodSelector() Obtain Target Object
+ * @method void setPodSelector(string $PodSelector) Set Target Object
  * @method integer getId() Obtain Network policy ID
  * @method void setId(integer $Id) Set Network policy ID
  */
@@ -119,8 +113,7 @@ class NetworkPolicyInfoItem extends AbstractModel
     public $Name;
 
     /**
-     * @var string Network policy description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Network Policy Description
      */
     public $Description;
 
@@ -168,8 +161,7 @@ cilium: Cilium
     public $NetworkPolicyPlugin;
 
     /**
-     * @var string Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Policy Distribution Result
      */
     public $PublishResult;
 
@@ -196,8 +188,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ToPolicyRule;
 
     /**
-     * @var string Object
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Target Object
      */
     public $PodSelector;
 
@@ -208,8 +199,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $Name Network policy name
-     * @param string $Description Network policy description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Description Network Policy Description
      * @param string $PublishStatus Publishing status:
 
 `PublishedNoConfirm`: Enabled and to be confirmed.
@@ -233,8 +223,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 kube-router: KubeRouter
 
 cilium: Cilium
-     * @param string $PublishResult Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PublishResult Policy Distribution Result
      * @param integer $FromPolicyRule Inbound rule
 
 `1`: Allow all.
@@ -249,8 +238,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `2`: Reject all.
 
 `3`: Custom.
-     * @param string $PodSelector Object
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PodSelector Target Object
      * @param integer $Id Network policy ID
      */
     function __construct()

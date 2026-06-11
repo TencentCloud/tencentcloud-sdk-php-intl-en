@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleInfo(K8sApiAbnormalRuleInfo $RuleInfo) Set Rule details
  * @method string getCopySrcRuleID() Obtain The ID of the copy rule (for copy rule scenarios)
  * @method void setCopySrcRuleID(string $CopySrcRuleID) Set The ID of the copy rule (for copy rule scenarios)
- * @method integer getEventID() Obtain Event ID (for adding events to an allowlist)
- * @method void setEventID(integer $EventID) Set Event ID (for adding events to an allowlist)
+ * @method integer getEventID() Obtain Event ID (abandoned, retained for compatibility. To add an event to the allowlist, use the API ModifyK8sApiAbnormalWhitelist).
+ * @method void setEventID(integer $EventID) Set Event ID (abandoned, retained for compatibility. To add an event to the allowlist, use the API ModifyK8sApiAbnormalWhitelist).
  */
 class CreateK8sApiAbnormalRuleInfoRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateK8sApiAbnormalRuleInfoRequest extends AbstractModel
     public $CopySrcRuleID;
 
     /**
-     * @var integer Event ID (for adding events to an allowlist)
+     * @var integer Event ID (abandoned, retained for compatibility. To add an event to the allowlist, use the API ModifyK8sApiAbnormalWhitelist).
      */
     public $EventID;
 
     /**
      * @param K8sApiAbnormalRuleInfo $RuleInfo Rule details
      * @param string $CopySrcRuleID The ID of the copy rule (for copy rule scenarios)
-     * @param integer $EventID Event ID (for adding events to an allowlist)
+     * @param integer $EventID Event ID (abandoned, retained for compatibility. To add an event to the allowlist, use the API ModifyK8sApiAbnormalWhitelist).
      */
     function __construct()
     {

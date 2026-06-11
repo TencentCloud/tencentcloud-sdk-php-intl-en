@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeJavaMemShellPluginList request structure.
  *
- * @method array getFilters() Obtain Filter Criteria: Keywords: Fuzzy query of IP or host name, JavaShellStatus, exact match of Exception
- * @method void setFilters(array $Filters) Set Filter Criteria: Keywords: Fuzzy query of IP or host name, JavaShellStatus, exact match of Exception
+ * @method array getFilters() Obtain Filtering criteria: InstanceID and IP
+
+MachineName fuzzy query, JavaShellStatus, Exception exact match
+ * @method void setFilters(array $Filters) Set Filtering criteria: InstanceID and IP
+
+MachineName fuzzy query, JavaShellStatus, Exception exact match
  * @method integer getOffset() Obtain Offset, which defaults to 0
  * @method void setOffset(integer $Offset) Set Offset, which defaults to 0
  * @method integer getLimit() Obtain Number of items to be returned. It is 10 by default, and the maximum value is 100.
@@ -30,7 +34,9 @@ use TencentCloud\Common\AbstractModel;
 class DescribeJavaMemShellPluginListRequest extends AbstractModel
 {
     /**
-     * @var array Filter Criteria: Keywords: Fuzzy query of IP or host name, JavaShellStatus, exact match of Exception
+     * @var array Filtering criteria: InstanceID and IP
+
+MachineName fuzzy query, JavaShellStatus, Exception exact match
      */
     public $Filters;
 
@@ -45,7 +51,9 @@ class DescribeJavaMemShellPluginListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters Filter Criteria: Keywords: Fuzzy query of IP or host name, JavaShellStatus, exact match of Exception
+     * @param array $Filters Filtering criteria: InstanceID and IP
+
+MachineName fuzzy query, JavaShellStatus, Exception exact match
      * @param integer $Offset Offset, which defaults to 0
      * @param integer $Limit Number of items to be returned. It is 10 by default, and the maximum value is 100.
      */

@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBaselineWeakPasswordList request structure.
  *
- * @method array getFilters() Obtain <li>WeakPassword - string - required: no - weak password</li>
- * @method void setFilters(array $Filters) Set <li>WeakPassword - string - required: no - weak password</li>
+ * @method array getFilters() Obtain <li>WeakPassword - string - required: no - weak password</li>
+ * @method void setFilters(array $Filters) Set <li>WeakPassword - string - required: no - weak password</li>
  * @method integer getLimit() Obtain Limit Entries, 10 by default, up to 100
  * @method void setLimit(integer $Limit) Set Limit Entries, 10 by default, up to 100
  * @method integer getOffset() Obtain Offset, which is 0 by default.
  * @method void setOffset(integer $Offset) Set Offset, which is 0 by default.
- * @method string getOrder() Obtain Sorting order [ASC: ascending|DESC: descending]
- * @method void setOrder(string $Order) Set Sorting order [ASC: ascending|DESC: descending]
- * @method string getBy() Obtain Sorting column [CreateTime|ModifyTime]
- * @method void setBy(string $By) Set Sorting column [CreateTime|ModifyTime]
+ * @method string getOrder() Obtain Sorting order [ASC: ascending|DESC: descending]
+ * @method void setOrder(string $Order) Set Sorting order [ASC: ascending|DESC: descending]
+ * @method string getBy() Obtain Sorting column [CreateTime|ModifyTime]
+ * @method void setBy(string $By) Set Sorting column [CreateTime|ModifyTime]
  */
 class DescribeBaselineWeakPasswordListRequest extends AbstractModel
 {
     /**
-     * @var array <li>WeakPassword - string - required: no - weak password</li>
+     * @var array <li>WeakPassword - string - required: no - weak password</li>
      */
     public $Filters;
 
@@ -49,21 +49,21 @@ class DescribeBaselineWeakPasswordListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string Sorting order [ASC: ascending|DESC: descending]
+     * @var string Sorting order [ASC: ascending|DESC: descending]
      */
     public $Order;
 
     /**
-     * @var string Sorting column [CreateTime|ModifyTime]
+     * @var string Sorting column [CreateTime|ModifyTime]
      */
     public $By;
 
     /**
-     * @param array $Filters <li>WeakPassword - string - required: no - weak password</li>
+     * @param array $Filters <li>WeakPassword - string - required: no - weak password</li>
      * @param integer $Limit Limit Entries, 10 by default, up to 100
      * @param integer $Offset Offset, which is 0 by default.
-     * @param string $Order Sorting order [ASC: ascending|DESC: descending]
-     * @param string $By Sorting column [CreateTime|ModifyTime]
+     * @param string $Order Sorting order [ASC: ascending|DESC: descending]
+     * @param string $By Sorting column [CreateTime|ModifyTime]
      */
     function __construct()
     {

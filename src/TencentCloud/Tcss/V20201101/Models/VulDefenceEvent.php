@@ -46,10 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Processing status
  * @method integer getEventID() Obtain Event ID
  * @method void setEventID(integer $EventID) Set Event ID
- * @method string getCreateTime() Obtain First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCreateTime() Obtain First detection time
+ * @method void setCreateTime(string $CreateTime) Set First detection time
  * @method string getContainerNetStatus() Obtain Isolation status
 `NORMAL`: 	Not isolated.
 `ISOLATED`: 		Isolated.
@@ -65,61 +63,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
  * @method string getMergeTime() Obtain Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMergeTime(string $MergeTime) Set Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContainerStatus() Obtain Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContainerStatus(string $ContainerStatus) Set Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContainerNetSubStatus() Obtain Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) Set Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContainerIsolateOperationSrc() Obtain Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) Set Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getQUUID() Obtain Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
- * @method void setQUUID(string $QUUID) Set Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
- * @method string getHostIP() Obtain Server private IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostIP(string $HostIP) Set Server private IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHostName() Obtain General node/Super node name
-Note: This field may return·`null`, indicating that no valid values can be obtained.
- * @method void setHostName(string $HostName) Set General node/Super node name
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method string getContainerStatus() Obtain Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+ * @method void setContainerStatus(string $ContainerStatus) Set Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+ * @method string getContainerNetSubStatus() Obtain Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
+ * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) Set Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
+ * @method string getContainerIsolateOperationSrc() Obtain Container Isolation Operation Source
+ * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) Set Container Isolation Operation Source
+ * @method string getQUUID() Obtain Host QUUID/Super Node ID
+ * @method void setQUUID(string $QUUID) Set Host QUUID/Super Node ID
+ * @method string getHostIP() Obtain Host private IP address
+ * @method void setHostIP(string $HostIP) Set Host private IP address
+ * @method string getHostName() Obtain Host Name/Super Node Name
+ * @method void setHostName(string $HostName) Set Host Name/Super Node Name
  * @method string getNodeType() Obtain Node type. Values: `NORMAL` (general node), `SUPER` (super node).
  * @method void setNodeType(string $NodeType) Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
  * @method string getPublicIP() Obtain Public IP
@@ -132,6 +116,10 @@ Note: This field may return·`null`, indicating that no valid values can be obta
  * @method void setClusterID(string $ClusterID) Set Cluster ID
  * @method string getClusterName() Obtain Cluster name
  * @method void setClusterName(string $ClusterName) Set Cluster name
+ * @method string getPodName() Obtain Pod name
+ * @method void setPodName(string $PodName) Set Pod name
+ * @method string getPodIP() Obtain pod ip
+ * @method void setPodIP(string $PodIP) Set pod ip
  */
 class VulDefenceEvent extends AbstractModel
 {
@@ -201,8 +189,7 @@ class VulDefenceEvent extends AbstractModel
     public $EventID;
 
     /**
-     * @var string First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string First detection time
      */
     public $CreateTime;
 
@@ -219,57 +206,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MergeTime;
 
     /**
-     * @var string Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
      */
     public $ContainerStatus;
 
     /**
-     * @var string Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
      */
     public $ContainerNetSubStatus;
 
     /**
-     * @var string Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Container Isolation Operation Source
      */
     public $ContainerIsolateOperationSrc;
 
     /**
-     * @var string Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @var string Host QUUID/Super Node ID
      */
     public $QUUID;
 
     /**
-     * @var string Server private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host private IP address
      */
     public $HostIP;
 
     /**
-     * @var string General node/Super node name
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @var string Host Name/Super Node Name
      */
     public $HostName;
 
@@ -304,6 +284,16 @@ Note: This field may return·`null`, indicating that no valid values can be obta
     public $ClusterName;
 
     /**
+     * @var string Pod name
+     */
+    public $PodName;
+
+    /**
+     * @var string pod ip
+     */
+    public $PodIP;
+
+    /**
      * @param string $CVEID Vulnerability CVE ID
      * @param string $VulName Vulnerability name
      * @param string $PocID POC ID
@@ -317,8 +307,7 @@ Note: This field may return·`null`, indicating that no valid values can be obta
      * @param string $ImageName Image name
      * @param string $Status Processing status
      * @param integer $EventID Event ID
-     * @param string $CreateTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CreateTime First detection time
      * @param string $ContainerNetStatus Isolation status
 `NORMAL`: 	Not isolated.
 `ISOLATED`: 		Isolated.
@@ -327,39 +316,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
      * @param string $MergeTime Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $QUUID Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-     * @param string $HostIP Server private IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HostName General node/Super node name
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param string $ContainerStatus Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+     * @param string $ContainerNetSubStatus Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
+     * @param string $ContainerIsolateOperationSrc Container Isolation Operation Source
+     * @param string $QUUID Host QUUID/Super Node ID
+     * @param string $HostIP Host private IP address
+     * @param string $HostName Host Name/Super Node Name
      * @param string $NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
      * @param string $PublicIP Public IP
      * @param string $NodeUniqueID UID of a super node
      * @param string $NodeID ID of a super node
      * @param string $ClusterID Cluster ID
      * @param string $ClusterName Cluster name
+     * @param string $PodName Pod name
+     * @param string $PodIP pod ip
      */
     function __construct()
     {
@@ -484,6 +468,14 @@ Note: This field may return·`null`, indicating that no valid values can be obta
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
         }
     }
 }

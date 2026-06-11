@@ -22,122 +22,84 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() Obtain Unique ID
  * @method void setId(integer $Id) Set Unique ID
- * @method string getUuid() Obtain CWPP client UUID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUuid(string $Uuid) Set CWPP client UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUuid() Obtain CWP client UUID.
+ * @method void setUuid(string $Uuid) Set CWP client UUID.
  * @method string getMachineIp() Obtain Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineIp(string $MachineIp) Set Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMachineName() Obtain Host name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineName(string $MachineName) Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUserName() Obtain Username
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserName(string $UserName) Set Username
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSrcIp() Obtain Source IP address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSrcIp(string $SrcIp) Set Source IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMachineName() Obtain host name
+ * @method void setMachineName(string $MachineName) Set host name
+ * @method string getUserName() Obtain Username.
+ * @method void setUserName(string $UserName) Set Username.
+ * @method string getSrcIp() Obtain Source IP
+ * @method void setSrcIp(string $SrcIp) Set Source IP
  * @method string getStatus() Obtain SUCCESS: cracking successful; FAILED: cracking failed
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatus(string $Status) Set SUCCESS: cracking successful; FAILED: cracking failed
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getCountry() Obtain Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCountry(integer $Country) Set Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getCity() Obtain City ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCity(integer $City) Set City ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProvince() Obtain Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProvince(integer $Province) Set Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getProvince() Obtain Province id
+ * @method void setProvince(integer $Province) Set Province id
  * @method string getCreateTime() Obtain Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getBanStatus() Obtain 0: no blocking (not supported for the client version)1: blocked
-2: blocking failed (program exception)
-3: no blocking (do not block for the private network)
-4: availability zone does not support blocking
+ * @method integer getBanStatus() Obtain 0 - No blocking (not supported by the client version)
+1: blocked
+2: Blocking failed (program exception)
+3: No blocking (No blocking for the private network)
+4: Availability zone does not support blocking
 10: blocking
 81: no blocking (blocking disabled)
-82: no blocking (non-Pro Edition)
+82-No Blocking (Non-Pro Edition)
 83: no blocking (added to the allowlist)
 86: no blocking (system allowlist)
-87: no blocking (client offline)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBanStatus(integer $BanStatus) Set 0: no blocking (not supported for the client version)1: blocked
-2: blocking failed (program exception)
-3: no blocking (do not block for the private network)
-4: availability zone does not support blocking
+87: No blocking (client offline)
+88-No blocking (Source Ip belongs to the same customer)
+89: no blocking (blocking is not supported for ipv6)
+ * @method void setBanStatus(integer $BanStatus) Set 0 - No blocking (not supported by the client version)
+1: blocked
+2: Blocking failed (program exception)
+3: No blocking (No blocking for the private network)
+4: Availability zone does not support blocking
 10: blocking
 81: no blocking (blocking disabled)
-82: no blocking (non-Pro Edition)
+82-No Blocking (Non-Pro Edition)
 83: no blocking (added to the allowlist)
 86: no blocking (system allowlist)
-87: no blocking (client offline)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getEventType() Obtain Event type. 200: brute force cracking event; 300: event of successful brute force cracking (page display); 400: event of brute force cracking on a non-existent account.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEventType(integer $EventType) Set Event type. 200: brute force cracking event; 300: event of successful brute force cracking (page display); 400: event of brute force cracking on a non-existent account.Note: This field may return null, indicating that no valid values can be obtained.
+87: No blocking (client offline)
+88-No blocking (Source Ip belongs to the same customer)
+89: no blocking (blocking is not supported for ipv6)
+ * @method integer getEventType() Obtain Event type: 200 - brute force cracking event; 300 - successful brute force cracking event (the status is displayed on the page); 400 - brute force cracking event for non-existent accounts.
+ * @method void setEventType(integer $EventType) Set Event type: 200 - brute force cracking event; 300 - successful brute force cracking event (the status is displayed on the page); 400 - brute force cracking event for non-existent accounts.
  * @method integer getCount() Obtain Occurrence count
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCount(integer $Count) Set Occurrence count
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getQuuid() Obtain Machine UUID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQuuid(string $Quuid) Set Machine UUID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsProVersion() Obtain Whether it is of the Pro Edition (true/false)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsProVersion(boolean $IsProVersion) Set Whether it is of the Pro Edition (true/false)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getQuuid() Obtain CVM instance UUID.
+ * @method void setQuuid(string $Quuid) Set CVM instance UUID.
+ * @method boolean getIsProVersion() Obtain Whether it is the Pro Edition (true/false)
+ * @method void setIsProVersion(boolean $IsProVersion) Set Whether it is the Pro Edition (true/false)
  * @method string getProtocol() Obtain Username of the attacked service
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProtocol(string $Protocol) Set Username of the attacked service
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getPort() Obtain Port
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPort(integer $Port) Set Port
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getModifyTime() Obtain Last attack time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setModifyTime(string $ModifyTime) Set Last attack time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstanceId() Obtain Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceId(string $InstanceId) Set Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getDataStatus() Obtain 0: pending; 1: ignored; 5: fixed; 6: added to allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDataStatus(integer $DataStatus) Set 0: pending; 1: ignored; 5: fixed; 6: added to allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLocation() Obtain Geo-location in Chinese
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLocation(string $Location) Set Geo-location in Chinese
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRiskLevel() Obtain Threat level. 0: low-risk; 1: medium-risk; 2: high-risk.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRiskLevel(integer $RiskLevel) Set Threat level. 0: low-risk; 1: medium-risk; 2: high-risk.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDataFrom() Obtain Event source. 0: blocking rule; 1: threat intelligence.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataFrom(integer $DataFrom) Set Event source. 0: blocking rule; 1: threat intelligence.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAttackStatusDesc() Obtain Description of the brute force cracking status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAttackStatusDesc(string $AttackStatusDesc) Set Description of the brute force cracking status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBanExpiredTime() Obtain Blocking expiration time (valid only for events in blocking status)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBanExpiredTime(string $BanExpiredTime) Set Blocking expiration time (valid only for events in blocking status)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLocation() Obtain Chinese name of a geo location.
+ * @method void setLocation(string $Location) Set Chinese name of a geo location.
+ * @method integer getRiskLevel() Obtain Threat level. 0: low risk, 1: medium risk, 2: high risk.
+ * @method void setRiskLevel(integer $RiskLevel) Set Threat level. 0: low risk, 1: medium risk, 2: high risk.
+ * @method integer getDataFrom() Obtain Event source. 0: blocking rule, 1: threat intelligence.
+ * @method void setDataFrom(integer $DataFrom) Set Event source. 0: blocking rule, 1: threat intelligence.
+ * @method string getAttackStatusDesc() Obtain Cracking status description.
+ * @method void setAttackStatusDesc(string $AttackStatusDesc) Set Cracking status description.
+ * @method string getBanExpiredTime() Obtain Block expiration time (only valid for blocked events).
+ * @method void setBanExpiredTime(string $BanExpiredTime) Set Block expiration time (only valid for blocked events).
+ * @method IPAnalyse getIPAnalyse() Obtain IP analysis
+ * @method void setIPAnalyse(IPAnalyse $IPAnalyse) Set IP analysis
  */
 class BruteAttackInfo extends AbstractModel
 {
@@ -147,227 +109,193 @@ class BruteAttackInfo extends AbstractModel
     public $Id;
 
     /**
-     * @var string CWPP client UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string CWP client UUID.
      */
     public $Uuid;
 
     /**
      * @var string Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineIp;
 
     /**
-     * @var string Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string host name
      */
     public $MachineName;
 
     /**
-     * @var string Username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Username.
      */
     public $UserName;
 
     /**
-     * @var string Source IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Source IP
      */
     public $SrcIp;
 
     /**
      * @var string SUCCESS: cracking successful; FAILED: cracking failed
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
      * @var integer Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Country;
 
     /**
      * @var integer City ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $City;
 
     /**
-     * @var integer Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Province id
      */
     public $Province;
 
     /**
      * @var string Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var integer 0: no blocking (not supported for the client version)1: blocked
-2: blocking failed (program exception)
-3: no blocking (do not block for the private network)
-4: availability zone does not support blocking
+     * @var integer 0 - No blocking (not supported by the client version)
+1: blocked
+2: Blocking failed (program exception)
+3: No blocking (No blocking for the private network)
+4: Availability zone does not support blocking
 10: blocking
 81: no blocking (blocking disabled)
-82: no blocking (non-Pro Edition)
+82-No Blocking (Non-Pro Edition)
 83: no blocking (added to the allowlist)
 86: no blocking (system allowlist)
-87: no blocking (client offline)
-Note: This field may return null, indicating that no valid values can be obtained.
+87: No blocking (client offline)
+88-No blocking (Source Ip belongs to the same customer)
+89: no blocking (blocking is not supported for ipv6)
      */
     public $BanStatus;
 
     /**
-     * @var integer Event type. 200: brute force cracking event; 300: event of successful brute force cracking (page display); 400: event of brute force cracking on a non-existent account.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Event type: 200 - brute force cracking event; 300 - successful brute force cracking event (the status is displayed on the page); 400 - brute force cracking event for non-existent accounts.
      */
     public $EventType;
 
     /**
      * @var integer Occurrence count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Count;
 
     /**
-     * @var string Machine UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string CVM instance UUID.
      */
     public $Quuid;
 
     /**
-     * @var boolean Whether it is of the Pro Edition (true/false)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether it is the Pro Edition (true/false)
      */
     public $IsProVersion;
 
     /**
      * @var string Username of the attacked service
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Protocol;
 
     /**
      * @var integer Port
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Port;
 
     /**
      * @var string Last attack time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ModifyTime;
 
     /**
      * @var string Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceId;
 
     /**
      * @var integer 0: pending; 1: ignored; 5: fixed; 6: added to allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataStatus;
 
     /**
      * @var MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
     /**
-     * @var string Geo-location in Chinese
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Chinese name of a geo location.
      */
     public $Location;
 
     /**
-     * @var integer Threat level. 0: low-risk; 1: medium-risk; 2: high-risk.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Threat level. 0: low risk, 1: medium risk, 2: high risk.
      */
     public $RiskLevel;
 
     /**
-     * @var integer Event source. 0: blocking rule; 1: threat intelligence.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Event source. 0: blocking rule, 1: threat intelligence.
      */
     public $DataFrom;
 
     /**
-     * @var string Description of the brute force cracking status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Cracking status description.
      */
     public $AttackStatusDesc;
 
     /**
-     * @var string Blocking expiration time (valid only for events in blocking status)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Block expiration time (only valid for blocked events).
      */
     public $BanExpiredTime;
 
     /**
+     * @var IPAnalyse IP analysis
+     */
+    public $IPAnalyse;
+
+    /**
      * @param integer $Id Unique ID
-     * @param string $Uuid CWPP client UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Uuid CWP client UUID.
      * @param string $MachineIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MachineName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UserName Username
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SrcIp Source IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MachineName host name
+     * @param string $UserName Username.
+     * @param string $SrcIp Source IP
      * @param string $Status SUCCESS: cracking successful; FAILED: cracking failed
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Country Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $City City ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Province Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Province Province id
      * @param string $CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $BanStatus 0: no blocking (not supported for the client version)1: blocked
-2: blocking failed (program exception)
-3: no blocking (do not block for the private network)
-4: availability zone does not support blocking
+     * @param integer $BanStatus 0 - No blocking (not supported by the client version)
+1: blocked
+2: Blocking failed (program exception)
+3: No blocking (No blocking for the private network)
+4: Availability zone does not support blocking
 10: blocking
 81: no blocking (blocking disabled)
-82: no blocking (non-Pro Edition)
+82-No Blocking (Non-Pro Edition)
 83: no blocking (added to the allowlist)
 86: no blocking (system allowlist)
-87: no blocking (client offline)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $EventType Event type. 200: brute force cracking event; 300: event of successful brute force cracking (page display); 400: event of brute force cracking on a non-existent account.Note: This field may return null, indicating that no valid values can be obtained.
+87: No blocking (client offline)
+88-No blocking (Source Ip belongs to the same customer)
+89: no blocking (blocking is not supported for ipv6)
+     * @param integer $EventType Event type: 200 - brute force cracking event; 300 - successful brute force cracking event (the status is displayed on the page); 400 - brute force cracking event for non-existent accounts.
      * @param integer $Count Occurrence count
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Quuid Machine UUID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsProVersion Whether it is of the Pro Edition (true/false)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Quuid CVM instance UUID.
+     * @param boolean $IsProVersion Whether it is the Pro Edition (true/false)
      * @param string $Protocol Username of the attacked service
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Port Port
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ModifyTime Last attack time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $DataStatus 0: pending; 1: ignored; 5: fixed; 6: added to allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo $MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Location Geo-location in Chinese
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RiskLevel Threat level. 0: low-risk; 1: medium-risk; 2: high-risk.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DataFrom Event source. 0: blocking rule; 1: threat intelligence.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AttackStatusDesc Description of the brute force cracking status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BanExpiredTime Blocking expiration time (valid only for events in blocking status)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Location Chinese name of a geo location.
+     * @param integer $RiskLevel Threat level. 0: low risk, 1: medium risk, 2: high risk.
+     * @param integer $DataFrom Event source. 0: blocking rule, 1: threat intelligence.
+     * @param string $AttackStatusDesc Cracking status description.
+     * @param string $BanExpiredTime Block expiration time (only valid for blocked events).
+     * @param IPAnalyse $IPAnalyse IP analysis
      */
     function __construct()
     {
@@ -489,6 +417,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("BanExpiredTime",$param) and $param["BanExpiredTime"] !== null) {
             $this->BanExpiredTime = $param["BanExpiredTime"];
+        }
+
+        if (array_key_exists("IPAnalyse",$param) and $param["IPAnalyse"] !== null) {
+            $this->IPAnalyse = new IPAnalyse();
+            $this->IPAnalyse->deserialize($param["IPAnalyse"]);
         }
     }
 }

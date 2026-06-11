@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportBaselineItemDetectList request structure.
  *
- * @method array getFilters() Obtain <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
- * @method void setFilters(array $Filters) Set <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
+ * @method array getFilters() Obtain <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
+ * @method void setFilters(array $Filters) Set <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
  * @method integer getExportAll() Obtain 0: Filtered Result Export; 1: Export All
  * @method void setExportAll(integer $ExportAll) Set 0: Filtered Result Export; 1: Export All
  * @method integer getIsExportDetail() Obtain 0: show the export interface; 1: export all result events
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ExportBaselineItemDetectListRequest extends AbstractModel
 {
     /**
-     * @var array <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
+     * @var array <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
      */
     public $Filters;
 
@@ -45,7 +45,7 @@ class ExportBaselineItemDetectListRequest extends AbstractModel
     public $IsExportDetail;
 
     /**
-     * @param array $Filters <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
+     * @param array $Filters <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
      * @param integer $ExportAll 0: Filtered Result Export; 1: Export All
      * @param integer $IsExportDetail 0: show the export interface; 1: export all result events
      */

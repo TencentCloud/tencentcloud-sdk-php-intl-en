@@ -28,6 +28,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanType(array $ScanType) Set Array of scan types
  * @method array getId() Obtain List of IDs of scanned images
  * @method void setId(array $Id) Set List of IDs of scanned images
+ * @method array getExcludeIDs() Obtain List of image IDs excluded from scanning.
+ * @method void setExcludeIDs(array $ExcludeIDs) Set List of image IDs excluded from scanning.
+ * @method boolean getIsLatest() Obtain 
+ * @method void setIsLatest(boolean $IsLatest) Set 
+ * @method integer getScanScope() Obtain 
+ * @method void setScanScope(integer $ScanScope) Set 
+ * @method array getRegistryType() Obtain 
+ * @method void setRegistryType(array $RegistryType) Set 
+ * @method array getNamespace() Obtain 
+ * @method void setNamespace(array $Namespace) Set 
+ * @method boolean getContainerRunning() Obtain 
+ * @method void setContainerRunning(boolean $ContainerRunning) Set 
+ * @method integer getTimeout() Obtain 
+ * @method void setTimeout(integer $Timeout) Set 
  */
 class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
 {
@@ -53,10 +67,52 @@ class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var array List of image IDs excluded from scanning.
+     */
+    public $ExcludeIDs;
+
+    /**
+     * @var boolean 
+     */
+    public $IsLatest;
+
+    /**
+     * @var integer 
+     */
+    public $ScanScope;
+
+    /**
+     * @var array 
+     */
+    public $RegistryType;
+
+    /**
+     * @var array 
+     */
+    public $Namespace;
+
+    /**
+     * @var boolean 
+     */
+    public $ContainerRunning;
+
+    /**
+     * @var integer 
+     */
+    public $Timeout;
+
+    /**
      * @param boolean $All Whether to scan all images
      * @param array $Images List of scanned images
      * @param array $ScanType Array of scan types
      * @param array $Id List of IDs of scanned images
+     * @param array $ExcludeIDs List of image IDs excluded from scanning.
+     * @param boolean $IsLatest 
+     * @param integer $ScanScope 
+     * @param array $RegistryType 
+     * @param array $Namespace 
+     * @param boolean $ContainerRunning 
+     * @param integer $Timeout 
      */
     function __construct()
     {
@@ -90,6 +146,34 @@ class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("ExcludeIDs",$param) and $param["ExcludeIDs"] !== null) {
+            $this->ExcludeIDs = $param["ExcludeIDs"];
+        }
+
+        if (array_key_exists("IsLatest",$param) and $param["IsLatest"] !== null) {
+            $this->IsLatest = $param["IsLatest"];
+        }
+
+        if (array_key_exists("ScanScope",$param) and $param["ScanScope"] !== null) {
+            $this->ScanScope = $param["ScanScope"];
+        }
+
+        if (array_key_exists("RegistryType",$param) and $param["RegistryType"] !== null) {
+            $this->RegistryType = $param["RegistryType"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("ContainerRunning",$param) and $param["ContainerRunning"] !== null) {
+            $this->ContainerRunning = $param["ContainerRunning"];
+        }
+
+        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
+            $this->Timeout = $param["Timeout"];
         }
     }
 }

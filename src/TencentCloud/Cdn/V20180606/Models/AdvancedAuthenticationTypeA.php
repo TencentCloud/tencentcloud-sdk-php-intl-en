@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireTime(integer $ExpireTime) Set Expiration time in seconds
  * @method boolean getExpireTimeRequired() Obtain Whether the expiration time parameter is required
  * @method void setExpireTimeRequired(boolean $ExpireTimeRequired) Set Whether the expiration time parameter is required
- * @method string getFormat() Obtain URL composition, e.g., `${private_key}${schema}${host}${full_uri}`.
- * @method void setFormat(string $Format) Set URL composition, e.g., `${private_key}${schema}${host}${full_uri}`.
+ * @method string getFormat() Obtain URL format, for example: ${private_key}${schema}${host}${full_uri}.
+ * @method void setFormat(string $Format) Set URL format, for example: ${private_key}${schema}${host}${full_uri}.
  * @method string getTimeFormat() Obtain Time format. Valid values: dec (decimal), hex (hexadecimal).
  * @method void setTimeFormat(string $TimeFormat) Set Time format. Valid values: dec (decimal), hex (hexadecimal).
  * @method integer getFailCode() Obtain Status code returned when the authentication failed
@@ -71,7 +71,7 @@ class AdvancedAuthenticationTypeA extends AbstractModel
     public $ExpireTimeRequired;
 
     /**
-     * @var string URL composition, e.g., `${private_key}${schema}${host}${full_uri}`.
+     * @var string URL format, for example: ${private_key}${schema}${host}${full_uri}.
      */
     public $Format;
 
@@ -106,7 +106,7 @@ class AdvancedAuthenticationTypeA extends AbstractModel
      * @param string $TimeParam Time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
      * @param integer $ExpireTime Expiration time in seconds
      * @param boolean $ExpireTimeRequired Whether the expiration time parameter is required
-     * @param string $Format URL composition, e.g., `${private_key}${schema}${host}${full_uri}`.
+     * @param string $Format URL format, for example: ${private_key}${schema}${host}${full_uri}.
      * @param string $TimeFormat Time format. Valid values: dec (decimal), hex (hexadecimal).
      * @param integer $FailCode Status code returned when the authentication failed
      * @param integer $ExpireCode Status code returned when the URL expired

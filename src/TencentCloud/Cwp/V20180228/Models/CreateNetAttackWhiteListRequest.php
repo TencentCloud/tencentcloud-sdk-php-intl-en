@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScope(integer $Scope) Set Whether the allowlist applies to all hosts. 0: no; 1: yes.
  * @method array getSrcIp() Obtain Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24 
  * @method void setSrcIp(array $SrcIp) Set Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24 
- * @method array getQuuidList() Obtain QUUID list
- * @method void setQuuidList(array $QuuidList) Set QUUID list
+ * @method array getQuuidList() Obtain QUUID list
+ * @method void setQuuidList(array $QuuidList) Set QUUID list
  * @method integer getEventId() Obtain Event ID
  * @method void setEventId(integer $EventId) Set Event ID
  * @method integer getDealOldEvents() Obtain Whether to allowlist all alarms that match this rule: 1: Yes, 0: No.
@@ -46,7 +46,7 @@ class CreateNetAttackWhiteListRequest extends AbstractModel
     public $SrcIp;
 
     /**
-     * @var array QUUID list
+     * @var array QUUID list
      */
     public $QuuidList;
 
@@ -68,7 +68,7 @@ class CreateNetAttackWhiteListRequest extends AbstractModel
     /**
      * @param integer $Scope Whether the allowlist applies to all hosts. 0: no; 1: yes.
      * @param array $SrcIp Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24 
-     * @param array $QuuidList QUUID list
+     * @param array $QuuidList QUUID list
      * @param integer $EventId Event ID
      * @param integer $DealOldEvents Whether to allowlist all alarms that match this rule: 1: Yes, 0: No.
      * @param string $Description Description

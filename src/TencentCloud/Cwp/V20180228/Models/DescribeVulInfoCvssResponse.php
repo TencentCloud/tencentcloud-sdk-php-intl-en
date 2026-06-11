@@ -21,73 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * DescribeVulInfoCvss response structure.
  *
  * @method integer getVulId() Obtain Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVulId(integer $VulId) Set Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVulName() Obtain Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVulName(string $VulName) Set Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getVulLevel() Obtain Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVulLevel(integer $VulLevel) Set Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getVulType() Obtain Vulnerability Classification: 1: Web-CMS Vulnerability 2: Application Vulnerabilities 4: Linux Software Vulnerabilities 5: Windows System Vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVulType(integer $VulType) Set Vulnerability Classification: 1: Web-CMS Vulnerability 2: Application Vulnerabilities 4: Linux Software Vulnerabilities 5: Windows System Vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDescription() Obtain Vulnerability Description Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Vulnerability Description Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRepairPlan() Obtain Fixing solution
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRepairPlan(string $RepairPlan) Set Fixing solution
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCveId() Obtain Vulnerability CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCveId(string $CveId) Set Vulnerability CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCveId() Obtain Vulnerability CVEID
+ * @method void setCveId(string $CveId) Set Vulnerability CVEID
  * @method string getReference() Obtain Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReference(string $Reference) Set Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCVSS() Obtain CVSS Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCVSS(string $CVSS) Set CVSS Information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPublicDate() Obtain Release date
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPublicDate(string $PublicDate) Set Release date
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPublicDate() Obtain Release time
+ * @method void setPublicDate(string $PublicDate) Set Release time
  * @method integer getCvssScore() Obtain CVSS Score
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCvssScore(integer $CvssScore) Set CVSS Score
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCveInfo() Obtain CVSS Details
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCveInfo(string $CveInfo) Set CVSS Details
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method float getCvssScoreFloat() Obtain CVSS score, floating point type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCvssScoreFloat(float $CvssScoreFloat) Set CVSS score, floating point type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getLabels() Obtain Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLabels(string $Labels) Set Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getDefenseAttackCount() Obtain Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDefenseAttackCount(integer $DefenseAttackCount) Set Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getSuccessFixCount() Obtain Total Number of Successful Network Repairs. Returns 0 by default for unsupported auto-repair vulnerabilities.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSuccessFixCount(integer $SuccessFixCount) Set Total Number of Successful Network Repairs. Returns 0 by default for unsupported auto-repair vulnerabilities.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getFixSwitch() Obtain Repair support: 0 - Neither Windows nor Linux supports for repair; 1 - Both Windows and Linux support for repair; 2 - Only Linux supports for repair; 3 - Only Windows supports for repair.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFixSwitch(integer $FixSwitch) Set Repair support: 0 - Neither Windows nor Linux supports for repair; 1 - Both Windows and Linux support for repair; 2 - Only Linux supports for repair; 3 - Only Windows supports for repair.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSupportDefence() Obtain Support defense: 0-no support 1-support
+ * @method void setSupportDefence(integer $SupportDefence) Set Support defense: 0-no support 1-support
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
@@ -95,105 +63,93 @@ class DescribeVulInfoCvssResponse extends AbstractModel
 {
     /**
      * @var integer Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VulId;
 
     /**
      * @var string Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VulName;
 
     /**
      * @var integer Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VulLevel;
 
     /**
      * @var integer Vulnerability Classification: 1: Web-CMS Vulnerability 2: Application Vulnerabilities 4: Linux Software Vulnerabilities 5: Windows System Vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VulType;
 
     /**
      * @var string Vulnerability Description Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Description;
 
     /**
      * @var string Fixing solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RepairPlan;
 
     /**
-     * @var string Vulnerability CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Vulnerability CVEID
      */
     public $CveId;
 
     /**
      * @var string Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Reference;
 
     /**
      * @var string CVSS Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CVSS;
 
     /**
-     * @var string Release date
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Release time
      */
     public $PublicDate;
 
     /**
      * @var integer CVSS Score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CvssScore;
 
     /**
      * @var string CVSS Details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CveInfo;
 
     /**
      * @var float CVSS score, floating point type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CvssScoreFloat;
 
     /**
      * @var string Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Labels;
 
     /**
      * @var integer Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DefenseAttackCount;
 
     /**
      * @var integer Total Number of Successful Network Repairs. Returns 0 by default for unsupported auto-repair vulnerabilities.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SuccessFixCount;
 
     /**
      * @var integer Repair support: 0 - Neither Windows nor Linux supports for repair; 1 - Both Windows and Linux support for repair; 2 - Only Linux supports for repair; 3 - Only Windows supports for repair.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FixSwitch;
+
+    /**
+     * @var integer Support defense: 0-no support 1-support
+     */
+    public $SupportDefence;
 
     /**
      * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -202,39 +158,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $VulLevel Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $VulType Vulnerability Classification: 1: Web-CMS Vulnerability 2: Application Vulnerabilities 4: Linux Software Vulnerabilities 5: Windows System Vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Description Vulnerability Description Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RepairPlan Fixing solution
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CveId Vulnerability CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CveId Vulnerability CVEID
      * @param string $Reference Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CVSS CVSS Information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PublicDate Release date
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PublicDate Release time
      * @param integer $CvssScore CVSS Score
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CveInfo CVSS Details
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param float $CvssScoreFloat CVSS score, floating point type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Labels Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $DefenseAttackCount Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SuccessFixCount Total Number of Successful Network Repairs. Returns 0 by default for unsupported auto-repair vulnerabilities.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $FixSwitch Repair support: 0 - Neither Windows nor Linux supports for repair; 1 - Both Windows and Linux support for repair; 2 - Only Linux supports for repair; 3 - Only Windows supports for repair.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SupportDefence Support defense: 0-no support 1-support
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -316,6 +256,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("FixSwitch",$param) and $param["FixSwitch"] !== null) {
             $this->FixSwitch = $param["FixSwitch"];
+        }
+
+        if (array_key_exists("SupportDefence",$param) and $param["SupportDefence"] !== null) {
+            $this->SupportDefence = $param["SupportDefence"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

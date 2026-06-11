@@ -44,28 +44,20 @@ use TencentCloud\Common\AbstractModel;
 `CHECK_RUNNING`: Checking.
 `CHECK_FINISHED`: Checked.
 `CHECK_FAILED`: Check failed.
- * @method string getCheckResult() Obtain Check result
-`RESULT_PASSED`: Passed.
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCheckResult(string $CheckResult) Set Check result
-`RESULT_PASSED`: Passed.
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getWhitelistId() Obtain Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWhitelistId(integer $WhitelistId) Set Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCheckResult() Obtain detection result
+RESULT_PASSED: Passed.
+RESULT_FAILED: failed
+ * @method void setCheckResult(string $CheckResult) Set detection result
+RESULT_PASSED: Passed.
+RESULT_FAILED: failed
+ * @method integer getWhitelistId() Obtain ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
+ * @method void setWhitelistId(integer $WhitelistId) Set ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
  * @method string getFixSuggestion() Obtain Handling suggestion
  * @method void setFixSuggestion(string $FixSuggestion) Set Handling suggestion
- * @method string getLastCheckTime() Obtain Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLastCheckTime(string $LastCheckTime) Set Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLastCheckTime() Obtain Last detection time.
+ * @method void setLastCheckTime(string $LastCheckTime) Set Last detection time.
  * @method string getVerifyInfo() Obtain Verification information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVerifyInfo(string $VerifyInfo) Set Verification information
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ComplianceAssetPolicyItem extends AbstractModel
 {
@@ -114,16 +106,14 @@ class ComplianceAssetPolicyItem extends AbstractModel
     public $CheckStatus;
 
     /**
-     * @var string Check result
-`RESULT_PASSED`: Passed.
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string detection result
+RESULT_PASSED: Passed.
+RESULT_FAILED: failed
      */
     public $CheckResult;
 
     /**
-     * @var integer Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
      */
     public $WhitelistId;
 
@@ -133,14 +123,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $FixSuggestion;
 
     /**
-     * @var string Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Last detection time.
      */
     public $LastCheckTime;
 
     /**
      * @var string Verification information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VerifyInfo;
 
@@ -157,17 +145,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `CHECK_RUNNING`: Checking.
 `CHECK_FINISHED`: Checked.
 `CHECK_FAILED`: Check failed.
-     * @param string $CheckResult Check result
-`RESULT_PASSED`: Passed.
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $WhitelistId Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CheckResult detection result
+RESULT_PASSED: Passed.
+RESULT_FAILED: failed
+     * @param integer $WhitelistId ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
      * @param string $FixSuggestion Handling suggestion
-     * @param string $LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LastCheckTime Last detection time.
      * @param string $VerifyInfo Verification information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

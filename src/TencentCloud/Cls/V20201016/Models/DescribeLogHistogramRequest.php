@@ -24,10 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrom(integer $From) Set Start time of the log to be queried, which is a Unix timestamp in milliseconds
  * @method integer getTo() Obtain End time of the log to be queried, which is a Unix timestamp in milliseconds
  * @method void setTo(integer $To) Set End time of the log to be queried, which is a Unix timestamp in milliseconds
- * @method string getQuery() Obtain Query statement
- * @method void setQuery(string $Query) Set Query statement
- * @method string getTopicId() Obtain ID of the log topic to be queried
- * @method void setTopicId(string $TopicId) Set ID of the log topic to be queried
+ * @method string getQuery() Obtain Retrieval analysis statement.
+The statement consists of [retrieval condition] | [SQL statement]. When there is no need to perform statistical analysis on logs, the pipe character | and SQL statement can be omitted.
+Use * or an empty string to search all logs.
+ * @method void setQuery(string $Query) Set Retrieval analysis statement.
+The statement consists of [retrieval condition] | [SQL statement]. When there is no need to perform statistical analysis on logs, the pipe character | and SQL statement can be omitted.
+Use * or an empty string to search all logs.
+ * @method string getTopicId() Obtain Log topic ID to query
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set Log topic ID to query
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
  * @method integer getInterval() Obtain Interval in milliseconds. Condition: (To-From) / Interval <= 200
  * @method void setInterval(integer $Interval) Set Interval in milliseconds. Condition: (To-From) / Interval <= 200
  * @method integer getSyntaxRule() Obtain Search syntax. Valid values:
@@ -50,12 +56,15 @@ class DescribeLogHistogramRequest extends AbstractModel
     public $To;
 
     /**
-     * @var string Query statement
+     * @var string Retrieval analysis statement.
+The statement consists of [retrieval condition] | [SQL statement]. When there is no need to perform statistical analysis on logs, the pipe character | and SQL statement can be omitted.
+Use * or an empty string to search all logs.
      */
     public $Query;
 
     /**
-     * @var string ID of the log topic to be queried
+     * @var string Log topic ID to query
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
@@ -74,8 +83,11 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
     /**
      * @param integer $From Start time of the log to be queried, which is a Unix timestamp in milliseconds
      * @param integer $To End time of the log to be queried, which is a Unix timestamp in milliseconds
-     * @param string $Query Query statement
-     * @param string $TopicId ID of the log topic to be queried
+     * @param string $Query Retrieval analysis statement.
+The statement consists of [retrieval condition] | [SQL statement]. When there is no need to perform statistical analysis on logs, the pipe character | and SQL statement can be omitted.
+Use * or an empty string to search all logs.
+     * @param string $TopicId Log topic ID to query
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      * @param integer $Interval Interval in milliseconds. Condition: (To-From) / Interval <= 200
      * @param integer $SyntaxRule Search syntax. Valid values:
 `0` (default): Lucene; `1`: CQL

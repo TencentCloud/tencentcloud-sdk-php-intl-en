@@ -20,46 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Kafka access protocol
  *
- * @method string getProtocol() Obtain Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProtocol(string $Protocol) Set Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMechanism() Obtain Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMechanism(string $Mechanism) Set Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUserName() Obtain UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserName(string $UserName) Set UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPassword() Obtain User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPassword(string $Password) Set User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProtocol() Obtain Protocol type. Supported protocol types include plaintext, sasl_plaintext, or sasl_ssl. Recommend using sasl_ssl. Protocol enables encrypted connection and also requires user authentication.
+
+-Protocol is required when IsEncryptionAddr is true.
+-Supported protocol types are as follows:
+-plaintext: Plaintext without encryption protocol
+-sasl_ssl: sasl authentication + ssl encryption
+-ssl: Pure ssl/TLS encryption protocol
+-sasl_plaintext: SASL authentication + unencrypted tunnel
+
+ * @method void setProtocol(string $Protocol) Set Protocol type. Supported protocol types include plaintext, sasl_plaintext, or sasl_ssl. Recommend using sasl_ssl. Protocol enables encrypted connection and also requires user authentication.
+
+-Protocol is required when IsEncryptionAddr is true.
+-Supported protocol types are as follows:
+-plaintext: Plaintext without encryption protocol
+-sasl_ssl: sasl authentication + ssl encryption
+-ssl: Pure ssl/TLS encryption protocol
+-sasl_plaintext: SASL authentication + unencrypted tunnel
+
+ * @method string getMechanism() Obtain Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.
+
+-Mechanism is required when Protocol is `sasl_plaintext` or `sasl_ssl`.
+-Supported encryption types are as follows.
+-PLAIN: plaintext authentication
+-SCRAM-SHA-256: Based on challenge-response mechanism, uses PBKDF2-HMAC-SHA256 algorithm.
+-SCRAM-SHA-512: Enhanced SCRAM that uses the PBKDF2-HMAC-SHA512 algorithm.
+ * @method void setMechanism(string $Mechanism) Set Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.
+
+-Mechanism is required when Protocol is `sasl_plaintext` or `sasl_ssl`.
+-Supported encryption types are as follows.
+-PLAIN: plaintext authentication
+-SCRAM-SHA-256: Based on challenge-response mechanism, uses PBKDF2-HMAC-SHA256 algorithm.
+-SCRAM-SHA-512: Enhanced SCRAM that uses the PBKDF2-HMAC-SHA512 algorithm.
+ * @method string getUserName() Obtain Username.
+Required when Protocol is sasl_plaintext or sasl_ssl
+ * @method void setUserName(string $UserName) Set Username.
+Required when Protocol is sasl_plaintext or sasl_ssl
+ * @method string getPassword() Obtain User password.
+Required when Protocol is sasl_plaintext or sasl_ssl
+ * @method void setPassword(string $Password) Set User password.
+Required when Protocol is sasl_plaintext or sasl_ssl
  */
 class KafkaProtocolInfo extends AbstractModel
 {
     /**
-     * @var string Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Protocol type. Supported protocol types include plaintext, sasl_plaintext, or sasl_ssl. Recommend using sasl_ssl. Protocol enables encrypted connection and also requires user authentication.
+
+-Protocol is required when IsEncryptionAddr is true.
+-Supported protocol types are as follows:
+-plaintext: Plaintext without encryption protocol
+-sasl_ssl: sasl authentication + ssl encryption
+-ssl: Pure ssl/TLS encryption protocol
+-sasl_plaintext: SASL authentication + unencrypted tunnel
+
      */
     public $Protocol;
 
     /**
-     * @var string Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.
+
+-Mechanism is required when Protocol is `sasl_plaintext` or `sasl_ssl`.
+-Supported encryption types are as follows.
+-PLAIN: plaintext authentication
+-SCRAM-SHA-256: Based on challenge-response mechanism, uses PBKDF2-HMAC-SHA256 algorithm.
+-SCRAM-SHA-512: Enhanced SCRAM that uses the PBKDF2-HMAC-SHA512 algorithm.
      */
     public $Mechanism;
 
     /**
-     * @var string UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Username.
+Required when Protocol is sasl_plaintext or sasl_ssl
      */
     public $UserName;
 
     /**
-     * @var string User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string User password.
+Required when Protocol is sasl_plaintext or sasl_ssl
      */
     public $Password;
 
     /**
-     * @param string $Protocol Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Mechanism Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UserName UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Password User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Protocol Protocol type. Supported protocol types include plaintext, sasl_plaintext, or sasl_ssl. Recommend using sasl_ssl. Protocol enables encrypted connection and also requires user authentication.
+
+-Protocol is required when IsEncryptionAddr is true.
+-Supported protocol types are as follows:
+-plaintext: Plaintext without encryption protocol
+-sasl_ssl: sasl authentication + ssl encryption
+-ssl: Pure ssl/TLS encryption protocol
+-sasl_plaintext: SASL authentication + unencrypted tunnel
+
+     * @param string $Mechanism Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.
+
+-Mechanism is required when Protocol is `sasl_plaintext` or `sasl_ssl`.
+-Supported encryption types are as follows.
+-PLAIN: plaintext authentication
+-SCRAM-SHA-256: Based on challenge-response mechanism, uses PBKDF2-HMAC-SHA256 algorithm.
+-SCRAM-SHA-512: Enhanced SCRAM that uses the PBKDF2-HMAC-SHA512 algorithm.
+     * @param string $UserName Username.
+Required when Protocol is sasl_plaintext or sasl_ssl
+     * @param string $Password User password.
+Required when Protocol is sasl_plaintext or sasl_ssl
      */
     function __construct()
     {

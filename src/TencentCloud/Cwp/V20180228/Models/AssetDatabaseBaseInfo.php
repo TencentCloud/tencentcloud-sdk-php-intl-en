@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProjectId() Obtain Host business group ID
  * @method void setProjectId(integer $ProjectId) Set Host business group ID
  * @method array getTag() Obtain Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTag(array $Tag) Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getName() Obtain Database name
  * @method void setName(string $Name) Set Database name
  * @method string getVersion() Obtain Version
@@ -67,19 +65,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method string getId() Obtain Database ID
  * @method void setId(string $Id) Set Database ID
  * @method string getUpdateTime() Obtain Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFirstTime() Obtain First collection time
  * @method void setFirstTime(string $FirstTime) Set First collection time
  * @method integer getIsNew() Obtain Whether newly added [0: no|1: yes]
  * @method void setIsNew(integer $IsNew) Set Whether newly added [0: no|1: yes]
  * @method string getMachineName() Obtain Host name
  * @method void setMachineName(string $MachineName) Set Host name
- * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method MachineExtraInfo getMachineExtraInfo() Obtain  Additional information
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set  Additional information
  */
 class AssetDatabaseBaseInfo extends AbstractModel
 {
@@ -115,7 +109,6 @@ class AssetDatabaseBaseInfo extends AbstractModel
 
     /**
      * @var array Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tag;
 
@@ -196,7 +189,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -216,8 +208,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MachineName;
 
     /**
-     * @var MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MachineExtraInfo  Additional information
      */
     public $MachineExtraInfo;
 
@@ -229,7 +220,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $OsInfo Operating System Information
      * @param integer $ProjectId Host business group ID
      * @param array $Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Name Database name
      * @param string $Version Version
      * @param string $Port Listening port
@@ -246,12 +236,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Param Startup parameter
      * @param string $Id Database ID
      * @param string $UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FirstTime First collection time
      * @param integer $IsNew Whether newly added [0: no|1: yes]
      * @param string $MachineName Host name
-     * @param MachineExtraInfo $MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MachineExtraInfo $MachineExtraInfo  Additional information
      */
     function __construct()
     {

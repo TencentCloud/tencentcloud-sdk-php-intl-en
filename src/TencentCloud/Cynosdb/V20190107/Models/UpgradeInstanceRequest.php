@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getCpu() Obtain Database CPU
- * @method void setCpu(integer $Cpu) Set Database CPU
- * @method integer getMemory() Obtain Database memory in GB
- * @method void setMemory(integer $Memory) Set Database memory in GB
- * @method string getUpgradeType() Obtain Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
- * @method void setUpgradeType(string $UpgradeType) Set Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
+ * @method integer getCpu() Obtain Database CPU.
+ * @method void setCpu(integer $Cpu) Set Database CPU.
+ * @method integer getMemory() Obtain Database memory in GB.
+ * @method void setMemory(integer $Memory) Set Database memory in GB.
+ * @method string getUpgradeType() Obtain Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
+ * @method void setUpgradeType(string $UpgradeType) Set Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
  * @method string getDeviceType() Obtain Instance Machine Type
 1. common: general.
 2. exclusive, dedicated.
@@ -36,16 +36,16 @@ use TencentCloud\Common\AbstractModel;
 2. exclusive, dedicated.
  * @method integer getStorageLimit() Obtain This parameter has been disused.
  * @method void setStorageLimit(integer $StorageLimit) Set This parameter has been disused.
- * @method integer getAutoVoucher() Obtain Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
- * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+ * @method integer getAutoVoucher() Obtain Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
+ * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
  * @method string getDbType() Obtain This parameter has been disused.
  * @method void setDbType(string $DbType) Set This parameter has been disused.
- * @method integer getDealMode() Obtain Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
- * @method void setDealMode(integer $DealMode) Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+ * @method integer getDealMode() Obtain Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
+ * @method void setDealMode(integer $DealMode) Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
  * @method string getUpgradeMode() Obtain Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
  * @method void setUpgradeMode(string $UpgradeMode) Set Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
- * @method UpgradeProxy getUpgradeProxy() Obtain 
- * @method void setUpgradeProxy(UpgradeProxy $UpgradeProxy) Set 
+ * @method UpgradeProxy getUpgradeProxy() Obtain Proxy synchronous upgrade.
+ * @method void setUpgradeProxy(UpgradeProxy $UpgradeProxy) Set Proxy synchronous upgrade.
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -55,17 +55,17 @@ class UpgradeInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Database CPU
+     * @var integer Database CPU.
      */
     public $Cpu;
 
     /**
-     * @var integer Database memory in GB
+     * @var integer Database memory in GB.
      */
     public $Memory;
 
     /**
-     * @var string Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
+     * @var string Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
      */
     public $UpgradeType;
 
@@ -82,7 +82,7 @@ class UpgradeInstanceRequest extends AbstractModel
     public $StorageLimit;
 
     /**
-     * @var integer Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+     * @var integer Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
      */
     public $AutoVoucher;
 
@@ -92,7 +92,7 @@ class UpgradeInstanceRequest extends AbstractModel
     public $DbType;
 
     /**
-     * @var integer Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     * @var integer Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
      */
     public $DealMode;
 
@@ -102,24 +102,24 @@ class UpgradeInstanceRequest extends AbstractModel
     public $UpgradeMode;
 
     /**
-     * @var UpgradeProxy 
+     * @var UpgradeProxy Proxy synchronous upgrade.
      */
     public $UpgradeProxy;
 
     /**
      * @param string $InstanceId Instance ID
-     * @param integer $Cpu Database CPU
-     * @param integer $Memory Database memory in GB
-     * @param string $UpgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
+     * @param integer $Cpu Database CPU.
+     * @param integer $Memory Database memory in GB.
+     * @param string $UpgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
      * @param string $DeviceType Instance Machine Type
 1. common: general.
 2. exclusive, dedicated.
      * @param integer $StorageLimit This parameter has been disused.
-     * @param integer $AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+     * @param integer $AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
      * @param string $DbType This parameter has been disused.
-     * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
      * @param string $UpgradeMode Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
-     * @param UpgradeProxy $UpgradeProxy 
+     * @param UpgradeProxy $UpgradeProxy Proxy synchronous upgrade.
      */
     function __construct()
     {

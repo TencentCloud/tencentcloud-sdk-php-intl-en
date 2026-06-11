@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * KV key-value pair data, including key name, key-value, and expiration time information.
  *
- * @method string getKey() Obtain Key name. Each key name cannot be empty, with a length of 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
- * @method void setKey(string $Key) Set Key name. Each key name cannot be empty, with a length of 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+ * @method string getKey() Obtain Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
+ * @method void setKey(string $Key) Set Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
  * @method string getValue() Obtain Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
  * @method void setValue(string $Value) Set Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
  * @method string getExpiration() Obtain Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class KeyValuePair extends AbstractModel
 {
     /**
-     * @var string Key name. Each key name cannot be empty, with a length of 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+     * @var string Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
      */
     public $Key;
 
@@ -45,7 +45,7 @@ class KeyValuePair extends AbstractModel
     public $Expiration;
 
     /**
-     * @param string $Key Key name. Each key name cannot be empty, with a length of 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+     * @param string $Key Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
      * @param string $Value Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
      * @param string $Expiration Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire.
      */

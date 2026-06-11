@@ -21,32 +21,78 @@ use TencentCloud\Common\AbstractModel;
  * ModifyDataTransform request structure.
  *
  * @method string getTaskId() Obtain Data processing task ID
+-Get the data processing task Id by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
  * @method void setTaskId(string $TaskId) Set Data processing task ID
- * @method string getName() Obtain Data processing task name
- * @method void setName(string $Name) Set Data processing task name
- * @method string getEtlContent() Obtain Data processing statement
- * @method void setEtlContent(string $EtlContent) Set Data processing statement
+-Get the data processing task Id by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+ * @method string getName() Obtain Processing task name
+-Get the name of a data processing task by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+
+Name limit
+-Cannot be an empty string
+-Cannot contain character '|'
+-Up to 255 characters
+ * @method void setName(string $Name) Set Processing task name
+-Get the name of a data processing task by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+
+Name limit
+-Cannot be an empty string
+-Cannot contain character '|'
+-Up to 255 characters
+ * @method string getEtlContent() Obtain Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents:
+
+-[Create a processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
+ * @method void setEtlContent(string $EtlContent) Set Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents:
+
+-[Create a processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
  * @method integer getEnableFlag() Obtain Task status. Valid values: 1 (enabled) and 2 (disabled).
  * @method void setEnableFlag(integer $EnableFlag) Set Task status. Valid values: 1 (enabled) and 2 (disabled).
  * @method array getDstResources() Obtain Destination topic ID and alias of the data processing task
  * @method void setDstResources(array $DstResources) Set Destination topic ID and alias of the data processing task
+ * @method boolean getBackupGiveUpData() Obtain Whether to discard log data after the limit is exceeded
+ * @method void setBackupGiveUpData(boolean $BackupGiveUpData) Set Whether to discard log data after the limit is exceeded
  * @method integer getHasServicesLog() Obtain Whether to enable delivery service log. 1 for disabled, 2 for enabled
  * @method void setHasServicesLog(integer $HasServicesLog) Set Whether to enable delivery service log. 1 for disabled, 2 for enabled
+ * @method integer getKeepFailureLog() Obtain Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+ * @method void setKeepFailureLog(integer $KeepFailureLog) Set Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+ * @method string getFailureLogKey() Obtain Field name of a failed log.
+ * @method void setFailureLogKey(string $FailureLogKey) Set Field name of a failed log.
+ * @method array getDataTransformSqlDataSources() Obtain External data source information
+ * @method void setDataTransformSqlDataSources(array $DataTransformSqlDataSources) Set External data source information
+ * @method array getEnvInfos() Obtain Set environment variable
+ * @method void setEnvInfos(array $EnvInfos) Set Set environment variable
  */
 class ModifyDataTransformRequest extends AbstractModel
 {
     /**
      * @var string Data processing task ID
+-Get the data processing task Id by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
      */
     public $TaskId;
 
     /**
-     * @var string Data processing task name
+     * @var string Processing task name
+-Get the name of a data processing task by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+
+Name limit
+-Cannot be an empty string
+-Cannot contain character '|'
+-Up to 255 characters
      */
     public $Name;
 
     /**
-     * @var string Data processing statement
+     * @var string Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents:
+
+-[Create a processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
      */
     public $EtlContent;
 
@@ -61,17 +107,59 @@ class ModifyDataTransformRequest extends AbstractModel
     public $DstResources;
 
     /**
+     * @var boolean Whether to discard log data after the limit is exceeded
+     */
+    public $BackupGiveUpData;
+
+    /**
      * @var integer Whether to enable delivery service log. 1 for disabled, 2 for enabled
      */
     public $HasServicesLog;
 
     /**
+     * @var integer Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+     */
+    public $KeepFailureLog;
+
+    /**
+     * @var string Field name of a failed log.
+     */
+    public $FailureLogKey;
+
+    /**
+     * @var array External data source information
+     */
+    public $DataTransformSqlDataSources;
+
+    /**
+     * @var array Set environment variable
+     */
+    public $EnvInfos;
+
+    /**
      * @param string $TaskId Data processing task ID
-     * @param string $Name Data processing task name
-     * @param string $EtlContent Data processing statement
+-Get the data processing task Id by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+     * @param string $Name Processing task name
+-Get the name of a data processing task by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+
+Name limit
+-Cannot be an empty string
+-Cannot contain character '|'
+-Up to 255 characters
+     * @param string $EtlContent Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents:
+
+-[Create a processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
      * @param integer $EnableFlag Task status. Valid values: 1 (enabled) and 2 (disabled).
      * @param array $DstResources Destination topic ID and alias of the data processing task
+     * @param boolean $BackupGiveUpData Whether to discard log data after the limit is exceeded
      * @param integer $HasServicesLog Whether to enable delivery service log. 1 for disabled, 2 for enabled
+     * @param integer $KeepFailureLog Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+     * @param string $FailureLogKey Field name of a failed log.
+     * @param array $DataTransformSqlDataSources External data source information
+     * @param array $EnvInfos Set environment variable
      */
     function __construct()
     {
@@ -111,8 +199,38 @@ class ModifyDataTransformRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("BackupGiveUpData",$param) and $param["BackupGiveUpData"] !== null) {
+            $this->BackupGiveUpData = $param["BackupGiveUpData"];
+        }
+
         if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
             $this->HasServicesLog = $param["HasServicesLog"];
+        }
+
+        if (array_key_exists("KeepFailureLog",$param) and $param["KeepFailureLog"] !== null) {
+            $this->KeepFailureLog = $param["KeepFailureLog"];
+        }
+
+        if (array_key_exists("FailureLogKey",$param) and $param["FailureLogKey"] !== null) {
+            $this->FailureLogKey = $param["FailureLogKey"];
+        }
+
+        if (array_key_exists("DataTransformSqlDataSources",$param) and $param["DataTransformSqlDataSources"] !== null) {
+            $this->DataTransformSqlDataSources = [];
+            foreach ($param["DataTransformSqlDataSources"] as $key => $value){
+                $obj = new DataTransformSqlDataSource();
+                $obj->deserialize($value);
+                array_push($this->DataTransformSqlDataSources, $obj);
+            }
+        }
+
+        if (array_key_exists("EnvInfos",$param) and $param["EnvInfos"] !== null) {
+            $this->EnvInfos = [];
+            foreach ($param["EnvInfos"] as $key => $value){
+                $obj = new EnvInfo();
+                $obj->deserialize($value);
+                array_push($this->EnvInfos, $obj);
+            }
         }
     }
 }

@@ -21,239 +21,141 @@ use TencentCloud\Common\AbstractModel;
  * DescribeVirusDetail response structure.
  *
  * @method string getImageId() Obtain Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setImageId(string $ImageId) Set Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getImageName() Obtain Image name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setImageName(string $ImageName) Set Image name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSize() Obtain Trojan file size
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSize(integer $Size) Set Trojan file size
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method integer getSize() Obtain Trojan File Size
+ * @method void setSize(integer $Size) Set Trojan File Size
  * @method string getFilePath() Obtain Trojan file path
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFilePath(string $FilePath) Set Trojan file path
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getModifyTime() Obtain Last generation time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setModifyTime(string $ModifyTime) Set Last generation time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getModifyTime() Obtain Latest creation time
+ * @method void setModifyTime(string $ModifyTime) Set Latest creation time
  * @method string getVirusName() Obtain Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVirusName(string $VirusName) Set Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRiskLevel() Obtain Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRiskLevel(string $RiskLevel) Set Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRiskLevel() Obtain Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
+ * @method void setRiskLevel(string $RiskLevel) Set Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
  * @method string getContainerName() Obtain Container name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setContainerName(string $ContainerName) Set Container name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContainerId() Obtain Container ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContainerId(string $ContainerId) Set Container ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHostName() Obtain Server name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostName(string $HostName) Set Server name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHostId() Obtain Server ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostId(string $HostId) Set Server ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getContainerId() Obtain Container id
+ * @method void setContainerId(string $ContainerId) Set Container id
+ * @method string getHostName() Obtain Host name
+ * @method void setHostName(string $HostName) Set Host name
+ * @method string getHostId() Obtain Host ID
+ * @method void setHostId(string $HostId) Set Host ID
  * @method string getProcessName() Obtain Process name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProcessName(string $ProcessName) Set Process name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getProcessPath() Obtain Process path
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProcessPath(string $ProcessPath) Set Process path
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProcessMd5() Obtain Process MD5
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProcessMd5(string $ProcessMd5) Set Process MD5
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProcessId() Obtain Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProcessId(integer $ProcessId) Set Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProcessMd5() Obtain Process md5
+ * @method void setProcessMd5(string $ProcessMd5) Set Process md5
+ * @method integer getProcessId() Obtain Process id
+ * @method void setProcessId(integer $ProcessId) Set Process id
  * @method string getProcessArgv() Obtain Process parameter
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProcessArgv(string $ProcessArgv) Set Process parameter
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getProcessChan() Obtain Process chain
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProcessChan(string $ProcessChan) Set Process chain
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProcessAccountGroup() Obtain Process group
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProcessAccountGroup(string $ProcessAccountGroup) Set Process group
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProcessStartAccount() Obtain Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProcessStartAccount(string $ProcessStartAccount) Set Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProcessAccountGroup() Obtain Process Group
+ * @method void setProcessAccountGroup(string $ProcessAccountGroup) Set Process Group
+ * @method string getProcessStartAccount() Obtain process initiator
+ * @method void setProcessStartAccount(string $ProcessStartAccount) Set process initiator
  * @method string getProcessFileAuthority() Obtain Process file permission
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProcessFileAuthority(string $ProcessFileAuthority) Set Process file permission
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSourceType() Obtain Source. Valid values: `0` (quick scan); `1` (scheduled scan); `2` (real-time monitoring).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSourceType(integer $SourceType) Set Source. Valid values: `0` (quick scan); `1` (scheduled scan); `2` (real-time monitoring).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTags() Obtain Tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSourceType() Obtain Source. 0: One-Click Scan; 1: Scheduled Scan; 2: Real-Time Monitoring
+ * @method void setSourceType(integer $SourceType) Set Source. 0: One-Click Scan; 1: Scheduled Scan; 2: Real-Time Monitoring
+ * @method array getTags() Obtain Tag.
+ * @method void setTags(array $Tags) Set Tag.
  * @method string getHarmDescribe() Obtain Event description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHarmDescribe(string $HarmDescribe) Set Event description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSuggestScheme() Obtain Solution
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSuggestScheme(string $SuggestScheme) Set Solution
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSuggestScheme() Obtain Recommended solution
+ * @method void setSuggestScheme(string $SuggestScheme) Set Recommended solution
  * @method string getMark() Obtain Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMark(string $Mark) Set Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFileName() Obtain Suspicious file name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileName(string $FileName) Set Suspicious file name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFileMd5() Obtain MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileMd5(string $FileMd5) Set MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFileName() Obtain Risk File Name
+ * @method void setFileName(string $FileName) Set Risk File Name
+ * @method string getFileMd5() Obtain File MD5
+ * @method void setFileMd5(string $FileMd5) Set File MD5
  * @method string getEventType() Obtain Event type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEventType(string $EventType) Set Event type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPodName() Obtain Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPodName(string $PodName) Set Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSubStatus() Obtain Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubStatus(string $SubStatus) Set Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHostIP() Obtain Private IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostIP(string $HostIP) Set Private IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getClientIP() Obtain Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClientIP(string $ClientIP) Set Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPProcessStartUser() Obtain Parent process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPProcessStartUser(string $PProcessStartUser) Set Parent process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPProcessUserGroup() Obtain User group of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPProcessUserGroup(string $PProcessUserGroup) Set User group of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPProcessPath() Obtain Path of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPProcessPath(string $PProcessPath) Set Path of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPProcessParam() Obtain Command line parameters of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPProcessParam(string $PProcessParam) Set Command line parameters of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAncestorProcessStartUser() Obtain Ancestor process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAncestorProcessStartUser(string $AncestorProcessStartUser) Set Ancestor process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAncestorProcessUserGroup() Obtain Ancestor process user group
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAncestorProcessUserGroup(string $AncestorProcessUserGroup) Set Ancestor process user group
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPodName() Obtain Cluster name.
+ * @method void setPodName(string $PodName) Set Cluster name.
+ * @method string getStatus() Obtain DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
+ * @method void setStatus(string $Status) Set DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
+ * @method string getSubStatus() Obtain Failed sub-status
+FILE_NOT_FOUND: File not found
+FILE_ABNORMAL: File abnormality
+FILE_ABNORMAL_DEAL_RECOVER: File abnormality when recovering file
+BACKUP FILE NOT FOUND
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+ * @method void setSubStatus(string $SubStatus) Set Failed sub-status
+FILE_NOT_FOUND: File not found
+FILE_ABNORMAL: File abnormality
+FILE_ABNORMAL_DEAL_RECOVER: File abnormality when recovering file
+BACKUP FILE NOT FOUND
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+ * @method string getHostIP() Obtain Private IP address
+ * @method void setHostIP(string $HostIP) Set Private IP address
+ * @method string getClientIP() Obtain Public IP address
+ * @method void setClientIP(string $ClientIP) Set Public IP address
+ * @method string getPProcessStartUser() Obtain Parent Process Startup User
+ * @method void setPProcessStartUser(string $PProcessStartUser) Set Parent Process Startup User
+ * @method string getPProcessUserGroup() Obtain Parent process user group
+ * @method void setPProcessUserGroup(string $PProcessUserGroup) Set Parent process user group
+ * @method string getPProcessPath() Obtain Parent process path
+ * @method void setPProcessPath(string $PProcessPath) Set Parent process path
+ * @method string getPProcessParam() Obtain Parent Process Command Line Parameters
+ * @method void setPProcessParam(string $PProcessParam) Set Parent Process Command Line Parameters
+ * @method string getAncestorProcessStartUser() Obtain Ancestor Process Startup User
+ * @method void setAncestorProcessStartUser(string $AncestorProcessStartUser) Set Ancestor Process Startup User
+ * @method string getAncestorProcessUserGroup() Obtain Ancestor Process User Group
+ * @method void setAncestorProcessUserGroup(string $AncestorProcessUserGroup) Set Ancestor Process User Group
  * @method string getAncestorProcessPath() Obtain Ancestor process path
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAncestorProcessPath(string $AncestorProcessPath) Set Ancestor process path
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAncestorProcessParam() Obtain Command line parameters of the ancestor process
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAncestorProcessParam(string $AncestorProcessParam) Set Command line parameters of the ancestor process
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOperationTime() Obtain Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOperationTime(string $OperationTime) Set Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAncestorProcessParam() Obtain Ancestor Process Command Line Parameters
+ * @method void setAncestorProcessParam(string $AncestorProcessParam) Set Ancestor Process Command Line Parameters
+ * @method string getOperationTime() Obtain Last Time for Event Handling
+ * @method void setOperationTime(string $OperationTime) Set Last Time for Event Handling
  * @method string getContainerNetStatus() Obtain Container isolation status
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setContainerNetStatus(string $ContainerNetStatus) Set Container isolation status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContainerNetSubStatus() Obtain Sub-status of container isolation
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) Set Sub-status of container isolation
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContainerIsolateOperationSrc() Obtain Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) Set Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getCheckPlatform() Obtain Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCheckPlatform(array $CheckPlatform) Set Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFileAccessTime() Obtain File accessed time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileAccessTime(string $FileAccessTime) Set File accessed time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFileModifyTime() Obtain File modified time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileModifyTime(string $FileModifyTime) Set File modified time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getContainerNetSubStatus() Obtain Container Isolation Sub-status
+ * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) Set Container Isolation Sub-status
+ * @method string getContainerIsolateOperationSrc() Obtain Container Isolation Operation Source
+ * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) Set Container Isolation Operation Source
+ * @method array getCheckPlatform() Obtain detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: TI
+ * @method void setCheckPlatform(array $CheckPlatform) Set detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: TI
+ * @method string getFileAccessTime() Obtain File Access Time
+ * @method void setFileAccessTime(string $FileAccessTime) Set File Access Time
+ * @method string getFileModifyTime() Obtain File Modification Time
+ * @method void setFileModifyTime(string $FileModifyTime) Set File Modification Time
  * @method string getNodeSubNetID() Obtain Node subnet ID
  * @method void setNodeSubNetID(string $NodeSubNetID) Set Node subnet ID
  * @method string getNodeSubNetName() Obtain Node subnet name
@@ -274,10 +176,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setNodeID(string $NodeID) Set Node ID
  * @method string getClusterName() Obtain Cluster name
  * @method void setClusterName(string $ClusterName) Set Cluster name
- * @method string getNamespace() Obtain 
- * @method void setNamespace(string $Namespace) Set 
- * @method string getWorkloadType() Obtain 
- * @method void setWorkloadType(string $WorkloadType) Set 
+ * @method string getNamespace() Obtain Namespace
+ * @method void setNamespace(string $Namespace) Set Namespace
+ * @method string getWorkloadType() Obtain Workload type
+ * @method void setWorkloadType(string $WorkloadType) Set Workload type
+ * @method string getContainerStatus() Obtain Container status.
+ * @method void setContainerStatus(string $ContainerStatus) Set Container status.
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
@@ -285,314 +189,265 @@ class DescribeVirusDetailResponse extends AbstractModel
 {
     /**
      * @var string Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ImageId;
 
     /**
      * @var string Image name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ImageName;
 
     /**
-     * @var string Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var integer Trojan file size
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Trojan File Size
      */
     public $Size;
 
     /**
      * @var string Trojan file path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FilePath;
 
     /**
-     * @var string Last generation time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Latest creation time
      */
     public $ModifyTime;
 
     /**
      * @var string Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VirusName;
 
     /**
-     * @var string Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
      */
     public $RiskLevel;
 
     /**
      * @var string Container name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ContainerName;
 
     /**
-     * @var string Container ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Container id
      */
     public $ContainerId;
 
     /**
-     * @var string Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host name
      */
     public $HostName;
 
     /**
-     * @var string Server ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host ID
      */
     public $HostId;
 
     /**
      * @var string Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProcessName;
 
     /**
      * @var string Process path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProcessPath;
 
     /**
-     * @var string Process MD5
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Process md5
      */
     public $ProcessMd5;
 
     /**
-     * @var integer Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Process id
      */
     public $ProcessId;
 
     /**
      * @var string Process parameter
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProcessArgv;
 
     /**
      * @var string Process chain
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProcessChan;
 
     /**
-     * @var string Process group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Process Group
      */
     public $ProcessAccountGroup;
 
     /**
-     * @var string Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string process initiator
      */
     public $ProcessStartAccount;
 
     /**
      * @var string Process file permission
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProcessFileAuthority;
 
     /**
-     * @var integer Source. Valid values: `0` (quick scan); `1` (scheduled scan); `2` (real-time monitoring).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Source. 0: One-Click Scan; 1: Scheduled Scan; 2: Real-Time Monitoring
      */
     public $SourceType;
 
     /**
-     * @var array Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Tag.
      */
     public $Tags;
 
     /**
      * @var string Event description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HarmDescribe;
 
     /**
-     * @var string Solution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Recommended solution
      */
     public $SuggestScheme;
 
     /**
      * @var string Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Mark;
 
     /**
-     * @var string Suspicious file name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Risk File Name
      */
     public $FileName;
 
     /**
-     * @var string MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File MD5
      */
     public $FileMd5;
 
     /**
      * @var string Event type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EventType;
 
     /**
-     * @var string Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Cluster name.
      */
     public $PodName;
 
     /**
-     * @var string `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
      */
     public $Status;
 
     /**
-     * @var string Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Failed sub-status
+FILE_NOT_FOUND: File not found
+FILE_ABNORMAL: File abnormality
+FILE_ABNORMAL_DEAL_RECOVER: File abnormality when recovering file
+BACKUP FILE NOT FOUND
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
      */
     public $SubStatus;
 
     /**
-     * @var string Private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Private IP address
      */
     public $HostIP;
 
     /**
-     * @var string Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Public IP address
      */
     public $ClientIP;
 
     /**
-     * @var string Parent process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Parent Process Startup User
      */
     public $PProcessStartUser;
 
     /**
-     * @var string User group of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Parent process user group
      */
     public $PProcessUserGroup;
 
     /**
-     * @var string Path of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Parent process path
      */
     public $PProcessPath;
 
     /**
-     * @var string Command line parameters of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Parent Process Command Line Parameters
      */
     public $PProcessParam;
 
     /**
-     * @var string Ancestor process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Ancestor Process Startup User
      */
     public $AncestorProcessStartUser;
 
     /**
-     * @var string Ancestor process user group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Ancestor Process User Group
      */
     public $AncestorProcessUserGroup;
 
     /**
      * @var string Ancestor process path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AncestorProcessPath;
 
     /**
-     * @var string Command line parameters of the ancestor process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Ancestor Process Command Line Parameters
      */
     public $AncestorProcessParam;
 
     /**
-     * @var string Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Last Time for Event Handling
      */
     public $OperationTime;
 
     /**
      * @var string Container isolation status
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ContainerNetStatus;
 
     /**
-     * @var string Sub-status of container isolation
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Container Isolation Sub-status
      */
     public $ContainerNetSubStatus;
 
     /**
-     * @var string Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Container Isolation Operation Source
      */
     public $ContainerIsolateOperationSrc;
 
     /**
-     * @var array Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: TI
      */
     public $CheckPlatform;
 
     /**
-     * @var string File accessed time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File Access Time
      */
     public $FileAccessTime;
 
     /**
-     * @var string File modified time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File Modification Time
      */
     public $FileModifyTime;
 
@@ -647,14 +502,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ClusterName;
 
     /**
-     * @var string 
+     * @var string Namespace
      */
     public $Namespace;
 
     /**
-     * @var string 
+     * @var string Workload type
      */
     public $WorkloadType;
+
+    /**
+     * @var string Container status.
+     */
+    public $ContainerStatus;
 
     /**
      * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -663,122 +523,73 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $ImageId Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ImageName Image name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Size Trojan file size
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CreateTime Creation time.
+     * @param integer $Size Trojan File Size
      * @param string $FilePath Trojan file path
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ModifyTime Last generation time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ModifyTime Latest creation time
      * @param string $VirusName Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RiskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RiskLevel Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
      * @param string $ContainerName Container name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ContainerId Container ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HostName Server name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HostId Server ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ContainerId Container id
+     * @param string $HostName Host name
+     * @param string $HostId Host ID
      * @param string $ProcessName Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ProcessPath Process path
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProcessMd5 Process MD5
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ProcessId Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProcessMd5 Process md5
+     * @param integer $ProcessId Process id
      * @param string $ProcessArgv Process parameter
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ProcessChan Process chain
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProcessAccountGroup Process group
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProcessStartAccount Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProcessAccountGroup Process Group
+     * @param string $ProcessStartAccount process initiator
      * @param string $ProcessFileAuthority Process file permission
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SourceType Source. Valid values: `0` (quick scan); `1` (scheduled scan); `2` (real-time monitoring).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SourceType Source. 0: One-Click Scan; 1: Scheduled Scan; 2: Real-Time Monitoring
+     * @param array $Tags Tag.
      * @param string $HarmDescribe Event description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SuggestScheme Solution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SuggestScheme Recommended solution
      * @param string $Mark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FileName Suspicious file name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FileMd5 MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FileName Risk File Name
+     * @param string $FileMd5 File MD5
      * @param string $EventType Event type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PodName Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SubStatus Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HostIP Private IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ClientIP Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PProcessStartUser Parent process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PProcessUserGroup User group of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PProcessPath Path of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PProcessParam Command line parameters of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AncestorProcessStartUser Ancestor process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AncestorProcessUserGroup Ancestor process user group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PodName Cluster name.
+     * @param string $Status DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
+     * @param string $SubStatus Failed sub-status
+FILE_NOT_FOUND: File not found
+FILE_ABNORMAL: File abnormality
+FILE_ABNORMAL_DEAL_RECOVER: File abnormality when recovering file
+BACKUP FILE NOT FOUND
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+     * @param string $HostIP Private IP address
+     * @param string $ClientIP Public IP address
+     * @param string $PProcessStartUser Parent Process Startup User
+     * @param string $PProcessUserGroup Parent process user group
+     * @param string $PProcessPath Parent process path
+     * @param string $PProcessParam Parent Process Command Line Parameters
+     * @param string $AncestorProcessStartUser Ancestor Process Startup User
+     * @param string $AncestorProcessUserGroup Ancestor Process User Group
      * @param string $AncestorProcessPath Ancestor process path
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AncestorProcessParam Command line parameters of the ancestor process
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OperationTime Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AncestorProcessParam Ancestor Process Command Line Parameters
+     * @param string $OperationTime Last Time for Event Handling
      * @param string $ContainerNetStatus Container isolation status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ContainerNetSubStatus Sub-status of container isolation
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $CheckPlatform Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FileAccessTime File accessed time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FileModifyTime File modified time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ContainerNetSubStatus Container Isolation Sub-status
+     * @param string $ContainerIsolateOperationSrc Container Isolation Operation Source
+     * @param array $CheckPlatform detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: TI
+     * @param string $FileAccessTime File Access Time
+     * @param string $FileModifyTime File Modification Time
      * @param string $NodeSubNetID Node subnet ID
      * @param string $NodeSubNetName Node subnet name
      * @param string $NodeSubNetCIDR Subnet IP range
@@ -789,8 +600,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
      * @param string $NodeID Node ID
      * @param string $ClusterName Cluster name
-     * @param string $Namespace 
-     * @param string $WorkloadType 
+     * @param string $Namespace Namespace
+     * @param string $WorkloadType Workload type
+     * @param string $ContainerStatus Container status.
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -1048,6 +860,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("WorkloadType",$param) and $param["WorkloadType"] !== null) {
             $this->WorkloadType = $param["WorkloadType"];
+        }
+
+        if (array_key_exists("ContainerStatus",$param) and $param["ContainerStatus"] !== null) {
+            $this->ContainerStatus = $param["ContainerStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

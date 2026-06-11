@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Multi-topic search return information
  *
- * @method array getErrors() Obtain Error information for multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setErrors(array $Errors) Set Error information for multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
- * @method array getInfos() Obtain Information for each log topic in multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setInfos(array $Infos) Set Information for each log topic in multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+ * @method array getErrors() Obtain Error information corresponding to multi-log topic retrieval
+ * @method void setErrors(array $Errors) Set Error information corresponding to multi-log topic retrieval
+ * @method array getInfos() Obtain Information for each log topic during multi-log topic retrieval
+ * @method void setInfos(array $Infos) Set Information for each log topic during multi-log topic retrieval
  */
 class SearchLogTopics extends AbstractModel
 {
     /**
-     * @var array Error information for multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+     * @var array Error information corresponding to multi-log topic retrieval
      */
     public $Errors;
 
     /**
-     * @var array Information for each log topic in multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+     * @var array Information for each log topic during multi-log topic retrieval
      */
     public $Infos;
 
     /**
-     * @param array $Errors Error information for multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Infos Information for each log topic in multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Errors Error information corresponding to multi-log topic retrieval
+     * @param array $Infos Information for each log topic during multi-log topic retrieval
      */
     function __construct()
     {

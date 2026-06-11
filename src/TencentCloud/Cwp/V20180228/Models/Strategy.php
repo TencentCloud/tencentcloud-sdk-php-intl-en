@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * Baseline security user policy information
  *
  * @method string getStrategyName() Obtain Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStrategyName(string $StrategyName) Set Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getStrategyId() Obtain Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStrategyId(integer $StrategyId) Set Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getRuleCount() Obtain Total number of baseline detection items
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRuleCount(integer $RuleCount) Set Total number of baseline detection items
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getHostCount() Obtain Number of Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostCount(integer $HostCount) Set Number of Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getHostCount() Obtain Number of hosts
+ * @method void setHostCount(integer $HostCount) Set Number of hosts
  * @method integer getScanCycle() Obtain Scan cycle
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScanCycle(integer $ScanCycle) Set Scan cycle
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getScanAt() Obtain Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScanAt(string $ScanAt) Set Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getEnabled() Obtain Available or not?
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEnabled(integer $Enabled) Set Available or not?
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getPassRate() Obtain Pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPassRate(integer $PassRate) Set Pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getPassRate() Obtain pass rate
+ * @method void setPassRate(integer $PassRate) Set pass rate
  * @method string getCategoryIds() Obtain Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCategoryIds(string $CategoryIds) Set Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getIsDefault() Obtain Whether a default policy
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsDefault(integer $IsDefault) Set Whether a default policy
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Strategy extends AbstractModel
 {
     /**
      * @var string Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StrategyName;
 
     /**
      * @var integer Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StrategyId;
 
     /**
      * @var integer Total number of baseline detection items
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RuleCount;
 
     /**
-     * @var integer Number of Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of hosts
      */
     public $HostCount;
 
     /**
      * @var integer Scan cycle
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ScanCycle;
 
     /**
      * @var string Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ScanAt;
 
     /**
      * @var integer Available or not?
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Enabled;
 
     /**
-     * @var integer Pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer pass rate
      */
     public $PassRate;
 
     /**
      * @var string Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CategoryIds;
 
     /**
      * @var integer Whether a default policy
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsDefault;
 
     /**
      * @param string $StrategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $StrategyId Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RuleCount Total number of baseline detection items
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $HostCount Number of Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $HostCount Number of hosts
      * @param integer $ScanCycle Scan cycle
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ScanAt Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Enabled Available or not?
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $PassRate Pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $PassRate pass rate
      * @param string $CategoryIds Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $IsDefault Whether a default policy
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAssetImageRegistryScanTask request structure.
  *
- * @method boolean getAll() Obtain Whether to scan all images
- * @method void setAll(boolean $All) Set Whether to scan all images
- * @method array getImages() Obtain List of scanned images
- * @method void setImages(array $Images) Set List of scanned images
- * @method array getScanType() Obtain Array of scan types
- * @method void setScanType(array $ScanType) Set Array of scan types
- * @method array getId() Obtain List of scanned images
- * @method void setId(array $Id) Set List of scanned images
- * @method array getFilters() Obtain Filter
- * @method void setFilters(array $Filters) Set Filter
- * @method array getExcludeImageList() Obtain List of images not to be scanned, which is used together with `Filters`.
- * @method void setExcludeImageList(array $ExcludeImageList) Set List of images not to be scanned, which is used together with `Filters`.
- * @method boolean getOnlyScanLatest() Obtain Whether to scan only the latest repository images, which is used together with `Filters`.
- * @method void setOnlyScanLatest(boolean $OnlyScanLatest) Set Whether to scan only the latest repository images, which is used together with `Filters`.
+ * @method boolean getAll() Obtain <p>Whether to scan all images.</p>
+ * @method void setAll(boolean $All) Set <p>Whether to scan all images.</p>
+ * @method array getImages() Obtain <p>List of images to be scanned.</p>
+ * @method void setImages(array $Images) Set <p>List of images to be scanned.</p>
+ * @method array getScanType() Obtain <p>Scan type array.</p>
+ * @method void setScanType(array $ScanType) Set <p>Scan type array.</p>
+ * @method array getId() Obtain <p>List of images to be scanned.</p>
+ * @method void setId(array $Id) Set <p>List of images to be scanned.</p>
+ * @method array getFilters() Obtain <p>Filter conditions.</p>
+ * @method void setFilters(array $Filters) Set <p>Filter conditions.</p>
+ * @method array getExcludeImageList() Obtain <p>List of images that do not need to be scanned, used in conjunction with Filters.</p>
+ * @method void setExcludeImageList(array $ExcludeImageList) Set <p>List of images that do not need to be scanned, used in conjunction with Filters.</p>
+ * @method boolean getOnlyScanLatest() Obtain <p>Whether to scan only the latest version of the image in each repository, used in conjunction with Filters.</p>
+ * @method void setOnlyScanLatest(boolean $OnlyScanLatest) Set <p>Whether to scan only the latest version of the image in each repository, used in conjunction with Filters.</p>
+ * @method integer getTimeout() Obtain <p>Task timeout duration.</p><p>Unit: seconds.</p>
+ * @method void setTimeout(integer $Timeout) Set <p>Task timeout duration.</p><p>Unit: seconds.</p>
  */
 class CreateAssetImageRegistryScanTaskRequest extends AbstractModel
 {
     /**
-     * @var boolean Whether to scan all images
+     * @var boolean <p>Whether to scan all images.</p>
      */
     public $All;
 
     /**
-     * @var array List of scanned images
+     * @var array <p>List of images to be scanned.</p>
      */
     public $Images;
 
     /**
-     * @var array Array of scan types
+     * @var array <p>Scan type array.</p>
      */
     public $ScanType;
 
     /**
-     * @var array List of scanned images
+     * @var array <p>List of images to be scanned.</p>
      */
     public $Id;
 
     /**
-     * @var array Filter
+     * @var array <p>Filter conditions.</p>
      */
     public $Filters;
 
     /**
-     * @var array List of images not to be scanned, which is used together with `Filters`.
+     * @var array <p>List of images that do not need to be scanned, used in conjunction with Filters.</p>
      */
     public $ExcludeImageList;
 
     /**
-     * @var boolean Whether to scan only the latest repository images, which is used together with `Filters`.
+     * @var boolean <p>Whether to scan only the latest version of the image in each repository, used in conjunction with Filters.</p>
      */
     public $OnlyScanLatest;
 
     /**
-     * @param boolean $All Whether to scan all images
-     * @param array $Images List of scanned images
-     * @param array $ScanType Array of scan types
-     * @param array $Id List of scanned images
-     * @param array $Filters Filter
-     * @param array $ExcludeImageList List of images not to be scanned, which is used together with `Filters`.
-     * @param boolean $OnlyScanLatest Whether to scan only the latest repository images, which is used together with `Filters`.
+     * @var integer <p>Task timeout duration.</p><p>Unit: seconds.</p>
+     */
+    public $Timeout;
+
+    /**
+     * @param boolean $All <p>Whether to scan all images.</p>
+     * @param array $Images <p>List of images to be scanned.</p>
+     * @param array $ScanType <p>Scan type array.</p>
+     * @param array $Id <p>List of images to be scanned.</p>
+     * @param array $Filters <p>Filter conditions.</p>
+     * @param array $ExcludeImageList <p>List of images that do not need to be scanned, used in conjunction with Filters.</p>
+     * @param boolean $OnlyScanLatest <p>Whether to scan only the latest version of the image in each repository, used in conjunction with Filters.</p>
+     * @param integer $Timeout <p>Task timeout duration.</p><p>Unit: seconds.</p>
      */
     function __construct()
     {
@@ -130,6 +138,10 @@ class CreateAssetImageRegistryScanTaskRequest extends AbstractModel
 
         if (array_key_exists("OnlyScanLatest",$param) and $param["OnlyScanLatest"] !== null) {
             $this->OnlyScanLatest = $param["OnlyScanLatest"];
+        }
+
+        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
+            $this->Timeout = $param["Timeout"];
         }
     }
 }

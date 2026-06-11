@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProjectId() Obtain Host business group ID
  * @method void setProjectId(integer $ProjectId) Set Host business group ID
  * @method array getTag() Obtain Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTag(array $Tag) Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getName() Obtain Application name
  * @method void setName(string $Name) Set Application name
  * @method integer getType() Obtain Application type	
@@ -71,17 +69,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method string getFirstTime() Obtain First collection time
  * @method void setFirstTime(string $FirstTime) Set First collection time
  * @method string getUpdateTime() Obtain Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsNew() Obtain Whether the web service is newly added [0: no|1: yes]
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsNew(integer $IsNew) Set Whether the web service is newly added [0: no|1: yes]
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsNew() Obtain Whether it is newly added [0: no | 1: yes]
+ * @method void setIsNew(integer $IsNew) Set Whether it is newly added [0: no | 1: yes]
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AssetAppBaseInfo extends AbstractModel
 {
@@ -117,7 +109,6 @@ class AssetAppBaseInfo extends AbstractModel
 
     /**
      * @var array Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tag;
 
@@ -176,19 +167,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
     /**
-     * @var integer Whether the web service is newly added [0: no|1: yes]
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether it is newly added [0: no | 1: yes]
      */
     public $IsNew;
 
     /**
      * @var MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -200,7 +188,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Quuid Host QUUID
      * @param integer $ProjectId Host business group ID
      * @param array $Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Name Application name
      * @param integer $Type Application type	
 1: operations
@@ -219,11 +206,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ConfigPath Configuration file path
      * @param string $FirstTime First collection time
      * @param string $UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsNew Whether the web service is newly added [0: no|1: yes]
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsNew Whether it is newly added [0: no | 1: yes]
      * @param MachineExtraInfo $MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -24,7 +24,6 @@ use TencentCloud\Cwp\V20180228\Models as Models;
 
 /**
  * @method Models\AddLoginWhiteListsResponse AddLoginWhiteLists(Models\AddLoginWhiteListsRequest $req) This API is used to add cross-region log-in allowlists in batches.
- * @method Models\CancelIgnoreVulResponse CancelIgnoreVul(Models\CancelIgnoreVulRequest $req) This API is used to unignore the vulnerabilities.
  * @method Models\ChangeRuleEventsIgnoreStatusResponse ChangeRuleEventsIgnoreStatus(Models\ChangeRuleEventsIgnoreStatusRequest $req) This API is used to ignore events or cancel ignoring in batches based on check item ID or event ID.
  * @method Models\ChangeStrategyEnableStatusResponse ChangeStrategyEnableStatus(Models\ChangeStrategyEnableStatusRequest $req) This API is used to change the policy availability status by policy ID.
  * @method Models\CheckBashPolicyParamsResponse CheckBashPolicyParams(Models\CheckBashPolicyParamsRequest $req) This API is used to verify parameters entered for adding and editing high-risk command user rules.
@@ -45,7 +44,7 @@ This API is used to call the billing payment API for payment since prepaid order
  * @method Models\CreateLogExportResponse CreateLogExport(Models\CreateLogExportRequest $req) This API is used to create log download tasks.
  * @method Models\CreateMaliciousRequestWhiteListResponse CreateMaliciousRequestWhiteList(Models\CreateMaliciousRequestWhiteListRequest $req) This API is used to add malicious request allowlists.
  * @method Models\CreateMalwareWhiteListResponse CreateMalwareWhiteList(Models\CreateMalwareWhiteListRequest $req) This API is used to create the Trojan allowlist.
- * @method Models\CreateNetAttackWhiteListResponse CreateNetAttackWhiteList(Models\CreateNetAttackWhiteListRequest $req) This API is used to create a network attack allowlist.
+ * @method Models\CreateNetAttackWhiteListResponse CreateNetAttackWhiteList(Models\CreateNetAttackWhiteListRequest $req) This API is used to create a network attack allowlist.
  * @method Models\CreateRansomDefenseStrategyResponse CreateRansomDefenseStrategy(Models\CreateRansomDefenseStrategyRequest $req) This API is used to create or modify anti-ransomware policies.
  * @method Models\CreateScanMalwareSettingResponse CreateScanMalwareSetting(Models\CreateScanMalwareSettingRequest $req) This API is used to detect the intrusion and virus scanning.
  * @method Models\CreateSearchLogResponse CreateSearchLog(Models\CreateSearchLogRequest $req) This API is used to add history search records.
@@ -76,6 +75,7 @@ This API is used to call the billing payment API for payment since prepaid order
  * @method Models\DeleteNonlocalLoginPlacesResponse DeleteNonlocalLoginPlaces(Models\DeleteNonlocalLoginPlacesRequest $req) This API is used to delete cross-region log-in records.
  * @method Models\DeletePrivilegeEventsResponse DeletePrivilegeEvents(Models\DeletePrivilegeEventsRequest $req) This API is used to delete local privilege escalation based on IDs.
  * @method Models\DeletePrivilegeRulesResponse DeletePrivilegeRules(Models\DeletePrivilegeRulesRequest $req) This API is used to delete local privilege elevation rules.
+ * @method Models\DeleteRaspRulesResponse DeleteRaspRules(Models\DeleteRaspRulesRequest $req) Deleting Entries from the Vulnerability Defense Allowlist
  * @method Models\DeleteReverseShellEventsResponse DeleteReverseShellEvents(Models\DeleteReverseShellEventsRequest $req) This API is used to delete Reverse Shell events based on IDs.
  * @method Models\DeleteReverseShellRulesResponse DeleteReverseShellRules(Models\DeleteReverseShellRulesRequest $req) This API is used to delete Reverse Shell rules.
  * @method Models\DeleteRiskDnsEventResponse DeleteRiskDnsEvent(Models\DeleteRiskDnsEventRequest $req) This API is used to delete malicious request events.
@@ -88,7 +88,7 @@ This API is used to call the billing payment API for payment since prepaid order
  * @method Models\DeleteWebHookRuleResponse DeleteWebHookRule(Models\DeleteWebHookRuleRequest $req) This API is used to delete the rules of WeCom chatbots.
  * @method Models\DescribeABTestConfigResponse DescribeABTestConfig(Models\DescribeABTestConfigRequest $req) This API is used to obtain the current grayscale configuration of the user.
  * @method Models\DescribeAESKeyResponse DescribeAESKey(Models\DescribeAESKeyRequest $req) This API is used to obtain the configured aeskey and aesiv.
- * @method Models\DescribeAccountStatisticsResponse DescribeAccountStatistics(Models\DescribeAccountStatisticsRequest $req) This API is used to obtain the account statistics data.
+ * @method Models\DescribeAccountStatisticsResponse DescribeAccountStatistics(Models\DescribeAccountStatisticsRequest $req) This API is used to obtain account statistics list data.
  * @method Models\DescribeAgentInstallCommandResponse DescribeAgentInstallCommand(Models\DescribeAgentInstallCommandRequest $req) This API is used to obtain the agent installation command.
  * @method Models\DescribeAgentInstallationTokenResponse DescribeAgentInstallationToken(Models\DescribeAgentInstallationTokenRequest $req) This API is used to obtain the token for installing the agent in a hybrid cloud environment.
  * @method Models\DescribeAlarmIncidentNodesResponse DescribeAlarmIncidentNodes(Models\DescribeAlarmIncidentNodesRequest $req) This API is used to obtain all node information on the event corresponding to an alarm.
@@ -140,20 +140,11 @@ This API is used to call the billing payment API for payment since prepaid order
  * @method Models\DescribeAssetWebServiceProcessListResponse DescribeAssetWebServiceProcessList(Models\DescribeAssetWebServiceProcessListRequest $req) This API is used to obtain the list of processes associated with Web services.
  * @method Models\DescribeAttackEventInfoResponse DescribeAttackEventInfo(Models\DescribeAttackEventInfoRequest $req) This API is used to obtain network attack details.
  * @method Models\DescribeAttackEventsResponse DescribeAttackEvents(Models\DescribeAttackEventsRequest $req) This API is used to display the list of network attack detection events in pagination.
- * @method Models\DescribeAttackLogsResponse DescribeAttackLogs(Models\DescribeAttackLogsRequest $req) DescribeAttackEvents 代替
-
-This API is used to display the list of network attack logs in pagination.
- * @method Models\DescribeAttackSourceResponse DescribeAttackSource(Models\DescribeAttackSourceRequest $req) 已废弃
-
-This API is used to backtrack attacks.
- * @method Models\DescribeAttackSourceEventsResponse DescribeAttackSourceEvents(Models\DescribeAttackSourceEventsRequest $req) 已废弃
-
-This API is used to query attack backtracking events.
  * @method Models\DescribeAttackStatisticsResponse DescribeAttackStatistics(Models\DescribeAttackStatisticsRequest $req) This API is used to obtain the statistics of network attack data.
  * @method Models\DescribeAttackTopResponse DescribeAttackTop(Models\DescribeAttackTopRequest $req) This API is used to obtain the list of Top 5 network attacks.
  * @method Models\DescribeAttackTrendsResponse DescribeAttackTrends(Models\DescribeAttackTrendsRequest $req) This API is used to obtain the network attack trend data.
+ * @method Models\DescribeAttackTypeResponse DescribeAttackType(Models\DescribeAttackTypeRequest $req) This API is used to query the application protection allowlist attack type list.
  * @method Models\DescribeAttackVulTypeListResponse DescribeAttackVulTypeList(Models\DescribeAttackVulTypeListRequest $req) This API is used to obtain the list of network attack threat types.
- * @method Models\DescribeAvailableExpertServiceDetailResponse DescribeAvailableExpertServiceDetail(Models\DescribeAvailableExpertServiceDetailRequest $req) This API is used to obtain available order details.
  * @method Models\DescribeBanModeResponse DescribeBanMode(Models\DescribeBanModeRequest $req) This API is used to obtain the brute-force blocking mode.
  * @method Models\DescribeBanRegionsResponse DescribeBanRegions(Models\DescribeBanRegionsRequest $req) This API is used to obtain the block region.
  * @method Models\DescribeBanStatusResponse DescribeBanStatus(Models\DescribeBanStatusRequest $req) This API is used to obtain the block button status.
@@ -185,17 +176,11 @@ This API is used to query attack backtracking events.
  * @method Models\DescribeCanFixVulMachineResponse DescribeCanFixVulMachine(Models\DescribeCanFixVulMachineRequest $req) This API is used to query the fixable host information.
  * @method Models\DescribeCanNotSeparateMachineResponse DescribeCanNotSeparateMachine(Models\DescribeCanNotSeparateMachineRequest $req) This API is used to obtain hosts where Trojans cannot be isolated.
  * @method Models\DescribeClientExceptionResponse DescribeClientException(Models\DescribeClientExceptionRequest $req) This API is used to obtain client exception events.
- * @method Models\DescribeComponentStatisticsResponse DescribeComponentStatistics(Models\DescribeComponentStatisticsRequest $req) 接口已无效
-
-This API is used to obtain the data of the component statistics list.
  * @method Models\DescribeDefenceEventDetailResponse DescribeDefenceEventDetail(Models\DescribeDefenceEventDetailRequest $req) This API is used to obtain vulnerability defense event details.
  * @method Models\DescribeDirectConnectInstallCommandResponse DescribeDirectConnectInstallCommand(Models\DescribeDirectConnectInstallCommandRequest $req) This API is used to obtain DC agent installation command, including the token.
  * @method Models\DescribeESAggregationsResponse DescribeESAggregations(Models\DescribeESAggregationsRequest $req) This API is used to obtain the aggregation result of the ES field.
- * @method Models\DescribeEmergencyResponseListResponse DescribeEmergencyResponseList(Models\DescribeEmergencyResponseListRequest $req) This API is used to obtain the emergency response list.
  * @method Models\DescribeEmergencyVulListResponse DescribeEmergencyVulList(Models\DescribeEmergencyVulListRequest $req) This API is used to obtain the list of emergency vulnerabilities.
  * @method Models\DescribeEventByTableResponse DescribeEventByTable(Models\DescribeEventByTableRequest $req) This API is used to query alarm event details based on event table names and IDs.
- * @method Models\DescribeExpertServiceListResponse DescribeExpertServiceList(Models\DescribeExpertServiceListRequest $req) This API is used to obtain the security manager list.
- * @method Models\DescribeExpertServiceOrderListResponse DescribeExpertServiceOrderList(Models\DescribeExpertServiceOrderListRequest $req) This API is used to obtain the expert service order list.
  * @method Models\DescribeExportMachinesResponse DescribeExportMachines(Models\DescribeExportMachinesRequest $req) This API is used to export the list of hosts in a specific region.
  * @method Models\DescribeFastAnalysisResponse DescribeFastAnalysis(Models\DescribeFastAnalysisRequest $req) This API is used to quickly analyze and count logs.
  * @method Models\DescribeFileTamperEventRuleInfoResponse DescribeFileTamperEventRuleInfo(Models\DescribeFileTamperEventRuleInfoRequest $req) This API is used to view the rule details API when an event occurs.
@@ -204,17 +189,15 @@ This API is used to obtain the data of the component statistics list.
  * @method Models\DescribeFileTamperRuleInfoResponse DescribeFileTamperRuleInfo(Models\DescribeFileTamperRuleInfoRequest $req) This API is used to query details of a monitoring rule.
  * @method Models\DescribeFileTamperRulesResponse DescribeFileTamperRules(Models\DescribeFileTamperRulesRequest $req) This API is used to obtain the list of core file monitoring rules.
  * @method Models\DescribeGeneralStatResponse DescribeGeneralStat(Models\DescribeGeneralStatRequest $req) This API is used to obtain the statistics data of hosts.
- * @method Models\DescribeHistoryAccountsResponse DescribeHistoryAccounts(Models\DescribeHistoryAccountsRequest $req) This API is used to obtain the data of the account change history list.
+ * @method Models\DescribeHistoryAccountsResponse DescribeHistoryAccounts(Models\DescribeHistoryAccountsRequest $req) This API is used to obtain the account change history list data.
  * @method Models\DescribeHistoryServiceResponse DescribeHistoryService(Models\DescribeHistoryServiceRequest $req) This API is used to query the log retrieval service information.
  * @method Models\DescribeHostInfoResponse DescribeHostInfo(Models\DescribeHostInfoRequest $req) This API is used to query the host and tag information.
- * @method Models\DescribeHostLoginListResponse DescribeHostLoginList(Models\DescribeHostLoginListRequest $req) This API is used to retrieve the log-in audit list.
+ * @method Models\DescribeHostLoginListResponse DescribeHostLoginList(Models\DescribeHostLoginListRequest $req) Retrieve the abnormal login list
  * @method Models\DescribeHotVulTopResponse DescribeHotVulTop(Models\DescribeHotVulTopRequest $req) This API is used to obtain hot spot vulnerabilities across the entire network.
  * @method Models\DescribeIgnoreBaselineRuleResponse DescribeIgnoreBaselineRule(Models\DescribeIgnoreBaselineRuleRequest $req) This API is used to query the information of ignored inspection items.
  * @method Models\DescribeIgnoreHostAndItemConfigResponse DescribeIgnoreHostAndItemConfig(Models\DescribeIgnoreHostAndItemConfigRequest $req) This API is used to obtain the information of affected inspection items and hosts ignored with one click.
  * @method Models\DescribeIgnoreRuleEffectHostListResponse DescribeIgnoreRuleEffectHostList(Models\DescribeIgnoreRuleEffectHostListRequest $req) This API is used to query the information on the list of hosts affected by ignored detection items based on detection item IDs and filter criteria.
- * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) 接口已废弃
-
-This API is used to obtain the index list.
+ * @method Models\DescribeInjectRiskyServiceSwitchResponse DescribeInjectRiskyServiceSwitch(Models\DescribeInjectRiskyServiceSwitchRequest $req) Query java memory horse and rasp whether inject risk service configuration
  * @method Models\DescribeJavaMemShellInfoResponse DescribeJavaMemShellInfo(Models\DescribeJavaMemShellInfoRequest $req) This API is used to query Java webshell event details.
  * @method Models\DescribeJavaMemShellListResponse DescribeJavaMemShellList(Models\DescribeJavaMemShellListRequest $req) This API is used to query the list of Java webshell events.
  * @method Models\DescribeJavaMemShellPluginInfoResponse DescribeJavaMemShellPluginInfo(Models\DescribeJavaMemShellPluginInfoRequest $req) This API is used to query the Java webshell plugin information of the given host.
@@ -234,6 +217,8 @@ This API is used to obtain the index list.
  * @method Models\DescribeLogStorageRecordResponse DescribeLogStorageRecord(Models\DescribeLogStorageRecordRequest $req) This API is used to obtain the record of stored log size.
  * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) This API is used to obtain the statistics of the used log retrieval capacity.
  * @method Models\DescribeLogTypeResponse DescribeLogType(Models\DescribeLogTypeRequest $req) This API is used to obtain log types, and the returned result of this API indicates temporarily filterable log types.
+ * @method Models\DescribeLoginTypeGlobalConfResponse DescribeLoginTypeGlobalConf(Models\DescribeLoginTypeGlobalConfRequest $req) Retrieve the global configuration for uninstall protection
+ * @method Models\DescribeLoginTypeHostResponse DescribeLoginTypeHost(Models\DescribeLoginTypeHostRequest $req) Retrieve the host list via QR code log-in
  * @method Models\DescribeLoginWhiteCombinedListResponse DescribeLoginWhiteCombinedList(Models\DescribeLoginWhiteCombinedListRequest $req) This API is used to obtain the list of cross-region log-in allowlists after merge.
  * @method Models\DescribeLoginWhiteHostListResponse DescribeLoginWhiteHostList(Models\DescribeLoginWhiteHostListRequest $req) This API is used to query the list of allowlisted machines after merge.
  * @method Models\DescribeLoginWhiteListResponse DescribeLoginWhiteList(Models\DescribeLoginWhiteListRequest $req) This API is used to obtain the cross-region log-in allowlist list.
@@ -258,11 +243,13 @@ This API is used to obtain the index list.
  * @method Models\DescribeMalwareTimingScanSettingResponse DescribeMalwareTimingScanSetting(Models\DescribeMalwareTimingScanSettingRequest $req) This API is used to query the scheduled scan configuration.
  * @method Models\DescribeMalwareWhiteListResponse DescribeMalwareWhiteList(Models\DescribeMalwareWhiteListRequest $req) This API is used to obtain the list of Trojan allowlists.
  * @method Models\DescribeMalwareWhiteListAffectListResponse DescribeMalwareWhiteListAffectList(Models\DescribeMalwareWhiteListAffectListRequest $req) This API is used to obtain the list of affected Trojan allowlists.
- * @method Models\DescribeMonthInspectionReportResponse DescribeMonthInspectionReport(Models\DescribeMonthInspectionReportRequest $req) This API is used to download the monthly inspection report of the security manager.
+ * @method Models\DescribeMemShellRulesResponse DescribeMemShellRules(Models\DescribeMemShellRulesRequest $req) This API is used to obtain the list of Reverse Shell rules.
  * @method Models\DescribeNetAttackSettingResponse DescribeNetAttackSetting(Models\DescribeNetAttackSettingRequest $req) This API is used to query network attack settings.
  * @method Models\DescribeNetAttackWhiteListResponse DescribeNetAttackWhiteList(Models\DescribeNetAttackWhiteListRequest $req) This API is used to obtain the network attack allowlist list.
  * @method Models\DescribeOpenPortStatisticsResponse DescribeOpenPortStatistics(Models\DescribeOpenPortStatisticsRequest $req) This API is used to obtain the list of port statistics.
  * @method Models\DescribeOverviewStatisticsResponse DescribeOverviewStatistics(Models\DescribeOverviewStatisticsRequest $req) This API is used to obtain the overview statistics.
+ * @method Models\DescribePatchEffectHostListResponse DescribePatchEffectHostList(Models\DescribePatchEffectHostListRequest $req) Query the information list of affected hosts by a patch
+ * @method Models\DescribePatchInfoResponse DescribePatchInfo(Models\DescribePatchInfoRequest $req) Patch details
  * @method Models\DescribePrivilegeEventInfoResponse DescribePrivilegeEventInfo(Models\DescribePrivilegeEventInfoRequest $req) This API is used to obtain local privilege escalation information details.
  * @method Models\DescribePrivilegeRulesResponse DescribePrivilegeRules(Models\DescribePrivilegeRulesRequest $req) This API is used to obtain the list of local privilege escalation rules.
  * @method Models\DescribeProVersionInfoResponse DescribeProVersionInfo(Models\DescribeProVersionInfoRequest $req) This API is used to obtain the overview information of the Professional edition.
@@ -280,10 +267,23 @@ This API is used to obtain the index list.
  * @method Models\DescribeRansomDefenseStrategyListResponse DescribeRansomDefenseStrategyList(Models\DescribeRansomDefenseStrategyListRequest $req) This API is used to query the list of anti-ransomware policies.
  * @method Models\DescribeRansomDefenseStrategyMachinesResponse DescribeRansomDefenseStrategyMachines(Models\DescribeRansomDefenseStrategyMachinesRequest $req) This API is used to query the list of machines bound to an anti-ransomware policy.
  * @method Models\DescribeRansomDefenseTrendResponse DescribeRansomDefenseTrend(Models\DescribeRansomDefenseTrendRequest $req) This API is used to obtain the ransomware situation across the entire network.
+ * @method Models\DescribeRaspEventCWPResponse DescribeRaspEventCWP(Models\DescribeRaspEventCWPRequest $req) This API is used to query application protection event lists
+ * @method Models\DescribeRaspEventDetailCWPResponse DescribeRaspEventDetailCWP(Models\DescribeRaspEventDetailCWPRequest $req) Application defense event details
+ * @method Models\DescribeRaspEventDetailTCSSResponse DescribeRaspEventDetailTCSS(Models\DescribeRaspEventDetailTCSSRequest $req) Application defense event details
+ * @method Models\DescribeRaspEventTCSSResponse DescribeRaspEventTCSS(Models\DescribeRaspEventTCSSRequest $req) This API is used to query application protection event lists
+ * @method Models\DescribeRaspLicenseListResponse DescribeRaspLicenseList(Models\DescribeRaspLicenseListRequest $req) Query the application protection license list
+ * @method Models\DescribeRaspMaxCpuResponse DescribeRaspMaxCpu(Models\DescribeRaspMaxCpuRequest $req) View the maximum cpu limitation for vulnerability defense
+ * @method Models\DescribeRaspMemShellDetailTCSSResponse DescribeRaspMemShellDetailTCSS(Models\DescribeRaspMemShellDetailTCSSRequest $req) Retrieve application protection Java Webshell scan event details from container perspective
+ * @method Models\DescribeRaspMemShellListTCSSResponse DescribeRaspMemShellListTCSS(Models\DescribeRaspMemShellListTCSSRequest $req) Retrieve Java Webshell scan event list from container perspective
+ * @method Models\DescribeRaspPluginListResponse DescribeRaspPluginList(Models\DescribeRaspPluginListRequest $req) Important Period Guarantee Protection License Plugin Detail List
+ * @method Models\DescribeRaspRuleVulsResponse DescribeRaspRuleVuls(Models\DescribeRaspRuleVulsRequest $req) Retrieve the vulnerability list of the vulnerability defense allowlist
+ * @method Models\DescribeRaspRulesResponse DescribeRaspRules(Models\DescribeRaspRulesRequest $req) This example shows you how to query the vulnerability defense allowlist.
  * @method Models\DescribeRecommendedProtectCpuResponse DescribeRecommendedProtectCpu(Models\DescribeRecommendedProtectCpuRequest $req) This API is used to query the recommended number of protection cores for purchase.
  * @method Models\DescribeReverseShellEventInfoResponse DescribeReverseShellEventInfo(Models\DescribeReverseShellEventInfoRequest $req) This API is used to query reverse shell details.
  * @method Models\DescribeReverseShellEventsResponse DescribeReverseShellEvents(Models\DescribeReverseShellEventsRequest $req) This API is used to obtain the list of Reverse Shell.
  * @method Models\DescribeReverseShellRulesResponse DescribeReverseShellRules(Models\DescribeReverseShellRulesRequest $req) This API is used to obtain the list of Reverse Shell rules.
+ * @method Models\DescribeReverseShellRulesAggregationResponse DescribeReverseShellRulesAggregation(Models\DescribeReverseShellRulesAggregationRequest $req) This API is used to obtain the list of Reverse Shell rules.
+ * @method Models\DescribeReverseShellSystemPolicyConfigResponse DescribeReverseShellSystemPolicyConfig(Models\DescribeReverseShellSystemPolicyConfigRequest $req) Query the configuration of the reverse shell system policy.
  * @method Models\DescribeRiskBatchStatusResponse DescribeRiskBatchStatus(Models\DescribeRiskBatchStatusRequest $req) This API is used to query if the intrusion detection event update task is completed.
  * @method Models\DescribeRiskDnsEventInfoResponse DescribeRiskDnsEventInfo(Models\DescribeRiskDnsEventInfoRequest $req) This API is used to query malicious request event details.
  * @method Models\DescribeRiskDnsEventListResponse DescribeRiskDnsEventList(Models\DescribeRiskDnsEventListRequest $req) This API is used to obtain the list of malicious request events.
@@ -317,11 +317,10 @@ This API is used to obtain the index list.
  * @method Models\DescribeSecurityDynamicsResponse DescribeSecurityDynamics(Models\DescribeSecurityDynamicsRequest $req) This API is used to obtain the dynamic message data of security events.
  * @method Models\DescribeSecurityEventStatResponse DescribeSecurityEventStat(Models\DescribeSecurityEventStatRequest $req) This API is used to obtain the statistics of security events.
  * @method Models\DescribeSecurityEventsCntResponse DescribeSecurityEventsCnt(Models\DescribeSecurityEventsCntRequest $req) This API is used to obtain the statistics data of security overview-related events.
- * @method Models\DescribeSecurityProtectionStatResponse DescribeSecurityProtectionStat(Models\DescribeSecurityProtectionStatRequest $req) 接口已无效
-
-This API is used to obtain the summary of security protection statuses.
  * @method Models\DescribeSecurityTrendsResponse DescribeSecurityTrends(Models\DescribeSecurityTrendsRequest $req) This API is used to obtain the security event statistics data.
  * @method Models\DescribeServersAndRiskAndFirstInfoResponse DescribeServersAndRiskAndFirstInfo(Models\DescribeServersAndRiskAndFirstInfoRequest $req) This API is used to obtain the number of risky files pending to be processed + the number of affected servers + whether to try to detect + last detection time.
+ * @method Models\DescribeShellPolicyListResponse DescribeShellPolicyList(Models\DescribeShellPolicyListRequest $req) This API is used to query the list of reverse shell policies.
+ * @method Models\DescribeSkillInfoResponse DescribeSkillInfo(Models\DescribeSkillInfoRequest $req) Patch details
  * @method Models\DescribeStrategyExistResponse DescribeStrategyExist(Models\DescribeStrategyExistRequest $req) This API is used to query whether a policy exists by policy name.
  * @method Models\DescribeTagMachinesResponse DescribeTagMachines(Models\DescribeTagMachinesRequest $req) This API is used to obtain the server information associated with the specified tag.
  * @method Models\DescribeTagsResponse DescribeTags(Models\DescribeTagsRequest $req) This API is used to obtain all host tags.
@@ -338,10 +337,12 @@ This API is used to obtain the summary of security protection statuses.
  * @method Models\DescribeVulDefenceEventResponse DescribeVulDefenceEvent(Models\DescribeVulDefenceEventRequest $req) This API is used to obtain the list of vulnerability defense events.
  * @method Models\DescribeVulDefenceListResponse DescribeVulDefenceList(Models\DescribeVulDefenceListRequest $req) This API is used to query the vulnerability defense list.
  * @method Models\DescribeVulDefenceOverviewResponse DescribeVulDefenceOverview(Models\DescribeVulDefenceOverviewRequest $req) This API is used to obtain the vulnerability defense overview information, including event trend and plugin enabling status.
+ * @method Models\DescribeVulDefenceOverviewCountResponse DescribeVulDefenceOverviewCount(Models\DescribeVulDefenceOverviewCountRequest $req) This API is used to obtain vulnerability defense policies and event statistics.
  * @method Models\DescribeVulDefencePluginDetailResponse DescribeVulDefencePluginDetail(Models\DescribeVulDefencePluginDetailRequest $req) This API is used to obtain the vulnerability defense plugin information on a single host.
  * @method Models\DescribeVulDefencePluginExceptionCountResponse DescribeVulDefencePluginExceptionCount(Models\DescribeVulDefencePluginExceptionCountRequest $req) This API is used to obtain the current number of abnormal plugins.
  * @method Models\DescribeVulDefencePluginStatusResponse DescribeVulDefencePluginStatus(Models\DescribeVulDefencePluginStatusRequest $req) This API is used to obtain the vulnerability defense plugin status of each host.
  * @method Models\DescribeVulDefenceSettingResponse DescribeVulDefenceSetting(Models\DescribeVulDefenceSettingRequest $req) This API is used to obtain the current vulnerability defense plugin settings.
+ * @method Models\DescribeVulDefenceSettingListResponse DescribeVulDefenceSettingList(Models\DescribeVulDefenceSettingListRequest $req) This API is used to query the list of vulnerability defense settings.
  * @method Models\DescribeVulEffectHostListResponse DescribeVulEffectHostList(Models\DescribeVulEffectHostListRequest $req) This API is used to obtain the list of hosts affected by vulnerabilities.
  * @method Models\DescribeVulEffectModulesResponse DescribeVulEffectModules(Models\DescribeVulEffectModulesRequest $req) This API is used to obtain the list of components affected by vulnerabilities.
  * @method Models\DescribeVulEmergentMsgResponse DescribeVulEmergentMsg(Models\DescribeVulEmergentMsgRequest $req) This API is used to obtain vulnerability emergency notifications.
@@ -363,11 +364,12 @@ This API is used to obtain the summary of security protection statuses.
  * @method Models\DescribeWebHookReceiverUsageResponse DescribeWebHookReceiverUsage(Models\DescribeWebHookReceiverUsageRequest $req) This API is used to query the usage of policies associated with the specified alarm recipient.
  * @method Models\DescribeWebHookRuleResponse DescribeWebHookRule(Models\DescribeWebHookRuleRequest $req) This API is used to obtain the details of the WeCom chatbot rules.
  * @method Models\DescribeWebHookRulesResponse DescribeWebHookRules(Models\DescribeWebHookRulesRequest $req) This API is used to obtain the list of WeCom chatbot rules.
+ * @method Models\DescribeWindowsPatchListResponse DescribeWindowsPatchList(Models\DescribeWindowsPatchListRequest $req) Search patch information list
+ * @method Models\DescribeYDRaspBlackWhiteResponse DescribeYDRaspBlackWhite(Models\DescribeYDRaspBlackWhiteRequest $req) Query application protection allowlist rules
  * @method Models\DestroyOrderResponse DestroyOrder(Models\DestroyOrderRequest $req) This API is used to terminate resources.
  * @method Models\EditBashRulesResponse EditBashRules(Models\EditBashRulesRequest $req) This API is used to add or modify high-risk command rules.
  * @method Models\EditPrivilegeRulesResponse EditPrivilegeRules(Models\EditPrivilegeRulesRequest $req) This API is used to add or modify local privilege escalation rules (multiple servers supported).
- * @method Models\EditReverseShellRulesResponse EditReverseShellRules(Models\EditReverseShellRulesRequest $req) This API is used to edit reverse shell rules (multiple servers supported).
-
+ * @method Models\EditReverseShellRulesResponse EditReverseShellRules(Models\EditReverseShellRulesRequest $req) Editing Reverse Shell Rules. (Supporting Selecting Multiple Servers)
  * @method Models\EditTagsResponse EditTags(Models\EditTagsRequest $req) This API is used to add or edit tags.
  * @method Models\ExportAssetAppListResponse ExportAssetAppList(Models\ExportAssetAppListRequest $req) This API is used to export the list of asset management applications.
  * @method Models\ExportAssetCoreModuleListResponse ExportAssetCoreModuleList(Models\ExportAssetCoreModuleListRequest $req) This API is used to export the list of asset management kernel modules.
@@ -407,6 +409,7 @@ This API is used to obtain the summary of security protection statuses.
  * @method Models\ExportMaliciousRequestsResponse ExportMaliciousRequests(Models\ExportMaliciousRequestsRequest $req) This API is used to export the downloaded malicious request files.
  * @method Models\ExportMalwaresResponse ExportMalwares(Models\ExportMalwaresRequest $req) This API is used to export Trojan records to a CSV file.
  * @method Models\ExportNonlocalLoginPlacesResponse ExportNonlocalLoginPlaces(Models\ExportNonlocalLoginPlacesRequest $req) This API is used to export cross-region log-in event records in CSV format.
+ * @method Models\ExportPatchEffectHostListResponse ExportPatchEffectHostList(Models\ExportPatchEffectHostListRequest $req) Export the affected host list of a patch
  * @method Models\ExportPrivilegeEventsResponse ExportPrivilegeEvents(Models\ExportPrivilegeEventsRequest $req) This API is used to export local privilege escalation events.
  * @method Models\ExportRansomDefenseBackupListResponse ExportRansomDefenseBackupList(Models\ExportRansomDefenseBackupListRequest $req) This API is used to export the list of host snapshot backups.
  * @method Models\ExportRansomDefenseEventsListResponse ExportRansomDefenseEventsList(Models\ExportRansomDefenseEventsListRequest $req) This API is used to export the list of anti-ransomware events.
@@ -428,8 +431,8 @@ This API is used to obtain the summary of security protection statuses.
  * @method Models\ExportVulEffectHostListResponse ExportVulEffectHostList(Models\ExportVulEffectHostListRequest $req) This API is used to export the list of hosts affected by vulnerabilities.
  * @method Models\ExportVulInfoResponse ExportVulInfo(Models\ExportVulInfoRequest $req) This API is used to export the vulnerability information, including the list of affected hosts and component information.
  * @method Models\ExportVulListResponse ExportVulList(Models\ExportVulListRequest $req) This API is used to export the vulnerability list.
+ * @method Models\ExportWindowsPatchListResponse ExportWindowsPatchList(Models\ExportWindowsPatchListRequest $req) Export Windows patch list
  * @method Models\GetLocalStorageItemResponse GetLocalStorageItem(Models\GetLocalStorageItemRequest $req) This API is used to obtain the locally stored data.
- * @method Models\IgnoreImpactedHostsResponse IgnoreImpactedHosts(Models\IgnoreImpactedHostsRequest $req) This API is used to ignore vulnerabilities.
  * @method Models\KeysLocalStorageResponse KeysLocalStorage(Models\KeysLocalStorageRequest $req) This API is used to obtain the list of locally stored key values.
  * @method Models\ModifyAutoOpenProVersionConfigResponse ModifyAutoOpenProVersionConfig(Models\ModifyAutoOpenProVersionConfigRequest $req) This API is used to enable the configuration of automatically enabling the professional protection configuration for newly added hosts.
  * @method Models\ModifyBanModeResponse ModifyBanMode(Models\ModifyBanModeRequest $req) This API is used to modify the brute-force blocking mode.
@@ -461,6 +464,9 @@ This API is used to obtain the summary of security protection statuses.
  * @method Models\ModifyNetAttackWhiteListResponse ModifyNetAttackWhiteList(Models\ModifyNetAttackWhiteListRequest $req) This API is used to edit the network attack whitelist.
  * @method Models\ModifyRansomDefenseEventsStatusResponse ModifyRansomDefenseEventsStatus(Models\ModifyRansomDefenseEventsStatusRequest $req) This API is used to modify the status of anti-ransomware events.
  * @method Models\ModifyRansomDefenseStrategyStatusResponse ModifyRansomDefenseStrategyStatus(Models\ModifyRansomDefenseStrategyStatusRequest $req) This API is used to modify the anti-ransomware policy status in batches.
+ * @method Models\ModifyRaspMaxCpuResponse ModifyRaspMaxCpu(Models\ModifyRaspMaxCpuRequest $req) Edit the maximum cpu configuration for vulnerability defense
+ * @method Models\ModifyRaspRulesResponse ModifyRaspRules(Models\ModifyRaspRulesRequest $req) This example shows you how to add entries to the vulnerability defense allowlist.
+ * @method Models\ModifyReverseShellRulesAggregationResponse ModifyReverseShellRulesAggregation(Models\ModifyReverseShellRulesAggregationRequest $req) Editing Reverse Shell Rules. (Supporting Selecting Multiple Servers)
  * @method Models\ModifyRiskDnsPolicyResponse ModifyRiskDnsPolicy(Models\ModifyRiskDnsPolicyRequest $req) This API is used to modify malicious request policies.
  * @method Models\ModifyRiskDnsPolicyStatusResponse ModifyRiskDnsPolicyStatus(Models\ModifyRiskDnsPolicyStatusRequest $req) This API is used to modify the status of malicious request policies.
  * @method Models\ModifyRiskEventsStatusResponse ModifyRiskEventsStatus(Models\ModifyRiskEventsStatusRequest $req) This API is used to change the status of intrusion detection events, including virus scanning, abnormal log-ins, password cracking, high-risk commands, reverse shells, and local privilege escalations.
@@ -479,6 +485,7 @@ This API is used to obtain the summary of security protection statuses.
  * @method Models\ModifyWebHookRuleStatusResponse ModifyWebHookRuleStatus(Models\ModifyWebHookRuleStatusRequest $req) This API is used to modify the rules of WeCom chatbots.
  * @method Models\ModifyWebPageProtectSwitchResponse ModifyWebPageProtectSwitch(Models\ModifyWebPageProtectSwitchRequest $req) This API is used to enable or disable website anti-tampering protection.
  * @method Models\RansomDefenseRollbackResponse RansomDefenseRollback(Models\RansomDefenseRollbackRequest $req) This API is used to roll back anti-ransomware snapshots.
+ * @method Models\RaspEventOverviewResponse RaspEventOverview(Models\RaspEventOverviewRequest $req) This API is used to obtain the vulnerability defense overview information, including event trend and plugin enabling status.
  * @method Models\RecoverMalwaresResponse RecoverMalwares(Models\RecoverMalwaresRequest $req) This API is used to batch recover quarantined Trojan files.
  * @method Models\RemoveLocalStorageItemResponse RemoveLocalStorageItem(Models\RemoveLocalStorageItemRequest $req) This API is used to delete the locally stored data.
  * @method Models\RemoveMachineResponse RemoveMachine(Models\RemoveMachineRequest $req) This API is used to delete all records of the host. Currently, it only supports non-Tencent Cloud hosts, and the host needs to be offline.

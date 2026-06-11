@@ -20,58 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDeliverCloudFunction request structure.
  *
- * @method string getTopicId() Obtain Topic id belonging to the delivery rule
- * @method void setTopicId(string $TopicId) Set Topic id belonging to the delivery rule
- * @method string getFunctionName() Obtain Cloud Function name for delivery
- * @method void setFunctionName(string $FunctionName) Set Cloud Function name for delivery
- * @method string getNamespace() Obtain Namespace
- * @method void setNamespace(string $Namespace) Set Namespace
- * @method string getQualifier() Obtain Function version
- * @method void setQualifier(string $Qualifier) Set Function version
- * @method integer getTimeout() Obtain Maximum waiting time for delivery. Unit: seconds
- * @method void setTimeout(integer $Timeout) Set Maximum waiting time for delivery. Unit: seconds
- * @method integer getMaxMsgNum() Obtain Maximum number of messages to deliver
- * @method void setMaxMsgNum(integer $MaxMsgNum) Set Maximum number of messages to deliver
+ * @method string getTopicId() Obtain TopicId to which the Shipping Rule belongs.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set TopicId to which the Shipping Rule belongs.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+ * @method string getFunctionName() Obtain Name of the cloud function for delivery. Only event functions (https://www.tencentcloud.com/document/product/583/9694?from_cn_redirect=1#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) (function type selection (https://www.tencentcloud.com/document/product/583/73483?from_cn_redirect=1)) are supported.
+Get function information by [getting the function list](https://www.tencentcloud.com/document/product/583/18582?from_cn_redirect=1).
+ * @method void setFunctionName(string $FunctionName) Set Name of the cloud function for delivery. Only event functions (https://www.tencentcloud.com/document/product/583/9694?from_cn_redirect=1#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) (function type selection (https://www.tencentcloud.com/document/product/583/73483?from_cn_redirect=1)) are supported.
+Get function information by [getting the function list](https://www.tencentcloud.com/document/product/583/18582?from_cn_redirect=1).
+ * @method string getNamespace() Obtain Namespace. See [Namespace management](https://www.tencentcloud.com/document/product/583/35913?from_cn_redirect=1).
+-Obtain the Name by listing the namespace list (https://www.tencentcloud.com/document/product/583/37158?from_cn_redirect=1).
+ * @method void setNamespace(string $Namespace) Set Namespace. See [Namespace management](https://www.tencentcloud.com/document/product/583/35913?from_cn_redirect=1).
+-Obtain the Name by listing the namespace list (https://www.tencentcloud.com/document/product/583/37158?from_cn_redirect=1).
+ * @method string getQualifier() Obtain Function version.
+-Get the function version by [querying the function version](https://www.tencentcloud.com/document/product/583/37162?from_cn_redirect=1).
+ * @method void setQualifier(string $Qualifier) Set Function version.
+-Get the function version by [querying the function version](https://www.tencentcloud.com/document/product/583/37162?from_cn_redirect=1).
+ * @method integer getTimeout() Obtain Maximum waiting time for delivery. Unit: seconds. Default: 60.
+ * @method void setTimeout(integer $Timeout) Set Maximum waiting time for delivery. Unit: seconds. Default: 60.
+ * @method integer getMaxMsgNum() Obtain Maximum number of messages to deliver. Default is 100. Supported range [1,10000].
+ * @method void setMaxMsgNum(integer $MaxMsgNum) Set Maximum number of messages to deliver. Default is 100. Supported range [1,10000].
  */
 class CreateDeliverCloudFunctionRequest extends AbstractModel
 {
     /**
-     * @var string Topic id belonging to the delivery rule
+     * @var string TopicId to which the Shipping Rule belongs.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     public $TopicId;
 
     /**
-     * @var string Cloud Function name for delivery
+     * @var string Name of the cloud function for delivery. Only event functions (https://www.tencentcloud.com/document/product/583/9694?from_cn_redirect=1#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) (function type selection (https://www.tencentcloud.com/document/product/583/73483?from_cn_redirect=1)) are supported.
+Get function information by [getting the function list](https://www.tencentcloud.com/document/product/583/18582?from_cn_redirect=1).
      */
     public $FunctionName;
 
     /**
-     * @var string Namespace
+     * @var string Namespace. See [Namespace management](https://www.tencentcloud.com/document/product/583/35913?from_cn_redirect=1).
+-Obtain the Name by listing the namespace list (https://www.tencentcloud.com/document/product/583/37158?from_cn_redirect=1).
      */
     public $Namespace;
 
     /**
-     * @var string Function version
+     * @var string Function version.
+-Get the function version by [querying the function version](https://www.tencentcloud.com/document/product/583/37162?from_cn_redirect=1).
      */
     public $Qualifier;
 
     /**
-     * @var integer Maximum waiting time for delivery. Unit: seconds
+     * @var integer Maximum waiting time for delivery. Unit: seconds. Default: 60.
      */
     public $Timeout;
 
     /**
-     * @var integer Maximum number of messages to deliver
+     * @var integer Maximum number of messages to deliver. Default is 100. Supported range [1,10000].
      */
     public $MaxMsgNum;
 
     /**
-     * @param string $TopicId Topic id belonging to the delivery rule
-     * @param string $FunctionName Cloud Function name for delivery
-     * @param string $Namespace Namespace
-     * @param string $Qualifier Function version
-     * @param integer $Timeout Maximum waiting time for delivery. Unit: seconds
-     * @param integer $MaxMsgNum Maximum number of messages to deliver
+     * @param string $TopicId TopicId to which the Shipping Rule belongs.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+     * @param string $FunctionName Name of the cloud function for delivery. Only event functions (https://www.tencentcloud.com/document/product/583/9694?from_cn_redirect=1#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) (function type selection (https://www.tencentcloud.com/document/product/583/73483?from_cn_redirect=1)) are supported.
+Get function information by [getting the function list](https://www.tencentcloud.com/document/product/583/18582?from_cn_redirect=1).
+     * @param string $Namespace Namespace. See [Namespace management](https://www.tencentcloud.com/document/product/583/35913?from_cn_redirect=1).
+-Obtain the Name by listing the namespace list (https://www.tencentcloud.com/document/product/583/37158?from_cn_redirect=1).
+     * @param string $Qualifier Function version.
+-Get the function version by [querying the function version](https://www.tencentcloud.com/document/product/583/37162?from_cn_redirect=1).
+     * @param integer $Timeout Maximum waiting time for delivery. Unit: seconds. Default: 60.
+     * @param integer $MaxMsgNum Maximum number of messages to deliver. Default is 100. Supported range [1,10000].
      */
     function __construct()
     {

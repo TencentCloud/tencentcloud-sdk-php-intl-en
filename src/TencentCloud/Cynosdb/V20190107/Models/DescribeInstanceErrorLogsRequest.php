@@ -20,49 +20,49 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceErrorLogs request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getLimit() Obtain Limit on the number of logs
- * @method void setLimit(integer $Limit) Set Limit on the number of logs
- * @method integer getOffset() Obtain Offset of the log number
- * @method void setOffset(integer $Offset) Set Offset of the log number
- * @method string getStartTime() Obtain Start time
- * @method void setStartTime(string $StartTime) Set Start time
- * @method string getEndTime() Obtain End time
- * @method void setEndTime(string $EndTime) Set End time
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method integer getLimit() Obtain Limit on the number of logs.
+ * @method void setLimit(integer $Limit) Set Limit on the number of logs.
+ * @method integer getOffset() Obtain Offset of the log number.
+ * @method void setOffset(integer $Offset) Set Offset of the log number.
+ * @method string getStartTime() Obtain Start time.
+ * @method void setStartTime(string $StartTime) Set Start time.
+ * @method string getEndTime() Obtain End time.
+ * @method void setEndTime(string $EndTime) Set End time.
  * @method string getOrderBy() Obtain Sorting field. Valid value: 'Timestamp'.
  * @method void setOrderBy(string $OrderBy) Set Sorting field. Valid value: 'Timestamp'.
  * @method string getOrderByType() Obtain Sorting order. Valid values: `ASC`, `DESC`.
  * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `ASC`, `DESC`.
  * @method array getLogLevels() Obtain Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
  * @method void setLogLevels(array $LogLevels) Set Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
- * @method array getKeyWords() Obtain 
- * @method void setKeyWords(array $KeyWords) Set 
+ * @method array getKeyWords() Obtain Keywords, supports fuzzy search.
+ * @method void setKeyWords(array $KeyWords) Set Keywords, supports fuzzy search.
  */
 class DescribeInstanceErrorLogsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var integer Limit on the number of logs
+     * @var integer Limit on the number of logs.
      */
     public $Limit;
 
     /**
-     * @var integer Offset of the log number
+     * @var integer Offset of the log number.
      */
     public $Offset;
 
     /**
-     * @var string Start time
+     * @var string Start time.
      */
     public $StartTime;
 
     /**
-     * @var string End time
+     * @var string End time.
      */
     public $EndTime;
 
@@ -82,20 +82,20 @@ class DescribeInstanceErrorLogsRequest extends AbstractModel
     public $LogLevels;
 
     /**
-     * @var array 
+     * @var array Keywords, supports fuzzy search.
      */
     public $KeyWords;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param integer $Limit Limit on the number of logs
-     * @param integer $Offset Offset of the log number
-     * @param string $StartTime Start time
-     * @param string $EndTime End time
+     * @param string $InstanceId Instance ID.
+     * @param integer $Limit Limit on the number of logs.
+     * @param integer $Offset Offset of the log number.
+     * @param string $StartTime Start time.
+     * @param string $EndTime End time.
      * @param string $OrderBy Sorting field. Valid value: 'Timestamp'.
      * @param string $OrderByType Sorting order. Valid values: `ASC`, `DESC`.
      * @param array $LogLevels Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
-     * @param array $KeyWords 
+     * @param array $KeyWords Keywords, supports fuzzy search.
      */
     function __construct()
     {

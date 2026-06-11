@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of the sub-policy of the preset policy for abnormal processes
  *
- * @method string getRuleId() Obtain Sub-policy ID
- * @method void setRuleId(string $RuleId) Set Sub-policy ID
  * @method boolean getIsEnable() Obtain Sub-policy status. Valid values: `true` (enabled); `false` (disabled).
  * @method void setIsEnable(boolean $IsEnable) Set Sub-policy status. Valid values: `true` (enabled); `false` (disabled).
+ * @method string getRuleId() Obtain Sub-policy ID
+ * @method void setRuleId(string $RuleId) Set Sub-policy ID
  * @method string getRuleMode() Obtain Policy mode. `RULE_MODE_RELEASE`: Allow.
    `RULE_MODE_ALERT`: Alert.
    `RULE_MODE_HOLDUP`: Block.
@@ -46,22 +46,20 @@ use TencentCloud\Common\AbstractModel;
 `FILELESS`: Fileless execution.
 `RISK_CMD`: High-risk command.
 `ABNORMAL_CHILD_PROC`: Unusual start found in the child process of the sensitive service.
- * @method string getRuleLevel() Obtain Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRuleLevel(string $RuleLevel) Set Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRuleLevel() Obtain Threat Level. HIGH: High; MIDDLE: Medium; LOW: Low
+ * @method void setRuleLevel(string $RuleLevel) Set Threat Level. HIGH: High; MIDDLE: Medium; LOW: Low
  */
 class AbnormalProcessSystemChildRuleInfo extends AbstractModel
 {
     /**
-     * @var string Sub-policy ID
-     */
-    public $RuleId;
-
-    /**
      * @var boolean Sub-policy status. Valid values: `true` (enabled); `false` (disabled).
      */
     public $IsEnable;
+
+    /**
+     * @var string Sub-policy ID
+     */
+    public $RuleId;
 
     /**
      * @var string Policy mode. `RULE_MODE_RELEASE`: Allow.
@@ -83,14 +81,13 @@ class AbnormalProcessSystemChildRuleInfo extends AbstractModel
     public $RuleType;
 
     /**
-     * @var string Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Threat Level. HIGH: High; MIDDLE: Medium; LOW: Low
      */
     public $RuleLevel;
 
     /**
-     * @param string $RuleId Sub-policy ID
      * @param boolean $IsEnable Sub-policy status. Valid values: `true` (enabled); `false` (disabled).
+     * @param string $RuleId Sub-policy ID
      * @param string $RuleMode Policy mode. `RULE_MODE_RELEASE`: Allow.
    `RULE_MODE_ALERT`: Alert.
    `RULE_MODE_HOLDUP`: Block.
@@ -102,8 +99,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `FILELESS`: Fileless execution.
 `RISK_CMD`: High-risk command.
 `ABNORMAL_CHILD_PROC`: Unusual start found in the child process of the sensitive service.
-     * @param string $RuleLevel Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RuleLevel Threat Level. HIGH: High; MIDDLE: Medium; LOW: Low
      */
     function __construct()
     {
@@ -118,12 +114,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
-        }
-
         if (array_key_exists("IsEnable",$param) and $param["IsEnable"] !== null) {
             $this->IsEnable = $param["IsEnable"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
         }
 
         if (array_key_exists("RuleMode",$param) and $param["RuleMode"] !== null) {

@@ -20,34 +20,44 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryMetric request structure.
  *
- * @method string getQuery() Obtain Query statement, using PromQL syntax	
- * @method void setQuery(string $Query) Set Query statement, using PromQL syntax	
+ * @method string getQuery() Obtain Queries statements; using PromQL syntax	
+-Refer to the [Syntax Rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document
+ * @method void setQuery(string $Query) Set Queries statements; using PromQL syntax	
+-Refer to the [Syntax Rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document
  * @method string getTopicId() Obtain Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
  * @method void setTopicId(string $TopicId) Set Metric Topic ID
- * @method integer getTime() Obtain Query time, Unix Timestamp in seconds	
- * @method void setTime(integer $Time) Set Query time, Unix Timestamp in seconds	
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method integer getTime() Obtain Query time, Unix timestamp in seconds. When empty, it represents the current timestamp.
+
+ * @method void setTime(integer $Time) Set Query time, Unix timestamp in seconds. When empty, it represents the current timestamp.
  */
 class QueryMetricRequest extends AbstractModel
 {
     /**
-     * @var string Query statement, using PromQL syntax	
+     * @var string Queries statements; using PromQL syntax	
+-Refer to the [Syntax Rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document
      */
     public $Query;
 
     /**
      * @var string Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
     /**
-     * @var integer Query time, Unix Timestamp in seconds	
+     * @var integer Query time, Unix timestamp in seconds. When empty, it represents the current timestamp.
+
      */
     public $Time;
 
     /**
-     * @param string $Query Query statement, using PromQL syntax	
+     * @param string $Query Queries statements; using PromQL syntax	
+-Refer to the [Syntax Rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document
      * @param string $TopicId Metric Topic ID
-     * @param integer $Time Query time, Unix Timestamp in seconds	
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param integer $Time Query time, Unix timestamp in seconds. When empty, it represents the current timestamp.
      */
     function __construct()
     {

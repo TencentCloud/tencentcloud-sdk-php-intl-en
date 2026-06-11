@@ -20,86 +20,65 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of a cluster security check item
  *
- * @method integer getCheckItemId() Obtain Unique ID of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCheckItemId(integer $CheckItemId) Set Unique ID of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCheckItemId() Obtain Unique Check Item ID
+ * @method void setCheckItemId(integer $CheckItemId) Set Unique Check Item ID
  * @method string getName() Obtain Name of the risk item
  * @method void setName(string $Name) Set Name of the risk item
- * @method string getItemDetail() Obtain Detailed description of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setItemDetail(string $ItemDetail) Set Detailed description of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRiskLevel() Obtain Severity. Valid values: `Serious` (critical); `High` (high); `Middle` (medium); `Hint` (prompt).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRiskLevel(string $RiskLevel) Set Severity. Valid values: `Serious` (critical); `High` (high); `Middle` (medium); `Hint` (prompt).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRiskTarget() Obtain Check target and risky target. Valid values: `Runc`, `Kubelet`, `Containerd`, `Pods`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRiskTarget(string $RiskTarget) Set Check target and risky target. Valid values: `Runc`, `Kubelet`, `Containerd`, `Pods`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRiskType() Obtain Risk type. Valid values: `CVERisk` (vulnerability risk); `ConfigRisk` (configuration risk).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRiskType(string $RiskType) Set Risk type. Valid values: `CVERisk` (vulnerability risk); `ConfigRisk` (configuration risk).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRiskAttribute() Obtain Risk type of the check item. Valid values: `PrivilegePromotion` (privilege escalation); `RefuseService` (service rejected); `DirectoryEscape` (directory traversal); `UnauthorizedAccess` (unauthorized access); `PrivilegeAndAccessControl` (permissions, privileges, and access controls); `SensitiveInfoLeak` (sensitive data leakage).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRiskAttribute(string $RiskAttribute) Set Risk type of the check item. Valid values: `PrivilegePromotion` (privilege escalation); `RefuseService` (service rejected); `DirectoryEscape` (directory traversal); `UnauthorizedAccess` (unauthorized access); `PrivilegeAndAccessControl` (permissions, privileges, and access controls); `SensitiveInfoLeak` (sensitive data leakage).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRiskProperty() Obtain Risk characteristic and tag. Valid values: `ExistEXP` (an EXP exists); `ExistPOC` (a POC exists); `NoNeedReboot` (restart not required); `ServerRestart` (service restart); `RemoteInfoLeak` (remote information leakage); `RemoteRefuseService` (remote denial of service); `RemoteExploit` (remote exploit); `RemoteExecute` (remote execution).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRiskProperty(string $RiskProperty) Set Risk characteristic and tag. Valid values: `ExistEXP` (an EXP exists); `ExistPOC` (a POC exists); `NoNeedReboot` (restart not required); `ServerRestart` (service restart); `RemoteInfoLeak` (remote information leakage); `RemoteRefuseService` (remote denial of service); `RemoteExploit` (remote exploit); `RemoteExecute` (remote execution).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCVENumber() Obtain CVE No.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCVENumber(string $CVENumber) Set CVE No.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getItemDetail() Obtain Check Item Details
+ * @method void setItemDetail(string $ItemDetail) Set Check Item Details
+ * @method string getRiskLevel() Obtain Threat Level: Serious, High, Medium, Hint
+ * @method void setRiskLevel(string $RiskLevel) Set Threat Level: Serious, High, Medium, Hint
+ * @method string getRiskTarget() Obtain Check Object and Risk Object: Runc, Kubelet, Containerd, and Pods
+ * @method void setRiskTarget(string $RiskTarget) Set Check Object and Risk Object: Runc, Kubelet, Containerd, and Pods
+ * @method string getRiskType() Obtain Risk Category. CVERisk: Vulnerability Risk; ConfigRisk: Configuration Risk
+ * @method void setRiskType(string $RiskType) Set Risk Category. CVERisk: Vulnerability Risk; ConfigRisk: Configuration Risk
+ * @method string getRiskAttribute() Obtain Risk Type of Check Item. PrivilegePromotion: Privilege Promotion; RefuseService: Refuse of Service; DirectoryEscape: Directory Traversal; UnauthorizedAccess: Unauthorized Access; PrivilegeAndAccessControl: Permission and Access Control Issues; SensitiveInfoLeak: Sensitive Information Leakage
+ * @method void setRiskAttribute(string $RiskAttribute) Set Risk Type of Check Item. PrivilegePromotion: Privilege Promotion; RefuseService: Refuse of Service; DirectoryEscape: Directory Traversal; UnauthorizedAccess: Unauthorized Access; PrivilegeAndAccessControl: Permission and Access Control Issues; SensitiveInfoLeak: Sensitive Information Leakage
+ * @method string getRiskProperty() Obtain Risk Characteristics Tag
+ExistEXP: With EXP
+ExistPOC: With POD
+NoNeedReboot: No Need of Reboot
+ServerRestart: Service Reboot
+RemoteInfoLeak: Remote Information Leakage
+RemoteRefuseService: Remote Refuse Service
+RemoteExploit: Remote Exploitation
+RemoteExecute: Remote Execution
+ * @method void setRiskProperty(string $RiskProperty) Set Risk Characteristics Tag
+ExistEXP: With EXP
+ExistPOC: With POD
+NoNeedReboot: No Need of Reboot
+ServerRestart: Service Reboot
+RemoteInfoLeak: Remote Information Leakage
+RemoteRefuseService: Remote Refuse Service
+RemoteExploit: Remote Exploitation
+RemoteExecute: Remote Execution
+ * @method string getCVENumber() Obtain CVE id
+ * @method void setCVENumber(string $CVENumber) Set CVE id
  * @method string getDiscoverTime() Obtain Disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDiscoverTime(string $DiscoverTime) Set Disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSolution() Obtain Solution
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSolution(string $Solution) Set Solution
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCVSS() Obtain CVSS information, which is used for drawing.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCVSS(string $CVSS) Set CVSS information, which is used for drawing.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCVSS() Obtain CVSS Information, Used for Drawing
+ * @method void setCVSS(string $CVSS) Set CVSS Information, Used for Drawing
  * @method string getCVSSScore() Obtain CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCVSSScore(string $CVSSScore) Set CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRelateLink() Obtain Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRelateLink(string $RelateLink) Set Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAffectedType() Obtain Affected type. Valid values: `Node`, `Workload`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAffectedType(string $AffectedType) Set Affected type. Valid values: `Node`, `Workload`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAffectedVersion() Obtain Affected version information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAffectedVersion(string $AffectedVersion) Set Affected version information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIgnoredAssetNum() Obtain Number of ignored assets
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIgnoredAssetNum(integer $IgnoredAssetNum) Set Number of ignored assets
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsIgnored() Obtain Whether to ignore the check item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsIgnored(boolean $IsIgnored) Set Whether to ignore the check item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRiskAssessment() Obtain Impact assessment
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRiskAssessment(string $RiskAssessment) Set Impact assessment
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAffectedType() Obtain Impact Type: Node or Workload
+ * @method void setAffectedType(string $AffectedType) Set Impact Type: Node or Workload
+ * @method string getAffectedVersion() Obtain Affected Version Information
+ * @method void setAffectedVersion(string $AffectedVersion) Set Affected Version Information
+ * @method integer getIgnoredAssetNum() Obtain Number of Ignored Assets
+ * @method void setIgnoredAssetNum(integer $IgnoredAssetNum) Set Number of Ignored Assets
+ * @method boolean getIsIgnored() Obtain Whether to Ignore the Check Item
+ * @method void setIsIgnored(boolean $IsIgnored) Set Whether to Ignore the Check Item
+ * @method string getRiskAssessment() Obtain Affected Critique
+ * @method void setRiskAssessment(string $RiskAssessment) Set Affected Critique
  */
 class ClusterCheckItem extends AbstractModel
 {
     /**
-     * @var integer Unique ID of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Unique Check Item ID
      */
     public $CheckItemId;
 
@@ -109,145 +88,126 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Name;
 
     /**
-     * @var string Detailed description of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Check Item Details
      */
     public $ItemDetail;
 
     /**
-     * @var string Severity. Valid values: `Serious` (critical); `High` (high); `Middle` (medium); `Hint` (prompt).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Threat Level: Serious, High, Medium, Hint
      */
     public $RiskLevel;
 
     /**
-     * @var string Check target and risky target. Valid values: `Runc`, `Kubelet`, `Containerd`, `Pods`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Check Object and Risk Object: Runc, Kubelet, Containerd, and Pods
      */
     public $RiskTarget;
 
     /**
-     * @var string Risk type. Valid values: `CVERisk` (vulnerability risk); `ConfigRisk` (configuration risk).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Risk Category. CVERisk: Vulnerability Risk; ConfigRisk: Configuration Risk
      */
     public $RiskType;
 
     /**
-     * @var string Risk type of the check item. Valid values: `PrivilegePromotion` (privilege escalation); `RefuseService` (service rejected); `DirectoryEscape` (directory traversal); `UnauthorizedAccess` (unauthorized access); `PrivilegeAndAccessControl` (permissions, privileges, and access controls); `SensitiveInfoLeak` (sensitive data leakage).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Risk Type of Check Item. PrivilegePromotion: Privilege Promotion; RefuseService: Refuse of Service; DirectoryEscape: Directory Traversal; UnauthorizedAccess: Unauthorized Access; PrivilegeAndAccessControl: Permission and Access Control Issues; SensitiveInfoLeak: Sensitive Information Leakage
      */
     public $RiskAttribute;
 
     /**
-     * @var string Risk characteristic and tag. Valid values: `ExistEXP` (an EXP exists); `ExistPOC` (a POC exists); `NoNeedReboot` (restart not required); `ServerRestart` (service restart); `RemoteInfoLeak` (remote information leakage); `RemoteRefuseService` (remote denial of service); `RemoteExploit` (remote exploit); `RemoteExecute` (remote execution).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Risk Characteristics Tag
+ExistEXP: With EXP
+ExistPOC: With POD
+NoNeedReboot: No Need of Reboot
+ServerRestart: Service Reboot
+RemoteInfoLeak: Remote Information Leakage
+RemoteRefuseService: Remote Refuse Service
+RemoteExploit: Remote Exploitation
+RemoteExecute: Remote Execution
      */
     public $RiskProperty;
 
     /**
-     * @var string CVE No.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string CVE id
      */
     public $CVENumber;
 
     /**
      * @var string Disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DiscoverTime;
 
     /**
      * @var string Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Solution;
 
     /**
-     * @var string CVSS information, which is used for drawing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string CVSS Information, Used for Drawing
      */
     public $CVSS;
 
     /**
      * @var string CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CVSSScore;
 
     /**
      * @var string Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RelateLink;
 
     /**
-     * @var string Affected type. Valid values: `Node`, `Workload`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Impact Type: Node or Workload
      */
     public $AffectedType;
 
     /**
-     * @var string Affected version information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Affected Version Information
      */
     public $AffectedVersion;
 
     /**
-     * @var integer Number of ignored assets
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of Ignored Assets
      */
     public $IgnoredAssetNum;
 
     /**
-     * @var boolean Whether to ignore the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether to Ignore the Check Item
      */
     public $IsIgnored;
 
     /**
-     * @var string Impact assessment
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Affected Critique
      */
     public $RiskAssessment;
 
     /**
-     * @param integer $CheckItemId Unique ID of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $CheckItemId Unique Check Item ID
      * @param string $Name Name of the risk item
-     * @param string $ItemDetail Detailed description of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RiskLevel Severity. Valid values: `Serious` (critical); `High` (high); `Middle` (medium); `Hint` (prompt).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RiskTarget Check target and risky target. Valid values: `Runc`, `Kubelet`, `Containerd`, `Pods`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RiskType Risk type. Valid values: `CVERisk` (vulnerability risk); `ConfigRisk` (configuration risk).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RiskAttribute Risk type of the check item. Valid values: `PrivilegePromotion` (privilege escalation); `RefuseService` (service rejected); `DirectoryEscape` (directory traversal); `UnauthorizedAccess` (unauthorized access); `PrivilegeAndAccessControl` (permissions, privileges, and access controls); `SensitiveInfoLeak` (sensitive data leakage).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RiskProperty Risk characteristic and tag. Valid values: `ExistEXP` (an EXP exists); `ExistPOC` (a POC exists); `NoNeedReboot` (restart not required); `ServerRestart` (service restart); `RemoteInfoLeak` (remote information leakage); `RemoteRefuseService` (remote denial of service); `RemoteExploit` (remote exploit); `RemoteExecute` (remote execution).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CVENumber CVE No.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ItemDetail Check Item Details
+     * @param string $RiskLevel Threat Level: Serious, High, Medium, Hint
+     * @param string $RiskTarget Check Object and Risk Object: Runc, Kubelet, Containerd, and Pods
+     * @param string $RiskType Risk Category. CVERisk: Vulnerability Risk; ConfigRisk: Configuration Risk
+     * @param string $RiskAttribute Risk Type of Check Item. PrivilegePromotion: Privilege Promotion; RefuseService: Refuse of Service; DirectoryEscape: Directory Traversal; UnauthorizedAccess: Unauthorized Access; PrivilegeAndAccessControl: Permission and Access Control Issues; SensitiveInfoLeak: Sensitive Information Leakage
+     * @param string $RiskProperty Risk Characteristics Tag
+ExistEXP: With EXP
+ExistPOC: With POD
+NoNeedReboot: No Need of Reboot
+ServerRestart: Service Reboot
+RemoteInfoLeak: Remote Information Leakage
+RemoteRefuseService: Remote Refuse Service
+RemoteExploit: Remote Exploitation
+RemoteExecute: Remote Execution
+     * @param string $CVENumber CVE id
      * @param string $DiscoverTime Disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Solution Solution
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CVSS CVSS information, which is used for drawing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CVSS CVSS Information, Used for Drawing
      * @param string $CVSSScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RelateLink Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AffectedType Affected type. Valid values: `Node`, `Workload`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AffectedVersion Affected version information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IgnoredAssetNum Number of ignored assets
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsIgnored Whether to ignore the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RiskAssessment Impact assessment
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AffectedType Impact Type: Node or Workload
+     * @param string $AffectedVersion Affected Version Information
+     * @param integer $IgnoredAssetNum Number of Ignored Assets
+     * @param boolean $IsIgnored Whether to Ignore the Check Item
+     * @param string $RiskAssessment Affected Critique
      */
     function __construct()
     {

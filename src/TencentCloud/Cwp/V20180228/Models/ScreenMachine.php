@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) Set Host name.
  * @method string getMachineOs() Obtain Host System.
  * @method void setMachineOs(string $MachineOs) Set Host System.
- * @method string getUuid() Obtain Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
- * @method void setUuid(string $Uuid) Set Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+ * @method string getUuid() Obtain CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+ * @method void setUuid(string $Uuid) Set CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
  * @method integer getMachineStatus() Obtain Status of a host on the large screen. 0: agent not installed; 1: offline; 2: offline - risky; 3: offline - critical;
 4: device installed - normal; 5: device installed - normal and of either Pro Edition or Ultimate Edition; 6: device installed - risky (network attack events > 0);
 7: device installed - risky (network attack events > 0) and of either Pro Edition or Ultimate Edition; 8: device installed - critical (intrusion detection events > 0);
@@ -73,9 +73,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCoreVersion() Obtain Kernel version
  * @method void setCoreVersion(string $CoreVersion) Set Kernel version
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ScreenMachine extends AbstractModel
 {
@@ -90,7 +88,7 @@ class ScreenMachine extends AbstractModel
     public $MachineOs;
 
     /**
-     * @var string Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+     * @var string CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
      */
     public $Uuid;
 
@@ -187,14 +185,13 @@ class ScreenMachine extends AbstractModel
 
     /**
      * @var MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
     /**
      * @param string $MachineName Host name.
      * @param string $MachineOs Host System.
-     * @param string $Uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+     * @param string $Uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
      * @param integer $MachineStatus Status of a host on the large screen. 0: agent not installed; 1: offline; 2: offline - risky; 3: offline - critical;
 4: device installed - normal; 5: device installed - normal and of either Pro Edition or Ultimate Edition; 6: device installed - risky (network attack events > 0);
 7: device installed - risky (network attack events > 0) and of either Pro Edition or Ultimate Edition; 8: device installed - critical (intrusion detection events > 0);
@@ -219,7 +216,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param float $MemSize Memory capacity (GB)
      * @param string $CoreVersion Kernel version
      * @param MachineExtraInfo $MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

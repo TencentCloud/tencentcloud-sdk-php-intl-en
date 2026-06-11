@@ -18,7 +18,7 @@ namespace TencentCloud\Rum\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Tag
+ * Tag.
  *
  * @method string getKey() Obtain Tag key
  * @method void setKey(string $Key) Set Tag key

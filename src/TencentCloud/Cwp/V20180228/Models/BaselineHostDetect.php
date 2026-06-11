@@ -40,14 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstTime(string $FirstTime) Set First detection time
  * @method string getLastTime() Obtain Last detection Time
  * @method void setLastTime(string $LastTime) Set Last detection Time
- * @method string getUuid() Obtain CWPP UUID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUuid(string $Uuid) Set CWPP UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUuid() Obtain CWP UUID
+ * @method void setUuid(string $Uuid) Set CWP UUID
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BaselineHostDetect extends AbstractModel
 {
@@ -102,14 +98,12 @@ class BaselineHostDetect extends AbstractModel
     public $LastTime;
 
     /**
-     * @var string CWPP UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string CWP UUID
      */
     public $Uuid;
 
     /**
      * @var MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -124,10 +118,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $NotPassedItemCount Detection Failure Count
      * @param string $FirstTime First detection time
      * @param string $LastTime Last detection Time
-     * @param string $Uuid CWPP UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Uuid CWP UUID
      * @param MachineExtraInfo $MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

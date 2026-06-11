@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionPersist(boolean $SessionPersist) Set Whether to enable session persistence. Values:
 <li>`true`: Enable.</li>
 <li>`false`: Disable.</li>Default value: false.
- * @method integer getSessionPersistTime() Obtain Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
- * @method void setSessionPersistTime(integer $SessionPersistTime) Set Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+ * @method integer getSessionPersistTime() Obtain Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
+ * @method void setSessionPersistTime(integer $SessionPersistTime) Set Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
  * @method string getOriginPort() Obtain The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>
@@ -123,7 +123,7 @@ class CreateApplicationProxyRuleRequest extends AbstractModel
     public $SessionPersist;
 
     /**
-     * @var integer Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+     * @var integer Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
      */
     public $SessionPersistTime;
 
@@ -159,7 +159,7 @@ class CreateApplicationProxyRuleRequest extends AbstractModel
      * @param boolean $SessionPersist Whether to enable session persistence. Values:
 <li>`true`: Enable.</li>
 <li>`false`: Disable.</li>Default value: false.
-     * @param integer $SessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+     * @param integer $SessionPersistTime Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
      * @param string $OriginPort The origin port, which can be:
 <li>A single port, such as 80</li>
 <li>A port range, such as 81-82</li>

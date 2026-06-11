@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPlatformId() Obtain <p>Platform ID.</p>
  * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
- * @method string getMNPId() Obtain <p>Mini program or mini game appid.</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini program or mini game appid.</p>
+ * @method string getMNPId() Obtain <p>Mini program appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini program appid.</p>
  */
 class CreateMNPSecretKeyRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CreateMNPSecretKeyRequest extends AbstractModel
     public $PlatformId;
 
     /**
-     * @var string <p>Mini program or mini game appid.</p>
+     * @var string <p>Mini program appid.</p>
      */
     public $MNPId;
 
     /**
      * @param string $PlatformId <p>Platform ID.</p>
-     * @param string $MNPId <p>Mini program or mini game appid.</p>
+     * @param string $MNPId <p>Mini program appid.</p>
      */
     function __construct()
     {

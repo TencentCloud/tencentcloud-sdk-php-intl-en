@@ -35,13 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getModifyTime() Obtain Modification time
  * @method void setModifyTime(string $ModifyTime) Set Modification time
  * @method string getUuid() Obtain Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUuid(string $Uuid) Set Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class JavaMemShellPluginSetting extends AbstractModel
 {
@@ -82,13 +78,11 @@ class JavaMemShellPluginSetting extends AbstractModel
 
     /**
      * @var string Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Uuid;
 
     /**
      * @var MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -101,9 +95,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CreateTime Creation time
      * @param string $ModifyTime Modification time
      * @param string $Uuid Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo $MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

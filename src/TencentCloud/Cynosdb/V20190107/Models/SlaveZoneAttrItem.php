@@ -18,10 +18,10 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Availability zone attribute item.
  *
- * @method string getZone() Obtain Availability zone
- * @method void setZone(string $Zone) Set Availability zone
+ * @method string getZone() Obtain Availability zone.
+ * @method void setZone(string $Zone) Set Availability zone.
  * @method string getBinlogSyncWay() Obtain binlog synchronization mode.
  * @method void setBinlogSyncWay(string $BinlogSyncWay) Set binlog synchronization mode.
  * @method integer getSemiSyncTimeout() Obtain Semi-Sync timeout period in milliseconds.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class SlaveZoneAttrItem extends AbstractModel
 {
     /**
-     * @var string Availability zone
+     * @var string Availability zone.
      */
     public $Zone;
 
@@ -45,7 +45,7 @@ class SlaveZoneAttrItem extends AbstractModel
     public $SemiSyncTimeout;
 
     /**
-     * @param string $Zone Availability zone
+     * @param string $Zone Availability zone.
      * @param string $BinlogSyncWay binlog synchronization mode.
      * @param integer $SemiSyncTimeout Semi-Sync timeout period in milliseconds.
      */

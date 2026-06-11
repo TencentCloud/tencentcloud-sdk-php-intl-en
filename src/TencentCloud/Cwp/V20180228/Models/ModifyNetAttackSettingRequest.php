@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExcludeInstanceIds(array $ExcludeInstanceIds) Set Manually Excluded Hosts
  * @method integer getAutoInclude() Obtain New assets automatically include: 0 - Do not include, 1 - include.
  * @method void setAutoInclude(integer $AutoInclude) Set New assets automatically include: 0 - Do not include, 1 - include.
+ * @method integer getProductType() Obtain 
+ * @method void setProductType(integer $ProductType) Set 
  */
 class ModifyNetAttackSettingRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyNetAttackSettingRequest extends AbstractModel
     public $AutoInclude;
 
     /**
+     * @var integer 
+     */
+    public $ProductType;
+
+    /**
      * @param integer $NetAttackEnable 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
      * @param integer $NetAttackAlarmStatus 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
      * @param integer $Scope 1 - All Ultimate edition hosts; 0 - list of hosts with Quuids
      * @param array $InstanceIds Specified hosts
      * @param array $ExcludeInstanceIds Manually Excluded Hosts
      * @param integer $AutoInclude New assets automatically include: 0 - Do not include, 1 - include.
+     * @param integer $ProductType 
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ModifyNetAttackSettingRequest extends AbstractModel
 
         if (array_key_exists("AutoInclude",$param) and $param["AutoInclude"] !== null) {
             $this->AutoInclude = $param["AutoInclude"];
+        }
+
+        if (array_key_exists("ProductType",$param) and $param["ProductType"] !== null) {
+            $this->ProductType = $param["ProductType"];
         }
     }
 }

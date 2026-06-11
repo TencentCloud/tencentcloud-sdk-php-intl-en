@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Parameter change information.
  *
  * @method string getParamName() Obtain Parameter name.
  * @method void setParamName(string $ParamName) Set Parameter name.

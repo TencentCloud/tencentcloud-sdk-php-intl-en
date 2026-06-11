@@ -20,434 +20,314 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Container runtime security - Information of the abnormal process
  *
- * @method string getProcessPath() Obtain Process directory
- * @method void setProcessPath(string $ProcessPath) Set Process directory
- * @method string getEventType() Obtain Event type. `MALICE_PROCESS_START`: Malicious process startup.
- * @method void setEventType(string $EventType) Set Event type. `MALICE_PROCESS_START`: Malicious process startup.
- * @method string getMatchRuleName() Obtain Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
- * @method void setMatchRuleName(string $MatchRuleName) Set Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
- * @method string getFoundTime() Obtain Generation time
- * @method void setFoundTime(string $FoundTime) Set Generation time
- * @method string getContainerName() Obtain Container name
- * @method void setContainerName(string $ContainerName) Set Container name
- * @method string getImageName() Obtain Image name
- * @method void setImageName(string $ImageName) Set Image name
- * @method string getBehavior() Obtain Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
- * @method void setBehavior(string $Behavior) Set Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
- * @method string getStatus() Obtain Status. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
- * @method void setStatus(string $Status) Set Status. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
- * @method string getId() Obtain Unique event ID
- * @method void setId(string $Id) Set Unique event ID
- * @method string getImageId() Obtain Image ID, which is used for redirect.
- * @method void setImageId(string $ImageId) Set Image ID, which is used for redirect.
- * @method string getContainerId() Obtain Container ID, which is used for redirect.
- * @method void setContainerId(string $ContainerId) Set Container ID, which is used for redirect.
- * @method string getSolution() Obtain Event solution
- * @method void setSolution(string $Solution) Set Event solution
- * @method string getDescription() Obtain Event description
- * @method void setDescription(string $Description) Set Event description
- * @method string getMatchRuleId() Obtain Hit policy ID
- * @method void setMatchRuleId(string $MatchRuleId) Set Hit policy ID
- * @method string getMatchAction() Obtain Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
- * @method void setMatchAction(string $MatchAction) Set Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
- * @method string getMatchProcessPath() Obtain Information of the process that hits the rule
- * @method void setMatchProcessPath(string $MatchProcessPath) Set Information of the process that hits the rule
- * @method boolean getRuleExist() Obtain Whether the rule exists
- * @method void setRuleExist(boolean $RuleExist) Set Whether the rule exists
- * @method integer getEventCount() Obtain Number of events
- * @method void setEventCount(integer $EventCount) Set Number of events
- * @method string getLatestFoundTime() Obtain Last generation time
- * @method void setLatestFoundTime(string $LatestFoundTime) Set Last generation time
- * @method string getRuleId() Obtain Rule group ID
- * @method void setRuleId(string $RuleId) Set Rule group ID
- * @method string getMatchGroupName() Obtain Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
- * @method void setMatchGroupName(string $MatchGroupName) Set Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
- * @method string getMatchRuleLevel() Obtain Level of the hit rule. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
- * @method void setMatchRuleLevel(string $MatchRuleLevel) Set Level of the hit rule. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
- * @method string getContainerNetStatus() Obtain Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContainerNetStatus(string $ContainerNetStatus) Set Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContainerNetSubStatus() Obtain Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) Set Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContainerIsolateOperationSrc() Obtain Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) Set Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContainerStatus() Obtain Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
- * @method void setContainerStatus(string $ContainerStatus) Set Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
- * @method string getClusterID() Obtain Cluster ID
- * @method void setClusterID(string $ClusterID) Set Cluster ID
- * @method string getNodeType() Obtain Node type. Values: `NORMAL` (general node), `SUPER` (super node).
- * @method void setNodeType(string $NodeType) Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
- * @method string getPodName() Obtain Pod name
- * @method void setPodName(string $PodName) Set Pod name
- * @method string getPodIP() Obtain Pod IP
- * @method void setPodIP(string $PodIP) Set Pod IP
- * @method string getNodeUniqueID() Obtain Cluster ID
- * @method void setNodeUniqueID(string $NodeUniqueID) Set Cluster ID
- * @method string getPublicIP() Obtain Node public IP
- * @method void setPublicIP(string $PublicIP) Set Node public IP
- * @method string getNodeName() Obtain Node name
- * @method void setNodeName(string $NodeName) Set Node name
- * @method string getNodeID() Obtain Node ID
- * @method void setNodeID(string $NodeID) Set Node ID
- * @method string getHostID() Obtain uuid
- * @method void setHostID(string $HostID) Set uuid
- * @method string getHostIP() Obtain Private IP of the node
- * @method void setHostIP(string $HostIP) Set Private IP of the node
- * @method string getClusterName() Obtain Cluster name
- * @method void setClusterName(string $ClusterName) Set Cluster name
+ * @method string getProcessPath() Obtain <p>Process directory.</p>
+ * @method void setProcessPath(string $ProcessPath) Set <p>Process directory.</p>
+ * @method string getEventType() Obtain <p>Event type. MALICE_PROCESS_START: malicious process startup.</p>
+ * @method void setEventType(string $EventType) Set <p>Event type. MALICE_PROCESS_START: malicious process startup.</p>
+ * @method string getMatchRuleName() Obtain <p>Hit rule name. PROXY_TOOL: proxy software; TRANSFER_CONTROL: lateral movement; ATTACK_CMD: malicious command; REVERSE_SHELL: reverse shell; FILELESS: fileless execution; RISK_CMD: high-risk command; ABNORMAL_CHILD_PROC: abnormal child process startup of sensitive service; USER_DEFINED_RULE: user-defined rule</p>
+ * @method void setMatchRuleName(string $MatchRuleName) Set <p>Hit rule name. PROXY_TOOL: proxy software; TRANSFER_CONTROL: lateral movement; ATTACK_CMD: malicious command; REVERSE_SHELL: reverse shell; FILELESS: fileless execution; RISK_CMD: high-risk command; ABNORMAL_CHILD_PROC: abnormal child process startup of sensitive service; USER_DEFINED_RULE: user-defined rule</p>
+ * @method string getFoundTime() Obtain <p>Generation time.</p>
+ * @method void setFoundTime(string $FoundTime) Set <p>Generation time.</p>
+ * @method string getContainerName() Obtain <p>Container name.</p>
+ * @method void setContainerName(string $ContainerName) Set <p>Container name.</p>
+ * @method string getImageName() Obtain <p>Image name.</p>
+ * @method void setImageName(string $ImageName) Set <p>Image name.</p>
+ * @method string getBehavior() Obtain <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
+ * @method void setBehavior(string $Behavior) Set <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
+ * @method string getStatus() Obtain <p>Status: EVENT_UNDEAL: event unhandled<br>    EVENT_DEALED: event handled<br>    EVENT_INGNORE: event ignored</p>
+ * @method void setStatus(string $Status) Set <p>Status: EVENT_UNDEAL: event unhandled<br>    EVENT_DEALED: event handled<br>    EVENT_INGNORE: event ignored</p>
+ * @method string getId() Obtain <p>Unique ID of the event record.</p>
+ * @method void setId(string $Id) Set <p>Unique ID of the event record.</p>
+ * @method string getImageId() Obtain <p>Image ID, used for redirection.</p>
+ * @method void setImageId(string $ImageId) Set <p>Image ID, used for redirection.</p>
+ * @method string getContainerId() Obtain <p>Container ID, used for redirection.</p>
+ * @method void setContainerId(string $ContainerId) Set <p>Container ID, used for redirection.</p>
+ * @method string getSolution() Obtain <p>Event solution.</p>
+ * @method void setSolution(string $Solution) Set <p>Event solution.</p>
+ * @method string getDescription() Obtain <p>Event detailed description.</p>
+ * @method void setDescription(string $Description) Set <p>Event detailed description.</p>
+ * @method string getMatchRuleId() Obtain <p>Hit policy ID.</p>
+ * @method void setMatchRuleId(string $MatchRuleId) Set <p>Hit policy ID.</p>
+ * @method string getMatchAction() Obtain <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
+ * @method void setMatchAction(string $MatchAction) Set <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
+ * @method string getMatchProcessPath() Obtain <p>Hit rule process information.</p>
+ * @method void setMatchProcessPath(string $MatchProcessPath) Set <p>Hit rule process information.</p>
+ * @method boolean getRuleExist() Obtain <p>Whether the rule exists.</p>
+ * @method void setRuleExist(boolean $RuleExist) Set <p>Whether the rule exists.</p>
+ * @method integer getEventCount() Obtain <p>Number of events.</p>
+ * @method void setEventCount(integer $EventCount) Set <p>Number of events.</p>
+ * @method string getLatestFoundTime() Obtain <p>Last generation time.</p>
+ * @method void setLatestFoundTime(string $LatestFoundTime) Set <p>Last generation time.</p>
+ * @method string getRuleId() Obtain <p>Rule group ID.</p>
+ * @method void setRuleId(string $RuleId) Set <p>Rule group ID.</p>
+ * @method string getMatchGroupName() Obtain <p>Hit policy name: SYSTEM_DEFINED_RULE (system policy) or user-defined policy name.</p>
+ * @method void setMatchGroupName(string $MatchGroupName) Set <p>Hit policy name: SYSTEM_DEFINED_RULE (system policy) or user-defined policy name.</p>
+ * @method string getMatchRuleLevel() Obtain <p>Hit rule level: HIGH, MIDDLE, and LOW.</p>
+ * @method void setMatchRuleLevel(string $MatchRuleLevel) Set <p>Hit rule level: HIGH, MIDDLE, and LOW.</p>
+ * @method string getContainerNetStatus() Obtain <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
+ * @method void setContainerNetStatus(string $ContainerNetStatus) Set <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
+ * @method string getContainerNetSubStatus() Obtain <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
+ * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) Set <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
+ * @method string getContainerIsolateOperationSrc() Obtain <p>Source of container isolation operation.</p>
+ * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) Set <p>Source of container isolation operation.</p>
+ * @method string getContainerStatus() Obtain <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
+ * @method void setContainerStatus(string $ContainerStatus) Set <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
+ * @method string getClusterID() Obtain <p>Cluster ID.</p>
+ * @method void setClusterID(string $ClusterID) Set <p>Cluster ID.</p>
+ * @method string getNodeType() Obtain <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
+ * @method void setNodeType(string $NodeType) Set <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
+ * @method string getPodName() Obtain <p>Pod name.</p>
+ * @method void setPodName(string $PodName) Set <p>Pod name.</p>
+ * @method string getPodIP() Obtain <p>pod ip</p>
+ * @method void setPodIP(string $PodIP) Set <p>pod ip</p>
+ * @method string getNodeUniqueID() Obtain <p>Cluster ID.</p>
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set <p>Cluster ID.</p>
+ * @method string getPublicIP() Obtain <p>Node public IP address.</p>
+ * @method void setPublicIP(string $PublicIP) Set <p>Node public IP address.</p>
+ * @method string getNodeName() Obtain <p>Node name.</p>
+ * @method void setNodeName(string $NodeName) Set <p>Node name.</p>
+ * @method string getNodeID() Obtain <p>Node ID.</p>
+ * @method void setNodeID(string $NodeID) Set <p>Node ID.</p>
+ * @method string getHostID() Obtain <p>uuid</p>
+ * @method void setHostID(string $HostID) Set <p>uuid</p>
+ * @method string getHostIP() Obtain <p>Node private IP address.</p>
+ * @method void setHostIP(string $HostIP) Set <p>Node private IP address.</p>
+ * @method string getClusterName() Obtain <p>Cluster name.</p>
+ * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
+ * @method string getCmdLine() Obtain <p>Command line parameters.</p>
+ * @method void setCmdLine(string $CmdLine) Set <p>Command line parameters.</p>
  */
 class AbnormalProcessEventInfo extends AbstractModel
 {
     /**
-     * @var string Process directory
+     * @var string <p>Process directory.</p>
      */
     public $ProcessPath;
 
     /**
-     * @var string Event type. `MALICE_PROCESS_START`: Malicious process startup.
+     * @var string <p>Event type. MALICE_PROCESS_START: malicious process startup.</p>
      */
     public $EventType;
 
     /**
-     * @var string Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
+     * @var string <p>Hit rule name. PROXY_TOOL: proxy software; TRANSFER_CONTROL: lateral movement; ATTACK_CMD: malicious command; REVERSE_SHELL: reverse shell; FILELESS: fileless execution; RISK_CMD: high-risk command; ABNORMAL_CHILD_PROC: abnormal child process startup of sensitive service; USER_DEFINED_RULE: user-defined rule</p>
      */
     public $MatchRuleName;
 
     /**
-     * @var string Generation time
+     * @var string <p>Generation time.</p>
      */
     public $FoundTime;
 
     /**
-     * @var string Container name
+     * @var string <p>Container name.</p>
      */
     public $ContainerName;
 
     /**
-     * @var string Image name
+     * @var string <p>Image name.</p>
      */
     public $ImageName;
 
     /**
-     * @var string Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
+     * @var string <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
      */
     public $Behavior;
 
     /**
-     * @var string Status. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
+     * @var string <p>Status: EVENT_UNDEAL: event unhandled<br>    EVENT_DEALED: event handled<br>    EVENT_INGNORE: event ignored</p>
      */
     public $Status;
 
     /**
-     * @var string Unique event ID
+     * @var string <p>Unique ID of the event record.</p>
      */
     public $Id;
 
     /**
-     * @var string Image ID, which is used for redirect.
+     * @var string <p>Image ID, used for redirection.</p>
      */
     public $ImageId;
 
     /**
-     * @var string Container ID, which is used for redirect.
+     * @var string <p>Container ID, used for redirection.</p>
      */
     public $ContainerId;
 
     /**
-     * @var string Event solution
+     * @var string <p>Event solution.</p>
      */
     public $Solution;
 
     /**
-     * @var string Event description
+     * @var string <p>Event detailed description.</p>
      */
     public $Description;
 
     /**
-     * @var string Hit policy ID
+     * @var string <p>Hit policy ID.</p>
      */
     public $MatchRuleId;
 
     /**
-     * @var string Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
+     * @var string <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
      */
     public $MatchAction;
 
     /**
-     * @var string Information of the process that hits the rule
+     * @var string <p>Hit rule process information.</p>
      */
     public $MatchProcessPath;
 
     /**
-     * @var boolean Whether the rule exists
+     * @var boolean <p>Whether the rule exists.</p>
      */
     public $RuleExist;
 
     /**
-     * @var integer Number of events
+     * @var integer <p>Number of events.</p>
      */
     public $EventCount;
 
     /**
-     * @var string Last generation time
+     * @var string <p>Last generation time.</p>
      */
     public $LatestFoundTime;
 
     /**
-     * @var string Rule group ID
+     * @var string <p>Rule group ID.</p>
      */
     public $RuleId;
 
     /**
-     * @var string Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
+     * @var string <p>Hit policy name: SYSTEM_DEFINED_RULE (system policy) or user-defined policy name.</p>
      */
     public $MatchGroupName;
 
     /**
-     * @var string Level of the hit rule. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
+     * @var string <p>Hit rule level: HIGH, MIDDLE, and LOW.</p>
      */
     public $MatchRuleLevel;
 
     /**
-     * @var string Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
      */
     public $ContainerNetStatus;
 
     /**
-     * @var string Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
      */
     public $ContainerNetSubStatus;
 
     /**
-     * @var string Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Source of container isolation operation.</p>
      */
     public $ContainerIsolateOperationSrc;
 
     /**
-     * @var string Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
+     * @var string <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
      */
     public $ContainerStatus;
 
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterID;
 
     /**
-     * @var string Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @var string <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
      */
     public $NodeType;
 
     /**
-     * @var string Pod name
+     * @var string <p>Pod name.</p>
      */
     public $PodName;
 
     /**
-     * @var string Pod IP
+     * @var string <p>pod ip</p>
      */
     public $PodIP;
 
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $NodeUniqueID;
 
     /**
-     * @var string Node public IP
+     * @var string <p>Node public IP address.</p>
      */
     public $PublicIP;
 
     /**
-     * @var string Node name
+     * @var string <p>Node name.</p>
      */
     public $NodeName;
 
     /**
-     * @var string Node ID
+     * @var string <p>Node ID.</p>
      */
     public $NodeID;
 
     /**
-     * @var string uuid
+     * @var string <p>uuid</p>
      */
     public $HostID;
 
     /**
-     * @var string Private IP of the node
+     * @var string <p>Node private IP address.</p>
      */
     public $HostIP;
 
     /**
-     * @var string Cluster name
+     * @var string <p>Cluster name.</p>
      */
     public $ClusterName;
 
     /**
-     * @param string $ProcessPath Process directory
-     * @param string $EventType Event type. `MALICE_PROCESS_START`: Malicious process startup.
-     * @param string $MatchRuleName Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
-     * @param string $FoundTime Generation time
-     * @param string $ContainerName Container name
-     * @param string $ImageName Image name
-     * @param string $Behavior Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
-     * @param string $Status Status. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-     * @param string $Id Unique event ID
-     * @param string $ImageId Image ID, which is used for redirect.
-     * @param string $ContainerId Container ID, which is used for redirect.
-     * @param string $Solution Event solution
-     * @param string $Description Event description
-     * @param string $MatchRuleId Hit policy ID
-     * @param string $MatchAction Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
-     * @param string $MatchProcessPath Information of the process that hits the rule
-     * @param boolean $RuleExist Whether the rule exists
-     * @param integer $EventCount Number of events
-     * @param string $LatestFoundTime Last generation time
-     * @param string $RuleId Rule group ID
-     * @param string $MatchGroupName Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-     * @param string $MatchRuleLevel Level of the hit rule. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-     * @param string $ContainerNetStatus Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-     * @param string $ClusterID Cluster ID
-     * @param string $NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
-     * @param string $PodName Pod name
-     * @param string $PodIP Pod IP
-     * @param string $NodeUniqueID Cluster ID
-     * @param string $PublicIP Node public IP
-     * @param string $NodeName Node name
-     * @param string $NodeID Node ID
-     * @param string $HostID uuid
-     * @param string $HostIP Private IP of the node
-     * @param string $ClusterName Cluster name
+     * @var string <p>Command line parameters.</p>
+     */
+    public $CmdLine;
+
+    /**
+     * @param string $ProcessPath <p>Process directory.</p>
+     * @param string $EventType <p>Event type. MALICE_PROCESS_START: malicious process startup.</p>
+     * @param string $MatchRuleName <p>Hit rule name. PROXY_TOOL: proxy software; TRANSFER_CONTROL: lateral movement; ATTACK_CMD: malicious command; REVERSE_SHELL: reverse shell; FILELESS: fileless execution; RISK_CMD: high-risk command; ABNORMAL_CHILD_PROC: abnormal child process startup of sensitive service; USER_DEFINED_RULE: user-defined rule</p>
+     * @param string $FoundTime <p>Generation time.</p>
+     * @param string $ContainerName <p>Container name.</p>
+     * @param string $ImageName <p>Image name.</p>
+     * @param string $Behavior <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
+     * @param string $Status <p>Status: EVENT_UNDEAL: event unhandled<br>    EVENT_DEALED: event handled<br>    EVENT_INGNORE: event ignored</p>
+     * @param string $Id <p>Unique ID of the event record.</p>
+     * @param string $ImageId <p>Image ID, used for redirection.</p>
+     * @param string $ContainerId <p>Container ID, used for redirection.</p>
+     * @param string $Solution <p>Event solution.</p>
+     * @param string $Description <p>Event detailed description.</p>
+     * @param string $MatchRuleId <p>Hit policy ID.</p>
+     * @param string $MatchAction <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
+     * @param string $MatchProcessPath <p>Hit rule process information.</p>
+     * @param boolean $RuleExist <p>Whether the rule exists.</p>
+     * @param integer $EventCount <p>Number of events.</p>
+     * @param string $LatestFoundTime <p>Last generation time.</p>
+     * @param string $RuleId <p>Rule group ID.</p>
+     * @param string $MatchGroupName <p>Hit policy name: SYSTEM_DEFINED_RULE (system policy) or user-defined policy name.</p>
+     * @param string $MatchRuleLevel <p>Hit rule level: HIGH, MIDDLE, and LOW.</p>
+     * @param string $ContainerNetStatus <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
+     * @param string $ContainerNetSubStatus <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
+     * @param string $ContainerIsolateOperationSrc <p>Source of container isolation operation.</p>
+     * @param string $ContainerStatus <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
+     * @param string $ClusterID <p>Cluster ID.</p>
+     * @param string $NodeType <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
+     * @param string $PodName <p>Pod name.</p>
+     * @param string $PodIP <p>pod ip</p>
+     * @param string $NodeUniqueID <p>Cluster ID.</p>
+     * @param string $PublicIP <p>Node public IP address.</p>
+     * @param string $NodeName <p>Node name.</p>
+     * @param string $NodeID <p>Node ID.</p>
+     * @param string $HostID <p>uuid</p>
+     * @param string $HostIP <p>Node private IP address.</p>
+     * @param string $ClusterName <p>Cluster name.</p>
+     * @param string $CmdLine <p>Command line parameters.</p>
      */
     function __construct()
     {
@@ -608,6 +488,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("CmdLine",$param) and $param["CmdLine"] !== null) {
+            $this->CmdLine = $param["CmdLine"];
         }
     }
 }

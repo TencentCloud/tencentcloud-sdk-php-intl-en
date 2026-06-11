@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * User list data.
  *
- * @method string getUserId() Obtain User ID.
- * @method void setUserId(string $UserId) Set User ID.
- * @method string getUserAccount() Obtain User account.
- * @method void setUserAccount(string $UserAccount) Set User account.
+ * @method string getUserId() Obtain <p>User ID.</p>
+ * @method void setUserId(string $UserId) Set <p>User ID.</p>
+ * @method string getUserAccount() Obtain <p>User account.</p>
+ * @method void setUserAccount(string $UserAccount) Set <p>User account.</p>
  * @method integer getAccountType() Obtain User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
  * @method void setAccountType(integer $AccountType) Set User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
- * @method string getUserName() Obtain User name.
- * @method void setUserName(string $UserName) Set User name.
- * @method string getCreateTime() Obtain Creation time.
- * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method string getUserName() Obtain <p>User name.</p>
+ * @method void setUserName(string $UserName) Set <p>User name.</p>
+ * @method string getCreateTime() Obtain <p>Creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
  * @method integer getStatus() Obtain Status. Valid values: 1: Active; 2: Disabled.
  * @method void setStatus(integer $Status) Set Status. Valid values: 1: Active; 2: Disabled.
- * @method string getTeamName() Obtain Team name.
- * @method void setTeamName(string $TeamName) Set Team name.
+ * @method string getTeamName() Obtain <p>Team name.</p>
+ * @method void setTeamName(string $TeamName) Set <p>Team name.</p>
  */
 class DescribeUserListData extends AbstractModel
 {
     /**
-     * @var string User ID.
+     * @var string <p>User ID.</p>
      */
     public $UserId;
 
     /**
-     * @var string User account.
+     * @var string <p>User account.</p>
      */
     public $UserAccount;
 
@@ -53,12 +53,12 @@ class DescribeUserListData extends AbstractModel
     public $AccountType;
 
     /**
-     * @var string User name.
+     * @var string <p>User name.</p>
      */
     public $UserName;
 
     /**
-     * @var string Creation time.
+     * @var string <p>Creation time.</p>
      */
     public $CreateTime;
 
@@ -68,18 +68,18 @@ class DescribeUserListData extends AbstractModel
     public $Status;
 
     /**
-     * @var string Team name.
+     * @var string <p>Team name.</p>
      */
     public $TeamName;
 
     /**
-     * @param string $UserId User ID.
-     * @param string $UserAccount User account.
+     * @param string $UserId <p>User ID.</p>
+     * @param string $UserAccount <p>User account.</p>
      * @param integer $AccountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
-     * @param string $UserName User name.
-     * @param string $CreateTime Creation time.
+     * @param string $UserName <p>User name.</p>
+     * @param string $CreateTime <p>Creation time.</p>
      * @param integer $Status Status. Valid values: 1: Active; 2: Disabled.
-     * @param string $TeamName Team name.
+     * @param string $TeamName <p>Team name.</p>
      */
     function __construct()
     {

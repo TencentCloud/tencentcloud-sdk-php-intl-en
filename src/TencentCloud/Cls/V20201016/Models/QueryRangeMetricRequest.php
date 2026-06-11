@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * QueryRangeMetric request structure.
  *
  * @method string getTopicId() Obtain Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
  * @method void setTopicId(string $TopicId) Set Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
  * @method string getQuery() Obtain Queries statements; using PromQL syntax
+-Refer to the [syntax rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document.
  * @method void setQuery(string $Query) Set Queries statements; using PromQL syntax
+-Refer to the [syntax rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document.
  * @method integer getStart() Obtain Queries start time; unix timestamp in seconds
  * @method void setStart(integer $Start) Set Queries start time; unix timestamp in seconds
  * @method integer getEnd() Obtain Queries end time; unix timestamp in seconds
@@ -35,11 +39,13 @@ class QueryRangeMetricRequest extends AbstractModel
 {
     /**
      * @var string Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
     /**
      * @var string Queries statements; using PromQL syntax
+-Refer to the [syntax rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document.
      */
     public $Query;
 
@@ -60,7 +66,9 @@ class QueryRangeMetricRequest extends AbstractModel
 
     /**
      * @param string $TopicId Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      * @param string $Query Queries statements; using PromQL syntax
+-Refer to the [syntax rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document.
      * @param integer $Start Queries start time; unix timestamp in seconds
      * @param integer $End Queries end time; unix timestamp in seconds
      * @param integer $Step Queries time interval, in seconds

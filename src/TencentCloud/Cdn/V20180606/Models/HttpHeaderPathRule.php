@@ -34,14 +34,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setHeaderName(string $HeaderName) Set HTTP header name. Up to 100 characters can be set.
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getHeaderValue() Obtain HTTP header value. Up to 1000 characters can be set.
-Not required when Mode is del
-Required when Mode is add/set
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setHeaderValue(string $HeaderValue) Set HTTP header value. Up to 1000 characters can be set.
-Not required when Mode is del
-Required when Mode is add/set
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getHeaderValue() Obtain http header value. custom request header supports up to 1000 characters. custom response header can be set up to 2000 characters.
+Optional when Mode is del.
+Required when Mode is add/set.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHeaderValue(string $HeaderValue) Set http header value. custom request header supports up to 1000 characters. custom response header can be set up to 2000 characters.
+Optional when Mode is del.
+Required when Mode is add/set.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRuleType() Obtain Rule types:
 `all`: Apply to all files.
 `file`: Apply to files with the specified suffixes.
@@ -85,10 +85,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $HeaderName;
 
     /**
-     * @var string HTTP header value. Up to 1000 characters can be set.
-Not required when Mode is del
-Required when Mode is add/set
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string http header value. custom request header supports up to 1000 characters. custom response header can be set up to 2000 characters.
+Optional when Mode is del.
+Required when Mode is add/set.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HeaderValue;
 
@@ -120,10 +120,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $HeaderName HTTP header name. Up to 100 characters can be set.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $HeaderValue HTTP header value. Up to 1000 characters can be set.
-Not required when Mode is del
-Required when Mode is add/set
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $HeaderValue http header value. custom request header supports up to 1000 characters. custom response header can be set up to 2000 characters.
+Optional when Mode is del.
+Required when Mode is add/set.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RuleType Rule types:
 `all`: Apply to all files.
 `file`: Apply to files with the specified suffixes.

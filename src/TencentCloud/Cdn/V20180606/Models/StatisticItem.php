@@ -32,10 +32,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setBpsThreshold(integer $BpsThreshold) Set Bandwidth/Traffic threshold
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getCounterMeasure() Obtain Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setCounterMeasure(string $CounterMeasure) Set Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getCounterMeasure() Obtain Shutdown method RETURN 404: RETURN_404.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCounterMeasure(string $CounterMeasure) Set Shutdown method RETURN 404: RETURN_404.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getAlertPercentage() Obtain Threshold (in percentage) that triggers alarms
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAlertPercentage(integer $AlertPercentage) Set Threshold (in percentage) that triggers alarms
@@ -52,8 +52,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setMetric(string $Metric) Set Metric type. `flux`: Traffic; `bandwidth`: Bandwidth.
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getCycle() Obtain Detection Cycle, Unit: Minutes, 60 or 1440
- * @method void setCycle(integer $Cycle) Set Detection Cycle, Unit: Minutes, 60 or 1440
+ * @method integer getCycle() Obtain 
+ * @method void setCycle(integer $Cycle) Set 
  * @method string getSwitch() Obtain Whether to enable cumulative usage limit. Values:
 `on`: Enable
 `off`: Disable
@@ -84,8 +84,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $BpsThreshold;
 
     /**
-     * @var string Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Shutdown method RETURN 404: RETURN_404.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CounterMeasure;
 
@@ -110,7 +110,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Metric;
 
     /**
-     * @var integer Detection Cycle, Unit: Minutes, 60 or 1440
+     * @var integer 
      */
     public $Cycle;
 
@@ -129,8 +129,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $BpsThreshold Bandwidth/Traffic threshold
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $CounterMeasure Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $CounterMeasure Shutdown method RETURN 404: RETURN_404.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $AlertPercentage Threshold (in percentage) that triggers alarms
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $AlertSwitch Whether to enable alerts for cumulative usage limit. Values:
@@ -139,7 +139,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Metric Metric type. `flux`: Traffic; `bandwidth`: Bandwidth.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $Cycle Detection Cycle, Unit: Minutes, 60 or 1440
+     * @param integer $Cycle 
      * @param string $Switch Whether to enable cumulative usage limit. Values:
 `on`: Enable
 `off`: Disable

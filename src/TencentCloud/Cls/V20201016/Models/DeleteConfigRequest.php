@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteConfig request structure.
  *
- * @method string getConfigId() Obtain Collection rule configuration ID
- * @method void setConfigId(string $ConfigId) Set Collection rule configuration ID
+ * @method string getConfigId() Obtain Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
+ * @method void setConfigId(string $ConfigId) Set Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
  */
 class DeleteConfigRequest extends AbstractModel
 {
     /**
-     * @var string Collection rule configuration ID
+     * @var string Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
      */
     public $ConfigId;
 
     /**
-     * @param string $ConfigId Collection rule configuration ID
+     * @param string $ConfigId Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
      */
     function __construct()
     {

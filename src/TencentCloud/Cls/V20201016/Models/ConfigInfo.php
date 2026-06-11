@@ -22,24 +22,34 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getConfigId() Obtain Collection rule configuration ID
  * @method void setConfigId(string $ConfigId) Set Collection rule configuration ID
- * @method string getName() Obtain Name of the collection rule configuration
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set Name of the collection rule configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain Collection rule configuration name
+ * @method void setName(string $Name) Set Collection rule configuration name
  * @method string getLogFormat() Obtain Log formatting method
-Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setLogFormat(string $LogFormat) Set Log formatting method
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getPath() Obtain Log collection path
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setPath(string $Path) Set Log collection path
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getLogType() Obtain Type of collected logs.- json_log: JSON File Log (For more information, see [Using JSON pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17419?from_cn_redirect=1));- delimiter_log: Delimiter - File Logs (For more information, see [Using delimiter pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17420?from_cn_redirect=1));- minimalist_log: Single-line Full-text File Log (For more information, see [Using single-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17421?from_cn_redirect=1));- fullregex_log: Single line full regular expression - File log (For more information, see [Using single-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52365?from_cn_redirect=1));- multiline_log: Multiline Full-text File Log (For more information, see [Using multi-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17422?from_cn_redirect=1));- multiline_fullregex_log: Multi-line complete regular expression - File Logs (For more information, see [Using multi-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52366?from_cn_redirect=1));- user_define_log: Combined parsing (Suitable for logs with multiple nested formats, see [Using combined parsing pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1));- service_syslog: syslog collection (For more information, see [Collect Syslog](https://intl.cloud.tencent.com/document/product/614/81454?from_cn_redirect=1));- windows_event_log represents: Windows event logs (see Collecting Windows Event Logs (https://intl.cloud.tencent.com/document/product/614/96678?from_cn_redirect=1) for details.).Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLogType(string $LogType) Set Type of collected logs.- json_log: JSON File Log (For more information, see [Using JSON pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17419?from_cn_redirect=1));- delimiter_log: Delimiter - File Logs (For more information, see [Using delimiter pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17420?from_cn_redirect=1));- minimalist_log: Single-line Full-text File Log (For more information, see [Using single-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17421?from_cn_redirect=1));- fullregex_log: Single line full regular expression - File log (For more information, see [Using single-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52365?from_cn_redirect=1));- multiline_log: Multiline Full-text File Log (For more information, see [Using multi-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17422?from_cn_redirect=1));- multiline_fullregex_log: Multi-line complete regular expression - File Logs (For more information, see [Using multi-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52366?from_cn_redirect=1));- user_define_log: Combined parsing (Suitable for logs with multiple nested formats, see [Using combined parsing pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1));- service_syslog: syslog collection (For more information, see [Collect Syslog](https://intl.cloud.tencent.com/document/product/614/81454?from_cn_redirect=1));- windows_event_log represents: Windows event logs (see Collecting Windows Event Logs (https://intl.cloud.tencent.com/document/product/614/96678?from_cn_redirect=1) for details.).Note: This field may return null, indicating that no valid values can be obtained.
- * @method ExtractRuleInfo getExtractRule() Obtain Extraction rule. If `ExtractRule` is set, `LogType` must be set
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setExtractRule(ExtractRuleInfo $ExtractRule) Set Extraction rule. If `ExtractRule` is set, `LogType` must be set
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getPath() Obtain log collection path
+ * @method void setPath(string $Path) Set log collection path
+ * @method string getLogType() Obtain Type of log collected.
+-json_log represents JSON file logs (see [Use JSON extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17419?from_cn_redirect=1)).
+-delimiter_log represents: delimiter-file logs (see [use delimiter extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17420?from_cn_redirect=1)).
+-minimalist_log represents single-line full-text file logs (see [use single-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17421?from_cn_redirect=1)).
+-fullregex_log represents single-line full regex-file logs (see [Collect logs using single-line full regex extraction mode](https://www.tencentcloud.com/document/product/614/52365?from_cn_redirect=1)).
+-multiline_log represents multi-line full-text file logs (see [use multi-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17422?from_cn_redirect=1)).
+-multiline_fullregex_log represents: Multiline full regex-file log (see [Collect logs using multiline-full regex extraction mode](https://www.tencentcloud.com/document/product/614/52366?from_cn_redirect=1));
+-user_define_log represents: combined parsing mode (suitable for logs with multiple nested formats, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1));
+-service_syslog represents syslog collection (see [Collect Syslog](https://www.tencentcloud.com/document/product/614/81454?from_cn_redirect=1)).
+- windows_event_log: Windows event log (see [Collecting Windows Event Logs](https://www.tencentcloud.com/document/product/614/96678?from_cn_redirect=1)).
+ * @method void setLogType(string $LogType) Set Type of log collected.
+-json_log represents JSON file logs (see [Use JSON extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17419?from_cn_redirect=1)).
+-delimiter_log represents: delimiter-file logs (see [use delimiter extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17420?from_cn_redirect=1)).
+-minimalist_log represents single-line full-text file logs (see [use single-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17421?from_cn_redirect=1)).
+-fullregex_log represents single-line full regex-file logs (see [Collect logs using single-line full regex extraction mode](https://www.tencentcloud.com/document/product/614/52365?from_cn_redirect=1)).
+-multiline_log represents multi-line full-text file logs (see [use multi-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17422?from_cn_redirect=1)).
+-multiline_fullregex_log represents: Multiline full regex-file log (see [Collect logs using multiline-full regex extraction mode](https://www.tencentcloud.com/document/product/614/52366?from_cn_redirect=1));
+-user_define_log represents: combined parsing mode (suitable for logs with multiple nested formats, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1));
+-service_syslog represents syslog collection (see [Collect Syslog](https://www.tencentcloud.com/document/product/614/81454?from_cn_redirect=1)).
+- windows_event_log: Windows event log (see [Collecting Windows Event Logs](https://www.tencentcloud.com/document/product/614/96678?from_cn_redirect=1)).
+ * @method ExtractRuleInfo getExtractRule() Obtain Extraction rule. If ExtractRule is set, then LogType must be set.
+ * @method void setExtractRule(ExtractRuleInfo $ExtractRule) Set Extraction rule. If ExtractRule is set, then LogType must be set.
  * @method array getExcludePaths() Obtain Collection path blocklist
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setExcludePaths(array $ExcludePaths) Set Collection path blocklist
@@ -47,19 +57,39 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method string getOutput() Obtain Log topic ID (TopicId) of collection configuration
  * @method void setOutput(string $Output) Set Log topic ID (TopicId) of collection configuration
  * @method string getUpdateTime() Obtain Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+-Time format: yyyy-MM-dd HH:mm:ss
  * @method void setUpdateTime(string $UpdateTime) Set Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getUserDefineRule() Obtain User-defined parsing strings, see Collecting Logs Using Combined Parsing Extraction Mode (https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1) for details.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserDefineRule(string $UserDefineRule) Set User-defined parsing strings, see Collecting Logs Using Combined Parsing Extraction Mode (https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1) for details.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAdvancedConfig() Obtain Advanced collection configuration. A JSON string, Key/Value definition as follows:- ClsAgentFileTimeout (timeout property), value range: an integer greater than or equal to 0, where 0 means no timeout- ClsAgentMaxDepth (maximum directory depth), value range: an integer greater than or equal to 0- ClsAgentParseFailMerge (merge logs that failed parsing), value range: true or falseSample:`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
+-Time format: yyyy-MM-dd HH:mm:ss
+ * @method string getCreateTime() Obtain Creation time.
+-Time format: yyyy-MM-dd HH:mm:ss
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+-Time format: yyyy-MM-dd HH:mm:ss
+ * @method string getUserDefineRule() Obtain Custom parsing string. For more information, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1).
+ * @method void setUserDefineRule(string $UserDefineRule) Set Custom parsing string. For more information, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1).
+ * @method string getAdvancedConfig() Obtain Advanced collection configuration. Json string, Key/Value is defined as follows:
+-ClsAgentFileTimeout (timeout attribute). Value ranges from 0 to integer. 0 means no timeout.
+-ClsAgentMaxDepth (maximum directory depth), value ranges from 0 to integer
+-ClsAgentParseFailMerge (merge parsing failure logs). Value ranges from true to false.
+Example:
+`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
-Default placeholder value in the console: `{"ClsAgentDefault":0}`Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAdvancedConfig(string $AdvancedConfig) Set Advanced collection configuration. A JSON string, Key/Value definition as follows:- ClsAgentFileTimeout (timeout property), value range: an integer greater than or equal to 0, where 0 means no timeout- ClsAgentMaxDepth (maximum directory depth), value range: an integer greater than or equal to 0- ClsAgentParseFailMerge (merge logs that failed parsing), value range: true or falseSample:`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
+Default placeholder value in console: `{\"ClsAgentDefault\":0}`
+ * @method void setAdvancedConfig(string $AdvancedConfig) Set Advanced collection configuration. Json string, Key/Value is defined as follows:
+-ClsAgentFileTimeout (timeout attribute). Value ranges from 0 to integer. 0 means no timeout.
+-ClsAgentMaxDepth (maximum directory depth), value ranges from 0 to integer
+-ClsAgentParseFailMerge (merge parsing failure logs). Value ranges from true to false.
+Example:
+`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
-Default placeholder value in the console: `{"ClsAgentDefault":0}`Note: This field may return null, indicating that no valid values can be obtained.
+Default placeholder value in console: `{\"ClsAgentDefault\":0}`
+ * @method string getInputType() Obtain Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+ * @method void setInputType(string $InputType) Set Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
  */
 class ConfigInfo extends AbstractModel
 {
@@ -69,31 +99,36 @@ class ConfigInfo extends AbstractModel
     public $ConfigId;
 
     /**
-     * @var string Name of the collection rule configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Collection rule configuration name
      */
     public $Name;
 
     /**
      * @var string Log formatting method
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $LogFormat;
 
     /**
-     * @var string Log collection path
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string log collection path
      */
     public $Path;
 
     /**
-     * @var string Type of collected logs.- json_log: JSON File Log (For more information, see [Using JSON pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17419?from_cn_redirect=1));- delimiter_log: Delimiter - File Logs (For more information, see [Using delimiter pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17420?from_cn_redirect=1));- minimalist_log: Single-line Full-text File Log (For more information, see [Using single-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17421?from_cn_redirect=1));- fullregex_log: Single line full regular expression - File log (For more information, see [Using single-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52365?from_cn_redirect=1));- multiline_log: Multiline Full-text File Log (For more information, see [Using multi-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17422?from_cn_redirect=1));- multiline_fullregex_log: Multi-line complete regular expression - File Logs (For more information, see [Using multi-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52366?from_cn_redirect=1));- user_define_log: Combined parsing (Suitable for logs with multiple nested formats, see [Using combined parsing pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1));- service_syslog: syslog collection (For more information, see [Collect Syslog](https://intl.cloud.tencent.com/document/product/614/81454?from_cn_redirect=1));- windows_event_log represents: Windows event logs (see Collecting Windows Event Logs (https://intl.cloud.tencent.com/document/product/614/96678?from_cn_redirect=1) for details.).Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Type of log collected.
+-json_log represents JSON file logs (see [Use JSON extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17419?from_cn_redirect=1)).
+-delimiter_log represents: delimiter-file logs (see [use delimiter extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17420?from_cn_redirect=1)).
+-minimalist_log represents single-line full-text file logs (see [use single-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17421?from_cn_redirect=1)).
+-fullregex_log represents single-line full regex-file logs (see [Collect logs using single-line full regex extraction mode](https://www.tencentcloud.com/document/product/614/52365?from_cn_redirect=1)).
+-multiline_log represents multi-line full-text file logs (see [use multi-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17422?from_cn_redirect=1)).
+-multiline_fullregex_log represents: Multiline full regex-file log (see [Collect logs using multiline-full regex extraction mode](https://www.tencentcloud.com/document/product/614/52366?from_cn_redirect=1));
+-user_define_log represents: combined parsing mode (suitable for logs with multiple nested formats, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1));
+-service_syslog represents syslog collection (see [Collect Syslog](https://www.tencentcloud.com/document/product/614/81454?from_cn_redirect=1)).
+- windows_event_log: Windows event log (see [Collecting Windows Event Logs](https://www.tencentcloud.com/document/product/614/96678?from_cn_redirect=1)).
      */
     public $LogType;
 
     /**
-     * @var ExtractRuleInfo Extraction rule. If `ExtractRule` is set, `LogType` must be set
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var ExtractRuleInfo Extraction rule. If ExtractRule is set, then LogType must be set.
      */
     public $ExtractRule;
 
@@ -110,48 +145,77 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @var string Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+-Time format: yyyy-MM-dd HH:mm:ss
      */
     public $UpdateTime;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
+-Time format: yyyy-MM-dd HH:mm:ss
      */
     public $CreateTime;
 
     /**
-     * @var string User-defined parsing strings, see Collecting Logs Using Combined Parsing Extraction Mode (https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1) for details.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Custom parsing string. For more information, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1).
      */
     public $UserDefineRule;
 
     /**
-     * @var string Advanced collection configuration. A JSON string, Key/Value definition as follows:- ClsAgentFileTimeout (timeout property), value range: an integer greater than or equal to 0, where 0 means no timeout- ClsAgentMaxDepth (maximum directory depth), value range: an integer greater than or equal to 0- ClsAgentParseFailMerge (merge logs that failed parsing), value range: true or falseSample:`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
+     * @var string Advanced collection configuration. Json string, Key/Value is defined as follows:
+-ClsAgentFileTimeout (timeout attribute). Value ranges from 0 to integer. 0 means no timeout.
+-ClsAgentMaxDepth (maximum directory depth), value ranges from 0 to integer
+-ClsAgentParseFailMerge (merge parsing failure logs). Value ranges from true to false.
+Example:
+`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
-Default placeholder value in the console: `{"ClsAgentDefault":0}`Note: This field may return null, indicating that no valid values can be obtained.
+Default placeholder value in console: `{\"ClsAgentDefault\":0}`
      */
     public $AdvancedConfig;
 
     /**
+     * @var string Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+     */
+    public $InputType;
+
+    /**
      * @param string $ConfigId Collection rule configuration ID
-     * @param string $Name Name of the collection rule configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Name Collection rule configuration name
      * @param string $LogFormat Log formatting method
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Path Log collection path
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $LogType Type of collected logs.- json_log: JSON File Log (For more information, see [Using JSON pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17419?from_cn_redirect=1));- delimiter_log: Delimiter - File Logs (For more information, see [Using delimiter pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17420?from_cn_redirect=1));- minimalist_log: Single-line Full-text File Log (For more information, see [Using single-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17421?from_cn_redirect=1));- fullregex_log: Single line full regular expression - File log (For more information, see [Using single-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52365?from_cn_redirect=1));- multiline_log: Multiline Full-text File Log (For more information, see [Using multi-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17422?from_cn_redirect=1));- multiline_fullregex_log: Multi-line complete regular expression - File Logs (For more information, see [Using multi-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52366?from_cn_redirect=1));- user_define_log: Combined parsing (Suitable for logs with multiple nested formats, see [Using combined parsing pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1));- service_syslog: syslog collection (For more information, see [Collect Syslog](https://intl.cloud.tencent.com/document/product/614/81454?from_cn_redirect=1));- windows_event_log represents: Windows event logs (see Collecting Windows Event Logs (https://intl.cloud.tencent.com/document/product/614/96678?from_cn_redirect=1) for details.).Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtractRuleInfo $ExtractRule Extraction rule. If `ExtractRule` is set, `LogType` must be set
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Path log collection path
+     * @param string $LogType Type of log collected.
+-json_log represents JSON file logs (see [Use JSON extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17419?from_cn_redirect=1)).
+-delimiter_log represents: delimiter-file logs (see [use delimiter extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17420?from_cn_redirect=1)).
+-minimalist_log represents single-line full-text file logs (see [use single-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17421?from_cn_redirect=1)).
+-fullregex_log represents single-line full regex-file logs (see [Collect logs using single-line full regex extraction mode](https://www.tencentcloud.com/document/product/614/52365?from_cn_redirect=1)).
+-multiline_log represents multi-line full-text file logs (see [use multi-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17422?from_cn_redirect=1)).
+-multiline_fullregex_log represents: Multiline full regex-file log (see [Collect logs using multiline-full regex extraction mode](https://www.tencentcloud.com/document/product/614/52366?from_cn_redirect=1));
+-user_define_log represents: combined parsing mode (suitable for logs with multiple nested formats, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1));
+-service_syslog represents syslog collection (see [Collect Syslog](https://www.tencentcloud.com/document/product/614/81454?from_cn_redirect=1)).
+- windows_event_log: Windows event log (see [Collecting Windows Event Logs](https://www.tencentcloud.com/document/product/614/96678?from_cn_redirect=1)).
+     * @param ExtractRuleInfo $ExtractRule Extraction rule. If ExtractRule is set, then LogType must be set.
      * @param array $ExcludePaths Collection path blocklist
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Output Log topic ID (TopicId) of collection configuration
      * @param string $UpdateTime Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time
-     * @param string $UserDefineRule User-defined parsing strings, see Collecting Logs Using Combined Parsing Extraction Mode (https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1) for details.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AdvancedConfig Advanced collection configuration. A JSON string, Key/Value definition as follows:- ClsAgentFileTimeout (timeout property), value range: an integer greater than or equal to 0, where 0 means no timeout- ClsAgentMaxDepth (maximum directory depth), value range: an integer greater than or equal to 0- ClsAgentParseFailMerge (merge logs that failed parsing), value range: true or falseSample:`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
+-Time format: yyyy-MM-dd HH:mm:ss
+     * @param string $CreateTime Creation time.
+-Time format: yyyy-MM-dd HH:mm:ss
+     * @param string $UserDefineRule Custom parsing string. For more information, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1).
+     * @param string $AdvancedConfig Advanced collection configuration. Json string, Key/Value is defined as follows:
+-ClsAgentFileTimeout (timeout attribute). Value ranges from 0 to integer. 0 means no timeout.
+-ClsAgentMaxDepth (maximum directory depth), value ranges from 0 to integer
+-ClsAgentParseFailMerge (merge parsing failure logs). Value ranges from true to false.
+Example:
+`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
-Default placeholder value in the console: `{"ClsAgentDefault":0}`Note: This field may return null, indicating that no valid values can be obtained.
+Default placeholder value in console: `{\"ClsAgentDefault\":0}`
+     * @param string $InputType Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
      */
     function __construct()
     {
@@ -218,6 +282,10 @@ Default placeholder value in the console: `{"ClsAgentDefault":0}`Note: This fiel
 
         if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
             $this->AdvancedConfig = $param["AdvancedConfig"];
+        }
+
+        if (array_key_exists("InputType",$param) and $param["InputType"] !== null) {
+            $this->InputType = $param["InputType"];
         }
     }
 }

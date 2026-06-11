@@ -20,430 +20,322 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Container runtime security - Information of the access control event
  *
- * @method string getProcessName() Obtain Process name
- * @method void setProcessName(string $ProcessName) Set Process name
- * @method string getMatchRuleName() Obtain Name of the hit rule
- * @method void setMatchRuleName(string $MatchRuleName) Set Name of the hit rule
- * @method string getFoundTime() Obtain Generation time
- * @method void setFoundTime(string $FoundTime) Set Generation time
- * @method string getContainerName() Obtain Container name
- * @method void setContainerName(string $ContainerName) Set Container name
- * @method string getImageName() Obtain Image name
- * @method void setImageName(string $ImageName) Set Image name
- * @method string getBehavior() Obtain Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
- * @method void setBehavior(string $Behavior) Set Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
- * @method string getStatus() Obtain Status. `0`: Pending. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
- * @method void setStatus(string $Status) Set Status. `0`: Pending. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
- * @method string getId() Obtain Unique event ID
- * @method void setId(string $Id) Set Unique event ID
- * @method string getFileName() Obtain Filename
- * @method void setFileName(string $FileName) Set Filename
- * @method string getEventType() Obtain Event type. `FILE_ABNORMAL_READ`: Abnormal file read.
- * @method void setEventType(string $EventType) Set Event type. `FILE_ABNORMAL_READ`: Abnormal file read.
- * @method string getImageId() Obtain Image ID, which is used for redirect.
- * @method void setImageId(string $ImageId) Set Image ID, which is used for redirect.
- * @method string getContainerId() Obtain Container ID, which is used for redirect.
- * @method void setContainerId(string $ContainerId) Set Container ID, which is used for redirect.
- * @method string getSolution() Obtain Event solution
- * @method void setSolution(string $Solution) Set Event solution
- * @method string getDescription() Obtain Event description
- * @method void setDescription(string $Description) Set Event description
- * @method string getMatchRuleId() Obtain Hit policy ID
- * @method void setMatchRuleId(string $MatchRuleId) Set Hit policy ID
- * @method string getMatchAction() Obtain Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
- * @method void setMatchAction(string $MatchAction) Set Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
- * @method string getMatchProcessPath() Obtain Information of the process that hits the rule
- * @method void setMatchProcessPath(string $MatchProcessPath) Set Information of the process that hits the rule
- * @method string getMatchFilePath() Obtain Information of the file that hits the rule
- * @method void setMatchFilePath(string $MatchFilePath) Set Information of the file that hits the rule
- * @method string getFilePath() Obtain File path containing the name
- * @method void setFilePath(string $FilePath) Set File path containing the name
- * @method boolean getRuleExist() Obtain Whether the rule exists
- * @method void setRuleExist(boolean $RuleExist) Set Whether the rule exists
- * @method integer getEventCount() Obtain Number of events
- * @method void setEventCount(integer $EventCount) Set Number of events
- * @method string getLatestFoundTime() Obtain Last generation time
- * @method void setLatestFoundTime(string $LatestFoundTime) Set Last generation time
- * @method string getRuleId() Obtain Rule group ID
- * @method void setRuleId(string $RuleId) Set Rule group ID
- * @method string getContainerNetStatus() Obtain Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
- * @method void setContainerNetStatus(string $ContainerNetStatus) Set Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
- * @method string getContainerNetSubStatus() Obtain Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
- * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) Set Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
- * @method string getContainerIsolateOperationSrc() Obtain Container isolation operation source
- * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) Set Container isolation operation source
- * @method string getContainerStatus() Obtain Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
- * @method void setContainerStatus(string $ContainerStatus) Set Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
- * @method string getNodeName() Obtain Node name: For super nodes, the node_id is displayed.
- * @method void setNodeName(string $NodeName) Set Node name: For super nodes, the node_id is displayed.
- * @method string getPodName() Obtain Pod name
- * @method void setPodName(string $PodName) Set Pod name
- * @method string getPodIP() Obtain Pod IP
- * @method void setPodIP(string $PodIP) Set Pod IP
- * @method string getNodeType() Obtain Node type. Values: `NORMAL` (general node), `SUPER` (super node).
- * @method void setNodeType(string $NodeType) Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
- * @method string getClusterID() Obtain Cluster ID
- * @method void setClusterID(string $ClusterID) Set Cluster ID
- * @method string getNodeUniqueID() Obtain Node unique ID. It's used for super nodes.
- * @method void setNodeUniqueID(string $NodeUniqueID) Set Node unique ID. It's used for super nodes.
- * @method string getPublicIP() Obtain Node public IP
- * @method void setPublicIP(string $PublicIP) Set Node public IP
- * @method string getNodeID() Obtain Node ID
- * @method void setNodeID(string $NodeID) Set Node ID
- * @method string getHostID() Obtain uuid
- * @method void setHostID(string $HostID) Set uuid
- * @method string getHostIP() Obtain Private IP of the node
- * @method void setHostIP(string $HostIP) Set Private IP of the node
- * @method string getClusterName() Obtain Cluster name
- * @method void setClusterName(string $ClusterName) Set Cluster name
+ * @method string getProcessName() Obtain <p>Process name.</p>
+ * @method void setProcessName(string $ProcessName) Set <p>Process name.</p>
+ * @method string getMatchRuleName() Obtain <p>Hit rule name.</p>
+ * @method void setMatchRuleName(string $MatchRuleName) Set <p>Hit rule name.</p>
+ * @method string getFoundTime() Obtain <p>Generation time.</p>
+ * @method void setFoundTime(string $FoundTime) Set <p>Generation time.</p>
+ * @method string getContainerName() Obtain <p>Container name.</p>
+ * @method void setContainerName(string $ContainerName) Set <p>Container name.</p>
+ * @method string getImageName() Obtain <p>Image name.</p>
+ * @method void setImageName(string $ImageName) Set <p>Image name.</p>
+ * @method string getBehavior() Obtain <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
+ * @method void setBehavior(string $Behavior) Set <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
+ * @method string getStatus() Obtain <p>Status 0: unhandled  "EVENT_UNDEAL": event unhandled<br>    &quot;EVENT_DEALED&quot;: event handled<br>    &quot;EVENT_INGNORE&quot;: event ignored</p>
+ * @method void setStatus(string $Status) Set <p>Status 0: unhandled  "EVENT_UNDEAL": event unhandled<br>    &quot;EVENT_DEALED&quot;: event handled<br>    &quot;EVENT_INGNORE&quot;: event ignored</p>
+ * @method string getId() Obtain <p>Unique ID of the event record.</p>
+ * @method void setId(string $Id) Set <p>Unique ID of the event record.</p>
+ * @method string getFileName() Obtain <p>File name.</p>
+ * @method void setFileName(string $FileName) Set <p>File name.</p>
+ * @method string getEventType() Obtain <p>Event type. FILE_ABNORMAL_READ: abnormal file read.</p>
+ * @method void setEventType(string $EventType) Set <p>Event type. FILE_ABNORMAL_READ: abnormal file read.</p>
+ * @method string getImageId() Obtain <p>Image ID, used for redirection.</p>
+ * @method void setImageId(string $ImageId) Set <p>Image ID, used for redirection.</p>
+ * @method string getContainerId() Obtain <p>Container ID, used for redirection.</p>
+ * @method void setContainerId(string $ContainerId) Set <p>Container ID, used for redirection.</p>
+ * @method string getSolution() Obtain <p>Event solution.</p>
+ * @method void setSolution(string $Solution) Set <p>Event solution.</p>
+ * @method string getDescription() Obtain <p>Event detailed description.</p>
+ * @method void setDescription(string $Description) Set <p>Event detailed description.</p>
+ * @method string getMatchRuleId() Obtain <p>Hit policy ID.</p>
+ * @method void setMatchRuleId(string $MatchRuleId) Set <p>Hit policy ID.</p>
+ * @method string getMatchAction() Obtain <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
+ * @method void setMatchAction(string $MatchAction) Set <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
+ * @method string getMatchProcessPath() Obtain <p>Hit rule process information.</p>
+ * @method void setMatchProcessPath(string $MatchProcessPath) Set <p>Hit rule process information.</p>
+ * @method string getMatchFilePath() Obtain <p>Hit rule file information.</p>
+ * @method void setMatchFilePath(string $MatchFilePath) Set <p>Hit rule file information.</p>
+ * @method string getFilePath() Obtain <p>File path, including name.</p>
+ * @method void setFilePath(string $FilePath) Set <p>File path, including name.</p>
+ * @method boolean getRuleExist() Obtain <p>Whether the rule exists.</p>
+ * @method void setRuleExist(boolean $RuleExist) Set <p>Whether the rule exists.</p>
+ * @method integer getEventCount() Obtain <p>Number of events.</p>
+ * @method void setEventCount(integer $EventCount) Set <p>Number of events.</p>
+ * @method string getLatestFoundTime() Obtain <p>Last generation time.</p>
+ * @method void setLatestFoundTime(string $LatestFoundTime) Set <p>Last generation time.</p>
+ * @method string getRuleId() Obtain <p>Rule group ID.</p>
+ * @method void setRuleId(string $RuleId) Set <p>Rule group ID.</p>
+ * @method string getContainerNetStatus() Obtain <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
+ * @method void setContainerNetStatus(string $ContainerNetStatus) Set <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
+ * @method string getContainerNetSubStatus() Obtain <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
+ * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) Set <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
+ * @method string getContainerIsolateOperationSrc() Obtain <p>Source of container isolation operation.</p>
+ * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) Set <p>Source of container isolation operation.</p>
+ * @method string getContainerStatus() Obtain <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
+ * @method void setContainerStatus(string $ContainerStatus) Set <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
+ * @method string getNodeName() Obtain <p>Node name: For super nodes, the node_id is displayed instead.</p>
+ * @method void setNodeName(string $NodeName) Set <p>Node name: For super nodes, the node_id is displayed instead.</p>
+ * @method string getPodName() Obtain <p>Pod name.</p>
+ * @method void setPodName(string $PodName) Set <p>Pod name.</p>
+ * @method string getPodIP() Obtain <p>pod ip</p>
+ * @method void setPodIP(string $PodIP) Set <p>pod ip</p>
+ * @method string getNodeType() Obtain <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
+ * @method void setNodeType(string $NodeType) Set <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
+ * @method string getClusterID() Obtain <p>Cluster ID.</p>
+ * @method void setClusterID(string $ClusterID) Set <p>Cluster ID.</p>
+ * @method string getNodeUniqueID() Obtain <p>Unique node ID, primarily used for super nodes.</p>
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set <p>Unique node ID, primarily used for super nodes.</p>
+ * @method string getPublicIP() Obtain <p>Node public IP address.</p>
+ * @method void setPublicIP(string $PublicIP) Set <p>Node public IP address.</p>
+ * @method string getNodeID() Obtain <p>Node ID.</p>
+ * @method void setNodeID(string $NodeID) Set <p>Node ID.</p>
+ * @method string getHostID() Obtain <p>uuid</p>
+ * @method void setHostID(string $HostID) Set <p>uuid</p>
+ * @method string getHostIP() Obtain <p>Node private IP address.</p>
+ * @method void setHostIP(string $HostIP) Set <p>Node private IP address.</p>
+ * @method string getClusterName() Obtain <p>Cluster name.</p>
+ * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
+ * @method string getCmdLine() Obtain <p>Command line parameters.</p>
+ * @method void setCmdLine(string $CmdLine) Set <p>Command line parameters.</p>
  */
 class AccessControlEventInfo extends AbstractModel
 {
     /**
-     * @var string Process name
+     * @var string <p>Process name.</p>
      */
     public $ProcessName;
 
     /**
-     * @var string Name of the hit rule
+     * @var string <p>Hit rule name.</p>
      */
     public $MatchRuleName;
 
     /**
-     * @var string Generation time
+     * @var string <p>Generation time.</p>
      */
     public $FoundTime;
 
     /**
-     * @var string Container name
+     * @var string <p>Container name.</p>
      */
     public $ContainerName;
 
     /**
-     * @var string Image name
+     * @var string <p>Image name.</p>
      */
     public $ImageName;
 
     /**
-     * @var string Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
+     * @var string <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
      */
     public $Behavior;
 
     /**
-     * @var string Status. `0`: Pending. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
+     * @var string <p>Status 0: unhandled  "EVENT_UNDEAL": event unhandled<br>    &quot;EVENT_DEALED&quot;: event handled<br>    &quot;EVENT_INGNORE&quot;: event ignored</p>
      */
     public $Status;
 
     /**
-     * @var string Unique event ID
+     * @var string <p>Unique ID of the event record.</p>
      */
     public $Id;
 
     /**
-     * @var string Filename
+     * @var string <p>File name.</p>
      */
     public $FileName;
 
     /**
-     * @var string Event type. `FILE_ABNORMAL_READ`: Abnormal file read.
+     * @var string <p>Event type. FILE_ABNORMAL_READ: abnormal file read.</p>
      */
     public $EventType;
 
     /**
-     * @var string Image ID, which is used for redirect.
+     * @var string <p>Image ID, used for redirection.</p>
      */
     public $ImageId;
 
     /**
-     * @var string Container ID, which is used for redirect.
+     * @var string <p>Container ID, used for redirection.</p>
      */
     public $ContainerId;
 
     /**
-     * @var string Event solution
+     * @var string <p>Event solution.</p>
      */
     public $Solution;
 
     /**
-     * @var string Event description
+     * @var string <p>Event detailed description.</p>
      */
     public $Description;
 
     /**
-     * @var string Hit policy ID
+     * @var string <p>Hit policy ID.</p>
      */
     public $MatchRuleId;
 
     /**
-     * @var string Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
+     * @var string <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
      */
     public $MatchAction;
 
     /**
-     * @var string Information of the process that hits the rule
+     * @var string <p>Hit rule process information.</p>
      */
     public $MatchProcessPath;
 
     /**
-     * @var string Information of the file that hits the rule
+     * @var string <p>Hit rule file information.</p>
      */
     public $MatchFilePath;
 
     /**
-     * @var string File path containing the name
+     * @var string <p>File path, including name.</p>
      */
     public $FilePath;
 
     /**
-     * @var boolean Whether the rule exists
+     * @var boolean <p>Whether the rule exists.</p>
      */
     public $RuleExist;
 
     /**
-     * @var integer Number of events
+     * @var integer <p>Number of events.</p>
      */
     public $EventCount;
 
     /**
-     * @var string Last generation time
+     * @var string <p>Last generation time.</p>
      */
     public $LatestFoundTime;
 
     /**
-     * @var string Rule group ID
+     * @var string <p>Rule group ID.</p>
      */
     public $RuleId;
 
     /**
-     * @var string Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
+     * @var string <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
      */
     public $ContainerNetStatus;
 
     /**
-     * @var string Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
+     * @var string <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
      */
     public $ContainerNetSubStatus;
 
     /**
-     * @var string Container isolation operation source
+     * @var string <p>Source of container isolation operation.</p>
      */
     public $ContainerIsolateOperationSrc;
 
     /**
-     * @var string Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
+     * @var string <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
      */
     public $ContainerStatus;
 
     /**
-     * @var string Node name: For super nodes, the node_id is displayed.
+     * @var string <p>Node name: For super nodes, the node_id is displayed instead.</p>
      */
     public $NodeName;
 
     /**
-     * @var string Pod name
+     * @var string <p>Pod name.</p>
      */
     public $PodName;
 
     /**
-     * @var string Pod IP
+     * @var string <p>pod ip</p>
      */
     public $PodIP;
 
     /**
-     * @var string Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @var string <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
      */
     public $NodeType;
 
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterID;
 
     /**
-     * @var string Node unique ID. It's used for super nodes.
+     * @var string <p>Unique node ID, primarily used for super nodes.</p>
      */
     public $NodeUniqueID;
 
     /**
-     * @var string Node public IP
+     * @var string <p>Node public IP address.</p>
      */
     public $PublicIP;
 
     /**
-     * @var string Node ID
+     * @var string <p>Node ID.</p>
      */
     public $NodeID;
 
     /**
-     * @var string uuid
+     * @var string <p>uuid</p>
      */
     public $HostID;
 
     /**
-     * @var string Private IP of the node
+     * @var string <p>Node private IP address.</p>
      */
     public $HostIP;
 
     /**
-     * @var string Cluster name
+     * @var string <p>Cluster name.</p>
      */
     public $ClusterName;
 
     /**
-     * @param string $ProcessName Process name
-     * @param string $MatchRuleName Name of the hit rule
-     * @param string $FoundTime Generation time
-     * @param string $ContainerName Container name
-     * @param string $ImageName Image name
-     * @param string $Behavior Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
-     * @param string $Status Status. `0`: Pending. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-     * @param string $Id Unique event ID
-     * @param string $FileName Filename
-     * @param string $EventType Event type. `FILE_ABNORMAL_READ`: Abnormal file read.
-     * @param string $ImageId Image ID, which is used for redirect.
-     * @param string $ContainerId Container ID, which is used for redirect.
-     * @param string $Solution Event solution
-     * @param string $Description Event description
-     * @param string $MatchRuleId Hit policy ID
-     * @param string $MatchAction Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
-     * @param string $MatchProcessPath Information of the process that hits the rule
-     * @param string $MatchFilePath Information of the file that hits the rule
-     * @param string $FilePath File path containing the name
-     * @param boolean $RuleExist Whether the rule exists
-     * @param integer $EventCount Number of events
-     * @param string $LatestFoundTime Last generation time
-     * @param string $RuleId Rule group ID
-     * @param string $ContainerNetStatus Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-     * @param string $ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-     * @param string $ContainerIsolateOperationSrc Container isolation operation source
-     * @param string $ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-     * @param string $NodeName Node name: For super nodes, the node_id is displayed.
-     * @param string $PodName Pod name
-     * @param string $PodIP Pod IP
-     * @param string $NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
-     * @param string $ClusterID Cluster ID
-     * @param string $NodeUniqueID Node unique ID. It's used for super nodes.
-     * @param string $PublicIP Node public IP
-     * @param string $NodeID Node ID
-     * @param string $HostID uuid
-     * @param string $HostIP Private IP of the node
-     * @param string $ClusterName Cluster name
+     * @var string <p>Command line parameters.</p>
+     */
+    public $CmdLine;
+
+    /**
+     * @param string $ProcessName <p>Process name.</p>
+     * @param string $MatchRuleName <p>Hit rule name.</p>
+     * @param string $FoundTime <p>Generation time.</p>
+     * @param string $ContainerName <p>Container name.</p>
+     * @param string $ImageName <p>Image name.</p>
+     * @param string $Behavior <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
+     * @param string $Status <p>Status 0: unhandled  "EVENT_UNDEAL": event unhandled<br>    &quot;EVENT_DEALED&quot;: event handled<br>    &quot;EVENT_INGNORE&quot;: event ignored</p>
+     * @param string $Id <p>Unique ID of the event record.</p>
+     * @param string $FileName <p>File name.</p>
+     * @param string $EventType <p>Event type. FILE_ABNORMAL_READ: abnormal file read.</p>
+     * @param string $ImageId <p>Image ID, used for redirection.</p>
+     * @param string $ContainerId <p>Container ID, used for redirection.</p>
+     * @param string $Solution <p>Event solution.</p>
+     * @param string $Description <p>Event detailed description.</p>
+     * @param string $MatchRuleId <p>Hit policy ID.</p>
+     * @param string $MatchAction <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
+     * @param string $MatchProcessPath <p>Hit rule process information.</p>
+     * @param string $MatchFilePath <p>Hit rule file information.</p>
+     * @param string $FilePath <p>File path, including name.</p>
+     * @param boolean $RuleExist <p>Whether the rule exists.</p>
+     * @param integer $EventCount <p>Number of events.</p>
+     * @param string $LatestFoundTime <p>Last generation time.</p>
+     * @param string $RuleId <p>Rule group ID.</p>
+     * @param string $ContainerNetStatus <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
+     * @param string $ContainerNetSubStatus <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
+     * @param string $ContainerIsolateOperationSrc <p>Source of container isolation operation.</p>
+     * @param string $ContainerStatus <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
+     * @param string $NodeName <p>Node name: For super nodes, the node_id is displayed instead.</p>
+     * @param string $PodName <p>Pod name.</p>
+     * @param string $PodIP <p>pod ip</p>
+     * @param string $NodeType <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
+     * @param string $ClusterID <p>Cluster ID.</p>
+     * @param string $NodeUniqueID <p>Unique node ID, primarily used for super nodes.</p>
+     * @param string $PublicIP <p>Node public IP address.</p>
+     * @param string $NodeID <p>Node ID.</p>
+     * @param string $HostID <p>uuid</p>
+     * @param string $HostIP <p>Node private IP address.</p>
+     * @param string $ClusterName <p>Cluster name.</p>
+     * @param string $CmdLine <p>Command line parameters.</p>
      */
     function __construct()
     {
@@ -608,6 +500,10 @@ class AccessControlEventInfo extends AbstractModel
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("CmdLine",$param) and $param["CmdLine"] !== null) {
+            $this->CmdLine = $param["CmdLine"];
         }
     }
 }

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublishTime(string $PublishTime) Set Release time
  * @method integer getVulId() Obtain Vulnerability ID
  * @method void setVulId(integer $VulId) Set Vulnerability ID
+ * @method integer getStatus() Obtain Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+ * @method void setStatus(integer $Status) Set Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
  */
 class VulDefenceRangeDetail extends AbstractModel
 {
@@ -73,6 +75,11 @@ class VulDefenceRangeDetail extends AbstractModel
     public $VulId;
 
     /**
+     * @var integer Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+     */
+    public $Status;
+
+    /**
      * @param string $VulName Vulnerability name
      * @param string $Label Tag
      * @param integer $Level Vulnerability level. 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical.
@@ -80,6 +87,7 @@ class VulDefenceRangeDetail extends AbstractModel
      * @param string $CveId cve id
      * @param string $PublishTime Release time
      * @param integer $VulId Vulnerability ID
+     * @param integer $Status Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class VulDefenceRangeDetail extends AbstractModel
 
         if (array_key_exists("VulId",$param) and $param["VulId"] !== null) {
             $this->VulId = $param["VulId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

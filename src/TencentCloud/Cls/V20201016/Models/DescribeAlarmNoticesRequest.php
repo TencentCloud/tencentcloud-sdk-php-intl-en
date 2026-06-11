@@ -20,65 +20,104 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmNotices request structure.
  *
- * @method array getFilters() Obtain <li> name
-Filter by Notification Channel Group Name.Type: String
-Required: No</li>
-<li> alarmNoticeId
-Filter by Notification Channel Group ID.Type: String
-Required: No</li>
-<li> uid
-Filter by Receiving User ID.Type: String
-Required: No</li>
-<li> groupId
-Filter by Receiving User Group ID.Type: String
-Required: No</li>
-
-<li> deliverFlag
-Filter by Delivery Status.Type: String
+ * @method array getFilters() Obtain name
+Filter by [notification channel group name].
+Type: String
+"Filters":[{"Key":"name","Values":["test-notice"]}]
 Required: No
-Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
- * @method void setFilters(array $Filters) Set <li> name
-Filter by Notification Channel Group Name.Type: String
-Required: No</li>
-<li> alarmNoticeId
-Filter by Notification Channel Group ID.Type: String
-Required: No</li>
-<li> uid
-Filter by Receiving User ID.Type: String
-Required: No</li>
-<li> groupId
-Filter by Receiving User Group ID.Type: String
-Required: No</li>
-
-<li> deliverFlag
-Filter by Delivery Status.Type: String
+alarmNoticeId
+Filter by [notification channel group ID].
+Type: String
+"Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
 Required: No
-Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
+uid
+Filter by [recipient user ID].
+Type: String
+"Filters": [{Key: "uid", Values: ["1137546"]}]
+Required: No
+groupId
+Filter by [recipient user group ID].
+Type: String
+"Filters": [{Key: "groupId", Values: ["344098"]}]
+Required: No
+
+deliverFlag
+Filter by [delivery status].
+Type: String
+Required: No
+Available values: "1": disabled, "2": enabled, "3": delivery exception
+"Filters":[{"Key":"deliverFlag","Values":["2"]}]
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
+ * @method void setFilters(array $Filters) Set name
+Filter by [notification channel group name].
+Type: String
+"Filters":[{"Key":"name","Values":["test-notice"]}]
+Required: No
+alarmNoticeId
+Filter by [notification channel group ID].
+Type: String
+"Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
+Required: No
+uid
+Filter by [recipient user ID].
+Type: String
+"Filters": [{Key: "uid", Values: ["1137546"]}]
+Required: No
+groupId
+Filter by [recipient user group ID].
+Type: String
+"Filters": [{Key: "groupId", Values: ["344098"]}]
+Required: No
+
+deliverFlag
+Filter by [delivery status].
+Type: String
+Required: No
+Available values: "1": disabled, "2": enabled, "3": delivery exception
+"Filters":[{"Key":"deliverFlag","Values":["2"]}]
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
  * @method integer getOffset() Obtain Page offset. Default value: 0
  * @method void setOffset(integer $Offset) Set Page offset. Default value: 0
  * @method integer getLimit() Obtain Maximum number of entries per page. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Maximum number of entries per page. Default value: 20. Maximum value: 100.
+ * @method boolean getHasAlarmShieldCount() Obtain Whether to return the quantity information of alarm silence statistics status in the configured notification channel group.
+- true: Need to return.
+- false: do not return (default false).
+ * @method void setHasAlarmShieldCount(boolean $HasAlarmShieldCount) Set Whether to return the quantity information of alarm silence statistics status in the configured notification channel group.
+- true: Need to return.
+- false: do not return (default false).
  */
 class DescribeAlarmNoticesRequest extends AbstractModel
 {
     /**
-     * @var array <li> name
-Filter by Notification Channel Group Name.Type: String
-Required: No</li>
-<li> alarmNoticeId
-Filter by Notification Channel Group ID.Type: String
-Required: No</li>
-<li> uid
-Filter by Receiving User ID.Type: String
-Required: No</li>
-<li> groupId
-Filter by Receiving User Group ID.Type: String
-Required: No</li>
-
-<li> deliverFlag
-Filter by Delivery Status.Type: String
+     * @var array name
+Filter by [notification channel group name].
+Type: String
+"Filters":[{"Key":"name","Values":["test-notice"]}]
 Required: No
-Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
+alarmNoticeId
+Filter by [notification channel group ID].
+Type: String
+"Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
+Required: No
+uid
+Filter by [recipient user ID].
+Type: String
+"Filters": [{Key: "uid", Values: ["1137546"]}]
+Required: No
+groupId
+Filter by [recipient user group ID].
+Type: String
+"Filters": [{Key: "groupId", Values: ["344098"]}]
+Required: No
+
+deliverFlag
+Filter by [delivery status].
+Type: String
+Required: No
+Available values: "1": disabled, "2": enabled, "3": delivery exception
+"Filters":[{"Key":"deliverFlag","Values":["2"]}]
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
      */
     public $Filters;
 
@@ -93,25 +132,46 @@ Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The
     public $Limit;
 
     /**
-     * @param array $Filters <li> name
-Filter by Notification Channel Group Name.Type: String
-Required: No</li>
-<li> alarmNoticeId
-Filter by Notification Channel Group ID.Type: String
-Required: No</li>
-<li> uid
-Filter by Receiving User ID.Type: String
-Required: No</li>
-<li> groupId
-Filter by Receiving User Group ID.Type: String
-Required: No</li>
+     * @var boolean Whether to return the quantity information of alarm silence statistics status in the configured notification channel group.
+- true: Need to return.
+- false: do not return (default false).
+     */
+    public $HasAlarmShieldCount;
 
-<li> deliverFlag
-Filter by Delivery Status.Type: String
+    /**
+     * @param array $Filters name
+Filter by [notification channel group name].
+Type: String
+"Filters":[{"Key":"name","Values":["test-notice"]}]
 Required: No
-Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
+alarmNoticeId
+Filter by [notification channel group ID].
+Type: String
+"Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
+Required: No
+uid
+Filter by [recipient user ID].
+Type: String
+"Filters": [{Key: "uid", Values: ["1137546"]}]
+Required: No
+groupId
+Filter by [recipient user group ID].
+Type: String
+"Filters": [{Key: "groupId", Values: ["344098"]}]
+Required: No
+
+deliverFlag
+Filter by [delivery status].
+Type: String
+Required: No
+Available values: "1": disabled, "2": enabled, "3": delivery exception
+"Filters":[{"Key":"deliverFlag","Values":["2"]}]
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
      * @param integer $Offset Page offset. Default value: 0
      * @param integer $Limit Maximum number of entries per page. Default value: 20. Maximum value: 100.
+     * @param boolean $HasAlarmShieldCount Whether to return the quantity information of alarm silence statistics status in the configured notification channel group.
+- true: Need to return.
+- false: do not return (default false).
      */
     function __construct()
     {
@@ -141,6 +201,10 @@ Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("HasAlarmShieldCount",$param) and $param["HasAlarmShieldCount"] !== null) {
+            $this->HasAlarmShieldCount = $param["HasAlarmShieldCount"];
         }
     }
 }

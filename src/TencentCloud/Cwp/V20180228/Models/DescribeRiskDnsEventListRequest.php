@@ -20,21 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRiskDnsEventList request structure.
  *
- * @method array getFilters() Obtain <li>IpOrName - String - required: no - filter by host IP or alias</li>
+ * @method array getFilters() Obtain <li>MachineName  Host name</li>
+
+
+
+Instance ID  
+
+ 
+
+IP    Private IP address or public IP address - Required: No - Filter by host IP or alias</li>
 <li>HostId - String - required: no - host ID</li>
 <li>AgentId - String - required: no - client ID</li>
 <li>PolicyType - String - required: no - policy type: 0 - system policy; 1 - user-defined policy</li>
-<li>Domain - String - required: no - domain name (First convert the domain name into the urlencode format, and then encode it using base64.)</li>
+<li>Domain - String - Required: No - Domain name (URL-encode the Domain name first, then base64 it)</li>
 <li>HandleStatus - String - required: no - filter by status: 0 - pending; 2 - trusted; 3 - untrusted</li>
-<li>BeginTime - String - required: no - start time of last access</li>
+<li>BeginTime - String - Required: no - start time of last access</li>
 <li>EndTime - String - required: no - end time of last access</li>
- * @method void setFilters(array $Filters) Set <li>IpOrName - String - required: no - filter by host IP or alias</li>
+ * @method void setFilters(array $Filters) Set <li>MachineName  Host name</li>
+
+
+
+Instance ID  
+
+ 
+
+IP    Private IP address or public IP address - Required: No - Filter by host IP or alias</li>
 <li>HostId - String - required: no - host ID</li>
 <li>AgentId - String - required: no - client ID</li>
 <li>PolicyType - String - required: no - policy type: 0 - system policy; 1 - user-defined policy</li>
-<li>Domain - String - required: no - domain name (First convert the domain name into the urlencode format, and then encode it using base64.)</li>
+<li>Domain - String - Required: No - Domain name (URL-encode the Domain name first, then base64 it)</li>
 <li>HandleStatus - String - required: no - filter by status: 0 - pending; 2 - trusted; 3 - untrusted</li>
-<li>BeginTime - String - required: no - start time of last access</li>
+<li>BeginTime - String - Required: no - start time of last access</li>
 <li>EndTime - String - required: no - end time of last access</li>
  * @method integer getLimit() Obtain Number of items to be returned. It is 10 by default, and the maximum value is 100.
  * @method void setLimit(integer $Limit) Set Number of items to be returned. It is 10 by default, and the maximum value is 100.
@@ -48,13 +64,21 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRiskDnsEventListRequest extends AbstractModel
 {
     /**
-     * @var array <li>IpOrName - String - required: no - filter by host IP or alias</li>
+     * @var array <li>MachineName  Host name</li>
+
+
+
+Instance ID  
+
+ 
+
+IP    Private IP address or public IP address - Required: No - Filter by host IP or alias</li>
 <li>HostId - String - required: no - host ID</li>
 <li>AgentId - String - required: no - client ID</li>
 <li>PolicyType - String - required: no - policy type: 0 - system policy; 1 - user-defined policy</li>
-<li>Domain - String - required: no - domain name (First convert the domain name into the urlencode format, and then encode it using base64.)</li>
+<li>Domain - String - Required: No - Domain name (URL-encode the Domain name first, then base64 it)</li>
 <li>HandleStatus - String - required: no - filter by status: 0 - pending; 2 - trusted; 3 - untrusted</li>
-<li>BeginTime - String - required: no - start time of last access</li>
+<li>BeginTime - String - Required: no - start time of last access</li>
 <li>EndTime - String - required: no - end time of last access</li>
      */
     public $Filters;
@@ -80,13 +104,21 @@ class DescribeRiskDnsEventListRequest extends AbstractModel
     public $By;
 
     /**
-     * @param array $Filters <li>IpOrName - String - required: no - filter by host IP or alias</li>
+     * @param array $Filters <li>MachineName  Host name</li>
+
+
+
+Instance ID  
+
+ 
+
+IP    Private IP address or public IP address - Required: No - Filter by host IP or alias</li>
 <li>HostId - String - required: no - host ID</li>
 <li>AgentId - String - required: no - client ID</li>
 <li>PolicyType - String - required: no - policy type: 0 - system policy; 1 - user-defined policy</li>
-<li>Domain - String - required: no - domain name (First convert the domain name into the urlencode format, and then encode it using base64.)</li>
+<li>Domain - String - Required: No - Domain name (URL-encode the Domain name first, then base64 it)</li>
 <li>HandleStatus - String - required: no - filter by status: 0 - pending; 2 - trusted; 3 - untrusted</li>
-<li>BeginTime - String - required: no - start time of last access</li>
+<li>BeginTime - String - Required: no - start time of last access</li>
 <li>EndTime - String - required: no - end time of last access</li>
      * @param integer $Limit Number of items to be returned. It is 10 by default, and the maximum value is 100.
      * @param integer $Offset Offset, which defaults to 0

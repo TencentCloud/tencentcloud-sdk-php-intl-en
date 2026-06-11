@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getIds() Obtain ID array, with the maximum number being 100.
  * @method void setIds(array $Ids) Set ID array, with the maximum number being 100.
+ * @method boolean getAll() Obtain Whether to delete all.
+ * @method void setAll(boolean $All) Set Whether to delete all.
  */
 class DeletePrivilegeEventsRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeletePrivilegeEventsRequest extends AbstractModel
     public $Ids;
 
     /**
+     * @var boolean Whether to delete all.
+     */
+    public $All;
+
+    /**
      * @param array $Ids ID array, with the maximum number being 100.
+     * @param boolean $All Whether to delete all.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeletePrivilegeEventsRequest extends AbstractModel
         }
         if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
             $this->Ids = $param["Ids"];
+        }
+
+        if (array_key_exists("All",$param) and $param["All"] !== null) {
+            $this->All = $param["All"];
         }
     }
 }

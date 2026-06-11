@@ -34,18 +34,12 @@ Namespace: `NamespaceSelector`, which indicates that `NamespaceSelector` has a v
 Pod type: `PodSelector`, which indicates that both `NamespaceSelector` and `PodSelector` have values.
 
 IP type: `IPBlock`, which indicates that only `IPBlock` has a value.
- * @method string getNamespaceSelector() Obtain Namespace selector
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNamespaceSelector(string $NamespaceSelector) Set Namespace selector
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPodSelector() Obtain Pod selector
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPodSelector(string $PodSelector) Set Pod selector
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIPBlock() Obtain IP selector
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIPBlock(string $IPBlock) Set IP selector
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNamespaceSelector() Obtain Namespace Selector
+ * @method void setNamespaceSelector(string $NamespaceSelector) Set Namespace Selector
+ * @method string getPodSelector() Obtain Pod Selector
+ * @method void setPodSelector(string $PodSelector) Set Pod Selector
+ * @method string getIPBlock() Obtain IP Selector
+ * @method void setIPBlock(string $IPBlock) Set IP Selector
  */
 class NetworkPeer extends AbstractModel
 {
@@ -61,20 +55,17 @@ IP type: `IPBlock`, which indicates that only `IPBlock` has a value.
     public $PeerType;
 
     /**
-     * @var string Namespace selector
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Namespace Selector
      */
     public $NamespaceSelector;
 
     /**
-     * @var string Pod selector
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Pod Selector
      */
     public $PodSelector;
 
     /**
-     * @var string IP selector
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string IP Selector
      */
     public $IPBlock;
 
@@ -86,12 +77,9 @@ Namespace: `NamespaceSelector`, which indicates that `NamespaceSelector` has a v
 Pod type: `PodSelector`, which indicates that both `NamespaceSelector` and `PodSelector` have values.
 
 IP type: `IPBlock`, which indicates that only `IPBlock` has a value.
-     * @param string $NamespaceSelector Namespace selector
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PodSelector Pod selector
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IPBlock IP selector
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NamespaceSelector Namespace Selector
+     * @param string $PodSelector Pod Selector
+     * @param string $IPBlock IP Selector
      */
     function __construct()
     {

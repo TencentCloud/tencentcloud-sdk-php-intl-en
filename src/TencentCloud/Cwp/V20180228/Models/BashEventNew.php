@@ -46,38 +46,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Occurrence time
  * @method string getMachineName() Obtain Host name
  * @method void setMachineName(string $MachineName) Set Host name
- * @method integer getDetectBy() Obtain 0: bash log; 1: real-time monitoring (Leiting edition)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDetectBy(integer $DetectBy) Set 0: bash log; 1: real-time monitoring (Leiting edition)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPid() Obtain Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPid(string $Pid) Set Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDetectBy() Obtain 0: bash log; 1: real-time monitoring (Thunder Edition)
+ * @method void setDetectBy(integer $DetectBy) Set 0: bash log; 1: real-time monitoring (Thunder Edition)
+ * @method string getPid() Obtain Process id
+ * @method void setPid(string $Pid) Set Process id
  * @method string getExe() Obtain Process name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExe(string $Exe) Set Process name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getModifyTime() Obtain Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setModifyTime(string $ModifyTime) Set Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getRuleCategory() Obtain Rule category. 0: system rule; 1: user rule
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRuleCategory(integer $RuleCategory) Set Rule category. 0: system rule; 1: user rule
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegexBashCmd() Obtain Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegexBashCmd(string $RegexBashCmd) Set Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMachineType() Obtain 0: normal; 1: Professional edition; 2: Ultimate edition
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineType(integer $MachineType) Set 0: normal; 1: Professional edition; 2: Ultimate edition
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRegexBashCmd() Obtain Escaped regular expression.
+ * @method void setRegexBashCmd(string $RegexBashCmd) Set Escaped regular expression.
+ * @method string getRegexExe() Obtain Escaped regular expression.
+ * @method void setRegexExe(string $RegexExe) Set Escaped regular expression.
+ * @method integer getMachineType() Obtain 0: Normal; 1: Pro edition; 2: Flagship edition
+ * @method void setMachineType(integer $MachineType) Set 0: Normal; 1: Pro edition; 2: Flagship edition
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional Information on Machine
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional Information on Machine
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BashEventNew extends AbstractModel
 {
@@ -147,50 +133,47 @@ class BashEventNew extends AbstractModel
     public $MachineName;
 
     /**
-     * @var integer 0: bash log; 1: real-time monitoring (Leiting edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 0: bash log; 1: real-time monitoring (Thunder Edition)
      */
     public $DetectBy;
 
     /**
-     * @var string Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Process id
      */
     public $Pid;
 
     /**
      * @var string Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Exe;
 
     /**
      * @var string Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ModifyTime;
 
     /**
      * @var integer Rule category. 0: system rule; 1: user rule
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RuleCategory;
 
     /**
-     * @var string Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Escaped regular expression.
      */
     public $RegexBashCmd;
 
     /**
-     * @var integer 0: normal; 1: Professional edition; 2: Ultimate edition
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Escaped regular expression.
+     */
+    public $RegexExe;
+
+    /**
+     * @var integer 0: Normal; 1: Pro edition; 2: Flagship edition
      */
     public $MachineType;
 
     /**
      * @var MachineExtraInfo Additional Information on Machine
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -208,22 +191,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Status Processing status: 0: pending; 1: processed; 2: allowlisted; 3: ignored
      * @param string $CreateTime Occurrence time
      * @param string $MachineName Host name
-     * @param integer $DetectBy 0: bash log; 1: real-time monitoring (Leiting edition)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DetectBy 0: bash log; 1: real-time monitoring (Thunder Edition)
+     * @param string $Pid Process id
      * @param string $Exe Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ModifyTime Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RuleCategory Rule category. 0: system rule; 1: user rule
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RegexBashCmd Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MachineType 0: normal; 1: Professional edition; 2: Ultimate edition
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RegexBashCmd Escaped regular expression.
+     * @param string $RegexExe Escaped regular expression.
+     * @param integer $MachineType 0: Normal; 1: Pro edition; 2: Flagship edition
      * @param MachineExtraInfo $MachineExtraInfo Additional Information on Machine
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -312,6 +288,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RegexBashCmd",$param) and $param["RegexBashCmd"] !== null) {
             $this->RegexBashCmd = $param["RegexBashCmd"];
+        }
+
+        if (array_key_exists("RegexExe",$param) and $param["RegexExe"] !== null) {
+            $this->RegexExe = $param["RegexExe"];
         }
 
         if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {

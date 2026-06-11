@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterParams request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getParamName() Obtain Parameter name
- * @method void setParamName(string $ParamName) Set Parameter name
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method string getParamName() Obtain Parameter name.
+ * @method void setParamName(string $ParamName) Set Parameter name.
+ * @method string getIsGlobal() Obtain Whether it is a global parameter.
+ * @method void setIsGlobal(string $IsGlobal) Set Whether it is a global parameter.
  */
 class DescribeClusterParamsRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var string Parameter name
+     * @var string Parameter name.
      */
     public $ParamName;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param string $ParamName Parameter name
+     * @var string Whether it is a global parameter.
+     */
+    public $IsGlobal;
+
+    /**
+     * @param string $ClusterId Cluster ID.
+     * @param string $ParamName Parameter name.
+     * @param string $IsGlobal Whether it is a global parameter.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeClusterParamsRequest extends AbstractModel
 
         if (array_key_exists("ParamName",$param) and $param["ParamName"] !== null) {
             $this->ParamName = $param["ParamName"];
+        }
+
+        if (array_key_exists("IsGlobal",$param) and $param["IsGlobal"] !== null) {
+            $this->IsGlobal = $param["IsGlobal"];
         }
     }
 }

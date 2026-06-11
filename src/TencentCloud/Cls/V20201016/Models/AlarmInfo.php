@@ -26,46 +26,48 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmTargets(array $AlarmTargets) Set Monitoring object list
  * @method MonitorTime getMonitorTime() Obtain Monitoring task running time point
  * @method void setMonitorTime(MonitorTime $MonitorTime) Set Monitoring task running time point
- * @method string getCondition() Obtain Single trigger condition. Mutually exclusive with the MultiConditions parameter.
- * @method void setCondition(string $Condition) Set Single trigger condition. Mutually exclusive with the MultiConditions parameter.
+ * @method string getCondition() Obtain Single trigger condition for whether to trigger alarm. Mutually exclusive with the MultiConditions parameter.
+ * @method void setCondition(string $Condition) Set Single trigger condition for whether to trigger alarm. Mutually exclusive with the MultiConditions parameter.
  * @method integer getTriggerCount() Obtain Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
  * @method void setTriggerCount(integer $TriggerCount) Set Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
  * @method integer getAlarmPeriod() Obtain Repeated alarm interval in minutes. Value range: 0–1440.
  * @method void setAlarmPeriod(integer $AlarmPeriod) Set Repeated alarm interval in minutes. Value range: 0–1440.
- * @method array getAlarmNoticeIds() Obtain List of associated alarm notification templates
- * @method void setAlarmNoticeIds(array $AlarmNoticeIds) Set List of associated alarm notification templates
+ * @method array getAlarmNoticeIds() Obtain List of associated alarm notification channel groups. - Search the list of associated alarm notification channel groups via [Query notification channel group list](https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1). It is mutually exclusive with MonitorNotice.
+ * @method void setAlarmNoticeIds(array $AlarmNoticeIds) Set List of associated alarm notification channel groups. - Search the list of associated alarm notification channel groups via [Query notification channel group list](https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1). It is mutually exclusive with MonitorNotice.
  * @method boolean getStatus() Obtain Enablement status
  * @method void setStatus(boolean $Status) Set Enablement status
  * @method string getAlarmId() Obtain Alarm policy ID
  * @method void setAlarmId(string $AlarmId) Set Alarm policy ID
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getUpdateTime() Obtain Last update time
- * @method void setUpdateTime(string $UpdateTime) Set Last update time
+ * @method string getCreateTime() Obtain Creation time. Format: YYYY-MM-DD HH:MM:SS
+ * @method void setCreateTime(string $CreateTime) Set Creation time. Format: YYYY-MM-DD HH:MM:SS
+ * @method string getUpdateTime() Obtain Latest update time. Format: YYYY-MM-DD HH:MM:SS
+ * @method void setUpdateTime(string $UpdateTime) Set Latest update time. Format: YYYY-MM-DD HH:MM:SS
  * @method string getMessageTemplate() Obtain Custom notification template
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setMessageTemplate(string $MessageTemplate) Set Custom notification template
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method CallBackInfo getCallBack() Obtain Custom callback template
-Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setCallBack(CallBackInfo $CallBack) Set Custom callback template
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getAnalysis() Obtain Multi-Dimensional analysis settings
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setAnalysis(array $Analysis) Set Multi-Dimensional analysis settings
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method boolean getGroupTriggerStatus() Obtain Group trigger status. 1: Enabled, 0: Disabled (default)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) Set Group trigger status. 1: Enabled, 0: Disabled (default)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getGroupTriggerCondition() Obtain Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroupTriggerCondition(array $GroupTriggerCondition) Set Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMonitorObjectType() Obtain Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMonitorObjectType(integer $MonitorObjectType) Set Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAlarmLevel() Obtain Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getMultiConditions() Obtain Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMultiConditions(array $MultiConditions) Set Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getAnalysis() Obtain Multidimensional analysis settings
+ * @method void setAnalysis(array $Analysis) Set Multidimensional analysis settings
+ * @method boolean getGroupTriggerStatus() Obtain Group trigger status. true: enabled, false: disabled (default)
+ * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) Set Group trigger status. true: enabled, false: disabled (default)
+ * @method array getGroupTriggerCondition() Obtain Grouping Trigger Conditions.
+ * @method void setGroupTriggerCondition(array $GroupTriggerCondition) Set Grouping Trigger Conditions.
+ * @method array getTags() Obtain Tag information bound to the alarm policy.
+ * @method void setTags(array $Tags) Set Tag information bound to the alarm policy.
+ * @method integer getMonitorObjectType() Obtain Monitored object type. 0: shared monitored object for execution statements; 1: separate monitored object for each execution statement. 
+ * @method void setMonitorObjectType(integer $MonitorObjectType) Set Monitored object type. 0: shared monitored object for execution statements; 1: separate monitored object for each execution statement. 
+ * @method integer getAlarmLevel() Obtain Alarm level. 0: Warn; 1: Information; 2: Critical.
+ * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm level. 0: Warn; 1: Information; 2: Critical.
+ * @method array getClassifications() Obtain Additional classification field for alerts.
+ * @method void setClassifications(array $Classifications) Set Additional classification field for alerts.
+ * @method array getMultiConditions() Obtain Multiple trigger conditions.
+Mutually exclusive conditions.
+ * @method void setMultiConditions(array $MultiConditions) Set Multiple trigger conditions.
+Mutually exclusive conditions.
+ * @method MonitorNotice getMonitorNotice() Obtain Tencent Cloud observability platform channel-related information, mutually exclusive with AlarmNoticeIds
+ * @method void setMonitorNotice(MonitorNotice $MonitorNotice) Set Tencent Cloud observability platform channel-related information, mutually exclusive with AlarmNoticeIds
  */
 class AlarmInfo extends AbstractModel
 {
@@ -85,7 +87,7 @@ class AlarmInfo extends AbstractModel
     public $MonitorTime;
 
     /**
-     * @var string Single trigger condition. Mutually exclusive with the MultiConditions parameter.
+     * @var string Single trigger condition for whether to trigger alarm. Mutually exclusive with the MultiConditions parameter.
      */
     public $Condition;
 
@@ -100,7 +102,7 @@ class AlarmInfo extends AbstractModel
     public $AlarmPeriod;
 
     /**
-     * @var array List of associated alarm notification templates
+     * @var array List of associated alarm notification channel groups. - Search the list of associated alarm notification channel groups via [Query notification channel group list](https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1). It is mutually exclusive with MonitorNotice.
      */
     public $AlarmNoticeIds;
 
@@ -115,12 +117,12 @@ class AlarmInfo extends AbstractModel
     public $AlarmId;
 
     /**
-     * @var string Creation time
+     * @var string Creation time. Format: YYYY-MM-DD HH:MM:SS
      */
     public $CreateTime;
 
     /**
-     * @var string Last update time
+     * @var string Latest update time. Format: YYYY-MM-DD HH:MM:SS
      */
     public $UpdateTime;
 
@@ -132,66 +134,80 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @var CallBackInfo Custom callback template
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $CallBack;
 
     /**
-     * @var array Multi-Dimensional analysis settings
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Multidimensional analysis settings
      */
     public $Analysis;
 
     /**
-     * @var boolean Group trigger status. 1: Enabled, 0: Disabled (default)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Group trigger status. true: enabled, false: disabled (default)
      */
     public $GroupTriggerStatus;
 
     /**
-     * @var array Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+     * @var array Grouping Trigger Conditions.
      */
     public $GroupTriggerCondition;
 
     /**
-     * @var integer Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Tag information bound to the alarm policy.
+     */
+    public $Tags;
+
+    /**
+     * @var integer Monitored object type. 0: shared monitored object for execution statements; 1: separate monitored object for each execution statement. 
      */
     public $MonitorObjectType;
 
     /**
-     * @var integer Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Alarm level. 0: Warn; 1: Information; 2: Critical.
      */
     public $AlarmLevel;
 
     /**
-     * @var array Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Additional classification field for alerts.
+     */
+    public $Classifications;
+
+    /**
+     * @var array Multiple trigger conditions.
+Mutually exclusive conditions.
      */
     public $MultiConditions;
+
+    /**
+     * @var MonitorNotice Tencent Cloud observability platform channel-related information, mutually exclusive with AlarmNoticeIds
+     */
+    public $MonitorNotice;
 
     /**
      * @param string $Name Alarm policy name
      * @param array $AlarmTargets Monitoring object list
      * @param MonitorTime $MonitorTime Monitoring task running time point
-     * @param string $Condition Single trigger condition. Mutually exclusive with the MultiConditions parameter.
+     * @param string $Condition Single trigger condition for whether to trigger alarm. Mutually exclusive with the MultiConditions parameter.
      * @param integer $TriggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
      * @param integer $AlarmPeriod Repeated alarm interval in minutes. Value range: 0–1440.
-     * @param array $AlarmNoticeIds List of associated alarm notification templates
+     * @param array $AlarmNoticeIds List of associated alarm notification channel groups. - Search the list of associated alarm notification channel groups via [Query notification channel group list](https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1). It is mutually exclusive with MonitorNotice.
      * @param boolean $Status Enablement status
      * @param string $AlarmId Alarm policy ID
-     * @param string $CreateTime Creation time
-     * @param string $UpdateTime Last update time
+     * @param string $CreateTime Creation time. Format: YYYY-MM-DD HH:MM:SS
+     * @param string $UpdateTime Latest update time. Format: YYYY-MM-DD HH:MM:SS
      * @param string $MessageTemplate Custom notification template
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param CallBackInfo $CallBack Custom callback template
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $Analysis Multi-Dimensional analysis settings
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param boolean $GroupTriggerStatus Group trigger status. 1: Enabled, 0: Disabled (default)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $GroupTriggerCondition Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MonitorObjectType Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AlarmLevel Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $MultiConditions Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Analysis Multidimensional analysis settings
+     * @param boolean $GroupTriggerStatus Group trigger status. true: enabled, false: disabled (default)
+     * @param array $GroupTriggerCondition Grouping Trigger Conditions.
+     * @param array $Tags Tag information bound to the alarm policy.
+     * @param integer $MonitorObjectType Monitored object type. 0: shared monitored object for execution statements; 1: separate monitored object for each execution statement. 
+     * @param integer $AlarmLevel Alarm level. 0: Warn; 1: Information; 2: Critical.
+     * @param array $Classifications Additional classification field for alerts.
+     * @param array $MultiConditions Multiple trigger conditions.
+Mutually exclusive conditions.
+     * @param MonitorNotice $MonitorNotice Tencent Cloud observability platform channel-related information, mutually exclusive with AlarmNoticeIds
      */
     function __construct()
     {
@@ -282,12 +298,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->GroupTriggerCondition = $param["GroupTriggerCondition"];
         }
 
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
         if (array_key_exists("MonitorObjectType",$param) and $param["MonitorObjectType"] !== null) {
             $this->MonitorObjectType = $param["MonitorObjectType"];
         }
 
         if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
             $this->AlarmLevel = $param["AlarmLevel"];
+        }
+
+        if (array_key_exists("Classifications",$param) and $param["Classifications"] !== null) {
+            $this->Classifications = [];
+            foreach ($param["Classifications"] as $key => $value){
+                $obj = new AlarmClassification();
+                $obj->deserialize($value);
+                array_push($this->Classifications, $obj);
+            }
         }
 
         if (array_key_exists("MultiConditions",$param) and $param["MultiConditions"] !== null) {
@@ -297,6 +331,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->MultiConditions, $obj);
             }
+        }
+
+        if (array_key_exists("MonitorNotice",$param) and $param["MonitorNotice"] !== null) {
+            $this->MonitorNotice = new MonitorNotice();
+            $this->MonitorNotice->deserialize($param["MonitorNotice"]);
         }
     }
 }

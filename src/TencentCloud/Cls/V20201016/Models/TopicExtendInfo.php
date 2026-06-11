@@ -18,20 +18,24 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Log topic extended information
+ * Log topic extension information.
  *
- * @method AnonymousInfo getAnonymousAccess() Obtain Log topic authentication-free configuration information
- * @method void setAnonymousAccess(AnonymousInfo $AnonymousAccess) Set Log topic authentication-free configuration information
+ * @method AnonymousInfo getAnonymousAccess() Obtain Log topic authentication-free configuration information.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAnonymousAccess(AnonymousInfo $AnonymousAccess) Set Log topic authentication-free configuration information.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TopicExtendInfo extends AbstractModel
 {
     /**
-     * @var AnonymousInfo Log topic authentication-free configuration information
+     * @var AnonymousInfo Log topic authentication-free configuration information.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AnonymousAccess;
 
     /**
-     * @param AnonymousInfo $AnonymousAccess Log topic authentication-free configuration information
+     * @param AnonymousInfo $AnonymousAccess Log topic authentication-free configuration information.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

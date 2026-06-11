@@ -48,10 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Account name
  * @method integer getProjectId() Obtain Host business group ID
  * @method void setProjectId(integer $ProjectId) Set Host business group ID
- * @method integer getUserType() Obtain Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only)
- * @method void setUserType(integer $UserType) Set Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only)
- * @method integer getIsDomain() Obtain Whether a domain account. 0: no; 1: yes; 2: no; 999: null (Windows only)
- * @method void setIsDomain(integer $IsDomain) Set Whether a domain account. 0: no; 1: yes; 2: no; 999: null (Windows only)
+ * @method integer getUserType() Obtain Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
+ * @method void setUserType(integer $UserType) Set Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
+ * @method integer getIsDomain() Obtain Whether it is a domain account: 0: no; 1: yes; 2: no; 999: null (for Windows only).
+ * @method void setIsDomain(integer $IsDomain) Set Whether it is a domain account: 0: no; 1: yes; 2: no; 999: null (for Windows only).
  * @method integer getIsSudo() Obtain Whether there is sudo permissions: 1: yes; 0: No; 999: null (Linux only)
  * @method void setIsSudo(integer $IsSudo) Set Whether there is sudo permissions: 1: yes; 0: No; 999: null (Linux only)
  * @method integer getIsSshLogin() Obtain Whether ssh log-in allowed. 1: yes; 0: no; 999: null (Linux only)
@@ -71,17 +71,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPasswordStatus() Obtain Password status: 1 - normal; 2 - expiring soon; 3 - expired; 4 - locked; 999 - null (Linux only)
  * @method void setPasswordStatus(integer $PasswordStatus) Set Password status: 1 - normal; 2 - expiring soon; 3 - expired; 4 - locked; 999 - null (Linux only)
  * @method string getUpdateTime() Obtain Update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFirstTime() Obtain First collection time
  * @method void setFirstTime(string $FirstTime) Set First collection time
  * @method integer getIsNew() Obtain Whether new [0: no|1: yes]
  * @method void setIsNew(integer $IsNew) Set Whether new [0: no|1: yes]
- * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method MachineExtraInfo getMachineExtraInfo() Obtain  Additional information
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set  Additional information
  */
 class AssetUserBaseInfo extends AbstractModel
 {
@@ -156,12 +152,12 @@ class AssetUserBaseInfo extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only)
+     * @var integer Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
      */
     public $UserType;
 
     /**
-     * @var integer Whether a domain account. 0: no; 1: yes; 2: no; 999: null (Windows only)
+     * @var integer Whether it is a domain account: 0: no; 1: yes; 2: no; 999: null (for Windows only).
      */
     public $IsDomain;
 
@@ -212,7 +208,6 @@ class AssetUserBaseInfo extends AbstractModel
 
     /**
      * @var string Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -227,8 +222,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsNew;
 
     /**
-     * @var MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MachineExtraInfo  Additional information
      */
     public $MachineExtraInfo;
 
@@ -247,8 +241,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $LastLoginTime Last log-in time
      * @param string $Name Account name
      * @param integer $ProjectId Host business group ID
-     * @param integer $UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only)
-     * @param integer $IsDomain Whether a domain account. 0: no; 1: yes; 2: no; 999: null (Windows only)
+     * @param integer $UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
+     * @param integer $IsDomain Whether it is a domain account: 0: no; 1: yes; 2: no; 999: null (for Windows only).
      * @param integer $IsSudo Whether there is sudo permissions: 1: yes; 0: No; 999: null (Linux only)
      * @param integer $IsSshLogin Whether ssh log-in allowed. 1: yes; 0: no; 999: null (Linux only)
      * @param string $HomePath Home directory
@@ -259,11 +253,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $PasswordLockDays Password locking time (unit: day): -1 - never locked; 999 - null (Linux only)
      * @param integer $PasswordStatus Password status: 1 - normal; 2 - expiring soon; 3 - expired; 4 - locked; 999 - null (Linux only)
      * @param string $UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FirstTime First collection time
      * @param integer $IsNew Whether new [0: no|1: yes]
-     * @param MachineExtraInfo $MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MachineExtraInfo $MachineExtraInfo  Additional information
      */
     function __construct()
     {

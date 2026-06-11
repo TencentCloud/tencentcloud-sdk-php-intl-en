@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlarmShield request structure.
  *
- * @method string getAlarmNoticeId() Obtain Notification Channel Group ID
- * @method void setAlarmNoticeId(string $AlarmNoticeId) Set Notification Channel Group ID
- * @method integer getStartTime() Obtain Block start time (second-level timestamp).
- * @method void setStartTime(integer $StartTime) Set Block start time (second-level timestamp).
- * @method integer getEndTime() Obtain Block end time (second-level timestamp).
- * @method void setEndTime(integer $EndTime) Set Block end time (second-level timestamp).
+ * @method string getAlarmNoticeId() Obtain Notification channel group id. Search the notification channel group list (https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1) to get the notification channel group id.
+ * @method void setAlarmNoticeId(string $AlarmNoticeId) Set Notification channel group id. Search the notification channel group list (https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1) to get the notification channel group id.
+ * @method integer getStartTime() Obtain Block rule start time (second-level timestamp).
+ * @method void setStartTime(integer $StartTime) Set Block rule start time (second-level timestamp).
+ * @method integer getEndTime() Obtain Block rule end time (second-level timestamp). The end time must be greater than the current time.
+ * @method void setEndTime(integer $EndTime) Set Block rule end time (second-level timestamp). The end time must be greater than the current time.
  * @method integer getType() Obtain Block type. 1: Block all notifications, 2: Block matching rules notifications according to the Rule parameter.
  * @method void setType(integer $Type) Set Block type. 1: Block all notifications, 2: Block matching rules notifications according to the Rule parameter.
  * @method string getReason() Obtain Blocking reason.
@@ -36,17 +36,17 @@ use TencentCloud\Common\AbstractModel;
 class CreateAlarmShieldRequest extends AbstractModel
 {
     /**
-     * @var string Notification Channel Group ID
+     * @var string Notification channel group id. Search the notification channel group list (https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1) to get the notification channel group id.
      */
     public $AlarmNoticeId;
 
     /**
-     * @var integer Block start time (second-level timestamp).
+     * @var integer Block rule start time (second-level timestamp).
      */
     public $StartTime;
 
     /**
-     * @var integer Block end time (second-level timestamp).
+     * @var integer Block rule end time (second-level timestamp). The end time must be greater than the current time.
      */
     public $EndTime;
 
@@ -66,9 +66,9 @@ class CreateAlarmShieldRequest extends AbstractModel
     public $Rule;
 
     /**
-     * @param string $AlarmNoticeId Notification Channel Group ID
-     * @param integer $StartTime Block start time (second-level timestamp).
-     * @param integer $EndTime Block end time (second-level timestamp).
+     * @param string $AlarmNoticeId Notification channel group id. Search the notification channel group list (https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1) to get the notification channel group id.
+     * @param integer $StartTime Block rule start time (second-level timestamp).
+     * @param integer $EndTime Block rule end time (second-level timestamp). The end time must be greater than the current time.
      * @param integer $Type Block type. 1: Block all notifications, 2: Block matching rules notifications according to the Rule parameter.
      * @param string $Reason Blocking reason.
      * @param string $Rule Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule).

@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyScheduledSql request structure.
  *
- * @method string getTaskId() Obtain Task ID
- * @method void setTaskId(string $TaskId) Set Task ID
- * @method string getSrcTopicId() Obtain Source log topic
- * @method void setSrcTopicId(string $SrcTopicId) Set Source log topic
+ * @method string getTaskId() Obtain Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+ * @method void setTaskId(string $TaskId) Set Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+ * @method string getSrcTopicId() Obtain Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
+ * @method void setSrcTopicId(string $SrcTopicId) Set Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
  * @method integer getEnableFlag() Obtain Task start status. 1: Enabled, 2: Disabled
  * @method void setEnableFlag(integer $EnableFlag) Set Task start status. 1: Enabled, 2: Disabled
  * @method ScheduledSqlResouceInfo getDstResource() Obtain Target log topic for scheduled SQL analysis
  * @method void setDstResource(ScheduledSqlResouceInfo $DstResource) Set Target log topic for scheduled SQL analysis
  * @method string getScheduledSqlContent() Obtain Queries statements
  * @method void setScheduledSqlContent(string $ScheduledSqlContent) Set Queries statements
- * @method integer getProcessPeriod() Obtain Scheduling interval (minutes)
- * @method void setProcessPeriod(integer $ProcessPeriod) Set Scheduling interval (minutes)
+ * @method integer getProcessPeriod() Obtain Scheduling cycle (minutes), 1-1440 minutes
+ * @method void setProcessPeriod(integer $ProcessPeriod) Set Scheduling cycle (minutes), 1-1440 minutes
  * @method string getProcessTimeWindow() Obtain Time window for a single query. Example: last 15 minutes
  * @method void setProcessTimeWindow(string $ProcessTimeWindow) Set Time window for a single query. Example: last 15 minutes
- * @method integer getProcessDelay() Obtain Execution delay (seconds)
- * @method void setProcessDelay(integer $ProcessDelay) Set Execution delay (seconds)
- * @method string getSrcTopicRegion() Obtain Region information of source topic ID 
- * @method void setSrcTopicRegion(string $SrcTopicRegion) Set Region information of source topic ID 
- * @method string getName() Obtain Task Name
- * @method void setName(string $Name) Set Task Name
+ * @method integer getProcessDelay() Obtain Execution delay (seconds), 0-120 seconds, default 60
+ * @method void setProcessDelay(integer $ProcessDelay) Set Execution delay (seconds), 0-120 seconds, default 60
+ * @method string getSrcTopicRegion() Obtain Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+ * @method void setSrcTopicRegion(string $SrcTopicRegion) Set Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+ * @method string getName() Obtain Task name, 0-255 characters
+ * @method void setName(string $Name) Set Task name, 0-255 characters
  * @method integer getSyntaxRule() Obtain Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax
  * @method void setSyntaxRule(integer $SyntaxRule) Set Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax
  */
 class ModifyScheduledSqlRequest extends AbstractModel
 {
     /**
-     * @var string Task ID
+     * @var string Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
      */
     public $TaskId;
 
     /**
-     * @var string Source log topic
+     * @var string Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
      */
     public $SrcTopicId;
 
@@ -71,7 +71,7 @@ class ModifyScheduledSqlRequest extends AbstractModel
     public $ScheduledSqlContent;
 
     /**
-     * @var integer Scheduling interval (minutes)
+     * @var integer Scheduling cycle (minutes), 1-1440 minutes
      */
     public $ProcessPeriod;
 
@@ -81,17 +81,17 @@ class ModifyScheduledSqlRequest extends AbstractModel
     public $ProcessTimeWindow;
 
     /**
-     * @var integer Execution delay (seconds)
+     * @var integer Execution delay (seconds), 0-120 seconds, default 60
      */
     public $ProcessDelay;
 
     /**
-     * @var string Region information of source topic ID 
+     * @var string Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
      */
     public $SrcTopicRegion;
 
     /**
-     * @var string Task Name
+     * @var string Task name, 0-255 characters
      */
     public $Name;
 
@@ -101,16 +101,16 @@ class ModifyScheduledSqlRequest extends AbstractModel
     public $SyntaxRule;
 
     /**
-     * @param string $TaskId Task ID
-     * @param string $SrcTopicId Source log topic
+     * @param string $TaskId Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+     * @param string $SrcTopicId Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
      * @param integer $EnableFlag Task start status. 1: Enabled, 2: Disabled
      * @param ScheduledSqlResouceInfo $DstResource Target log topic for scheduled SQL analysis
      * @param string $ScheduledSqlContent Queries statements
-     * @param integer $ProcessPeriod Scheduling interval (minutes)
+     * @param integer $ProcessPeriod Scheduling cycle (minutes), 1-1440 minutes
      * @param string $ProcessTimeWindow Time window for a single query. Example: last 15 minutes
-     * @param integer $ProcessDelay Execution delay (seconds)
-     * @param string $SrcTopicRegion Region information of source topic ID 
-     * @param string $Name Task Name
+     * @param integer $ProcessDelay Execution delay (seconds), 0-120 seconds, default 60
+     * @param string $SrcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+     * @param string $Name Task name, 0-255 characters
      * @param integer $SyntaxRule Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax
      */
     function __construct()

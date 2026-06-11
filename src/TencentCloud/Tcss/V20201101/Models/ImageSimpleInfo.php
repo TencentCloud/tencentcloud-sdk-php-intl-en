@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageType(string $ImageType) Set Type
  * @method integer getContainerCnt() Obtain Number of associated containers
  * @method void setContainerCnt(integer $ContainerCnt) Set Number of associated containers
+ * @method integer getHostCnt() Obtain Associated hosts
+ * @method void setHostCnt(integer $HostCnt) Set Associated hosts
  */
 class ImageSimpleInfo extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ImageSimpleInfo extends AbstractModel
     public $ContainerCnt;
 
     /**
+     * @var integer Associated hosts
+     */
+    public $HostCnt;
+
+    /**
      * @param string $ImageID Image ID
      * @param string $ImageName Image name
      * @param integer $Size Image size
      * @param string $ImageType Type
      * @param integer $ContainerCnt Number of associated containers
+     * @param integer $HostCnt Associated hosts
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ImageSimpleInfo extends AbstractModel
 
         if (array_key_exists("ContainerCnt",$param) and $param["ContainerCnt"] !== null) {
             $this->ContainerCnt = $param["ContainerCnt"];
+        }
+
+        if (array_key_exists("HostCnt",$param) and $param["HostCnt"] !== null) {
+            $this->HostCnt = $param["HostCnt"];
         }
     }
 }

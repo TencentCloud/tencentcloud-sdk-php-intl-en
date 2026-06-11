@@ -78,6 +78,7 @@ For customers with large-scale consumption detail (for example, monthly consumpt
  * @method Models\DescribeDosageCosDetailByDateResponse DescribeDosageCosDetailByDate(Models\DescribeDosageCosDetailByDateRequest $req) This API is used to query COS usage details.
  * @method Models\DescribeGatherResourceResponse DescribeGatherResource(Models\DescribeGatherResourceRequest $req) This API is used to query the details of a cost allocation bill by resource.
  * @method Models\DescribeGatherRuleDetailResponse DescribeGatherRuleDetail(Models\DescribeGatherRuleDetailRequest $req) This API is used to query the collection rule details.
+ * @method Models\DescribeOrgMemberAccountBalanceResponse DescribeOrgMemberAccountBalance(Models\DescribeOrgMemberAccountBalanceRequest $req) Query member available balance in batches
  * @method Models\DescribeRenewInstancesResponse DescribeRenewInstances(Models\DescribeRenewInstancesRequest $req) Notes:
 1. This API supports querying annual and monthly subscription instances integrated into the renewal management page, including running and isolated instances (some products unsupported).
 2. When using this API, a sub-user should have the QcloudFinanceRenewManageFullAccess permission policy.

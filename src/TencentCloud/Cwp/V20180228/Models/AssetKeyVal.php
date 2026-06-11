@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getValue() Obtain Quantity
  * @method void setValue(integer $Value) Set Quantity
  * @method string getDesc() Obtain Description information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDesc(string $Desc) Set Description information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getNewCount() Obtain Number of additions today
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNewCount(integer $NewCount) Set Number of additions today
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getNewCount() Obtain Number of new key-value pairs today
+ * @method void setNewCount(integer $NewCount) Set Number of new key-value pairs today
  */
 class AssetKeyVal extends AbstractModel
 {
@@ -47,13 +43,11 @@ class AssetKeyVal extends AbstractModel
 
     /**
      * @var string Description information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Desc;
 
     /**
-     * @var integer Number of additions today
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of new key-value pairs today
      */
     public $NewCount;
 
@@ -61,9 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Key Tag
      * @param integer $Value Quantity
      * @param string $Desc Description information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $NewCount Number of additions today
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $NewCount Number of new key-value pairs today
      */
     function __construct()
     {

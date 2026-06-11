@@ -106,6 +106,28 @@ use TencentCloud\Common\AbstractModel;
 `DESTROYED`: Terminated.
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
+ * @method string getClusterID() Obtain Cluster ID.
+ * @method void setClusterID(string $ClusterID) Set Cluster ID.
+ * @method string getNodeType() Obtain Node Type. NORMAL: Common Node; SUPER: Super Node
+ * @method void setNodeType(string $NodeType) Set Node Type. NORMAL: Common Node; SUPER: Super Node
+ * @method string getPodName() Obtain pod name
+ * @method void setPodName(string $PodName) Set pod name
+ * @method string getPodIP() Obtain pod ip
+ * @method void setPodIP(string $PodIP) Set pod ip
+ * @method string getNodeUniqueID() Obtain Node Unique ID
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set Node Unique ID
+ * @method string getPublicIP() Obtain Node Public IP
+ * @method void setPublicIP(string $PublicIP) Set Node Public IP
+ * @method string getNodeName() Obtain Node name.
+ * @method void setNodeName(string $NodeName) Set Node name.
+ * @method string getHostID() Obtain uuid
+ * @method void setHostID(string $HostID) Set uuid
+ * @method string getHostIP() Obtain Node private network IP.
+ * @method void setHostIP(string $HostIP) Set Node private network IP.
+ * @method string getNodeID() Obtain Node ID.
+ * @method void setNodeID(string $NodeID) Set Node ID.
+ * @method string getClusterName() Obtain Cluster name.
+ * @method void setClusterName(string $ClusterName) Set Cluster name.
  */
 class ReverseShellEventInfo extends AbstractModel
 {
@@ -233,6 +255,61 @@ class ReverseShellEventInfo extends AbstractModel
     public $ContainerStatus;
 
     /**
+     * @var string Cluster ID.
+     */
+    public $ClusterID;
+
+    /**
+     * @var string Node Type. NORMAL: Common Node; SUPER: Super Node
+     */
+    public $NodeType;
+
+    /**
+     * @var string pod name
+     */
+    public $PodName;
+
+    /**
+     * @var string pod ip
+     */
+    public $PodIP;
+
+    /**
+     * @var string Node Unique ID
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string Node Public IP
+     */
+    public $PublicIP;
+
+    /**
+     * @var string Node name.
+     */
+    public $NodeName;
+
+    /**
+     * @var string uuid
+     */
+    public $HostID;
+
+    /**
+     * @var string Node private network IP.
+     */
+    public $HostIP;
+
+    /**
+     * @var string Node ID.
+     */
+    public $NodeID;
+
+    /**
+     * @var string Cluster name.
+     */
+    public $ClusterName;
+
+    /**
      * @param string $ProcessName Process name
      * @param string $ProcessPath Process path
      * @param string $ImageId Image ID
@@ -276,6 +353,17 @@ class ReverseShellEventInfo extends AbstractModel
 `DESTROYED`: Terminated.
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
+     * @param string $ClusterID Cluster ID.
+     * @param string $NodeType Node Type. NORMAL: Common Node; SUPER: Super Node
+     * @param string $PodName pod name
+     * @param string $PodIP pod ip
+     * @param string $NodeUniqueID Node Unique ID
+     * @param string $PublicIP Node Public IP
+     * @param string $NodeName Node name.
+     * @param string $HostID uuid
+     * @param string $HostIP Node private network IP.
+     * @param string $NodeID Node ID.
+     * @param string $ClusterName Cluster name.
      */
     function __construct()
     {
@@ -368,6 +456,50 @@ class ReverseShellEventInfo extends AbstractModel
 
         if (array_key_exists("ContainerStatus",$param) and $param["ContainerStatus"] !== null) {
             $this->ContainerStatus = $param["ContainerStatus"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
+            $this->PublicIP = $param["PublicIP"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("HostID",$param) and $param["HostID"] !== null) {
+            $this->HostID = $param["HostID"];
+        }
+
+        if (array_key_exists("HostIP",$param) and $param["HostIP"] !== null) {
+            $this->HostIP = $param["HostIP"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

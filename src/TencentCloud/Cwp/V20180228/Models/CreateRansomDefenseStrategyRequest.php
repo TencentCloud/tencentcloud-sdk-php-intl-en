@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncludeDir(string $IncludeDir) Set Include directories, separated by semicolons (;).
  * @method string getExcludeDir() Obtain Exclude directories, separated by semicolons (;).
  * @method void setExcludeDir(string $ExcludeDir) Set Exclude directories, separated by semicolons (;).
- * @method integer getBackupType() Obtain Backup pattern: 0 weekly, 1 daily.
- * @method void setBackupType(integer $BackupType) Set Backup pattern: 0 weekly, 1 daily.
+ * @method integer getBackupType() Obtain Backup mode: 0 weekly, 1 daily, 2 do not backup.
+ * @method void setBackupType(integer $BackupType) Set Backup mode: 0 weekly, 1 daily, 2 do not backup.
  * @method string getWeekday() Obtain Scheduled task execution days in a week (1-7): 1; 2; 7.
  * @method void setWeekday(string $Weekday) Set Scheduled task execution days in a week (1-7): 1; 2; 7.
  * @method integer getSaveDay() Obtain Retention Period: 0 Permanent.
@@ -88,7 +88,7 @@ class CreateRansomDefenseStrategyRequest extends AbstractModel
     public $ExcludeDir;
 
     /**
-     * @var integer Backup pattern: 0 weekly, 1 daily.
+     * @var integer Backup mode: 0 weekly, 1 daily, 2 do not backup.
      */
     public $BackupType;
 
@@ -116,7 +116,7 @@ class CreateRansomDefenseStrategyRequest extends AbstractModel
      * @param integer $IsAll Apply to all machines or not. 0: No; 1: Yes
      * @param string $IncludeDir Include directories, separated by semicolons (;).
      * @param string $ExcludeDir Exclude directories, separated by semicolons (;).
-     * @param integer $BackupType Backup pattern: 0 weekly, 1 daily.
+     * @param integer $BackupType Backup mode: 0 weekly, 1 daily, 2 do not backup.
      * @param string $Weekday Scheduled task execution days in a week (1-7): 1; 2; 7.
      * @param integer $SaveDay Retention Period: 0 Permanent.
      * @param array $Machines Bound Host List

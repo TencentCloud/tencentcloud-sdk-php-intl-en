@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLogset request structure.
  *
- * @method string getLogsetId() Obtain Logset ID
- * @method void setLogsetId(string $LogsetId) Set Logset ID
- * @method string getLogsetName() Obtain Logset name
- * @method void setLogsetName(string $LogsetName) Set Logset name
+ * @method string getLogsetId() Obtain Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
+ * @method void setLogsetId(string $LogsetId) Set Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
+ * @method string getLogsetName() Obtain Log set name. Supports a maximum of 255 characters. Unsupported character: `|`.
+ * @method void setLogsetName(string $LogsetName) Set Log set name. Supports a maximum of 255 characters. Unsupported character: `|`.
  * @method array getTags() Obtain Tag key-value pair bound to logset. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key at any time.
  * @method void setTags(array $Tags) Set Tag key-value pair bound to logset. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key at any time.
  */
 class ModifyLogsetRequest extends AbstractModel
 {
     /**
-     * @var string Logset ID
+     * @var string Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
      */
     public $LogsetId;
 
     /**
-     * @var string Logset name
+     * @var string Log set name. Supports a maximum of 255 characters. Unsupported character: `|`.
      */
     public $LogsetName;
 
@@ -45,8 +45,8 @@ class ModifyLogsetRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $LogsetId Logset ID
-     * @param string $LogsetName Logset name
+     * @param string $LogsetId Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
+     * @param string $LogsetName Log set name. Supports a maximum of 255 characters. Unsupported character: `|`.
      * @param array $Tags Tag key-value pair bound to logset. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key at any time.
      */
     function __construct()

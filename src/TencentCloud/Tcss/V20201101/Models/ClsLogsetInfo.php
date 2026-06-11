@@ -22,14 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLogsetID() Obtain Logset ID
  * @method void setLogsetID(string $LogsetID) Set Logset ID
- * @method string getLogsetName() Obtain Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLogsetName(string $LogsetName) Set Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTopicList() Obtain List of CLS topics
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTopicList(array $TopicList) Set List of CLS topics
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLogsetName() Obtain logset name
+ * @method void setLogsetName(string $LogsetName) Set logset name
+ * @method array getTopicList() Obtain CLS Topic List
+ * @method void setTopicList(array $TopicList) Set CLS Topic List
  */
 class ClsLogsetInfo extends AbstractModel
 {
@@ -39,23 +35,19 @@ class ClsLogsetInfo extends AbstractModel
     public $LogsetID;
 
     /**
-     * @var string Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string logset name
      */
     public $LogsetName;
 
     /**
-     * @var array List of CLS topics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array CLS Topic List
      */
     public $TopicList;
 
     /**
      * @param string $LogsetID Logset ID
-     * @param string $LogsetName Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $TopicList List of CLS topics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LogsetName logset name
+     * @param array $TopicList CLS Topic List
      */
     function __construct()
     {

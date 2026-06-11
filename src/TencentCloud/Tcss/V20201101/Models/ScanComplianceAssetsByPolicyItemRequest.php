@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerPolicyItemId(integer $CustomerPolicyItemId) Set ID of the specified check item
  * @method array getCustomerAssetIdSet() Obtain List of IDs of customer assets to be scanned again
  * @method void setCustomerAssetIdSet(array $CustomerAssetIdSet) Set List of IDs of customer assets to be scanned again
+ * @method string getAssetType() Obtain Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
+ * @method void setAssetType(string $AssetType) Set Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
  */
 class ScanComplianceAssetsByPolicyItemRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ScanComplianceAssetsByPolicyItemRequest extends AbstractModel
     public $CustomerAssetIdSet;
 
     /**
+     * @var string Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
+     */
+    public $AssetType;
+
+    /**
      * @param integer $CustomerPolicyItemId ID of the specified check item
      * @param array $CustomerAssetIdSet List of IDs of customer assets to be scanned again
+     * @param string $AssetType Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ScanComplianceAssetsByPolicyItemRequest extends AbstractModel
 
         if (array_key_exists("CustomerAssetIdSet",$param) and $param["CustomerAssetIdSet"] !== null) {
             $this->CustomerAssetIdSet = $param["CustomerAssetIdSet"];
+        }
+
+        if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
+            $this->AssetType = $param["AssetType"];
         }
     }
 }

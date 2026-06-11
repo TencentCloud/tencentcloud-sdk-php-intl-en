@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getScanStatus() Obtain Task status. Valid values: `SCANNING` (scanning); `FAILED` (failed); `FINISHED` (completed); `CANCELED` (canceled).
  * @method void setScanStatus(string $ScanStatus) Set Task status. Valid values: `SCANNING` (scanning); `FAILED` (failed); `FINISHED` (completed); `CANCELED` (canceled).
  * @method float getScanDuration() Obtain Scan duration
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScanDuration(float $ScanDuration) Set Scan duration
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getHighLevelVulCount() Obtain Number of high-risk vulnerabilities
  * @method void setHighLevelVulCount(integer $HighLevelVulCount) Set Number of high-risk vulnerabilities
  * @method integer getMediumLevelVulCount() Obtain Number of medium-risk vulnerabilities
@@ -73,7 +71,6 @@ class VulScanImageInfo extends AbstractModel
 
     /**
      * @var float Scan duration
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ScanDuration;
 
@@ -123,7 +120,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param float $Size Image size
      * @param string $ScanStatus Task status. Valid values: `SCANNING` (scanning); `FAILED` (failed); `FINISHED` (completed); `CANCELED` (canceled).
      * @param float $ScanDuration Scan duration
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $HighLevelVulCount Number of high-risk vulnerabilities
      * @param integer $MediumLevelVulCount Number of medium-risk vulnerabilities
      * @param integer $LowLevelVulCount Number of low-risk vulnerabilities

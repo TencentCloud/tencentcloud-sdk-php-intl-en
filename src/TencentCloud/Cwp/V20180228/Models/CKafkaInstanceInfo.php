@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getKafkaVersion() Obtain Version No.
  * @method void setKafkaVersion(string $KafkaVersion) Set Version No.
  * @method array getTopicList() Obtain Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTopicList(array $TopicList) Set Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getRouteList() Obtain Routing List
  * @method void setRouteList(array $RouteList) Set Routing List
  * @method integer getDiskSize() Obtain Disk capacity (unit: GB)
@@ -66,7 +64,6 @@ class CKafkaInstanceInfo extends AbstractModel
 
     /**
      * @var array Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TopicList;
 
@@ -115,7 +112,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $InstanceName Instance name
      * @param string $KafkaVersion Version No.
      * @param array $TopicList Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $RouteList Routing List
      * @param integer $DiskSize Disk capacity (unit: GB)
      * @param string $VpcId vpcId. Leaving it blank indicates a basic network.

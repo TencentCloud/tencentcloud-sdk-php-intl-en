@@ -24,16 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Pagination parameter, indicating the number of entries per page. Maximum value: 100.
  * @method integer getOffset() Obtain Pagination parameter
  * @method void setOffset(integer $Offset) Set Pagination parameter
- * @method array getFilters() Obtain Filtering criteria
-<li>StrategyId - Uint64 - baseline policy ID</li>
-<li>Status - Uint64 - processing status: 1: passed; 0: failed</li><li>Level - Uint64[] - risk level: 1: low; 2: medium; 3: high; 4: critical</li><li>BaselineName - String - baseline name</li>
-<li>Quuid - String - host QUUID</li>
-<li>Uuid - String - host UUID</li>
- * @method void setFilters(array $Filters) Set Filtering criteria
-<li>StrategyId - Uint64 - baseline policy ID</li>
-<li>Status - Uint64 - processing status: 1: passed; 0: failed</li><li>Level - Uint64[] - risk level: 1: low; 2: medium; 3: high; 4: critical</li><li>BaselineName - String - baseline name</li>
-<li>Quuid - String - host QUUID</li>
-<li>Uuid - String - host UUID</li>
+ * @method array getFilters() Obtain Filter conditions <li>StrategyId- Uint64 - Baseline policy id</li> <li>Status - Uint64 - Processing status 1-Approved 0-Failed</li> <li>Level - Uint64 - Threat level 1-Low risk 2-Medium risk 3-High risk 4-Critical</li> <li>BaselineName  - String - Baseline name</li> <li>Quuid- String - Host quuid</li> <li>Uuid- String - Host uuid</li>
+ * @method void setFilters(array $Filters) Set Filter conditions <li>StrategyId- Uint64 - Baseline policy id</li> <li>Status - Uint64 - Processing status 1-Approved 0-Failed</li> <li>Level - Uint64 - Threat level 1-Low risk 2-Medium risk 3-High risk 4-Critical</li> <li>BaselineName  - String - Baseline name</li> <li>Quuid- String - Host quuid</li> <li>Uuid- String - Host uuid</li>
  */
 class DescribeBaselineListRequest extends AbstractModel
 {
@@ -48,22 +40,14 @@ class DescribeBaselineListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array Filtering criteria
-<li>StrategyId - Uint64 - baseline policy ID</li>
-<li>Status - Uint64 - processing status: 1: passed; 0: failed</li><li>Level - Uint64[] - risk level: 1: low; 2: medium; 3: high; 4: critical</li><li>BaselineName - String - baseline name</li>
-<li>Quuid - String - host QUUID</li>
-<li>Uuid - String - host UUID</li>
+     * @var array Filter conditions <li>StrategyId- Uint64 - Baseline policy id</li> <li>Status - Uint64 - Processing status 1-Approved 0-Failed</li> <li>Level - Uint64 - Threat level 1-Low risk 2-Medium risk 3-High risk 4-Critical</li> <li>BaselineName  - String - Baseline name</li> <li>Quuid- String - Host quuid</li> <li>Uuid- String - Host uuid</li>
      */
     public $Filters;
 
     /**
      * @param integer $Limit Pagination parameter, indicating the number of entries per page. Maximum value: 100.
      * @param integer $Offset Pagination parameter
-     * @param array $Filters Filtering criteria
-<li>StrategyId - Uint64 - baseline policy ID</li>
-<li>Status - Uint64 - processing status: 1: passed; 0: failed</li><li>Level - Uint64[] - risk level: 1: low; 2: medium; 3: high; 4: critical</li><li>BaselineName - String - baseline name</li>
-<li>Quuid - String - host QUUID</li>
-<li>Uuid - String - host UUID</li>
+     * @param array $Filters Filter conditions <li>StrategyId- Uint64 - Baseline policy id</li> <li>Status - Uint64 - Processing status 1-Approved 0-Failed</li> <li>Level - Uint64 - Threat level 1-Low risk 2-Medium risk 3-High risk 4-Critical</li> <li>BaselineName  - String - Baseline name</li> <li>Quuid- String - Host quuid</li> <li>Uuid- String - Host uuid</li>
      */
     function __construct()
     {

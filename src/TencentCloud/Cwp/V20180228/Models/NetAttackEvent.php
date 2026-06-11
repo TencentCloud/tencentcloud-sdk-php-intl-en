@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMergeTime() Obtain Attack time
  * @method void setMergeTime(string $MergeTime) Set Attack time
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getType() Obtain Attack Status: 0: Attack Attempt 1: Confirmed Attack (Successful Attack).
  * @method void setType(integer $Type) Set Attack Status: 0: Attack Attempt 1: Confirmed Attack (Successful Attack).
  * @method integer getStatus() Obtain Processing Status: 0 Pending, 1 Processed, 2 Allowlisted, 3 Ignored, 4 Deleted, 5: Defense Enabled.
@@ -48,14 +46,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setVulSupportDefense(integer $VulSupportDefense) Set Whether vulnerabilities support defense. 0: No 1: Yes
  * @method integer getVulDefenceStatus() Obtain Whether to enable vulnerability defense: 0 - No, 1 - Yes
  * @method void setVulDefenceStatus(integer $VulDefenceStatus) Set Whether to enable vulnerability defense: 0 - No, 1 - Yes
- * @method integer getPayVersion() Obtain Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
- * @method void setPayVersion(integer $PayVersion) Set Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+ * @method integer getPayVersion() Obtain Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
+ * @method void setPayVersion(integer $PayVersion) Set Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
  * @method string getQuuid() Obtain cvm uuid
  * @method void setQuuid(string $Quuid) Set cvm uuid
  * @method integer getCount() Obtain Attacks
  * @method void setCount(integer $Count) Set Attacks
  * @method boolean getNew() Obtain Whether to add new hosts today
  * @method void setNew(boolean $New) Set Whether to add new hosts today
+ * @method integer getRaspOpen() Obtain Whether application protection is enabled. 0: disabled, 1: enabled
+ * @method void setRaspOpen(integer $RaspOpen) Set Whether application protection is enabled. 0: disabled, 1: enabled
+ * @method IPAnalyse getIPAnalyse() Obtain ip analysis
+ * @method void setIPAnalyse(IPAnalyse $IPAnalyse) Set ip analysis
  */
 class NetAttackEvent extends AbstractModel
 {
@@ -101,7 +103,6 @@ class NetAttackEvent extends AbstractModel
 
     /**
      * @var MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -126,7 +127,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VulDefenceStatus;
 
     /**
-     * @var integer Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+     * @var integer Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
      */
     public $PayVersion;
 
@@ -146,6 +147,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $New;
 
     /**
+     * @var integer Whether application protection is enabled. 0: disabled, 1: enabled
+     */
+    public $RaspOpen;
+
+    /**
+     * @var IPAnalyse ip analysis
+     */
+    public $IPAnalyse;
+
+    /**
      * @param integer $Id Log ID
      * @param string $Uuid Client ID
      * @param integer $DstPort Target port
@@ -155,15 +166,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $VulName Vulnerability name
      * @param string $MergeTime Attack time
      * @param MachineExtraInfo $MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Type Attack Status: 0: Attack Attempt 1: Confirmed Attack (Successful Attack).
      * @param integer $Status Processing Status: 0 Pending, 1 Processed, 2 Allowlisted, 3 Ignored, 4 Deleted, 5: Defense Enabled.
      * @param integer $VulSupportDefense Whether vulnerabilities support defense. 0: No 1: Yes
      * @param integer $VulDefenceStatus Whether to enable vulnerability defense: 0 - No, 1 - Yes
-     * @param integer $PayVersion Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+     * @param integer $PayVersion Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
      * @param string $Quuid cvm uuid
      * @param integer $Count Attacks
      * @param boolean $New Whether to add new hosts today
+     * @param integer $RaspOpen Whether application protection is enabled. 0: disabled, 1: enabled
+     * @param IPAnalyse $IPAnalyse ip analysis
      */
     function __construct()
     {
@@ -245,6 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("New",$param) and $param["New"] !== null) {
             $this->New = $param["New"];
+        }
+
+        if (array_key_exists("RaspOpen",$param) and $param["RaspOpen"] !== null) {
+            $this->RaspOpen = $param["RaspOpen"];
+        }
+
+        if (array_key_exists("IPAnalyse",$param) and $param["IPAnalyse"] !== null) {
+            $this->IPAnalyse = new IPAnalyse();
+            $this->IPAnalyse->deserialize($param["IPAnalyse"]);
         }
     }
 }

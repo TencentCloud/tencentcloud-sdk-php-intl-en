@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetImageDetail request structure.
  *
- * @method string getImageID() Obtain Image ID
- * @method void setImageID(string $ImageID) Set Image ID
+ * @method string getImageID() Obtain <p>Image ID.</p>
+ * @method void setImageID(string $ImageID) Set <p>Image ID.</p>
  */
 class DescribeAssetImageDetailRequest extends AbstractModel
 {
     /**
-     * @var string Image ID
+     * @var string <p>Image ID.</p>
      */
     public $ImageID;
 
     /**
-     * @param string $ImageID Image ID
+     * @param string $ImageID <p>Image ID.</p>
      */
     function __construct()
     {

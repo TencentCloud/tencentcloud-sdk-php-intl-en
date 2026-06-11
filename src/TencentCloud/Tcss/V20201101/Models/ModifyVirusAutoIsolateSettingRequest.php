@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoIsolateSwitch(boolean $AutoIsolateSwitch) Set Automatic isolation switch. Valid values: `true` (on); `false` (off).
  * @method boolean getIsKillProgress() Obtain Whether to interrupt the process associated with the isolated file. Valid values: `true` (yes); `false` (no).
  * @method void setIsKillProgress(boolean $IsKillProgress) Set Whether to interrupt the process associated with the isolated file. Valid values: `true` (yes); `false` (no).
+ * @method boolean getUserAutoIsolateKillSwitch() Obtain Enabling status customized by the user.
+ * @method void setUserAutoIsolateKillSwitch(boolean $UserAutoIsolateKillSwitch) Set Enabling status customized by the user.
  */
 class ModifyVirusAutoIsolateSettingRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyVirusAutoIsolateSettingRequest extends AbstractModel
     public $IsKillProgress;
 
     /**
+     * @var boolean Enabling status customized by the user.
+     */
+    public $UserAutoIsolateKillSwitch;
+
+    /**
      * @param boolean $AutoIsolateSwitch Automatic isolation switch. Valid values: `true` (on); `false` (off).
      * @param boolean $IsKillProgress Whether to interrupt the process associated with the isolated file. Valid values: `true` (yes); `false` (no).
+     * @param boolean $UserAutoIsolateKillSwitch Enabling status customized by the user.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyVirusAutoIsolateSettingRequest extends AbstractModel
 
         if (array_key_exists("IsKillProgress",$param) and $param["IsKillProgress"] !== null) {
             $this->IsKillProgress = $param["IsKillProgress"];
+        }
+
+        if (array_key_exists("UserAutoIsolateKillSwitch",$param) and $param["UserAutoIsolateKillSwitch"] !== null) {
+            $this->UserAutoIsolateKillSwitch = $param["UserAutoIsolateKillSwitch"];
         }
     }
 }

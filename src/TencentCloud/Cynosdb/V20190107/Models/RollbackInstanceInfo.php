@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Rollback instance information.
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
@@ -32,18 +32,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) Set vip information.
  * @method integer getVport() Obtain Specifies the vport information.
  * @method void setVport(integer $Vport) Set Specifies the vport information.
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method string getStatus() Obtain Status
- * @method void setStatus(string $Status) Set Status
- * @method integer getCpu() Obtain CPU Size
- * @method void setCpu(integer $Cpu) Set CPU Size
- * @method integer getMem() Obtain Memory Size
- * @method void setMem(integer $Mem) Set Memory Size
- * @method integer getStorageLimit() Obtain Storage size
- * @method void setStorageLimit(integer $StorageLimit) Set Storage size
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
+ * @method string getStatus() Obtain Status.
+ * @method void setStatus(string $Status) Set Status.
+ * @method integer getCpu() Obtain CPU Size.
+ * @method void setCpu(integer $Cpu) Set CPU Size.
+ * @method integer getMem() Obtain Memory Size.
+ * @method void setMem(integer $Mem) Set Memory Size.
+ * @method integer getStorageLimit() Obtain Storage size.
+ * @method void setStorageLimit(integer $StorageLimit) Set Storage size.
  */
 class RollbackInstanceInfo extends AbstractModel
 {
@@ -78,32 +78,32 @@ class RollbackInstanceInfo extends AbstractModel
     public $Vport;
 
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
-     * @var string Status
+     * @var string Status.
      */
     public $Status;
 
     /**
-     * @var integer CPU Size
+     * @var integer CPU Size.
      */
     public $Cpu;
 
     /**
-     * @var integer Memory Size
+     * @var integer Memory Size.
      */
     public $Mem;
 
     /**
-     * @var integer Storage size
+     * @var integer Storage size.
      */
     public $StorageLimit;
 
@@ -114,12 +114,12 @@ class RollbackInstanceInfo extends AbstractModel
      * @param string $UniqSubnetId Subnet information.
      * @param string $Vip vip information.
      * @param integer $Vport Specifies the vport information.
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
-     * @param string $Status Status
-     * @param integer $Cpu CPU Size
-     * @param integer $Mem Memory Size
-     * @param integer $StorageLimit Storage size
+     * @param string $InstanceId Instance ID.
+     * @param string $InstanceName Instance name.
+     * @param string $Status Status.
+     * @param integer $Cpu CPU Size.
+     * @param integer $Mem Memory Size.
+     * @param integer $StorageLimit Storage size.
      */
     function __construct()
     {

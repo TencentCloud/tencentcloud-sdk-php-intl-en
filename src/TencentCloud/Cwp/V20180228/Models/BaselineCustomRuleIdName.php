@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Baseline Custom Rule ID and Name
  *
  * @method integer getRuleId() Obtain Custom rule ID　
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRuleId(integer $RuleId) Set Custom rule ID　
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRuleName() Obtain Custom Rule Name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRuleName(string $RuleName) Set Custom Rule Name
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BaselineCustomRuleIdName extends AbstractModel
 {
     /**
      * @var integer Custom rule ID　
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RuleId;
 
     /**
      * @var string Custom Rule Name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RuleName;
 
     /**
      * @param integer $RuleId Custom rule ID　
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RuleName Custom Rule Name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

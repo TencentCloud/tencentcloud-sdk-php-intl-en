@@ -18,14 +18,14 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Manual backup task information.
  *
- * @method string getBackupType() Obtain 
- * @method void setBackupType(string $BackupType) Set 
- * @method string getBackupMethod() Obtain 
- * @method void setBackupMethod(string $BackupMethod) Set 
- * @method string getSnapshotTime() Obtain 
- * @method void setSnapshotTime(string $SnapshotTime) Set 
+ * @method string getBackupType() Obtain Backup type. snapshot - Snapshot backup.
+ * @method void setBackupType(string $BackupType) Set Backup type. snapshot - Snapshot backup.
+ * @method string getBackupMethod() Obtain Backup method. auto - Automatic backup, manual - Manual backup.
+ * @method void setBackupMethod(string $BackupMethod) Set Backup method. auto - Automatic backup, manual - Manual backup.
+ * @method string getSnapshotTime() Obtain Backup time.
+ * @method void setSnapshotTime(string $SnapshotTime) Set Backup time.
  * @method array getCrossRegionBackupInfos() Obtain Detailed information of cross-region backup items.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCrossRegionBackupInfos(array $CrossRegionBackupInfos) Set Detailed information of cross-region backup items.
@@ -34,17 +34,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class ManualBackupData extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Backup type. snapshot - Snapshot backup.
      */
     public $BackupType;
 
     /**
-     * @var string 
+     * @var string Backup method. auto - Automatic backup, manual - Manual backup.
      */
     public $BackupMethod;
 
     /**
-     * @var string 
+     * @var string Backup time.
      */
     public $SnapshotTime;
 
@@ -55,9 +55,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CrossRegionBackupInfos;
 
     /**
-     * @param string $BackupType 
-     * @param string $BackupMethod 
-     * @param string $SnapshotTime 
+     * @param string $BackupType Backup type. snapshot - Snapshot backup.
+     * @param string $BackupMethod Backup method. auto - Automatic backup, manual - Manual backup.
+     * @param string $SnapshotTime Backup time.
      * @param array $CrossRegionBackupInfos Detailed information of cross-region backup items.
 Note: This field may return null, indicating that no valid values can be obtained.
      */

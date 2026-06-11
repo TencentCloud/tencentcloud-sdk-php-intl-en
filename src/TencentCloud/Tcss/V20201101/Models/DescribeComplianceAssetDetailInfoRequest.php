@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getCustomerAssetId() Obtain Customer asset ID
  * @method void setCustomerAssetId(integer $CustomerAssetId) Set Customer asset ID
+ * @method string getAssetType() Obtain Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
+ * @method void setAssetType(string $AssetType) Set Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
  */
 class DescribeComplianceAssetDetailInfoRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeComplianceAssetDetailInfoRequest extends AbstractModel
     public $CustomerAssetId;
 
     /**
+     * @var string Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
+     */
+    public $AssetType;
+
+    /**
      * @param integer $CustomerAssetId Customer asset ID
+     * @param string $AssetType Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeComplianceAssetDetailInfoRequest extends AbstractModel
         }
         if (array_key_exists("CustomerAssetId",$param) and $param["CustomerAssetId"] !== null) {
             $this->CustomerAssetId = $param["CustomerAssetId"];
+        }
+
+        if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
+            $this->AssetType = $param["AssetType"];
         }
     }
 }

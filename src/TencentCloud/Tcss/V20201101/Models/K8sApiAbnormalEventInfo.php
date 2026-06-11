@@ -20,182 +20,178 @@ use TencentCloud\Common\AbstractModel;
 /**
  * K8sApi api abnormal event details
  *
- * @method string getMatchRuleName() Obtain Hit rule name
- * @method void setMatchRuleName(string $MatchRuleName) Set Hit rule name
- * @method string getMatchRuleType() Obtain Hit rule type
- * @method void setMatchRuleType(string $MatchRuleType) Set Hit rule type
- * @method string getRiskLevel() Obtain Alarm level
- * @method void setRiskLevel(string $RiskLevel) Set Alarm level
- * @method string getClusterID() Obtain Cluster ID
- * @method void setClusterID(string $ClusterID) Set Cluster ID
- * @method string getClusterName() Obtain Cluster name
- * @method void setClusterName(string $ClusterName) Set Cluster name
- * @method string getClusterRunningStatus() Obtain Cluster running status
- * @method void setClusterRunningStatus(string $ClusterRunningStatus) Set Cluster running status
- * @method string getFirstCreateTime() Obtain First creation time
- * @method void setFirstCreateTime(string $FirstCreateTime) Set First creation time
- * @method string getLastCreateTime() Obtain Last creation time
- * @method void setLastCreateTime(string $LastCreateTime) Set Last creation time
- * @method integer getAlarmCount() Obtain Number of alarms
- * @method void setAlarmCount(integer $AlarmCount) Set Number of alarms
- * @method string getStatus() Obtain Status
-`EVENT_UNDEAL`: Unhandled
-`EVENT_DEALED`: Handled
-`EVENT_IGNORE`: Ignored
-`EVENT_DEL`: Deleted
-`EVENT_ADD_WHITE`: Added to an allowlist
- * @method void setStatus(string $Status) Set Status
-`EVENT_UNDEAL`: Unhandled
-`EVENT_DEALED`: Handled
-`EVENT_IGNORE`: Ignored
-`EVENT_DEL`: Deleted
-`EVENT_ADD_WHITE`: Added to an allowlist
- * @method string getClusterMasterIP() Obtain The master IP of a cluster
- * @method void setClusterMasterIP(string $ClusterMasterIP) Set The master IP of a cluster
- * @method string getK8sVersion() Obtain K8s version
- * @method void setK8sVersion(string $K8sVersion) Set K8s version
- * @method array getRunningComponent() Obtain Runtime component
- * @method void setRunningComponent(array $RunningComponent) Set Runtime component
- * @method string getDesc() Obtain Description
- * @method void setDesc(string $Desc) Set Description
- * @method string getSuggestion() Obtain Suggestion
- * @method void setSuggestion(string $Suggestion) Set Suggestion
- * @method string getInfo() Obtain Request information
- * @method void setInfo(string $Info) Set Request information
- * @method string getMatchRuleID() Obtain Rule ID
- * @method void setMatchRuleID(string $MatchRuleID) Set Rule ID
- * @method array getHighLightFields() Obtain An array of highlighted fields
- * @method void setHighLightFields(array $HighLightFields) Set An array of highlighted fields
- * @method K8sApiAbnormalRuleScopeInfo getMatchRule() Obtain Hit rule
- * @method void setMatchRule(K8sApiAbnormalRuleScopeInfo $MatchRule) Set Hit rule
+ * @method string getMatchRuleName() Obtain <p>Hit rule name.</p>
+ * @method void setMatchRuleName(string $MatchRuleName) Set <p>Hit rule name.</p>
+ * @method string getMatchRuleType() Obtain <p>Hit rule type.</p>
+ * @method void setMatchRuleType(string $MatchRuleType) Set <p>Hit rule type.</p>
+ * @method string getRiskLevel() Obtain <p>Alarm level.</p>
+ * @method void setRiskLevel(string $RiskLevel) Set <p>Alarm level.</p>
+ * @method string getClusterID() Obtain <p>Cluster ID.</p>
+ * @method void setClusterID(string $ClusterID) Set <p>Cluster ID.</p>
+ * @method string getClusterName() Obtain <p>Cluster name.</p>
+ * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
+ * @method string getClusterRunningStatus() Obtain <p>Cluster running status: CSR_RUNNING, CSR_EXCEPTION, and CSR_CREATING</p>
+ * @method void setClusterRunningStatus(string $ClusterRunningStatus) Set <p>Cluster running status: CSR_RUNNING, CSR_EXCEPTION, and CSR_CREATING</p>
+ * @method string getFirstCreateTime() Obtain <p>Initial generation time.</p>
+ * @method void setFirstCreateTime(string $FirstCreateTime) Set <p>Initial generation time.</p>
+ * @method string getLastCreateTime() Obtain <p>Last generation time.</p>
+ * @method void setLastCreateTime(string $LastCreateTime) Set <p>Last generation time.</p>
+ * @method integer getAlarmCount() Obtain <p>Number of alarms.</p>
+ * @method void setAlarmCount(integer $AlarmCount) Set <p>Number of alarms.</p>
+ * @method string getStatus() Obtain <p>Status.<br>&quot;EVENT_UNDEAL&quot;: unhandled<br>&quot;EVENT_DEALED&quot;: handled<br>&quot;EVENT_IGNORE&quot;: ignored<br>&quot;EVENT_DEL&quot;: deleted<br>&quot;EVENT_ADD_WHITE&quot;: allowlisted</p>
+ * @method void setStatus(string $Status) Set <p>Status.<br>&quot;EVENT_UNDEAL&quot;: unhandled<br>&quot;EVENT_DEALED&quot;: handled<br>&quot;EVENT_IGNORE&quot;: ignored<br>&quot;EVENT_DEL&quot;: deleted<br>&quot;EVENT_ADD_WHITE&quot;: allowlisted</p>
+ * @method string getClusterMasterIP() Obtain <p>Cluster master IP address.</p>
+ * @method void setClusterMasterIP(string $ClusterMasterIP) Set <p>Cluster master IP address.</p>
+ * @method string getK8sVersion() Obtain <p>K8s version.</p>
+ * @method void setK8sVersion(string $K8sVersion) Set <p>K8s version.</p>
+ * @method array getRunningComponent() Obtain <p>Runtime component.</p>
+ * @method void setRunningComponent(array $RunningComponent) Set <p>Runtime component.</p>
+ * @method string getDesc() Obtain <p>Description.</p>
+ * @method void setDesc(string $Desc) Set <p>Description.</p>
+ * @method string getSuggestion() Obtain <p>Suggestion.</p>
+ * @method void setSuggestion(string $Suggestion) Set <p>Suggestion.</p>
+ * @method string getInfo() Obtain <p>Request information.</p>
+ * @method void setInfo(string $Info) Set <p>Request information.</p>
+ * @method string getMatchRuleID() Obtain <p>Rule ID.</p>
+ * @method void setMatchRuleID(string $MatchRuleID) Set <p>Rule ID.</p>
+ * @method array getHighLightFields() Obtain <p>Array of highlighted fields.</p>
+ * @method void setHighLightFields(array $HighLightFields) Set <p>Array of highlighted fields.</p>
+ * @method K8sApiAbnormalRuleScopeInfo getMatchRule() Obtain <p>Hit rule.</p>
+ * @method void setMatchRule(K8sApiAbnormalRuleScopeInfo $MatchRule) Set <p>Hit rule.</p>
+ * @method string getHighLightFieldsVal() Obtain <p>Hit rule content corresponding to highlighted fields (JSON string, such as {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>Parameter format: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+ * @method void setHighLightFieldsVal(string $HighLightFieldsVal) Set <p>Hit rule content corresponding to highlighted fields (JSON string, such as {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>Parameter format: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+ * @method string getRuleTypeZH() Obtain <p>Rule type.</p>
+ * @method void setRuleTypeZH(string $RuleTypeZH) Set <p>Rule type.</p>
  */
 class K8sApiAbnormalEventInfo extends AbstractModel
 {
     /**
-     * @var string Hit rule name
+     * @var string <p>Hit rule name.</p>
      */
     public $MatchRuleName;
 
     /**
-     * @var string Hit rule type
+     * @var string <p>Hit rule type.</p>
      */
     public $MatchRuleType;
 
     /**
-     * @var string Alarm level
+     * @var string <p>Alarm level.</p>
      */
     public $RiskLevel;
 
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterID;
 
     /**
-     * @var string Cluster name
+     * @var string <p>Cluster name.</p>
      */
     public $ClusterName;
 
     /**
-     * @var string Cluster running status
+     * @var string <p>Cluster running status: CSR_RUNNING, CSR_EXCEPTION, and CSR_CREATING</p>
      */
     public $ClusterRunningStatus;
 
     /**
-     * @var string First creation time
+     * @var string <p>Initial generation time.</p>
      */
     public $FirstCreateTime;
 
     /**
-     * @var string Last creation time
+     * @var string <p>Last generation time.</p>
      */
     public $LastCreateTime;
 
     /**
-     * @var integer Number of alarms
+     * @var integer <p>Number of alarms.</p>
      */
     public $AlarmCount;
 
     /**
-     * @var string Status
-`EVENT_UNDEAL`: Unhandled
-`EVENT_DEALED`: Handled
-`EVENT_IGNORE`: Ignored
-`EVENT_DEL`: Deleted
-`EVENT_ADD_WHITE`: Added to an allowlist
+     * @var string <p>Status.<br>&quot;EVENT_UNDEAL&quot;: unhandled<br>&quot;EVENT_DEALED&quot;: handled<br>&quot;EVENT_IGNORE&quot;: ignored<br>&quot;EVENT_DEL&quot;: deleted<br>&quot;EVENT_ADD_WHITE&quot;: allowlisted</p>
      */
     public $Status;
 
     /**
-     * @var string The master IP of a cluster
+     * @var string <p>Cluster master IP address.</p>
      */
     public $ClusterMasterIP;
 
     /**
-     * @var string K8s version
+     * @var string <p>K8s version.</p>
      */
     public $K8sVersion;
 
     /**
-     * @var array Runtime component
+     * @var array <p>Runtime component.</p>
      */
     public $RunningComponent;
 
     /**
-     * @var string Description
+     * @var string <p>Description.</p>
      */
     public $Desc;
 
     /**
-     * @var string Suggestion
+     * @var string <p>Suggestion.</p>
      */
     public $Suggestion;
 
     /**
-     * @var string Request information
+     * @var string <p>Request information.</p>
      */
     public $Info;
 
     /**
-     * @var string Rule ID
+     * @var string <p>Rule ID.</p>
      */
     public $MatchRuleID;
 
     /**
-     * @var array An array of highlighted fields
+     * @var array <p>Array of highlighted fields.</p>
      */
     public $HighLightFields;
 
     /**
-     * @var K8sApiAbnormalRuleScopeInfo Hit rule
+     * @var K8sApiAbnormalRuleScopeInfo <p>Hit rule.</p>
      */
     public $MatchRule;
 
     /**
-     * @param string $MatchRuleName Hit rule name
-     * @param string $MatchRuleType Hit rule type
-     * @param string $RiskLevel Alarm level
-     * @param string $ClusterID Cluster ID
-     * @param string $ClusterName Cluster name
-     * @param string $ClusterRunningStatus Cluster running status
-     * @param string $FirstCreateTime First creation time
-     * @param string $LastCreateTime Last creation time
-     * @param integer $AlarmCount Number of alarms
-     * @param string $Status Status
-`EVENT_UNDEAL`: Unhandled
-`EVENT_DEALED`: Handled
-`EVENT_IGNORE`: Ignored
-`EVENT_DEL`: Deleted
-`EVENT_ADD_WHITE`: Added to an allowlist
-     * @param string $ClusterMasterIP The master IP of a cluster
-     * @param string $K8sVersion K8s version
-     * @param array $RunningComponent Runtime component
-     * @param string $Desc Description
-     * @param string $Suggestion Suggestion
-     * @param string $Info Request information
-     * @param string $MatchRuleID Rule ID
-     * @param array $HighLightFields An array of highlighted fields
-     * @param K8sApiAbnormalRuleScopeInfo $MatchRule Hit rule
+     * @var string <p>Hit rule content corresponding to highlighted fields (JSON string, such as {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>Parameter format: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+     */
+    public $HighLightFieldsVal;
+
+    /**
+     * @var string <p>Rule type.</p>
+     */
+    public $RuleTypeZH;
+
+    /**
+     * @param string $MatchRuleName <p>Hit rule name.</p>
+     * @param string $MatchRuleType <p>Hit rule type.</p>
+     * @param string $RiskLevel <p>Alarm level.</p>
+     * @param string $ClusterID <p>Cluster ID.</p>
+     * @param string $ClusterName <p>Cluster name.</p>
+     * @param string $ClusterRunningStatus <p>Cluster running status: CSR_RUNNING, CSR_EXCEPTION, and CSR_CREATING</p>
+     * @param string $FirstCreateTime <p>Initial generation time.</p>
+     * @param string $LastCreateTime <p>Last generation time.</p>
+     * @param integer $AlarmCount <p>Number of alarms.</p>
+     * @param string $Status <p>Status.<br>&quot;EVENT_UNDEAL&quot;: unhandled<br>&quot;EVENT_DEALED&quot;: handled<br>&quot;EVENT_IGNORE&quot;: ignored<br>&quot;EVENT_DEL&quot;: deleted<br>&quot;EVENT_ADD_WHITE&quot;: allowlisted</p>
+     * @param string $ClusterMasterIP <p>Cluster master IP address.</p>
+     * @param string $K8sVersion <p>K8s version.</p>
+     * @param array $RunningComponent <p>Runtime component.</p>
+     * @param string $Desc <p>Description.</p>
+     * @param string $Suggestion <p>Suggestion.</p>
+     * @param string $Info <p>Request information.</p>
+     * @param string $MatchRuleID <p>Rule ID.</p>
+     * @param array $HighLightFields <p>Array of highlighted fields.</p>
+     * @param K8sApiAbnormalRuleScopeInfo $MatchRule <p>Hit rule.</p>
+     * @param string $HighLightFieldsVal <p>Hit rule content corresponding to highlighted fields (JSON string, such as {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>Parameter format: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+     * @param string $RuleTypeZH <p>Rule type.</p>
      */
     function __construct()
     {
@@ -285,6 +281,14 @@ class K8sApiAbnormalEventInfo extends AbstractModel
         if (array_key_exists("MatchRule",$param) and $param["MatchRule"] !== null) {
             $this->MatchRule = new K8sApiAbnormalRuleScopeInfo();
             $this->MatchRule->deserialize($param["MatchRule"]);
+        }
+
+        if (array_key_exists("HighLightFieldsVal",$param) and $param["HighLightFieldsVal"] !== null) {
+            $this->HighLightFieldsVal = $param["HighLightFieldsVal"];
+        }
+
+        if (array_key_exists("RuleTypeZH",$param) and $param["RuleTypeZH"] !== null) {
+            $this->RuleTypeZH = $param["RuleTypeZH"];
         }
     }
 }

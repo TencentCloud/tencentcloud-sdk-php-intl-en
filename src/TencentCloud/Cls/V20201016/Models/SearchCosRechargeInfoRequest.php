@@ -20,40 +20,55 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchCosRechargeInfo request structure.
  *
- * @method string getTopicId() Obtain Log topic ID
- * @method void setTopicId(string $TopicId) Set Log topic ID
- * @method string getLogsetId() Obtain Logset ID
- * @method void setLogsetId(string $LogsetId) Set Logset ID
- * @method string getName() Obtain Delivery Task Name
- * @method void setName(string $Name) Set Delivery Task Name
- * @method string getBucket() Obtain COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
- * @method void setBucket(string $Bucket) Set COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+ * @method string getTopicId() Obtain Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method string getLogsetId() Obtain FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
+ * @method void setLogsetId(string $LogsetId) Set FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
+ * @method string getName() Obtain COS import task name, supports up to 128 bytes.
+ * @method void setName(string $Name) Set COS import task name, supports up to 128 bytes.
+ * @method string getBucket() Obtain COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
+ * @method void setBucket(string $Bucket) Set COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
  * @method string getBucketRegion() Obtain The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
  * @method void setBucketRegion(string $BucketRegion) Set The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
- * @method string getPrefix() Obtain The prefix of the folder where COS files are located
- * @method void setPrefix(string $Prefix) Set The prefix of the folder where COS files are located
- * @method string getCompress() Obtain Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
- * @method void setCompress(string $Compress) Set Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
+ * @method string getPrefix() Obtain The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
+ * @method void setPrefix(string $Prefix) Set The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
+ * @method string getCompress() Obtain Compression mode: "", "gzip", "lzop", "snappy". Default: ""; no compression.
+ * @method void setCompress(string $Compress) Set Compression mode: "", "gzip", "lzop", "snappy". Default: ""; no compression.
  */
 class SearchCosRechargeInfoRequest extends AbstractModel
 {
     /**
-     * @var string Log topic ID
+     * @var string Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
     /**
-     * @var string Logset ID
+     * @var string FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
      */
     public $LogsetId;
 
     /**
-     * @var string Delivery Task Name
+     * @var string COS import task name, supports up to 128 bytes.
      */
     public $Name;
 
     /**
-     * @var string COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+     * @var string COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
      */
     public $Bucket;
 
@@ -63,23 +78,28 @@ class SearchCosRechargeInfoRequest extends AbstractModel
     public $BucketRegion;
 
     /**
-     * @var string The prefix of the folder where COS files are located
+     * @var string The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
      */
     public $Prefix;
 
     /**
-     * @var string Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
+     * @var string Compression mode: "", "gzip", "lzop", "snappy". Default: ""; no compression.
      */
     public $Compress;
 
     /**
-     * @param string $TopicId Log topic ID
-     * @param string $LogsetId Logset ID
-     * @param string $Name Delivery Task Name
-     * @param string $Bucket COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+     * @param string $TopicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param string $LogsetId FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
+     * @param string $Name COS import task name, supports up to 128 bytes.
+     * @param string $Bucket COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
      * @param string $BucketRegion The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
-     * @param string $Prefix The prefix of the folder where COS files are located
-     * @param string $Compress Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
+     * @param string $Prefix The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
+     * @param string $Compress Compression mode: "", "gzip", "lzop", "snappy". Default: ""; no compression.
      */
     function __construct()
     {

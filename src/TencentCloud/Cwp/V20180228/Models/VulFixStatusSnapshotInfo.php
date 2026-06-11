@@ -23,33 +23,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQuuid() Obtain cvm id
  * @method void setQuuid(string $Quuid) Set cvm id
  * @method string getHostName() Obtain Host name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostName(string $HostName) Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getHostIp() Obtain Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostIp(string $HostIp) Set Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSnapshotName() Obtain Snapshot name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSnapshotName(string $SnapshotName) Set Snapshot name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getModifyTime() Obtain Snapshot creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setModifyTime(string $ModifyTime) Set Snapshot creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSnapshotId() Obtain Snapshot ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getId() Obtain Unique record ID
  * @method void setId(integer $Id) Set Unique record ID
- * @method integer getStatus() Obtain Snapshot status. 0: initial; 1: created successfully; 2: creation failed.
- * @method void setStatus(integer $Status) Set Snapshot status. 0: initial; 1: created successfully; 2: creation failed.
+ * @method integer getStatus() Obtain Snapshot status. 0: initial; 1: created successfully; 2: creation failed; 10: unsupported; 11: no need to create.
+ * @method void setStatus(integer $Status) Set Snapshot status. 0: initial; 1: created successfully; 2: creation failed; 10: unsupported; 11: no need to create.
  * @method string getFailReason() Obtain Snapshot creation failure reason
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFailReason(string $FailReason) Set Snapshot creation failure reason
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMachineType() Obtain Host type
+ * @method void setMachineType(string $MachineType) Set Host type
  */
 class VulFixStatusSnapshotInfo extends AbstractModel
 {
@@ -60,31 +50,26 @@ class VulFixStatusSnapshotInfo extends AbstractModel
 
     /**
      * @var string Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostName;
 
     /**
      * @var string Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostIp;
 
     /**
      * @var string Snapshot name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SnapshotName;
 
     /**
      * @var string Snapshot creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ModifyTime;
 
     /**
      * @var string Snapshot ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SnapshotId;
 
@@ -94,32 +79,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Id;
 
     /**
-     * @var integer Snapshot status. 0: initial; 1: created successfully; 2: creation failed.
+     * @var integer Snapshot status. 0: initial; 1: created successfully; 2: creation failed; 10: unsupported; 11: no need to create.
      */
     public $Status;
 
     /**
      * @var string Snapshot creation failure reason
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FailReason;
 
     /**
+     * @var string Host type
+     */
+    public $MachineType;
+
+    /**
      * @param string $Quuid cvm id
      * @param string $HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SnapshotName Snapshot name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ModifyTime Snapshot creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SnapshotId Snapshot ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Id Unique record ID
-     * @param integer $Status Snapshot status. 0: initial; 1: created successfully; 2: creation failed.
+     * @param integer $Status Snapshot status. 0: initial; 1: created successfully; 2: creation failed; 10: unsupported; 11: no need to create.
      * @param string $FailReason Snapshot creation failure reason
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MachineType Host type
      */
     function __construct()
     {
@@ -168,6 +152,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("FailReason",$param) and $param["FailReason"] !== null) {
             $this->FailReason = $param["FailReason"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

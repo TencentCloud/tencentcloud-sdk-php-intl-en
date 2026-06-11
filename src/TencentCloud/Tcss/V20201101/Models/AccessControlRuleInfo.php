@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Container runtime - Access control policy information
  *
- * @method boolean getIsEnable() Obtain Switch. Valid values: `true` (on); `false` (off).
- * @method void setIsEnable(boolean $IsEnable) Set Switch. Valid values: `true` (on); `false` (off).
- * @method array getImageIds() Obtain IDs of associated images. An empty array indicates all images.
- * @method void setImageIds(array $ImageIds) Set IDs of associated images. An empty array indicates all images.
  * @method array getChildRules() Obtain Array of sub-policies of the user policy
  * @method void setChildRules(array $ChildRules) Set Array of sub-policies of the user policy
+ * @method array getImageIds() Obtain IDs of associated images. An empty array indicates all images.
+ * @method void setImageIds(array $ImageIds) Set IDs of associated images. An empty array indicates all images.
+ * @method boolean getIsEnable() Obtain Switch. Valid values: `true` (on); `false` (off).
+ * @method void setIsEnable(boolean $IsEnable) Set Switch. Valid values: `true` (on); `false` (off).
  * @method string getRuleName() Obtain Policy name
  * @method void setRuleName(string $RuleName) Set Policy name
- * @method string getRuleId() Obtain Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRuleId(string $RuleId) Set Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getSystemChildRules() Obtain Array of sub-policies of the preset policy
- * @method void setSystemChildRules(array $SystemChildRules) Set Array of sub-policies of the preset policy
  * @method boolean getIsDefault() Obtain Whether it is the default preset policy
  * @method void setIsDefault(boolean $IsDefault) Set Whether it is the default preset policy
+ * @method boolean getIsGlobal() Obtain true: all images, false: specified images. When IsGlobal=true, ImageIds returns an empty array.
+ * @method void setIsGlobal(boolean $IsGlobal) Set true: all images, false: specified images. When IsGlobal=true, ImageIds returns an empty array.
+ * @method string getRuleId() Obtain Policy ID
+ * @method void setRuleId(string $RuleId) Set Policy ID
+ * @method array getSystemChildRules() Obtain Array of sub-policies of the preset policy
+ * @method void setSystemChildRules(array $SystemChildRules) Set Array of sub-policies of the preset policy
  */
 class AccessControlRuleInfo extends AbstractModel
 {
     /**
-     * @var boolean Switch. Valid values: `true` (on); `false` (off).
+     * @var array Array of sub-policies of the user policy
      */
-    public $IsEnable;
+    public $ChildRules;
 
     /**
      * @var array IDs of associated images. An empty array indicates all images.
@@ -50,9 +50,9 @@ class AccessControlRuleInfo extends AbstractModel
     public $ImageIds;
 
     /**
-     * @var array Array of sub-policies of the user policy
+     * @var boolean Switch. Valid values: `true` (on); `false` (off).
      */
-    public $ChildRules;
+    public $IsEnable;
 
     /**
      * @var string Policy name
@@ -60,8 +60,17 @@ class AccessControlRuleInfo extends AbstractModel
     public $RuleName;
 
     /**
+     * @var boolean Whether it is the default preset policy
+     */
+    public $IsDefault;
+
+    /**
+     * @var boolean true: all images, false: specified images. When IsGlobal=true, ImageIds returns an empty array.
+     */
+    public $IsGlobal;
+
+    /**
      * @var string Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RuleId;
 
@@ -71,19 +80,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SystemChildRules;
 
     /**
-     * @var boolean Whether it is the default preset policy
-     */
-    public $IsDefault;
-
-    /**
-     * @param boolean $IsEnable Switch. Valid values: `true` (on); `false` (off).
-     * @param array $ImageIds IDs of associated images. An empty array indicates all images.
      * @param array $ChildRules Array of sub-policies of the user policy
+     * @param array $ImageIds IDs of associated images. An empty array indicates all images.
+     * @param boolean $IsEnable Switch. Valid values: `true` (on); `false` (off).
      * @param string $RuleName Policy name
-     * @param string $RuleId Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $SystemChildRules Array of sub-policies of the preset policy
      * @param boolean $IsDefault Whether it is the default preset policy
+     * @param boolean $IsGlobal true: all images, false: specified images. When IsGlobal=true, ImageIds returns an empty array.
+     * @param string $RuleId Policy ID
+     * @param array $SystemChildRules Array of sub-policies of the preset policy
      */
     function __construct()
     {
@@ -98,14 +102,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsEnable",$param) and $param["IsEnable"] !== null) {
-            $this->IsEnable = $param["IsEnable"];
-        }
-
-        if (array_key_exists("ImageIds",$param) and $param["ImageIds"] !== null) {
-            $this->ImageIds = $param["ImageIds"];
-        }
-
         if (array_key_exists("ChildRules",$param) and $param["ChildRules"] !== null) {
             $this->ChildRules = [];
             foreach ($param["ChildRules"] as $key => $value){
@@ -115,8 +111,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
             }
         }
 
+        if (array_key_exists("ImageIds",$param) and $param["ImageIds"] !== null) {
+            $this->ImageIds = $param["ImageIds"];
+        }
+
+        if (array_key_exists("IsEnable",$param) and $param["IsEnable"] !== null) {
+            $this->IsEnable = $param["IsEnable"];
+        }
+
         if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
             $this->RuleName = $param["RuleName"];
+        }
+
+        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
+            $this->IsDefault = $param["IsDefault"];
+        }
+
+        if (array_key_exists("IsGlobal",$param) and $param["IsGlobal"] !== null) {
+            $this->IsGlobal = $param["IsGlobal"];
         }
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
@@ -130,10 +142,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->SystemChildRules, $obj);
             }
-        }
-
-        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
-            $this->IsDefault = $param["IsDefault"];
         }
     }
 }

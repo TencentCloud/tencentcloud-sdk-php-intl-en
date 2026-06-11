@@ -38,8 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDisabled(integer $IsDisabled) Set Enable/Disable [1-Disable, 0-Enable]
  * @method array getQuuids() Obtain Host list
  * @method void setQuuids(array $Quuids) Set Host list
- * @method array getExcludedQuuids() Obtain Machines to be excluded
- * @method void setExcludedQuuids(array $ExcludedQuuids) Set Machines to be excluded
+ * @method array getExcludedQuuids() Obtain List of machines to be excluded.	
+ * @method void setExcludedQuuids(array $ExcludedQuuids) Set List of machines to be excluded.	
+ * @method string getMsgLanguage() Obtain Push language type, Chinese zh, English en
+ * @method void setMsgLanguage(string $MsgLanguage) Set Push language type, Chinese zh, English en
  */
 class ModifyWebHookPolicyRequest extends AbstractModel
 {
@@ -89,9 +91,14 @@ class ModifyWebHookPolicyRequest extends AbstractModel
     public $Quuids;
 
     /**
-     * @var array Machines to be excluded
+     * @var array List of machines to be excluded.	
      */
     public $ExcludedQuuids;
+
+    /**
+     * @var string Push language type, Chinese zh, English en
+     */
+    public $MsgLanguage;
 
     /**
      * @param integer $Id id
@@ -103,7 +110,8 @@ class ModifyWebHookPolicyRequest extends AbstractModel
      * @param array $CustomFields Custom passthrough field
      * @param integer $IsDisabled Enable/Disable [1-Disable, 0-Enable]
      * @param array $Quuids Host list
-     * @param array $ExcludedQuuids Machines to be excluded
+     * @param array $ExcludedQuuids List of machines to be excluded.	
+     * @param string $MsgLanguage Push language type, Chinese zh, English en
      */
     function __construct()
     {
@@ -176,6 +184,10 @@ class ModifyWebHookPolicyRequest extends AbstractModel
 
         if (array_key_exists("ExcludedQuuids",$param) and $param["ExcludedQuuids"] !== null) {
             $this->ExcludedQuuids = $param["ExcludedQuuids"];
+        }
+
+        if (array_key_exists("MsgLanguage",$param) and $param["MsgLanguage"] !== null) {
+            $this->MsgLanguage = $param["MsgLanguage"];
         }
     }
 }

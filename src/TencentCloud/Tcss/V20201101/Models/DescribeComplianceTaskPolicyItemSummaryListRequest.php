@@ -42,14 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Initial offset. Default value: `0`.
  * @method integer getLimit() Obtain Number of results to be returned. Default value: `10`. Maximum value: `100`.
  * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: `10`. Maximum value: `100`.
- * @method array getFilters() Obtain Filter
-Name - String
-Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
-`ClusterName` is also available for K8s assets.
- * @method void setFilters(array $Filters) Set Filter
-Name - String
-Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
-`ClusterName` is also available for K8s assets.
+ * @method array getFilters() Obtain Filtering conditions. <li>Name      string Detection item name.</li> <li>ItemType  string Detection item type.</li> <li>RiskLevel string Risk level.</li> <li>IsOpen    int    Enabling status.</li>
+ * @method void setFilters(array $Filters) Set Filtering conditions. <li>Name      string Detection item name.</li> <li>ItemType  string Detection item type.</li> <li>RiskLevel string Risk level.</li> <li>IsOpen    int    Enabling status.</li>
  */
 class DescribeComplianceTaskPolicyItemSummaryListRequest extends AbstractModel
 {
@@ -77,10 +71,7 @@ class DescribeComplianceTaskPolicyItemSummaryListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array Filter
-Name - String
-Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
-`ClusterName` is also available for K8s assets.
+     * @var array Filtering conditions. <li>Name      string Detection item name.</li> <li>ItemType  string Detection item type.</li> <li>RiskLevel string Risk level.</li> <li>IsOpen    int    Enabling status.</li>
      */
     public $Filters;
 
@@ -96,10 +87,7 @@ Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
 `ASSET_K8S`: K8s asset.
      * @param integer $Offset Initial offset. Default value: `0`.
      * @param integer $Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
-     * @param array $Filters Filter
-Name - String
-Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
-`ClusterName` is also available for K8s assets.
+     * @param array $Filters Filtering conditions. <li>Name      string Detection item name.</li> <li>ItemType  string Detection item type.</li> <li>RiskLevel string Risk level.</li> <li>IsOpen    int    Enabling status.</li>
      */
     function __construct()
     {

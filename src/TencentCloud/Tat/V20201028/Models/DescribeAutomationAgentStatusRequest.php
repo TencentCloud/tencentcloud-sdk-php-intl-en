@@ -34,14 +34,32 @@ You can get the instance ID through the query instance interface of correspondin
 The maximum per request is 100.
 
 Parameters must not be specified simultaneously `InstanceIds` and `Filters`.
- * @method array getFilters() Obtain -agent-status - String - required: no - (filter condition) filters by agent status. valid values: Online, Offline. 
--environment - String - required: no - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
--instance-id - String - required: no - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
+ * @method array getFilters() Obtain - agent-status 
+    - String 
+    - required: no 
+    - (filter condition) filters by agent status. valid values: Online, Offline. 
+- environment 
+    - String 
+    - required: no 
+    - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
+- instance-id 
+    - String 
+    - required: no 
+    - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
 
 The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InstanceIds` and `Filters` parameters cannot be specified at the same time.
- * @method void setFilters(array $Filters) Set -agent-status - String - required: no - (filter condition) filters by agent status. valid values: Online, Offline. 
--environment - String - required: no - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
--instance-id - String - required: no - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
+ * @method void setFilters(array $Filters) Set - agent-status 
+    - String 
+    - required: no 
+    - (filter condition) filters by agent status. valid values: Online, Offline. 
+- environment 
+    - String 
+    - required: no 
+    - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
+- instance-id 
+    - String 
+    - required: no 
+    - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
 
 The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InstanceIds` and `Filters` parameters cannot be specified at the same time.
  * @method integer getLimit() Obtain Number of returned results. It defaults to `20`. The maximum is 100. For more information on `Limit`, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
@@ -63,9 +81,18 @@ Parameters must not be specified simultaneously `InstanceIds` and `Filters`.
     public $InstanceIds;
 
     /**
-     * @var array -agent-status - String - required: no - (filter condition) filters by agent status. valid values: Online, Offline. 
--environment - String - required: no - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
--instance-id - String - required: no - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
+     * @var array - agent-status 
+    - String 
+    - required: no 
+    - (filter condition) filters by agent status. valid values: Online, Offline. 
+- environment 
+    - String 
+    - required: no 
+    - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
+- instance-id 
+    - String 
+    - required: no 
+    - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
 
 The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InstanceIds` and `Filters` parameters cannot be specified at the same time.
      */
@@ -89,9 +116,18 @@ You can get the instance ID through the query instance interface of correspondin
 The maximum per request is 100.
 
 Parameters must not be specified simultaneously `InstanceIds` and `Filters`.
-     * @param array $Filters -agent-status - String - required: no - (filter condition) filters by agent status. valid values: Online, Offline. 
--environment - String - required: no - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
--instance-id - String - required: no - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
+     * @param array $Filters - agent-status 
+    - String 
+    - required: no 
+    - (filter condition) filters by agent status. valid values: Online, Offline. 
+- environment 
+    - String 
+    - required: no 
+    - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
+- instance-id 
+    - String 
+    - required: no 
+    - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
 
 The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InstanceIds` and `Filters` parameters cannot be specified at the same time.
      * @param integer $Limit Number of returned results. It defaults to `20`. The maximum is 100. For more information on `Limit`, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).

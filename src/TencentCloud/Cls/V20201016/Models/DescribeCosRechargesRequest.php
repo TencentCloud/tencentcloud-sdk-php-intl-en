@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCosRecharges request structure.
  *
- * @method string getTopicId() Obtain ID of the log topic.
- * @method void setTopicId(string $TopicId) Set ID of the log topic.
+ * @method string getTopicId() Obtain Log topic Id.
+- Get the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set Log topic Id.
+- Get the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
  * @method integer getStatus() Obtain Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
  * @method void setStatus(integer $Status) Set Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
  * @method integer getEnable() Obtain Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
@@ -30,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCosRechargesRequest extends AbstractModel
 {
     /**
-     * @var string ID of the log topic.
+     * @var string Log topic Id.
+- Get the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
@@ -45,7 +48,8 @@ class DescribeCosRechargesRequest extends AbstractModel
     public $Enable;
 
     /**
-     * @param string $TopicId ID of the log topic.
+     * @param string $TopicId Log topic Id.
+- Get the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
      * @param integer $Status Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
      * @param integer $Enable Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
      */

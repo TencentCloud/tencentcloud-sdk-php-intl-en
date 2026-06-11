@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * K8s asset details
  *
- * @method string getClusterName() Obtain K8s cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClusterName(string $ClusterName) Set K8s cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getClusterVersion() Obtain K8s cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClusterVersion(string $ClusterVersion) Set K8s cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getClusterName() Obtain Name of the K8S cluster.
+ * @method void setClusterName(string $ClusterName) Set Name of the K8S cluster.
+ * @method string getClusterVersion() Obtain Kubernetes Cluster Version
+ * @method void setClusterVersion(string $ClusterVersion) Set Kubernetes Cluster Version
  */
 class ComplianceK8SDetailInfo extends AbstractModel
 {
     /**
-     * @var string K8s cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name of the K8S cluster.
      */
     public $ClusterName;
 
     /**
-     * @var string K8s cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Kubernetes Cluster Version
      */
     public $ClusterVersion;
 
     /**
-     * @param string $ClusterName K8s cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ClusterVersion K8s cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ClusterName Name of the K8S cluster.
+     * @param string $ClusterVersion Kubernetes Cluster Version
      */
     function __construct()
     {

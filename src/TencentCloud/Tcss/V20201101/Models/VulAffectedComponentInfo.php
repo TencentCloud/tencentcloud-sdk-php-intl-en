@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Information of the component affected by the vulnerability
  *
  * @method string getName() Obtain Component name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Component name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getVersion() Obtain Component version
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVersion(array $Version) Set Component version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getFixedVersion() Obtain Fixed component version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFixedVersion(array $FixedVersion) Set Fixed component version
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getFixedVersion() Obtain Component Repair Version
+ * @method void setFixedVersion(array $FixedVersion) Set Component Repair Version
  */
 class VulAffectedComponentInfo extends AbstractModel
 {
     /**
      * @var string Component name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
      * @var array Component version
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Version;
 
     /**
-     * @var array Fixed component version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Component Repair Version
      */
     public $FixedVersion;
 
     /**
      * @param string $Name Component name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Version Component version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $FixedVersion Fixed component version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $FixedVersion Component Repair Version
      */
     function __construct()
     {

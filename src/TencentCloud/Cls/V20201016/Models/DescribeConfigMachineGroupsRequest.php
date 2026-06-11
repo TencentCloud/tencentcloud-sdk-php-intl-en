@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConfigMachineGroups request structure.
  *
- * @method string getConfigId() Obtain Collection configuration ID
- * @method void setConfigId(string $ConfigId) Set Collection configuration ID
+ * @method string getConfigId() Obtain Collection Configuration ID
+-Obtain the collection configuration Id by accessing the collection rule configuration (https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
+ * @method void setConfigId(string $ConfigId) Set Collection Configuration ID
+-Obtain the collection configuration Id by accessing the collection rule configuration (https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
  */
 class DescribeConfigMachineGroupsRequest extends AbstractModel
 {
     /**
-     * @var string Collection configuration ID
+     * @var string Collection Configuration ID
+-Obtain the collection configuration Id by accessing the collection rule configuration (https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
      */
     public $ConfigId;
 
     /**
-     * @param string $ConfigId Collection configuration ID
+     * @param string $ConfigId Collection Configuration ID
+-Obtain the collection configuration Id by accessing the collection rule configuration (https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
      */
     function __construct()
     {

@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageID(string $ImageID) Set Image ID
  * @method string getImageName() Obtain Image name
  * @method void setImageName(string $ImageName) Set Image name
- * @method integer getHostCount() Obtain Number of associated servers
- * @method void setHostCount(integer $HostCount) Set Number of associated servers
+ * @method integer getHostCount() Obtain Number of associated hosts (including regular nodes and super nodes).
+ * @method void setHostCount(integer $HostCount) Set Number of associated hosts (including regular nodes and super nodes).
+ * @method integer getSuperNodeCount() Obtain Number of associated super nodes.
+ * @method void setSuperNodeCount(integer $SuperNodeCount) Set Number of associated super nodes.
  * @method integer getContainerCount() Obtain Number of associated containers
  * @method void setContainerCount(integer $ContainerCount) Set Number of associated containers
  * @method array getComponentList() Obtain List of components
@@ -44,9 +46,14 @@ class VulAffectedImageInfo extends AbstractModel
     public $ImageName;
 
     /**
-     * @var integer Number of associated servers
+     * @var integer Number of associated hosts (including regular nodes and super nodes).
      */
     public $HostCount;
+
+    /**
+     * @var integer Number of associated super nodes.
+     */
+    public $SuperNodeCount;
 
     /**
      * @var integer Number of associated containers
@@ -61,7 +68,8 @@ class VulAffectedImageInfo extends AbstractModel
     /**
      * @param string $ImageID Image ID
      * @param string $ImageName Image name
-     * @param integer $HostCount Number of associated servers
+     * @param integer $HostCount Number of associated hosts (including regular nodes and super nodes).
+     * @param integer $SuperNodeCount Number of associated super nodes.
      * @param integer $ContainerCount Number of associated containers
      * @param array $ComponentList List of components
      */
@@ -88,6 +96,10 @@ class VulAffectedImageInfo extends AbstractModel
 
         if (array_key_exists("HostCount",$param) and $param["HostCount"] !== null) {
             $this->HostCount = $param["HostCount"];
+        }
+
+        if (array_key_exists("SuperNodeCount",$param) and $param["SuperNodeCount"] !== null) {
+            $this->SuperNodeCount = $param["SuperNodeCount"];
         }
 
         if (array_key_exists("ContainerCount",$param) and $param["ContainerCount"] !== null) {

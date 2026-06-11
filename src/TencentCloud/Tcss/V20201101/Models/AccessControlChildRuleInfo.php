@@ -20,54 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Container runtime security - Information of the access control sub-policy
  *
- * @method string getRuleMode() Obtain Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
- * @method void setRuleMode(string $RuleMode) Set Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
- * @method string getProcessPath() Obtain Process path
- * @method void setProcessPath(string $ProcessPath) Set Process path
- * @method string getTargetFilePath() Obtain Accessed file path, which is valid only for access control.
- * @method void setTargetFilePath(string $TargetFilePath) Set Accessed file path, which is valid only for access control.
- * @method string getRuleId() Obtain Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRuleId(string $RuleId) Set Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProcessPath() Obtain <p>Process path.</p>
+ * @method void setProcessPath(string $ProcessPath) Set <p>Process path.</p>
+ * @method string getRuleMode() Obtain <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+ * @method void setRuleMode(string $RuleMode) Set <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+ * @method string getTargetFilePath() Obtain <p>Accessed file path, only effective during access control.</p>
+ * @method void setTargetFilePath(string $TargetFilePath) Set <p>Accessed file path, only effective during access control.</p>
+ * @method string getCmdLine() Obtain <p>Command line parameters.</p>
+ * @method void setCmdLine(string $CmdLine) Set <p>Command line parameters.</p>
+ * @method string getRuleId() Obtain <p>Sub-policy ID.</p>
+ * @method void setRuleId(string $RuleId) Set <p>Sub-policy ID.</p>
  */
 class AccessControlChildRuleInfo extends AbstractModel
 {
     /**
-     * @var string Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
-     */
-    public $RuleMode;
-
-    /**
-     * @var string Process path
+     * @var string <p>Process path.</p>
      */
     public $ProcessPath;
 
     /**
-     * @var string Accessed file path, which is valid only for access control.
+     * @var string <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+     */
+    public $RuleMode;
+
+    /**
+     * @var string <p>Accessed file path, only effective during access control.</p>
      */
     public $TargetFilePath;
 
     /**
-     * @var string Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Command line parameters.</p>
+     */
+    public $CmdLine;
+
+    /**
+     * @var string <p>Sub-policy ID.</p>
      */
     public $RuleId;
 
     /**
-     * @param string $RuleMode Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
-     * @param string $ProcessPath Process path
-     * @param string $TargetFilePath Accessed file path, which is valid only for access control.
-     * @param string $RuleId Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProcessPath <p>Process path.</p>
+     * @param string $RuleMode <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+     * @param string $TargetFilePath <p>Accessed file path, only effective during access control.</p>
+     * @param string $CmdLine <p>Command line parameters.</p>
+     * @param string $RuleId <p>Sub-policy ID.</p>
      */
     function __construct()
     {
@@ -82,16 +78,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleMode",$param) and $param["RuleMode"] !== null) {
-            $this->RuleMode = $param["RuleMode"];
-        }
-
         if (array_key_exists("ProcessPath",$param) and $param["ProcessPath"] !== null) {
             $this->ProcessPath = $param["ProcessPath"];
         }
 
+        if (array_key_exists("RuleMode",$param) and $param["RuleMode"] !== null) {
+            $this->RuleMode = $param["RuleMode"];
+        }
+
         if (array_key_exists("TargetFilePath",$param) and $param["TargetFilePath"] !== null) {
             $this->TargetFilePath = $param["TargetFilePath"];
+        }
+
+        if (array_key_exists("CmdLine",$param) and $param["CmdLine"] !== null) {
+            $this->CmdLine = $param["CmdLine"];
         }
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {

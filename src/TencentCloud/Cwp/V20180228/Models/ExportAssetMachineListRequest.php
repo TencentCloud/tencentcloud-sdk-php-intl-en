@@ -27,16 +27,16 @@ use TencentCloud\Common\AbstractModel;
 <li>OsType - String - required: no - Windows or Linux</li>
 <li>CpuLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
 <li>DiskLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%=~80%
+4: 80%~100%</li>
 <li>MemLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
  * @method void setFilters(array $Filters) Set Filter criteria
 <li>IP - String - Required: No - Host IP</li>
 <li>MachineName - String - Required: No - hostname</li>
@@ -44,16 +44,16 @@ use TencentCloud\Common\AbstractModel;
 <li>OsType - String - required: no - Windows or Linux</li>
 <li>CpuLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
 <li>DiskLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%=~80%
+4: 80%~100%</li>
 <li>MemLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
  * @method string getOrder() Obtain Sorting method: asc for ascending order or desc for descending order
  * @method void setOrder(string $Order) Set Sorting method: asc for ascending order or desc for descending order
  * @method string getBy() Obtain Optional sorting method [FirstTime|PartitionCount]
@@ -69,16 +69,16 @@ class ExportAssetMachineListRequest extends AbstractModel
 <li>OsType - String - required: no - Windows or Linux</li>
 <li>CpuLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
 <li>DiskLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%=~80%
+4: 80%~100%</li>
 <li>MemLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
      */
     public $Filters;
 
@@ -100,16 +100,16 @@ class ExportAssetMachineListRequest extends AbstractModel
 <li>OsType - String - required: no - Windows or Linux</li>
 <li>CpuLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
 <li>DiskLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%=~80%
+4: 80%~100%</li>
 <li>MemLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
      * @param string $Order Sorting method: asc for ascending order or desc for descending order
      * @param string $By Optional sorting method [FirstTime|PartitionCount]
      */

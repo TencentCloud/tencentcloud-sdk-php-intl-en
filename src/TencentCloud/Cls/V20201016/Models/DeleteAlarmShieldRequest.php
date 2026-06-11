@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAlarmShield request structure.
  *
- * @method string getTaskId() Obtain Blocking rule ID.
- * @method void setTaskId(string $TaskId) Set Blocking rule ID.
- * @method string getAlarmNoticeId() Obtain Notification channel group ID.
- * @method void setAlarmNoticeId(string $AlarmNoticeId) Set Notification channel group ID.
+ * @method string getTaskId() Obtain Blocking rule id. Retrieve the blocking rule id by [searching for alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
+ * @method void setTaskId(string $TaskId) Set Blocking rule id. Retrieve the blocking rule id by [searching for alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
+ * @method string getAlarmNoticeId() Obtain Notification channel group id. Retrieve the notification channel group id by [searching alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
+ * @method void setAlarmNoticeId(string $AlarmNoticeId) Set Notification channel group id. Retrieve the notification channel group id by [searching alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
  */
 class DeleteAlarmShieldRequest extends AbstractModel
 {
     /**
-     * @var string Blocking rule ID.
+     * @var string Blocking rule id. Retrieve the blocking rule id by [searching for alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
      */
     public $TaskId;
 
     /**
-     * @var string Notification channel group ID.
+     * @var string Notification channel group id. Retrieve the notification channel group id by [searching alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
      */
     public $AlarmNoticeId;
 
     /**
-     * @param string $TaskId Blocking rule ID.
-     * @param string $AlarmNoticeId Notification channel group ID.
+     * @param string $TaskId Blocking rule id. Retrieve the blocking rule id by [searching for alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
+     * @param string $AlarmNoticeId Notification channel group id. Retrieve the notification channel group id by [searching alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
      */
     function __construct()
     {

@@ -20,14 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Security report article details
  *
- * @method string getTitle() Obtain Article name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTitle(string $Title) Set Article name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getGotoType() Obtain Redirection location: 0: no redirection; 1: virus scanning; 2: vulnerability scan; 3: security baseline
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGotoType(integer $GotoType) Set Redirection location: 0: no redirection; 1: virus scanning; 2: vulnerability scan; 3: security baseline
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTitle() Obtain article name
+ * @method void setTitle(string $Title) Set article name
+ * @method integer getGotoType() Obtain Redirection location: 0: no redirection; 1: malicious file scan; 2: vulnerability scanning; 3: security baseline
+ * @method void setGotoType(integer $GotoType) Set Redirection location: 0: no redirection; 1: malicious file scan; 2: vulnerability scanning; 3: security baseline
  * @method string getSubtitle() Obtain Subtitle
  * @method void setSubtitle(string $Subtitle) Set Subtitle
  * @method string getCreateTime() Obtain Release time
@@ -42,14 +38,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class BroadcastInfo extends AbstractModel
 {
     /**
-     * @var string Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string article name
      */
     public $Title;
 
     /**
-     * @var integer Redirection location: 0: no redirection; 1: virus scanning; 2: vulnerability scan; 3: security baseline
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Redirection location: 0: no redirection; 1: malicious file scan; 2: vulnerability scanning; 3: security baseline
      */
     public $GotoType;
 
@@ -79,10 +73,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Type;
 
     /**
-     * @param string $Title Article name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $GotoType Redirection location: 0: no redirection; 1: virus scanning; 2: vulnerability scan; 3: security baseline
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Title article name
+     * @param integer $GotoType Redirection location: 0: no redirection; 1: malicious file scan; 2: vulnerability scanning; 3: security baseline
      * @param string $Subtitle Subtitle
      * @param string $CreateTime Release time
      * @param string $Content Rich text content information

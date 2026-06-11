@@ -30,26 +30,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvocationId(string $InvocationId) Set Command execution ID.
  * @method string getResult() Obtain Trigger result.
 
--PENDING: waiting for distribution.
+- PENDING: waiting for distribution.
 - RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
  * @method void setResult(string $Result) Set Trigger result.
 
--PENDING: waiting for distribution.
+- PENDING: waiting for distribution.
 - RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
  */
 class InvokerRecord extends AbstractModel
 {
@@ -76,15 +76,15 @@ class InvokerRecord extends AbstractModel
     /**
      * @var string Trigger result.
 
--PENDING: waiting for distribution.
+- PENDING: waiting for distribution.
 - RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
      */
     public $Result;
 
@@ -95,15 +95,15 @@ class InvokerRecord extends AbstractModel
      * @param string $InvocationId Command execution ID.
      * @param string $Result Trigger result.
 
--PENDING: waiting for distribution.
+- PENDING: waiting for distribution.
 - RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
      */
     function __construct()
     {

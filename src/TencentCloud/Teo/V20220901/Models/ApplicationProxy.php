@@ -62,8 +62,8 @@ Default value: overseas.
  * @method void setAccelerateType(integer $AccelerateType) Set Whether to enable acceleration. Values:
 <li>`0`: Disable acceleration.</li>
 <li>`1`: Enable acceleration.</li>
- * @method integer getSessionPersistTime() Obtain The session persistence duration.
- * @method void setSessionPersistTime(integer $SessionPersistTime) Set The session persistence duration.
+ * @method integer getSessionPersistTime() Obtain Session hold time, unit: seconds.
+ * @method void setSessionPersistTime(integer $SessionPersistTime) Set Session hold time, unit: seconds.
  * @method string getStatus() Obtain The rule status. Values:
 <li>`online`: Enabled</li>
 <li>`offline`: Disabled</li>
@@ -161,7 +161,7 @@ Default value: overseas.
     public $AccelerateType;
 
     /**
-     * @var integer The session persistence duration.
+     * @var integer Session hold time, unit: seconds.
      */
     public $SessionPersistTime;
 
@@ -237,7 +237,7 @@ Default value: overseas.
      * @param integer $AccelerateType Whether to enable acceleration. Values:
 <li>`0`: Disable acceleration.</li>
 <li>`1`: Enable acceleration.</li>
-     * @param integer $SessionPersistTime The session persistence duration.
+     * @param integer $SessionPersistTime Session hold time, unit: seconds.
      * @param string $Status The rule status. Values:
 <li>`online`: Enabled</li>
 <li>`offline`: Disabled</li>

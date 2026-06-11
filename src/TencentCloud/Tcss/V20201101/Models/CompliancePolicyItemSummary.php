@@ -34,10 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskLevel(string $RiskLevel) Set Severity. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
  * @method string getAssetType() Obtain Asset type of the check item
  * @method void setAssetType(string $AssetType) Set Asset type of the check item
- * @method string getLastCheckTime() Obtain Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLastCheckTime(string $LastCheckTime) Set Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLastCheckTime() Obtain Last detection time
+ * @method void setLastCheckTime(string $LastCheckTime) Set Last detection time
  * @method string getCheckStatus() Obtain Check status
 
 `CHECK_INIT`: To be checked.
@@ -56,34 +54,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `CHECK_FINISHED`: Checked.
 
 `CHECK_FAILED`: Check failed.
- * @method string getCheckResult() Obtain Check result. Valid values: `RESULT_PASSED`: Passed.
+ * @method string getCheckResult() Obtain Detection result. RESULT_PASSED: Passed.
 
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCheckResult(string $CheckResult) Set Check result. Valid values: `RESULT_PASSED`: Passed.
+RESULT_FAILED: failed
+ * @method void setCheckResult(string $CheckResult) Set Detection result. RESULT_PASSED: Passed.
 
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getPassedAssetCount() Obtain Number of assets that passed the check
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPassedAssetCount(integer $PassedAssetCount) Set Number of assets that passed the check
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFailedAssetCount() Obtain Number of assets that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFailedAssetCount(integer $FailedAssetCount) Set Number of assets that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getWhitelistId() Obtain Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWhitelistId(integer $WhitelistId) Set Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+RESULT_FAILED: failed
+ * @method integer getPassedAssetCount() Obtain Number of assets passed detection
+ * @method void setPassedAssetCount(integer $PassedAssetCount) Set Number of assets passed detection
+ * @method integer getFailedAssetCount() Obtain Number of assets with detection failed
+ * @method void setFailedAssetCount(integer $FailedAssetCount) Set Number of assets with detection failed
+ * @method integer getWhitelistId() Obtain ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
+ * @method void setWhitelistId(integer $WhitelistId) Set ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
  * @method string getFixSuggestion() Obtain Handling suggestion
  * @method void setFixSuggestion(string $FixSuggestion) Set Handling suggestion
  * @method integer getBenchmarkStandardId() Obtain Compliance standard ID
  * @method void setBenchmarkStandardId(integer $BenchmarkStandardId) Set Compliance standard ID
- * @method string getApplicableVersion() Obtain TCSS editions that support this check item
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setApplicableVersion(string $ApplicableVersion) Set TCSS editions that support this check item
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getApplicableVersion() Obtain Applicable Version for Check Items
+ * @method void setApplicableVersion(string $ApplicableVersion) Set Applicable Version for Check Items
+ * @method string getDescription() Obtain Check Item Description
+ * @method void setDescription(string $Description) Set Check Item Description
+ * @method string getAuditProcedure() Obtain Check Item Audit Method
+ * @method void setAuditProcedure(string $AuditProcedure) Set Check Item Audit Method
+ * @method integer getIsEnable() Obtain Whether enabled
+<li>0 Off</li>
+<li>1 Enable</li>
+ * @method void setIsEnable(integer $IsEnable) Set Whether enabled
+<li>0 Off</li>
+<li>1 Enable</li>
  */
 class CompliancePolicyItemSummary extends AbstractModel
 {
@@ -123,8 +121,7 @@ class CompliancePolicyItemSummary extends AbstractModel
     public $AssetType;
 
     /**
-     * @var string Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Last detection time
      */
     public $LastCheckTime;
 
@@ -142,28 +139,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CheckStatus;
 
     /**
-     * @var string Check result. Valid values: `RESULT_PASSED`: Passed.
+     * @var string Detection result. RESULT_PASSED: Passed.
 
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+RESULT_FAILED: failed
      */
     public $CheckResult;
 
     /**
-     * @var integer Number of assets that passed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of assets passed detection
      */
     public $PassedAssetCount;
 
     /**
-     * @var integer Number of assets that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of assets with detection failed
      */
     public $FailedAssetCount;
 
     /**
-     * @var integer Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
      */
     public $WhitelistId;
 
@@ -178,10 +171,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $BenchmarkStandardId;
 
     /**
-     * @var string TCSS editions that support this check item
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string Applicable Version for Check Items
      */
     public $ApplicableVersion;
+
+    /**
+     * @var string Check Item Description
+     */
+    public $Description;
+
+    /**
+     * @var string Check Item Audit Method
+     */
+    public $AuditProcedure;
+
+    /**
+     * @var integer Whether enabled
+<li>0 Off</li>
+<li>1 Enable</li>
+     */
+    public $IsEnable;
 
     /**
      * @param integer $CustomerPolicyItemId Unique ID of the customer check item
@@ -191,8 +200,7 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $BenchmarkStandardName Compliance standard
      * @param string $RiskLevel Severity. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
      * @param string $AssetType Asset type of the check item
-     * @param string $LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LastCheckTime Last detection time
      * @param string $CheckStatus Check status
 
 `CHECK_INIT`: To be checked.
@@ -202,20 +210,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `CHECK_FINISHED`: Checked.
 
 `CHECK_FAILED`: Check failed.
-     * @param string $CheckResult Check result. Valid values: `RESULT_PASSED`: Passed.
+     * @param string $CheckResult Detection result. RESULT_PASSED: Passed.
 
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $PassedAssetCount Number of assets that passed the check
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $FailedAssetCount Number of assets that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $WhitelistId Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+RESULT_FAILED: failed
+     * @param integer $PassedAssetCount Number of assets passed detection
+     * @param integer $FailedAssetCount Number of assets with detection failed
+     * @param integer $WhitelistId ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
      * @param string $FixSuggestion Handling suggestion
      * @param integer $BenchmarkStandardId Compliance standard ID
-     * @param string $ApplicableVersion TCSS editions that support this check item
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $ApplicableVersion Applicable Version for Check Items
+     * @param string $Description Check Item Description
+     * @param string $AuditProcedure Check Item Audit Method
+     * @param integer $IsEnable Whether enabled
+<li>0 Off</li>
+<li>1 Enable</li>
      */
     function __construct()
     {
@@ -292,6 +300,18 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("ApplicableVersion",$param) and $param["ApplicableVersion"] !== null) {
             $this->ApplicableVersion = $param["ApplicableVersion"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("AuditProcedure",$param) and $param["AuditProcedure"] !== null) {
+            $this->AuditProcedure = $param["AuditProcedure"];
+        }
+
+        if (array_key_exists("IsEnable",$param) and $param["IsEnable"] !== null) {
+            $this->IsEnable = $param["IsEnable"];
         }
     }
 }

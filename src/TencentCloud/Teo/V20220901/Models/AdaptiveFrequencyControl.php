@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnabled() Obtain Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
  * @method void setEnabled(string $Enabled) Set Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+ * @method string getId() Obtain Rule ID of adaptive frequency control, returned as an output parameter.
+ * @method void setId(string $Id) Set Rule ID of adaptive frequency control, returned as an output parameter.
  * @method string getSensitivity() Obtain The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
  * @method void setSensitivity(string $Sensitivity) Set The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
  * @method SecurityAction getAction() Obtain The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
@@ -35,6 +37,11 @@ class AdaptiveFrequencyControl extends AbstractModel
     public $Enabled;
 
     /**
+     * @var string Rule ID of adaptive frequency control, returned as an output parameter.
+     */
+    public $Id;
+
+    /**
      * @var string The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
      */
     public $Sensitivity;
@@ -46,6 +53,7 @@ class AdaptiveFrequencyControl extends AbstractModel
 
     /**
      * @param string $Enabled Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * @param string $Id Rule ID of adaptive frequency control, returned as an output parameter.
      * @param string $Sensitivity The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
      * @param SecurityAction $Action The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
      */
@@ -64,6 +72,10 @@ class AdaptiveFrequencyControl extends AbstractModel
         }
         if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
             $this->Enabled = $param["Enabled"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
         if (array_key_exists("Sensitivity",$param) and $param["Sensitivity"] !== null) {

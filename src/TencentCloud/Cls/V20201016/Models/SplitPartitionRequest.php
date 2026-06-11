@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * SplitPartition request structure.
  *
  * @method string getTopicId() Obtain Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
  * @method void setTopicId(string $TopicId) Set Log topic ID
- * @method integer getPartitionId() Obtain ID of the partition to be split
- * @method void setPartitionId(integer $PartitionId) Set ID of the partition to be split
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method integer getPartitionId() Obtain Partition Id to split
+-Get the Id of the partition to be split by [getting the partition list](https://www.tencentcloud.com/document/product/614/56470?from_cn_redirect=1).
+ * @method void setPartitionId(integer $PartitionId) Set Partition Id to split
+-Get the Id of the partition to be split by [getting the partition list](https://www.tencentcloud.com/document/product/614/56470?from_cn_redirect=1).
  * @method string getSplitKey() Obtain Partition split hash key position, which is meaningful only if `Number=2` is set
  * @method void setSplitKey(string $SplitKey) Set Partition split hash key position, which is meaningful only if `Number=2` is set
  * @method integer getNumber() Obtain Number of partitions to split into, which is optional. Default value: 2
@@ -33,11 +37,13 @@ class SplitPartitionRequest extends AbstractModel
 {
     /**
      * @var string Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
     /**
-     * @var integer ID of the partition to be split
+     * @var integer Partition Id to split
+-Get the Id of the partition to be split by [getting the partition list](https://www.tencentcloud.com/document/product/614/56470?from_cn_redirect=1).
      */
     public $PartitionId;
 
@@ -53,7 +59,9 @@ class SplitPartitionRequest extends AbstractModel
 
     /**
      * @param string $TopicId Log topic ID
-     * @param integer $PartitionId ID of the partition to be split
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param integer $PartitionId Partition Id to split
+-Get the Id of the partition to be split by [getting the partition list](https://www.tencentcloud.com/document/product/614/56470?from_cn_redirect=1).
      * @param string $SplitKey Partition split hash key position, which is meaningful only if `Number=2` is set
      * @param integer $Number Number of partitions to split into, which is optional. Default value: 2
      */

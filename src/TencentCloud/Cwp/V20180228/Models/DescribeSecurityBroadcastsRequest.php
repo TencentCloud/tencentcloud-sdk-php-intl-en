@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginDate(string $BeginDate) Set Filter release date: start time
  * @method string getEndDate() Obtain Filter release date: end time
  * @method void setEndDate(string $EndDate) Set Filter release date: end time
- * @method string getBroadcastType() Obtain Filter security report type: 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release
- * @method void setBroadcastType(string $BroadcastType) Set Filter security report type: 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release
+ * @method string getBroadcastType() Obtain Filter by security report type. 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release; 4 - practical tutorial.
+ * @method void setBroadcastType(string $BroadcastType) Set Filter by security report type. 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release; 4 - practical tutorial.
  */
 class DescribeSecurityBroadcastsRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeSecurityBroadcastsRequest extends AbstractModel
     public $EndDate;
 
     /**
-     * @var string Filter security report type: 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release
+     * @var string Filter by security report type. 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release; 4 - practical tutorial.
      */
     public $BroadcastType;
 
@@ -63,7 +63,7 @@ class DescribeSecurityBroadcastsRequest extends AbstractModel
      * @param integer $Limit Number of records to return, which is 10 by default, and 0 = all.
      * @param string $BeginDate Filter release date: start time
      * @param string $EndDate Filter release date: end time
-     * @param string $BroadcastType Filter security report type: 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release
+     * @param string $BroadcastType Filter by security report type. 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release; 4 - practical tutorial.
      */
     function __construct()
     {

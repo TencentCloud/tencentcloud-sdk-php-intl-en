@@ -25,13 +25,13 @@ use TencentCloud\Common\AbstractModel;
 Value is:.
 
 - COMMAND: COMMAND.
--REGISTER_CODE: managed instance registration code.
+- REGISTER_CODE: managed instance registration code.
  * @method void setResourceName(string $ResourceName) Set Resource name
 
 Value is:.
 
 - COMMAND: COMMAND.
--REGISTER_CODE: managed instance registration code.
+- REGISTER_CODE: managed instance registration code.
  * @method integer getResourceQuotaUsed() Obtain Used credit limit.
  * @method void setResourceQuotaUsed(integer $ResourceQuotaUsed) Set Used credit limit.
  * @method integer getResourceQuotaTotal() Obtain Total quota.
@@ -45,7 +45,7 @@ class GeneralResourceQuotaSet extends AbstractModel
 Value is:.
 
 - COMMAND: COMMAND.
--REGISTER_CODE: managed instance registration code.
+- REGISTER_CODE: managed instance registration code.
      */
     public $ResourceName;
 
@@ -65,7 +65,7 @@ Value is:.
 Value is:.
 
 - COMMAND: COMMAND.
--REGISTER_CODE: managed instance registration code.
+- REGISTER_CODE: managed instance registration code.
      * @param integer $ResourceQuotaUsed Used credit limit.
      * @param integer $ResourceQuotaTotal Total quota.
      */

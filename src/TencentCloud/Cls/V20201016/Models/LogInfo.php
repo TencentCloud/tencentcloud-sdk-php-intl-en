@@ -34,22 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPkgId(string $PkgId) Set ID of the request package for log reporting
  * @method string getPkgLogId() Obtain Log ID in request package
  * @method void setPkgLogId(string $PkgLogId) Set Log ID in request package
- * @method string getLogJson() Obtain Serialized JSON string of log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setLogJson(string $LogJson) Set Serialized JSON string of log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getHostName() Obtain Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setHostName(string $HostName) Set Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getRawLog() Obtain Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRawLog(string $RawLog) Set Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIndexStatus() Obtain The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIndexStatus(string $IndexStatus) Set The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getHighLights() Obtain Keywords that meet search criteria are generally highlighted. Only key-value search is supported, not full-text search.	
+ * @method void setHighLights(array $HighLights) Set Keywords that meet search criteria are generally highlighted. Only key-value search is supported, not full-text search.	
+ * @method string getLogJson() Obtain JSON serialized string of the log content
+ * @method void setLogJson(string $LogJson) Set JSON serialized string of the log content
+ * @method string getHostName() Obtain Log source host name
+ * @method void setHostName(string $HostName) Set Log source host name
+ * @method string getRawLog() Obtain Raw log (only available when there is an error in creating the log index).
+ * @method void setRawLog(string $RawLog) Set Raw log (only available when there is an error in creating the log index).
+ * @method string getIndexStatus() Obtain Cause for log index creation exception. It has a value only when a log index creation exception occurs.
+ * @method void setIndexStatus(string $IndexStatus) Set Cause for log index creation exception. It has a value only when a log index creation exception occurs.
  */
 class LogInfo extends AbstractModel
 {
@@ -89,26 +83,27 @@ class LogInfo extends AbstractModel
     public $PkgLogId;
 
     /**
-     * @var string Serialized JSON string of log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Keywords that meet search criteria are generally highlighted. Only key-value search is supported, not full-text search.	
+     */
+    public $HighLights;
+
+    /**
+     * @var string JSON serialized string of the log content
      */
     public $LogJson;
 
     /**
-     * @var string Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string Log source host name
      */
     public $HostName;
 
     /**
-     * @var string Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Raw log (only available when there is an error in creating the log index).
      */
     public $RawLog;
 
     /**
-     * @var string The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Cause for log index creation exception. It has a value only when a log index creation exception occurs.
      */
     public $IndexStatus;
 
@@ -120,14 +115,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $FileName Log filename
      * @param string $PkgId ID of the request package for log reporting
      * @param string $PkgLogId Log ID in request package
-     * @param string $LogJson Serialized JSON string of log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $HostName Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $RawLog Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IndexStatus The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $HighLights Keywords that meet search criteria are generally highlighted. Only key-value search is supported, not full-text search.	
+     * @param string $LogJson JSON serialized string of the log content
+     * @param string $HostName Log source host name
+     * @param string $RawLog Raw log (only available when there is an error in creating the log index).
+     * @param string $IndexStatus Cause for log index creation exception. It has a value only when a log index creation exception occurs.
      */
     function __construct()
     {
@@ -168,6 +160,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("PkgLogId",$param) and $param["PkgLogId"] !== null) {
             $this->PkgLogId = $param["PkgLogId"];
+        }
+
+        if (array_key_exists("HighLights",$param) and $param["HighLights"] !== null) {
+            $this->HighLights = [];
+            foreach ($param["HighLights"] as $key => $value){
+                $obj = new HighLightItem();
+                $obj->deserialize($value);
+                array_push($this->HighLights, $obj);
+            }
         }
 
         if (array_key_exists("LogJson",$param) and $param["LogJson"] !== null) {

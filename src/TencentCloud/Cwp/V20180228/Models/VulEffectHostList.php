@@ -21,209 +21,193 @@ use TencentCloud\Common\AbstractModel;
  * List of hosts affected by vulnerabilities
  *
  * @method integer getEventId() Obtain Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEventId(integer $EventId) Set Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Status. 0: pending; 1: ignored; 3: fixed; 5: detecting; 6: fixing; 7: rolling back; 8: fixing failed.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Status. 0: pending; 1: ignored; 3: fixed; 5: detecting; 6: fixing; 7: rolling back; 8: fixing failed.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Status: 0 - pending processing; 1 - ignored; 3 - fixed; 5 - detecting; 6 - in remediation; 7 - rolling back; 8 - fix failed.
+ * @method void setStatus(integer $Status) Set Status: 0 - pending processing; 1 - ignored; 3 - fixed; 5 - detecting; 6 - in remediation; 7 - rolling back; 8 - fix failed.
  * @method string getLastTime() Obtain Last detection time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLastTime(string $LastTime) Set Last detection time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getLevel() Obtain Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLevel(integer $Level) Set Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getQuuid() Obtain Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQuuid(string $Quuid) Set Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUuid() Obtain Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUuid(string $Uuid) Set Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getHostIp() Obtain Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostIp(string $HostIp) Set Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getAliasName() Obtain Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAliasName(string $AliasName) Set Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getTags() Obtain Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDescription() Obtain Description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getHostVersion() Obtain Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostVersion(integer $HostVersion) Set Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsSupportAutoFix() Obtain Whether automatic fixing is supported. 0: not supported; 1: supported; 2: client offline; 3: manual fixing supported for Ultimate Edition hosts; 4: not supported for this model; 5: fixing, 6: fixed; 7: detecting; 9: fixing failed; 10: ignored; 11: supported for Linux but not Windows; 12: supported for Windows but not Linux; 13: fixing failed but host is offline; 14: fixing failed but host is not of the Ultimate edition; 15: manually fixed.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsSupportAutoFix(integer $IsSupportAutoFix) Set Whether automatic fixing is supported. 0: not supported; 1: supported; 2: client offline; 3: manual fixing supported for Ultimate Edition hosts; 4: not supported for this model; 5: fixing, 6: fixed; 7: detecting; 9: fixing failed; 10: ignored; 11: supported for Linux but not Windows; 12: supported for Windows but not Linux; 13: fixing failed but host is offline; 14: fixing failed but host is not of the Ultimate edition; 15: manually fixed.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFixStatusMsg() Obtain Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFixStatusMsg(string $FixStatusMsg) Set Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getHostVersion() Obtain Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+ * @method void setHostVersion(integer $HostVersion) Set Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+ * @method integer getIsSupportAutoFix() Obtain Whether automatic fixing is supported 0: Cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Host can only be manually repaired if not flagship, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: In-progress detection, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not on linux, 13: Fixing failed but host is offline, 14: Fixing failed but host is not flagship, 15: Manually fixed
+ * @method void setIsSupportAutoFix(integer $IsSupportAutoFix) Set Whether automatic fixing is supported 0: Cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Host can only be manually repaired if not flagship, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: In-progress detection, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not on linux, 13: Fixing failed but host is offline, 14: Fixing failed but host is not flagship, 15: Manually fixed
+ * @method string getFixStatusMsg() Obtain Reason for failure
+ * @method void setFixStatusMsg(string $FixStatusMsg) Set Reason for failure
  * @method string getFirstDiscoveryTime() Obtain First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFirstDiscoveryTime(string $FirstDiscoveryTime) Set First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceState() Obtain Instance status. "PENDING": creating; "LAUNCH_FAILED" : creation failed; "RUNNING": running; "STOPPED": shut down; "STARTING": starting; "STOPPING": shutting down; "REBOOTING": restarting; "SHUTDOWN": shut down and pending termination; "TERMINATING": terminating.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceState(string $InstanceState) Set Instance status. "PENDING": creating; "LAUNCH_FAILED" : creation failed; "RUNNING": running; "STOPPED": shut down; "STARTING": starting; "STOPPING": shutting down; "REBOOTING": restarting; "SHUTDOWN": shut down and pending termination; "TERMINATING": terminating.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceState() Obtain Instance status: "PENDING" - creating, "LAUNCH_FAILED" - creation failed, "RUNNING" - running, "STOPPED" - shutdown, "STARTING" - starting, "STOPPING" - indicates shutdown in progress, "REBOOTING" - restarting, "SHUTDOWN" - indicate shutdown and pending termination, "TERMINATING" - indicates terminating in progress.
+ * @method void setInstanceState(string $InstanceState) Set Instance status: "PENDING" - creating, "LAUNCH_FAILED" - creation failed, "RUNNING" - running, "STOPPED" - shutdown, "STARTING" - starting, "STOPPING" - indicates shutdown in progress, "REBOOTING" - restarting, "SHUTDOWN" - indicate shutdown and pending termination, "TERMINATING" - indicates terminating in progress.
  * @method string getPublicIpAddresses() Obtain Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPublicIpAddresses(string $PublicIpAddresses) Set Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getCloudTags() Obtain Cloud tag information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCloudTags(array $CloudTags) Set Cloud tag information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method MachineExtraInfo getMachineExtraInfo() Obtain Host additional information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Host additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getCloudTags() Obtain Cloud Tag Information
+ * @method void setCloudTags(array $CloudTags) Set Cloud Tag Information
+ * @method MachineExtraInfo getMachineExtraInfo() Obtain Host Additional Information
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Host Additional Information
+ * @method string getMachineType() Obtain Host type
+ * @method void setMachineType(string $MachineType) Set Host type
+ * @method integer getRegionId() Obtain Availability zone ID.
+ * @method void setRegionId(integer $RegionId) Set Availability zone ID.
+ * @method integer getHasSnapshot() Obtain Whether to create a snapshot for the fix task: 0: not created; other: created.
+ * @method void setHasSnapshot(integer $HasSnapshot) Set Whether to create a snapshot for the fix task: 0: not created; other: created.
+ * @method string getLatestFixTime() Obtain Last repair time
+ * @method void setLatestFixTime(string $LatestFixTime) Set Last repair time
+ * @method string getDescriptionEn() Obtain Description
+ * @method void setDescriptionEn(string $DescriptionEn) Set Description
  */
 class VulEffectHostList extends AbstractModel
 {
     /**
      * @var integer Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EventId;
 
     /**
-     * @var integer Status. 0: pending; 1: ignored; 3: fixed; 5: detecting; 6: fixing; 7: rolling back; 8: fixing failed.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Status: 0 - pending processing; 1 - ignored; 3 - fixed; 5 - detecting; 6 - in remediation; 7 - rolling back; 8 - fix failed.
      */
     public $Status;
 
     /**
      * @var string Last detection time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LastTime;
 
     /**
      * @var integer Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Level;
 
     /**
      * @var string Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Quuid;
 
     /**
      * @var string Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Uuid;
 
     /**
      * @var string Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostIp;
 
     /**
      * @var string Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AliasName;
 
     /**
      * @var array Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
     /**
      * @var string Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Description;
 
     /**
-     * @var integer Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
      */
     public $HostVersion;
 
     /**
-     * @var integer Whether automatic fixing is supported. 0: not supported; 1: supported; 2: client offline; 3: manual fixing supported for Ultimate Edition hosts; 4: not supported for this model; 5: fixing, 6: fixed; 7: detecting; 9: fixing failed; 10: ignored; 11: supported for Linux but not Windows; 12: supported for Windows but not Linux; 13: fixing failed but host is offline; 14: fixing failed but host is not of the Ultimate edition; 15: manually fixed.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether automatic fixing is supported 0: Cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Host can only be manually repaired if not flagship, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: In-progress detection, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not on linux, 13: Fixing failed but host is offline, 14: Fixing failed but host is not flagship, 15: Manually fixed
      */
     public $IsSupportAutoFix;
 
     /**
-     * @var string Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Reason for failure
      */
     public $FixStatusMsg;
 
     /**
      * @var string First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FirstDiscoveryTime;
 
     /**
-     * @var string Instance status. "PENDING": creating; "LAUNCH_FAILED" : creation failed; "RUNNING": running; "STOPPED": shut down; "STARTING": starting; "STOPPING": shutting down; "REBOOTING": restarting; "SHUTDOWN": shut down and pending termination; "TERMINATING": terminating.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance status: "PENDING" - creating, "LAUNCH_FAILED" - creation failed, "RUNNING" - running, "STOPPED" - shutdown, "STARTING" - starting, "STOPPING" - indicates shutdown in progress, "REBOOTING" - restarting, "SHUTDOWN" - indicate shutdown and pending termination, "TERMINATING" - indicates terminating in progress.
      */
     public $InstanceState;
 
     /**
      * @var string Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PublicIpAddresses;
 
     /**
-     * @var array Cloud tag information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Cloud Tag Information
      */
     public $CloudTags;
 
     /**
-     * @var MachineExtraInfo Host additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MachineExtraInfo Host Additional Information
      */
     public $MachineExtraInfo;
 
     /**
+     * @var string Host type
+     */
+    public $MachineType;
+
+    /**
+     * @var integer Availability zone ID.
+     */
+    public $RegionId;
+
+    /**
+     * @var integer Whether to create a snapshot for the fix task: 0: not created; other: created.
+     */
+    public $HasSnapshot;
+
+    /**
+     * @var string Last repair time
+     */
+    public $LatestFixTime;
+
+    /**
+     * @var string Description
+     */
+    public $DescriptionEn;
+
+    /**
      * @param integer $EventId Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Status. 0: pending; 1: ignored; 3: fixed; 5: detecting; 6: fixing; 7: rolling back; 8: fixing failed.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Status: 0 - pending processing; 1 - ignored; 3 - fixed; 5 - detecting; 6 - in remediation; 7 - rolling back; 8 - fix failed.
      * @param string $LastTime Last detection time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Level Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $AliasName Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Tags Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Description Description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $HostVersion Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsSupportAutoFix Whether automatic fixing is supported. 0: not supported; 1: supported; 2: client offline; 3: manual fixing supported for Ultimate Edition hosts; 4: not supported for this model; 5: fixing, 6: fixed; 7: detecting; 9: fixing failed; 10: ignored; 11: supported for Linux but not Windows; 12: supported for Windows but not Linux; 13: fixing failed but host is offline; 14: fixing failed but host is not of the Ultimate edition; 15: manually fixed.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FixStatusMsg Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $HostVersion Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+     * @param integer $IsSupportAutoFix Whether automatic fixing is supported 0: Cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Host can only be manually repaired if not flagship, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: In-progress detection, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not on linux, 13: Fixing failed but host is offline, 14: Fixing failed but host is not flagship, 15: Manually fixed
+     * @param string $FixStatusMsg Reason for failure
      * @param string $FirstDiscoveryTime First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceState Instance status. "PENDING": creating; "LAUNCH_FAILED" : creation failed; "RUNNING": running; "STOPPED": shut down; "STARTING": starting; "STOPPING": shutting down; "REBOOTING": restarting; "SHUTDOWN": shut down and pending termination; "TERMINATING": terminating.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceState Instance status: "PENDING" - creating, "LAUNCH_FAILED" - creation failed, "RUNNING" - running, "STOPPED" - shutdown, "STARTING" - starting, "STOPPING" - indicates shutdown in progress, "REBOOTING" - restarting, "SHUTDOWN" - indicate shutdown and pending termination, "TERMINATING" - indicates terminating in progress.
      * @param string $PublicIpAddresses Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $CloudTags Cloud tag information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineExtraInfo $MachineExtraInfo Host additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $CloudTags Cloud Tag Information
+     * @param MachineExtraInfo $MachineExtraInfo Host Additional Information
+     * @param string $MachineType Host type
+     * @param integer $RegionId Availability zone ID.
+     * @param integer $HasSnapshot Whether to create a snapshot for the fix task: 0: not created; other: created.
+     * @param string $LatestFixTime Last repair time
+     * @param string $DescriptionEn Description
      */
     function __construct()
     {
@@ -314,6 +298,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
             $this->MachineExtraInfo = new MachineExtraInfo();
             $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("HasSnapshot",$param) and $param["HasSnapshot"] !== null) {
+            $this->HasSnapshot = $param["HasSnapshot"];
+        }
+
+        if (array_key_exists("LatestFixTime",$param) and $param["LatestFixTime"] !== null) {
+            $this->LatestFixTime = $param["LatestFixTime"];
+        }
+
+        if (array_key_exists("DescriptionEn",$param) and $param["DescriptionEn"] !== null) {
+            $this->DescriptionEn = $param["DescriptionEn"];
         }
     }
 }

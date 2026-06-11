@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getIds() Obtain Array of brute force cracking event IDs (maximum: 100)
  * @method void setIds(array $Ids) Set Array of brute force cracking event IDs (maximum: 100)
+ * @method boolean getAll() Obtain Whether to delete all.
+ * @method void setAll(boolean $All) Set Whether to delete all.
  */
 class DeleteBruteAttacksRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteBruteAttacksRequest extends AbstractModel
     public $Ids;
 
     /**
+     * @var boolean Whether to delete all.
+     */
+    public $All;
+
+    /**
      * @param array $Ids Array of brute force cracking event IDs (maximum: 100)
+     * @param boolean $All Whether to delete all.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteBruteAttacksRequest extends AbstractModel
         }
         if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
             $this->Ids = $param["Ids"];
+        }
+
+        if (array_key_exists("All",$param) and $param["All"] !== null) {
+            $this->All = $param["All"];
         }
     }
 }

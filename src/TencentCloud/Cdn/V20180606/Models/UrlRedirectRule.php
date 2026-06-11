@@ -26,14 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPattern(string $Pattern) Set URL to be matched. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
  * @method string getRedirectUrl() Obtain Target URL, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
  * @method void setRedirectUrl(string $RedirectUrl) Set Target URL, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
- * @method string getRedirectHost() Obtain Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+ * @method string getRedirectHost() Obtain Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, "http://[current domain name]" will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setRedirectHost(string $RedirectHost) Set Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+ * @method void setRedirectHost(string $RedirectHost) Set Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, "http://[current domain name]" will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method boolean getFullMatch() Obtain Whether to use full-path matching or arbitrary matching
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setFullMatch(boolean $FullMatch) Set Whether to use full-path matching or arbitrary matching
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method boolean getRegex() Obtain 
+ * @method void setRegex(boolean $Regex) Set 
  */
 class UrlRedirectRule extends AbstractModel
 {
@@ -53,7 +55,7 @@ class UrlRedirectRule extends AbstractModel
     public $RedirectUrl;
 
     /**
-     * @var string Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+     * @var string Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, "http://[current domain name]" will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RedirectHost;
@@ -65,13 +67,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $FullMatch;
 
     /**
+     * @var boolean 
+     */
+    public $Regex;
+
+    /**
      * @param integer $RedirectStatusCode Redirect status code. Valid values: 301, 302
      * @param string $Pattern URL to be matched. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
      * @param string $RedirectUrl Target URL, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
-     * @param string $RedirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+     * @param string $RedirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, "http://[current domain name]" will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param boolean $FullMatch Whether to use full-path matching or arbitrary matching
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param boolean $Regex 
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("FullMatch",$param) and $param["FullMatch"] !== null) {
             $this->FullMatch = $param["FullMatch"];
+        }
+
+        if (array_key_exists("Regex",$param) and $param["Regex"] !== null) {
+            $this->Regex = $param["Regex"];
         }
     }
 }

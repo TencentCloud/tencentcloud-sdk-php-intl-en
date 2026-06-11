@@ -45,19 +45,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterType() Obtain Database type that the parameter template applies to.
 - REPLSET: replica set instance.
 - SHARD: shard instance.
--STANDALONE: Single-node instance.
+- STANDALONE: Single-node instance.
  * @method void setClusterType(string $ClusterType) Set Database type that the parameter template applies to.
 - REPLSET: replica set instance.
 - SHARD: shard instance.
--STANDALONE: Single-node instance.
+- STANDALONE: Single-node instance.
  * @method string getTplDesc() Obtain Parameter template description.
  * @method void setTplDesc(string $TplDesc) Set Parameter template description.
  * @method string getTplType() Obtain Template type.
--DEFAULT: System default template.
--CUSTOMIZE: custom template.
+- DEFAULT: System default template.
+- CUSTOMIZE: custom template.
  * @method void setTplType(string $TplType) Set Template type.
--DEFAULT: System default template.
--CUSTOMIZE: custom template.
+- DEFAULT: System default template.
+- CUSTOMIZE: custom template.
  */
 class ParamTpl extends AbstractModel
 {
@@ -88,7 +88,7 @@ class ParamTpl extends AbstractModel
      * @var string Database type that the parameter template applies to.
 - REPLSET: replica set instance.
 - SHARD: shard instance.
--STANDALONE: Single-node instance.
+- STANDALONE: Single-node instance.
      */
     public $ClusterType;
 
@@ -99,8 +99,8 @@ class ParamTpl extends AbstractModel
 
     /**
      * @var string Template type.
--DEFAULT: System default template.
--CUSTOMIZE: custom template.
+- DEFAULT: System default template.
+- CUSTOMIZE: custom template.
      */
     public $TplType;
 
@@ -119,11 +119,11 @@ class ParamTpl extends AbstractModel
      * @param string $ClusterType Database type that the parameter template applies to.
 - REPLSET: replica set instance.
 - SHARD: shard instance.
--STANDALONE: Single-node instance.
+- STANDALONE: Single-node instance.
      * @param string $TplDesc Parameter template description.
      * @param string $TplType Template type.
--DEFAULT: System default template.
--CUSTOMIZE: custom template.
+- DEFAULT: System default template.
+- CUSTOMIZE: custom template.
      */
     function __construct()
     {

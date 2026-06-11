@@ -20,26 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance refresh settings.
  *
- * @method RollingUpdateSettings getRollingUpdateSettings() Obtain Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
- * @method void setRollingUpdateSettings(RollingUpdateSettings $RollingUpdateSettings) Set Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
- * @method boolean getCheckInstanceTargetHealth() Obtain Whether to enable the backend service health check for the instance. Default value: FALSE. This parameter is valid only for the scaling group bound to an application-based CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
- * @method void setCheckInstanceTargetHealth(boolean $CheckInstanceTargetHealth) Set Whether to enable the backend service health check for the instance. Default value: FALSE. This parameter is valid only for the scaling group bound to an application-based CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+ * @method RollingUpdateSettings getRollingUpdateSettings() Obtain Rolling update settings. This parameter group must be configured if the RefreshMode parameter starts with ROLLING_UPDATE(e.g., ROLLING_UPDATE_RESET).
+ * @method void setRollingUpdateSettings(RollingUpdateSettings $RollingUpdateSettings) Set Rolling update settings. This parameter group must be configured if the RefreshMode parameter starts with ROLLING_UPDATE(e.g., ROLLING_UPDATE_RESET).
+ * @method boolean getCheckInstanceTargetHealth() Obtain Whether to enable the backend service health check for the instance. Default value: FALSE. 
+This parameter is valid only for the scaling group bound to CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+ * @method void setCheckInstanceTargetHealth(boolean $CheckInstanceTargetHealth) Set Whether to enable the backend service health check for the instance. Default value: FALSE. 
+This parameter is valid only for the scaling group bound to CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+ * @method integer getCheckInstanceTargetHealthTimeout() Obtain Specifies the timeout period for instance backend service health check, in seconds. 
+Value range: [60,7200]. Default value: 1800 seconds. 
+This parameter takes effect only when the CheckInstanceTargetHealth parameter is enabled.  If an instance health check times out, the instance will be marked as a refresh failure.
+ * @method void setCheckInstanceTargetHealthTimeout(integer $CheckInstanceTargetHealthTimeout) Set Specifies the timeout period for instance backend service health check, in seconds. 
+Value range: [60,7200]. Default value: 1800 seconds. 
+This parameter takes effect only when the CheckInstanceTargetHealth parameter is enabled.  If an instance health check times out, the instance will be marked as a refresh failure.
  */
 class RefreshSettings extends AbstractModel
 {
     /**
-     * @var RollingUpdateSettings Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
+     * @var RollingUpdateSettings Rolling update settings. This parameter group must be configured if the RefreshMode parameter starts with ROLLING_UPDATE(e.g., ROLLING_UPDATE_RESET).
      */
     public $RollingUpdateSettings;
 
     /**
-     * @var boolean Whether to enable the backend service health check for the instance. Default value: FALSE. This parameter is valid only for the scaling group bound to an application-based CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+     * @var boolean Whether to enable the backend service health check for the instance. Default value: FALSE. 
+This parameter is valid only for the scaling group bound to CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
      */
     public $CheckInstanceTargetHealth;
 
     /**
-     * @param RollingUpdateSettings $RollingUpdateSettings Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
-     * @param boolean $CheckInstanceTargetHealth Whether to enable the backend service health check for the instance. Default value: FALSE. This parameter is valid only for the scaling group bound to an application-based CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+     * @var integer Specifies the timeout period for instance backend service health check, in seconds. 
+Value range: [60,7200]. Default value: 1800 seconds. 
+This parameter takes effect only when the CheckInstanceTargetHealth parameter is enabled.  If an instance health check times out, the instance will be marked as a refresh failure.
+     */
+    public $CheckInstanceTargetHealthTimeout;
+
+    /**
+     * @param RollingUpdateSettings $RollingUpdateSettings Rolling update settings. This parameter group must be configured if the RefreshMode parameter starts with ROLLING_UPDATE(e.g., ROLLING_UPDATE_RESET).
+     * @param boolean $CheckInstanceTargetHealth Whether to enable the backend service health check for the instance. Default value: FALSE. 
+This parameter is valid only for the scaling group bound to CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+     * @param integer $CheckInstanceTargetHealthTimeout Specifies the timeout period for instance backend service health check, in seconds. 
+Value range: [60,7200]. Default value: 1800 seconds. 
+This parameter takes effect only when the CheckInstanceTargetHealth parameter is enabled.  If an instance health check times out, the instance will be marked as a refresh failure.
      */
     function __construct()
     {
@@ -61,6 +81,10 @@ class RefreshSettings extends AbstractModel
 
         if (array_key_exists("CheckInstanceTargetHealth",$param) and $param["CheckInstanceTargetHealth"] !== null) {
             $this->CheckInstanceTargetHealth = $param["CheckInstanceTargetHealth"];
+        }
+
+        if (array_key_exists("CheckInstanceTargetHealthTimeout",$param) and $param["CheckInstanceTargetHealthTimeout"] !== null) {
+            $this->CheckInstanceTargetHealthTimeout = $param["CheckInstanceTargetHealthTimeout"];
         }
     }
 }

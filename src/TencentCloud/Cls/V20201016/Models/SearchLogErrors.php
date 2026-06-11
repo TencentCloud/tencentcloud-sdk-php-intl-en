@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Error information for multi-log topic search
  *
- * @method string getTopicId() Obtain Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setTopicId(string $TopicId) Set Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getErrorMsg() Obtain Error MessageNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setErrorMsg(string $ErrorMsg) Set Error MessageNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getErrorCodeStr() Obtain Error CodeNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setErrorCodeStr(string $ErrorCodeStr) Set Error CodeNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTopicId() Obtain Log topic ID
+ * @method void setTopicId(string $TopicId) Set Log topic ID
+ * @method string getErrorMsg() Obtain Error message
+ * @method void setErrorMsg(string $ErrorMsg) Set Error message
+ * @method string getErrorCodeStr() Obtain Error code.
+ * @method void setErrorCodeStr(string $ErrorCodeStr) Set Error code.
  */
 class SearchLogErrors extends AbstractModel
 {
     /**
-     * @var string Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Log topic ID
      */
     public $TopicId;
 
     /**
-     * @var string Error MessageNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Error message
      */
     public $ErrorMsg;
 
     /**
-     * @var string Error CodeNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Error code.
      */
     public $ErrorCodeStr;
 
     /**
-     * @param string $TopicId Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ErrorMsg Error MessageNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ErrorCodeStr Error CodeNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TopicId Log topic ID
+     * @param string $ErrorMsg Error message
+     * @param string $ErrorCodeStr Error code.
      */
     function __construct()
     {

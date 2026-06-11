@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateIntegrateCluster request structure.
  *
- * @method string getZone() Obtain Availability zone
- * @method void setZone(string $Zone) Set Availability zone
+ * @method string getZone() Obtain Availability zone.
+ * @method void setZone(string $Zone) Set Availability zone.
  * @method string getVpcId() Obtain Specifies the ID of the VPC network it belongs to.
  * @method void setVpcId(string $VpcId) Set Specifies the ID of the VPC network it belongs to.
  * @method string getSubnetId() Obtain Subnet ID.
@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
 <li>Specifies the available values for MYSQL: 5.7, 8.0.</li>.
  * @method void setDbVersion(string $DbVersion) Set Database version. valid values:. 
 <li>Specifies the available values for MYSQL: 5.7, 8.0.</li>.
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method integer getProjectId() Obtain Project ID.
+ * @method void setProjectId(integer $ProjectId) Set Project ID.
  * @method string getClusterName() Obtain Cluster name, length less than 64 characters. each character value ranges from uppercase/lowercase letters, digits, special symbols ('-','_','.').
  * @method void setClusterName(string $ClusterName) Set Cluster name, length less than 64 characters. each character value ranges from uppercase/lowercase letters, digits, special symbols ('-','_','.').
- * @method string getAdminPassword() Obtain Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/ with any three types).
- * @method void setAdminPassword(string $AdminPassword) Set Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/ with any three types).
+ * @method string getAdminPassword() Obtain Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
+ * @method void setAdminPassword(string $AdminPassword) Set Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
  * @method integer getPort() Obtain Port, default 3306, in the range of [0, 65535).
  * @method void setPort(integer $Port) Set Port, default 3306, in the range of [0, 65535).
  * @method integer getPayMode() Obtain Billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
@@ -96,7 +96,7 @@ Rollback and clone do not support monthly subscription storage.
 class CreateIntegrateClusterRequest extends AbstractModel
 {
     /**
-     * @var string Availability zone
+     * @var string Availability zone.
      */
     public $Zone;
 
@@ -117,7 +117,7 @@ class CreateIntegrateClusterRequest extends AbstractModel
     public $DbVersion;
 
     /**
-     * @var integer Project ID
+     * @var integer Project ID.
      */
     public $ProjectId;
 
@@ -127,7 +127,7 @@ class CreateIntegrateClusterRequest extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/ with any three types).
+     * @var string Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
      */
     public $AdminPassword;
 
@@ -256,14 +256,14 @@ Rollback and clone do not support monthly subscription storage.
     public $StorageVersion;
 
     /**
-     * @param string $Zone Availability zone
+     * @param string $Zone Availability zone.
      * @param string $VpcId Specifies the ID of the VPC network it belongs to.
      * @param string $SubnetId Subnet ID.
      * @param string $DbVersion Database version. valid values:. 
 <li>Specifies the available values for MYSQL: 5.7, 8.0.</li>.
-     * @param integer $ProjectId Project ID
+     * @param integer $ProjectId Project ID.
      * @param string $ClusterName Cluster name, length less than 64 characters. each character value ranges from uppercase/lowercase letters, digits, special symbols ('-','_','.').
-     * @param string $AdminPassword Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/ with any three types).
+     * @param string $AdminPassword Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
      * @param integer $Port Port, default 3306, in the range of [0, 65535).
      * @param integer $PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
      * @param integer $Count Number of clusters to purchase. value range: [1,3]. default is 1.

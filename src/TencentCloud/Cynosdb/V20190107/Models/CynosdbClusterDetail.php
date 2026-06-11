@@ -18,36 +18,36 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cluster details
+ * Cluster details.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getClusterName() Obtain Cluster name
- * @method void setClusterName(string $ClusterName) Set Cluster name
- * @method string getRegion() Obtain Region
- * @method void setRegion(string $Region) Set Region
- * @method string getZone() Obtain AZ
- * @method void setZone(string $Zone) Set AZ
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method string getClusterName() Obtain Cluster name.
+ * @method void setClusterName(string $ClusterName) Set Cluster name.
+ * @method string getRegion() Obtain Region.
+ * @method void setRegion(string $Region) Set Region.
+ * @method string getZone() Obtain AZ.
+ * @method void setZone(string $Zone) Set AZ.
  * @method string getPhysicalZone() Obtain Physical availability zone.
  * @method void setPhysicalZone(string $PhysicalZone) Set Physical availability zone.
  * @method string getStatus() Obtain Status. supported values are as follows:.
--Creating: creating.
+- Creating: creating.
 - running: running.
--isolating.
--Isolated: isolated.
--activating: restore from recycle bin.
--offlining: offline.
--offlined: offline.
+- isolating.
+- Isolated: isolated.
+- activating: restore from recycle bin.
+- offlining: offline.
+- offlined: offline.
 - deleting: deleting.
 - deleted: deleted.
  * @method void setStatus(string $Status) Set Status. supported values are as follows:.
--Creating: creating.
+- Creating: creating.
 - running: running.
--isolating.
--Isolated: isolated.
--activating: restore from recycle bin.
--offlining: offline.
--offlined: offline.
+- isolating.
+- Isolated: isolated.
+- activating: restore from recycle bin.
+- offlining: offline.
+- offlined: offline.
 - deleting: deleting.
 - deleted: deleted.
  * @method string getStatusDesc() Obtain Status description
@@ -72,32 +72,32 @@ pausing
  * @method void setMinStorageSize(integer $MinStorageSize) Set Specifies the minimum storage specification, in gb.
  * @method integer getStoragePayMode() Obtain Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
  * @method void setStoragePayMode(integer $StoragePayMode) Set Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
- * @method string getVpcName() Obtain VPC name
- * @method void setVpcName(string $VpcName) Set VPC name
- * @method string getVpcId() Obtain Unique VPC ID
- * @method void setVpcId(string $VpcId) Set Unique VPC ID
- * @method string getSubnetName() Obtain Subnet name
- * @method void setSubnetName(string $SubnetName) Set Subnet name
- * @method string getSubnetId() Obtain Subnet ID
- * @method void setSubnetId(string $SubnetId) Set Subnet ID
- * @method string getCharset() Obtain Character set
- * @method void setCharset(string $Charset) Set Character set
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getDbType() Obtain Database type
- * @method void setDbType(string $DbType) Set Database type
+ * @method string getVpcName() Obtain VPC name.
+ * @method void setVpcName(string $VpcName) Set VPC name.
+ * @method string getVpcId() Obtain Unique VPC ID.
+ * @method void setVpcId(string $VpcId) Set Unique VPC ID.
+ * @method string getSubnetName() Obtain Subnet name.
+ * @method void setSubnetName(string $SubnetName) Set Subnet name.
+ * @method string getSubnetId() Obtain Subnet ID.
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID.
+ * @method string getCharset() Obtain Character set.
+ * @method void setCharset(string $Charset) Set Character set.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method string getDbType() Obtain Database type.
+ * @method void setDbType(string $DbType) Set Database type.
  * @method string getDbMode() Obtain Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
  * @method void setDbMode(string $DbMode) Set Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
- * @method string getDbVersion() Obtain Database version
- * @method void setDbVersion(string $DbVersion) Set Database version
+ * @method string getDbVersion() Obtain Database version.
+ * @method void setDbVersion(string $DbVersion) Set Database version.
  * @method integer getStorageLimit() Obtain Specifies the maximum storage space.
  * @method void setStorageLimit(integer $StorageLimit) Set Specifies the maximum storage space.
- * @method integer getUsedStorage() Obtain Used capacity
- * @method void setUsedStorage(integer $UsedStorage) Set Used capacity
- * @method string getVip() Obtain VIP
- * @method void setVip(string $Vip) Set VIP
- * @method integer getVport() Obtain vport
- * @method void setVport(integer $Vport) Set vport
+ * @method integer getUsedStorage() Obtain Used capacity.
+ * @method void setUsedStorage(integer $UsedStorage) Set Used capacity.
+ * @method string getVip() Obtain VIP.
+ * @method void setVip(string $Vip) Set VIP.
+ * @method integer getVport() Obtain vport.
+ * @method void setVport(integer $Vport) Set vport.
  * @method array getRoAddr() Obtain VIP and vport of the read-only instance in a cluster.
  * @method void setRoAddr(array $RoAddr) Set VIP and vport of the read-only instance in a cluster.
  * @method Ability getAbility() Obtain Functions supported by the cluster.
@@ -116,16 +116,16 @@ pausing
  * @method void setMasterZone(string $MasterZone) Set Primary AZ.
  * @method array getSlaveZones() Obtain Availability zone list.
  * @method void setSlaveZones(array $SlaveZones) Set Availability zone list.
- * @method array getInstanceSet() Obtain Instance information
- * @method void setInstanceSet(array $InstanceSet) Set Instance information
- * @method integer getPayMode() Obtain Billing mode
- * @method void setPayMode(integer $PayMode) Set Billing mode
- * @method string getPeriodEndTime() Obtain Expiration time
- * @method void setPeriodEndTime(string $PeriodEndTime) Set Expiration time
- * @method integer getProjectID() Obtain Project ID
- * @method void setProjectID(integer $ProjectID) Set Project ID
- * @method array getResourceTags() Obtain Array of tags bound to instance
- * @method void setResourceTags(array $ResourceTags) Set Array of tags bound to instance
+ * @method array getInstanceSet() Obtain Instance information.
+ * @method void setInstanceSet(array $InstanceSet) Set Instance information.
+ * @method integer getPayMode() Obtain Billing mode.
+ * @method void setPayMode(integer $PayMode) Set Billing mode.
+ * @method string getPeriodEndTime() Obtain Expiration time.
+ * @method void setPeriodEndTime(string $PeriodEndTime) Set Expiration time.
+ * @method integer getProjectID() Obtain Project ID.
+ * @method void setProjectID(integer $ProjectID) Set Project ID.
+ * @method array getResourceTags() Obtain Array of tags bound to instance.
+ * @method void setResourceTags(array $ResourceTags) Set Array of tags bound to instance.
  * @method string getProxyStatus() Obtain Proxy status.
  * @method void setProxyStatus(string $ProxyStatus) Set Proxy status.
  * @method string getLogBin() Obtain binlog switch. valid values: ON, OFF.
@@ -170,22 +170,22 @@ If empty, the field is invalid.
 class CynosdbClusterDetail extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var string Cluster name
+     * @var string Cluster name.
      */
     public $ClusterName;
 
     /**
-     * @var string Region
+     * @var string Region.
      */
     public $Region;
 
     /**
-     * @var string AZ
+     * @var string AZ.
      */
     public $Zone;
 
@@ -196,13 +196,13 @@ class CynosdbClusterDetail extends AbstractModel
 
     /**
      * @var string Status. supported values are as follows:.
--Creating: creating.
+- Creating: creating.
 - running: running.
--isolating.
--Isolated: isolated.
--activating: restore from recycle bin.
--offlining: offline.
--offlined: offline.
+- isolating.
+- Isolated: isolated.
+- activating: restore from recycle bin.
+- offlining: offline.
+- offlined: offline.
 - deleting: deleting.
 - deleted: deleted.
      */
@@ -248,37 +248,37 @@ pausing
     public $StoragePayMode;
 
     /**
-     * @var string VPC name
+     * @var string VPC name.
      */
     public $VpcName;
 
     /**
-     * @var string Unique VPC ID
+     * @var string Unique VPC ID.
      */
     public $VpcId;
 
     /**
-     * @var string Subnet name
+     * @var string Subnet name.
      */
     public $SubnetName;
 
     /**
-     * @var string Subnet ID
+     * @var string Subnet ID.
      */
     public $SubnetId;
 
     /**
-     * @var string Character set
+     * @var string Character set.
      */
     public $Charset;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Database type
+     * @var string Database type.
      */
     public $DbType;
 
@@ -288,7 +288,7 @@ pausing
     public $DbMode;
 
     /**
-     * @var string Database version
+     * @var string Database version.
      */
     public $DbVersion;
 
@@ -298,17 +298,17 @@ pausing
     public $StorageLimit;
 
     /**
-     * @var integer Used capacity
+     * @var integer Used capacity.
      */
     public $UsedStorage;
 
     /**
-     * @var string VIP
+     * @var string VIP.
      */
     public $Vip;
 
     /**
-     * @var integer vport
+     * @var integer vport.
      */
     public $Vport;
 
@@ -358,27 +358,27 @@ pausing
     public $SlaveZones;
 
     /**
-     * @var array Instance information
+     * @var array Instance information.
      */
     public $InstanceSet;
 
     /**
-     * @var integer Billing mode
+     * @var integer Billing mode.
      */
     public $PayMode;
 
     /**
-     * @var string Expiration time
+     * @var string Expiration time.
      */
     public $PeriodEndTime;
 
     /**
-     * @var integer Project ID
+     * @var integer Project ID.
      */
     public $ProjectID;
 
     /**
-     * @var array Array of tags bound to instance
+     * @var array Array of tags bound to instance.
      */
     public $ResourceTags;
 
@@ -471,19 +471,19 @@ If empty, the field is invalid.
     public $IsOpenTDE;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param string $ClusterName Cluster name
-     * @param string $Region Region
-     * @param string $Zone AZ
+     * @param string $ClusterId Cluster ID.
+     * @param string $ClusterName Cluster name.
+     * @param string $Region Region.
+     * @param string $Zone AZ.
      * @param string $PhysicalZone Physical availability zone.
      * @param string $Status Status. supported values are as follows:.
--Creating: creating.
+- Creating: creating.
 - running: running.
--isolating.
--Isolated: isolated.
--activating: restore from recycle bin.
--offlining: offline.
--offlined: offline.
+- isolating.
+- Isolated: isolated.
+- activating: restore from recycle bin.
+- offlining: offline.
+- offlined: offline.
 - deleting: deleting.
 - deleted: deleted.
      * @param string $StatusDesc Status description
@@ -497,19 +497,19 @@ pausing
      * @param integer $MaxStorageSize Maximum storage specification, in gb.
      * @param integer $MinStorageSize Specifies the minimum storage specification, in gb.
      * @param integer $StoragePayMode Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
-     * @param string $VpcName VPC name
-     * @param string $VpcId Unique VPC ID
-     * @param string $SubnetName Subnet name
-     * @param string $SubnetId Subnet ID
-     * @param string $Charset Character set
-     * @param string $CreateTime Creation time
-     * @param string $DbType Database type
+     * @param string $VpcName VPC name.
+     * @param string $VpcId Unique VPC ID.
+     * @param string $SubnetName Subnet name.
+     * @param string $SubnetId Subnet ID.
+     * @param string $Charset Character set.
+     * @param string $CreateTime Creation time.
+     * @param string $DbType Database type.
      * @param string $DbMode Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
-     * @param string $DbVersion Database version
+     * @param string $DbVersion Database version.
      * @param integer $StorageLimit Specifies the maximum storage space.
-     * @param integer $UsedStorage Used capacity
-     * @param string $Vip VIP
-     * @param integer $Vport vport
+     * @param integer $UsedStorage Used capacity.
+     * @param string $Vip VIP.
+     * @param integer $Vport vport.
      * @param array $RoAddr VIP and vport of the read-only instance in a cluster.
      * @param Ability $Ability Functions supported by the cluster.
      * @param string $CynosVersion Specifies the cynos version.
@@ -519,11 +519,11 @@ pausing
      * @param array $Tasks Task list.
      * @param string $MasterZone Primary AZ.
      * @param array $SlaveZones Availability zone list.
-     * @param array $InstanceSet Instance information
-     * @param integer $PayMode Billing mode
-     * @param string $PeriodEndTime Expiration time
-     * @param integer $ProjectID Project ID
-     * @param array $ResourceTags Array of tags bound to instance
+     * @param array $InstanceSet Instance information.
+     * @param integer $PayMode Billing mode.
+     * @param string $PeriodEndTime Expiration time.
+     * @param integer $ProjectID Project ID.
+     * @param array $ResourceTags Array of tags bound to instance.
      * @param string $ProxyStatus Proxy status.
      * @param string $LogBin binlog switch. valid values: ON, OFF.
      * @param string $IsSkipTrade Specifies whether to skip the transaction.

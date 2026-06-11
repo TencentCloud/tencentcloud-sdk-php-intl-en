@@ -21,41 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * View vulnerability fixing details
  *
  * @method integer getVulId() Obtain Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVulId(integer $VulId) Set Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVulName() Obtain Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVulName(string $VulName) Set Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getProgress() Obtain Vulnerability fixing progress: 1-100;
  * @method void setProgress(integer $Progress) Set Vulnerability fixing progress: 1-100;
  * @method array getHostList() Obtain Vulnerability fixing status for corresponding hosts
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostList(array $HostList) Set Vulnerability fixing status for corresponding hosts
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getFailCnt() Obtain Number of hosts with failed vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFailCnt(integer $FailCnt) Set Number of hosts with failed vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFixSuccessCnt() Obtain Number of hosts with successful vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFixSuccessCnt(integer $FixSuccessCnt) Set Number of hosts with successful vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFixMethod() Obtain Repair method: 0 component update or patch installation, 1 disable service
- * @method void setFixMethod(integer $FixMethod) Set Repair method: 0 component update or patch installation, 1 disable service
+ * @method integer getFixSuccessCnt() Obtain Number of successful repairs
+ * @method void setFixSuccessCnt(integer $FixSuccessCnt) Set Number of successful repairs
+ * @method integer getFixMethod() Obtain Repair method. 0: Update components or install patches. 1: Disable service.
+ * @method void setFixMethod(integer $FixMethod) Set Repair method. 0: Update components or install patches. 1: Disable service.
+ * @method integer getKbId() Obtain kb ID
+ * @method void setKbId(integer $KbId) Set kb ID
+ * @method string getKbNumber() Obtain kb number
+ * @method void setKbNumber(string $KbNumber) Set kb number
+ * @method string getKbName() Obtain kb name
+ * @method void setKbName(string $KbName) Set kb name
+ * @method array getPreKbList() Obtain Pre kb list
+ * @method void setPreKbList(array $PreKbList) Set Pre kb list
  */
 class VulFixStatusInfo extends AbstractModel
 {
     /**
      * @var integer Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VulId;
 
     /**
      * @var string Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VulName;
 
@@ -66,40 +62,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var array Vulnerability fixing status for corresponding hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostList;
 
     /**
      * @var integer Number of hosts with failed vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FailCnt;
 
     /**
-     * @var integer Number of hosts with successful vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of successful repairs
      */
     public $FixSuccessCnt;
 
     /**
-     * @var integer Repair method: 0 component update or patch installation, 1 disable service
+     * @var integer Repair method. 0: Update components or install patches. 1: Disable service.
      */
     public $FixMethod;
 
     /**
+     * @var integer kb ID
+     */
+    public $KbId;
+
+    /**
+     * @var string kb number
+     */
+    public $KbNumber;
+
+    /**
+     * @var string kb name
+     */
+    public $KbName;
+
+    /**
+     * @var array Pre kb list
+     */
+    public $PreKbList;
+
+    /**
      * @param integer $VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Progress Vulnerability fixing progress: 1-100;
      * @param array $HostList Vulnerability fixing status for corresponding hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $FailCnt Number of hosts with failed vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $FixSuccessCnt Number of hosts with successful vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $FixMethod Repair method: 0 component update or patch installation, 1 disable service
+     * @param integer $FixSuccessCnt Number of successful repairs
+     * @param integer $FixMethod Repair method. 0: Update components or install patches. 1: Disable service.
+     * @param integer $KbId kb ID
+     * @param string $KbNumber kb number
+     * @param string $KbName kb name
+     * @param array $PreKbList Pre kb list
      */
     function __construct()
     {
@@ -145,6 +157,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("FixMethod",$param) and $param["FixMethod"] !== null) {
             $this->FixMethod = $param["FixMethod"];
+        }
+
+        if (array_key_exists("KbId",$param) and $param["KbId"] !== null) {
+            $this->KbId = $param["KbId"];
+        }
+
+        if (array_key_exists("KbNumber",$param) and $param["KbNumber"] !== null) {
+            $this->KbNumber = $param["KbNumber"];
+        }
+
+        if (array_key_exists("KbName",$param) and $param["KbName"] !== null) {
+            $this->KbName = $param["KbName"];
+        }
+
+        if (array_key_exists("PreKbList",$param) and $param["PreKbList"] !== null) {
+            $this->PreKbList = $param["PreKbList"];
         }
     }
 }

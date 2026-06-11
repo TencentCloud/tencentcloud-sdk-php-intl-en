@@ -20,98 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTopic request structure.
  *
- * @method string getLogsetId() Obtain Logset ID
- * @method void setLogsetId(string $LogsetId) Set Logset ID
- * @method string getTopicName() Obtain Log topic name
- * @method void setTopicName(string $TopicName) Set Log topic name
- * @method integer getPartitionCount() Obtain Number of log topic partitions. Default value: 1. Maximum value: 10
- * @method void setPartitionCount(integer $PartitionCount) Set Number of log topic partitions. Default value: 1. Maximum value: 10
- * @method array getTags() Obtain Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key.
- * @method void setTags(array $Tags) Set Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key.
- * @method boolean getAutoSplit() Obtain Whether to enable automatic split. Default value: true
- * @method void setAutoSplit(boolean $AutoSplit) Set Whether to enable automatic split. Default value: true
- * @method integer getMaxSplitPartitions() Obtain Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
- * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) Set Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
- * @method string getStorageType() Obtain Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
- * @method void setStorageType(string $StorageType) Set Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
- * @method integer getPeriod() Obtain lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
- * @method void setPeriod(integer $Period) Set lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
- * @method string getDescribes() Obtain Log topic description
- * @method void setDescribes(string $Describes) Set Log topic description
- * @method integer getHotPeriod() Obtain 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
- * @method void setHotPeriod(integer $HotPeriod) Set 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
- * @method boolean getIsWebTracking() Obtain Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
- * @method void setIsWebTracking(boolean $IsWebTracking) Set Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+ * @method string getLogsetId() Obtain <p>Logset ID</p><ul><li>Obtain the logset Id through <a href="https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1">Get Logset List</a>.</li></ul>
+ * @method void setLogsetId(string $LogsetId) Set <p>Logset ID</p><ul><li>Obtain the logset Id through <a href="https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1">Get Logset List</a>.</li></ul>
+ * @method string getTopicName() Obtain <p>Topic name<br>Name limitation</p><ul><li>Cannot be an empty string</li><li>Cannot contain character '|'</li><li>Cannot use the following names ["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]</li></ul>
+ * @method void setTopicName(string $TopicName) Set <p>Topic name<br>Name limitation</p><ul><li>Cannot be an empty string</li><li>Cannot contain character '|'</li><li>Cannot use the following names ["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]</li></ul>
+ * @method integer getPartitionCount() Obtain <p>Topic partition count. Default creation is 1 partition. Supports a maximum of 10 partitions.</p>
+ * @method void setPartitionCount(integer $PartitionCount) Set <p>Topic partition count. Default creation is 1 partition. Supports a maximum of 10 partitions.</p>
+ * @method array getTags() Obtain <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding topic. Up to 10 tag key-value pairs are supported, and the same resource can only be bound to the same tag key.</p>
+ * @method void setTags(array $Tags) Set <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding topic. Up to 10 tag key-value pairs are supported, and the same resource can only be bound to the same tag key.</p>
+ * @method boolean getAutoSplit() Obtain <p>Whether to enable auto-split, true by default</p>
+ * @method void setAutoSplit(boolean $AutoSplit) Set <p>Whether to enable auto-split, true by default</p>
+ * @method integer getMaxSplitPartitions() Obtain <p>When auto-split is enabled, the maximum number of partitions allowed for each topic is 50 by default.</p>
+ * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) Set <p>When auto-split is enabled, the maximum number of partitions allowed for each topic is 50 by default.</p>
+ * @method string getStorageType() Obtain <p>Log topic storage type. Available values: hot (standard storage), cold (infrequent storage). Default hot. This configuration is not supported for metric topics.</p>
+ * @method void setStorageType(string $StorageType) Set <p>Log topic storage type. Available values: hot (standard storage), cold (infrequent storage). Default hot. This configuration is not supported for metric topics.</p>
+ * @method integer getPeriod() Obtain <p>Storage time, in days.</p><ul><li>Log topic: When logs are collected to standard storage, the supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Log topic: When logs are collected to infrequently accessed storage, the supported range is 7 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Metric topic: The supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li></ul>
+ * @method void setPeriod(integer $Period) Set <p>Storage time, in days.</p><ul><li>Log topic: When logs are collected to standard storage, the supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Log topic: When logs are collected to infrequently accessed storage, the supported range is 7 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Metric topic: The supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li></ul>
+ * @method string getDescribes() Obtain <p>Topic description</p>
+ * @method void setDescribes(string $Describes) Set <p>Topic description</p>
+ * @method integer getHotPeriod() Obtain <p>0: Log topic disables log settlement.<br>Non-0: Number of days for standard storage after log settlement is enabled in the log topic. HotPeriod needs to be greater than or equal to 7 and less than Period.<br>Effective only when StorageType is hot. This configuration is not supported for metric topics.</p>
+ * @method void setHotPeriod(integer $HotPeriod) Set <p>0: Log topic disables log settlement.<br>Non-0: Number of days for standard storage after log settlement is enabled in the log topic. HotPeriod needs to be greater than or equal to 7 and less than Period.<br>Effective only when StorageType is hot. This configuration is not supported for metric topics.</p>
+ * @method integer getEncryption() Obtain <p>Encryption-related parameters. Encrypted regions and allowlisted users can pass this parameter, which cannot be passed in other scenarios.<br>0 or not passed: no encryption<br>1: kms-cls cloud service key encryption</p><p>Supported regions: ap-beijing, ap-guangzhou, ap-shanghai, ap-singapore, ap-bangkok, ap-jakarta, eu-frankfurt, ap-seoul, ap-tokyo</p>
+ * @method void setEncryption(integer $Encryption) Set <p>Encryption-related parameters. Encrypted regions and allowlisted users can pass this parameter, which cannot be passed in other scenarios.<br>0 or not passed: no encryption<br>1: kms-cls cloud service key encryption</p><p>Supported regions: ap-beijing, ap-guangzhou, ap-shanghai, ap-singapore, ap-bangkok, ap-jakarta, eu-frankfurt, ap-seoul, ap-tokyo</p>
+ * @method integer getBizType() Obtain <p>Topic type</p><ul><li>0: Log topic, default value</li><li>1: Metric topic</li></ul>
+ * @method void setBizType(integer $BizType) Set <p>Topic type</p><ul><li>0: Log topic, default value</li><li>1: Metric topic</li></ul>
+ * @method string getTopicId() Obtain <p>Custom topic ID, format: custom part-User APPID. If this parameter is left empty, ID will be automatically generated.</p><ul><li>The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and must be 3 to 40 characters in length.</li><li>The trailing part requires the use of - to concatenate User APPID. APPID can be queried on the page https://console.cloud.tencent.com/developer.</li><li>If this field is specified, ensure uniqueness across all regions.</li></ul>
+ * @method void setTopicId(string $TopicId) Set <p>Custom topic ID, format: custom part-User APPID. If this parameter is left empty, ID will be automatically generated.</p><ul><li>The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and must be 3 to 40 characters in length.</li><li>The trailing part requires the use of - to concatenate User APPID. APPID can be queried on the page https://console.cloud.tencent.com/developer.</li><li>If this field is specified, ensure uniqueness across all regions.</li></ul>
+ * @method boolean getIsWebTracking() Obtain <p>Free authentication switch. False: turned off; true: turned on. Default false.<br>When enabled, anonymous access to the log topic will be supported for designated operations. For details, see <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a>. This configuration is not supported for metric topics.</p>
+ * @method void setIsWebTracking(boolean $IsWebTracking) Set <p>Free authentication switch. False: turned off; true: turned on. Default false.<br>When enabled, anonymous access to the log topic will be supported for designated operations. For details, see <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a>. This configuration is not supported for metric topics.</p>
+ * @method TopicExtendInfo getExtends() Obtain <p>Topic extended information</p>
+ * @method void setExtends(TopicExtendInfo $Extends) Set <p>Topic extended information</p>
+ * @method boolean getIsSourceFrom() Obtain <p>Enable logging of public network source IP and server receipt time</p>
+ * @method void setIsSourceFrom(boolean $IsSourceFrom) Set <p>Enable logging of public network source IP and server receipt time</p>
+ * @method integer getBillingMode() Obtain <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Raw log size billing (currently only supported for some customers)</li></ul><p>Default value: 0</p>
+ * @method void setBillingMode(integer $BillingMode) Set <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Raw log size billing (currently only supported for some customers)</li></ul><p>Default value: 0</p>
  */
 class CreateTopicRequest extends AbstractModel
 {
     /**
-     * @var string Logset ID
+     * @var string <p>Logset ID</p><ul><li>Obtain the logset Id through <a href="https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1">Get Logset List</a>.</li></ul>
      */
     public $LogsetId;
 
     /**
-     * @var string Log topic name
+     * @var string <p>Topic name<br>Name limitation</p><ul><li>Cannot be an empty string</li><li>Cannot contain character '|'</li><li>Cannot use the following names ["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]</li></ul>
      */
     public $TopicName;
 
     /**
-     * @var integer Number of log topic partitions. Default value: 1. Maximum value: 10
+     * @var integer <p>Topic partition count. Default creation is 1 partition. Supports a maximum of 10 partitions.</p>
      */
     public $PartitionCount;
 
     /**
-     * @var array Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key.
+     * @var array <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding topic. Up to 10 tag key-value pairs are supported, and the same resource can only be bound to the same tag key.</p>
      */
     public $Tags;
 
     /**
-     * @var boolean Whether to enable automatic split. Default value: true
+     * @var boolean <p>Whether to enable auto-split, true by default</p>
      */
     public $AutoSplit;
 
     /**
-     * @var integer Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
+     * @var integer <p>When auto-split is enabled, the maximum number of partitions allowed for each topic is 50 by default.</p>
      */
     public $MaxSplitPartitions;
 
     /**
-     * @var string Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+     * @var string <p>Log topic storage type. Available values: hot (standard storage), cold (infrequent storage). Default hot. This configuration is not supported for metric topics.</p>
      */
     public $StorageType;
 
     /**
-     * @var integer lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+     * @var integer <p>Storage time, in days.</p><ul><li>Log topic: When logs are collected to standard storage, the supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Log topic: When logs are collected to infrequently accessed storage, the supported range is 7 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Metric topic: The supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li></ul>
      */
     public $Period;
 
     /**
-     * @var string Log topic description
+     * @var string <p>Topic description</p>
      */
     public $Describes;
 
     /**
-     * @var integer 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
+     * @var integer <p>0: Log topic disables log settlement.<br>Non-0: Number of days for standard storage after log settlement is enabled in the log topic. HotPeriod needs to be greater than or equal to 7 and less than Period.<br>Effective only when StorageType is hot. This configuration is not supported for metric topics.</p>
      */
     public $HotPeriod;
 
     /**
-     * @var boolean Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+     * @var integer <p>Encryption-related parameters. Encrypted regions and allowlisted users can pass this parameter, which cannot be passed in other scenarios.<br>0 or not passed: no encryption<br>1: kms-cls cloud service key encryption</p><p>Supported regions: ap-beijing, ap-guangzhou, ap-shanghai, ap-singapore, ap-bangkok, ap-jakarta, eu-frankfurt, ap-seoul, ap-tokyo</p>
+     */
+    public $Encryption;
+
+    /**
+     * @var integer <p>Topic type</p><ul><li>0: Log topic, default value</li><li>1: Metric topic</li></ul>
+     */
+    public $BizType;
+
+    /**
+     * @var string <p>Custom topic ID, format: custom part-User APPID. If this parameter is left empty, ID will be automatically generated.</p><ul><li>The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and must be 3 to 40 characters in length.</li><li>The trailing part requires the use of - to concatenate User APPID. APPID can be queried on the page https://console.cloud.tencent.com/developer.</li><li>If this field is specified, ensure uniqueness across all regions.</li></ul>
+     */
+    public $TopicId;
+
+    /**
+     * @var boolean <p>Free authentication switch. False: turned off; true: turned on. Default false.<br>When enabled, anonymous access to the log topic will be supported for designated operations. For details, see <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a>. This configuration is not supported for metric topics.</p>
      */
     public $IsWebTracking;
 
     /**
-     * @param string $LogsetId Logset ID
-     * @param string $TopicName Log topic name
-     * @param integer $PartitionCount Number of log topic partitions. Default value: 1. Maximum value: 10
-     * @param array $Tags Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key.
-     * @param boolean $AutoSplit Whether to enable automatic split. Default value: true
-     * @param integer $MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
-     * @param string $StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
-     * @param integer $Period lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
-     * @param string $Describes Log topic description
-     * @param integer $HotPeriod 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
-     * @param boolean $IsWebTracking Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+     * @var TopicExtendInfo <p>Topic extended information</p>
+     */
+    public $Extends;
+
+    /**
+     * @var boolean <p>Enable logging of public network source IP and server receipt time</p>
+     */
+    public $IsSourceFrom;
+
+    /**
+     * @var integer <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Raw log size billing (currently only supported for some customers)</li></ul><p>Default value: 0</p>
+     */
+    public $BillingMode;
+
+    /**
+     * @param string $LogsetId <p>Logset ID</p><ul><li>Obtain the logset Id through <a href="https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1">Get Logset List</a>.</li></ul>
+     * @param string $TopicName <p>Topic name<br>Name limitation</p><ul><li>Cannot be an empty string</li><li>Cannot contain character '|'</li><li>Cannot use the following names ["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]</li></ul>
+     * @param integer $PartitionCount <p>Topic partition count. Default creation is 1 partition. Supports a maximum of 10 partitions.</p>
+     * @param array $Tags <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding topic. Up to 10 tag key-value pairs are supported, and the same resource can only be bound to the same tag key.</p>
+     * @param boolean $AutoSplit <p>Whether to enable auto-split, true by default</p>
+     * @param integer $MaxSplitPartitions <p>When auto-split is enabled, the maximum number of partitions allowed for each topic is 50 by default.</p>
+     * @param string $StorageType <p>Log topic storage type. Available values: hot (standard storage), cold (infrequent storage). Default hot. This configuration is not supported for metric topics.</p>
+     * @param integer $Period <p>Storage time, in days.</p><ul><li>Log topic: When logs are collected to standard storage, the supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Log topic: When logs are collected to infrequently accessed storage, the supported range is 7 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Metric topic: The supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li></ul>
+     * @param string $Describes <p>Topic description</p>
+     * @param integer $HotPeriod <p>0: Log topic disables log settlement.<br>Non-0: Number of days for standard storage after log settlement is enabled in the log topic. HotPeriod needs to be greater than or equal to 7 and less than Period.<br>Effective only when StorageType is hot. This configuration is not supported for metric topics.</p>
+     * @param integer $Encryption <p>Encryption-related parameters. Encrypted regions and allowlisted users can pass this parameter, which cannot be passed in other scenarios.<br>0 or not passed: no encryption<br>1: kms-cls cloud service key encryption</p><p>Supported regions: ap-beijing, ap-guangzhou, ap-shanghai, ap-singapore, ap-bangkok, ap-jakarta, eu-frankfurt, ap-seoul, ap-tokyo</p>
+     * @param integer $BizType <p>Topic type</p><ul><li>0: Log topic, default value</li><li>1: Metric topic</li></ul>
+     * @param string $TopicId <p>Custom topic ID, format: custom part-User APPID. If this parameter is left empty, ID will be automatically generated.</p><ul><li>The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and must be 3 to 40 characters in length.</li><li>The trailing part requires the use of - to concatenate User APPID. APPID can be queried on the page https://console.cloud.tencent.com/developer.</li><li>If this field is specified, ensure uniqueness across all regions.</li></ul>
+     * @param boolean $IsWebTracking <p>Free authentication switch. False: turned off; true: turned on. Default false.<br>When enabled, anonymous access to the log topic will be supported for designated operations. For details, see <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a>. This configuration is not supported for metric topics.</p>
+     * @param TopicExtendInfo $Extends <p>Topic extended information</p>
+     * @param boolean $IsSourceFrom <p>Enable logging of public network source IP and server receipt time</p>
+     * @param integer $BillingMode <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Raw log size billing (currently only supported for some customers)</li></ul><p>Default value: 0</p>
      */
     function __construct()
     {
@@ -171,8 +219,33 @@ class CreateTopicRequest extends AbstractModel
             $this->HotPeriod = $param["HotPeriod"];
         }
 
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = $param["Encryption"];
+        }
+
+        if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {
+            $this->BizType = $param["BizType"];
+        }
+
+        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
+            $this->TopicId = $param["TopicId"];
+        }
+
         if (array_key_exists("IsWebTracking",$param) and $param["IsWebTracking"] !== null) {
             $this->IsWebTracking = $param["IsWebTracking"];
+        }
+
+        if (array_key_exists("Extends",$param) and $param["Extends"] !== null) {
+            $this->Extends = new TopicExtendInfo();
+            $this->Extends->deserialize($param["Extends"]);
+        }
+
+        if (array_key_exists("IsSourceFrom",$param) and $param["IsSourceFrom"] !== null) {
+            $this->IsSourceFrom = $param["IsSourceFrom"];
+        }
+
+        if (array_key_exists("BillingMode",$param) and $param["BillingMode"] !== null) {
+            $this->BillingMode = $param["BillingMode"];
         }
     }
 }

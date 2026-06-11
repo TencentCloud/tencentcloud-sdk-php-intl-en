@@ -28,34 +28,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommandId(string $CommandId) Set Command ID.
  * @method string getTaskStatus() Obtain Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: canceling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
  * @method void setTaskStatus(string $TaskStatus) Set Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: canceling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method TaskResult getTaskResult() Obtain Execution result.
@@ -78,12 +78,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setErrorInfo(string $ErrorInfo) Set Error message displayed when the execution task fails.
  * @method string getInvocationSource() Obtain Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
  * @method void setInvocationSource(string $InvocationSource) Set Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
  * @method string getCommandName() Obtain Name of the executed command.
  * @method void setCommandName(string $CommandName) Set Name of the executed command.
  */
@@ -107,19 +107,19 @@ class InvocationTask extends AbstractModel
     /**
      * @var string Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: canceling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
      */
     public $TaskStatus;
 
@@ -168,8 +168,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @var string Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
      */
     public $InvocationSource;
 
@@ -184,19 +184,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CommandId Command ID.
      * @param string $TaskStatus Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: canceling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
      * @param string $InstanceId Instance ID.
      * @param TaskResult $TaskResult Execution result.
      * @param string $StartTime Task start time. format: YYYY-MM-DDThh:MM:ssZ.
@@ -209,8 +209,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ErrorInfo Error message displayed when the execution task fails.
      * @param string $InvocationSource Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
      * @param string $CommandName Name of the executed command.
      */
     function __construct()

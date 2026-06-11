@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Initial offset. Default value: `0`.
  * @method integer getLimit() Obtain Number of results to be obtained. Default value: `10`. Maximum value: `100`.
  * @method void setLimit(integer $Limit) Set Number of results to be obtained. Default value: `10`. Maximum value: `100`.
- * @method array getFilters() Obtain Filter list, which is supported by the `Name` field.
-RiskLevel
- * @method void setFilters(array $Filters) Set Filter list, which is supported by the `Name` field.
-RiskLevel
+ * @method array getFilters() Obtain Filter list. Name field support
+RiskLevel, AppId
+ * @method void setFilters(array $Filters) Set Filter list. Name field support
+RiskLevel, AppId
+ * @method string getAssetType() Obtain Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
+ * @method void setAssetType(string $AssetType) Set Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
  */
 class DescribeComplianceAssetPolicyItemListRequest extends AbstractModel
 {
@@ -49,17 +51,23 @@ class DescribeComplianceAssetPolicyItemListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array Filter list, which is supported by the `Name` field.
-RiskLevel
+     * @var array Filter list. Name field support
+RiskLevel, AppId
      */
     public $Filters;
+
+    /**
+     * @var string Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
+     */
+    public $AssetType;
 
     /**
      * @param integer $CustomerAssetId Customer asset ID
      * @param integer $Offset Initial offset. Default value: `0`.
      * @param integer $Limit Number of results to be obtained. Default value: `10`. Maximum value: `100`.
-     * @param array $Filters Filter list, which is supported by the `Name` field.
-RiskLevel
+     * @param array $Filters Filter list. Name field support
+RiskLevel, AppId
+     * @param string $AssetType Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
      */
     function __construct()
     {
@@ -93,6 +101,10 @@ RiskLevel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
+            $this->AssetType = $param["AssetType"];
         }
     }
 }

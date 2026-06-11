@@ -27,9 +27,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  * @method array getFilters() Obtain Filter criteria
-<li>Keywords - String - required: no - keyword (rule name)</li>
+<li>Name - String - required: no - rule name</li>
+<li>Rule - String - Required: no - Rule content</li>
+<li>Level - Int - required: no - threat level</li>
+<li>White - Int - Required: no - Type of allowlist</li>
+<li>RuleCategory - Int - required: no - policy type</li>
+<li>BashAction - Int - required: no - action</li>
+<li>Status - Int - required: no - effective status</li>
  * @method void setFilters(array $Filters) Set Filter criteria
-<li>Keywords - String - required: no - keyword (rule name)</li>
+<li>Name - String - required: no - rule name</li>
+<li>Rule - String - Required: no - Rule content</li>
+<li>Level - Int - required: no - threat level</li>
+<li>White - Int - Required: no - Type of allowlist</li>
+<li>RuleCategory - Int - required: no - policy type</li>
+<li>BashAction - Int - required: no - action</li>
+<li>Status - Int - required: no - effective status</li>
  */
 class DescribeBashRulesRequest extends AbstractModel
 {
@@ -50,7 +62,13 @@ class DescribeBashRulesRequest extends AbstractModel
 
     /**
      * @var array Filter criteria
-<li>Keywords - String - required: no - keyword (rule name)</li>
+<li>Name - String - required: no - rule name</li>
+<li>Rule - String - Required: no - Rule content</li>
+<li>Level - Int - required: no - threat level</li>
+<li>White - Int - Required: no - Type of allowlist</li>
+<li>RuleCategory - Int - required: no - policy type</li>
+<li>BashAction - Int - required: no - action</li>
+<li>Status - Int - required: no - effective status</li>
      */
     public $Filters;
 
@@ -59,7 +77,13 @@ class DescribeBashRulesRequest extends AbstractModel
      * @param integer $Limit Number of returned entries. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
      * @param array $Filters Filter criteria
-<li>Keywords - String - required: no - keyword (rule name)</li>
+<li>Name - String - required: no - rule name</li>
+<li>Rule - String - Required: no - Rule content</li>
+<li>Level - Int - required: no - threat level</li>
+<li>White - Int - Required: no - Type of allowlist</li>
+<li>RuleCategory - Int - required: no - policy type</li>
+<li>BashAction - Int - required: no - action</li>
+<li>Status - Int - required: no - effective status</li>
      */
     function __construct()
     {

@@ -33,53 +33,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRuleName() Obtain Rule
  * @method void setRuleName(string $RuleName) Set Rule
  * @method string getDetectResultDesc() Obtain Check result description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDetectResultDesc(string $DetectResultDesc) Set Check result description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getLevel() Obtain Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLevel(integer $Level) Set Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getDetectStatus() Obtain Detection Status. 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDetectStatus(integer $DetectStatus) Set Detection Status. 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getHostId() Obtain Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostId(string $HostId) Set Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHostName() Obtain Host name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostName(string $HostName) Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHostName() Obtain host name
+ * @method void setHostName(string $HostName) Set host name
  * @method string getHostIp() Obtain Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostIp(string $HostIp) Set Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getWanIp() Obtain Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWanIp(string $WanIp) Set Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFirstTime() Obtain First Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFirstTime(string $FirstTime) Set First Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getLastTime() Obtain Last Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLastTime(string $LastTime) Set Last Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getCanBeFixed() Obtain Can Be Fixed or Not
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCanBeFixed(integer $CanBeFixed) Set Can Be Fixed or Not
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUuid() Obtain Host Security UUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUuid(string $Uuid) Set Host Security UUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BaselineItem extends AbstractModel
 {
@@ -115,73 +91,61 @@ class BaselineItem extends AbstractModel
 
     /**
      * @var string Check result description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DetectResultDesc;
 
     /**
      * @var integer Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Level;
 
     /**
      * @var integer Detection Status. 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DetectStatus;
 
     /**
      * @var string Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostId;
 
     /**
-     * @var string Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string host name
      */
     public $HostName;
 
     /**
      * @var string Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostIp;
 
     /**
      * @var string Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $WanIp;
 
     /**
      * @var string First Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FirstTime;
 
     /**
      * @var string Last Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LastTime;
 
     /**
      * @var integer Can Be Fixed or Not
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CanBeFixed;
 
     /**
      * @var string Host Security UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Uuid;
 
     /**
      * @var MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -193,29 +157,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $FixMethod Fixing Method
      * @param string $RuleName Rule
      * @param string $DetectResultDesc Check result description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $DetectStatus Detection Status. 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HostId Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HostName host name
      * @param string $HostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $WanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FirstTime First Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $LastTime Last Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CanBeFixed Can Be Fixed or Not
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Uuid Host Security UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo $MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

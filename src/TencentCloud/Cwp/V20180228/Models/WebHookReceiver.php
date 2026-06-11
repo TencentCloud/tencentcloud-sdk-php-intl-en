@@ -21,45 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * Alarm recipient
  *
  * @method integer getId() Obtain id
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setId(integer $Id) Set id
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getName() Obtain Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAddr() Obtain Webhook URL
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddr(string $Addr) Set Webhook URL
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain Receiver name
+ * @method void setName(string $Name) Set Receiver name
+ * @method string getAddr() Obtain webhook URL
+ * @method void setAddr(string $Addr) Set webhook URL
+ * @method integer getType() Obtain Type
+ * @method void setType(integer $Type) Set Type
+ * @method string getSCFRegion() Obtain target region
+ * @method void setSCFRegion(string $SCFRegion) Set target region
+ * @method string getNamespace() Obtain Namespace
+ * @method void setNamespace(string $Namespace) Set Namespace
+ * @method string getFunctionName() Obtain function name
+ * @method void setFunctionName(string $FunctionName) Set function name
+ * @method string getFunctionVersion() Obtain Version
+ * @method void setFunctionVersion(string $FunctionVersion) Set Version
+ * @method string getAlias() Obtain Alias
+ * @method void setAlias(string $Alias) Set Alias
  */
 class WebHookReceiver extends AbstractModel
 {
     /**
      * @var integer id
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Id;
 
     /**
-     * @var string Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Receiver name
      */
     public $Name;
 
     /**
-     * @var string Webhook URL
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string webhook URL
      */
     public $Addr;
 
     /**
+     * @var integer Type
+     */
+    public $Type;
+
+    /**
+     * @var string target region
+     */
+    public $SCFRegion;
+
+    /**
+     * @var string Namespace
+     */
+    public $Namespace;
+
+    /**
+     * @var string function name
+     */
+    public $FunctionName;
+
+    /**
+     * @var string Version
+     */
+    public $FunctionVersion;
+
+    /**
+     * @var string Alias
+     */
+    public $Alias;
+
+    /**
      * @param integer $Id id
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Name Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Addr Webhook URL
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Name Receiver name
+     * @param string $Addr webhook URL
+     * @param integer $Type Type
+     * @param string $SCFRegion target region
+     * @param string $Namespace Namespace
+     * @param string $FunctionName function name
+     * @param string $FunctionVersion Version
+     * @param string $Alias Alias
      */
     function __construct()
     {
@@ -84,6 +120,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Addr",$param) and $param["Addr"] !== null) {
             $this->Addr = $param["Addr"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("SCFRegion",$param) and $param["SCFRegion"] !== null) {
+            $this->SCFRegion = $param["SCFRegion"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
+            $this->FunctionName = $param["FunctionName"];
+        }
+
+        if (array_key_exists("FunctionVersion",$param) and $param["FunctionVersion"] !== null) {
+            $this->FunctionVersion = $param["FunctionVersion"];
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
     }
 }

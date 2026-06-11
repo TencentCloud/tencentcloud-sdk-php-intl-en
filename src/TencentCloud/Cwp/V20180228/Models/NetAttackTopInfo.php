@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Statistics on top network attacks
  *
  * @method array getAgent() Obtain Top Statistical Data on Network Attack Host Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAgent(array $Agent) Set Top Statistical Data on Network Attack Host Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getSrcIp() Obtain Top Statistical Data on Network Attack IP Source Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSrcIp(array $SrcIp) Set Top Statistical Data on Network Attack IP Source Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getDstPort() Obtain Top Statistical Data on Network Attack Target Port Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDstPort(array $DstPort) Set Top Statistical Data on Network Attack Target Port Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getVul() Obtain Top Statistical Data on Network Attack Vulnerability Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVul(array $Vul) Set Top Statistical Data on Network Attack Vulnerability Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NetAttackTopInfo extends AbstractModel
 {
     /**
      * @var array Top Statistical Data on Network Attack Host Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Agent;
 
     /**
      * @var array Top Statistical Data on Network Attack IP Source Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SrcIp;
 
     /**
      * @var array Top Statistical Data on Network Attack Target Port Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DstPort;
 
     /**
      * @var array Top Statistical Data on Network Attack Vulnerability Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Vul;
 
     /**
      * @param array $Agent Top Statistical Data on Network Attack Host Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $SrcIp Top Statistical Data on Network Attack IP Source Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $DstPort Top Statistical Data on Network Attack Target Port Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Vul Top Statistical Data on Network Attack Vulnerability Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getAssetPolicySetList() Obtain List of asset IDs and check item IDs
  * @method void setAssetPolicySetList(array $AssetPolicySetList) Set List of asset IDs and check item IDs
+ * @method string getAssetType() Obtain Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
+ * @method void setAssetType(string $AssetType) Set Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
  */
 class AddComplianceAssetPolicySetToWhitelistRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class AddComplianceAssetPolicySetToWhitelistRequest extends AbstractModel
     public $AssetPolicySetList;
 
     /**
+     * @var string Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
+     */
+    public $AssetType;
+
+    /**
      * @param array $AssetPolicySetList List of asset IDs and check item IDs
+     * @param string $AssetType Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class AddComplianceAssetPolicySetToWhitelistRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AssetPolicySetList, $obj);
             }
+        }
+
+        if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
+            $this->AssetType = $param["AssetType"];
         }
     }
 }

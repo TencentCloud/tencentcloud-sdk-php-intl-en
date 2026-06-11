@@ -50,14 +50,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCVSSV3Desc(string $CVSSV3Desc) Set CVSS V3 description
  * @method boolean getIsSuggest() Obtain Whether it is of high priority. Valid values: `true` (yes); `false` (no).
  * @method void setIsSuggest(boolean $IsSuggest) Set Whether it is of high priority. Valid values: `true` (yes); `false` (no).
- * @method string getFixedVersions() Obtain Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFixedVersions(string $FixedVersions) Set Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTag() Obtain Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTag(array $Tag) Set Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFixedVersions() Obtain Repair Version Number
+ * @method void setFixedVersions(string $FixedVersions) Set Repair Version Number
+ * @method array getTag() Obtain Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
+ * @method void setTag(array $Tag) Set Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
+ * @method integer getAttackLevel() Obtain Attack Heat
+ * @method void setAttackLevel(integer $AttackLevel) Set Attack Heat
  */
 class ImagesVul extends AbstractModel
 {
@@ -137,16 +135,19 @@ class ImagesVul extends AbstractModel
     public $IsSuggest;
 
     /**
-     * @var string Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Repair Version Number
      */
     public $FixedVersions;
 
     /**
-     * @var array Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
      */
     public $Tag;
+
+    /**
+     * @var integer Attack Heat
+     */
+    public $AttackLevel;
 
     /**
      * @param string $CVEID Vulnerability ID
@@ -164,10 +165,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param float $CVSSV3Score CVSS V3 score
      * @param string $CVSSV3Desc CVSS V3 description
      * @param boolean $IsSuggest Whether it is of high priority. Valid values: `true` (yes); `false` (no).
-     * @param string $FixedVersions Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Tag Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FixedVersions Repair Version Number
+     * @param array $Tag Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
+     * @param integer $AttackLevel Attack Heat
      */
     function __construct()
     {
@@ -248,6 +248,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("AttackLevel",$param) and $param["AttackLevel"] !== null) {
+            $this->AttackLevel = $param["AttackLevel"];
         }
     }
 }

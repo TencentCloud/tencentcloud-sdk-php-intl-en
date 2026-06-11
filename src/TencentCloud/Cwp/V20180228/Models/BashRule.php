@@ -44,22 +44,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) Set Modification time
  * @method string getHostip() Obtain Host IP
  * @method void setHostip(string $Hostip) Set Host IP
- * @method array getUuids() Obtain Arrays of UUIDs for servers to be effective
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUuids(array $Uuids) Set Arrays of UUIDs for servers to be effective
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getWhite() Obtain 0= blocklist; 1= allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWhite(integer $White) Set 0= blocklist; 1= allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getUuids() Obtain Array of UUIDs for active servers
+ * @method void setUuids(array $Uuids) Set Array of UUIDs for active servers
+ * @method integer getWhite() Obtain 0: blocklist 1: allowlist
+ * @method void setWhite(integer $White) Set 0: blocklist 1: allowlist
  * @method integer getDealOldEvents() Obtain Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDealOldEvents(integer $DealOldEvents) Set Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDescription() Obtain Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BashRule extends AbstractModel
 {
@@ -125,26 +117,22 @@ class BashRule extends AbstractModel
     public $Hostip;
 
     /**
-     * @var array Arrays of UUIDs for servers to be effective
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Array of UUIDs for active servers
      */
     public $Uuids;
 
     /**
-     * @var integer 0= blocklist; 1= allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 0: blocklist 1: allowlist
      */
     public $White;
 
     /**
      * @var integer Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DealOldEvents;
 
     /**
      * @var string Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Description;
 
@@ -161,14 +149,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CreateTime Creation time
      * @param string $ModifyTime Modification time
      * @param string $Hostip Host IP
-     * @param array $Uuids Arrays of UUIDs for servers to be effective
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $White 0= blocklist; 1= allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Uuids Array of UUIDs for active servers
+     * @param integer $White 0: blocklist 1: allowlist
      * @param integer $DealOldEvents Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Description Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

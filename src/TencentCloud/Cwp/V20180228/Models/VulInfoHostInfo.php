@@ -20,94 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Fix vulnerability second popup in batch
  *
- * @method string getHostName() Obtain Host name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostName(string $HostName) Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHostIp() Obtain Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostIp(string $HostIp) Set Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHostName() Obtain host name
+ * @method void setHostName(string $HostName) Set host name
+ * @method string getHostIp() Obtain Host IP address
+ * @method void setHostIp(string $HostIp) Set Host IP address
  * @method array getTags() Obtain Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getQuuid() Obtain Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQuuid(string $Quuid) Set Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsSupportAutoFix() Obtain 0 - the vulnerability cannot be fixed automatically; 1 - the vulnerability can be fixed automatically; 2 - the client has been offline; 3 - the host is not the ultimate edition and can only be fixed manually; 4 - the model does not allow automatic fix; 5 - fixing; 6 - fixed; 7 - under detection; 9 - fix failed; 10 - ignored; 11 - the vulnerability is supported only on Linux, not on Windows; 12 - the vulnerability is supported only on Windows, not on Linux.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsSupportAutoFix(integer $IsSupportAutoFix) Set 0 - the vulnerability cannot be fixed automatically; 1 - the vulnerability can be fixed automatically; 2 - the client has been offline; 3 - the host is not the ultimate edition and can only be fixed manually; 4 - the model does not allow automatic fix; 5 - fixing; 6 - fixed; 7 - under detection; 9 - fix failed; 10 - ignored; 11 - the vulnerability is supported only on Linux, not on Windows; 12 - the vulnerability is supported only on Windows, not on Linux.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsSupportAutoFix() Obtain 0: Vulnerability cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Manual fixing supported for non-flagship hosts, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: Detecting, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not linux.
+ * @method void setIsSupportAutoFix(integer $IsSupportAutoFix) Set 0: Vulnerability cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Manual fixing supported for non-flagship hosts, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: Detecting, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not linux.
  * @method string getUuid() Obtain Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUuid(string $Uuid) Set Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain Host InstanceId
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Host InstanceId
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceId() Obtain Host instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Host instance ID.
+ * @method string getMachineType() Obtain Host type
+ * @method void setMachineType(string $MachineType) Set Host type
+ * @method integer getAgentStatus() Obtain agent online status; 0 for offline, 1 for online.
+ * @method void setAgentStatus(integer $AgentStatus) Set agent online status; 0 for offline, 1 for online.
  */
 class VulInfoHostInfo extends AbstractModel
 {
     /**
-     * @var string Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string host name
      */
     public $HostName;
 
     /**
-     * @var string Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host IP address
      */
     public $HostIp;
 
     /**
      * @var array Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
 
     /**
      * @var string Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Quuid;
 
     /**
-     * @var integer 0 - the vulnerability cannot be fixed automatically; 1 - the vulnerability can be fixed automatically; 2 - the client has been offline; 3 - the host is not the ultimate edition and can only be fixed manually; 4 - the model does not allow automatic fix; 5 - fixing; 6 - fixed; 7 - under detection; 9 - fix failed; 10 - ignored; 11 - the vulnerability is supported only on Linux, not on Windows; 12 - the vulnerability is supported only on Windows, not on Linux.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 0: Vulnerability cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Manual fixing supported for non-flagship hosts, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: Detecting, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not linux.
      */
     public $IsSupportAutoFix;
 
     /**
      * @var string Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Uuid;
 
     /**
-     * @var string Host InstanceId
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host instance ID.
      */
     public $InstanceId;
 
     /**
-     * @param string $HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HostIp Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host type
+     */
+    public $MachineType;
+
+    /**
+     * @var integer agent online status; 0 for offline, 1 for online.
+     */
+    public $AgentStatus;
+
+    /**
+     * @param string $HostName host name
+     * @param string $HostIp Host IP address
      * @param array $Tags Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsSupportAutoFix 0 - the vulnerability cannot be fixed automatically; 1 - the vulnerability can be fixed automatically; 2 - the client has been offline; 3 - the host is not the ultimate edition and can only be fixed manually; 4 - the model does not allow automatic fix; 5 - fixing; 6 - fixed; 7 - under detection; 9 - fix failed; 10 - ignored; 11 - the vulnerability is supported only on Linux, not on Windows; 12 - the vulnerability is supported only on Windows, not on Linux.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsSupportAutoFix 0: Vulnerability cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Manual fixing supported for non-flagship hosts, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: Detecting, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not linux.
      * @param string $Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId Host InstanceId
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceId Host instance ID.
+     * @param string $MachineType Host type
+     * @param integer $AgentStatus agent online status; 0 for offline, 1 for online.
      */
     function __construct()
     {
@@ -148,6 +136,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
+        }
+
+        if (array_key_exists("AgentStatus",$param) and $param["AgentStatus"] !== null) {
+            $this->AgentStatus = $param["AgentStatus"];
         }
     }
 }

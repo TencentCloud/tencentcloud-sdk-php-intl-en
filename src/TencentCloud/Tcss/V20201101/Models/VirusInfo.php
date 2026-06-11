@@ -20,169 +20,165 @@ use TencentCloud\Common\AbstractModel;
 /**
  * List of trojans at runtime
  *
- * @method string getFileName() Obtain Filename
- * @method void setFileName(string $FileName) Set Filename
+ * @method string getFileName() Obtain File name
+ * @method void setFileName(string $FileName) Set File name
  * @method string getFilePath() Obtain File path
  * @method void setFilePath(string $FilePath) Set File path
  * @method string getVirusName() Obtain Virus name
  * @method void setVirusName(string $VirusName) Set Virus name
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
  * @method string getModifyTime() Obtain Update time
  * @method void setModifyTime(string $ModifyTime) Set Update time
  * @method string getContainerName() Obtain Container name
  * @method void setContainerName(string $ContainerName) Set Container name
- * @method string getContainerId() Obtain Container ID
- * @method void setContainerId(string $ContainerId) Set Container ID
- * @method string getContainerStatus() Obtain Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
- * @method void setContainerStatus(string $ContainerStatus) Set Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
- * @method string getImageName() Obtain Image name
- * @method void setImageName(string $ImageName) Set Image name
- * @method string getImageId() Obtain Image ID
- * @method void setImageId(string $ImageId) Set Image ID
- * @method string getStatus() Obtain `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
- * @method void setStatus(string $Status) Set `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
+ * @method string getContainerId() Obtain container id
+ * @method void setContainerId(string $ContainerId) Set container id
+ * @method string getContainerStatus() Obtain Container status.
+RUNNING: running
+Suspend: PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+ * @method void setContainerStatus(string $ContainerStatus) Set Container status.
+RUNNING: running
+Suspend: PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+ * @method string getImageName() Obtain Image Name
+ * @method void setImageName(string $ImageName) Set Image Name
+ * @method string getImageId() Obtain Image id
+ * @method void setImageId(string $ImageId) Set Image id
+ * @method string getStatus() Obtain DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
+ * @method void setStatus(string $Status) Set DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
  * @method string getId() Obtain Event ID
  * @method void setId(string $Id) Set Event ID
  * @method string getHarmDescribe() Obtain Event description
  * @method void setHarmDescribe(string $HarmDescribe) Set Event description
- * @method string getSuggestScheme() Obtain Solution
- * @method void setSuggestScheme(string $SuggestScheme) Set Solution
- * @method string getSubStatus() Obtain Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-`TIMEOUT`: Timed out.
-`TOO_MANY`: Too many tasks.
-`OFFLINE`: Offline.
-`INTERNAL`: Internal service error.
-`VALIDATION`: Invalid parameter.
- * @method void setSubStatus(string $SubStatus) Set Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-`TIMEOUT`: Timed out.
-`TOO_MANY`: Too many tasks.
-`OFFLINE`: Offline.
-`INTERNAL`: Internal service error.
-`VALIDATION`: Invalid parameter.
- * @method string getContainerNetStatus() Obtain Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
- * @method void setContainerNetStatus(string $ContainerNetStatus) Set Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
- * @method string getContainerNetSubStatus() Obtain Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
- * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) Set Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
- * @method string getContainerIsolateOperationSrc() Obtain Container isolation operation source
- * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) Set Container isolation operation source
- * @method string getMD5() Obtain MD5 checksum
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMD5(string $MD5) Set MD5 checksum
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRiskLevel() Obtain Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRiskLevel(string $RiskLevel) Set Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getCheckPlatform() Obtain Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCheckPlatform(array $CheckPlatform) Set Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNodeID() Obtain Node ID.
- * @method void setNodeID(string $NodeID) Set Node ID.
- * @method string getNodeName() Obtain Node name
- * @method void setNodeName(string $NodeName) Set Node name
- * @method string getPodIP() Obtain Pod IP
- * @method void setPodIP(string $PodIP) Set Pod IP
- * @method string getPodName() Obtain Pod (instance) name
- * @method void setPodName(string $PodName) Set Pod (instance) name
- * @method string getClusterID() Obtain ID of the cluster where the node resides
- * @method void setClusterID(string $ClusterID) Set ID of the cluster where the node resides
- * @method string getNodeType() Obtain Node type. Values: `NORMAL` (general node), `SUPER` (super node).
- * @method void setNodeType(string $NodeType) Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+ * @method string getSuggestScheme() Obtain Recommended solution
+ * @method void setSuggestScheme(string $SuggestScheme) Set Recommended solution
+ * @method string getSubStatus() Obtain Failed sub-status
+FILE_NOT_FOUND: File does not exist
+FILE_ABNORMAL: abnormal file
+FILE_ABNORMAL_DEAL_RECOVER: Abnormal file when recovering file.
+BACKUP_FILE_NOT_FOUND: Backup file not found
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+TIMEOUT: Timeout
+TOO_MANY: Too many tasks
+OFFLINE: Offline
+INTERNAL Server Error
+VALIDATION: Invalid parameter
+ * @method void setSubStatus(string $SubStatus) Set Failed sub-status
+FILE_NOT_FOUND: File does not exist
+FILE_ABNORMAL: abnormal file
+FILE_ABNORMAL_DEAL_RECOVER: Abnormal file when recovering file.
+BACKUP_FILE_NOT_FOUND: Backup file not found
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+TIMEOUT: Timeout
+TOO_MANY: Too many tasks
+OFFLINE: Offline
+INTERNAL Server Error
+VALIDATION: Invalid parameter
+ * @method string getContainerNetStatus() Obtain Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
+ * @method void setContainerNetStatus(string $ContainerNetStatus) Set Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
+ * @method string getContainerNetSubStatus() Obtain container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	SHARED_HOST
+	RESOURCE_LIMIT
+	"UNKNOW": Unknown
+ * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) Set container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	SHARED_HOST
+	RESOURCE_LIMIT
+	"UNKNOW": Unknown
+ * @method string getContainerIsolateOperationSrc() Obtain Container Isolation Operation Source
+ * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) Set Container Isolation Operation Source
+ * @method string getMD5() Obtain MD5 Value
+ * @method void setMD5(string $MD5) Set MD5 Value
+ * @method string getRiskLevel() Obtain Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
+ * @method void setRiskLevel(string $RiskLevel) Set Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
+ * @method array getCheckPlatform() Obtain Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
+ * @method void setCheckPlatform(array $CheckPlatform) Set Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
+ * @method string getNodeID() Obtain Node ID
+ * @method void setNodeID(string $NodeID) Set Node ID
+ * @method string getNodeName() Obtain Node name.
+ * @method void setNodeName(string $NodeName) Set Node name.
+ * @method string getPodIP() Obtain pod ip
+ * @method void setPodIP(string $PodIP) Set pod ip
+ * @method string getPodName() Obtain Name of the pod (instance)
+ * @method void setPodName(string $PodName) Set Name of the pod (instance)
+ * @method string getClusterID() Obtain Node Cluster ID
+ * @method void setClusterID(string $ClusterID) Set Node Cluster ID
+ * @method string getNodeType() Obtain Node Type. NORMAL: Common Node; SUPER: Super Node
+ * @method void setNodeType(string $NodeType) Set Node Type. NORMAL: Common Node; SUPER: Super Node
  * @method string getPublicIP() Obtain Public IP of the node
  * @method void setPublicIP(string $PublicIP) Set Public IP of the node
- * @method string getInnerIP() Obtain Node private IP
- * @method void setInnerIP(string $InnerIP) Set Node private IP
- * @method string getNodeUniqueID() Obtain UID of the node
- * @method void setNodeUniqueID(string $NodeUniqueID) Set UID of the node
- * @method string getHostID() Obtain ID for the general node
- * @method void setHostID(string $HostID) Set ID for the general node
- * @method string getClusterName() Obtain Cluster name
- * @method void setClusterName(string $ClusterName) Set Cluster name
+ * @method string getInnerIP() Obtain Node private network IP
+ * @method void setInnerIP(string $InnerIP) Set Node private network IP
+ * @method string getNodeUniqueID() Obtain Node Unique ID
+ * @method void setNodeUniqueID(string $NodeUniqueID) Set Node Unique ID
+ * @method string getHostID() Obtain Common Node ID
+ * @method void setHostID(string $HostID) Set Common Node ID
+ * @method string getClusterName() Obtain Cluster name.
+ * @method void setClusterName(string $ClusterName) Set Cluster name.
+ * @method string getHostIP() Obtain Private IP address of the node, which is the same as the value of InnerIP.
+ * @method void setHostIP(string $HostIP) Set Private IP address of the node, which is the same as the value of InnerIP.
  */
 class VirusInfo extends AbstractModel
 {
     /**
-     * @var string Filename
+     * @var string File name
      */
     public $FileName;
 
@@ -197,7 +193,7 @@ class VirusInfo extends AbstractModel
     public $VirusName;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $CreateTime;
 
@@ -212,42 +208,42 @@ class VirusInfo extends AbstractModel
     public $ContainerName;
 
     /**
-     * @var string Container ID
+     * @var string container id
      */
     public $ContainerId;
 
     /**
-     * @var string Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
+     * @var string Container status.
+RUNNING: running
+Suspend: PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
      */
     public $ContainerStatus;
 
     /**
-     * @var string Image name
+     * @var string Image Name
      */
     public $ImageName;
 
     /**
-     * @var string Image ID
+     * @var string Image id
      */
     public $ImageId;
 
     /**
-     * @var string `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
+     * @var string DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
      */
     public $Status;
 
@@ -262,104 +258,101 @@ class VirusInfo extends AbstractModel
     public $HarmDescribe;
 
     /**
-     * @var string Solution
+     * @var string Recommended solution
      */
     public $SuggestScheme;
 
     /**
-     * @var string Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-`TIMEOUT`: Timed out.
-`TOO_MANY`: Too many tasks.
-`OFFLINE`: Offline.
-`INTERNAL`: Internal service error.
-`VALIDATION`: Invalid parameter.
+     * @var string Failed sub-status
+FILE_NOT_FOUND: File does not exist
+FILE_ABNORMAL: abnormal file
+FILE_ABNORMAL_DEAL_RECOVER: Abnormal file when recovering file.
+BACKUP_FILE_NOT_FOUND: Backup file not found
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+TIMEOUT: Timeout
+TOO_MANY: Too many tasks
+OFFLINE: Offline
+INTERNAL Server Error
+VALIDATION: Invalid parameter
      */
     public $SubStatus;
 
     /**
-     * @var string Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
+     * @var string Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
      */
     public $ContainerNetStatus;
 
     /**
-     * @var string Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
+     * @var string container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	SHARED_HOST
+	RESOURCE_LIMIT
+	"UNKNOW": Unknown
      */
     public $ContainerNetSubStatus;
 
     /**
-     * @var string Container isolation operation source
+     * @var string Container Isolation Operation Source
      */
     public $ContainerIsolateOperationSrc;
 
     /**
-     * @var string MD5 checksum
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string MD5 Value
      */
     public $MD5;
 
     /**
-     * @var string Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
      */
     public $RiskLevel;
 
     /**
-     * @var array Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
      */
     public $CheckPlatform;
 
     /**
-     * @var string Node ID.
+     * @var string Node ID
      */
     public $NodeID;
 
     /**
-     * @var string Node name
+     * @var string Node name.
      */
     public $NodeName;
 
     /**
-     * @var string Pod IP
+     * @var string pod ip
      */
     public $PodIP;
 
     /**
-     * @var string Pod (instance) name
+     * @var string Name of the pod (instance)
      */
     public $PodName;
 
     /**
-     * @var string ID of the cluster where the node resides
+     * @var string Node Cluster ID
      */
     public $ClusterID;
 
     /**
-     * @var string Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @var string Node Type. NORMAL: Common Node; SUPER: Super Node
      */
     public $NodeType;
 
@@ -369,105 +362,108 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PublicIP;
 
     /**
-     * @var string Node private IP
+     * @var string Node private network IP
      */
     public $InnerIP;
 
     /**
-     * @var string UID of the node
+     * @var string Node Unique ID
      */
     public $NodeUniqueID;
 
     /**
-     * @var string ID for the general node
+     * @var string Common Node ID
      */
     public $HostID;
 
     /**
-     * @var string Cluster name
+     * @var string Cluster name.
      */
     public $ClusterName;
 
     /**
-     * @param string $FileName Filename
+     * @var string Private IP address of the node, which is the same as the value of InnerIP.
+     */
+    public $HostIP;
+
+    /**
+     * @param string $FileName File name
      * @param string $FilePath File path
      * @param string $VirusName Virus name
-     * @param string $CreateTime Creation time
+     * @param string $CreateTime Creation time.
      * @param string $ModifyTime Update time
      * @param string $ContainerName Container name
-     * @param string $ContainerId Container ID
-     * @param string $ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-     * @param string $ImageName Image name
-     * @param string $ImageId Image ID
-     * @param string $Status `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
+     * @param string $ContainerId container id
+     * @param string $ContainerStatus Container status.
+RUNNING: running
+Suspend: PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+     * @param string $ImageName Image Name
+     * @param string $ImageId Image id
+     * @param string $Status DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
      * @param string $Id Event ID
      * @param string $HarmDescribe Event description
-     * @param string $SuggestScheme Solution
-     * @param string $SubStatus Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-`TIMEOUT`: Timed out.
-`TOO_MANY`: Too many tasks.
-`OFFLINE`: Offline.
-`INTERNAL`: Internal service error.
-`VALIDATION`: Invalid parameter.
-     * @param string $ContainerNetStatus Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-     * @param string $ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-     * @param string $ContainerIsolateOperationSrc Container isolation operation source
-     * @param string $MD5 MD5 checksum
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RiskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $CheckPlatform Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $NodeID Node ID.
-     * @param string $NodeName Node name
-     * @param string $PodIP Pod IP
-     * @param string $PodName Pod (instance) name
-     * @param string $ClusterID ID of the cluster where the node resides
-     * @param string $NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * @param string $SuggestScheme Recommended solution
+     * @param string $SubStatus Failed sub-status
+FILE_NOT_FOUND: File does not exist
+FILE_ABNORMAL: abnormal file
+FILE_ABNORMAL_DEAL_RECOVER: Abnormal file when recovering file.
+BACKUP_FILE_NOT_FOUND: Backup file not found
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+TIMEOUT: Timeout
+TOO_MANY: Too many tasks
+OFFLINE: Offline
+INTERNAL Server Error
+VALIDATION: Invalid parameter
+     * @param string $ContainerNetStatus Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
+     * @param string $ContainerNetSubStatus container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	SHARED_HOST
+	RESOURCE_LIMIT
+	"UNKNOW": Unknown
+     * @param string $ContainerIsolateOperationSrc Container Isolation Operation Source
+     * @param string $MD5 MD5 Value
+     * @param string $RiskLevel Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
+     * @param array $CheckPlatform Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
+     * @param string $NodeID Node ID
+     * @param string $NodeName Node name.
+     * @param string $PodIP pod ip
+     * @param string $PodName Name of the pod (instance)
+     * @param string $ClusterID Node Cluster ID
+     * @param string $NodeType Node Type. NORMAL: Common Node; SUPER: Super Node
      * @param string $PublicIP Public IP of the node
-     * @param string $InnerIP Node private IP
-     * @param string $NodeUniqueID UID of the node
-     * @param string $HostID ID for the general node
-     * @param string $ClusterName Cluster name
+     * @param string $InnerIP Node private network IP
+     * @param string $NodeUniqueID Node Unique ID
+     * @param string $HostID Common Node ID
+     * @param string $ClusterName Cluster name.
+     * @param string $HostIP Private IP address of the node, which is the same as the value of InnerIP.
      */
     function __construct()
     {
@@ -608,6 +604,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("HostIP",$param) and $param["HostIP"] !== null) {
+            $this->HostIP = $param["HostIP"];
         }
     }
 }

@@ -20,26 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAsset request structure.
  *
- * @method boolean getAll() Obtain Sync all
- * @method void setAll(boolean $All) Set Sync all
- * @method array getHosts() Obtain List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
- * @method void setHosts(array $Hosts) Set List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
+ * @method boolean getAll() Obtain Synchronizes all regular nodes.
+ * @method void setAll(boolean $All) Set Synchronizes all regular nodes.
+ * @method array getHosts() Obtain List of UUIDs of hosts to be synchronized. 
+ * @method void setHosts(array $Hosts) Set List of UUIDs of hosts to be synchronized. 
+ * @method boolean getAllSuperHost() Obtain Synchronizes all super nodes.
+ * @method void setAllSuperHost(boolean $AllSuperHost) Set Synchronizes all super nodes.
+ * @method array getNodeUniqueIds() Obtain Unique IDs of super nodes to be synchronized.
+ * @method void setNodeUniqueIds(array $NodeUniqueIds) Set Unique IDs of super nodes to be synchronized.
+ * @method integer getTimeoutSec() Obtain Timeout (in seconds). Minimum value: 3600.
+ * @method void setTimeoutSec(integer $TimeoutSec) Set Timeout (in seconds). Minimum value: 3600.
  */
 class ModifyAssetRequest extends AbstractModel
 {
     /**
-     * @var boolean Sync all
+     * @var boolean Synchronizes all regular nodes.
      */
     public $All;
 
     /**
-     * @var array List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
+     * @var array List of UUIDs of hosts to be synchronized. 
      */
     public $Hosts;
 
     /**
-     * @param boolean $All Sync all
-     * @param array $Hosts List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
+     * @var boolean Synchronizes all super nodes.
+     */
+    public $AllSuperHost;
+
+    /**
+     * @var array Unique IDs of super nodes to be synchronized.
+     */
+    public $NodeUniqueIds;
+
+    /**
+     * @var integer Timeout (in seconds). Minimum value: 3600.
+     */
+    public $TimeoutSec;
+
+    /**
+     * @param boolean $All Synchronizes all regular nodes.
+     * @param array $Hosts List of UUIDs of hosts to be synchronized. 
+     * @param boolean $AllSuperHost Synchronizes all super nodes.
+     * @param array $NodeUniqueIds Unique IDs of super nodes to be synchronized.
+     * @param integer $TimeoutSec Timeout (in seconds). Minimum value: 3600.
      */
     function __construct()
     {
@@ -60,6 +84,18 @@ class ModifyAssetRequest extends AbstractModel
 
         if (array_key_exists("Hosts",$param) and $param["Hosts"] !== null) {
             $this->Hosts = $param["Hosts"];
+        }
+
+        if (array_key_exists("AllSuperHost",$param) and $param["AllSuperHost"] !== null) {
+            $this->AllSuperHost = $param["AllSuperHost"];
+        }
+
+        if (array_key_exists("NodeUniqueIds",$param) and $param["NodeUniqueIds"] !== null) {
+            $this->NodeUniqueIds = $param["NodeUniqueIds"];
+        }
+
+        if (array_key_exists("TimeoutSec",$param) and $param["TimeoutSec"] !== null) {
+            $this->TimeoutSec = $param["TimeoutSec"];
         }
     }
 }

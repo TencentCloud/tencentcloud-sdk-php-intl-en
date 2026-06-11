@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTranId() Obtain Frozen transaction ID.
  * @method void setTranId(string $TranId) Set Frozen transaction ID.
- * @method array getDealNames() Obtain Order ID
- * @method void setDealNames(array $DealNames) Set Order ID
+ * @method array getDealNames() Obtain Order ID.
+ * @method void setDealNames(array $DealNames) Set Order ID.
  * @method array getResourceIds() Obtain Resource ID list (this field is no longer maintained. please use the dealNames field and the query API DescribeResourcesByDealName to obtain resource ids).
  * @method void setResourceIds(array $ResourceIds) Set Resource ID list (this field is no longer maintained. please use the dealNames field and the query API DescribeResourcesByDealName to obtain resource ids).
  * @method array getClusterIds() Obtain Cluster ID list (this field is no longer maintained. please use the dealNames field to get cluster ids via the DescribeResourcesByDealName api.).
@@ -45,7 +45,7 @@ class CreateIntegrateClusterResponse extends AbstractModel
     public $TranId;
 
     /**
-     * @var array Order ID
+     * @var array Order ID.
      */
     public $DealNames;
 
@@ -73,7 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $TranId Frozen transaction ID.
-     * @param array $DealNames Order ID
+     * @param array $DealNames Order ID.
      * @param array $ResourceIds Resource ID list (this field is no longer maintained. please use the dealNames field and the query API DescribeResourcesByDealName to obtain resource ids).
      * @param array $ClusterIds Cluster ID list (this field is no longer maintained. please use the dealNames field to get cluster ids via the DescribeResourcesByDealName api.).
      * @param array $BigDealIds Large order number.

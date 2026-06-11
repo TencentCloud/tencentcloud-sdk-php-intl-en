@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUuid() Obtain Agent UUID
  * @method void setUuid(string $Uuid) Set Agent UUID
+ * @method array getNodeUniqueIds() Obtain Super Node Unique ID
+ * @method void setNodeUniqueIds(array $NodeUniqueIds) Set Super Node Unique ID
+ * @method array getUUIDs() Obtain UUID list
+ * @method void setUUIDs(array $UUIDs) Set UUID list
  */
 class DeleteMachineRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DeleteMachineRequest extends AbstractModel
     public $Uuid;
 
     /**
+     * @var array Super Node Unique ID
+     */
+    public $NodeUniqueIds;
+
+    /**
+     * @var array UUID list
+     */
+    public $UUIDs;
+
+    /**
      * @param string $Uuid Agent UUID
+     * @param array $NodeUniqueIds Super Node Unique ID
+     * @param array $UUIDs UUID list
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DeleteMachineRequest extends AbstractModel
         }
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
             $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("NodeUniqueIds",$param) and $param["NodeUniqueIds"] !== null) {
+            $this->NodeUniqueIds = $param["NodeUniqueIds"];
+        }
+
+        if (array_key_exists("UUIDs",$param) and $param["UUIDs"] !== null) {
+            $this->UUIDs = $param["UUIDs"];
         }
     }
 }

@@ -31,67 +31,41 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMachineIp() Obtain Private IP address
  * @method void setMachineIp(string $MachineIp) Set Private IP address
  * @method string getMachineWanIp() Obtain Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineWanIp(string $MachineWanIp) Set Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getCloudTags() Obtain Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCloudTags(array $CloudTags) Set Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getCloudTags() Obtain Cloud Tag
+ * @method void setCloudTags(array $CloudTags) Set Cloud Tag
  * @method RegionInfo getRegionInfo() Obtain Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRegionInfo(RegionInfo $RegionInfo) Set Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTag() Obtain CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTag(array $Tag) Set CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTag() Obtain Host security tag
+ * @method void setTag(array $Tag) Set Host security tag
  * @method integer getStatus() Obtain Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatus(integer $Status) Set Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getStrategyId() Obtain Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStrategyId(integer $StrategyId) Set Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDiskInfo() Obtain Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDiskInfo(string $DiskInfo) Set Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getStrategyName() Obtain Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStrategyName(string $StrategyName) Set Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getBackupCount() Obtain Number of Backups
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBackupCount(integer $BackupCount) Set Number of Backups
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getLastBackupStatus() Obtain Latest Backup Status: 0 - Backing Up, 1 - Normal, 2 - Failed, 9 - No Backup Yet
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLastBackupStatus(integer $LastBackupStatus) Set Latest Backup Status: 0 - Backing Up, 1 - Normal, 2 - Failed, 9 - No Backup Yet
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getLastBackupMessage() Obtain Reason for the Last Backup Failure
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLastBackupMessage(string $LastBackupMessage) Set Reason for the Last Backup Failure
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getLastBackupTime() Obtain Last Backup Time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLastBackupTime(string $LastBackupTime) Set Last Backup Time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getRollBackPercent() Obtain Latest Rollback Progress Percentage
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRollBackPercent(integer $RollBackPercent) Set Latest Rollback Progress Percentage
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getRollBackStatus() Obtain Latest Rollback Status: 0 - In Progress, 1 - Succeeded, 2 - Failed
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRollBackStatus(integer $RollBackStatus) Set Latest Rollback Status: 0 - In Progress, 1 - Succeeded, 2 - Failed
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getBackupSuccessCount() Obtain Backup Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBackupSuccessCount(integer $BackupSuccessCount) Set Backup Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getHostVersion() Obtain Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+ * @method void setHostVersion(integer $HostVersion) Set Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+ * @method string getMachineType() Obtain Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+ * @method void setMachineType(string $MachineType) Set Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
  */
 class RansomDefenseStrategyMachineBackupInfo extends AbstractModel
 {
@@ -122,94 +96,89 @@ class RansomDefenseStrategyMachineBackupInfo extends AbstractModel
 
     /**
      * @var string Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineWanIp;
 
     /**
-     * @var array Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Cloud Tag
      */
     public $CloudTags;
 
     /**
      * @var RegionInfo Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RegionInfo;
 
     /**
-     * @var array CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Host security tag
      */
     public $Tag;
 
     /**
      * @var integer Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
      * @var integer Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StrategyId;
 
     /**
      * @var string Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DiskInfo;
 
     /**
      * @var string Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StrategyName;
 
     /**
      * @var integer Number of Backups
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BackupCount;
 
     /**
      * @var integer Latest Backup Status: 0 - Backing Up, 1 - Normal, 2 - Failed, 9 - No Backup Yet
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LastBackupStatus;
 
     /**
      * @var string Reason for the Last Backup Failure
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LastBackupMessage;
 
     /**
      * @var string Last Backup Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LastBackupTime;
 
     /**
      * @var integer Latest Rollback Progress Percentage
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RollBackPercent;
 
     /**
      * @var integer Latest Rollback Status: 0 - In Progress, 1 - Succeeded, 2 - Failed
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RollBackStatus;
 
     /**
      * @var integer Backup Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BackupSuccessCount;
+
+    /**
+     * @var integer Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+     */
+    public $HostVersion;
+
+    /**
+     * @var string Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+     */
+    public $MachineType;
 
     /**
      * @param string $Uuid Host UUID
@@ -218,36 +187,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $InstanceId Host Instance ID
      * @param string $MachineIp Private IP address
      * @param string $MachineWanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $CloudTags Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $CloudTags Cloud Tag
      * @param RegionInfo $RegionInfo Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Tag CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tag Host security tag
      * @param integer $Status Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $StrategyId Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DiskInfo Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $StrategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $BackupCount Number of Backups
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $LastBackupStatus Latest Backup Status: 0 - Backing Up, 1 - Normal, 2 - Failed, 9 - No Backup Yet
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $LastBackupMessage Reason for the Last Backup Failure
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $LastBackupTime Last Backup Time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RollBackPercent Latest Rollback Progress Percentage
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RollBackStatus Latest Rollback Status: 0 - In Progress, 1 - Succeeded, 2 - Failed
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $BackupSuccessCount Backup Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $HostVersion Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+     * @param string $MachineType Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
      */
     function __construct()
     {
@@ -351,6 +307,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("BackupSuccessCount",$param) and $param["BackupSuccessCount"] !== null) {
             $this->BackupSuccessCount = $param["BackupSuccessCount"];
+        }
+
+        if (array_key_exists("HostVersion",$param) and $param["HostVersion"] !== null) {
+            $this->HostVersion = $param["HostVersion"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

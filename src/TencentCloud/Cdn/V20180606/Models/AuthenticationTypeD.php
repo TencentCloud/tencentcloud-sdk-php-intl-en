@@ -19,7 +19,7 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * Timestamp hotlink protection mode D configuration
-The access URL format of timestamp hotlink protection mode D is as follows: http://DomainName/FileName?sign=md5hash&t=timestamp
+The access URL format of timestamp hotlink protection mode D is as follows: `http://DomainName/FileName?sign=md5hash&t=timestamp`
 Here, timestamp is a decimal or hexadecimal timestamp in Unix format;
 `md5hash`: MD5 (custom key + file path + timestamp)
  *

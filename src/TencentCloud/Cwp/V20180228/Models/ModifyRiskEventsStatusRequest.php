@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRiskEventsStatus request structure.
  *
- * @method integer getOperate() Obtain Operations - 0: Mark as Handled, 1: Ignore, 2: Delete Record, 3: Trojan Isolation, 4: Isolated Trojan Resumption, 5: Trojan Trust, 6: Trojan Untrust, 7: Kill Exceptional Process.
- * @method void setOperate(integer $Operate) Set Operations - 0: Mark as Handled, 1: Ignore, 2: Delete Record, 3: Trojan Isolation, 4: Isolated Trojan Resumption, 5: Trojan Trust, 6: Trojan Untrust, 7: Kill Exceptional Process.
+ * @method integer getOperate() Obtain Operation. 0: mark as handled; 1: ignore; 2: delete records; 3: isolate Trojan viruses; 4: recover isolating Trojan viruses; 5: add files to the trusted list; 6: delete files from the trusted list; 7: scan abnormal processes; 8: add to the allowlist.
+ * @method void setOperate(integer $Operate) Set Operation. 0: mark as handled; 1: ignore; 2: delete records; 3: isolate Trojan viruses; 4: recover isolating Trojan viruses; 5: add files to the trusted list; 6: delete files from the trusted list; 7: scan abnormal processes; 8: add to the allowlist.
  * @method string getRiskType() Obtain Operation event types, file scan: MALWARE, exceptional login: HOST_LOGIN, password brute attack: BRUTE_ATTACK, malicious request: MALICIOUS_REQUEST, high-risk command: BASH_EVENT, local privilege escalation: PRIVILEGE_EVENT, reverse shell: REVERSE_SHELL, exceptional process: PROCESS.
  * @method void setRiskType(string $RiskType) Set Operation event types, file scan: MALWARE, exceptional login: HOST_LOGIN, password brute attack: BRUTE_ATTACK, malicious request: MALICIOUS_REQUEST, high-risk command: BASH_EVENT, local privilege escalation: PRIVILEGE_EVENT, reverse shell: REVERSE_SHELL, exceptional process: PROCESS.
  * @method array getIds() Obtain An array of event IDs that need to be modified, and batch operation is supported.
@@ -64,11 +64,15 @@ Filter criteria
 <li>BeginTime - String - required: no - process startup time - begin</li>
 <li>BeginTime - String - required: no - process startup time - end</li>
 <li>Status - String - required: no - filter by status: 0 - pending; 1 - under detection; 2 - detected; 3 - exited; 4 - trusted</li>
+ * @method boolean getDoClean() Obtain When Operate is Trojan isolation
+<li>This operation will fix tampered system commands, scheduled tasks, and other system files. Please ensure that yum/apt is available during the operation.</li>
+ * @method void setDoClean(boolean $DoClean) Set When Operate is Trojan isolation
+<li>This operation will fix tampered system commands, scheduled tasks, and other system files. Please ensure that yum/apt is available during the operation.</li>
  */
 class ModifyRiskEventsStatusRequest extends AbstractModel
 {
     /**
-     * @var integer Operations - 0: Mark as Handled, 1: Ignore, 2: Delete Record, 3: Trojan Isolation, 4: Isolated Trojan Resumption, 5: Trojan Trust, 6: Trojan Untrust, 7: Kill Exceptional Process.
+     * @var integer Operation. 0: mark as handled; 1: ignore; 2: delete records; 3: isolate Trojan viruses; 4: recover isolating Trojan viruses; 5: add files to the trusted list; 6: delete files from the trusted list; 7: scan abnormal processes; 8: add to the allowlist.
      */
     public $Operate;
 
@@ -122,7 +126,13 @@ Filter criteria
     public $Filters;
 
     /**
-     * @param integer $Operate Operations - 0: Mark as Handled, 1: Ignore, 2: Delete Record, 3: Trojan Isolation, 4: Isolated Trojan Resumption, 5: Trojan Trust, 6: Trojan Untrust, 7: Kill Exceptional Process.
+     * @var boolean When Operate is Trojan isolation
+<li>This operation will fix tampered system commands, scheduled tasks, and other system files. Please ensure that yum/apt is available during the operation.</li>
+     */
+    public $DoClean;
+
+    /**
+     * @param integer $Operate Operation. 0: mark as handled; 1: ignore; 2: delete records; 3: isolate Trojan viruses; 4: recover isolating Trojan viruses; 5: add files to the trusted list; 6: delete files from the trusted list; 7: scan abnormal processes; 8: add to the allowlist.
      * @param string $RiskType Operation event types, file scan: MALWARE, exceptional login: HOST_LOGIN, password brute attack: BRUTE_ATTACK, malicious request: MALICIOUS_REQUEST, high-risk command: BASH_EVENT, local privilege escalation: PRIVILEGE_EVENT, reverse shell: REVERSE_SHELL, exceptional process: PROCESS.
      * @param array $Ids An array of event IDs that need to be modified, and batch operation is supported.
      * @param boolean $UpdateAll Whether to update all, i.e. whether to operate on all events; this parameter is invalid when IDs are not left blank.
@@ -144,6 +154,8 @@ Filter criteria
 <li>BeginTime - String - required: no - process startup time - begin</li>
 <li>BeginTime - String - required: no - process startup time - end</li>
 <li>Status - String - required: no - filter by status: 0 - pending; 1 - under detection; 2 - detected; 3 - exited; 4 - trusted</li>
+     * @param boolean $DoClean When Operate is Trojan isolation
+<li>This operation will fix tampered system commands, scheduled tasks, and other system files. Please ensure that yum/apt is available during the operation.</li>
      */
     function __construct()
     {
@@ -193,6 +205,10 @@ Filter criteria
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("DoClean",$param) and $param["DoClean"] !== null) {
+            $this->DoClean = $param["DoClean"];
         }
     }
 }

@@ -33,11 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProjectId() Obtain Host business group ID
  * @method void setProjectId(integer $ProjectId) Set Host business group ID
  * @method array getTag() Obtain Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTag(array $Tag) Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getName() Obtain Database name
- * @method void setName(string $Name) Set Database name
+ * @method string getName() Obtain Web application name.
+ * @method void setName(string $Name) Set Web application name.
  * @method string getVersion() Obtain Version
  * @method void setVersion(string $Version) Set Version
  * @method string getLang() Obtain Language
@@ -52,10 +50,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setFirstTime(string $FirstTime) Set First collection time
  * @method integer getIsNew() Obtain Whether new [0: no|1: yes]
  * @method void setIsNew(integer $IsNew) Set Whether new [0: no|1: yes]
- * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method MachineExtraInfo getMachineExtraInfo() Obtain  Additional information
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set  Additional information
  * @method string getPath() Obtain Application path
  * @method void setPath(string $Path) Set Application path
  */
@@ -93,12 +89,11 @@ class AssetWebFrameBaseInfo extends AbstractModel
 
     /**
      * @var array Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tag;
 
     /**
-     * @var string Database name
+     * @var string Web application name.
      */
     public $Name;
 
@@ -138,8 +133,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsNew;
 
     /**
-     * @var MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MachineExtraInfo  Additional information
      */
     public $MachineExtraInfo;
 
@@ -156,8 +150,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $OsInfo Operating System Information
      * @param integer $ProjectId Host business group ID
      * @param array $Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Name Database name
+     * @param string $Name Web application name.
      * @param string $Version Version
      * @param string $Lang Language
      * @param string $ServiceType Service type
@@ -165,8 +158,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $UpdateTime Data update time
      * @param string $FirstTime First collection time
      * @param integer $IsNew Whether new [0: no|1: yes]
-     * @param MachineExtraInfo $MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MachineExtraInfo $MachineExtraInfo  Additional information
      * @param string $Path Application path
      */
     function __construct()

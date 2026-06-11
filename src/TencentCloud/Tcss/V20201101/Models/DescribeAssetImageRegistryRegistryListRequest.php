@@ -20,50 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetImageRegistryRegistryList request structure.
  *
- * @method integer getLimit() Obtain Number to return, default is 10, maximum is 100
- * @method void setLimit(integer $Limit) Set Number to return, default is 10, maximum is 100
- * @method integer getOffset() Obtain Offset, the default is 0
- * @method void setOffset(integer $Offset) Set Offset, the default is 0
- * @method array getFilters() Obtain Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
- * @method void setFilters(array $Filters) Set Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
- * @method string getBy() Obtain Sort field
- * @method void setBy(string $By) Set Sort field
- * @method string getOrder() Obtain Sort by asc, desc
- * @method void setOrder(string $Order) Set Sort by asc, desc
+ * @method integer getLimit() Obtain Number of entries to be returned. Default value: 10. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of entries to be returned. Default value: 10. Maximum value: 100.
+ * @method integer getOffset() Obtain Offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
+ * @method array getFilters() Obtain Filter fields
+Authorization status, with possible values: all, unauthorized (0), authorized (1)
+ * @method void setFilters(array $Filters) Set Filter fields
+Authorization status, with possible values: all, unauthorized (0), authorized (1)
+ * @method string getBy() Obtain Sorting field.
+ * @method void setBy(string $By) Set Sorting field.
+ * @method string getOrder() Obtain Sorting method: asc, desc
+ * @method void setOrder(string $Order) Set Sorting method: asc, desc
  */
 class DescribeAssetImageRegistryRegistryListRequest extends AbstractModel
 {
     /**
-     * @var integer Number to return, default is 10, maximum is 100
+     * @var integer Number of entries to be returned. Default value: 10. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @var integer Offset, the default is 0
+     * @var integer Offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var array Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
+     * @var array Filter fields
+Authorization status, with possible values: all, unauthorized (0), authorized (1)
      */
     public $Filters;
 
     /**
-     * @var string Sort field
+     * @var string Sorting field.
      */
     public $By;
 
     /**
-     * @var string Sort by asc, desc
+     * @var string Sorting method: asc, desc
      */
     public $Order;
 
     /**
-     * @param integer $Limit Number to return, default is 10, maximum is 100
-     * @param integer $Offset Offset, the default is 0
-     * @param array $Filters Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
-     * @param string $By Sort field
-     * @param string $Order Sort by asc, desc
+     * @param integer $Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
+     * @param integer $Offset Offset. Default value: 0.
+     * @param array $Filters Filter fields
+Authorization status, with possible values: all, unauthorized (0), authorized (1)
+     * @param string $By Sorting field.
+     * @param string $Order Sorting method: asc, desc
      */
     function __construct()
     {

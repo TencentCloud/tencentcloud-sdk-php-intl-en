@@ -20,70 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Optional information of the security log Kafka
  *
- * @method string getInstanceID() Obtain Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceID(string $InstanceID) Set Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceName() Obtain Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceName(string $InstanceName) Set Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceID() Obtain Instance ID.
+ * @method void setInstanceID(string $InstanceID) Set Instance ID.
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
  * @method array getTopicList() Obtain Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTopicList(array $TopicList) Set Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getRouteList() Obtain Route list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRouteList(array $RouteList) Set Route list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getKafkaVersion() Obtain Kafka version number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKafkaVersion(string $KafkaVersion) Set Kafka version number
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getRouteList() Obtain Routing List
+ * @method void setRouteList(array $RouteList) Set Routing List
+ * @method string getKafkaVersion() Obtain Kafka Version Number
+ * @method void setKafkaVersion(string $KafkaVersion) Set Kafka Version Number
  */
 class CKafkaInstanceInfo extends AbstractModel
 {
     /**
-     * @var string Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance ID.
      */
     public $InstanceID;
 
     /**
-     * @var string Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
      * @var array Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TopicList;
 
     /**
-     * @var array Route list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Routing List
      */
     public $RouteList;
 
     /**
-     * @var string Kafka version number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Kafka Version Number
      */
     public $KafkaVersion;
 
     /**
-     * @param string $InstanceID Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceID Instance ID.
+     * @param string $InstanceName Instance name.
      * @param array $TopicList Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $RouteList Route list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $KafkaVersion Kafka version number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $RouteList Routing List
+     * @param string $KafkaVersion Kafka Version Number
      */
     function __construct()
     {

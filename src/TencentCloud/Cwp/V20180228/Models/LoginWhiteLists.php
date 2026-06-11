@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() Obtain Record ID
  * @method void setId(integer $Id) Set Record ID
- * @method string getUuid() Obtain Yunjing client ID
- * @method void setUuid(string $Uuid) Set Yunjing client ID
+ * @method string getUuid() Obtain Host Security UUID
+ * @method void setUuid(string $Uuid) Set Host Security UUID
  * @method array getPlaces() Obtain Allowlisted regions
  * @method void setPlaces(array $Places) Set Allowlisted regions
  * @method string getUserName() Obtain Allowlisted users (Multiple users are separated by commas.)
@@ -53,7 +53,7 @@ class LoginWhiteLists extends AbstractModel
     public $Id;
 
     /**
-     * @var string Yunjing client ID
+     * @var string Host Security UUID
      */
     public $Uuid;
 
@@ -109,7 +109,7 @@ class LoginWhiteLists extends AbstractModel
 
     /**
      * @param integer $Id Record ID
-     * @param string $Uuid Yunjing client ID
+     * @param string $Uuid Host Security UUID
      * @param array $Places Allowlisted regions
      * @param string $UserName Allowlisted users (Multiple users are separated by commas.)
      * @param string $SrcIp Allowlisted IPs (Multiple IPs are separated by commas.)

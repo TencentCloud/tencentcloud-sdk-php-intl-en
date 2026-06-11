@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyName(string $KeyName) Set Key name
  * @method string getKeyType() Obtain Supported data types: string, boolean, int32, int64, float, and double
  * @method void setKeyType(string $KeyType) Set Supported data types: string, boolean, int32, int64, float, and double
- * @method string getKeyNonExistingField() Obtain Assignment information returned upon resolution failure
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setKeyNonExistingField(string $KeyNonExistingField) Set Assignment information returned upon resolution failure
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getKeyNonExistingField() Obtain Assigned value for parsing failure
+ * @method void setKeyNonExistingField(string $KeyNonExistingField) Set Assigned value for parsing failure
  */
 class ParquetKeyInfo extends AbstractModel
 {
@@ -42,16 +40,14 @@ class ParquetKeyInfo extends AbstractModel
     public $KeyType;
 
     /**
-     * @var string Assignment information returned upon resolution failure
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Assigned value for parsing failure
      */
     public $KeyNonExistingField;
 
     /**
      * @param string $KeyName Key name
      * @param string $KeyType Supported data types: string, boolean, int32, int64, float, and double
-     * @param string $KeyNonExistingField Assignment information returned upon resolution failure
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $KeyNonExistingField Assigned value for parsing failure
      */
     function __construct()
     {

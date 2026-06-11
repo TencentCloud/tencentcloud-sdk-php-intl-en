@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteTopic request structure.
  *
- * @method string getTopicId() Obtain Log topic ID
- * @method void setTopicId(string $TopicId) Set Log topic ID
+ * @method string getTopicId() Obtain Topic ID - Obtain the log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set Topic ID - Obtain the log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
  */
 class DeleteTopicRequest extends AbstractModel
 {
     /**
-     * @var string Log topic ID
+     * @var string Topic ID - Obtain the log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
     /**
-     * @param string $TopicId Log topic ID
+     * @param string $TopicId Topic ID - Obtain the log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     function __construct()
     {

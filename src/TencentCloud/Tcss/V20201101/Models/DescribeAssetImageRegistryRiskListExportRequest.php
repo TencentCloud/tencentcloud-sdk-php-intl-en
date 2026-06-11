@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetImageRegistryRiskListExport request structure.
  *
- * @method array getExportField() Obtain Export field
- * @method void setExportField(array $ExportField) Set Export field
  * @method integer getLimit() Obtain Number of results to be returned. Default value: `10`. Maximum value: `100`.
  * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: `10`. Maximum value: `100`.
  * @method integer getOffset() Obtain Offset. Default value: `0`.
@@ -34,16 +32,13 @@ use TencentCloud\Common\AbstractModel;
 <li>Name - String - Required: No - Vulnerability name</li>
  * @method ImageInfo getImageInfo() Obtain Image information
  * @method void setImageInfo(ImageInfo $ImageInfo) Set Image information
+ * @method array getExportField() Obtain Export field
+ * @method void setExportField(array $ExportField) Set Export field
  * @method integer getId() Obtain Image ID
  * @method void setId(integer $Id) Set Image ID
  */
 class DescribeAssetImageRegistryRiskListExportRequest extends AbstractModel
 {
-    /**
-     * @var array Export field
-     */
-    public $ExportField;
-
     /**
      * @var integer Number of results to be returned. Default value: `10`. Maximum value: `100`.
      */
@@ -67,18 +62,23 @@ class DescribeAssetImageRegistryRiskListExportRequest extends AbstractModel
     public $ImageInfo;
 
     /**
+     * @var array Export field
+     */
+    public $ExportField;
+
+    /**
      * @var integer Image ID
      */
     public $Id;
 
     /**
-     * @param array $ExportField Export field
      * @param integer $Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
      * @param integer $Offset Offset. Default value: `0`.
      * @param array $Filters Filter
 <li>Level- String - Required: No - Vulnerability level</li>
 <li>Name - String - Required: No - Vulnerability name</li>
      * @param ImageInfo $ImageInfo Image information
+     * @param array $ExportField Export field
      * @param integer $Id Image ID
      */
     function __construct()
@@ -94,10 +94,6 @@ class DescribeAssetImageRegistryRiskListExportRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ExportField",$param) and $param["ExportField"] !== null) {
-            $this->ExportField = $param["ExportField"];
-        }
-
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
         }
@@ -118,6 +114,10 @@ class DescribeAssetImageRegistryRiskListExportRequest extends AbstractModel
         if (array_key_exists("ImageInfo",$param) and $param["ImageInfo"] !== null) {
             $this->ImageInfo = new ImageInfo();
             $this->ImageInfo->deserialize($param["ImageInfo"]);
+        }
+
+        if (array_key_exists("ExportField",$param) and $param["ExportField"] !== null) {
+            $this->ExportField = $param["ExportField"];
         }
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {

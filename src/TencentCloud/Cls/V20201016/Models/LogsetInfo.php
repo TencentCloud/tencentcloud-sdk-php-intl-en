@@ -24,20 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogsetId(string $LogsetId) Set Logset ID
  * @method string getLogsetName() Obtain Logset name
  * @method void setLogsetName(string $LogsetName) Set Logset name
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getAssumerName() Obtain Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAssumerName(string $AssumerName) Set Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTags() Obtain Tag bound to logset
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag bound to logset
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getCreateTime() Obtain Creation time. Format `YYYY-MM-DD HH:MM:SS`
+ * @method void setCreateTime(string $CreateTime) Set Creation time. Format `YYYY-MM-DD HH:MM:SS`
+ * @method integer getAssumerUin() Obtain If AssumerUin is not empty, it indicates the Uin of the service provider that created the log set.
+ * @method void setAssumerUin(integer $AssumerUin) Set If AssumerUin is not empty, it indicates the Uin of the service provider that created the log set.
+ * @method string getAssumerName() Obtain Cloud product identifier. When the logset is created by other cloud products, this field displays the cloud product name, such as CDN and TKE.
+ * @method void setAssumerName(string $AssumerName) Set Cloud product identifier. When the logset is created by other cloud products, this field displays the cloud product name, such as CDN and TKE.
+ * @method array getTags() Obtain Tag bound to log set
+ * @method void setTags(array $Tags) Set Tag bound to log set
  * @method integer getTopicCount() Obtain Number of log topics in logset
  * @method void setTopicCount(integer $TopicCount) Set Number of log topics in logset
  * @method string getRoleName() Obtain If `AssumerName` is not empty, it indicates the service provider who creates the logset.
  * @method void setRoleName(string $RoleName) Set If `AssumerName` is not empty, it indicates the service provider who creates the logset.
+ * @method integer getMetricTopicCount() Obtain Number of metric topics under log sets
+ * @method void setMetricTopicCount(integer $MetricTopicCount) Set Number of metric topics under log sets
  */
 class LogsetInfo extends AbstractModel
 {
@@ -52,19 +52,22 @@ class LogsetInfo extends AbstractModel
     public $LogsetName;
 
     /**
-     * @var string Creation time
+     * @var string Creation time. Format `YYYY-MM-DD HH:MM:SS`
      */
     public $CreateTime;
 
     /**
-     * @var string Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer If AssumerUin is not empty, it indicates the Uin of the service provider that created the log set.
+     */
+    public $AssumerUin;
+
+    /**
+     * @var string Cloud product identifier. When the logset is created by other cloud products, this field displays the cloud product name, such as CDN and TKE.
      */
     public $AssumerName;
 
     /**
-     * @var array Tag bound to logset
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Tag bound to log set
      */
     public $Tags;
 
@@ -79,15 +82,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RoleName;
 
     /**
+     * @var integer Number of metric topics under log sets
+     */
+    public $MetricTopicCount;
+
+    /**
      * @param string $LogsetId Logset ID
      * @param string $LogsetName Logset name
-     * @param string $CreateTime Creation time
-     * @param string $AssumerName Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Tags Tag bound to logset
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $CreateTime Creation time. Format `YYYY-MM-DD HH:MM:SS`
+     * @param integer $AssumerUin If AssumerUin is not empty, it indicates the Uin of the service provider that created the log set.
+     * @param string $AssumerName Cloud product identifier. When the logset is created by other cloud products, this field displays the cloud product name, such as CDN and TKE.
+     * @param array $Tags Tag bound to log set
      * @param integer $TopicCount Number of log topics in logset
      * @param string $RoleName If `AssumerName` is not empty, it indicates the service provider who creates the logset.
+     * @param integer $MetricTopicCount Number of metric topics under log sets
      */
     function __construct()
     {
@@ -114,6 +122,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
             $this->CreateTime = $param["CreateTime"];
         }
 
+        if (array_key_exists("AssumerUin",$param) and $param["AssumerUin"] !== null) {
+            $this->AssumerUin = $param["AssumerUin"];
+        }
+
         if (array_key_exists("AssumerName",$param) and $param["AssumerName"] !== null) {
             $this->AssumerName = $param["AssumerName"];
         }
@@ -133,6 +145,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
             $this->RoleName = $param["RoleName"];
+        }
+
+        if (array_key_exists("MetricTopicCount",$param) and $param["MetricTopicCount"] !== null) {
+            $this->MetricTopicCount = $param["MetricTopicCount"];
         }
     }
 }

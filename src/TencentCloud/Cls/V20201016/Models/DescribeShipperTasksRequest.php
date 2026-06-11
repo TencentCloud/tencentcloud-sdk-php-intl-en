@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeShipperTasks request structure.
  *
- * @method string getShipperId() Obtain Shipping rule ID
- * @method void setShipperId(string $ShipperId) Set Shipping rule ID
- * @method integer getStartTime() Obtain Query start timestamp in milliseconds, which can be within the last three days
- * @method void setStartTime(integer $StartTime) Set Query start timestamp in milliseconds, which can be within the last three days
- * @method integer getEndTime() Obtain Query end timestamp in milliseconds
- * @method void setEndTime(integer $EndTime) Set Query end timestamp in milliseconds
+ * @method string getShipperId() Obtain Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+ * @method void setShipperId(string $ShipperId) Set Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+ * @method integer getStartTime() Obtain Start timestamp for the query. Supports queries within the most recent 3 days in ms.
+StartTime must be less than EndTime
+ * @method void setStartTime(integer $StartTime) Set Start timestamp for the query. Supports queries within the most recent 3 days in ms.
+StartTime must be less than EndTime
+ * @method integer getEndTime() Obtain Query end timestamp, in ms.
+StartTime must be less than EndTime
+ * @method void setEndTime(integer $EndTime) Set Query end timestamp, in ms.
+StartTime must be less than EndTime
  */
 class DescribeShipperTasksRequest extends AbstractModel
 {
     /**
-     * @var string Shipping rule ID
+     * @var string Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
      */
     public $ShipperId;
 
     /**
-     * @var integer Query start timestamp in milliseconds, which can be within the last three days
+     * @var integer Start timestamp for the query. Supports queries within the most recent 3 days in ms.
+StartTime must be less than EndTime
      */
     public $StartTime;
 
     /**
-     * @var integer Query end timestamp in milliseconds
+     * @var integer Query end timestamp, in ms.
+StartTime must be less than EndTime
      */
     public $EndTime;
 
     /**
-     * @param string $ShipperId Shipping rule ID
-     * @param integer $StartTime Query start timestamp in milliseconds, which can be within the last three days
-     * @param integer $EndTime Query end timestamp in milliseconds
+     * @param string $ShipperId Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+     * @param integer $StartTime Start timestamp for the query. Supports queries within the most recent 3 days in ms.
+StartTime must be less than EndTime
+     * @param integer $EndTime Query end timestamp, in ms.
+StartTime must be less than EndTime
      */
     function __construct()
     {

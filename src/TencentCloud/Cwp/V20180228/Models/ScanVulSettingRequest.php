@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set Scan end time. Example: 08:00
  * @method integer getEnableScan() Obtain Whether to enable scanning. 1: enable; 0: disable.
  * @method void setEnableScan(integer $EnableScan) Set Whether to enable scanning. 1: enable; 0: disable.
- * @method array getUuids() Obtain If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
- * @method void setUuids(array $Uuids) Set If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
- * @method integer getScanMethod() Obtain 0 version comparison, 2 version comparison + poc
- * @method void setScanMethod(integer $ScanMethod) Set 0 version comparison, 2 version comparison + poc
+ * @method array getUuids() Obtain If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
+ * @method void setUuids(array $Uuids) Set If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
+ * @method integer getScanMethod() Obtain 0: version comparison, 2: version comparison + POC.
+ * @method void setScanMethod(integer $ScanMethod) Set 0: version comparison, 2: version comparison + POC.
  */
 class ScanVulSettingRequest extends AbstractModel
 {
@@ -84,12 +84,12 @@ class ScanVulSettingRequest extends AbstractModel
     public $EnableScan;
 
     /**
-     * @var array If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
+     * @var array If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
      */
     public $Uuids;
 
     /**
-     * @var integer 0 version comparison, 2 version comparison + poc
+     * @var integer 0: version comparison, 2: version comparison + POC.
      */
     public $ScanMethod;
 
@@ -102,8 +102,8 @@ class ScanVulSettingRequest extends AbstractModel
      * @param string $StartTime Scan start time. Example: 00:00
      * @param string $EndTime Scan end time. Example: 08:00
      * @param integer $EnableScan Whether to enable scanning. 1: enable; 0: disable.
-     * @param array $Uuids If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
-     * @param integer $ScanMethod 0 version comparison, 2 version comparison + poc
+     * @param array $Uuids If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
+     * @param integer $ScanMethod 0: version comparison, 2: version comparison + POC.
      */
     function __construct()
     {

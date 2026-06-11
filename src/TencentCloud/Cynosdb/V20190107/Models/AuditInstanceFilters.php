@@ -18,36 +18,36 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Filter criteria for querying audit instances.
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method boolean getExactMatch() Obtain 
- * @method void setExactMatch(boolean $ExactMatch) Set 
- * @method array getValues() Obtain 
- * @method void setValues(array $Values) Set 
+ * @method string getName() Obtain Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
+ * @method void setName(string $Name) Set Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
+ * @method boolean getExactMatch() Obtain True indicates exact match, false indicates fuzzy match.
+ * @method void setExactMatch(boolean $ExactMatch) Set True indicates exact match, false indicates fuzzy match.
+ * @method array getValues() Obtain Filter value.
+ * @method void setValues(array $Values) Set Filter value.
  */
 class AuditInstanceFilters extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
      */
     public $Name;
 
     /**
-     * @var boolean 
+     * @var boolean True indicates exact match, false indicates fuzzy match.
      */
     public $ExactMatch;
 
     /**
-     * @var array 
+     * @var array Filter value.
      */
     public $Values;
 
     /**
-     * @param string $Name 
-     * @param boolean $ExactMatch 
-     * @param array $Values 
+     * @param string $Name Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
+     * @param boolean $ExactMatch True indicates exact match, false indicates fuzzy match.
+     * @param array $Values Filter value.
      */
     function __construct()
     {

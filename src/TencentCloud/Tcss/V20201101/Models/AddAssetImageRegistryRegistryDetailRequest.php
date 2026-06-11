@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) Set Password
  * @method string getUrl() Obtain Repository URL
  * @method void setUrl(string $Url) Set Repository URL
- * @method string getRegistryType() Obtain Repository type, which can be `harbor`.
- * @method void setRegistryType(string $RegistryType) Set Repository type, which can be `harbor`.
+ * @method string getRegistryType() Obtain Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
+ * @method void setRegistryType(string $RegistryType) Set Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
  * @method string getNetType() Obtain Network type, which can be `public` (public network).
  * @method void setNetType(string $NetType) Set Network type, which can be `public` (public network).
  * @method string getRegistryVersion() Obtain Repository version
@@ -40,6 +40,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpeedLimit(integer $SpeedLimit) Set Speed limit
  * @method integer getInsecure() Obtain Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
  * @method void setInsecure(integer $Insecure) Set Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
+ * @method array getConnDetectConfig() Obtain 
+ * @method void setConnDetectConfig(array $ConnDetectConfig) Set 
+ * @method boolean getNeedScan() Obtain Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+ * @method void setNeedScan(boolean $NeedScan) Set Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+ * @method integer getSyncMode() Obtain Synchronization method. 0: full synchronization; 1: incremental synchronization.
+ * @method void setSyncMode(integer $SyncMode) Set Synchronization method. 0: full synchronization; 1: incremental synchronization.
+ * @method string getWebhookUrl() Obtain Webhook access address.
+ * @method void setWebhookUrl(string $WebhookUrl) Set Webhook access address.
+ * @method string getWebhookToken() Obtain Webhook access token.
+ * @method void setWebhookToken(string $WebhookToken) Set Webhook access token.
+ * @method string getInstanceId() Obtain TCR instance ID.
+ * @method void setInstanceId(string $InstanceId) Set TCR instance ID.
  */
 class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
 {
@@ -64,7 +76,7 @@ class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
     public $Url;
 
     /**
-     * @var string Repository type, which can be `harbor`.
+     * @var string Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
      */
     public $RegistryType;
 
@@ -94,16 +106,52 @@ class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
     public $Insecure;
 
     /**
+     * @var array 
+     */
+    public $ConnDetectConfig;
+
+    /**
+     * @var boolean Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+     */
+    public $NeedScan;
+
+    /**
+     * @var integer Synchronization method. 0: full synchronization; 1: incremental synchronization.
+     */
+    public $SyncMode;
+
+    /**
+     * @var string Webhook access address.
+     */
+    public $WebhookUrl;
+
+    /**
+     * @var string Webhook access token.
+     */
+    public $WebhookToken;
+
+    /**
+     * @var string TCR instance ID.
+     */
+    public $InstanceId;
+
+    /**
      * @param string $Name Repository name
      * @param string $Username Username
      * @param string $Password Password
      * @param string $Url Repository URL
-     * @param string $RegistryType Repository type, which can be `harbor`.
+     * @param string $RegistryType Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
      * @param string $NetType Network type, which can be `public` (public network).
      * @param string $RegistryVersion Repository version
      * @param string $RegistryRegion Region. Default value: `default`.
      * @param integer $SpeedLimit Speed limit
      * @param integer $Insecure Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
+     * @param array $ConnDetectConfig 
+     * @param boolean $NeedScan Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+     * @param integer $SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.
+     * @param string $WebhookUrl Webhook access address.
+     * @param string $WebhookToken Webhook access token.
+     * @param string $InstanceId TCR instance ID.
      */
     function __construct()
     {
@@ -156,6 +204,35 @@ class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
 
         if (array_key_exists("Insecure",$param) and $param["Insecure"] !== null) {
             $this->Insecure = $param["Insecure"];
+        }
+
+        if (array_key_exists("ConnDetectConfig",$param) and $param["ConnDetectConfig"] !== null) {
+            $this->ConnDetectConfig = [];
+            foreach ($param["ConnDetectConfig"] as $key => $value){
+                $obj = new ConnDetectConfig();
+                $obj->deserialize($value);
+                array_push($this->ConnDetectConfig, $obj);
+            }
+        }
+
+        if (array_key_exists("NeedScan",$param) and $param["NeedScan"] !== null) {
+            $this->NeedScan = $param["NeedScan"];
+        }
+
+        if (array_key_exists("SyncMode",$param) and $param["SyncMode"] !== null) {
+            $this->SyncMode = $param["SyncMode"];
+        }
+
+        if (array_key_exists("WebhookUrl",$param) and $param["WebhookUrl"] !== null) {
+            $this->WebhookUrl = $param["WebhookUrl"];
+        }
+
+        if (array_key_exists("WebhookToken",$param) and $param["WebhookToken"] !== null) {
+            $this->WebhookToken = $param["WebhookToken"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

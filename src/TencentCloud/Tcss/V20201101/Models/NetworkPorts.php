@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Port of the custom rule of the network cluster policy
  *
- * @method string getProtocol() Obtain Protocol of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProtocol(string $Protocol) Set Protocol of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPort() Obtain Port of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPort(string $Port) Set Port of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProtocol() Obtain Network Policy Protocol
+ * @method void setProtocol(string $Protocol) Set Network Policy Protocol
+ * @method string getPort() Obtain Network Policy Port
+ * @method void setPort(string $Port) Set Network Policy Port
  */
 class NetworkPorts extends AbstractModel
 {
     /**
-     * @var string Protocol of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Network Policy Protocol
      */
     public $Protocol;
 
     /**
-     * @var string Port of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Network Policy Port
      */
     public $Port;
 
     /**
-     * @param string $Protocol Protocol of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Port Port of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Protocol Network Policy Protocol
+     * @param string $Port Network Policy Port
      */
     function __construct()
     {

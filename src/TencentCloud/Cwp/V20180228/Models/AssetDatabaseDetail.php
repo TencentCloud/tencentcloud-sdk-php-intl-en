@@ -59,9 +59,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getParam() Obtain Startup parameter
  * @method void setParam(string $Param) Set Startup parameter
  * @method string getUpdateTime() Obtain Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AssetDatabaseDetail extends AbstractModel
 {
@@ -162,7 +160,6 @@ class AssetDatabaseDetail extends AbstractModel
 
     /**
      * @var string Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -187,7 +184,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $BinPath Binary path
      * @param string $Param Startup parameter
      * @param string $UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

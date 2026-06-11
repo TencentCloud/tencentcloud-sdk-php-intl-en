@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getQuery() Obtain ES aggregation condition in JSON
  * @method void setQuery(string $Query) Set ES aggregation condition in JSON
+ * @method array getLogTypes() Obtain Log Type List
+ * @method void setLogTypes(array $LogTypes) Set Log Type List
  */
 class DescribeESAggregationsRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeESAggregationsRequest extends AbstractModel
     public $Query;
 
     /**
+     * @var array Log Type List
+     */
+    public $LogTypes;
+
+    /**
      * @param string $Query ES aggregation condition in JSON
+     * @param array $LogTypes Log Type List
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeESAggregationsRequest extends AbstractModel
         }
         if (array_key_exists("Query",$param) and $param["Query"] !== null) {
             $this->Query = $param["Query"];
+        }
+
+        if (array_key_exists("LogTypes",$param) and $param["LogTypes"] !== null) {
+            $this->LogTypes = $param["LogTypes"];
         }
     }
 }

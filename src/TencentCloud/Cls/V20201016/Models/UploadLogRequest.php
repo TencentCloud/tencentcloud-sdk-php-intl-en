@@ -20,34 +20,47 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UploadLog request structure.
  *
- * @method string getTopicId() Obtain Topic ID
- * @method void setTopicId(string $TopicId) Set Topic ID
- * @method string getHashKey() Obtain Topic partition where data will be written into by `HashKey` 
- * @method void setHashKey(string $HashKey) Set Topic partition where data will be written into by `HashKey` 
- * @method string getCompressType() Obtain Compression type
- * @method void setCompressType(string $CompressType) Set Compression type
+ * @method string getTopicId() Obtain Log topic id
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set Log topic id
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method string getHashKey() Obtain This parameter has been deprecated and should not be used.
+ * @method void setHashKey(string $HashKey) Set This parameter has been deprecated and should not be used.
+ * @method string getCompressType() Obtain Compression method. Currently supports
+- lz4
+- zstd
+ * @method void setCompressType(string $CompressType) Set Compression method. Currently supports
+- lz4
+- zstd
  */
 class UploadLogRequest extends AbstractModel
 {
     /**
-     * @var string Topic ID
+     * @var string Log topic id
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
     /**
-     * @var string Topic partition where data will be written into by `HashKey` 
+     * @var string This parameter has been deprecated and should not be used.
+     * @deprecated
      */
     public $HashKey;
 
     /**
-     * @var string Compression type
+     * @var string Compression method. Currently supports
+- lz4
+- zstd
      */
     public $CompressType;
 
     /**
-     * @param string $TopicId Topic ID
-     * @param string $HashKey Topic partition where data will be written into by `HashKey` 
-     * @param string $CompressType Compression type
+     * @param string $TopicId Log topic id
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param string $HashKey This parameter has been deprecated and should not be used.
+     * @param string $CompressType Compression method. Currently supports
+- lz4
+- zstd
      */
     function __construct()
     {

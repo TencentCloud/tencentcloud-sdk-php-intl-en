@@ -20,174 +20,126 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of a virus in the image
  *
- * @method string getPath() Obtain Path
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPath(string $Path) Set Path
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPath() Obtain Path.
+ * @method void setPath(string $Path) Set Path.
  * @method integer getRiskLevel() Obtain Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRiskLevel(integer $RiskLevel) Set Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVirusName() Obtain Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVirusName(string $VirusName) Set Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTags() Obtain Tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Tag.
+ * @method void setTags(array $Tags) Set Tag.
  * @method string getDesc() Obtain Description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDesc(string $Desc) Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSolution() Obtain Fix suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSolution(string $Solution) Set Fix suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSolution() Obtain Remediation Suggestions
+ * @method void setSolution(string $Solution) Set Remediation Suggestions
  * @method integer getSize() Obtain Size
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSize(integer $Size) Set Size
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFirstScanTime() Obtain First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFirstScanTime(string $FirstScanTime) Set First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFirstScanTime() Obtain First detection time
+ * @method void setFirstScanTime(string $FirstScanTime) Set First detection time
  * @method string getLatestScanTime() Obtain Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLatestScanTime(string $LatestScanTime) Set Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMd5() Obtain MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMd5(string $Md5) Set MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFileName() Obtain Filename
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileName(string $FileName) Set Filename
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getCheckPlatform() Obtain Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCheckPlatform(array $CheckPlatform) Set Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMd5() Obtain File md5
+ * @method void setMd5(string $Md5) Set File md5
+ * @method string getFileName() Obtain File name
+ * @method void setFileName(string $FileName) Set File name
+ * @method array getCheckPlatform() Obtain Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
+ * @method void setCheckPlatform(array $CheckPlatform) Set Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
  */
 class ImageVirusInfo extends AbstractModel
 {
     /**
-     * @var string Path
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Path.
      */
     public $Path;
 
     /**
      * @var integer Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RiskLevel;
 
     /**
      * @var string Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VirusName;
 
     /**
-     * @var array Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Tag.
      */
     public $Tags;
 
     /**
      * @var string Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Desc;
 
     /**
-     * @var string Fix suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Remediation Suggestions
      */
     public $Solution;
 
     /**
      * @var integer Size
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Size;
 
     /**
-     * @var string First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string First detection time
      */
     public $FirstScanTime;
 
     /**
      * @var string Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LatestScanTime;
 
     /**
-     * @var string MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File md5
      */
     public $Md5;
 
     /**
-     * @var string Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File name
      */
     public $FileName;
 
     /**
-     * @var array Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
      */
     public $CheckPlatform;
 
     /**
-     * @param string $Path Path
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Path Path.
      * @param integer $RiskLevel Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VirusName Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags Tag.
      * @param string $Desc Description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Solution Fix suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Solution Remediation Suggestions
      * @param integer $Size Size
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FirstScanTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FirstScanTime First detection time
      * @param string $LatestScanTime Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Md5 MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FileName Filename
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $CheckPlatform Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Md5 File md5
+     * @param string $FileName File name
+     * @param array $CheckPlatform Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
      */
     function __construct()
     {

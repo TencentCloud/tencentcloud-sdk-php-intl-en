@@ -41,13 +41,13 @@ Note: When the device is paid by the tenant and inactive (not selected for month
  * @method string getLastOnlineTime() Obtain Last online time
  * @method void setLastOnlineTime(string $LastOnlineTime) Set Last online time
  * @method integer getLicensePayMode() Obtain Authorization validity period
-Monthly authorization
+0: Monthly authorization
 1: Permanent license
--Unknown
+-1: Unknown
  * @method void setLicensePayMode(integer $LicensePayMode) Set Authorization validity period
-Monthly authorization
+0: Monthly authorization
 1: Permanent license
--Unknown
+-1: Unknown
  * @method integer getPayer() Obtain Payer
 0: Customer payment
 1: Manufacturer payment
@@ -105,9 +105,9 @@ Note: When the device is paid by the tenant and inactive (not selected for month
 
     /**
      * @var integer Authorization validity period
-Monthly authorization
+0: Monthly authorization
 1: Permanent license
--Unknown
+-1: Unknown
      */
     public $LicensePayMode;
 
@@ -130,9 +130,9 @@ Monthly authorization
 Note: When the device is paid by the tenant and inactive (not selected for monthly or permanent payment), this parameter returns 1, indicating only that the tenant has paid. This parameter will be subsequently deprecated. For new access, please use LicensePayMode and Payer.
      * @param string $LastOnlineTime Last online time
      * @param integer $LicensePayMode Authorization validity period
-Monthly authorization
+0: Monthly authorization
 1: Permanent license
--Unknown
+-1: Unknown
      * @param integer $Payer Payer
 0: Customer payment
 1: Manufacturer payment

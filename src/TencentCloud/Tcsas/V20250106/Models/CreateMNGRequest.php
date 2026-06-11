@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
  * @method string getTeamId() Obtain <p>Team ID.</p>
  * @method void setTeamId(string $TeamId) Set <p>Team ID.</p>
- * @method array getI18nList() Obtain <p>The mini game name and description in multiple languages.</p>
- * @method void setI18nList(array $I18nList) Set <p>The mini game name and description in multiple languages.</p>
+ * @method array getI18nList() Obtain <p>Mini game name and introduction in multiple languages.</p>
+ * @method void setI18nList(array $I18nList) Set <p>Mini game name and introduction in multiple languages.</p>
  */
 class CreateMNGRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class CreateMNGRequest extends AbstractModel
     public $TeamId;
 
     /**
-     * @var array <p>The mini game name and description in multiple languages.</p>
+     * @var array <p>Mini game name and introduction in multiple languages.</p>
      */
     public $I18nList;
 
@@ -87,7 +87,7 @@ class CreateMNGRequest extends AbstractModel
      * @param string $MNPDesc <p>Mini game description.</p>
      * @param string $PlatformId <p>Platform ID.</p>
      * @param string $TeamId <p>Team ID.</p>
-     * @param array $I18nList <p>The mini game name and description in multiple languages.</p>
+     * @param array $I18nList <p>Mini game name and introduction in multiple languages.</p>
      */
     function __construct()
     {

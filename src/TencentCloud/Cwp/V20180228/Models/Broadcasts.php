@@ -20,14 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Security report list
  *
- * @method string getTitle() Obtain Article name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTitle(string $Title) Set Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTitle() Obtain article name
+ * @method void setTitle(string $Title) Set article name
  * @method integer getType() Obtain Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setType(integer $Type) Set Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSubtitle() Obtain Subtitle
  * @method void setSubtitle(string $Subtitle) Set Subtitle
  * @method string getCreateTime() Obtain Release time
@@ -40,14 +36,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class Broadcasts extends AbstractModel
 {
     /**
-     * @var string Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string article name
      */
     public $Title;
 
     /**
      * @var integer Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
@@ -72,10 +66,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Level;
 
     /**
-     * @param string $Title Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Title article name
      * @param integer $Type Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Subtitle Subtitle
      * @param string $CreateTime Release time
      * @param integer $Id Article unique ID

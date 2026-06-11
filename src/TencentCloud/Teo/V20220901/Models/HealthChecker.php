@@ -38,8 +38,8 @@ Note: NoCheck means the health check policy is not enabled.
 Note: NoCheck means the health check policy is not enabled.
  * @method integer getPort() Obtain Check port, which is required when Type = HTTP, Type = HTTPS, Type = TCP, or Type = UDP.
  * @method void setPort(integer $Port) Set Check port, which is required when Type = HTTP, Type = HTTPS, Type = TCP, or Type = UDP.
- * @method integer getInterval() Obtain Check frequency, in seconds. It indicates how often a health check task is initiated. Valid values: 30, 60, 180, 300, 600.
- * @method void setInterval(integer $Interval) Set Check frequency, in seconds. It indicates how often a health check task is initiated. Valid values: 30, 60, 180, 300, 600.
+ * @method integer getInterval() Obtain Check frequency, in seconds. It indicates how often a health check task is initiated. Configurable range: 10-600 seconds.
+ * @method void setInterval(integer $Interval) Set Check frequency, in seconds. It indicates how often a health check task is initiated. Configurable range: 10-600 seconds.
  * @method integer getTimeout() Obtain Timeout for each health check, in seconds. If the health check time exceeds this value, the check result is determined as "unhealthy". The default value is 5s, and the value should be less than Interval.
  * @method void setTimeout(integer $Timeout) Set Timeout for each health check, in seconds. If the health check time exceeds this value, the check result is determined as "unhealthy". The default value is 5s, and the value should be less than Interval.
  * @method integer getHealthThreshold() Obtain Healthy state threshold, in the number of times. It indicates that if the consecutive health check results are "healthy" for a certain number of times, an origin server is considered "healthy". The default value is 3 times, with the minimum value of 1 time.
@@ -87,7 +87,7 @@ Note: NoCheck means the health check policy is not enabled.
     public $Port;
 
     /**
-     * @var integer Check frequency, in seconds. It indicates how often a health check task is initiated. Valid values: 30, 60, 180, 300, 600.
+     * @var integer Check frequency, in seconds. It indicates how often a health check task is initiated. Configurable range: 10-600 seconds.
      */
     public $Interval;
 
@@ -154,7 +154,7 @@ Note: NoCheck means the health check policy is not enabled.
 <li>NoCheck.</li>
 Note: NoCheck means the health check policy is not enabled.
      * @param integer $Port Check port, which is required when Type = HTTP, Type = HTTPS, Type = TCP, or Type = UDP.
-     * @param integer $Interval Check frequency, in seconds. It indicates how often a health check task is initiated. Valid values: 30, 60, 180, 300, 600.
+     * @param integer $Interval Check frequency, in seconds. It indicates how often a health check task is initiated. Configurable range: 10-600 seconds.
      * @param integer $Timeout Timeout for each health check, in seconds. If the health check time exceeds this value, the check result is determined as "unhealthy". The default value is 5s, and the value should be less than Interval.
      * @param integer $HealthThreshold Healthy state threshold, in the number of times. It indicates that if the consecutive health check results are "healthy" for a certain number of times, an origin server is considered "healthy". The default value is 3 times, with the minimum value of 1 time.
      * @param integer $CriticalThreshold Unhealthy state threshold, in the number of times. It indicates that if the consecutive health check results are "unhealthy" for a certain number of times, an origin server is considered "unhealthy". The default value is 2 times.

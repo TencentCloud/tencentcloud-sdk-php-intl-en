@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set Zone ID.
  * @method string getNamespace() Obtain Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
  * @method void setNamespace(string $Namespace) Set Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
- * @method array getKeys() Obtain Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters. Allowed characters include letters, numbers, hyphens, and underscores. To query a single key, input an array with one element.
- * @method void setKeys(array $Keys) Set Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters. Allowed characters include letters, numbers, hyphens, and underscores. To query a single key, input an array with one element.
+ * @method array getKeys() Obtain Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
+ * @method void setKeys(array $Keys) Set Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
  */
 class EdgeKVGetRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class EdgeKVGetRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var array Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters. Allowed characters include letters, numbers, hyphens, and underscores. To query a single key, input an array with one element.
+     * @var array Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
      */
     public $Keys;
 
     /**
      * @param string $ZoneId Zone ID.
      * @param string $Namespace Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
-     * @param array $Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters. Allowed characters include letters, numbers, hyphens, and underscores. To query a single key, input an array with one element.
+     * @param array $Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
      */
     function __construct()
     {

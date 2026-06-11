@@ -28,18 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostCount(integer $HostCount) Set Number of servers with exploit prevention enabled
  * @method integer getExceptionHostCount() Obtain Number of abnormal servers with exploit prevention enabled
  * @method void setExceptionHostCount(integer $ExceptionHostCount) Set Number of abnormal servers with exploit prevention enabled
- * @method array getHostIDs() Obtain Specified servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostIDs(array $HostIDs) Set Specified servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getHostTotalCount() Obtain Total number of servers with TCSS activated
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostTotalCount(integer $HostTotalCount) Set Total number of servers with TCSS activated
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSupportDefenseVulCount() Obtain Number of vulnerabilities that can be prevented
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSupportDefenseVulCount(integer $SupportDefenseVulCount) Set Number of vulnerabilities that can be prevented
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getHostIDs() Obtain Custom Vulnerability Defense Hosts
+ * @method void setHostIDs(array $HostIDs) Set Custom Vulnerability Defense Hosts
+ * @method integer getHostTotalCount() Obtain Total Number of Hosts with Container Security Enabled
+ * @method void setHostTotalCount(integer $HostTotalCount) Set Total Number of Hosts with Container Security Enabled
+ * @method integer getSupportDefenseVulCount() Obtain Supported Defense Vulnerability Count
+ * @method void setSupportDefenseVulCount(integer $SupportDefenseVulCount) Set Supported Defense Vulnerability Count
  * @method integer getHostNodeCount() Obtain Number of normal nodes
  * @method void setHostNodeCount(integer $HostNodeCount) Set Number of normal nodes
  * @method integer getSuperScope() Obtain Super node scope
@@ -76,20 +70,17 @@ class DescribeVulDefenceSettingResponse extends AbstractModel
     public $ExceptionHostCount;
 
     /**
-     * @var array Specified servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Custom Vulnerability Defense Hosts
      */
     public $HostIDs;
 
     /**
-     * @var integer Total number of servers with TCSS activated
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Total Number of Hosts with Container Security Enabled
      */
     public $HostTotalCount;
 
     /**
-     * @var integer Number of vulnerabilities that can be prevented
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Supported Defense Vulnerability Count
      */
     public $SupportDefenseVulCount;
 
@@ -128,12 +119,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Scope Scope of servers with exploit prevention enabled. Valid values: `0` (specified servers); `1` (all servers).
      * @param integer $HostCount Number of servers with exploit prevention enabled
      * @param integer $ExceptionHostCount Number of abnormal servers with exploit prevention enabled
-     * @param array $HostIDs Specified servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $HostTotalCount Total number of servers with TCSS activated
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SupportDefenseVulCount Number of vulnerabilities that can be prevented
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $HostIDs Custom Vulnerability Defense Hosts
+     * @param integer $HostTotalCount Total Number of Hosts with Container Security Enabled
+     * @param integer $SupportDefenseVulCount Supported Defense Vulnerability Count
      * @param integer $HostNodeCount Number of normal nodes
      * @param integer $SuperScope Super node scope
      * @param integer $SuperNodeCount Number of super nodes

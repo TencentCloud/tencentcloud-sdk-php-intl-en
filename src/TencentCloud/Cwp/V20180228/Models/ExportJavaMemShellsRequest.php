@@ -28,6 +28,10 @@ MachineName host name for fuzzy query; Type, status for precise match; CreateBeg
 MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
  * @method array getWhere() Obtain Export fields
  * @method void setWhere(array $Where) Set Export fields
+ * @method string getOrder() Obtain Sorting method (case insensitive): asc for ascending order; desc for descending order
+ * @method void setOrder(string $Order) Set Sorting method (case insensitive): asc for ascending order; desc for descending order
+ * @method string getBy() Obtain Sort column, strictly equal: latest detection time RecentFoundTime
+ * @method void setBy(string $By) Set Sort column, strictly equal: latest detection time RecentFoundTime
  */
 class ExportJavaMemShellsRequest extends AbstractModel
 {
@@ -44,10 +48,22 @@ MachineName host name for fuzzy query; Type, status for precise match; CreateBeg
     public $Where;
 
     /**
+     * @var string Sorting method (case insensitive): asc for ascending order; desc for descending order
+     */
+    public $Order;
+
+    /**
+     * @var string Sort column, strictly equal: latest detection time RecentFoundTime
+     */
+    public $By;
+
+    /**
      * @param array $Filters Filtering criteria: InstanceID and IP
 
 MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
      * @param array $Where Export fields
+     * @param string $Order Sorting method (case insensitive): asc for ascending order; desc for descending order
+     * @param string $By Sort column, strictly equal: latest detection time RecentFoundTime
      */
     function __construct()
     {
@@ -73,6 +89,14 @@ MachineName host name for fuzzy query; Type, status for precise match; CreateBeg
 
         if (array_key_exists("Where",$param) and $param["Where"] !== null) {
             $this->Where = $param["Where"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
         }
     }
 }

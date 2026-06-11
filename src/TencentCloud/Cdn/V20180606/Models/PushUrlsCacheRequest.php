@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PushUrlsCache request structure.
  *
- * @method array getUrls() Obtain List of URLs. The protocol header such as "http://" or "https://" needs to be included.
- * @method void setUrls(array $Urls) Set List of URLs. The protocol header such as "http://" or "https://" needs to be included.
+ * @method array getUrls() Obtain List of URLs. The protocol header such as `http://` or `https://` needs to be included.
+ * @method void setUrls(array $Urls) Set List of URLs. The protocol header such as `http://` or `https://` needs to be included.
  * @method string getUserAgent() Obtain Specifies the User-Agent header of an HTTP prefetch request when it is forwarded to the origin server
 Default value: `TencentCdn`
  * @method void setUserAgent(string $UserAgent) Set Specifies the User-Agent header of an HTTP prefetch request when it is forwarded to the origin server
@@ -64,7 +64,7 @@ This feature is in beta test.
 class PushUrlsCacheRequest extends AbstractModel
 {
     /**
-     * @var array List of URLs. The protocol header such as "http://" or "https://" needs to be included.
+     * @var array List of URLs. The protocol header such as `http://` or `https://` needs to be included.
      */
     public $Urls;
 
@@ -116,7 +116,7 @@ This feature is in beta test.
     public $UrlEncode;
 
     /**
-     * @param array $Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
+     * @param array $Urls List of URLs. The protocol header such as `http://` or `https://` needs to be included.
      * @param string $UserAgent Specifies the User-Agent header of an HTTP prefetch request when it is forwarded to the origin server
 Default value: `TencentCdn`
      * @param string $Area Destination region for the prefetch

@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAlarmShield request structure.
  *
- * @method string getTaskId() Obtain Blocking rule ID.
- * @method void setTaskId(string $TaskId) Set Blocking rule ID.
- * @method string getAlarmNoticeId() Obtain Notification channel group ID.
- * @method void setAlarmNoticeId(string $AlarmNoticeId) Set Notification channel group ID.
- * @method integer getStartTime() Obtain Block start time (second-level timestamp).
- * @method void setStartTime(integer $StartTime) Set Block start time (second-level timestamp).
+ * @method string getTaskId() Obtain Blocking rule ID. Retrieve the blocking rule ID via [retrieve alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
+ * @method void setTaskId(string $TaskId) Set Blocking rule ID. Retrieve the blocking rule ID via [retrieve alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
+ * @method string getAlarmNoticeId() Obtain id of the notification channel group. Retrieve alert masking configuration rules (https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1) to get the id of the notification channel group.
+ * @method void setAlarmNoticeId(string $AlarmNoticeId) Set id of the notification channel group. Retrieve alert masking configuration rules (https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1) to get the id of the notification channel group.
+ * @method integer getStartTime() Obtain Block start time, second-level (s) timestamp.
+ * @method void setStartTime(integer $StartTime) Set Block start time, second-level (s) timestamp.
  * @method integer getEndTime() Obtain Block end time (second-level timestamp).
  * @method void setEndTime(integer $EndTime) Set Block end time (second-level timestamp).
  * @method integer getType() Obtain Block type. 1: Block all notifications, 2: Block matching rules notifications according to the Rule parameter.
@@ -35,22 +35,24 @@ use TencentCloud\Common\AbstractModel;
  * @method string getReason() Obtain Blocking Reason
  * @method void setReason(string $Reason) Set Blocking Reason
  * @method integer getStatus() Obtain Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2).
+Enumerate: 0 (inactive), 1 (active), 2 (invalid)
  * @method void setStatus(integer $Status) Set Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2).
+Enumerate: 0 (inactive), 1 (active), 2 (invalid)
  */
 class ModifyAlarmShieldRequest extends AbstractModel
 {
     /**
-     * @var string Blocking rule ID.
+     * @var string Blocking rule ID. Retrieve the blocking rule ID via [retrieve alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
      */
     public $TaskId;
 
     /**
-     * @var string Notification channel group ID.
+     * @var string id of the notification channel group. Retrieve alert masking configuration rules (https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1) to get the id of the notification channel group.
      */
     public $AlarmNoticeId;
 
     /**
-     * @var integer Block start time (second-level timestamp).
+     * @var integer Block start time, second-level (s) timestamp.
      */
     public $StartTime;
 
@@ -76,18 +78,20 @@ class ModifyAlarmShieldRequest extends AbstractModel
 
     /**
      * @var integer Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2).
+Enumerate: 0 (inactive), 1 (active), 2 (invalid)
      */
     public $Status;
 
     /**
-     * @param string $TaskId Blocking rule ID.
-     * @param string $AlarmNoticeId Notification channel group ID.
-     * @param integer $StartTime Block start time (second-level timestamp).
+     * @param string $TaskId Blocking rule ID. Retrieve the blocking rule ID via [retrieve alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
+     * @param string $AlarmNoticeId id of the notification channel group. Retrieve alert masking configuration rules (https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1) to get the id of the notification channel group.
+     * @param integer $StartTime Block start time, second-level (s) timestamp.
      * @param integer $EndTime Block end time (second-level timestamp).
      * @param integer $Type Block type. 1: Block all notifications, 2: Block matching rules notifications according to the Rule parameter.
      * @param string $Rule Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule).
      * @param string $Reason Blocking Reason
      * @param integer $Status Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2).
+Enumerate: 0 (inactive), 1 (active), 2 (invalid)
      */
     function __construct()
     {

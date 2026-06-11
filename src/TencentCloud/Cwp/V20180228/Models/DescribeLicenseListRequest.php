@@ -46,10 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset, which is 0 by default.
  * @method array getTags() Obtain Tag filtering; filter by the platform's tag capabilities. In this case, you should pass in the tag key and tag value as an object.
  * @method void setTags(array $Tags) Set Tag filtering; filter by the platform's tag capabilities. In this case, you should pass in the tag key and tag value as an object.
- * @method string getOrder() Obtain 
- * @method void setOrder(string $Order) Set 
- * @method string getBy() Obtain 
- * @method void setBy(string $By) Set 
+ * @method string getOrder() Obtain ASC for ascending order; DESC for descending order.
+ * @method void setOrder(string $Order) Set ASC for ascending order; DESC for descending order.
+ * @method string getBy() Obtain Number of LicenseCnt authorizations.
+ * @method void setBy(string $By) Set Number of LicenseCnt authorizations.
  */
 class DescribeLicenseListRequest extends AbstractModel
 {
@@ -83,12 +83,12 @@ class DescribeLicenseListRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 
+     * @var string ASC for ascending order; DESC for descending order.
      */
     public $Order;
 
     /**
-     * @var string 
+     * @var string Number of LicenseCnt authorizations.
      */
     public $By;
 
@@ -106,8 +106,8 @@ class DescribeLicenseListRequest extends AbstractModel
      * @param integer $Limit Limit number, 10 by default.
      * @param integer $Offset Offset, which is 0 by default.
      * @param array $Tags Tag filtering; filter by the platform's tag capabilities. In this case, you should pass in the tag key and tag value as an object.
-     * @param string $Order 
-     * @param string $By 
+     * @param string $Order ASC for ascending order; DESC for descending order.
+     * @param string $By Number of LicenseCnt authorizations.
      */
     function __construct()
     {

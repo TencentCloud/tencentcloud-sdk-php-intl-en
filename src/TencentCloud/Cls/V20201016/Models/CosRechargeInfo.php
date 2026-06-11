@@ -21,193 +21,157 @@ use TencentCloud\Common\AbstractModel;
  * COS import configuration information.
  *
  * @method string getId() Obtain COS import configuration ID.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setId(string $Id) Set COS import configuration ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTopicId() Obtain ID of the log topic.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTopicId(string $TopicId) Set ID of the log topic.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLogsetId() Obtain ID of the logset.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLogsetId(string $LogsetId) Set ID of the logset.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getName() Obtain COS import task name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set COS import task name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBucket() Obtain COS bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBucket(string $Bucket) Set COS bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBucketRegion() Obtain Region where the COS bucket is located.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBucketRegion(string $BucketRegion) Set Region where the COS bucket is located.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPrefix() Obtain The prefix of the folder where COS files are located.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPrefix(string $Prefix) Set The prefix of the folder where COS files are located.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLogType() Obtain The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
-Default value: `minimalist_log`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLogType(string $LogType) Set The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
-Default value: `minimalist_log`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getEnable() Obtain Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnable(integer $Enable) Set Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUpdateTime() Obtain Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProgress() Obtain Progress in percentage.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProgress(integer $Progress) Set Progress in percentage.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCompress() Obtain Valid values: "" (default), "gzip", "lzop", "snappy"
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCompress(string $Compress) Set Valid values: "" (default), "gzip", "lzop", "snappy"
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ExtractRuleInfo getExtractRuleInfo() Obtain See the description of the `ExtractRuleInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExtractRuleInfo(ExtractRuleInfo $ExtractRuleInfo) Set See the description of the `ExtractRuleInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTopicId() Obtain Log topic ID
+ * @method void setTopicId(string $TopicId) Set Log topic ID
+ * @method string getLogsetId() Obtain Logset ID
+ * @method void setLogsetId(string $LogsetId) Set Logset ID
+ * @method string getName() Obtain COS import task name
+ * @method void setName(string $Name) Set COS import task name
+ * @method string getBucket() Obtain COS bucket
+ * @method void setBucket(string $Bucket) Set COS bucket
+ * @method string getBucketRegion() Obtain COS bucket location.
+
+-Obtain region information via [regions and access endpoints](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1).
+ * @method void setBucketRegion(string $BucketRegion) Set COS bucket location.
+
+-Obtain region information via [regions and access endpoints](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1).
+ * @method string getPrefix() Obtain Prefix of the COS file folder location
+ * @method void setPrefix(string $Prefix) Set Prefix of the COS file folder location
+ * @method string getLogType() Obtain Types of logs collected: json_log represents JSON logs, delimiter_log represents delimiter-separated format logs, minimalist_log represents single-line full-text representation.
+default is minimalist_log
+ * @method void setLogType(string $LogType) Set Types of logs collected: json_log represents JSON logs, delimiter_log represents delimiter-separated format logs, minimalist_log represents single-line full-text representation.
+default is minimalist_log
+ * @method integer getStatus() Obtain status 0: Created, 1: Running, 2: Stopped, 3: Completed, 4: Execution failed.
+ * @method void setStatus(integer $Status) Set status 0: Created, 1: Running, 2: Stopped, 3: Completed, 4: Execution failed.
+ * @method integer getEnable() Obtain Whether this feature is enabled. 0: Disabled; 1: Enabled.
+ * @method void setEnable(integer $Enable) Set Whether this feature is enabled. 0: Disabled; 1: Enabled.
+ * @method string getCreateTime() Obtain Creation time. Time format: YYYY-MM-DD HH:mm:ss
+ * @method void setCreateTime(string $CreateTime) Set Creation time. Time format: YYYY-MM-DD HH:mm:ss
+ * @method string getUpdateTime() Obtain Update time. Time format: YYYY-MM-DD HH:mm:ss
+ * @method void setUpdateTime(string $UpdateTime) Set Update time. Time format: YYYY-MM-DD HH:mm:ss
+ * @method integer getProgress() Obtain Progress Bar Percentage
+ * @method void setProgress(integer $Progress) Set Progress Bar Percentage
+ * @method string getCompress() Obtain Compression methods supported: "", "gzip", "lzop", and "snappy". Default empty with no compression.
+ * @method void setCompress(string $Compress) Set Compression methods supported: "", "gzip", "lzop", and "snappy". Default empty with no compression.
+ * @method ExtractRuleInfo getExtractRuleInfo() Obtain See the description of the ExtractRuleInfo structure.
+ * @method void setExtractRuleInfo(ExtractRuleInfo $ExtractRuleInfo) Set See the description of the ExtractRuleInfo structure.
+ * @method integer getTaskType() Obtain COS import task type. Valid values: 1: one-time import task; 2: continuous import task.
+ * @method void setTaskType(integer $TaskType) Set COS import task type. Valid values: 1: one-time import task; 2: continuous import task.
+ * @method array getMetadata() Obtain Metadata. Buckets and objects are supported.
+ * @method void setMetadata(array $Metadata) Set Metadata. Buckets and objects are supported.
  */
 class CosRechargeInfo extends AbstractModel
 {
     /**
      * @var string COS import configuration ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Id;
 
     /**
-     * @var string ID of the log topic.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Log topic ID
      */
     public $TopicId;
 
     /**
-     * @var string ID of the logset.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Logset ID
      */
     public $LogsetId;
 
     /**
-     * @var string COS import task name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string COS import task name
      */
     public $Name;
 
     /**
-     * @var string COS bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string COS bucket
      */
     public $Bucket;
 
     /**
-     * @var string Region where the COS bucket is located.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string COS bucket location.
+
+-Obtain region information via [regions and access endpoints](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1).
      */
     public $BucketRegion;
 
     /**
-     * @var string The prefix of the folder where COS files are located.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Prefix of the COS file folder location
      */
     public $Prefix;
 
     /**
-     * @var string The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
-Default value: `minimalist_log`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Types of logs collected: json_log represents JSON logs, delimiter_log represents delimiter-separated format logs, minimalist_log represents single-line full-text representation.
+default is minimalist_log
      */
     public $LogType;
 
     /**
-     * @var integer Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer status 0: Created, 1: Running, 2: Stopped, 3: Completed, 4: Execution failed.
      */
     public $Status;
 
     /**
-     * @var integer Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether this feature is enabled. 0: Disabled; 1: Enabled.
      */
     public $Enable;
 
     /**
-     * @var string Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Creation time. Time format: YYYY-MM-DD HH:mm:ss
      */
     public $CreateTime;
 
     /**
-     * @var string Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Update time. Time format: YYYY-MM-DD HH:mm:ss
      */
     public $UpdateTime;
 
     /**
-     * @var integer Progress in percentage.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Progress Bar Percentage
      */
     public $Progress;
 
     /**
-     * @var string Valid values: "" (default), "gzip", "lzop", "snappy"
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Compression methods supported: "", "gzip", "lzop", and "snappy". Default empty with no compression.
      */
     public $Compress;
 
     /**
-     * @var ExtractRuleInfo See the description of the `ExtractRuleInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ExtractRuleInfo See the description of the ExtractRuleInfo structure.
      */
     public $ExtractRuleInfo;
 
     /**
+     * @var integer COS import task type. Valid values: 1: one-time import task; 2: continuous import task.
+     */
+    public $TaskType;
+
+    /**
+     * @var array Metadata. Buckets and objects are supported.
+     */
+    public $Metadata;
+
+    /**
      * @param string $Id COS import configuration ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TopicId ID of the log topic.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LogsetId ID of the logset.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Name COS import task name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Bucket COS bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BucketRegion Region where the COS bucket is located.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Prefix The prefix of the folder where COS files are located.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LogType The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
-Default value: `minimalist_log`
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Enable Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdateTime Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Progress Progress in percentage.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Compress Valid values: "" (default), "gzip", "lzop", "snappy"
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtractRuleInfo $ExtractRuleInfo See the description of the `ExtractRuleInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TopicId Log topic ID
+     * @param string $LogsetId Logset ID
+     * @param string $Name COS import task name
+     * @param string $Bucket COS bucket
+     * @param string $BucketRegion COS bucket location.
+
+-Obtain region information via [regions and access endpoints](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1).
+     * @param string $Prefix Prefix of the COS file folder location
+     * @param string $LogType Types of logs collected: json_log represents JSON logs, delimiter_log represents delimiter-separated format logs, minimalist_log represents single-line full-text representation.
+default is minimalist_log
+     * @param integer $Status status 0: Created, 1: Running, 2: Stopped, 3: Completed, 4: Execution failed.
+     * @param integer $Enable Whether this feature is enabled. 0: Disabled; 1: Enabled.
+     * @param string $CreateTime Creation time. Time format: YYYY-MM-DD HH:mm:ss
+     * @param string $UpdateTime Update time. Time format: YYYY-MM-DD HH:mm:ss
+     * @param integer $Progress Progress Bar Percentage
+     * @param string $Compress Compression methods supported: "", "gzip", "lzop", and "snappy". Default empty with no compression.
+     * @param ExtractRuleInfo $ExtractRuleInfo See the description of the ExtractRuleInfo structure.
+     * @param integer $TaskType COS import task type. Valid values: 1: one-time import task; 2: continuous import task.
+     * @param array $Metadata Metadata. Buckets and objects are supported.
      */
     function __construct()
     {
@@ -281,6 +245,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("ExtractRuleInfo",$param) and $param["ExtractRuleInfo"] !== null) {
             $this->ExtractRuleInfo = new ExtractRuleInfo();
             $this->ExtractRuleInfo->deserialize($param["ExtractRuleInfo"]);
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = $param["Metadata"];
         }
     }
 }

@@ -22,14 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLogContent() Obtain Log content
  * @method void setLogContent(string $LogContent) Set Log content
- * @method integer getLineNum() Obtain Line number
- * @method void setLineNum(integer $LineNum) Set Line number
- * @method string getDstTopicId() Obtain Target log topic
- * @method void setDstTopicId(string $DstTopicId) Set Target log topic
- * @method string getFailReason() Obtain Error code. An empty string "" indicates no error.
- * @method void setFailReason(string $FailReason) Set Error code. An empty string "" indicates no error.
- * @method string getTime() Obtain Log timestamp
- * @method void setTime(string $Time) Set Log timestamp
+ * @method integer getLineNum() Obtain Line number. Starts from 0.
+ * @method void setLineNum(integer $LineNum) Set Line number. Starts from 0.
+ * @method string getDstTopicId() Obtain target log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method void setDstTopicId(string $DstTopicId) Set target log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method string getFailReason() Obtain Error message for failure. A null string "" indicates normal.
+ * @method void setFailReason(string $FailReason) Set Error message for failure. A null string "" indicates normal.
+ * @method string getTime() Obtain Log time, format: `2024-05-07 17:13:17.105`
+
+-Invalid input parameter
+-Valid at that time, the time format in logs
+ * @method void setTime(string $Time) Set Log time, format: `2024-05-07 17:13:17.105`
+
+-Invalid input parameter
+-Valid at that time, the time format in logs
  * @method string getDstTopicName() Obtain Target topic name
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDstTopicName(string $DstTopicName) Set Target topic name
@@ -43,37 +51,46 @@ class PreviewLogStatistic extends AbstractModel
     public $LogContent;
 
     /**
-     * @var integer Line number
+     * @var integer Line number. Starts from 0.
      */
     public $LineNum;
 
     /**
-     * @var string Target log topic
+     * @var string target log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $DstTopicId;
 
     /**
-     * @var string Error code. An empty string "" indicates no error.
+     * @var string Error message for failure. A null string "" indicates normal.
      */
     public $FailReason;
 
     /**
-     * @var string Log timestamp
+     * @var string Log time, format: `2024-05-07 17:13:17.105`
+
+-Invalid input parameter
+-Valid at that time, the time format in logs
      */
     public $Time;
 
     /**
      * @var string Target topic name
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $DstTopicName;
 
     /**
      * @param string $LogContent Log content
-     * @param integer $LineNum Line number
-     * @param string $DstTopicId Target log topic
-     * @param string $FailReason Error code. An empty string "" indicates no error.
-     * @param string $Time Log timestamp
+     * @param integer $LineNum Line number. Starts from 0.
+     * @param string $DstTopicId target log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param string $FailReason Error message for failure. A null string "" indicates normal.
+     * @param string $Time Log time, format: `2024-05-07 17:13:17.105`
+
+-Invalid input parameter
+-Valid at that time, the time format in logs
      * @param string $DstTopicName Target topic name
 Note: This field may return null, indicating that no valid values can be obtained.
      */

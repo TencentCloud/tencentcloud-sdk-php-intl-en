@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeID(string $NodeID) Set ID of a super node
  * @method string getNodeName() Obtain Super node name
  * @method void setNodeName(string $NodeName) Set Super node name
+ * @method string getContainerStatus() Obtain Container status. "RUNNING": running; "PAUSED": paused; "STOPPED": stopped; "CREATED": created; "DESTROYED": terminated; "RESTARTING": restarting; "REMOVING": migrating; "DEAD": dead; "UNKNOWN": unknown.
+ * @method void setContainerStatus(string $ContainerStatus) Set Container status. "RUNNING": running; "PAUSED": paused; "STOPPED": stopped; "CREATED": created; "DESTROYED": terminated; "RESTARTING": restarting; "REMOVING": migrating; "DEAD": dead; "UNKNOWN": unknown.
  */
 class VulAffectedContainerInfo extends AbstractModel
 {
@@ -122,6 +124,11 @@ class VulAffectedContainerInfo extends AbstractModel
     public $NodeName;
 
     /**
+     * @var string Container status. "RUNNING": running; "PAUSED": paused; "STOPPED": stopped; "CREATED": created; "DESTROYED": terminated; "RESTARTING": restarting; "REMOVING": migrating; "DEAD": dead; "UNKNOWN": unknown.
+     */
+    public $ContainerStatus;
+
+    /**
      * @param string $HostIP Private IP
      * @param string $ContainerID Container ID
      * @param string $ContainerName Container name
@@ -136,6 +143,7 @@ class VulAffectedContainerInfo extends AbstractModel
      * @param string $NodeUniqueID UID of a super node
      * @param string $NodeID ID of a super node
      * @param string $NodeName Super node name
+     * @param string $ContainerStatus Container status. "RUNNING": running; "PAUSED": paused; "STOPPED": stopped; "CREATED": created; "DESTROYED": terminated; "RESTARTING": restarting; "REMOVING": migrating; "DEAD": dead; "UNKNOWN": unknown.
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class VulAffectedContainerInfo extends AbstractModel
 
         if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
             $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("ContainerStatus",$param) and $param["ContainerStatus"] !== null) {
+            $this->ContainerStatus = $param["ContainerStatus"];
         }
     }
 }

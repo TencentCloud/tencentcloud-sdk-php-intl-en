@@ -23,8 +23,12 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tcss\V20201101\Models as Models;
 
 /**
- * @method Models\AddAndPublishNetworkFirewallPolicyDetailResponse AddAndPublishNetworkFirewallPolicyDetail(Models\AddAndPublishNetworkFirewallPolicyDetailRequest $req) This API is used to create a task to add and publish a network policy in the container network.
- * @method Models\AddAndPublishNetworkFirewallPolicyYamlDetailResponse AddAndPublishNetworkFirewallPolicyYamlDetail(Models\AddAndPublishNetworkFirewallPolicyYamlDetailRequest $req) This API is used to create a task to configure and publish a YAML network policy in the container network.
+ * @method Models\AddAndPublishNetworkFirewallPolicyDetailResponse AddAndPublishNetworkFirewallPolicyDetail(Models\AddAndPublishNetworkFirewallPolicyDetailRequest $req) deprecated pending reconstruction
+
+Create a network policy and add and distribute tasks for the container network.
+ * @method Models\AddAndPublishNetworkFirewallPolicyYamlDetailResponse AddAndPublishNetworkFirewallPolicyYamlDetail(Models\AddAndPublishNetworkFirewallPolicyYamlDetailRequest $req) This feature is deprecated pending tripartite reconstruction
+
+Create a YAML network policy and distribute tasks for the container network.
  * @method Models\AddAssetImageRegistryRegistryDetailResponse AddAssetImageRegistryRegistryDetail(Models\AddAssetImageRegistryRegistryDetailRequest $req) This API is used to add the details of an image repository.
  * @method Models\AddComplianceAssetPolicySetToWhitelistResponse AddComplianceAssetPolicySetToWhitelist(Models\AddComplianceAssetPolicySetToWhitelistRequest $req) This API is used to ignore the specified asset IDs and check item IDs so as to hide the assets contained in the specified check items.
 `AddCompliancePolicyItemToWhitelist` is the reference API. Except for the input field, others should be the same, and if not, it may be due to the definition.
@@ -39,11 +43,21 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\AddEditWarningRulesResponse AddEditWarningRules(Models\AddEditWarningRulesRequest $req) This API is used to add or edit an alert policy.
  * @method Models\AddEscapeWhiteListResponse AddEscapeWhiteList(Models\AddEscapeWhiteListRequest $req) This API is used to add an allowed escape.
  * @method Models\AddIgnoreVulResponse AddIgnoreVul(Models\AddIgnoreVulRequest $req) This API is used to add ignored vulnerabilities in a vulnerability scan.
- * @method Models\AddNetworkFirewallPolicyDetailResponse AddNetworkFirewallPolicyDetail(Models\AddNetworkFirewallPolicyDetailRequest $req) This API is used to create a task to add a network policy in the container network.
- * @method Models\AddNetworkFirewallPolicyYamlDetailResponse AddNetworkFirewallPolicyYamlDetail(Models\AddNetworkFirewallPolicyYamlDetailRequest $req) This API is used to create a task to add a YAML network policy in the container network.
- * @method Models\CheckNetworkFirewallPolicyYamlResponse CheckNetworkFirewallPolicyYaml(Models\CheckNetworkFirewallPolicyYamlRequest $req) This API is used to create a task to check a YAML network policy in the container network.
+ * @method Models\AddNetworkFirewallPolicyDetailResponse AddNetworkFirewallPolicyDetail(Models\AddNetworkFirewallPolicyDetailRequest $req) This feature is deprecated pending tripartite reconstruction
+
+Create a network policy and add tasks for the container network.
+ * @method Models\AddNetworkFirewallPolicyYamlDetailResponse AddNetworkFirewallPolicyYamlDetail(Models\AddNetworkFirewallPolicyYamlDetailRequest $req) deprecated pending reconstruction
+
+Create a YAML network policy and add tasks for the container network.
+ * @method Models\AddOrModifyMaliciousConnectionWhiteListResponse AddOrModifyMaliciousConnectionWhiteList(Models\AddOrModifyMaliciousConnectionWhiteListRequest $req) Add or modify the allowlist for malicious external connections.
+ * @method Models\AddOrModifyVirusWhiteListRuleResponse AddOrModifyVirusWhiteListRule(Models\AddOrModifyVirusWhiteListRuleRequest $req) This API is used to add or modify Trojan allowlist rules.
+ * @method Models\CheckNetworkFirewallPolicyYamlResponse CheckNetworkFirewallPolicyYaml(Models\CheckNetworkFirewallPolicyYamlRequest $req) deprecated pending reconstruction
+
+Create a task of check the YAML network policy for the container network.
  * @method Models\CheckRepeatAssetImageRegistryResponse CheckRepeatAssetImageRegistry(Models\CheckRepeatAssetImageRegistryRequest $req) This API is used to check whether an image repository name is duplicated.
- * @method Models\ConfirmNetworkFirewallPolicyResponse ConfirmNetworkFirewallPolicy(Models\ConfirmNetworkFirewallPolicyRequest $req) This API is used to create a task to confirm a network policy in the container network.
+ * @method Models\ConfirmNetworkFirewallPolicyResponse ConfirmNetworkFirewallPolicy(Models\ConfirmNetworkFirewallPolicyRequest $req) deprecated pending reconstruction
+
+Create a network policy and confirm tasks for the container network.
  * @method Models\CreateAbnormalProcessRulesExportJobResponse CreateAbnormalProcessRulesExportJob(Models\CreateAbnormalProcessRulesExportJobRequest $req) This API is used to export abnormal process rules.
  * @method Models\CreateAccessControlsRuleExportJobResponse CreateAccessControlsRuleExportJob(Models\CreateAccessControlsRuleExportJobRequest $req) This API is used to export file tampering detection rules.
  * @method Models\CreateAssetImageRegistryScanTaskResponse CreateAssetImageRegistryScanTask(Models\CreateAssetImageRegistryScanTaskRequest $req) This API is used to create an image scan task for an image repository.
@@ -52,6 +66,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\CreateAssetImageScanTaskResponse CreateAssetImageScanTask(Models\CreateAssetImageScanTaskRequest $req) This API is used to create an image scan task.
  * @method Models\CreateAssetImageVirusExportJobResponse CreateAssetImageVirusExportJob(Models\CreateAssetImageVirusExportJobRequest $req) This API is used to create a task to export the list of trojans in a local image.
  * @method Models\CreateCheckComponentResponse CreateCheckComponent(Models\CreateCheckComponentRequest $req) This API is used to install the check component and create a defender.
+ * @method Models\CreateClusterAccessResponse CreateClusterAccess(Models\CreateClusterAccessRequest $req) Create cluster access.
  * @method Models\CreateClusterCheckTaskResponse CreateClusterCheckTask(Models\CreateClusterCheckTaskRequest $req) This API is used to create a cluster check task to check it for risk items.
  * @method Models\CreateComplianceTaskResponse CreateComplianceTask(Models\CreateComplianceTaskRequest $req) This API is used to create a compliance check task for another check triggered at the asset level.
  * @method Models\CreateComponentExportJobResponse CreateComponentExportJob(Models\CreateComponentExportJobRequest $req) This API is used to export the list of components in a local image.
@@ -64,11 +79,19 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\CreateImageExportJobResponse CreateImageExportJob(Models\CreateImageExportJobRequest $req) This API is used to create an image export task.
  * @method Models\CreateK8sApiAbnormalEventExportJobResponse CreateK8sApiAbnormalEventExportJob(Models\CreateK8sApiAbnormalEventExportJobRequest $req) This API is used to create K8sApi abnormal event export jobs.
  * @method Models\CreateK8sApiAbnormalRuleExportJobResponse CreateK8sApiAbnormalRuleExportJob(Models\CreateK8sApiAbnormalRuleExportJobRequest $req) This API is used to export rules of K8sApi exceptions. 
- * @method Models\CreateK8sApiAbnormalRuleInfoResponse CreateK8sApiAbnormalRuleInfo(Models\CreateK8sApiAbnormalRuleInfoRequest $req) This API is used to create K8sApi abnormal event rules.
- * @method Models\CreateNetworkFirewallClusterRefreshResponse CreateNetworkFirewallClusterRefresh(Models\CreateNetworkFirewallClusterRefreshRequest $req) This API is used to distribute a refresh task in the container network cluster.
- * @method Models\CreateNetworkFirewallPolicyDiscoverResponse CreateNetworkFirewallPolicyDiscover(Models\CreateNetworkFirewallPolicyDiscoverRequest $req) This API is used to create a task to sync a network policy from the container network cluster.
- * @method Models\CreateNetworkFirewallPublishResponse CreateNetworkFirewallPublish(Models\CreateNetworkFirewallPublishRequest $req) This API is used to create a task to publish a network policy in the container network.
- * @method Models\CreateNetworkFirewallUndoPublishResponse CreateNetworkFirewallUndoPublish(Models\CreateNetworkFirewallUndoPublishRequest $req) This API is used to create a task to revoke a network policy in the container network.
+ * @method Models\CreateK8sApiAbnormalRuleInfoResponse CreateK8sApiAbnormalRuleInfo(Models\CreateK8sApiAbnormalRuleInfoRequest $req) Create a k8s API exception event RULE. The Action in RuleInfoList only supports RULE_MODE_ALERT (ALERT) and no longer supports RULE_MODE_RELEASE/PASS (allow). The EventID parameter has been removed. To add an event to the allowlist, use the ModifyK8sApiAbnormalWhitelist API.
+ * @method Models\CreateNetworkFirewallClusterRefreshResponse CreateNetworkFirewallClusterRefresh(Models\CreateNetworkFirewallClusterRefreshRequest $req) This feature is deprecated pending tripartite reconstruction
+
+Distribute refresh tasks of clusters for the container network.
+ * @method Models\CreateNetworkFirewallPolicyDiscoverResponse CreateNetworkFirewallPolicyDiscover(Models\CreateNetworkFirewallPolicyDiscoverRequest $req) deprecated pending reconstruction
+
+Create an auto-discovery task according to the container network and cluster network policies.
+ * @method Models\CreateNetworkFirewallPublishResponse CreateNetworkFirewallPublish(Models\CreateNetworkFirewallPublishRequest $req) deprecated pending reconstruction
+
+Create a network policy and distribute tasks for the container network.
+ * @method Models\CreateNetworkFirewallUndoPublishResponse CreateNetworkFirewallUndoPublish(Models\CreateNetworkFirewallUndoPublishRequest $req) deprecated pending reconstruction
+
+Create a network policy and cancel tasks for the container network.
  * @method Models\CreateOrModifyPostPayCoresResponse CreateOrModifyPostPayCores(Models\CreateOrModifyPostPayCoresRequest $req) This API is used to create or edit the upper limit for elastic billing.
  * @method Models\CreateProcessEventsExportJobResponse CreateProcessEventsExportJob(Models\CreateProcessEventsExportJobRequest $req) This API is used to create a task to asynchronously export abnormal process events.
  * @method Models\CreateRefreshTaskResponse CreateRefreshTask(Models\CreateRefreshTaskRequest $req) This API is used to distribute a task to refresh the asset information.
@@ -89,38 +112,35 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DeleteComplianceAssetPolicySetFromWhitelistResponse DeleteComplianceAssetPolicySetFromWhitelist(Models\DeleteComplianceAssetPolicySetFromWhitelistRequest $req) This API is used to unignore the specified asset IDs and check item IDs so as to show the assets contained in the specified check items.
 `AddCompliancePolicyAssetSetToWhitelist` is the reference API. Except for the input field, others should be the same, and if not, it may be due to the definition.
  * @method Models\DeleteCompliancePolicyAssetSetFromWhitelistResponse DeleteCompliancePolicyAssetSetFromWhitelist(Models\DeleteCompliancePolicyAssetSetFromWhitelistRequest $req) This API is used to unignore the specified asset IDs and check item IDs so as to show the assets contained in the specified check items.
- * @method Models\DeleteCompliancePolicyItemFromWhitelistResponse DeleteCompliancePolicyItemFromWhitelist(Models\DeleteCompliancePolicyItemFromWhitelistRequest $req) This API is used to remove the specified check item from the allowlist.
+ * @method Models\DeleteCompliancePolicyItemFromWhitelistResponse DeleteCompliancePolicyItemFromWhitelist(Models\DeleteCompliancePolicyItemFromWhitelistRequest $req) Product refactoring and optimization, none of these APIs are called.
+
+Remove the designated detection item from the allowlist.
  * @method Models\DeleteEscapeWhiteListResponse DeleteEscapeWhiteList(Models\DeleteEscapeWhiteListRequest $req) This API is used to delete an allowed escape.
  * @method Models\DeleteIgnoreVulResponse DeleteIgnoreVul(Models\DeleteIgnoreVulRequest $req) This API is used to unignore vulnerabilities in a vulnerability scan.
  * @method Models\DeleteK8sApiAbnormalRuleResponse DeleteK8sApiAbnormalRule(Models\DeleteK8sApiAbnormalRuleRequest $req) This API is used to delete a K8sApi abnormal event rules.
  * @method Models\DeleteMachineResponse DeleteMachine(Models\DeleteMachineRequest $req) This API is used to uninstall the agent.
- * @method Models\DeleteNetworkFirewallPolicyDetailResponse DeleteNetworkFirewallPolicyDetail(Models\DeleteNetworkFirewallPolicyDetailRequest $req) This API is used to create a task to delete a network policy in the container network.
+ * @method Models\DeleteNetworkFirewallPolicyDetailResponse DeleteNetworkFirewallPolicyDetail(Models\DeleteNetworkFirewallPolicyDetailRequest $req) deprecated pending reconstruction
+
+Create a network policy and delete tasks for the container network.
+ * @method Models\DeleteRaspRulesResponse DeleteRaspRules(Models\DeleteRaspRulesRequest $req) Deleting Entries from the Vulnerability Defense Allowlist
  * @method Models\DeleteReverseShellEventsResponse DeleteReverseShellEvents(Models\DeleteReverseShellEventsRequest $req) This API is used to delete a reverse shell event at runtime.
  * @method Models\DeleteReverseShellWhiteListsResponse DeleteReverseShellWhiteLists(Models\DeleteReverseShellWhiteListsRequest $req) This API is used to delete an allowed reverse shell at runtime.
  * @method Models\DeleteRiskSyscallEventsResponse DeleteRiskSyscallEvents(Models\DeleteRiskSyscallEventsRequest $req) This API is used to delete a high-risk syscall event at runtime.
  * @method Models\DeleteRiskSyscallWhiteListsResponse DeleteRiskSyscallWhiteLists(Models\DeleteRiskSyscallWhiteListsRequest $req) This API is used to delete an allowed high-risk syscall at runtime.
  * @method Models\DeleteSearchTemplateResponse DeleteSearchTemplate(Models\DeleteSearchTemplateRequest $req) This API is used to delete a search template.
+ * @method Models\DeleteVirusWhiteListRuleResponse DeleteVirusWhiteListRule(Models\DeleteVirusWhiteListRuleRequest $req) This API is used to delete Trojan allowlist rules.
  * @method Models\DescribeABTestConfigResponse DescribeABTestConfig(Models\DescribeABTestConfigRequest $req) This API is used to get the current canary configuration of the user.
  * @method Models\DescribeAbnormalProcessDetailResponse DescribeAbnormalProcessDetail(Models\DescribeAbnormalProcessDetailRequest $req) This API is used to query the details of an abnormal process event at runtime.
  * @method Models\DescribeAbnormalProcessEventTendencyResponse DescribeAbnormalProcessEventTendency(Models\DescribeAbnormalProcessEventTendencyRequest $req) This API is used to query the trend of pending abnormal process events.
  * @method Models\DescribeAbnormalProcessEventsResponse DescribeAbnormalProcessEvents(Models\DescribeAbnormalProcessEventsRequest $req) This API is used to query the list of abnormal process events at runtime.
- * @method Models\DescribeAbnormalProcessEventsExportResponse DescribeAbnormalProcessEventsExport(Models\DescribeAbnormalProcessEventsExportRequest $req) 接口已废弃
-
-This API is used to query and export the list of abnormal process events at runtime.
  * @method Models\DescribeAbnormalProcessLevelSummaryResponse DescribeAbnormalProcessLevelSummary(Models\DescribeAbnormalProcessLevelSummaryRequest $req) This API is used to count the number of pending abnormal process events at each severity level.
  * @method Models\DescribeAbnormalProcessRuleDetailResponse DescribeAbnormalProcessRuleDetail(Models\DescribeAbnormalProcessRuleDetailRequest $req) This API is used to query the details of an abnormal process policy at runtime.
  * @method Models\DescribeAbnormalProcessRulesResponse DescribeAbnormalProcessRules(Models\DescribeAbnormalProcessRulesRequest $req) This API is used to query the list of abnormal process policies at runtime.
- * @method Models\DescribeAbnormalProcessRulesExportResponse DescribeAbnormalProcessRulesExport(Models\DescribeAbnormalProcessRulesExportRequest $req) 接口已废弃
-
-This API is used to query and export the list of abnormal process policies at runtime.
  * @method Models\DescribeAccessControlDetailResponse DescribeAccessControlDetail(Models\DescribeAccessControlDetailRequest $req) This API is used to query the details of an access control event at runtime.
  * @method Models\DescribeAccessControlEventsResponse DescribeAccessControlEvents(Models\DescribeAccessControlEventsRequest $req) This API is used to query the list of access control events at runtime.
  * @method Models\DescribeAccessControlEventsExportResponse DescribeAccessControlEventsExport(Models\DescribeAccessControlEventsExportRequest $req) This API is used to export the list of access control events at runtime.
  * @method Models\DescribeAccessControlRuleDetailResponse DescribeAccessControlRuleDetail(Models\DescribeAccessControlRuleDetailRequest $req) This API is used to query the details of an access control policy at runtime.
  * @method Models\DescribeAccessControlRulesResponse DescribeAccessControlRules(Models\DescribeAccessControlRulesRequest $req) This API is used to query the list of access control policies at runtime.
- * @method Models\DescribeAccessControlRulesExportResponse DescribeAccessControlRulesExport(Models\DescribeAccessControlRulesExportRequest $req) 接口已废弃
-
-This API is used to export the list of access control policies at runtime.
  * @method Models\DescribeAffectedClusterCountResponse DescribeAffectedClusterCount(Models\DescribeAffectedClusterCountRequest $req) This API is used to get and return the number of affected clusters.
  * @method Models\DescribeAffectedNodeListResponse DescribeAffectedNodeList(Models\DescribeAffectedNodeListRequest $req) This API is used to query affected node types and return the node list.
  * @method Models\DescribeAffectedWorkloadListResponse DescribeAffectedWorkloadList(Models\DescribeAffectedWorkloadListRequest $req) This API is used to query affected workload types and return the workload list.
@@ -138,9 +158,6 @@ This API is used to export the list of access control policies at runtime.
  * @method Models\DescribeAssetImageDetailResponse DescribeAssetImageDetail(Models\DescribeAssetImageDetailRequest $req) This API is used to query the details of an image.
  * @method Models\DescribeAssetImageHostListResponse DescribeAssetImageHostList(Models\DescribeAssetImageHostListRequest $req) This API is used to query the servers associated with an image.
  * @method Models\DescribeAssetImageListResponse DescribeAssetImageList(Models\DescribeAssetImageListRequest $req) This API is used to query the list of images.
- * @method Models\DescribeAssetImageListExportResponse DescribeAssetImageListExport(Models\DescribeAssetImageListExportRequest $req) 接口已废弃
-
-This API is used to export the list of images.
  * @method Models\DescribeAssetImageRegistryAssetStatusResponse DescribeAssetImageRegistryAssetStatus(Models\DescribeAssetImageRegistryAssetStatusRequest $req) This API is used to view the update progress of the assets in an image repository.
  * @method Models\DescribeAssetImageRegistryDetailResponse DescribeAssetImageRegistryDetail(Models\DescribeAssetImageRegistryDetailRequest $req) This API is used to query the image repository details.
  * @method Models\DescribeAssetImageRegistryListResponse DescribeAssetImageRegistryList(Models\DescribeAssetImageRegistryListRequest $req) This API is used to query the list of image repositories.
@@ -193,20 +210,23 @@ This API is used to export the list of images.
  * @method Models\DescribeEscapeEventInfoResponse DescribeEscapeEventInfo(Models\DescribeEscapeEventInfoRequest $req) This API is used to query the list of container escape events.
  * @method Models\DescribeEscapeEventTendencyResponse DescribeEscapeEventTendency(Models\DescribeEscapeEventTendencyRequest $req) This API is used to query the trend of pending escape events.
  * @method Models\DescribeEscapeEventTypeSummaryResponse DescribeEscapeEventTypeSummary(Models\DescribeEscapeEventTypeSummaryRequest $req) This API is used to query the types of container escape events and the number of pending events.
- * @method Models\DescribeEscapeEventsExportResponse DescribeEscapeEventsExport(Models\DescribeEscapeEventsExportRequest $req) 接口已废弃
-
-This API is used to export the list of container escape events.
  * @method Models\DescribeEscapeRuleInfoResponse DescribeEscapeRuleInfo(Models\DescribeEscapeRuleInfoRequest $req) This API is used to query the information of a container escape scan rule.
  * @method Models\DescribeEscapeSafeStateResponse DescribeEscapeSafeState(Models\DescribeEscapeSafeStateRequest $req) This API is used to query the container escape security status.
  * @method Models\DescribeEscapeWhiteListResponse DescribeEscapeWhiteList(Models\DescribeEscapeWhiteListRequest $req) This API is used to query the allowlist of escapes.
  * @method Models\DescribeExportJobDownloadURLResponse DescribeExportJobDownloadURL(Models\DescribeExportJobDownloadURLRequest $req) This API is used to query the URL to download the result of an exportation task.
  * @method Models\DescribeExportJobManageListResponse DescribeExportJobManageList(Models\DescribeExportJobManageListRequest $req) This API is used to query the export job management list.
- * @method Models\DescribeExportJobResultResponse DescribeExportJobResult(Models\DescribeExportJobResultRequest $req) This API is used to query the result of an export task.
+ * @method Models\DescribeExportJobResultResponse DescribeExportJobResult(Models\DescribeExportJobResultRequest $req) Query the progress of the export interface
  * @method Models\DescribeImageAuthorizedInfoResponse DescribeImageAuthorizedInfo(Models\DescribeImageAuthorizedInfoRequest $req) This API is used to query the image licensing information.
  * @method Models\DescribeImageAutoAuthorizedLogListResponse DescribeImageAutoAuthorizedLogList(Models\DescribeImageAutoAuthorizedLogListRequest $req) This API is used to query the list of automatic image licensing results.
  * @method Models\DescribeImageAutoAuthorizedRuleResponse DescribeImageAutoAuthorizedRule(Models\DescribeImageAutoAuthorizedRuleRequest $req) This API is used to query an automatic licensing rule for local images.
  * @method Models\DescribeImageAutoAuthorizedTaskListResponse DescribeImageAutoAuthorizedTaskList(Models\DescribeImageAutoAuthorizedTaskListRequest $req) This API is used to query the list of automatic image licensing tasks.
  * @method Models\DescribeImageComponentListResponse DescribeImageComponentList(Models\DescribeImageComponentListRequest $req) This API is used to query the list of components in an local image.
+ * @method Models\DescribeImageDenyEventDetailResponse DescribeImageDenyEventDetail(Models\DescribeImageDenyEventDetailRequest $req) Query image interception event details.
+ * @method Models\DescribeImageDenyEventListResponse DescribeImageDenyEventList(Models\DescribeImageDenyEventListRequest $req) Query the list of image interception events.
+ * @method Models\DescribeImageDenyEventTendencyResponse DescribeImageDenyEventTendency(Models\DescribeImageDenyEventTendencyRequest $req) Query the trend of image interception events.
+ * @method Models\DescribeImageDenyRuleDetailResponse DescribeImageDenyRuleDetail(Models\DescribeImageDenyRuleDetailRequest $req) Query image interception rule details.
+ * @method Models\DescribeImageDenyRuleListResponse DescribeImageDenyRuleList(Models\DescribeImageDenyRuleListRequest $req) Query the image interception rule list.
+ * @method Models\DescribeImageDenyRuleSummaryResponse DescribeImageDenyRuleSummary(Models\DescribeImageDenyRuleSummaryRequest $req) Query image interception rule statistics.
  * @method Models\DescribeImageRegistryNamespaceListResponse DescribeImageRegistryNamespaceList(Models\DescribeImageRegistryNamespaceListRequest $req) This API is used to query the list of namespaces for an image repository.
  * @method Models\DescribeImageRegistryTimingScanTaskResponse DescribeImageRegistryTimingScanTask(Models\DescribeImageRegistryTimingScanTaskRequest $req) This API is used to view a scheduled task of an image repository.
  * @method Models\DescribeImageRiskSummaryResponse DescribeImageRiskSummary(Models\DescribeImageRiskSummaryRequest $req) This API is used to query the overview of local image risks.
@@ -217,31 +237,55 @@ This API is used to export the list of container escape events.
  * @method Models\DescribeK8sApiAbnormalEventInfoResponse DescribeK8sApiAbnormalEventInfo(Models\DescribeK8sApiAbnormalEventInfoRequest $req) Querying details of a K8s API exception event
  * @method Models\DescribeK8sApiAbnormalEventListResponse DescribeK8sApiAbnormalEventList(Models\DescribeK8sApiAbnormalEventListRequest $req) This API is used to query the K8sApi abnormal event list.
  * @method Models\DescribeK8sApiAbnormalRuleInfoResponse DescribeK8sApiAbnormalRuleInfo(Models\DescribeK8sApiAbnormalRuleInfoRequest $req) This API is used to query K8sApi abnormal request rule details.
- * @method Models\DescribeK8sApiAbnormalRuleListResponse DescribeK8sApiAbnormalRuleList(Models\DescribeK8sApiAbnormalRuleListRequest $req) This API is used to the K8sApi abnormal request rule list.
+ * @method Models\DescribeK8sApiAbnormalRuleListResponse DescribeK8sApiAbnormalRuleList(Models\DescribeK8sApiAbnormalRuleListRequest $req) This API is used to query the list of abnormal request rules for k8sapi. It supports fuzzy search by cluster name (ClusterName) and Cluster ID, with cluster rules (is_all=1) always returned. The response includes newly-added RuleInfoList (sub-rule content), RuleActions (deduplicated execution action list), and the EffectAllCluster field.
  * @method Models\DescribeK8sApiAbnormalRuleScopeListResponse DescribeK8sApiAbnormalRuleScopeList(Models\DescribeK8sApiAbnormalRuleScopeListRequest $req) This API is used to query rules for K8s API exceptions. 
  * @method Models\DescribeK8sApiAbnormalSummaryResponse DescribeK8sApiAbnormalSummary(Models\DescribeK8sApiAbnormalSummaryRequest $req) This API is used to query the statistics of K8sApi abnormal events.
  * @method Models\DescribeK8sApiAbnormalTendencyResponse DescribeK8sApiAbnormalTendency(Models\DescribeK8sApiAbnormalTendencyRequest $req) This API is used to query the trend of K8sApi abnormal events.
  * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) This API is used to get the statistics of the log search usage.
- * @method Models\DescribeNetworkFirewallAuditRecordResponse DescribeNetworkFirewallAuditRecord(Models\DescribeNetworkFirewallAuditRecordRequest $req) This API is used to query the list of cluster policy audits.
- * @method Models\DescribeNetworkFirewallClusterListResponse DescribeNetworkFirewallClusterList(Models\DescribeNetworkFirewallClusterListRequest $req) This API is used to query the list of clusters.
- * @method Models\DescribeNetworkFirewallClusterRefreshStatusResponse DescribeNetworkFirewallClusterRefreshStatus(Models\DescribeNetworkFirewallClusterRefreshStatusRequest $req) This API is used to query the progress of the asset query task in the container network.
- * @method Models\DescribeNetworkFirewallNamespaceLabelListResponse DescribeNetworkFirewallNamespaceLabelList(Models\DescribeNetworkFirewallNamespaceLabelListRequest $req) This API is used to query the list of cluster network namespace labels.
- * @method Models\DescribeNetworkFirewallPodLabelsListResponse DescribeNetworkFirewallPodLabelsList(Models\DescribeNetworkFirewallPodLabelsListRequest $req) This API is used to query cluster network Pod labels.
- * @method Models\DescribeNetworkFirewallPolicyDetailResponse DescribeNetworkFirewallPolicyDetail(Models\DescribeNetworkFirewallPolicyDetailRequest $req) This API is used to view the details of a policy in the container network cluster.
- * @method Models\DescribeNetworkFirewallPolicyDiscoverResponse DescribeNetworkFirewallPolicyDiscover(Models\DescribeNetworkFirewallPolicyDiscoverRequest $req) This API is used to query the progress of a network policy sync task in the container network.
- * @method Models\DescribeNetworkFirewallPolicyListResponse DescribeNetworkFirewallPolicyList(Models\DescribeNetworkFirewallPolicyListRequest $req) This API is used to query the list of cluster network policies.
- * @method Models\DescribeNetworkFirewallPolicyStatusResponse DescribeNetworkFirewallPolicyStatus(Models\DescribeNetworkFirewallPolicyStatusRequest $req) This API is used to query the execution status of a network policy in the container network.
- * @method Models\DescribeNetworkFirewallPolicyYamlDetailResponse DescribeNetworkFirewallPolicyYamlDetail(Models\DescribeNetworkFirewallPolicyYamlDetailRequest $req) This API is used to view the details of a YAML network policy in the container network cluster.
+ * @method Models\DescribeMaliciousConnectionBlackListResponse DescribeMaliciousConnectionBlackList(Models\DescribeMaliciousConnectionBlackListRequest $req) Query the malicious external connection blocklist.
+ * @method Models\DescribeMaliciousConnectionWhiteListResponse DescribeMaliciousConnectionWhiteList(Models\DescribeMaliciousConnectionWhiteListRequest $req) Query the allowlist for malicious external connections.
+ * @method Models\DescribeNetworkFirewallAuditRecordResponse DescribeNetworkFirewallAuditRecord(Models\DescribeNetworkFirewallAuditRecordRequest $req) This feature is deprecated pending tripartite reconstruction
+
+Query the cluster policy audit list.
+ * @method Models\DescribeNetworkFirewallClusterListResponse DescribeNetworkFirewallClusterList(Models\DescribeNetworkFirewallClusterListRequest $req) Query the network firewall cluster policy list.
+ * @method Models\DescribeNetworkFirewallClusterRefreshStatusResponse DescribeNetworkFirewallClusterRefreshStatus(Models\DescribeNetworkFirewallClusterRefreshStatusRequest $req) This feature is deprecated pending tripartite reconstruction
+
+Query the asset task progress for the container network.
+ * @method Models\DescribeNetworkFirewallNamespaceLabelListResponse DescribeNetworkFirewallNamespaceLabelList(Models\DescribeNetworkFirewallNamespaceLabelListRequest $req) This feature is deprecated pending tripartite reconstruction
+
+Query the cluster network space tag list.
+ * @method Models\DescribeNetworkFirewallPodLabelsListResponse DescribeNetworkFirewallPodLabelsList(Models\DescribeNetworkFirewallPodLabelsListRequest $req) deprecated pending reconstruction
+
+Query the cluster network pod tags.
+ * @method Models\DescribeNetworkFirewallPolicyDetailResponse DescribeNetworkFirewallPolicyDetail(Models\DescribeNetworkFirewallPolicyDetailRequest $req) deprecated pending reconstruction
+
+View policy details of clusters for the container network.
+ * @method Models\DescribeNetworkFirewallPolicyDiscoverResponse DescribeNetworkFirewallPolicyDiscover(Models\DescribeNetworkFirewallPolicyDiscoverRequest $req) This feature is deprecated pending tripartite reconstruction
+
+Query the auto-discovery task process of the network policy for the network policy.
+ * @method Models\DescribeNetworkFirewallPolicyListResponse DescribeNetworkFirewallPolicyList(Models\DescribeNetworkFirewallPolicyListRequest $req) deprecated pending reconstruction
+
+Query the cluster network policy list.
+ * @method Models\DescribeNetworkFirewallPolicyStatusResponse DescribeNetworkFirewallPolicyStatus(Models\DescribeNetworkFirewallPolicyStatusRequest $req) This feature is deprecated pending tripartite reconstruction
+
+Query the network policy execution status for the container network.
+ * @method Models\DescribeNetworkFirewallPolicyYamlDetailResponse DescribeNetworkFirewallPolicyYamlDetail(Models\DescribeNetworkFirewallPolicyYamlDetailRequest $req) deprecated pending reconstruction
+
+View YAML network policy details of clusters for the container network.
  * @method Models\DescribeNewestVulResponse DescribeNewestVul(Models\DescribeNewestVulRequest $req) This API is used to query the latest list of vulnerabilities.
  * @method Models\DescribePostPayDetailResponse DescribePostPayDetail(Models\DescribePostPayDetailRequest $req) This API is used to query the pay-as-you-go billing details.
  * @method Models\DescribeProVersionInfoResponse DescribeProVersionInfo(Models\DescribeProVersionInfoRequest $req) This API is used to check whether the Pro Edition needs to be purchased.
  * @method Models\DescribePromotionActivityResponse DescribePromotionActivity(Models\DescribePromotionActivityRequest $req) This API is used to query promotions.
  * @method Models\DescribePublicKeyResponse DescribePublicKey(Models\DescribePublicKeyRequest $req) This API is used to get the public key.
  * @method Models\DescribePurchaseStateInfoResponse DescribePurchaseStateInfo(Models\DescribePurchaseStateInfoRequest $req) This API is used to check whether TCSS is purchased.
+ * @method Models\DescribeRaspRuleVulsResponse DescribeRaspRuleVuls(Models\DescribeRaspRuleVulsRequest $req) Retrieve the list of vulnerabilities in the Vulnerability Defense Allowlist
+ * @method Models\DescribeRaspRulesResponse DescribeRaspRules(Models\DescribeRaspRulesRequest $req) Query the list of vulnerabilities that can be defensed.
  * @method Models\DescribeRefreshTaskResponse DescribeRefreshTask(Models\DescribeRefreshTaskRequest $req) This API is used to query a refresh task.
  * @method Models\DescribeReverseShellDetailResponse DescribeReverseShellDetail(Models\DescribeReverseShellDetailRequest $req) This API is used to query the details of a reverse shell event at runtime.
  * @method Models\DescribeReverseShellEventsResponse DescribeReverseShellEvents(Models\DescribeReverseShellEventsRequest $req) This API is used to query the list of reverse shell events at runtime.
  * @method Models\DescribeReverseShellEventsExportResponse DescribeReverseShellEventsExport(Models\DescribeReverseShellEventsExportRequest $req) This API is used to query and export the list of reverse shell events at runtime.
+ * @method Models\DescribeReverseShellRegexpWhiteListResponse DescribeReverseShellRegexpWhiteList(Models\DescribeReverseShellRegexpWhiteListRequest $req) Query the reverse shell regular expression allowlist.
+ * @method Models\DescribeReverseShellRegexpWhiteListInfoResponse DescribeReverseShellRegexpWhiteListInfo(Models\DescribeReverseShellRegexpWhiteListInfoRequest $req) Query details of the reverse shell regular expression allowlist.
  * @method Models\DescribeReverseShellWhiteListDetailResponse DescribeReverseShellWhiteListDetail(Models\DescribeReverseShellWhiteListDetailRequest $req) This API is used to query the details of the allowlist of reverse shells at runtime.
  * @method Models\DescribeReverseShellWhiteListsResponse DescribeReverseShellWhiteLists(Models\DescribeReverseShellWhiteListsRequest $req) This API is used to query the allowlist of reverse shells at runtime.
  * @method Models\DescribeRiskListResponse DescribeRiskList(Models\DescribeRiskListRequest $req) This API is used to query the list of risk items identified in the last task and filter them by special field.
@@ -282,13 +326,16 @@ This API is used to export the list of container escape events.
  * @method Models\DescribeVirusEventTendencyResponse DescribeVirusEventTendency(Models\DescribeVirusEventTendencyRequest $req) This API is used to query the trend of trojan events.
  * @method Models\DescribeVirusListResponse DescribeVirusList(Models\DescribeVirusListRequest $req) This API is used to query the list of virus scanning events at runtime.
  * @method Models\DescribeVirusManualScanEstimateTimeoutResponse DescribeVirusManualScanEstimateTimeout(Models\DescribeVirusManualScanEstimateTimeoutRequest $req) This API is used to query the estimated timeout period of a quick trojan scan.
+ * @method Models\DescribeVirusMonitorConfigResponse DescribeVirusMonitorConfig(Models\DescribeVirusMonitorConfigRequest $req) Query real-time monitoring settings of file scan at runtime.
  * @method Models\DescribeVirusMonitorSettingResponse DescribeVirusMonitorSetting(Models\DescribeVirusMonitorSettingRequest $req) This API is used to query the real-time monitoring settings of virus scanning at runtime.
  * @method Models\DescribeVirusSampleDownloadUrlResponse DescribeVirusSampleDownloadUrl(Models\DescribeVirusSampleDownloadUrlRequest $req) This API is used to query the download URL of a trojan sample.
+ * @method Models\DescribeVirusScanConfigResponse DescribeVirusScanConfig(Models\DescribeVirusScanConfigRequest $req) Query new settings of file scan at runtime.
  * @method Models\DescribeVirusScanSettingResponse DescribeVirusScanSetting(Models\DescribeVirusScanSettingRequest $req) This API is used to query virus scanning settings at runtime.
  * @method Models\DescribeVirusScanTaskStatusResponse DescribeVirusScanTaskStatus(Models\DescribeVirusScanTaskStatusRequest $req) This API is used to query the status of a virus scanning task at runtime.
  * @method Models\DescribeVirusScanTimeoutSettingResponse DescribeVirusScanTimeoutSetting(Models\DescribeVirusScanTimeoutSettingRequest $req) This API is used to query the timeout settings of a file scan at runtime.
  * @method Models\DescribeVirusSummaryResponse DescribeVirusSummary(Models\DescribeVirusSummaryRequest $req) This API is used to query the trojan overview at runtime.
  * @method Models\DescribeVirusTaskListResponse DescribeVirusTaskList(Models\DescribeVirusTaskListRequest $req) This API is used to query the list of virus scanning tasks at runtime.
+ * @method Models\DescribeVirusWhiteListRulesResponse DescribeVirusWhiteListRules(Models\DescribeVirusWhiteListRulesRequest $req) This API is used to query the Trojan allowlist rule list.
  * @method Models\DescribeVulContainerListResponse DescribeVulContainerList(Models\DescribeVulContainerListRequest $req) This API is used to query the list of containers affected by vulnerabilities.
  * @method Models\DescribeVulDefenceEventResponse DescribeVulDefenceEvent(Models\DescribeVulDefenceEventRequest $req) This API is used to query the list of exploit prevention events.
  * @method Models\DescribeVulDefenceEventDetailResponse DescribeVulDefenceEventDetail(Models\DescribeVulDefenceEventDetailRequest $req) This API is used to query the details of an exploit prevention event.
@@ -324,14 +371,17 @@ This API is used to export the list of container escape events.
  * @method Models\ModifyAssetImageScanStopResponse ModifyAssetImageScanStop(Models\ModifyAssetImageScanStopRequest $req) This API is used to stop an image scan.
  * @method Models\ModifyCompliancePeriodTaskResponse ModifyCompliancePeriodTask(Models\ModifyCompliancePeriodTaskRequest $req) This API is used to modify the settings of a scheduled task, including the check cycle and the status of the compliance benchmark.
  * @method Models\ModifyContainerNetStatusResponse ModifyContainerNetStatus(Models\ModifyContainerNetStatusRequest $req) This API is used to isolate a container.
+ * @method Models\ModifyDefendStatusResponse ModifyDefendStatus(Models\ModifyDefendStatusRequest $req) This API is used to modify the protection status.
  * @method Models\ModifyEscapeEventStatusResponse ModifyEscapeEventStatus(Models\ModifyEscapeEventStatusRequest $req) This API is used to change the status of a container escape scan event.
  * @method Models\ModifyEscapeRuleResponse ModifyEscapeRule(Models\ModifyEscapeRuleRequest $req) This API is used to modify the information of a container escape scan rule.
  * @method Models\ModifyEscapeWhiteListResponse ModifyEscapeWhiteList(Models\ModifyEscapeWhiteListRequest $req) This API is used to modify an allowed escape.
  * @method Models\ModifyImageAuthorizedResponse ModifyImageAuthorized(Models\ModifyImageAuthorizedRequest $req) This API is used to batch license images to be scanned (v2.0).
  * @method Models\ModifyK8sApiAbnormalEventStatusResponse ModifyK8sApiAbnormalEventStatus(Models\ModifyK8sApiAbnormalEventStatusRequest $req) This API is used to modify the status of K8sApi exception events.
- * @method Models\ModifyK8sApiAbnormalRuleInfoResponse ModifyK8sApiAbnormalRuleInfo(Models\ModifyK8sApiAbnormalRuleInfoRequest $req) This API is used to modify the information of K8sApi abnormal rules.
+ * @method Models\ModifyK8sApiAbnormalRuleInfoResponse ModifyK8sApiAbnormalRuleInfo(Models\ModifyK8sApiAbnormalRuleInfoRequest $req) Modify the exception rule info of k8sapi. The Action in RuleInfoList only supports RULE_MODE_ALERT and no longer supports RULE_MODE_RELEASE/PASS.
  * @method Models\ModifyK8sApiAbnormalRuleStatusResponse ModifyK8sApiAbnormalRuleStatus(Models\ModifyK8sApiAbnormalRuleStatusRequest $req) This API is used to modify the status of K8sApi abnormal event rules.
+ * @method Models\ModifyRaspRulesResponse ModifyRaspRules(Models\ModifyRaspRulesRequest $req) Edit or create a java Memory Trojan allowlist
  * @method Models\ModifyReverseShellStatusResponse ModifyReverseShellStatus(Models\ModifyReverseShellStatusRequest $req) This API is used to change the status of a reverse shell event.
+ * @method Models\ModifyRiskDnsEventStatusResponse ModifyRiskDnsEventStatus(Models\ModifyRiskDnsEventStatusRequest $req) Edit the malicious request event status.
  * @method Models\ModifyRiskSyscallStatusResponse ModifyRiskSyscallStatus(Models\ModifyRiskSyscallStatusRequest $req) This API is used to change the status of a high-risk syscall event.
  * @method Models\ModifySecLogCleanSettingInfoResponse ModifySecLogCleanSettingInfo(Models\ModifySecLogCleanSettingInfoRequest $req) This API is used to modify the settings of security log cleanup.
  * @method Models\ModifySecLogDeliveryClsSettingResponse ModifySecLogDeliveryClsSetting(Models\ModifySecLogDeliveryClsSettingRequest $req) This API is used to update the configuration of security log delivery to CLS.
@@ -360,12 +410,21 @@ This API is used to export the list of container escape events.
  * @method Models\StopVulScanTaskResponse StopVulScanTask(Models\StopVulScanTaskRequest $req) This API is used to stop a vulnerability scan task.
  * @method Models\SwitchImageAutoAuthorizedRuleResponse SwitchImageAutoAuthorizedRule(Models\SwitchImageAutoAuthorizedRuleRequest $req) This API is used to enable/disable automatic licensing for local images.
  * @method Models\SyncAssetImageRegistryAssetResponse SyncAssetImageRegistryAsset(Models\SyncAssetImageRegistryAssetRequest $req) This API is used to refresh the assets in an image repository.
- * @method Models\UpdateAndPublishNetworkFirewallPolicyDetailResponse UpdateAndPublishNetworkFirewallPolicyDetail(Models\UpdateAndPublishNetworkFirewallPolicyDetailRequest $req) This API is used to create a task to update and publish a network policy in the container network.
- * @method Models\UpdateAndPublishNetworkFirewallPolicyYamlDetailResponse UpdateAndPublishNetworkFirewallPolicyYamlDetail(Models\UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest $req) This API is used to create a task to update and publish a YAML network policy in the container network.
+ * @method Models\UninstallClusterContainerSecurityResponse UninstallClusterContainerSecurity(Models\UninstallClusterContainerSecurityRequest $req) Uninstall cluster container security.
+ * @method Models\UpdateAndPublishNetworkFirewallPolicyDetailResponse UpdateAndPublishNetworkFirewallPolicyDetail(Models\UpdateAndPublishNetworkFirewallPolicyDetailRequest $req) This feature is deprecated pending tripartite reconstruction
+
+Create a network policy and update and distribute tasks for the container network.
+ * @method Models\UpdateAndPublishNetworkFirewallPolicyYamlDetailResponse UpdateAndPublishNetworkFirewallPolicyYamlDetail(Models\UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest $req) deprecated pending reconstruction
+
+Update the YAML network policy and distribute tasks for the container network.
  * @method Models\UpdateAssetImageRegistryRegistryDetailResponse UpdateAssetImageRegistryRegistryDetail(Models\UpdateAssetImageRegistryRegistryDetailRequest $req) This API is used to update the details of an image repository.
  * @method Models\UpdateImageRegistryTimingScanTaskResponse UpdateImageRegistryTimingScanTask(Models\UpdateImageRegistryTimingScanTaskRequest $req) This API is used to update a scheduled task for an image repository.
- * @method Models\UpdateNetworkFirewallPolicyDetailResponse UpdateNetworkFirewallPolicyDetail(Models\UpdateNetworkFirewallPolicyDetailRequest $req) This API is used to create a task to update a network policy in the container network.
- * @method Models\UpdateNetworkFirewallPolicyYamlDetailResponse UpdateNetworkFirewallPolicyYamlDetail(Models\UpdateNetworkFirewallPolicyYamlDetailRequest $req) This API is used to create a task to update a YAML network policy in the container network.
+ * @method Models\UpdateNetworkFirewallPolicyDetailResponse UpdateNetworkFirewallPolicyDetail(Models\UpdateNetworkFirewallPolicyDetailRequest $req) This feature is deprecated pending tripartite reconstruction
+
+Create a network policy update task for the container network.
+ * @method Models\UpdateNetworkFirewallPolicyYamlDetailResponse UpdateNetworkFirewallPolicyYamlDetail(Models\UpdateNetworkFirewallPolicyYamlDetailRequest $req) deprecated pending reconstruction
+
+Update the YAML network policy task for the container network.
  */
 
 class TcssClient extends AbstractClient

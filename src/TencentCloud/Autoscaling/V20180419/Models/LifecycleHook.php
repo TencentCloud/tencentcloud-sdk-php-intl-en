@@ -27,19 +27,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
  * @method string getDefaultResult() Obtain Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
--CONTINUE execution by default means capacity expansion or reduction.
--For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
+- CONTINUE execution by default means capacity expansion or reduction.
+- For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
  * @method void setDefaultResult(string $DefaultResult) Set Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
--CONTINUE execution by default means capacity expansion or reduction.
--For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
+- CONTINUE execution by default means capacity expansion or reduction.
+- For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
  * @method integer getHeartbeatTimeout() Obtain Specifies the timeout waiting time of the lifecycle hook in seconds. value range: 30 to 7200.
  * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) Set Specifies the timeout waiting time of the lifecycle hook in seconds. value range: 30 to 7200.
  * @method string getLifecycleTransition() Obtain Scenario for entering the lifecycle hook. valid values:.
--`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
--INSTANCE_TERMINATING: scale-in lifecycle hook.
+- `INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+- `INSTANCE_TERMINATING`: scale-in lifecycle hook.
  * @method void setLifecycleTransition(string $LifecycleTransition) Set Scenario for entering the lifecycle hook. valid values:.
--`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
--INSTANCE_TERMINATING: scale-in lifecycle hook.
+- `INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+- `INSTANCE_TERMINATING`: scale-in lifecycle hook.
  * @method string getNotificationMetadata() Obtain Additional information for the notification target
  * @method void setNotificationMetadata(string $NotificationMetadata) Set Additional information for the notification target
  * @method string getCreatedTime() Obtain Creation time. uses UTC for timing.
@@ -72,8 +72,8 @@ class LifecycleHook extends AbstractModel
 
     /**
      * @var string Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
--CONTINUE execution by default means capacity expansion or reduction.
--For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
+- CONTINUE execution by default means capacity expansion or reduction.
+- For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
      */
     public $DefaultResult;
 
@@ -84,8 +84,8 @@ class LifecycleHook extends AbstractModel
 
     /**
      * @var string Scenario for entering the lifecycle hook. valid values:.
--`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
--INSTANCE_TERMINATING: scale-in lifecycle hook.
+- `INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+- `INSTANCE_TERMINATING`: scale-in lifecycle hook.
      */
     public $LifecycleTransition;
 
@@ -120,12 +120,12 @@ Description: when set to `EXTENSION`, the lifecycle hook will be triggered durin
      * @param string $LifecycleHookName Lifecycle hook name
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param string $DefaultResult Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
--CONTINUE execution by default means capacity expansion or reduction.
--For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
+- CONTINUE execution by default means capacity expansion or reduction.
+- For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
      * @param integer $HeartbeatTimeout Specifies the timeout waiting time of the lifecycle hook in seconds. value range: 30 to 7200.
      * @param string $LifecycleTransition Scenario for entering the lifecycle hook. valid values:.
--`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
--INSTANCE_TERMINATING: scale-in lifecycle hook.
+- `INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+- `INSTANCE_TERMINATING`: scale-in lifecycle hook.
      * @param string $NotificationMetadata Additional information for the notification target
      * @param string $CreatedTime Creation time. uses UTC for timing.
      * @param NotificationTarget $NotificationTarget Notification target

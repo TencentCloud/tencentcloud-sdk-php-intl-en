@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogSet(string $LogSet) Set Logset
  * @method string getTopicID() Obtain Topic ID
  * @method void setTopicID(string $TopicID) Set Topic ID
- * @method string getLogSetName() Obtain Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLogSetName(string $LogSetName) Set Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLogSetName() Obtain logset name
+ * @method void setLogSetName(string $LogSetName) Set logset name
  * @method string getTopicName() Obtain Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTopicName(string $TopicName) Set Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getSubLogType() Obtain Log type	
+ * @method void setSubLogType(array $SubLogType) Set Log type	
+ * @method string getErrMsg() Obtain Error message
+ * @method void setErrMsg(string $ErrMsg) Set Error message
  */
 class SecLogDeliveryClsSettingInfo extends AbstractModel
 {
@@ -67,16 +67,24 @@ class SecLogDeliveryClsSettingInfo extends AbstractModel
     public $TopicID;
 
     /**
-     * @var string Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string logset name
      */
     public $LogSetName;
 
     /**
      * @var string Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TopicName;
+
+    /**
+     * @var array Log type	
+     */
+    public $SubLogType;
+
+    /**
+     * @var string Error message
+     */
+    public $ErrMsg;
 
     /**
      * @param string $LogType Log type
@@ -84,10 +92,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Region Region
      * @param string $LogSet Logset
      * @param string $TopicID Topic ID
-     * @param string $LogSetName Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LogSetName logset name
      * @param string $TopicName Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $SubLogType Log type	
+     * @param string $ErrMsg Error message
      */
     function __construct()
     {
@@ -128,6 +136,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
             $this->TopicName = $param["TopicName"];
+        }
+
+        if (array_key_exists("SubLogType",$param) and $param["SubLogType"] !== null) {
+            $this->SubLogType = $param["SubLogType"];
+        }
+
+        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
+            $this->ErrMsg = $param["ErrMsg"];
         }
     }
 }

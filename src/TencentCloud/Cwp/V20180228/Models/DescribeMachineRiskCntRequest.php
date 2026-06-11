@@ -21,21 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DescribeMachineRiskCnt request structure.
  *
  * @method array getFilters() Obtain Filter criteria
-<li>Uuids- String - required: no - host uuid</li>
+<li>Uuids- String - required: no - host uuid</li>
  * @method void setFilters(array $Filters) Set Filter criteria
-<li>Uuids- String - required: no - host uuid</li>
+<li>Uuids- String - required: no - host uuid</li>
  */
 class DescribeMachineRiskCntRequest extends AbstractModel
 {
     /**
      * @var array Filter criteria
-<li>Uuids- String - required: no - host uuid</li>
+<li>Uuids- String - required: no - host uuid</li>
      */
     public $Filters;
 
     /**
      * @param array $Filters Filter criteria
-<li>Uuids- String - required: no - host uuid</li>
+<li>Uuids- String - required: no - host uuid</li>
      */
     function __construct()
     {

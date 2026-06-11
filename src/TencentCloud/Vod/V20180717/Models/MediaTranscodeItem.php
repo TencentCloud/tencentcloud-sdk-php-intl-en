@@ -20,174 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Transcoding information
  *
- * @method string getUrl() Obtain Address of output video file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUrl(string $Url) Set Address of output video file.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getDefinition() Obtain For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
-<font color=red>Note: A value of 0 represents the original file. </font>
- * @method void setDefinition(integer $Definition) Set For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
-<font color=red>Note: A value of 0 represents the original file. </font>
- * @method integer getBitrate() Obtain Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setBitrate(integer $Bitrate) Set Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getHeight() Obtain Maximum value of the height of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setHeight(integer $Height) Set Maximum value of the height of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getWidth() Obtain Maximum value of the width of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setWidth(integer $Width) Set Maximum value of the width of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getSize() Obtain The file size (bytes).
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
- * @method void setSize(integer $Size) Set The file size (bytes).
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
- * @method float getDuration() Obtain Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDuration(float $Duration) Set Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMd5() Obtain MD5 value of video.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMd5(string $Md5) Set MD5 value of video.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getContainer() Obtain Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setContainer(string $Container) Set Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getVideoStreamSet() Obtain Video stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVideoStreamSet(array $VideoStreamSet) Set Video stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getAudioStreamSet() Obtain Audio stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAudioStreamSet(array $AudioStreamSet) Set Audio stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDigitalWatermarkType() Obtain The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
- * @method void setDigitalWatermarkType(string $DigitalWatermarkType) Set The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
- * @method string getCopyRightWatermarkText() Obtain 
- * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) Set 
- * @method integer getBlindWatermarkDefinition() Obtain Digital watermark template id.
- * @method void setBlindWatermarkDefinition(integer $BlindWatermarkDefinition) Set Digital watermark template id.
+ * @method string getUrl() Obtain <p>File URL of the transcoded video.</p>
+ * @method void setUrl(string $Url) Set <p>File URL of the transcoded video.</p>
+ * @method integer getDefinition() Obtain <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
+ * @method void setDefinition(integer $Definition) Set <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
+ * @method integer getBitrate() Obtain <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
+ * @method void setBitrate(integer $Bitrate) Set <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
+ * @method integer getHeight() Obtain <p>Maximum value of video stream height. Unit: px.</p>
+ * @method void setHeight(integer $Height) Set <p>Maximum value of video stream height. Unit: px.</p>
+ * @method integer getWidth() Obtain <p>Maximum value of video stream width. Unit: px.</p>
+ * @method void setWidth(integer $Width) Set <p>Maximum value of video stream width. Unit: px.</p>
+ * @method integer getSize() Obtain <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
+ * @method void setSize(integer $Size) Set <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
+ * @method float getDuration() Obtain <p>Video duration, in seconds.</p>
+ * @method void setDuration(float $Duration) Set <p>Video duration, in seconds.</p>
+ * @method string getMd5() Obtain <p>md5 value of the video.</p>
+ * @method void setMd5(string $Md5) Set <p>md5 value of the video.</p>
+ * @method string getContainer() Obtain <p>Container type, such as m4a, mp4.</p>
+ * @method void setContainer(string $Container) Set <p>Container type, such as m4a, mp4.</p>
+ * @method array getVideoStreamSet() Obtain <p>Video stream information.</p>
+ * @method void setVideoStreamSet(array $VideoStreamSet) Set <p>Video stream information.</p>
+ * @method array getAudioStreamSet() Obtain <p>Audio stream information.</p>
+ * @method void setAudioStreamSet(array $AudioStreamSet) Set <p>Audio stream information.</p>
+ * @method string getDigitalWatermarkType() Obtain <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
+ * @method void setDigitalWatermarkType(string $DigitalWatermarkType) Set <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
+ * @method string getCopyRightWatermarkText() Obtain <p>Copyright information.</p>
+ * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) Set <p>Copyright information.</p>
+ * @method integer getBlindWatermarkDefinition() Obtain <p>Digital watermark template id.</p>
+ * @method void setBlindWatermarkDefinition(integer $BlindWatermarkDefinition) Set <p>Digital watermark template id.</p>
+ * @method string getFileId() Obtain <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
+ * @method void setFileId(string $FileId) Set <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
  */
 class MediaTranscodeItem extends AbstractModel
 {
     /**
-     * @var string Address of output video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string <p>File URL of the transcoded video.</p>
      */
     public $Url;
 
     /**
-     * @var integer For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
-<font color=red>Note: A value of 0 represents the original file. </font>
+     * @var integer <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
      */
     public $Definition;
 
     /**
-     * @var integer Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
      */
     public $Bitrate;
 
     /**
-     * @var integer Maximum value of the height of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Maximum value of video stream height. Unit: px.</p>
      */
     public $Height;
 
     /**
-     * @var integer Maximum value of the width of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Maximum value of video stream width. Unit: px.</p>
      */
     public $Width;
 
     /**
-     * @var integer The file size (bytes).
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+     * @var integer <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
      */
     public $Size;
 
     /**
-     * @var float Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float <p>Video duration, in seconds.</p>
      */
     public $Duration;
 
     /**
-     * @var string MD5 value of video.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string <p>md5 value of the video.</p>
      */
     public $Md5;
 
     /**
-     * @var string Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Container type, such as m4a, mp4.</p>
      */
     public $Container;
 
     /**
-     * @var array Video stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Video stream information.</p>
      */
     public $VideoStreamSet;
 
     /**
-     * @var array Audio stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Audio stream information.</p>
      */
     public $AudioStreamSet;
 
     /**
-     * @var string The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
+     * @var string <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
      */
     public $DigitalWatermarkType;
 
     /**
-     * @var string 
+     * @var string <p>Copyright information.</p>
      */
     public $CopyRightWatermarkText;
 
     /**
-     * @var integer Digital watermark template id.
+     * @var integer <p>Digital watermark template id.</p>
      */
     public $BlindWatermarkDefinition;
 
     /**
-     * @param string $Url Address of output video file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Definition For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
-<font color=red>Note: A value of 0 represents the original file. </font>
-     * @param integer $Bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Height Maximum value of the height of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Width Maximum value of the width of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Size The file size (bytes).
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
-     * @param float $Duration Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Md5 MD5 value of video.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Container Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $VideoStreamSet Video stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $AudioStreamSet Audio stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DigitalWatermarkType The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
-     * @param string $CopyRightWatermarkText 
-     * @param integer $BlindWatermarkDefinition Digital watermark template id.
+     * @var string <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
+     */
+    public $FileId;
+
+    /**
+     * @param string $Url <p>File URL of the transcoded video.</p>
+     * @param integer $Definition <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
+     * @param integer $Bitrate <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
+     * @param integer $Height <p>Maximum value of video stream height. Unit: px.</p>
+     * @param integer $Width <p>Maximum value of video stream width. Unit: px.</p>
+     * @param integer $Size <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
+     * @param float $Duration <p>Video duration, in seconds.</p>
+     * @param string $Md5 <p>md5 value of the video.</p>
+     * @param string $Container <p>Container type, such as m4a, mp4.</p>
+     * @param array $VideoStreamSet <p>Video stream information.</p>
+     * @param array $AudioStreamSet <p>Audio stream information.</p>
+     * @param string $DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
+     * @param string $CopyRightWatermarkText <p>Copyright information.</p>
+     * @param integer $BlindWatermarkDefinition <p>Digital watermark template id.</p>
+     * @param string $FileId <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
      */
     function __construct()
     {
@@ -266,6 +222,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("BlindWatermarkDefinition",$param) and $param["BlindWatermarkDefinition"] !== null) {
             $this->BlindWatermarkDefinition = $param["BlindWatermarkDefinition"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
     }
 }

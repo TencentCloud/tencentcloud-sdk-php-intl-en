@@ -18,112 +18,60 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Configuration range of K8sApi abnormal event rules 
+ * Configuration Scope for Kubernetes API Exception Event Rules
  *
- * @method string getScope() Obtain Range
-System event:
-ANONYMOUS_ACCESS: Anonymous access
-ABNORMAL_UA_REQ: Abnormal UA request
-ANONYMOUS_ABNORMAL_PERMISSION: Abnormal changes on permissions of an anonymous user
-GET_CREDENTIALS: Credential information acquisition
-MOUNT_SENSITIVE_PATH: Sensitive path mounting
-COMMAND_RUN: Command execution
-PRIVILEGE_CONTAINER: Privilege container
-EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
-STATICS_POD: Static pod creation
-ABNORMAL_CREATE_POD: Abnormal pod creation
-USER_DEFINED: User defined
- * @method void setScope(string $Scope) Set Range
-System event:
-ANONYMOUS_ACCESS: Anonymous access
-ABNORMAL_UA_REQ: Abnormal UA request
-ANONYMOUS_ABNORMAL_PERMISSION: Abnormal changes on permissions of an anonymous user
-GET_CREDENTIALS: Credential information acquisition
-MOUNT_SENSITIVE_PATH: Sensitive path mounting
-COMMAND_RUN: Command execution
-PRIVILEGE_CONTAINER: Privilege container
-EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
-STATICS_POD: Static pod creation
-ABNORMAL_CREATE_POD: Abnormal pod creation
-USER_DEFINED: User defined
- * @method string getAction() Obtain Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
- * @method void setAction(string $Action) Set Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
- * @method string getRiskLevel() Obtain Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setRiskLevel(string $RiskLevel) Set Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
-Note: This field may return `null`, indicating that no valid value was found.
- * @method boolean getStatus() Obtain Switch status (true: On; false: Off): applicable to system rules.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setStatus(boolean $Status) Set Switch status (true: On; false: Off): applicable to system rules.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method boolean getIsDelete() Obtain Whether to delete: applicable to custom rule input parameters.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setIsDelete(boolean $IsDelete) Set Whether to delete: applicable to custom rule input parameters.
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getAction() Obtain <p>Execution action. The blocklist rule only supports RULE_MODE_ALERT (alert) and no longer supports RULE_MODE_RELEASE/PASS (allow). To allow, use the allowlist API ModifyK8sApiAbnormalWhitelist.</p>
+ * @method void setAction(string $Action) Set <p>Execution action. The blocklist rule only supports RULE_MODE_ALERT (alert) and no longer supports RULE_MODE_RELEASE/PASS (allow). To allow, use the allowlist API ModifyK8sApiAbnormalWhitelist.</p>
+ * @method string getScope() Obtain <p>Scope.<br>System events:<br>ANONYMOUS_ACCESS: anonymous access<br>ABNORMAL_UA_REQ: abnormal UA request<br>ANONYMOUS_ABNORMAL_PERMISSION: anonymous user permission change<br>GET_CREDENTIALS: credential information acquisition<br>MOUNT_SENSITIVE_PATH: sensitive path mounting<br>COMMAND_RUN: command execution<br>PRIVILEGE_CONTAINER: privileged container<br>EXCEPTION_CRONTAB_TASK: abnormal scheduled task<br>STATICS_POD: static Pod creation<br>ABNORMAL_CREATE_POD: abnormal Pod creation<br>USER_DEFINED: user-defined</p>
+ * @method void setScope(string $Scope) Set <p>Scope.<br>System events:<br>ANONYMOUS_ACCESS: anonymous access<br>ABNORMAL_UA_REQ: abnormal UA request<br>ANONYMOUS_ABNORMAL_PERMISSION: anonymous user permission change<br>GET_CREDENTIALS: credential information acquisition<br>MOUNT_SENSITIVE_PATH: sensitive path mounting<br>COMMAND_RUN: command execution<br>PRIVILEGE_CONTAINER: privileged container<br>EXCEPTION_CRONTAB_TASK: abnormal scheduled task<br>STATICS_POD: static Pod creation<br>ABNORMAL_CREATE_POD: abnormal Pod creation<br>USER_DEFINED: user-defined</p>
+ * @method boolean getIsDelete() Obtain <p>Whether it has been deleted.</p>
+ * @method void setIsDelete(boolean $IsDelete) Set <p>Whether it has been deleted.</p>
+ * @method string getRiskLevel() Obtain <p>Threat level: HIGH, MIDDLE, LOW, and NOTICE.</p>
+ * @method void setRiskLevel(string $RiskLevel) Set <p>Threat level: HIGH, MIDDLE, LOW, and NOTICE.</p>
+ * @method string getRuleTypeZH() Obtain <p>Description of the rule type.</p>
+ * @method void setRuleTypeZH(string $RuleTypeZH) Set <p>Description of the rule type.</p>
+ * @method boolean getStatus() Obtain <p>Switch status (true: on, false: off) applicable to system rules.</p>
+ * @method void setStatus(boolean $Status) Set <p>Switch status (true: on, false: off) applicable to system rules.</p>
  */
 class K8sApiAbnormalRuleScopeInfo extends AbstractModel
 {
     /**
-     * @var string Range
-System event:
-ANONYMOUS_ACCESS: Anonymous access
-ABNORMAL_UA_REQ: Abnormal UA request
-ANONYMOUS_ABNORMAL_PERMISSION: Abnormal changes on permissions of an anonymous user
-GET_CREDENTIALS: Credential information acquisition
-MOUNT_SENSITIVE_PATH: Sensitive path mounting
-COMMAND_RUN: Command execution
-PRIVILEGE_CONTAINER: Privilege container
-EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
-STATICS_POD: Static pod creation
-ABNORMAL_CREATE_POD: Abnormal pod creation
-USER_DEFINED: User defined
-     */
-    public $Scope;
-
-    /**
-     * @var string Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
+     * @var string <p>Execution action. The blocklist rule only supports RULE_MODE_ALERT (alert) and no longer supports RULE_MODE_RELEASE/PASS (allow). To allow, use the allowlist API ModifyK8sApiAbnormalWhitelist.</p>
      */
     public $Action;
 
     /**
-     * @var string Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string <p>Scope.<br>System events:<br>ANONYMOUS_ACCESS: anonymous access<br>ABNORMAL_UA_REQ: abnormal UA request<br>ANONYMOUS_ABNORMAL_PERMISSION: anonymous user permission change<br>GET_CREDENTIALS: credential information acquisition<br>MOUNT_SENSITIVE_PATH: sensitive path mounting<br>COMMAND_RUN: command execution<br>PRIVILEGE_CONTAINER: privileged container<br>EXCEPTION_CRONTAB_TASK: abnormal scheduled task<br>STATICS_POD: static Pod creation<br>ABNORMAL_CREATE_POD: abnormal Pod creation<br>USER_DEFINED: user-defined</p>
      */
-    public $RiskLevel;
+    public $Scope;
 
     /**
-     * @var boolean Switch status (true: On; false: Off): applicable to system rules.
-Note: This field may return `null`, indicating that no valid value was found.
-     */
-    public $Status;
-
-    /**
-     * @var boolean Whether to delete: applicable to custom rule input parameters.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var boolean <p>Whether it has been deleted.</p>
      */
     public $IsDelete;
 
     /**
-     * @param string $Scope Range
-System event:
-ANONYMOUS_ACCESS: Anonymous access
-ABNORMAL_UA_REQ: Abnormal UA request
-ANONYMOUS_ABNORMAL_PERMISSION: Abnormal changes on permissions of an anonymous user
-GET_CREDENTIALS: Credential information acquisition
-MOUNT_SENSITIVE_PATH: Sensitive path mounting
-COMMAND_RUN: Command execution
-PRIVILEGE_CONTAINER: Privilege container
-EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
-STATICS_POD: Static pod creation
-ABNORMAL_CREATE_POD: Abnormal pod creation
-USER_DEFINED: User defined
-     * @param string $Action Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
-     * @param string $RiskLevel Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param boolean $Status Switch status (true: On; false: Off): applicable to system rules.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param boolean $IsDelete Whether to delete: applicable to custom rule input parameters.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string <p>Threat level: HIGH, MIDDLE, LOW, and NOTICE.</p>
+     */
+    public $RiskLevel;
+
+    /**
+     * @var string <p>Description of the rule type.</p>
+     */
+    public $RuleTypeZH;
+
+    /**
+     * @var boolean <p>Switch status (true: on, false: off) applicable to system rules.</p>
+     */
+    public $Status;
+
+    /**
+     * @param string $Action <p>Execution action. The blocklist rule only supports RULE_MODE_ALERT (alert) and no longer supports RULE_MODE_RELEASE/PASS (allow). To allow, use the allowlist API ModifyK8sApiAbnormalWhitelist.</p>
+     * @param string $Scope <p>Scope.<br>System events:<br>ANONYMOUS_ACCESS: anonymous access<br>ABNORMAL_UA_REQ: abnormal UA request<br>ANONYMOUS_ABNORMAL_PERMISSION: anonymous user permission change<br>GET_CREDENTIALS: credential information acquisition<br>MOUNT_SENSITIVE_PATH: sensitive path mounting<br>COMMAND_RUN: command execution<br>PRIVILEGE_CONTAINER: privileged container<br>EXCEPTION_CRONTAB_TASK: abnormal scheduled task<br>STATICS_POD: static Pod creation<br>ABNORMAL_CREATE_POD: abnormal Pod creation<br>USER_DEFINED: user-defined</p>
+     * @param boolean $IsDelete <p>Whether it has been deleted.</p>
+     * @param string $RiskLevel <p>Threat level: HIGH, MIDDLE, LOW, and NOTICE.</p>
+     * @param string $RuleTypeZH <p>Description of the rule type.</p>
+     * @param boolean $Status <p>Switch status (true: on, false: off) applicable to system rules.</p>
      */
     function __construct()
     {
@@ -138,24 +86,28 @@ Note: This field may return `null`, indicating that no valid value was found.
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
+            $this->Action = $param["Action"];
+        }
+
         if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {
             $this->Scope = $param["Scope"];
         }
 
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
+        if (array_key_exists("IsDelete",$param) and $param["IsDelete"] !== null) {
+            $this->IsDelete = $param["IsDelete"];
         }
 
         if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
             $this->RiskLevel = $param["RiskLevel"];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("RuleTypeZH",$param) and $param["RuleTypeZH"] !== null) {
+            $this->RuleTypeZH = $param["RuleTypeZH"];
         }
 
-        if (array_key_exists("IsDelete",$param) and $param["IsDelete"] !== null) {
-            $this->IsDelete = $param["IsDelete"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

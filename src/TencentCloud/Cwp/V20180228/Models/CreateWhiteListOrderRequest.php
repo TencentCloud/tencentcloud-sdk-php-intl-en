@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLicenseNum(integer $LicenseNum) Set Number of authorizations (The minimum value is 1, and the maximum value is 99999.)
  * @method integer getDeadline() Obtain Expiration time (The minimum value is 1.)
  * @method void setDeadline(integer $Deadline) Set Expiration time (The minimum value is 1.)
- * @method string getRuleName() Obtain Rule name, big asset center: asset_center
- * @method void setRuleName(string $RuleName) Set Rule name, big asset center: asset_center
  * @method integer getSourceType() Obtain Order type. 1: trial; 2: free; 3: experience; 4: free SSL certificate gift; 5: free CVM
  * @method void setSourceType(integer $SourceType) Set Order type. 1: trial; 2: free; 3: experience; 4: free SSL certificate gift; 5: free CVM
+ * @method string getRuleName() Obtain Rule name, big asset center: asset_center
+ * @method void setRuleName(string $RuleName) Set Rule name, big asset center: asset_center
  * @method integer getRegionId() Obtain Region: 1 Guangzhou; 9 Singapore. The default is 1. Do not select 9 unless necessary.
  * @method void setRegionId(integer $RegionId) Set Region: 1 Guangzhou; 9 Singapore. The default is 1. Do not select 9 unless necessary.
  * @method string getExtraParam() Obtain Additional parameters; JSON string, including ResourceId and LicenseType.
@@ -53,14 +53,14 @@ class CreateWhiteListOrderRequest extends AbstractModel
     public $Deadline;
 
     /**
-     * @var string Rule name, big asset center: asset_center
-     */
-    public $RuleName;
-
-    /**
      * @var integer Order type. 1: trial; 2: free; 3: experience; 4: free SSL certificate gift; 5: free CVM
      */
     public $SourceType;
+
+    /**
+     * @var string Rule name, big asset center: asset_center
+     */
+    public $RuleName;
 
     /**
      * @var integer Region: 1 Guangzhou; 9 Singapore. The default is 1. Do not select 9 unless necessary.
@@ -76,8 +76,8 @@ class CreateWhiteListOrderRequest extends AbstractModel
      * @param integer $LicenseType Authorization type
      * @param integer $LicenseNum Number of authorizations (The minimum value is 1, and the maximum value is 99999.)
      * @param integer $Deadline Expiration time (The minimum value is 1.)
-     * @param string $RuleName Rule name, big asset center: asset_center
      * @param integer $SourceType Order type. 1: trial; 2: free; 3: experience; 4: free SSL certificate gift; 5: free CVM
+     * @param string $RuleName Rule name, big asset center: asset_center
      * @param integer $RegionId Region: 1 Guangzhou; 9 Singapore. The default is 1. Do not select 9 unless necessary.
      * @param string $ExtraParam Additional parameters; JSON string, including ResourceId and LicenseType.
      */
@@ -106,12 +106,12 @@ class CreateWhiteListOrderRequest extends AbstractModel
             $this->Deadline = $param["Deadline"];
         }
 
-        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
-            $this->RuleName = $param["RuleName"];
-        }
-
         if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
             $this->SourceType = $param["SourceType"];
+        }
+
+        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
+            $this->RuleName = $param["RuleName"];
         }
 
         if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {

@@ -39,9 +39,19 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsSwitchBind() Obtain Whether rebinding is allowed: false - rebinding is not allowed.
  * @method void setIsSwitchBind(boolean $IsSwitchBind) Set Whether rebinding is allowed: false - rebinding is not allowed.
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceState() Obtain <li>RUNNING: running</li>
+<li>STOPPED: Shut down</li>
+<li> EXPIRED To be recycled</li>
+ * @method void setInstanceState(string $InstanceState) Set <li>RUNNING: running</li>
+<li>STOPPED: Shut down</li>
+<li> EXPIRED To be recycled</li>
+ * @method string getAgentState() Obtain <li>ONLINE Offline</li>
+<li>OFFLINE: Under protection</li>
+<li>UNINSTALLED Client not installed</li>
+ * @method void setAgentState(string $AgentState) Set <li>ONLINE Offline</li>
+<li>OFFLINE: Under protection</li>
+<li>UNINSTALLED Client not installed</li>
  */
 class LicenseBindDetail extends AbstractModel
 {
@@ -92,9 +102,22 @@ class LicenseBindDetail extends AbstractModel
 
     /**
      * @var MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
+
+    /**
+     * @var string <li>RUNNING: running</li>
+<li>STOPPED: Shut down</li>
+<li> EXPIRED To be recycled</li>
+     */
+    public $InstanceState;
+
+    /**
+     * @var string <li>ONLINE Offline</li>
+<li>OFFLINE: Under protection</li>
+<li>UNINSTALLED Client not installed</li>
+     */
+    public $AgentState;
 
     /**
      * @param string $MachineName Machine Alias
@@ -107,7 +130,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param boolean $IsUnBind Whether unbinding is allowed: false - unbinding is not allowed.
      * @param boolean $IsSwitchBind Whether rebinding is allowed: false - rebinding is not allowed.
      * @param MachineExtraInfo $MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceState <li>RUNNING: running</li>
+<li>STOPPED: Shut down</li>
+<li> EXPIRED To be recycled</li>
+     * @param string $AgentState <li>ONLINE Offline</li>
+<li>OFFLINE: Under protection</li>
+<li>UNINSTALLED Client not installed</li>
      */
     function __construct()
     {
@@ -161,6 +189,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
             $this->MachineExtraInfo = new MachineExtraInfo();
             $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
+        }
+
+        if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
+            $this->InstanceState = $param["InstanceState"];
+        }
+
+        if (array_key_exists("AgentState",$param) and $param["AgentState"] !== null) {
+            $this->AgentState = $param["AgentState"];
         }
     }
 }

@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteMachineGroup request structure.
  *
- * @method string getGroupId() Obtain Machine group ID
- * @method void setGroupId(string $GroupId) Set Machine group ID
+ * @method string getGroupId() Obtain Machine group Id
+-Obtain the machine group Id by searching the machine group list (https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
+ * @method void setGroupId(string $GroupId) Set Machine group Id
+-Obtain the machine group Id by searching the machine group list (https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
  */
 class DeleteMachineGroupRequest extends AbstractModel
 {
     /**
-     * @var string Machine group ID
+     * @var string Machine group Id
+-Obtain the machine group Id by searching the machine group list (https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
      */
     public $GroupId;
 
     /**
-     * @param string $GroupId Machine group ID
+     * @param string $GroupId Machine group Id
+-Obtain the machine group Id by searching the machine group list (https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
      */
     function __construct()
     {

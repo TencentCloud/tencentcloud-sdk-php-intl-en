@@ -22,96 +22,58 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() Obtain Record ID
  * @method void setId(integer $Id) Set Record ID
- * @method string getUuid() Obtain UUID string
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUuid(string $Uuid) Set UUID string
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMachineIp() Obtain Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineIp(string $MachineIp) Set Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUuid() Obtain Host UUID
+ * @method void setUuid(string $Uuid) Set Host UUID
+ * @method string getMachineIp() Obtain Host IP address
+ * @method void setMachineIp(string $MachineIp) Set Host IP address
  * @method string getMachineName() Obtain Host name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineName(string $MachineName) Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUserName() Obtain Username
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserName(string $UserName) Set Username
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUserName() Obtain Username.
+ * @method void setUserName(string $UserName) Set Username.
  * @method string getSrcIp() Obtain Source IP
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSrcIp(string $SrcIp) Set Source IP
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getStatus() Obtain 1: normal log-in; 2: cross-region log-in; 5: allowlisted; 14: processed; 15: ignored
  * @method void setStatus(integer $Status) Set 1: normal log-in; 2: cross-region log-in; 5: allowlisted; 14: processed; 15: ignored
  * @method integer getCountry() Obtain Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCountry(integer $Country) Set Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getCity() Obtain City ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCity(integer $City) Set City ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProvince() Obtain Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProvince(integer $Province) Set Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getProvince() Obtain Province id
+ * @method void setProvince(integer $Province) Set Province id
  * @method string getLoginTime() Obtain Log-in time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLoginTime(string $LoginTime) Set Log-in time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getModifyTime() Obtain Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setModifyTime(string $ModifyTime) Set Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsRiskArea() Obtain Whether hit the exception of cross-region log-in: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsRiskArea(integer $IsRiskArea) Set Whether hit the exception of cross-region log-in: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsRiskArea() Obtain Whether hit the exception of cross-region log-in: 1 means hit the exception, 0 means not hit
+ * @method void setIsRiskArea(integer $IsRiskArea) Set Whether hit the exception of cross-region log-in: 1 means hit the exception, 0 means not hit
  * @method integer getIsRiskUser() Obtain Whether hit the exception of abnormal user: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsRiskUser(integer $IsRiskUser) Set Whether hit the exception of abnormal user: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getIsRiskTime() Obtain Whether hit the exception of abnormal time: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsRiskTime(integer $IsRiskTime) Set Whether hit the exception of abnormal time: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getIsRiskSrcIp() Obtain Whether hit the exception of abnormal IP: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsRiskSrcIp(integer $IsRiskSrcIp) Set Whether hit the exception of abnormal IP: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getRiskLevel() Obtain Risk level:
-0: high
-1: suspicious
-Note: This field may return null, indicating that no valid values can be obtained.
+0: high risk
+1: Suspicious
  * @method void setRiskLevel(integer $RiskLevel) Set Risk level:
-0: high
-1: suspicious
-Note: This field may return null, indicating that no valid values can be obtained.
+0: high risk
+1: Suspicious
  * @method string getLocation() Obtain Location name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLocation(string $Location) Set Location name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getQuuid() Obtain Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQuuid(string $Quuid) Set Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDesc() Obtain High-risk information description:
-ABROAD - overseas IP
-XTI - threat intelligence
-Note: This field may return null, indicating that no valid values can be obtained.
+ABROAD - IP outside Chinese mainland
+XTI - Threat Intelligence
  * @method void setDesc(string $Desc) Set High-risk information description:
-ABROAD - overseas IP
-XTI - threat intelligence
-Note: This field may return null, indicating that no valid values can be obtained.
+ABROAD - IP outside Chinese mainland
+XTI - Threat Intelligence
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getPort() Obtain Request destination port
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPort(integer $Port) Set Request destination port
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getPort() Obtain Request destination port.
+ * @method void setPort(integer $Port) Set Request destination port.
+ * @method IPAnalyse getIPAnalyse() Obtain ip analysis
+ * @method void setIPAnalyse(IPAnalyse $IPAnalyse) Set ip analysis
  */
 class HostLoginList extends AbstractModel
 {
@@ -121,32 +83,27 @@ class HostLoginList extends AbstractModel
     public $Id;
 
     /**
-     * @var string UUID string
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host UUID
      */
     public $Uuid;
 
     /**
-     * @var string Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host IP address
      */
     public $MachineIp;
 
     /**
      * @var string Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineName;
 
     /**
-     * @var string Username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Username.
      */
     public $UserName;
 
     /**
      * @var string Source IP
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SrcIp;
 
@@ -157,145 +114,116 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var integer Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Country;
 
     /**
      * @var integer City ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $City;
 
     /**
-     * @var integer Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Province id
      */
     public $Province;
 
     /**
      * @var string Log-in time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LoginTime;
 
     /**
      * @var string Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ModifyTime;
 
     /**
-     * @var integer Whether hit the exception of cross-region log-in: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether hit the exception of cross-region log-in: 1 means hit the exception, 0 means not hit
      */
     public $IsRiskArea;
 
     /**
      * @var integer Whether hit the exception of abnormal user: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsRiskUser;
 
     /**
      * @var integer Whether hit the exception of abnormal time: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsRiskTime;
 
     /**
      * @var integer Whether hit the exception of abnormal IP: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsRiskSrcIp;
 
     /**
      * @var integer Risk level:
-0: high
-1: suspicious
-Note: This field may return null, indicating that no valid values can be obtained.
+0: high risk
+1: Suspicious
      */
     public $RiskLevel;
 
     /**
      * @var string Location name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Location;
 
     /**
      * @var string Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Quuid;
 
     /**
      * @var string High-risk information description:
-ABROAD - overseas IP
-XTI - threat intelligence
-Note: This field may return null, indicating that no valid values can be obtained.
+ABROAD - IP outside Chinese mainland
+XTI - Threat Intelligence
      */
     public $Desc;
 
     /**
      * @var MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
     /**
-     * @var integer Request destination port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Request destination port.
      */
     public $Port;
 
     /**
+     * @var IPAnalyse ip analysis
+     */
+    public $IPAnalyse;
+
+    /**
      * @param integer $Id Record ID
-     * @param string $Uuid UUID string
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MachineIp Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Uuid Host UUID
+     * @param string $MachineIp Host IP address
      * @param string $MachineName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UserName Username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UserName Username.
      * @param string $SrcIp Source IP
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Status 1: normal log-in; 2: cross-region log-in; 5: allowlisted; 14: processed; 15: ignored
      * @param integer $Country Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $City City ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Province Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Province Province id
      * @param string $LoginTime Log-in time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ModifyTime Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsRiskArea Whether hit the exception of cross-region log-in: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsRiskArea Whether hit the exception of cross-region log-in: 1 means hit the exception, 0 means not hit
      * @param integer $IsRiskUser Whether hit the exception of abnormal user: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $IsRiskTime Whether hit the exception of abnormal time: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $IsRiskSrcIp Whether hit the exception of abnormal IP: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RiskLevel Risk level:
-0: high
-1: suspicious
-Note: This field may return null, indicating that no valid values can be obtained.
+0: high risk
+1: Suspicious
      * @param string $Location Location name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Desc High-risk information description:
-ABROAD - overseas IP
-XTI - threat intelligence
-Note: This field may return null, indicating that no valid values can be obtained.
+ABROAD - IP outside Chinese mainland
+XTI - Threat Intelligence
      * @param MachineExtraInfo $MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Port Request destination port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Port Request destination port.
+     * @param IPAnalyse $IPAnalyse ip analysis
      */
     function __construct()
     {
@@ -397,6 +325,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("IPAnalyse",$param) and $param["IPAnalyse"] !== null) {
+            $this->IPAnalyse = new IPAnalyse();
+            $this->IPAnalyse->deserialize($param["IPAnalyse"]);
         }
     }
 }

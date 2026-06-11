@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLicenseType() Obtain Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
  * @method void setLicenseType(integer $LicenseType) Set Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
  * @method integer getLicenseStatus() Obtain Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLicenseStatus(integer $LicenseStatus) Set Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getLicenseCnt() Obtain Total number of authorizations
  * @method void setLicenseCnt(integer $LicenseCnt) Set Total number of authorizations
  * @method integer getUsedLicenseCnt() Obtain Number of used authorizations
@@ -50,14 +48,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setSourceType(integer $SourceType) Set Whether the order is a trial order
  * @method string getAlias() Obtain Resource alias
  * @method void setAlias(string $Alias) Set Resource alias
- * @method array getTags() Obtain Platform Tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Platform Tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFreezeNum() Obtain Number of frozen authorizations. 0: no authorization is frozen; other values: actual number of frozen authorizations.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFreezeNum(integer $FreezeNum) Set Number of frozen authorizations. 0: no authorization is frozen; other values: actual number of frozen authorizations.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Platform tag
+ * @method void setTags(array $Tags) Set Platform tag
+ * @method integer getFreezeNum() Obtain Number of frozen licenses. 0: unfrozen, values other than 0: number of frozen licenses.
+ * @method void setFreezeNum(integer $FreezeNum) Set Number of frozen licenses. 0: unfrozen, values other than 0: number of frozen licenses.
  */
 class LicenseDetail extends AbstractModel
 {
@@ -73,7 +67,6 @@ class LicenseDetail extends AbstractModel
 
     /**
      * @var integer Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LicenseStatus;
 
@@ -133,14 +126,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Alias;
 
     /**
-     * @var array Platform Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Platform tag
      */
     public $Tags;
 
     /**
-     * @var integer Number of frozen authorizations. 0: no authorization is frozen; other values: actual number of frozen authorizations.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of frozen licenses. 0: unfrozen, values other than 0: number of frozen licenses.
      */
     public $FreezeNum;
 
@@ -148,7 +139,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $LicenseId Authorization ID
      * @param integer $LicenseType Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
      * @param integer $LicenseStatus Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $LicenseCnt Total number of authorizations
      * @param integer $UsedLicenseCnt Number of used authorizations
      * @param integer $OrderStatus Order status. 1: normal; 2: isolated; 3: terminated.
@@ -160,10 +150,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $BuyTime Time of purchase
      * @param integer $SourceType Whether the order is a trial order
      * @param string $Alias Resource alias
-     * @param array $Tags Platform Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $FreezeNum Number of frozen authorizations. 0: no authorization is frozen; other values: actual number of frozen authorizations.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags Platform tag
+     * @param integer $FreezeNum Number of frozen licenses. 0: unfrozen, values other than 0: number of frozen licenses.
      */
     function __construct()
     {

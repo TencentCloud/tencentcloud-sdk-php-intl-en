@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorage(integer $Storage) Set <p>This parameter is meaningless and abandoned.<br>Storage size, in GB.</p>
  * @method string getClusterName() Obtain <p>Cluster name, length less than 64 characters, each character value ranges from uppercase/lowercase letters, digits, special symbols ('-', '_', '.')</p>
  * @method void setClusterName(string $ClusterName) Set <p>Cluster name, length less than 64 characters, each character value ranges from uppercase/lowercase letters, digits, special symbols ('-', '_', '.')</p>
- * @method string getAdminPassword() Obtain <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
- * @method void setAdminPassword(string $AdminPassword) Set <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
+ * @method string getAdminPassword() Obtain <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
+ * @method void setAdminPassword(string $AdminPassword) Set <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
  * @method integer getPort() Obtain <p>Port, default 3306, in the range of [0, 65535)</p>
  * @method void setPort(integer $Port) Set <p>Port, default 3306, in the range of [0, 65535)</p>
  * @method integer getPayMode() Obtain <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Pay-as-you-go billing</li><li>1: Monthly Subscription</li></ul><p>Default value: 0</p>
@@ -173,7 +173,7 @@ class CreateClustersRequest extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
+     * @var string <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
      */
     public $AdminPassword;
 
@@ -364,7 +364,7 @@ class CreateClustersRequest extends AbstractModel
      * @param integer $InstanceCount <p>Instance count</p><p>Value ranges from [1, 16]</p><p>Default value: 2</p><ul><li>A value of 2 means one rw instance + one ro instance.</li><li>The transmitted n refers to one rw instance + n-1 ro instances (identical specifications).</li><li>For a more precise cluster composition collocation, please use InstanceInitInfos.</li><li>The value set by this parameter is suitable for provisioned resource cluster. If needed to set the specifications and quantity of Serverless cluster, please use the InstanceInitInfo structure in InstanceInitInfos.n.</li></ul>
      * @param integer $Storage <p>This parameter is meaningless and abandoned.<br>Storage size, in GB.</p>
      * @param string $ClusterName <p>Cluster name, length less than 64 characters, each character value ranges from uppercase/lowercase letters, digits, special symbols ('-', '_', '.')</p>
-     * @param string $AdminPassword <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
+     * @param string $AdminPassword <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
      * @param integer $Port <p>Port, default 3306, in the range of [0, 65535)</p>
      * @param integer $PayMode <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Pay-as-you-go billing</li><li>1: Monthly Subscription</li></ul><p>Default value: 0</p>
      * @param integer $Count <p>Number of clusters to purchase. Optional value range: [1,50]. Default is 1.</p>

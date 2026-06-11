@@ -20,130 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information on the host affected by baseline
  *
- * @method integer getPassCount() Obtain Passed item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPassCount(integer $PassCount) Set Passed item
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getPassCount() Obtain Passed items
+ * @method void setPassCount(integer $PassCount) Set Passed items
  * @method integer getFailCount() Obtain Risky item
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFailCount(integer $FailCount) Set Risky item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFirstScanTime() Obtain First check time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFirstScanTime(string $FirstScanTime) Set First check time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLastScanTime() Obtain Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLastScanTime(string $LastScanTime) Set Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFirstScanTime() Obtain First detection event
+ * @method void setFirstScanTime(string $FirstScanTime) Set First detection event
+ * @method string getLastScanTime() Obtain Last detection time
+ * @method void setLastScanTime(string $LastScanTime) Set Last detection time
  * @method integer getStatus() Obtain Risky item processing status. 0: failed; 1: passed.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatus(integer $Status) Set Risky item processing status. 0: failed; 1: passed.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getQuuid() Obtain Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQuuid(string $Quuid) Set Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getHostIp() Obtain Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostIp(string $HostIp) Set Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getAliasName() Obtain Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAliasName(string $AliasName) Set Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUuid() Obtain Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUuid(string $Uuid) Set Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxStatus() Obtain Check status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMaxStatus(integer $MaxStatus) Set Check status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaxStatus() Obtain detecting state
+ * @method void setMaxStatus(integer $MaxStatus) Set detecting state
  */
 class BaselineEffectHost extends AbstractModel
 {
     /**
-     * @var integer Passed item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Passed items
      */
     public $PassCount;
 
     /**
      * @var integer Risky item
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FailCount;
 
     /**
-     * @var string First check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string First detection event
      */
     public $FirstScanTime;
 
     /**
-     * @var string Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Last detection time
      */
     public $LastScanTime;
 
     /**
      * @var integer Risky item processing status. 0: failed; 1: passed.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
      * @var string Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Quuid;
 
     /**
      * @var string Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostIp;
 
     /**
      * @var string Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AliasName;
 
     /**
      * @var string Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Uuid;
 
     /**
-     * @var integer Check status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer detecting state
      */
     public $MaxStatus;
 
     /**
-     * @param integer $PassCount Passed item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $PassCount Passed items
      * @param integer $FailCount Risky item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FirstScanTime First check time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LastScanTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FirstScanTime First detection event
+     * @param string $LastScanTime Last detection time
      * @param integer $Status Risky item processing status. 0: failed; 1: passed.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $AliasName Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxStatus Check status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaxStatus detecting state
      */
     function __construct()
     {

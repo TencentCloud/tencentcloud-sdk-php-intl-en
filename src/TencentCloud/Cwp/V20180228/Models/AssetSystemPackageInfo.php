@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOsInfo() Obtain Operating system
  * @method void setOsInfo(string $OsInfo) Set Operating system
  * @method string getUpdateTime() Obtain Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFirstTime() Obtain First collection time
  * @method void setFirstTime(string $FirstTime) Set First collection time
  * @method integer getIsNew() Obtain Whether newly added [0: no|1: yes]
@@ -95,7 +93,6 @@ class AssetSystemPackageInfo extends AbstractModel
 
     /**
      * @var string Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -134,7 +131,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $MachineIp Host IP
      * @param string $OsInfo Operating system
      * @param string $UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FirstTime First collection time
      * @param integer $IsNew Whether newly added [0: no|1: yes]
      * @param MachineExtraInfo $MachineExtraInfo Additional information

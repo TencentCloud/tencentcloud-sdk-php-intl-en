@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: `10`. Maximum value: `100`.
  * @method integer getOffset() Obtain Offset. Default value: `0`.
  * @method void setOffset(integer $Offset) Set Offset. Default value: `0`.
- * @method string getOrder() Obtain Sorting order
- * @method void setOrder(string $Order) Set Sorting order
- * @method string getBy() Obtain Sorting field
- * @method void setBy(string $By) Set Sorting field
+ * @method string getOrder() Obtain Sorting method. Valid values: asc and desc.
+ * @method void setOrder(string $Order) Set Sorting method. Valid values: asc and desc.
+ * @method string getBy() Obtain Sorting field. For example, ContainerCnt.
+ * @method void setBy(string $By) Set Sorting field. For example, ContainerCnt.
  */
 class DescribeImageSimpleListRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class DescribeImageSimpleListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string Sorting order
+     * @var string Sorting method. Valid values: asc and desc.
      */
     public $Order;
 
     /**
-     * @var string Sorting field
+     * @var string Sorting field. For example, ContainerCnt.
      */
     public $By;
 
@@ -62,8 +62,8 @@ class DescribeImageSimpleListRequest extends AbstractModel
      * @param array $Filters `IsAuthorized` (whether it is licensed). Valid values: `0` (no); `1` (yes); none (all).
      * @param integer $Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
      * @param integer $Offset Offset. Default value: `0`.
-     * @param string $Order Sorting order
-     * @param string $By Sorting field
+     * @param string $Order Sorting method. Valid values: asc and desc.
+     * @param string $By Sorting field. For example, ContainerCnt.
      */
     function __construct()
     {

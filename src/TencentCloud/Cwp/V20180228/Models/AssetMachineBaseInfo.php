@@ -50,26 +50,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuSize(integer $CpuSize) Set CPU count
  * @method string getCpuLoad() Obtain CPU utilization, in percentage
  * @method void setCpuLoad(string $CpuLoad) Set CPU utilization, in percentage
- * @method array getTag() Obtain Tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTag(array $Tag) Set Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTag() Obtain Tag.
+ * @method void setTag(array $Tag) Set Tag.
  * @method string getUpdateTime() Obtain Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getIsNew() Obtain Whether it is newly added [0 - no;1 - yes]
  * @method void setIsNew(integer $IsNew) Set Whether it is newly added [0 - no;1 - yes]
  * @method string getFirstTime() Obtain First collection time
  * @method void setFirstTime(string $FirstTime) Set First collection time
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCpuLoadNum() Obtain CPU load readings (only valid for Linux systems)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCpuLoadNum(string $CpuLoadNum) Set CPU load readings (only valid for Linux systems)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCpuLoadNum() Obtain CPU load readings (only valid for Linux systems).
+ * @method void setCpuLoadNum(string $CpuLoadNum) Set CPU load readings (only valid for Linux systems).
  */
 class AssetMachineBaseInfo extends AbstractModel
 {
@@ -149,14 +141,12 @@ class AssetMachineBaseInfo extends AbstractModel
     public $CpuLoad;
 
     /**
-     * @var array Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Tag.
      */
     public $Tag;
 
     /**
      * @var string Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -172,13 +162,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
     /**
-     * @var string CPU load readings (only valid for Linux systems)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string CPU load readings (only valid for Linux systems).
      */
     public $CpuLoadNum;
 
@@ -198,16 +186,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ProjectId Business group ID
      * @param integer $CpuSize CPU count
      * @param string $CpuLoad CPU utilization, in percentage
-     * @param array $Tag Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tag Tag.
      * @param string $UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $IsNew Whether it is newly added [0 - no;1 - yes]
      * @param string $FirstTime First collection time
      * @param MachineExtraInfo $MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CpuLoadNum CPU load readings (only valid for Linux systems)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CpuLoadNum CPU load readings (only valid for Linux systems).
      */
     function __construct()
     {

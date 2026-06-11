@@ -24,30 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of items to be returned. The maximum value is 100.
  * @method integer getOffset() Obtain Offset, which defaults to 0
  * @method void setOffset(integer $Offset) Set Offset, which defaults to 0
- * @method array getFilters() Obtain Filter criteria
-<li>Quuid - String - required: no - CVM UUID</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
-<li>MachineName - String - required: no - host alias</li>
-<li>Ip - String - required: no - host IP</li>
-<li>InstanceID - String - required: no - host instance ID</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>Status - int - required: no - status filtering: 1: normal log-in; 5: whitelisted; 14: processed; 15: ignored</li>
-<li>LoginTimeBegin - String - required: no - filter by modification time; start time</li>
-<li>LoginTimeEnd - String - required: no - filter by modification time; end time</li>
-<li>RiskLevel - int - required: no - status filtering: 0: high-risk; 1: suspicious</li>
- * @method void setFilters(array $Filters) Set Filter criteria
-<li>Quuid - String - required: no - CVM UUID</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
-<li>MachineName - String - required: no - host alias</li>
-<li>Ip - String - required: no - host IP</li>
-<li>InstanceID - String - required: no - host instance ID</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>Status - int - required: no - status filtering: 1: normal log-in; 5: whitelisted; 14: processed; 15: ignored</li>
-<li>LoginTimeBegin - String - required: no - filter by modification time; start time</li>
-<li>LoginTimeEnd - String - required: no - filter by modification time; end time</li>
-<li>RiskLevel - int - required: no - status filtering: 0: high-risk; 1: suspicious</li>
+ * @method array getFilters() Obtain Filter criteria. <li>Quuid - String - Required: No - CVM uuid</li> <li>uuid - String - Required: No - Host security unique uuid</li> <li>MachineName - String - Required: No - Host alias</li> <li>Ip - String - Required: No - Host Ip address</li> <li>InstanceID - String - Required: No - Host instance ID</li> <li>SrcIp - String - Required: No - Source Ip filter</li> <li>UserName - String - Required: No - UserName filter</li> <li>Status - String - Required: No - Status filtering: 2: Pending; 5: Whitelisted; 14: Fixed; 15: Ignored</li> <li>LoginTimeBegin - String - Required: No - Filter by modification time range, start time</li> <li>LoginTimeEnd - String - Required: No - Filter by modification time range, end time</li> <li>RiskLevel - String - Required: No - Status filtering: 0: High risk; 1: Suspicious</li>
+ * @method void setFilters(array $Filters) Set Filter criteria. <li>Quuid - String - Required: No - CVM uuid</li> <li>uuid - String - Required: No - Host security unique uuid</li> <li>MachineName - String - Required: No - Host alias</li> <li>Ip - String - Required: No - Host Ip address</li> <li>InstanceID - String - Required: No - Host instance ID</li> <li>SrcIp - String - Required: No - Source Ip filter</li> <li>UserName - String - Required: No - UserName filter</li> <li>Status - String - Required: No - Status filtering: 2: Pending; 5: Whitelisted; 14: Fixed; 15: Ignored</li> <li>LoginTimeBegin - String - Required: No - Filter by modification time range, start time</li> <li>LoginTimeEnd - String - Required: No - Filter by modification time range, end time</li> <li>RiskLevel - String - Required: No - Status filtering: 0: High risk; 1: Suspicious</li>
  * @method string getOrder() Obtain Sorting method: sort by number of requests: asc - ascending order/desc - descending order
  * @method void setOrder(string $Order) Set Sorting method: sort by number of requests: asc - ascending order/desc - descending order
  * @method string getBy() Obtain Sorting field: LoginTime - occurrence time
@@ -66,18 +44,7 @@ class DescribeHostLoginListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array Filter criteria
-<li>Quuid - String - required: no - CVM UUID</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
-<li>MachineName - String - required: no - host alias</li>
-<li>Ip - String - required: no - host IP</li>
-<li>InstanceID - String - required: no - host instance ID</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>Status - int - required: no - status filtering: 1: normal log-in; 5: whitelisted; 14: processed; 15: ignored</li>
-<li>LoginTimeBegin - String - required: no - filter by modification time; start time</li>
-<li>LoginTimeEnd - String - required: no - filter by modification time; end time</li>
-<li>RiskLevel - int - required: no - status filtering: 0: high-risk; 1: suspicious</li>
+     * @var array Filter criteria. <li>Quuid - String - Required: No - CVM uuid</li> <li>uuid - String - Required: No - Host security unique uuid</li> <li>MachineName - String - Required: No - Host alias</li> <li>Ip - String - Required: No - Host Ip address</li> <li>InstanceID - String - Required: No - Host instance ID</li> <li>SrcIp - String - Required: No - Source Ip filter</li> <li>UserName - String - Required: No - UserName filter</li> <li>Status - String - Required: No - Status filtering: 2: Pending; 5: Whitelisted; 14: Fixed; 15: Ignored</li> <li>LoginTimeBegin - String - Required: No - Filter by modification time range, start time</li> <li>LoginTimeEnd - String - Required: No - Filter by modification time range, end time</li> <li>RiskLevel - String - Required: No - Status filtering: 0: High risk; 1: Suspicious</li>
      */
     public $Filters;
 
@@ -94,18 +61,7 @@ class DescribeHostLoginListRequest extends AbstractModel
     /**
      * @param integer $Limit Number of items to be returned. The maximum value is 100.
      * @param integer $Offset Offset, which defaults to 0
-     * @param array $Filters Filter criteria
-<li>Quuid - String - required: no - CVM UUID</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
-<li>MachineName - String - required: no - host alias</li>
-<li>Ip - String - required: no - host IP</li>
-<li>InstanceID - String - required: no - host instance ID</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>Status - int - required: no - status filtering: 1: normal log-in; 5: whitelisted; 14: processed; 15: ignored</li>
-<li>LoginTimeBegin - String - required: no - filter by modification time; start time</li>
-<li>LoginTimeEnd - String - required: no - filter by modification time; end time</li>
-<li>RiskLevel - int - required: no - status filtering: 0: high-risk; 1: suspicious</li>
+     * @param array $Filters Filter criteria. <li>Quuid - String - Required: No - CVM uuid</li> <li>uuid - String - Required: No - Host security unique uuid</li> <li>MachineName - String - Required: No - Host alias</li> <li>Ip - String - Required: No - Host Ip address</li> <li>InstanceID - String - Required: No - Host instance ID</li> <li>SrcIp - String - Required: No - Source Ip filter</li> <li>UserName - String - Required: No - UserName filter</li> <li>Status - String - Required: No - Status filtering: 2: Pending; 5: Whitelisted; 14: Fixed; 15: Ignored</li> <li>LoginTimeBegin - String - Required: No - Filter by modification time range, start time</li> <li>LoginTimeEnd - String - Required: No - Filter by modification time range, end time</li> <li>RiskLevel - String - Required: No - Status filtering: 0: High risk; 1: Suspicious</li>
      * @param string $Order Sorting method: sort by number of requests: asc - ascending order/desc - descending order
      * @param string $By Sorting field: LoginTime - occurrence time
      */

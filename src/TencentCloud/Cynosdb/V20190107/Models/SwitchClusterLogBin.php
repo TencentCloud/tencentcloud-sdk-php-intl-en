@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Switch cluster log bin toggle
  *
  * @method string getStatus() Obtain Status
  * @method void setStatus(string $Status) Set Status

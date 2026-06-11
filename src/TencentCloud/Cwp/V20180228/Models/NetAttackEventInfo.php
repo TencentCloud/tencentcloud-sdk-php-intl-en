@@ -49,35 +49,27 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() Obtain Event ID
  * @method void setId(integer $Id) Set Event ID
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getDstPort() Obtain Target port
  * @method void setDstPort(integer $DstPort) Set Target port
  * @method integer getCount() Obtain Attack count
  * @method void setCount(integer $Count) Set Attack count
- * @method integer getPayVersion() Obtain Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
- * @method void setPayVersion(integer $PayVersion) Set Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+ * @method integer getPayVersion() Obtain Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
+ * @method void setPayVersion(integer $PayVersion) Set Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
  * @method string getQuuid() Obtain cvm uuid
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQuuid(string $Quuid) Set cvm uuid
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMergeTime() Obtain Time of Attack
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMergeTime(string $MergeTime) Set Time of Attack
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getType() Obtain 0: Attack Attempt 1: Successful Attack
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setType(integer $Type) Set 0: Attack Attempt 1: Successful Attack
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getHostOpType() Obtain 0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostOpType(integer $HostOpType) Set 0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getHostOpProcessTree() Obtain Process Tree, needs to be decoded with base64.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostOpProcessTree(string $HostOpProcessTree) Set Process Tree, needs to be decoded with base64.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method IPAnalyse getIPAnalyse() Obtain IP analysis
+ * @method void setIPAnalyse(IPAnalyse $IPAnalyse) Set IP analysis
+ * @method string getNetResponsePayload() Obtain Response packet base64 encoded
+ * @method void setNetResponsePayload(string $NetResponsePayload) Set Response packet base64 encoded
  */
 class NetAttackEventInfo extends AbstractModel
 {
@@ -153,7 +145,6 @@ class NetAttackEventInfo extends AbstractModel
 
     /**
      * @var MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -168,39 +159,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Count;
 
     /**
-     * @var integer Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+     * @var integer Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
      */
     public $PayVersion;
 
     /**
      * @var string cvm uuid
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Quuid;
 
     /**
      * @var string Time of Attack
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MergeTime;
 
     /**
      * @var integer 0: Attack Attempt 1: Successful Attack
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
     /**
      * @var integer 0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostOpType;
 
     /**
      * @var string Process Tree, needs to be decoded with base64.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostOpProcessTree;
+
+    /**
+     * @var IPAnalyse IP analysis
+     */
+    public $IPAnalyse;
+
+    /**
+     * @var string Response packet base64 encoded
+     */
+    public $NetResponsePayload;
 
     /**
      * @param integer $Status Processing Status: 0 Pending, 1 Processed, 2 Allowlisted, 3 Ignored, 4 Deleted, 5: Defense Enabled.
@@ -218,20 +214,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Uuid Host UUID
      * @param integer $Id Event ID
      * @param MachineExtraInfo $MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $DstPort Target port
      * @param integer $Count Attack count
-     * @param integer $PayVersion Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+     * @param integer $PayVersion Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
      * @param string $Quuid cvm uuid
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MergeTime Time of Attack
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Type 0: Attack Attempt 1: Successful Attack
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $HostOpType 0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HostOpProcessTree Process Tree, needs to be decoded with base64.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IPAnalyse $IPAnalyse IP analysis
+     * @param string $NetResponsePayload Response packet base64 encoded
      */
     function __construct()
     {
@@ -337,6 +329,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("HostOpProcessTree",$param) and $param["HostOpProcessTree"] !== null) {
             $this->HostOpProcessTree = $param["HostOpProcessTree"];
+        }
+
+        if (array_key_exists("IPAnalyse",$param) and $param["IPAnalyse"] !== null) {
+            $this->IPAnalyse = new IPAnalyse();
+            $this->IPAnalyse->deserialize($param["IPAnalyse"]);
+        }
+
+        if (array_key_exists("NetResponsePayload",$param) and $param["NetResponsePayload"] !== null) {
+            $this->NetResponsePayload = $param["NetResponsePayload"];
         }
     }
 }

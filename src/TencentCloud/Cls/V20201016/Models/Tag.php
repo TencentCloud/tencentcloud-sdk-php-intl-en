@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Description of the tag pair bound to a resource instance when it is created
  *
- * @method string getKey() Obtain The tag key.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKey(string $Key) Set The tag key.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getValue() Obtain The tag value.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setValue(string $Value) Set The tag value.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getKey() Obtain Tag key.
+ * @method void setKey(string $Key) Set Tag key.
+ * @method string getValue() Obtain Tag value.
+ * @method void setValue(string $Value) Set Tag value.
  */
 class Tag extends AbstractModel
 {
     /**
-     * @var string The tag key.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Tag key.
      */
     public $Key;
 
     /**
-     * @var string The tag value.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Tag value.
      */
     public $Value;
 
     /**
-     * @param string $Key The tag key.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Value The tag value.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Key Tag key.
+     * @param string $Value Tag value.
      */
     function __construct()
     {

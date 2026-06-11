@@ -20,62 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetImageRegistryList request structure.
  *
- * @method integer getLimit() Obtain Number of results to be returned. Default value: `10`. Maximum value: `100`.
- * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: `10`. Maximum value: `100`.
- * @method integer getOffset() Obtain Offset. Default value: `0`.
- * @method void setOffset(integer $Offset) Set Offset. Default value: `0`.
- * @method array getFilters() Obtain Filter field
-`IsAuthorized` (whether licensed). Valid values: `all` (all); `0` (unlicensed); `1` (licensed).
- * @method void setFilters(array $Filters) Set Filter field
-`IsAuthorized` (whether licensed). Valid values: `all` (all); `0` (unlicensed); `1` (licensed).
- * @method string getBy() Obtain Sorting field
- * @method void setBy(string $By) Set Sorting field
- * @method string getOrder() Obtain Sorting order. Valid values: `asc`, `desc`.
- * @method void setOrder(string $Order) Set Sorting order. Valid values: `asc`, `desc`.
- * @method boolean getOnlyShowLatest() Obtain Whether to show only the latest repository images. Default value: `false`.
- * @method void setOnlyShowLatest(boolean $OnlyShowLatest) Set Whether to show only the latest repository images. Default value: `false`.
+ * @method integer getLimit() Obtain <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+ * @method integer getOffset() Obtain <p>Offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset. Default value: 0.</p>
+ * @method array getFilters() Obtain <p>Filter field.<br>IsAuthorized can be set to all, 0 (unauthorized), and 1 (authorized).</p>
+ * @method void setFilters(array $Filters) Set <p>Filter field.<br>IsAuthorized can be set to all, 0 (unauthorized), and 1 (authorized).</p>
+ * @method string getBy() Obtain <p>Sorting field.</p>
+ * @method void setBy(string $By) Set <p>Sorting field.</p>
+ * @method string getOrder() Obtain <p>Sorting method. Valid values: asc and desc.</p>
+ * @method void setOrder(string $Order) Set <p>Sorting method. Valid values: asc and desc.</p>
+ * @method boolean getOnlyShowLatest() Obtain <p>Whether to display only the latest image of each repository. Default value: false.</p>
+ * @method void setOnlyShowLatest(boolean $OnlyShowLatest) Set <p>Whether to display only the latest image of each repository. Default value: false.</p>
+ * @method boolean getIsRunning() Obtain <p>Whether to display only running container images.</p>
+ * @method void setIsRunning(boolean $IsRunning) Set <p>Whether to display only running container images.</p>
  */
 class DescribeAssetImageRegistryListRequest extends AbstractModel
 {
     /**
-     * @var integer Number of results to be returned. Default value: `10`. Maximum value: `100`.
+     * @var integer <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Offset. Default value: `0`.
+     * @var integer <p>Offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var array Filter field
-`IsAuthorized` (whether licensed). Valid values: `all` (all); `0` (unlicensed); `1` (licensed).
+     * @var array <p>Filter field.<br>IsAuthorized can be set to all, 0 (unauthorized), and 1 (authorized).</p>
      */
     public $Filters;
 
     /**
-     * @var string Sorting field
+     * @var string <p>Sorting field.</p>
      */
     public $By;
 
     /**
-     * @var string Sorting order. Valid values: `asc`, `desc`.
+     * @var string <p>Sorting method. Valid values: asc and desc.</p>
      */
     public $Order;
 
     /**
-     * @var boolean Whether to show only the latest repository images. Default value: `false`.
+     * @var boolean <p>Whether to display only the latest image of each repository. Default value: false.</p>
      */
     public $OnlyShowLatest;
 
     /**
-     * @param integer $Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
-     * @param integer $Offset Offset. Default value: `0`.
-     * @param array $Filters Filter field
-`IsAuthorized` (whether licensed). Valid values: `all` (all); `0` (unlicensed); `1` (licensed).
-     * @param string $By Sorting field
-     * @param string $Order Sorting order. Valid values: `asc`, `desc`.
-     * @param boolean $OnlyShowLatest Whether to show only the latest repository images. Default value: `false`.
+     * @var boolean <p>Whether to display only running container images.</p>
+     */
+    public $IsRunning;
+
+    /**
+     * @param integer $Limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+     * @param integer $Offset <p>Offset. Default value: 0.</p>
+     * @param array $Filters <p>Filter field.<br>IsAuthorized can be set to all, 0 (unauthorized), and 1 (authorized).</p>
+     * @param string $By <p>Sorting field.</p>
+     * @param string $Order <p>Sorting method. Valid values: asc and desc.</p>
+     * @param boolean $OnlyShowLatest <p>Whether to display only the latest image of each repository. Default value: false.</p>
+     * @param boolean $IsRunning <p>Whether to display only running container images.</p>
      */
     function __construct()
     {
@@ -117,6 +121,10 @@ class DescribeAssetImageRegistryListRequest extends AbstractModel
 
         if (array_key_exists("OnlyShowLatest",$param) and $param["OnlyShowLatest"] !== null) {
             $this->OnlyShowLatest = $param["OnlyShowLatest"];
+        }
+
+        if (array_key_exists("IsRunning",$param) and $param["IsRunning"] !== null) {
+            $this->IsRunning = $param["IsRunning"];
         }
     }
 }

@@ -31,41 +31,27 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMachineIp() Obtain Private IP address
  * @method void setMachineIp(string $MachineIp) Set Private IP address
  * @method string getMachineWanIp() Obtain Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineWanIp(string $MachineWanIp) Set Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getCloudTags() Obtain Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCloudTags(array $CloudTags) Set Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getCloudTags() Obtain Cloud Tag
+ * @method void setCloudTags(array $CloudTags) Set Cloud Tag
  * @method RegionInfo getRegionInfo() Obtain Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRegionInfo(RegionInfo $RegionInfo) Set Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTag() Obtain CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTag(array $Tag) Set CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTag() Obtain Host security tag
+ * @method void setTag(array $Tag) Set Host security tag
  * @method integer getStatus() Obtain Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatus(integer $Status) Set Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getStrategyId() Obtain Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStrategyId(integer $StrategyId) Set Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDiskInfo() Obtain Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDiskInfo(string $DiskInfo) Set Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getHostVersion() Obtain Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostVersion(integer $HostVersion) Set Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getHostVersion() Obtain Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+ * @method void setHostVersion(integer $HostVersion) Set Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
  * @method string getStrategyName() Obtain Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStrategyName(string $StrategyName) Set Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMachineType() Obtain Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+ * @method void setMachineType(string $MachineType) Set Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
  */
 class RansomDefenseStrategyMachineDetail extends AbstractModel
 {
@@ -96,57 +82,54 @@ class RansomDefenseStrategyMachineDetail extends AbstractModel
 
     /**
      * @var string Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineWanIp;
 
     /**
-     * @var array Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Cloud Tag
      */
     public $CloudTags;
 
     /**
      * @var RegionInfo Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RegionInfo;
 
     /**
-     * @var array CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Host security tag
      */
     public $Tag;
 
     /**
      * @var integer Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
      * @var integer Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StrategyId;
 
     /**
      * @var string Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DiskInfo;
 
     /**
-     * @var integer Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
      */
     public $HostVersion;
 
     /**
      * @var string Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StrategyName;
+
+    /**
+     * @var string Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+     */
+    public $MachineType;
 
     /**
      * @param string $Uuid Host UUID
@@ -155,23 +138,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $InstanceId Host Instance ID
      * @param string $MachineIp Private IP address
      * @param string $MachineWanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $CloudTags Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $CloudTags Cloud Tag
      * @param RegionInfo $RegionInfo Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Tag CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tag Host security tag
      * @param integer $Status Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $StrategyId Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DiskInfo Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $HostVersion Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $HostVersion Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
      * @param string $StrategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MachineType Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
      */
     function __construct()
     {
@@ -251,6 +227,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("StrategyName",$param) and $param["StrategyName"] !== null) {
             $this->StrategyName = $param["StrategyName"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

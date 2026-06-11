@@ -31,13 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLevel() Obtain Vulnerability level 1: low-risk; 2: medium-risk; 3: high-risk; 4: prompt
  * @method void setLevel(integer $Level) Set Vulnerability level 1: low-risk; 2: medium-risk; 3: high-risk; 4: prompt
  * @method integer getCategory() Obtain Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCategory(integer $Category) Set Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUuid() Obtain Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUuid(string $Uuid) Set Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUuid() Obtain Host UUID.
+ * @method void setUuid(string $Uuid) Set Host UUID.
  */
 class ScreenVulInfo extends AbstractModel
 {
@@ -68,13 +64,11 @@ class ScreenVulInfo extends AbstractModel
 
     /**
      * @var integer Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Category;
 
     /**
-     * @var string Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host UUID.
      */
     public $Uuid;
 
@@ -85,9 +79,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $LastTime Last detection Time
      * @param integer $Level Vulnerability level 1: low-risk; 2: medium-risk; 3: high-risk; 4: prompt
      * @param integer $Category Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Uuid Host UUID.
      */
     function __construct()
     {

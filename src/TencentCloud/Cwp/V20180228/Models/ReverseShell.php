@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParentProcGroup(string $ParentProcGroup) Set Parent process user group
  * @method string getParentProcPath() Obtain Parent process path
  * @method void setParentProcPath(string $ParentProcPath) Set Parent process path
- * @method integer getStatus() Obtain Processing status: 0 - pending; 2 - allowlisted; 3 - processed; 4 - ignored
- * @method void setStatus(integer $Status) Set Processing status: 0 - pending; 2 - allowlisted; 3 - processed; 4 - ignored
+ * @method integer getStatus() Obtain Processing status. 0 - pending processing; 2 - allowlisted; 3 - processed; 4 - ignored; 6 - blocked.
+ * @method void setStatus(integer $Status) Set Processing status. 0 - pending processing; 2 - allowlisted; 3 - processed; 4 - ignored; 6 - blocked.
  * @method string getCreateTime() Obtain Occurrence time
  * @method void setCreateTime(string $CreateTime) Set Occurrence time
  * @method string getMachineName() Obtain Server name
@@ -61,17 +61,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDetectBy() Obtain Detection method: 0: behavior analysis; 1 command feature detection
  * @method void setDetectBy(integer $DetectBy) Set Detection method: 0: behavior analysis; 1 command feature detection
  * @method MachineExtraInfo getMachineExtraInfo() Obtain  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getPid() Obtain Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPid(integer $Pid) Set Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRiskLevel() Obtain Threat level: 0 - medium-risk; 1 - high-risk
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRiskLevel(integer $RiskLevel) Set Threat level: 0 - medium-risk; 1 - high-risk
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getPid() Obtain Process id
+ * @method void setPid(integer $Pid) Set Process id
+ * @method integer getRiskLevel() Obtain Threat level. 0: medium risk, 1: high risk.
+ * @method void setRiskLevel(integer $RiskLevel) Set Threat level. 0: medium risk, 1: high risk.
+ * @method string getCmdLineQuote() Obtain Escaped content of command details. It is used when regular expressions match allowlisted full strings.	
+ * @method void setCmdLineQuote(string $CmdLineQuote) Set Escaped content of command details. It is used when regular expressions match allowlisted full strings.	
  */
 class ReverseShell extends AbstractModel
 {
@@ -151,7 +147,7 @@ class ReverseShell extends AbstractModel
     public $ParentProcPath;
 
     /**
-     * @var integer Processing status: 0 - pending; 2 - allowlisted; 3 - processed; 4 - ignored
+     * @var integer Processing status. 0 - pending processing; 2 - allowlisted; 3 - processed; 4 - ignored; 6 - blocked.
      */
     public $Status;
 
@@ -177,21 +173,23 @@ class ReverseShell extends AbstractModel
 
     /**
      * @var MachineExtraInfo  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
     /**
-     * @var integer Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Process id
      */
     public $Pid;
 
     /**
-     * @var integer Threat level: 0 - medium-risk; 1 - high-risk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Threat level. 0: medium risk, 1: high risk.
      */
     public $RiskLevel;
+
+    /**
+     * @var string Escaped content of command details. It is used when regular expressions match allowlisted full strings.	
+     */
+    public $CmdLineQuote;
 
     /**
      * @param integer $Id ID primary key
@@ -209,17 +207,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ParentProcUser Parent process user
      * @param string $ParentProcGroup Parent process user group
      * @param string $ParentProcPath Parent process path
-     * @param integer $Status Processing status: 0 - pending; 2 - allowlisted; 3 - processed; 4 - ignored
+     * @param integer $Status Processing status. 0 - pending processing; 2 - allowlisted; 3 - processed; 4 - ignored; 6 - blocked.
      * @param string $CreateTime Occurrence time
      * @param string $MachineName Server name
      * @param string $ProcTree Process tree
      * @param integer $DetectBy Detection method: 0: behavior analysis; 1 command feature detection
      * @param MachineExtraInfo $MachineExtraInfo  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RiskLevel Threat level: 0 - medium-risk; 1 - high-risk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Pid Process id
+     * @param integer $RiskLevel Threat level. 0: medium risk, 1: high risk.
+     * @param string $CmdLineQuote Escaped content of command details. It is used when regular expressions match allowlisted full strings.	
      */
     function __construct()
     {
@@ -325,6 +321,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
             $this->RiskLevel = $param["RiskLevel"];
+        }
+
+        if (array_key_exists("CmdLineQuote",$param) and $param["CmdLineQuote"] !== null) {
+            $this->CmdLineQuote = $param["CmdLineQuote"];
         }
     }
 }

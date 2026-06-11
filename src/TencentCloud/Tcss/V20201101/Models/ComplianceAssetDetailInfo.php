@@ -46,18 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassedPolicyItemCount(integer $PassedPolicyItemCount) Set Number of check items that the asset passed
  * @method integer getFailedPolicyItemCount() Obtain Number of check items that the asset failed
  * @method void setFailedPolicyItemCount(integer $FailedPolicyItemCount) Set Number of check items that the asset failed
- * @method string getLastCheckTime() Obtain Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLastCheckTime(string $LastCheckTime) Set Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCheckResult() Obtain Check result. Valid values:
-`RESULT_FAILED`: Failed.
-`RESULT_PASSED`: Passed.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCheckResult(string $CheckResult) Set Check result. Valid values:
-`RESULT_FAILED`: Failed.
-`RESULT_PASSED`: Passed.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLastCheckTime() Obtain Last detection time.
+ * @method void setLastCheckTime(string $LastCheckTime) Set Last detection time.
+ * @method string getCheckResult() Obtain Detection result:
+RESULT_FAILED: failed.
+RESULT_PASSED: Passed.
+ * @method void setCheckResult(string $CheckResult) Set Detection result:
+RESULT_FAILED: failed.
+RESULT_PASSED: Passed.
  * @method string getAssetStatus() Obtain Asset status
  * @method void setAssetStatus(string $AssetStatus) Set Asset status
  * @method string getAssetCreateTime() Obtain Asset creation time
@@ -123,16 +119,14 @@ class ComplianceAssetDetailInfo extends AbstractModel
     public $FailedPolicyItemCount;
 
     /**
-     * @var string Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Last detection time.
      */
     public $LastCheckTime;
 
     /**
-     * @var string Check result. Valid values:
-`RESULT_FAILED`: Failed.
-`RESULT_PASSED`: Passed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Detection result:
+RESULT_FAILED: failed.
+RESULT_PASSED: Passed.
      */
     public $CheckResult;
 
@@ -164,12 +158,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `CHECK_FAILED`: Check failed.
      * @param integer $PassedPolicyItemCount Number of check items that the asset passed
      * @param integer $FailedPolicyItemCount Number of check items that the asset failed
-     * @param string $LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CheckResult Check result. Valid values:
-`RESULT_FAILED`: Failed.
-`RESULT_PASSED`: Passed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LastCheckTime Last detection time.
+     * @param string $CheckResult Detection result:
+RESULT_FAILED: failed.
+RESULT_PASSED: Passed.
      * @param string $AssetStatus Asset status
      * @param string $AssetCreateTime Asset creation time
 `ASSET_NORMAL`: Running.

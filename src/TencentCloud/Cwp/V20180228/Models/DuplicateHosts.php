@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * Batch add to allowlists
  *
  * @method string getQuuid() Obtain Quuid
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQuuid(string $Quuid) Set Quuid
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUuid() Obtain Uuid
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUuid(string $Uuid) Set Uuid
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getId() Obtain Id
  * @method void setId(integer $Id) Set Id
  */
@@ -35,13 +31,11 @@ class DuplicateHosts extends AbstractModel
 {
     /**
      * @var string Quuid
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Quuid;
 
     /**
      * @var string Uuid
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Uuid;
 
@@ -52,9 +46,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $Quuid Quuid
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Uuid Uuid
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Id Id
      */
     function __construct()

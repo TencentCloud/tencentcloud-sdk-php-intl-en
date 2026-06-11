@@ -20,12 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConfig request structure.
  *
- * @method string getName() Obtain Collection configuration name
- * @method void setName(string $Name) Set Collection configuration name
- * @method string getOutput() Obtain Log topic ID (TopicId) of collection configuration
- * @method void setOutput(string $Output) Set Log topic ID (TopicId) of collection configuration
- * @method string getPath() Obtain Log collection path containing the filename
- * @method void setPath(string $Path) Set Log collection path containing the filename
+ * @method string getName() Obtain collection configuration name
+-Names do not contain special characters
+- Name can be up to 255 characters, exceeding which will be truncated
+ * @method void setName(string $Name) Set collection configuration name
+-Names do not contain special characters
+- Name can be up to 255 characters, exceeding which will be truncated
+ * @method string getOutput() Obtain Log topic ID to which the collection configuration belongs, i.e., topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method void setOutput(string $Output) Set Log topic ID to which the collection configuration belongs, i.e., topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method string getPath() Obtain Log collection path, which contains the file name. Multiple paths are supported and should be separated by English commas. It is required for file collection.
+ * @method void setPath(string $Path) Set Log collection path, which contains the file name. Multiple paths are supported and should be separated by English commas. It is required for file collection.
  * @method string getLogType() Obtain The collected log type, default is minimalist_log. Supports the following types:- json_log: JSON File Log (For more information, see [Using JSON pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17419?from_cn_redirect=1));- delimiter_log: Delimiter - File Logs (For more information, see [Using delimiter pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17420?from_cn_redirect=1));- minimalist_log: Single-line Full-text File Log (For more information, see [Using single-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17421?from_cn_redirect=1));- fullregex_log: Single line full regular expression - File log (For more information, see [Using single-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52365?from_cn_redirect=1));- multiline_log: Multiline Full-text File Log (For more information, see [Using multi-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17422?from_cn_redirect=1));- multiline_fullregex_log: Multi-line complete regular expression - File Logs (For more information, see [Using multi-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52366?from_cn_redirect=1));- user_define_log: Combined parsing (Suitable for logs with multiple nested formats, see [Using combined parsing pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1));- service_syslog: syslog collection (For more information, see [Collect Syslog](https://intl.cloud.tencent.com/document/product/614/81454?from_cn_redirect=1));- windows_event_log: Windows event log (see [Collecting Windows Event Logs](https://intl.cloud.tencent.com/document/product/614/96678?from_cn_redirect=1)).
  * @method void setLogType(string $LogType) Set The collected log type, default is minimalist_log. Supports the following types:- json_log: JSON File Log (For more information, see [Using JSON pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17419?from_cn_redirect=1));- delimiter_log: Delimiter - File Logs (For more information, see [Using delimiter pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17420?from_cn_redirect=1));- minimalist_log: Single-line Full-text File Log (For more information, see [Using single-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17421?from_cn_redirect=1));- fullregex_log: Single line full regular expression - File log (For more information, see [Using single-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52365?from_cn_redirect=1));- multiline_log: Multiline Full-text File Log (For more information, see [Using multi-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17422?from_cn_redirect=1));- multiline_fullregex_log: Multi-line complete regular expression - File Logs (For more information, see [Using multi-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52366?from_cn_redirect=1));- user_define_log: Combined parsing (Suitable for logs with multiple nested formats, see [Using combined parsing pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1));- service_syslog: syslog collection (For more information, see [Collect Syslog](https://intl.cloud.tencent.com/document/product/614/81454?from_cn_redirect=1));- windows_event_log: Windows event log (see [Collecting Windows Event Logs](https://intl.cloud.tencent.com/document/product/614/96678?from_cn_redirect=1)).
  * @method ExtractRuleInfo getExtractRule() Obtain Extraction rule. If `ExtractRule` is set, `LogType` must be set.
@@ -42,21 +48,32 @@ Default placeholder value in console: `{\"ClsAgentDefault\":0}`
 Sample:`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
 Default placeholder value in console: `{\"ClsAgentDefault\":0}`
+ * @method string getInputType() Obtain Log input type (<span style="color:red; font-weight:bold">Note: Required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+ * @method void setInputType(string $InputType) Set Log input type (<span style="color:red; font-weight:bold">Note: Required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
  */
 class CreateConfigRequest extends AbstractModel
 {
     /**
-     * @var string Collection configuration name
+     * @var string collection configuration name
+-Names do not contain special characters
+- Name can be up to 255 characters, exceeding which will be truncated
      */
     public $Name;
 
     /**
-     * @var string Log topic ID (TopicId) of collection configuration
+     * @var string Log topic ID to which the collection configuration belongs, i.e., topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $Output;
 
     /**
-     * @var string Log collection path containing the filename
+     * @var string Log collection path, which contains the file name. Multiple paths are supported and should be separated by English commas. It is required for file collection.
      */
     public $Path;
 
@@ -89,9 +106,20 @@ Default placeholder value in console: `{\"ClsAgentDefault\":0}`
     public $AdvancedConfig;
 
     /**
-     * @param string $Name Collection configuration name
-     * @param string $Output Log topic ID (TopicId) of collection configuration
-     * @param string $Path Log collection path containing the filename
+     * @var string Log input type (<span style="color:red; font-weight:bold">Note: Required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+     */
+    public $InputType;
+
+    /**
+     * @param string $Name collection configuration name
+-Names do not contain special characters
+- Name can be up to 255 characters, exceeding which will be truncated
+     * @param string $Output Log topic ID to which the collection configuration belongs, i.e., topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param string $Path Log collection path, which contains the file name. Multiple paths are supported and should be separated by English commas. It is required for file collection.
      * @param string $LogType The collected log type, default is minimalist_log. Supports the following types:- json_log: JSON File Log (For more information, see [Using JSON pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17419?from_cn_redirect=1));- delimiter_log: Delimiter - File Logs (For more information, see [Using delimiter pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17420?from_cn_redirect=1));- minimalist_log: Single-line Full-text File Log (For more information, see [Using single-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17421?from_cn_redirect=1));- fullregex_log: Single line full regular expression - File log (For more information, see [Using single-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52365?from_cn_redirect=1));- multiline_log: Multiline Full-text File Log (For more information, see [Using multi-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17422?from_cn_redirect=1));- multiline_fullregex_log: Multi-line complete regular expression - File Logs (For more information, see [Using multi-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52366?from_cn_redirect=1));- user_define_log: Combined parsing (Suitable for logs with multiple nested formats, see [Using combined parsing pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1));- service_syslog: syslog collection (For more information, see [Collect Syslog](https://intl.cloud.tencent.com/document/product/614/81454?from_cn_redirect=1));- windows_event_log: Windows event log (see [Collecting Windows Event Logs](https://intl.cloud.tencent.com/document/product/614/96678?from_cn_redirect=1)).
      * @param ExtractRuleInfo $ExtractRule Extraction rule. If `ExtractRule` is set, `LogType` must be set.
      * @param array $ExcludePaths Collection path blocklist
@@ -100,6 +128,10 @@ Default placeholder value in console: `{\"ClsAgentDefault\":0}`
 Sample:`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
 Default placeholder value in console: `{\"ClsAgentDefault\":0}`
+     * @param string $InputType Log input type (<span style="color:red; font-weight:bold">Note: Required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
      */
     function __construct()
     {
@@ -150,6 +182,10 @@ Default placeholder value in console: `{\"ClsAgentDefault\":0}`
 
         if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
             $this->AdvancedConfig = $param["AdvancedConfig"];
+        }
+
+        if (array_key_exists("InputType",$param) and $param["InputType"] !== null) {
+            $this->InputType = $param["InputType"];
         }
     }
 }

@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * CreateExport request structure.
  *
  * @method string getTopicId() Obtain Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
  * @method void setTopicId(string $TopicId) Set Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
  * @method integer getCount() Obtain Number of logs to be exported. Maximum value: 50 million
  * @method void setCount(integer $Count) Set Number of logs to be exported. Maximum value: 50 million
  * @method string getQuery() Obtain Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
@@ -36,11 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFormat(string $Format) Set Exported log data format. Valid values: `json`, `csv`. Default value: `json`
  * @method integer getSyntaxRule() Obtain Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
  * @method void setSyntaxRule(integer $SyntaxRule) Set Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
+ * @method array getDerivedFields() Obtain Export fields
+ * @method void setDerivedFields(array $DerivedFields) Set Export fields
  */
 class CreateExportRequest extends AbstractModel
 {
     /**
      * @var string Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
@@ -80,7 +85,13 @@ class CreateExportRequest extends AbstractModel
     public $SyntaxRule;
 
     /**
+     * @var array Export fields
+     */
+    public $DerivedFields;
+
+    /**
      * @param string $TopicId Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      * @param integer $Count Number of logs to be exported. Maximum value: 50 million
      * @param string $Query Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
      * @param integer $From Start time of the log to be exported, which is a timestamp in milliseconds
@@ -88,6 +99,7 @@ class CreateExportRequest extends AbstractModel
      * @param string $Order Exported log sorting order by time. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
      * @param string $Format Exported log data format. Valid values: `json`, `csv`. Default value: `json`
      * @param integer $SyntaxRule Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
+     * @param array $DerivedFields Export fields
      */
     function __construct()
     {
@@ -132,6 +144,10 @@ class CreateExportRequest extends AbstractModel
 
         if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
             $this->SyntaxRule = $param["SyntaxRule"];
+        }
+
+        if (array_key_exists("DerivedFields",$param) and $param["DerivedFields"] !== null) {
+            $this->DerivedFields = $param["DerivedFields"];
         }
     }
 }

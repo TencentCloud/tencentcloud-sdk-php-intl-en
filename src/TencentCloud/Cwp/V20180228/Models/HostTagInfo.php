@@ -21,153 +21,129 @@ use TencentCloud\Common\AbstractModel;
  * Host and host tag information
  *
  * @method string getQuuid() Obtain Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQuuid(string $Quuid) Set Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getTagList() Obtain Host tag name array
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTagList(array $TagList) Set Host tag name array
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getHostIp() Obtain Host intranet IP
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostIp(string $HostIp) Set Host intranet IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAliasName() Obtain Host name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAliasName(string $AliasName) Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMachineWanIp() Obtain Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineWanIp(string $MachineWanIp) Set Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAliasName() Obtain host name
+ * @method void setAliasName(string $AliasName) Set host name
+ * @method string getMachineWanIp() Obtain Host public IP address.
+ * @method void setMachineWanIp(string $MachineWanIp) Set Host public IP address.
  * @method string getUuid() Obtain Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUuid(string $Uuid) Set Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getKernelVersion() Obtain Kernel version number
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setKernelVersion(string $KernelVersion) Set Kernel version number
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMachineStatus() Obtain Host online status: ONLINE; OFFLINE
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineStatus(string $MachineStatus) Set Host online status: ONLINE; OFFLINE
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProtectType() Obtain Protection version: BASIC_VERSION - Basic Edition PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProtectType(string $ProtectType) Set Protection version: BASIC_VERSION - Basic Edition PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMachineStatus() Obtain Host online status: ONLINE, OFFLINE
+ * @method void setMachineStatus(string $MachineStatus) Set Host online status: ONLINE, OFFLINE
+ * @method string getProtectType() Obtain Protection version: BASIC_VERSION - Basic Edition, PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
+ * @method void setProtectType(string $ProtectType) Set Protection version: BASIC_VERSION - Basic Edition, PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
  * @method integer getVulNum() Obtain Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVulNum(integer $VulNum) Set Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getCloudTags() Obtain Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCloudTags(array $CloudTags) Set Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstanceID() Obtain Host Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceID(string $InstanceID) Set Host Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMachineType() Obtain Specific host types
+ * @method void setMachineType(string $MachineType) Set Specific host types
+ * @method string getRegionName() Obtain Availability zone name
+ * @method void setRegionName(string $RegionName) Set Availability zone name
+ * @method integer getRegionId() Obtain Availability zone ID.
+ * @method void setRegionId(integer $RegionId) Set Availability zone ID.
  */
 class HostTagInfo extends AbstractModel
 {
     /**
      * @var string Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Quuid;
 
     /**
      * @var array Host tag name array
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TagList;
 
     /**
      * @var string Host intranet IP
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostIp;
 
     /**
-     * @var string Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string host name
      */
     public $AliasName;
 
     /**
-     * @var string Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host public IP address.
      */
     public $MachineWanIp;
 
     /**
      * @var string Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Uuid;
 
     /**
      * @var string Kernel version number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $KernelVersion;
 
     /**
-     * @var string Host online status: ONLINE; OFFLINE
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host online status: ONLINE, OFFLINE
      */
     public $MachineStatus;
 
     /**
-     * @var string Protection version: BASIC_VERSION - Basic Edition PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Protection version: BASIC_VERSION - Basic Edition, PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
      */
     public $ProtectType;
 
     /**
      * @var integer Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VulNum;
 
     /**
      * @var array Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CloudTags;
 
     /**
      * @var string Host Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceID;
 
     /**
+     * @var string Specific host types
+     */
+    public $MachineType;
+
+    /**
+     * @var string Availability zone name
+     */
+    public $RegionName;
+
+    /**
+     * @var integer Availability zone ID.
+     */
+    public $RegionId;
+
+    /**
      * @param string $Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $TagList Host tag name array
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HostIp Host intranet IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AliasName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MachineWanIp Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AliasName host name
+     * @param string $MachineWanIp Host public IP address.
      * @param string $Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $KernelVersion Kernel version number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MachineStatus Host online status: ONLINE; OFFLINE
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ProtectType Protection version: BASIC_VERSION - Basic Edition PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MachineStatus Host online status: ONLINE, OFFLINE
+     * @param string $ProtectType Protection version: BASIC_VERSION - Basic Edition, PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
      * @param integer $VulNum Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $CloudTags Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceID Host Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MachineType Specific host types
+     * @param string $RegionName Availability zone name
+     * @param integer $RegionId Availability zone ID.
      */
     function __construct()
     {
@@ -233,6 +209,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
             $this->InstanceID = $param["InstanceID"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
+        }
+
+        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
+            $this->RegionName = $param["RegionName"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }

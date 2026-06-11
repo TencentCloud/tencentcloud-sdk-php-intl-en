@@ -30,18 +30,12 @@ If this parameter is left empty, edge server information will be returned by def
 `edge`: Edge server
 `last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
- * @method string getArea() Obtain Specifies a region to query.
-`mainland`: Nodes in the Chinese mainland
-`overseas`: Nodes outside the Chinese mainland
-`global`: Global nodes
- * @method void setArea(string $Area) Set Specifies a region to query.
-`mainland`: Nodes in the Chinese mainland
-`overseas`: Nodes outside the Chinese mainland
-`global`: Global nodes
+ * @method string getArea() Obtain Query region: mainland: node in chinese mainland; overseas: node outside the chinese mainland; global: global node.
+ * @method void setArea(string $Area) Set Query region: mainland: node in chinese mainland; overseas: node outside the chinese mainland; global: global node.
  * @method boolean getSegment() Obtain Whether to return a value as an IP range
  * @method void setSegment(boolean $Segment) Set Whether to return a value as an IP range
- * @method boolean getShowIpv6() Obtain whether to query node IPV6 information.
- * @method void setShowIpv6(boolean $ShowIpv6) Set whether to query node IPV6 information.
+ * @method boolean getShowIpv6() Obtain 
+ * @method void setShowIpv6(boolean $ShowIpv6) Set 
  * @method boolean getAbbreviationIpv6() Obtain Whether to abbreviate the IPv6 address.
  * @method void setAbbreviationIpv6(boolean $AbbreviationIpv6) Set Whether to abbreviate the IPv6 address.
  */
@@ -61,10 +55,7 @@ If this parameter is left empty, edge server information will be returned by def
     public $Layer;
 
     /**
-     * @var string Specifies a region to query.
-`mainland`: Nodes in the Chinese mainland
-`overseas`: Nodes outside the Chinese mainland
-`global`: Global nodes
+     * @var string Query region: mainland: node in chinese mainland; overseas: node outside the chinese mainland; global: global node.
      */
     public $Area;
 
@@ -74,7 +65,7 @@ If this parameter is left empty, edge server information will be returned by def
     public $Segment;
 
     /**
-     * @var boolean whether to query node IPV6 information.
+     * @var boolean 
      */
     public $ShowIpv6;
 
@@ -89,12 +80,9 @@ If this parameter is left empty, edge server information will be returned by def
 `edge`: Edge server
 `last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
-     * @param string $Area Specifies a region to query.
-`mainland`: Nodes in the Chinese mainland
-`overseas`: Nodes outside the Chinese mainland
-`global`: Global nodes
+     * @param string $Area Query region: mainland: node in chinese mainland; overseas: node outside the chinese mainland; global: global node.
      * @param boolean $Segment Whether to return a value as an IP range
-     * @param boolean $ShowIpv6 whether to query node IPV6 information.
+     * @param boolean $ShowIpv6 
      * @param boolean $AbbreviationIpv6 Whether to abbreviate the IPv6 address.
      */
     function __construct()

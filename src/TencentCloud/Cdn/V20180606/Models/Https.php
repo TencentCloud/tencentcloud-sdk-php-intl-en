@@ -90,10 +90,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setHsts(Hsts $Hsts) Set HSTS configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method array getTlsVersion() Obtain TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setTlsVersion(array $TlsVersion) Set TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getTlsVersion() Obtain Specifies the Tls version setting, which has partial support for Advance domain names and can be set to TLSv1, TLSv1.1, TLSv1.2, or TLSv1.3. consecutive versions must be enabled when modifying.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTlsVersion(array $TlsVersion) Set Specifies the Tls version setting, which has partial support for Advance domain names and can be set to TLSv1, TLSv1.1, TLSv1.2, or TLSv1.3. consecutive versions must be enabled when modifying.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Https extends AbstractModel
 {
@@ -169,8 +169,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Hsts;
 
     /**
-     * @var array TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Specifies the Tls version setting, which has partial support for Advance domain names and can be set to TLSv1, TLSv1.1, TLSv1.2, or TLSv1.3. consecutive versions must be enabled when modifying.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TlsVersion;
 
@@ -210,8 +210,8 @@ failed: deployment failed
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Hsts $Hsts HSTS configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param array $TlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $TlsVersion Specifies the Tls version setting, which has partial support for Advance domain names and can be set to TLSv1, TLSv1.1, TLSv1.2, or TLSv1.3. consecutive versions must be enabled when modifying.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

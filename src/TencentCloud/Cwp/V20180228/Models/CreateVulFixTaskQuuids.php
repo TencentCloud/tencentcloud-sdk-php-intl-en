@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Create QUUIDs for fixing tasks
  *
- * @method integer getVulId() Obtain Vulnerability ID
- * @method void setVulId(integer $VulId) Set Vulnerability ID
  * @method array getQuuids() Obtain Hosts that need to fix vulnerabilities. All hosts need to have the vulnerability with the ID of VulId and be in a pending fix status.
  * @method void setQuuids(array $Quuids) Set Hosts that need to fix vulnerabilities. All hosts need to have the vulnerability with the ID of VulId and be in a pending fix status.
- * @method integer getFixMethod() Obtain Repair method: 0 component update or patch installation, 1 disable service
- * @method void setFixMethod(integer $FixMethod) Set Repair method: 0 component update or patch installation, 1 disable service
+ * @method integer getVulId() Obtain Vulnerability ID
+ * @method void setVulId(integer $VulId) Set Vulnerability ID
+ * @method integer getFixMethod() Obtain Repair method. 0: Update components or install patches. 1: Disable service.
+ * @method void setFixMethod(integer $FixMethod) Set Repair method. 0: Update components or install patches. 1: Disable service.
+ * @method integer getKbId() Obtain kb id
+ * @method void setKbId(integer $KbId) Set kb id
  */
 class CreateVulFixTaskQuuids extends AbstractModel
 {
-    /**
-     * @var integer Vulnerability ID
-     */
-    public $VulId;
-
     /**
      * @var array Hosts that need to fix vulnerabilities. All hosts need to have the vulnerability with the ID of VulId and be in a pending fix status.
      */
     public $Quuids;
 
     /**
-     * @var integer Repair method: 0 component update or patch installation, 1 disable service
+     * @var integer Vulnerability ID
+     */
+    public $VulId;
+
+    /**
+     * @var integer Repair method. 0: Update components or install patches. 1: Disable service.
      */
     public $FixMethod;
 
     /**
-     * @param integer $VulId Vulnerability ID
+     * @var integer kb id
+     */
+    public $KbId;
+
+    /**
      * @param array $Quuids Hosts that need to fix vulnerabilities. All hosts need to have the vulnerability with the ID of VulId and be in a pending fix status.
-     * @param integer $FixMethod Repair method: 0 component update or patch installation, 1 disable service
+     * @param integer $VulId Vulnerability ID
+     * @param integer $FixMethod Repair method. 0: Update components or install patches. 1: Disable service.
+     * @param integer $KbId kb id
      */
     function __construct()
     {
@@ -62,16 +70,20 @@ class CreateVulFixTaskQuuids extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VulId",$param) and $param["VulId"] !== null) {
-            $this->VulId = $param["VulId"];
-        }
-
         if (array_key_exists("Quuids",$param) and $param["Quuids"] !== null) {
             $this->Quuids = $param["Quuids"];
         }
 
+        if (array_key_exists("VulId",$param) and $param["VulId"] !== null) {
+            $this->VulId = $param["VulId"];
+        }
+
         if (array_key_exists("FixMethod",$param) and $param["FixMethod"] !== null) {
             $this->FixMethod = $param["FixMethod"];
+        }
+
+        if (array_key_exists("KbId",$param) and $param["KbId"] !== null) {
+            $this->KbId = $param["KbId"];
         }
     }
 }

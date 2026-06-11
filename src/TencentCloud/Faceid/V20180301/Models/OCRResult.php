@@ -48,9 +48,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCardBackCutImageBase64(string $CardBackCutImageBase64) Set <p>Base64 of the cropped image of the back side of the ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getWarnCardInfos() Obtain <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: Alarm for incomplete document border</li><li>-9102: Alarm for document photocopy</li><li>-9103: Alarm for rephotographing</li><li>-9104: PS alarm</li><li>-9107: Reflective alarm</li><li>-9108: Blurry alarm</li><li>-9109: Alarm capability not enabled</li></ul>
+ * @method array getWarnCardInfos() Obtain <p>Alarm code</p><p>Enumeration value:</p><ul><li>9101: Alarm for incomplete document border</li><li>9102: Alarm for document photocopy</li><li>9103: Alarm for rephotographing</li><li>9104: PS alarm</li><li>9107: Reflective alarm</li><li>9108: Blurry alarm</li><li>9109: Alarm capability not enabled</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWarnCardInfos(array $WarnCardInfos) Set <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: Alarm for incomplete document border</li><li>-9102: Alarm for document photocopy</li><li>-9103: Alarm for rephotographing</li><li>-9104: PS alarm</li><li>-9107: Reflective alarm</li><li>-9108: Blurry alarm</li><li>-9109: Alarm capability not enabled</li></ul>
+ * @method void setWarnCardInfos(array $WarnCardInfos) Set <p>Alarm code</p><p>Enumeration value:</p><ul><li>9101: Alarm for incomplete document border</li><li>9102: Alarm for document photocopy</li><li>9103: Alarm for rephotographing</li><li>9104: PS alarm</li><li>9107: Reflective alarm</li><li>9108: Blurry alarm</li><li>9109: Alarm capability not enabled</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getOriginalCardInfo() Obtain <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -103,7 +103,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CardBackCutImageBase64;
 
     /**
-     * @var array <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: Alarm for incomplete document border</li><li>-9102: Alarm for document photocopy</li><li>-9103: Alarm for rephotographing</li><li>-9104: PS alarm</li><li>-9107: Reflective alarm</li><li>-9108: Blurry alarm</li><li>-9109: Alarm capability not enabled</li></ul>
+     * @var array <p>Alarm code</p><p>Enumeration value:</p><ul><li>9101: Alarm for incomplete document border</li><li>9102: Alarm for document photocopy</li><li>9103: Alarm for rephotographing</li><li>9104: PS alarm</li><li>9107: Reflective alarm</li><li>9108: Blurry alarm</li><li>9109: Alarm capability not enabled</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $WarnCardInfos;
@@ -129,7 +129,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CardBackCutImageBase64 <p>Base64 of the cropped image of the back side of the ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $WarnCardInfos <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: Alarm for incomplete document border</li><li>-9102: Alarm for document photocopy</li><li>-9103: Alarm for rephotographing</li><li>-9104: PS alarm</li><li>-9107: Reflective alarm</li><li>-9108: Blurry alarm</li><li>-9109: Alarm capability not enabled</li></ul>
+     * @param array $WarnCardInfos <p>Alarm code</p><p>Enumeration value:</p><ul><li>9101: Alarm for incomplete document border</li><li>9102: Alarm for document photocopy</li><li>9103: Alarm for rephotographing</li><li>9104: PS alarm</li><li>9107: Reflective alarm</li><li>9108: Blurry alarm</li><li>9109: Alarm capability not enabled</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OriginalCardInfo <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
 Note: This field may return null, indicating that no valid values can be obtained.

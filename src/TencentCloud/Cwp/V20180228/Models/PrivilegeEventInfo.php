@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() Obtain Data ID
  * @method void setId(integer $Id) Set Data ID
- * @method string getUuid() Obtain Yunjing ID
- * @method void setUuid(string $Uuid) Set Yunjing ID
- * @method string getQuuid() Obtain Host ID
- * @method void setQuuid(string $Quuid) Set Host ID
+ * @method string getUuid() Obtain Host Security UUID
+ * @method void setUuid(string $Uuid) Set Host Security UUID
+ * @method string getQuuid() Obtain Host UUID
+ * @method void setQuuid(string $Quuid) Set Host UUID
  * @method string getHostIp() Obtain Host private IP address
  * @method void setHostIp(string $HostIp) Set Host private IP address
  * @method string getProcessName() Obtain Process name
@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineStatus(string $MachineStatus) Set Host online status: OFFLINE; ONLINE
  * @method string getModifyTime() Obtain Processing time
  * @method void setModifyTime(string $ModifyTime) Set Processing time
+ * @method integer getCount() Obtain Alarm count
+ * @method void setCount(integer $Count) Set Alarm count
  */
 class PrivilegeEventInfo extends AbstractModel
 {
@@ -81,12 +83,12 @@ class PrivilegeEventInfo extends AbstractModel
     public $Id;
 
     /**
-     * @var string Yunjing ID
+     * @var string Host Security UUID
      */
     public $Uuid;
 
     /**
-     * @var string Host ID
+     * @var string Host UUID
      */
     public $Quuid;
 
@@ -206,9 +208,14 @@ class PrivilegeEventInfo extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var integer Alarm count
+     */
+    public $Count;
+
+    /**
      * @param integer $Id Data ID
-     * @param string $Uuid Yunjing ID
-     * @param string $Quuid Host ID
+     * @param string $Uuid Host Security UUID
+     * @param string $Quuid Host UUID
      * @param string $HostIp Host private IP address
      * @param string $ProcessName Process name
      * @param string $FullPath Process path
@@ -232,6 +239,7 @@ class PrivilegeEventInfo extends AbstractModel
      * @param string $NewCaps Permission list (Separate multiple items with |.)
      * @param string $MachineStatus Host online status: OFFLINE; ONLINE
      * @param string $ModifyTime Processing time
+     * @param integer $Count Alarm count
      */
     function __construct()
     {
@@ -348,6 +356,10 @@ class PrivilegeEventInfo extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
     }
 }

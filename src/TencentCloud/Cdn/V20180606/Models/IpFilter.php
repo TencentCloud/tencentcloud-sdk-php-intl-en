@@ -34,21 +34,21 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `whitelist`: IP allowlist
 `blacklist`: IP blocklist
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method array getFilters() Obtain IP blocklist/allowlist
-Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
-Up to 50 whitelists or blacklists can be entered
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setFilters(array $Filters) Set IP blocklist/allowlist
-Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
-Up to 50 whitelists or blacklists can be entered
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method array getFilterRules() Obtain IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setFilterRules(array $FilterRules) Set IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getReturnCode() Obtain (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+ * @method array getFilters() Obtain IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 200 allowlist or blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFilters(array $Filters) Set IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 200 allowlist or blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getFilterRules() Obtain IP blocklist and allowlist path-specific configuration. the total count of blocklist and allowlist ips must not exceed 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFilterRules(array $FilterRules) Set IP blocklist and allowlist path-specific configuration. the total count of blocklist and allowlist ips must not exceed 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getReturnCode() Obtain (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. 
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setReturnCode(integer $ReturnCode) Set (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+ * @method void setReturnCode(integer $ReturnCode) Set (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. 
 Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class IpFilter extends AbstractModel
@@ -69,21 +69,21 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $FilterType;
 
     /**
-     * @var array IP blocklist/allowlist
-Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
-Up to 50 whitelists or blacklists can be entered
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 200 allowlist or blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Filters;
 
     /**
-     * @var array IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array IP blocklist and allowlist path-specific configuration. the total count of blocklist and allowlist ips must not exceed 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FilterRules;
 
     /**
-     * @var integer (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+     * @var integer (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. 
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ReturnCode;
@@ -96,13 +96,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 `whitelist`: IP allowlist
 `blacklist`: IP blocklist
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param array $Filters IP blocklist/allowlist
-Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
-Up to 50 whitelists or blacklists can be entered
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param array $FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $ReturnCode (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+     * @param array $Filters IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 200 allowlist or blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $FilterRules IP blocklist and allowlist path-specific configuration. the total count of blocklist and allowlist ips must not exceed 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ReturnCode (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. 
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()

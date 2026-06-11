@@ -20,8 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeComplianceAssetList request structure.
  *
- * @method array getAssetTypeSet() Obtain List of asset types
- * @method void setAssetTypeSet(array $AssetTypeSet) Set List of asset types
+ * @method array getAssetTypeSet() Obtain Asset type list.
+ASSET_CONTAINER, container
+ASSET_IMAGE - Mirror
+ASSET_HOST, Host
+ASSET_K8S, K8S asset
+ * @method void setAssetTypeSet(array $AssetTypeSet) Set Asset type list.
+ASSET_CONTAINER, container
+ASSET_IMAGE - Mirror
+ASSET_HOST, Host
+ASSET_K8S, K8S asset
  * @method integer getOffset() Obtain Initial offset. Default value: `0`.
  * @method void setOffset(integer $Offset) Set Initial offset. Default value: `0`.
  * @method integer getLimit() Obtain Number of results. Default value: `10`. Maximum value: `100`.
@@ -32,7 +40,11 @@ use TencentCloud\Common\AbstractModel;
 class DescribeComplianceAssetListRequest extends AbstractModel
 {
     /**
-     * @var array List of asset types
+     * @var array Asset type list.
+ASSET_CONTAINER, container
+ASSET_IMAGE - Mirror
+ASSET_HOST, Host
+ASSET_K8S, K8S asset
      */
     public $AssetTypeSet;
 
@@ -52,7 +64,11 @@ class DescribeComplianceAssetListRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param array $AssetTypeSet List of asset types
+     * @param array $AssetTypeSet Asset type list.
+ASSET_CONTAINER, container
+ASSET_IMAGE - Mirror
+ASSET_HOST, Host
+ASSET_K8S, K8S asset
      * @param integer $Offset Initial offset. Default value: `0`.
      * @param integer $Limit Number of results. Default value: `10`. Maximum value: `100`.
      * @param array $Filters Query filter

@@ -23,25 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getHostId() Obtain Host ID
  * @method void setHostId(string $HostId) Set Host ID
  * @method string getHostName() Obtain Host name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostName(string $HostName) Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getHostTag() Obtain Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostTag(string $HostTag) Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getHostIp() Obtain Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostIp(string $HostIp) Set Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getWanIp() Obtain Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWanIp(string $WanIp) Set Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BaselineHost extends AbstractModel
 {
@@ -52,46 +42,36 @@ class BaselineHost extends AbstractModel
 
     /**
      * @var string Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostName;
 
     /**
      * @var string Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostTag;
 
     /**
      * @var string Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostIp;
 
     /**
      * @var string Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $WanIp;
 
     /**
      * @var MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
     /**
      * @param string $HostId Host ID
      * @param string $HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HostTag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HostIp Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $WanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo $MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -20,70 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Monitoring object
  *
- * @method string getTopicId() Obtain Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setTopicId(string $TopicId) Set Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getQuery() Obtain Query statementNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setQuery(string $Query) Set Query statementNote: This field may return null, indicating that no valid values can be obtained.
- * @method integer getNumber() Obtain Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNumber(integer $Number) Set Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStartTimeOffset() Obtain Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTimeOffset(integer $StartTimeOffset) Set Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getEndTimeOffset() Obtain Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTimeOffset(integer $EndTimeOffset) Set Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLogsetId() Obtain Logset IDNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setLogsetId(string $LogsetId) Set Logset IDNote: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSyntaxRule() Obtain Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSyntaxRule(integer $SyntaxRule) Set Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTopicId() Obtain Log topic ID. Obtain the log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set Log topic ID. Obtain the log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method string getQuery() Obtain Query statement.
+ * @method void setQuery(string $Query) Set Query statement.
+ * @method integer getNumber() Obtain Alarm object SN. It starts from 1 and increments.
+ * @method void setNumber(integer $Number) Set Alarm object SN. It starts from 1 and increments.
+ * @method integer getStartTimeOffset() Obtain Offset of the start time of the query time range from alarm execution time, in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1,440.
+ * @method void setStartTimeOffset(integer $StartTimeOffset) Set Offset of the start time of the query time range from alarm execution time, in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1,440.
+ * @method integer getEndTimeOffset() Obtain Offset of the end time of the query time range from alarm execution time, in minutes. The value cannot be positive and should be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.
+ * @method void setEndTimeOffset(integer $EndTimeOffset) Set Offset of the end time of the query time range from alarm execution time, in minutes. The value cannot be positive and should be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.
+ * @method string getLogsetId() Obtain Logset ID. Obtain the logset ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method void setLogsetId(string $LogsetId) Set Logset ID. Obtain the logset ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method integer getSyntaxRule() Obtain Search syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+ * @method void setSyntaxRule(integer $SyntaxRule) Set Search syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
  */
 class AlarmTarget extends AbstractModel
 {
     /**
-     * @var string Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Log topic ID. Obtain the log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
     /**
-     * @var string Query statementNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Query statement.
      */
     public $Query;
 
     /**
-     * @var integer Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Alarm object SN. It starts from 1 and increments.
      */
     public $Number;
 
     /**
-     * @var integer Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Offset of the start time of the query time range from alarm execution time, in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1,440.
      */
     public $StartTimeOffset;
 
     /**
-     * @var integer Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Offset of the end time of the query time range from alarm execution time, in minutes. The value cannot be positive and should be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.
      */
     public $EndTimeOffset;
 
     /**
-     * @var string Logset IDNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Logset ID. Obtain the logset ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $LogsetId;
 
     /**
-     * @var integer Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Search syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
      */
     public $SyntaxRule;
 
     /**
-     * @param string $TopicId Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Query Query statementNote: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Number Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $StartTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $EndTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LogsetId Logset IDNote: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SyntaxRule Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TopicId Log topic ID. Obtain the log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param string $Query Query statement.
+     * @param integer $Number Alarm object SN. It starts from 1 and increments.
+     * @param integer $StartTimeOffset Offset of the start time of the query time range from alarm execution time, in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1,440.
+     * @param integer $EndTimeOffset Offset of the end time of the query time range from alarm execution time, in minutes. The value cannot be positive and should be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.
+     * @param string $LogsetId Logset ID. Obtain the logset ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param integer $SyntaxRule Search syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
      */
     function __construct()
     {

@@ -27,11 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInvocationId() Obtain Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
  * @method void setInvocationId(string $InvocationId) Set Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
  * @method string getInvokeCommandResult() Obtain Result of command invocation,
-<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId`.</li>
 <li>`FAILED`: Failed to invoke the command</li>
 <li>`NONE`</li>
  * @method void setInvokeCommandResult(string $InvokeCommandResult) Set Result of command invocation,
-<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId`.</li>
 <li>`FAILED`: Failed to invoke the command</li>
 <li>`NONE`</li>
  * @method string getNotificationResult() Obtain Notification result, which indicates whether it is successful to notify CMQ/TDMQ.<br>
@@ -82,7 +82,7 @@ class LifecycleActionResultInfo extends AbstractModel
 
     /**
      * @var string Result of command invocation,
-<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId`.</li>
 <li>`FAILED`: Failed to invoke the command</li>
 <li>`NONE`</li>
      */
@@ -119,7 +119,7 @@ class LifecycleActionResultInfo extends AbstractModel
      * @param string $InstanceId ID of the instance
      * @param string $InvocationId Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
      * @param string $InvokeCommandResult Result of command invocation,
-<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId`.</li>
 <li>`FAILED`: Failed to invoke the command</li>
 <li>`NONE`</li>
      * @param string $NotificationResult Notification result, which indicates whether it is successful to notify CMQ/TDMQ.<br>

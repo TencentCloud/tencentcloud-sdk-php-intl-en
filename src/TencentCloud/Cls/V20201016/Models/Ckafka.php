@@ -20,58 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of the CKafka instance to ship to
  *
- * @method string getVip() Obtain CKafka VIP
- * @method void setVip(string $Vip) Set CKafka VIP
- * @method string getVport() Obtain CKafka Vport
- * @method void setVport(string $Vport) Set CKafka Vport
- * @method string getInstanceId() Obtain CKafka instance ID
- * @method void setInstanceId(string $InstanceId) Set CKafka instance ID
- * @method string getInstanceName() Obtain CKafka instance name
- * @method void setInstanceName(string $InstanceName) Set CKafka instance name
- * @method string getTopicId() Obtain CKafka topic ID
- * @method void setTopicId(string $TopicId) Set CKafka topic ID
- * @method string getTopicName() Obtain CKafka topic name
- * @method void setTopicName(string $TopicName) Set CKafka topic name
+ * @method string getInstanceId() Obtain InstanceId of Ckafka.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+- Obtain the instance id by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
+ * @method void setInstanceId(string $InstanceId) Set InstanceId of Ckafka.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+- Obtain the instance id by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
+ * @method string getTopicName() Obtain TopicName of Ckafka
+-Obtain the TopicName by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicName through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+ * @method void setTopicName(string $TopicName) Set TopicName of Ckafka
+-Obtain the TopicName by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicName through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+ * @method string getVip() Obtain Vip of Ckafka.
+- Obtain vip information by searching the instance attributes (https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If the delivery task is created via the role ARN method, the Vip field can be empty.
+ * @method void setVip(string $Vip) Set Vip of Ckafka.
+- Obtain vip information by searching the instance attributes (https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If the delivery task is created via the role ARN method, the Vip field can be empty.
+ * @method string getVport() Obtain Vport of Ckafka.
+-Obtain vip port information by [obtaining instance attributes](https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If it is created by the role ARN method, the Vport field can be empty.
+ * @method void setVport(string $Vport) Set Vport of Ckafka.
+-Obtain vip port information by [obtaining instance attributes](https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If it is created by the role ARN method, the Vport field can be empty.
+ * @method string getInstanceName() Obtain InstanceName of Ckafka.
+- Obtain the InstanceName by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+-Get InstanceName by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the InstanceName field can be empty.
+ * @method void setInstanceName(string $InstanceName) Set InstanceName of Ckafka.
+- Obtain the InstanceName by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+-Get InstanceName by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the InstanceName field can be empty.
+ * @method string getTopicId() Obtain Topic ID of Ckafka.
+-Obtain the TopicId by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicId through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the TopicId field can be empty.
+ * @method void setTopicId(string $TopicId) Set Topic ID of Ckafka.
+-Obtain the TopicId by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicId through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the TopicId field can be empty.
  */
 class Ckafka extends AbstractModel
 {
     /**
-     * @var string CKafka VIP
-     */
-    public $Vip;
-
-    /**
-     * @var string CKafka Vport
-     */
-    public $Vport;
-
-    /**
-     * @var string CKafka instance ID
+     * @var string InstanceId of Ckafka.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+- Obtain the instance id by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
      */
     public $InstanceId;
 
     /**
-     * @var string CKafka instance name
-     */
-    public $InstanceName;
-
-    /**
-     * @var string CKafka topic ID
-     */
-    public $TopicId;
-
-    /**
-     * @var string CKafka topic name
+     * @var string TopicName of Ckafka
+-Obtain the TopicName by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicName through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
      */
     public $TopicName;
 
     /**
-     * @param string $Vip CKafka VIP
-     * @param string $Vport CKafka Vport
-     * @param string $InstanceId CKafka instance ID
-     * @param string $InstanceName CKafka instance name
-     * @param string $TopicId CKafka topic ID
-     * @param string $TopicName CKafka topic name
+     * @var string Vip of Ckafka.
+- Obtain vip information by searching the instance attributes (https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If the delivery task is created via the role ARN method, the Vip field can be empty.
+     */
+    public $Vip;
+
+    /**
+     * @var string Vport of Ckafka.
+-Obtain vip port information by [obtaining instance attributes](https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If it is created by the role ARN method, the Vport field can be empty.
+     */
+    public $Vport;
+
+    /**
+     * @var string InstanceName of Ckafka.
+- Obtain the InstanceName by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+-Get InstanceName by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the InstanceName field can be empty.
+     */
+    public $InstanceName;
+
+    /**
+     * @var string Topic ID of Ckafka.
+-Obtain the TopicId by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicId through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the TopicId field can be empty.
+     */
+    public $TopicId;
+
+    /**
+     * @param string $InstanceId InstanceId of Ckafka.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+- Obtain the instance id by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
+     * @param string $TopicName TopicName of Ckafka
+-Obtain the TopicName by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicName through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+     * @param string $Vip Vip of Ckafka.
+- Obtain vip information by searching the instance attributes (https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If the delivery task is created via the role ARN method, the Vip field can be empty.
+     * @param string $Vport Vport of Ckafka.
+-Obtain vip port information by [obtaining instance attributes](https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If it is created by the role ARN method, the Vport field can be empty.
+     * @param string $InstanceName InstanceName of Ckafka.
+- Obtain the InstanceName by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+-Get InstanceName by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the InstanceName field can be empty.
+     * @param string $TopicId Topic ID of Ckafka.
+-Obtain the TopicId by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicId through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the TopicId field can be empty.
      */
     function __construct()
     {
@@ -86,6 +142,14 @@ class Ckafka extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
+            $this->TopicName = $param["TopicName"];
+        }
+
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
             $this->Vip = $param["Vip"];
         }
@@ -94,20 +158,12 @@ class Ckafka extends AbstractModel
             $this->Vport = $param["Vport"];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
         }
 
         if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
             $this->TopicId = $param["TopicId"];
-        }
-
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
         }
     }
 }

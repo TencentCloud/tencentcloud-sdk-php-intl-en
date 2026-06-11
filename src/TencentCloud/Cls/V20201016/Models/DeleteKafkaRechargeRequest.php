@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteKafkaRecharge request structure.
  *
- * @method string getId() Obtain Kafka data import configuration ID
- * @method void setId(string $Id) Set Kafka data import configuration ID
- * @method string getTopicId() Obtain Target CLS log topic ID
- * @method void setTopicId(string $TopicId) Set Target CLS log topic ID
+ * @method string getId() Obtain Kafka import configuration Id.
+
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+ * @method void setId(string $Id) Set Kafka import configuration Id.
+
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+ * @method string getTopicId() Obtain Import the target log topic Id of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set Import the target log topic Id of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
  */
 class DeleteKafkaRechargeRequest extends AbstractModel
 {
     /**
-     * @var string Kafka data import configuration ID
+     * @var string Kafka import configuration Id.
+
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
      */
     public $Id;
 
     /**
-     * @var string Target CLS log topic ID
+     * @var string Import the target log topic Id of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
     /**
-     * @param string $Id Kafka data import configuration ID
-     * @param string $TopicId Target CLS log topic ID
+     * @param string $Id Kafka import configuration Id.
+
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+     * @param string $TopicId Import the target log topic Id of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     function __construct()
     {

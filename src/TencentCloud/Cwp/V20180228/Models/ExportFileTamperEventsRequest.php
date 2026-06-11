@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileds(array $Fileds) Set Fields to be exported
  * @method string getFields() Obtain Fields to be exported
  * @method void setFields(string $Fields) Set Fields to be exported
+ * @method array getWhere() Obtain Fields to be exported
+ * @method void setWhere(array $Where) Set Fields to be exported
  */
 class ExportFileTamperEventsRequest extends AbstractModel
 {
@@ -51,8 +53,14 @@ class ExportFileTamperEventsRequest extends AbstractModel
 
     /**
      * @var string Fields to be exported
+     * @deprecated
      */
     public $Fields;
+
+    /**
+     * @var array Fields to be exported
+     */
+    public $Where;
 
     /**
      * @param array $Filters Filtering criteria
@@ -61,6 +69,7 @@ class ExportFileTamperEventsRequest extends AbstractModel
 <li>RuleCategory - string - required: no - rule category: 0: system rule; 1: custom rule</li>
      * @param array $Fileds Fields to be exported
      * @param string $Fields Fields to be exported
+     * @param array $Where Fields to be exported
      */
     function __construct()
     {
@@ -90,6 +99,10 @@ class ExportFileTamperEventsRequest extends AbstractModel
 
         if (array_key_exists("Fields",$param) and $param["Fields"] !== null) {
             $this->Fields = $param["Fields"];
+        }
+
+        if (array_key_exists("Where",$param) and $param["Where"] !== null) {
+            $this->Where = $param["Where"];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLogset request structure.
  *
- * @method string getLogsetId() Obtain Logset ID
- * @method void setLogsetId(string $LogsetId) Set Logset ID
+ * @method string getLogsetId() Obtain Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
+ * @method void setLogsetId(string $LogsetId) Set Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
  */
 class DeleteLogsetRequest extends AbstractModel
 {
     /**
-     * @var string Logset ID
+     * @var string Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
      */
     public $LogsetId;
 
     /**
-     * @param string $LogsetId Logset ID
+     * @param string $LogsetId Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
      */
     function __construct()
     {

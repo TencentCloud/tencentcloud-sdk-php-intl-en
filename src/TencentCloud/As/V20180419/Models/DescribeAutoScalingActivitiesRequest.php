@@ -34,8 +34,8 @@ The maximum number of `Filters` per request is 10. the upper limit for `Filter.V
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
  * @method integer getOffset() Obtain Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
- * @method string getStartTime() Obtain The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
- * @method void setStartTime(string $StartTime) Set The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+ * @method string getStartTime() Obtain The earliest start time of the scaling operation. if ActivityIds is specified, this parameter will be ignored. value is in UTC time, following the ISO8601 standard, format: YYYY-MM-DDThh:MM:ssZ. note: currently, only scaling operations from the past two years are saved.
+ * @method void setStartTime(string $StartTime) Set The earliest start time of the scaling operation. if ActivityIds is specified, this parameter will be ignored. value is in UTC time, following the ISO8601 standard, format: YYYY-MM-DDThh:MM:ssZ. note: currently, only scaling operations from the past two years are saved.
  * @method string getEndTime() Obtain The latest end time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
  * @method void setEndTime(string $EndTime) Set The latest end time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
  */
@@ -65,7 +65,7 @@ The maximum number of `Filters` per request is 10. the upper limit for `Filter.V
     public $Offset;
 
     /**
-     * @var string The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+     * @var string The earliest start time of the scaling operation. if ActivityIds is specified, this parameter will be ignored. value is in UTC time, following the ISO8601 standard, format: YYYY-MM-DDThh:MM:ssZ. note: currently, only scaling operations from the past two years are saved.
      */
     public $StartTime;
 
@@ -82,7 +82,7 @@ The maximum number of `Filters` per request is 10. the upper limit for `Filter.V
 The maximum number of `Filters` per request is 10. the upper limit for `Filter.Values` is 5. parameters must not specify both `ActivityIds` and `Filters` simultaneously.
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
      * @param integer $Offset Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
-     * @param string $StartTime The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+     * @param string $StartTime The earliest start time of the scaling operation. if ActivityIds is specified, this parameter will be ignored. value is in UTC time, following the ISO8601 standard, format: YYYY-MM-DDThh:MM:ssZ. note: currently, only scaling operations from the past two years are saved.
      * @param string $EndTime The latest end time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
      */
     function __construct()

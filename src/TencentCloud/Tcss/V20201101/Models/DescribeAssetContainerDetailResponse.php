@@ -82,14 +82,10 @@ use TencentCloud\Common\AbstractModel;
 `RESTORE_FAILED`: Recovery failed.
  * @method string getNetSubStatus() Obtain Sub-status of the network
  * @method void setNetSubStatus(string $NetSubStatus) Set Sub-status of the network
- * @method string getIsolateSource() Obtain Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsolateSource(string $IsolateSource) Set Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIsolateSource() Obtain Isolate source
+ * @method void setIsolateSource(string $IsolateSource) Set Isolate source
  * @method string getIsolateTime() Obtain Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsolateTime(string $IsolateTime) Set Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getNodeID() Obtain Node ID
  * @method void setNodeID(string $NodeID) Set Node ID
  * @method string getNodeName() Obtain Node name
@@ -253,14 +249,12 @@ class DescribeAssetContainerDetailResponse extends AbstractModel
     public $NetSubStatus;
 
     /**
-     * @var string Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Isolate source
      */
     public $IsolateSource;
 
     /**
      * @var string Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsolateTime;
 
@@ -366,10 +360,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
      * @param string $NetSubStatus Sub-status of the network
-     * @param string $IsolateSource Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IsolateSource Isolate source
      * @param string $IsolateTime Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $NodeID Node ID
      * @param string $NodeName Node name
      * @param string $NodeSubNetID Node subnet ID

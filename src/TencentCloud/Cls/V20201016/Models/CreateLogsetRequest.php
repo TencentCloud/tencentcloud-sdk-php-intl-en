@@ -20,15 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLogset request structure.
  *
- * @method string getLogsetName() Obtain Logset name, which must be unique
- * @method void setLogsetName(string $LogsetName) Set Logset name, which must be unique
+ * @method string getLogsetName() Obtain Log set name.
+
+-Supports a maximum of 255 characters. The `|` character is not supported.
+ * @method void setLogsetName(string $LogsetName) Set Log set name.
+
+-Supports a maximum of 255 characters. The `|` character is not supported.
  * @method array getTags() Obtain Tag description list. Up to 10 tag key-value pairs are supported and must be unique.
  * @method void setTags(array $Tags) Set Tag description list. Up to 10 tag key-value pairs are supported and must be unique.
+ * @method string getLogsetId() Obtain Logset ID, format: custom part-User APPID. Automatically generate ID if left empty.
+
+-The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and has a length of 3 to 40 characters.
+-The end requires the use of - to concatenate the User APPID, which can be queried on the https://console.cloud.tencent.com/developer page.
+-If you specify this field, ensure uniqueness across all regions.
+ * @method void setLogsetId(string $LogsetId) Set Logset ID, format: custom part-User APPID. Automatically generate ID if left empty.
+
+-The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and has a length of 3 to 40 characters.
+-The end requires the use of - to concatenate the User APPID, which can be queried on the https://console.cloud.tencent.com/developer page.
+-If you specify this field, ensure uniqueness across all regions.
  */
 class CreateLogsetRequest extends AbstractModel
 {
     /**
-     * @var string Logset name, which must be unique
+     * @var string Log set name.
+
+-Supports a maximum of 255 characters. The `|` character is not supported.
      */
     public $LogsetName;
 
@@ -38,8 +54,24 @@ class CreateLogsetRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $LogsetName Logset name, which must be unique
+     * @var string Logset ID, format: custom part-User APPID. Automatically generate ID if left empty.
+
+-The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and has a length of 3 to 40 characters.
+-The end requires the use of - to concatenate the User APPID, which can be queried on the https://console.cloud.tencent.com/developer page.
+-If you specify this field, ensure uniqueness across all regions.
+     */
+    public $LogsetId;
+
+    /**
+     * @param string $LogsetName Log set name.
+
+-Supports a maximum of 255 characters. The `|` character is not supported.
      * @param array $Tags Tag description list. Up to 10 tag key-value pairs are supported and must be unique.
+     * @param string $LogsetId Logset ID, format: custom part-User APPID. Automatically generate ID if left empty.
+
+-The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and has a length of 3 to 40 characters.
+-The end requires the use of - to concatenate the User APPID, which can be queried on the https://console.cloud.tencent.com/developer page.
+-If you specify this field, ensure uniqueness across all regions.
      */
     function __construct()
     {
@@ -65,6 +97,10 @@ class CreateLogsetRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("LogsetId",$param) and $param["LogsetId"] !== null) {
+            $this->LogsetId = $param["LogsetId"];
         }
     }
 }

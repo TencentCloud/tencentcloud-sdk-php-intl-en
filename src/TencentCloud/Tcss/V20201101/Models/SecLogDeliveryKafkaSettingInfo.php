@@ -20,21 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Settings of security log delivery to Kafka
  *
- * @method string getLogType() Obtain Log type
- * @method void setLogType(string $LogType) Set Log type
+ * @method string getLogType() Obtain Security log module.
+ * @method void setLogType(string $LogType) Set Security log module.
  * @method string getTopicID() Obtain Topic ID
  * @method void setTopicID(string $TopicID) Set Topic ID
  * @method string getTopicName() Obtain Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTopicName(string $TopicName) Set Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getState() Obtain Delivery status. Valid values: `false` (disabled); `true` (enabled).
  * @method void setState(boolean $State) Set Delivery status. Valid values: `false` (disabled); `true` (enabled).
+ * @method array getSubLogType() Obtain Log type
+ * @method void setSubLogType(array $SubLogType) Set Log type
+ * @method string getErrMsg() Obtain Error message
+ * @method void setErrMsg(string $ErrMsg) Set Error message
  */
 class SecLogDeliveryKafkaSettingInfo extends AbstractModel
 {
     /**
-     * @var string Log type
+     * @var string Security log module.
      */
     public $LogType;
 
@@ -45,7 +47,6 @@ class SecLogDeliveryKafkaSettingInfo extends AbstractModel
 
     /**
      * @var string Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TopicName;
 
@@ -55,11 +56,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $State;
 
     /**
-     * @param string $LogType Log type
+     * @var array Log type
+     */
+    public $SubLogType;
+
+    /**
+     * @var string Error message
+     */
+    public $ErrMsg;
+
+    /**
+     * @param string $LogType Security log module.
      * @param string $TopicID Topic ID
      * @param string $TopicName Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $State Delivery status. Valid values: `false` (disabled); `true` (enabled).
+     * @param array $SubLogType Log type
+     * @param string $ErrMsg Error message
      */
     function __construct()
     {
@@ -88,6 +100,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("SubLogType",$param) and $param["SubLogType"] !== null) {
+            $this->SubLogType = $param["SubLogType"];
+        }
+
+        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
+            $this->ErrMsg = $param["ErrMsg"];
         }
     }
 }

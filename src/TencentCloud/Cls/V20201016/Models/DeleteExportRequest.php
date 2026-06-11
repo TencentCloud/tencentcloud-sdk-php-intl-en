@@ -20,18 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteExport request structure.
  *
- * @method string getExportId() Obtain Log export ID
- * @method void setExportId(string $ExportId) Set Log export ID
+ * @method string getExportId() Obtain Log export task ID.
+-Obtain the log export task Id through [Get Log Download Task List](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1).
+
+ * @method void setExportId(string $ExportId) Set Log export task ID.
+-Obtain the log export task Id through [Get Log Download Task List](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1).
  */
 class DeleteExportRequest extends AbstractModel
 {
     /**
-     * @var string Log export ID
+     * @var string Log export task ID.
+-Obtain the log export task Id through [Get Log Download Task List](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1).
+
      */
     public $ExportId;
 
     /**
-     * @param string $ExportId Log export ID
+     * @param string $ExportId Log export task ID.
+-Obtain the log export task Id through [Get Log Download Task List](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1).
      */
     function __construct()
     {

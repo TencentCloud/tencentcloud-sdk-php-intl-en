@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Add the host information entity of the log-in audit allowlist.
  *
- * @method string getQuuid() Obtain Quuid
- * @method void setQuuid(string $Quuid) Set Quuid
- * @method string getUuid() Obtain Uuid
- * @method void setUuid(string $Uuid) Set Uuid
+ * @method string getQuuid() Obtain Host QUUID
+ * @method void setQuuid(string $Quuid) Set Host QUUID
+ * @method string getUuid() Obtain Host UUID.
+ * @method void setUuid(string $Uuid) Set Host UUID.
  */
 class HostInfo extends AbstractModel
 {
     /**
-     * @var string Quuid
+     * @var string Host QUUID
      */
     public $Quuid;
 
     /**
-     * @var string Uuid
+     * @var string Host UUID.
      */
     public $Uuid;
 
     /**
-     * @param string $Quuid Quuid
-     * @param string $Uuid Uuid
+     * @param string $Quuid Host QUUID
+     * @param string $Uuid Host UUID.
      */
     function __construct()
     {

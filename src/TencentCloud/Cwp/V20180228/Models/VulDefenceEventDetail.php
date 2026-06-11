@@ -41,9 +41,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCity() Obtain City of the attack source IP address
  * @method void setCity(string $City) Set City of the attack source IP address
  * @method array getSourcePort() Obtain Attack source port
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSourcePort(array $SourcePort) Set Attack source port
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Event Creation Time
  * @method void setCreateTime(string $CreateTime) Set Event Creation Time
  * @method string getMergeTime() Obtain Update Event Time
@@ -71,9 +69,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method string getExceptionPstree() Obtain Host Compromise Event Process Tree (JSON format, unique to WeDetect)
  * @method void setExceptionPstree(string $ExceptionPstree) Set Host Compromise Event Process Tree (JSON format, unique to WeDetect)
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class VulDefenceEventDetail extends AbstractModel
 {
@@ -129,7 +125,6 @@ class VulDefenceEventDetail extends AbstractModel
 
     /**
      * @var array Attack source port
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SourcePort;
 
@@ -200,7 +195,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -216,7 +210,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SourceIp Attack source IP address
      * @param string $City City of the attack source IP address
      * @param array $SourcePort Attack source port
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Event Creation Time
      * @param string $MergeTime Update Event Time
      * @param integer $Count Number of Occurrences
@@ -231,7 +224,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $EventDetail Vulnerability ID-Related Event Details (JSON array format, unique to RASP)
      * @param string $ExceptionPstree Host Compromise Event Process Tree (JSON format, unique to WeDetect)
      * @param MachineExtraInfo $MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

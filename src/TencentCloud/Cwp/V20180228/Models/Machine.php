@@ -24,22 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) Set Host name.
  * @method string getMachineOs() Obtain Host System.
  * @method void setMachineOs(string $MachineOs) Set Host System.
- * @method string getMachineStatus() Obtain Host status
-<li>OFFLINE: Offline</li>
-<li>ONLINE: Online</li>
-<li>SHUTDOWN: Shut down</li>
-<li>UNINSTALLED: Unprotected</li>
- * @method void setMachineStatus(string $MachineStatus) Set Host status
-<li>OFFLINE: Offline</li>
-<li>ONLINE: Online</li>
-<li>SHUTDOWN: Shut down</li>
-<li>UNINSTALLED: Unprotected</li>
- * @method string getAgentStatus() Obtain 
- * @method void setAgentStatus(string $AgentStatus) Set 
- * @method string getInstanceStatus() Obtain 
- * @method void setInstanceStatus(string $InstanceStatus) Set 
- * @method string getUuid() Obtain Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
- * @method void setUuid(string $Uuid) Set Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+ * @method string getMachineStatus() Obtain Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
+ * @method void setMachineStatus(string $MachineStatus) Set Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
+ * @method string getAgentStatus() Obtain ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
+ * @method void setAgentStatus(string $AgentStatus) Set ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
+ * @method string getInstanceStatus() Obtain RUNNING; is shut down; to be recycled	
+ * @method void setInstanceStatus(string $InstanceStatus) Set RUNNING; is shut down; to be recycled	
+ * @method string getUuid() Obtain CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+ * @method void setUuid(string $Uuid) Set CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
  * @method string getQuuid() Obtain CVM or BM Machine Unique UUID.
  * @method void setQuuid(string $Quuid) Set CVM or BM Machine Unique UUID.
  * @method integer getVulNum() Obtain Number of vulnerabilities
@@ -92,36 +84,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineType(string $MachineType) Set Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
  * @method string getKernelVersion() Obtain Kernel version
  * @method void setKernelVersion(string $KernelVersion) Set Kernel version
- * @method string getProtectType() Obtain Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Inclusive Edition
- * @method void setProtectType(string $ProtectType) Set Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Inclusive Edition
+ * @method string getProtectType() Obtain Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
+ * @method void setProtectType(string $ProtectType) Set Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
  * @method array getCloudTags() Obtain Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCloudTags(array $CloudTags) Set Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsAddedOnTheFifteen() Obtain Whether a host added within the last 15 days: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsAddedOnTheFifteen(integer $IsAddedOnTheFifteen) Set Whether a host added within the last 15 days: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsAddedOnTheFifteen() Obtain Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
+ * @method void setIsAddedOnTheFifteen(integer $IsAddedOnTheFifteen) Set Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
  * @method string getIpList() Obtain Host IP List
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIpList(string $IpList) Set Host IP List
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVpcId() Obtain Network
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVpcId(string $VpcId) Set Network
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getRemark() Obtain Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRemark(string $Remark) Set Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAgentVersion() Obtain 
- * @method void setAgentVersion(string $AgentVersion) Set 
+ * @method string getAgentVersion() Obtain Host security agent version
+ * @method void setAgentVersion(string $AgentVersion) Set Host security agent version
+ * @method integer getAppId() Obtain 
+ * @method void setAppId(integer $AppId) Set 
+ * @method string getCSIPProtectType() Obtain 
+ * @method void setCSIPProtectType(string $CSIPProtectType) Set 
  */
 class Machine extends AbstractModel
 {
@@ -136,26 +120,22 @@ class Machine extends AbstractModel
     public $MachineOs;
 
     /**
-     * @var string Host status
-<li>OFFLINE: Offline</li>
-<li>ONLINE: Online</li>
-<li>SHUTDOWN: Shut down</li>
-<li>UNINSTALLED: Unprotected</li>
+     * @var string Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
      */
     public $MachineStatus;
 
     /**
-     * @var string 
+     * @var string ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
      */
     public $AgentStatus;
 
     /**
-     * @var string 
+     * @var string RUNNING; is shut down; to be recycled	
      */
     public $InstanceStatus;
 
     /**
-     * @var string Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+     * @var string CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
      */
     public $Uuid;
 
@@ -262,37 +242,32 @@ class Machine extends AbstractModel
     public $KernelVersion;
 
     /**
-     * @var string Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Inclusive Edition
+     * @var string Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
      */
     public $ProtectType;
 
     /**
      * @var array Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CloudTags;
 
     /**
-     * @var integer Whether a host added within the last 15 days: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
      */
     public $IsAddedOnTheFifteen;
 
     /**
      * @var string Host IP List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IpList;
 
     /**
      * @var string Network
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VpcId;
 
     /**
      * @var MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -303,26 +278,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Remark;
 
     /**
-     * @var string 
+     * @var string Host security agent version
      */
     public $AgentVersion;
 
     /**
+     * @var integer 
+     */
+    public $AppId;
+
+    /**
+     * @var string 
+     */
+    public $CSIPProtectType;
+
+    /**
      * @param string $MachineName Host name.
      * @param string $MachineOs Host System.
-     * @param string $MachineStatus Host status
-<li>OFFLINE: Offline</li>
-<li>ONLINE: Online</li>
-<li>SHUTDOWN: Shut down</li>
-<li>UNINSTALLED: Unprotected</li>
-     * @param string $AgentStatus 
-     * @param string $InstanceStatus 
-     * @param string $Uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+     * @param string $MachineStatus Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
+     * @param string $AgentStatus ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
+     * @param string $InstanceStatus RUNNING; is shut down; to be recycled	
+     * @param string $Uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
      * @param string $Quuid CVM or BM Machine Unique UUID.
      * @param integer $VulNum Number of vulnerabilities
      * @param string $MachineIp Host IP.
@@ -349,21 +329,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $HasAssetScan Whether there is an available asset scanning API: 0 - no; 1 - yes
      * @param string $MachineType Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
      * @param string $KernelVersion Kernel version
-     * @param string $ProtectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Inclusive Edition
+     * @param string $ProtectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
      * @param array $CloudTags Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsAddedOnTheFifteen Whether a host added within the last 15 days: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsAddedOnTheFifteen Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
      * @param string $IpList Host IP List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VpcId Network
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo $MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceId Instance ID
      * @param string $Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AgentVersion 
+     * @param string $AgentVersion Host security agent version
+     * @param integer $AppId 
+     * @param string $CSIPProtectType 
      */
     function __construct()
     {
@@ -524,6 +500,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("AgentVersion",$param) and $param["AgentVersion"] !== null) {
             $this->AgentVersion = $param["AgentVersion"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("CSIPProtectType",$param) and $param["CSIPProtectType"] !== null) {
+            $this->CSIPProtectType = $param["CSIPProtectType"];
         }
     }
 }

@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteMachineGroupInfo request structure.
  *
- * @method string getGroupId() Obtain Machine group ID
- * @method void setGroupId(string $GroupId) Set Machine group ID
+ * @method string getGroupId() Obtain Machine group Id
+-Obtain the machine group Id by searching the [machine group list](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
+ * @method void setGroupId(string $GroupId) Set Machine group Id
+-Obtain the machine group Id by searching the [machine group list](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
  * @method MachineGroupTypeInfo getMachineGroupType() Obtain Machine group type
 Supported types: `ip` and `label`
  * @method void setMachineGroupType(MachineGroupTypeInfo $MachineGroupType) Set Machine group type
@@ -30,7 +32,8 @@ Supported types: `ip` and `label`
 class DeleteMachineGroupInfoRequest extends AbstractModel
 {
     /**
-     * @var string Machine group ID
+     * @var string Machine group Id
+-Obtain the machine group Id by searching the [machine group list](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
      */
     public $GroupId;
 
@@ -41,7 +44,8 @@ Supported types: `ip` and `label`
     public $MachineGroupType;
 
     /**
-     * @param string $GroupId Machine group ID
+     * @param string $GroupId Machine group Id
+-Obtain the machine group Id by searching the [machine group list](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
      * @param MachineGroupTypeInfo $MachineGroupType Machine group type
 Supported types: `ip` and `label`
      */

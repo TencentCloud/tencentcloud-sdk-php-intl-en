@@ -37,41 +37,23 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProgress() Obtain Scan progress
  * @method void setProgress(integer $Progress) Set Scan progress
  * @method string getCveId() Obtain CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCveId(string $CveId) Set CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method float getCvssScore() Obtain CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCvssScore(float $CvssScore) Set CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getLabels() Obtain Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLabels(string $Labels) Set Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getHostCount() Obtain Number of affected machines
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostCount(integer $HostCount) Set Number of affected machines
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsSupportDefense() Obtain Whether to support defense: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsSupportDefense(integer $IsSupportDefense) Set Whether to support defense: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsSupportDefense() Obtain Support defense: 0-no support 1-support
+ * @method void setIsSupportDefense(integer $IsSupportDefense) Set Support defense: 0-no support 1-support
  * @method integer getDefenseAttackCount() Obtain Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDefenseAttackCount(integer $DefenseAttackCount) Set Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMethod() Obtain Detection rule: 0: version comparison; 1: POC verification
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMethod(integer $Method) Set Detection rule: 0: version comparison; 1: POC verification
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAttackLevel() Obtain Attack intensity level
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAttackLevel(integer $AttackLevel) Set Attack intensity level
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getDefenseState() Obtain Whether vulnerability defense is enabled on hosts with vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefenseState(boolean $DefenseState) Set Whether vulnerability defense is enabled on hosts with vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMethod() Obtain Detection rule. 0: version comparison, 1: POC verification.
+ * @method void setMethod(integer $Method) Set Detection rule. 0: version comparison, 1: POC verification.
+ * @method integer getAttackLevel() Obtain Attack intensity level.
+ * @method void setAttackLevel(integer $AttackLevel) Set Attack intensity level.
+ * @method boolean getDefenseState() Obtain Whether vulnerable hosts are enabled with vulnerability defense.
+ * @method void setDefenseState(boolean $DefenseState) Set Whether vulnerable hosts are enabled with vulnerability defense.
  */
 class EmergencyVul extends AbstractModel
 {
@@ -117,55 +99,46 @@ class EmergencyVul extends AbstractModel
 
     /**
      * @var string CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CveId;
 
     /**
      * @var float CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CvssScore;
 
     /**
      * @var string Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Labels;
 
     /**
      * @var integer Number of affected machines
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostCount;
 
     /**
-     * @var integer Whether to support defense: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Support defense: 0-no support 1-support
      */
     public $IsSupportDefense;
 
     /**
      * @var integer Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DefenseAttackCount;
 
     /**
-     * @var integer Detection rule: 0: version comparison; 1: POC verification
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Detection rule. 0: version comparison, 1: POC verification.
      */
     public $Method;
 
     /**
-     * @var integer Attack intensity level
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Attack intensity level.
      */
     public $AttackLevel;
 
     /**
-     * @var boolean Whether vulnerability defense is enabled on hosts with vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether vulnerable hosts are enabled with vulnerability defense.
      */
     public $DefenseState;
 
@@ -179,23 +152,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $LastScanTime Last scan time
      * @param integer $Progress Scan progress
      * @param string $CveId CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param float $CvssScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Labels Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $HostCount Number of affected machines
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsSupportDefense Whether to support defense: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsSupportDefense Support defense: 0-no support 1-support
      * @param integer $DefenseAttackCount Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Method Detection rule: 0: version comparison; 1: POC verification
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AttackLevel Attack intensity level
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $DefenseState Whether vulnerability defense is enabled on hosts with vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Method Detection rule. 0: version comparison, 1: POC verification.
+     * @param integer $AttackLevel Attack intensity level.
+     * @param boolean $DefenseState Whether vulnerable hosts are enabled with vulnerability defense.
      */
     function __construct()
     {

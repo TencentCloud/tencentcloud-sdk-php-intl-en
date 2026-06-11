@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNetAttackSetting request structure.
  *
-
+ * @method integer getProductType() Obtain 
+ * @method void setProductType(integer $ProductType) Set 
  */
 class DescribeNetAttackSettingRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 
+     */
+    public $ProductType;
 
     /**
-
+     * @param integer $ProductType 
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeNetAttackSettingRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("ProductType",$param) and $param["ProductType"] !== null) {
+            $this->ProductType = $param["ProductType"];
+        }
     }
 }

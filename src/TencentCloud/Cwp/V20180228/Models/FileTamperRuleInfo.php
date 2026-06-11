@@ -21,15 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * List of core file monitoring rules
  *
  * @method string getName() Obtain Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getRuleCategory() Obtain Rule Type. 0: System Rule; 1: User Rule
  * @method void setRuleCategory(integer $RuleCategory) Set Rule Type. 0: System Rule; 1: User Rule
  * @method integer getHostCount() Obtain Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostCount(integer $HostCount) Set Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getModifyTime() Obtain Update time
  * @method void setModifyTime(string $ModifyTime) Set Update time
  * @method string getCreateTime() Obtain Creation time
@@ -42,42 +38,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setIsGlobal(integer $IsGlobal) Set Whether global 0: no; 1: yes
  * @method integer getLevel() Obtain Risk Level. 0: None; 1: High-Risk; 2: Medium-Risk; 3: Low-Risk
  * @method void setLevel(integer $Level) Set Risk Level. 0: None; 1: High-Risk; 2: Medium-Risk; 3: Low-Risk
- * @method integer getWriteRuleCount() Obtain Number of write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWriteRuleCount(integer $WriteRuleCount) Set Number of write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getReadRuleCount() Obtain Number of read entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReadRuleCount(integer $ReadRuleCount) Set Number of read entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getReadWriteRuleCount() Obtain Number of read and write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReadWriteRuleCount(integer $ReadWriteRuleCount) Set Number of read and write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getWriteRuleCount() Obtain Number of write entries for a subrule.
+ * @method void setWriteRuleCount(integer $WriteRuleCount) Set Number of write entries for a subrule.
+ * @method integer getReadRuleCount() Obtain Number of read entries for a subrule.
+ * @method void setReadRuleCount(integer $ReadRuleCount) Set Number of read entries for a subrule.
+ * @method integer getReadWriteRuleCount() Obtain Number of read and write entries for a subrule.
+ * @method void setReadWriteRuleCount(integer $ReadWriteRuleCount) Set Number of read and write entries for a subrule.
  * @method string getFileAction() Obtain Monitoring behavior
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFileAction(string $FileAction) Set Monitoring behavior
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getAddWhiteType() Obtain Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
  * @method void setAddWhiteType(string $AddWhiteType) Set Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
  */
 class FileTamperRuleInfo extends AbstractModel
 {
     /**
      * @var string Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
@@ -88,7 +73,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var integer Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostCount;
 
@@ -123,20 +107,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Level;
 
     /**
-     * @var integer Number of write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of write entries for a subrule.
      */
     public $WriteRuleCount;
 
     /**
-     * @var integer Number of read entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of read entries for a subrule.
      */
     public $ReadRuleCount;
 
     /**
-     * @var integer Number of read and write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of read and write entries for a subrule.
      */
     public $ReadWriteRuleCount;
 
@@ -145,45 +126,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FileAction;
 
     /**
      * @var string Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
      */
     public $AddWhiteType;
 
     /**
      * @param string $Name Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RuleCategory Rule Type. 0: System Rule; 1: User Rule
      * @param integer $HostCount Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ModifyTime Update time
      * @param string $CreateTime Creation time
      * @param integer $Status Status. 0: Enabled; 1: Disabled
      * @param integer $Id Rule ID, which is set to 0 for system rules
      * @param integer $IsGlobal Whether global 0: no; 1: yes
      * @param integer $Level Risk Level. 0: None; 1: High-Risk; 2: Medium-Risk; 3: Low-Risk
-     * @param integer $WriteRuleCount Number of write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ReadRuleCount Number of read entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ReadWriteRuleCount Number of read and write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $WriteRuleCount Number of write entries for a subrule.
+     * @param integer $ReadRuleCount Number of read entries for a subrule.
+     * @param integer $ReadWriteRuleCount Number of read and write entries for a subrule.
      * @param string $FileAction Monitoring behavior
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $AddWhiteType Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
      */
     function __construct()
     {

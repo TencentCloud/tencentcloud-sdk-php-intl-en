@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * Server Basic Information
  *
  * @method string getWanIP() Obtain Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWanIP(string $WanIP) Set Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPrivateIP() Obtain Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPrivateIP(string $PrivateIP) Set Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getNetworkType() Obtain Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNetworkType(integer $NetworkType) Set Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getNetworkName() Obtain Network Name, returns vpc_id in the case of a VPC network
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNetworkName(string $NetworkName) Set Network Name, returns vpc_id in the case of a VPC network
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstanceID() Obtain Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceID(string $InstanceID) Set Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHostName() Obtain Host name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostName(string $HostName) Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHostName() Obtain host name
+ * @method void setHostName(string $HostName) Set host name
  */
 class MachineExtraInfo extends AbstractModel
 {
     /**
      * @var string Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $WanIP;
 
     /**
      * @var string Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PrivateIP;
 
     /**
      * @var integer Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NetworkType;
 
     /**
      * @var string Network Name, returns vpc_id in the case of a VPC network
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NetworkName;
 
     /**
      * @var string Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceID;
 
     /**
-     * @var string Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string host name
      */
     public $HostName;
 
     /**
      * @param string $WanIP Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PrivateIP Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $NetworkType Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $NetworkName Network Name, returns vpc_id in the case of a VPC network
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceID Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HostName host name
      */
     function __construct()
     {

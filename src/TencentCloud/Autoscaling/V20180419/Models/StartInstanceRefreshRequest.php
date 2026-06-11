@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartInstanceRefresh request structure.
  *
- * @method string getAutoScalingGroupId() Obtain Scaling group ID.
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID.
+ * @method string getAutoScalingGroupId() Obtain Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeAutoScalingGroups](https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeAutoScalingGroups](https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.
  * @method RefreshSettings getRefreshSettings() Obtain Refresh settings.
  * @method void setRefreshSettings(RefreshSettings $RefreshSettings) Set Refresh settings.
  * @method string getRefreshMode() Obtain Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class StartInstanceRefreshRequest extends AbstractModel
 {
     /**
-     * @var string Scaling group ID.
+     * @var string Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeAutoScalingGroups](https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.
      */
     public $AutoScalingGroupId;
 
@@ -51,7 +51,7 @@ class StartInstanceRefreshRequest extends AbstractModel
     public $RefreshMode;
 
     /**
-     * @param string $AutoScalingGroupId Scaling group ID.
+     * @param string $AutoScalingGroupId Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeAutoScalingGroups](https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.
      * @param RefreshSettings $RefreshSettings Refresh settings.
      * @param string $RefreshMode Refresh mode. default value: ROLLING_UPDATE_RESET. valid values:.
 <Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.

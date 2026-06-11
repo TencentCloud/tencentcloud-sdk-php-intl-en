@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) Set Host name.
  * @method string getMachineOs() Obtain Host System.
  * @method void setMachineOs(string $MachineOs) Set Host System.
- * @method string getUuid() Obtain Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
- * @method void setUuid(string $Uuid) Set Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+ * @method string getUuid() Obtain CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+ * @method void setUuid(string $Uuid) Set CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
  * @method string getQuuid() Obtain CVM or BM Machine Unique UUID.
  * @method void setQuuid(string $Quuid) Set CVM or BM Machine Unique UUID.
  * @method string getMachineIp() Obtain Host IP.
@@ -48,28 +48,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTag(array $Tag) Set Tag information
  * @method RegionInfo getRegionInfo() Obtain Region information
  * @method void setRegionInfo(RegionInfo $RegionInfo) Set Region information
- * @method string getInstanceState() Obtain Instance status. TERMINATED_PRO_VERSION: terminated.
- * @method void setInstanceState(string $InstanceState) Set Instance status. TERMINATED_PRO_VERSION: terminated.
+ * @method string getInstanceState() Obtain Refer to the instance status in the CVM instance list for the InstanceState value.
+https://www.tencentcloud.com/document/api/213/15753?from_cn_redirect=1#Instance
+ * @method void setInstanceState(string $InstanceState) Set Refer to the instance status in the CVM instance list for the InstanceState value.
+https://www.tencentcloud.com/document/api/213/15753?from_cn_redirect=1#Instance
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method string getMachineType() Obtain Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
  * @method void setMachineType(string $MachineType) Set Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
  * @method string getKernelVersion() Obtain Kernel version
  * @method void setKernelVersion(string $KernelVersion) Set Kernel version
- * @method string getProtectType() Obtain Protection Edition. BASIC_VERSION: Basic Edition; PRO_VERSION: Professional Edition; Flagship: Premium Edition; GENERAL_DISCOUNT: General Discount Edition
- * @method void setProtectType(string $ProtectType) Set Protection Edition. BASIC_VERSION: Basic Edition; PRO_VERSION: Professional Edition; Flagship: Premium Edition; GENERAL_DISCOUNT: General Discount Edition
+ * @method string getProtectType() Obtain Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
+ * @method void setProtectType(string $ProtectType) Set Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
  * @method LicenseOrder getLicenseOrder() Obtain Authorization order object
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLicenseOrder(LicenseOrder $LicenseOrder) Set Authorization order object
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getCloudTags() Obtain Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCloudTags(array $CloudTags) Set Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstanceId() Obtain Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceId(string $InstanceId) Set Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MachineSimple extends AbstractModel
 {
@@ -84,7 +80,7 @@ class MachineSimple extends AbstractModel
     public $MachineOs;
 
     /**
-     * @var string Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+     * @var string CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
      */
     public $Uuid;
 
@@ -128,7 +124,8 @@ class MachineSimple extends AbstractModel
     public $RegionInfo;
 
     /**
-     * @var string Instance status. TERMINATED_PRO_VERSION: terminated.
+     * @var string Refer to the instance status in the CVM instance list for the InstanceState value.
+https://www.tencentcloud.com/document/api/213/15753?from_cn_redirect=1#Instance
      */
     public $InstanceState;
 
@@ -148,32 +145,29 @@ class MachineSimple extends AbstractModel
     public $KernelVersion;
 
     /**
-     * @var string Protection Edition. BASIC_VERSION: Basic Edition; PRO_VERSION: Professional Edition; Flagship: Premium Edition; GENERAL_DISCOUNT: General Discount Edition
+     * @var string Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
      */
     public $ProtectType;
 
     /**
      * @var LicenseOrder Authorization order object
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LicenseOrder;
 
     /**
      * @var array Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CloudTags;
 
     /**
      * @var string Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceId;
 
     /**
      * @param string $MachineName Host name.
      * @param string $MachineOs Host System.
-     * @param string $Uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+     * @param string $Uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
      * @param string $Quuid CVM or BM Machine Unique UUID.
      * @param string $MachineIp Host IP.
      * @param boolean $IsProVersion Whether the edition is Pro Edition
@@ -185,17 +179,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>PREPAY: prepaid, indicating monthly subscription mode</li>
      * @param array $Tag Tag information
      * @param RegionInfo $RegionInfo Region information
-     * @param string $InstanceState Instance status. TERMINATED_PRO_VERSION: terminated.
+     * @param string $InstanceState Refer to the instance status in the CVM instance list for the InstanceState value.
+https://www.tencentcloud.com/document/api/213/15753?from_cn_redirect=1#Instance
      * @param integer $ProjectId Project ID
      * @param string $MachineType Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
      * @param string $KernelVersion Kernel version
-     * @param string $ProtectType Protection Edition. BASIC_VERSION: Basic Edition; PRO_VERSION: Professional Edition; Flagship: Premium Edition; GENERAL_DISCOUNT: General Discount Edition
+     * @param string $ProtectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
      * @param LicenseOrder $LicenseOrder Authorization order object
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $CloudTags Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

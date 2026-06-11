@@ -22,22 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getEventIdSet() Obtain IDs of events
  * @method void setEventIdSet(array $EventIdSet) Set IDs of events
- * @method string getStatus() Obtain Event status   
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-    `EVENT_DEL`: Deleted.
-    `EVENT_ADD_WHITE`: Allowed.
-    `EVENT_PENDING`: Pending.
-	`EVENT_ISOLATE_CONTAINER`: Container isolated.
-	`EVENT_RESOTRE_CONTAINER`: Container recovered.
- * @method void setStatus(string $Status) Set Event status   
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-    `EVENT_DEL`: Deleted.
-    `EVENT_ADD_WHITE`: Allowed.
-    `EVENT_PENDING`: Pending.
-	`EVENT_ISOLATE_CONTAINER`: Container isolated.
-	`EVENT_RESOTRE_CONTAINER`: Container recovered.
+ * @method string getStatus() Obtain Identifies the event status.       EVENT_DEALED: event handled; EVENT_IGNORE: event ignored; EVENT_DEL: event deleted; EVENT_ADD_WHITE: event allowlisted; EVENT_PENDING: event pending handling;	EVENT_ISOLATE_CONTAINER: container isolated;	EVENT_RESOTRE_CONTAINER: container restored.
+ * @method void setStatus(string $Status) Set Identifies the event status.       EVENT_DEALED: event handled; EVENT_IGNORE: event ignored; EVENT_DEL: event deleted; EVENT_ADD_WHITE: event allowlisted; EVENT_PENDING: event pending handling;	EVENT_ISOLATE_CONTAINER: container isolated;	EVENT_RESOTRE_CONTAINER: container restored.
  * @method string getRemark() Obtain Event remarks
  * @method void setRemark(string $Remark) Set Event remarks
  * @method boolean getAutoIsolate() Obtain Whether to automatically isolate files with the same MD5 checksum
@@ -51,14 +37,7 @@ class ModifyVirusFileStatusRequest extends AbstractModel
     public $EventIdSet;
 
     /**
-     * @var string Event status   
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-    `EVENT_DEL`: Deleted.
-    `EVENT_ADD_WHITE`: Allowed.
-    `EVENT_PENDING`: Pending.
-	`EVENT_ISOLATE_CONTAINER`: Container isolated.
-	`EVENT_RESOTRE_CONTAINER`: Container recovered.
+     * @var string Identifies the event status.       EVENT_DEALED: event handled; EVENT_IGNORE: event ignored; EVENT_DEL: event deleted; EVENT_ADD_WHITE: event allowlisted; EVENT_PENDING: event pending handling;	EVENT_ISOLATE_CONTAINER: container isolated;	EVENT_RESOTRE_CONTAINER: container restored.
      */
     public $Status;
 
@@ -74,14 +53,7 @@ class ModifyVirusFileStatusRequest extends AbstractModel
 
     /**
      * @param array $EventIdSet IDs of events
-     * @param string $Status Event status   
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-    `EVENT_DEL`: Deleted.
-    `EVENT_ADD_WHITE`: Allowed.
-    `EVENT_PENDING`: Pending.
-	`EVENT_ISOLATE_CONTAINER`: Container isolated.
-	`EVENT_RESOTRE_CONTAINER`: Container recovered.
+     * @param string $Status Identifies the event status.       EVENT_DEALED: event handled; EVENT_IGNORE: event ignored; EVENT_DEL: event deleted; EVENT_ADD_WHITE: event allowlisted; EVENT_PENDING: event pending handling;	EVENT_ISOLATE_CONTAINER: container isolated;	EVENT_RESOTRE_CONTAINER: container restored.
      * @param string $Remark Event remarks
      * @param boolean $AutoIsolate Whether to automatically isolate files with the same MD5 checksum
      */

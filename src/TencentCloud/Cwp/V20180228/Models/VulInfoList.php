@@ -36,70 +36,66 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostCount(integer $HostCount) Set Number of affected hosts
  * @method integer getLevel() Obtain Vulnerability level. 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical.
  * @method void setLevel(integer $Level) Set Vulnerability level. 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical.
- * @method integer getFrom() Obtain This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFrom(integer $From) Set This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getFrom() Obtain Obsolete
+ * @method void setFrom(integer $From) Set Obsolete
  * @method string getDescript() Obtain Description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescript(string $Descript) Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPublishTimeWisteria() Obtain This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPublishTimeWisteria(string $PublishTimeWisteria) Set This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNameWisteria() Obtain This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNameWisteria(string $NameWisteria) Set This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDescriptWisteria() Obtain This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDescriptWisteria(string $DescriptWisteria) Set This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPublishTimeWisteria() Obtain Obsolete
+ * @method void setPublishTimeWisteria(string $PublishTimeWisteria) Set Obsolete
+ * @method string getNameWisteria() Obtain Obsolete
+ * @method void setNameWisteria(string $NameWisteria) Set Obsolete
+ * @method string getDescriptWisteria() Obtain Obsolete
+ * @method void setDescriptWisteria(string $DescriptWisteria) Set Obsolete
  * @method string getStatusStr() Obtain Event status after aggregation
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatusStr(string $StatusStr) Set Event status after aggregation
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCveId() Obtain CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCveId(string $CveId) Set CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method float getCvssScore() Obtain CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCvssScore(float $CvssScore) Set CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLabels() Obtain Vulnerability tags, separated by multiple commas
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLabels(string $Labels) Set Vulnerability tags, separated by multiple commas
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFixSwitch() Obtain Whether automatic fixing is supported and hosts that support automatic fixing are included. 0: no; 1: yes.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFixSwitch(integer $FixSwitch) Set Whether automatic fixing is supported and hosts that support automatic fixing are included. 0: no; 1: yes.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTaskId() Obtain ID of the last scan task
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskId(integer $TaskId) Set ID of the last scan task
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsSupportDefense() Obtain Whether defense is supported. 0: not supported; 1: supported.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsSupportDefense(integer $IsSupportDefense) Set Whether defense is supported. 0: not supported; 1: supported.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDefenseAttackCount() Obtain Number of attacks defended
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefenseAttackCount(integer $DefenseAttackCount) Set Number of attacks defended
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFirstAppearTime() Obtain First occurrence time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFirstAppearTime(string $FirstAppearTime) Set First occurrence time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getVulCategory() Obtain Vulnerability category. 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVulCategory(integer $VulCategory) Set Vulnerability category. 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAttackLevel() Obtain Attack intensity
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAttackLevel(integer $AttackLevel) Set Attack intensity
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getFixNoNeedRestart() Obtain Whether a restart is required after the vulnerability is fixed
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFixNoNeedRestart(boolean $FixNoNeedRestart) Set Whether a restart is required after the vulnerability is fixed
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMethod() Obtain Detection method. 0: version comparison; 1: POC verification.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMethod(integer $Method) Set Detection method. 0: version comparison; 1: POC verification.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLabels() Obtain Vulnerability Tags, Separated by Multiple Commas
+
+EXP exists
+Wild Attacks: KNOWN_EXPLOITED
+LOCAL: Local use
+Mandatory vulnerabilities: NEED_FIX
+RemoteExploit:NETWORK
+POC exists: POC
+System RESTART
+ * @method void setLabels(string $Labels) Set Vulnerability Tags, Separated by Multiple Commas
+
+EXP exists
+Wild Attacks: KNOWN_EXPLOITED
+LOCAL: Local use
+Mandatory vulnerabilities: NEED_FIX
+RemoteExploit:NETWORK
+POC exists: POC
+System RESTART
+ * @method integer getFixSwitch() Obtain Whether automatic fixing is supported and hosts that support automatic fixing, 0=No 1=Yes
+ * @method void setFixSwitch(integer $FixSwitch) Set Whether automatic fixing is supported and hosts that support automatic fixing, 0=No 1=Yes
+ * @method integer getTaskId() Obtain id of the last scan task
+ * @method void setTaskId(integer $TaskId) Set id of the last scan task
+ * @method integer getIsSupportDefense() Obtain Support defense, 0: no support 1: support
+ * @method void setIsSupportDefense(integer $IsSupportDefense) Set Support defense, 0: no support 1: support
+ * @method integer getDefenseAttackCount() Obtain Number of Attacks Defended
+ * @method void setDefenseAttackCount(integer $DefenseAttackCount) Set Number of Attacks Defended
+ * @method string getFirstAppearTime() Obtain first occurrence time
+ * @method void setFirstAppearTime(string $FirstAppearTime) Set first occurrence time
+ * @method integer getVulCategory() Obtain Vulnerability Category 1: web-cms Vulnerability 2: Application Vulnerability 4: Linux Software Vulnerability 5: Windows System Vulnerability
+ * @method void setVulCategory(integer $VulCategory) Set Vulnerability Category 1: web-cms Vulnerability 2: Application Vulnerability 4: Linux Software Vulnerability 5: Windows System Vulnerability
+ * @method integer getAttackLevel() Obtain Attack intensity level.
+ * @method void setAttackLevel(integer $AttackLevel) Set Attack intensity level.
+ * @method boolean getFixNoNeedRestart() Obtain Whether a restart is required after vulnerability repair.
+ * @method void setFixNoNeedRestart(boolean $FixNoNeedRestart) Set Whether a restart is required after vulnerability repair.
+ * @method integer getMethod() Obtain Detection method. 0: version comparison, 1: POC verification.
+ * @method void setMethod(integer $Method) Set Detection method. 0: version comparison, 1: POC verification.
+ * @method integer getVulFixSwitch() Obtain Whether vulnerability fixing is supported. 0: not supported; 1: supported.
+ * @method void setVulFixSwitch(integer $VulFixSwitch) Set Whether vulnerability fixing is supported. 0: not supported; 1: supported.
+ * @method string getLatestFixTime() Obtain Latest remediation time
+ * @method void setLatestFixTime(string $LatestFixTime) Set Latest remediation time
+ * @method integer getRaspOpenNodeCount() Obtain Number of application protection activations for machines with vulnerability correspondence
+ * @method void setRaspOpenNodeCount(integer $RaspOpenNodeCount) Set Number of application protection activations for machines with vulnerability correspondence
+ * @method integer getRaspClosedNodeCount() Obtain Number of application protection deactivations for machines with vulnerability correspondence
+ * @method void setRaspClosedNodeCount(integer $RaspClosedNodeCount) Set Number of application protection deactivations for machines with vulnerability correspondence
  */
 class VulInfoList extends AbstractModel
 {
@@ -144,108 +140,122 @@ class VulInfoList extends AbstractModel
     public $Level;
 
     /**
-     * @var integer This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Obsolete
      */
     public $From;
 
     /**
      * @var string Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Descript;
 
     /**
-     * @var string This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Obsolete
      */
     public $PublishTimeWisteria;
 
     /**
-     * @var string This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Obsolete
      */
     public $NameWisteria;
 
     /**
-     * @var string This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Obsolete
      */
     public $DescriptWisteria;
 
     /**
      * @var string Event status after aggregation
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StatusStr;
 
     /**
      * @var string CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CveId;
 
     /**
      * @var float CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CvssScore;
 
     /**
-     * @var string Vulnerability tags, separated by multiple commas
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Vulnerability Tags, Separated by Multiple Commas
+
+EXP exists
+Wild Attacks: KNOWN_EXPLOITED
+LOCAL: Local use
+Mandatory vulnerabilities: NEED_FIX
+RemoteExploit:NETWORK
+POC exists: POC
+System RESTART
      */
     public $Labels;
 
     /**
-     * @var integer Whether automatic fixing is supported and hosts that support automatic fixing are included. 0: no; 1: yes.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether automatic fixing is supported and hosts that support automatic fixing, 0=No 1=Yes
      */
     public $FixSwitch;
 
     /**
-     * @var integer ID of the last scan task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer id of the last scan task
      */
     public $TaskId;
 
     /**
-     * @var integer Whether defense is supported. 0: not supported; 1: supported.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Support defense, 0: no support 1: support
      */
     public $IsSupportDefense;
 
     /**
-     * @var integer Number of attacks defended
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of Attacks Defended
      */
     public $DefenseAttackCount;
 
     /**
-     * @var string First occurrence time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string first occurrence time
      */
     public $FirstAppearTime;
 
     /**
-     * @var integer Vulnerability category. 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Vulnerability Category 1: web-cms Vulnerability 2: Application Vulnerability 4: Linux Software Vulnerability 5: Windows System Vulnerability
      */
     public $VulCategory;
 
     /**
-     * @var integer Attack intensity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Attack intensity level.
      */
     public $AttackLevel;
 
     /**
-     * @var boolean Whether a restart is required after the vulnerability is fixed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether a restart is required after vulnerability repair.
      */
     public $FixNoNeedRestart;
 
     /**
-     * @var integer Detection method. 0: version comparison; 1: POC verification.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Detection method. 0: version comparison, 1: POC verification.
      */
     public $Method;
+
+    /**
+     * @var integer Whether vulnerability fixing is supported. 0: not supported; 1: supported.
+     */
+    public $VulFixSwitch;
+
+    /**
+     * @var string Latest remediation time
+     */
+    public $LatestFixTime;
+
+    /**
+     * @var integer Number of application protection activations for machines with vulnerability correspondence
+     */
+    public $RaspOpenNodeCount;
+
+    /**
+     * @var integer Number of application protection deactivations for machines with vulnerability correspondence
+     */
+    public $RaspClosedNodeCount;
 
     /**
      * @param string $Ids IDs of events corresponding to a vulnerability, separated by commas (,)
@@ -256,38 +266,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $LastTime Last detection time
      * @param integer $HostCount Number of affected hosts
      * @param integer $Level Vulnerability level. 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical.
-     * @param integer $From This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $From Obsolete
      * @param string $Descript Description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PublishTimeWisteria This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $NameWisteria This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DescriptWisteria This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PublishTimeWisteria Obsolete
+     * @param string $NameWisteria Obsolete
+     * @param string $DescriptWisteria Obsolete
      * @param string $StatusStr Event status after aggregation
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CveId CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param float $CvssScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Labels Vulnerability tags, separated by multiple commas
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $FixSwitch Whether automatic fixing is supported and hosts that support automatic fixing are included. 0: no; 1: yes.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TaskId ID of the last scan task
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsSupportDefense Whether defense is supported. 0: not supported; 1: supported.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DefenseAttackCount Number of attacks defended
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FirstAppearTime First occurrence time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $VulCategory Vulnerability category. 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AttackLevel Attack intensity
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $FixNoNeedRestart Whether a restart is required after the vulnerability is fixed
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Method Detection method. 0: version comparison; 1: POC verification.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Labels Vulnerability Tags, Separated by Multiple Commas
+
+EXP exists
+Wild Attacks: KNOWN_EXPLOITED
+LOCAL: Local use
+Mandatory vulnerabilities: NEED_FIX
+RemoteExploit:NETWORK
+POC exists: POC
+System RESTART
+     * @param integer $FixSwitch Whether automatic fixing is supported and hosts that support automatic fixing, 0=No 1=Yes
+     * @param integer $TaskId id of the last scan task
+     * @param integer $IsSupportDefense Support defense, 0: no support 1: support
+     * @param integer $DefenseAttackCount Number of Attacks Defended
+     * @param string $FirstAppearTime first occurrence time
+     * @param integer $VulCategory Vulnerability Category 1: web-cms Vulnerability 2: Application Vulnerability 4: Linux Software Vulnerability 5: Windows System Vulnerability
+     * @param integer $AttackLevel Attack intensity level.
+     * @param boolean $FixNoNeedRestart Whether a restart is required after vulnerability repair.
+     * @param integer $Method Detection method. 0: version comparison, 1: POC verification.
+     * @param integer $VulFixSwitch Whether vulnerability fixing is supported. 0: not supported; 1: supported.
+     * @param string $LatestFixTime Latest remediation time
+     * @param integer $RaspOpenNodeCount Number of application protection activations for machines with vulnerability correspondence
+     * @param integer $RaspClosedNodeCount Number of application protection deactivations for machines with vulnerability correspondence
      */
     function __construct()
     {
@@ -404,6 +412,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Method",$param) and $param["Method"] !== null) {
             $this->Method = $param["Method"];
+        }
+
+        if (array_key_exists("VulFixSwitch",$param) and $param["VulFixSwitch"] !== null) {
+            $this->VulFixSwitch = $param["VulFixSwitch"];
+        }
+
+        if (array_key_exists("LatestFixTime",$param) and $param["LatestFixTime"] !== null) {
+            $this->LatestFixTime = $param["LatestFixTime"];
+        }
+
+        if (array_key_exists("RaspOpenNodeCount",$param) and $param["RaspOpenNodeCount"] !== null) {
+            $this->RaspOpenNodeCount = $param["RaspOpenNodeCount"];
+        }
+
+        if (array_key_exists("RaspClosedNodeCount",$param) and $param["RaspClosedNodeCount"] !== null) {
+            $this->RaspClosedNodeCount = $param["RaspClosedNodeCount"];
         }
     }
 }

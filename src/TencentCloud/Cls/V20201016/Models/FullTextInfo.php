@@ -29,9 +29,7 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
 Only symbols, \n\t\r, and escape character \ are supported.
 Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
  * @method boolean getContainZH() Obtain Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setContainZH(boolean $ContainZH) Set Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class FullTextInfo extends AbstractModel
 {
@@ -49,7 +47,6 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
 
     /**
      * @var boolean Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ContainZH;
 
@@ -59,7 +56,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Only symbols, \n\t\r, and escape character \ are supported.
 Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
      * @param boolean $ContainZH Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

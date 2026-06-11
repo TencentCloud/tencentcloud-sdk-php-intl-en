@@ -21,65 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * Host information for batch vulnerability fixing
  *
  * @method integer getVulId() Obtain Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVulId(integer $VulId) Set Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVulName() Obtain Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVulName(string $VulName) Set Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getHostList() Obtain Information on hosts where this vulnerability can be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostList(array $HostList) Set Information on hosts where this vulnerability can be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getFixTag() Obtain Fixing prompt tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFixTag(array $FixTag) Set Fixing prompt tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getVulCategory() Obtain Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
- * @method void setVulCategory(integer $VulCategory) Set Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
+ * @method integer getVulCategory() Obtain Vulnerability category. 1: web CMS vulnerability, 2: application vulnerability, 4: Linux software vulnerability, 5 Windows system vulnerability.
+ * @method void setVulCategory(integer $VulCategory) Set Vulnerability category. 1: web CMS vulnerability, 2: application vulnerability, 4: Linux software vulnerability, 5 Windows system vulnerability.
  */
 class CanFixVulInfo extends AbstractModel
 {
     /**
      * @var integer Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VulId;
 
     /**
      * @var string Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VulName;
 
     /**
      * @var array Information on hosts where this vulnerability can be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostList;
 
     /**
      * @var array Fixing prompt tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FixTag;
 
     /**
-     * @var integer Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
+     * @var integer Vulnerability category. 1: web CMS vulnerability, 2: application vulnerability, 4: Linux software vulnerability, 5 Windows system vulnerability.
      */
     public $VulCategory;
 
     /**
      * @param integer $VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $HostList Information on hosts where this vulnerability can be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $FixTag Fixing prompt tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $VulCategory Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
+     * @param integer $VulCategory Vulnerability category. 1: web CMS vulnerability, 2: application vulnerability, 4: Linux software vulnerability, 5 Windows system vulnerability.
      */
     function __construct()
     {

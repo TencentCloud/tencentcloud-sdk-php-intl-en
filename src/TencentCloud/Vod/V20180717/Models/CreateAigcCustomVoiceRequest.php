@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceUrl(string $VoiceUrl) Set <p>Access link for the timbre data file. Supports audio/video files in .mp3 / .wav / .mp4 / .mov format. The voice in the audio should be clean and noiseless, with only one voice type. The duration should be no shorter than 5 seconds and no longer than 30 seconds.</p>
  * @method string getVideoId() Obtain <p>History works ID. Audio material can be provided by referring to history works.</p>
  * @method void setVideoId(string $VideoId) Set <p>History works ID. Audio material can be provided by referring to history works.</p>
+ * @method string getDisableModeration() Obtain <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
+ * @method void setDisableModeration(string $DisableModeration) Set <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
  * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
  * @method void setSessionId(string $SessionId) Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
  * @method string getSessionContext() Obtain <p>Source context. This is used to pass through user request information. The task complete callback returns the value of this field. The maximum length is 1000 characters.</p>
@@ -58,6 +60,11 @@ class CreateAigcCustomVoiceRequest extends AbstractModel
     public $VideoId;
 
     /**
+     * @var string <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
+     */
+    public $DisableModeration;
+
+    /**
      * @var string <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public $SessionId;
@@ -77,6 +84,7 @@ class CreateAigcCustomVoiceRequest extends AbstractModel
      * @param string $VoiceName <p>Timbre name. The maximum length of the text content is 20 characters.</p>
      * @param string $VoiceUrl <p>Access link for the timbre data file. Supports audio/video files in .mp3 / .wav / .mp4 / .mov format. The voice in the audio should be clean and noiseless, with only one voice type. The duration should be no shorter than 5 seconds and no longer than 30 seconds.</p>
      * @param string $VideoId <p>History works ID. Audio material can be provided by referring to history works.</p>
+     * @param string $DisableModeration <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
      * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      * @param string $SessionContext <p>Source context. This is used to pass through user request information. The task complete callback returns the value of this field. The maximum length is 1000 characters.</p>
      * @param integer $TasksPriority <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.</p>
@@ -108,6 +116,10 @@ class CreateAigcCustomVoiceRequest extends AbstractModel
 
         if (array_key_exists("VideoId",$param) and $param["VideoId"] !== null) {
             $this->VideoId = $param["VideoId"];
+        }
+
+        if (array_key_exists("DisableModeration",$param) and $param["DisableModeration"] !== null) {
+            $this->DisableModeration = $param["DisableModeration"];
         }
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {

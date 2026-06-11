@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Format configuration of shipped log content
  *
- * @method string getFormat() Obtain Content format. Valid values: `json`, `csv`
- * @method void setFormat(string $Format) Set Content format. Valid values: `json`, `csv`
+ * @method string getFormat() Obtain Content format, support json, csv, parquet
+ * @method void setFormat(string $Format) Set Content format, support json, csv, parquet
  * @method CsvInfo getCsv() Obtain CSV format content description
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setCsv(CsvInfo $Csv) Set CSV format content description
@@ -38,7 +38,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 class ContentInfo extends AbstractModel
 {
     /**
-     * @var string Content format. Valid values: `json`, `csv`
+     * @var string Content format, support json, csv, parquet
      */
     public $Format;
 
@@ -61,7 +61,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Parquet;
 
     /**
-     * @param string $Format Content format. Valid values: `json`, `csv`
+     * @param string $Format Content format, support json, csv, parquet
      * @param CsvInfo $Csv CSV format content description
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param JsonInfo $Json JSON format content description

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PurgeUrlsCache request structure.
  *
- * @method array getUrls() Obtain List of URLs. The protocol header such as "http://" or "https://" needs to be included.
- * @method void setUrls(array $Urls) Set List of URLs. The protocol header such as "http://" or "https://" needs to be included.
+ * @method array getUrls() Obtain List of URLs. The protocol header such as `http://` or `https://` needs to be included.
+ * @method void setUrls(array $Urls) Set List of URLs. The protocol header such as `http://` or `https://` needs to be included.
  * @method string getArea() Obtain Purging region
 The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
 If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
@@ -38,7 +38,7 @@ The specified purging region should match the domain name acceleration region.
 class PurgeUrlsCacheRequest extends AbstractModel
 {
     /**
-     * @var array List of URLs. The protocol header such as "http://" or "https://" needs to be included.
+     * @var array List of URLs. The protocol header such as `http://` or `https://` needs to be included.
      */
     public $Urls;
 
@@ -57,7 +57,7 @@ The specified purging region should match the domain name acceleration region.
     public $UrlEncode;
 
     /**
-     * @param array $Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
+     * @param array $Urls List of URLs. The protocol header such as `http://` or `https://` needs to be included.
      * @param string $Area Purging region
 The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
 If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.

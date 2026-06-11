@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnabled() Obtain Whether bandwidth abuse protection (applicable to chinese mainland only) is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
  * @method void setEnabled(string $Enabled) Set Whether bandwidth abuse protection (applicable to chinese mainland only) is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+ * @method string getId() Obtain Rule ID of traffic anti-fraud, returned as an output parameter.
+ * @method void setId(string $Id) Set Rule ID of traffic anti-fraud, returned as an output parameter.
  * @method SecurityAction getAction() Obtain Bandwidth abuse protection (applicable to chinese mainland) handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observe;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
  * @method void setAction(SecurityAction $Action) Set Bandwidth abuse protection (applicable to chinese mainland) handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observe;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
  */
@@ -33,12 +35,18 @@ class BandwidthAbuseDefense extends AbstractModel
     public $Enabled;
 
     /**
+     * @var string Rule ID of traffic anti-fraud, returned as an output parameter.
+     */
+    public $Id;
+
+    /**
      * @var SecurityAction Bandwidth abuse protection (applicable to chinese mainland) handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observe;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
      */
     public $Action;
 
     /**
      * @param string $Enabled Whether bandwidth abuse protection (applicable to chinese mainland only) is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+     * @param string $Id Rule ID of traffic anti-fraud, returned as an output parameter.
      * @param SecurityAction $Action Bandwidth abuse protection (applicable to chinese mainland) handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observe;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
      */
     function __construct()
@@ -56,6 +64,10 @@ class BandwidthAbuseDefense extends AbstractModel
         }
         if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
             $this->Enabled = $param["Enabled"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
         if (array_key_exists("Action",$param) and $param["Action"] !== null) {

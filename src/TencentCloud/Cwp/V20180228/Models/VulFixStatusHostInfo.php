@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Status. 0: initial status; 1: task issued (fixing); 2: completed (successful); 3: fixing failed (failed); 4: fixing failed due to snapshot creation failure (unfixed).
  * @method string getModifyTime() Obtain Fixing time
  * @method void setModifyTime(string $ModifyTime) Set Fixing time
- * @method string getFailReason() Obtain Fixing failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFailReason(string $FailReason) Set Fixing failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFailReason() Obtain Fix failure cause
+ * @method void setFailReason(string $FailReason) Set Fix failure cause
  */
 class VulFixStatusHostInfo extends AbstractModel
 {
@@ -63,8 +61,7 @@ class VulFixStatusHostInfo extends AbstractModel
     public $ModifyTime;
 
     /**
-     * @var string Fixing failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Fix failure cause
      */
     public $FailReason;
 
@@ -74,8 +71,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Quuid Host QUUID
      * @param integer $Status Status. 0: initial status; 1: task issued (fixing); 2: completed (successful); 3: fixing failed (failed); 4: fixing failed due to snapshot creation failure (unfixed).
      * @param string $ModifyTime Fixing time
-     * @param string $FailReason Fixing failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FailReason Fix failure cause
      */
     function __construct()
     {

@@ -24,24 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Event rule
  * @method string getSolution() Obtain Solution
  * @method void setSolution(string $Solution) Set Solution
- * @method string getRemark() Obtain Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRemark(string $Remark) Set Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRemark() Obtain Event remark information
+ * @method void setRemark(string $Remark) Set Event remark information
  * @method AbnormalProcessChildRuleInfo getMatchRule() Obtain Details of the hit rule
  * @method void setMatchRule(AbnormalProcessChildRuleInfo $MatchRule) Set Details of the hit rule
  * @method string getRuleName() Obtain Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
  * @method void setRuleName(string $RuleName) Set Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
  * @method string getRuleId() Obtain ID of the hit rule
  * @method void setRuleId(string $RuleId) Set ID of the hit rule
- * @method string getOperationTime() Obtain Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOperationTime(string $OperationTime) Set Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getGroupName() Obtain Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGroupName(string $GroupName) Set Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOperationTime() Obtain Last Time for Event Handling
+ * @method void setOperationTime(string $OperationTime) Set Last Time for Event Handling
+ * @method string getGroupName() Obtain Hit Policy Name: SYSTEM_DEFINED_RULE (System Policy) or Custom Policy Name
+ * @method void setGroupName(string $GroupName) Set Hit Policy Name: SYSTEM_DEFINED_RULE (System Policy) or Custom Policy Name
  */
 class AbnormalProcessEventDescription extends AbstractModel
 {
@@ -56,8 +50,7 @@ class AbnormalProcessEventDescription extends AbstractModel
     public $Solution;
 
     /**
-     * @var string Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Event remark information
      */
     public $Remark;
 
@@ -77,29 +70,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RuleId;
 
     /**
-     * @var string Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Last Time for Event Handling
      */
     public $OperationTime;
 
     /**
-     * @var string Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Hit Policy Name: SYSTEM_DEFINED_RULE (System Policy) or Custom Policy Name
      */
     public $GroupName;
 
     /**
      * @param string $Description Event rule
      * @param string $Solution Solution
-     * @param string $Remark Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Remark Event remark information
      * @param AbnormalProcessChildRuleInfo $MatchRule Details of the hit rule
      * @param string $RuleName Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
      * @param string $RuleId ID of the hit rule
-     * @param string $OperationTime Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $GroupName Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OperationTime Last Time for Event Handling
+     * @param string $GroupName Hit Policy Name: SYSTEM_DEFINED_RULE (System Policy) or Custom Policy Name
      */
     function __construct()
     {

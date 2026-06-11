@@ -79,13 +79,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTargetPermission() Obtain Target File Permissions
  * @method void setTargetPermission(string $TargetPermission) Set Target File Permissions
  * @method string getTargetModifyTime() Obtain Target File Update Time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTargetModifyTime(string $TargetModifyTime) Set Target File Update Time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTargetCreatTime() Obtain Target File Creation Time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTargetCreatTime(string $TargetCreatTime) Set Target File Creation Time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getExePid() Obtain Process PID
  * @method void setExePid(integer $ExePid) Set Process PID
  * @method string getTargetName() Obtain File name
@@ -95,21 +91,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method integer getLevel() Obtain Risk Level. 0: None; 1: High-Risk; 2: Medium-Risk; 3: Low-Risk
  * @method void setLevel(integer $Level) Set Risk Level. 0: None; 1: High-Risk; 2: Medium-Risk; 3: Low-Risk
  * @method string getExeName() Obtain Process name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExeName(string $ExeName) Set Process name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method MachineExtraInfo getMachineExtraInfo() Obtain  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFileAction() Obtain File threat behavior
 <li>read: read file</li>
 <li>write: modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFileAction(string $FileAction) Set File threat behavior
 <li>read: read file</li>
 <li>write: modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class FileTamperEvent extends AbstractModel
 {
@@ -260,13 +250,11 @@ class FileTamperEvent extends AbstractModel
 
     /**
      * @var string Target File Update Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TargetModifyTime;
 
     /**
      * @var string Target File Creation Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TargetCreatTime;
 
@@ -292,13 +280,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExeName;
 
     /**
      * @var MachineExtraInfo  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -306,7 +292,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string File threat behavior
 <li>read: read file</li>
 <li>write: modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FileAction;
 
@@ -341,21 +326,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $TargetSize Target file size
      * @param string $TargetPermission Target File Permissions
      * @param string $TargetModifyTime Target File Update Time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TargetCreatTime Target File Creation Time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ExePid Process PID
      * @param string $TargetName File name
      * @param string $Reference Reference link
      * @param integer $Level Risk Level. 0: None; 1: High-Risk; 2: Medium-Risk; 3: Low-Risk
      * @param string $ExeName Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo $MachineExtraInfo  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FileAction File threat behavior
 <li>read: read file</li>
 <li>write: modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

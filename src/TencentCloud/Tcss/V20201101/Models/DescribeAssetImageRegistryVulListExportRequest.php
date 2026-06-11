@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Name - String - Required: No - Vulnerability name</li>
  * @method ImageInfo getImageInfo() Obtain Image information
  * @method void setImageInfo(ImageInfo $ImageInfo) Set Image information
- * @method integer getId() Obtain Image ID
- * @method void setId(integer $Id) Set Image ID
+ * @method integer getId() Obtain Unique image ID, obtainable by calling the DescribeAssetImageRegistryList API.
+ * @method void setId(integer $Id) Set Unique image ID, obtainable by calling the DescribeAssetImageRegistryList API.
  */
 class DescribeAssetImageRegistryVulListExportRequest extends AbstractModel
 {
@@ -67,7 +67,7 @@ class DescribeAssetImageRegistryVulListExportRequest extends AbstractModel
     public $ImageInfo;
 
     /**
-     * @var integer Image ID
+     * @var integer Unique image ID, obtainable by calling the DescribeAssetImageRegistryList API.
      */
     public $Id;
 
@@ -79,7 +79,7 @@ class DescribeAssetImageRegistryVulListExportRequest extends AbstractModel
 <li>Level- String - Required: No - Vulnerability level</li>
 <li>Name - String - Required: No - Vulnerability name</li>
      * @param ImageInfo $ImageInfo Image information
-     * @param integer $Id Image ID
+     * @param integer $Id Unique image ID, obtainable by calling the DescribeAssetImageRegistryList API.
      */
     function __construct()
     {

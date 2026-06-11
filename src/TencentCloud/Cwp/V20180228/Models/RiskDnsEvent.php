@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuggestSolution(string $SuggestSolution) Set Fixing solution
  * @method string getReferenceLink() Obtain Reference link
  * @method void setReferenceLink(string $ReferenceLink) Set Reference link
- * @method integer getHandleStatus() Obtain Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored]
- * @method void setHandleStatus(integer $HandleStatus) Set Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored]
+ * @method integer getHandleStatus() Obtain Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored|6: blocked]
+ * @method void setHandleStatus(integer $HandleStatus) Set Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored|6: blocked]
  * @method integer getPid() Obtain Process ID
  * @method void setPid(integer $Pid) Set Process ID
  * @method string getProcessName() Obtain Process name
@@ -69,9 +69,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getHostStatus() Obtain Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
  * @method void setHostStatus(string $HostStatus) Set Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getOsType() Obtain [1:CentOS|2:Debian|3:Gentoo|4:Redhat|5:Ubuntu|6:Windows|7:TencentOS|8:CoreOS|9:FreeBSD|10:SUSE]
  * @method void setOsType(integer $OsType) Set [1:CentOS|2:Debian|3:Gentoo|4:Redhat|5:Ubuntu|6:Windows|7:TencentOS|8:CoreOS|9:FreeBSD|10:SUSE]
  */
@@ -158,7 +156,7 @@ class RiskDnsEvent extends AbstractModel
     public $ReferenceLink;
 
     /**
-     * @var integer Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored]
+     * @var integer Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored|6: blocked]
      */
     public $HandleStatus;
 
@@ -199,7 +197,6 @@ class RiskDnsEvent extends AbstractModel
 
     /**
      * @var MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -225,7 +222,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ThreatDesc Threat description
      * @param string $SuggestSolution Fixing solution
      * @param string $ReferenceLink Reference link
-     * @param integer $HandleStatus Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored]
+     * @param integer $HandleStatus Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored|6: blocked]
      * @param integer $Pid Process ID
      * @param string $ProcessName Process name
      * @param string $ProcessMd5 Process MD5
@@ -234,7 +231,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $LastTime Last access Time
      * @param string $HostStatus Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
      * @param MachineExtraInfo $MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $OsType [1:CentOS|2:Debian|3:Gentoo|4:Redhat|5:Ubuntu|6:Windows|7:TencentOS|8:CoreOS|9:FreeBSD|10:SUSE]
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmShields request structure.
  *
- * @method string getAlarmNoticeId() Obtain Notification Channel Group ID
- * @method void setAlarmNoticeId(string $AlarmNoticeId) Set Notification Channel Group ID
+ * @method string getAlarmNoticeId() Obtain Notification channel group id. Obtain the notification channel group id by searching the [notification channel group list](https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
+ * @method void setAlarmNoticeId(string $AlarmNoticeId) Set Notification channel group id. Obtain the notification channel group id by searching the [notification channel group list](https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
  * @method array getFilters() Obtain - taskId: Filter by [Rule ID]. Type: String. Optional: No
 - status: Filter by [Rule Status]. Type: String. Supports 0: Not yet effective, 1: In Effect, 2: Expired. Optional: No
 Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
@@ -36,7 +36,7 @@ Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
 class DescribeAlarmShieldsRequest extends AbstractModel
 {
     /**
-     * @var string Notification Channel Group ID
+     * @var string Notification channel group id. Obtain the notification channel group id by searching the [notification channel group list](https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
      */
     public $AlarmNoticeId;
 
@@ -58,7 +58,7 @@ Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
     public $Limit;
 
     /**
-     * @param string $AlarmNoticeId Notification Channel Group ID
+     * @param string $AlarmNoticeId Notification channel group id. Obtain the notification channel group id by searching the [notification channel group list](https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
      * @param array $Filters - taskId: Filter by [Rule ID]. Type: String. Optional: No
 - status: Filter by [Rule Status]. Type: String. Supports 0: Not yet effective, 1: In Effect, 2: Expired. Optional: No
 Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.

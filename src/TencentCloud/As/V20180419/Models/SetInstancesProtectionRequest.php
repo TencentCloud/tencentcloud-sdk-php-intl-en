@@ -27,11 +27,11 @@ use TencentCloud\Common\AbstractModel;
 <li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
 <li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
  * @method array getInstanceIds() Obtain Instance ID. you can obtain available instance ID in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index)</li>
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID. you can obtain available instance ID in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index)</li>
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>
  * @method boolean getProtectedFromScaleIn() Obtain Whether to enable scale-in protection for this instance
  * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) Set Whether to enable scale-in protection for this instance
  */
@@ -46,8 +46,8 @@ class SetInstancesProtectionRequest extends AbstractModel
 
     /**
      * @var array Instance ID. you can obtain available instance ID in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index)</li>
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>
      */
     public $InstanceIds;
 
@@ -61,8 +61,8 @@ class SetInstancesProtectionRequest extends AbstractModel
 <li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
 <li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
      * @param array $InstanceIds Instance ID. you can obtain available instance ID in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index)</li>
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>
      * @param boolean $ProtectedFromScaleIn Whether to enable scale-in protection for this instance
      */
     function __construct()

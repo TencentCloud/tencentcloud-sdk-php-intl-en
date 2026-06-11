@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getVulId() Obtain Vulnerability ID
  * @method void setVulId(integer $VulId) Set Vulnerability ID
+ * @method string getSource() Obtain Compatible with application protection vulnerability defense container perspective alerts for vulnerability details. Host perspective is selected by default. Optional fields. Source=tcss indicates container perspective vulnerability details. The backend converts VulId to VulId in host vul_vuls.
+ * @method void setSource(string $Source) Set Compatible with application protection vulnerability defense container perspective alerts for vulnerability details. Host perspective is selected by default. Optional fields. Source=tcss indicates container perspective vulnerability details. The backend converts VulId to VulId in host vul_vuls.
  */
 class DescribeVulInfoCvssRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeVulInfoCvssRequest extends AbstractModel
     public $VulId;
 
     /**
+     * @var string Compatible with application protection vulnerability defense container perspective alerts for vulnerability details. Host perspective is selected by default. Optional fields. Source=tcss indicates container perspective vulnerability details. The backend converts VulId to VulId in host vul_vuls.
+     */
+    public $Source;
+
+    /**
      * @param integer $VulId Vulnerability ID
+     * @param string $Source Compatible with application protection vulnerability defense container perspective alerts for vulnerability details. Host perspective is selected by default. Optional fields. Source=tcss indicates container perspective vulnerability details. The backend converts VulId to VulId in host vul_vuls.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeVulInfoCvssRequest extends AbstractModel
         }
         if (array_key_exists("VulId",$param) and $param["VulId"] !== null) {
             $this->VulId = $param["VulId"];
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
         }
     }
 }

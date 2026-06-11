@@ -20,30 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Multiple trigger conditions.
  *
- * @method string getCondition() Obtain Trigger condition.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCondition(string $Condition) Set Trigger condition.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAlarmLevel() Obtain Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).<li> If not specified, the default is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).<li> If not specified, the default is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCondition() Obtain Trigger conditions
+ * @method void setCondition(string $Condition) Set Trigger conditions
+ * @method integer getAlarmLevel() Obtain Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).
+
+- If not specified, the default is 0.
+ * @method void setAlarmLevel(integer $AlarmLevel) Set Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).
+
+- If not specified, the default is 0.
  */
 class MultiCondition extends AbstractModel
 {
     /**
-     * @var string Trigger condition.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Trigger conditions
      */
     public $Condition;
 
     /**
-     * @var integer Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).<li> If not specified, the default is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).
+
+- If not specified, the default is 0.
      */
     public $AlarmLevel;
 
     /**
-     * @param string $Condition Trigger condition.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AlarmLevel Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).<li> If not specified, the default is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Condition Trigger conditions
+     * @param integer $AlarmLevel Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).
+
+- If not specified, the default is 0.
      */
     function __construct()
     {

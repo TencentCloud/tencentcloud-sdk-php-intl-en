@@ -20,76 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIndex response structure.
  *
- * @method string getTopicId() Obtain Log topic ID
- * @method void setTopicId(string $TopicId) Set Log topic ID
- * @method boolean getStatus() Obtain Whether it takes effect
- * @method void setStatus(boolean $Status) Set Whether it takes effect
- * @method RuleInfo getRule() Obtain Index configuration information
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setRule(RuleInfo $Rule) Set Index configuration information
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getModifyTime() Obtain Index modification time. The default value is the index creation time.
- * @method void setModifyTime(string $ModifyTime) Set Index modification time. The default value is the index creation time.
- * @method boolean getIncludeInternalFields() Obtain Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`)
-* `false`: Full-text indexing does not include internal fields.
-* `true`: Full-text indexing includes internal fields.
+ * @method string getTopicId() Obtain <p>Log topic Id</p>
+ * @method void setTopicId(string $TopicId) Set <p>Log topic Id</p>
+ * @method boolean getStatus() Obtain <p>Index status. true: enabled, false: disabled<br>Once enabled, you can perform retrieval and analysis of logs, which will generate indexing traffic, index storage, and corresponding fees. <a href="https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9">Billing details</a></p>
+ * @method void setStatus(boolean $Status) Set <p>Index status. true: enabled, false: disabled<br>Once enabled, you can perform retrieval and analysis of logs, which will generate indexing traffic, index storage, and corresponding fees. <a href="https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9">Billing details</a></p>
+ * @method RuleInfo getRule() Obtain <p>Index configuration information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIncludeInternalFields(boolean $IncludeInternalFields) Set Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`)
-* `false`: Full-text indexing does not include internal fields.
-* `true`: Full-text indexing includes internal fields.
+ * @method void setRule(RuleInfo $Rule) Set <p>Index configuration information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMetadataFlag() Obtain Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`)
-* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
-* `1`: Full-text indexing includes all metadata fields.
-* `2`: Full-text indexing does not include metadata fields.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMetadataFlag(integer $MetadataFlag) Set Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`)
-* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
-* `1`: Full-text indexing includes all metadata fields.
-* `2`: Full-text indexing does not include metadata fields.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getModifyTime() Obtain <p>Index modification time, which is initially the index creation time. Format <code>YYYY-MM-DD HH:MM:SS</code></p>
+ * @method void setModifyTime(string $ModifyTime) Set <p>Index modification time, which is initially the index creation time. Format <code>YYYY-MM-DD HH:MM:SS</code></p>
+ * @method boolean getIncludeInternalFields() Obtain <p>Whether the built-in reserved fields (<code>__FILENAME__</code>, <code>__HOSTNAME__</code>, and <code>__SOURCE__</code>) are included in the full-text index</p><ul><li>false: does not include</li><li>true: includes</li></ul>
+ * @method void setIncludeInternalFields(boolean $IncludeInternalFields) Set <p>Whether the built-in reserved fields (<code>__FILENAME__</code>, <code>__HOSTNAME__</code>, and <code>__SOURCE__</code>) are included in the full-text index</p><ul><li>false: does not include</li><li>true: includes</li></ul>
+ * @method integer getMetadataFlag() Obtain <p>Whether metadata fields (fields prefixed with <code>__TAG__</code>) are included in full-text indexing</p><ul><li>0: Contain only metadata fields with key-value index enabled</li><li>1: Include all metadata fields</li><li>2: Exclude any metadata fields</li></ul>
+ * @method void setMetadataFlag(integer $MetadataFlag) Set <p>Whether metadata fields (fields prefixed with <code>__TAG__</code>) are included in full-text indexing</p><ul><li>0: Contain only metadata fields with key-value index enabled</li><li>1: Include all metadata fields</li><li>2: Exclude any metadata fields</li></ul>
+ * @method string getCoverageField() Obtain <p>Custom log parsing exception storage field.</p>
+ * @method void setCoverageField(string $CoverageField) Set <p>Custom log parsing exception storage field.</p>
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribeIndexResponse extends AbstractModel
 {
     /**
-     * @var string Log topic ID
+     * @var string <p>Log topic Id</p>
      */
     public $TopicId;
 
     /**
-     * @var boolean Whether it takes effect
+     * @var boolean <p>Index status. true: enabled, false: disabled<br>Once enabled, you can perform retrieval and analysis of logs, which will generate indexing traffic, index storage, and corresponding fees. <a href="https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9">Billing details</a></p>
      */
     public $Status;
 
     /**
-     * @var RuleInfo Index configuration information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var RuleInfo <p>Index configuration information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Rule;
 
     /**
-     * @var string Index modification time. The default value is the index creation time.
+     * @var string <p>Index modification time, which is initially the index creation time. Format <code>YYYY-MM-DD HH:MM:SS</code></p>
      */
     public $ModifyTime;
 
     /**
-     * @var boolean Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`)
-* `false`: Full-text indexing does not include internal fields.
-* `true`: Full-text indexing includes internal fields.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean <p>Whether the built-in reserved fields (<code>__FILENAME__</code>, <code>__HOSTNAME__</code>, and <code>__SOURCE__</code>) are included in the full-text index</p><ul><li>false: does not include</li><li>true: includes</li></ul>
      */
     public $IncludeInternalFields;
 
     /**
-     * @var integer Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`)
-* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
-* `1`: Full-text indexing includes all metadata fields.
-* `2`: Full-text indexing does not include metadata fields.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Whether metadata fields (fields prefixed with <code>__TAG__</code>) are included in full-text indexing</p><ul><li>0: Contain only metadata fields with key-value index enabled</li><li>1: Include all metadata fields</li><li>2: Exclude any metadata fields</li></ul>
      */
     public $MetadataFlag;
+
+    /**
+     * @var string <p>Custom log parsing exception storage field.</p>
+     */
+    public $CoverageField;
 
     /**
      * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -97,20 +83,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $TopicId Log topic ID
-     * @param boolean $Status Whether it takes effect
-     * @param RuleInfo $Rule Index configuration information
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ModifyTime Index modification time. The default value is the index creation time.
-     * @param boolean $IncludeInternalFields Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`)
-* `false`: Full-text indexing does not include internal fields.
-* `true`: Full-text indexing includes internal fields.
+     * @param string $TopicId <p>Log topic Id</p>
+     * @param boolean $Status <p>Index status. true: enabled, false: disabled<br>Once enabled, you can perform retrieval and analysis of logs, which will generate indexing traffic, index storage, and corresponding fees. <a href="https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9">Billing details</a></p>
+     * @param RuleInfo $Rule <p>Index configuration information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MetadataFlag Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`)
-* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
-* `1`: Full-text indexing includes all metadata fields.
-* `2`: Full-text indexing does not include metadata fields.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ModifyTime <p>Index modification time, which is initially the index creation time. Format <code>YYYY-MM-DD HH:MM:SS</code></p>
+     * @param boolean $IncludeInternalFields <p>Whether the built-in reserved fields (<code>__FILENAME__</code>, <code>__HOSTNAME__</code>, and <code>__SOURCE__</code>) are included in the full-text index</p><ul><li>false: does not include</li><li>true: includes</li></ul>
+     * @param integer $MetadataFlag <p>Whether metadata fields (fields prefixed with <code>__TAG__</code>) are included in full-text indexing</p><ul><li>0: Contain only metadata fields with key-value index enabled</li><li>1: Include all metadata fields</li><li>2: Exclude any metadata fields</li></ul>
+     * @param string $CoverageField <p>Custom log parsing exception storage field.</p>
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -149,6 +129,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MetadataFlag",$param) and $param["MetadataFlag"] !== null) {
             $this->MetadataFlag = $param["MetadataFlag"];
+        }
+
+        if (array_key_exists("CoverageField",$param) and $param["CoverageField"] !== null) {
+            $this->CoverageField = $param["CoverageField"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

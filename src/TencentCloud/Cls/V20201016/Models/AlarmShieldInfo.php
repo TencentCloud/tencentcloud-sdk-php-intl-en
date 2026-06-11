@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) Set Block end time (second-level timestamp).
  * @method integer getType() Obtain Block type. 1: Block all notifications, 2: Block matching rules notifications according to the Rule parameter.
  * @method void setType(integer $Type) Set Block type. 1: Block all notifications, 2: Block matching rules notifications according to the Rule parameter.
- * @method string getRule() Obtain Rule for shielding, mandatory when Type is 2. See Product Documentation (https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule) for rule writing details.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRule(string $Rule) Set Rule for shielding, mandatory when Type is 2. See Product Documentation (https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule) for rule writing details.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRule() Obtain Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://www.tencentcloud.com/document/product/614/103178?from_cn_redirect=1#rule).
+ * @method void setRule(string $Rule) Set Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://www.tencentcloud.com/document/product/614/103178?from_cn_redirect=1#rule).
  * @method string getReason() Obtain Blocking reason.
  * @method void setReason(string $Reason) Set Blocking reason.
  * @method integer getSource() Obtain Rule Creation Source.
@@ -44,10 +44,10 @@ use TencentCloud\Common\AbstractModel;
 0: Not yet effective; 1: In effect; 2: Expired
  * @method void setStatus(integer $Status) Set Rule Status.
 0: Not yet effective; 1: In effect; 2: Expired
- * @method integer getCreateTime() Obtain Rule Creation Time.
- * @method void setCreateTime(integer $CreateTime) Set Rule Creation Time.
- * @method integer getUpdateTime() Obtain Rule Update Time.
- * @method void setUpdateTime(integer $UpdateTime) Set Rule Update Time.
+ * @method integer getCreateTime() Obtain Rule creation time. Unix second-level timestamp (s).
+ * @method void setCreateTime(integer $CreateTime) Set Rule creation time. Unix second-level timestamp (s).
+ * @method integer getUpdateTime() Obtain Rule update time. Unix second-level timestamp (s).
+ * @method void setUpdateTime(integer $UpdateTime) Set Rule update time. Unix second-level timestamp (s).
  */
 class AlarmShieldInfo extends AbstractModel
 {
@@ -77,7 +77,7 @@ class AlarmShieldInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var string Rule for shielding, mandatory when Type is 2. See Product Documentation (https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule) for rule writing details.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://www.tencentcloud.com/document/product/614/103178?from_cn_redirect=1#rule).
      */
     public $Rule;
 
@@ -104,12 +104,12 @@ class AlarmShieldInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Rule Creation Time.
+     * @var integer Rule creation time. Unix second-level timestamp (s).
      */
     public $CreateTime;
 
     /**
-     * @var integer Rule Update Time.
+     * @var integer Rule update time. Unix second-level timestamp (s).
      */
     public $UpdateTime;
 
@@ -119,15 +119,15 @@ class AlarmShieldInfo extends AbstractModel
      * @param integer $StartTime Block start time (second-level timestamp).
      * @param integer $EndTime Block end time (second-level timestamp).
      * @param integer $Type Block type. 1: Block all notifications, 2: Block matching rules notifications according to the Rule parameter.
-     * @param string $Rule Rule for shielding, mandatory when Type is 2. See Product Documentation (https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule) for rule writing details.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Rule Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://www.tencentcloud.com/document/product/614/103178?from_cn_redirect=1#rule).
      * @param string $Reason Blocking reason.
      * @param integer $Source Rule Creation Source.
 1. Console; 2. API; 3. Alarm notification
      * @param string $Operator Operator.
      * @param integer $Status Rule Status.
 0: Not yet effective; 1: In effect; 2: Expired
-     * @param integer $CreateTime Rule Creation Time.
-     * @param integer $UpdateTime Rule Update Time.
+     * @param integer $CreateTime Rule creation time. Unix second-level timestamp (s).
+     * @param integer $UpdateTime Rule update time. Unix second-level timestamp (s).
      */
     function __construct()
     {

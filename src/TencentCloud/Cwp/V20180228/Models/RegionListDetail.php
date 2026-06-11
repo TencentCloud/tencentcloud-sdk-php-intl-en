@@ -26,14 +26,12 @@ LH, TencentCloud Lighthouse
 ECM, Tencent Cloud Edge Computing Machine
 BM, Tencent BM 1.0
 Other, Other servers (non-Tencent Cloud)
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineType(string $MachineType) Set Machine type
 CVM, Tencent Cloud Virtual Machine
 LH, TencentCloud Lighthouse
 ECM, Tencent Cloud Edge Computing Machine
 BM, Tencent BM 1.0
 Other, Other servers (non-Tencent Cloud)
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getCloudFrom() Obtain 0 Tencent Cloud
 1 IDC
 2 Alibaba Cloud
@@ -43,7 +41,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 6 Google
 7 Oracle
 8 Digital Ocean
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCloudFrom(integer $CloudFrom) Set 0 Tencent Cloud
 1 IDC
 2 Alibaba Cloud
@@ -53,11 +50,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 6 Google
 7 Oracle
 8 Digital Ocean
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getRegionList() Obtain List of regions
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegionList(array $RegionList) Set List of regions
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getRegionList() Obtain Region list
+ * @method void setRegionList(array $RegionList) Set Region list
  */
 class RegionListDetail extends AbstractModel
 {
@@ -68,7 +62,6 @@ LH, TencentCloud Lighthouse
 ECM, Tencent Cloud Edge Computing Machine
 BM, Tencent BM 1.0
 Other, Other servers (non-Tencent Cloud)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineType;
 
@@ -82,13 +75,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 6 Google
 7 Oracle
 8 Digital Ocean
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CloudFrom;
 
     /**
-     * @var array List of regions
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Region list
      */
     public $RegionList;
 
@@ -99,7 +90,6 @@ LH, TencentCloud Lighthouse
 ECM, Tencent Cloud Edge Computing Machine
 BM, Tencent BM 1.0
 Other, Other servers (non-Tencent Cloud)
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CloudFrom 0 Tencent Cloud
 1 IDC
 2 Alibaba Cloud
@@ -109,9 +99,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 6 Google
 7 Oracle
 8 Digital Ocean
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $RegionList List of regions
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $RegionList Region list
      */
     function __construct()
     {

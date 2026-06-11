@@ -28,6 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddr(string $Addr) Set webhook URL
  * @method boolean getIsModify() Obtain Whether to modify
  * @method void setIsModify(boolean $IsModify) Set Whether to modify
+ * @method integer getType() Obtain Type
+ * @method void setType(integer $Type) Set Type
+ * @method string getSCFRegion() Obtain target region
+ * @method void setSCFRegion(string $SCFRegion) Set target region
+ * @method string getNamespace() Obtain Namespace
+ * @method void setNamespace(string $Namespace) Set Namespace
+ * @method string getFunctionName() Obtain function name
+ * @method void setFunctionName(string $FunctionName) Set function name
+ * @method string getFunctionVersion() Obtain Function version
+ * @method void setFunctionVersion(string $FunctionVersion) Set Function version
+ * @method string getAlias() Obtain Alias
+ * @method void setAlias(string $Alias) Set Alias
  */
 class ModifyWebHookReceiverRequest extends AbstractModel
 {
@@ -52,10 +64,46 @@ class ModifyWebHookReceiverRequest extends AbstractModel
     public $IsModify;
 
     /**
+     * @var integer Type
+     */
+    public $Type;
+
+    /**
+     * @var string target region
+     */
+    public $SCFRegion;
+
+    /**
+     * @var string Namespace
+     */
+    public $Namespace;
+
+    /**
+     * @var string function name
+     */
+    public $FunctionName;
+
+    /**
+     * @var string Function version
+     */
+    public $FunctionVersion;
+
+    /**
+     * @var string Alias
+     */
+    public $Alias;
+
+    /**
      * @param integer $Id id
      * @param string $Name Receiver name
      * @param string $Addr webhook URL
      * @param boolean $IsModify Whether to modify
+     * @param integer $Type Type
+     * @param string $SCFRegion target region
+     * @param string $Namespace Namespace
+     * @param string $FunctionName function name
+     * @param string $FunctionVersion Function version
+     * @param string $Alias Alias
      */
     function __construct()
     {
@@ -84,6 +132,30 @@ class ModifyWebHookReceiverRequest extends AbstractModel
 
         if (array_key_exists("IsModify",$param) and $param["IsModify"] !== null) {
             $this->IsModify = $param["IsModify"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("SCFRegion",$param) and $param["SCFRegion"] !== null) {
+            $this->SCFRegion = $param["SCFRegion"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
+            $this->FunctionName = $param["FunctionName"];
+        }
+
+        if (array_key_exists("FunctionVersion",$param) and $param["FunctionVersion"] !== null) {
+            $this->FunctionVersion = $param["FunctionVersion"];
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
     }
 }

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPolicy() Obtain Execution policy.
 
--ONCE: one-time execution.
--RECURRENCE: execute periodically.
+- ONCE: one-time execution.
+- RECURRENCE: execute periodically.
  * @method void setPolicy(string $Policy) Set Execution policy.
 
--ONCE: one-time execution.
--RECURRENCE: execute periodically.
+- ONCE: one-time execution.
+- RECURRENCE: execute periodically.
  * @method string getRecurrence() Obtain Trigger the crontab expression. This field is required if `Policy` is `RECURRENCE`. The crontab expression is parsed in UTC+8.
  * @method void setRecurrence(string $Recurrence) Set Trigger the crontab expression. This field is required if `Policy` is `RECURRENCE`. The crontab expression is parsed in UTC+8.
  * @method string getInvokeTime() Obtain Next execution time of the executor. this field requires specifying when Policy is ONCE.
@@ -42,8 +42,8 @@ class ScheduleSettings extends AbstractModel
     /**
      * @var string Execution policy.
 
--ONCE: one-time execution.
--RECURRENCE: execute periodically.
+- ONCE: one-time execution.
+- RECURRENCE: execute periodically.
      */
     public $Policy;
 
@@ -62,8 +62,8 @@ The time format is YYYY-MM-DDThh:MM:ssZ.
     /**
      * @param string $Policy Execution policy.
 
--ONCE: one-time execution.
--RECURRENCE: execute periodically.
+- ONCE: one-time execution.
+- RECURRENCE: execute periodically.
      * @param string $Recurrence Trigger the crontab expression. This field is required if `Policy` is `RECURRENCE`. The crontab expression is parsed in UTC+8.
      * @param string $InvokeTime Next execution time of the executor. this field requires specifying when Policy is ONCE.
 

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Information of the component affected by the vulnerability
  *
  * @method string getName() Obtain Component name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Component name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVersion() Obtain Component version
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVersion(string $Version) Set Component version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFixedVersion() Obtain Fixed component version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFixedVersion(string $FixedVersion) Set Fixed component version
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFixedVersion() Obtain Component Repair Version
+ * @method void setFixedVersion(string $FixedVersion) Set Component Repair Version
  * @method string getPath() Obtain Component path
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPath(string $Path) Set Component path
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class VulAffectedImageComponentInfo extends AbstractModel
 {
     /**
      * @var string Component name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
      * @var string Component version
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Version;
 
     /**
-     * @var string Fixed component version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Component Repair Version
      */
     public $FixedVersion;
 
     /**
      * @var string Component path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Path;
 
     /**
      * @param string $Name Component name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Version Component version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FixedVersion Fixed component version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FixedVersion Component Repair Version
      * @param string $Path Component path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

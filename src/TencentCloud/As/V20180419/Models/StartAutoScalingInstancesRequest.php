@@ -27,11 +27,11 @@ use TencentCloud\Common\AbstractModel;
 <li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
 <li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
  * @method array getInstanceIds() Obtain Specifies the instance ID list of CVM to enable. you can obtain available instance ID in the following ways.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>.
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index)</li>
+<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>
  * @method void setInstanceIds(array $InstanceIds) Set Specifies the instance ID list of CVM to enable. you can obtain available instance ID in the following ways.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>.
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index)</li>
+<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>
  */
 class StartAutoScalingInstancesRequest extends AbstractModel
 {
@@ -44,8 +44,8 @@ class StartAutoScalingInstancesRequest extends AbstractModel
 
     /**
      * @var array Specifies the instance ID list of CVM to enable. you can obtain available instance ID in the following ways.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>.
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index)</li>
+<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>
      */
     public $InstanceIds;
 
@@ -54,8 +54,8 @@ class StartAutoScalingInstancesRequest extends AbstractModel
 <li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
 <li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
      * @param array $InstanceIds Specifies the instance ID list of CVM to enable. you can obtain available instance ID in the following ways.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>.
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index)</li>
+<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>
      */
     function __construct()
     {

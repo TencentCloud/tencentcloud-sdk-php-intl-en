@@ -68,14 +68,10 @@ use TencentCloud\Common\AbstractModel;
 `RESTORE_FAILED`: Recovery failed.
  * @method string getNetSubStatus() Obtain Sub-status of the network
  * @method void setNetSubStatus(string $NetSubStatus) Set Sub-status of the network
- * @method string getIsolateSource() Obtain Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsolateSource(string $IsolateSource) Set Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIsolateSource() Obtain Isolate source
+ * @method void setIsolateSource(string $IsolateSource) Set Isolate source
  * @method string getIsolateTime() Obtain Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsolateTime(string $IsolateTime) Set Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getNodeID() Obtain Super node ID
  * @method void setNodeID(string $NodeID) Set Super node ID
  * @method string getPodIP() Obtain Pod IP
@@ -90,10 +86,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setPodCpu(integer $PodCpu) Set Number of CPU cores used by the pod
  * @method integer getPodMem() Obtain Memory specification of the Pod
  * @method void setPodMem(integer $PodMem) Set Memory specification of the Pod
- * @method string getClusterName() Obtain Cluster Name
- * @method void setClusterName(string $ClusterName) Set Cluster Name
- * @method string getClusterID() Obtain Cluster ID
- * @method void setClusterID(string $ClusterID) Set Cluster ID
+ * @method string getClusterName() Obtain 
+ * @method void setClusterName(string $ClusterName) Set 
+ * @method string getClusterID() Obtain 
+ * @method void setClusterID(string $ClusterID) Set 
  * @method string getPodUid() Obtain pod uid
  * @method void setPodUid(string $PodUid) Set pod uid
  */
@@ -196,14 +192,12 @@ class ContainerInfo extends AbstractModel
     public $NetSubStatus;
 
     /**
-     * @var string Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Isolate source
      */
     public $IsolateSource;
 
     /**
      * @var string Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsolateTime;
 
@@ -243,12 +237,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PodMem;
 
     /**
-     * @var string Cluster Name
+     * @var string 
      */
     public $ClusterName;
 
     /**
-     * @var string Cluster ID
+     * @var string 
      */
     public $ClusterID;
 
@@ -282,10 +276,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
      * @param string $NetSubStatus Sub-status of the network
-     * @param string $IsolateSource Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IsolateSource Isolate source
      * @param string $IsolateTime Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $NodeID Super node ID
      * @param string $PodIP Pod IP
      * @param string $PodName Pod name
@@ -293,8 +285,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $NodeUniqueID UID of the super node
      * @param integer $PodCpu Number of CPU cores used by the pod
      * @param integer $PodMem Memory specification of the Pod
-     * @param string $ClusterName Cluster Name
-     * @param string $ClusterID Cluster ID
+     * @param string $ClusterName 
+     * @param string $ClusterID 
      * @param string $PodUid pod uid
      */
     function __construct()

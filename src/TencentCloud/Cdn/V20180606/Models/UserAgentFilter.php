@@ -28,10 +28,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 `on`: Enable
 `off`: Disable
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method array getFilterRules() Obtain UA blacklist/whitelist effect rule list
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setFilterRules(array $FilterRules) Set UA blacklist/whitelist effect rule list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getFilterRules() Obtain Effective rule list for UA blacklist and whitelist. must not exceed 10 rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFilterRules(array $FilterRules) Set Effective rule list for UA blacklist and whitelist. must not exceed 10 rules.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class UserAgentFilter extends AbstractModel
 {
@@ -44,8 +44,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Switch;
 
     /**
-     * @var array UA blacklist/whitelist effect rule list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Effective rule list for UA blacklist and whitelist. must not exceed 10 rules.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FilterRules;
 
@@ -54,8 +54,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `on`: Enable
 `off`: Disable
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param array $FilterRules UA blacklist/whitelist effect rule list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $FilterRules Effective rule list for UA blacklist and whitelist. must not exceed 10 rules.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -20,40 +20,60 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyKafkaRecharge request structure.
  *
- * @method string getId() Obtain Kafka data import configuration ID
- * @method void setId(string $Id) Set Kafka data import configuration ID
- * @method string getTopicId() Obtain Target topic ID
- * @method void setTopicId(string $TopicId) Set Target topic ID
+ * @method string getId() Obtain Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by searching the [Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+ * @method void setId(string $Id) Set Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by searching the [Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+ * @method string getTopicId() Obtain Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
  * @method string getName() Obtain Kafka data import configuration name
  * @method void setName(string $Name) Set Kafka data import configuration name
- * @method integer getKafkaType() Obtain Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
- * @method void setKafkaType(integer $KafkaType) Set Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
- * @method string getKafkaInstance() Obtain CKafka instance ID, which is required when `KafkaType` is set to `0`
- * @method void setKafkaInstance(string $KafkaInstance) Set CKafka instance ID, which is required when `KafkaType` is set to `0`
- * @method string getServerAddr() Obtain Service address
- * @method void setServerAddr(string $ServerAddr) Set Service address
- * @method boolean getIsEncryptionAddr() Obtain Whether the service address uses an encrypted connection
- * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) Set Whether the service address uses an encrypted connection
- * @method KafkaProtocolInfo getProtocol() Obtain Encryption access protocol, which is required when IsEncryptionAddr` is set to `true`
- * @method void setProtocol(KafkaProtocolInfo $Protocol) Set Encryption access protocol, which is required when IsEncryptionAddr` is set to `true`
- * @method string getUserKafkaTopics() Obtain List of Kafka topics to import data from. Separate multiple topics with commas (,).
- * @method void setUserKafkaTopics(string $UserKafkaTopics) Set List of Kafka topics to import data from. Separate multiple topics with commas (,).
+ * @method integer getKafkaType() Obtain Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
+ * @method void setKafkaType(integer $KafkaType) Set Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
+ * @method string getKafkaInstance() Obtain Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+ * @method void setKafkaInstance(string $KafkaInstance) Set Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+ * @method string getServerAddr() Obtain Service address, which is required when KafkaType is 1.
+ * @method void setServerAddr(string $ServerAddr) Set Service address, which is required when KafkaType is 1.
+ * @method boolean getIsEncryptionAddr() Obtain Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
+ * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) Set Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
+ * @method KafkaProtocolInfo getProtocol() Obtain Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
+ * @method void setProtocol(KafkaProtocolInfo $Protocol) Set Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
+ * @method string getUserKafkaTopics() Obtain List of Kafka-related topics to be imported by the user, separated by commas.
+
+-When Kafka Type is Tencent Cloud CKafka: Get TopicName by searching the topic list (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+ * @method void setUserKafkaTopics(string $UserKafkaTopics) Set List of Kafka-related topics to be imported by the user, separated by commas.
+
+-When Kafka Type is Tencent Cloud CKafka: Get TopicName by searching the topic list (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
  * @method string getConsumerGroupName() Obtain Kafka consumer group name
  * @method void setConsumerGroupName(string $ConsumerGroupName) Set Kafka consumer group name
  * @method LogRechargeRuleInfo getLogRechargeRule() Obtain Log import rule
  * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) Set Log import rule
- * @method integer getStatusControl() Obtain Import control. Valid values: 1 (suspend) and 2 (resume).
- * @method void setStatusControl(integer $StatusControl) Set Import control. Valid values: 1 (suspend) and 2 (resume).
+ * @method integer getStatusControl() Obtain Import control, 1: suspend; 2: start.
+ * @method void setStatusControl(integer $StatusControl) Set Import control, 1: suspend; 2: start.
+ * @method UserKafkaMeta getUserKafkaMeta() Obtain User kafka extended information
+ * @method void setUserKafkaMeta(UserKafkaMeta $UserKafkaMeta) Set User kafka extended information
  */
 class ModifyKafkaRechargeRequest extends AbstractModel
 {
     /**
-     * @var string Kafka data import configuration ID
+     * @var string Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by searching the [Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
      */
     public $Id;
 
     /**
-     * @var string Target topic ID
+     * @var string Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     public $TopicId;
 
@@ -63,32 +83,35 @@ class ModifyKafkaRechargeRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
+     * @var integer Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
      */
     public $KafkaType;
 
     /**
-     * @var string CKafka instance ID, which is required when `KafkaType` is set to `0`
+     * @var string Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public $KafkaInstance;
 
     /**
-     * @var string Service address
+     * @var string Service address, which is required when KafkaType is 1.
      */
     public $ServerAddr;
 
     /**
-     * @var boolean Whether the service address uses an encrypted connection
+     * @var boolean Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
      */
     public $IsEncryptionAddr;
 
     /**
-     * @var KafkaProtocolInfo Encryption access protocol, which is required when IsEncryptionAddr` is set to `true`
+     * @var KafkaProtocolInfo Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
      */
     public $Protocol;
 
     /**
-     * @var string List of Kafka topics to import data from. Separate multiple topics with commas (,).
+     * @var string List of Kafka-related topics to be imported by the user, separated by commas.
+
+-When Kafka Type is Tencent Cloud CKafka: Get TopicName by searching the topic list (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
      */
     public $UserKafkaTopics;
 
@@ -103,23 +126,36 @@ class ModifyKafkaRechargeRequest extends AbstractModel
     public $LogRechargeRule;
 
     /**
-     * @var integer Import control. Valid values: 1 (suspend) and 2 (resume).
+     * @var integer Import control, 1: suspend; 2: start.
      */
     public $StatusControl;
 
     /**
-     * @param string $Id Kafka data import configuration ID
-     * @param string $TopicId Target topic ID
+     * @var UserKafkaMeta User kafka extended information
+     */
+    public $UserKafkaMeta;
+
+    /**
+     * @param string $Id Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by searching the [Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+     * @param string $TopicId Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      * @param string $Name Kafka data import configuration name
-     * @param integer $KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
-     * @param string $KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
-     * @param string $ServerAddr Service address
-     * @param boolean $IsEncryptionAddr Whether the service address uses an encrypted connection
-     * @param KafkaProtocolInfo $Protocol Encryption access protocol, which is required when IsEncryptionAddr` is set to `true`
-     * @param string $UserKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
+     * @param integer $KafkaType Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
+     * @param string $KafkaInstance Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+     * @param string $ServerAddr Service address, which is required when KafkaType is 1.
+     * @param boolean $IsEncryptionAddr Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
+     * @param KafkaProtocolInfo $Protocol Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
+     * @param string $UserKafkaTopics List of Kafka-related topics to be imported by the user, separated by commas.
+
+-When Kafka Type is Tencent Cloud CKafka: Get TopicName by searching the topic list (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
      * @param string $ConsumerGroupName Kafka consumer group name
      * @param LogRechargeRuleInfo $LogRechargeRule Log import rule
-     * @param integer $StatusControl Import control. Valid values: 1 (suspend) and 2 (resume).
+     * @param integer $StatusControl Import control, 1: suspend; 2: start.
+     * @param UserKafkaMeta $UserKafkaMeta User kafka extended information
      */
     function __construct()
     {
@@ -182,6 +218,11 @@ class ModifyKafkaRechargeRequest extends AbstractModel
 
         if (array_key_exists("StatusControl",$param) and $param["StatusControl"] !== null) {
             $this->StatusControl = $param["StatusControl"];
+        }
+
+        if (array_key_exists("UserKafkaMeta",$param) and $param["UserKafkaMeta"] !== null) {
+            $this->UserKafkaMeta = new UserKafkaMeta();
+            $this->UserKafkaMeta->deserialize($param["UserKafkaMeta"]);
         }
     }
 }

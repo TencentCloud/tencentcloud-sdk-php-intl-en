@@ -34,8 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeoutPeriod(integer $TimeoutPeriod) Set Scan duration, in seconds. Default duration: 3,600 second.
  * @method array getVulIds() Obtain IDs of vulnerabilities to be scanned
  * @method void setVulIds(array $VulIds) Set IDs of vulnerabilities to be scanned
- * @method integer getScanMethod() Obtain 0 version comparison, 2 version comparison + poc
- * @method void setScanMethod(integer $ScanMethod) Set 0 version comparison, 2 version comparison + poc
+ * @method integer getScanMethod() Obtain 0: version comparison, 2: version comparison + POC.
+ * @method void setScanMethod(integer $ScanMethod) Set 0: version comparison, 2: version comparison + POC.
+ * @method array getKBNumber() Obtain kb No.
+ * @method void setKBNumber(array $KBNumber) Set kb No.
  */
 class ScanVulRequest extends AbstractModel
 {
@@ -75,9 +77,14 @@ class ScanVulRequest extends AbstractModel
     public $VulIds;
 
     /**
-     * @var integer 0 version comparison, 2 version comparison + poc
+     * @var integer 0: version comparison, 2: version comparison + POC.
      */
     public $ScanMethod;
+
+    /**
+     * @var array kb No.
+     */
+    public $KBNumber;
 
     /**
      * @param string $VulLevels Whether to count only critical vulnerabilities. 1: only critical vulnerabilities; 0: all vulnerabilities.
@@ -87,7 +94,8 @@ class ScanVulRequest extends AbstractModel
      * @param integer $VulEmergency Whether it is an emergency vulnerability. 0: no; 1: yes.
      * @param integer $TimeoutPeriod Scan duration, in seconds. Default duration: 3,600 second.
      * @param array $VulIds IDs of vulnerabilities to be scanned
-     * @param integer $ScanMethod 0 version comparison, 2 version comparison + poc
+     * @param integer $ScanMethod 0: version comparison, 2: version comparison + POC.
+     * @param array $KBNumber kb No.
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ScanVulRequest extends AbstractModel
 
         if (array_key_exists("ScanMethod",$param) and $param["ScanMethod"] !== null) {
             $this->ScanMethod = $param["ScanMethod"];
+        }
+
+        if (array_key_exists("KBNumber",$param) and $param["KBNumber"] !== null) {
+            $this->KBNumber = $param["KBNumber"];
         }
     }
 }

@@ -61,13 +61,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTags() Obtain Tag Features
  * @method void setTags(array $Tags) Set Tag Features
  * @method string getMachineWanIp() Obtain Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineWanIp(string $MachineWanIp) Set Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMachineStatus() Obtain Host online status. OFFLINE: offline; ONLINE: online; UNKNOWN: unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineStatus(string $MachineStatus) Set Host online status. OFFLINE: offline; ONLINE: online; UNKNOWN: unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMachineStatus() Obtain Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
+ * @method void setMachineStatus(string $MachineStatus) Set Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
  */
 class RiskDnsList extends AbstractModel
 {
@@ -173,13 +169,11 @@ class RiskDnsList extends AbstractModel
 
     /**
      * @var string Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineWanIp;
 
     /**
-     * @var string Host online status. OFFLINE: offline; ONLINE: online; UNKNOWN: unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
      */
     public $MachineStatus;
 
@@ -205,9 +199,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SuggestScheme Recommended solution
      * @param array $Tags Tag Features
      * @param string $MachineWanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MachineStatus Host online status. OFFLINE: offline; ONLINE: online; UNKNOWN: unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MachineStatus Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
      */
     function __construct()
     {

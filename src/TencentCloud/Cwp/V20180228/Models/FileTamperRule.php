@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFileAction(string $FileAction) Set Monitoring behavior
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getArgs() Obtain Command line parameter not filled
+ * @method void setArgs(string $Args) Set Command line parameter not filled
  */
 class FileTamperRule extends AbstractModel
 {
@@ -59,9 +59,13 @@ class FileTamperRule extends AbstractModel
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FileAction;
+
+    /**
+     * @var string Command line parameter not filled
+     */
+    public $Args;
 
     /**
      * @param string $ProcessPath Process path
@@ -71,7 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Args Command line parameter not filled
      */
     function __construct()
     {
@@ -100,6 +104,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("FileAction",$param) and $param["FileAction"] !== null) {
             $this->FileAction = $param["FileAction"];
+        }
+
+        if (array_key_exists("Args",$param) and $param["Args"] !== null) {
+            $this->Args = $param["Args"];
         }
     }
 }

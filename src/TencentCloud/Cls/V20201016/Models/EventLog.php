@@ -20,46 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Windows event log collection configuration
  *
- * @method string getEventChannel() Obtain Event channel, supports Application, Security, Setup, System, ALL
+ * @method string getEventChannel() Obtain Event channel, support
+-Application log
+-Security log
+-Startup log
+-System log
+-ALL logs
 
- * @method void setEventChannel(string $EventChannel) Set Event channel, supports Application, Security, Setup, System, ALL
+ * @method void setEventChannel(string $EventChannel) Set Event channel, support
+-Application log
+-Security log
+-Startup log
+-System log
+-ALL logs
 
- * @method integer getTimeType() Obtain Time type, 1: User-defined, 2: Current time
- * @method void setTimeType(integer $TimeType) Set Time type, 1: User-defined, 2: Current time
- * @method integer getTimestamp() Obtain Time, when choosing custom time type, a specific time is required
- * @method void setTimestamp(integer $Timestamp) Set Time, when choosing custom time type, a specific time is required
+ * @method integer getTimeType() Obtain Supported types of the time field (Timestamp)
+-1 (User-customized time)
+-2 (current time)
+ * @method void setTimeType(integer $TimeType) Set Supported types of the time field (Timestamp)
+-1 (User-customized time)
+-2 (current time)
+ * @method integer getTimestamp() Obtain Time, when users choose custom time type, specify the time in seconds
+Format: timestamp, 1754897446
+ * @method void setTimestamp(integer $Timestamp) Set Time, when users choose custom time type, specify the time in seconds
+Format: timestamp, 1754897446
  * @method array getEventIDs() Obtain Event ID filter list
+	
+Optional. Being empty indicates no filtering is applied.
+Support forward filtering for a single value (for example: 20) or a range (for example: 0-20), also support reverse filtering for a single value (for example: -20).
+Multiple filter items can be separated by commas, for example: 1-200,-100 means collect event logs within the range of 1-200 except 100.
  * @method void setEventIDs(array $EventIDs) Set Event ID filter list
+	
+Optional. Being empty indicates no filtering is applied.
+Support forward filtering for a single value (for example: 20) or a range (for example: 0-20), also support reverse filtering for a single value (for example: -20).
+Multiple filter items can be separated by commas, for example: 1-200,-100 means collect event logs within the range of 1-200 except 100.
  */
 class EventLog extends AbstractModel
 {
     /**
-     * @var string Event channel, supports Application, Security, Setup, System, ALL
+     * @var string Event channel, support
+-Application log
+-Security log
+-Startup log
+-System log
+-ALL logs
 
      */
     public $EventChannel;
 
     /**
-     * @var integer Time type, 1: User-defined, 2: Current time
+     * @var integer Supported types of the time field (Timestamp)
+-1 (User-customized time)
+-2 (current time)
      */
     public $TimeType;
 
     /**
-     * @var integer Time, when choosing custom time type, a specific time is required
+     * @var integer Time, when users choose custom time type, specify the time in seconds
+Format: timestamp, 1754897446
      */
     public $Timestamp;
 
     /**
      * @var array Event ID filter list
+	
+Optional. Being empty indicates no filtering is applied.
+Support forward filtering for a single value (for example: 20) or a range (for example: 0-20), also support reverse filtering for a single value (for example: -20).
+Multiple filter items can be separated by commas, for example: 1-200,-100 means collect event logs within the range of 1-200 except 100.
      */
     public $EventIDs;
 
     /**
-     * @param string $EventChannel Event channel, supports Application, Security, Setup, System, ALL
+     * @param string $EventChannel Event channel, support
+-Application log
+-Security log
+-Startup log
+-System log
+-ALL logs
 
-     * @param integer $TimeType Time type, 1: User-defined, 2: Current time
-     * @param integer $Timestamp Time, when choosing custom time type, a specific time is required
+     * @param integer $TimeType Supported types of the time field (Timestamp)
+-1 (User-customized time)
+-2 (current time)
+     * @param integer $Timestamp Time, when users choose custom time type, specify the time in seconds
+Format: timestamp, 1754897446
      * @param array $EventIDs Event ID filter list
+	
+Optional. Being empty indicates no filtering is applied.
+Support forward filtering for a single value (for example: 20) or a range (for example: 0-20), also support reverse filtering for a single value (for example: -20).
+Multiple filter items can be separated by commas, for example: 1-200,-100 means collect event logs within the range of 1-200 except 100.
      */
     function __construct()
     {

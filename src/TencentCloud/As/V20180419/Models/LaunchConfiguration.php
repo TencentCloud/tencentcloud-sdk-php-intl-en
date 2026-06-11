@@ -76,8 +76,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setVersionNumber(integer $VersionNumber) Set Version
  * @method string getUpdatedTime() Obtain Last update time is in standard UTC time.
  * @method void setUpdatedTime(string $UpdatedTime) Set Last update time is in standard UTC time.
- * @method string getCamRoleName() Obtain Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
- * @method void setCamRoleName(string $CamRoleName) Set Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+ * @method string getCamRoleName() Obtain Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+ * @method void setCamRoleName(string $CamRoleName) Set Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
  * @method string getLastOperationInstanceTypesCheckPolicy() Obtain Value of InstanceTypesCheckPolicy upon the last operation.
  * @method void setLastOperationInstanceTypesCheckPolicy(string $LastOperationInstanceTypesCheckPolicy) Set Value of InstanceTypesCheckPolicy upon the last operation.
  * @method HostNameSettings getHostNameSettings() Obtain CVM hostname settings.
@@ -220,7 +220,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UpdatedTime;
 
     /**
-     * @var string Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+     * @var string Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
      */
     public $CamRoleName;
 
@@ -304,7 +304,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $Tags Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
      * @param integer $VersionNumber Version
      * @param string $UpdatedTime Last update time is in standard UTC time.
-     * @param string $CamRoleName Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+     * @param string $CamRoleName Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
      * @param string $LastOperationInstanceTypesCheckPolicy Value of InstanceTypesCheckPolicy upon the last operation.
      * @param HostNameSettings $HostNameSettings CVM hostname settings.
      * @param InstanceNameSettings $InstanceNameSettings Settings of CVM instance names

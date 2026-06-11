@@ -43,21 +43,16 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUuid() Obtain Host UUID
  * @method void setUuid(string $Uuid) Set Host UUID
  * @method string getUpdateTime() Obtain Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFirstTime() Obtain First collection time
  * @method void setFirstTime(string $FirstTime) Set First collection time
  * @method integer getIsNew() Obtain Whether new [0: no|1: yes]
  * @method void setIsNew(integer $IsNew) Set Whether new [0: no|1: yes]
  * @method string getMachineWanIp() Obtain Server Public IP
  * @method void setMachineWanIp(string $MachineWanIp) Set Server Public IP
- * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
+ * @method MachineExtraInfo getMachineExtraInfo() Obtain  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set  Additional information
  */
 class AssetEnvBaseInfo extends AbstractModel
 {
@@ -110,7 +105,6 @@ class AssetEnvBaseInfo extends AbstractModel
 
     /**
      * @var string Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -130,9 +124,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MachineWanIp;
 
     /**
-     * @var MachineExtraInfo Additional information
+     * @var MachineExtraInfo  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -149,13 +142,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Quuid Host QUUID
      * @param string $Uuid Host UUID
      * @param string $UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FirstTime First collection time
      * @param integer $IsNew Whether new [0: no|1: yes]
      * @param string $MachineWanIp Server Public IP
-     * @param MachineExtraInfo $MachineExtraInfo Additional information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MachineExtraInfo $MachineExtraInfo  Additional information
      */
     function __construct()
     {

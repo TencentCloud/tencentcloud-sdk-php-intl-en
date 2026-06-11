@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) Set Status!=0 indicates the completion time.
  * @method RegionInfo getRegionInfo() Obtain Availability zone information
  * @method void setRegionInfo(RegionInfo $RegionInfo) Set Availability zone information
+ * @method string getInstanceId() Obtain Host example ID
+ * @method void setInstanceId(string $InstanceId) Set Host example ID
+ * @method string getMachineType() Obtain Host type
+ * @method void setMachineType(string $MachineType) Set Host type
  */
 class RansomDefenseRollbackTask extends AbstractModel
 {
@@ -94,6 +98,16 @@ class RansomDefenseRollbackTask extends AbstractModel
     public $RegionInfo;
 
     /**
+     * @var string Host example ID
+     */
+    public $InstanceId;
+
+    /**
+     * @var string Host type
+     */
+    public $MachineType;
+
+    /**
      * @param integer $Id Task ID
      * @param string $Uuid Host UUID
      * @param string $Quuid Host QUUID
@@ -104,6 +118,8 @@ class RansomDefenseRollbackTask extends AbstractModel
      * @param string $BackupTime Snapshot time
      * @param string $ModifyTime Status!=0 indicates the completion time.
      * @param RegionInfo $RegionInfo Availability zone information
+     * @param string $InstanceId Host example ID
+     * @param string $MachineType Host type
      */
     function __construct()
     {
@@ -157,6 +173,14 @@ class RansomDefenseRollbackTask extends AbstractModel
         if (array_key_exists("RegionInfo",$param) and $param["RegionInfo"] !== null) {
             $this->RegionInfo = new RegionInfo();
             $this->RegionInfo->deserialize($param["RegionInfo"]);
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

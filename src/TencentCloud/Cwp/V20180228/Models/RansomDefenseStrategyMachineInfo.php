@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUuid() Obtain Host UUID
  * @method void setUuid(string $Uuid) Set Host UUID
  * @method string getDiskInfo() Obtain Specified Hard Disk List. When it is empty, it means all hard disks: disk_id1|disk_name1;disk_id2|disk_name2.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDiskInfo(string $DiskInfo) Set Specified Hard Disk List. When it is empty, it means all hard disks: disk_id1|disk_name1;disk_id2|disk_name2.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RansomDefenseStrategyMachineInfo extends AbstractModel
 {
@@ -36,14 +34,12 @@ class RansomDefenseStrategyMachineInfo extends AbstractModel
 
     /**
      * @var string Specified Hard Disk List. When it is empty, it means all hard disks: disk_id1|disk_name1;disk_id2|disk_name2.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DiskInfo;
 
     /**
      * @param string $Uuid Host UUID
      * @param string $DiskInfo Specified Hard Disk List. When it is empty, it means all hard disks: disk_id1|disk_name1;disk_id2|disk_name2.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

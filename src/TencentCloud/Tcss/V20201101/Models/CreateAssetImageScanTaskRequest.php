@@ -20,67 +20,107 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAssetImageScanTask request structure.
  *
- * @method boolean getAll() Obtain Whether to scan all images.
- * @method void setAll(boolean $All) Set Whether to scan all images.
- * @method array getImages() Obtain List of images to be scanned.
- * @method void setImages(array $Images) Set List of images to be scanned.
- * @method boolean getScanVul() Obtain Scan for vulnerabilities.
- * @method void setScanVul(boolean $ScanVul) Set Scan for vulnerabilities.
- * @method boolean getScanVirus() Obtain Scan for trojans.
- * @method void setScanVirus(boolean $ScanVirus) Set Scan for trojans.
- * @method boolean getScanRisk() Obtain Scan for risks.
- * @method void setScanRisk(boolean $ScanRisk) Set Scan for risks.
- * @method array getFilters() Obtain Filter
- * @method void setFilters(array $Filters) Set Filter
- * @method array getExcludeImageIds() Obtain Specified image IDs to be excluded
- * @method void setExcludeImageIds(array $ExcludeImageIds) Set Specified image IDs to be excluded
+ * @method boolean getAll() Obtain <p>Whether to scan all images; select one from all images, image list, and filter by condition.</p>
+ * @method void setAll(boolean $All) Set <p>Whether to scan all images; select one from all images, image list, and filter by condition.</p>
+ * @method array getImages() Obtain <p>List of images to scan; choose one from all images, image list, and filter by condition.</p>
+ * @method void setImages(array $Images) Set <p>List of images to scan; choose one from all images, image list, and filter by condition.</p>
+ * @method boolean getScanVul() Obtain <p>Scan vulnerabilities; select one from vulnerability, Trojan, and risk.</p>
+ * @method void setScanVul(boolean $ScanVul) Set <p>Scan vulnerabilities; select one from vulnerability, Trojan, and risk.</p>
+ * @method boolean getScanVirus() Obtain <p>Scan for trojans; select either vulnerability, Trojan or risk.</p>
+ * @method void setScanVirus(boolean $ScanVirus) Set <p>Scan for trojans; select either vulnerability, Trojan or risk.</p>
+ * @method boolean getScanRisk() Obtain <p>Scan risk; select one from vulnerability, Trojan, and risk.</p>
+ * @method void setScanRisk(boolean $ScanRisk) Set <p>Scan risk; select one from vulnerability, Trojan, and risk.</p>
+ * @method array getFilters() Obtain <p>Filter images by conditions; select one from all images, image list, and filter by condition.</p>
+ * @method void setFilters(array $Filters) Set <p>Filter images by conditions; select one from all images, image list, and filter by condition.</p>
+ * @method array getExcludeImageIds() Obtain <p>Filter images by conditions and exclude individual images</p>
+ * @method void setExcludeImageIds(array $ExcludeImageIds) Set <p>Filter images by conditions and exclude individual images</p>
+ * @method boolean getContainerRunning() Obtain <p>Whether the image has running containers</p>
+ * @method void setContainerRunning(boolean $ContainerRunning) Set <p>Whether the image has running containers</p>
+ * @method integer getScanScope() Obtain <p>Scan range 0 all authorized images, 1 selected images, 2 recommended scan, 3 cluster scan</p><p>Value ranges from 0 to 3</p><p>Default value: 0</p>
+ * @method void setScanScope(integer $ScanScope) Set <p>Scan range 0 all authorized images, 1 selected images, 2 recommended scan, 3 cluster scan</p><p>Value ranges from 0 to 3</p><p>Default value: 0</p>
+ * @method integer getTimeout() Obtain <p>Task timeout duration unit seconds, default 1 hour.</p>
+ * @method void setTimeout(integer $Timeout) Set <p>Task timeout duration unit seconds, default 1 hour.</p>
+ * @method boolean getIsOneClickScanningTask() Obtain <p>One-click scan task. Default false indicates non-one-click scan, true one-click scan.</p>
+ * @method void setIsOneClickScanningTask(boolean $IsOneClickScanningTask) Set <p>One-click scan task. Default false indicates non-one-click scan, true one-click scan.</p>
+ * @method array getClusterIDs() Obtain <p>Cluster ID.</p>
+ * @method void setClusterIDs(array $ClusterIDs) Set <p>Cluster ID.</p>
  */
 class CreateAssetImageScanTaskRequest extends AbstractModel
 {
     /**
-     * @var boolean Whether to scan all images.
+     * @var boolean <p>Whether to scan all images; select one from all images, image list, and filter by condition.</p>
      * @deprecated
      */
     public $All;
 
     /**
-     * @var array List of images to be scanned.
+     * @var array <p>List of images to scan; choose one from all images, image list, and filter by condition.</p>
      */
     public $Images;
 
     /**
-     * @var boolean Scan for vulnerabilities.
+     * @var boolean <p>Scan vulnerabilities; select one from vulnerability, Trojan, and risk.</p>
      */
     public $ScanVul;
 
     /**
-     * @var boolean Scan for trojans.
+     * @var boolean <p>Scan for trojans; select either vulnerability, Trojan or risk.</p>
      */
     public $ScanVirus;
 
     /**
-     * @var boolean Scan for risks.
+     * @var boolean <p>Scan risk; select one from vulnerability, Trojan, and risk.</p>
      */
     public $ScanRisk;
 
     /**
-     * @var array Filter
+     * @var array <p>Filter images by conditions; select one from all images, image list, and filter by condition.</p>
      */
     public $Filters;
 
     /**
-     * @var array Specified image IDs to be excluded
+     * @var array <p>Filter images by conditions and exclude individual images</p>
      */
     public $ExcludeImageIds;
 
     /**
-     * @param boolean $All Whether to scan all images.
-     * @param array $Images List of images to be scanned.
-     * @param boolean $ScanVul Scan for vulnerabilities.
-     * @param boolean $ScanVirus Scan for trojans.
-     * @param boolean $ScanRisk Scan for risks.
-     * @param array $Filters Filter
-     * @param array $ExcludeImageIds Specified image IDs to be excluded
+     * @var boolean <p>Whether the image has running containers</p>
+     */
+    public $ContainerRunning;
+
+    /**
+     * @var integer <p>Scan range 0 all authorized images, 1 selected images, 2 recommended scan, 3 cluster scan</p><p>Value ranges from 0 to 3</p><p>Default value: 0</p>
+     */
+    public $ScanScope;
+
+    /**
+     * @var integer <p>Task timeout duration unit seconds, default 1 hour.</p>
+     */
+    public $Timeout;
+
+    /**
+     * @var boolean <p>One-click scan task. Default false indicates non-one-click scan, true one-click scan.</p>
+     */
+    public $IsOneClickScanningTask;
+
+    /**
+     * @var array <p>Cluster ID.</p>
+     */
+    public $ClusterIDs;
+
+    /**
+     * @param boolean $All <p>Whether to scan all images; select one from all images, image list, and filter by condition.</p>
+     * @param array $Images <p>List of images to scan; choose one from all images, image list, and filter by condition.</p>
+     * @param boolean $ScanVul <p>Scan vulnerabilities; select one from vulnerability, Trojan, and risk.</p>
+     * @param boolean $ScanVirus <p>Scan for trojans; select either vulnerability, Trojan or risk.</p>
+     * @param boolean $ScanRisk <p>Scan risk; select one from vulnerability, Trojan, and risk.</p>
+     * @param array $Filters <p>Filter images by conditions; select one from all images, image list, and filter by condition.</p>
+     * @param array $ExcludeImageIds <p>Filter images by conditions and exclude individual images</p>
+     * @param boolean $ContainerRunning <p>Whether the image has running containers</p>
+     * @param integer $ScanScope <p>Scan range 0 all authorized images, 1 selected images, 2 recommended scan, 3 cluster scan</p><p>Value ranges from 0 to 3</p><p>Default value: 0</p>
+     * @param integer $Timeout <p>Task timeout duration unit seconds, default 1 hour.</p>
+     * @param boolean $IsOneClickScanningTask <p>One-click scan task. Default false indicates non-one-click scan, true one-click scan.</p>
+     * @param array $ClusterIDs <p>Cluster ID.</p>
      */
     function __construct()
     {
@@ -126,6 +166,26 @@ class CreateAssetImageScanTaskRequest extends AbstractModel
 
         if (array_key_exists("ExcludeImageIds",$param) and $param["ExcludeImageIds"] !== null) {
             $this->ExcludeImageIds = $param["ExcludeImageIds"];
+        }
+
+        if (array_key_exists("ContainerRunning",$param) and $param["ContainerRunning"] !== null) {
+            $this->ContainerRunning = $param["ContainerRunning"];
+        }
+
+        if (array_key_exists("ScanScope",$param) and $param["ScanScope"] !== null) {
+            $this->ScanScope = $param["ScanScope"];
+        }
+
+        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
+            $this->Timeout = $param["Timeout"];
+        }
+
+        if (array_key_exists("IsOneClickScanningTask",$param) and $param["IsOneClickScanningTask"] !== null) {
+            $this->IsOneClickScanningTask = $param["IsOneClickScanningTask"];
+        }
+
+        if (array_key_exists("ClusterIDs",$param) and $param["ClusterIDs"] !== null) {
+            $this->ClusterIDs = $param["ClusterIDs"];
         }
     }
 }

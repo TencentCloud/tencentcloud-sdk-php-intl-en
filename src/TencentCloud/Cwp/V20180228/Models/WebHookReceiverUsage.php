@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Usage information on associated policies of the alarm recipient
  *
- * @method integer getReceiverId() Obtain Recipient ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReceiverId(integer $ReceiverId) Set Recipient ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getReceiverName() Obtain Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReceiverName(string $ReceiverName) Set Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getReceiverId() Obtain Recipient ID.
+ * @method void setReceiverId(integer $ReceiverId) Set Recipient ID.
+ * @method string getReceiverName() Obtain Receiver name
+ * @method void setReceiverName(string $ReceiverName) Set Receiver name
  * @method string getPolicyName() Obtain Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPolicyName(string $PolicyName) Set Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class WebHookReceiverUsage extends AbstractModel
 {
     /**
-     * @var integer Recipient ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Recipient ID.
      */
     public $ReceiverId;
 
     /**
-     * @var string Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Receiver name
      */
     public $ReceiverName;
 
     /**
      * @var string Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PolicyName;
 
     /**
-     * @param integer $ReceiverId Recipient ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ReceiverName Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ReceiverId Recipient ID.
+     * @param string $ReceiverName Receiver name
      * @param string $PolicyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

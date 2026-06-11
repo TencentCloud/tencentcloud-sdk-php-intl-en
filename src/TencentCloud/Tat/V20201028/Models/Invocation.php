@@ -28,26 +28,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommandName(string $CommandName) Set Name of the executed command.
  * @method string getInvocationStatus() Obtain Execution task status. valid values:.
 
--PENDING: waiting for distribution.
-- RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- PENDING: waiting for distribution.
+- RUNNING: command is running.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
  * @method void setInvocationStatus(string $InvocationStatus) Set Execution task status. valid values:.
 
--PENDING: waiting for distribution.
-- RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- PENDING: waiting for distribution.
+- RUNNING: command is running.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
  * @method array getInvocationTaskBasicInfoSet() Obtain Execution task information list.
  * @method void setInvocationTaskBasicInfoSet(array $InvocationTaskBasicInfoSet) Set Execution task information list.
  * @method string getDescription() Obtain Execution activity description.
@@ -72,12 +72,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setUsername(string $Username) Set The user who executes the command on the instance.
  * @method string getInvocationSource() Obtain Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
  * @method void setInvocationSource(string $InvocationSource) Set Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
  * @method string getCommandContent() Obtain Base64-encoded command
  * @method void setCommandContent(string $CommandContent) Set Base64-encoded command
  * @method string getCommandType() Obtain Command type
@@ -111,15 +111,15 @@ class Invocation extends AbstractModel
     /**
      * @var string Execution task status. valid values:.
 
--PENDING: waiting for distribution.
-- RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- PENDING: waiting for distribution.
+- RUNNING: command is running.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
      */
     public $InvocationStatus;
 
@@ -177,8 +177,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @var string Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
      */
     public $InvocationSource;
 
@@ -218,15 +218,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CommandName Name of the executed command.
      * @param string $InvocationStatus Execution task status. valid values:.
 
--PENDING: waiting for distribution.
-- RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- PENDING: waiting for distribution.
+- RUNNING: command is running.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
      * @param array $InvocationTaskBasicInfoSet Execution task information list.
      * @param string $Description Execution activity description.
      * @param string $StartTime Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ.
@@ -240,8 +240,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Username The user who executes the command on the instance.
      * @param string $InvocationSource Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
      * @param string $CommandContent Base64-encoded command
      * @param string $CommandType Command type
      * @param integer $Timeout Command timeout period, in seconds.

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAlarmNotice request structure.
  *
- * @method string getAlarmNoticeId() Obtain Notification group ID
- * @method void setAlarmNoticeId(string $AlarmNoticeId) Set Notification group ID
+ * @method string getAlarmNoticeId() Obtain Notification channel group ID. Obtain the notification channel group ID by searching the notification channel group list (https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
+ * @method void setAlarmNoticeId(string $AlarmNoticeId) Set Notification channel group ID. Obtain the notification channel group ID by searching the notification channel group list (https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
  */
 class DeleteAlarmNoticeRequest extends AbstractModel
 {
     /**
-     * @var string Notification group ID
+     * @var string Notification channel group ID. Obtain the notification channel group ID by searching the notification channel group list (https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
      */
     public $AlarmNoticeId;
 
     /**
-     * @param string $AlarmNoticeId Notification group ID
+     * @param string $AlarmNoticeId Notification channel group ID. Obtain the notification channel group ID by searching the notification channel group list (https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
      */
     function __construct()
     {

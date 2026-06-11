@@ -20,106 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Items in the list of K8sApi abnormal request trends
  *
- * @method string getDate() Obtain Date
- * @method void setDate(string $Date) Set Date
- * @method integer getExceptionUARequestCount() Obtain The number of abnormal UA request events
- * @method void setExceptionUARequestCount(integer $ExceptionUARequestCount) Set The number of abnormal UA request events
- * @method integer getAnonymousUserRightCount() Obtain The number of anonymous user permission events
- * @method void setAnonymousUserRightCount(integer $AnonymousUserRightCount) Set The number of anonymous user permission events
- * @method integer getCredentialInformationObtainCount() Obtain The number of credential information acquisition events
- * @method void setCredentialInformationObtainCount(integer $CredentialInformationObtainCount) Set The number of credential information acquisition events
- * @method integer getSensitiveDataMountCount() Obtain The number of sensitive data mounting events
- * @method void setSensitiveDataMountCount(integer $SensitiveDataMountCount) Set The number of sensitive data mounting events
- * @method integer getCmdExecCount() Obtain The number of command execution events
- * @method void setCmdExecCount(integer $CmdExecCount) Set The number of command execution events
- * @method integer getAbnormalScheduledTaskCount() Obtain The number of abnormal scheduled task events
- * @method void setAbnormalScheduledTaskCount(integer $AbnormalScheduledTaskCount) Set The number of abnormal scheduled task events
- * @method integer getStaticsPodCreateCount() Obtain The number of static pods created
- * @method void setStaticsPodCreateCount(integer $StaticsPodCreateCount) Set The number of static pods created
- * @method integer getDoubtfulContainerCreateCount() Obtain The number of suspicious containers created
- * @method void setDoubtfulContainerCreateCount(integer $DoubtfulContainerCreateCount) Set The number of suspicious containers created
- * @method integer getUserDefinedRuleCount() Obtain The number of custom rule events
- * @method void setUserDefinedRuleCount(integer $UserDefinedRuleCount) Set The number of custom rule events
- * @method integer getAnonymousAccessCount() Obtain The number of anonymous access events
- * @method void setAnonymousAccessCount(integer $AnonymousAccessCount) Set The number of anonymous access events
- * @method integer getPrivilegeContainerCount() Obtain The number of privilege container events
- * @method void setPrivilegeContainerCount(integer $PrivilegeContainerCount) Set The number of privilege container events
+ * @method string getDate() Obtain <p>Date</p>
+ * @method void setDate(string $Date) Set <p>Date</p>
+ * @method integer getExceptionUARequestCount() Obtain <p>Number of abnormal UA request events.</p>
+ * @method void setExceptionUARequestCount(integer $ExceptionUARequestCount) Set <p>Number of abnormal UA request events.</p>
+ * @method integer getAnonymousUserRightCount() Obtain <p>Number of anonymous user permission events.</p>
+ * @method void setAnonymousUserRightCount(integer $AnonymousUserRightCount) Set <p>Number of anonymous user permission events.</p>
+ * @method integer getCredentialInformationObtainCount() Obtain <p>Number of credential information acquisition events.</p>
+ * @method void setCredentialInformationObtainCount(integer $CredentialInformationObtainCount) Set <p>Number of credential information acquisition events.</p>
+ * @method integer getSensitiveDataMountCount() Obtain <p>Number of sensitive data mount events.</p>
+ * @method void setSensitiveDataMountCount(integer $SensitiveDataMountCount) Set <p>Number of sensitive data mount events.</p>
+ * @method integer getCmdExecCount() Obtain <p>Number of command execution events.</p>
+ * @method void setCmdExecCount(integer $CmdExecCount) Set <p>Number of command execution events.</p>
+ * @method integer getAbnormalScheduledTaskCount() Obtain <p>Number of abnormal scheduled task events.</p>
+ * @method void setAbnormalScheduledTaskCount(integer $AbnormalScheduledTaskCount) Set <p>Number of abnormal scheduled task events.</p>
+ * @method integer getStaticsPodCreateCount() Obtain <p>Number of static Pod creations.</p>
+ * @method void setStaticsPodCreateCount(integer $StaticsPodCreateCount) Set <p>Number of static Pod creations.</p>
+ * @method integer getDoubtfulContainerCreateCount() Obtain <p>Number of suspicious container creations.</p>
+ * @method void setDoubtfulContainerCreateCount(integer $DoubtfulContainerCreateCount) Set <p>Number of suspicious container creations.</p>
+ * @method integer getUserDefinedRuleCount() Obtain <p>Number of custom rule events.</p>
+ * @method void setUserDefinedRuleCount(integer $UserDefinedRuleCount) Set <p>Number of custom rule events.</p>
+ * @method integer getAnonymousAccessCount() Obtain <p>Number of anonymous access events.</p>
+ * @method void setAnonymousAccessCount(integer $AnonymousAccessCount) Set <p>Number of anonymous access events.</p>
+ * @method integer getPrivilegeContainerCount() Obtain <p>Number of privileged container events.</p>
+ * @method void setPrivilegeContainerCount(integer $PrivilegeContainerCount) Set <p>Number of privileged container events.</p>
+ * @method array getRuleTypeCountSet() Obtain <p>Number of alarms corresponding to the rule type.</p>
+ * @method void setRuleTypeCountSet(array $RuleTypeCountSet) Set <p>Number of alarms corresponding to the rule type.</p>
  */
 class K8sApiAbnormalTendencyItem extends AbstractModel
 {
     /**
-     * @var string Date
+     * @var string <p>Date</p>
      */
     public $Date;
 
     /**
-     * @var integer The number of abnormal UA request events
+     * @var integer <p>Number of abnormal UA request events.</p>
      */
     public $ExceptionUARequestCount;
 
     /**
-     * @var integer The number of anonymous user permission events
+     * @var integer <p>Number of anonymous user permission events.</p>
      */
     public $AnonymousUserRightCount;
 
     /**
-     * @var integer The number of credential information acquisition events
+     * @var integer <p>Number of credential information acquisition events.</p>
      */
     public $CredentialInformationObtainCount;
 
     /**
-     * @var integer The number of sensitive data mounting events
+     * @var integer <p>Number of sensitive data mount events.</p>
      */
     public $SensitiveDataMountCount;
 
     /**
-     * @var integer The number of command execution events
+     * @var integer <p>Number of command execution events.</p>
      */
     public $CmdExecCount;
 
     /**
-     * @var integer The number of abnormal scheduled task events
+     * @var integer <p>Number of abnormal scheduled task events.</p>
      */
     public $AbnormalScheduledTaskCount;
 
     /**
-     * @var integer The number of static pods created
+     * @var integer <p>Number of static Pod creations.</p>
      */
     public $StaticsPodCreateCount;
 
     /**
-     * @var integer The number of suspicious containers created
+     * @var integer <p>Number of suspicious container creations.</p>
      */
     public $DoubtfulContainerCreateCount;
 
     /**
-     * @var integer The number of custom rule events
+     * @var integer <p>Number of custom rule events.</p>
      */
     public $UserDefinedRuleCount;
 
     /**
-     * @var integer The number of anonymous access events
+     * @var integer <p>Number of anonymous access events.</p>
      */
     public $AnonymousAccessCount;
 
     /**
-     * @var integer The number of privilege container events
+     * @var integer <p>Number of privileged container events.</p>
      */
     public $PrivilegeContainerCount;
 
     /**
-     * @param string $Date Date
-     * @param integer $ExceptionUARequestCount The number of abnormal UA request events
-     * @param integer $AnonymousUserRightCount The number of anonymous user permission events
-     * @param integer $CredentialInformationObtainCount The number of credential information acquisition events
-     * @param integer $SensitiveDataMountCount The number of sensitive data mounting events
-     * @param integer $CmdExecCount The number of command execution events
-     * @param integer $AbnormalScheduledTaskCount The number of abnormal scheduled task events
-     * @param integer $StaticsPodCreateCount The number of static pods created
-     * @param integer $DoubtfulContainerCreateCount The number of suspicious containers created
-     * @param integer $UserDefinedRuleCount The number of custom rule events
-     * @param integer $AnonymousAccessCount The number of anonymous access events
-     * @param integer $PrivilegeContainerCount The number of privilege container events
+     * @var array <p>Number of alarms corresponding to the rule type.</p>
+     */
+    public $RuleTypeCountSet;
+
+    /**
+     * @param string $Date <p>Date</p>
+     * @param integer $ExceptionUARequestCount <p>Number of abnormal UA request events.</p>
+     * @param integer $AnonymousUserRightCount <p>Number of anonymous user permission events.</p>
+     * @param integer $CredentialInformationObtainCount <p>Number of credential information acquisition events.</p>
+     * @param integer $SensitiveDataMountCount <p>Number of sensitive data mount events.</p>
+     * @param integer $CmdExecCount <p>Number of command execution events.</p>
+     * @param integer $AbnormalScheduledTaskCount <p>Number of abnormal scheduled task events.</p>
+     * @param integer $StaticsPodCreateCount <p>Number of static Pod creations.</p>
+     * @param integer $DoubtfulContainerCreateCount <p>Number of suspicious container creations.</p>
+     * @param integer $UserDefinedRuleCount <p>Number of custom rule events.</p>
+     * @param integer $AnonymousAccessCount <p>Number of anonymous access events.</p>
+     * @param integer $PrivilegeContainerCount <p>Number of privileged container events.</p>
+     * @param array $RuleTypeCountSet <p>Number of alarms corresponding to the rule type.</p>
      */
     function __construct()
     {
@@ -180,6 +188,15 @@ class K8sApiAbnormalTendencyItem extends AbstractModel
 
         if (array_key_exists("PrivilegeContainerCount",$param) and $param["PrivilegeContainerCount"] !== null) {
             $this->PrivilegeContainerCount = $param["PrivilegeContainerCount"];
+        }
+
+        if (array_key_exists("RuleTypeCountSet",$param) and $param["RuleTypeCountSet"] !== null) {
+            $this->RuleTypeCountSet = [];
+            foreach ($param["RuleTypeCountSet"] as $key => $value){
+                $obj = new K8SAPIRuleTypeCountItem();
+                $obj->deserialize($value);
+                array_push($this->RuleTypeCountSet, $obj);
+            }
         }
     }
 }

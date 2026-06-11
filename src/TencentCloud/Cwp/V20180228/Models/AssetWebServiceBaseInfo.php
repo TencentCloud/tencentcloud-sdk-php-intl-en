@@ -33,11 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProjectId() Obtain Host business group ID
  * @method void setProjectId(integer $ProjectId) Set Host business group ID
  * @method array getTag() Obtain Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTag(array $Tag) Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getName() Obtain Database name
- * @method void setName(string $Name) Set Database name
+ * @method string getName() Obtain Service name
+ * @method void setName(string $Name) Set Service name
  * @method string getVersion() Obtain Version
  * @method void setVersion(string $Version) Set Version
  * @method string getBinPath() Obtain Binary path
@@ -57,17 +55,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method string getDesc() Obtain Description
  * @method void setDesc(string $Desc) Set Description
  * @method string getUpdateTime() Obtain Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFirstTime() Obtain First collection time
  * @method void setFirstTime(string $FirstTime) Set First collection time
  * @method integer getIsNew() Obtain Whether newly added [0: no|1: yes]
  * @method void setIsNew(integer $IsNew) Set Whether newly added [0: no|1: yes]
- * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method MachineExtraInfo getMachineExtraInfo() Obtain  Additional information
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set  Additional information
  */
 class AssetWebServiceBaseInfo extends AbstractModel
 {
@@ -103,12 +97,11 @@ class AssetWebServiceBaseInfo extends AbstractModel
 
     /**
      * @var array Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tag;
 
     /**
-     * @var string Database name
+     * @var string Service name
      */
     public $Name;
 
@@ -159,7 +152,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -174,8 +166,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsNew;
 
     /**
-     * @var MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MachineExtraInfo  Additional information
      */
     public $MachineExtraInfo;
 
@@ -187,8 +178,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $OsInfo Operating System Information
      * @param integer $ProjectId Host business group ID
      * @param array $Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Name Database name
+     * @param string $Name Service name
      * @param string $Version Version
      * @param string $BinPath Binary path
      * @param string $User Startup user
@@ -199,11 +189,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $MachineName Host name
      * @param string $Desc Description
      * @param string $UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FirstTime First collection time
      * @param integer $IsNew Whether newly added [0: no|1: yes]
-     * @param MachineExtraInfo $MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MachineExtraInfo $MachineExtraInfo  Additional information
      */
     function __construct()
     {

@@ -20,99 +20,73 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Kafka data import configuration
  *
- * @method string getId() Obtain ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setId(string $Id) Set ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getId() Obtain ID of Kafka data subscription configuration.
+ * @method void setId(string $Id) Set ID of Kafka data subscription configuration.
  * @method string getTopicId() Obtain Log topic ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTopicId(string $TopicId) Set Log topic ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getName() Obtain Kafka data import task name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set Kafka data import task name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getKafkaType() Obtain Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKafkaType(integer $KafkaType) Set Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getKafkaInstance() Obtain CKafka instance ID, which is required when `KafkaType` is set to `0`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setKafkaInstance(string $KafkaInstance) Set CKafka instance ID, which is required when `KafkaType` is set to `0`
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain Name of the Kafka import task
+ * @method void setName(string $Name) Set Name of the Kafka import task
+ * @method integer getKafkaType() Obtain Imports Kafka type. 0: Cloud CKafka; 1: user-built Kafka
+ * @method void setKafkaType(integer $KafkaType) Set Imports Kafka type. 0: Cloud CKafka; 1: user-built Kafka
+ * @method string getKafkaInstance() Obtain CKafka instance ID of cloud platform, required when KafkaType is 0.
+ * @method void setKafkaInstance(string $KafkaInstance) Set CKafka instance ID of cloud platform, required when KafkaType is 0.
  * @method string getServerAddr() Obtain Service address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setServerAddr(string $ServerAddr) Set Service address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsEncryptionAddr() Obtain Whether the service address uses an encrypted connection	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) Set Whether the service address uses an encrypted connection	
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsEncryptionAddr() Obtain Whether ServerAddr is an encrypted connection	
+ * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) Set Whether ServerAddr is an encrypted connection	
  * @method KafkaProtocolInfo getProtocol() Obtain Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
  * @method void setProtocol(KafkaProtocolInfo $Protocol) Set Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
- * @method string getUserKafkaTopics() Obtain List of Kafka topics to import data from. Separate multiple topics with commas (,).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserKafkaTopics(string $UserKafkaTopics) Set List of Kafka topics to import data from. Separate multiple topics with commas (,).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getConsumerGroupName() Obtain Kafka consumer group name	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConsumerGroupName(string $ConsumerGroupName) Set Kafka consumer group name	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getOffset() Obtain Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setOffset(integer $Offset) Set Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUpdateTime() Obtain Update time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUserKafkaTopics() Obtain The list of Kafka-related topics that the user needs to import. Separate multiple topics by commas.
+ * @method void setUserKafkaTopics(string $UserKafkaTopics) Set The list of Kafka-related topics that the user needs to import. Separate multiple topics by commas.
+ * @method string getConsumerGroupName() Obtain Kafka consumer group name of the user	
+ * @method void setConsumerGroupName(string $ConsumerGroupName) Set Kafka consumer group name of the user	
+ * @method integer getStatus() Obtain Status. 1: Running; 2: Suspension.
+ * @method void setStatus(integer $Status) Set Status. 1: Running; 2: Suspension.
+ * @method integer getOffset() Obtain Data import position. -2: earliest (default); -1: latest
+ * @method void setOffset(integer $Offset) Set Data import position. -2: earliest (default); -1: latest
+ * @method string getCreateTime() Obtain Creation time. Format `YYYY-MM-DD HH:MM:SS`
+ * @method void setCreateTime(string $CreateTime) Set Creation time. Format `YYYY-MM-DD HH:MM:SS`
+ * @method string getUpdateTime() Obtain Update time. Format: `YYYY-MM-DD HH:MM:SS`
+ * @method void setUpdateTime(string $UpdateTime) Set Update time. Format: `YYYY-MM-DD HH:MM:SS`
  * @method LogRechargeRuleInfo getLogRechargeRule() Obtain Log import rule
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) Set Log import rule
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method UserKafkaMeta getUserKafkaMeta() Obtain User kafka extended information
+ * @method void setUserKafkaMeta(UserKafkaMeta $UserKafkaMeta) Set User kafka extended information
  */
 class KafkaRechargeInfo extends AbstractModel
 {
     /**
-     * @var string ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string ID of Kafka data subscription configuration.
      */
     public $Id;
 
     /**
      * @var string Log topic ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TopicId;
 
     /**
-     * @var string Kafka data import task name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name of the Kafka import task
      */
     public $Name;
 
     /**
-     * @var integer Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Imports Kafka type. 0: Cloud CKafka; 1: user-built Kafka
      */
     public $KafkaType;
 
     /**
-     * @var string CKafka instance ID, which is required when `KafkaType` is set to `0`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string CKafka instance ID of cloud platform, required when KafkaType is 0.
      */
     public $KafkaInstance;
 
     /**
      * @var string Service address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ServerAddr;
 
     /**
-     * @var boolean Whether the service address uses an encrypted connection	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether ServerAddr is an encrypted connection	
      */
     public $IsEncryptionAddr;
 
@@ -122,72 +96,62 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Protocol;
 
     /**
-     * @var string List of Kafka topics to import data from. Separate multiple topics with commas (,).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The list of Kafka-related topics that the user needs to import. Separate multiple topics by commas.
      */
     public $UserKafkaTopics;
 
     /**
-     * @var string Kafka consumer group name	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Kafka consumer group name of the user	
      */
     public $ConsumerGroupName;
 
     /**
-     * @var integer Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Status. 1: Running; 2: Suspension.
      */
     public $Status;
 
     /**
-     * @var integer Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Data import position. -2: earliest (default); -1: latest
      */
     public $Offset;
 
     /**
-     * @var string Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Creation time. Format `YYYY-MM-DD HH:MM:SS`
      */
     public $CreateTime;
 
     /**
-     * @var string Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Update time. Format: `YYYY-MM-DD HH:MM:SS`
      */
     public $UpdateTime;
 
     /**
      * @var LogRechargeRuleInfo Log import rule
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LogRechargeRule;
 
     /**
-     * @param string $Id ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var UserKafkaMeta User kafka extended information
+     */
+    public $UserKafkaMeta;
+
+    /**
+     * @param string $Id ID of Kafka data subscription configuration.
      * @param string $TopicId Log topic ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Name Kafka data import task name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Name Name of the Kafka import task
+     * @param integer $KafkaType Imports Kafka type. 0: Cloud CKafka; 1: user-built Kafka
+     * @param string $KafkaInstance CKafka instance ID of cloud platform, required when KafkaType is 0.
      * @param string $ServerAddr Service address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsEncryptionAddr Whether the service address uses an encrypted connection	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsEncryptionAddr Whether ServerAddr is an encrypted connection	
      * @param KafkaProtocolInfo $Protocol Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
-     * @param string $UserKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ConsumerGroupName Kafka consumer group name	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Offset Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UserKafkaTopics The list of Kafka-related topics that the user needs to import. Separate multiple topics by commas.
+     * @param string $ConsumerGroupName Kafka consumer group name of the user	
+     * @param integer $Status Status. 1: Running; 2: Suspension.
+     * @param integer $Offset Data import position. -2: earliest (default); -1: latest
+     * @param string $CreateTime Creation time. Format `YYYY-MM-DD HH:MM:SS`
+     * @param string $UpdateTime Update time. Format: `YYYY-MM-DD HH:MM:SS`
      * @param LogRechargeRuleInfo $LogRechargeRule Log import rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UserKafkaMeta $UserKafkaMeta User kafka extended information
      */
     function __construct()
     {
@@ -262,6 +226,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("LogRechargeRule",$param) and $param["LogRechargeRule"] !== null) {
             $this->LogRechargeRule = new LogRechargeRuleInfo();
             $this->LogRechargeRule->deserialize($param["LogRechargeRule"]);
+        }
+
+        if (array_key_exists("UserKafkaMeta",$param) and $param["UserKafkaMeta"] !== null) {
+            $this->UserKafkaMeta = new UserKafkaMeta();
+            $this->UserKafkaMeta->deserialize($param["UserKafkaMeta"]);
         }
     }
 }

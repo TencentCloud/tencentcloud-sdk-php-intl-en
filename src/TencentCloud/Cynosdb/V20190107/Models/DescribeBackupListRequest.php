@@ -20,55 +20,55 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupList request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method integer getLimit() Obtain The number of results to be returned. Value range: (0,100]
- * @method void setLimit(integer $Limit) Set The number of results to be returned. Value range: (0,100]
- * @method integer getOffset() Obtain Record offset. Value range: [0,INF)
- * @method void setOffset(integer $Offset) Set Record offset. Value range: [0,INF)
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method integer getLimit() Obtain The number of results to be returned. Value range: (0,100].
+ * @method void setLimit(integer $Limit) Set The number of results to be returned. Value range: (0,100].
+ * @method integer getOffset() Obtain Record offset. Value range: [0,INF).
+ * @method void setOffset(integer $Offset) Set Record offset. Value range: [0,INF).
  * @method string getDbType() Obtain Database type. Valid values: 
 <li> MYSQL </li>
  * @method void setDbType(string $DbType) Set Database type. Valid values: 
 <li> MYSQL </li>
- * @method array getBackupIds() Obtain Backup ID
- * @method void setBackupIds(array $BackupIds) Set Backup ID
+ * @method array getBackupIds() Obtain Backup ID.
+ * @method void setBackupIds(array $BackupIds) Set Backup ID.
  * @method string getBackupType() Obtain Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
  * @method void setBackupType(string $BackupType) Set Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
  * @method string getBackupMethod() Obtain Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
  * @method void setBackupMethod(string $BackupMethod) Set Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
- * @method string getSnapShotType() Obtain 
- * @method void setSnapShotType(string $SnapShotType) Set 
- * @method string getStartTime() Obtain Backup start time
- * @method void setStartTime(string $StartTime) Set Backup start time
- * @method string getEndTime() Obtain Backup end time
- * @method void setEndTime(string $EndTime) Set Backup end time
- * @method array getFileNames() Obtain 
- * @method void setFileNames(array $FileNames) Set 
+ * @method string getSnapShotType() Obtain Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot.
+ * @method void setSnapShotType(string $SnapShotType) Set Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot.
+ * @method string getStartTime() Obtain Backup start time.
+ * @method void setStartTime(string $StartTime) Set Backup start time.
+ * @method string getEndTime() Obtain Backup end time.
+ * @method void setEndTime(string $EndTime) Set Backup end time.
+ * @method array getFileNames() Obtain Backup file name, fuzzy search.
+ * @method void setFileNames(array $FileNames) Set Backup file name, fuzzy search.
  * @method array getBackupNames() Obtain Backup alias, which supports fuzzy query.
  * @method void setBackupNames(array $BackupNames) Set Backup alias, which supports fuzzy query.
- * @method array getSnapshotIdList() Obtain ID list of the snapshot backup
- * @method void setSnapshotIdList(array $SnapshotIdList) Set ID list of the snapshot backup
- * @method string getBackupRegion() Obtain 
- * @method void setBackupRegion(string $BackupRegion) Set 
- * @method string getIsCrossRegionsBackup() Obtain 
- * @method void setIsCrossRegionsBackup(string $IsCrossRegionsBackup) Set 
- * @method array getBackupStatus() Obtain Status you want to query
- * @method void setBackupStatus(array $BackupStatus) Set Status you want to query
+ * @method array getSnapshotIdList() Obtain ID list of the snapshot backup.
+ * @method void setSnapshotIdList(array $SnapshotIdList) Set ID list of the snapshot backup.
+ * @method string getBackupRegion() Obtain Backup region.
+ * @method void setBackupRegion(string $BackupRegion) Set Backup region.
+ * @method string getIsCrossRegionsBackup() Obtain Whether cross-region backup.
+ * @method void setIsCrossRegionsBackup(string $IsCrossRegionsBackup) Set Whether cross-region backup.
+ * @method array getBackupStatus() Obtain Status you want to query.
+ * @method void setBackupStatus(array $BackupStatus) Set Status you want to query.
  */
 class DescribeBackupListRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var integer The number of results to be returned. Value range: (0,100]
+     * @var integer The number of results to be returned. Value range: (0,100].
      */
     public $Limit;
 
     /**
-     * @var integer Record offset. Value range: [0,INF)
+     * @var integer Record offset. Value range: [0,INF).
      */
     public $Offset;
 
@@ -79,7 +79,7 @@ class DescribeBackupListRequest extends AbstractModel
     public $DbType;
 
     /**
-     * @var array Backup ID
+     * @var array Backup ID.
      */
     public $BackupIds;
 
@@ -94,22 +94,22 @@ class DescribeBackupListRequest extends AbstractModel
     public $BackupMethod;
 
     /**
-     * @var string 
+     * @var string Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot.
      */
     public $SnapShotType;
 
     /**
-     * @var string Backup start time
+     * @var string Backup start time.
      */
     public $StartTime;
 
     /**
-     * @var string Backup end time
+     * @var string Backup end time.
      */
     public $EndTime;
 
     /**
-     * @var array 
+     * @var array Backup file name, fuzzy search.
      */
     public $FileNames;
 
@@ -119,43 +119,43 @@ class DescribeBackupListRequest extends AbstractModel
     public $BackupNames;
 
     /**
-     * @var array ID list of the snapshot backup
+     * @var array ID list of the snapshot backup.
      */
     public $SnapshotIdList;
 
     /**
-     * @var string 
+     * @var string Backup region.
      */
     public $BackupRegion;
 
     /**
-     * @var string 
+     * @var string Whether cross-region backup.
      */
     public $IsCrossRegionsBackup;
 
     /**
-     * @var array Status you want to query
+     * @var array Status you want to query.
      */
     public $BackupStatus;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param integer $Limit The number of results to be returned. Value range: (0,100]
-     * @param integer $Offset Record offset. Value range: [0,INF)
+     * @param string $ClusterId Cluster ID.
+     * @param integer $Limit The number of results to be returned. Value range: (0,100].
+     * @param integer $Offset Record offset. Value range: [0,INF).
      * @param string $DbType Database type. Valid values: 
 <li> MYSQL </li>
-     * @param array $BackupIds Backup ID
+     * @param array $BackupIds Backup ID.
      * @param string $BackupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
      * @param string $BackupMethod Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
-     * @param string $SnapShotType 
-     * @param string $StartTime Backup start time
-     * @param string $EndTime Backup end time
-     * @param array $FileNames 
+     * @param string $SnapShotType Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot.
+     * @param string $StartTime Backup start time.
+     * @param string $EndTime Backup end time.
+     * @param array $FileNames Backup file name, fuzzy search.
      * @param array $BackupNames Backup alias, which supports fuzzy query.
-     * @param array $SnapshotIdList ID list of the snapshot backup
-     * @param string $BackupRegion 
-     * @param string $IsCrossRegionsBackup 
-     * @param array $BackupStatus Status you want to query
+     * @param array $SnapshotIdList ID list of the snapshot backup.
+     * @param string $BackupRegion Backup region.
+     * @param string $IsCrossRegionsBackup Whether cross-region backup.
+     * @param array $BackupStatus Status you want to query.
      */
     function __construct()
     {

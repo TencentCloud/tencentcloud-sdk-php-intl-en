@@ -18,16 +18,16 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * When adding or resizing an instance, synchronously upgrade the proxy.
  *
  * @method integer getCpu() Obtain cpu
  * @method void setCpu(integer $Cpu) Set cpu
  * @method integer getMem() Obtain memory
  * @method void setMem(integer $Mem) Set memory
- * @method array getProxyZones() Obtain 
- * @method void setProxyZones(array $ProxyZones) Set 
- * @method string getReloadBalance() Obtain 
- * @method void setReloadBalance(string $ReloadBalance) Set 
+ * @method array getProxyZones() Obtain Proxy node information
+ * @method void setProxyZones(array $ProxyZones) Set Proxy node information
+ * @method string getReloadBalance() Obtain Rebalance
+ * @method void setReloadBalance(string $ReloadBalance) Set Rebalance
  */
 class UpgradeProxy extends AbstractModel
 {
@@ -42,20 +42,20 @@ class UpgradeProxy extends AbstractModel
     public $Mem;
 
     /**
-     * @var array 
+     * @var array Proxy node information
      */
     public $ProxyZones;
 
     /**
-     * @var string 
+     * @var string Rebalance
      */
     public $ReloadBalance;
 
     /**
      * @param integer $Cpu cpu
      * @param integer $Mem memory
-     * @param array $ProxyZones 
-     * @param string $ReloadBalance 
+     * @param array $ProxyZones Proxy node information
+     * @param string $ReloadBalance Rebalance
      */
     function __construct()
     {

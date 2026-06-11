@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWhite(integer $White) Set 0: blocklist; 1: allowlist
  * @method integer getBashAction() Obtain 0: alarm; 1: allowlist; 2: intercept
  * @method void setBashAction(integer $BashAction) Set 0: alarm; 1: allowlist; 2: intercept
- * @method string getRule() Obtain Regular expression
- * @method void setRule(string $Rule) Set Regular expression
+ * @method string getRule() Obtain Regular expression, encrypted with Base64. This field is deprecated. If you enter this parameter, it will be automatically replaced with Rules.Process.CmdLine.
+ * @method void setRule(string $Rule) Set Regular expression, encrypted with Base64. This field is deprecated. If you enter this parameter, it will be automatically replaced with Rules.Process.CmdLine.
  * @method integer getLevel() Obtain Risk level (0: none; 1: high-risk; 2: medium-risk; 3: low-risk)
  * @method void setLevel(integer $Level) Set Risk level (0: none; 1: high-risk; 2: medium-risk; 3: low-risk)
  * @method integer getScope() Obtain Effective scope (0: a group of QUUID; 1: all professional editions (including ultimate edition); 2: all ultimate editions; 3: all hosts)
@@ -37,19 +37,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() Obtain Policy ID
  * @method void setId(integer $Id) Set Policy ID
  * @method string getDescript() Obtain Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescript(string $Descript) Set Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getEventId() Obtain When it is added to the allowlist, the EventId needs to be passed in.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEventId(integer $EventId) Set When it is added to the allowlist, the EventId needs to be passed in.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDealOldEvents() Obtain Whether to process old events as allowlisted ones: 0 - no; 1 - yes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDealOldEvents(integer $DealOldEvents) Set Whether to process old events as allowlisted ones: 0 - no; 1 - yes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getQuuids() Obtain A collection of QUUIDs for effective hosts
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQuuids(array $Quuids) Set A collection of QUUIDs for effective hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getEventId() Obtain When it is added to the allowlist, the event ID needs to be passed in.
+ * @method void setEventId(integer $EventId) Set When it is added to the allowlist, the event ID needs to be passed in.
+ * @method integer getDealOldEvents() Obtain Whether to add existing events to the allowlist. 0: no; 1: yes.
+ * @method void setDealOldEvents(integer $DealOldEvents) Set Whether to add existing events to the allowlist. 0: no; 1: yes.
+ * @method array getQuuids() Obtain QUUID set for effective hosts
+ * @method void setQuuids(array $Quuids) Set QUUID set for effective hosts
  * @method integer getCategory() Obtain Policy type: 0 - system; 1 - user
  * @method void setCategory(integer $Category) Set Policy type: 0 - system; 1 - user
  * @method string getCreateTime() Obtain Creation time
@@ -58,6 +52,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setModifyTime(string $ModifyTime) Set Modification time
  * @method array getUuids() Obtain Compatibility with older versions may be needed.
  * @method void setUuids(array $Uuids) Set Compatibility with older versions may be needed.
+ * @method PolicyRules getRules() Obtain Rule expression
+ * @method void setRules(PolicyRules $Rules) Set Rule expression
  */
 class BashPolicy extends AbstractModel
 {
@@ -82,7 +78,7 @@ class BashPolicy extends AbstractModel
     public $BashAction;
 
     /**
-     * @var string Regular expression
+     * @var string Regular expression, encrypted with Base64. This field is deprecated. If you enter this parameter, it will be automatically replaced with Rules.Process.CmdLine.
      */
     public $Rule;
 
@@ -103,24 +99,21 @@ class BashPolicy extends AbstractModel
 
     /**
      * @var string Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Descript;
 
     /**
-     * @var integer When it is added to the allowlist, the EventId needs to be passed in.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer When it is added to the allowlist, the event ID needs to be passed in.
      */
     public $EventId;
 
     /**
-     * @var integer Whether to process old events as allowlisted ones: 0 - no; 1 - yes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether to add existing events to the allowlist. 0: no; 1: yes.
      */
     public $DealOldEvents;
 
     /**
-     * @var array A collection of QUUIDs for effective hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array QUUID set for effective hosts
      */
     public $Quuids;
 
@@ -145,25 +138,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Uuids;
 
     /**
+     * @var PolicyRules Rule expression
+     */
+    public $Rules;
+
+    /**
      * @param string $Name Policy name
      * @param integer $Enable 1: valid; 0: invalid
      * @param integer $White 0: blocklist; 1: allowlist
      * @param integer $BashAction 0: alarm; 1: allowlist; 2: intercept
-     * @param string $Rule Regular expression
+     * @param string $Rule Regular expression, encrypted with Base64. This field is deprecated. If you enter this parameter, it will be automatically replaced with Rules.Process.CmdLine.
      * @param integer $Level Risk level (0: none; 1: high-risk; 2: medium-risk; 3: low-risk)
      * @param integer $Scope Effective scope (0: a group of QUUID; 1: all professional editions (including ultimate edition); 2: all ultimate editions; 3: all hosts)
      * @param integer $Id Policy ID
      * @param string $Descript Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $EventId When it is added to the allowlist, the EventId needs to be passed in.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DealOldEvents Whether to process old events as allowlisted ones: 0 - no; 1 - yes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Quuids A collection of QUUIDs for effective hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $EventId When it is added to the allowlist, the event ID needs to be passed in.
+     * @param integer $DealOldEvents Whether to add existing events to the allowlist. 0: no; 1: yes.
+     * @param array $Quuids QUUID set for effective hosts
      * @param integer $Category Policy type: 0 - system; 1 - user
      * @param string $CreateTime Creation time
      * @param string $ModifyTime Modification time
      * @param array $Uuids Compatibility with older versions may be needed.
+     * @param PolicyRules $Rules Rule expression
      */
     function __construct()
     {
@@ -240,6 +236,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Uuids",$param) and $param["Uuids"] !== null) {
             $this->Uuids = $param["Uuids"];
+        }
+
+        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
+            $this->Rules = new PolicyRules();
+            $this->Rules->deserialize($param["Rules"]);
         }
     }
 }

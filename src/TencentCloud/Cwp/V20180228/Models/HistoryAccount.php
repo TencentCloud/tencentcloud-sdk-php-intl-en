@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineIp(string $MachineIp) Set Private IP address of the host
  * @method string getMachineName() Obtain Host name
  * @method void setMachineName(string $MachineName) Set Host name
- * @method string getUsername() Obtain Username
- * @method void setUsername(string $Username) Set Username
+ * @method string getUsername() Obtain Account name.
+ * @method void setUsername(string $Username) Set Account name.
  * @method string getModifyType() Obtain Account change type
 <li>CREATE: account creation</li>
 <li>MODIFY: account modification</li>
@@ -64,7 +64,7 @@ class HistoryAccount extends AbstractModel
     public $MachineName;
 
     /**
-     * @var string Username
+     * @var string Account name.
      */
     public $Username;
 
@@ -86,7 +86,7 @@ class HistoryAccount extends AbstractModel
      * @param string $Uuid CWPP client UUID
      * @param string $MachineIp Private IP address of the host
      * @param string $MachineName Host name
-     * @param string $Username Username
+     * @param string $Username Account name.
      * @param string $ModifyType Account change type
 <li>CREATE: account creation</li>
 <li>MODIFY: account modification</li>

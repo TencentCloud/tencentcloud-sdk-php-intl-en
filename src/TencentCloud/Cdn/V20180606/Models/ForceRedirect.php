@@ -36,12 +36,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 http: forced HTTP redirect
 https: forced HTTPS redirect
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getRedirectStatusCode() Obtain Status code returned for forced redirect 
-Supports 301, 302.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Status code returned for forced redirect 
-Supports 301, 302.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getRedirectStatusCode() Obtain Specifies the return status code for forced redirection. 
+Supports 301, 302, 307, and 308.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Specifies the return status code for forced redirection. 
+Supports 301, 302, 307, and 308.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCarryHeaders() Obtain Whether to return the newly added header during force redirection
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCarryHeaders(string $CarryHeaders) Set Whether to return the newly added header during force redirection
@@ -66,9 +66,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $RedirectType;
 
     /**
-     * @var integer Status code returned for forced redirect 
-Supports 301, 302.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Specifies the return status code for forced redirection. 
+Supports 301, 302, 307, and 308.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RedirectStatusCode;
 
@@ -87,9 +87,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 http: forced HTTP redirect
 https: forced HTTPS redirect
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $RedirectStatusCode Status code returned for forced redirect 
-Supports 301, 302.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $RedirectStatusCode Specifies the return status code for forced redirection. 
+Supports 301, 302, 307, and 308.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CarryHeaders Whether to return the newly added header during force redirection
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */

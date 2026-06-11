@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDataTransform request structure.
  *
- * @method string getTaskId() Obtain Data processing task ID
- * @method void setTaskId(string $TaskId) Set Data processing task ID
+ * @method string getTaskId() Obtain Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
+ * @method void setTaskId(string $TaskId) Set Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
  */
 class DeleteDataTransformRequest extends AbstractModel
 {
     /**
-     * @var string Data processing task ID
+     * @var string Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId Data processing task ID
+     * @param string $TaskId Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
      */
     function __construct()
     {

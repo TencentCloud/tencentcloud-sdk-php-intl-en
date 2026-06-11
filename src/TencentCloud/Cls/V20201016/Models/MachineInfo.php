@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getIp() Obtain Machine IP
  * @method void setIp(string $Ip) Set Machine IP
- * @method string getInstanceID() Obtain Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceID(string $InstanceID) Set Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceID() Obtain Machine instance ID.
+ * @method void setInstanceID(string $InstanceID) Set Machine instance ID.
  * @method integer getStatus() Obtain Machine status. Valid values: `0`: exceptional; `1`: normal
  * @method void setStatus(integer $Status) Set Machine status. Valid values: `0`: exceptional; `1`: normal
- * @method string getOfflineTime() Obtain Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
- * @method void setOfflineTime(string $OfflineTime) Set Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
+ * @method string getOfflineTime() Obtain Machine offline time. Null indicates normal. Return a specific time in case of exceptions. Time format: YYYY-MM-DD HH:mm:ss.
+ * @method void setOfflineTime(string $OfflineTime) Set Machine offline time. Null indicates normal. Return a specific time in case of exceptions. Time format: YYYY-MM-DD HH:mm:ss.
  * @method integer getAutoUpdate() Obtain Whether to enable automatic update for the machine. Valid values: `0`: no; `1`: yes
  * @method void setAutoUpdate(integer $AutoUpdate) Set Whether to enable automatic update for the machine. Valid values: `0`: no; `1`: yes
  * @method string getVersion() Obtain Current machine version number
@@ -47,7 +47,7 @@ class MachineInfo extends AbstractModel
     public $Ip;
 
     /**
-     * @var string Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Machine instance ID.
      */
     public $InstanceID;
 
@@ -57,7 +57,7 @@ class MachineInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var string Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
+     * @var string Machine offline time. Null indicates normal. Return a specific time in case of exceptions. Time format: YYYY-MM-DD HH:mm:ss.
      */
     public $OfflineTime;
 
@@ -88,9 +88,9 @@ class MachineInfo extends AbstractModel
 
     /**
      * @param string $Ip Machine IP
-     * @param string $InstanceID Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceID Machine instance ID.
      * @param integer $Status Machine status. Valid values: `0`: exceptional; `1`: normal
-     * @param string $OfflineTime Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
+     * @param string $OfflineTime Machine offline time. Null indicates normal. Return a specific time in case of exceptions. Time format: YYYY-MM-DD HH:mm:ss.
      * @param integer $AutoUpdate Whether to enable automatic update for the machine. Valid values: `0`: no; `1`: yes
      * @param string $Version Current machine version number
      * @param integer $UpdateStatus Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed.

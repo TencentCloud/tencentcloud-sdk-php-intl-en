@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() Obtain Event ID
  * @method void setId(integer $Id) Set Event ID
  * @method string getAlias() Obtain Server name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAlias(string $Alias) Set Server name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getHostIp() Obtain Server IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostIp(string $HostIp) Set Server IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getType() Obtain Memory Trojan Type. 0: Filter Type; 1: Listener Type; 2: Servlet Type; 3: Interceptors Type; 4: Agent Type; 5: Other
  * @method void setType(integer $Type) Set Memory Trojan Type. 0: Filter Type; 1: Listener Type; 2: Servlet Type; 3: Interceptors Type; 4: Agent Type; 5: Other
  * @method string getDescription() Obtain Description
@@ -43,13 +39,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method string getQuuid() Obtain Server QUUID
  * @method void setQuuid(string $Quuid) Set Server QUUID
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUuid() Obtain Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUuid(string $Uuid) Set Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getClassName() Obtain Class name
+ * @method void setClassName(string $ClassName) Set Class name
+ * @method string getSuperClassName() Obtain Parent class name
+ * @method void setSuperClassName(string $SuperClassName) Set Parent class name
+ * @method string getInterfaces() Obtain Inherited API
+ * @method void setInterfaces(string $Interfaces) Set Inherited API
+ * @method string getAnnotations() Obtain Annotation
+ * @method void setAnnotations(string $Annotations) Set Annotation
+ * @method string getLoaderClassName() Obtain Associated class loader.
+ * @method void setLoaderClassName(string $LoaderClassName) Set Associated class loader.
  */
 class JavaMemShellInfo extends AbstractModel
 {
@@ -60,13 +62,11 @@ class JavaMemShellInfo extends AbstractModel
 
     /**
      * @var string Server name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Alias;
 
     /**
      * @var string Server IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostIp;
 
@@ -102,22 +102,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
     /**
      * @var string Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Uuid;
 
     /**
+     * @var string Class name
+     */
+    public $ClassName;
+
+    /**
+     * @var string Parent class name
+     */
+    public $SuperClassName;
+
+    /**
+     * @var string Inherited API
+     */
+    public $Interfaces;
+
+    /**
+     * @var string Annotation
+     */
+    public $Annotations;
+
+    /**
+     * @var string Associated class loader.
+     */
+    public $LoaderClassName;
+
+    /**
      * @param integer $Id Event ID
      * @param string $Alias Server name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HostIp Server IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Type Memory Trojan Type. 0: Filter Type; 1: Listener Type; 2: Servlet Type; 3: Interceptors Type; 4: Agent Type; 5: Other
      * @param string $Description Description
      * @param string $CreateTime First detection time
@@ -125,9 +146,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Status Processing Status. 0 - Pending; 1 - Allowlisted; 2 - Deleted; 3 - Ignored; 4 - Manually Processed
      * @param string $Quuid Server QUUID
      * @param MachineExtraInfo $MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Uuid Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ClassName Class name
+     * @param string $SuperClassName Parent class name
+     * @param string $Interfaces Inherited API
+     * @param string $Annotations Annotation
+     * @param string $LoaderClassName Associated class loader.
      */
     function __construct()
     {
@@ -185,6 +209,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
             $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("ClassName",$param) and $param["ClassName"] !== null) {
+            $this->ClassName = $param["ClassName"];
+        }
+
+        if (array_key_exists("SuperClassName",$param) and $param["SuperClassName"] !== null) {
+            $this->SuperClassName = $param["SuperClassName"];
+        }
+
+        if (array_key_exists("Interfaces",$param) and $param["Interfaces"] !== null) {
+            $this->Interfaces = $param["Interfaces"];
+        }
+
+        if (array_key_exists("Annotations",$param) and $param["Annotations"] !== null) {
+            $this->Annotations = $param["Annotations"];
+        }
+
+        if (array_key_exists("LoaderClassName",$param) and $param["LoaderClassName"] !== null) {
+            $this->LoaderClassName = $param["LoaderClassName"];
         }
     }
 }

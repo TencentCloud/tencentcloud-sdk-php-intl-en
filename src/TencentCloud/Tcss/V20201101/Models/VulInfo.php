@@ -22,64 +22,42 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Vulnerability name
  * @method void setName(string $Name) Set Vulnerability name
- * @method array getTags() Obtain Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain vulnerability tag
+ * @method void setTags(array $Tags) Set vulnerability tag
  * @method float getCVSSV3Score() Obtain CVSS V3 score
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCVSSV3Score(float $CVSSV3Score) Set CVSS V3 score
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getLevel() Obtain Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLevel(string $Level) Set Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCVEID() Obtain CVE No.
  * @method void setCVEID(string $CVEID) Set CVE No.
- * @method string getCategory() Obtain Vulnerability sub-category
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCategory(string $Category) Set Vulnerability sub-category
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFoundTime() Obtain First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFoundTime(string $FoundTime) Set First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCategory() Obtain Vulnerability Subtype
+ * @method void setCategory(string $Category) Set Vulnerability Subtype
+ * @method string getFoundTime() Obtain First detection time
+ * @method void setFoundTime(string $FoundTime) Set First detection time
  * @method string getLatestFoundTime() Obtain Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLatestFoundTime(string $LatestFoundTime) Set Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getID() Obtain Vulnerability ID
  * @method void setID(integer $ID) Set Vulnerability ID
  * @method integer getLocalImageCount() Obtain Number of affected local images
  * @method void setLocalImageCount(integer $LocalImageCount) Set Number of affected local images
- * @method integer getContainerCount() Obtain Number of affected containers
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContainerCount(integer $ContainerCount) Set Number of affected containers
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRegistryImageCount() Obtain Number of affected repository images
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegistryImageCount(integer $RegistryImageCount) Set Number of affected repository images
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPocID() Obtain POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPocID(string $PocID) Set POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDefenceStatus() Obtain Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefenceStatus(string $DefenceStatus) Set Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDefenceScope() Obtain Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefenceScope(string $DefenceScope) Set Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDefenceHostCount() Obtain Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefenceHostCount(integer $DefenceHostCount) Set Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDefendedCount() Obtain Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefendedCount(integer $DefendedCount) Set Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getContainerCount() Obtain Affected Container Count
+ * @method void setContainerCount(integer $ContainerCount) Set Affected Container Count
+ * @method integer getRegistryImageCount() Obtain Affected Repository Image Count
+ * @method void setRegistryImageCount(integer $RegistryImageCount) Set Affected Repository Image Count
+ * @method string getPocID() Obtain Vulnerability Poc ID
+ * @method void setPocID(string $PocID) Set Vulnerability Poc ID
+ * @method string getDefenceStatus() Obtain Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
+ * @method void setDefenceStatus(string $DefenceStatus) Set Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
+ * @method string getDefenceScope() Obtain Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
+ * @method void setDefenceScope(string $DefenceScope) Set Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
+ * @method integer getDefenceHostCount() Obtain Number of Hosts Defended Against Vulnerabilities
+ * @method void setDefenceHostCount(integer $DefenceHostCount) Set Number of Hosts Defended Against Vulnerabilities
+ * @method integer getDefendedCount() Obtain Number of Attacks Defended
+ * @method void setDefendedCount(integer $DefendedCount) Set Number of Attacks Defended
+ * @method integer getRaspOpenNodeCount() Obtain Number of hosts with application protection enabled for the vulnerability.
+ * @method void setRaspOpenNodeCount(integer $RaspOpenNodeCount) Set Number of hosts with application protection enabled for the vulnerability.
+ * @method integer getRaspClosedNodeCount() Obtain Number of hosts with application protection disabled for the vulnerability.
+ * @method void setRaspClosedNodeCount(integer $RaspClosedNodeCount) Set Number of hosts with application protection disabled for the vulnerability.
  */
 class VulInfo extends AbstractModel
 {
@@ -89,20 +67,17 @@ class VulInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var array Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array vulnerability tag
      */
     public $Tags;
 
     /**
      * @var float CVSS V3 score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CVSSV3Score;
 
     /**
      * @var string Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Level;
 
@@ -112,20 +87,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CVEID;
 
     /**
-     * @var string Vulnerability sub-category
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Vulnerability Subtype
      */
     public $Category;
 
     /**
-     * @var string First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string First detection time
      */
     public $FoundTime;
 
     /**
      * @var string Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LatestFoundTime;
 
@@ -140,78 +112,70 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $LocalImageCount;
 
     /**
-     * @var integer Number of affected containers
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Affected Container Count
      */
     public $ContainerCount;
 
     /**
-     * @var integer Number of affected repository images
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Affected Repository Image Count
      */
     public $RegistryImageCount;
 
     /**
-     * @var string POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Vulnerability Poc ID
      */
     public $PocID;
 
     /**
-     * @var string Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
      */
     public $DefenceStatus;
 
     /**
-     * @var string Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
      */
     public $DefenceScope;
 
     /**
-     * @var integer Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of Hosts Defended Against Vulnerabilities
      */
     public $DefenceHostCount;
 
     /**
-     * @var integer Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of Attacks Defended
      */
     public $DefendedCount;
 
     /**
+     * @var integer Number of hosts with application protection enabled for the vulnerability.
+     */
+    public $RaspOpenNodeCount;
+
+    /**
+     * @var integer Number of hosts with application protection disabled for the vulnerability.
+     */
+    public $RaspClosedNodeCount;
+
+    /**
      * @param string $Name Vulnerability name
-     * @param array $Tags Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags vulnerability tag
      * @param float $CVSSV3Score CVSS V3 score
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CVEID CVE No.
-     * @param string $Category Vulnerability sub-category
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FoundTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Category Vulnerability Subtype
+     * @param string $FoundTime First detection time
      * @param string $LatestFoundTime Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ID Vulnerability ID
      * @param integer $LocalImageCount Number of affected local images
-     * @param integer $ContainerCount Number of affected containers
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RegistryImageCount Number of affected repository images
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PocID POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DefenceStatus Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DefenceScope Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DefenceHostCount Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DefendedCount Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ContainerCount Affected Container Count
+     * @param integer $RegistryImageCount Affected Repository Image Count
+     * @param string $PocID Vulnerability Poc ID
+     * @param string $DefenceStatus Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
+     * @param string $DefenceScope Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
+     * @param integer $DefenceHostCount Number of Hosts Defended Against Vulnerabilities
+     * @param integer $DefendedCount Number of Attacks Defended
+     * @param integer $RaspOpenNodeCount Number of hosts with application protection enabled for the vulnerability.
+     * @param integer $RaspClosedNodeCount Number of hosts with application protection disabled for the vulnerability.
      */
     function __construct()
     {
@@ -292,6 +256,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DefendedCount",$param) and $param["DefendedCount"] !== null) {
             $this->DefendedCount = $param["DefendedCount"];
+        }
+
+        if (array_key_exists("RaspOpenNodeCount",$param) and $param["RaspOpenNodeCount"] !== null) {
+            $this->RaspOpenNodeCount = $param["RaspOpenNodeCount"];
+        }
+
+        if (array_key_exists("RaspClosedNodeCount",$param) and $param["RaspClosedNodeCount"] !== null) {
+            $this->RaspClosedNodeCount = $param["RaspClosedNodeCount"];
         }
     }
 }

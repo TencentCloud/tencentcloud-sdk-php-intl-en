@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportBaselineFixList request structure.
  *
- * @method array getFilters() Obtain <li>ItemName - String - required: no - item name</li>
- * @method void setFilters(array $Filters) Set <li>ItemName - String - required: no - item name</li>
+ * @method array getFilters() Obtain <li>ItemName - String - required: no - item name</li>
+ * @method void setFilters(array $Filters) Set <li>ItemName - String - required: no - item name</li>
  * @method integer getExportAll() Obtain 0: Filtered Result Export; 1: Export All
  * @method void setExportAll(integer $ExportAll) Set 0: Filtered Result Export; 1: Export All
  */
 class ExportBaselineFixListRequest extends AbstractModel
 {
     /**
-     * @var array <li>ItemName - String - required: no - item name</li>
+     * @var array <li>ItemName - String - required: no - item name</li>
      */
     public $Filters;
 
@@ -38,7 +38,7 @@ class ExportBaselineFixListRequest extends AbstractModel
     public $ExportAll;
 
     /**
-     * @param array $Filters <li>ItemName - String - required: no - item name</li>
+     * @param array $Filters <li>ItemName - String - required: no - item name</li>
      * @param integer $ExportAll 0: Filtered Result Export; 1: Export All
      */
     function __construct()

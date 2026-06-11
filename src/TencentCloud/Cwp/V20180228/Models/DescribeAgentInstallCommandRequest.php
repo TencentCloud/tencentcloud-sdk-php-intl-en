@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VpcId, required when NetType=direct
  * @method array getTagIds() Obtain Tag ID list, effective only when IsCloud=false
  * @method void setTagIds(array $TagIds) Set Tag ID list, effective only when IsCloud=false
- * @method string getExpireDate() Obtain Command validity period, required for non-Tencent Cloud instances
- * @method void setExpireDate(string $ExpireDate) Set Command validity period, required for non-Tencent Cloud instances
+ * @method string getExpireDate() Obtain Command validity period, required for non-Tencent Cloud instances (abandoned, takes effect permanently).
+ * @method void setExpireDate(string $ExpireDate) Set Command validity period, required for non-Tencent Cloud instances (abandoned, takes effect permanently).
  * @method string getVip() Obtain VIP Accessed via Proxy Mode
  * @method void setVip(string $Vip) Set VIP Accessed via Proxy Mode
  */
@@ -63,7 +63,7 @@ class DescribeAgentInstallCommandRequest extends AbstractModel
     public $TagIds;
 
     /**
-     * @var string Command validity period, required for non-Tencent Cloud instances
+     * @var string Command validity period, required for non-Tencent Cloud instances (abandoned, takes effect permanently).
      */
     public $ExpireDate;
 
@@ -78,7 +78,7 @@ class DescribeAgentInstallCommandRequest extends AbstractModel
      * @param string $RegionCode Region identifier, required when NetType=direct
      * @param string $VpcId VpcId, required when NetType=direct
      * @param array $TagIds Tag ID list, effective only when IsCloud=false
-     * @param string $ExpireDate Command validity period, required for non-Tencent Cloud instances
+     * @param string $ExpireDate Command validity period, required for non-Tencent Cloud instances (abandoned, takes effect permanently).
      * @param string $Vip VIP Accessed via Proxy Mode
      */
     function __construct()

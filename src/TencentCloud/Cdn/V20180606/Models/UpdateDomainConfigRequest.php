@@ -134,6 +134,10 @@ After switching to global acceleration, configurations of the domain name will b
  * @method void setOthersPrivateAccess(OthersPrivateAccess $OthersPrivateAccess) Set Origin-pull authentication for other origins
  * @method HttpsBilling getHttpsBilling() Obtain HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
  * @method void setHttpsBilling(HttpsBilling $HttpsBilling) Set HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
+ * @method ParamFilter getParamFilter() Obtain Specifies the blocklist parameter.
+ * @method void setParamFilter(ParamFilter $ParamFilter) Set Specifies the blocklist parameter.
+ * @method AutoGuard getAutoGuard() Obtain 
+ * @method void setAutoGuard(AutoGuard $AutoGuard) Set 
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -391,6 +395,16 @@ After switching to global acceleration, configurations of the domain name will b
     public $HttpsBilling;
 
     /**
+     * @var ParamFilter Specifies the blocklist parameter.
+     */
+    public $ParamFilter;
+
+    /**
+     * @var AutoGuard 
+     */
+    public $AutoGuard;
+
+    /**
      * @param string $Domain Domain name
      * @param integer $ProjectId Project ID
      * @param Origin $Origin Origin server configuration
@@ -448,6 +462,8 @@ After switching to global acceleration, configurations of the domain name will b
      * @param QnPrivateAccess $QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
      * @param OthersPrivateAccess $OthersPrivateAccess Origin-pull authentication for other origins
      * @param HttpsBilling $HttpsBilling HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
+     * @param ParamFilter $ParamFilter Specifies the blocklist parameter.
+     * @param AutoGuard $AutoGuard 
      */
     function __construct()
     {
@@ -700,6 +716,16 @@ After switching to global acceleration, configurations of the domain name will b
         if (array_key_exists("HttpsBilling",$param) and $param["HttpsBilling"] !== null) {
             $this->HttpsBilling = new HttpsBilling();
             $this->HttpsBilling->deserialize($param["HttpsBilling"]);
+        }
+
+        if (array_key_exists("ParamFilter",$param) and $param["ParamFilter"] !== null) {
+            $this->ParamFilter = new ParamFilter();
+            $this->ParamFilter->deserialize($param["ParamFilter"]);
+        }
+
+        if (array_key_exists("AutoGuard",$param) and $param["AutoGuard"] !== null) {
+            $this->AutoGuard = new AutoGuard();
+            $this->AutoGuard->deserialize($param["AutoGuard"]);
         }
     }
 }

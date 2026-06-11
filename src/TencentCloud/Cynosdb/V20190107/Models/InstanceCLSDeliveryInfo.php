@@ -18,53 +18,42 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Instance log delivery information.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceName() Obtain Instance name.
 
-
- * @method void setInstanceName(string $InstanceName) Set Instance name
-
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
 
  * @method string getTopicId() Obtain Log topic id.
 
  * @method void setTopicId(string $TopicId) Set Log topic id.
 
- * @method string getTopicName() Obtain Log topic name
- * @method void setTopicName(string $TopicName) Set Log topic name
+ * @method string getTopicName() Obtain Log topic name.
+ * @method void setTopicName(string $TopicName) Set Log topic name.
  * @method string getGroupId() Obtain Log set id.
-
  * @method void setGroupId(string $GroupId) Set Log set id.
-
  * @method string getGroupName() Obtain Log set name.
-
 
  * @method void setGroupName(string $GroupName) Set Log set name.
 
-
  * @method string getRegion() Obtain Log delivery region.
-
  * @method void setRegion(string $Region) Set Log delivery region.
-
  * @method string getStatus() Obtain Delivery status: creating, running, offlining, offlined.
-
  * @method void setStatus(string $Status) Set Delivery status: creating, running, offlining, offlined.
-
  * @method string getLogType() Obtain Log type.
  * @method void setLogType(string $LogType) Set Log type.
  */
 class InstanceCLSDeliveryInfo extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
-
+     * @var string Instance name.
 
      */
     public $InstanceName;
@@ -76,32 +65,28 @@ class InstanceCLSDeliveryInfo extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string Log topic name
+     * @var string Log topic name.
      */
     public $TopicName;
 
     /**
      * @var string Log set id.
-
      */
     public $GroupId;
 
     /**
      * @var string Log set name.
 
-
      */
     public $GroupName;
 
     /**
      * @var string Log delivery region.
-
      */
     public $Region;
 
     /**
      * @var string Delivery status: creating, running, offlining, offlined.
-
      */
     public $Status;
 
@@ -111,22 +96,17 @@ class InstanceCLSDeliveryInfo extends AbstractModel
     public $LogType;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
-
+     * @param string $InstanceId Instance ID.
+     * @param string $InstanceName Instance name.
 
      * @param string $TopicId Log topic id.
 
-     * @param string $TopicName Log topic name
+     * @param string $TopicName Log topic name.
      * @param string $GroupId Log set id.
-
      * @param string $GroupName Log set name.
 
-
      * @param string $Region Log delivery region.
-
      * @param string $Status Delivery status: creating, running, offlining, offlined.
-
      * @param string $LogType Log type.
      */
     function __construct()

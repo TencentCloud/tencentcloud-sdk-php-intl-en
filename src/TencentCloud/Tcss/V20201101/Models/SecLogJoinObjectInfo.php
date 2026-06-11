@@ -22,36 +22,30 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getHostID() Obtain Server ID
  * @method void setHostID(string $HostID) Set Server ID
- * @method string getHostName() Obtain Server name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostName(string $HostName) Set Server name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHostIP() Obtain Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostIP(string $HostIP) Set Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHostName() Obtain Host name
+ * @method void setHostName(string $HostName) Set Host name
+ * @method string getHostIP() Obtain Host IP address
+ * @method void setHostIP(string $HostIP) Set Host IP address
  * @method string getHostStatus() Obtain Server status
  * @method void setHostStatus(string $HostStatus) Set Server status
  * @method string getClusterID() Obtain Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setClusterID(string $ClusterID) Set Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getClusterName() Obtain Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClusterName(string $ClusterName) Set Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPublicIP() Obtain Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPublicIP(string $PublicIP) Set Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getClusterName() Obtain Cluster name.
+ * @method void setClusterName(string $ClusterName) Set Cluster name.
+ * @method string getPublicIP() Obtain Public IP address
+ * @method void setPublicIP(string $PublicIP) Set Public IP address
  * @method boolean getJoinState() Obtain Access status. Valid values: `true` (accessed); `false` (not accessed).
  * @method void setJoinState(boolean $JoinState) Set Access status. Valid values: `true` (accessed); `false` (not accessed).
- * @method string getClusterVersion() Obtain Cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClusterVersion(string $ClusterVersion) Set Cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getClusterVersion() Obtain cluster edition
+ * @method void setClusterVersion(string $ClusterVersion) Set cluster edition
  * @method string getClusterMainAddress() Obtain Master node address of the cluster
  * @method void setClusterMainAddress(string $ClusterMainAddress) Set Master node address of the cluster
+ * @method integer getContainerCnt() Obtain Number of containers
+ * @method void setContainerCnt(integer $ContainerCnt) Set Number of containers
+ * @method string getClusterType() Obtain Cluster type.
+ * @method void setClusterType(string $ClusterType) Set Cluster type.
+ * @method string getClusterStatus() Obtain Cluster status
+ * @method void setClusterStatus(string $ClusterStatus) Set Cluster status
  */
 class SecLogJoinObjectInfo extends AbstractModel
 {
@@ -61,14 +55,12 @@ class SecLogJoinObjectInfo extends AbstractModel
     public $HostID;
 
     /**
-     * @var string Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host name
      */
     public $HostName;
 
     /**
-     * @var string Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host IP address
      */
     public $HostIP;
 
@@ -79,19 +71,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClusterID;
 
     /**
-     * @var string Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Cluster name.
      */
     public $ClusterName;
 
     /**
-     * @var string Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Public IP address
      */
     public $PublicIP;
 
@@ -101,8 +90,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $JoinState;
 
     /**
-     * @var string Cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string cluster edition
      */
     public $ClusterVersion;
 
@@ -112,22 +100,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ClusterMainAddress;
 
     /**
+     * @var integer Number of containers
+     */
+    public $ContainerCnt;
+
+    /**
+     * @var string Cluster type.
+     */
+    public $ClusterType;
+
+    /**
+     * @var string Cluster status
+     */
+    public $ClusterStatus;
+
+    /**
      * @param string $HostID Server ID
-     * @param string $HostName Server name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HostIP Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HostName Host name
+     * @param string $HostIP Host IP address
      * @param string $HostStatus Server status
      * @param string $ClusterID Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ClusterName Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PublicIP Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ClusterName Cluster name.
+     * @param string $PublicIP Public IP address
      * @param boolean $JoinState Access status. Valid values: `true` (accessed); `false` (not accessed).
-     * @param string $ClusterVersion Cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ClusterVersion cluster edition
      * @param string $ClusterMainAddress Master node address of the cluster
+     * @param integer $ContainerCnt Number of containers
+     * @param string $ClusterType Cluster type.
+     * @param string $ClusterStatus Cluster status
      */
     function __construct()
     {
@@ -180,6 +180,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ClusterMainAddress",$param) and $param["ClusterMainAddress"] !== null) {
             $this->ClusterMainAddress = $param["ClusterMainAddress"];
+        }
+
+        if (array_key_exists("ContainerCnt",$param) and $param["ContainerCnt"] !== null) {
+            $this->ContainerCnt = $param["ContainerCnt"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
+            $this->ClusterStatus = $param["ClusterStatus"];
         }
     }
 }

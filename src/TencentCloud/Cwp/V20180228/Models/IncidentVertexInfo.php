@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Event point information
  *
  * @method string getIncidentId() Obtain Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIncidentId(string $IncidentId) Set Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTableName() Obtain The name of the table where the event occurred
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTableName(string $TableName) Set The name of the table where the event occurred
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getVertex() Obtain A list of node information, with array items containing detailed node information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVertex(array $Vertex) Set A list of node information, with array items containing detailed node information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getVertexCount() Obtain Total number of nodes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVertexCount(integer $VertexCount) Set Total number of nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getVertex() Obtain Node information list, in an array including detailed node information.
+ * @method void setVertex(array $Vertex) Set Node information list, in an array including detailed node information.
+ * @method integer getVertexCount() Obtain Total number of nodes.
+ * @method void setVertexCount(integer $VertexCount) Set Total number of nodes.
  */
 class IncidentVertexInfo extends AbstractModel
 {
     /**
      * @var string Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IncidentId;
 
     /**
      * @var string The name of the table where the event occurred
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TableName;
 
     /**
-     * @var array A list of node information, with array items containing detailed node information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Node information list, in an array including detailed node information.
      */
     public $Vertex;
 
     /**
-     * @var integer Total number of nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Total number of nodes.
      */
     public $VertexCount;
 
     /**
      * @param string $IncidentId Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TableName The name of the table where the event occurred
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Vertex A list of node information, with array items containing detailed node information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $VertexCount Total number of nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Vertex Node information list, in an array including detailed node information.
+     * @param integer $VertexCount Total number of nodes.
      */
     function __construct()
     {

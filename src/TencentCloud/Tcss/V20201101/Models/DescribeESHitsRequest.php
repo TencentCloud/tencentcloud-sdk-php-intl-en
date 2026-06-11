@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. Default value: `0`.
  * @method integer getLimit() Obtain Number of results to be returned. Maximum value: `100`.
  * @method void setLimit(integer $Limit) Set Number of results to be returned. Maximum value: `100`.
+ * @method array getLogTypes() Obtain Log Type List
+ * @method void setLogTypes(array $LogTypes) Set Log Type List
  */
 class DescribeESHitsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeESHitsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array Log Type List
+     */
+    public $LogTypes;
+
+    /**
      * @param string $Query ES query condition in JSON
      * @param integer $Offset Offset. Default value: `0`.
      * @param integer $Limit Number of results to be returned. Maximum value: `100`.
+     * @param array $LogTypes Log Type List
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeESHitsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("LogTypes",$param) and $param["LogTypes"] !== null) {
+            $this->LogTypes = $param["LogTypes"];
         }
     }
 }

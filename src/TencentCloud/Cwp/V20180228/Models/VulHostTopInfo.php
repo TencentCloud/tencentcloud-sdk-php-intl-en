@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Top 5 server risk entities
  *
- * @method string getHostName() Obtain Host name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostName(string $HostName) Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHostName() Obtain host name
+ * @method void setHostName(string $HostName) Set host name
  * @method array getVulLevelList() Obtain Vulnerability level and quantity statistics list
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVulLevelList(array $VulLevelList) Set Vulnerability level and quantity statistics list
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getQuuid() Obtain Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQuuid(string $Quuid) Set Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getScore() Obtain Top ratings
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScore(integer $Score) Set Top ratings
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getScore() Obtain top rating
+ * @method void setScore(integer $Score) Set top rating
  */
 class VulHostTopInfo extends AbstractModel
 {
     /**
-     * @var string Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string host name
      */
     public $HostName;
 
     /**
      * @var array Vulnerability level and quantity statistics list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VulLevelList;
 
     /**
      * @var string Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Quuid;
 
     /**
-     * @var integer Top ratings
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer top rating
      */
     public $Score;
 
     /**
-     * @param string $HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HostName host name
      * @param array $VulLevelList Vulnerability level and quantity statistics list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Score Top ratings
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Score top rating
      */
     function __construct()
     {

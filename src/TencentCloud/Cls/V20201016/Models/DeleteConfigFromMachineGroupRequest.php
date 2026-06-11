@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * DeleteConfigFromMachineGroup request structure.
  *
  * @method string getGroupId() Obtain Machine group ID
+-Get the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
  * @method void setGroupId(string $GroupId) Set Machine group ID
- * @method string getConfigId() Obtain Collection configuration ID
- * @method void setConfigId(string $ConfigId) Set Collection configuration ID
+-Get the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
+ * @method string getConfigId() Obtain Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
+ * @method void setConfigId(string $ConfigId) Set Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
  */
 class DeleteConfigFromMachineGroupRequest extends AbstractModel
 {
     /**
      * @var string Machine group ID
+-Get the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
      */
     public $GroupId;
 
     /**
-     * @var string Collection configuration ID
+     * @var string Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
      */
     public $ConfigId;
 
     /**
      * @param string $GroupId Machine group ID
-     * @param string $ConfigId Collection configuration ID
+-Get the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
+     * @param string $ConfigId Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
      */
     function __construct()
     {

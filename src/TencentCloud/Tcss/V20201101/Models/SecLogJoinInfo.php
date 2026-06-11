@@ -36,6 +36,8 @@ Container bash: "container_bash"
 Container startup: "container_launch"
 K8s API: "k8s_api"
 )
+ * @method integer getClusterCount() Obtain Number of accessed clusters.
+ * @method void setClusterCount(integer $ClusterCount) Set Number of accessed clusters.
  */
 class SecLogJoinInfo extends AbstractModel
 {
@@ -64,6 +66,11 @@ K8s API: "k8s_api"
     public $LogType;
 
     /**
+     * @var integer Number of accessed clusters.
+     */
+    public $ClusterCount;
+
+    /**
      * @param integer $Count Number of connected general nodes
      * @param integer $SuperNodeCount Number of connected super nodes
      * @param boolean $IsJoined Whether it is accessed. Valid values: `true` (accessed); `false` (not accessed).
@@ -72,6 +79,7 @@ Container bash: "container_bash"
 Container startup: "container_launch"
 K8s API: "k8s_api"
 )
+     * @param integer $ClusterCount Number of accessed clusters.
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ K8s API: "k8s_api"
 
         if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
             $this->LogType = $param["LogType"];
+        }
+
+        if (array_key_exists("ClusterCount",$param) and $param["ClusterCount"] !== null) {
+            $this->ClusterCount = $param["ClusterCount"];
         }
     }
 }

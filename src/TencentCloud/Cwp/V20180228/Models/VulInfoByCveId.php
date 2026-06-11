@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getVulId() Obtain Vulnerability ID
  * @method void setVulId(integer $VulId) Set Vulnerability ID
- * @method integer getFixSwitch() Obtain Repair Support Status. 0-Neither Windows nor Linux supports for repair; 1-Both Windows and Linux support for repair; 2-Only Linux supports for repair; 3-Only Windows supports for repair.
- * @method void setFixSwitch(integer $FixSwitch) Set Repair Support Status. 0-Neither Windows nor Linux supports for repair; 1-Both Windows and Linux support for repair; 2-Only Linux supports for repair; 3-Only Windows supports for repair.
+ * @method integer getFixSwitch() Obtain Fixing support status: 0 - not support fixing for Windows and Linux; 1 - support fixing for both Windows and Linux; 2 - support fixing for Linux only; 3 - support fixing for Windows only.
+ * @method void setFixSwitch(integer $FixSwitch) Set Fixing support status: 0 - not support fixing for Windows and Linux; 1 - support fixing for both Windows and Linux; 2 - support fixing for Linux only; 3 - support fixing for Windows only.
  */
 class VulInfoByCveId extends AbstractModel
 {
@@ -33,13 +33,13 @@ class VulInfoByCveId extends AbstractModel
     public $VulId;
 
     /**
-     * @var integer Repair Support Status. 0-Neither Windows nor Linux supports for repair; 1-Both Windows and Linux support for repair; 2-Only Linux supports for repair; 3-Only Windows supports for repair.
+     * @var integer Fixing support status: 0 - not support fixing for Windows and Linux; 1 - support fixing for both Windows and Linux; 2 - support fixing for Linux only; 3 - support fixing for Windows only.
      */
     public $FixSwitch;
 
     /**
      * @param integer $VulId Vulnerability ID
-     * @param integer $FixSwitch Repair Support Status. 0-Neither Windows nor Linux supports for repair; 1-Both Windows and Linux support for repair; 2-Only Linux supports for repair; 3-Only Windows supports for repair.
+     * @param integer $FixSwitch Fixing support status: 0 - not support fixing for Windows and Linux; 1 - support fixing for both Windows and Linux; 2 - support fixing for Linux only; 3 - support fixing for Windows only.
      */
     function __construct()
     {

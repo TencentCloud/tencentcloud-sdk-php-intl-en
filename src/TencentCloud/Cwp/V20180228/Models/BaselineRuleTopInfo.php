@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Information on TOP baseline detection item
  *
  * @method string getRuleName() Obtain Baseline detection item name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRuleName(string $RuleName) Set Baseline detection item name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getLevel() Obtain Detection item hazard level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLevel(integer $Level) Set Detection item hazard level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getEventCount() Obtain Total number of events
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEventCount(integer $EventCount) Set Total number of events
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRuleId() Obtain Detection Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRuleId(integer $RuleId) Set Detection Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRuleId() Obtain Detection item ID
+ * @method void setRuleId(integer $RuleId) Set Detection item ID
  */
 class BaselineRuleTopInfo extends AbstractModel
 {
     /**
      * @var string Baseline detection item name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RuleName;
 
     /**
      * @var integer Detection item hazard level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Level;
 
     /**
      * @var integer Total number of events
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EventCount;
 
     /**
-     * @var integer Detection Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Detection item ID
      */
     public $RuleId;
 
     /**
      * @param string $RuleName Baseline detection item name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Level Detection item hazard level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $EventCount Total number of events
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RuleId Detection Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RuleId Detection item ID
      */
     function __construct()
     {

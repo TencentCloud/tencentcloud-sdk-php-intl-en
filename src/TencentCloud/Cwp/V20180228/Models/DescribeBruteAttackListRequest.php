@@ -26,28 +26,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset, which defaults to 0
  * @method array getFilters() Obtain Filter criteria
 <li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
+<li>Uuid - String - Required: no - CWP unique UUID</li>
 <li>Quuid - String - required: no - CVM UUID</li>
 <li>Status - String - required: no - filter by status: failed - FAILED; succeeded - SUCCESS</li>
 <li>UserName - String - required: no - filter by UserName</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
+<li>SrcIp - String - Required: No - Source ip filter criteria</li>
 <li>CreateBeginTime - String - required: no - filter by first attack time, start time</li>
-<li>CreateEndTime - String - required: no - filter by first attack time, end time</li>
+<li>CreateEndTime - String - Required: no - Filter by first attack time, end time</li>
 <li>ModifyBeginTime - String - required: no - filter by last attack time, start time</li>
 <li>ModifyEndTime - String - required: no - filter by last attack time, end time</li>
-<li>Banned - String - required: no - filter by blocking status (separate multiple items with commas): 0 - not blocked (global ZK switch is off); 82 - not blocked (Non-Pro Edition); 83 - not blocked (allowlisted); 1 - blocked; 2 - not blocked (abnormal program); 3 - not blocked (private network attacks cannot be blocked); 4 - not blocked (Anping is not supported)</li>
+<li>Banned - String - Required: No - Blocking status filtering, multiple values separated by ",": 0-unblocked (global ZK switch off), 82-unblocked (non-Pro Edition), 83-unblocked (added to allowlist), 1-Block Success (completed), 2-unblocked-abnormal program, 3-unblocked-internal network attack (blocking is not supported), 4-unblocked-Anping (blocking is not supported), 10-Block Success (active)</li>
+<li>DataFrom - Int - Matched rule: 0-login rule, 1-intelligence rule</li>
+<li>EventType - String - Required: No - Filter criteria for cracking status: 200-Cracking failure (incorrect password), 300-Successful cracking, 400-Cracking failure (account does not exist)</li>
  * @method void setFilters(array $Filters) Set Filter criteria
 <li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
+<li>Uuid - String - Required: no - CWP unique UUID</li>
 <li>Quuid - String - required: no - CVM UUID</li>
 <li>Status - String - required: no - filter by status: failed - FAILED; succeeded - SUCCESS</li>
 <li>UserName - String - required: no - filter by UserName</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
+<li>SrcIp - String - Required: No - Source ip filter criteria</li>
 <li>CreateBeginTime - String - required: no - filter by first attack time, start time</li>
-<li>CreateEndTime - String - required: no - filter by first attack time, end time</li>
+<li>CreateEndTime - String - Required: no - Filter by first attack time, end time</li>
 <li>ModifyBeginTime - String - required: no - filter by last attack time, start time</li>
 <li>ModifyEndTime - String - required: no - filter by last attack time, end time</li>
-<li>Banned - String - required: no - filter by blocking status (separate multiple items with commas): 0 - not blocked (global ZK switch is off); 82 - not blocked (Non-Pro Edition); 83 - not blocked (allowlisted); 1 - blocked; 2 - not blocked (abnormal program); 3 - not blocked (private network attacks cannot be blocked); 4 - not blocked (Anping is not supported)</li>
+<li>Banned - String - Required: No - Blocking status filtering, multiple values separated by ",": 0-unblocked (global ZK switch off), 82-unblocked (non-Pro Edition), 83-unblocked (added to allowlist), 1-Block Success (completed), 2-unblocked-abnormal program, 3-unblocked-internal network attack (blocking is not supported), 4-unblocked-Anping (blocking is not supported), 10-Block Success (active)</li>
+<li>DataFrom - Int - Matched rule: 0-login rule, 1-intelligence rule</li>
+<li>EventType - String - Required: No - Filter criteria for cracking status: 200-Cracking failure (incorrect password), 300-Successful cracking, 400-Cracking failure (account does not exist)</li>
  * @method string getOrder() Obtain Sorting method: sort by number of requests: asc - ascending order/desc - descending order
  * @method void setOrder(string $Order) Set Sorting method: sort by number of requests: asc - ascending order/desc - descending order
  * @method string getBy() Obtain Sorting field: CreateTime - first attack time
@@ -68,16 +72,18 @@ class DescribeBruteAttackListRequest extends AbstractModel
     /**
      * @var array Filter criteria
 <li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
+<li>Uuid - String - Required: no - CWP unique UUID</li>
 <li>Quuid - String - required: no - CVM UUID</li>
 <li>Status - String - required: no - filter by status: failed - FAILED; succeeded - SUCCESS</li>
 <li>UserName - String - required: no - filter by UserName</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
+<li>SrcIp - String - Required: No - Source ip filter criteria</li>
 <li>CreateBeginTime - String - required: no - filter by first attack time, start time</li>
-<li>CreateEndTime - String - required: no - filter by first attack time, end time</li>
+<li>CreateEndTime - String - Required: no - Filter by first attack time, end time</li>
 <li>ModifyBeginTime - String - required: no - filter by last attack time, start time</li>
 <li>ModifyEndTime - String - required: no - filter by last attack time, end time</li>
-<li>Banned - String - required: no - filter by blocking status (separate multiple items with commas): 0 - not blocked (global ZK switch is off); 82 - not blocked (Non-Pro Edition); 83 - not blocked (allowlisted); 1 - blocked; 2 - not blocked (abnormal program); 3 - not blocked (private network attacks cannot be blocked); 4 - not blocked (Anping is not supported)</li>
+<li>Banned - String - Required: No - Blocking status filtering, multiple values separated by ",": 0-unblocked (global ZK switch off), 82-unblocked (non-Pro Edition), 83-unblocked (added to allowlist), 1-Block Success (completed), 2-unblocked-abnormal program, 3-unblocked-internal network attack (blocking is not supported), 4-unblocked-Anping (blocking is not supported), 10-Block Success (active)</li>
+<li>DataFrom - Int - Matched rule: 0-login rule, 1-intelligence rule</li>
+<li>EventType - String - Required: No - Filter criteria for cracking status: 200-Cracking failure (incorrect password), 300-Successful cracking, 400-Cracking failure (account does not exist)</li>
      */
     public $Filters;
 
@@ -96,16 +102,18 @@ class DescribeBruteAttackListRequest extends AbstractModel
      * @param integer $Offset Offset, which defaults to 0
      * @param array $Filters Filter criteria
 <li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
+<li>Uuid - String - Required: no - CWP unique UUID</li>
 <li>Quuid - String - required: no - CVM UUID</li>
 <li>Status - String - required: no - filter by status: failed - FAILED; succeeded - SUCCESS</li>
 <li>UserName - String - required: no - filter by UserName</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
+<li>SrcIp - String - Required: No - Source ip filter criteria</li>
 <li>CreateBeginTime - String - required: no - filter by first attack time, start time</li>
-<li>CreateEndTime - String - required: no - filter by first attack time, end time</li>
+<li>CreateEndTime - String - Required: no - Filter by first attack time, end time</li>
 <li>ModifyBeginTime - String - required: no - filter by last attack time, start time</li>
 <li>ModifyEndTime - String - required: no - filter by last attack time, end time</li>
-<li>Banned - String - required: no - filter by blocking status (separate multiple items with commas): 0 - not blocked (global ZK switch is off); 82 - not blocked (Non-Pro Edition); 83 - not blocked (allowlisted); 1 - blocked; 2 - not blocked (abnormal program); 3 - not blocked (private network attacks cannot be blocked); 4 - not blocked (Anping is not supported)</li>
+<li>Banned - String - Required: No - Blocking status filtering, multiple values separated by ",": 0-unblocked (global ZK switch off), 82-unblocked (non-Pro Edition), 83-unblocked (added to allowlist), 1-Block Success (completed), 2-unblocked-abnormal program, 3-unblocked-internal network attack (blocking is not supported), 4-unblocked-Anping (blocking is not supported), 10-Block Success (active)</li>
+<li>DataFrom - Int - Matched rule: 0-login rule, 1-intelligence rule</li>
+<li>EventType - String - Required: No - Filter criteria for cracking status: 200-Cracking failure (incorrect password), 300-Successful cracking, 400-Cracking failure (account does not exist)</li>
      * @param string $Order Sorting method: sort by number of requests: asc - ascending order/desc - descending order
      * @param string $By Sorting field: CreateTime - first attack time
      */

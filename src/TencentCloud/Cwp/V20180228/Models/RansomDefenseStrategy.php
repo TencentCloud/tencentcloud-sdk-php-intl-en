@@ -23,51 +23,33 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() Obtain Policy ID
  * @method void setId(integer $Id) Set Policy ID
  * @method string getUin() Obtain Operating UIN
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUin(string $Uin) Set Operating UIN
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getName() Obtain Policy name
  * @method void setName(string $Name) Set Policy name
  * @method string getDescription() Obtain Policy Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Policy Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getStatus() Obtain Enabling Status: 0 Disabled, 1 Enabled.
  * @method void setStatus(integer $Status) Set Enabling Status: 0 Disabled, 1 Enabled.
  * @method integer getIsAll() Obtain Whether it takes effect for all hosts.
  * @method void setIsAll(integer $IsAll) Set Whether it takes effect for all hosts.
  * @method string getIncludeDir() Obtain Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIncludeDir(string $IncludeDir) Set Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getExcludeDir() Obtain Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExcludeDir(string $ExcludeDir) Set Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getBackupType() Obtain Backup pattern: 0 weekly, 1 daily.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBackupType(integer $BackupType) Set Backup pattern: 0 weekly, 1 daily.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getBackupType() Obtain Backup mode: 0 weekly, 1 daily, 2 do not backup.
+ * @method void setBackupType(integer $BackupType) Set Backup mode: 0 weekly, 1 daily, 2 do not backup.
  * @method string getWeekday() Obtain Backup days in a week (1-7): 1; 2; 3; 4.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWeekday(string $Weekday) Set Backup days in a week (1-7): 1; 2; 3; 4.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getHour() Obtain Backup Execution Time Point (0-23): 11:00; 12:00
  * @method void setHour(string $Hour) Set Backup Execution Time Point (0-23): 11:00; 12:00
  * @method integer getSaveDay() Obtain Storage Days, 0 for Permanent
  * @method void setSaveDay(integer $SaveDay) Set Storage Days, 0 for Permanent
  * @method string getCreateTime() Obtain Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getModifyTime() Obtain Last modification time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setModifyTime(string $ModifyTime) Set Last modification time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getMachineCount() Obtain Number of Bound Machines
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineCount(integer $MachineCount) Set Number of Bound Machines
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RansomDefenseStrategy extends AbstractModel
 {
@@ -78,7 +60,6 @@ class RansomDefenseStrategy extends AbstractModel
 
     /**
      * @var string Operating UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Uin;
 
@@ -89,7 +70,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Policy Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Description;
 
@@ -105,25 +85,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IncludeDir;
 
     /**
      * @var string Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExcludeDir;
 
     /**
-     * @var integer Backup pattern: 0 weekly, 1 daily.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Backup mode: 0 weekly, 1 daily, 2 do not backup.
      */
     public $BackupType;
 
     /**
      * @var string Backup days in a week (1-7): 1; 2; 3; 4.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Weekday;
 
@@ -139,47 +115,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
      * @var string Last modification time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ModifyTime;
 
     /**
      * @var integer Number of Bound Machines
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineCount;
 
     /**
      * @param integer $Id Policy ID
      * @param string $Uin Operating UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Name Policy name
      * @param string $Description Policy Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Status Enabling Status: 0 Disabled, 1 Enabled.
      * @param integer $IsAll Whether it takes effect for all hosts.
      * @param string $IncludeDir Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ExcludeDir Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $BackupType Backup pattern: 0 weekly, 1 daily.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $BackupType Backup mode: 0 weekly, 1 daily, 2 do not backup.
      * @param string $Weekday Backup days in a week (1-7): 1; 2; 3; 4.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Hour Backup Execution Time Point (0-23): 11:00; 12:00
      * @param integer $SaveDay Storage Days, 0 for Permanent
      * @param string $CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ModifyTime Last modification time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MachineCount Number of Bound Machines
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

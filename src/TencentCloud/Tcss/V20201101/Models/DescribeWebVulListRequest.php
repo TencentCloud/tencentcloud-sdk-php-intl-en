@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 <li>ComponentName- string - Required: No - Component name</li>
 <li>ComponentVersion- string - Required: No - Component version</li>
 <li>Name- string - Required: No - Vulnerability name</li>
-<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
+<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL` (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
  * @method void setFilters(array $Filters) Set Filter
 <li>OnlyAffectedContainer- string - Required: No - Show only vulnerabilities that affect containers. Valid values: `true`, `false`.</li>
 <li>OnlyAffectedNewestImage-string - Required: No - Show only vulnerabilities that affect the latest image tags. Valid values: `true`, `false`.</li>
@@ -53,7 +53,7 @@ use TencentCloud\Common\AbstractModel;
 <li>ComponentName- string - Required: No - Component name</li>
 <li>ComponentVersion- string - Required: No - Component version</li>
 <li>Name- string - Required: No - Vulnerability name</li>
-<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
+<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL` (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
  * @method string getOrder() Obtain Sorting order
  * @method void setOrder(string $Order) Set Sorting order
  * @method string getBy() Obtain Sorting field
@@ -86,7 +86,7 @@ class DescribeWebVulListRequest extends AbstractModel
 <li>ComponentName- string - Required: No - Component name</li>
 <li>ComponentVersion- string - Required: No - Component version</li>
 <li>Name- string - Required: No - Vulnerability name</li>
-<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
+<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL` (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
      */
     public $Filters;
 
@@ -117,7 +117,7 @@ class DescribeWebVulListRequest extends AbstractModel
 <li>ComponentName- string - Required: No - Component name</li>
 <li>ComponentVersion- string - Required: No - Component version</li>
 <li>Name- string - Required: No - Vulnerability name</li>
-<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
+<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL` (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
      * @param string $Order Sorting order
      * @param string $By Sorting field
      */

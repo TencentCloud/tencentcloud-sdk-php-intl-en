@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyKafkaConsumer request structure.
  *
- * @method string getFromTopicId() Obtain Log Topic ID
- * @method void setFromTopicId(string $FromTopicId) Set Log Topic ID
- * @method integer getCompression() Obtain Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
- * @method void setCompression(integer $Compression) Set Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
- * @method KafkaConsumerContent getConsumerContent() Obtain Kafka protocol consumer data format
- * @method void setConsumerContent(KafkaConsumerContent $ConsumerContent) Set Kafka protocol consumer data format
+ * @method string getFromTopicId() Obtain <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
+ * @method void setFromTopicId(string $FromTopicId) Set <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
+ * @method integer getCompression() Obtain <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
+ * @method void setCompression(integer $Compression) Set <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
+ * @method KafkaConsumerContent getConsumerContent() Obtain <p>kafka protocol consumption data format</p>
+ * @method void setConsumerContent(KafkaConsumerContent $ConsumerContent) Set <p>kafka protocol consumption data format</p>
+ * @method integer getHasServicesLog() Obtain <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+ * @method void setHasServicesLog(integer $HasServicesLog) Set <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+ * @method integer getScopeType() Obtain <p>Range type of consumption, 0: latest, 1: history + latest</p>
+ * @method void setScopeType(integer $ScopeType) Set <p>Range type of consumption, 0: latest, 1: history + latest</p>
  */
 class ModifyKafkaConsumerRequest extends AbstractModel
 {
     /**
-     * @var string Log Topic ID
+     * @var string <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
      */
     public $FromTopicId;
 
     /**
-     * @var integer Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
+     * @var integer <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
      */
     public $Compression;
 
     /**
-     * @var KafkaConsumerContent Kafka protocol consumer data format
+     * @var KafkaConsumerContent <p>kafka protocol consumption data format</p>
      */
     public $ConsumerContent;
 
     /**
-     * @param string $FromTopicId Log Topic ID
-     * @param integer $Compression Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
-     * @param KafkaConsumerContent $ConsumerContent Kafka protocol consumer data format
+     * @var integer <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+     */
+    public $HasServicesLog;
+
+    /**
+     * @var integer <p>Range type of consumption, 0: latest, 1: history + latest</p>
+     */
+    public $ScopeType;
+
+    /**
+     * @param string $FromTopicId <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
+     * @param integer $Compression <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
+     * @param KafkaConsumerContent $ConsumerContent <p>kafka protocol consumption data format</p>
+     * @param integer $HasServicesLog <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+     * @param integer $ScopeType <p>Range type of consumption, 0: latest, 1: history + latest</p>
      */
     function __construct()
     {
@@ -73,6 +89,14 @@ class ModifyKafkaConsumerRequest extends AbstractModel
         if (array_key_exists("ConsumerContent",$param) and $param["ConsumerContent"] !== null) {
             $this->ConsumerContent = new KafkaConsumerContent();
             $this->ConsumerContent->deserialize($param["ConsumerContent"]);
+        }
+
+        if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
+            $this->HasServicesLog = $param["HasServicesLog"];
+        }
+
+        if (array_key_exists("ScopeType",$param) and $param["ScopeType"] !== null) {
+            $this->ScopeType = $param["ScopeType"];
         }
     }
 }

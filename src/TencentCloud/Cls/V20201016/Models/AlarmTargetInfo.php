@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(integer $StartTimeOffset) Set Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
  * @method integer getEndTimeOffset() Obtain Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
  * @method void setEndTimeOffset(integer $EndTimeOffset) Set Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+ * @method integer getSyntaxRule() Obtain Retrieval syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+ * @method void setSyntaxRule(integer $SyntaxRule) Set Retrieval syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+ * @method integer getBizType() Obtain Topic type.
+0: log topic; 1: metric topic
+ * @method void setBizType(integer $BizType) Set Topic type.
+0: log topic; 1: metric topic
  */
 class AlarmTargetInfo extends AbstractModel
 {
@@ -80,6 +90,19 @@ class AlarmTargetInfo extends AbstractModel
     public $EndTimeOffset;
 
     /**
+     * @var integer Retrieval syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+     */
+    public $SyntaxRule;
+
+    /**
+     * @var integer Topic type.
+0: log topic; 1: metric topic
+     */
+    public $BizType;
+
+    /**
      * @param string $LogsetId Logset ID
      * @param string $LogsetName Logset name
      * @param string $TopicId Log topic ID
@@ -88,6 +111,11 @@ class AlarmTargetInfo extends AbstractModel
      * @param integer $Number Monitoring object number
      * @param integer $StartTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
      * @param integer $EndTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+     * @param integer $SyntaxRule Retrieval syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+     * @param integer $BizType Topic type.
+0: log topic; 1: metric topic
      */
     function __construct()
     {
@@ -132,6 +160,14 @@ class AlarmTargetInfo extends AbstractModel
 
         if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
             $this->EndTimeOffset = $param["EndTimeOffset"];
+        }
+
+        if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
+            $this->SyntaxRule = $param["SyntaxRule"];
+        }
+
+        if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {
+            $this->BizType = $param["BizType"];
         }
     }
 }

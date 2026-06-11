@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Heuristic cache configuration
  *
- * @method string getSwitch() Obtain Whether to enable heuristic caching. Values:
-`on`: Enable
-`off`: Disable
-Note: This field may return·`null`, indicating that no valid values can be obtained.
- * @method void setSwitch(string $Switch) Set Whether to enable heuristic caching. Values:
-`on`: Enable
-`off`: Disable
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method string getSwitch() Obtain Specifies the heuristic cache configuration switch. valid values:.
+on: enable.
+Off: turn off the switch (default).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Specifies the heuristic cache configuration switch. valid values:.
+on: enable.
+Off: turn off the switch (default).
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method CacheConfig getCacheConfig() Obtain Heuristic cache validity configuration
 Note: This field may return·`null`, indicating that no valid values can be obtained.
  * @method void setCacheConfig(CacheConfig $CacheConfig) Set Heuristic cache validity configuration
@@ -36,10 +36,10 @@ Note: This field may return·`null`, indicating that no valid values can be obta
 class HeuristicCache extends AbstractModel
 {
     /**
-     * @var string Whether to enable heuristic caching. Values:
-`on`: Enable
-`off`: Disable
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @var string Specifies the heuristic cache configuration switch. valid values:.
+on: enable.
+Off: turn off the switch (default).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Switch;
 
@@ -50,10 +50,10 @@ Note: This field may return·`null`, indicating that no valid values can be obta
     public $CacheConfig;
 
     /**
-     * @param string $Switch Whether to enable heuristic caching. Values:
-`on`: Enable
-`off`: Disable
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param string $Switch Specifies the heuristic cache configuration switch. valid values:.
+on: enable.
+Off: turn off the switch (default).
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param CacheConfig $CacheConfig Heuristic cache validity configuration
 Note: This field may return·`null`, indicating that no valid values can be obtained.
      */

@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RetryShipperTask request structure.
  *
- * @method string getShipperId() Obtain Shipping rule ID
- * @method void setShipperId(string $ShipperId) Set Shipping rule ID
- * @method string getTaskId() Obtain Shipping task ID
- * @method void setTaskId(string $TaskId) Set Shipping task ID
+ * @method string getShipperId() Obtain Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+ * @method void setShipperId(string $ShipperId) Set Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+ * @method string getTaskId() Obtain Delivery task Id.
+
+-Obtain the TaskId by searching the shipping task list (https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+ * @method void setTaskId(string $TaskId) Set Delivery task Id.
+
+-Obtain the TaskId by searching the shipping task list (https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
  */
 class RetryShipperTaskRequest extends AbstractModel
 {
     /**
-     * @var string Shipping rule ID
+     * @var string Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
      */
     public $ShipperId;
 
     /**
-     * @var string Shipping task ID
+     * @var string Delivery task Id.
+
+-Obtain the TaskId by searching the shipping task list (https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
      */
     public $TaskId;
 
     /**
-     * @param string $ShipperId Shipping rule ID
-     * @param string $TaskId Shipping task ID
+     * @param string $ShipperId Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+     * @param string $TaskId Delivery task Id.
+
+-Obtain the TaskId by searching the shipping task list (https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
      */
     function __construct()
     {

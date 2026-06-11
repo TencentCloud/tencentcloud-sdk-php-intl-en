@@ -18,12 +18,12 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Rollback RO group information.
  *
- * @method string getInstanceGroupId() Obtain Instance group ID
- * @method void setInstanceGroupId(string $InstanceGroupId) Set Instance group ID
- * @method string getUniqVpcId() Obtain VPC information
- * @method void setUniqVpcId(string $UniqVpcId) Set VPC information
+ * @method string getInstanceGroupId() Obtain Instance group ID.
+ * @method void setInstanceGroupId(string $InstanceGroupId) Set Instance group ID.
+ * @method string getUniqVpcId() Obtain VPC information.
+ * @method void setUniqVpcId(string $UniqVpcId) Set VPC information.
  * @method string getUniqSubnetId() Obtain Subnet information.
  * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet information.
  * @method string getVip() Obtain vip information.
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class RollbackRoGroupInfo extends AbstractModel
 {
     /**
-     * @var string Instance group ID
+     * @var string Instance group ID.
      */
     public $InstanceGroupId;
 
     /**
-     * @var string VPC information
+     * @var string VPC information.
      */
     public $UniqVpcId;
 
@@ -59,8 +59,8 @@ class RollbackRoGroupInfo extends AbstractModel
     public $Vport;
 
     /**
-     * @param string $InstanceGroupId Instance group ID
-     * @param string $UniqVpcId VPC information
+     * @param string $InstanceGroupId Instance group ID.
+     * @param string $UniqVpcId VPC information.
      * @param string $UniqSubnetId Subnet information.
      * @param string $Vip vip information.
      * @param integer $Vport Specifies the vport information.

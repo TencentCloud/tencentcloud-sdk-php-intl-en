@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * Information of hosts affected by ignoring detection items
  *
  * @method string getHostName() Obtain Host name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHostName(string $HostName) Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getLevel() Obtain Severity level: 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLevel(integer $Level) Set Severity level: 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getLevel() Obtain Severity level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
+ * @method void setLevel(integer $Level) Set Severity level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
  * @method array getTagList() Obtain Host tag array
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTagList(array $TagList) Set Host tag array
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Status: 0: failed; 1: ignore; 3: passed; 5: detecting
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Status: 0: failed; 1: ignore; 3: passed; 5: detecting
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLastScanTime() Obtain Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLastScanTime(string $LastScanTime) Set Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Status: 0: failed; 1: ignore; 3: approved; 5: detecting
+ * @method void setStatus(integer $Status) Set Status: 0: failed; 1: ignore; 3: approved; 5: detecting
+ * @method string getLastScanTime() Obtain Last detection time
+ * @method void setLastScanTime(string $LastScanTime) Set Last detection time
  * @method integer getEventId() Obtain Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEventId(integer $EventId) Set Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getQuuid() Obtain Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setQuuid(string $Quuid) Set Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class IgnoreRuleEffectHostInfo extends AbstractModel
 {
     /**
      * @var string Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostName;
 
     /**
-     * @var integer Severity level: 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Severity level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
      */
     public $Level;
 
     /**
      * @var array Host tag array
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TagList;
 
     /**
-     * @var integer Status: 0: failed; 1: ignore; 3: passed; 5: detecting
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Status: 0: failed; 1: ignore; 3: approved; 5: detecting
      */
     public $Status;
 
     /**
-     * @var string Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Last detection time
      */
     public $LastScanTime;
 
     /**
      * @var integer Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EventId;
 
     /**
      * @var string Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Quuid;
 
     /**
      * @param string $HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Level Severity level: 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Level Severity level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
      * @param array $TagList Host tag array
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Status: 0: failed; 1: ignore; 3: passed; 5: detecting
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LastScanTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Status: 0: failed; 1: ignore; 3: approved; 5: detecting
+     * @param string $LastScanTime Last detection time
      * @param integer $EventId Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

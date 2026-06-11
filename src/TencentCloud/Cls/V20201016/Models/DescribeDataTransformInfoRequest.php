@@ -20,84 +20,140 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDataTransformInfo request structure.
  *
- * @method array getFilters() Obtain <br><li>taskName
-
-Filter by **processing task name**.
+ * @method array getFilters() Obtain - taskName
+Filter by [processing task name].
 Type: String
-
 Required: No
+Example: test-task
 
-<br><li>taskId
-
-Filter by **processing task ID**.
+- taskId
+Filter by [processing task id].
 Type: String
-
 Required: No
+Example: a3622556-6402-4942-b4ff-5ae32ec29810
+Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
 
-<br><li>srctopicId
-
-Filter by **source topic ID**.
+- topicId
+Filter by [source topicId].
 Type: String
-
 Required: No
+Example: 756cec3e-a0a5-44c3-85a8-090870582000
+Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
- * @method void setFilters(array $Filters) Set <br><li>taskName
-
-Filter by **processing task name**.
+- status
+Filter by [Task running status]. 1: Preparing, 2: Running, 3: Stopping, 4: Stopped.
 Type: String
-
 Required: No
+Example: 1
 
-<br><li>taskId
-
-Filter by **processing task ID**.
+- hasServiceLog
+Filter by [whether service logs are enabled]. 1: not enabled, 2: on.
 Type: String
-
 Required: No
+Example: 1
 
-<br><li>srctopicId
-
-Filter by **source topic ID**.
+- dstTopicType
+Filter by [Target topic Type]. 1: Fixed, 2: Dynamic.
 Type: String
-
 Required: No
+Example: 1
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
+ * @method void setFilters(array $Filters) Set - taskName
+Filter by [processing task name].
+Type: String
+Required: No
+Example: test-task
+
+- taskId
+Filter by [processing task id].
+Type: String
+Required: No
+Example: a3622556-6402-4942-b4ff-5ae32ec29810
+Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
+
+- topicId
+Filter by [source topicId].
+Type: String
+Required: No
+Example: 756cec3e-a0a5-44c3-85a8-090870582000
+Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+
+- status
+Filter by [Task running status]. 1: Preparing, 2: Running, 3: Stopping, 4: Stopped.
+Type: String
+Required: No
+Example: 1
+
+- hasServiceLog
+Filter by [whether service logs are enabled]. 1: not enabled, 2: on.
+Type: String
+Required: No
+Example: 1
+
+- dstTopicType
+Filter by [Target topic Type]. 1: Fixed, 2: Dynamic.
+Type: String
+Required: No
+Example: 1
+
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
  * @method integer getOffset() Obtain The pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set The pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Maximum number of entries per page. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Maximum number of entries per page. Default value: 20. Maximum value: 100.
  * @method integer getType() Obtain Task type. Valid values: 1: Get the details of a single task. 2 (default): Get the task list.
  * @method void setType(integer $Type) Set Task type. Valid values: 1: Get the details of a single task. 2 (default): Get the task list.
- * @method string getTaskId() Obtain Task ID, which is required when `Type` is set to `1`
- * @method void setTaskId(string $TaskId) Set Task ID, which is required when `Type` is set to `1`
+ * @method string getTaskId() Obtain When Type is 1, this parameter is required.
+Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
+ * @method void setTaskId(string $TaskId) Set When Type is 1, this parameter is required.
+Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
  */
 class DescribeDataTransformInfoRequest extends AbstractModel
 {
     /**
-     * @var array <br><li>taskName
-
-Filter by **processing task name**.
+     * @var array - taskName
+Filter by [processing task name].
 Type: String
-
 Required: No
+Example: test-task
 
-<br><li>taskId
-
-Filter by **processing task ID**.
+- taskId
+Filter by [processing task id].
 Type: String
-
 Required: No
+Example: a3622556-6402-4942-b4ff-5ae32ec29810
+Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
 
-<br><li>srctopicId
-
-Filter by **source topic ID**.
+- topicId
+Filter by [source topicId].
 Type: String
-
 Required: No
+Example: 756cec3e-a0a5-44c3-85a8-090870582000
+Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+- status
+Filter by [Task running status]. 1: Preparing, 2: Running, 3: Stopping, 4: Stopped.
+Type: String
+Required: No
+Example: 1
+
+- hasServiceLog
+Filter by [whether service logs are enabled]. 1: not enabled, 2: on.
+Type: String
+Required: No
+Example: 1
+
+- dstTopicType
+Filter by [Target topic Type]. 1: Fixed, 2: Dynamic.
+Type: String
+Required: No
+Example: 1
+
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
      */
     public $Filters;
 
@@ -117,37 +173,57 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
     public $Type;
 
     /**
-     * @var string Task ID, which is required when `Type` is set to `1`
+     * @var string When Type is 1, this parameter is required.
+Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
      */
     public $TaskId;
 
     /**
-     * @param array $Filters <br><li>taskName
-
-Filter by **processing task name**.
+     * @param array $Filters - taskName
+Filter by [processing task name].
 Type: String
-
 Required: No
+Example: test-task
 
-<br><li>taskId
-
-Filter by **processing task ID**.
+- taskId
+Filter by [processing task id].
 Type: String
-
 Required: No
+Example: a3622556-6402-4942-b4ff-5ae32ec29810
+Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
 
-<br><li>srctopicId
-
-Filter by **source topic ID**.
+- topicId
+Filter by [source topicId].
 Type: String
-
 Required: No
+Example: 756cec3e-a0a5-44c3-85a8-090870582000
+Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+- status
+Filter by [Task running status]. 1: Preparing, 2: Running, 3: Stopping, 4: Stopped.
+Type: String
+Required: No
+Example: 1
+
+- hasServiceLog
+Filter by [whether service logs are enabled]. 1: not enabled, 2: on.
+Type: String
+Required: No
+Example: 1
+
+- dstTopicType
+Filter by [Target topic Type]. 1: Fixed, 2: Dynamic.
+Type: String
+Required: No
+Example: 1
+
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
      * @param integer $Offset The pagination offset. Default value: 0.
      * @param integer $Limit Maximum number of entries per page. Default value: 20. Maximum value: 100.
      * @param integer $Type Task type. Valid values: 1: Get the details of a single task. 2 (default): Get the task list.
-     * @param string $TaskId Task ID, which is required when `Type` is set to `1`
+     * @param string $TaskId When Type is 1, this parameter is required.
+Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
      */
     function __construct()
     {

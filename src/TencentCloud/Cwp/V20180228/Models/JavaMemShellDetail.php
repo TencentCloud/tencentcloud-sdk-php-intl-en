@@ -64,12 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventDescription(string $EventDescription) Set Event description
  * @method string getSecurityAdvice() Obtain Security advice
  * @method void setSecurityAdvice(string $SecurityAdvice) Set Security advice
- * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional host information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional host information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMachineState() Obtain Instance status: RUNNING, STOPPED, SHUTDOWN...
- * @method void setMachineState(string $MachineState) Set Instance status: RUNNING, STOPPED, SHUTDOWN...
+ * @method MachineExtraInfo getMachineExtraInfo() Obtain  Host Additional Information
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set  Host Additional Information
+ * @method string getMachineState() Obtain Agent status: OFFLINE; ONLINE.
+ * @method void setMachineState(string $MachineState) Set Agent status: OFFLINE; ONLINE.
  */
 class JavaMemShellDetail extends AbstractModel
 {
@@ -184,13 +182,12 @@ class JavaMemShellDetail extends AbstractModel
     public $SecurityAdvice;
 
     /**
-     * @var MachineExtraInfo Additional host information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MachineExtraInfo  Host Additional Information
      */
     public $MachineExtraInfo;
 
     /**
-     * @var string Instance status: RUNNING, STOPPED, SHUTDOWN...
+     * @var string Agent status: OFFLINE; ONLINE.
      */
     public $MachineState;
 
@@ -217,9 +214,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ClassContentPretty Java Memory Trojan Decompilation Code
      * @param string $EventDescription Event description
      * @param string $SecurityAdvice Security advice
-     * @param MachineExtraInfo $MachineExtraInfo Additional host information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MachineState Instance status: RUNNING, STOPPED, SHUTDOWN...
+     * @param MachineExtraInfo $MachineExtraInfo  Host Additional Information
+     * @param string $MachineState Agent status: OFFLINE; ONLINE.
      */
     function __construct()
     {

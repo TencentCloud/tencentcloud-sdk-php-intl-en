@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMNP request structure.
  *
- * @method string getMNPType() Obtain Mini program category.
- * @method void setMNPType(string $MNPType) Set Mini program category.
- * @method string getMNPName() Obtain Mini program name.
- * @method void setMNPName(string $MNPName) Set Mini program name.
- * @method string getMNPIntro() Obtain Mini program introduction.
- * @method void setMNPIntro(string $MNPIntro) Set Mini program introduction.
- * @method string getMNPDesc() Obtain Mini program description.
- * @method void setMNPDesc(string $MNPDesc) Set Mini program description.
- * @method string getMNPId() Obtain Mini program appid.
- * @method void setMNPId(string $MNPId) Set Mini program appid.
- * @method string getPlatformId() Obtain Platform ID.
- * @method void setPlatformId(string $PlatformId) Set Platform ID.
- * @method string getMNPIcon() Obtain Mini program icon.
- * @method void setMNPIcon(string $MNPIcon) Set Mini program icon.
- * @method array getI18nList() Obtain <p>The mini program name and description in multiple languages.</p>
- * @method void setI18nList(array $I18nList) Set <p>The mini program name and description in multiple languages.</p>
+ * @method string getMNPType() Obtain <p>Mini program category.</p>
+ * @method void setMNPType(string $MNPType) Set <p>Mini program category.</p>
+ * @method string getMNPName() Obtain <p>Mini program name.</p>
+ * @method void setMNPName(string $MNPName) Set <p>Mini program name.</p>
+ * @method string getMNPIntro() Obtain <p>Mini program introduction.</p>
+ * @method void setMNPIntro(string $MNPIntro) Set <p>Mini program introduction.</p>
+ * @method string getMNPDesc() Obtain <p>Mini program description.</p>
+ * @method void setMNPDesc(string $MNPDesc) Set <p>Mini program description.</p>
+ * @method string getMNPId() Obtain <p>Mini program appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini program appid.</p>
+ * @method string getPlatformId() Obtain <p>Platform ID.</p>
+ * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
+ * @method string getMNPIcon() Obtain <p>Mini program icon.</p>
+ * @method void setMNPIcon(string $MNPIcon) Set <p>Mini program icon.</p>
+ * @method array getI18nList() Obtain <p>Mini program name and introduction in multiple languages.</p>
+ * @method void setI18nList(array $I18nList) Set <p>Mini program name and introduction in multiple languages.</p>
  */
 class ModifyMNPRequest extends AbstractModel
 {
     /**
-     * @var string Mini program category.
+     * @var string <p>Mini program category.</p>
      */
     public $MNPType;
 
     /**
-     * @var string Mini program name.
+     * @var string <p>Mini program name.</p>
      */
     public $MNPName;
 
     /**
-     * @var string Mini program introduction.
+     * @var string <p>Mini program introduction.</p>
      */
     public $MNPIntro;
 
     /**
-     * @var string Mini program description.
+     * @var string <p>Mini program description.</p>
      */
     public $MNPDesc;
 
     /**
-     * @var string Mini program appid.
+     * @var string <p>Mini program appid.</p>
      */
     public $MNPId;
 
     /**
-     * @var string Platform ID.
+     * @var string <p>Platform ID.</p>
      */
     public $PlatformId;
 
     /**
-     * @var string Mini program icon.
+     * @var string <p>Mini program icon.</p>
      */
     public $MNPIcon;
 
     /**
-     * @var array <p>The mini program name and description in multiple languages.</p>
+     * @var array <p>Mini program name and introduction in multiple languages.</p>
      */
     public $I18nList;
 
     /**
-     * @param string $MNPType Mini program category.
-     * @param string $MNPName Mini program name.
-     * @param string $MNPIntro Mini program introduction.
-     * @param string $MNPDesc Mini program description.
-     * @param string $MNPId Mini program appid.
-     * @param string $PlatformId Platform ID.
-     * @param string $MNPIcon Mini program icon.
-     * @param array $I18nList <p>The mini program name and description in multiple languages.</p>
+     * @param string $MNPType <p>Mini program category.</p>
+     * @param string $MNPName <p>Mini program name.</p>
+     * @param string $MNPIntro <p>Mini program introduction.</p>
+     * @param string $MNPDesc <p>Mini program description.</p>
+     * @param string $MNPId <p>Mini program appid.</p>
+     * @param string $PlatformId <p>Platform ID.</p>
+     * @param string $MNPIcon <p>Mini program icon.</p>
+     * @param array $I18nList <p>Mini program name and introduction in multiple languages.</p>
      */
     function __construct()
     {

@@ -20,138 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Superapp sensitive API list data.
  *
- * @method string getAPIId() Obtain API ID.
- * @method void setAPIId(string $APIId) Set API ID.
- * @method string getAPIName() Obtain API name.
- * @method void setAPIName(string $APIName) Set API name.
- * @method string getAPIMethod() Obtain API request method.
- * @method void setAPIMethod(string $APIMethod) Set API request method.
- * @method string getAPIDesc() Obtain API description.
- * @method void setAPIDesc(string $APIDesc) Set API description.
- * @method string getCreateUser() Obtain Creator.
- * @method void setCreateUser(string $CreateUser) Set Creator.
- * @method string getCreateTime() Obtain Creation time.
- * @method void setCreateTime(string $CreateTime) Set Creation time.
- * @method string getUpdateUser() Obtain Last modifier.
- * @method void setUpdateUser(string $UpdateUser) Set Last modifier.
- * @method string getUpdateTime() Obtain Last modified time.
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time.
- * @method string getApplicationId() Obtain Superapp ID.
- * @method void setApplicationId(string $ApplicationId) Set Superapp ID.
- * @method string getApplicationName() Obtain Superapp name.
- * @method void setApplicationName(string $ApplicationName) Set Superapp name.
- * @method string getTeamId() Obtain Team ID.
- * @method void setTeamId(string $TeamId) Set Team ID.
- * @method string getTeamName() Obtain Team name.
- * @method void setTeamName(string $TeamName) Set Team name.
- * @method string getApplicationLogo() Obtain Superapp icon.
- * @method void setApplicationLogo(string $ApplicationLogo) Set Superapp icon.
- * @method integer getAPIType() Obtain API type. Valid values: 1: System; 2: Custom.
- * @method void setAPIType(integer $APIType) Set API type. Valid values: 1: System; 2: Custom.
- * @method integer getStatus() Obtain API status. Valid values: 0: Public; 1: Restricted.
- * @method void setStatus(integer $Status) Set API status. Valid values: 0: Public; 1: Restricted.
- * @method integer getUseScope() Obtain Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
- * @method void setUseScope(integer $UseScope) Set Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+ * @method string getAPIId() Obtain <p>APIID</p>
+ * @method void setAPIId(string $APIId) Set <p>APIID</p>
+ * @method string getAPIName() Obtain <p>API name.</p>
+ * @method void setAPIName(string $APIName) Set <p>API name.</p>
+ * @method string getAPIMethod() Obtain <p>API method.</p>
+ * @method void setAPIMethod(string $APIMethod) Set <p>API method.</p>
+ * @method string getAPIDesc() Obtain <p>API description.</p>
+ * @method void setAPIDesc(string $APIDesc) Set <p>API description.</p>
+ * @method string getCreateUser() Obtain <p>Creator.</p>
+ * @method void setCreateUser(string $CreateUser) Set <p>Creator.</p>
+ * @method string getCreateTime() Obtain <p>Creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
+ * @method string getUpdateUser() Obtain <p>Last modifier.</p>
+ * @method void setUpdateUser(string $UpdateUser) Set <p>Last modifier.</p>
+ * @method string getUpdateTime() Obtain <p>Last modified time.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Last modified time.</p>
+ * @method string getApplicationId() Obtain <p>Superapp ID.</p>
+ * @method void setApplicationId(string $ApplicationId) Set <p>Superapp ID.</p>
+ * @method string getApplicationName() Obtain <p>Superapp name.</p>
+ * @method void setApplicationName(string $ApplicationName) Set <p>Superapp name.</p>
+ * @method string getTeamId() Obtain <p>Team ID.</p>
+ * @method void setTeamId(string $TeamId) Set <p>Team ID.</p>
+ * @method string getTeamName() Obtain <p>Team name.</p>
+ * @method void setTeamName(string $TeamName) Set <p>Team name.</p>
+ * @method string getApplicationLogo() Obtain <p>Superapp icon.</p>
+ * @method void setApplicationLogo(string $ApplicationLogo) Set <p>Superapp icon.</p>
+ * @method integer getAPIType() Obtain <p>API type. Valid values: 1: System; 2: Custom.</p>
+ * @method void setAPIType(integer $APIType) Set <p>API type. Valid values: 1: System; 2: Custom.</p>
+ * @method integer getStatus() Obtain <p>API status. Valid values: 0: Public; 1: Restricted.</p>
+ * @method void setStatus(integer $Status) Set <p>API status. Valid values: 0: Public; 1: Restricted.</p>
+ * @method integer getUseScope() Obtain <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
+ * @method void setUseScope(integer $UseScope) Set <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
  */
 class DescribeApplicationSensitiveAPIListData extends AbstractModel
 {
     /**
-     * @var string API ID.
+     * @var string <p>APIID</p>
      */
     public $APIId;
 
     /**
-     * @var string API name.
+     * @var string <p>API name.</p>
      */
     public $APIName;
 
     /**
-     * @var string API request method.
+     * @var string <p>API method.</p>
      */
     public $APIMethod;
 
     /**
-     * @var string API description.
+     * @var string <p>API description.</p>
      */
     public $APIDesc;
 
     /**
-     * @var string Creator.
+     * @var string <p>Creator.</p>
      */
     public $CreateUser;
 
     /**
-     * @var string Creation time.
+     * @var string <p>Creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Last modifier.
+     * @var string <p>Last modifier.</p>
      */
     public $UpdateUser;
 
     /**
-     * @var string Last modified time.
+     * @var string <p>Last modified time.</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string Superapp ID.
+     * @var string <p>Superapp ID.</p>
      */
     public $ApplicationId;
 
     /**
-     * @var string Superapp name.
+     * @var string <p>Superapp name.</p>
      */
     public $ApplicationName;
 
     /**
-     * @var string Team ID.
+     * @var string <p>Team ID.</p>
      */
     public $TeamId;
 
     /**
-     * @var string Team name.
+     * @var string <p>Team name.</p>
      */
     public $TeamName;
 
     /**
-     * @var string Superapp icon.
+     * @var string <p>Superapp icon.</p>
      */
     public $ApplicationLogo;
 
     /**
-     * @var integer API type. Valid values: 1: System; 2: Custom.
+     * @var integer <p>API type. Valid values: 1: System; 2: Custom.</p>
      */
     public $APIType;
 
     /**
-     * @var integer API status. Valid values: 0: Public; 1: Restricted.
+     * @var integer <p>API status. Valid values: 0: Public; 1: Restricted.</p>
      */
     public $Status;
 
     /**
-     * @var integer Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+     * @var integer <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
      */
     public $UseScope;
 
     /**
-     * @param string $APIId API ID.
-     * @param string $APIName API name.
-     * @param string $APIMethod API request method.
-     * @param string $APIDesc API description.
-     * @param string $CreateUser Creator.
-     * @param string $CreateTime Creation time.
-     * @param string $UpdateUser Last modifier.
-     * @param string $UpdateTime Last modified time.
-     * @param string $ApplicationId Superapp ID.
-     * @param string $ApplicationName Superapp name.
-     * @param string $TeamId Team ID.
-     * @param string $TeamName Team name.
-     * @param string $ApplicationLogo Superapp icon.
-     * @param integer $APIType API type. Valid values: 1: System; 2: Custom.
-     * @param integer $Status API status. Valid values: 0: Public; 1: Restricted.
-     * @param integer $UseScope Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+     * @param string $APIId <p>APIID</p>
+     * @param string $APIName <p>API name.</p>
+     * @param string $APIMethod <p>API method.</p>
+     * @param string $APIDesc <p>API description.</p>
+     * @param string $CreateUser <p>Creator.</p>
+     * @param string $CreateTime <p>Creation time.</p>
+     * @param string $UpdateUser <p>Last modifier.</p>
+     * @param string $UpdateTime <p>Last modified time.</p>
+     * @param string $ApplicationId <p>Superapp ID.</p>
+     * @param string $ApplicationName <p>Superapp name.</p>
+     * @param string $TeamId <p>Team ID.</p>
+     * @param string $TeamName <p>Team name.</p>
+     * @param string $ApplicationLogo <p>Superapp icon.</p>
+     * @param integer $APIType <p>API type. Valid values: 1: System; 2: Custom.</p>
+     * @param integer $Status <p>API status. Valid values: 0: Public; 1: Restricted.</p>
+     * @param integer $UseScope <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
      */
     function __construct()
     {

@@ -20,98 +20,102 @@ use TencentCloud\Common\AbstractModel;
 /**
  * List of clusters
  *
- * @method string getClusterID() Obtain Cluster ID
- * @method void setClusterID(string $ClusterID) Set Cluster ID
- * @method string getClusterName() Obtain Cluster name
- * @method void setClusterName(string $ClusterName) Set Cluster name
- * @method string getStatus() Obtain Cluster status
-`CSR_RUNNING`: Running
-`CSR_EXCEPTION`: Abnormal
-`CSR_DEL`: Deleted
- * @method void setStatus(string $Status) Set Cluster status
-`CSR_RUNNING`: Running
-`CSR_EXCEPTION`: Abnormal
-`CSR_DEL`: Deleted
- * @method string getBindRuleName() Obtain Bound rule name
- * @method void setBindRuleName(string $BindRuleName) Set Bound rule name
- * @method string getClusterType() Obtain Cluster type:
-`CT_TKE`: TKE cluster
-`CT_USER_CREATE`: External cluster
-`CT_TKE_SERVERLESS`: TKE Serverless cluster
- * @method void setClusterType(string $ClusterType) Set Cluster type:
-`CT_TKE`: TKE cluster
-`CT_USER_CREATE`: External cluster
-`CT_TKE_SERVERLESS`: TKE Serverless cluster
- * @method string getClusterVersion() Obtain Cluster version
- * @method void setClusterVersion(string $ClusterVersion) Set Cluster version
- * @method integer getMemLimit() Obtain MEM usage
- * @method void setMemLimit(integer $MemLimit) Set MEM usage
- * @method integer getCpuLimit() Obtain cpu
- * @method void setCpuLimit(integer $CpuLimit) Set cpu
+ * @method string getClusterID() Obtain <p>Cluster ID.</p>
+ * @method void setClusterID(string $ClusterID) Set <p>Cluster ID.</p>
+ * @method string getClusterName() Obtain <p>Cluster name.</p>
+ * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
+ * @method string getStatus() Obtain <p>Cluster status<br>CSR_RUNNING: Running<br>CSR_EXCEPTION: Exception<br>CSR_DEL: Deleted</p>
+ * @method void setStatus(string $Status) Set <p>Cluster status<br>CSR_RUNNING: Running<br>CSR_EXCEPTION: Exception<br>CSR_DEL: Deleted</p>
+ * @method string getBindRuleID() Obtain <p>ID of the bound cluster</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBindRuleID(string $BindRuleID) Set <p>ID of the bound cluster</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBindRuleName() Obtain <p>Binding rule name</p>
+ * @method void setBindRuleName(string $BindRuleName) Set <p>Binding rule name</p>
+ * @method string getClusterType() Obtain <p>ClusterType:<br>CT_TKE: tke cluster;<br>CT_USER_CREATE: user-built cluster;<br>CT_TKE_SERVERLESS: TKE Serverless Cluster;</p>
+ * @method void setClusterType(string $ClusterType) Set <p>ClusterType:<br>CT_TKE: tke cluster;<br>CT_USER_CREATE: user-built cluster;<br>CT_TKE_SERVERLESS: TKE Serverless Cluster;</p>
+ * @method string getClusterVersion() Obtain <p>Cluster edition</p>
+ * @method void setClusterVersion(string $ClusterVersion) Set <p>Cluster edition</p>
+ * @method integer getMemLimit() Obtain <p>Memory capacity</p>
+ * @method void setMemLimit(integer $MemLimit) Set <p>Memory capacity</p>
+ * @method integer getCpuLimit() Obtain <p>cpu</p>
+ * @method void setCpuLimit(integer $CpuLimit) Set <p>cpu</p>
+ * @method string getClusterAuditStatus() Obtain <p>Cluster audit switch status:<br>Closed/Closing/CloseFailed/Opened/Opening/OpenFailed</p>
+ * @method void setClusterAuditStatus(string $ClusterAuditStatus) Set <p>Cluster audit switch status:<br>Closed/Closing/CloseFailed/Opened/Opening/OpenFailed</p>
+ * @method string getAccessedStatus() Obtain <p>Access status:<br>Not connected: AccessedNone<br>Defended: AccessedDefended<br>No protection: AccessedInstalled<br>Partial protection: AccessedPartialDefence<br>Access exception: AccessedException<br>Uninstallation exception: AccessedUninstallException<br>Accessing: AccessedInstalling<br>Uninstalling: AccessedUninstalling</p>
+ * @method void setAccessedStatus(string $AccessedStatus) Set <p>Access status:<br>Not connected: AccessedNone<br>Defended: AccessedDefended<br>No protection: AccessedInstalled<br>Partial protection: AccessedPartialDefence<br>Access exception: AccessedException<br>Uninstallation exception: AccessedUninstallException<br>Accessing: AccessedInstalling<br>Uninstalling: AccessedUninstalling</p>
  */
 class AssetClusterListItem extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterID;
 
     /**
-     * @var string Cluster name
+     * @var string <p>Cluster name.</p>
      */
     public $ClusterName;
 
     /**
-     * @var string Cluster status
-`CSR_RUNNING`: Running
-`CSR_EXCEPTION`: Abnormal
-`CSR_DEL`: Deleted
+     * @var string <p>Cluster status<br>CSR_RUNNING: Running<br>CSR_EXCEPTION: Exception<br>CSR_DEL: Deleted</p>
      */
     public $Status;
 
     /**
-     * @var string Bound rule name
+     * @var string <p>ID of the bound cluster</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BindRuleID;
+
+    /**
+     * @var string <p>Binding rule name</p>
      */
     public $BindRuleName;
 
     /**
-     * @var string Cluster type:
-`CT_TKE`: TKE cluster
-`CT_USER_CREATE`: External cluster
-`CT_TKE_SERVERLESS`: TKE Serverless cluster
+     * @var string <p>ClusterType:<br>CT_TKE: tke cluster;<br>CT_USER_CREATE: user-built cluster;<br>CT_TKE_SERVERLESS: TKE Serverless Cluster;</p>
      */
     public $ClusterType;
 
     /**
-     * @var string Cluster version
+     * @var string <p>Cluster edition</p>
      */
     public $ClusterVersion;
 
     /**
-     * @var integer MEM usage
+     * @var integer <p>Memory capacity</p>
      */
     public $MemLimit;
 
     /**
-     * @var integer cpu
+     * @var integer <p>cpu</p>
      */
     public $CpuLimit;
 
     /**
-     * @param string $ClusterID Cluster ID
-     * @param string $ClusterName Cluster name
-     * @param string $Status Cluster status
-`CSR_RUNNING`: Running
-`CSR_EXCEPTION`: Abnormal
-`CSR_DEL`: Deleted
-     * @param string $BindRuleName Bound rule name
-     * @param string $ClusterType Cluster type:
-`CT_TKE`: TKE cluster
-`CT_USER_CREATE`: External cluster
-`CT_TKE_SERVERLESS`: TKE Serverless cluster
-     * @param string $ClusterVersion Cluster version
-     * @param integer $MemLimit MEM usage
-     * @param integer $CpuLimit cpu
+     * @var string <p>Cluster audit switch status:<br>Closed/Closing/CloseFailed/Opened/Opening/OpenFailed</p>
+     */
+    public $ClusterAuditStatus;
+
+    /**
+     * @var string <p>Access status:<br>Not connected: AccessedNone<br>Defended: AccessedDefended<br>No protection: AccessedInstalled<br>Partial protection: AccessedPartialDefence<br>Access exception: AccessedException<br>Uninstallation exception: AccessedUninstallException<br>Accessing: AccessedInstalling<br>Uninstalling: AccessedUninstalling</p>
+     */
+    public $AccessedStatus;
+
+    /**
+     * @param string $ClusterID <p>Cluster ID.</p>
+     * @param string $ClusterName <p>Cluster name.</p>
+     * @param string $Status <p>Cluster status<br>CSR_RUNNING: Running<br>CSR_EXCEPTION: Exception<br>CSR_DEL: Deleted</p>
+     * @param string $BindRuleID <p>ID of the bound cluster</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BindRuleName <p>Binding rule name</p>
+     * @param string $ClusterType <p>ClusterType:<br>CT_TKE: tke cluster;<br>CT_USER_CREATE: user-built cluster;<br>CT_TKE_SERVERLESS: TKE Serverless Cluster;</p>
+     * @param string $ClusterVersion <p>Cluster edition</p>
+     * @param integer $MemLimit <p>Memory capacity</p>
+     * @param integer $CpuLimit <p>cpu</p>
+     * @param string $ClusterAuditStatus <p>Cluster audit switch status:<br>Closed/Closing/CloseFailed/Opened/Opening/OpenFailed</p>
+     * @param string $AccessedStatus <p>Access status:<br>Not connected: AccessedNone<br>Defended: AccessedDefended<br>No protection: AccessedInstalled<br>Partial protection: AccessedPartialDefence<br>Access exception: AccessedException<br>Uninstallation exception: AccessedUninstallException<br>Accessing: AccessedInstalling<br>Uninstalling: AccessedUninstalling</p>
      */
     function __construct()
     {
@@ -138,6 +142,10 @@ class AssetClusterListItem extends AbstractModel
             $this->Status = $param["Status"];
         }
 
+        if (array_key_exists("BindRuleID",$param) and $param["BindRuleID"] !== null) {
+            $this->BindRuleID = $param["BindRuleID"];
+        }
+
         if (array_key_exists("BindRuleName",$param) and $param["BindRuleName"] !== null) {
             $this->BindRuleName = $param["BindRuleName"];
         }
@@ -156,6 +164,14 @@ class AssetClusterListItem extends AbstractModel
 
         if (array_key_exists("CpuLimit",$param) and $param["CpuLimit"] !== null) {
             $this->CpuLimit = $param["CpuLimit"];
+        }
+
+        if (array_key_exists("ClusterAuditStatus",$param) and $param["ClusterAuditStatus"] !== null) {
+            $this->ClusterAuditStatus = $param["ClusterAuditStatus"];
+        }
+
+        if (array_key_exists("AccessedStatus",$param) and $param["AccessedStatus"] !== null) {
+            $this->AccessedStatus = $param["AccessedStatus"];
         }
     }
 }

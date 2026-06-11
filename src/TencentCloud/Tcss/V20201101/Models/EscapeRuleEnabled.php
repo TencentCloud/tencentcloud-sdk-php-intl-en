@@ -21,19 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * Enablement/Disablement of the container escape scan policy
  *
  * @method string getType() Obtain Rule type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+ESCAPE_CGROUPS: Escape by using the cgroup mechanism
+ESCAPE_TAMPER_SENSITIVE_FILE: Escape by tampering with sensitive files
+ESCAPE_DOCKER_API: Escape by accessing the Docker API
+ESCAPE_VUL_OCCURRED: Escape vulnerability exploitation.
+MOUNT_SENSITIVE_PATH: MOUNT SENSITIVE path
+PRIVILEGE_CONTAINER_START: Privilege container
+PRIVILEGE: Escape by program privilege escalation
  * @method void setType(string $Type) Set Rule type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+ESCAPE_CGROUPS: Escape by using the cgroup mechanism
+ESCAPE_TAMPER_SENSITIVE_FILE: Escape by tampering with sensitive files
+ESCAPE_DOCKER_API: Escape by accessing the Docker API
+ESCAPE_VUL_OCCURRED: Escape vulnerability exploitation.
+MOUNT_SENSITIVE_PATH: MOUNT SENSITIVE path
+PRIVILEGE_CONTAINER_START: Privilege container
+PRIVILEGE: Escape by program privilege escalation
  * @method boolean getIsEnable() Obtain Whether to enable. Valid values: `false` (no); `true` (yes).
  * @method void setIsEnable(boolean $IsEnable) Set Whether to enable. Valid values: `false` (no); `true` (yes).
  */
@@ -41,12 +43,13 @@ class EscapeRuleEnabled extends AbstractModel
 {
     /**
      * @var string Rule type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+ESCAPE_CGROUPS: Escape by using the cgroup mechanism
+ESCAPE_TAMPER_SENSITIVE_FILE: Escape by tampering with sensitive files
+ESCAPE_DOCKER_API: Escape by accessing the Docker API
+ESCAPE_VUL_OCCURRED: Escape vulnerability exploitation.
+MOUNT_SENSITIVE_PATH: MOUNT SENSITIVE path
+PRIVILEGE_CONTAINER_START: Privilege container
+PRIVILEGE: Escape by program privilege escalation
      */
     public $Type;
 
@@ -57,12 +60,13 @@ class EscapeRuleEnabled extends AbstractModel
 
     /**
      * @param string $Type Rule type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+ESCAPE_CGROUPS: Escape by using the cgroup mechanism
+ESCAPE_TAMPER_SENSITIVE_FILE: Escape by tampering with sensitive files
+ESCAPE_DOCKER_API: Escape by accessing the Docker API
+ESCAPE_VUL_OCCURRED: Escape vulnerability exploitation.
+MOUNT_SENSITIVE_PATH: MOUNT SENSITIVE path
+PRIVILEGE_CONTAINER_START: Privilege container
+PRIVILEGE: Escape by program privilege escalation
      * @param boolean $IsEnable Whether to enable. Valid values: `false` (no); `true` (yes).
      */
     function __construct()

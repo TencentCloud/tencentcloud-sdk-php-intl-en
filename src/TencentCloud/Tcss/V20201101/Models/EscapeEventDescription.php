@@ -24,14 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Event rule
  * @method string getSolution() Obtain Solution
  * @method void setSolution(string $Solution) Set Solution
- * @method string getRemark() Obtain Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRemark(string $Remark) Set Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOperationTime() Obtain Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOperationTime(string $OperationTime) Set Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRemark() Obtain Event remark information
+ * @method void setRemark(string $Remark) Set Event remark information
+ * @method string getOperationTime() Obtain Last Time for Event Handling
+ * @method void setOperationTime(string $OperationTime) Set Last Time for Event Handling
  */
 class EscapeEventDescription extends AbstractModel
 {
@@ -46,24 +42,20 @@ class EscapeEventDescription extends AbstractModel
     public $Solution;
 
     /**
-     * @var string Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Event remark information
      */
     public $Remark;
 
     /**
-     * @var string Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Last Time for Event Handling
      */
     public $OperationTime;
 
     /**
      * @param string $Description Event rule
      * @param string $Solution Solution
-     * @param string $Remark Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OperationTime Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Remark Event remark information
+     * @param string $OperationTime Last Time for Event Handling
      */
     function __construct()
     {

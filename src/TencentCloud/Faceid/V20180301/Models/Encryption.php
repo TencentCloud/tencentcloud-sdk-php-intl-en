@@ -18,7 +18,7 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Sensitive Data Encryption
  *
  * @method array getEncryptList() Obtain <p>When using the encryption service, fill in the field to be encrypted. One or more encrypted fields can be auto-filled in this API.</p>
 Note: This field may return null, indicating that no valid values can be obtained.

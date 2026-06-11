@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Merge cross-region log-in allowlists
  *
- * @method array getPlaces() Obtain Allowlist region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPlaces(array $Places) Set Allowlist region
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getPlaces() Obtain Allowlisted regions
+ * @method void setPlaces(array $Places) Set Allowlisted regions
  * @method string getUserName() Obtain Allowlisted users (Multiple users are separated by commas.)
  * @method void setUserName(string $UserName) Set Allowlisted users (Multiple users are separated by commas.)
  * @method string getSrcIp() Obtain Allowlisted IPs (Multiple IPs are separated by commas.)
@@ -50,14 +48,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setModifyTime(string $ModifyTime) Set Last modification time
  * @method string getUuid() Obtain Server UUID
  * @method void setUuid(string $Uuid) Set Server UUID
- * @method string getLocations() Obtain Login Location
- * @method void setLocations(string $Locations) Set Login Location
+ * @method string getLocations() Obtain Login location
+ * @method void setLocations(string $Locations) Set Login location
  */
 class LoginWhiteCombinedInfo extends AbstractModel
 {
     /**
-     * @var array Allowlist region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Allowlisted regions
      */
     public $Places;
 
@@ -127,13 +124,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Uuid;
 
     /**
-     * @var string Login Location
+     * @var string Login location
      */
     public $Locations;
 
     /**
-     * @param array $Places Allowlist region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Places Allowlisted regions
      * @param string $UserName Allowlisted users (Multiple users are separated by commas.)
      * @param string $SrcIp Allowlisted IPs (Multiple IPs are separated by commas.)
      * @param string $Locale Region string
@@ -147,7 +143,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CreateTime Creation time
      * @param string $ModifyTime Last modification time
      * @param string $Uuid Server UUID
-     * @param string $Locations Login Location
+     * @param string $Locations Login location
      */
     function __construct()
     {

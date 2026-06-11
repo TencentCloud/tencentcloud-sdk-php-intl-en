@@ -40,6 +40,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpeedLimit(integer $SpeedLimit) Set Speed limit
  * @method integer getInsecure() Obtain Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
  * @method void setInsecure(integer $Insecure) Set Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
+ * @method array getConnDetectConfig() Obtain 
+ * @method void setConnDetectConfig(array $ConnDetectConfig) Set 
+ * @method integer getRegistryId() Obtain Repository unique id
+ * @method void setRegistryId(integer $RegistryId) Set Repository unique id
+ * @method integer getSyncMode() Obtain Synchronization method. 0: full synchronization; 1: incremental synchronization.
+ * @method void setSyncMode(integer $SyncMode) Set Synchronization method. 0: full synchronization; 1: incremental synchronization.
+ * @method boolean getNeedScan() Obtain Whether to perform authorization and scanning automatically. This parameter is valid for incremental synchronization, which involves all new images.
+ * @method void setNeedScan(boolean $NeedScan) Set Whether to perform authorization and scanning automatically. This parameter is valid for incremental synchronization, which involves all new images.
+ * @method string getInstanceId() Obtain TCR instance ID.
+ * @method void setInstanceId(string $InstanceId) Set TCR instance ID.
  */
 class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
 {
@@ -94,6 +104,31 @@ class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
     public $Insecure;
 
     /**
+     * @var array 
+     */
+    public $ConnDetectConfig;
+
+    /**
+     * @var integer Repository unique id
+     */
+    public $RegistryId;
+
+    /**
+     * @var integer Synchronization method. 0: full synchronization; 1: incremental synchronization.
+     */
+    public $SyncMode;
+
+    /**
+     * @var boolean Whether to perform authorization and scanning automatically. This parameter is valid for incremental synchronization, which involves all new images.
+     */
+    public $NeedScan;
+
+    /**
+     * @var string TCR instance ID.
+     */
+    public $InstanceId;
+
+    /**
      * @param string $Name Repository name
      * @param string $Username Username
      * @param string $Password Password
@@ -104,6 +139,11 @@ class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
      * @param string $RegistryRegion Region. Default value: `default`.
      * @param integer $SpeedLimit Speed limit
      * @param integer $Insecure Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
+     * @param array $ConnDetectConfig 
+     * @param integer $RegistryId Repository unique id
+     * @param integer $SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.
+     * @param boolean $NeedScan Whether to perform authorization and scanning automatically. This parameter is valid for incremental synchronization, which involves all new images.
+     * @param string $InstanceId TCR instance ID.
      */
     function __construct()
     {
@@ -156,6 +196,31 @@ class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
 
         if (array_key_exists("Insecure",$param) and $param["Insecure"] !== null) {
             $this->Insecure = $param["Insecure"];
+        }
+
+        if (array_key_exists("ConnDetectConfig",$param) and $param["ConnDetectConfig"] !== null) {
+            $this->ConnDetectConfig = [];
+            foreach ($param["ConnDetectConfig"] as $key => $value){
+                $obj = new ConnDetectConfig();
+                $obj->deserialize($value);
+                array_push($this->ConnDetectConfig, $obj);
+            }
+        }
+
+        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
+            $this->RegistryId = $param["RegistryId"];
+        }
+
+        if (array_key_exists("SyncMode",$param) and $param["SyncMode"] !== null) {
+            $this->SyncMode = $param["SyncMode"];
+        }
+
+        if (array_key_exists("NeedScan",$param) and $param["NeedScan"] !== null) {
+            $this->NeedScan = $param["NeedScan"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

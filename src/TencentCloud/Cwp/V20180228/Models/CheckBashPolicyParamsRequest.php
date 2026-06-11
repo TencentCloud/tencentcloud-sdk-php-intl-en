@@ -20,21 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckBashPolicyParams request structure.
  *
- * @method string getCheckField() Obtain Verify content Name or Rule. (Use a comma to separate them if both need to be verified.)
- * @method void setCheckField(string $CheckField) Set Verify content Name or Rule. (Use a comma to separate them if both need to be verified.)
+ * @method string getCheckField() Obtain Verify content field, use commas to separate if necessary to detect multiple fields
+<li>Name Policy name</li>
+<li>Process</li>
+<li>Name PProcess Parent process</li>
+<li>Name AProcess Ancestor process</li>
+
+ * @method void setCheckField(string $CheckField) Set Verify content field, use commas to separate if necessary to detect multiple fields
+<li>Name Policy name</li>
+<li>Process</li>
+<li>Name PProcess Parent process</li>
+<li>Name AProcess Ancestor process</li>
+
  * @method integer getEventId() Obtain Event ID needs to be submitted when allowlisting an event in the event list.
  * @method void setEventId(integer $EventId) Set Event ID needs to be submitted when allowlisting an event in the event list.
  * @method string getName() Obtain Name of rule to be entered
  * @method void setName(string $Name) Set Name of rule to be entered
- * @method string getRule() Obtain The regular expression to be entered by the user: It must match command content corresponding to the submitted EventId.
- * @method void setRule(string $Rule) Set The regular expression to be entered by the user: It must match command content corresponding to the submitted EventId.
+ * @method string getRule() Obtain This field is not in maintenance. If you fill in this parameter, it will automatically replace to Rules.Process.
+
+ * @method void setRule(string $Rule) Set This field is not in maintenance. If you fill in this parameter, it will automatically replace to Rules.Process.
+
  * @method integer getId() Obtain Rule ID passed during editing
  * @method void setId(integer $Id) Set Rule ID passed during editing
+ * @method PolicyRules getRules() Obtain Rule expression
+ * @method void setRules(PolicyRules $Rules) Set Rule expression
  */
 class CheckBashPolicyParamsRequest extends AbstractModel
 {
     /**
-     * @var string Verify content Name or Rule. (Use a comma to separate them if both need to be verified.)
+     * @var string Verify content field, use commas to separate if necessary to detect multiple fields
+<li>Name Policy name</li>
+<li>Process</li>
+<li>Name PProcess Parent process</li>
+<li>Name AProcess Ancestor process</li>
+
      */
     public $CheckField;
 
@@ -49,7 +68,8 @@ class CheckBashPolicyParamsRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string The regular expression to be entered by the user: It must match command content corresponding to the submitted EventId.
+     * @var string This field is not in maintenance. If you fill in this parameter, it will automatically replace to Rules.Process.
+
      */
     public $Rule;
 
@@ -59,11 +79,23 @@ class CheckBashPolicyParamsRequest extends AbstractModel
     public $Id;
 
     /**
-     * @param string $CheckField Verify content Name or Rule. (Use a comma to separate them if both need to be verified.)
+     * @var PolicyRules Rule expression
+     */
+    public $Rules;
+
+    /**
+     * @param string $CheckField Verify content field, use commas to separate if necessary to detect multiple fields
+<li>Name Policy name</li>
+<li>Process</li>
+<li>Name PProcess Parent process</li>
+<li>Name AProcess Ancestor process</li>
+
      * @param integer $EventId Event ID needs to be submitted when allowlisting an event in the event list.
      * @param string $Name Name of rule to be entered
-     * @param string $Rule The regular expression to be entered by the user: It must match command content corresponding to the submitted EventId.
+     * @param string $Rule This field is not in maintenance. If you fill in this parameter, it will automatically replace to Rules.Process.
+
      * @param integer $Id Rule ID passed during editing
+     * @param PolicyRules $Rules Rule expression
      */
     function __construct()
     {
@@ -96,6 +128,11 @@ class CheckBashPolicyParamsRequest extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
+            $this->Rules = new PolicyRules();
+            $this->Rules->deserialize($param["Rules"]);
         }
     }
 }

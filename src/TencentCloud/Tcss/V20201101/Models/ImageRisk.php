@@ -20,70 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of a high-risk behavior in the image
  *
- * @method integer getBehavior() Obtain High-risk behavior
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBehavior(integer $Behavior) Set High-risk behavior
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getBehavior() Obtain high-risk behavior
+ * @method void setBehavior(integer $Behavior) Set high-risk behavior
  * @method integer getType() Obtain Type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setType(integer $Type) Set Type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getLevel() Obtain Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLevel(string $Level) Set Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDesc() Obtain Description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDesc(string $Desc) Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstructionContent() Obtain Solution
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstructionContent(string $InstructionContent) Set Solution
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ImageRisk extends AbstractModel
 {
     /**
-     * @var integer High-risk behavior
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer high-risk behavior
      */
     public $Behavior;
 
     /**
      * @var integer Type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
     /**
      * @var string Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Level;
 
     /**
      * @var string Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Desc;
 
     /**
      * @var string Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstructionContent;
 
     /**
-     * @param integer $Behavior High-risk behavior
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Behavior high-risk behavior
      * @param integer $Type Type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Desc Description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstructionContent Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

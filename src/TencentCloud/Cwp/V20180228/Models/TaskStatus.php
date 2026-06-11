@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOk(string $Ok) Set Scan terminated (including terminating)
  * @method string getFail() Obtain Scan failed
  * @method void setFail(string $Fail) Set Scan failed
- * @method string getStop() Obtain Scan failed, with specific reason displayed: scan timeout, low client version, or client offline
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStop(string $Stop) Set Scan failed, with specific reason displayed: scan timeout, low client version, or client offline
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStop() Obtain Scan failed, with specific reason displayed: scan timeout, low client version, or client offline.
+ * @method void setStop(string $Stop) Set Scan failed, with specific reason displayed: scan timeout, low client version, or client offline.
  */
 class TaskStatus extends AbstractModel
 {
@@ -49,8 +47,7 @@ class TaskStatus extends AbstractModel
     public $Fail;
 
     /**
-     * @var string Scan failed, with specific reason displayed: scan timeout, low client version, or client offline
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Scan failed, with specific reason displayed: scan timeout, low client version, or client offline.
      */
     public $Stop;
 
@@ -58,8 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Scanning Scanning (including initializing)
      * @param string $Ok Scan terminated (including terminating)
      * @param string $Fail Scan failed
-     * @param string $Stop Scan failed, with specific reason displayed: scan timeout, low client version, or client offline
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Stop Scan failed, with specific reason displayed: scan timeout, low client version, or client offline.
      */
     function __construct()
     {

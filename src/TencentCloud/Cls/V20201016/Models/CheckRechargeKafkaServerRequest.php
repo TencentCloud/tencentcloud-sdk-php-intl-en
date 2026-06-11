@@ -20,26 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckRechargeKafkaServer request structure.
  *
- * @method integer getKafkaType() Obtain Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
- * @method void setKafkaType(integer $KafkaType) Set Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
- * @method string getKafkaInstance() Obtain Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
- * @method void setKafkaInstance(string $KafkaInstance) Set Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+ * @method integer getKafkaType() Obtain Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
+ * @method void setKafkaType(integer $KafkaType) Set Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
+ * @method string getKafkaInstance() Obtain Tencent Cloud CKafka instance ID.
+When KafkaType is 0, KafkaInstance is required
+
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+ * @method void setKafkaInstance(string $KafkaInstance) Set Tencent Cloud CKafka instance ID.
+When KafkaType is 0, KafkaInstance is required
+
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
  * @method string getServerAddr() Obtain Service AddressWhen KafkaType is 1, ServerAddr is required
  * @method void setServerAddr(string $ServerAddr) Set Service AddressWhen KafkaType is 1, ServerAddr is required
- * @method boolean getIsEncryptionAddr() Obtain Whether the service address uses an encrypted connection
- * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) Set Whether the service address uses an encrypted connection
- * @method KafkaProtocolInfo getProtocol() Obtain Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
- * @method void setProtocol(KafkaProtocolInfo $Protocol) Set Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
+ * @method boolean getIsEncryptionAddr() Obtain Whether ServerAddr is an encrypted connection. The default value is false. It is valid when KafkaType is 1, indicating a user self-built Kafka.
+ * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) Set Whether ServerAddr is an encrypted connection. The default value is false. It is valid when KafkaType is 1, indicating a user self-built Kafka.
+ * @method KafkaProtocolInfo getProtocol() Obtain Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
+ * @method void setProtocol(KafkaProtocolInfo $Protocol) Set Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
+ * @method UserKafkaMeta getUserKafkaMeta() Obtain User kafka extended information
+ * @method void setUserKafkaMeta(UserKafkaMeta $UserKafkaMeta) Set User kafka extended information
  */
 class CheckRechargeKafkaServerRequest extends AbstractModel
 {
     /**
-     * @var integer Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
+     * @var integer Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
      */
     public $KafkaType;
 
     /**
-     * @var string Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+     * @var string Tencent Cloud CKafka instance ID.
+When KafkaType is 0, KafkaInstance is required
+
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public $KafkaInstance;
 
@@ -49,21 +60,30 @@ class CheckRechargeKafkaServerRequest extends AbstractModel
     public $ServerAddr;
 
     /**
-     * @var boolean Whether the service address uses an encrypted connection
+     * @var boolean Whether ServerAddr is an encrypted connection. The default value is false. It is valid when KafkaType is 1, indicating a user self-built Kafka.
      */
     public $IsEncryptionAddr;
 
     /**
-     * @var KafkaProtocolInfo Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
+     * @var KafkaProtocolInfo Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
      */
     public $Protocol;
 
     /**
-     * @param integer $KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-     * @param string $KafkaInstance Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+     * @var UserKafkaMeta User kafka extended information
+     */
+    public $UserKafkaMeta;
+
+    /**
+     * @param integer $KafkaType Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
+     * @param string $KafkaInstance Tencent Cloud CKafka instance ID.
+When KafkaType is 0, KafkaInstance is required
+
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      * @param string $ServerAddr Service AddressWhen KafkaType is 1, ServerAddr is required
-     * @param boolean $IsEncryptionAddr Whether the service address uses an encrypted connection
-     * @param KafkaProtocolInfo $Protocol Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
+     * @param boolean $IsEncryptionAddr Whether ServerAddr is an encrypted connection. The default value is false. It is valid when KafkaType is 1, indicating a user self-built Kafka.
+     * @param KafkaProtocolInfo $Protocol Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
+     * @param UserKafkaMeta $UserKafkaMeta User kafka extended information
      */
     function __construct()
     {
@@ -97,6 +117,11 @@ class CheckRechargeKafkaServerRequest extends AbstractModel
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = new KafkaProtocolInfo();
             $this->Protocol->deserialize($param["Protocol"]);
+        }
+
+        if (array_key_exists("UserKafkaMeta",$param) and $param["UserKafkaMeta"] !== null) {
+            $this->UserKafkaMeta = new UserKafkaMeta();
+            $this->UserKafkaMeta->deserialize($param["UserKafkaMeta"]);
         }
     }
 }

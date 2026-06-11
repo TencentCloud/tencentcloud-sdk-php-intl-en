@@ -18,100 +18,76 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CKafka route details
+ * Ckafka route detail
  *
- * @method integer getRouteID() Obtain Route ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRouteID(integer $RouteID) Set Route ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRouteID() Obtain Routing ID
+ * @method void setRouteID(integer $RouteID) Set Routing ID
  * @method string getDomain() Obtain Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDomain(string $Domain) Set Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDomainPort() Obtain Domain port
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDomainPort(integer $DomainPort) Set Domain port
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVip() Obtain VIP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVip(string $Vip) Set VIP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getVipType() Obtain VIP type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVipType(integer $VipType) Set VIP type
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDomainPort() Obtain Domain Port
+ * @method void setDomainPort(integer $DomainPort) Set Domain Port
+ * @method string getVip() Obtain Virtual IP
+ * @method void setVip(string $Vip) Set Virtual IP
+ * @method integer getVipType() Obtain Virtual IP Type
+ * @method void setVipType(integer $VipType) Set Virtual IP Type
  * @method integer getAccessType() Obtain Access type
-// `0`: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `1`: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-	// `2`: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `3`: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+	SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version).
+	2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+	3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
  * @method void setAccessType(integer $AccessType) Set Access type
-// `0`: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `1`: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-	// `2`: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `3`: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+	SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version).
+	2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+	3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
  */
 class CkafkaRouteInfo extends AbstractModel
 {
     /**
-     * @var integer Route ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Routing ID
      */
     public $RouteID;
 
     /**
      * @var string Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Domain;
 
     /**
-     * @var integer Domain port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Domain Port
      */
     public $DomainPort;
 
     /**
-     * @var string VIP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Virtual IP
      */
     public $Vip;
 
     /**
-     * @var integer VIP type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Virtual IP Type
      */
     public $VipType;
 
     /**
      * @var integer Access type
-// `0`: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `1`: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-	// `2`: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `3`: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+	SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version).
+	2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+	3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
      */
     public $AccessType;
 
     /**
-     * @param integer $RouteID Route ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RouteID Routing ID
      * @param string $Domain Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DomainPort Domain port
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Vip VIP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $VipType VIP type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DomainPort Domain Port
+     * @param string $Vip Virtual IP
+     * @param integer $VipType Virtual IP Type
      * @param integer $AccessType Access type
-// `0`: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `1`: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-	// `2`: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `3`: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+	SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version).
+	2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+	3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
      */
     function __construct()
     {

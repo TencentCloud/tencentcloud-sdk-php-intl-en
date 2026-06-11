@@ -34,14 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcesses(string $Processes) Set Dependent processes
  * @method string getModules() Obtain Dependent modules
  * @method void setModules(string $Modules) Set Dependent modules
- * @method array getParams() Obtain Parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setParams(array $Params) Set Parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getParams() Obtain Parameter information.
+ * @method void setParams(array $Params) Set Parameter information.
  * @method string getUpdateTime() Obtain Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AssetCoreModuleDetail extends AbstractModel
 {
@@ -81,14 +77,12 @@ class AssetCoreModuleDetail extends AbstractModel
     public $Modules;
 
     /**
-     * @var array Parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Parameter information.
      */
     public $Params;
 
     /**
      * @var string Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -100,10 +94,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Size Size
      * @param string $Processes Dependent processes
      * @param string $Modules Dependent modules
-     * @param array $Params Parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Params Parameter information.
      * @param string $UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProjectId() Obtain Host business group ID
  * @method void setProjectId(integer $ProjectId) Set Host business group ID
  * @method array getTag() Obtain Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTag(array $Tag) Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getName() Obtain Process name
  * @method void setName(string $Name) Set Process name
  * @method string getDesc() Obtain Process description
@@ -64,8 +62,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setParentProcessName(string $ParentProcessName) Set Parent process name
  * @method string getStatus() Obtain Process status
  * @method void setStatus(string $Status) Set Process status
- * @method integer getHasSign() Obtain Digital signature. 0: no; 1: yes; 999: null (Windows only).
- * @method void setHasSign(integer $HasSign) Set Digital signature. 0: no; 1: yes; 999: null (Windows only).
+ * @method integer getHasSign() Obtain Digital signature: 0: none; 1: yes; 999: null (for Windows only).
+ * @method void setHasSign(integer $HasSign) Set Digital signature: 0: none; 1: yes; 999: null (for Windows only).
  * @method integer getInstallByPackage() Obtain Whether to install the package. 0: no; 1: yes; 999: null (Linux only).
  * @method void setInstallByPackage(integer $InstallByPackage) Set Whether to install the package. 0: no; 1: yes; 999: null (Linux only).
  * @method string getPackageName() Obtain Software package name
@@ -73,19 +71,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method string getMachineName() Obtain Host name
  * @method void setMachineName(string $MachineName) Set Host name
  * @method string getUpdateTime() Obtain Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFirstTime() Obtain First collection time
  * @method void setFirstTime(string $FirstTime) Set First collection time
  * @method integer getIsNew() Obtain Whether new [0: no|1: yes]
  * @method void setIsNew(integer $IsNew) Set Whether new [0: no|1: yes]
- * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
+ * @method MachineExtraInfo getMachineExtraInfo() Obtain  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set  Additional information
  */
 class AssetProcessBaseInfo extends AbstractModel
 {
@@ -121,7 +114,6 @@ class AssetProcessBaseInfo extends AbstractModel
 
     /**
      * @var array Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tag;
 
@@ -196,7 +188,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Status;
 
     /**
-     * @var integer Digital signature. 0: no; 1: yes; 999: null (Windows only).
+     * @var integer Digital signature: 0: none; 1: yes; 999: null (for Windows only).
      */
     public $HasSign;
 
@@ -217,7 +209,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -232,9 +223,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsNew;
 
     /**
-     * @var MachineExtraInfo Additional information
+     * @var MachineExtraInfo  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -246,7 +236,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $OsInfo Operating System Information
      * @param integer $ProjectId Host business group ID
      * @param array $Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Name Process name
      * @param string $Desc Process description
      * @param string $Path Process path
@@ -261,17 +250,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Ppid Parent process ID
      * @param string $ParentProcessName Parent process name
      * @param string $Status Process status
-     * @param integer $HasSign Digital signature. 0: no; 1: yes; 999: null (Windows only).
+     * @param integer $HasSign Digital signature: 0: none; 1: yes; 999: null (for Windows only).
      * @param integer $InstallByPackage Whether to install the package. 0: no; 1: yes; 999: null (Linux only).
      * @param string $PackageName Software package name
      * @param string $MachineName Host name
      * @param string $UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FirstTime First collection time
      * @param integer $IsNew Whether new [0: no|1: yes]
-     * @param MachineExtraInfo $MachineExtraInfo Additional information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MachineExtraInfo $MachineExtraInfo  Additional information
      */
     function __construct()
     {

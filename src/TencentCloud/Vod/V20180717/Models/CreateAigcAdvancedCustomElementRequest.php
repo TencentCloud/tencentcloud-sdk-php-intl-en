@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setElementImageList(string $ElementImageList) Set <p>Reference images of the subject can be set with multiple images and its details.</p><ul><li>Including front reference images and other perspectives or close-up reference images. Among them:<ul><li>At least 1 front reference image is required, defined by the frontal_image parameter.</li><li>1–3 other reference images are required, with differences from the front reference image, defined by the image_url parameter.</li></ul></li><li>Use key:value to carry, as follows:<br><pre><code>{  &quot;frontal_image&quot;:&quot;image_url_0&quot;,  &quot;refer_images&quot;:[    {      &quot;image_url&quot;:&quot;image_url_1&quot;    },    {      &quot;image_url&quot;:&quot;image_url_2&quot;    },    {      &quot;image_url&quot;:&quot;image_url_3&quot;    }  ]}</code></pre></li></ul>
  * @method string getTagList() Obtain <p>Configure tags for a subject. A subject can be configured with multiple tags.</p><ul><li>Use key:value pairs to carry them. Details are given below:</li></ul><p><pre><code>[  {        "tag_id": "o_101"  }, {        "tag_id": "o_102"    }]</code></pre></p>
  * @method void setTagList(string $TagList) Set <p>Configure tags for a subject. A subject can be configured with multiple tags.</p><ul><li>Use key:value pairs to carry them. Details are given below:</li></ul><p><pre><code>[  {        "tag_id": "o_101"  }, {        "tag_id": "o_102"    }]</code></pre></p>
+ * @method string getDisableModeration() Obtain <p>If the overseas custom subject library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom subject library.</li><li>False: Non-use of the overseas custom subject library.</li></ul>
+ * @method void setDisableModeration(string $DisableModeration) Set <p>If the overseas custom subject library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom subject library.</li><li>False: Non-use of the overseas custom subject library.</li></ul>
  * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
  * @method void setSessionId(string $SessionId) Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
  * @method string getSessionContext() Obtain <p>Source context. This is used to pass through user request information. The task complete callback returns the value of this field. The maximum length is 1000 characters.</p>
@@ -86,6 +88,11 @@ class CreateAigcAdvancedCustomElementRequest extends AbstractModel
     public $TagList;
 
     /**
+     * @var string <p>If the overseas custom subject library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom subject library.</li><li>False: Non-use of the overseas custom subject library.</li></ul>
+     */
+    public $DisableModeration;
+
+    /**
      * @var string <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public $SessionId;
@@ -109,6 +116,7 @@ class CreateAigcAdvancedCustomElementRequest extends AbstractModel
      * @param string $ElementVideoList <p>Reference video for the entity. You can set the entity and its details through the video.</p><ul><li>You can upload a video with sound. If the video contains voice, it will trigger timbre customization (customization + adding to the timbre library + binding to the entity).</li><li>The current parameter is required when referencing a video and is invalid when referencing an image.</li><li>Use key:value pairs as follows:<br><pre><code>{  "refer_videos":[    {      "video_url":"video_url_1"    }  ]}</code></pre>● Only MP4/MOV video formats are supported.<br>● Only 1080p videos with a duration between 3s–8s and an aspect ratio of 16:9 or 9:16 are supported.<br>● Up to 1 video can be uploaded, with a video size of no more than 200MB.<br>● The video_url parameter value cannot be empty.</li></ul>
      * @param string $ElementImageList <p>Reference images of the subject can be set with multiple images and its details.</p><ul><li>Including front reference images and other perspectives or close-up reference images. Among them:<ul><li>At least 1 front reference image is required, defined by the frontal_image parameter.</li><li>1–3 other reference images are required, with differences from the front reference image, defined by the image_url parameter.</li></ul></li><li>Use key:value to carry, as follows:<br><pre><code>{  &quot;frontal_image&quot;:&quot;image_url_0&quot;,  &quot;refer_images&quot;:[    {      &quot;image_url&quot;:&quot;image_url_1&quot;    },    {      &quot;image_url&quot;:&quot;image_url_2&quot;    },    {      &quot;image_url&quot;:&quot;image_url_3&quot;    }  ]}</code></pre></li></ul>
      * @param string $TagList <p>Configure tags for a subject. A subject can be configured with multiple tags.</p><ul><li>Use key:value pairs to carry them. Details are given below:</li></ul><p><pre><code>[  {        "tag_id": "o_101"  }, {        "tag_id": "o_102"    }]</code></pre></p>
+     * @param string $DisableModeration <p>If the overseas custom subject library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom subject library.</li><li>False: Non-use of the overseas custom subject library.</li></ul>
      * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      * @param string $SessionContext <p>Source context. This is used to pass through user request information. The task complete callback returns the value of this field. The maximum length is 1000 characters.</p>
      * @param integer $TasksPriority <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
@@ -156,6 +164,10 @@ class CreateAigcAdvancedCustomElementRequest extends AbstractModel
 
         if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
             $this->TagList = $param["TagList"];
+        }
+
+        if (array_key_exists("DisableModeration",$param) and $param["DisableModeration"] !== null) {
+            $this->DisableModeration = $param["DisableModeration"];
         }
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {

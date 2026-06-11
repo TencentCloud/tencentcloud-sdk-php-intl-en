@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyConsumer request structure.
  *
- * @method string getTopicId() Obtain Log topic ID bound to the task
- * @method void setTopicId(string $TopicId) Set Log topic ID bound to the task
+ * @method string getTopicId() Obtain Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
  * @method boolean getEffective() Obtain Whether the shipping task takes effect (default: no)
  * @method void setEffective(boolean $Effective) Set Whether the shipping task takes effect (default: no)
  * @method boolean getNeedContent() Obtain Whether to deliver log Metadata information; the default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
@@ -32,11 +36,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCkafka(Ckafka $Ckafka) Set CKafka information
  * @method integer getCompression() Obtain Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
  * @method void setCompression(integer $Compression) Set Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
+ * @method string getRoleArn() Obtain ARN [Create role](https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1)
+ * @method void setRoleArn(string $RoleArn) Set ARN [Create role](https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1)
+ * @method string getExternalId() Obtain external ID
+ * @method void setExternalId(string $ExternalId) Set external ID
+ * @method AdvancedConsumerConfiguration getAdvancedConfig() Obtain Advanced configuration
+ * @method void setAdvancedConfig(AdvancedConsumerConfiguration $AdvancedConfig) Set Advanced configuration
  */
 class ModifyConsumerRequest extends AbstractModel
 {
     /**
-     * @var string Log topic ID bound to the task
+     * @var string Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     public $TopicId;
 
@@ -66,12 +78,32 @@ class ModifyConsumerRequest extends AbstractModel
     public $Compression;
 
     /**
-     * @param string $TopicId Log topic ID bound to the task
+     * @var string ARN [Create role](https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1)
+     */
+    public $RoleArn;
+
+    /**
+     * @var string external ID
+     */
+    public $ExternalId;
+
+    /**
+     * @var AdvancedConsumerConfiguration Advanced configuration
+     */
+    public $AdvancedConfig;
+
+    /**
+     * @param string $TopicId Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      * @param boolean $Effective Whether the shipping task takes effect (default: no)
      * @param boolean $NeedContent Whether to deliver log Metadata information; the default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
      * @param ConsumerContent $Content Metadata to ship if `NeedContent` is `true`
      * @param Ckafka $Ckafka CKafka information
      * @param integer $Compression Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
+     * @param string $RoleArn ARN [Create role](https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1)
+     * @param string $ExternalId external ID
+     * @param AdvancedConsumerConfiguration $AdvancedConfig Advanced configuration
      */
     function __construct()
     {
@@ -110,6 +142,19 @@ class ModifyConsumerRequest extends AbstractModel
 
         if (array_key_exists("Compression",$param) and $param["Compression"] !== null) {
             $this->Compression = $param["Compression"];
+        }
+
+        if (array_key_exists("RoleArn",$param) and $param["RoleArn"] !== null) {
+            $this->RoleArn = $param["RoleArn"];
+        }
+
+        if (array_key_exists("ExternalId",$param) and $param["ExternalId"] !== null) {
+            $this->ExternalId = $param["ExternalId"];
+        }
+
+        if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
+            $this->AdvancedConfig = new AdvancedConsumerConfiguration();
+            $this->AdvancedConfig->deserialize($param["AdvancedConfig"]);
         }
     }
 }

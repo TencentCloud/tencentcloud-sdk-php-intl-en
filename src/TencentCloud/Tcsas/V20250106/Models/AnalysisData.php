@@ -18,28 +18,28 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Trend data value.
+ * Data analysis API response value object. key is the data time, and number is the data value.
  *
- * @method string getDataTime() Obtain Data time.
- * @method void setDataTime(string $DataTime) Set Data time.
- * @method string getNumber() Obtain Data value.
- * @method void setNumber(string $Number) Set Data value.
+ * @method string getDataTime() Obtain <p>Data time.</p>
+ * @method void setDataTime(string $DataTime) Set <p>Data time.</p>
+ * @method string getNumber() Obtain <p>Data value.</p>
+ * @method void setNumber(string $Number) Set <p>Data value.</p>
  */
 class AnalysisData extends AbstractModel
 {
     /**
-     * @var string Data time.
+     * @var string <p>Data time.</p>
      */
     public $DataTime;
 
     /**
-     * @var string Data value.
+     * @var string <p>Data value.</p>
      */
     public $Number;
 
     /**
-     * @param string $DataTime Data time.
-     * @param string $Number Data value.
+     * @param string $DataTime <p>Data time.</p>
+     * @param string $Number <p>Data value.</p>
      */
     function __construct()
     {

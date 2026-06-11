@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulId(integer $VulId) Set Vulnerability ID. This parameter can be left blank if FixId is specified.
  * @method string getQuuid() Obtain Host QUUID. This parameter can be used together with VulId to query the details of the last fixing task on a specific host.
  * @method void setQuuid(string $Quuid) Set Host QUUID. This parameter can be used together with VulId to query the details of the last fixing task on a specific host.
+ * @method integer getKbId() Obtain Patch id
+ * @method void setKbId(integer $KbId) Set Patch id
  */
 class DescribeVulFixStatusRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeVulFixStatusRequest extends AbstractModel
     public $Quuid;
 
     /**
+     * @var integer Patch id
+     */
+    public $KbId;
+
+    /**
      * @param integer $FixId Task ID. This parameter can be left blank if VulId is specified.
      * @param integer $VulId Vulnerability ID. This parameter can be left blank if FixId is specified.
      * @param string $Quuid Host QUUID. This parameter can be used together with VulId to query the details of the last fixing task on a specific host.
+     * @param integer $KbId Patch id
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeVulFixStatusRequest extends AbstractModel
 
         if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
             $this->Quuid = $param["Quuid"];
+        }
+
+        if (array_key_exists("KbId",$param) and $param["KbId"] !== null) {
+            $this->KbId = $param["KbId"];
         }
     }
 }

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() Obtain ID primary key
  * @method void setId(integer $Id) Set ID primary key
- * @method string getUuid() Obtain Yunjing UUID
- * @method void setUuid(string $Uuid) Set Yunjing UUID
- * @method string getQuuid() Obtain Host ID
- * @method void setQuuid(string $Quuid) Set Host ID
+ * @method string getUuid() Obtain Host Security UUID
+ * @method void setUuid(string $Uuid) Set Host Security UUID
+ * @method string getQuuid() Obtain Host UUID
+ * @method void setQuuid(string $Quuid) Set Host UUID
  * @method string getHostIp() Obtain Host private IP address
  * @method void setHostIp(string $HostIp) Set Host private IP address
  * @method string getDstIp() Obtain Target IP
@@ -58,10 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) Set Host name
  * @method integer getDetectBy() Obtain Detection method
  * @method void setDetectBy(integer $DetectBy) Set Detection method
- * @method string getPsTree() Obtain Process tree json; pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPsTree(string $PsTree) Set Process tree json; pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPsTree() Obtain Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
+ * @method void setPsTree(string $PsTree) Set Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
  * @method string getSuggestScheme() Obtain Recommended solution
  * @method void setSuggestScheme(string $SuggestScheme) Set Recommended solution
  * @method string getHarmDescribe() Obtain Description
@@ -76,6 +74,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setMachineStatus(string $MachineStatus) Set Host online status: OFFLINE; ONLINE
  * @method string getModifyTime() Obtain Processing time
  * @method void setModifyTime(string $ModifyTime) Set Processing time
+ * @method string getCmdLineQuote() Obtain Escaped content of command details. It is used when regular expressions match allowlisted full strings.
+ * @method void setCmdLineQuote(string $CmdLineQuote) Set Escaped content of command details. It is used when regular expressions match allowlisted full strings.
+ * @method integer getRiskLevel() Obtain Risk level
+ * @method void setRiskLevel(integer $RiskLevel) Set Risk level
  */
 class ReverseShellEventInfo extends AbstractModel
 {
@@ -85,12 +87,12 @@ class ReverseShellEventInfo extends AbstractModel
     public $Id;
 
     /**
-     * @var string Yunjing UUID
+     * @var string Host Security UUID
      */
     public $Uuid;
 
     /**
-     * @var string Host ID
+     * @var string Host UUID
      */
     public $Quuid;
 
@@ -175,8 +177,7 @@ class ReverseShellEventInfo extends AbstractModel
     public $DetectBy;
 
     /**
-     * @var string Process tree json; pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
      */
     public $PsTree;
 
@@ -216,9 +217,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ModifyTime;
 
     /**
+     * @var string Escaped content of command details. It is used when regular expressions match allowlisted full strings.
+     */
+    public $CmdLineQuote;
+
+    /**
+     * @var integer Risk level
+     */
+    public $RiskLevel;
+
+    /**
      * @param integer $Id ID primary key
-     * @param string $Uuid Yunjing UUID
-     * @param string $Quuid Host ID
+     * @param string $Uuid Host Security UUID
+     * @param string $Quuid Host UUID
      * @param string $HostIp Host private IP address
      * @param string $DstIp Target IP
      * @param integer $DstPort Target port
@@ -235,8 +246,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CreateTime Occurrence time
      * @param string $MachineName Host name
      * @param integer $DetectBy Detection method
-     * @param string $PsTree Process tree json; pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PsTree Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
      * @param string $SuggestScheme Recommended solution
      * @param string $HarmDescribe Description
      * @param array $Tags Tag
@@ -244,6 +254,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $MachineWanIp Host public IP address
      * @param string $MachineStatus Host online status: OFFLINE; ONLINE
      * @param string $ModifyTime Processing time
+     * @param string $CmdLineQuote Escaped content of command details. It is used when regular expressions match allowlisted full strings.
+     * @param integer $RiskLevel Risk level
      */
     function __construct()
     {
@@ -364,6 +376,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("CmdLineQuote",$param) and $param["CmdLineQuote"] !== null) {
+            $this->CmdLineQuote = $param["CmdLineQuote"];
+        }
+
+        if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
+            $this->RiskLevel = $param["RiskLevel"];
         }
     }
 }

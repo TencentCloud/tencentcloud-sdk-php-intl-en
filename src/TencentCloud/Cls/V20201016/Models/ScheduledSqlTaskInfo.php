@@ -30,32 +30,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSrcTopicName(string $SrcTopicName) Set Source Log Topic Name
  * @method ScheduledSqlResouceInfo getDstResource() Obtain Scheduled SQL analysis of target topic
  * @method void setDstResource(ScheduledSqlResouceInfo $DstResource) Set Scheduled SQL analysis of target topic
- * @method string getCreateTime() Obtain Creation Time
- * @method void setCreateTime(string $CreateTime) Set Creation Time
- * @method string getUpdateTime() Obtain Task Update Time
- * @method void setUpdateTime(string $UpdateTime) Set Task Update Time
+ * @method string getCreateTime() Obtain Task creation time. Format: yyyy-MM-dd HH:mm:ss
+ * @method void setCreateTime(string $CreateTime) Set Task creation time. Format: yyyy-MM-dd HH:mm:ss
+ * @method string getUpdateTime() Obtain Task update time. Format: yyyy-MM-dd HH:mm:ss
+ * @method void setUpdateTime(string $UpdateTime) Set Task update time. Format: yyyy-MM-dd HH:mm:ss
  * @method integer getStatus() Obtain Task status: 1: Running 2: Stop 3: Exception - Source log topic not found 4: Exception - target topic not found5: Access permission issue 6: Internal failure 7: Other faults
  * @method void setStatus(integer $Status) Set Task status: 1: Running 2: Stop 3: Exception - Source log topic not found 4: Exception - target topic not found5: Access permission issue 6: Internal failure 7: Other faults
  * @method integer getEnableFlag() Obtain Task status: 1 Enabled, 2 Disabled
  * @method void setEnableFlag(integer $EnableFlag) Set Task status: 1 Enabled, 2 Disabled
  * @method string getScheduledSqlContent() Obtain Queries statements
  * @method void setScheduledSqlContent(string $ScheduledSqlContent) Set Queries statements
- * @method string getProcessStartTime() Obtain Schedule Start Time
- * @method void setProcessStartTime(string $ProcessStartTime) Set Schedule Start Time
+ * @method string getProcessStartTime() Obtain Schedule start time. Format: yyyy-MM-dd HH:mm:ss
+ * @method void setProcessStartTime(string $ProcessStartTime) Set Schedule start time. Format: yyyy-MM-dd HH:mm:ss
  * @method integer getProcessType() Obtain Schedule Type: 1 Continuous Running 2 Specified Time Range
  * @method void setProcessType(integer $ProcessType) Set Schedule Type: 1 Continuous Running 2 Specified Time Range
- * @method string getProcessEndTime() Obtain Schedule End Time, required when process_type=2
- * @method void setProcessEndTime(string $ProcessEndTime) Set Schedule End Time, required when process_type=2
- * @method integer getProcessPeriod() Obtain Scheduling Interval (Minutes)
- * @method void setProcessPeriod(integer $ProcessPeriod) Set Scheduling Interval (Minutes)
+ * @method string getProcessEndTime() Obtain Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
+ * @method void setProcessEndTime(string $ProcessEndTime) Set Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
+ * @method integer getProcessPeriod() Obtain Scheduling cycle (minutes), 1-1440 minutes
+ * @method void setProcessPeriod(integer $ProcessPeriod) Set Scheduling cycle (minutes), 1-1440 minutes
  * @method string getProcessTimeWindow() Obtain Query Time Window. @m-15m, @m, meaning the last 15 minutes
  * @method void setProcessTimeWindow(string $ProcessTimeWindow) Set Query Time Window. @m-15m, @m, meaning the last 15 minutes
- * @method integer getProcessDelay() Obtain Execution Delay (Seconds)
- * @method void setProcessDelay(integer $ProcessDelay) Set Execution Delay (Seconds)
- * @method string getSrcTopicRegion() Obtain Source Topic ID Region Information
- * @method void setSrcTopicRegion(string $SrcTopicRegion) Set Source Topic ID Region Information
- * @method integer getSyntaxRule() Obtain Syntax Rules: 0 Lucene syntax, 1 CQL syntaxNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setSyntaxRule(integer $SyntaxRule) Set Syntax Rules: 0 Lucene syntax, 1 CQL syntaxNote: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getProcessDelay() Obtain Execution delay (seconds), 0-120 seconds, default 60
+ * @method void setProcessDelay(integer $ProcessDelay) Set Execution delay (seconds), 0-120 seconds, default 60
+ * @method string getSrcTopicRegion() Obtain Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+ * @method void setSrcTopicRegion(string $SrcTopicRegion) Set Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+ * @method integer getSyntaxRule() Obtain Syntax rules. 0: Lucene syntax; 1: CQL syntax.
+ * @method void setSyntaxRule(integer $SyntaxRule) Set Syntax rules. 0: Lucene syntax; 1: CQL syntax.
+ * @method integer getHasServicesLog() Obtain Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+ * @method void setHasServicesLog(integer $HasServicesLog) Set Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+ * @method integer getFullQuery() Obtain Full-text search tag. 1: Off, 2: On.
+ * @method void setFullQuery(integer $FullQuery) Set Full-text search tag. 1: Off, 2: On.
  */
 class ScheduledSqlTaskInfo extends AbstractModel
 {
@@ -85,12 +89,12 @@ class ScheduledSqlTaskInfo extends AbstractModel
     public $DstResource;
 
     /**
-     * @var string Creation Time
+     * @var string Task creation time. Format: yyyy-MM-dd HH:mm:ss
      */
     public $CreateTime;
 
     /**
-     * @var string Task Update Time
+     * @var string Task update time. Format: yyyy-MM-dd HH:mm:ss
      */
     public $UpdateTime;
 
@@ -110,7 +114,7 @@ class ScheduledSqlTaskInfo extends AbstractModel
     public $ScheduledSqlContent;
 
     /**
-     * @var string Schedule Start Time
+     * @var string Schedule start time. Format: yyyy-MM-dd HH:mm:ss
      */
     public $ProcessStartTime;
 
@@ -120,12 +124,12 @@ class ScheduledSqlTaskInfo extends AbstractModel
     public $ProcessType;
 
     /**
-     * @var string Schedule End Time, required when process_type=2
+     * @var string Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
      */
     public $ProcessEndTime;
 
     /**
-     * @var integer Scheduling Interval (Minutes)
+     * @var integer Scheduling cycle (minutes), 1-1440 minutes
      */
     public $ProcessPeriod;
 
@@ -135,19 +139,29 @@ class ScheduledSqlTaskInfo extends AbstractModel
     public $ProcessTimeWindow;
 
     /**
-     * @var integer Execution Delay (Seconds)
+     * @var integer Execution delay (seconds), 0-120 seconds, default 60
      */
     public $ProcessDelay;
 
     /**
-     * @var string Source Topic ID Region Information
+     * @var string Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
      */
     public $SrcTopicRegion;
 
     /**
-     * @var integer Syntax Rules: 0 Lucene syntax, 1 CQL syntaxNote: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Syntax rules. 0: Lucene syntax; 1: CQL syntax.
      */
     public $SyntaxRule;
+
+    /**
+     * @var integer Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+     */
+    public $HasServicesLog;
+
+    /**
+     * @var integer Full-text search tag. 1: Off, 2: On.
+     */
+    public $FullQuery;
 
     /**
      * @param string $TaskId ScheduledSql task id
@@ -155,19 +169,21 @@ class ScheduledSqlTaskInfo extends AbstractModel
      * @param string $SrcTopicId Source Log Topic ID
      * @param string $SrcTopicName Source Log Topic Name
      * @param ScheduledSqlResouceInfo $DstResource Scheduled SQL analysis of target topic
-     * @param string $CreateTime Creation Time
-     * @param string $UpdateTime Task Update Time
+     * @param string $CreateTime Task creation time. Format: yyyy-MM-dd HH:mm:ss
+     * @param string $UpdateTime Task update time. Format: yyyy-MM-dd HH:mm:ss
      * @param integer $Status Task status: 1: Running 2: Stop 3: Exception - Source log topic not found 4: Exception - target topic not found5: Access permission issue 6: Internal failure 7: Other faults
      * @param integer $EnableFlag Task status: 1 Enabled, 2 Disabled
      * @param string $ScheduledSqlContent Queries statements
-     * @param string $ProcessStartTime Schedule Start Time
+     * @param string $ProcessStartTime Schedule start time. Format: yyyy-MM-dd HH:mm:ss
      * @param integer $ProcessType Schedule Type: 1 Continuous Running 2 Specified Time Range
-     * @param string $ProcessEndTime Schedule End Time, required when process_type=2
-     * @param integer $ProcessPeriod Scheduling Interval (Minutes)
+     * @param string $ProcessEndTime Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
+     * @param integer $ProcessPeriod Scheduling cycle (minutes), 1-1440 minutes
      * @param string $ProcessTimeWindow Query Time Window. @m-15m, @m, meaning the last 15 minutes
-     * @param integer $ProcessDelay Execution Delay (Seconds)
-     * @param string $SrcTopicRegion Source Topic ID Region Information
-     * @param integer $SyntaxRule Syntax Rules: 0 Lucene syntax, 1 CQL syntaxNote: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ProcessDelay Execution delay (seconds), 0-120 seconds, default 60
+     * @param string $SrcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+     * @param integer $SyntaxRule Syntax rules. 0: Lucene syntax; 1: CQL syntax.
+     * @param integer $HasServicesLog Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+     * @param integer $FullQuery Full-text search tag. 1: Off, 2: On.
      */
     function __construct()
     {
@@ -253,6 +269,14 @@ class ScheduledSqlTaskInfo extends AbstractModel
 
         if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
             $this->SyntaxRule = $param["SyntaxRule"];
+        }
+
+        if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
+            $this->HasServicesLog = $param["HasServicesLog"];
+        }
+
+        if (array_key_exists("FullQuery",$param) and $param["FullQuery"] !== null) {
+            $this->FullQuery = $param["FullQuery"];
         }
     }
 }

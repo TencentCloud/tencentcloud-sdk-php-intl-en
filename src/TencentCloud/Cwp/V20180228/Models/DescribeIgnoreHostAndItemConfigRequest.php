@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIgnoreHostAndItemConfig request structure.
  *
- * @method array getFilters() Obtain <li>ItemId - int64 - whether required: no - item ID</i>
-<li>RuleId - int64 - whether required: no - rule ID</li>
+ * @method array getFilters() Obtain <li>ItemId - int64 - required: no - item ID</li>
+<li>RuleId - int64 - required: no - rule ID</li>
 <li>HostId - string - whether required: no - host ID</li>
- * @method void setFilters(array $Filters) Set <li>ItemId - int64 - whether required: no - item ID</i>
-<li>RuleId - int64 - whether required: no - rule ID</li>
+ * @method void setFilters(array $Filters) Set <li>ItemId - int64 - required: no - item ID</li>
+<li>RuleId - int64 - required: no - rule ID</li>
 <li>HostId - string - whether required: no - host ID</li>
  */
 class DescribeIgnoreHostAndItemConfigRequest extends AbstractModel
 {
     /**
-     * @var array <li>ItemId - int64 - whether required: no - item ID</i>
-<li>RuleId - int64 - whether required: no - rule ID</li>
+     * @var array <li>ItemId - int64 - required: no - item ID</li>
+<li>RuleId - int64 - required: no - rule ID</li>
 <li>HostId - string - whether required: no - host ID</li>
      */
     public $Filters;
 
     /**
-     * @param array $Filters <li>ItemId - int64 - whether required: no - item ID</i>
-<li>RuleId - int64 - whether required: no - rule ID</li>
+     * @param array $Filters <li>ItemId - int64 - required: no - item ID</li>
+<li>RuleId - int64 - required: no - rule ID</li>
 <li>HostId - string - whether required: no - host ID</li>
      */
     function __construct()

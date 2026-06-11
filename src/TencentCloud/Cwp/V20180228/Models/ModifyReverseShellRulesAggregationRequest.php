@@ -1,0 +1,185 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Cwp\V20180228\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * ModifyReverseShellRulesAggregation request structure.
+ *
+ * @method integer getId() Obtain Rule ID (leave this parameter blank for addition)
+ * @method void setId(integer $Id) Set Rule ID (leave this parameter blank for addition)
+ * @method array getUuids() Obtain Client ID array
+ * @method void setUuids(array $Uuids) Set Client ID array
+ * @method string getHostIp() Obtain Host IP address
+ * @method void setHostIp(string $HostIp) Set Host IP address
+ * @method string getDestIp() Obtain Target IP address
+ * @method void setDestIp(string $DestIp) Set Target IP address
+ * @method string getDestPort() Obtain Target port
+ * @method void setDestPort(string $DestPort) Set Target port
+ * @method string getProcessName() Obtain Process name
+ * @method void setProcessName(string $ProcessName) Set Process name
+ * @method integer getIsGlobal() Obtain Whether the rule is global (not global by default)
+ * @method void setIsGlobal(integer $IsGlobal) Set Whether the rule is global (not global by default)
+ * @method integer getEventId() Obtain ID of the associated event when clicking Add to Allowlist on the event list and details page (leave this parameter blank for rule addition)
+ * @method void setEventId(integer $EventId) Set ID of the associated event when clicking Add to Allowlist on the event list and details page (leave this parameter blank for rule addition)
+ * @method integer getWhiteType() Obtain Allowlisting method. 0: regular allowlisting, 1: regular expression allowlisting.
+ * @method void setWhiteType(integer $WhiteType) Set Allowlisting method. 0: regular allowlisting, 1: regular expression allowlisting.
+ * @method string getRuleRegexp() Obtain Regular expression
+ * @method void setRuleRegexp(string $RuleRegexp) Set Regular expression
+ * @method integer getHandleHistory() Obtain Whether to process historical events. 0: no, 1: yes.
+ * @method void setHandleHistory(integer $HandleHistory) Set Whether to process historical events. 0: no, 1: yes.
+ * @method string getGroupID() Obtain Batch ID.
+ * @method void setGroupID(string $GroupID) Set Batch ID.
+ */
+class ModifyReverseShellRulesAggregationRequest extends AbstractModel
+{
+    /**
+     * @var integer Rule ID (leave this parameter blank for addition)
+     */
+    public $Id;
+
+    /**
+     * @var array Client ID array
+     */
+    public $Uuids;
+
+    /**
+     * @var string Host IP address
+     */
+    public $HostIp;
+
+    /**
+     * @var string Target IP address
+     */
+    public $DestIp;
+
+    /**
+     * @var string Target port
+     */
+    public $DestPort;
+
+    /**
+     * @var string Process name
+     */
+    public $ProcessName;
+
+    /**
+     * @var integer Whether the rule is global (not global by default)
+     */
+    public $IsGlobal;
+
+    /**
+     * @var integer ID of the associated event when clicking Add to Allowlist on the event list and details page (leave this parameter blank for rule addition)
+     */
+    public $EventId;
+
+    /**
+     * @var integer Allowlisting method. 0: regular allowlisting, 1: regular expression allowlisting.
+     */
+    public $WhiteType;
+
+    /**
+     * @var string Regular expression
+     */
+    public $RuleRegexp;
+
+    /**
+     * @var integer Whether to process historical events. 0: no, 1: yes.
+     */
+    public $HandleHistory;
+
+    /**
+     * @var string Batch ID.
+     */
+    public $GroupID;
+
+    /**
+     * @param integer $Id Rule ID (leave this parameter blank for addition)
+     * @param array $Uuids Client ID array
+     * @param string $HostIp Host IP address
+     * @param string $DestIp Target IP address
+     * @param string $DestPort Target port
+     * @param string $ProcessName Process name
+     * @param integer $IsGlobal Whether the rule is global (not global by default)
+     * @param integer $EventId ID of the associated event when clicking Add to Allowlist on the event list and details page (leave this parameter blank for rule addition)
+     * @param integer $WhiteType Allowlisting method. 0: regular allowlisting, 1: regular expression allowlisting.
+     * @param string $RuleRegexp Regular expression
+     * @param integer $HandleHistory Whether to process historical events. 0: no, 1: yes.
+     * @param string $GroupID Batch ID.
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Uuids",$param) and $param["Uuids"] !== null) {
+            $this->Uuids = $param["Uuids"];
+        }
+
+        if (array_key_exists("HostIp",$param) and $param["HostIp"] !== null) {
+            $this->HostIp = $param["HostIp"];
+        }
+
+        if (array_key_exists("DestIp",$param) and $param["DestIp"] !== null) {
+            $this->DestIp = $param["DestIp"];
+        }
+
+        if (array_key_exists("DestPort",$param) and $param["DestPort"] !== null) {
+            $this->DestPort = $param["DestPort"];
+        }
+
+        if (array_key_exists("ProcessName",$param) and $param["ProcessName"] !== null) {
+            $this->ProcessName = $param["ProcessName"];
+        }
+
+        if (array_key_exists("IsGlobal",$param) and $param["IsGlobal"] !== null) {
+            $this->IsGlobal = $param["IsGlobal"];
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
+        }
+
+        if (array_key_exists("WhiteType",$param) and $param["WhiteType"] !== null) {
+            $this->WhiteType = $param["WhiteType"];
+        }
+
+        if (array_key_exists("RuleRegexp",$param) and $param["RuleRegexp"] !== null) {
+            $this->RuleRegexp = $param["RuleRegexp"];
+        }
+
+        if (array_key_exists("HandleHistory",$param) and $param["HandleHistory"] !== null) {
+            $this->HandleHistory = $param["HandleHistory"];
+        }
+
+        if (array_key_exists("GroupID",$param) and $param["GroupID"] !== null) {
+            $this->GroupID = $param["GroupID"];
+        }
+    }
+}

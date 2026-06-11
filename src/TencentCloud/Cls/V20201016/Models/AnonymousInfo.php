@@ -18,28 +18,28 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Authentication-free information
+ * Authentication-free information.
  *
- * @method array getOperations() Obtain Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
- * @method void setOperations(array $Operations) Set Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
- * @method array getConditions() Obtain Condition list
- * @method void setConditions(array $Conditions) Set Condition list
+ * @method array getOperations() Obtain Operation list. Valid values: trackLog: log upload through JS/HTTP; realtimeProducer: log upload through Kafka protocol.
+ * @method void setOperations(array $Operations) Set Operation list. Valid values: trackLog: log upload through JS/HTTP; realtimeProducer: log upload through Kafka protocol.
+ * @method array getConditions() Obtain List of conditions.
+ * @method void setConditions(array $Conditions) Set List of conditions.
  */
 class AnonymousInfo extends AbstractModel
 {
     /**
-     * @var array Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
+     * @var array Operation list. Valid values: trackLog: log upload through JS/HTTP; realtimeProducer: log upload through Kafka protocol.
      */
     public $Operations;
 
     /**
-     * @var array Condition list
+     * @var array List of conditions.
      */
     public $Conditions;
 
     /**
-     * @param array $Operations Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
-     * @param array $Conditions Condition list
+     * @param array $Operations Operation list. Valid values: trackLog: log upload through JS/HTTP; realtimeProducer: log upload through Kafka protocol.
+     * @param array $Conditions List of conditions.
      */
     function __construct()
     {

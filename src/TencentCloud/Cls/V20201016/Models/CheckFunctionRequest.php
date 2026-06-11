@@ -20,22 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckFunction request structure.
  *
- * @method string getEtlContent() Obtain Processing statement entered by the user
- * @method void setEtlContent(string $EtlContent) Set Processing statement entered by the user
- * @method array getDstResources() Obtain Target topic ID and alias of the data processing task
- * @method void setDstResources(array $DstResources) Set Target topic ID and alias of the data processing task
+ * @method string getEtlContent() Obtain Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents
+
+-[Create processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
+ * @method void setEtlContent(string $EtlContent) Set Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents
+
+-[Create processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
+ * @method array getDstResources() Obtain Target topic_id and alias of the processing task. This parameter is required when FuncType is 1.
+Obtain the target log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method void setDstResources(array $DstResources) Set Target topic_id and alias of the processing task. This parameter is required when FuncType is 1.
+Obtain the target log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
  * @method integer getFuncType() Obtain Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
  * @method void setFuncType(integer $FuncType) Set Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
  */
 class CheckFunctionRequest extends AbstractModel
 {
     /**
-     * @var string Processing statement entered by the user
+     * @var string Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents
+
+-[Create processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
      */
     public $EtlContent;
 
     /**
-     * @var array Target topic ID and alias of the data processing task
+     * @var array Target topic_id and alias of the processing task. This parameter is required when FuncType is 1.
+Obtain the target log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $DstResources;
 
@@ -45,8 +63,14 @@ class CheckFunctionRequest extends AbstractModel
     public $FuncType;
 
     /**
-     * @param string $EtlContent Processing statement entered by the user
-     * @param array $DstResources Target topic ID and alias of the data processing task
+     * @param string $EtlContent Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents
+
+-[Create processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
+     * @param array $DstResources Target topic_id and alias of the processing task. This parameter is required when FuncType is 1.
+Obtain the target log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      * @param integer $FuncType Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
      */
     function __construct()

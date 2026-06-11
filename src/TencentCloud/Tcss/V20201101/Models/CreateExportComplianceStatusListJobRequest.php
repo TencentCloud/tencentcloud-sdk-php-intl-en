@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExportAll(boolean $ExportAll) Set Valid values: `true` (export all); `false` (export based on the `IdList`).
  * @method array getIdList() Obtain List of IDs of assets or check items to be exported, which is determined by the value of `ExportByAsset`.
  * @method void setIdList(array $IdList) Set List of IDs of assets or check items to be exported, which is determined by the value of `ExportByAsset`.
+ * @method array getFilters() Obtain filter
+ * @method void setFilters(array $Filters) Set filter
  */
 class CreateExportComplianceStatusListJobRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateExportComplianceStatusListJobRequest extends AbstractModel
     public $IdList;
 
     /**
+     * @var array filter
+     */
+    public $Filters;
+
+    /**
      * @param string $AssetType Asset type of the information to be exported
      * @param boolean $ExportByAsset Export by check item or asset. Valid values: `true` (export by asset); `false` (export by check item).
      * @param boolean $ExportAll Valid values: `true` (export all); `false` (export based on the `IdList`).
      * @param array $IdList List of IDs of assets or check items to be exported, which is determined by the value of `ExportByAsset`.
+     * @param array $Filters filter
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class CreateExportComplianceStatusListJobRequest extends AbstractModel
 
         if (array_key_exists("IdList",$param) and $param["IdList"] !== null) {
             $this->IdList = $param["IdList"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new RunTimeFilters();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

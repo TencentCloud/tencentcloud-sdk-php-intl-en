@@ -36,20 +36,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUuid(string $Uuid) Set UUID
  * @method string getQuuid() Obtain QUUID
  * @method void setQuuid(string $Quuid) Set QUUID
- * @method string getStatus() Obtain Status code
- * @method void setStatus(string $Status) Set Status code
+ * @method string getStatus() Obtain Status code: Scanning; Ok; Fail.
+ * @method void setStatus(string $Status) Set Status code: Scanning; Ok; Fail.
  * @method string getDescription() Obtain Description
  * @method void setDescription(string $Description) Set Description
  * @method integer getId() Obtain Unique ID
  * @method void setId(integer $Id) Set Unique ID
- * @method integer getFailType() Obtain Failure details
- * @method void setFailType(integer $FailType) Set Failure details
+ * @method integer getFailType() Obtain Failure type. 3: offline; 4: timeout; 5: failed; 8: early agent version.
+ * @method void setFailType(integer $FailType) Set Failure type. 3: offline; 4: timeout; 5: failed; 8: early agent version.
  * @method string getMachineWanIp() Obtain Public IP address
  * @method void setMachineWanIp(string $MachineWanIp) Set Public IP address
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ScanTaskDetails extends AbstractModel
 {
@@ -94,7 +92,7 @@ class ScanTaskDetails extends AbstractModel
     public $Quuid;
 
     /**
-     * @var string Status code
+     * @var string Status code: Scanning; Ok; Fail.
      */
     public $Status;
 
@@ -109,7 +107,7 @@ class ScanTaskDetails extends AbstractModel
     public $Id;
 
     /**
-     * @var integer Failure details
+     * @var integer Failure type. 3: offline; 4: timeout; 5: failed; 8: early agent version.
      */
     public $FailType;
 
@@ -120,7 +118,6 @@ class ScanTaskDetails extends AbstractModel
 
     /**
      * @var MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -133,13 +130,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ScanEndTime Scan end time
      * @param string $Uuid UUID
      * @param string $Quuid QUUID
-     * @param string $Status Status code
+     * @param string $Status Status code: Scanning; Ok; Fail.
      * @param string $Description Description
      * @param integer $Id Unique ID
-     * @param integer $FailType Failure details
+     * @param integer $FailType Failure type. 3: offline; 4: timeout; 5: failed; 8: early agent version.
      * @param string $MachineWanIp Public IP address
      * @param MachineExtraInfo $MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

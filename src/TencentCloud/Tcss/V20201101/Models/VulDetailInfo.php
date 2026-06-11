@@ -24,22 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCVEID(string $CVEID) Set CVE No.
  * @method string getName() Obtain Vulnerability name
  * @method void setName(string $Name) Set Vulnerability name
- * @method array getTags() Obtain Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain vulnerability tag
+ * @method void setTags(array $Tags) Set vulnerability tag
  * @method string getCategoryType() Obtain Vulnerability type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCategoryType(string $CategoryType) Set Vulnerability type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLevel() Obtain Vulnerability severity
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLevel(string $Level) Set Vulnerability severity
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLevel() Obtain Vulnerability threat level
+ * @method void setLevel(string $Level) Set Vulnerability threat level
  * @method string getSubmitTime() Obtain Vulnerability disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSubmitTime(string $SubmitTime) Set Vulnerability disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDescription() Obtain Vulnerability description
  * @method void setDescription(string $Description) Set Vulnerability description
  * @method string getCVSSV3Desc() Obtain CVSS V3 description
@@ -68,26 +60,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRegistryNewestImageCount(integer $RegistryNewestImageCount) Set Number of affected repository images on the latest version
  * @method string getPocID() Obtain POC ID
  * @method void setPocID(string $PocID) Set POC ID
- * @method string getDefenceStatus() Obtain Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefenceStatus(string $DefenceStatus) Set Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDefenceScope() Obtain Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefenceScope(string $DefenceScope) Set Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDefenceHostCount() Obtain Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefenceHostCount(integer $DefenceHostCount) Set Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDefendedCount() Obtain Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefendedCount(integer $DefendedCount) Set Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getScanStatus() Obtain Whether it is scanned. Valid values: `NOT_SCAN` (not scanned); `SCANNED` (scanned).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanStatus(string $ScanStatus) Set Whether it is scanned. Valid values: `NOT_SCAN` (not scanned); `SCANNED` (scanned).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDefenceStatus() Obtain Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
+ * @method void setDefenceStatus(string $DefenceStatus) Set Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
+ * @method string getDefenceScope() Obtain Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
+ * @method void setDefenceScope(string $DefenceScope) Set Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
+ * @method integer getDefenceHostCount() Obtain Number of Hosts Defended Against Vulnerabilities
+ * @method void setDefenceHostCount(integer $DefenceHostCount) Set Number of Hosts Defended Against Vulnerabilities
+ * @method integer getDefendedCount() Obtain Number of Attacks Defended
+ * @method void setDefendedCount(integer $DefendedCount) Set Number of Attacks Defended
+ * @method string getScanStatus() Obtain Scanned. NOT_SCAN: Not Scanned; SCANNED: Scanned
+ * @method void setScanStatus(string $ScanStatus) Set Scanned. NOT_SCAN: Not Scanned; SCANNED: Scanned
  */
 class VulDetailInfo extends AbstractModel
 {
@@ -102,26 +84,22 @@ class VulDetailInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var array Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array vulnerability tag
      */
     public $Tags;
 
     /**
      * @var string Vulnerability type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CategoryType;
 
     /**
-     * @var string Vulnerability severity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Vulnerability threat level
      */
     public $Level;
 
     /**
      * @var string Vulnerability disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubmitTime;
 
@@ -196,46 +174,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PocID;
 
     /**
-     * @var string Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
      */
     public $DefenceStatus;
 
     /**
-     * @var string Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
      */
     public $DefenceScope;
 
     /**
-     * @var integer Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of Hosts Defended Against Vulnerabilities
      */
     public $DefenceHostCount;
 
     /**
-     * @var integer Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of Attacks Defended
      */
     public $DefendedCount;
 
     /**
-     * @var string Whether it is scanned. Valid values: `NOT_SCAN` (not scanned); `SCANNED` (scanned).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Scanned. NOT_SCAN: Not Scanned; SCANNED: Scanned
      */
     public $ScanStatus;
 
     /**
      * @param string $CVEID CVE No.
      * @param string $Name Vulnerability name
-     * @param array $Tags Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags vulnerability tag
      * @param string $CategoryType Vulnerability type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Level Vulnerability severity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Level Vulnerability threat level
      * @param string $SubmitTime Vulnerability disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Description Vulnerability description
      * @param string $CVSSV3Desc CVSS V3 description
      * @param string $OfficialSolution Vulnerability fix suggestion
@@ -250,16 +219,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $LocalNewestImageCount Number of affected local images on the latest version
      * @param integer $RegistryNewestImageCount Number of affected repository images on the latest version
      * @param string $PocID POC ID
-     * @param string $DefenceStatus Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DefenceScope Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DefenceHostCount Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DefendedCount Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ScanStatus Whether it is scanned. Valid values: `NOT_SCAN` (not scanned); `SCANNED` (scanned).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DefenceStatus Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
+     * @param string $DefenceScope Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
+     * @param integer $DefenceHostCount Number of Hosts Defended Against Vulnerabilities
+     * @param integer $DefendedCount Number of Attacks Defended
+     * @param string $ScanStatus Scanned. NOT_SCAN: Not Scanned; SCANNED: Scanned
      */
     function __construct()
     {

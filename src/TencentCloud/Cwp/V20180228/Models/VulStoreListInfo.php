@@ -37,9 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAttackLevel() Obtain Vulnerability attack level
  * @method void setAttackLevel(integer $AttackLevel) Set Vulnerability attack level
  * @method integer getFixSwitch() Obtain Whether automatic vulnerability fixing is supported
-0: not supported on Windows/Linux; 1: supported on Windows/Linux; 2: supported on Linux only; 3: supported on Windows only.
+0 - Windows/Linux both off; 1 - Windows/Linux both on; 2 - Linux only; 3 - Windows only
  * @method void setFixSwitch(integer $FixSwitch) Set Whether automatic vulnerability fixing is supported
-0: not supported on Windows/Linux; 1: supported on Windows/Linux; 2: supported on Linux only; 3: supported on Windows only.
+0 - Windows/Linux both off; 1 - Windows/Linux both on; 2 - Linux only; 3 - Windows only
  * @method integer getSupportDefense() Obtain Whether defense against vulnerabilities is supported
 0: not supported; 1: supported.
  * @method void setSupportDefense(integer $SupportDefense) Set Whether defense against vulnerabilities is supported
@@ -89,7 +89,7 @@ class VulStoreListInfo extends AbstractModel
 
     /**
      * @var integer Whether automatic vulnerability fixing is supported
-0: not supported on Windows/Linux; 1: supported on Windows/Linux; 2: supported on Linux only; 3: supported on Windows only.
+0 - Windows/Linux both off; 1 - Windows/Linux both on; 2 - Linux only; 3 - Windows only
      */
     public $FixSwitch;
 
@@ -109,7 +109,7 @@ class VulStoreListInfo extends AbstractModel
      * @param integer $Method Vulnerability Detection Method: 0 - Version Comparison, 1 - POC Verification
      * @param integer $AttackLevel Vulnerability attack level
      * @param integer $FixSwitch Whether automatic vulnerability fixing is supported
-0: not supported on Windows/Linux; 1: supported on Windows/Linux; 2: supported on Linux only; 3: supported on Windows only.
+0 - Windows/Linux both off; 1 - Windows/Linux both on; 2 - Linux only; 3 - Windows only
      * @param integer $SupportDefense Whether defense against vulnerabilities is supported
 0: not supported; 1: supported.
      */

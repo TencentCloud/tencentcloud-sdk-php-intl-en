@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateIndex request structure.
  *
- * @method string getTopicId() Obtain Log topic ID
- * @method void setTopicId(string $TopicId) Set Log topic ID
+ * @method string getTopicId() Obtain Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
  * @method RuleInfo getRule() Obtain Index rule
  * @method void setRule(RuleInfo $Rule) Set Index rule
  * @method boolean getStatus() Obtain Whether to take effect. Default value: true
@@ -40,11 +42,14 @@ use TencentCloud\Common\AbstractModel;
 * `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
 * `1`: Full-text indexing includes all metadata fields.
 * `2`: Full-text indexing does not include metadata fields.
+ * @method string getCoverageField() Obtain Custom log parsing exception storage fields
+ * @method void setCoverageField(string $CoverageField) Set Custom log parsing exception storage fields
  */
 class CreateIndexRequest extends AbstractModel
 {
     /**
-     * @var string Log topic ID
+     * @var string Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
@@ -74,7 +79,13 @@ class CreateIndexRequest extends AbstractModel
     public $MetadataFlag;
 
     /**
-     * @param string $TopicId Log topic ID
+     * @var string Custom log parsing exception storage fields
+     */
+    public $CoverageField;
+
+    /**
+     * @param string $TopicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      * @param RuleInfo $Rule Index rule
      * @param boolean $Status Whether to take effect. Default value: true
      * @param boolean $IncludeInternalFields Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`). Default value: `false`. Recommended value: `true`.
@@ -84,6 +95,7 @@ class CreateIndexRequest extends AbstractModel
 * `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
 * `1`: Full-text indexing includes all metadata fields.
 * `2`: Full-text indexing does not include metadata fields.
+     * @param string $CoverageField Custom log parsing exception storage fields
      */
     function __construct()
     {
@@ -117,6 +129,10 @@ class CreateIndexRequest extends AbstractModel
 
         if (array_key_exists("MetadataFlag",$param) and $param["MetadataFlag"] !== null) {
             $this->MetadataFlag = $param["MetadataFlag"];
+        }
+
+        if (array_key_exists("CoverageField",$param) and $param["CoverageField"] !== null) {
+            $this->CoverageField = $param["CoverageField"];
         }
     }
 }

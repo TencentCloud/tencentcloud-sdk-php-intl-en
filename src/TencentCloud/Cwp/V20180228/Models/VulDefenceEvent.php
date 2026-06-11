@@ -52,16 +52,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCount(integer $Count) Set Number of Occurrences
  * @method integer getStatus() Obtain Status. 0: Pending; 1: Defended; 2: Processed; 3: Ignored; 4: Deleted
  * @method void setStatus(integer $Status) Set Status. 0: Pending; 1: Defended; 2: Processed; 3: Ignored; 4: Deleted
- * @method integer getUpgradeType() Obtain 0: Pro Edition; 1: Ultimate Edition; 2: LH Inclusive Edition (for Lighthouse only); 3: CVM Inclusive Edition (for CVM only).
- * @method void setUpgradeType(integer $UpgradeType) Set 0: Pro Edition; 1: Ultimate Edition; 2: LH Inclusive Edition (for Lighthouse only); 3: CVM Inclusive Edition (for CVM only).
+ * @method integer getUpgradeType() Obtain 0: Pro Edition; 1: Flagship Edition; 2: LH Light Edition (for Lighthouse only); 3: CVM Light Edition (for CVM only).
+ * @method void setUpgradeType(integer $UpgradeType) Set 0: Pro Edition; 1: Flagship Edition; 2: LH Light Edition (for Lighthouse only); 3: CVM Light Edition (for CVM only).
  * @method integer getFixType() Obtain 0: do not support fixing; 1: support fixing.
  * @method void setFixType(integer $FixType) Set 0: do not support fixing; 1: support fixing.
  * @method string getUuid() Obtain Host UUID
  * @method void setUuid(string $Uuid) Set Host UUID
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class VulDefenceEvent extends AbstractModel
 {
@@ -146,7 +144,7 @@ class VulDefenceEvent extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 0: Pro Edition; 1: Ultimate Edition; 2: LH Inclusive Edition (for Lighthouse only); 3: CVM Inclusive Edition (for CVM only).
+     * @var integer 0: Pro Edition; 1: Flagship Edition; 2: LH Light Edition (for Lighthouse only); 3: CVM Light Edition (for CVM only).
      */
     public $UpgradeType;
 
@@ -162,7 +160,6 @@ class VulDefenceEvent extends AbstractModel
 
     /**
      * @var MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
@@ -183,11 +180,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $MergeTime Update Event Time
      * @param integer $Count Number of Occurrences
      * @param integer $Status Status. 0: Pending; 1: Defended; 2: Processed; 3: Ignored; 4: Deleted
-     * @param integer $UpgradeType 0: Pro Edition; 1: Ultimate Edition; 2: LH Inclusive Edition (for Lighthouse only); 3: CVM Inclusive Edition (for CVM only).
+     * @param integer $UpgradeType 0: Pro Edition; 1: Flagship Edition; 2: LH Light Edition (for Lighthouse only); 3: CVM Light Edition (for CVM only).
      * @param integer $FixType 0: do not support fixing; 1: support fixing.
      * @param string $Uuid Host UUID
      * @param MachineExtraInfo $MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

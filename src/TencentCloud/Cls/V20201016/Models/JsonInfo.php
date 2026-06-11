@@ -22,14 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getEnableTag() Obtain Enablement flag
  * @method void setEnableTag(boolean $EnableTag) Set Enablement flag
- * @method array getMetaFields() Obtain List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+ * @method array getMetaFields() Obtain Metadata information list, available values are __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+
+-SOURCE IP for log collection, for example: 10.0.1.2
+-__FILENAME__: Log collection file name, for example: /data/log/nginx/access.log
+-__TIMESTAMP__: Log timestamp (millisecond-level Unix timestamp). When retrieving logs by time range, the time is automatically used to retrieve logs. It is displayed on the console as "log time", for example: 1640005601188.
+-__HOSTNAME__: Log source machine name. Need to use Loglistener 2.7.4 and above versions to capture this field, for example: localhost.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMetaFields(array $MetaFields) Set List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+ * @method void setMetaFields(array $MetaFields) Set Metadata information list, available values are __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+
+-SOURCE IP for log collection, for example: 10.0.1.2
+-__FILENAME__: Log collection file name, for example: /data/log/nginx/access.log
+-__TIMESTAMP__: Log timestamp (millisecond-level Unix timestamp). When retrieving logs by time range, the time is automatically used to retrieve logs. It is displayed on the console as "log time", for example: 1640005601188.
+-__HOSTNAME__: Log source machine name. Need to use Loglistener 2.7.4 and above versions to capture this field, for example: localhost.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getJsonType() Obtain JSON format for shipping. `0`: String format; `1`: Structured format.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setJsonType(integer $JsonType) Set JSON format for shipping. `0`: String format; `1`: Structured format.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getJsonType() Obtain JSON format for shipping. 0: shipped as a string; 1: shipped in a structured way.
+ * @method void setJsonType(integer $JsonType) Set JSON format for shipping. 0: shipped as a string; 1: shipped in a structured way.
  */
 class JsonInfo extends AbstractModel
 {
@@ -39,23 +47,31 @@ class JsonInfo extends AbstractModel
     public $EnableTag;
 
     /**
-     * @var array List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+     * @var array Metadata information list, available values are __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+
+-SOURCE IP for log collection, for example: 10.0.1.2
+-__FILENAME__: Log collection file name, for example: /data/log/nginx/access.log
+-__TIMESTAMP__: Log timestamp (millisecond-level Unix timestamp). When retrieving logs by time range, the time is automatically used to retrieve logs. It is displayed on the console as "log time", for example: 1640005601188.
+-__HOSTNAME__: Log source machine name. Need to use Loglistener 2.7.4 and above versions to capture this field, for example: localhost.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MetaFields;
 
     /**
-     * @var integer JSON format for shipping. `0`: String format; `1`: Structured format.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer JSON format for shipping. 0: shipped as a string; 1: shipped in a structured way.
      */
     public $JsonType;
 
     /**
      * @param boolean $EnableTag Enablement flag
-     * @param array $MetaFields List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+     * @param array $MetaFields Metadata information list, available values are __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+
+-SOURCE IP for log collection, for example: 10.0.1.2
+-__FILENAME__: Log collection file name, for example: /data/log/nginx/access.log
+-__TIMESTAMP__: Log timestamp (millisecond-level Unix timestamp). When retrieving logs by time range, the time is automatically used to retrieve logs. It is displayed on the console as "log time", for example: 1640005601188.
+-__HOSTNAME__: Log source machine name. Need to use Loglistener 2.7.4 and above versions to capture this field, for example: localhost.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $JsonType JSON format for shipping. `0`: String format; `1`: Structured format.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $JsonType JSON format for shipping. 0: shipped as a string; 1: shipped in a structured way.
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Filters
  *
- * @method string getKey() Obtain Metric NameNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setKey(string $Key) Set Metric NameNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getValue() Obtain Metric content Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setValue(string $Value) Set Metric content Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getKey() Obtain Metric name
+ * @method void setKey(string $Key) Set Metric name
+ * @method string getValue() Obtain Metric content.
+ * @method void setValue(string $Value) Set Metric content.
  */
 class MetricLabel extends AbstractModel
 {
     /**
-     * @var string Metric NameNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Metric name
      */
     public $Key;
 
     /**
-     * @var string Metric content Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Metric content.
      */
     public $Value;
 
     /**
-     * @param string $Key Metric NameNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Value Metric content Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Key Metric name
+     * @param string $Value Metric content.
      */
     function __construct()
     {

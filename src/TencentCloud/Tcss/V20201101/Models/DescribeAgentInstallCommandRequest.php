@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireDate(string $ExpireDate) Set Command validity, which is required for non-Tencent Cloud instances.
  * @method array getTagIds() Obtain Tag ID list, which is valid only when `IsCloud` is `false`.
  * @method void setTagIds(array $TagIds) Set Tag ID list, which is valid only when `IsCloud` is `false`.
+ * @method string getVip() Obtain Virtual IP
+ * @method void setVip(string $Vip) Set Virtual IP
  */
 class DescribeAgentInstallCommandRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeAgentInstallCommandRequest extends AbstractModel
     public $TagIds;
 
     /**
+     * @var string Virtual IP
+     */
+    public $Vip;
+
+    /**
      * @param boolean $IsCloud Whether it is from Tencent Cloud
      * @param string $NetType Network type. Valid values: `basic` (classic network); `private` (VPC); `public` (public network); `direct` (Direct Connect).
      * @param string $RegionCode Region, which is required when `NetType` is `direct`.
      * @param string $VpcId VpcId, which is required when `NetType` is `direct`.
      * @param string $ExpireDate Command validity, which is required for non-Tencent Cloud instances.
      * @param array $TagIds Tag ID list, which is valid only when `IsCloud` is `false`.
+     * @param string $Vip Virtual IP
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeAgentInstallCommandRequest extends AbstractModel
 
         if (array_key_exists("TagIds",$param) and $param["TagIds"] !== null) {
             $this->TagIds = $param["TagIds"];
+        }
+
+        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
+            $this->Vip = $param["Vip"];
         }
     }
 }

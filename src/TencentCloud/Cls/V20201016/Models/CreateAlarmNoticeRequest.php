@@ -20,50 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlarmNotice request structure.
  *
- * @method string getName() Obtain Notification group name
- * @method void setName(string $Name) Set Notification group name
- * @method string getType() Obtain Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
- * @method void setType(string $Type) Set Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
- * @method array getNoticeReceivers() Obtain Notification recipient
- * @method void setNoticeReceivers(array $NoticeReceivers) Set Notification recipient
- * @method array getWebCallbacks() Obtain API callback information (including WeCom)
- * @method void setWebCallbacks(array $WebCallbacks) Set API callback information (including WeCom)
- * @method array getNoticeRules() Obtain Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
- * @method void setNoticeRules(array $NoticeRules) Set Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
+ * @method string getName() Obtain Notification channel group name. Supports a maximum of 255 bytes. Does not support '|'.
+ * @method void setName(string $Name) Set Notification channel group name. Supports a maximum of 255 bytes. Does not support '|'.
+ * @method array getTags() Obtain Tag description list. By specifying this parameter, you can bind multiple tags to the corresponding notification channel group. A maximum of 50 tag key-value pairs are supported, and there should not be duplicate key-value pairs.
+ * @method void setTags(array $Tags) Set Tag description list. By specifying this parameter, you can bind multiple tags to the corresponding notification channel group. A maximum of 50 tag key-value pairs are supported, and there should not be duplicate key-value pairs.
+ * @method string getType() Obtain [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Alarm types that require sending notifications. Available values:
+- Trigger - Alarm trigger
+-Alarm Recovery
+-All - Alarm trigger and alarm recovery
+ * @method void setType(string $Type) Set [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Alarm types that require sending notifications. Available values:
+- Trigger - Alarm trigger
+-Alarm Recovery
+-All - Alarm trigger and alarm recovery
+ * @method array getNoticeReceivers() Obtain [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Notification recipients
+ * @method void setNoticeReceivers(array $NoticeReceivers) Set [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Notification recipients
+ * @method array getWebCallbacks() Obtain [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Interface callback information (including WeCom, DingTalk, Lark).
+ * @method void setWebCallbacks(array $WebCallbacks) Set [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Interface callback information (including WeCom, DingTalk, Lark).
+ * @method array getNoticeRules() Obtain [Advanced mode] (Choose between easy mode and alarm mode, and configure corresponding parameters)
+Notification rules.
+ * @method void setNoticeRules(array $NoticeRules) Set [Advanced mode] (Choose between easy mode and alarm mode, and configure corresponding parameters)
+Notification rules.
+ * @method string getJumpDomain() Obtain Query data link. It should start with http:// or https:// and should not end with /.
+ * @method void setJumpDomain(string $JumpDomain) Set Query data link. It should start with http:// or https:// and should not end with /.
+ * @method integer getDeliverStatus() Obtain Delivery log switch. Values are as follows:
+1: Off (default value).
+2: Enable 
+When the delivery log switch is enabled, the DeliverConfig parameter is required.
+ * @method void setDeliverStatus(integer $DeliverStatus) Set Delivery log switch. Values are as follows:
+1: Off (default value).
+2: Enable 
+When the delivery log switch is enabled, the DeliverConfig parameter is required.
+ * @method DeliverConfig getDeliverConfig() Obtain Log shipping configuration parameter. It is required when DeliverStatus is enabled.
+ * @method void setDeliverConfig(DeliverConfig $DeliverConfig) Set Log shipping configuration parameter. It is required when DeliverStatus is enabled.
+ * @method integer getAlarmShieldStatus() Obtain Login-free operation alarm switch. Values are as follows:
+- 1: disabled.
+-2: Enable (default value)
+ * @method void setAlarmShieldStatus(integer $AlarmShieldStatus) Set Login-free operation alarm switch. Values are as follows:
+- 1: disabled.
+-2: Enable (default value)
+ * @method boolean getCallbackPrioritize() Obtain Unify the custom callback parameter settings.
+-true: Use the custom callback parameters in the notification content template to override the request header and request body separately configured in the alarm policy.
+-false: Prioritize using the request header and request body separately configured in the alarm policy.
+ * @method void setCallbackPrioritize(boolean $CallbackPrioritize) Set Unify the custom callback parameter settings.
+-true: Use the custom callback parameters in the notification content template to override the request header and request body separately configured in the alarm policy.
+-false: Prioritize using the request header and request body separately configured in the alarm policy.
  */
 class CreateAlarmNoticeRequest extends AbstractModel
 {
     /**
-     * @var string Notification group name
+     * @var string Notification channel group name. Supports a maximum of 255 bytes. Does not support '|'.
      */
     public $Name;
 
     /**
-     * @var string Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
+     * @var array Tag description list. By specifying this parameter, you can bind multiple tags to the corresponding notification channel group. A maximum of 50 tag key-value pairs are supported, and there should not be duplicate key-value pairs.
+     */
+    public $Tags;
+
+    /**
+     * @var string [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Alarm types that require sending notifications. Available values:
+- Trigger - Alarm trigger
+-Alarm Recovery
+-All - Alarm trigger and alarm recovery
      */
     public $Type;
 
     /**
-     * @var array Notification recipient
+     * @var array [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Notification recipients
      */
     public $NoticeReceivers;
 
     /**
-     * @var array API callback information (including WeCom)
+     * @var array [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Interface callback information (including WeCom, DingTalk, Lark).
      */
     public $WebCallbacks;
 
     /**
-     * @var array Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
+     * @var array [Advanced mode] (Choose between easy mode and alarm mode, and configure corresponding parameters)
+Notification rules.
      */
     public $NoticeRules;
 
     /**
-     * @param string $Name Notification group name
-     * @param string $Type Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
-     * @param array $NoticeReceivers Notification recipient
-     * @param array $WebCallbacks API callback information (including WeCom)
-     * @param array $NoticeRules Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
+     * @var string Query data link. It should start with http:// or https:// and should not end with /.
+     */
+    public $JumpDomain;
+
+    /**
+     * @var integer Delivery log switch. Values are as follows:
+1: Off (default value).
+2: Enable 
+When the delivery log switch is enabled, the DeliverConfig parameter is required.
+     */
+    public $DeliverStatus;
+
+    /**
+     * @var DeliverConfig Log shipping configuration parameter. It is required when DeliverStatus is enabled.
+     */
+    public $DeliverConfig;
+
+    /**
+     * @var integer Login-free operation alarm switch. Values are as follows:
+- 1: disabled.
+-2: Enable (default value)
+     */
+    public $AlarmShieldStatus;
+
+    /**
+     * @var boolean Unify the custom callback parameter settings.
+-true: Use the custom callback parameters in the notification content template to override the request header and request body separately configured in the alarm policy.
+-false: Prioritize using the request header and request body separately configured in the alarm policy.
+     */
+    public $CallbackPrioritize;
+
+    /**
+     * @param string $Name Notification channel group name. Supports a maximum of 255 bytes. Does not support '|'.
+     * @param array $Tags Tag description list. By specifying this parameter, you can bind multiple tags to the corresponding notification channel group. A maximum of 50 tag key-value pairs are supported, and there should not be duplicate key-value pairs.
+     * @param string $Type [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Alarm types that require sending notifications. Available values:
+- Trigger - Alarm trigger
+-Alarm Recovery
+-All - Alarm trigger and alarm recovery
+     * @param array $NoticeReceivers [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Notification recipients
+     * @param array $WebCallbacks [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Interface callback information (including WeCom, DingTalk, Lark).
+     * @param array $NoticeRules [Advanced mode] (Choose between easy mode and alarm mode, and configure corresponding parameters)
+Notification rules.
+     * @param string $JumpDomain Query data link. It should start with http:// or https:// and should not end with /.
+     * @param integer $DeliverStatus Delivery log switch. Values are as follows:
+1: Off (default value).
+2: Enable 
+When the delivery log switch is enabled, the DeliverConfig parameter is required.
+     * @param DeliverConfig $DeliverConfig Log shipping configuration parameter. It is required when DeliverStatus is enabled.
+     * @param integer $AlarmShieldStatus Login-free operation alarm switch. Values are as follows:
+- 1: disabled.
+-2: Enable (default value)
+     * @param boolean $CallbackPrioritize Unify the custom callback parameter settings.
+-true: Use the custom callback parameters in the notification content template to override the request header and request body separately configured in the alarm policy.
+-false: Prioritize using the request header and request body separately configured in the alarm policy.
      */
     function __construct()
     {
@@ -80,6 +184,15 @@ class CreateAlarmNoticeRequest extends AbstractModel
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
@@ -111,6 +224,27 @@ class CreateAlarmNoticeRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->NoticeRules, $obj);
             }
+        }
+
+        if (array_key_exists("JumpDomain",$param) and $param["JumpDomain"] !== null) {
+            $this->JumpDomain = $param["JumpDomain"];
+        }
+
+        if (array_key_exists("DeliverStatus",$param) and $param["DeliverStatus"] !== null) {
+            $this->DeliverStatus = $param["DeliverStatus"];
+        }
+
+        if (array_key_exists("DeliverConfig",$param) and $param["DeliverConfig"] !== null) {
+            $this->DeliverConfig = new DeliverConfig();
+            $this->DeliverConfig->deserialize($param["DeliverConfig"]);
+        }
+
+        if (array_key_exists("AlarmShieldStatus",$param) and $param["AlarmShieldStatus"] !== null) {
+            $this->AlarmShieldStatus = $param["AlarmShieldStatus"];
+        }
+
+        if (array_key_exists("CallbackPrioritize",$param) and $param["CallbackPrioritize"] !== null) {
+            $this->CallbackPrioritize = $param["CallbackPrioritize"];
         }
     }
 }

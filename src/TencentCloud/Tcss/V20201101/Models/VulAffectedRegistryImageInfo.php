@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getImageID() Obtain Image ID
  * @method void setImageID(string $ImageID) Set Image ID
- * @method string getImageName() Obtain Image name
- * @method void setImageName(string $ImageName) Set Image name
- * @method string getImageTag() Obtain Image tag
- * @method void setImageTag(string $ImageTag) Set Image tag
- * @method string getNamespace() Obtain Image namespace
- * @method void setNamespace(string $Namespace) Set Image namespace
- * @method string getImageRepoAddress() Obtain Image address
- * @method void setImageRepoAddress(string $ImageRepoAddress) Set Image address
- * @method array getComponentList() Obtain List of components
- * @method void setComponentList(array $ComponentList) Set List of components
- * @method boolean getIsLatestImage() Obtain Whether it is the latest image tag
- * @method void setIsLatestImage(boolean $IsLatestImage) Set Whether it is the latest image tag
- * @method integer getImageAssetId() Obtain Internal image asset ID
- * @method void setImageAssetId(integer $ImageAssetId) Set Internal image asset ID
+ * @method string getImageName() Obtain Image Name
+ * @method void setImageName(string $ImageName) Set Image Name
+ * @method string getImageTag() Obtain Mirror version
+ * @method void setImageTag(string $ImageTag) Set Mirror version
+ * @method string getNamespace() Obtain Image Namespace
+ * @method void setNamespace(string $Namespace) Set Image Namespace
+ * @method string getImageRepoAddress() Obtain Image address.
+ * @method void setImageRepoAddress(string $ImageRepoAddress) Set Image address.
+ * @method array getComponentList() Obtain Component List
+ * @method void setComponentList(array $ComponentList) Set Component List
+ * @method boolean getIsLatestImage() Obtain Whether the Latest Version of the Image
+ * @method void setIsLatestImage(boolean $IsLatestImage) Set Whether the Latest Version of the Image
+ * @method integer getImageAssetId() Obtain Internal Image Asset ID
+ * @method void setImageAssetId(integer $ImageAssetId) Set Internal Image Asset ID
  */
 class VulAffectedRegistryImageInfo extends AbstractModel
 {
@@ -45,49 +45,49 @@ class VulAffectedRegistryImageInfo extends AbstractModel
     public $ImageID;
 
     /**
-     * @var string Image name
+     * @var string Image Name
      */
     public $ImageName;
 
     /**
-     * @var string Image tag
+     * @var string Mirror version
      */
     public $ImageTag;
 
     /**
-     * @var string Image namespace
+     * @var string Image Namespace
      */
     public $Namespace;
 
     /**
-     * @var string Image address
+     * @var string Image address.
      */
     public $ImageRepoAddress;
 
     /**
-     * @var array List of components
+     * @var array Component List
      */
     public $ComponentList;
 
     /**
-     * @var boolean Whether it is the latest image tag
+     * @var boolean Whether the Latest Version of the Image
      */
     public $IsLatestImage;
 
     /**
-     * @var integer Internal image asset ID
+     * @var integer Internal Image Asset ID
      */
     public $ImageAssetId;
 
     /**
      * @param string $ImageID Image ID
-     * @param string $ImageName Image name
-     * @param string $ImageTag Image tag
-     * @param string $Namespace Image namespace
-     * @param string $ImageRepoAddress Image address
-     * @param array $ComponentList List of components
-     * @param boolean $IsLatestImage Whether it is the latest image tag
-     * @param integer $ImageAssetId Internal image asset ID
+     * @param string $ImageName Image Name
+     * @param string $ImageTag Mirror version
+     * @param string $Namespace Image Namespace
+     * @param string $ImageRepoAddress Image address.
+     * @param array $ComponentList Component List
+     * @param boolean $IsLatestImage Whether the Latest Version of the Image
+     * @param integer $ImageAssetId Internal Image Asset ID
      */
     function __construct()
     {

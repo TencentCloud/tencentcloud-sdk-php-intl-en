@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Server asset details
  *
- * @method string getDockerVersion() Obtain Docker version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDockerVersion(string $DockerVersion) Set Docker version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getK8SVersion() Obtain K8s version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setK8SVersion(string $K8SVersion) Set K8s version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDockerVersion() Obtain Docker version on the host.
+ * @method void setDockerVersion(string $DockerVersion) Set Docker version on the host.
+ * @method string getK8SVersion() Obtain K8S version on the host.
+ * @method void setK8SVersion(string $K8SVersion) Set K8S version on the host.
+ * @method string getContainerdVersion() Obtain Containerd Version on Host
+ * @method void setContainerdVersion(string $ContainerdVersion) Set Containerd Version on Host
  */
 class ComplianceHostDetailInfo extends AbstractModel
 {
     /**
-     * @var string Docker version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Docker version on the host.
      */
     public $DockerVersion;
 
     /**
-     * @var string K8s version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string K8S version on the host.
      */
     public $K8SVersion;
 
     /**
-     * @param string $DockerVersion Docker version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $K8SVersion K8s version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Containerd Version on Host
+     */
+    public $ContainerdVersion;
+
+    /**
+     * @param string $DockerVersion Docker version on the host.
+     * @param string $K8SVersion K8S version on the host.
+     * @param string $ContainerdVersion Containerd Version on Host
      */
     function __construct()
     {
@@ -68,6 +68,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("K8SVersion",$param) and $param["K8SVersion"] !== null) {
             $this->K8SVersion = $param["K8SVersion"];
+        }
+
+        if (array_key_exists("ContainerdVersion",$param) and $param["ContainerdVersion"] !== null) {
+            $this->ContainerdVersion = $param["ContainerdVersion"];
         }
     }
 }

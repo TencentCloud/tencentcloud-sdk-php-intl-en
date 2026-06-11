@@ -20,12 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAigcAudioTask request structure.
  *
+ * @method integer getSubAppId() Obtain <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
+ * @method void setSubAppId(integer $SubAppId) Set <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
  * @method string getModelName() Obtain <p>Model name.</p>
  * @method void setModelName(string $ModelName) Set <p>Model name.</p>
  * @method string getModelVersion() Obtain <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
  * @method void setModelVersion(string $ModelVersion) Set <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
- * @method string getSceneType() Obtain <p>Designated scenarios currently support sfx (sound effects).</p>
- * @method void setSceneType(string $SceneType) Set <p>Designated scenarios currently support sfx (sound effects).</p>
+ * @method string getSceneType() Obtain <p>Designated scenarios currently support sfx (sound effects) and music.</p>
+ * @method void setSceneType(string $SceneType) Set <p>Designated scenarios currently support sfx (sound effects) and music.</p>
  * @method string getPrompt() Obtain <p>Description of the generated audio</p>
  * @method void setPrompt(string $Prompt) Set <p>Description of the generated audio</p>
  * @method array getVideoInfos() Obtain <p>Reference video info</p>
@@ -40,6 +42,11 @@ use TencentCloud\Common\AbstractModel;
 class CreateAigcAudioTaskRequest extends AbstractModel
 {
     /**
+     * @var integer <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
+     */
+    public $SubAppId;
+
+    /**
      * @var string <p>Model name.</p>
      */
     public $ModelName;
@@ -50,7 +57,7 @@ class CreateAigcAudioTaskRequest extends AbstractModel
     public $ModelVersion;
 
     /**
-     * @var string <p>Designated scenarios currently support sfx (sound effects).</p>
+     * @var string <p>Designated scenarios currently support sfx (sound effects) and music.</p>
      */
     public $SceneType;
 
@@ -80,9 +87,10 @@ class CreateAigcAudioTaskRequest extends AbstractModel
     public $AdditionalParameters;
 
     /**
+     * @param integer $SubAppId <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
      * @param string $ModelName <p>Model name.</p>
      * @param string $ModelVersion <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
-     * @param string $SceneType <p>Designated scenarios currently support sfx (sound effects).</p>
+     * @param string $SceneType <p>Designated scenarios currently support sfx (sound effects) and music.</p>
      * @param string $Prompt <p>Description of the generated audio</p>
      * @param array $VideoInfos <p>Reference video info</p>
      * @param array $AudioInfos <p>Input the reference audio content.</p><p>For example, input is required for music generation.</p>
@@ -102,6 +110,10 @@ class CreateAigcAudioTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("ModelName",$param) and $param["ModelName"] !== null) {
             $this->ModelName = $param["ModelName"];
         }

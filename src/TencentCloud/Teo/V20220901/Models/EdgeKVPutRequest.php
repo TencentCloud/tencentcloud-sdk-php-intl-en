@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set Zone ID.
  * @method string getNamespace() Obtain Namespace name.
  * @method void setNamespace(string $Namespace) Set Namespace name.
- * @method string getKey() Obtain Key name. The length is 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
- * @method void setKey(string $Key) Set Key name. The length is 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+ * @method string getKey() Obtain Key name, with a length of 1-512 characters, supports valid UTF-8 characters.
+ * @method void setKey(string $Key) Set Key name, with a length of 1-512 characters, supports valid UTF-8 characters.
  * @method string getValue() Obtain Key-value. Cannot be empty and supports up to 1 MB. Supports storing string data.
  * @method void setValue(string $Value) Set Key-value. Cannot be empty and supports up to 1 MB. Supports storing string data.
- * @method integer getExpiration() Obtain Expiration time, absolute time. It means the seconds elapsed since midnight (UTC/GMT) on January 1, 1970, and cannot be earlier than the current time. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
- * @method void setExpiration(integer $Expiration) Set Expiration time, absolute time. It means the seconds elapsed since midnight (UTC/GMT) on January 1, 1970, and cannot be earlier than the current time. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
- * @method integer getExpirationTTL() Obtain Expiration time, relative time, in seconds. Indicates the data will expire after the specified seconds, must be greater than 0. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
- * @method void setExpirationTTL(integer $ExpirationTTL) Set Expiration time, relative time, in seconds. Indicates the data will expire after the specified seconds, must be greater than 0. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
+ * @method integer getExpiration() Obtain Expiry date of the key-value pair, absolute time in seconds, represents the seconds elapsed since 00:00:00 on January 1, 1970 (UTC) (Unix timestamp). The value must be greater than or equal to current time + 60, meaning the expiry date is at least 60 seconds from now. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence. If left empty, the key-value pair will never expire.
+ * @method void setExpiration(integer $Expiration) Set Expiry date of the key-value pair, absolute time in seconds, represents the seconds elapsed since 00:00:00 on January 1, 1970 (UTC) (Unix timestamp). The value must be greater than or equal to current time + 60, meaning the expiry date is at least 60 seconds from now. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence. If left empty, the key-value pair will never expire.
+ * @method integer getExpirationTTL() Obtain The survival time of the key-value pair is a relative time in seconds, indicating that the data will expire after transit of specified seconds. Value ranges from 60. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence; if left empty, the key-value pair will never expire.
+ * @method void setExpirationTTL(integer $ExpirationTTL) Set The survival time of the key-value pair is a relative time in seconds, indicating that the data will expire after transit of specified seconds. Value ranges from 60. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence; if left empty, the key-value pair will never expire.
  */
 class EdgeKVPutRequest extends AbstractModel
 {
@@ -46,7 +46,7 @@ class EdgeKVPutRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string Key name. The length is 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+     * @var string Key name, with a length of 1-512 characters, supports valid UTF-8 characters.
      */
     public $Key;
 
@@ -56,22 +56,22 @@ class EdgeKVPutRequest extends AbstractModel
     public $Value;
 
     /**
-     * @var integer Expiration time, absolute time. It means the seconds elapsed since midnight (UTC/GMT) on January 1, 1970, and cannot be earlier than the current time. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
+     * @var integer Expiry date of the key-value pair, absolute time in seconds, represents the seconds elapsed since 00:00:00 on January 1, 1970 (UTC) (Unix timestamp). The value must be greater than or equal to current time + 60, meaning the expiry date is at least 60 seconds from now. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence. If left empty, the key-value pair will never expire.
      */
     public $Expiration;
 
     /**
-     * @var integer Expiration time, relative time, in seconds. Indicates the data will expire after the specified seconds, must be greater than 0. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
+     * @var integer The survival time of the key-value pair is a relative time in seconds, indicating that the data will expire after transit of specified seconds. Value ranges from 60. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence; if left empty, the key-value pair will never expire.
      */
     public $ExpirationTTL;
 
     /**
      * @param string $ZoneId Zone ID.
      * @param string $Namespace Namespace name.
-     * @param string $Key Key name. The length is 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+     * @param string $Key Key name, with a length of 1-512 characters, supports valid UTF-8 characters.
      * @param string $Value Key-value. Cannot be empty and supports up to 1 MB. Supports storing string data.
-     * @param integer $Expiration Expiration time, absolute time. It means the seconds elapsed since midnight (UTC/GMT) on January 1, 1970, and cannot be earlier than the current time. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
-     * @param integer $ExpirationTTL Expiration time, relative time, in seconds. Indicates the data will expire after the specified seconds, must be greater than 0. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
+     * @param integer $Expiration Expiry date of the key-value pair, absolute time in seconds, represents the seconds elapsed since 00:00:00 on January 1, 1970 (UTC) (Unix timestamp). The value must be greater than or equal to current time + 60, meaning the expiry date is at least 60 seconds from now. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence. If left empty, the key-value pair will never expire.
+     * @param integer $ExpirationTTL The survival time of the key-value pair is a relative time in seconds, indicating that the data will expire after transit of specified seconds. Value ranges from 60. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence; if left empty, the key-value pair will never expire.
      */
     function __construct()
     {

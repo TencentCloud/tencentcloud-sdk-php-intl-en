@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnabled() Obtain Whether intelligent client filtering is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
  * @method void setEnabled(string $Enabled) Set Whether intelligent client filtering is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+ * @method string getId() Obtain Rule ID of intelligent client filtering, returned as an output parameter.
+ * @method void setId(string $Id) Set Rule ID of intelligent client filtering, returned as an output parameter.
  * @method SecurityAction getAction() Obtain The handling method of intelligent client filtering. when Enabled is on, this field is required. the Name parameter of SecurityAction supports: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
  * @method void setAction(SecurityAction $Action) Set The handling method of intelligent client filtering. when Enabled is on, this field is required. the Name parameter of SecurityAction supports: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
  */
@@ -33,12 +35,18 @@ class ClientFiltering extends AbstractModel
     public $Enabled;
 
     /**
+     * @var string Rule ID of intelligent client filtering, returned as an output parameter.
+     */
+    public $Id;
+
+    /**
      * @var SecurityAction The handling method of intelligent client filtering. when Enabled is on, this field is required. the Name parameter of SecurityAction supports: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
      */
     public $Action;
 
     /**
      * @param string $Enabled Whether intelligent client filtering is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * @param string $Id Rule ID of intelligent client filtering, returned as an output parameter.
      * @param SecurityAction $Action The handling method of intelligent client filtering. when Enabled is on, this field is required. the Name parameter of SecurityAction supports: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
      */
     function __construct()
@@ -56,6 +64,10 @@ class ClientFiltering extends AbstractModel
         }
         if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
             $this->Enabled = $param["Enabled"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
         if (array_key_exists("Action",$param) and $param["Action"] !== null) {

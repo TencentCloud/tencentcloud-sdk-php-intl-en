@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * Query Details of Host-related Core File Monitoring Rules
  *
  * @method string getName() Obtain Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getRuleCategory() Obtain Rule Type. 0: System Rule; 1: User Rule
  * @method void setRuleCategory(integer $RuleCategory) Set Rule Type. 0: System Rule; 1: User Rule
  * @method array getRule() Obtain Rule
@@ -35,7 +33,6 @@ class MachineFileTamperRule extends AbstractModel
 {
     /**
      * @var string Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
@@ -56,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $Name Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RuleCategory Rule Type. 0: System Rule; 1: User Rule
      * @param array $Rule Rule
      * @param integer $Id Unique ID

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssetItemId(integer $AssetItemId) Set Asset ID
  * @method array getCustomerPolicyItemIdSet() Obtain List of IDs of check items to be ignored in the specified asset
  * @method void setCustomerPolicyItemIdSet(array $CustomerPolicyItemIdSet) Set List of IDs of check items to be ignored in the specified asset
+ * @method string getAssetType() Obtain Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
+ * @method void setAssetType(string $AssetType) Set Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
  */
 class DeleteComplianceAssetPolicySetFromWhitelistRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteComplianceAssetPolicySetFromWhitelistRequest extends AbstractModel
     public $CustomerPolicyItemIdSet;
 
     /**
+     * @var string Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
+     */
+    public $AssetType;
+
+    /**
      * @param integer $AssetItemId Asset ID
      * @param array $CustomerPolicyItemIdSet List of IDs of check items to be ignored in the specified asset
+     * @param string $AssetType Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteComplianceAssetPolicySetFromWhitelistRequest extends AbstractModel
 
         if (array_key_exists("CustomerPolicyItemIdSet",$param) and $param["CustomerPolicyItemIdSet"] !== null) {
             $this->CustomerPolicyItemIdSet = $param["CustomerPolicyItemIdSet"];
+        }
+
+        if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
+            $this->AssetType = $param["AssetType"];
         }
     }
 }

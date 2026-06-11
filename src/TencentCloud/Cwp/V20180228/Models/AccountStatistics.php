@@ -18,7 +18,7 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Account statistics data
+ * Account stats.
  *
  * @method string getUsername() Obtain Username
  * @method void setUsername(string $Username) Set Username

@@ -26,18 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefendHostCount(integer $DefendHostCount) Set Number of hosts with defense enabled
  * @method integer getExceptionCount() Obtain Number of plugin exceptions
  * @method void setExceptionCount(integer $ExceptionCount) Set Number of plugin exceptions
- * @method array getAttackCounts() Obtain Daily attack trends
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAttackCounts(array $AttackCounts) Set Daily attack trends
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getAttackCounts() Obtain Daily attack trend
+ * @method void setAttackCounts(array $AttackCounts) Set Daily attack trend
  * @method array getDefendCounts() Obtain Daily defense trends
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDefendCounts(array $DefendCounts) Set Daily defense trends
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getDate() Obtain Date
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDate(array $Date) Set Date
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class VulDefenceOverview extends AbstractModel
 {
@@ -57,20 +51,17 @@ class VulDefenceOverview extends AbstractModel
     public $ExceptionCount;
 
     /**
-     * @var array Daily attack trends
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Daily attack trend
      */
     public $AttackCounts;
 
     /**
      * @var array Daily defense trends
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DefendCounts;
 
     /**
      * @var array Date
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Date;
 
@@ -78,12 +69,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Enable Defense switch: 0 - disable; 1 - enable
      * @param integer $DefendHostCount Number of hosts with defense enabled
      * @param integer $ExceptionCount Number of plugin exceptions
-     * @param array $AttackCounts Daily attack trends
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $AttackCounts Daily attack trend
      * @param array $DefendCounts Daily defense trends
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Date Date
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

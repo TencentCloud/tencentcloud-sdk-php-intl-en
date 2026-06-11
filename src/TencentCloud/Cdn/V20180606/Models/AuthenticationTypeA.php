@@ -18,13 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Timestamp hotlink protection mode A configuration
-The access URL format of timestamp hotlink protection mode A is as follows: http://DomainName/Filename?sign=timestamp-rand-uid-md5hash
-Here, timestamp is a decimal timestamp in Unix format;
-rand is a random string composed of 0-100 characters, including digits, upper and lower-case letters.
-uid is 0;
-md5hash: MD5 (file path-timestamp-rand-uid-custom key)
-
+ * Timestamp hotlink protection mode A configuration.
+The access URL format for timestamp hotlink protection mode A is: `http://DomainName/Filename?sign=timestamp-rand-uid-md5hash`.
+Among them, timestamp is a decimal UNIX timestamp.
+Rand specifies a random string with 0 to 100 characters composed of upper- and lower-case letters and numbers.
+Specifies the uid is 0.
+md5hash: specifies md5 (file path-timestamp-rand-uid-custom key).
  *
  * @method string getSecretKey() Obtain The key for signature calculation
 6-32 characters. Only digits and letters are allowed. 

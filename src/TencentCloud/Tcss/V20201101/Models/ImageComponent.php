@@ -28,14 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) Set Component path
  * @method string getType() Obtain Component type
  * @method void setType(string $Type) Set Component type
- * @method integer getVulCount() Obtain Number of component vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVulCount(integer $VulCount) Set Number of component vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getVulCount() Obtain Number of Component Vulnerabilities
+ * @method void setVulCount(integer $VulCount) Set Number of Component Vulnerabilities
  * @method string getImageID() Obtain Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setImageID(string $ImageID) Set Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ImageComponent extends AbstractModel
 {
@@ -60,14 +56,12 @@ class ImageComponent extends AbstractModel
     public $Type;
 
     /**
-     * @var integer Number of component vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of Component Vulnerabilities
      */
     public $VulCount;
 
     /**
      * @var string Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ImageID;
 
@@ -76,10 +70,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Version Component version
      * @param string $Path Component path
      * @param string $Type Component type
-     * @param integer $VulCount Number of component vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $VulCount Number of Component Vulnerabilities
      * @param string $ImageID Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -42,13 +42,13 @@ Note: Up to 20 ports can be input for each rule.
 <li>custom: manually added;</li>
 <li>loadbalancer: cloud load balancer;</li>
 <li>origins: origin server group.</li>
- * @method array getOriginValue() Obtain Origin server information.
+ * @method array getOriginValue() Obtain Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
- * @method void setOriginValue(array $OriginValue) Set Origin server information.
+ * @method void setOriginValue(array $OriginValue) Set Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
  * @method string getRuleId() Obtain Rule ID.
  * @method void setRuleId(string $RuleId) Set Rule ID.
@@ -80,8 +80,8 @@ Note: Up to 20 ports can be input for each rule.
  * @method void setSessionPersist(boolean $SessionPersist) Set Whether to enable session persistence. Valid values:
 <li>true: Enable;</li>
 <li>false: Disable.</li>Default value: false.
- * @method integer getSessionPersistTime() Obtain Duration for session persistence. the value takes effect only when SessionPersist is true.
- * @method void setSessionPersistTime(integer $SessionPersistTime) Set Duration for session persistence. the value takes effect only when SessionPersist is true.
+ * @method integer getSessionPersistTime() Obtain Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
+ * @method void setSessionPersistTime(integer $SessionPersistTime) Set Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
  * @method string getOriginPort() Obtain Origin server port. Supported formats:
 <li>A single port, such as 80.</li>
 <li>A port range, such as 81-82, indicating two ports 81 and 82.</li>
@@ -117,9 +117,9 @@ Note: Up to 20 ports can be input for each rule.
     public $OriginType;
 
     /**
-     * @var array Origin server information.
+     * @var array Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      */
     public $OriginValue;
@@ -156,7 +156,7 @@ Note: Up to 20 ports can be input for each rule.
     public $SessionPersist;
 
     /**
-     * @var integer Duration for session persistence. the value takes effect only when SessionPersist is true.
+     * @var integer Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
      */
     public $SessionPersistTime;
 
@@ -184,9 +184,9 @@ Note: Up to 20 ports can be input for each rule.
 <li>custom: manually added;</li>
 <li>loadbalancer: cloud load balancer;</li>
 <li>origins: origin server group.</li>
-     * @param array $OriginValue Origin server information.
+     * @param array $OriginValue Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      * @param string $RuleId Rule ID.
      * @param string $Status Status. Valid values:
@@ -203,7 +203,7 @@ Note: Up to 20 ports can be input for each rule.
      * @param boolean $SessionPersist Whether to enable session persistence. Valid values:
 <li>true: Enable;</li>
 <li>false: Disable.</li>Default value: false.
-     * @param integer $SessionPersistTime Duration for session persistence. the value takes effect only when SessionPersist is true.
+     * @param integer $SessionPersistTime Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
      * @param string $OriginPort Origin server port. Supported formats:
 <li>A single port, such as 80.</li>
 <li>A port range, such as 81-82, indicating two ports 81 and 82.</li>

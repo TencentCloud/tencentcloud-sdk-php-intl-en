@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
 <li>CreateBeginTime - String - required: no - filter by creation time - start time</li>
 <li>CreateEndTime - String - required: no - filter by creation time - end time</li>
 <li>Status - String - required: no - filter by status</li>
- * @method string getBy() Obtain Sorting value: CreateTime
- * @method void setBy(string $By) Set Sorting value: CreateTime
- * @method string getOrder() Obtain Sorting method: ASC, DESC
- * @method void setOrder(string $Order) Set Sorting method: ASC, DESC
+ * @method string getBy() Obtain Sorting value: CreateTime
+ * @method void setBy(string $By) Set Sorting value: CreateTime
+ * @method string getOrder() Obtain Sorting method: ASC, DESC
+ * @method void setOrder(string $Order) Set Sorting method: ASC, DESC
  */
 class ExportAttackEventsRequest extends AbstractModel
 {
@@ -53,12 +53,12 @@ class ExportAttackEventsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string Sorting value: CreateTime
+     * @var string Sorting value: CreateTime
      */
     public $By;
 
     /**
-     * @var string Sorting method: ASC, DESC
+     * @var string Sorting method: ASC, DESC
      */
     public $Order;
 
@@ -70,8 +70,8 @@ class ExportAttackEventsRequest extends AbstractModel
 <li>CreateBeginTime - String - required: no - filter by creation time - start time</li>
 <li>CreateEndTime - String - required: no - filter by creation time - end time</li>
 <li>Status - String - required: no - filter by status</li>
-     * @param string $By Sorting value: CreateTime
-     * @param string $Order Sorting method: ASC, DESC
+     * @param string $By Sorting value: CreateTime
+     * @param string $Order Sorting method: ASC, DESC
      */
     function __construct()
     {

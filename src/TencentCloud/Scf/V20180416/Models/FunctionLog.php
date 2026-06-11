@@ -101,11 +101,13 @@ class FunctionLog extends AbstractModel
 
     /**
      * @var string Log level
+     * @deprecated
      */
     public $Level;
 
     /**
      * @var string Log source
+     * @deprecated
      */
     public $Source;
 

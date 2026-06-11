@@ -20,66 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetImageList request structure.
  *
- * @method integer getLimit() Obtain Number of results to be returned. Default value: `10`. Maximum value: `100`.
- * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: `10`. Maximum value: `100`.
- * @method integer getOffset() Obtain Offset. Default value: `0`.
- * @method void setOffset(integer $Offset) Set Offset. Default value: `0`.
- * @method array getFilters() Obtain Filter
-<li>ImageName- String - Required: No - Image name</li>
-<li>ScanStatus - String - Required: No - Image scanning status. Valid values: `notScan`, `scanning`, `scanned`, `scanErr`.</li>
-<li>ImageID- String - Required: No - Image ID</li>
-<li>SecurityRisk- String - Required: No - Security risks. Valid values: `VulCnt`, `VirusCnt`, `RiskCnt`, `IsTrustImage`.</li>
- * @method void setFilters(array $Filters) Set Filter
-<li>ImageName- String - Required: No - Image name</li>
-<li>ScanStatus - String - Required: No - Image scanning status. Valid values: `notScan`, `scanning`, `scanned`, `scanErr`.</li>
-<li>ImageID- String - Required: No - Image ID</li>
-<li>SecurityRisk- String - Required: No - Security risks. Valid values: `VulCnt`, `VirusCnt`, `RiskCnt`, `IsTrustImage`.</li>
- * @method string getBy() Obtain Sorting field
- * @method void setBy(string $By) Set Sorting field
- * @method string getOrder() Obtain Sorting order. Valid values: `asc`, `desc`.
- * @method void setOrder(string $Order) Set Sorting order. Valid values: `asc`, `desc`.
+ * @method integer getLimit() Obtain <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+ * @method integer getOffset() Obtain <p>Offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset. Default value: 0.</p>
+ * @method array getFilters() Obtain <p>Filter conditions.</p><li>ImageName - String - Required: No - Image name filter;</li><li>ScanStatus - String - Required: No - Image scan status: notScan, scanning, scanned, and scanErr</li><li>ImageID - String - Required: No - Image ID filter;</li><li>SecurityRisk - String - Required: No - Security risk: VirusCnt, RiskCnt, IsTrustImage, CriticalLevelVul, HighLevelVul, MediumLevelVul, and LowLevelVul.</li>
+ * @method void setFilters(array $Filters) Set <p>Filter conditions.</p><li>ImageName - String - Required: No - Image name filter;</li><li>ScanStatus - String - Required: No - Image scan status: notScan, scanning, scanned, and scanErr</li><li>ImageID - String - Required: No - Image ID filter;</li><li>SecurityRisk - String - Required: No - Security risk: VirusCnt, RiskCnt, IsTrustImage, CriticalLevelVul, HighLevelVul, MediumLevelVul, and LowLevelVul.</li>
+ * @method string getBy() Obtain <p>Sorting field.</p>
+ * @method void setBy(string $By) Set <p>Sorting field.</p>
+ * @method string getOrder() Obtain <p>Sorting method. Valid values: asc and desc.</p>
+ * @method void setOrder(string $Order) Set <p>Sorting method. Valid values: asc and desc.</p>
  */
 class DescribeAssetImageListRequest extends AbstractModel
 {
     /**
-     * @var integer Number of results to be returned. Default value: `10`. Maximum value: `100`.
+     * @var integer <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Offset. Default value: `0`.
+     * @var integer <p>Offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var array Filter
-<li>ImageName- String - Required: No - Image name</li>
-<li>ScanStatus - String - Required: No - Image scanning status. Valid values: `notScan`, `scanning`, `scanned`, `scanErr`.</li>
-<li>ImageID- String - Required: No - Image ID</li>
-<li>SecurityRisk- String - Required: No - Security risks. Valid values: `VulCnt`, `VirusCnt`, `RiskCnt`, `IsTrustImage`.</li>
+     * @var array <p>Filter conditions.</p><li>ImageName - String - Required: No - Image name filter;</li><li>ScanStatus - String - Required: No - Image scan status: notScan, scanning, scanned, and scanErr</li><li>ImageID - String - Required: No - Image ID filter;</li><li>SecurityRisk - String - Required: No - Security risk: VirusCnt, RiskCnt, IsTrustImage, CriticalLevelVul, HighLevelVul, MediumLevelVul, and LowLevelVul.</li>
      */
     public $Filters;
 
     /**
-     * @var string Sorting field
+     * @var string <p>Sorting field.</p>
      */
     public $By;
 
     /**
-     * @var string Sorting order. Valid values: `asc`, `desc`.
+     * @var string <p>Sorting method. Valid values: asc and desc.</p>
      */
     public $Order;
 
     /**
-     * @param integer $Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
-     * @param integer $Offset Offset. Default value: `0`.
-     * @param array $Filters Filter
-<li>ImageName- String - Required: No - Image name</li>
-<li>ScanStatus - String - Required: No - Image scanning status. Valid values: `notScan`, `scanning`, `scanned`, `scanErr`.</li>
-<li>ImageID- String - Required: No - Image ID</li>
-<li>SecurityRisk- String - Required: No - Security risks. Valid values: `VulCnt`, `VirusCnt`, `RiskCnt`, `IsTrustImage`.</li>
-     * @param string $By Sorting field
-     * @param string $Order Sorting order. Valid values: `asc`, `desc`.
+     * @param integer $Limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+     * @param integer $Offset <p>Offset. Default value: 0.</p>
+     * @param array $Filters <p>Filter conditions.</p><li>ImageName - String - Required: No - Image name filter;</li><li>ScanStatus - String - Required: No - Image scan status: notScan, scanning, scanned, and scanErr</li><li>ImageID - String - Required: No - Image ID filter;</li><li>SecurityRisk - String - Required: No - Security risk: VirusCnt, RiskCnt, IsTrustImage, CriticalLevelVul, HighLevelVul, MediumLevelVul, and LowLevelVul.</li>
+     * @param string $By <p>Sorting field.</p>
+     * @param string $Order <p>Sorting method. Valid values: asc and desc.</p>
      */
     function __construct()
     {

@@ -27,7 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPhone() Obtain Mobile number.
  * @method void setPhone(string $Phone) Set Mobile number.
  * @method string getCiphertextBlob() Obtain Users with encryption requirements can import the CiphertextBlob of kms. Read the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document about encrypting data.
+
  * @method void setCiphertextBlob(string $CiphertextBlob) Set Users with encryption requirements can import the CiphertextBlob of kms. Read the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document about encrypting data.
+
  * @method array getEncryptList() Obtain When using the encryption service, fill in the field to be encrypted.
 -This API can fill in one or more of encrypted IdCard, Name, and Phone.
  * @method void setEncryptList(array $EncryptList) Set When using the encryption service, fill in the field to be encrypted.
@@ -54,6 +56,7 @@ class PhoneVerificationRequest extends AbstractModel
 
     /**
      * @var string Users with encryption requirements can import the CiphertextBlob of kms. Read the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document about encrypting data.
+
      */
     public $CiphertextBlob;
 
@@ -73,6 +76,7 @@ class PhoneVerificationRequest extends AbstractModel
      * @param string $Name Name
      * @param string $Phone Mobile number.
      * @param string $CiphertextBlob Users with encryption requirements can import the CiphertextBlob of kms. Read the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document about encrypting data.
+
      * @param array $EncryptList When using the encryption service, fill in the field to be encrypted.
 -This API can fill in one or more of encrypted IdCard, Name, and Phone.
      * @param string $Iv Users with encryption requirements import the initial vector for CBC encryption.

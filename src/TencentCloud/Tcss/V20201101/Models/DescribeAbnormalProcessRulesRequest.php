@@ -20,19 +20,44 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAbnormalProcessRules request structure.
  *
+ * @method string getBy() Obtain Sorting field
+ * @method void setBy(string $By) Set Sorting field
+ * @method array getFilters() Obtain Filter parameters,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName - String - required: no - mirror name, fuzzy search for rules bound to the image</li>
+<li>ImageId - String - required: no - image ID, fuzzy search for rules bound to the image</li>
+<li>RuleType - String - Required: No - Policy type filter. Value: system (system policy), user (user policy)</li>
+<li>RuleAction- String - Required: No - Execution action filter. Valid values: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (block) </li>
+
+ * @method void setFilters(array $Filters) Set Filter parameters,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName - String - required: no - mirror name, fuzzy search for rules bound to the image</li>
+<li>ImageId - String - required: no - image ID, fuzzy search for rules bound to the image</li>
+<li>RuleType - String - Required: No - Policy type filter. Value: system (system policy), user (user policy)</li>
+<li>RuleAction- String - Required: No - Execution action filter. Valid values: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (block) </li>
+
  * @method integer getLimit() Obtain Number of results to be returned. Default value: `10`. Maximum value: `100`.
  * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: `10`. Maximum value: `100`.
  * @method integer getOffset() Obtain Offset. Default value: `0`.
  * @method void setOffset(integer $Offset) Set Offset. Default value: `0`.
- * @method array getFilters() Obtain Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
- * @method void setFilters(array $Filters) Set Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
  * @method string getOrder() Obtain Valid values: `asc`, `desc`.
  * @method void setOrder(string $Order) Set Valid values: `asc`, `desc`.
- * @method string getBy() Obtain Sorting field
- * @method void setBy(string $By) Set Sorting field
  */
 class DescribeAbnormalProcessRulesRequest extends AbstractModel
 {
+    /**
+     * @var string Sorting field
+     */
+    public $By;
+
+    /**
+     * @var array Filter parameters,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName - String - required: no - mirror name, fuzzy search for rules bound to the image</li>
+<li>ImageId - String - required: no - image ID, fuzzy search for rules bound to the image</li>
+<li>RuleType - String - Required: No - Policy type filter. Value: system (system policy), user (user policy)</li>
+<li>RuleAction- String - Required: No - Execution action filter. Valid values: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (block) </li>
+
+     */
+    public $Filters;
+
     /**
      * @var integer Number of results to be returned. Default value: `10`. Maximum value: `100`.
      */
@@ -44,26 +69,21 @@ class DescribeAbnormalProcessRulesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
-     */
-    public $Filters;
-
-    /**
      * @var string Valid values: `asc`, `desc`.
      */
     public $Order;
 
     /**
-     * @var string Sorting field
-     */
-    public $By;
+     * @param string $By Sorting field
+     * @param array $Filters Filter parameters,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName - String - required: no - mirror name, fuzzy search for rules bound to the image</li>
+<li>ImageId - String - required: no - image ID, fuzzy search for rules bound to the image</li>
+<li>RuleType - String - Required: No - Policy type filter. Value: system (system policy), user (user policy)</li>
+<li>RuleAction- String - Required: No - Execution action filter. Valid values: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (block) </li>
 
-    /**
      * @param integer $Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
      * @param integer $Offset Offset. Default value: `0`.
-     * @param array $Filters Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
      * @param string $Order Valid values: `asc`, `desc`.
-     * @param string $By Sorting field
      */
     function __construct()
     {
@@ -78,12 +98,8 @@ class DescribeAbnormalProcessRulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
@@ -95,12 +111,16 @@ class DescribeAbnormalProcessRulesRequest extends AbstractModel
             }
         }
 
-        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
-            $this->Order = $param["Order"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
 
-        if (array_key_exists("By",$param) and $param["By"] !== null) {
-            $this->By = $param["By"];
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
         }
     }
 }

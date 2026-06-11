@@ -63,101 +63,73 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNetworkPayload() Obtain Attack packet
  * @method void setNetworkPayload(string $NetworkPayload) Set Attack packet
  * @method integer getPID() Obtain Process PID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPID(integer $PID) Set Process PID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMainClass() Obtain Main class name of the process
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMainClass(string $MainClass) Set Main class name of the process
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMainClass() Obtain Main class name of process
+ * @method void setMainClass(string $MainClass) Set Main class name of process
  * @method string getStackTrace() Obtain Stack information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStackTrace(string $StackTrace) Set Stack information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getServerAccount() Obtain Listened account
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setServerAccount(string $ServerAccount) Set Listened account
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getServerPort() Obtain Listened port
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setServerPort(string $ServerPort) Set Listened port
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getServerAccount() Obtain Listen to account
+ * @method void setServerAccount(string $ServerAccount) Set Listen to account
+ * @method string getServerPort() Obtain Listening port
+ * @method void setServerPort(string $ServerPort) Set Listening port
  * @method string getServerExe() Obtain Process path
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setServerExe(string $ServerExe) Set Process path
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getServerArg() Obtain Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setServerArg(string $ServerArg) Set Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getQUUID() Obtain Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
- * @method void setQUUID(string $QUUID) Set Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+ * @method string getQUUID() Obtain Host QUUID/Super Node ID
+ * @method void setQUUID(string $QUUID) Set Host QUUID/Super Node ID
  * @method string getContainerNetStatus() Obtain Isolation status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+UNISOLATED NORMAL
+ISOLATED
+ISOLATING
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
  * @method void setContainerNetStatus(string $ContainerNetStatus) Set Isolation status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContainerNetSubStatus() Obtain Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) Set Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContainerIsolateOperationSrc() Obtain Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) Set Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContainerStatus() Obtain Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContainerStatus(string $ContainerStatus) Set Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+UNISOLATED NORMAL
+ISOLATED
+ISOLATING
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
+ * @method string getContainerNetSubStatus() Obtain Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
+ * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) Set Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
+ * @method string getContainerIsolateOperationSrc() Obtain Container Isolation Operation Source
+ * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) Set Container Isolation Operation Source
+ * @method string getContainerStatus() Obtain Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+ * @method void setContainerStatus(string $ContainerStatus) Set Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
  * @method string getJNDIUrl() Obtain API URL
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setJNDIUrl(string $JNDIUrl) Set API URL
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getRaspDetail() Obtain RASP details
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setRaspDetail(array $RaspDetail) Set RASP details
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method array getRaspDetail() Obtain rasp detail
+ * @method void setRaspDetail(array $RaspDetail) Set rasp detail
  * @method string getNodeSubNetName() Obtain Super node subnet name
  * @method void setNodeSubNetName(string $NodeSubNetName) Set Super node subnet name
  * @method string getNodeSubNetCIDR() Obtain Super node subnet IP range
@@ -176,10 +148,10 @@ Note: This field may return `null`, indicating that no valid value was found.
  * @method void setClusterID(string $ClusterID) Set Cluster ID
  * @method string getClusterName() Obtain Cluster name
  * @method void setClusterName(string $ClusterName) Set Cluster name
- * @method string getNamespace() Obtain Namespace
- * @method void setNamespace(string $Namespace) Set Namespace
- * @method string getWorkloadType() Obtain Workload
- * @method void setWorkloadType(string $WorkloadType) Set Workload
+ * @method string getNamespace() Obtain 
+ * @method void setNamespace(string $Namespace) Set 
+ * @method string getWorkloadType() Obtain 
+ * @method void setWorkloadType(string $WorkloadType) Set 
  */
 class VulDefenceEventDetail extends AbstractModel
 {
@@ -290,105 +262,91 @@ class VulDefenceEventDetail extends AbstractModel
 
     /**
      * @var integer Process PID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PID;
 
     /**
-     * @var string Main class name of the process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Main class name of process
      */
     public $MainClass;
 
     /**
      * @var string Stack information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StackTrace;
 
     /**
-     * @var string Listened account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Listen to account
      */
     public $ServerAccount;
 
     /**
-     * @var string Listened port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Listening port
      */
     public $ServerPort;
 
     /**
      * @var string Process path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ServerExe;
 
     /**
      * @var string Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ServerArg;
 
     /**
-     * @var string Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @var string Host QUUID/Super Node ID
      */
     public $QUUID;
 
     /**
      * @var string Isolation status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+UNISOLATED NORMAL
+ISOLATED
+ISOLATING
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
      */
     public $ContainerNetStatus;
 
     /**
-     * @var string Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
      */
     public $ContainerNetSubStatus;
 
     /**
-     * @var string Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Container Isolation Operation Source
      */
     public $ContainerIsolateOperationSrc;
 
     /**
-     * @var string Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
      */
     public $ContainerStatus;
 
     /**
      * @var string API URL
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $JNDIUrl;
 
     /**
-     * @var array RASP details
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array rasp detail
      */
     public $RaspDetail;
 
@@ -438,12 +396,12 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $ClusterName;
 
     /**
-     * @var string Namespace
+     * @var string 
      */
     public $Namespace;
 
     /**
-     * @var string Workload
+     * @var string 
      */
     public $WorkloadType;
 
@@ -470,53 +428,39 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $OfficialSolution Fix suggestion
      * @param string $NetworkPayload Attack packet
      * @param integer $PID Process PID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MainClass Main class name of the process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MainClass Main class name of process
      * @param string $StackTrace Stack information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ServerAccount Listened account
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ServerPort Listened port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ServerAccount Listen to account
+     * @param string $ServerPort Listening port
      * @param string $ServerExe Process path
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ServerArg Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $QUUID Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * @param string $QUUID Host QUUID/Super Node ID
      * @param string $ContainerNetStatus Isolation status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+UNISOLATED NORMAL
+ISOLATED
+ISOLATING
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
+     * @param string $ContainerNetSubStatus Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
+     * @param string $ContainerIsolateOperationSrc Container Isolation Operation Source
+     * @param string $ContainerStatus Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
      * @param string $JNDIUrl API URL
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $RaspDetail RASP details
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param array $RaspDetail rasp detail
      * @param string $NodeSubNetName Super node subnet name
      * @param string $NodeSubNetCIDR Super node subnet IP range
      * @param string $PodIP Pod IP
@@ -526,8 +470,8 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $NodeSubNetID Super node subnet ID
      * @param string $ClusterID Cluster ID
      * @param string $ClusterName Cluster name
-     * @param string $Namespace Namespace
-     * @param string $WorkloadType Workload
+     * @param string $Namespace 
+     * @param string $WorkloadType 
      */
     function __construct()
     {

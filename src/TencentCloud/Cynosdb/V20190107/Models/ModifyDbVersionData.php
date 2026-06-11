@@ -18,36 +18,36 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Modify database kernel version task information.
  *
- * @method string getOldVersion() Obtain 
- * @method void setOldVersion(string $OldVersion) Set 
- * @method string getNewVersion() Obtain 
- * @method void setNewVersion(string $NewVersion) Set 
- * @method string getUpgradeType() Obtain 
- * @method void setUpgradeType(string $UpgradeType) Set 
+ * @method string getOldVersion() Obtain Version before modification.
+ * @method void setOldVersion(string $OldVersion) Set Version before modification.
+ * @method string getNewVersion() Obtain Version after modification.
+ * @method void setNewVersion(string $NewVersion) Set Version after modification.
+ * @method string getUpgradeType() Obtain Upgrade method.
+ * @method void setUpgradeType(string $UpgradeType) Set Upgrade method.
  */
 class ModifyDbVersionData extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Version before modification.
      */
     public $OldVersion;
 
     /**
-     * @var string 
+     * @var string Version after modification.
      */
     public $NewVersion;
 
     /**
-     * @var string 
+     * @var string Upgrade method.
      */
     public $UpgradeType;
 
     /**
-     * @param string $OldVersion 
-     * @param string $NewVersion 
-     * @param string $UpgradeType 
+     * @param string $OldVersion Version before modification.
+     * @param string $NewVersion Version after modification.
+     * @param string $UpgradeType Upgrade method.
      */
     function __construct()
     {

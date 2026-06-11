@@ -18,12 +18,12 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Audit instance details.
  *
  * @method integer getProjectId() Obtain Project ID.
  * @method void setProjectId(integer $ProjectId) Set Project ID.
- * @method array getTagList() Obtain Tag information
- * @method void setTagList(array $TagList) Set Tag information
+ * @method array getTagList() Obtain Tag information.
+ * @method void setTagList(array $TagList) Set Tag information.
  */
 class AuditInstanceInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AuditInstanceInfo extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array Tag information
+     * @var array Tag information.
      */
     public $TagList;
 
     /**
      * @param integer $ProjectId Project ID.
-     * @param array $TagList Tag information
+     * @param array $TagList Tag information.
      */
     function __construct()
     {

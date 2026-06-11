@@ -32,8 +32,8 @@ BM: BM
 ECM: Edge Computing Machine
 LH: Lighthouse
 Other: Hybrid Cloud Zone
- * @method string getMachineRegion() Obtain Machine region. For example, ap-guangzhou and ap-shanghai.
- * @method void setMachineRegion(string $MachineRegion) Set Machine region. For example, ap-guangzhou and ap-shanghai.
+ * @method string getMachineRegion() Obtain Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
+ * @method void setMachineRegion(string $MachineRegion) Set Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
  * @method integer getLimit() Obtain Number of entries to be returned. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of entries to be returned. Default value: 10. Maximum value: 100.
  * @method integer getOffset() Obtain Offset. Default value: 0.
@@ -62,7 +62,7 @@ Other: Hybrid Cloud Zone
     public $MachineType;
 
     /**
-     * @var string Machine region. For example, ap-guangzhou and ap-shanghai.
+     * @var string Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
      */
     public $MachineRegion;
 
@@ -96,7 +96,7 @@ BM: BM
 ECM: Edge Computing Machine
 LH: Lighthouse
 Other: Hybrid Cloud Zone
-     * @param string $MachineRegion Machine region. For example, ap-guangzhou and ap-shanghai.
+     * @param string $MachineRegion Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
      * @param integer $Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
      * @param array $Filters Filtering criteria

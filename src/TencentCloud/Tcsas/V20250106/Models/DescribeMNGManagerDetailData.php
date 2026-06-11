@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTeamId(string $TeamId) Set <p>Team ID.</p>
  * @method integer getStatus() Obtain <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
  * @method void setStatus(integer $Status) Set <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
- * @method array getI18nList() Obtain The mini game name and description in multiple languages.
- * @method void setI18nList(array $I18nList) Set The mini game name and description in multiple languages.
+ * @method array getI18nList() Obtain <p>Mini game information in multiple languages.</p>
+ * @method void setI18nList(array $I18nList) Set <p>Mini game information in multiple languages.</p>
  */
 class DescribeMNGManagerDetailData extends AbstractModel
 {
@@ -110,7 +110,7 @@ class DescribeMNGManagerDetailData extends AbstractModel
     public $Status;
 
     /**
-     * @var array The mini game name and description in multiple languages.
+     * @var array <p>Mini game information in multiple languages.</p>
      */
     public $I18nList;
 
@@ -127,7 +127,7 @@ class DescribeMNGManagerDetailData extends AbstractModel
      * @param string $TeamName <p>Team name.</p>
      * @param string $TeamId <p>Team ID.</p>
      * @param integer $Status <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
-     * @param array $I18nList The mini game name and description in multiple languages.
+     * @param array $I18nList <p>Mini game information in multiple languages.</p>
      */
     function __construct()
     {

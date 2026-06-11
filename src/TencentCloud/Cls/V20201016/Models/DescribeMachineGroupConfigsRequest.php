@@ -21,17 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DescribeMachineGroupConfigs request structure.
  *
  * @method string getGroupId() Obtain Machine group ID
+-Obtain the machine group Id by searching the [machine group list](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
  * @method void setGroupId(string $GroupId) Set Machine group ID
+-Obtain the machine group Id by searching the [machine group list](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
  */
 class DescribeMachineGroupConfigsRequest extends AbstractModel
 {
     /**
      * @var string Machine group ID
+-Obtain the machine group Id by searching the [machine group list](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
      */
     public $GroupId;
 
     /**
      * @param string $GroupId Machine group ID
+-Obtain the machine group Id by searching the [machine group list](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
      */
     function __construct()
     {

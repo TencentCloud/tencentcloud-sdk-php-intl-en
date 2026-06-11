@@ -20,166 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of a virus in the image
  *
- * @method string getPath() Obtain Path
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPath(string $Path) Set Path
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPath() Obtain Path.
+ * @method void setPath(string $Path) Set Path.
  * @method string getRiskLevel() Obtain Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRiskLevel(string $RiskLevel) Set Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCategory() Obtain Category
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCategory(string $Category) Set Category
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCategory() Obtain category
+ * @method void setCategory(string $Category) Set category
  * @method string getVirusName() Obtain Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVirusName(string $VirusName) Set Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTags() Obtain Tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Tag.
+ * @method void setTags(array $Tags) Set Tag.
  * @method string getDesc() Obtain Description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDesc(string $Desc) Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSolution() Obtain Solution
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSolution(string $Solution) Set Solution
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFileType() Obtain File type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFileType(string $FileType) Set File type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFileName() Obtain File path
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFileName(string $FileName) Set File path
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFileMd5() Obtain MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileMd5(string $FileMd5) Set MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFileMd5() Obtain File md5
+ * @method void setFileMd5(string $FileMd5) Set File md5
  * @method integer getFileSize() Obtain Size
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFileSize(integer $FileSize) Set Size
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFirstScanTime() Obtain First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFirstScanTime(string $FirstScanTime) Set First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFirstScanTime() Obtain First detection time
+ * @method void setFirstScanTime(string $FirstScanTime) Set First detection time
  * @method string getLatestScanTime() Obtain Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLatestScanTime(string $LatestScanTime) Set Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ImageVirus extends AbstractModel
 {
     /**
-     * @var string Path
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Path.
      */
     public $Path;
 
     /**
      * @var string Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RiskLevel;
 
     /**
-     * @var string Category
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string category
      */
     public $Category;
 
     /**
      * @var string Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VirusName;
 
     /**
-     * @var array Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Tag.
      */
     public $Tags;
 
     /**
      * @var string Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Desc;
 
     /**
      * @var string Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Solution;
 
     /**
      * @var string File type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FileType;
 
     /**
      * @var string File path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FileName;
 
     /**
-     * @var string MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string File md5
      */
     public $FileMd5;
 
     /**
      * @var integer Size
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FileSize;
 
     /**
-     * @var string First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string First detection time
      */
     public $FirstScanTime;
 
     /**
      * @var string Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LatestScanTime;
 
     /**
-     * @param string $Path Path
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Path Path.
      * @param string $RiskLevel Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Category Category
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Category category
      * @param string $VirusName Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags Tag.
      * @param string $Desc Description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Solution Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FileType File type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FileName File path
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FileMd5 MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FileMd5 File md5
      * @param integer $FileSize Size
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FirstScanTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FirstScanTime First detection time
      * @param string $LatestScanTime Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -20,29 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeShippers request structure.
  *
- * @method array getFilters() Obtain - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
-- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
-- topicId: Filter by **log topic**. Type: String. Required: No.
+ * @method array getFilters() Obtain -shipperName: Filter by [delivery rule name].
+Type: String.
+    Required: No
+-shipperId: Filter by [Delivery Rule ID].
+Type: String.
+    Required: No
+-topicId: Filter by [log topic].
+Type: String.
+    Required: No
+-taskStatus: Filter by [task running status]. Supported values: `0`: stop, `1`: running, `2`: exception.
+Type: String
+    Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
- * @method void setFilters(array $Filters) Set - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
-- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
-- topicId: Filter by **log topic**. Type: String. Required: No.
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 10.
+ * @method void setFilters(array $Filters) Set -shipperName: Filter by [delivery rule name].
+Type: String.
+    Required: No
+-shipperId: Filter by [Delivery Rule ID].
+Type: String.
+    Required: No
+-topicId: Filter by [log topic].
+Type: String.
+    Required: No
+-taskStatus: Filter by [task running status]. Supported values: `0`: stop, `1`: running, `2`: exception.
+Type: String
+    Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 10.
  * @method integer getOffset() Obtain Page offset. Default value: 0
  * @method void setOffset(integer $Offset) Set Page offset. Default value: 0
  * @method integer getLimit() Obtain Maximum number of entries per page. Default value: 20. Maximum value: 100
  * @method void setLimit(integer $Limit) Set Maximum number of entries per page. Default value: 20. Maximum value: 100
+ * @method integer getPreciseSearch() Obtain Control whether the relevant fields in Filters use exact matching. 0: Default value, fuzzy matching for shipperName. 1: Exact match for shipperName.
+ * @method void setPreciseSearch(integer $PreciseSearch) Set Control whether the relevant fields in Filters use exact matching. 0: Default value, fuzzy matching for shipperName. 1: Exact match for shipperName.
  */
 class DescribeShippersRequest extends AbstractModel
 {
     /**
-     * @var array - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
-- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
-- topicId: Filter by **log topic**. Type: String. Required: No.
+     * @var array -shipperName: Filter by [delivery rule name].
+Type: String.
+    Required: No
+-shipperId: Filter by [Delivery Rule ID].
+Type: String.
+    Required: No
+-topicId: Filter by [log topic].
+Type: String.
+    Required: No
+-taskStatus: Filter by [task running status]. Supported values: `0`: stop, `1`: running, `2`: exception.
+Type: String
+    Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 10.
      */
     public $Filters;
 
@@ -57,13 +86,28 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
     public $Limit;
 
     /**
-     * @param array $Filters - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
-- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
-- topicId: Filter by **log topic**. Type: String. Required: No.
+     * @var integer Control whether the relevant fields in Filters use exact matching. 0: Default value, fuzzy matching for shipperName. 1: Exact match for shipperName.
+     */
+    public $PreciseSearch;
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+    /**
+     * @param array $Filters -shipperName: Filter by [delivery rule name].
+Type: String.
+    Required: No
+-shipperId: Filter by [Delivery Rule ID].
+Type: String.
+    Required: No
+-topicId: Filter by [log topic].
+Type: String.
+    Required: No
+-taskStatus: Filter by [task running status]. Supported values: `0`: stop, `1`: running, `2`: exception.
+Type: String
+    Required: No
+
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 10.
      * @param integer $Offset Page offset. Default value: 0
      * @param integer $Limit Maximum number of entries per page. Default value: 20. Maximum value: 100
+     * @param integer $PreciseSearch Control whether the relevant fields in Filters use exact matching. 0: Default value, fuzzy matching for shipperName. 1: Exact match for shipperName.
      */
     function __construct()
     {
@@ -93,6 +137,10 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("PreciseSearch",$param) and $param["PreciseSearch"] !== null) {
+            $this->PreciseSearch = $param["PreciseSearch"];
         }
     }
 }

@@ -26,10 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFullUrlCache(string $FullUrlCache) Set Whether to enable full-path cache
 `on`: Enable full-path cache (i.e., disable Ignore Query String)
 `off`: Disable full-path cache (i.e., enable Ignore Query String)
- * @method string getIgnoreCase() Obtain Specifies whether the cache key is case sensitive
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setIgnoreCase(string $IgnoreCase) Set Specifies whether the cache key is case sensitive
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getIgnoreCase() Obtain Specifies whether to use case-insensitive cache.
+on: enable.
+Off: turn off the switch.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIgnoreCase(string $IgnoreCase) Set Specifies whether to use case-insensitive cache.
+on: enable.
+Off: turn off the switch.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method QueryStringKey getQueryString() Obtain Request parameter contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setQueryString(QueryStringKey $QueryString) Set Request parameter contained in `CacheKey`
@@ -65,8 +69,10 @@ class CacheKey extends AbstractModel
     public $FullUrlCache;
 
     /**
-     * @var string Specifies whether the cache key is case sensitive
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Specifies whether to use case-insensitive cache.
+on: enable.
+Off: turn off the switch.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IgnoreCase;
 
@@ -110,8 +116,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param string $FullUrlCache Whether to enable full-path cache
 `on`: Enable full-path cache (i.e., disable Ignore Query String)
 `off`: Disable full-path cache (i.e., enable Ignore Query String)
-     * @param string $IgnoreCase Specifies whether the cache key is case sensitive
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $IgnoreCase Specifies whether to use case-insensitive cache.
+on: enable.
+Off: turn off the switch.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param QueryStringKey $QueryString Request parameter contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CookieKey $Cookie Cookie contained in `CacheKey`

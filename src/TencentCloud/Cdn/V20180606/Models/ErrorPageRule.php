@@ -29,9 +29,9 @@ Supports 301 or 302.
  * @method void setRedirectCode(integer $RedirectCode) Set Redirect status code settings
 Supports 301 or 302.
  * @method string getRedirectUrl() Obtain Redirect URL
-Requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as `https://www.test.com/error.html`.
  * @method void setRedirectUrl(string $RedirectUrl) Set Redirect URL
-Requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as `https://www.test.com/error.html`.
  */
 class ErrorPageRule extends AbstractModel
 {
@@ -49,7 +49,7 @@ Supports 301 or 302.
 
     /**
      * @var string Redirect URL
-Requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as `https://www.test.com/error.html`.
      */
     public $RedirectUrl;
 
@@ -59,7 +59,7 @@ Supports 400, 403, 404, 500.
      * @param integer $RedirectCode Redirect status code settings
 Supports 301 or 302.
      * @param string $RedirectUrl Redirect URL
-Requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as `https://www.test.com/error.html`.
      */
     function __construct()
     {

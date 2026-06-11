@@ -20,31 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeK8sApiAbnormalRuleList request structure.
  *
- * @method array getFilters() Obtain Filters.
-<li>`RuleType` - String - Optional - Rule type</li>
-<li>`Status` - String - Optional - Status</li>
- * @method void setFilters(array $Filters) Set Filters.
-<li>`RuleType` - String - Optional - Rule type</li>
-<li>`Status` - String - Optional - Status</li>
- * @method integer getLimit() Obtain The number of results returned. Default value: 10. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set The number of results returned. Default value: 10. Maximum value: 100.
- * @method integer getOffset() Obtain Offset. Default value: 0
- * @method void setOffset(integer $Offset) Set Offset. Default value: 0
- * @method string getOrder() Obtain Sort order
- * @method void setOrder(string $Order) Set Sort order
  * @method string getBy() Obtain Sorting field.
 <li>`UpdateTime` - String - Optional - Last updated</li>
 <li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
  * @method void setBy(string $By) Set Sorting field.
 <li>`UpdateTime` - String - Optional - Last updated</li>
 <li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
+ * @method array getFilters() Obtain Filter criteria
+<li>RuleType - string - required: no - rule type</li>
+<li>Status - string - required: no - status</li>
+<li>RuleName - string - required: no - rule name (fuzzy query)</li>
+<li>ClusterName - string - Required: No - Cluster name. Fuzzy search for rules bound to the cluster (including full cluster rules).</li>
+<li>ClusterID - string - Required: No - Cluster ID. Fuzzy search for rules bound to the cluster (including cluster rules).</li>
+<li>RuleAction - string - Required: No - Execution action filter. Value: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (intercept)</li>
+ * @method void setFilters(array $Filters) Set Filter criteria
+<li>RuleType - string - required: no - rule type</li>
+<li>Status - string - required: no - status</li>
+<li>RuleName - string - required: no - rule name (fuzzy query)</li>
+<li>ClusterName - string - Required: No - Cluster name. Fuzzy search for rules bound to the cluster (including full cluster rules).</li>
+<li>ClusterID - string - Required: No - Cluster ID. Fuzzy search for rules bound to the cluster (including cluster rules).</li>
+<li>RuleAction - string - Required: No - Execution action filter. Value: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (intercept)</li>
+ * @method integer getLimit() Obtain The number of results returned. Default value: 10. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set The number of results returned. Default value: 10. Maximum value: 100.
+ * @method integer getOffset() Obtain Offset. Default value: 0
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0
+ * @method string getOrder() Obtain Sort order
+ * @method void setOrder(string $Order) Set Sort order
  */
 class DescribeK8sApiAbnormalRuleListRequest extends AbstractModel
 {
     /**
-     * @var array Filters.
-<li>`RuleType` - String - Optional - Rule type</li>
-<li>`Status` - String - Optional - Status</li>
+     * @var string Sorting field.
+<li>`UpdateTime` - String - Optional - Last updated</li>
+<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
+     */
+    public $By;
+
+    /**
+     * @var array Filter criteria
+<li>RuleType - string - required: no - rule type</li>
+<li>Status - string - required: no - status</li>
+<li>RuleName - string - required: no - rule name (fuzzy query)</li>
+<li>ClusterName - string - Required: No - Cluster name. Fuzzy search for rules bound to the cluster (including full cluster rules).</li>
+<li>ClusterID - string - Required: No - Cluster ID. Fuzzy search for rules bound to the cluster (including cluster rules).</li>
+<li>RuleAction - string - Required: No - Execution action filter. Value: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (intercept)</li>
      */
     public $Filters;
 
@@ -64,22 +83,19 @@ class DescribeK8sApiAbnormalRuleListRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var string Sorting field.
-<li>`UpdateTime` - String - Optional - Last updated</li>
-<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
-     */
-    public $By;
-
-    /**
-     * @param array $Filters Filters.
-<li>`RuleType` - String - Optional - Rule type</li>
-<li>`Status` - String - Optional - Status</li>
-     * @param integer $Limit The number of results returned. Default value: 10. Maximum value: 100.
-     * @param integer $Offset Offset. Default value: 0
-     * @param string $Order Sort order
      * @param string $By Sorting field.
 <li>`UpdateTime` - String - Optional - Last updated</li>
 <li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
+     * @param array $Filters Filter criteria
+<li>RuleType - string - required: no - rule type</li>
+<li>Status - string - required: no - status</li>
+<li>RuleName - string - required: no - rule name (fuzzy query)</li>
+<li>ClusterName - string - Required: No - Cluster name. Fuzzy search for rules bound to the cluster (including full cluster rules).</li>
+<li>ClusterID - string - Required: No - Cluster ID. Fuzzy search for rules bound to the cluster (including cluster rules).</li>
+<li>RuleAction - string - Required: No - Execution action filter. Value: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (intercept)</li>
+     * @param integer $Limit The number of results returned. Default value: 10. Maximum value: 100.
+     * @param integer $Offset Offset. Default value: 0
+     * @param string $Order Sort order
      */
     function __construct()
     {
@@ -94,6 +110,10 @@ class DescribeK8sApiAbnormalRuleListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
+        }
+
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -113,10 +133,6 @@ class DescribeK8sApiAbnormalRuleListRequest extends AbstractModel
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
-        }
-
-        if (array_key_exists("By",$param) and $param["By"] !== null) {
-            $this->By = $param["By"];
         }
     }
 }

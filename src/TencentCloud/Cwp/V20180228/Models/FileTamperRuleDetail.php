@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * Core File Monitoring Rule Details
  *
  * @method string getName() Obtain Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getModifyTime() Obtain Update time
  * @method void setModifyTime(string $ModifyTime) Set Update time
  * @method string getCreateTime() Obtain Creation time
@@ -33,9 +31,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method array getRule() Obtain Rule
  * @method void setRule(array $Rule) Set Rule
  * @method array getUuids() Obtain Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUuids(array $Uuids) Set Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getId() Obtain Rule ID
  * @method void setId(integer $Id) Set Rule ID
  * @method integer getIsGlobal() Obtain Global Rule or Not (No by Default). 0: No; 1: Yes
@@ -44,20 +40,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setLevel(integer $Level) Set Risk Level. 0: None; 1: High-Risk; 2: Medium-Risk; 3: Low-Risk
  * @method integer getUuidTotalCount() Obtain Total Number of Effective Hosts
  * @method void setUuidTotalCount(integer $UuidTotalCount) Set Total Number of Effective Hosts
- * @method string getAddWhiteType() Obtain Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddWhiteType(string $AddWhiteType) Set Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAddWhiteType() Obtain Allowlist processing type
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
+ * @method void setAddWhiteType(string $AddWhiteType) Set Allowlist processing type
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
  */
 class FileTamperRuleDetail extends AbstractModel
 {
     /**
      * @var string Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
@@ -83,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var array Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Uuids;
 
@@ -108,30 +100,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UuidTotalCount;
 
     /**
-     * @var string Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Allowlist processing type
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
      */
     public $AddWhiteType;
 
     /**
      * @param string $Name Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ModifyTime Update time
      * @param string $CreateTime Creation time
      * @param integer $Status Status. 0: Enabled; 1: Disabled
      * @param array $Rule Rule
      * @param array $Uuids Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Id Rule ID
      * @param integer $IsGlobal Global Rule or Not (No by Default). 0: No; 1: Yes
      * @param integer $Level Risk Level. 0: None; 1: High-Risk; 2: Medium-Risk; 3: Low-Risk
      * @param integer $UuidTotalCount Total Number of Effective Hosts
-     * @param string $AddWhiteType Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AddWhiteType Allowlist processing type
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
      */
     function __construct()
     {

@@ -36,18 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) Set Server name
  * @method string getOsInfo() Obtain Operating system
  * @method void setOsInfo(string $OsInfo) Set Operating system
- * @method array getProcess() Obtain Reference process list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProcess(array $Process) Set Reference process list
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMd5() Obtain Jar package Md5
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMd5(string $Md5) Set Jar package Md5
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getProcess() Obtain Reference process list.
+ * @method void setProcess(array $Process) Set Reference process list.
+ * @method string getMd5() Obtain JAR package Md5
+ * @method void setMd5(string $Md5) Set JAR package Md5
  * @method string getUpdateTime() Obtain Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AssetJarDetail extends AbstractModel
 {
@@ -92,20 +86,17 @@ class AssetJarDetail extends AbstractModel
     public $OsInfo;
 
     /**
-     * @var array Reference process list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Reference process list.
      */
     public $Process;
 
     /**
-     * @var string Jar package Md5
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string JAR package Md5
      */
     public $Md5;
 
     /**
      * @var string Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -118,12 +109,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $MachineIp Server IP
      * @param string $MachineName Server name
      * @param string $OsInfo Operating system
-     * @param array $Process Reference process list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Md5 Jar package Md5
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Process Reference process list.
+     * @param string $Md5 JAR package Md5
      * @param string $UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

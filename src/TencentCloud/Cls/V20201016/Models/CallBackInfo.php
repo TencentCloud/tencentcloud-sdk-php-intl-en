@@ -20,30 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Callback configuration
  *
- * @method string getBody() Obtain `Body` during callback
- * @method void setBody(string $Body) Set `Body` during callback
- * @method array getHeaders() Obtain `Headers` during callback
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setHeaders(array $Headers) Set `Headers` during callback
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getBody() Obtain Callback Body.
+Place various alarm variables in the request content. For details, see the help documentation (https://www.tencentcloud.com/document/product/614/74718?from_cn_redirect=1).
+in the following example:
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
+ * @method void setBody(string $Body) Set Callback Body.
+Place various alarm variables in the request content. For details, see the help documentation (https://www.tencentcloud.com/document/product/614/74718?from_cn_redirect=1).
+in the following example:
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
+ * @method array getHeaders() Obtain HTTP request header field for callbacks.
+For example, the following request header field informs the server request content type is JSON.
+```
+"Content-Type: application/json"
+```
+ * @method void setHeaders(array $Headers) Set HTTP request header field for callbacks.
+For example, the following request header field informs the server request content type is JSON.
+```
+"Content-Type: application/json"
+```
  */
 class CallBackInfo extends AbstractModel
 {
     /**
-     * @var string `Body` during callback
+     * @var string Callback Body.
+Place various alarm variables in the request content. For details, see the help documentation (https://www.tencentcloud.com/document/product/614/74718?from_cn_redirect=1).
+in the following example:
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
      */
     public $Body;
 
     /**
-     * @var array `Headers` during callback
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array HTTP request header field for callbacks.
+For example, the following request header field informs the server request content type is JSON.
+```
+"Content-Type: application/json"
+```
      */
     public $Headers;
 
     /**
-     * @param string $Body `Body` during callback
-     * @param array $Headers `Headers` during callback
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Body Callback Body.
+Place various alarm variables in the request content. For details, see the help documentation (https://www.tencentcloud.com/document/product/614/74718?from_cn_redirect=1).
+in the following example:
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
+     * @param array $Headers HTTP request header field for callbacks.
+For example, the following request header field informs the server request content type is JSON.
+```
+"Content-Type: application/json"
+```
      */
     function __construct()
     {

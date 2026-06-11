@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set ID of the auto scaling group where the scheduled task is located.
  * @method string getStartTime() Obtain Start time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
  * @method void setStartTime(string $StartTime) Set Start time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
- * @method string getRecurrence() Obtain Specifies the repeating mode of the scheduled task. the Recurrence parameter limits (https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
- * @method void setRecurrence(string $Recurrence) Set Specifies the repeating mode of the scheduled task. the Recurrence parameter limits (https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
+ * @method string getRecurrence() Obtain Specifies the repeating mode of the scheduled task. The [Recurrence parameter limits](https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
+ * @method void setRecurrence(string $Recurrence) Set Specifies the repeating mode of the scheduled task. The [Recurrence parameter limits](https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
  * @method string getEndTime() Obtain End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
  * @method void setEndTime(string $EndTime) Set End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
  * @method integer getMaxSize() Obtain Maximum number of instances set by the scheduled task.
@@ -46,14 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScheduledType(string $ScheduledType) Set Scheduled task execution type. Valid values:
 <li>CRONTAB: repeated execution.</li>
 <li>ONCE: single execution.</li>
- * @method boolean getDisableUpdateDesiredCapacity() Obtain Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+ * @method boolean getDisableUpdateDesiredCapacity() Obtain This flag disables the normal update of the DesiredCapacityproperty that would otherwise occur when a scheduled scaling task is triggered.
 
 Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
 The following cases assume that DisableUpdateDesiredCapacity is True:
 - When scheduled task triggered, the original DesiredCapacity is 5. The scheduled task changes the minSize to 10, the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 5 is less than minSize 10, so the final new DesiredCapacity is 10.
 - When scheduled task triggered, the original DesiredCapacity is 25. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 25 is greater than the maxSize 20, so the final new DesiredCapacity is 20.
 - When scheduled task triggered, the original DesiredCapacity is 13. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect, and the DesiredCapacity is still 13.
- * @method void setDisableUpdateDesiredCapacity(boolean $DisableUpdateDesiredCapacity) Set Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+ * @method void setDisableUpdateDesiredCapacity(boolean $DisableUpdateDesiredCapacity) Set This flag disables the normal update of the DesiredCapacityproperty that would otherwise occur when a scheduled scaling task is triggered.
 
 Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
 The following cases assume that DisableUpdateDesiredCapacity is True:
@@ -84,7 +84,7 @@ class ScheduledAction extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string Specifies the repeating mode of the scheduled task. the Recurrence parameter limits (https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
+     * @var string Specifies the repeating mode of the scheduled task. The [Recurrence parameter limits](https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
      */
     public $Recurrence;
 
@@ -121,7 +121,7 @@ class ScheduledAction extends AbstractModel
     public $ScheduledType;
 
     /**
-     * @var boolean Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+     * @var boolean This flag disables the normal update of the DesiredCapacityproperty that would otherwise occur when a scheduled scaling task is triggered.
 
 Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
 The following cases assume that DisableUpdateDesiredCapacity is True:
@@ -136,7 +136,7 @@ The following cases assume that DisableUpdateDesiredCapacity is True:
      * @param string $ScheduledActionName Scheduled task name.
      * @param string $AutoScalingGroupId ID of the auto scaling group where the scheduled task is located.
      * @param string $StartTime Start time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
-     * @param string $Recurrence Specifies the repeating mode of the scheduled task. the Recurrence parameter limits (https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
+     * @param string $Recurrence Specifies the repeating mode of the scheduled task. The [Recurrence parameter limits](https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
      * @param string $EndTime End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
      * @param integer $MaxSize Maximum number of instances set by the scheduled task.
      * @param integer $DesiredCapacity Desired number of instances set by the scheduled task.
@@ -145,7 +145,7 @@ The following cases assume that DisableUpdateDesiredCapacity is True:
      * @param string $ScheduledType Scheduled task execution type. Valid values:
 <li>CRONTAB: repeated execution.</li>
 <li>ONCE: single execution.</li>
-     * @param boolean $DisableUpdateDesiredCapacity Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+     * @param boolean $DisableUpdateDesiredCapacity This flag disables the normal update of the DesiredCapacityproperty that would otherwise occur when a scheduled scaling task is triggered.
 
 Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
 The following cases assume that DisableUpdateDesiredCapacity is True:

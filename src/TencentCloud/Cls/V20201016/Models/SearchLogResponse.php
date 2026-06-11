@@ -20,111 +20,96 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchLog response structure.
  *
- * @method string getContext() Obtain Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.Note:* Applicable only for single log topic searches. When searching multiple log topics, please use the Context in Topics.
- * @method void setContext(string $Context) Set Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.Note:* Applicable only for single log topic searches. When searching multiple log topics, please use the Context in Topics.
- * @method boolean getListOver() Obtain Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
-Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
- * @method void setListOver(boolean $ListOver) Set Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
-Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
- * @method boolean getAnalysis() Obtain Whether the returned data is the analysis (SQL) result
- * @method void setAnalysis(boolean $Analysis) Set Whether the returned data is the analysis (SQL) result
- * @method array getResults() Obtain Raw logs that meet the search conditions
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setResults(array $Results) Set Raw logs that meet the search conditions
-Note: This field may return `null`, indicating that no valid value was found.
- * @method array getColNames() Obtain Column names of log analysis
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setColNames(array $ColNames) Set Column names of log analysis
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method array getAnalysisResults() Obtain Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setAnalysisResults(array $AnalysisResults) Set Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method array getAnalysisRecords() Obtain Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setAnalysisRecords(array $AnalysisRecords) Set Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method array getColumns() Obtain Column attributes of log analysis
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setColumns(array $Columns) Set Column attributes of log analysis
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method float getSamplingRate() Obtain Sample rate used in this statistical analysis
+ * @method string getContext() Obtain <p>Pass through the Context value returned by this API to obtain more logs later. The expiration time is 1 hour.<br>Note:</p><ul><li>Applicable only for single log topic retrieval. To retrieve multiple log topics, use the Context in Topics.</li></ul>
+ * @method void setContext(string $Context) Set <p>Pass through the Context value returned by this API to obtain more logs later. The expiration time is 1 hour.<br>Note:</p><ul><li>Applicable only for single log topic retrieval. To retrieve multiple log topics, use the Context in Topics.</li></ul>
+ * @method boolean getListOver() Obtain <p>Whether all logs meeting the retrieval criteria have been returned. If not, use Context parameter to retrieve more logs.<br>Note: This is only valid when the search and analysis statement (Query) does not contain SQL.</p>
+ * @method void setListOver(boolean $ListOver) Set <p>Whether all logs meeting the retrieval criteria have been returned. If not, use Context parameter to retrieve more logs.<br>Note: This is only valid when the search and analysis statement (Query) does not contain SQL.</p>
+ * @method boolean getAnalysis() Obtain <p>Whether the returned data is the SQL analysis result</p>
+ * @method void setAnalysis(boolean $Analysis) Set <p>Whether the returned data is the SQL analysis result</p>
+ * @method array getResults() Obtain <p>Raw logs matching the retrieval criteria</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSamplingRate(float $SamplingRate) Set Sample rate used in this statistical analysis
+ * @method void setResults(array $Results) Set <p>Raw logs matching the retrieval criteria</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method SearchLogTopics getTopics() Obtain Refers to the basic information of each log topic when multiple log topics are used for search, such as error messages.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTopics(SearchLogTopics $Topics) Set Refers to the basic information of each log topic when multiple log topics are used for search, such as error messages.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getColNames() Obtain <p>Column names of log statistics analysis results<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setColNames(array $ColNames) Set <p>Column names of log statistics analysis results<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getAnalysisResults() Obtain <p>Statistical analysis results of logs<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAnalysisResults(array $AnalysisResults) Set <p>Statistical analysis results of logs<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getAnalysisRecords() Obtain <p>Log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAnalysisRecords(array $AnalysisRecords) Set <p>Log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getColumns() Obtain <p>Column attribute of log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setColumns(array $Columns) Set <p>Column attribute of log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getSamplingRate() Obtain <p>Sampling rate used in this analysis</p>
+ * @method void setSamplingRate(float $SamplingRate) Set <p>Sampling rate used in this analysis</p>
+ * @method SearchLogTopics getTopics() Obtain <p>When multiple log topics are used for retrieval, basic information of each log topic, such as error message.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTopics(SearchLogTopics $Topics) Set <p>When multiple log topics are used for retrieval, basic information of each log topic, such as error message.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class SearchLogResponse extends AbstractModel
 {
     /**
-     * @var string Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.Note:* Applicable only for single log topic searches. When searching multiple log topics, please use the Context in Topics.
+     * @var string <p>Pass through the Context value returned by this API to obtain more logs later. The expiration time is 1 hour.<br>Note:</p><ul><li>Applicable only for single log topic retrieval. To retrieve multiple log topics, use the Context in Topics.</li></ul>
      */
     public $Context;
 
     /**
-     * @var boolean Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
-Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+     * @var boolean <p>Whether all logs meeting the retrieval criteria have been returned. If not, use Context parameter to retrieve more logs.<br>Note: This is only valid when the search and analysis statement (Query) does not contain SQL.</p>
      */
     public $ListOver;
 
     /**
-     * @var boolean Whether the returned data is the analysis (SQL) result
+     * @var boolean <p>Whether the returned data is the SQL analysis result</p>
      */
     public $Analysis;
 
     /**
-     * @var array Raw logs that meet the search conditions
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array <p>Raw logs matching the retrieval criteria</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Results;
 
     /**
-     * @var array Column names of log analysis
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array <p>Column names of log statistics analysis results<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ColNames;
 
     /**
-     * @var array Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array <p>Statistical analysis results of logs<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AnalysisResults;
 
     /**
-     * @var array Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array <p>Log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AnalysisRecords;
 
     /**
-     * @var array Column attributes of log analysis
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array <p>Column attribute of log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Columns;
 
     /**
-     * @var float Sample rate used in this statistical analysis
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float <p>Sampling rate used in this analysis</p>
      */
     public $SamplingRate;
 
     /**
-     * @var SearchLogTopics Refers to the basic information of each log topic when multiple log topics are used for search, such as error messages.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SearchLogTopics <p>When multiple log topics are used for retrieval, basic information of each log topic, such as error message.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Topics;
 
@@ -134,27 +119,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $Context Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.Note:* Applicable only for single log topic searches. When searching multiple log topics, please use the Context in Topics.
-     * @param boolean $ListOver Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
-Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-     * @param boolean $Analysis Whether the returned data is the analysis (SQL) result
-     * @param array $Results Raw logs that meet the search conditions
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param array $ColNames Column names of log analysis
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param array $AnalysisResults Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param array $AnalysisRecords Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param array $Columns Column attributes of log analysis
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param float $SamplingRate Sample rate used in this statistical analysis
+     * @param string $Context <p>Pass through the Context value returned by this API to obtain more logs later. The expiration time is 1 hour.<br>Note:</p><ul><li>Applicable only for single log topic retrieval. To retrieve multiple log topics, use the Context in Topics.</li></ul>
+     * @param boolean $ListOver <p>Whether all logs meeting the retrieval criteria have been returned. If not, use Context parameter to retrieve more logs.<br>Note: This is only valid when the search and analysis statement (Query) does not contain SQL.</p>
+     * @param boolean $Analysis <p>Whether the returned data is the SQL analysis result</p>
+     * @param array $Results <p>Raw logs matching the retrieval criteria</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SearchLogTopics $Topics Refers to the basic information of each log topic when multiple log topics are used for search, such as error messages.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ColNames <p>Column names of log statistics analysis results<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $AnalysisResults <p>Statistical analysis results of logs<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $AnalysisRecords <p>Log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Columns <p>Column attribute of log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $SamplingRate <p>Sampling rate used in this analysis</p>
+     * @param SearchLogTopics $Topics <p>When multiple log topics are used for retrieval, basic information of each log topic, such as error message.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()

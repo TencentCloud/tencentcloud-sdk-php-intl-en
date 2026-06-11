@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Record of stored log size
  *
- * @method string getMonth() Obtain Year and month
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMonth(string $Month) Set Year and month
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getUsedSize() Obtain Used storage capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUsedSize(integer $UsedSize) Set Used storage capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getInquireSize() Obtain Total capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInquireSize(integer $InquireSize) Set Total capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMonth() Obtain Year and month.
+ * @method void setMonth(string $Month) Set Year and month.
+ * @method integer getUsedSize() Obtain Storage amount, in bytes.
+ * @method void setUsedSize(integer $UsedSize) Set Storage amount, in bytes.
+ * @method integer getInquireSize() Obtain Total volume, in bytes.
+ * @method void setInquireSize(integer $InquireSize) Set Total volume, in bytes.
  */
 class LogStorageRecord extends AbstractModel
 {
     /**
-     * @var string Year and month
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Year and month.
      */
     public $Month;
 
     /**
-     * @var integer Used storage capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Storage amount, in bytes.
      */
     public $UsedSize;
 
     /**
-     * @var integer Total capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Total volume, in bytes.
      */
     public $InquireSize;
 
     /**
-     * @param string $Month Year and month
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $UsedSize Used storage capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $InquireSize Total capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Month Year and month.
+     * @param integer $UsedSize Storage amount, in bytes.
+     * @param integer $InquireSize Total volume, in bytes.
      */
     function __construct()
     {

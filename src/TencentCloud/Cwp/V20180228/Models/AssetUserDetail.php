@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastLoginTime(string $LastLoginTime) Set Last log-in time
  * @method string getName() Obtain Account name
  * @method void setName(string $Name) Set Account name
- * @method integer getUserType() Obtain Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only).
- * @method void setUserType(integer $UserType) Set Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only).
- * @method integer getIsDomain() Obtain Whether the account is a domain account. 0: no; 1: yes; 999: null (Windows only).
- * @method void setIsDomain(integer $IsDomain) Set Whether the account is a domain account. 0: no; 1: yes; 999: null (Windows only).
+ * @method integer getUserType() Obtain Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
+ * @method void setUserType(integer $UserType) Set Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
+ * @method integer getIsDomain() Obtain Whether it is a domain account: 0: no; 1: yes; 999: null (for Windows only).
+ * @method void setIsDomain(integer $IsDomain) Set Whether it is a domain account: 0: no; 1: yes; 999: null (for Windows only).
  * @method integer getIsSshLogin() Obtain Whether SSH log-in allowed. 1: yes; 0: no; 999: null (Linux only).
  * @method void setIsSshLogin(integer $IsSshLogin) Set Whether SSH log-in allowed. 1: yes; 0: no; 999: null (Linux only).
  * @method string getHomePath() Obtain Home directory
@@ -74,12 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPasswordWarnDays(integer $PasswordWarnDays) Set Password expiration reminder, in days
  * @method integer getPasswordChangeType() Obtain Password change settings. 0: not allowed; 1: allowed.
  * @method void setPasswordChangeType(integer $PasswordChangeType) Set Password change settings. 0: not allowed; 1: allowed.
- * @method array getKeys() Obtain User public key listNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setKeys(array $Keys) Set User public key listNote: This field may return null, indicating that no valid values can be obtained.
+ * @method array getKeys() Obtain User public key list.
+ * @method void setKeys(array $Keys) Set User public key list.
  * @method string getUpdateTime() Obtain Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AssetUserDetail extends AbstractModel
 {
@@ -134,12 +132,12 @@ class AssetUserDetail extends AbstractModel
     public $Name;
 
     /**
-     * @var integer Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only).
+     * @var integer Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
      */
     public $UserType;
 
     /**
-     * @var integer Whether the account is a domain account. 0: no; 1: yes; 999: null (Windows only).
+     * @var integer Whether it is a domain account: 0: no; 1: yes; 999: null (for Windows only).
      */
     public $IsDomain;
 
@@ -219,13 +217,12 @@ class AssetUserDetail extends AbstractModel
     public $PasswordChangeType;
 
     /**
-     * @var array User public key listNote: This field may return null, indicating that no valid values can be obtained.
+     * @var array User public key list.
      */
     public $Keys;
 
     /**
      * @var string Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -240,8 +237,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $IsRoot Whether there is root permission. 0: no; 1: yes; 999: null (Linux only).
      * @param string $LastLoginTime Last log-in time
      * @param string $Name Account name
-     * @param integer $UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only).
-     * @param integer $IsDomain Whether the account is a domain account. 0: no; 1: yes; 999: null (Windows only).
+     * @param integer $UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
+     * @param integer $IsDomain Whether it is a domain account: 0: no; 1: yes; 999: null (for Windows only).
      * @param integer $IsSshLogin Whether SSH log-in allowed. 1: yes; 0: no; 999: null (Linux only).
      * @param string $HomePath Home directory
      * @param string $Shell Shell path (Linux only)
@@ -257,9 +254,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $LastLoginIp Last log-in IP address
      * @param integer $PasswordWarnDays Password expiration reminder, in days
      * @param integer $PasswordChangeType Password change settings. 0: not allowed; 1: allowed.
-     * @param array $Keys User public key listNote: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Keys User public key list.
      * @param string $UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

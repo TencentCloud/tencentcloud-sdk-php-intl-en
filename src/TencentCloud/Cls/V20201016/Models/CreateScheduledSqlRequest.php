@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateScheduledSql request structure.
  *
- * @method string getSrcTopicId() Obtain Source log topic
- * @method void setSrcTopicId(string $SrcTopicId) Set Source log topic
- * @method string getName() Obtain Task name
- * @method void setName(string $Name) Set Task name
+ * @method string getSrcTopicId() Obtain Source log topic ID. Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method void setSrcTopicId(string $SrcTopicId) Set Source log topic ID. Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method string getName() Obtain Task name, 0-255 characters
+ * @method void setName(string $Name) Set Task name, 0-255 characters
  * @method integer getEnableFlag() Obtain Task start status. 1: Enabled, 2: Disabled
  * @method void setEnableFlag(integer $EnableFlag) Set Task start status. 1: Enabled, 2: Disabled
  * @method ScheduledSqlResouceInfo getDstResource() Obtain Target log topic for scheduled SQL analysis
@@ -34,14 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcessStartTime(integer $ProcessStartTime) Set Schedule start time, Unix timestamp, in milliseconds
  * @method integer getProcessType() Obtain Schedule type: 1: Continuous running; 2: Specified time range
  * @method void setProcessType(integer $ProcessType) Set Schedule type: 1: Continuous running; 2: Specified time range
- * @method integer getProcessPeriod() Obtain Scheduling interval (minutes)
- * @method void setProcessPeriod(integer $ProcessPeriod) Set Scheduling interval (minutes)
+ * @method integer getProcessPeriod() Obtain Scheduling Interval (Minutes), 1-1440 minutes
+ * @method void setProcessPeriod(integer $ProcessPeriod) Set Scheduling Interval (Minutes), 1-1440 minutes
  * @method string getProcessTimeWindow() Obtain Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.
  * @method void setProcessTimeWindow(string $ProcessTimeWindow) Set Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.
- * @method integer getProcessDelay() Obtain Execution delay (Seconds)
- * @method void setProcessDelay(integer $ProcessDelay) Set Execution delay (Seconds)
- * @method string getSrcTopicRegion() Obtain Source topic ID region information
- * @method void setSrcTopicRegion(string $SrcTopicRegion) Set Source topic ID region information
+ * @method integer getProcessDelay() Obtain Execution Delay (Seconds), 0-120 seconds, default 60 seconds
+ * @method void setProcessDelay(integer $ProcessDelay) Set Execution Delay (Seconds), 0-120 seconds, default 60 seconds
+ * @method string getSrcTopicRegion() Obtain Regional information of the source topicId. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
+ * @method void setSrcTopicRegion(string $SrcTopicRegion) Set Regional information of the source topicId. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
  * @method integer getProcessEndTime() Obtain Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
  * @method void setProcessEndTime(integer $ProcessEndTime) Set Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
  * @method integer getSyntaxRule() Obtain Query syntax rules. Default value is 0. 0: Lucene syntax, 1: CQL syntax
@@ -50,12 +50,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateScheduledSqlRequest extends AbstractModel
 {
     /**
-     * @var string Source log topic
+     * @var string Source log topic ID. Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $SrcTopicId;
 
     /**
-     * @var string Task name
+     * @var string Task name, 0-255 characters
      */
     public $Name;
 
@@ -85,7 +85,7 @@ class CreateScheduledSqlRequest extends AbstractModel
     public $ProcessType;
 
     /**
-     * @var integer Scheduling interval (minutes)
+     * @var integer Scheduling Interval (Minutes), 1-1440 minutes
      */
     public $ProcessPeriod;
 
@@ -95,12 +95,12 @@ class CreateScheduledSqlRequest extends AbstractModel
     public $ProcessTimeWindow;
 
     /**
-     * @var integer Execution delay (Seconds)
+     * @var integer Execution Delay (Seconds), 0-120 seconds, default 60 seconds
      */
     public $ProcessDelay;
 
     /**
-     * @var string Source topic ID region information
+     * @var string Regional information of the source topicId. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
      */
     public $SrcTopicRegion;
 
@@ -115,17 +115,17 @@ class CreateScheduledSqlRequest extends AbstractModel
     public $SyntaxRule;
 
     /**
-     * @param string $SrcTopicId Source log topic
-     * @param string $Name Task name
+     * @param string $SrcTopicId Source log topic ID. Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param string $Name Task name, 0-255 characters
      * @param integer $EnableFlag Task start status. 1: Enabled, 2: Disabled
      * @param ScheduledSqlResouceInfo $DstResource Target log topic for scheduled SQL analysis
      * @param string $ScheduledSqlContent Query statement
      * @param integer $ProcessStartTime Schedule start time, Unix timestamp, in milliseconds
      * @param integer $ProcessType Schedule type: 1: Continuous running; 2: Specified time range
-     * @param integer $ProcessPeriod Scheduling interval (minutes)
+     * @param integer $ProcessPeriod Scheduling Interval (Minutes), 1-1440 minutes
      * @param string $ProcessTimeWindow Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.
-     * @param integer $ProcessDelay Execution delay (Seconds)
-     * @param string $SrcTopicRegion Source topic ID region information
+     * @param integer $ProcessDelay Execution Delay (Seconds), 0-120 seconds, default 60 seconds
+     * @param string $SrcTopicRegion Regional information of the source topicId. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
      * @param integer $ProcessEndTime Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
      * @param integer $SyntaxRule Query syntax rules. Default value is 0. 0: Lucene syntax, 1: CQL syntax
      */

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuuid(string $Quuid) Set Host QUUID
  * @method integer getVulId() Obtain Vulnerability ID
  * @method void setVulId(integer $VulId) Set Vulnerability ID
+ * @method integer getKbId() Obtain Kb Id 
+ * @method void setKbId(integer $KbId) Set Kb Id 
  */
 class RetryVulFixRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class RetryVulFixRequest extends AbstractModel
     public $VulId;
 
     /**
+     * @var integer Kb Id 
+     */
+    public $KbId;
+
+    /**
      * @param integer $FixId Vulnerability ID
      * @param string $Quuid Host QUUID
      * @param integer $VulId Vulnerability ID
+     * @param integer $KbId Kb Id 
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class RetryVulFixRequest extends AbstractModel
 
         if (array_key_exists("VulId",$param) and $param["VulId"] !== null) {
             $this->VulId = $param["VulId"];
+        }
+
+        if (array_key_exists("KbId",$param) and $param["KbId"] !== null) {
+            $this->KbId = $param["KbId"];
         }
     }
 }

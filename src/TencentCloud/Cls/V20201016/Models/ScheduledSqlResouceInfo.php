@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Resource information for ScheduledSql
  *
- * @method string getTopicId() Obtain Target topic ID
- * @method void setTopicId(string $TopicId) Set Target topic ID
- * @method string getRegion() Obtain Region information for the topic
- * @method void setRegion(string $Region) Set Region information for the topic
+ * @method string getTopicId() Obtain Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+ * @method string getRegion() Obtain Regional information of the topic. Cross-region selection is not supported currently. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
+ * @method void setRegion(string $Region) Set Regional information of the topic. Cross-region selection is not supported currently. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
  * @method integer getBizType() Obtain Topic type: 0 for log topic, and 1 for metric topic
  * @method void setBizType(integer $BizType) Set Topic type: 0 for log topic, and 1 for metric topic
  * @method string getMetricName() Obtain Metric name. When BizType is 1, MetricName needs to be specified.
@@ -42,12 +42,12 @@ Dimension names must start with a letter or underscore, followed by letters, dig
 class ScheduledSqlResouceInfo extends AbstractModel
 {
     /**
-     * @var string Target topic ID
+     * @var string Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public $TopicId;
 
     /**
-     * @var string Region information for the topic
+     * @var string Regional information of the topic. Cross-region selection is not supported currently. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
      */
     public $Region;
 
@@ -83,8 +83,8 @@ Dimension names must start with a letter or underscore, followed by letters, dig
     public $CustomMetricLabels;
 
     /**
-     * @param string $TopicId Target topic ID
-     * @param string $Region Region information for the topic
+     * @param string $TopicId Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param string $Region Regional information of the topic. Cross-region selection is not supported currently. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
      * @param integer $BizType Topic type: 0 for log topic, and 1 for metric topic
      * @param string $MetricName Metric name. When BizType is 1, MetricName needs to be specified.
      * @param array $MetricNames Metric NameWhen BizType is 1, prioritize using the MetricNames field. Multiple metrics can only be filled in the MetricNames field, while it's recommended to fill a single metric in the MetricName field.

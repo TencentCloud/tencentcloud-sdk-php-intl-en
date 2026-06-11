@@ -28,12 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInclusiveBeginKey(string $InclusiveBeginKey) Set Partition hash start key
  * @method string getExclusiveEndKey() Obtain Partition hash end key
  * @method void setExclusiveEndKey(string $ExclusiveEndKey) Set Partition hash end key
- * @method string getCreateTime() Obtain Partition creation time
- * @method void setCreateTime(string $CreateTime) Set Partition creation time
- * @method string getLastWriteTime() Obtain Last modified of read-only partition
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setLastWriteTime(string $LastWriteTime) Set Last modified of read-only partition
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getCreateTime() Obtain Partition Creation Time
+Time format: yyyy-MM-dd HH:mm:ss
+ * @method void setCreateTime(string $CreateTime) Set Partition Creation Time
+Time format: yyyy-MM-dd HH:mm:ss
+ * @method string getLastWriteTime() Obtain Time to stop writing data to the read-only partition
+Time format: yyyy-MM-dd HH:mm:ss
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLastWriteTime(string $LastWriteTime) Set Time to stop writing data to the read-only partition
+Time format: yyyy-MM-dd HH:mm:ss
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PartitionInfo extends AbstractModel
 {
@@ -58,13 +62,15 @@ class PartitionInfo extends AbstractModel
     public $ExclusiveEndKey;
 
     /**
-     * @var string Partition creation time
+     * @var string Partition Creation Time
+Time format: yyyy-MM-dd HH:mm:ss
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified of read-only partition
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Time to stop writing data to the read-only partition
+Time format: yyyy-MM-dd HH:mm:ss
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LastWriteTime;
 
@@ -73,9 +79,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $Status Partition status. Valid values: `readwrite`, `readonly`
      * @param string $InclusiveBeginKey Partition hash start key
      * @param string $ExclusiveEndKey Partition hash end key
-     * @param string $CreateTime Partition creation time
-     * @param string $LastWriteTime Last modified of read-only partition
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $CreateTime Partition Creation Time
+Time format: yyyy-MM-dd HH:mm:ss
+     * @param string $LastWriteTime Time to stop writing data to the read-only partition
+Time format: yyyy-MM-dd HH:mm:ss
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

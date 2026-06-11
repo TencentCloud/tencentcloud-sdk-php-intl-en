@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateKafkaRecharge request structure.
  *
- * @method string getTopicId() Obtain Target topic ID
- * @method void setTopicId(string $TopicId) Set Target topic ID
+ * @method string getTopicId() Obtain Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+ * @method void setTopicId(string $TopicId) Set Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
  * @method string getName() Obtain Kafka data import configuration name
  * @method void setName(string $Name) Set Kafka data import configuration name
  * @method integer getKafkaType() Obtain Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
@@ -32,21 +36,31 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
  * @method LogRechargeRuleInfo getLogRechargeRule() Obtain Log Import Rules.
  * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) Set Log Import Rules.
- * @method string getKafkaInstance() Obtain CKafka instance ID, which is required when `KafkaType` is set to `0`
- * @method void setKafkaInstance(string $KafkaInstance) Set CKafka instance ID, which is required when `KafkaType` is set to `0`
- * @method string getServerAddr() Obtain Service address, which is required when `KafkaType` is set to `1`
- * @method void setServerAddr(string $ServerAddr) Set Service address, which is required when `KafkaType` is set to `1`
- * @method boolean getIsEncryptionAddr() Obtain Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
- * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) Set Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
- * @method KafkaProtocolInfo getProtocol() Obtain Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
- * @method void setProtocol(KafkaProtocolInfo $Protocol) Set Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
- * @method string getConsumerGroupName() Obtain Kafka consumer group name
- * @method void setConsumerGroupName(string $ConsumerGroupName) Set Kafka consumer group name
+ * @method string getKafkaInstance() Obtain Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+-Obtain the instance id through [Get Instance List Information](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+ * @method void setKafkaInstance(string $KafkaInstance) Set Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+-Obtain the instance id through [Get Instance List Information](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+ * @method string getServerAddr() Obtain Service address, which is required when KafkaType is 1.
+ * @method void setServerAddr(string $ServerAddr) Set Service address, which is required when KafkaType is 1.
+ * @method boolean getIsEncryptionAddr() Obtain Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
+ * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) Set Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
+ * @method KafkaProtocolInfo getProtocol() Obtain Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
+ * @method void setProtocol(KafkaProtocolInfo $Protocol) Set Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
+ * @method string getConsumerGroupName() Obtain User Kafka consumer group name.
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed messages of the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by one consumer in the group.
+ * @method void setConsumerGroupName(string $ConsumerGroupName) Set User Kafka consumer group name.
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed messages of the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by one consumer in the group.
+ * @method UserKafkaMeta getUserKafkaMeta() Obtain User kafka extended information
+ * @method void setUserKafkaMeta(UserKafkaMeta $UserKafkaMeta) Set User kafka extended information
  */
 class CreateKafkaRechargeRequest extends AbstractModel
 {
     /**
-     * @var string Target topic ID
+     * @var string Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     public $TopicId;
 
@@ -76,42 +90,56 @@ class CreateKafkaRechargeRequest extends AbstractModel
     public $LogRechargeRule;
 
     /**
-     * @var string CKafka instance ID, which is required when `KafkaType` is set to `0`
+     * @var string Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+-Obtain the instance id through [Get Instance List Information](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public $KafkaInstance;
 
     /**
-     * @var string Service address, which is required when `KafkaType` is set to `1`
+     * @var string Service address, which is required when KafkaType is 1.
      */
     public $ServerAddr;
 
     /**
-     * @var boolean Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
+     * @var boolean Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
      */
     public $IsEncryptionAddr;
 
     /**
-     * @var KafkaProtocolInfo Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+     * @var KafkaProtocolInfo Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
      */
     public $Protocol;
 
     /**
-     * @var string Kafka consumer group name
+     * @var string User Kafka consumer group name.
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed messages of the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by one consumer in the group.
      */
     public $ConsumerGroupName;
 
     /**
-     * @param string $TopicId Target topic ID
+     * @var UserKafkaMeta User kafka extended information
+     */
+    public $UserKafkaMeta;
+
+    /**
+     * @param string $TopicId Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      * @param string $Name Kafka data import configuration name
      * @param integer $KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
      * @param string $UserKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
      * @param integer $Offset Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
      * @param LogRechargeRuleInfo $LogRechargeRule Log Import Rules.
-     * @param string $KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
-     * @param string $ServerAddr Service address, which is required when `KafkaType` is set to `1`
-     * @param boolean $IsEncryptionAddr Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
-     * @param KafkaProtocolInfo $Protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
-     * @param string $ConsumerGroupName Kafka consumer group name
+     * @param string $KafkaInstance Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+-Obtain the instance id through [Get Instance List Information](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+     * @param string $ServerAddr Service address, which is required when KafkaType is 1.
+     * @param boolean $IsEncryptionAddr Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
+     * @param KafkaProtocolInfo $Protocol Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
+     * @param string $ConsumerGroupName User Kafka consumer group name.
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed messages of the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by one consumer in the group.
+     * @param UserKafkaMeta $UserKafkaMeta User kafka extended information
      */
     function __construct()
     {
@@ -170,6 +198,11 @@ class CreateKafkaRechargeRequest extends AbstractModel
 
         if (array_key_exists("ConsumerGroupName",$param) and $param["ConsumerGroupName"] !== null) {
             $this->ConsumerGroupName = $param["ConsumerGroupName"];
+        }
+
+        if (array_key_exists("UserKafkaMeta",$param) and $param["UserKafkaMeta"] !== null) {
+            $this->UserKafkaMeta = new UserKafkaMeta();
+            $this->UserKafkaMeta->deserialize($param["UserKafkaMeta"]);
         }
     }
 }

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAccessKey(string $AccessKey) Set Access ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getSecretKey() Obtain Key
- * @method void setSecretKey(string $SecretKey) Set Key
+ * @method string getSecretKey() Obtain Key. the field is returned with masking.
+ * @method void setSecretKey(string $SecretKey) Set Key. the field is returned with masking.
  */
 class QnPrivateAccess extends AbstractModel
 {
@@ -49,7 +49,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $AccessKey;
 
     /**
-     * @var string Key
+     * @var string Key. the field is returned with masking.
      */
     public $SecretKey;
 
@@ -59,7 +59,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Disable
      * @param string $AccessKey Access ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $SecretKey Key
+     * @param string $SecretKey Key. the field is returned with masking.
      */
     function __construct()
     {

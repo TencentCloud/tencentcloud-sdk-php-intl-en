@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupTime(string $BackupTime) Set Backup time
  * @method integer getEventStatus() Obtain Ransom Status: 0 - No Alarm, 1 - Alarm Present
  * @method void setEventStatus(integer $EventStatus) Set Ransom Status: 0 - No Alarm, 1 - Alarm Present
- * @method integer getBackupStatus() Obtain Backup Status: 0 - Backing up, 1 - Normal, 2, 3 - Failed, 4 - Snapshot expired, 9 - Snapshot deleted
- * @method void setBackupStatus(integer $BackupStatus) Set Backup Status: 0 - Backing up, 1 - Normal, 2, 3 - Failed, 4 - Snapshot expired, 9 - Snapshot deleted
+ * @method integer getBackupStatus() Obtain Backup status: 0 backup in progress, 1 normal, 2, 3 failure, 4 snapshot expired, 5 number of snapshots exceed the limit, 9 snapshot deleted.
+ * @method void setBackupStatus(integer $BackupStatus) Set Backup status: 0 backup in progress, 1 normal, 2, 3 failure, 4 snapshot expired, 5 number of snapshots exceed the limit, 9 snapshot deleted.
  * @method integer getDiskCount() Obtain Number of backup disk
  * @method void setDiskCount(integer $DiskCount) Set Number of backup disk
  * @method string getDisks() Obtain Hard Disk Information, separated by semicolons (;).
@@ -52,7 +52,7 @@ class RansomDefenseBackup extends AbstractModel
     public $EventStatus;
 
     /**
-     * @var integer Backup Status: 0 - Backing up, 1 - Normal, 2, 3 - Failed, 4 - Snapshot expired, 9 - Snapshot deleted
+     * @var integer Backup status: 0 backup in progress, 1 normal, 2, 3 failure, 4 snapshot expired, 5 number of snapshots exceed the limit, 9 snapshot deleted.
      */
     public $BackupStatus;
 
@@ -89,7 +89,7 @@ class RansomDefenseBackup extends AbstractModel
     /**
      * @param string $BackupTime Backup time
      * @param integer $EventStatus Ransom Status: 0 - No Alarm, 1 - Alarm Present
-     * @param integer $BackupStatus Backup Status: 0 - Backing up, 1 - Normal, 2, 3 - Failed, 4 - Snapshot expired, 9 - Snapshot deleted
+     * @param integer $BackupStatus Backup status: 0 backup in progress, 1 normal, 2, 3 failure, 4 snapshot expired, 5 number of snapshots exceed the limit, 9 snapshot deleted.
      * @param integer $DiskCount Number of backup disk
      * @param string $Disks Hard Disk Information, separated by semicolons (;).
      * @param string $SnapshotIds Snapshot List, separated by semicolons (;)

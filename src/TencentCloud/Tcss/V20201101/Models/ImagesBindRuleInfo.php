@@ -26,22 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageName(string $ImageName) Set Image name
  * @method integer getContainerCnt() Obtain Number of associated containers
  * @method void setContainerCnt(integer $ContainerCnt) Set Number of associated containers
- * @method string getRuleId() Obtain Bound rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRuleId(string $RuleId) Set Bound rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRuleId() Obtain Binding rule id
+ * @method void setRuleId(string $RuleId) Set Binding rule id
  * @method string getRuleName() Obtain Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRuleName(string $RuleName) Set Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getImageSize() Obtain Image size
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setImageSize(integer $ImageSize) Set Image size
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getImageSize() Obtain image size
+ * @method void setImageSize(integer $ImageSize) Set image size
  * @method string getScanTime() Obtain Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScanTime(string $ScanTime) Set Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ImagesBindRuleInfo extends AbstractModel
 {
@@ -61,26 +53,22 @@ class ImagesBindRuleInfo extends AbstractModel
     public $ContainerCnt;
 
     /**
-     * @var string Bound rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Binding rule id
      */
     public $RuleId;
 
     /**
      * @var string Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RuleName;
 
     /**
-     * @var integer Image size
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer image size
      */
     public $ImageSize;
 
     /**
      * @var string Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ScanTime;
 
@@ -88,14 +76,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ImageId Image ID
      * @param string $ImageName Image name
      * @param integer $ContainerCnt Number of associated containers
-     * @param string $RuleId Bound rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RuleId Binding rule id
      * @param string $RuleName Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ImageSize Image size
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ImageSize image size
      * @param string $ScanTime Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

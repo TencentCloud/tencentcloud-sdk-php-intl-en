@@ -20,178 +20,218 @@ use TencentCloud\Common\AbstractModel;
 /**
  * List of server IDs
  *
- * @method string getHostID() Obtain Server ID
- * @method void setHostID(string $HostID) Set Server ID
- * @method string getHostIP() Obtain Server IP, which is the private IP
- * @method void setHostIP(string $HostIP) Set Server IP, which is the private IP
- * @method string getHostName() Obtain Server name
- * @method void setHostName(string $HostName) Set Server name
- * @method string getGroup() Obtain Project
- * @method void setGroup(string $Group) Set Project
- * @method string getDockerVersion() Obtain Docker version
- * @method void setDockerVersion(string $DockerVersion) Set Docker version
- * @method string getDockerFileSystemDriver() Obtain Docker file system type
- * @method void setDockerFileSystemDriver(string $DockerFileSystemDriver) Set Docker file system type
- * @method integer getImageCnt() Obtain Number of images
- * @method void setImageCnt(integer $ImageCnt) Set Number of images
- * @method integer getContainerCnt() Obtain Number of containers
- * @method void setContainerCnt(integer $ContainerCnt) Set Number of containers
- * @method string getStatus() Obtain Agent status
- * @method void setStatus(string $Status) Set Agent status
- * @method boolean getIsContainerd() Obtain Whether it is Containerd
- * @method void setIsContainerd(boolean $IsContainerd) Set Whether it is Containerd
- * @method string getMachineType() Obtain Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
- * @method void setMachineType(string $MachineType) Set Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
- * @method string getPublicIp() Obtain Public IP
- * @method void setPublicIp(string $PublicIp) Set Public IP
- * @method string getUuid() Obtain Server UUID
- * @method void setUuid(string $Uuid) Set Server UUID
- * @method string getInstanceID() Obtain Server instance ID
- * @method void setInstanceID(string $InstanceID) Set Server instance ID
- * @method integer getRegionID() Obtain Region ID
- * @method void setRegionID(integer $RegionID) Set Region ID
- * @method ProjectInfo getProject() Obtain Project
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setProject(ProjectInfo $Project) Set Project
-Note: This field may return `null`, indicating that no valid value was found.
- * @method array getTags() Obtain Tags
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setTags(array $Tags) Set Tags
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getClusterID() Obtain Cluster ID
- * @method void setClusterID(string $ClusterID) Set Cluster ID
- * @method string getClusterName() Obtain Cluster Name
- * @method void setClusterName(string $ClusterName) Set Cluster Name
- * @method string getClusterAccessedStatus() Obtain Cluster Access Status
- * @method void setClusterAccessedStatus(string $ClusterAccessedStatus) Set Cluster Access Status
+ * @method string getHostID() Obtain <p>Host ID.</p>
+ * @method void setHostID(string $HostID) Set <p>Host ID.</p>
+ * @method string getHostIP() Obtain <p>Host IP address, which is the private IP address.</p>
+ * @method void setHostIP(string $HostIP) Set <p>Host IP address, which is the private IP address.</p>
+ * @method string getHostName() Obtain <p>Host name.</p>
+ * @method void setHostName(string $HostName) Set <p>Host name.</p>
+ * @method string getGroup() Obtain <p>Business group.</p>
+ * @method void setGroup(string $Group) Set <p>Business group.</p>
+ * @method string getDockerVersion() Obtain <p>Docker version.</p>
+ * @method void setDockerVersion(string $DockerVersion) Set <p>Docker version.</p>
+ * @method string getDockerFileSystemDriver() Obtain <p>Docker file system type.</p>
+ * @method void setDockerFileSystemDriver(string $DockerFileSystemDriver) Set <p>Docker file system type.</p>
+ * @method integer getImageCnt() Obtain <p>Number of images.</p>
+ * @method void setImageCnt(integer $ImageCnt) Set <p>Number of images.</p>
+ * @method integer getContainerCnt() Obtain <p>Number of containers.</p>
+ * @method void setContainerCnt(integer $ContainerCnt) Set <p>Number of containers.</p>
+ * @method string getStatus() Obtain <p>Agent running status.</p>
+ * @method void setStatus(string $Status) Set <p>Agent running status.</p>
+ * @method boolean getIsContainerd() Obtain <p>Whether it is containerd.</p>
+ * @method void setIsContainerd(boolean $IsContainerd) Set <p>Whether it is containerd.</p>
+ * @method string getMachineType() Obtain <p>Server source: one of ["CVM", "ECM", "LH", "BM"] is a Tencent Cloud server; one of ["Other"] is a non-Tencent Cloud server;</p>
+ * @method void setMachineType(string $MachineType) Set <p>Server source: one of ["CVM", "ECM", "LH", "BM"] is a Tencent Cloud server; one of ["Other"] is a non-Tencent Cloud server;</p>
+ * @method string getPublicIp() Obtain <p>Public IP address.</p>
+ * @method void setPublicIp(string $PublicIp) Set <p>Public IP address.</p>
+ * @method string getUuid() Obtain <p>Host UUID.</p>
+ * @method void setUuid(string $Uuid) Set <p>Host UUID.</p>
+ * @method string getInstanceID() Obtain <p>Host instance ID.</p>
+ * @method void setInstanceID(string $InstanceID) Set <p>Host instance ID.</p>
+ * @method integer getRegionID() Obtain <p>Region ID.</p>
+ * @method void setRegionID(integer $RegionID) Set <p>Region ID.</p>
+ * @method ProjectInfo getProject() Obtain <p>Project.</p>
+ * @method void setProject(ProjectInfo $Project) Set <p>Project.</p>
+ * @method array getTags() Obtain <p>Tag.</p>
+ * @method void setTags(array $Tags) Set <p>Tag.</p>
+ * @method string getClusterID() Obtain <p>Cluster ID.</p>
+ * @method void setClusterID(string $ClusterID) Set <p>Cluster ID.</p>
+ * @method string getClusterName() Obtain <p>Cluster name.</p>
+ * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
+ * @method string getClusterAccessedStatus() Obtain <p>Cluster access status.</p>
+ * @method void setClusterAccessedStatus(string $ClusterAccessedStatus) Set <p>Cluster access status.</p>
+ * @method string getClusterAccessedSubStatus() Obtain <p>Cluster access sub-status.</p><p>Enumeration values:</p><ul><li>AccessedSubNone: none</li><li>AccessedSubUninstallException: uninstallation exception</li><li>AccessedSubTimeout: access timeout</li><li>AccessedSubUninstallTimeout: uninstallation timeout</li><li>AccessedSubResourceException: cluster component check exception, including Deployment and DaemonSet</li><li>AccessedSubCAMPermissionDenied: insufficient CAM permissions</li></ul>
+ * @method void setClusterAccessedSubStatus(string $ClusterAccessedSubStatus) Set <p>Cluster access sub-status.</p><p>Enumeration values:</p><ul><li>AccessedSubNone: none</li><li>AccessedSubUninstallException: uninstallation exception</li><li>AccessedSubTimeout: access timeout</li><li>AccessedSubUninstallTimeout: uninstallation timeout</li><li>AccessedSubResourceException: cluster component check exception, including Deployment and DaemonSet</li><li>AccessedSubCAMPermissionDenied: insufficient CAM permissions</li></ul>
+ * @method string getClusterAccessedErrorReason() Obtain <p>Detailed description of the failure reason.</p>
+ * @method void setClusterAccessedErrorReason(string $ClusterAccessedErrorReason) Set <p>Detailed description of the failure reason.</p>
+ * @method integer getChargeCoresCnt() Obtain <p>Billable cores.</p>
+ * @method void setChargeCoresCnt(integer $ChargeCoresCnt) Set <p>Billable cores.</p>
+ * @method string getDefendStatus() Obtain <p>Protection status:<br>Defended<br>Undefended</p>
+ * @method void setDefendStatus(string $DefendStatus) Set <p>Protection status:<br>Defended<br>Undefended</p>
+ * @method integer getCoresCnt() Obtain <p>Number of cores.</p>
+ * @method void setCoresCnt(integer $CoresCnt) Set <p>Number of cores.</p>
+ * @method string getLastOnlineTime() Obtain <p>Last online time.</p>
+ * @method void setLastOnlineTime(string $LastOnlineTime) Set <p>Last online time.</p>
  */
 class HostInfo extends AbstractModel
 {
     /**
-     * @var string Server ID
+     * @var string <p>Host ID.</p>
      */
     public $HostID;
 
     /**
-     * @var string Server IP, which is the private IP
+     * @var string <p>Host IP address, which is the private IP address.</p>
      */
     public $HostIP;
 
     /**
-     * @var string Server name
+     * @var string <p>Host name.</p>
      */
     public $HostName;
 
     /**
-     * @var string Project
+     * @var string <p>Business group.</p>
      */
     public $Group;
 
     /**
-     * @var string Docker version
+     * @var string <p>Docker version.</p>
      */
     public $DockerVersion;
 
     /**
-     * @var string Docker file system type
+     * @var string <p>Docker file system type.</p>
      */
     public $DockerFileSystemDriver;
 
     /**
-     * @var integer Number of images
+     * @var integer <p>Number of images.</p>
      */
     public $ImageCnt;
 
     /**
-     * @var integer Number of containers
+     * @var integer <p>Number of containers.</p>
      */
     public $ContainerCnt;
 
     /**
-     * @var string Agent status
+     * @var string <p>Agent running status.</p>
      */
     public $Status;
 
     /**
-     * @var boolean Whether it is Containerd
+     * @var boolean <p>Whether it is containerd.</p>
      */
     public $IsContainerd;
 
     /**
-     * @var string Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
+     * @var string <p>Server source: one of ["CVM", "ECM", "LH", "BM"] is a Tencent Cloud server; one of ["Other"] is a non-Tencent Cloud server;</p>
      */
     public $MachineType;
 
     /**
-     * @var string Public IP
+     * @var string <p>Public IP address.</p>
      */
     public $PublicIp;
 
     /**
-     * @var string Server UUID
+     * @var string <p>Host UUID.</p>
      */
     public $Uuid;
 
     /**
-     * @var string Server instance ID
+     * @var string <p>Host instance ID.</p>
      */
     public $InstanceID;
 
     /**
-     * @var integer Region ID
+     * @var integer <p>Region ID.</p>
      */
     public $RegionID;
 
     /**
-     * @var ProjectInfo Project
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var ProjectInfo <p>Project.</p>
      */
     public $Project;
 
     /**
-     * @var array Tags
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array <p>Tag.</p>
      */
     public $Tags;
 
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterID;
 
     /**
-     * @var string Cluster Name
+     * @var string <p>Cluster name.</p>
      */
     public $ClusterName;
 
     /**
-     * @var string Cluster Access Status
+     * @var string <p>Cluster access status.</p>
      */
     public $ClusterAccessedStatus;
 
     /**
-     * @param string $HostID Server ID
-     * @param string $HostIP Server IP, which is the private IP
-     * @param string $HostName Server name
-     * @param string $Group Project
-     * @param string $DockerVersion Docker version
-     * @param string $DockerFileSystemDriver Docker file system type
-     * @param integer $ImageCnt Number of images
-     * @param integer $ContainerCnt Number of containers
-     * @param string $Status Agent status
-     * @param boolean $IsContainerd Whether it is Containerd
-     * @param string $MachineType Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
-     * @param string $PublicIp Public IP
-     * @param string $Uuid Server UUID
-     * @param string $InstanceID Server instance ID
-     * @param integer $RegionID Region ID
-     * @param ProjectInfo $Project Project
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param array $Tags Tags
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $ClusterID Cluster ID
-     * @param string $ClusterName Cluster Name
-     * @param string $ClusterAccessedStatus Cluster Access Status
+     * @var string <p>Cluster access sub-status.</p><p>Enumeration values:</p><ul><li>AccessedSubNone: none</li><li>AccessedSubUninstallException: uninstallation exception</li><li>AccessedSubTimeout: access timeout</li><li>AccessedSubUninstallTimeout: uninstallation timeout</li><li>AccessedSubResourceException: cluster component check exception, including Deployment and DaemonSet</li><li>AccessedSubCAMPermissionDenied: insufficient CAM permissions</li></ul>
+     */
+    public $ClusterAccessedSubStatus;
+
+    /**
+     * @var string <p>Detailed description of the failure reason.</p>
+     */
+    public $ClusterAccessedErrorReason;
+
+    /**
+     * @var integer <p>Billable cores.</p>
+     */
+    public $ChargeCoresCnt;
+
+    /**
+     * @var string <p>Protection status:<br>Defended<br>Undefended</p>
+     */
+    public $DefendStatus;
+
+    /**
+     * @var integer <p>Number of cores.</p>
+     */
+    public $CoresCnt;
+
+    /**
+     * @var string <p>Last online time.</p>
+     */
+    public $LastOnlineTime;
+
+    /**
+     * @param string $HostID <p>Host ID.</p>
+     * @param string $HostIP <p>Host IP address, which is the private IP address.</p>
+     * @param string $HostName <p>Host name.</p>
+     * @param string $Group <p>Business group.</p>
+     * @param string $DockerVersion <p>Docker version.</p>
+     * @param string $DockerFileSystemDriver <p>Docker file system type.</p>
+     * @param integer $ImageCnt <p>Number of images.</p>
+     * @param integer $ContainerCnt <p>Number of containers.</p>
+     * @param string $Status <p>Agent running status.</p>
+     * @param boolean $IsContainerd <p>Whether it is containerd.</p>
+     * @param string $MachineType <p>Server source: one of ["CVM", "ECM", "LH", "BM"] is a Tencent Cloud server; one of ["Other"] is a non-Tencent Cloud server;</p>
+     * @param string $PublicIp <p>Public IP address.</p>
+     * @param string $Uuid <p>Host UUID.</p>
+     * @param string $InstanceID <p>Host instance ID.</p>
+     * @param integer $RegionID <p>Region ID.</p>
+     * @param ProjectInfo $Project <p>Project.</p>
+     * @param array $Tags <p>Tag.</p>
+     * @param string $ClusterID <p>Cluster ID.</p>
+     * @param string $ClusterName <p>Cluster name.</p>
+     * @param string $ClusterAccessedStatus <p>Cluster access status.</p>
+     * @param string $ClusterAccessedSubStatus <p>Cluster access sub-status.</p><p>Enumeration values:</p><ul><li>AccessedSubNone: none</li><li>AccessedSubUninstallException: uninstallation exception</li><li>AccessedSubTimeout: access timeout</li><li>AccessedSubUninstallTimeout: uninstallation timeout</li><li>AccessedSubResourceException: cluster component check exception, including Deployment and DaemonSet</li><li>AccessedSubCAMPermissionDenied: insufficient CAM permissions</li></ul>
+     * @param string $ClusterAccessedErrorReason <p>Detailed description of the failure reason.</p>
+     * @param integer $ChargeCoresCnt <p>Billable cores.</p>
+     * @param string $DefendStatus <p>Protection status:<br>Defended<br>Undefended</p>
+     * @param integer $CoresCnt <p>Number of cores.</p>
+     * @param string $LastOnlineTime <p>Last online time.</p>
      */
     function __construct()
     {
@@ -290,6 +330,30 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("ClusterAccessedStatus",$param) and $param["ClusterAccessedStatus"] !== null) {
             $this->ClusterAccessedStatus = $param["ClusterAccessedStatus"];
+        }
+
+        if (array_key_exists("ClusterAccessedSubStatus",$param) and $param["ClusterAccessedSubStatus"] !== null) {
+            $this->ClusterAccessedSubStatus = $param["ClusterAccessedSubStatus"];
+        }
+
+        if (array_key_exists("ClusterAccessedErrorReason",$param) and $param["ClusterAccessedErrorReason"] !== null) {
+            $this->ClusterAccessedErrorReason = $param["ClusterAccessedErrorReason"];
+        }
+
+        if (array_key_exists("ChargeCoresCnt",$param) and $param["ChargeCoresCnt"] !== null) {
+            $this->ChargeCoresCnt = $param["ChargeCoresCnt"];
+        }
+
+        if (array_key_exists("DefendStatus",$param) and $param["DefendStatus"] !== null) {
+            $this->DefendStatus = $param["DefendStatus"];
+        }
+
+        if (array_key_exists("CoresCnt",$param) and $param["CoresCnt"] !== null) {
+            $this->CoresCnt = $param["CoresCnt"];
+        }
+
+        if (array_key_exists("LastOnlineTime",$param) and $param["LastOnlineTime"] !== null) {
+            $this->LastOnlineTime = $param["LastOnlineTime"];
         }
     }
 }

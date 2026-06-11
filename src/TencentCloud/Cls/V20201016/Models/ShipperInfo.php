@@ -20,230 +20,210 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Shipping rule
  *
- * @method string getShipperId() Obtain Shipping rule ID
- * @method void setShipperId(string $ShipperId) Set Shipping rule ID
- * @method string getTopicId() Obtain Log topic ID
- * @method void setTopicId(string $TopicId) Set Log topic ID
- * @method string getBucket() Obtain Bucket address shipped to
- * @method void setBucket(string $Bucket) Set Bucket address shipped to
- * @method string getPrefix() Obtain Shipping prefix directory
- * @method void setPrefix(string $Prefix) Set Shipping prefix directory
- * @method string getShipperName() Obtain Shipping rule name
- * @method void setShipperName(string $ShipperName) Set Shipping rule name
- * @method integer getInterval() Obtain Shipping time interval in seconds
- * @method void setInterval(integer $Interval) Set Shipping time interval in seconds
- * @method integer getMaxSize() Obtain Maximum size of shipped file in MB
- * @method void setMaxSize(integer $MaxSize) Set Maximum size of shipped file in MB
- * @method boolean getStatus() Obtain Whether it takes effect
- * @method void setStatus(boolean $Status) Set Whether it takes effect
- * @method array getFilterRules() Obtain Filter rule for shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setFilterRules(array $FilterRules) Set Filter rule for shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getPartition() Obtain Partition rule of shipped log, which can be represented in `strftime` time format
- * @method void setPartition(string $Partition) Set Partition rule of shipped log, which can be represented in `strftime` time format
- * @method CompressInfo getCompress() Obtain Compression configuration of shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setCompress(CompressInfo $Compress) Set Compression configuration of shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method ContentInfo getContent() Obtain Format configuration of shipped log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setContent(ContentInfo $Content) Set Format configuration of shipped log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time of shipped log
- * @method void setCreateTime(string $CreateTime) Set Creation time of shipped log
- * @method integer getFilenameMode() Obtain Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFilenameMode(integer $FilenameMode) Set Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStartTime() Obtain Start time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(integer $StartTime) Set Start time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getEndTime() Obtain End time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(integer $EndTime) Set End time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getProgress() Obtain Progress of historical data shipping (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProgress(float $Progress) Set Progress of historical data shipping (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRemainTime() Obtain Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRemainTime(integer $RemainTime) Set Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getHistoryStatus() Obtain Status of historical data shipping. Valid values:
-0: Real-time data is being shipped.
-1: The system is preparing for historical data shipping.
-2: Historical data is being shipped.
-3: An error occurred while shipping historical data.
-4: Historical data shipping ended.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHistoryStatus(integer $HistoryStatus) Set Status of historical data shipping. Valid values:
-0: Real-time data is being shipped.
-1: The system is preparing for historical data shipping.
-2: Historical data is being shipped.
-3: An error occurred while shipping historical data.
-4: Historical data shipping ended.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStorageType() Obtain COS bucket type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStorageType(string $StorageType) Set COS bucket type
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getShipperId() Obtain <p>Delivery Rule ID</p>
+ * @method void setShipperId(string $ShipperId) Set <p>Delivery Rule ID</p>
+ * @method string getTopicId() Obtain <p>Log topic ID.</p>
+ * @method void setTopicId(string $TopicId) Set <p>Log topic ID.</p>
+ * @method string getBucket() Obtain <p>bucket address for shipping</p>
+ * @method void setBucket(string $Bucket) Set <p>bucket address for shipping</p>
+ * @method string getPrefix() Obtain <p>Delivery prefix directory</p>
+ * @method void setPrefix(string $Prefix) Set <p>Delivery prefix directory</p>
+ * @method string getShipperName() Obtain <p>Shipping rule name</p>
+ * @method void setShipperName(string $ShipperName) Set <p>Shipping rule name</p>
+ * @method integer getInterval() Obtain <p>Shipping time interval. Unit: seconds</p>
+ * @method void setInterval(integer $Interval) Set <p>Shipping time interval. Unit: seconds</p>
+ * @method integer getMaxSize() Obtain <p>Maximum value of delivered files in MB</p>
+ * @method void setMaxSize(integer $MaxSize) Set <p>Maximum value of delivered files in MB</p>
+ * @method boolean getStatus() Obtain <p>Whether effective</p>
+ * @method void setStatus(boolean $Status) Set <p>Whether effective</p>
+ * @method array getFilterRules() Obtain <p>Filter rules for log shipping</p>
+ * @method void setFilterRules(array $FilterRules) Set <p>Filter rules for log shipping</p>
+ * @method string getPartition() Obtain <p>Partition rules for log shipping support strftime time format representation</p>
+ * @method void setPartition(string $Partition) Set <p>Partition rules for log shipping support strftime time format representation</p>
+ * @method CompressInfo getCompress() Obtain <p>Compression configuration of shipped logs</p>
+ * @method void setCompress(CompressInfo $Compress) Set <p>Compression configuration of shipped logs</p>
+ * @method ContentInfo getContent() Obtain <p>Content format configuration for shipped logs</p>
+ * @method void setContent(ContentInfo $Content) Set <p>Content format configuration for shipped logs</p>
+ * @method string getCreateTime() Obtain <p>Creation time of shipped logs. Format: YYYY-MM-DD HH:MM:SS</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time of shipped logs. Format: YYYY-MM-DD HH:MM:SS</p>
+ * @method integer getFilenameMode() Obtain <p>Delivery file naming configuration. 0: Random number naming, 1: Delivery time naming. Default: 0 (Random number naming).</p>
+ * @method void setFilenameMode(integer $FilenameMode) Set <p>Delivery file naming configuration. 0: Random number naming, 1: Delivery time naming. Default: 0 (Random number naming).</p>
+ * @method integer getStartTime() Obtain <p>Start time of the data shipping range</p>
+ * @method void setStartTime(integer $StartTime) Set <p>Start time of the data shipping range</p>
+ * @method integer getEndTime() Obtain <p>End time of the data delivery range</p>
+ * @method void setEndTime(integer $EndTime) Set <p>End time of the data delivery range</p>
+ * @method float getProgress() Obtain <p>Progress of historical data delivery (valid only when users select historical data within the dataset)</p>
+ * @method void setProgress(float $Progress) Set <p>Progress of historical data delivery (valid only when users select historical data within the dataset)</p>
+ * @method integer getRemainTime() Obtain <p>Remaining time for all historical data delivery completion (valid only when there is historical data in the selected data)</p><p>Unit: second</p>
+ * @method void setRemainTime(integer $RemainTime) Set <p>Remaining time for all historical data delivery completion (valid only when there is historical data in the selected data)</p><p>Unit: second</p>
+ * @method integer getHistoryStatus() Obtain <p>Historical task status:<br>0: Real-time task<br>1: Task preparing<br>2: Task running<br>3: Task execution exception<br>4: Task execution complete</p>
+ * @method void setHistoryStatus(integer $HistoryStatus) Set <p>Historical task status:<br>0: Real-time task<br>1: Task preparing<br>2: Task running<br>3: Task execution exception<br>4: Task execution complete</p>
+ * @method string getStorageType() Obtain <p>Storage type. Default value is STANDARD. For enumeration values, see the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage type overview</a> document.<br>Reference values:<br>STANDARD: standard storage<br>STANDARD_IA: infrequent storage<br>ARCHIVE: archive storage<br>DEEP_ARCHIVE: deep archive storage<br>MAZ_STANDARD: standard storage (multi-AZ)<br>MAZ_STANDARD_IA: infrequent storage (multi-AZ)<br>INTELLIGENT_TIERING: intelligent tiering storage<br>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</p>
+ * @method void setStorageType(string $StorageType) Set <p>Storage type. Default value is STANDARD. For enumeration values, see the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage type overview</a> document.<br>Reference values:<br>STANDARD: standard storage<br>STANDARD_IA: infrequent storage<br>ARCHIVE: archive storage<br>DEEP_ARCHIVE: deep archive storage<br>MAZ_STANDARD: standard storage (multi-AZ)<br>MAZ_STANDARD_IA: infrequent storage (multi-AZ)<br>INTELLIGENT_TIERING: intelligent tiering storage<br>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</p>
+ * @method string getRoleArn() Obtain <p>ARN <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+ * @method void setRoleArn(string $RoleArn) Set <p>ARN <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+ * @method string getExternalId() Obtain <p>External ID</p>
+ * @method void setExternalId(string $ExternalId) Set <p>External ID</p>
+ * @method integer getTaskStatus() Obtain <p>Task running status. Supports <code>0</code>, <code>1</code>, <code>2</code></p><ul><li><code>0</code>: Stop</li><li><code>1</code>: Running</li><li><code>2</code>: Exception</li></ul>
+ * @method void setTaskStatus(integer $TaskStatus) Set <p>Task running status. Supports <code>0</code>, <code>1</code>, <code>2</code></p><ul><li><code>0</code>: Stop</li><li><code>1</code>: Running</li><li><code>2</code>: Exception</li></ul>
+ * @method string getTimeZone() Obtain <p>Time variable used to generate the file path shipped to COS</p>
+ * @method void setTimeZone(string $TimeZone) Set <p>Time variable used to generate the file path shipped to COS</p>
+ * @method string getDSLFilter() Obtain <p>Pre-filtering process - filter out original data before writing to COS</p>
+ * @method void setDSLFilter(string $DSLFilter) Set <p>Pre-filtering process - filter out original data before writing to COS</p>
  */
 class ShipperInfo extends AbstractModel
 {
     /**
-     * @var string Shipping rule ID
+     * @var string <p>Delivery Rule ID</p>
      */
     public $ShipperId;
 
     /**
-     * @var string Log topic ID
+     * @var string <p>Log topic ID.</p>
      */
     public $TopicId;
 
     /**
-     * @var string Bucket address shipped to
+     * @var string <p>bucket address for shipping</p>
      */
     public $Bucket;
 
     /**
-     * @var string Shipping prefix directory
+     * @var string <p>Delivery prefix directory</p>
      */
     public $Prefix;
 
     /**
-     * @var string Shipping rule name
+     * @var string <p>Shipping rule name</p>
      */
     public $ShipperName;
 
     /**
-     * @var integer Shipping time interval in seconds
+     * @var integer <p>Shipping time interval. Unit: seconds</p>
      */
     public $Interval;
 
     /**
-     * @var integer Maximum size of shipped file in MB
+     * @var integer <p>Maximum value of delivered files in MB</p>
      */
     public $MaxSize;
 
     /**
-     * @var boolean Whether it takes effect
+     * @var boolean <p>Whether effective</p>
      */
     public $Status;
 
     /**
-     * @var array Filter rule for shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array <p>Filter rules for log shipping</p>
      */
     public $FilterRules;
 
     /**
-     * @var string Partition rule of shipped log, which can be represented in `strftime` time format
+     * @var string <p>Partition rules for log shipping support strftime time format representation</p>
      */
     public $Partition;
 
     /**
-     * @var CompressInfo Compression configuration of shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var CompressInfo <p>Compression configuration of shipped logs</p>
      */
     public $Compress;
 
     /**
-     * @var ContentInfo Format configuration of shipped log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var ContentInfo <p>Content format configuration for shipped logs</p>
      */
     public $Content;
 
     /**
-     * @var string Creation time of shipped log
+     * @var string <p>Creation time of shipped logs. Format: YYYY-MM-DD HH:MM:SS</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Delivery file naming configuration. 0: Random number naming, 1: Delivery time naming. Default: 0 (Random number naming).</p>
      */
     public $FilenameMode;
 
     /**
-     * @var integer Start time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Start time of the data shipping range</p>
      */
     public $StartTime;
 
     /**
-     * @var integer End time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>End time of the data delivery range</p>
      */
     public $EndTime;
 
     /**
-     * @var float Progress of historical data shipping (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float <p>Progress of historical data delivery (valid only when users select historical data within the dataset)</p>
      */
     public $Progress;
 
     /**
-     * @var integer Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Remaining time for all historical data delivery completion (valid only when there is historical data in the selected data)</p><p>Unit: second</p>
      */
     public $RemainTime;
 
     /**
-     * @var integer Status of historical data shipping. Valid values:
-0: Real-time data is being shipped.
-1: The system is preparing for historical data shipping.
-2: Historical data is being shipped.
-3: An error occurred while shipping historical data.
-4: Historical data shipping ended.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Historical task status:<br>0: Real-time task<br>1: Task preparing<br>2: Task running<br>3: Task execution exception<br>4: Task execution complete</p>
      */
     public $HistoryStatus;
 
     /**
-     * @var string COS bucket type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Storage type. Default value is STANDARD. For enumeration values, see the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage type overview</a> document.<br>Reference values:<br>STANDARD: standard storage<br>STANDARD_IA: infrequent storage<br>ARCHIVE: archive storage<br>DEEP_ARCHIVE: deep archive storage<br>MAZ_STANDARD: standard storage (multi-AZ)<br>MAZ_STANDARD_IA: infrequent storage (multi-AZ)<br>INTELLIGENT_TIERING: intelligent tiering storage<br>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</p>
      */
     public $StorageType;
 
     /**
-     * @param string $ShipperId Shipping rule ID
-     * @param string $TopicId Log topic ID
-     * @param string $Bucket Bucket address shipped to
-     * @param string $Prefix Shipping prefix directory
-     * @param string $ShipperName Shipping rule name
-     * @param integer $Interval Shipping time interval in seconds
-     * @param integer $MaxSize Maximum size of shipped file in MB
-     * @param boolean $Status Whether it takes effect
-     * @param array $FilterRules Filter rule for shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Partition Partition rule of shipped log, which can be represented in `strftime` time format
-     * @param CompressInfo $Compress Compression configuration of shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ContentInfo $Content Format configuration of shipped log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time of shipped log
-     * @param integer $FilenameMode Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $StartTime Start time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $EndTime End time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $Progress Progress of historical data shipping (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RemainTime Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $HistoryStatus Status of historical data shipping. Valid values:
-0: Real-time data is being shipped.
-1: The system is preparing for historical data shipping.
-2: Historical data is being shipped.
-3: An error occurred while shipping historical data.
-4: Historical data shipping ended.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StorageType COS bucket type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>ARN <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+     */
+    public $RoleArn;
+
+    /**
+     * @var string <p>External ID</p>
+     */
+    public $ExternalId;
+
+    /**
+     * @var integer <p>Task running status. Supports <code>0</code>, <code>1</code>, <code>2</code></p><ul><li><code>0</code>: Stop</li><li><code>1</code>: Running</li><li><code>2</code>: Exception</li></ul>
+     */
+    public $TaskStatus;
+
+    /**
+     * @var string <p>Time variable used to generate the file path shipped to COS</p>
+     */
+    public $TimeZone;
+
+    /**
+     * @var string <p>Pre-filtering process - filter out original data before writing to COS</p>
+     */
+    public $DSLFilter;
+
+    /**
+     * @param string $ShipperId <p>Delivery Rule ID</p>
+     * @param string $TopicId <p>Log topic ID.</p>
+     * @param string $Bucket <p>bucket address for shipping</p>
+     * @param string $Prefix <p>Delivery prefix directory</p>
+     * @param string $ShipperName <p>Shipping rule name</p>
+     * @param integer $Interval <p>Shipping time interval. Unit: seconds</p>
+     * @param integer $MaxSize <p>Maximum value of delivered files in MB</p>
+     * @param boolean $Status <p>Whether effective</p>
+     * @param array $FilterRules <p>Filter rules for log shipping</p>
+     * @param string $Partition <p>Partition rules for log shipping support strftime time format representation</p>
+     * @param CompressInfo $Compress <p>Compression configuration of shipped logs</p>
+     * @param ContentInfo $Content <p>Content format configuration for shipped logs</p>
+     * @param string $CreateTime <p>Creation time of shipped logs. Format: YYYY-MM-DD HH:MM:SS</p>
+     * @param integer $FilenameMode <p>Delivery file naming configuration. 0: Random number naming, 1: Delivery time naming. Default: 0 (Random number naming).</p>
+     * @param integer $StartTime <p>Start time of the data shipping range</p>
+     * @param integer $EndTime <p>End time of the data delivery range</p>
+     * @param float $Progress <p>Progress of historical data delivery (valid only when users select historical data within the dataset)</p>
+     * @param integer $RemainTime <p>Remaining time for all historical data delivery completion (valid only when there is historical data in the selected data)</p><p>Unit: second</p>
+     * @param integer $HistoryStatus <p>Historical task status:<br>0: Real-time task<br>1: Task preparing<br>2: Task running<br>3: Task execution exception<br>4: Task execution complete</p>
+     * @param string $StorageType <p>Storage type. Default value is STANDARD. For enumeration values, see the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage type overview</a> document.<br>Reference values:<br>STANDARD: standard storage<br>STANDARD_IA: infrequent storage<br>ARCHIVE: archive storage<br>DEEP_ARCHIVE: deep archive storage<br>MAZ_STANDARD: standard storage (multi-AZ)<br>MAZ_STANDARD_IA: infrequent storage (multi-AZ)<br>INTELLIGENT_TIERING: intelligent tiering storage<br>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</p>
+     * @param string $RoleArn <p>ARN <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+     * @param string $ExternalId <p>External ID</p>
+     * @param integer $TaskStatus <p>Task running status. Supports <code>0</code>, <code>1</code>, <code>2</code></p><ul><li><code>0</code>: Stop</li><li><code>1</code>: Running</li><li><code>2</code>: Exception</li></ul>
+     * @param string $TimeZone <p>Time variable used to generate the file path shipped to COS</p>
+     * @param string $DSLFilter <p>Pre-filtering process - filter out original data before writing to COS</p>
      */
     function __construct()
     {
@@ -343,6 +323,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
             $this->StorageType = $param["StorageType"];
+        }
+
+        if (array_key_exists("RoleArn",$param) and $param["RoleArn"] !== null) {
+            $this->RoleArn = $param["RoleArn"];
+        }
+
+        if (array_key_exists("ExternalId",$param) and $param["ExternalId"] !== null) {
+            $this->ExternalId = $param["ExternalId"];
+        }
+
+        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
+            $this->TaskStatus = $param["TaskStatus"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
+            $this->DSLFilter = $param["DSLFilter"];
         }
     }
 }

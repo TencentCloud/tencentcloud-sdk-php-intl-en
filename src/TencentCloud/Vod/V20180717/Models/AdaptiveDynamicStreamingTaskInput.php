@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubtitleSet(array $SubtitleSet) Set <p>External subtitle file, with subtitle ID as the element, supports multiple subtitles, up to 16.</p>
  * @method array getSubtitleInfoSet() Obtain <p>List of subtitle suppression information. A maximum of 2 are supported.</p>
  * @method void setSubtitleInfoSet(array $SubtitleInfoSet) Set <p>List of subtitle suppression information. A maximum of 2 are supported.</p>
+ * @method ThirdPartyDrmInfo getDrmInfo() Obtain <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+ * @method void setDrmInfo(ThirdPartyDrmInfo $DrmInfo) Set <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -73,6 +75,11 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $SubtitleInfoSet;
 
     /**
+     * @var ThirdPartyDrmInfo <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+     */
+    public $DrmInfo;
+
+    /**
      * @param integer $Definition <p>Adaptive bitrate streaming template ID.</p>
      * @param array $WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
      * @param TraceWatermarkInput $TraceWatermark <p>Traceable watermark.</p>
@@ -80,6 +87,7 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
      * @param BlindWatermarkInput $BlindWatermark <p>Digital watermark.</p>
      * @param array $SubtitleSet <p>External subtitle file, with subtitle ID as the element, supports multiple subtitles, up to 16.</p>
      * @param array $SubtitleInfoSet <p>List of subtitle suppression information. A maximum of 2 are supported.</p>
+     * @param ThirdPartyDrmInfo $DrmInfo <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
      */
     function __construct()
     {
@@ -133,6 +141,11 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SubtitleInfoSet, $obj);
             }
+        }
+
+        if (array_key_exists("DrmInfo",$param) and $param["DrmInfo"] !== null) {
+            $this->DrmInfo = new ThirdPartyDrmInfo();
+            $this->DrmInfo->deserialize($param["DrmInfo"]);
         }
     }
 }

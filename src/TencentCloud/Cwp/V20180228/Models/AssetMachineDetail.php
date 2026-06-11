@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuSize(integer $CpuSize) Set Number of CPU
  * @method string getCpuLoad() Obtain CPU load
  * @method void setCpuLoad(string $CpuLoad) Set CPU load
- * @method integer getProtectLevel() Obtain Protection Level. 0 Basic Edition; 1 Professional Edition; 2 Premium Edition; 3 General Discount Edition
- * @method void setProtectLevel(integer $ProtectLevel) Set Protection Level. 0 Basic Edition; 1 Professional Edition; 2 Premium Edition; 3 General Discount Edition
+ * @method integer getProtectLevel() Obtain Protection level: 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
+ * @method void setProtectLevel(integer $ProtectLevel) Set Protection level: 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
  * @method string getRiskStatus() Obtain Risk status: UNKNOW - unknown; RISK - risky; SAFT - Safe
  * @method void setRiskStatus(string $RiskStatus) Set Risk status: UNKNOW - unknown; RISK - risky; SAFT - Safe
  * @method integer getProtectDays() Obtain Days protected
@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set Professional edition expiration time
  * @method string getCoreVersion() Obtain Kernel version
  * @method void setCoreVersion(string $CoreVersion) Set Kernel version
- * @method string getOsType() Obtain linux/windows
- * @method void setOsType(string $OsType) Set linux/windows
+ * @method string getOsType() Obtain Linux/Windows
+ * @method void setOsType(string $OsType) Set Linux/Windows
  * @method string getAgentVersion() Obtain Agent version
  * @method void setAgentVersion(string $AgentVersion) Set Agent version
  * @method string getInstallTime() Obtain Installation time
@@ -87,29 +87,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDeviceVersion() Obtain Server model
  * @method void setDeviceVersion(string $DeviceVersion) Set Server model
  * @method string getOfflineTime() Obtain Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOfflineTime(string $OfflineTime) Set Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstanceId() Obtain Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceId(string $InstanceId) Set Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUpdateTime() Obtain Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method MachineExtraInfo getMachineExtraInfo() Obtain Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCpuLoadVul() Obtain CpuLoadVul
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCpuLoadVul(string $CpuLoadVul) Set CpuLoadVul
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFirstTime() Obtain Time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFirstTime(string $FirstTime) Set Time
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AssetMachineDetail extends AbstractModel
 {
@@ -184,7 +172,7 @@ class AssetMachineDetail extends AbstractModel
     public $CpuLoad;
 
     /**
-     * @var integer Protection Level. 0 Basic Edition; 1 Professional Edition; 2 Premium Edition; 3 General Discount Edition
+     * @var integer Protection level: 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
      */
     public $ProtectLevel;
 
@@ -214,7 +202,7 @@ class AssetMachineDetail extends AbstractModel
     public $CoreVersion;
 
     /**
-     * @var string linux/windows
+     * @var string Linux/Windows
      */
     public $OsType;
 
@@ -276,37 +264,31 @@ class AssetMachineDetail extends AbstractModel
 
     /**
      * @var string Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OfflineTime;
 
     /**
      * @var string Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceId;
 
     /**
      * @var string Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
     /**
      * @var MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineExtraInfo;
 
     /**
      * @var string CpuLoadVul
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CpuLoadVul;
 
     /**
      * @var string Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FirstTime;
 
@@ -325,13 +307,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $MachineWanIp Host public IP address
      * @param integer $CpuSize Number of CPU
      * @param string $CpuLoad CPU load
-     * @param integer $ProtectLevel Protection Level. 0 Basic Edition; 1 Professional Edition; 2 Premium Edition; 3 General Discount Edition
+     * @param integer $ProtectLevel Protection level: 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
      * @param string $RiskStatus Risk status: UNKNOW - unknown; RISK - risky; SAFT - Safe
      * @param integer $ProtectDays Days protected
      * @param string $BuyTime Professional edition activation time
      * @param string $EndTime Professional edition expiration time
      * @param string $CoreVersion Kernel version
-     * @param string $OsType linux/windows
+     * @param string $OsType Linux/Windows
      * @param string $AgentVersion Agent version
      * @param string $InstallTime Installation time
      * @param string $BootTime System startup time
@@ -345,17 +327,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ProjectId Business group ID
      * @param string $DeviceVersion Server model
      * @param string $OfflineTime Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceId Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo $MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CpuLoadVul CpuLoadVul
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FirstTime Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

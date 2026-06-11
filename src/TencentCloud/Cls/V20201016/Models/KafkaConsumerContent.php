@@ -32,26 +32,24 @@ This parameter does not need to be set when `Format` is set to `0`.
  * @method void setMetaFields(array $MetaFields) Set Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
 \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 This parameter does not need to be set when `Format` is set to `0`.
- * @method integer getTagTransaction() Obtain Tag data processing mode: 1: Do not tile (default); 2: Tile.
+ * @method integer getTagTransaction() Obtain tag data processing method: 1: Not Tiled (default value); 2: Tile.
 
 Untiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
 Tiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTagTransaction(integer $TagTransaction) Set Tag data processing mode: 1: Do not tile (default); 2: Tile.
+ * @method void setTagTransaction(integer $TagTransaction) Set tag data processing method: 1: Not Tiled (default value); 2: Tile.
 
 Untiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
 Tiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getJsonType() Obtain JSON data format:
 1: Not escaped (default format)
 2: Escaped
@@ -90,16 +88,15 @@ This parameter does not need to be set when `Format` is set to `0`.
     public $MetaFields;
 
     /**
-     * @var integer Tag data processing mode: 1: Do not tile (default); 2: Tile.
+     * @var integer tag data processing method: 1: Not Tiled (default value); 2: Tile.
 
 Untiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
 Tiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TagTransaction;
 
@@ -122,16 +119,15 @@ This parameter does not need to be set when `Format` is set to `0`.
      * @param array $MetaFields Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
 \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 This parameter does not need to be set when `Format` is set to `0`.
-     * @param integer $TagTransaction Tag data processing mode: 1: Do not tile (default); 2: Tile.
+     * @param integer $TagTransaction tag data processing method: 1: Not Tiled (default value); 2: Tile.
 
 Untiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
 Tiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $JsonType JSON data format:
 1: Not escaped (default format)
 2: Escaped

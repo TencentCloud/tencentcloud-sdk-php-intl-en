@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
 `ASSET_HOST`: Server.
 `ASSET_K8S`: K8s asset.
  * @method string getLastTriggerTime() Obtain Last trigger time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLastTriggerTime(string $LastTriggerTime) Set Last trigger time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getTotalPolicyItemCount() Obtain Total number of check items
  * @method void setTotalPolicyItemCount(integer $TotalPolicyItemCount) Set Total number of check items
  * @method CompliancePeriodTaskRule getPeriodRule() Obtain Cycle settings
@@ -61,7 +59,6 @@ class CompliancePeriodTask extends AbstractModel
 
     /**
      * @var string Last trigger time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LastTriggerTime;
 
@@ -88,7 +85,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ASSET_HOST`: Server.
 `ASSET_K8S`: K8s asset.
      * @param string $LastTriggerTime Last trigger time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TotalPolicyItemCount Total number of check items
      * @param CompliancePeriodTaskRule $PeriodRule Cycle settings
      * @param array $BenchmarkStandardSet List of compliance standards

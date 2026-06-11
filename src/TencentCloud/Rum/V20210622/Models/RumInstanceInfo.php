@@ -18,44 +18,44 @@ namespace TencentCloud\Rum\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RUM instance information
+ * Rum instance information
  *
- * @method integer getInstanceStatus() Obtain Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: deleted)
- * @method void setInstanceStatus(integer $InstanceStatus) Set Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: deleted)
- * @method integer getAreaId() Obtain Region ID
- * @method void setAreaId(integer $AreaId) Set Region ID
+ * @method integer getInstanceStatus() Obtain Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=deleted)
+ * @method void setInstanceStatus(integer $InstanceStatus) Set Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=deleted)
+ * @method integer getAreaId() Obtain Zone Id
+ * @method void setAreaId(integer $AreaId) Set Zone Id
  * @method array getTags() Obtain Tag list
  * @method void setTags(array $Tags) Set Tag list
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method integer getClusterId() Obtain Cluster ID
  * @method void setClusterId(integer $ClusterId) Set Cluster ID
  * @method string getInstanceDesc() Obtain Instance description
  * @method void setInstanceDesc(string $InstanceDesc) Set Instance description
- * @method integer getChargeStatus() Obtain Billing status (1: in use; 2: expired; 3: terminated; 4: assigning; 5: assignment failed)
- * @method void setChargeStatus(integer $ChargeStatus) Set Billing status (1: in use; 2: expired; 3: terminated; 4: assigning; 5: assignment failed)
- * @method integer getChargeType() Obtain Billing type (1: free; 2: prepaid; 3: postpaid)
- * @method void setChargeType(integer $ChargeType) Set Billing type (1: free; 2: prepaid; 3: postpaid)
+ * @method integer getChargeStatus() Obtain Billing status (1=Active, 2=Expired, 3=Terminated, 4=Allocating, 5=Allocation failure)
+ * @method void setChargeStatus(integer $ChargeStatus) Set Billing status (1=Active, 2=Expired, 3=Terminated, 4=Allocating, 5=Allocation failure)
+ * @method integer getChargeType() Obtain Billing type (1=Free edition, 2=Prepayment, 3=Pay-as-you-go)
+ * @method void setChargeType(integer $ChargeType) Set Billing type (1=Free edition, 2=Prepayment, 3=Pay-as-you-go)
  * @method string getUpdatedAt() Obtain Update time
  * @method void setUpdatedAt(string $UpdatedAt) Set Update time
- * @method integer getDataRetentionDays() Obtain Data retention period (in days)
- * @method void setDataRetentionDays(integer $DataRetentionDays) Set Data retention period (in days)
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method string getCreatedAt() Obtain Creation time
- * @method void setCreatedAt(string $CreatedAt) Set Creation time
- * @method integer getInstanceType() Obtain 
- * @method void setInstanceType(integer $InstanceType) Set 
+ * @method integer getDataRetentionDays() Obtain Data retention time (days)
+ * @method void setDataRetentionDays(integer $DataRetentionDays) Set Data retention time (days)
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
+ * @method string getCreatedAt() Obtain Creation time.
+ * @method void setCreatedAt(string $CreatedAt) Set Creation time.
+ * @method integer getInstanceType() Obtain Instance type 1: Original web-related class 2: app endpoint type
+ * @method void setInstanceType(integer $InstanceType) Set Instance type 1: Original web-related class 2: app endpoint type
  */
 class RumInstanceInfo extends AbstractModel
 {
     /**
-     * @var integer Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: deleted)
+     * @var integer Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=deleted)
      */
     public $InstanceStatus;
 
     /**
-     * @var integer Region ID
+     * @var integer Zone Id
      */
     public $AreaId;
 
@@ -65,7 +65,7 @@ class RumInstanceInfo extends AbstractModel
     public $Tags;
 
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
@@ -80,12 +80,12 @@ class RumInstanceInfo extends AbstractModel
     public $InstanceDesc;
 
     /**
-     * @var integer Billing status (1: in use; 2: expired; 3: terminated; 4: assigning; 5: assignment failed)
+     * @var integer Billing status (1=Active, 2=Expired, 3=Terminated, 4=Allocating, 5=Allocation failure)
      */
     public $ChargeStatus;
 
     /**
-     * @var integer Billing type (1: free; 2: prepaid; 3: postpaid)
+     * @var integer Billing type (1=Free edition, 2=Prepayment, 3=Pay-as-you-go)
      */
     public $ChargeType;
 
@@ -95,39 +95,39 @@ class RumInstanceInfo extends AbstractModel
     public $UpdatedAt;
 
     /**
-     * @var integer Data retention period (in days)
+     * @var integer Data retention time (days)
      */
     public $DataRetentionDays;
 
     /**
-     * @var string Instance name
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $CreatedAt;
 
     /**
-     * @var integer 
+     * @var integer Instance type 1: Original web-related class 2: app endpoint type
      */
     public $InstanceType;
 
     /**
-     * @param integer $InstanceStatus Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: deleted)
-     * @param integer $AreaId Region ID
+     * @param integer $InstanceStatus Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=deleted)
+     * @param integer $AreaId Zone Id
      * @param array $Tags Tag list
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId Instance ID.
      * @param integer $ClusterId Cluster ID
      * @param string $InstanceDesc Instance description
-     * @param integer $ChargeStatus Billing status (1: in use; 2: expired; 3: terminated; 4: assigning; 5: assignment failed)
-     * @param integer $ChargeType Billing type (1: free; 2: prepaid; 3: postpaid)
+     * @param integer $ChargeStatus Billing status (1=Active, 2=Expired, 3=Terminated, 4=Allocating, 5=Allocation failure)
+     * @param integer $ChargeType Billing type (1=Free edition, 2=Prepayment, 3=Pay-as-you-go)
      * @param string $UpdatedAt Update time
-     * @param integer $DataRetentionDays Data retention period (in days)
-     * @param string $InstanceName Instance name
-     * @param string $CreatedAt Creation time
-     * @param integer $InstanceType 
+     * @param integer $DataRetentionDays Data retention time (days)
+     * @param string $InstanceName Instance name.
+     * @param string $CreatedAt Creation time.
+     * @param integer $InstanceType Instance type 1: Original web-related class 2: app endpoint type
      */
     function __construct()
     {

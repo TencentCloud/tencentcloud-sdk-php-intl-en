@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) Set Sorting method: ASC / DESC
  * @method string getBy() Obtain Sorting field, supporting CreateTime
  * @method void setBy(string $By) Set Sorting field, supporting CreateTime
+ * @method string getCreateBeginTime() Obtain Event Creation Start Time
+ * @method void setCreateBeginTime(string $CreateBeginTime) Set Event Creation Start Time
+ * @method string getCreateEndTime() Obtain Incident creation end time
+ * @method void setCreateEndTime(string $CreateEndTime) Set Incident creation end time
  */
 class DescribeRansomDefenseEventsListRequest extends AbstractModel
 {
@@ -68,6 +72,16 @@ class DescribeRansomDefenseEventsListRequest extends AbstractModel
     public $By;
 
     /**
+     * @var string Event Creation Start Time
+     */
+    public $CreateBeginTime;
+
+    /**
+     * @var string Incident creation end time
+     */
+    public $CreateEndTime;
+
+    /**
      * @param integer $Limit Pagination parameters (The maximum quantity is 100)
      * @param integer $Offset Pagination parameter
      * @param array $Filters Filter criteria
@@ -76,6 +90,8 @@ class DescribeRansomDefenseEventsListRequest extends AbstractModel
 <li>HostIp - String - host IP</li>
      * @param string $Order Sorting method: ASC / DESC
      * @param string $By Sorting field, supporting CreateTime
+     * @param string $CreateBeginTime Event Creation Start Time
+     * @param string $CreateEndTime Incident creation end time
      */
     function __construct()
     {
@@ -113,6 +129,14 @@ class DescribeRansomDefenseEventsListRequest extends AbstractModel
 
         if (array_key_exists("By",$param) and $param["By"] !== null) {
             $this->By = $param["By"];
+        }
+
+        if (array_key_exists("CreateBeginTime",$param) and $param["CreateBeginTime"] !== null) {
+            $this->CreateBeginTime = $param["CreateBeginTime"];
+        }
+
+        if (array_key_exists("CreateEndTime",$param) and $param["CreateEndTime"] !== null) {
+            $this->CreateEndTime = $param["CreateEndTime"];
         }
     }
 }

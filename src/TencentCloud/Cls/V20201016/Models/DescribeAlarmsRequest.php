@@ -21,49 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAlarms request structure.
  *
  * @method array getFilters() Obtain name
-- Filter by **alarm policy name**
-- Type: String
-- Required: No
+-Filter by [alarm policy name].
+-Type: String
+-Optional: No.
+-Example: test-alarm
 
 alarmId
-- Filter by **alarm policy ID**
-- Type: String
-- Required: No
+-Filter by [alert policy ID].
+-Type: String
+-Optional: No.
+-Example: alarm-b60cf034-c3d6-4b01-xxxx-4e877ebb4751
 
 topicId
-- Filter by **log topic ID**
-- Type: String
-- Required: No
+-Filter by [log topic ID of the monitored object].
+-Type: String
+-Optional: No.
+-Example: 6766f83d-659e-xxxx-a8f7-9104a1012743
 
 enable
-- Filter by **enablement status**
-- Type: String
-- Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an "invalid parameter" error will be returned.
-- Required: No
+-Filter by [Enabled status].
+-Type: String
+-Remark: The parameter value range for enable is 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False. Other values will return error information.
+-Optional: No.
+-Example: true
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
  * @method void setFilters(array $Filters) Set name
-- Filter by **alarm policy name**
-- Type: String
-- Required: No
+-Filter by [alarm policy name].
+-Type: String
+-Optional: No.
+-Example: test-alarm
 
 alarmId
-- Filter by **alarm policy ID**
-- Type: String
-- Required: No
+-Filter by [alert policy ID].
+-Type: String
+-Optional: No.
+-Example: alarm-b60cf034-c3d6-4b01-xxxx-4e877ebb4751
 
 topicId
-- Filter by **log topic ID**
-- Type: String
-- Required: No
+-Filter by [log topic ID of the monitored object].
+-Type: String
+-Optional: No.
+-Example: 6766f83d-659e-xxxx-a8f7-9104a1012743
 
 enable
-- Filter by **enablement status**
-- Type: String
-- Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an "invalid parameter" error will be returned.
-- Required: No
+-Filter by [Enabled status].
+-Type: String
+-Remark: The parameter value range for enable is 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False. Other values will return error information.
+-Optional: No.
+-Example: true
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
  * @method integer getOffset() Obtain Page offset. Default value: 0
  * @method void setOffset(integer $Offset) Set Page offset. Default value: 0
  * @method integer getLimit() Obtain Maximum number of entries per page. Default value: 20. Maximum value: 100.
@@ -73,27 +81,31 @@ class DescribeAlarmsRequest extends AbstractModel
 {
     /**
      * @var array name
-- Filter by **alarm policy name**
-- Type: String
-- Required: No
+-Filter by [alarm policy name].
+-Type: String
+-Optional: No.
+-Example: test-alarm
 
 alarmId
-- Filter by **alarm policy ID**
-- Type: String
-- Required: No
+-Filter by [alert policy ID].
+-Type: String
+-Optional: No.
+-Example: alarm-b60cf034-c3d6-4b01-xxxx-4e877ebb4751
 
 topicId
-- Filter by **log topic ID**
-- Type: String
-- Required: No
+-Filter by [log topic ID of the monitored object].
+-Type: String
+-Optional: No.
+-Example: 6766f83d-659e-xxxx-a8f7-9104a1012743
 
 enable
-- Filter by **enablement status**
-- Type: String
-- Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an "invalid parameter" error will be returned.
-- Required: No
+-Filter by [Enabled status].
+-Type: String
+-Remark: The parameter value range for enable is 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False. Other values will return error information.
+-Optional: No.
+-Example: true
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
      */
     public $Filters;
 
@@ -109,27 +121,31 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
 
     /**
      * @param array $Filters name
-- Filter by **alarm policy name**
-- Type: String
-- Required: No
+-Filter by [alarm policy name].
+-Type: String
+-Optional: No.
+-Example: test-alarm
 
 alarmId
-- Filter by **alarm policy ID**
-- Type: String
-- Required: No
+-Filter by [alert policy ID].
+-Type: String
+-Optional: No.
+-Example: alarm-b60cf034-c3d6-4b01-xxxx-4e877ebb4751
 
 topicId
-- Filter by **log topic ID**
-- Type: String
-- Required: No
+-Filter by [log topic ID of the monitored object].
+-Type: String
+-Optional: No.
+-Example: 6766f83d-659e-xxxx-a8f7-9104a1012743
 
 enable
-- Filter by **enablement status**
-- Type: String
-- Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an "invalid parameter" error will be returned.
-- Required: No
+-Filter by [Enabled status].
+-Type: String
+-Remark: The parameter value range for enable is 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False. Other values will return error information.
+-Optional: No.
+-Example: true
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
      * @param integer $Offset Page offset. Default value: 0
      * @param integer $Limit Maximum number of entries per page. Default value: 20. Maximum value: 100.
      */

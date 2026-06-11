@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Machine group type description
  *
- * @method string getType() Obtain Machine group type. Valid values: `ip`: the IP addresses of collection machines are stored in `Values` of the machine group; `label`: the tags of the machines are stored in `Values` of the machine group
- * @method void setType(string $Type) Set Machine group type. Valid values: `ip`: the IP addresses of collection machines are stored in `Values` of the machine group; `label`: the tags of the machines are stored in `Values` of the machine group
- * @method array getValues() Obtain Machine description list
- * @method void setValues(array $Values) Set Machine description list
+ * @method string getType() Obtain Machine group type. Support ip and label.
+-ip: Indicates that Values in this machine group represent the ip address of the collection machine.
+-label: means the Values in this group contain machine tags
+ * @method void setType(string $Type) Set Machine group type. Support ip and label.
+-ip: Indicates that Values in this machine group represent the ip address of the collection machine.
+-label: means the Values in this group contain machine tags
+ * @method array getValues() Obtain Machine description list.
+ * @method void setValues(array $Values) Set Machine description list.
  */
 class MachineGroupTypeInfo extends AbstractModel
 {
     /**
-     * @var string Machine group type. Valid values: `ip`: the IP addresses of collection machines are stored in `Values` of the machine group; `label`: the tags of the machines are stored in `Values` of the machine group
+     * @var string Machine group type. Support ip and label.
+-ip: Indicates that Values in this machine group represent the ip address of the collection machine.
+-label: means the Values in this group contain machine tags
      */
     public $Type;
 
     /**
-     * @var array Machine description list
+     * @var array Machine description list.
      */
     public $Values;
 
     /**
-     * @param string $Type Machine group type. Valid values: `ip`: the IP addresses of collection machines are stored in `Values` of the machine group; `label`: the tags of the machines are stored in `Values` of the machine group
-     * @param array $Values Machine description list
+     * @param string $Type Machine group type. Support ip and label.
+-ip: Indicates that Values in this machine group represent the ip address of the collection machine.
+-label: means the Values in this group contain machine tags
+     * @param array $Values Machine description list.
      */
     function __construct()
     {

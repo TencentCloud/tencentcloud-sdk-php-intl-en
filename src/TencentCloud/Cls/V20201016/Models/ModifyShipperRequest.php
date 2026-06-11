@@ -20,114 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyShipper request structure.
  *
- * @method string getShipperId() Obtain Shipping rule ID
- * @method void setShipperId(string $ShipperId) Set Shipping rule ID
- * @method string getBucket() Obtain New destination bucket in shipping rule
- * @method void setBucket(string $Bucket) Set New destination bucket in shipping rule
- * @method string getPrefix() Obtain New destination directory prefix in shipping rule
- * @method void setPrefix(string $Prefix) Set New destination directory prefix in shipping rule
- * @method boolean getStatus() Obtain Shipping rule status
- * @method void setStatus(boolean $Status) Set Shipping rule status
- * @method string getShipperName() Obtain Shipping rule name
- * @method void setShipperName(string $ShipperName) Set Shipping rule name
- * @method integer getInterval() Obtain Shipping time interval in seconds. Default value: 300. Value range: 300 to 900
- * @method void setInterval(integer $Interval) Set Shipping time interval in seconds. Default value: 300. Value range: 300 to 900
- * @method integer getMaxSize() Obtain Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5 to 256
- * @method void setMaxSize(integer $MaxSize) Set Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5 to 256
- * @method array getFilterRules() Obtain Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
- * @method void setFilterRules(array $FilterRules) Set Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
- * @method string getPartition() Obtain Partition rule of shipped log, which can be represented in `strftime` time format
- * @method void setPartition(string $Partition) Set Partition rule of shipped log, which can be represented in `strftime` time format
- * @method CompressInfo getCompress() Obtain Compression configuration of shipped log
- * @method void setCompress(CompressInfo $Compress) Set Compression configuration of shipped log
- * @method ContentInfo getContent() Obtain Format configuration of shipped log content
- * @method void setContent(ContentInfo $Content) Set Format configuration of shipped log content
- * @method integer getFilenameMode() Obtain Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
- * @method void setFilenameMode(integer $FilenameMode) Set Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
- * @method string getStorageType() Obtain COS bucket type
- * @method void setStorageType(string $StorageType) Set COS bucket type
+ * @method string getShipperId() Obtain <p>Shipping rule ID.</p><ul><li>Obtain the ShipperId by <a href="https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1">obtaining the shipping task list</a>.</li></ul>
+ * @method void setShipperId(string $ShipperId) Set <p>Shipping rule ID.</p><ul><li>Obtain the ShipperId by <a href="https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1">obtaining the shipping task list</a>.</li></ul>
+ * @method string getBucket() Obtain <p>COS bucket, see the supported <a href="https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1">bucket naming conventions</a>.</p><ul><li>Obtain COS buckets via <a href="https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1">GET Service (List Buckets)</a>.</li></ul>
+ * @method void setBucket(string $Bucket) Set <p>COS bucket, see the supported <a href="https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1">bucket naming conventions</a>.</p><ul><li>Obtain COS buckets via <a href="https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1">GET Service (List Buckets)</a>.</li></ul>
+ * @method string getPrefix() Obtain <p>The new directory prefix delivered by the Shipping Rule.</p><ul><li>Only 0-9A-Za-z-_/ are allowed.</li><li>Supports a maximum of 256 characters.</li></ul>
+ * @method void setPrefix(string $Prefix) Set <p>The new directory prefix delivered by the Shipping Rule.</p><ul><li>Only 0-9A-Za-z-_/ are allowed.</li><li>Supports a maximum of 256 characters.</li></ul>
+ * @method boolean getStatus() Obtain <p>Switch state of shipping rules. true: enable delivery task; false: disable delivery task.</p>
+ * @method void setStatus(boolean $Status) Set <p>Switch state of shipping rules. true: enable delivery task; false: disable delivery task.</p>
+ * @method string getShipperName() Obtain <p>Shipping rule name</p>
+ * @method void setShipperName(string $ShipperName) Set <p>Shipping rule name</p>
+ * @method integer getInterval() Obtain <p>Shipping time interval in seconds. Default: 300. Valid range: 300-900.</p>
+ * @method void setInterval(integer $Interval) Set <p>Shipping time interval in seconds. Default: 300. Valid range: 300-900.</p>
+ * @method integer getMaxSize() Obtain <p>Maximum value of delivered files in MB. Default: 256. Range: 5-256.</p>
+ * @method void setMaxSize(integer $MaxSize) Set <p>Maximum value of delivered files in MB. Default: 256. Range: 5-256.</p>
+ * @method array getFilterRules() Obtain <p>Filter rules for log shipping. Matched logs are shipped. The relationship between the rules is and. Up to 5 rules are allowed. An empty array indicates all logs are shipped without filtering.</p>
+ * @method void setFilterRules(array $FilterRules) Set <p>Filter rules for log shipping. Matched logs are shipped. The relationship between the rules is and. Up to 5 rules are allowed. An empty array indicates all logs are shipped without filtering.</p>
+ * @method string getPartition() Obtain <p>Partition rules for log shipping support strftime time format representation</p>
+ * @method void setPartition(string $Partition) Set <p>Partition rules for log shipping support strftime time format representation</p>
+ * @method CompressInfo getCompress() Obtain <p>Compression configuration of shipped logs</p>
+ * @method void setCompress(CompressInfo $Compress) Set <p>Compression configuration of shipped logs</p>
+ * @method ContentInfo getContent() Obtain <p>Content format configuration for shipped logs</p>
+ * @method void setContent(ContentInfo $Content) Set <p>Content format configuration for shipped logs</p>
+ * @method integer getFilenameMode() Obtain <p>Delivery file naming configuration. 0: Random number naming. 1: Delivery time naming.</p>
+ * @method void setFilenameMode(integer $FilenameMode) Set <p>Delivery file naming configuration. 0: Random number naming. 1: Delivery time naming.</p>
+ * @method string getStorageType() Obtain <p>The storage type. Default value is STANDARD. For enumeration values, please refer to the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage class overview</a> document.<br>Reference values include:</p><ul><li>STANDARD: standard storage</li><li>STANDARD_IA: infrequent storage</li><li>ARCHIVE: archive storage</li><li>DEEP_ARCHIVE: deep archive storage</li><li>MAZ_STANDARD: standard storage (multi-AZ)</li><li>MAZ_STANDARD_IA: infrequent storage (multi-AZ)</li><li>INTELLIGENT_TIERING: intelligent tiering storage</li><li>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</li></ul>
+ * @method void setStorageType(string $StorageType) Set <p>The storage type. Default value is STANDARD. For enumeration values, please refer to the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage class overview</a> document.<br>Reference values include:</p><ul><li>STANDARD: standard storage</li><li>STANDARD_IA: infrequent storage</li><li>ARCHIVE: archive storage</li><li>DEEP_ARCHIVE: deep archive storage</li><li>MAZ_STANDARD: standard storage (multi-AZ)</li><li>MAZ_STANDARD_IA: infrequent storage (multi-AZ)</li><li>INTELLIGENT_TIERING: intelligent tiering storage</li><li>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</li></ul>
+ * @method string getRoleArn() Obtain <p>Role access description name <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+ * @method void setRoleArn(string $RoleArn) Set <p>Role access description name <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+ * @method string getExternalId() Obtain <p>External ID</p>
+ * @method void setExternalId(string $ExternalId) Set <p>External ID</p>
+ * @method string getTimeZone() Obtain <p>Used to generate time variables in the file path shipped to COS.</p><p>Input limitation: Supports the following time zone list</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+ * @method void setTimeZone(string $TimeZone) Set <p>Used to generate time variables in the file path shipped to COS.</p><p>Input limitation: Supports the following time zone list</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+ * @method string getDSLFilter() Obtain <p>Pre-filtering process - filter out original data written to COS</p>
+ * @method void setDSLFilter(string $DSLFilter) Set <p>Pre-filtering process - filter out original data written to COS</p>
  */
 class ModifyShipperRequest extends AbstractModel
 {
     /**
-     * @var string Shipping rule ID
+     * @var string <p>Shipping rule ID.</p><ul><li>Obtain the ShipperId by <a href="https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1">obtaining the shipping task list</a>.</li></ul>
      */
     public $ShipperId;
 
     /**
-     * @var string New destination bucket in shipping rule
+     * @var string <p>COS bucket, see the supported <a href="https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1">bucket naming conventions</a>.</p><ul><li>Obtain COS buckets via <a href="https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1">GET Service (List Buckets)</a>.</li></ul>
      */
     public $Bucket;
 
     /**
-     * @var string New destination directory prefix in shipping rule
+     * @var string <p>The new directory prefix delivered by the Shipping Rule.</p><ul><li>Only 0-9A-Za-z-_/ are allowed.</li><li>Supports a maximum of 256 characters.</li></ul>
      */
     public $Prefix;
 
     /**
-     * @var boolean Shipping rule status
+     * @var boolean <p>Switch state of shipping rules. true: enable delivery task; false: disable delivery task.</p>
      */
     public $Status;
 
     /**
-     * @var string Shipping rule name
+     * @var string <p>Shipping rule name</p>
      */
     public $ShipperName;
 
     /**
-     * @var integer Shipping time interval in seconds. Default value: 300. Value range: 300 to 900
+     * @var integer <p>Shipping time interval in seconds. Default: 300. Valid range: 300-900.</p>
      */
     public $Interval;
 
     /**
-     * @var integer Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5 to 256
+     * @var integer <p>Maximum value of delivered files in MB. Default: 256. Range: 5-256.</p>
      */
     public $MaxSize;
 
     /**
-     * @var array Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
+     * @var array <p>Filter rules for log shipping. Matched logs are shipped. The relationship between the rules is and. Up to 5 rules are allowed. An empty array indicates all logs are shipped without filtering.</p>
      */
     public $FilterRules;
 
     /**
-     * @var string Partition rule of shipped log, which can be represented in `strftime` time format
+     * @var string <p>Partition rules for log shipping support strftime time format representation</p>
      */
     public $Partition;
 
     /**
-     * @var CompressInfo Compression configuration of shipped log
+     * @var CompressInfo <p>Compression configuration of shipped logs</p>
      */
     public $Compress;
 
     /**
-     * @var ContentInfo Format configuration of shipped log content
+     * @var ContentInfo <p>Content format configuration for shipped logs</p>
      */
     public $Content;
 
     /**
-     * @var integer Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
+     * @var integer <p>Delivery file naming configuration. 0: Random number naming. 1: Delivery time naming.</p>
      */
     public $FilenameMode;
 
     /**
-     * @var string COS bucket type
+     * @var string <p>The storage type. Default value is STANDARD. For enumeration values, please refer to the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage class overview</a> document.<br>Reference values include:</p><ul><li>STANDARD: standard storage</li><li>STANDARD_IA: infrequent storage</li><li>ARCHIVE: archive storage</li><li>DEEP_ARCHIVE: deep archive storage</li><li>MAZ_STANDARD: standard storage (multi-AZ)</li><li>MAZ_STANDARD_IA: infrequent storage (multi-AZ)</li><li>INTELLIGENT_TIERING: intelligent tiering storage</li><li>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</li></ul>
      */
     public $StorageType;
 
     /**
-     * @param string $ShipperId Shipping rule ID
-     * @param string $Bucket New destination bucket in shipping rule
-     * @param string $Prefix New destination directory prefix in shipping rule
-     * @param boolean $Status Shipping rule status
-     * @param string $ShipperName Shipping rule name
-     * @param integer $Interval Shipping time interval in seconds. Default value: 300. Value range: 300 to 900
-     * @param integer $MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5 to 256
-     * @param array $FilterRules Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
-     * @param string $Partition Partition rule of shipped log, which can be represented in `strftime` time format
-     * @param CompressInfo $Compress Compression configuration of shipped log
-     * @param ContentInfo $Content Format configuration of shipped log content
-     * @param integer $FilenameMode Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
-     * @param string $StorageType COS bucket type
+     * @var string <p>Role access description name <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+     */
+    public $RoleArn;
+
+    /**
+     * @var string <p>External ID</p>
+     */
+    public $ExternalId;
+
+    /**
+     * @var string <p>Used to generate time variables in the file path shipped to COS.</p><p>Input limitation: Supports the following time zone list</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+     */
+    public $TimeZone;
+
+    /**
+     * @var string <p>Pre-filtering process - filter out original data written to COS</p>
+     */
+    public $DSLFilter;
+
+    /**
+     * @param string $ShipperId <p>Shipping rule ID.</p><ul><li>Obtain the ShipperId by <a href="https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1">obtaining the shipping task list</a>.</li></ul>
+     * @param string $Bucket <p>COS bucket, see the supported <a href="https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1">bucket naming conventions</a>.</p><ul><li>Obtain COS buckets via <a href="https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1">GET Service (List Buckets)</a>.</li></ul>
+     * @param string $Prefix <p>The new directory prefix delivered by the Shipping Rule.</p><ul><li>Only 0-9A-Za-z-_/ are allowed.</li><li>Supports a maximum of 256 characters.</li></ul>
+     * @param boolean $Status <p>Switch state of shipping rules. true: enable delivery task; false: disable delivery task.</p>
+     * @param string $ShipperName <p>Shipping rule name</p>
+     * @param integer $Interval <p>Shipping time interval in seconds. Default: 300. Valid range: 300-900.</p>
+     * @param integer $MaxSize <p>Maximum value of delivered files in MB. Default: 256. Range: 5-256.</p>
+     * @param array $FilterRules <p>Filter rules for log shipping. Matched logs are shipped. The relationship between the rules is and. Up to 5 rules are allowed. An empty array indicates all logs are shipped without filtering.</p>
+     * @param string $Partition <p>Partition rules for log shipping support strftime time format representation</p>
+     * @param CompressInfo $Compress <p>Compression configuration of shipped logs</p>
+     * @param ContentInfo $Content <p>Content format configuration for shipped logs</p>
+     * @param integer $FilenameMode <p>Delivery file naming configuration. 0: Random number naming. 1: Delivery time naming.</p>
+     * @param string $StorageType <p>The storage type. Default value is STANDARD. For enumeration values, please refer to the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage class overview</a> document.<br>Reference values include:</p><ul><li>STANDARD: standard storage</li><li>STANDARD_IA: infrequent storage</li><li>ARCHIVE: archive storage</li><li>DEEP_ARCHIVE: deep archive storage</li><li>MAZ_STANDARD: standard storage (multi-AZ)</li><li>MAZ_STANDARD_IA: infrequent storage (multi-AZ)</li><li>INTELLIGENT_TIERING: intelligent tiering storage</li><li>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</li></ul>
+     * @param string $RoleArn <p>Role access description name <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+     * @param string $ExternalId <p>External ID</p>
+     * @param string $TimeZone <p>Used to generate time variables in the file path shipped to COS.</p><p>Input limitation: Supports the following time zone list</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+     * @param string $DSLFilter <p>Pre-filtering process - filter out original data written to COS</p>
      */
     function __construct()
     {
@@ -199,6 +231,22 @@ class ModifyShipperRequest extends AbstractModel
 
         if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
             $this->StorageType = $param["StorageType"];
+        }
+
+        if (array_key_exists("RoleArn",$param) and $param["RoleArn"] !== null) {
+            $this->RoleArn = $param["RoleArn"];
+        }
+
+        if (array_key_exists("ExternalId",$param) and $param["ExternalId"] !== null) {
+            $this->ExternalId = $param["ExternalId"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
+            $this->DSLFilter = $param["DSLFilter"];
         }
     }
 }

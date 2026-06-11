@@ -28,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set 0-in progress; 1-succeeded; 2-failed
  * @method string getFixMessage() Obtain Fix suggestion
  * @method void setFixMessage(string $FixMessage) Set Fix suggestion
- * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information of machine
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information of machine
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional Information on Machine
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional Information on Machine
  */
 class LicenseBindTaskDetail extends AbstractModel
 {
@@ -56,8 +54,7 @@ class LicenseBindTaskDetail extends AbstractModel
     public $FixMessage;
 
     /**
-     * @var MachineExtraInfo Additional information of machine
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MachineExtraInfo Additional Information on Machine
      */
     public $MachineExtraInfo;
 
@@ -66,8 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ErrMsg Error message
      * @param integer $Status 0-in progress; 1-succeeded; 2-failed
      * @param string $FixMessage Fix suggestion
-     * @param MachineExtraInfo $MachineExtraInfo Additional information of machine
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MachineExtraInfo $MachineExtraInfo Additional Information on Machine
      */
     function __construct()
     {

@@ -21,237 +21,177 @@ use TencentCloud\Common\AbstractModel;
  * Information of a vulnerability in the image
  *
  * @method string getCVEID() Obtain Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCVEID(string $CVEID) Set Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPOCID() Obtain POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPOCID(string $POCID) Set POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPOCID() Obtain viewpoint validation program ID
+ * @method void setPOCID(string $POCID) Set viewpoint validation program ID
  * @method string getName() Obtain Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getComponents() Obtain Component information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComponents(array $Components) Set Component information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCategory() Obtain Category
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCategory(string $Category) Set Category
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getComponents() Obtain Component Information
+ * @method void setComponents(array $Components) Set Component Information
+ * @method string getCategory() Obtain category
+ * @method void setCategory(string $Category) Set category
  * @method string getCategoryType() Obtain Category 2
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCategoryType(string $CategoryType) Set Category 2
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getLevel() Obtain Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLevel(string $Level) Set Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDes() Obtain Description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDes(string $Des) Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getOfficialSolution() Obtain Solution
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOfficialSolution(string $OfficialSolution) Set Solution
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getReference() Obtain Reference
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReference(string $Reference) Set Reference
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDefenseSolution() Obtain Defense solution
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefenseSolution(string $DefenseSolution) Set Defense solution
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getReference() Obtain Refer
+ * @method void setReference(string $Reference) Set Refer
+ * @method string getDefenseSolution() Obtain defense solution
+ * @method void setDefenseSolution(string $DefenseSolution) Set defense solution
  * @method string getSubmitTime() Obtain Submission time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSubmitTime(string $SubmitTime) Set Submission time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCvssScore() Obtain CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCvssScore(string $CvssScore) Set CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCvssVector() Obtain CVSS information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCvssVector(string $CvssVector) Set CVSS information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIsSuggest() Obtain Whether fix is suggested
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsSuggest(string $IsSuggest) Set Whether fix is suggested
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFixedVersions() Obtain Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFixedVersions(string $FixedVersions) Set Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTag() Obtain Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTag(array $Tag) Set Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getComponent() Obtain Component name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComponent(string $Component) Set Component name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCvssScore() Obtain CVSS Score
+ * @method void setCvssScore(string $CvssScore) Set CVSS Score
+ * @method string getCvssVector() Obtain CVSS information.
+ * @method void setCvssVector(string $CvssVector) Set CVSS information.
+ * @method string getIsSuggest() Obtain Whether repair is suggested.
+ * @method void setIsSuggest(string $IsSuggest) Set Whether repair is suggested.
+ * @method string getFixedVersions() Obtain Repair Version Number
+ * @method void setFixedVersions(string $FixedVersions) Set Repair Version Number
+ * @method array getTag() Obtain Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
+ * @method void setTag(array $Tag) Set Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
+ * @method string getComponent() Obtain Component name.
+ * @method void setComponent(string $Component) Set Component name.
  * @method string getVersion() Obtain Component version
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVersion(string $Version) Set Component version
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAttackLevel() Obtain Attack Heat 0-3
+ * @method void setAttackLevel(integer $AttackLevel) Set Attack Heat 0-3
+ * @method array getLayerInfos() Obtain Image Layer Information List
+ * @method void setLayerInfos(array $LayerInfos) Set Image Layer Information List
  */
 class ImageVul extends AbstractModel
 {
     /**
      * @var string Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CVEID;
 
     /**
-     * @var string POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string viewpoint validation program ID
      */
     public $POCID;
 
     /**
      * @var string Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Name;
 
     /**
-     * @var array Component information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Component Information
      */
     public $Components;
 
     /**
-     * @var string Category
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string category
      */
     public $Category;
 
     /**
      * @var string Category 2
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CategoryType;
 
     /**
      * @var string Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Level;
 
     /**
      * @var string Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Des;
 
     /**
      * @var string Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OfficialSolution;
 
     /**
-     * @var string Reference
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Refer
      */
     public $Reference;
 
     /**
-     * @var string Defense solution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string defense solution
      */
     public $DefenseSolution;
 
     /**
      * @var string Submission time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubmitTime;
 
     /**
-     * @var string CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string CVSS Score
      */
     public $CvssScore;
 
     /**
-     * @var string CVSS information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string CVSS information.
      */
     public $CvssVector;
 
     /**
-     * @var string Whether fix is suggested
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Whether repair is suggested.
      */
     public $IsSuggest;
 
     /**
-     * @var string Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Repair Version Number
      */
     public $FixedVersions;
 
     /**
-     * @var array Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
      */
     public $Tag;
 
     /**
-     * @var string Component name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Component name.
      */
     public $Component;
 
     /**
      * @var string Component version
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Version;
 
     /**
+     * @var integer Attack Heat 0-3
+     */
+    public $AttackLevel;
+
+    /**
+     * @var array Image Layer Information List
+     */
+    public $LayerInfos;
+
+    /**
      * @param string $CVEID Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $POCID POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $POCID viewpoint validation program ID
      * @param string $Name Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Components Component information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Category Category
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Components Component Information
+     * @param string $Category category
      * @param string $CategoryType Category 2
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Des Description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OfficialSolution Solution
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Reference Reference
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DefenseSolution Defense solution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Reference Refer
+     * @param string $DefenseSolution defense solution
      * @param string $SubmitTime Submission time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CvssScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CvssVector CVSS information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IsSuggest Whether fix is suggested
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FixedVersions Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Tag Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Component Component name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CvssScore CVSS Score
+     * @param string $CvssVector CVSS information.
+     * @param string $IsSuggest Whether repair is suggested.
+     * @param string $FixedVersions Repair Version Number
+     * @param array $Tag Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
+     * @param string $Component Component name.
      * @param string $Version Component version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AttackLevel Attack Heat 0-3
+     * @param array $LayerInfos Image Layer Information List
      */
     function __construct()
     {
@@ -345,6 +285,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Version",$param) and $param["Version"] !== null) {
             $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("AttackLevel",$param) and $param["AttackLevel"] !== null) {
+            $this->AttackLevel = $param["AttackLevel"];
+        }
+
+        if (array_key_exists("LayerInfos",$param) and $param["LayerInfos"] !== null) {
+            $this->LayerInfos = [];
+            foreach ($param["LayerInfos"] as $key => $value){
+                $obj = new ImageVulLayerInfo();
+                $obj->deserialize($value);
+                array_push($this->LayerInfos, $obj);
+            }
         }
     }
 }

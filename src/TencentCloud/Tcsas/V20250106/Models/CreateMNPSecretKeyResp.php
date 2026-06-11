@@ -18,7 +18,7 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Response for creating a mini program secret key.
+ * Response for creating a mini program secret key
  *
  * @method string getKeyId() Obtain <p>Key ID.</p>
  * @method void setKeyId(string $KeyId) Set <p>Key ID.</p>

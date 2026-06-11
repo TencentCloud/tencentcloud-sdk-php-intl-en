@@ -20,331 +20,263 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetImageRegistryDetail response structure.
  *
- * @method string getImageDigest() Obtain Image digest
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setImageDigest(string $ImageDigest) Set Image digest
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getImageRepoAddress() Obtain Image address
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setImageRepoAddress(string $ImageRepoAddress) Set Image address
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getImageDigest() Obtain Image Digest
+ * @method void setImageDigest(string $ImageDigest) Set Image Digest
+ * @method string getImageRepoAddress() Obtain Image address.
+ * @method void setImageRepoAddress(string $ImageRepoAddress) Set Image address.
  * @method string getRegistryType() Obtain Image type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRegistryType(string $RegistryType) Set Image type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getImageName() Obtain Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setImageName(string $ImageName) Set Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getImageTag() Obtain Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setImageTag(string $ImageTag) Set Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getImageTag() Obtain Mirror version
+ * @method void setImageTag(string $ImageTag) Set Mirror version
  * @method string getScanTime() Obtain Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScanTime(string $ScanTime) Set Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getScanStatus() Obtain Scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanStatus(string $ScanStatus) Set Scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getVulCnt() Obtain Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVulCnt(integer $VulCnt) Set Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getVirusCnt() Obtain Number of viruses and trojans
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVirusCnt(integer $VirusCnt) Set Number of viruses and trojans
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getScanStatus() Obtain scan status
+ * @method void setScanStatus(string $ScanStatus) Set scan status
+ * @method integer getVulCnt() Obtain Number of security vulnerabilities
+ * @method void setVulCnt(integer $VulCnt) Set Number of security vulnerabilities
+ * @method integer getVirusCnt() Obtain Number of Trojan viruses
+ * @method void setVirusCnt(integer $VirusCnt) Set Number of Trojan viruses
  * @method integer getRiskCnt() Obtain Number of risky behaviors
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRiskCnt(integer $RiskCnt) Set Number of risky behaviors
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getSentiveInfoCnt() Obtain Number of sensitive data items
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSentiveInfoCnt(integer $SentiveInfoCnt) Set Number of sensitive data items
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getOsName() Obtain Image system
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOsName(string $OsName) Set Image system
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOsName() Obtain Image system.
+ * @method void setOsName(string $OsName) Set Image system.
  * @method string getScanVirusError() Obtain Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScanVirusError(string $ScanVirusError) Set Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getScanVulError() Obtain Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanVulError(string $ScanVulError) Set Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getScanVulError() Obtain Vulnerability scanning error
+ * @method void setScanVulError(string $ScanVulError) Set Vulnerability scanning error
  * @method string getLayerInfo() Obtain Layer file information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLayerInfo(string $LayerInfo) Set Layer file information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceName() Obtain Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceName(string $InstanceName) Set Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
  * @method string getNamespace() Obtain Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNamespace(string $Namespace) Set Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getScanRiskError() Obtain High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanRiskError(string $ScanRiskError) Set High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getScanVirusProgress() Obtain Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanVirusProgress(integer $ScanVirusProgress) Set Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getScanVulProgress() Obtain Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanVulProgress(integer $ScanVulProgress) Set Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getScanRiskProgress() Obtain Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanRiskProgress(integer $ScanRiskProgress) Set Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getScanRemainTime() Obtain Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanRemainTime(integer $ScanRemainTime) Set Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCveStatus() Obtain CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCveStatus(string $CveStatus) Set CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRiskStatus() Obtain High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRiskStatus(string $RiskStatus) Set High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVirusStatus() Obtain Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVirusStatus(string $VirusStatus) Set Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getScanRiskError() Obtain High risk scan error
+ * @method void setScanRiskError(string $ScanRiskError) Set High risk scan error
+ * @method integer getScanVirusProgress() Obtain Trojan information scan progress
+ * @method void setScanVirusProgress(integer $ScanVirusProgress) Set Trojan information scan progress
+ * @method integer getScanVulProgress() Obtain Vulnerability scan progress.
+ * @method void setScanVulProgress(integer $ScanVulProgress) Set Vulnerability scan progress.
+ * @method integer getScanRiskProgress() Obtain Sensitive scanning progress
+ * @method void setScanRiskProgress(integer $ScanRiskProgress) Set Sensitive scanning progress
+ * @method integer getScanRemainTime() Obtain Remaining scan time (seconds)
+ * @method void setScanRemainTime(integer $ScanRemainTime) Set Remaining scan time (seconds)
+ * @method string getCveStatus() Obtain cve scan status
+ * @method void setCveStatus(string $CveStatus) Set cve scan status
+ * @method string getRiskStatus() Obtain High risk scan status
+ * @method void setRiskStatus(string $RiskStatus) Set High risk scan status
+ * @method string getVirusStatus() Obtain Trojan scan status
+ * @method void setVirusStatus(string $VirusStatus) Set Trojan scan status
  * @method integer getProgress() Obtain Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProgress(integer $Progress) Set Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsAuthorized() Obtain Licensing status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsAuthorized(integer $IsAuthorized) Set Licensing status
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsAuthorized() Obtain Authorization status
+ * @method void setIsAuthorized(integer $IsAuthorized) Set Authorization status
  * @method integer getImageSize() Obtain Image size
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setImageSize(integer $ImageSize) Set Image size
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getImageId() Obtain Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setImageId(string $ImageId) Set Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegistryRegion() Obtain Image region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegistryRegion(string $RegistryRegion) Set Image region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getImageCreateTime() Obtain Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setImageCreateTime(string $ImageCreateTime) Set Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getImageId() Obtain Image ID.
+ * @method void setImageId(string $ImageId) Set Image ID.
+ * @method string getRegistryRegion() Obtain Image Zone
+ * @method void setRegistryRegion(string $RegistryRegion) Set Image Zone
+ * @method string getImageCreateTime() Obtain Image Creation Time
+ * @method void setImageCreateTime(string $ImageCreateTime) Set Image Creation Time
+ * @method integer getSensitiveInfoCnt() Obtain Number of sensitive data items
+ * @method void setSensitiveInfoCnt(integer $SensitiveInfoCnt) Set Number of sensitive data items
+ * @method integer getId() Obtain 
+ * @method void setId(integer $Id) Set 
+ * @method string getSolution() Obtain Solution
+ * @method void setSolution(string $Solution) Set Solution
+ * @method string getReason() Obtain Reason
+ * @method void setReason(string $Reason) Set Reason
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribeAssetImageRegistryDetailResponse extends AbstractModel
 {
     /**
-     * @var string Image digest
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Image Digest
      */
     public $ImageDigest;
 
     /**
-     * @var string Image address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Image address.
      */
     public $ImageRepoAddress;
 
     /**
      * @var string Image type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RegistryType;
 
     /**
      * @var string Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ImageName;
 
     /**
-     * @var string Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Mirror version
      */
     public $ImageTag;
 
     /**
      * @var string Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ScanTime;
 
     /**
-     * @var string Scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string scan status
      */
     public $ScanStatus;
 
     /**
-     * @var integer Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of security vulnerabilities
      */
     public $VulCnt;
 
     /**
-     * @var integer Number of viruses and trojans
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of Trojan viruses
      */
     public $VirusCnt;
 
     /**
      * @var integer Number of risky behaviors
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RiskCnt;
 
     /**
      * @var integer Number of sensitive data items
-Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     public $SentiveInfoCnt;
 
     /**
-     * @var string Image system
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Image system.
      */
     public $OsName;
 
     /**
      * @var string Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ScanVirusError;
 
     /**
-     * @var string Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Vulnerability scanning error
      */
     public $ScanVulError;
 
     /**
      * @var string Layer file information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LayerInfo;
 
     /**
-     * @var string Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
      * @var string Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Namespace;
 
     /**
-     * @var string High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string High risk scan error
      */
     public $ScanRiskError;
 
     /**
-     * @var integer Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Trojan information scan progress
      */
     public $ScanVirusProgress;
 
     /**
-     * @var integer Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Vulnerability scan progress.
      */
     public $ScanVulProgress;
 
     /**
-     * @var integer Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Sensitive scanning progress
      */
     public $ScanRiskProgress;
 
     /**
-     * @var integer Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Remaining scan time (seconds)
      */
     public $ScanRemainTime;
 
     /**
-     * @var string CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string cve scan status
      */
     public $CveStatus;
 
     /**
-     * @var string High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string High risk scan status
      */
     public $RiskStatus;
 
     /**
-     * @var string Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Trojan scan status
      */
     public $VirusStatus;
 
     /**
      * @var integer Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Progress;
 
     /**
-     * @var integer Licensing status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Authorization status
      */
     public $IsAuthorized;
 
     /**
      * @var integer Image size
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ImageSize;
 
     /**
-     * @var string Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Image ID.
      */
     public $ImageId;
 
     /**
-     * @var string Image region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Image Zone
      */
     public $RegistryRegion;
 
     /**
-     * @var string Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Image Creation Time
      */
     public $ImageCreateTime;
+
+    /**
+     * @var integer Number of sensitive data items
+     */
+    public $SensitiveInfoCnt;
+
+    /**
+     * @var integer 
+     */
+    public $Id;
+
+    /**
+     * @var string Solution
+     */
+    public $Solution;
+
+    /**
+     * @var string Reason
+     */
+    public $Reason;
 
     /**
      * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -352,70 +284,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $ImageDigest Image digest
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ImageRepoAddress Image address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ImageDigest Image Digest
+     * @param string $ImageRepoAddress Image address.
      * @param string $RegistryType Image type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ImageName Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ImageTag Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ImageTag Mirror version
      * @param string $ScanTime Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ScanStatus Scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $VulCnt Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $VirusCnt Number of viruses and trojans
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ScanStatus scan status
+     * @param integer $VulCnt Number of security vulnerabilities
+     * @param integer $VirusCnt Number of Trojan viruses
      * @param integer $RiskCnt Number of risky behaviors
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SentiveInfoCnt Number of sensitive data items
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $OsName Image system
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OsName Image system.
      * @param string $ScanVirusError Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ScanVulError Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ScanVulError Vulnerability scanning error
      * @param string $LayerInfo Layer file information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceId Instance ID.
+     * @param string $InstanceName Instance name.
      * @param string $Namespace Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ScanRiskError High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ScanVirusProgress Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ScanVulProgress Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ScanRiskProgress Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ScanRemainTime Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CveStatus CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RiskStatus High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VirusStatus Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ScanRiskError High risk scan error
+     * @param integer $ScanVirusProgress Trojan information scan progress
+     * @param integer $ScanVulProgress Vulnerability scan progress.
+     * @param integer $ScanRiskProgress Sensitive scanning progress
+     * @param integer $ScanRemainTime Remaining scan time (seconds)
+     * @param string $CveStatus cve scan status
+     * @param string $RiskStatus High risk scan status
+     * @param string $VirusStatus Trojan scan status
      * @param integer $Progress Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsAuthorized Licensing status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsAuthorized Authorization status
      * @param integer $ImageSize Image size
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ImageId Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RegistryRegion Image region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ImageCreateTime Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ImageId Image ID.
+     * @param string $RegistryRegion Image Zone
+     * @param string $ImageCreateTime Image Creation Time
+     * @param integer $SensitiveInfoCnt Number of sensitive data items
+     * @param integer $Id 
+     * @param string $Solution Solution
+     * @param string $Reason Reason
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -557,6 +461,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ImageCreateTime",$param) and $param["ImageCreateTime"] !== null) {
             $this->ImageCreateTime = $param["ImageCreateTime"];
+        }
+
+        if (array_key_exists("SensitiveInfoCnt",$param) and $param["SensitiveInfoCnt"] !== null) {
+            $this->SensitiveInfoCnt = $param["SensitiveInfoCnt"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Solution",$param) and $param["Solution"] !== null) {
+            $this->Solution = $param["Solution"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The statistical entity representing top vulnerabilities
  *
- * @method string getVulName() Obtain Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVulName(string $VulName) Set Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVulName() Obtain Vulnerability name.
+ * @method void setVulName(string $VulName) Set Vulnerability name.
  * @method integer getVulLevel() Obtain Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVulLevel(integer $VulLevel) Set Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getVulCount() Obtain Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVulCount(integer $VulCount) Set Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getVulId() Obtain Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVulId(integer $VulId) Set Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class VulTopInfo extends AbstractModel
 {
     /**
-     * @var string Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Vulnerability name.
      */
     public $VulName;
 
     /**
      * @var integer Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VulLevel;
 
     /**
      * @var integer Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VulCount;
 
     /**
      * @var integer Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VulId;
 
     /**
-     * @param string $VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VulName Vulnerability name.
      * @param integer $VulLevel Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $VulCount Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIds(array $Ids) Set An array of event IDs that need to be modified, and batch operation is supported.
  * @method boolean getAll() Obtain Whether to update all, i.e. whether to operate on all events; this parameter is invalid when IDs are not left blank.
  * @method void setAll(boolean $All) Set Whether to update all, i.e. whether to operate on all events; this parameter is invalid when IDs are not left blank.
- * @method integer getStatus() Obtain 0: Pending 1: Processed 2: Allowlisted 3: Ignored 4: Deleted 
- * @method void setStatus(integer $Status) Set 0: Pending 1: Processed 2: Allowlisted 3: Ignored 4: Deleted 
+ * @method integer getStatus() Obtain 0: pending processing; 1: processed; 3: ignored; 4: deleted. 
+ * @method void setStatus(integer $Status) Set 0: pending processing; 1: processed; 3: ignored; 4: deleted. 
  * @method array getFilters() Obtain Filter criteria
 <li>Type: String attack status: 0: attempted attack; 1: attack succeeded: required: no</li>
 <li>Status: String event processing status: 0: pending 1: processed; 2: allowlisted; 3: ignored; 4: deleted: required: no</li>
 <li>SrcIP - String source IP - required: no</li>
 <li>DstPort - String attack target port - required: no</li>
-<li>MachineName - String host name - required: no</li>
+<li>MachineName - String host name - required: no</li>
 <li>InstanceID - String host instance ID - required: no</li>
 <li>Quuids - String host CVM UUID - required: no</li>
 
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Status: String event processing status: 0: pending 1: processed; 2: allowlisted; 3: ignored; 4: deleted: required: no</li>
 <li>SrcIP - String source IP - required: no</li>
 <li>DstPort - String attack target port - required: no</li>
-<li>MachineName - String host name - required: no</li>
+<li>MachineName - String host name - required: no</li>
 <li>InstanceID - String host instance ID - required: no</li>
 <li>Quuids - String host CVM UUID - required: no</li>
 
@@ -60,7 +60,7 @@ class ModifyEventAttackStatusRequest extends AbstractModel
     public $All;
 
     /**
-     * @var integer 0: Pending 1: Processed 2: Allowlisted 3: Ignored 4: Deleted 
+     * @var integer 0: pending processing; 1: processed; 3: ignored; 4: deleted. 
      */
     public $Status;
 
@@ -70,7 +70,7 @@ class ModifyEventAttackStatusRequest extends AbstractModel
 <li>Status: String event processing status: 0: pending 1: processed; 2: allowlisted; 3: ignored; 4: deleted: required: no</li>
 <li>SrcIP - String source IP - required: no</li>
 <li>DstPort - String attack target port - required: no</li>
-<li>MachineName - String host name - required: no</li>
+<li>MachineName - String host name - required: no</li>
 <li>InstanceID - String host instance ID - required: no</li>
 <li>Quuids - String host CVM UUID - required: no</li>
 
@@ -85,13 +85,13 @@ class ModifyEventAttackStatusRequest extends AbstractModel
     /**
      * @param array $Ids An array of event IDs that need to be modified, and batch operation is supported.
      * @param boolean $All Whether to update all, i.e. whether to operate on all events; this parameter is invalid when IDs are not left blank.
-     * @param integer $Status 0: Pending 1: Processed 2: Allowlisted 3: Ignored 4: Deleted 
+     * @param integer $Status 0: pending processing; 1: processed; 3: ignored; 4: deleted. 
      * @param array $Filters Filter criteria
 <li>Type: String attack status: 0: attempted attack; 1: attack succeeded: required: no</li>
 <li>Status: String event processing status: 0: pending 1: processed; 2: allowlisted; 3: ignored; 4: deleted: required: no</li>
 <li>SrcIP - String source IP - required: no</li>
 <li>DstPort - String attack target port - required: no</li>
-<li>MachineName - String host name - required: no</li>
+<li>MachineName - String host name - required: no</li>
 <li>InstanceID - String host instance ID - required: no</li>
 <li>Quuids - String host CVM UUID - required: no</li>
 

@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time
  * @method integer getSize() Obtain Image size
  * @method void setSize(integer $Size) Set Image size
- * @method integer getHostCnt() Obtain Number of servers
- * @method void setHostCnt(integer $HostCnt) Set Number of servers
+ * @method integer getHostCnt() Obtain Number of hosts (includes regular nodes and super nodes).
+ * @method void setHostCnt(integer $HostCnt) Set Number of hosts (includes regular nodes and super nodes).
+ * @method integer getSuperNodeCnt() Obtain Number of super nodes.
+ * @method void setSuperNodeCnt(integer $SuperNodeCnt) Set Number of super nodes.
  * @method integer getContainerCnt() Obtain Number of containers
  * @method void setContainerCnt(integer $ContainerCnt) Set Number of containers
  * @method string getScanTime() Obtain Scan time
@@ -62,6 +64,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAuthorized(integer $IsAuthorized) Set Whether it is licensed. Valid values: `1` (yes); `0` (no).
  * @method integer getComponentCnt() Obtain Number of components
  * @method void setComponentCnt(integer $ComponentCnt) Set Number of components
+ * @method integer getCriticalLevelVulCnt() Obtain 
+ * @method void setCriticalLevelVulCnt(integer $CriticalLevelVulCnt) Set 
+ * @method integer getHighLevelVulCnt() Obtain 
+ * @method void setHighLevelVulCnt(integer $HighLevelVulCnt) Set 
+ * @method integer getMediumLevelVulCnt() Obtain 
+ * @method void setMediumLevelVulCnt(integer $MediumLevelVulCnt) Set 
+ * @method integer getLowLevelVulCnt() Obtain 
+ * @method void setLowLevelVulCnt(integer $LowLevelVulCnt) Set 
+ * @method boolean getIsLatestImage() Obtain 
+ * @method void setIsLatestImage(boolean $IsLatestImage) Set 
+ * @method boolean getRecommendedFix() Obtain 
+ * @method void setRecommendedFix(boolean $RecommendedFix) Set 
+ * @method string getSolution() Obtain Solution
+ * @method void setSolution(string $Solution) Set Solution
+ * @method string getReason() Obtain Reason
+
+ * @method void setReason(string $Reason) Set Reason
  */
 class ImagesInfo extends AbstractModel
 {
@@ -86,9 +105,14 @@ class ImagesInfo extends AbstractModel
     public $Size;
 
     /**
-     * @var integer Number of servers
+     * @var integer Number of hosts (includes regular nodes and super nodes).
      */
     public $HostCnt;
+
+    /**
+     * @var integer Number of super nodes.
+     */
+    public $SuperNodeCnt;
 
     /**
      * @var integer Number of containers
@@ -171,11 +195,53 @@ class ImagesInfo extends AbstractModel
     public $ComponentCnt;
 
     /**
+     * @var integer 
+     */
+    public $CriticalLevelVulCnt;
+
+    /**
+     * @var integer 
+     */
+    public $HighLevelVulCnt;
+
+    /**
+     * @var integer 
+     */
+    public $MediumLevelVulCnt;
+
+    /**
+     * @var integer 
+     */
+    public $LowLevelVulCnt;
+
+    /**
+     * @var boolean 
+     */
+    public $IsLatestImage;
+
+    /**
+     * @var boolean 
+     */
+    public $RecommendedFix;
+
+    /**
+     * @var string Solution
+     */
+    public $Solution;
+
+    /**
+     * @var string Reason
+
+     */
+    public $Reason;
+
+    /**
      * @param string $ImageID Image ID
      * @param string $ImageName Image name
      * @param string $CreateTime Creation time
      * @param integer $Size Image size
-     * @param integer $HostCnt Number of servers
+     * @param integer $HostCnt Number of hosts (includes regular nodes and super nodes).
+     * @param integer $SuperNodeCnt Number of super nodes.
      * @param integer $ContainerCnt Number of containers
      * @param string $ScanTime Scan time
      * @param integer $VulCnt Number of vulnerabilities
@@ -192,6 +258,14 @@ class ImagesInfo extends AbstractModel
      * @param integer $IsSuggest Whether the image is of high priority. Valid values: `0` (no); others (yes).
      * @param integer $IsAuthorized Whether it is licensed. Valid values: `1` (yes); `0` (no).
      * @param integer $ComponentCnt Number of components
+     * @param integer $CriticalLevelVulCnt 
+     * @param integer $HighLevelVulCnt 
+     * @param integer $MediumLevelVulCnt 
+     * @param integer $LowLevelVulCnt 
+     * @param boolean $IsLatestImage 
+     * @param boolean $RecommendedFix 
+     * @param string $Solution Solution
+     * @param string $Reason Reason
      */
     function __construct()
     {
@@ -224,6 +298,10 @@ class ImagesInfo extends AbstractModel
 
         if (array_key_exists("HostCnt",$param) and $param["HostCnt"] !== null) {
             $this->HostCnt = $param["HostCnt"];
+        }
+
+        if (array_key_exists("SuperNodeCnt",$param) and $param["SuperNodeCnt"] !== null) {
+            $this->SuperNodeCnt = $param["SuperNodeCnt"];
         }
 
         if (array_key_exists("ContainerCnt",$param) and $param["ContainerCnt"] !== null) {
@@ -288,6 +366,38 @@ class ImagesInfo extends AbstractModel
 
         if (array_key_exists("ComponentCnt",$param) and $param["ComponentCnt"] !== null) {
             $this->ComponentCnt = $param["ComponentCnt"];
+        }
+
+        if (array_key_exists("CriticalLevelVulCnt",$param) and $param["CriticalLevelVulCnt"] !== null) {
+            $this->CriticalLevelVulCnt = $param["CriticalLevelVulCnt"];
+        }
+
+        if (array_key_exists("HighLevelVulCnt",$param) and $param["HighLevelVulCnt"] !== null) {
+            $this->HighLevelVulCnt = $param["HighLevelVulCnt"];
+        }
+
+        if (array_key_exists("MediumLevelVulCnt",$param) and $param["MediumLevelVulCnt"] !== null) {
+            $this->MediumLevelVulCnt = $param["MediumLevelVulCnt"];
+        }
+
+        if (array_key_exists("LowLevelVulCnt",$param) and $param["LowLevelVulCnt"] !== null) {
+            $this->LowLevelVulCnt = $param["LowLevelVulCnt"];
+        }
+
+        if (array_key_exists("IsLatestImage",$param) and $param["IsLatestImage"] !== null) {
+            $this->IsLatestImage = $param["IsLatestImage"];
+        }
+
+        if (array_key_exists("RecommendedFix",$param) and $param["RecommendedFix"] !== null) {
+            $this->RecommendedFix = $param["RecommendedFix"];
+        }
+
+        if (array_key_exists("Solution",$param) and $param["Solution"] !== null) {
+            $this->Solution = $param["Solution"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

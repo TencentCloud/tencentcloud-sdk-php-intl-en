@@ -45,65 +45,37 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMachineName() Obtain Host name
  * @method void setMachineName(string $MachineName) Set Host name
  * @method string getExe() Obtain Process name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExe(string $Exe) Set Process name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getModifyTime() Obtain Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setModifyTime(string $ModifyTime) Set Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRuleCategory() Obtain Rule category. 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRuleCategory(integer $RuleCategory) Set Rule category. 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRuleCategory() Obtain Rule category. 0: system rule; 1: user rule
+ * @method void setRuleCategory(integer $RuleCategory) Set Rule category. 0: system rule; 1: user rule
  * @method string getRegexBashCmd() Obtain Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRegexBashCmd(string $RegexBashCmd) Set Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPsTree() Obtain Process tree json  pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: command execution; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPsTree(string $PsTree) Set Process tree json  pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: command execution; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPsTree() Obtain Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
+ * @method void setPsTree(string $PsTree) Set Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
  * @method string getSuggestScheme() Obtain Recommended solution
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSuggestScheme(string $SuggestScheme) Set Recommended solution
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getHarmDescribe() Obtain Description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHarmDescribe(string $HarmDescribe) Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTags() Obtain Tag
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Tag.
+ * @method void setTags(array $Tags) Set Tag.
  * @method array getReferences() Obtain Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReferences(array $References) Set Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMachineWanIp() Obtain Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineWanIp(string $MachineWanIp) Set Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMachineStatus() Obtain Host online status: OFFLINE; ONLINE
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMachineStatus(string $MachineStatus) Set Host online status: OFFLINE; ONLINE
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUser() Obtain Log-in user
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUser(string $User) Set Log-in user
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPid() Obtain Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPid(string $Pid) Set Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMachineType() Obtain 0: normal; 1: professional version; 2: ultimate edition
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMachineType(integer $MachineType) Set 0: normal; 1: professional version; 2: ultimate edition
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMachineType() Obtain 0: Ordinary 1: Pro Edition 2: Flagship Edition
+ * @method void setMachineType(integer $MachineType) Set 0: Ordinary 1: Pro Edition 2: Flagship Edition
  * @method integer getDetectBy() Obtain Source of Detection: 0: bash log; 1: real-time monitoring
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDetectBy(integer $DetectBy) Set Source of Detection: 0: bash log; 1: real-time monitoring
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBashCmdDecoded() Obtain Execute commands (decoded)
+ * @method void setBashCmdDecoded(string $BashCmdDecoded) Set Execute commands (decoded)
  */
 class BashEventsInfoNew extends AbstractModel
 {
@@ -169,93 +141,83 @@ class BashEventsInfoNew extends AbstractModel
 
     /**
      * @var string Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Exe;
 
     /**
      * @var string Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ModifyTime;
 
     /**
-     * @var integer Rule category. 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Rule category. 0: system rule; 1: user rule
      */
     public $RuleCategory;
 
     /**
      * @var string Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RegexBashCmd;
 
     /**
-     * @var string Process tree json  pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: command execution; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
      */
     public $PsTree;
 
     /**
      * @var string Recommended solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SuggestScheme;
 
     /**
      * @var string Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HarmDescribe;
 
     /**
-     * @var array Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Tag.
      */
     public $Tags;
 
     /**
      * @var array Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $References;
 
     /**
      * @var string Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineWanIp;
 
     /**
      * @var string Host online status: OFFLINE; ONLINE
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MachineStatus;
 
     /**
      * @var string Log-in user
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $User;
 
     /**
      * @var string Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Pid;
 
     /**
-     * @var integer 0: normal; 1: professional version; 2: ultimate edition
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 0: Ordinary 1: Pro Edition 2: Flagship Edition
      */
     public $MachineType;
 
     /**
      * @var integer Source of Detection: 0: bash log; 1: real-time monitoring
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DetectBy;
+
+    /**
+     * @var string Execute commands (decoded)
+     */
+    public $BashCmdDecoded;
 
     /**
      * @param integer $Id Data ID
@@ -271,35 +233,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CreateTime Occurrence time
      * @param string $MachineName Host name
      * @param string $Exe Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ModifyTime Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RuleCategory Rule category. 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RuleCategory Rule category. 0: system rule; 1: user rule
      * @param string $RegexBashCmd Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PsTree Process tree json  pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: command execution; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PsTree Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
      * @param string $SuggestScheme Recommended solution
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HarmDescribe Description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags Tag.
      * @param array $References Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MachineWanIp Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MachineStatus Host online status: OFFLINE; ONLINE
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $User Log-in user
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MachineType 0: normal; 1: professional version; 2: ultimate edition
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MachineType 0: Ordinary 1: Pro Edition 2: Flagship Edition
      * @param integer $DetectBy Source of Detection: 0: bash log; 1: real-time monitoring
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BashCmdDecoded Execute commands (decoded)
      */
     function __construct()
     {
@@ -420,6 +368,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DetectBy",$param) and $param["DetectBy"] !== null) {
             $this->DetectBy = $param["DetectBy"];
+        }
+
+        if (array_key_exists("BashCmdDecoded",$param) and $param["BashCmdDecoded"] !== null) {
+            $this->BashCmdDecoded = $param["BashCmdDecoded"];
         }
     }
 }

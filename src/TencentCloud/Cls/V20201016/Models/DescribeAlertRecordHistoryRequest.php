@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlertRecordHistory request structure.
  *
- * @method integer getFrom() Obtain Start time of the query range, which is a Unix timestamp in ms
- * @method void setFrom(integer $From) Set Start time of the query range, which is a Unix timestamp in ms
- * @method integer getTo() Obtain End time of the query range, which is a Unix timestamp in ms
- * @method void setTo(integer $To) Set End time of the query range, which is a Unix timestamp in ms
+ * @method integer getFrom() Obtain Start time of the query time range, unix timestamp in milliseconds (ms)
+ * @method void setFrom(integer $From) Set Start time of the query time range, unix timestamp in milliseconds (ms)
+ * @method integer getTo() Obtain End time of query time range, unix timestamp in milliseconds (ms)
+ * @method void setTo(integer $To) Set End time of query time range, unix timestamp in milliseconds (ms)
  * @method integer getOffset() Obtain Page offset. Default value: 0
  * @method void setOffset(integer $Offset) Set Page offset. Default value: 0
  * @method integer getLimit() Obtain Maximum number of entries per page. Maximum value: 100
@@ -44,12 +44,12 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
 class DescribeAlertRecordHistoryRequest extends AbstractModel
 {
     /**
-     * @var integer Start time of the query range, which is a Unix timestamp in ms
+     * @var integer Start time of the query time range, unix timestamp in milliseconds (ms)
      */
     public $From;
 
     /**
-     * @var integer End time of the query range, which is a Unix timestamp in ms
+     * @var integer End time of query time range, unix timestamp in milliseconds (ms)
      */
     public $To;
 
@@ -74,8 +74,8 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
     public $Filters;
 
     /**
-     * @param integer $From Start time of the query range, which is a Unix timestamp in ms
-     * @param integer $To End time of the query range, which is a Unix timestamp in ms
+     * @param integer $From Start time of the query time range, unix timestamp in milliseconds (ms)
+     * @param integer $To End time of query time range, unix timestamp in milliseconds (ms)
      * @param integer $Offset Page offset. Default value: 0
      * @param integer $Limit Maximum number of entries per page. Maximum value: 100
      * @param array $Filters - alertId: Filter by alarm policy ID. Type: String; optional

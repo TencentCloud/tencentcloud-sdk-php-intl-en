@@ -46,32 +46,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Occurrence time
  * @method string getMachineName() Obtain Server name
  * @method void setMachineName(string $MachineName) Set Server name
- * @method integer getDetectBy() Obtain 0: bash log; 1: real-time monitoring (thunder edition)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDetectBy(integer $DetectBy) Set 0: bash log; 1: real-time monitoring (thunder edition)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPid() Obtain Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPid(string $Pid) Set Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDetectBy() Obtain 0: bash log; 1: real-time monitoring (Thunder Edition)
+ * @method void setDetectBy(integer $DetectBy) Set 0: bash log; 1: real-time monitoring (Thunder Edition)
+ * @method string getPid() Obtain Process id
+ * @method void setPid(string $Pid) Set Process id
  * @method string getExe() Obtain Process name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExe(string $Exe) Set Process name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getModifyTime() Obtain Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setModifyTime(string $ModifyTime) Set Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRuleCategory() Obtain Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRuleCategory(integer $RuleCategory) Set Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegexBashCmd() Obtain Automatically generated regular expression\nNote: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegexBashCmd(string $RegexBashCmd) Set Automatically generated regular expression\nNote: This field may return null, indicating that no valid values can be obtained.
- * @method string getHostName() Obtain Host HostName
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostName(string $HostName) Set Host HostName
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRuleCategory() Obtain Rule category. 0: system rule; 1: user rule
+ * @method void setRuleCategory(integer $RuleCategory) Set Rule category. 0: system rule; 1: user rule
+ * @method string getRegexBashCmd() Obtain Automatically generated regular expression
+ * @method void setRegexBashCmd(string $RegexBashCmd) Set Automatically generated regular expression
+ * @method string getHostName() Obtain Host name.
+ * @method void setHostName(string $HostName) Set Host name.
  */
 class BashEvent extends AbstractModel
 {
@@ -141,43 +129,37 @@ class BashEvent extends AbstractModel
     public $MachineName;
 
     /**
-     * @var integer 0: bash log; 1: real-time monitoring (thunder edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 0: bash log; 1: real-time monitoring (Thunder Edition)
      */
     public $DetectBy;
 
     /**
-     * @var string Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Process id
      */
     public $Pid;
 
     /**
      * @var string Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Exe;
 
     /**
      * @var string Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ModifyTime;
 
     /**
-     * @var integer Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Rule category. 0: system rule; 1: user rule
      */
     public $RuleCategory;
 
     /**
-     * @var string Automatically generated regular expression\nNote: This field may return null, indicating that no valid values can be obtained.
+     * @var string Automatically generated regular expression
      */
     public $RegexBashCmd;
 
     /**
-     * @var string Host HostName
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host name.
      */
     public $HostName;
 
@@ -195,19 +177,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Status Processing status: 0 - pending; 1 - processed; 2 - allowlisted; 3 - ignored
      * @param string $CreateTime Occurrence time
      * @param string $MachineName Server name
-     * @param integer $DetectBy 0: bash log; 1: real-time monitoring (thunder edition)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DetectBy 0: bash log; 1: real-time monitoring (Thunder Edition)
+     * @param string $Pid Process id
      * @param string $Exe Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ModifyTime Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RuleCategory Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RegexBashCmd Automatically generated regular expression\nNote: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HostName Host HostName
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RuleCategory Rule category. 0: system rule; 1: user rule
+     * @param string $RegexBashCmd Automatically generated regular expression
+     * @param string $HostName Host name.
      */
     function __construct()
     {
