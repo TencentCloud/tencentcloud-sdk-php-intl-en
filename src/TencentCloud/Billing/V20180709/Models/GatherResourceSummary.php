@@ -92,8 +92,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductCodeName(string $ProductCodeName) Set Subproduct name: Product subdivision type purchased by the user
  * @method string getPayMode() Obtain Billing mode code
  * @method void setPayMode(string $PayMode) Set Billing mode code
- * @method string getPayModeName() Obtain Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
- * @method void setPayModeName(string $PayModeName) Set Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+ * @method string getPayModeName() Obtain Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
+ * @method void setPayModeName(string $PayModeName) Set Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
  * @method string getActionType() Obtain Transaction type code
  * @method void setActionType(string $ActionType) Set Transaction type code
  * @method string getActionTypeName() Obtain Transaction type: Detailed transaction type
@@ -278,7 +278,7 @@ class GatherResourceSummary extends AbstractModel
     public $PayMode;
 
     /**
-     * @var string Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+     * @var string Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      */
     public $PayModeName;
 
@@ -343,7 +343,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ProductCode Subproduct code
      * @param string $ProductCodeName Subproduct name: Product subdivision type purchased by the user
      * @param string $PayMode Billing mode code
-     * @param string $PayModeName Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+     * @param string $PayModeName Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      * @param string $ActionType Transaction type code
      * @param string $ActionTypeName Transaction type: Detailed transaction type
      * @param string $SplitItemId Split item ID: The ID of the split item involved in the split product, such as COS bucket ID and CDN domain name

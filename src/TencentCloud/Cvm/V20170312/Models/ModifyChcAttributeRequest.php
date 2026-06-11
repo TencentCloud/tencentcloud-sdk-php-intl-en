@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceType(string $DeviceType) Set Server type
  * @method string getBmcUser() Obtain Valid characters: Letters, numbers, hyphens and underscores
  * @method void setBmcUser(string $BmcUser) Set Valid characters: Letters, numbers, hyphens and underscores
- * @method string getPassword() Obtain The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
- * @method void setPassword(string $Password) Set The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
+ * @method string getPassword() Obtain The password can contain 8 to 16 characters, including letters, numbers and special symbols ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
+ * @method void setPassword(string $Password) Set The password can contain 8 to 16 characters, including letters, numbers and special symbols ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
  * @method array getBmcSecurityGroupIds() Obtain BMC network security group list
  * @method void setBmcSecurityGroupIds(array $BmcSecurityGroupIds) Set BMC network security group list
  */
@@ -56,7 +56,7 @@ class ModifyChcAttributeRequest extends AbstractModel
     public $BmcUser;
 
     /**
-     * @var string The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
+     * @var string The password can contain 8 to 16 characters, including letters, numbers and special symbols ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
      */
     public $Password;
 
@@ -70,7 +70,7 @@ class ModifyChcAttributeRequest extends AbstractModel
      * @param string $InstanceName CHC host name
      * @param string $DeviceType Server type
      * @param string $BmcUser Valid characters: Letters, numbers, hyphens and underscores
-     * @param string $Password The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
+     * @param string $Password The password can contain 8 to 16 characters, including letters, numbers and special symbols ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
      * @param array $BmcSecurityGroupIds BMC network security group list
      */
     function __construct()

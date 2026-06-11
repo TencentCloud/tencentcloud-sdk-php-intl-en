@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperateUin(string $OperateUin) Set Operator account ID (the resource account ID or role ID opened by prepaid resource ordering or postpaid operation)
  * @method string getPayMode() Obtain Billing mode code
  * @method void setPayMode(string $PayMode) Set Billing mode code
- * @method string getPayModeName() Obtain Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
- * @method void setPayModeName(string $PayModeName) Set Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+ * @method string getPayModeName() Obtain Billing mode: Resource billing mode, which can be  yearly/monthly subscriptionor pay-as-you-go.
+ * @method void setPayModeName(string $PayModeName) Set Billing mode: Resource billing mode, which can be  yearly/monthly subscriptionor pay-as-you-go.
  * @method string getActionType() Obtain Transaction type code
  * @method void setActionType(string $ActionType) Set Transaction type code
  * @method string getActionTypeName() Obtain Transaction type: Detailed transaction type
@@ -167,7 +167,7 @@ class AllocationSummaryByResource extends AbstractModel
     public $PayMode;
 
     /**
-     * @var string Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+     * @var string Billing mode: Resource billing mode, which can be  yearly/monthly subscriptionor pay-as-you-go.
      */
     public $PayModeName;
 
@@ -391,7 +391,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $OwnerUin User UIN: Account ID of the actual resource user
      * @param string $OperateUin Operator account ID (the resource account ID or role ID opened by prepaid resource ordering or postpaid operation)
      * @param string $PayMode Billing mode code
-     * @param string $PayModeName Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+     * @param string $PayModeName Billing mode: Resource billing mode, which can be  yearly/monthly subscriptionor pay-as-you-go.
      * @param string $ActionType Transaction type code
      * @param string $ActionTypeName Transaction type: Detailed transaction type
      * @param string $BusinessCode Product code

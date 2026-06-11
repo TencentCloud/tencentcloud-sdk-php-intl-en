@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
  * @method string getMNPId() Obtain <p>Mini program appid.</p>
  * @method void setMNPId(string $MNPId) Set <p>Mini program appid.</p>
+ * @method string getPipelineId() Obtain <p>CI/CD key ID.</p>
+ * @method void setPipelineId(string $PipelineId) Set <p>CI/CD key ID.</p>
  */
 class CreateMNPSecretKeyRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateMNPSecretKeyRequest extends AbstractModel
     public $MNPId;
 
     /**
+     * @var string <p>CI/CD key ID.</p>
+     */
+    public $PipelineId;
+
+    /**
      * @param string $PlatformId <p>Platform ID.</p>
      * @param string $MNPId <p>Mini program appid.</p>
+     * @param string $PipelineId <p>CI/CD key ID.</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateMNPSecretKeyRequest extends AbstractModel
 
         if (array_key_exists("MNPId",$param) and $param["MNPId"] !== null) {
             $this->MNPId = $param["MNPId"];
+        }
+
+        if (array_key_exists("PipelineId",$param) and $param["PipelineId"] !== null) {
+            $this->PipelineId = $param["PipelineId"];
         }
     }
 }

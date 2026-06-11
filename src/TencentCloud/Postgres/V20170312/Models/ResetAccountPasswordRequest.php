@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() Obtain Specifies the instance ID, such as postgres-4wdeb0zv. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  * @method void setDBInstanceId(string $DBInstanceId) Set Specifies the instance ID, such as postgres-4wdeb0zv. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
- * @method string getUserName() Obtain Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
- * @method void setUserName(string $UserName) Set Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+ * @method string getUserName() Obtain Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
+ * @method void setUserName(string $UserName) Set Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
  * @method string getPassword() Obtain Specifies the new password for the UserName account.
 Password settings rule specifies the following:.
 - valid values: 8 to 32 characters. a password with more than 12 characters is recommended.
--Must not start with "/".
--Must include the following four items:.
-Lowercase letters a ~ z.
-Uppercase letters: A – Z.
+- Must not start with "/".
+- Must include the following four items:.
+Lowercase letters a - z.
+Uppercase letters: A - Z.
 Digits: 0-9.
 Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
  * @method void setPassword(string $Password) Set Specifies the new password for the UserName account.
 Password settings rule specifies the following:.
 - valid values: 8 to 32 characters. a password with more than 12 characters is recommended.
--Must not start with "/".
--Must include the following four items:.
-Lowercase letters a ~ z.
-Uppercase letters: A – Z.
+- Must not start with "/".
+- Must include the following four items:.
+Lowercase letters a - z.
+Uppercase letters: A - Z.
 Digits: 0-9.
 Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
  */
@@ -51,7 +51,7 @@ class ResetAccountPasswordRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var string Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+     * @var string Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
      */
     public $UserName;
 
@@ -59,10 +59,10 @@ class ResetAccountPasswordRequest extends AbstractModel
      * @var string Specifies the new password for the UserName account.
 Password settings rule specifies the following:.
 - valid values: 8 to 32 characters. a password with more than 12 characters is recommended.
--Must not start with "/".
--Must include the following four items:.
-Lowercase letters a ~ z.
-Uppercase letters: A – Z.
+- Must not start with "/".
+- Must include the following four items:.
+Lowercase letters a - z.
+Uppercase letters: A - Z.
 Digits: 0-9.
 Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
      */
@@ -70,14 +70,14 @@ Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
 
     /**
      * @param string $DBInstanceId Specifies the instance ID, such as postgres-4wdeb0zv. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
-     * @param string $UserName Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+     * @param string $UserName Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
      * @param string $Password Specifies the new password for the UserName account.
 Password settings rule specifies the following:.
 - valid values: 8 to 32 characters. a password with more than 12 characters is recommended.
--Must not start with "/".
--Must include the following four items:.
-Lowercase letters a ~ z.
-Uppercase letters: A – Z.
+- Must not start with "/".
+- Must include the following four items:.
+Lowercase letters a - z.
+Uppercase letters: A - Z.
 Digits: 0-9.
 Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
      */

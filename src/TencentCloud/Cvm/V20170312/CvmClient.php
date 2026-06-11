@@ -46,7 +46,7 @@ If you currently use a password to log in, you will no longer be able to do so a
 
 An instance launch template is a configuration data and can be used to create instances. Its content includes configurations required to create instances, such as instance type, types and sizes of data disk and system disk, and security group and other information.
 
-This API is used to create an instance launch template. After the initial creation of the instance template, its template version is the default version 1. A new version can be created using CreateLaunchTemplateVersion (https://intl.cloud.tencent.com/document/product/213/66326?from_cn_redirect=1), and the version number will increment. By default, when specifying an instance launch template in RunInstances (https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1), if the template version number is not specified, the default version will be used.
+This API is used to create an instance launch template. After the initial creation of the instance template, its template version is the default version 1. A new version can be created using [CreateLaunchTemplateVersion](https://www.tencentcloud.com/document/api/213/45361), and the version number will increment. By default, when specifying an instance launch template in [RunInstances](https://www.tencentcloud.com/document/api/213/33237), if the template version number is not specified, the default version will be used.
  * @method Models\CreateLaunchTemplateVersionResponse CreateLaunchTemplateVersion(Models\CreateLaunchTemplateVersionRequest $req) This API is used to create an instance launch template based on the specified template ID and the corresponding template version number. The default version number will be used when no template version numbers are specified. Each instance launch template can have up to 30 version numbers.
  * @method Models\DeleteDisasterRecoverGroupsResponse DeleteDisasterRecoverGroups(Models\DeleteDisasterRecoverGroupsRequest $req) This API is used to delete a [spread placement group](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1). Only empty placement groups can be deleted. To delete a non-empty group, you need to terminate all the CVM instances in it first. Otherwise, the deletion will fail.
  * @method Models\DeleteImagesResponse DeleteImages(Models\DeleteImagesRequest $req) This API is used to delete one or more images.
@@ -66,7 +66,7 @@ This API is used to create an instance launch template. After the initial creati
 
 * You can filter the query results with the instance ID, name or device type. See `Filter` for more information.
 * If no parameter is defined, a certain number of instances under the current account will be returned. The number is specified by `Limit` and is `20` by default.
- * @method Models\DescribeDisasterRecoverGroupQuotaResponse DescribeDisasterRecoverGroupQuota(Models\DescribeDisasterRecoverGroupQuotaRequest $req) This API is used to query the quota of [spread placement groups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1).
+ * @method Models\DescribeDisasterRecoverGroupQuotaResponse DescribeDisasterRecoverGroupQuota(Models\DescribeDisasterRecoverGroupQuotaRequest $req) This API is used to query the quota of [spread placement groups](https://www.tencentcloud.com/document/product/213/15486).
  * @method Models\DescribeDisasterRecoverGroupsResponse DescribeDisasterRecoverGroups(Models\DescribeDisasterRecoverGroupsRequest $req) This API is used to query the information on [spread placement groups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1).
  * @method Models\DescribeHostsResponse DescribeHosts(Models\DescribeHostsRequest $req) This API is used to query the details of CDH instances.
  * @method Models\DescribeImageFromFamilyResponse DescribeImageFromFamily(Models\DescribeImageFromFamilyRequest $req) This API is used to view information about available images within an image family.
@@ -204,7 +204,7 @@ This API is used to perform operations that do not support instances with no cha
  * @method Models\RenewInstancesResponse RenewInstances(Models\RenewInstancesRequest $req) This API is used to renew annual and monthly subscription instances.
 
 This API is used to operate on monthly subscription instances only.
-This API is used to ensure your account balance is sufficient for renewal. You can check the balance via the DescribeAccountBalance API (https://www.tencentcloud.com/document/product/555/20253?from_cn_redirect=1).
+This API is used to ensure your account balance is sufficient for renewal. You can check the balance via the [DescribeAccountBalance API](https://www.tencentcloud.com/document/api/555/50284).
 * You can query the result of the instance operation by calling the API [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
  * @method Models\ResetInstanceResponse ResetInstance(Models\ResetInstanceRequest $req) This API (ResetInstance) is used to reinstall the operating system on a specified instance.
 
@@ -230,7 +230,7 @@ This API is used to ensure your account balance is sufficient for renewal. You c
 * Currently, you cannot use this API to change the models of [CDH](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) instances.
  * @method Models\ResizeInstanceDisksResponse ResizeInstanceDisks(Models\ResizeInstanceDisksRequest $req) This API (ResizeInstanceDisks) is used to expand the data disks of an instance.
 
-* Currently, you can only use the API to expand non-elastic data disks whose [disk type](https://www.tencentcloud.com/document/product/213/15753) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`. You can use [`DescribeDisks`](https://intl.cloud.tencent.com/document/api/362/16315?from_cn_redirect=1) to check whether a disk is elastic. If the `Portable` field in the response is `false`, it means that the disk is non-elastic.
+* Currently, you can only use the API to expand non-elastic data disks whose [disk type](https://www.tencentcloud.com/document/product/213/15753) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`. You can use [`DescribeDisks`](https://www.tencentcloud.com/document/api/362/16315) to check whether a disk is elastic. If the `Portable` field in the response is `false`, it means that the disk is non-elastic.
 * Currently, this API does not support [CDH](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) instances.
 * Currently, only one data disk can be expanded at a time.
  * @method Models\RunInstancesResponse RunInstances(Models\RunInstancesRequest $req) This API is used to create one or more instances with a specified configuration.

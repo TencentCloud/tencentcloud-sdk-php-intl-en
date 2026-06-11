@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskMsg(string $TaskMsg) Set <p>Task status information.</p>
  * @method integer getMNPVersionId() Obtain <p>Mini game version ID (returned upon successful compilation).</p>
  * @method void setMNPVersionId(integer $MNPVersionId) Set <p>Mini game version ID (returned upon successful compilation).</p>
+ * @method integer getExpireTime() Obtain <p>QR code expiration time.</p>
+ * @method void setExpireTime(integer $ExpireTime) Set <p>QR code expiration time.</p>
+ * @method string getQRCode() Obtain <p>Version QR code.</p>
+ * @method void setQRCode(string $QRCode) Set <p>Version QR code.</p>
+ * @method array getSubPackageInfos() Obtain <p>Compilation package information.</p>
+ * @method void setSubPackageInfos(array $SubPackageInfos) Set <p>Compilation package information.</p>
  */
 class DescribeMNGVersionResp extends AbstractModel
 {
@@ -59,11 +65,29 @@ class DescribeMNGVersionResp extends AbstractModel
     public $MNPVersionId;
 
     /**
+     * @var integer <p>QR code expiration time.</p>
+     */
+    public $ExpireTime;
+
+    /**
+     * @var string <p>Version QR code.</p>
+     */
+    public $QRCode;
+
+    /**
+     * @var array <p>Compilation package information.</p>
+     */
+    public $SubPackageInfos;
+
+    /**
      * @param string $MNPId <p>Mini game appid.</p>
      * @param string $TaskId <p>Task ID.</p>
      * @param integer $TaskStatus <p>Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded.</p>
      * @param string $TaskMsg <p>Task status information.</p>
      * @param integer $MNPVersionId <p>Mini game version ID (returned upon successful compilation).</p>
+     * @param integer $ExpireTime <p>QR code expiration time.</p>
+     * @param string $QRCode <p>Version QR code.</p>
+     * @param array $SubPackageInfos <p>Compilation package information.</p>
      */
     function __construct()
     {
@@ -96,6 +120,23 @@ class DescribeMNGVersionResp extends AbstractModel
 
         if (array_key_exists("MNPVersionId",$param) and $param["MNPVersionId"] !== null) {
             $this->MNPVersionId = $param["MNPVersionId"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("QRCode",$param) and $param["QRCode"] !== null) {
+            $this->QRCode = $param["QRCode"];
+        }
+
+        if (array_key_exists("SubPackageInfos",$param) and $param["SubPackageInfos"] !== null) {
+            $this->SubPackageInfos = [];
+            foreach ($param["SubPackageInfos"] as $key => $value){
+                $obj = new MNPVersionSubPackageInfo();
+                $obj->deserialize($value);
+                array_push($this->SubPackageInfos, $obj);
+            }
         }
     }
 }

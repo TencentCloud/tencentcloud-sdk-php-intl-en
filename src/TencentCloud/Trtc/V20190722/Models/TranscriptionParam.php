@@ -46,8 +46,10 @@ If all anchors being transcribed continuously leave the TRTC room or switch to t
 If all anchors being transcribed continuously leave the TRTC room or switch to the audience role for longer than this value, the transcription task stops automatically.
 - Default: 30
 - Range: 5 - 86400 (24 hours)
- * @method integer getSendCustomMode() Obtain Controls whether the custom data channel is enabled. Accepted values: 0 (disabled) or 1 (enabled). Defaults to 0 if omitted.
- * @method void setSendCustomMode(integer $SendCustomMode) Set Controls whether the custom data channel is enabled. Accepted values: 0 (disabled) or 1 (enabled). Defaults to 0 if omitted.
+ * @method integer getSendCustomMode() Obtain Custom data mode: 0 indicates disabled, 1 indicates enabled.
+Leave blank defaults to 0, meaning custom data is disabled.
+ * @method void setSendCustomMode(integer $SendCustomMode) Set Custom data mode: 0 indicates disabled, 1 indicates enabled.
+Leave blank defaults to 0, meaning custom data is disabled.
  */
 class TranscriptionParam extends AbstractModel
 {
@@ -85,7 +87,8 @@ If all anchors being transcribed continuously leave the TRTC room or switch to t
     public $MaxIdleTime;
 
     /**
-     * @var integer Controls whether the custom data channel is enabled. Accepted values: 0 (disabled) or 1 (enabled). Defaults to 0 if omitted.
+     * @var integer Custom data mode: 0 indicates disabled, 1 indicates enabled.
+Leave blank defaults to 0, meaning custom data is disabled.
      */
     public $SendCustomMode;
 
@@ -103,7 +106,8 @@ Leave empty or omit to disable the blocklist. Provide specific values to exclude
 If all anchors being transcribed continuously leave the TRTC room or switch to the audience role for longer than this value, the transcription task stops automatically.
 - Default: 30
 - Range: 5 - 86400 (24 hours)
-     * @param integer $SendCustomMode Controls whether the custom data channel is enabled. Accepted values: 0 (disabled) or 1 (enabled). Defaults to 0 if omitted.
+     * @param integer $SendCustomMode Custom data mode: 0 indicates disabled, 1 indicates enabled.
+Leave blank defaults to 0, meaning custom data is disabled.
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
- * @method string getUserName() Obtain Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
- * @method void setUserName(string $UserName) Set Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+ * @method string getUserName() Obtain Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
+ * @method void setUserName(string $UserName) Set Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
  */
 class DeleteAccountRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteAccountRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var string Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+     * @var string Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
      */
     public $UserName;
 
     /**
      * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
-     * @param string $UserName Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+     * @param string $UserName Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
      */
     function __construct()
     {

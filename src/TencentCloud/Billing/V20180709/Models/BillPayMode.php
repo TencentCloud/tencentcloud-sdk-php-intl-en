@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPayMode() Obtain Billing mode code
  * @method void setPayMode(string $PayMode) Set Billing mode code
- * @method string getPayModeName() Obtain Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
- * @method void setPayModeName(string $PayModeName) Set Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+ * @method string getPayModeName() Obtain Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
+ * @method void setPayModeName(string $PayModeName) Set Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
  */
 class BillPayMode extends AbstractModel
 {
@@ -33,13 +33,13 @@ class BillPayMode extends AbstractModel
     public $PayMode;
 
     /**
-     * @var string Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+     * @var string Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      */
     public $PayModeName;
 
     /**
      * @param string $PayMode Billing mode code
-     * @param string $PayModeName Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+     * @param string $PayModeName Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      */
     function __construct()
     {

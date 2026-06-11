@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name: Various cloud products purchased by users
  * @method string getPayMode() Obtain Billing mode code
  * @method void setPayMode(string $PayMode) Set Billing mode code
- * @method string getPayModeName() Obtain Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
- * @method void setPayModeName(string $PayModeName) Set Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+ * @method string getPayModeName() Obtain Billing mode: Resource billing mode, which can be yearly/monthly subscriptionor pay-as-you-go.
+ * @method void setPayModeName(string $PayModeName) Set Billing mode: Resource billing mode, which can be yearly/monthly subscriptionor pay-as-you-go.
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method string getProjectName() Obtain Project name: The Project to which a resource belongs, which is independently allocated by the user for the resource in the console. If a resource has not been allocated to an Project, it will be a default Project.
@@ -239,7 +239,7 @@ class AllocationDetail extends AbstractModel
     public $PayMode;
 
     /**
-     * @var string Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+     * @var string Billing mode: Resource billing mode, which can be yearly/monthly subscriptionor pay-as-you-go.
      */
     public $PayModeName;
 
@@ -598,7 +598,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $BusinessCode Product code
      * @param string $BusinessCodeName Product name: Various cloud products purchased by users
      * @param string $PayMode Billing mode code
-     * @param string $PayModeName Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+     * @param string $PayModeName Billing mode: Resource billing mode, which can be yearly/monthly subscriptionor pay-as-you-go.
      * @param integer $ProjectId Project ID
      * @param string $ProjectName Project name: The Project to which a resource belongs, which is independently allocated by the user for the resource in the console. If a resource has not been allocated to an Project, it will be a default Project.
      * @param integer $RegionId Region ID

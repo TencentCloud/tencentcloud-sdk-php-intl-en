@@ -108,6 +108,18 @@ Supported languages for speech-to-text:
 
  * @method integer getVadLevel() Obtain vad far-field voice suppression capacity (does not impact asr recognition accuracy), range [0, 3], default is 0. Recommended setting is 2 for better far-field voice suppression.
  * @method void setVadLevel(integer $VadLevel) Set vad far-field voice suppression capacity (does not impact asr recognition accuracy), range [0, 3], default is 0. Recommended setting is 2 for better far-field voice suppression.
+ * @method integer getFilterDirty() Obtain Whether to filter out dirty words (currently only support basic language engine and standard language engine). Range: [0, 2]. Default value: 0.
+0: Not filtering; 1: Filter out dirty words; 2: Replace dirty words with "*".
+ * @method void setFilterDirty(integer $FilterDirty) Set Whether to filter out dirty words (currently only support basic language engine and standard language engine). Range: [0, 2]. Default value: 0.
+0: Not filtering; 1: Filter out dirty words; 2: Replace dirty words with "*".
+ * @method integer getFilterModal() Obtain Whether to filter filler words (currently only support basic language engine and standard language engine). Range:  [0, 2]. Default value 0.
+0:No filtering; 1: Partial filtering; 2: Strict filtering.
+ * @method void setFilterModal(integer $FilterModal) Set Whether to filter filler words (currently only support basic language engine and standard language engine). Range:  [0, 2]. Default value 0.
+0:No filtering; 1: Partial filtering; 2: Strict filtering.
+ * @method integer getFilterPunc() Obtain Whether to filter periods at the end of sentences (currently only support basic language engine and standard language engine), range [0, 1], default value 0.
+0: Do not filter out periods at the end of sentences; 1: Filter out periods at the end of sentences.
+ * @method void setFilterPunc(integer $FilterPunc) Set Whether to filter periods at the end of sentences (currently only support basic language engine and standard language engine), range [0, 1], default value 0.
+0: Do not filter out periods at the end of sentences; 1: Filter out periods at the end of sentences.
  */
 class AsrParam extends AbstractModel
 {
@@ -176,6 +188,24 @@ Supported languages for speech-to-text:
     public $VadLevel;
 
     /**
+     * @var integer Whether to filter out dirty words (currently only support basic language engine and standard language engine). Range: [0, 2]. Default value: 0.
+0: Not filtering; 1: Filter out dirty words; 2: Replace dirty words with "*".
+     */
+    public $FilterDirty;
+
+    /**
+     * @var integer Whether to filter filler words (currently only support basic language engine and standard language engine). Range:  [0, 2]. Default value 0.
+0:No filtering; 1: Partial filtering; 2: Strict filtering.
+     */
+    public $FilterModal;
+
+    /**
+     * @var integer Whether to filter periods at the end of sentences (currently only support basic language engine and standard language engine), range [0, 1], default value 0.
+0: Do not filter out periods at the end of sentences; 1: Filter out periods at the end of sentences.
+     */
+    public $FilterPunc;
+
+    /**
      * @param string $Lang The model type used for the transcription service. Example: <code>"zh"</code>.
 
 Supported languages for speech-to-text:
@@ -220,6 +250,12 @@ Supported languages for speech-to-text:
      * @param array $AlternativeLanguage Fuzzy language detection is an advanced function, which is billed at the Advanced tier rate by default. Only Advanced tier languages are supported, excluding zh-dialect and zh-yue. Note: A maximum of 4 languages can be specified.
 
      * @param integer $VadLevel vad far-field voice suppression capacity (does not impact asr recognition accuracy), range [0, 3], default is 0. Recommended setting is 2 for better far-field voice suppression.
+     * @param integer $FilterDirty Whether to filter out dirty words (currently only support basic language engine and standard language engine). Range: [0, 2]. Default value: 0.
+0: Not filtering; 1: Filter out dirty words; 2: Replace dirty words with "*".
+     * @param integer $FilterModal Whether to filter filler words (currently only support basic language engine and standard language engine). Range:  [0, 2]. Default value 0.
+0:No filtering; 1: Partial filtering; 2: Strict filtering.
+     * @param integer $FilterPunc Whether to filter periods at the end of sentences (currently only support basic language engine and standard language engine), range [0, 1], default value 0.
+0: Do not filter out periods at the end of sentences; 1: Filter out periods at the end of sentences.
      */
     function __construct()
     {
@@ -252,6 +288,18 @@ Supported languages for speech-to-text:
 
         if (array_key_exists("VadLevel",$param) and $param["VadLevel"] !== null) {
             $this->VadLevel = $param["VadLevel"];
+        }
+
+        if (array_key_exists("FilterDirty",$param) and $param["FilterDirty"] !== null) {
+            $this->FilterDirty = $param["FilterDirty"];
+        }
+
+        if (array_key_exists("FilterModal",$param) and $param["FilterModal"] !== null) {
+            $this->FilterModal = $param["FilterModal"];
+        }
+
+        if (array_key_exists("FilterPunc",$param) and $param["FilterPunc"] !== null) {
+            $this->FilterPunc = $param["FilterPunc"];
         }
     }
 }

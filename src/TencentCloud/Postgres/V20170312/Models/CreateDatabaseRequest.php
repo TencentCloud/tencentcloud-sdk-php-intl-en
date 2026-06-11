@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 Name specification: consists of letters (a-z, a-z), digits (0-9), and underscores (_), starting with a letter or underscore (_), up to 63 characters. system reserved keywords cannot be used, and 'postgres' is not allowed.
  * @method void setDatabaseName(string $DatabaseName) Set Specifies the user-created database name.
 Name specification: consists of letters (a-z, a-z), digits (0-9), and underscores (_), starting with a letter or underscore (_), up to 63 characters. system reserved keywords cannot be used, and 'postgres' is not allowed.
- * @method string getDatabaseOwner() Obtain Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
- * @method void setDatabaseOwner(string $DatabaseOwner) Set Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+ * @method string getDatabaseOwner() Obtain Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
+ * @method void setDatabaseOwner(string $DatabaseOwner) Set Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
  * @method string getEncoding() Obtain Specifies the character encoding of the database.
 Supported character sets include UTF8, LATIN1, LATIN2, WIN1250, WIN1251, WIN1252, KOI8R, EUC_JP, and EUC_KR.
 Default value: UTF8.
@@ -53,7 +53,7 @@ Name specification: consists of letters (a-z, a-z), digits (0-9), and underscore
     public $DatabaseName;
 
     /**
-     * @var string Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+     * @var string Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
      */
     public $DatabaseOwner;
 
@@ -78,7 +78,7 @@ Default value: UTF8.
      * @param string $DBInstanceId Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      * @param string $DatabaseName Specifies the user-created database name.
 Name specification: consists of letters (a-z, a-z), digits (0-9), and underscores (_), starting with a letter or underscore (_), up to 63 characters. system reserved keywords cannot be used, and 'postgres' is not allowed.
-     * @param string $DatabaseOwner Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+     * @param string $DatabaseOwner Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
      * @param string $Encoding Specifies the character encoding of the database.
 Supported character sets include UTF8, LATIN1, LATIN2, WIN1250, WIN1251, WIN1252, KOI8R, EUC_JP, and EUC_KR.
 Default value: UTF8.

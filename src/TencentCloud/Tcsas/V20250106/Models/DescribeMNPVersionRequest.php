@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusinessId(string $BusinessId) Set <p>Task ID returned by the CreateMNPVersion API.</p>
  * @method string getPlatformId() Obtain <p>Platform ID.</p>
  * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
+ * @method string getPipelineId() Obtain <p>CI/CD key ID.</p>
+ * @method void setPipelineId(string $PipelineId) Set <p>CI/CD key ID.</p>
  */
 class DescribeMNPVersionRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeMNPVersionRequest extends AbstractModel
     public $PlatformId;
 
     /**
+     * @var string <p>CI/CD key ID.</p>
+     */
+    public $PipelineId;
+
+    /**
      * @param string $BusinessId <p>Task ID returned by the CreateMNPVersion API.</p>
      * @param string $PlatformId <p>Platform ID.</p>
+     * @param string $PipelineId <p>CI/CD key ID.</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeMNPVersionRequest extends AbstractModel
 
         if (array_key_exists("PlatformId",$param) and $param["PlatformId"] !== null) {
             $this->PlatformId = $param["PlatformId"];
+        }
+
+        if (array_key_exists("PipelineId",$param) and $param["PipelineId"] !== null) {
+            $this->PipelineId = $param["PipelineId"];
         }
     }
 }

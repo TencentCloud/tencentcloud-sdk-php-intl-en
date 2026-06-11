@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
  * @method string getMNPVersionIntro() Obtain <p>Version description.</p>
  * @method void setMNPVersionIntro(string $MNPVersionIntro) Set <p>Version description.</p>
+ * @method integer getVersionType() Obtain <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+ * @method void setVersionType(integer $VersionType) Set <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+ * @method string getCompileCondition() Obtain <p>Compilation condition.</p>
+ * @method void setCompileCondition(string $CompileCondition) Set <p>Compilation condition.</p>
+ * @method string getCompileConfig() Obtain <p>Compilation configuration.</p>
+ * @method void setCompileConfig(string $CompileConfig) Set <p>Compilation configuration.</p>
+ * @method string getPipelineId() Obtain <p>CI/CD key ID.</p>
+ * @method void setPipelineId(string $PipelineId) Set <p>CI/CD key ID.</p>
+ * @method string getFileInnerUrl() Obtain <p>Internal file URL.</p>
+ * @method void setFileInnerUrl(string $FileInnerUrl) Set <p>Internal file URL.</p>
  */
 class CreateMNPVersionRequest extends AbstractModel
 {
@@ -59,11 +69,41 @@ class CreateMNPVersionRequest extends AbstractModel
     public $MNPVersionIntro;
 
     /**
+     * @var integer <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+     */
+    public $VersionType;
+
+    /**
+     * @var string <p>Compilation condition.</p>
+     */
+    public $CompileCondition;
+
+    /**
+     * @var string <p>Compilation configuration.</p>
+     */
+    public $CompileConfig;
+
+    /**
+     * @var string <p>CI/CD key ID.</p>
+     */
+    public $PipelineId;
+
+    /**
+     * @var string <p>Internal file URL.</p>
+     */
+    public $FileInnerUrl;
+
+    /**
      * @param string $MNPId <p>Mini-program appid.</p>
      * @param string $MNPVersion <p>Version number.</p>
      * @param string $FileUrl <p>URL of the mini program file exported from the IDE and uploaded to the file server.<p>
      * @param string $PlatformId <p>Platform ID.</p>
      * @param string $MNPVersionIntro <p>Version description.</p>
+     * @param integer $VersionType <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+     * @param string $CompileCondition <p>Compilation condition.</p>
+     * @param string $CompileConfig <p>Compilation configuration.</p>
+     * @param string $PipelineId <p>CI/CD key ID.</p>
+     * @param string $FileInnerUrl <p>Internal file URL.</p>
      */
     function __construct()
     {
@@ -96,6 +136,26 @@ class CreateMNPVersionRequest extends AbstractModel
 
         if (array_key_exists("MNPVersionIntro",$param) and $param["MNPVersionIntro"] !== null) {
             $this->MNPVersionIntro = $param["MNPVersionIntro"];
+        }
+
+        if (array_key_exists("VersionType",$param) and $param["VersionType"] !== null) {
+            $this->VersionType = $param["VersionType"];
+        }
+
+        if (array_key_exists("CompileCondition",$param) and $param["CompileCondition"] !== null) {
+            $this->CompileCondition = $param["CompileCondition"];
+        }
+
+        if (array_key_exists("CompileConfig",$param) and $param["CompileConfig"] !== null) {
+            $this->CompileConfig = $param["CompileConfig"];
+        }
+
+        if (array_key_exists("PipelineId",$param) and $param["PipelineId"] !== null) {
+            $this->PipelineId = $param["PipelineId"];
+        }
+
+        if (array_key_exists("FileInnerUrl",$param) and $param["FileInnerUrl"] !== null) {
+            $this->FileInnerUrl = $param["FileInnerUrl"];
         }
     }
 }

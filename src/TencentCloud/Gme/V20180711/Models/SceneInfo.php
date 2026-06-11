@@ -23,34 +23,46 @@ use TencentCloud\Common\AbstractModel;
 `VoiceMessage`: Voice Messaging;
 `GMECloudApi`: GME cloud APIs
  *
- * @method string getSceneId() Obtain 
- * @method void setSceneId(string $SceneId) Set 
- * @method boolean getStatus() Obtain 
- * @method void setStatus(boolean $Status) Set 
- * @method string getCallbackUrl() Obtain 
- * @method void setCallbackUrl(string $CallbackUrl) Set 
+ * @method string getSceneId() Obtain RealTime: Real-time Voice Analysis; 
+VoiceMessage: Voice Message; 
+GMECloudApi: GME Cloud API; 
+ * @method void setSceneId(string $SceneId) Set RealTime: Real-time Voice Analysis; 
+VoiceMessage: Voice Message; 
+GMECloudApi: GME Cloud API; 
+ * @method boolean getStatus() Obtain Switch state, true for on, false for off.
+
+ * @method void setStatus(boolean $Status) Set Switch state, true for on, false for off.
+
+ * @method string getCallbackUrl() Obtain callback URL
+ * @method void setCallbackUrl(string $CallbackUrl) Set callback URL
  */
 class SceneInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string RealTime: Real-time Voice Analysis; 
+VoiceMessage: Voice Message; 
+GMECloudApi: GME Cloud API; 
      */
     public $SceneId;
 
     /**
-     * @var boolean 
+     * @var boolean Switch state, true for on, false for off.
+
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string callback URL
      */
     public $CallbackUrl;
 
     /**
-     * @param string $SceneId 
-     * @param boolean $Status 
-     * @param string $CallbackUrl 
+     * @param string $SceneId RealTime: Real-time Voice Analysis; 
+VoiceMessage: Voice Message; 
+GMECloudApi: GME Cloud API; 
+     * @param boolean $Status Switch state, true for on, false for off.
+
+     * @param string $CallbackUrl callback URL
      */
     function __construct()
     {

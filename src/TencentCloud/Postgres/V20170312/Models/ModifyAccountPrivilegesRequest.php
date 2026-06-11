@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() Obtain Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
- * @method string getUserName() Obtain Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1) api.
- * @method void setUserName(string $UserName) Set Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1) api.
+ * @method string getUserName() Obtain Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109) api.
+ * @method void setUserName(string $UserName) Set Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109) api.
  * @method array getModifyPrivilegeSet() Obtain Permission information to modify. supports batch modification. the maximum number of modifications per batch is 50.
  * @method void setModifyPrivilegeSet(array $ModifyPrivilegeSet) Set Permission information to modify. supports batch modification. the maximum number of modifications per batch is 50.
  */
@@ -35,7 +35,7 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var string Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1) api.
+     * @var string Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109) api.
      */
     public $UserName;
 
@@ -46,7 +46,7 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
 
     /**
      * @param string $DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
-     * @param string $UserName Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1) api.
+     * @param string $UserName Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109) api.
      * @param array $ModifyPrivilegeSet Permission information to modify. supports batch modification. the maximum number of modifications per batch is 50.
      */
     function __construct()

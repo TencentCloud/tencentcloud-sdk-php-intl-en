@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBizId(integer $BizId) Set Application ID
  * @method array getUids() Obtain List of the members to remove
  * @method void setUids(array $Uids) Set List of the members to remove
+ * @method array getStrUids() Obtain List of users to exclude (string type)
+ * @method void setStrUids(array $StrUids) Set List of users to exclude (string type)
  */
 class DeleteRoomMemberRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DeleteRoomMemberRequest extends AbstractModel
     public $Uids;
 
     /**
+     * @var array List of users to exclude (string type)
+     */
+    public $StrUids;
+
+    /**
      * @param string $RoomId ID of the target room
      * @param integer $DeleteType Operation type. `1`: Delete a room; `2`: Remove members
      * @param integer $BizId Application ID
      * @param array $Uids List of the members to remove
+     * @param array $StrUids List of users to exclude (string type)
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DeleteRoomMemberRequest extends AbstractModel
 
         if (array_key_exists("Uids",$param) and $param["Uids"] !== null) {
             $this->Uids = $param["Uids"];
+        }
+
+        if (array_key_exists("StrUids",$param) and $param["StrUids"] !== null) {
+            $this->StrUids = $param["StrUids"];
         }
     }
 }

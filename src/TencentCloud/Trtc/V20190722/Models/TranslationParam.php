@@ -20,90 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Translation parameters
  *
- * @method array getTargetLang() Obtain Target language for translation. Example: ["en", "ja"].
-
-Supported target languages:
-
-- <code>"zh"</code>: Chinese
-- <code>"en"</code>: English
-- <code>"vi"</code>: Vietnamese
-- <code>"ja"</code>: Japanese
-- <code>"ko"</code>: Korean
-- <code>"id"</code>: Indonesian
-- <code>"th"</code>: Thai
-- <code>"pt"</code>: Portuguese
-- <code>"ar"</code>: Arabic
-- <code>"es"</code>: Spanish
-- <code>"fr"</code>: French
-- <code>"ms"</code>: Malay
-- <code>"de"</code>: German
-- <code>"it"</code>: Italian
-- <code>"ru"</code>: Russian
- * @method void setTargetLang(array $TargetLang) Set Target language for translation. Example: ["en", "ja"].
-
-Supported target languages:
-
-- <code>"zh"</code>: Chinese
-- <code>"en"</code>: English
-- <code>"vi"</code>: Vietnamese
-- <code>"ja"</code>: Japanese
-- <code>"ko"</code>: Korean
-- <code>"id"</code>: Indonesian
-- <code>"th"</code>: Thai
-- <code>"pt"</code>: Portuguese
-- <code>"ar"</code>: Arabic
-- <code>"es"</code>: Spanish
-- <code>"fr"</code>: French
-- <code>"ms"</code>: Malay
-- <code>"de"</code>: German
-- <code>"it"</code>: Italian
-- <code>"ru"</code>: Russian
+ * @method array getTargetLang() Obtain <p>Target language for translation, example value ["en", "ja"]. Target language list [Chinese "zh", English "en", Vietnamese "vi", Japanese "ja", Korean "ko", Indonesian "id", Thai "th", Portuguese "pt", Arabic "ar", Spanish "es", French "fr", Malay "ms", German "de", Italian "it", Russian "ru"].</p>
+ * @method void setTargetLang(array $TargetLang) Set <p>Target language for translation, example value ["en", "ja"]. Target language list [Chinese "zh", English "en", Vietnamese "vi", Japanese "ja", Korean "ko", Indonesian "id", Thai "th", Portuguese "pt", Arabic "ar", Spanish "es", French "fr", Malay "ms", German "de", Italian "it", Russian "ru"].</p>
+ * @method array getTerminologies() Obtain <p>Glossary configuration.</p>
+ * @method void setTerminologies(array $Terminologies) Set <p>Glossary configuration.</p>
  */
 class TranslationParam extends AbstractModel
 {
     /**
-     * @var array Target language for translation. Example: ["en", "ja"].
-
-Supported target languages:
-
-- <code>"zh"</code>: Chinese
-- <code>"en"</code>: English
-- <code>"vi"</code>: Vietnamese
-- <code>"ja"</code>: Japanese
-- <code>"ko"</code>: Korean
-- <code>"id"</code>: Indonesian
-- <code>"th"</code>: Thai
-- <code>"pt"</code>: Portuguese
-- <code>"ar"</code>: Arabic
-- <code>"es"</code>: Spanish
-- <code>"fr"</code>: French
-- <code>"ms"</code>: Malay
-- <code>"de"</code>: German
-- <code>"it"</code>: Italian
-- <code>"ru"</code>: Russian
+     * @var array <p>Target language for translation, example value ["en", "ja"]. Target language list [Chinese "zh", English "en", Vietnamese "vi", Japanese "ja", Korean "ko", Indonesian "id", Thai "th", Portuguese "pt", Arabic "ar", Spanish "es", French "fr", Malay "ms", German "de", Italian "it", Russian "ru"].</p>
      */
     public $TargetLang;
 
     /**
-     * @param array $TargetLang Target language for translation. Example: ["en", "ja"].
+     * @var array <p>Glossary configuration.</p>
+     */
+    public $Terminologies;
 
-Supported target languages:
-
-- <code>"zh"</code>: Chinese
-- <code>"en"</code>: English
-- <code>"vi"</code>: Vietnamese
-- <code>"ja"</code>: Japanese
-- <code>"ko"</code>: Korean
-- <code>"id"</code>: Indonesian
-- <code>"th"</code>: Thai
-- <code>"pt"</code>: Portuguese
-- <code>"ar"</code>: Arabic
-- <code>"es"</code>: Spanish
-- <code>"fr"</code>: French
-- <code>"ms"</code>: Malay
-- <code>"de"</code>: German
-- <code>"it"</code>: Italian
-- <code>"ru"</code>: Russian
+    /**
+     * @param array $TargetLang <p>Target language for translation, example value ["en", "ja"]. Target language list [Chinese "zh", English "en", Vietnamese "vi", Japanese "ja", Korean "ko", Indonesian "id", Thai "th", Portuguese "pt", Arabic "ar", Spanish "es", French "fr", Malay "ms", German "de", Italian "it", Russian "ru"].</p>
+     * @param array $Terminologies <p>Glossary configuration.</p>
      */
     function __construct()
     {
@@ -120,6 +56,15 @@ Supported target languages:
         }
         if (array_key_exists("TargetLang",$param) and $param["TargetLang"] !== null) {
             $this->TargetLang = $param["TargetLang"];
+        }
+
+        if (array_key_exists("Terminologies",$param) and $param["Terminologies"] !== null) {
+            $this->Terminologies = [];
+            foreach ($param["Terminologies"] as $key => $value){
+                $obj = new TerminologyItem();
+                $obj->deserialize($value);
+                array_push($this->Terminologies, $obj);
+            }
         }
     }
 }

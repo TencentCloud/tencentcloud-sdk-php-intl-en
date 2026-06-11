@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyImageAttribute request structure.
  *
- * @method string getImageId() Obtain Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
- * @method void setImageId(string $ImageId) Set Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
+ * @method string getImageId() Obtain Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://www.tencentcloud.com/document/api/213/33272) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
+ * @method void setImageId(string $ImageId) Set Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://www.tencentcloud.com/document/api/213/33272) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
  * @method string getImageName() Obtain New image name, which should meet the following requirements:<li>It should not exceed 60 characters.</li><li>It should be unique.</li>
  * @method void setImageName(string $ImageName) Set New image name, which should meet the following requirements:<li>It should not exceed 60 characters.</li><li>It should be unique.</li>
  * @method string getImageDescription() Obtain New image description, which should meet the following requirement:<li>It should not exceed 256 characters.</li>
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyImageAttributeRequest extends AbstractModel
 {
     /**
-     * @var string Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
+     * @var string Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://www.tencentcloud.com/document/api/213/33272) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
      */
     public $ImageId;
 
@@ -59,7 +59,7 @@ class ModifyImageAttributeRequest extends AbstractModel
     public $ImageDeprecated;
 
     /**
-     * @param string $ImageId Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
+     * @param string $ImageId Image ID, such as `img-gvbnzy6f`. You can obtain the image ID in the following ways:<li>Call the [DescribeImages](https://www.tencentcloud.com/document/api/213/33272) API and find the value of `ImageId` in the response.</li><li>Obtain it in the [Image console](https://console.cloud.tencent.com/cvm/image).</li>
      * @param string $ImageName New image name, which should meet the following requirements:<li>It should not exceed 60 characters.</li><li>It should be unique.</li>
      * @param string $ImageDescription New image description, which should meet the following requirement:<li>It should not exceed 256 characters.</li>
      * @param string $ImageFamily Sets the image family;

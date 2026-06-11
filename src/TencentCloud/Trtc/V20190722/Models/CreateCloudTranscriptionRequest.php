@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloudTranscription request structure.
  *
- * @method integer getSdkAppId() Obtain [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room.
- * @method void setSdkAppId(integer $SdkAppId) Set [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room.
- * @method string getRoomId() Obtain [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType.
- * @method void setRoomId(string $RoomId) Set [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType.
- * @method integer getRoomIdType() Obtain Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number.
- * @method void setRoomIdType(integer $RoomIdType) Set Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number.
- * @method TranscriptionParam getTranscriptionParam() Obtain Parameters for transcribe service to join TRTC room.
- * @method void setTranscriptionParam(TranscriptionParam $TranscriptionParam) Set Parameters for transcribe service to join TRTC room.
- * @method AsrParam getAsrParam() Obtain Parameters used by the ASR transcribe service.
- * @method void setAsrParam(AsrParam $AsrParam) Set Parameters used by the ASR transcribe service.
- * @method TranslationParam getTranslationParam() Obtain Translation parameters used for transcription.
- * @method void setTranslationParam(TranslationParam $TranslationParam) Set Translation parameters used for transcription.
+ * @method integer getSdkAppId() Obtain <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid">SdkAppId</a> of TRTC is the same as the SdkAppId corresponding to the transcribe room.</p>
+ * @method void setSdkAppId(integer $SdkAppId) Set <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid">SdkAppId</a> of TRTC is the same as the SdkAppId corresponding to the transcribe room.</p>
+ * @method string getRoomId() Obtain <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid">RoomId</a> of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it through RoomIdType.</p>
+ * @method void setRoomId(string $RoomId) Set <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid">RoomId</a> of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it through RoomIdType.</p>
+ * @method integer getRoomIdType() Obtain <p>The room information RoomType must be identical to the data type of the RoomId corresponding to the transcribed room. 0 indicates an integer room number, and 1 indicates a string Room Number.</p>
+ * @method void setRoomIdType(integer $RoomIdType) Set <p>The room information RoomType must be identical to the data type of the RoomId corresponding to the transcribed room. 0 indicates an integer room number, and 1 indicates a string Room Number.</p>
+ * @method TranscriptionParam getTranscriptionParam() Obtain <p>Parameters for the transcribe service to join TRTC room.</p>
+ * @method void setTranscriptionParam(TranscriptionParam $TranscriptionParam) Set <p>Parameters for the transcribe service to join TRTC room.</p>
+ * @method AsrParam getAsrParam() Obtain <p>Parameters used by the ASR transcribe service.</p>
+ * @method void setAsrParam(AsrParam $AsrParam) Set <p>Parameters used by the ASR transcribe service.</p>
+ * @method TranslationParam getTranslationParam() Obtain <p>Parameters used to transcribe the translation service.</p>
+ * @method void setTranslationParam(TranslationParam $TranslationParam) Set <p>Parameters used to transcribe the translation service.</p>
+ * @method array getTTSParam() Obtain <p>Parameters used by the TTS transcribe service.</p>
+ * @method void setTTSParam(array $TTSParam) Set <p>Parameters used by the TTS transcribe service.</p>
  */
 class CreateCloudTranscriptionRequest extends AbstractModel
 {
     /**
-     * @var integer [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room.
+     * @var integer <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid">SdkAppId</a> of TRTC is the same as the SdkAppId corresponding to the transcribe room.</p>
      */
     public $SdkAppId;
 
     /**
-     * @var string [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType.
+     * @var string <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid">RoomId</a> of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it through RoomIdType.</p>
      */
     public $RoomId;
 
     /**
-     * @var integer Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number.
+     * @var integer <p>The room information RoomType must be identical to the data type of the RoomId corresponding to the transcribed room. 0 indicates an integer room number, and 1 indicates a string Room Number.</p>
      */
     public $RoomIdType;
 
     /**
-     * @var TranscriptionParam Parameters for transcribe service to join TRTC room.
+     * @var TranscriptionParam <p>Parameters for the transcribe service to join TRTC room.</p>
      */
     public $TranscriptionParam;
 
     /**
-     * @var AsrParam Parameters used by the ASR transcribe service.
+     * @var AsrParam <p>Parameters used by the ASR transcribe service.</p>
      */
     public $AsrParam;
 
     /**
-     * @var TranslationParam Translation parameters used for transcription.
+     * @var TranslationParam <p>Parameters used to transcribe the translation service.</p>
      */
     public $TranslationParam;
 
     /**
-     * @param integer $SdkAppId [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room.
-     * @param string $RoomId [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType.
-     * @param integer $RoomIdType Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number.
-     * @param TranscriptionParam $TranscriptionParam Parameters for transcribe service to join TRTC room.
-     * @param AsrParam $AsrParam Parameters used by the ASR transcribe service.
-     * @param TranslationParam $TranslationParam Translation parameters used for transcription.
+     * @var array <p>Parameters used by the TTS transcribe service.</p>
+     */
+    public $TTSParam;
+
+    /**
+     * @param integer $SdkAppId <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid">SdkAppId</a> of TRTC is the same as the SdkAppId corresponding to the transcribe room.</p>
+     * @param string $RoomId <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid">RoomId</a> of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it through RoomIdType.</p>
+     * @param integer $RoomIdType <p>The room information RoomType must be identical to the data type of the RoomId corresponding to the transcribed room. 0 indicates an integer room number, and 1 indicates a string Room Number.</p>
+     * @param TranscriptionParam $TranscriptionParam <p>Parameters for the transcribe service to join TRTC room.</p>
+     * @param AsrParam $AsrParam <p>Parameters used by the ASR transcribe service.</p>
+     * @param TranslationParam $TranslationParam <p>Parameters used to transcribe the translation service.</p>
+     * @param array $TTSParam <p>Parameters used by the TTS transcribe service.</p>
      */
     function __construct()
     {
@@ -111,6 +119,15 @@ class CreateCloudTranscriptionRequest extends AbstractModel
         if (array_key_exists("TranslationParam",$param) and $param["TranslationParam"] !== null) {
             $this->TranslationParam = new TranslationParam();
             $this->TranslationParam->deserialize($param["TranslationParam"]);
+        }
+
+        if (array_key_exists("TTSParam",$param) and $param["TTSParam"] !== null) {
+            $this->TTSParam = [];
+            foreach ($param["TTSParam"] as $key => $value){
+                $obj = new TTSParam();
+                $obj->deserialize($value);
+                array_push($this->TTSParam, $obj);
+            }
         }
     }
 }
