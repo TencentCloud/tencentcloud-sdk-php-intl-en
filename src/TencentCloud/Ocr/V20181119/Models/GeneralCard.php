@@ -69,14 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setLastName(string $LastName) Set Name.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSex() Obtain Gender on the document.
--M: man.
--F: woman.
--X: other gender identity.
+- M: man.
+- F: woman.
+- X: other gender identity.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSex(string $Sex) Set Gender on the document.
--M: man.
--F: woman.
--X: other gender identity.
+- M: man.
+- F: woman.
+- X: other gender identity.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getAge() Obtain Age. 0 means no valid info.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -191,9 +191,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Gender on the document.
--M: man.
--F: woman.
--X: other gender identity.
+- M: man.
+- F: woman.
+- X: other gender identity.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Sex;
@@ -278,9 +278,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $LastName Name.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Sex Gender on the document.
--M: man.
--F: woman.
--X: other gender identity.
+- M: man.
+- F: woman.
+- X: other gender identity.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Age Age. 0 means no valid info.
 Note: This field may return null, indicating that no valid values can be obtained.

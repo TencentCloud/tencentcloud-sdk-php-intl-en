@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRNM(string $RNM) Set RNM
  * @method string getCPF() Obtain CPF
  * @method void setCPF(string $CPF) Set CPF
- * @method string getCLASSIFICATION() Obtain 
- * @method void setCLASSIFICATION(string $CLASSIFICATION) Set 
- * @method string getPRAZODERESIDENCIA() Obtain 
- * @method void setPRAZODERESIDENCIA(string $PRAZODERESIDENCIA) Set 
+ * @method string getCLASSIFICATION() Obtain Residence category
+ * @method void setCLASSIFICATION(string $CLASSIFICATION) Set Residence category
+ * @method string getPRAZODERESIDENCIA() Obtain Residence validity term
+ * @method void setPRAZODERESIDENCIA(string $PRAZODERESIDENCIA) Set Residence validity term
  * @method string getISSUANCE() Obtain Issue Date
  * @method void setISSUANCE(string $ISSUANCE) Set Issue Date
  * @method string getAMPAROLEGAL() Obtain Legal basis
@@ -103,12 +103,12 @@ class RecognizeBrazilRNMOCRResponse extends AbstractModel
     public $CPF;
 
     /**
-     * @var string 
+     * @var string Residence category
      */
     public $CLASSIFICATION;
 
     /**
-     * @var string 
+     * @var string Residence validity term
      */
     public $PRAZODERESIDENCIA;
 
@@ -152,8 +152,8 @@ class RecognizeBrazilRNMOCRResponse extends AbstractModel
      * @param string $VALIDADE Expiry Date
      * @param string $RNM RNM
      * @param string $CPF CPF
-     * @param string $CLASSIFICATION 
-     * @param string $PRAZODERESIDENCIA 
+     * @param string $CLASSIFICATION Residence category
+     * @param string $PRAZODERESIDENCIA Residence validity term
      * @param string $ISSUANCE Issue Date
      * @param string $AMPAROLEGAL Legal basis
      * @param string $MRZ Machine readable zone code
