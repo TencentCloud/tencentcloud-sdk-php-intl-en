@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileSystemId(string $FileSystemId) Set File system unique ID.
  * @method string getType() Obtain Lifecycle task type; archive: settlement; restore: preheating; release: data release; metaload: metadata loading.
  * @method void setType(string $Type) Set Lifecycle task type; archive: settlement; restore: preheating; release: data release; metaload: metadata loading.
- * @method string getTaskPath() Obtain The path or file to be settled supports passing only one path and cannot be empty.
- * @method void setTaskPath(string $TaskPath) Set The path or file to be settled supports passing only one path and cannot be empty.
  * @method string getTaskName() Obtain Task name.
  * @method void setTaskName(string $TaskName) Set Task name.
+ * @method string getTaskPath() Obtain The path or file to be settled supports passing only one path and cannot be empty.
+ * @method void setTaskPath(string $TaskPath) Set The path or file to be settled supports passing only one path and cannot be empty.
  * @method string getDataFlowId() Obtain Data flow ID. this api can be accessed through DescribeDataFlow.
  * @method void setDataFlowId(string $DataFlowId) Set Data flow ID. this api can be accessed through DescribeDataFlow.
  * @method boolean getIsOverwrite() Obtain When a file in CFS Turbo and an external storage have the same name, whether to overwrite. true: overwrite. false: not overwrite (at the same time, data storage will not be released). default false when empty.
@@ -46,14 +46,14 @@ class CreateLifecycleDataTaskRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var string The path or file to be settled supports passing only one path and cannot be empty.
-     */
-    public $TaskPath;
-
-    /**
      * @var string Task name.
      */
     public $TaskName;
+
+    /**
+     * @var string The path or file to be settled supports passing only one path and cannot be empty.
+     */
+    public $TaskPath;
 
     /**
      * @var string Data flow ID. this api can be accessed through DescribeDataFlow.
@@ -68,8 +68,8 @@ class CreateLifecycleDataTaskRequest extends AbstractModel
     /**
      * @param string $FileSystemId File system unique ID.
      * @param string $Type Lifecycle task type; archive: settlement; restore: preheating; release: data release; metaload: metadata loading.
-     * @param string $TaskPath The path or file to be settled supports passing only one path and cannot be empty.
      * @param string $TaskName Task name.
+     * @param string $TaskPath The path or file to be settled supports passing only one path and cannot be empty.
      * @param string $DataFlowId Data flow ID. this api can be accessed through DescribeDataFlow.
      * @param boolean $IsOverwrite When a file in CFS Turbo and an external storage have the same name, whether to overwrite. true: overwrite. false: not overwrite (at the same time, data storage will not be released). default false when empty.
      */
@@ -94,12 +94,12 @@ class CreateLifecycleDataTaskRequest extends AbstractModel
             $this->Type = $param["Type"];
         }
 
-        if (array_key_exists("TaskPath",$param) and $param["TaskPath"] !== null) {
-            $this->TaskPath = $param["TaskPath"];
-        }
-
         if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
             $this->TaskName = $param["TaskName"];
+        }
+
+        if (array_key_exists("TaskPath",$param) and $param["TaskPath"] !== null) {
+            $this->TaskPath = $param["TaskPath"];
         }
 
         if (array_key_exists("DataFlowId",$param) and $param["DataFlowId"] !== null) {

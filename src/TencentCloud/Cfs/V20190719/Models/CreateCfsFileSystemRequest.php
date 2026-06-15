@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMountIP(string $MountIP) Set IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
  * @method string getFsName() Obtain Custom file system name
  * @method void setFsName(string $FsName) Set Custom file system name
+ * @method boolean getEncrypted() Obtain 
+ * @method void setEncrypted(boolean $Encrypted) Set 
  * @method array getResourceTags() Obtain File system tag
  * @method void setResourceTags(array $ResourceTags) Set File system tag
  * @method string getClientToken() Obtain A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
@@ -129,6 +131,11 @@ class CreateCfsFileSystemRequest extends AbstractModel
     public $FsName;
 
     /**
+     * @var boolean 
+     */
+    public $Encrypted;
+
+    /**
      * @var array File system tag
      */
     public $ResourceTags;
@@ -198,6 +205,7 @@ Enhanced: creates enhanced metadata.
 [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1)
      * @param string $MountIP IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
      * @param string $FsName Custom file system name
+     * @param boolean $Encrypted 
      * @param array $ResourceTags File system tag
      * @param string $ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
      * @param string $CcnId Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
@@ -264,6 +272,10 @@ Enhanced: creates enhanced metadata.
 
         if (array_key_exists("FsName",$param) and $param["FsName"] !== null) {
             $this->FsName = $param["FsName"];
+        }
+
+        if (array_key_exists("Encrypted",$param) and $param["Encrypted"] !== null) {
+            $this->Encrypted = $param["Encrypted"];
         }
 
         if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {

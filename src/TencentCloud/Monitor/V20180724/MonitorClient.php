@@ -36,6 +36,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
  * @method Models\CreateGrafanaInstanceResponse CreateGrafanaInstance(Models\CreateGrafanaInstanceRequest $req) This API is used to create a monthly subscribed TCMG instance of the Basic Edition, with auto-renewal enabled and vouchers not allowed by default.
  * @method Models\CreateGrafanaIntegrationResponse CreateGrafanaIntegration(Models\CreateGrafanaIntegrationRequest $req) This API is used to create a Grafana integration configuration.
  * @method Models\CreateGrafanaNotificationChannelResponse CreateGrafanaNotificationChannel(Models\CreateGrafanaNotificationChannelRequest $req) This API is used to create a Grafana notification channel.
+ * @method Models\CreateOnCallFormResponse CreateOnCallForm(Models\CreateOnCallFormRequest $req) Creates an on-call schedule.
  * @method Models\CreatePolicyGroupResponse CreatePolicyGroup(Models\CreatePolicyGroupRequest $req) This API is used to add a policy group.
  * @method Models\CreatePrometheusAgentResponse CreatePrometheusAgent(Models\CreatePrometheusAgentRequest $req) This API is used to create a Prometheus CVM agent.
  * @method Models\CreatePrometheusAlertGroupResponse CreatePrometheusAlertGroup(Models\CreatePrometheusAlertGroupRequest $req) This API is used to create a Prometheus alert rule groups.
@@ -62,6 +63,7 @@ This API is used to enable individually creating enabled/disabled alert rules un
  * @method Models\DeleteGrafanaInstanceResponse DeleteGrafanaInstance(Models\DeleteGrafanaInstanceRequest $req) This API is used to refund a monthly subscribed TCMG instance. Once it is called, the instance cannot be used and will be automatically terminated seven days later.
  * @method Models\DeleteGrafanaIntegrationResponse DeleteGrafanaIntegration(Models\DeleteGrafanaIntegrationRequest $req) This API is used to delete a Grafana integration configuration.
  * @method Models\DeleteGrafanaNotificationChannelResponse DeleteGrafanaNotificationChannel(Models\DeleteGrafanaNotificationChannelRequest $req) This API is used to delete a Grafana notification channel.
+ * @method Models\DeleteOnCallFormsResponse DeleteOnCallForms(Models\DeleteOnCallFormsRequest $req) Deletes an on-call schedule.
  * @method Models\DeletePolicyGroupResponse DeletePolicyGroup(Models\DeletePolicyGroupRequest $req) This API is used to delete an alarm policy group.
  * @method Models\DeletePrometheusAlertGroupsResponse DeletePrometheusAlertGroups(Models\DeletePrometheusAlertGroupsRequest $req) This API is used to delete Prometheus alert rule groups.
  * @method Models\DeletePrometheusAlertPolicyResponse DeletePrometheusAlertPolicy(Models\DeletePrometheusAlertPolicyRequest $req) This API is used to delete a TMP 2.0 instance alerting rule.
@@ -102,6 +104,8 @@ Note: **If you use a sub-account, you can only query the alarm records of author
  * @method Models\DescribeGrafanaWhiteListResponse DescribeGrafanaWhiteList(Models\DescribeGrafanaWhiteListRequest $req) This API is used to list the Grafana allowlist.
  * @method Models\DescribeInstalledPluginsResponse DescribeInstalledPlugins(Models\DescribeInstalledPluginsRequest $req) This API is used to list the plugins installed in an instance.
  * @method Models\DescribeMonitorTypesResponse DescribeMonitorTypes(Models\DescribeMonitorTypesRequest $req) This API is used to list all the monitoring types supported by CM.
+ * @method Models\DescribeOnCallFormResponse DescribeOnCallForm(Models\DescribeOnCallFormRequest $req) Describes On-Call Schedule Details.
+ * @method Models\DescribeOnCallFormsResponse DescribeOnCallForms(Models\DescribeOnCallFormsRequest $req) Describes on-call schedule list.
  * @method Models\DescribePolicyConditionListResponse DescribePolicyConditionList(Models\DescribePolicyConditionListRequest $req) This API is used to get basic alarm policy conditions.
  * @method Models\DescribePolicyGroupInfoResponse DescribePolicyGroupInfo(Models\DescribePolicyGroupInfoRequest $req) This API is used to get details of a basic policy group.
  * @method Models\DescribePolicyGroupListResponse DescribePolicyGroupList(Models\DescribePolicyGroupListRequest $req) This API is used to get the list of basic policy alarm groups.
@@ -186,6 +190,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
  * @method Models\UpdateGrafanaIntegrationResponse UpdateGrafanaIntegration(Models\UpdateGrafanaIntegrationRequest $req) This API is used to update the Grafana integration configuration.
  * @method Models\UpdateGrafanaNotificationChannelResponse UpdateGrafanaNotificationChannel(Models\UpdateGrafanaNotificationChannelRequest $req) This API is used to update the Grafana notification channel.
  * @method Models\UpdateGrafanaWhiteListResponse UpdateGrafanaWhiteList(Models\UpdateGrafanaWhiteListRequest $req) This API is used to update the Grafana allowlist.
+ * @method Models\UpdateOnCallFormResponse UpdateOnCallForm(Models\UpdateOnCallFormRequest $req) Modifies an on-call schedule.
  * @method Models\UpdatePrometheusAgentStatusResponse UpdatePrometheusAgentStatus(Models\UpdatePrometheusAgentStatusRequest $req) This API is used to update the status of a Prometheus CVM agent.
  * @method Models\UpdatePrometheusAlertGroupResponse UpdatePrometheusAlertGroup(Models\UpdatePrometheusAlertGroupRequest $req) This API is used to update Prometheus alert rule groups.
  * @method Models\UpdatePrometheusAlertGroupStateResponse UpdatePrometheusAlertGroupState(Models\UpdatePrometheusAlertGroupStateRequest $req) This API is used to batch update the status of alarm groups and set all rules grouped in them to the target status.
