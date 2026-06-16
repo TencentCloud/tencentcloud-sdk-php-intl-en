@@ -18,83 +18,59 @@ namespace TencentCloud\Bi\V20220105\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Customized query
+ * resource
  *
- * @method string getModuleId() Obtain Configuration name.
+ * @method string getResourceName() Obtain Resource name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setModuleId(string $ModuleId) Set Configuration name.
+ * @method void setResourceName(string $ResourceName) Set Resource name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIncludeType() Obtain Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+ * @method boolean getResourceValue() Obtain resource value
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIncludeType(string $IncludeType) Set Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+ * @method void setResourceValue(boolean $ResourceValue) Set resource value
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getParams() Obtain Additional parameters.
+ * @method boolean getCanChange() Obtain Changeable
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setParams(string $Params) Set Additional parameters.
+ * @method void setCanChange(boolean $CanChange) Set Changeable
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTips() Obtain Prompt message
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTips(string $Tips) Set Prompt message
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class ProjectConfigResult extends AbstractModel
+class ResourceItem extends AbstractModel
 {
     /**
-     * @var string Configuration name.
+     * @var string Resource name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $ModuleId;
+    public $ResourceName;
 
     /**
-     * @var string Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @var boolean resource value
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $IncludeType;
+    public $ResourceValue;
 
     /**
-     * @var string Additional parameters.
+     * @var boolean Changeable
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $Params;
+    public $CanChange;
 
     /**
-     * @param string $ModuleId Configuration name.
+     * @var string Prompt message
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IncludeType Configuration mode.
-Valid values:.
+     */
+    public $Tips;
 
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+    /**
+     * @param string $ResourceName Resource name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Params Additional parameters.
+     * @param boolean $ResourceValue resource value
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $CanChange Changeable
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Tips Prompt message
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -110,16 +86,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
-            $this->ModuleId = $param["ModuleId"];
+        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
+            $this->ResourceName = $param["ResourceName"];
         }
 
-        if (array_key_exists("IncludeType",$param) and $param["IncludeType"] !== null) {
-            $this->IncludeType = $param["IncludeType"];
+        if (array_key_exists("ResourceValue",$param) and $param["ResourceValue"] !== null) {
+            $this->ResourceValue = $param["ResourceValue"];
         }
 
-        if (array_key_exists("Params",$param) and $param["Params"] !== null) {
-            $this->Params = $param["Params"];
+        if (array_key_exists("CanChange",$param) and $param["CanChange"] !== null) {
+            $this->CanChange = $param["CanChange"];
+        }
+
+        if (array_key_exists("Tips",$param) and $param["Tips"] !== null) {
+            $this->Tips = $param["Tips"];
         }
     }
 }

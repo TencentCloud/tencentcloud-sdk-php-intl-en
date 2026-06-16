@@ -18,83 +18,59 @@ namespace TencentCloud\Bi\V20220105\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Customized query
+ * User resource input parameter
  *
- * @method string getModuleId() Obtain Configuration name.
+ * @method string getCorpId() Obtain Enterprise ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setModuleId(string $ModuleId) Set Configuration name.
+ * @method void setCorpId(string $CorpId) Set Enterprise ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIncludeType() Obtain Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+ * @method string getUserId() Obtain User ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIncludeType(string $IncludeType) Set Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+ * @method void setUserId(string $UserId) Set User ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getParams() Obtain Additional parameters.
+ * @method string getUserName() Obtain Username.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setParams(string $Params) Set Additional parameters.
+ * @method void setUserName(string $UserName) Set Username.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getResourceList() Obtain Resource list
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResourceList(array $ResourceList) Set Resource list
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class ProjectConfigResult extends AbstractModel
+class UserResourceDTO extends AbstractModel
 {
     /**
-     * @var string Configuration name.
+     * @var string Enterprise ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $ModuleId;
+    public $CorpId;
 
     /**
-     * @var string Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @var string User ID
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $IncludeType;
+    public $UserId;
 
     /**
-     * @var string Additional parameters.
+     * @var string Username.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $Params;
+    public $UserName;
 
     /**
-     * @param string $ModuleId Configuration name.
+     * @var array Resource list
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IncludeType Configuration mode.
-Valid values:.
+     */
+    public $ResourceList;
 
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+    /**
+     * @param string $CorpId Enterprise ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Params Additional parameters.
+     * @param string $UserId User ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UserName Username.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ResourceList Resource list
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -110,16 +86,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
-            $this->ModuleId = $param["ModuleId"];
+        if (array_key_exists("CorpId",$param) and $param["CorpId"] !== null) {
+            $this->CorpId = $param["CorpId"];
         }
 
-        if (array_key_exists("IncludeType",$param) and $param["IncludeType"] !== null) {
-            $this->IncludeType = $param["IncludeType"];
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
 
-        if (array_key_exists("Params",$param) and $param["Params"] !== null) {
-            $this->Params = $param["Params"];
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("ResourceList",$param) and $param["ResourceList"] !== null) {
+            $this->ResourceList = [];
+            foreach ($param["ResourceList"] as $key => $value){
+                $obj = new ResourceItem();
+                $obj->deserialize($value);
+                array_push($this->ResourceList, $obj);
+            }
         }
     }
 }

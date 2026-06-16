@@ -39,8 +39,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method integer getStatus() Obtain User status.
 Valid values:.
 
--Enable.
--0: disabled.
+- 1: Enable.
+- 0: disabled.
 
 The default value is 1.
 Example value: 1.
@@ -48,8 +48,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setStatus(integer $Status) Set User status.
 Valid values:.
 
--Enable.
--0: disabled.
+- 1: Enable.
+- 0: disabled.
 
 The default value is 1.
 Example value: 1.
@@ -159,8 +159,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var integer User status.
 Valid values:.
 
--Enable.
--0: disabled.
+- 1: Enable.
+- 0: disabled.
 
 The default value is 1.
 Example value: 1.
@@ -283,8 +283,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Status User status.
 Valid values:.
 
--Enable.
--0: disabled.
+- 1: Enable.
+- 0: disabled.
 
 The default value is 1.
 Example value: 1.

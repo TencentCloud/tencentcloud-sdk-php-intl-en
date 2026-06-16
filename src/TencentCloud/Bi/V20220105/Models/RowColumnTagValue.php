@@ -18,83 +18,47 @@ namespace TencentCloud\Bi\V20220105\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Customized query
+ * Row/column permission tag input/output parameter
  *
- * @method string getModuleId() Obtain Configuration name.
+ * @method integer getId() Obtain Tag ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setModuleId(string $ModuleId) Set Configuration name.
+ * @method void setId(integer $Id) Set Tag ID.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIncludeType() Obtain Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+ * @method string getName() Obtain Tag name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIncludeType(string $IncludeType) Set Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+ * @method void setName(string $Name) Set Tag name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getParams() Obtain Additional parameters.
+ * @method array getValues() Obtain Tag value list
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setParams(string $Params) Set Additional parameters.
+ * @method void setValues(array $Values) Set Tag value list
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class ProjectConfigResult extends AbstractModel
+class RowColumnTagValue extends AbstractModel
 {
     /**
-     * @var string Configuration name.
+     * @var integer Tag ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $ModuleId;
+    public $Id;
 
     /**
-     * @var string Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @var string Tag name.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $IncludeType;
+    public $Name;
 
     /**
-     * @var string Additional parameters.
+     * @var array Tag value list
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $Params;
+    public $Values;
 
     /**
-     * @param string $ModuleId Configuration name.
+     * @param integer $Id Tag ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IncludeType Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @param string $Name Tag name.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Params Additional parameters.
+     * @param array $Values Tag value list
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -110,16 +74,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
-            $this->ModuleId = $param["ModuleId"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
-        if (array_key_exists("IncludeType",$param) and $param["IncludeType"] !== null) {
-            $this->IncludeType = $param["IncludeType"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("Params",$param) and $param["Params"] !== null) {
-            $this->Params = $param["Params"];
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

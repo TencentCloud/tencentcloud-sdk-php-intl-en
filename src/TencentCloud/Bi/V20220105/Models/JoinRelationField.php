@@ -18,83 +18,47 @@ namespace TencentCloud\Bi\V20220105\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Customized query
+ * Join tables and view association information between original tables
  *
- * @method string getModuleId() Obtain Configuration name.
+ * @method string getFieldJoinId() Obtain Field association id, frontend usage
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setModuleId(string $ModuleId) Set Configuration name.
+ * @method void setFieldJoinId(string $FieldJoinId) Set Field association id, frontend usage
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIncludeType() Obtain Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+ * @method TableField getSourceField() Obtain Original table field
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIncludeType(string $IncludeType) Set Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+ * @method void setSourceField(TableField $SourceField) Set Original table field
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getParams() Obtain Additional parameters.
+ * @method TableField getTargetField() Obtain Target table field
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setParams(string $Params) Set Additional parameters.
+ * @method void setTargetField(TableField $TargetField) Set Target table field
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class ProjectConfigResult extends AbstractModel
+class JoinRelationField extends AbstractModel
 {
     /**
-     * @var string Configuration name.
+     * @var string Field association id, frontend usage
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $ModuleId;
+    public $FieldJoinId;
 
     /**
-     * @var string Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @var TableField Original table field
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $IncludeType;
+    public $SourceField;
 
     /**
-     * @var string Additional parameters.
+     * @var TableField Target table field
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $Params;
+    public $TargetField;
 
     /**
-     * @param string $ModuleId Configuration name.
+     * @param string $FieldJoinId Field association id, frontend usage
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IncludeType Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @param TableField $SourceField Original table field
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Params Additional parameters.
+     * @param TableField $TargetField Target table field
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -110,16 +74,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
-            $this->ModuleId = $param["ModuleId"];
+        if (array_key_exists("FieldJoinId",$param) and $param["FieldJoinId"] !== null) {
+            $this->FieldJoinId = $param["FieldJoinId"];
         }
 
-        if (array_key_exists("IncludeType",$param) and $param["IncludeType"] !== null) {
-            $this->IncludeType = $param["IncludeType"];
+        if (array_key_exists("SourceField",$param) and $param["SourceField"] !== null) {
+            $this->SourceField = new TableField();
+            $this->SourceField->deserialize($param["SourceField"]);
         }
 
-        if (array_key_exists("Params",$param) and $param["Params"] !== null) {
-            $this->Params = $param["Params"];
+        if (array_key_exists("TargetField",$param) and $param["TargetField"] !== null) {
+            $this->TargetField = new TableField();
+            $this->TargetField->deserialize($param["TargetField"]);
         }
     }
 }

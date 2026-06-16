@@ -18,83 +18,47 @@ namespace TencentCloud\Bi\V20220105\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Customized query
+ * Data list of all column names in the table
  *
- * @method string getModuleId() Obtain Configuration name.
+ * @method array getList() Obtain Column list in the table
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setModuleId(string $ModuleId) Set Configuration name.
+ * @method void setList(array $List) Set Column list in the table
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIncludeType() Obtain Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+ * @method string getTranId() Obtain async transaction id
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIncludeType(string $IncludeType) Set Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+ * @method void setTranId(string $TranId) Set async transaction id
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getParams() Obtain Additional parameters.
+ * @method integer getTranStatus() Obtain Async transaction status
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setParams(string $Params) Set Additional parameters.
+ * @method void setTranStatus(integer $TranStatus) Set Async transaction status
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class ProjectConfigResult extends AbstractModel
+class TableColumnListData extends AbstractModel
 {
     /**
-     * @var string Configuration name.
+     * @var array Column list in the table
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $ModuleId;
+    public $List;
 
     /**
-     * @var string Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @var string async transaction id
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $IncludeType;
+    public $TranId;
 
     /**
-     * @var string Additional parameters.
+     * @var integer Async transaction status
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $Params;
+    public $TranStatus;
 
     /**
-     * @param string $ModuleId Configuration name.
+     * @param array $List Column list in the table
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IncludeType Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @param string $TranId async transaction id
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Params Additional parameters.
+     * @param integer $TranStatus Async transaction status
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -110,16 +74,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
-            $this->ModuleId = $param["ModuleId"];
+        if (array_key_exists("List",$param) and $param["List"] !== null) {
+            $this->List = [];
+            foreach ($param["List"] as $key => $value){
+                $obj = new TableColumn();
+                $obj->deserialize($value);
+                array_push($this->List, $obj);
+            }
         }
 
-        if (array_key_exists("IncludeType",$param) and $param["IncludeType"] !== null) {
-            $this->IncludeType = $param["IncludeType"];
+        if (array_key_exists("TranId",$param) and $param["TranId"] !== null) {
+            $this->TranId = $param["TranId"];
         }
 
-        if (array_key_exists("Params",$param) and $param["Params"] !== null) {
-            $this->Params = $param["Params"];
+        if (array_key_exists("TranStatus",$param) and $param["TranStatus"] !== null) {
+            $this->TranStatus = $param["TranStatus"];
         }
     }
 }

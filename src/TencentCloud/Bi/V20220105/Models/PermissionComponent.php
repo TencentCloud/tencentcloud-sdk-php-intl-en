@@ -27,10 +27,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method string getIncludeType() Obtain Availability.
 Valid values:.
 
--usable.
--visible.
--disabled: unavailable.
--hidden: hide.
+- usable.
+- visible.
+- disabled: unavailable.
+- hidden: hide.
 
 Default value: disabled.
 Example value: disabled.
@@ -38,10 +38,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setIncludeType(string $IncludeType) Set Availability.
 Valid values:.
 
--usable.
--visible.
--disabled: unavailable.
--hidden: hide.
+- usable.
+- visible.
+- disabled: unavailable.
+- hidden: hide.
 
 Default value: disabled.
 Example value: disabled.
@@ -71,10 +71,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string Availability.
 Valid values:.
 
--usable.
--visible.
--disabled: unavailable.
--hidden: hide.
+- usable.
+- visible.
+- disabled: unavailable.
+- hidden: hide.
 
 Default value: disabled.
 Example value: disabled.
@@ -106,10 +106,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $IncludeType Availability.
 Valid values:.
 
--usable.
--visible.
--disabled: unavailable.
--hidden: hide.
+- usable.
+- visible.
+- disabled: unavailable.
+- hidden: hide.
 
 Default value: disabled.
 Example value: disabled.
