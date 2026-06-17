@@ -20,38 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceSpecs request structure.
  *
- * @method string getDbType() Obtain Database type. Valid values: 
-<li> MYSQL </li>
- * @method void setDbType(string $DbType) Set Database type. Valid values: 
-<li> MYSQL </li>
- * @method boolean getIncludeZoneStocks() Obtain Whether to return the AZ information.
- * @method void setIncludeZoneStocks(boolean $IncludeZoneStocks) Set Whether to return the AZ information.
- * @method string getDeviceType() Obtain Instance machine type.
- * @method void setDeviceType(string $DeviceType) Set Instance machine type.
+ * @method string getDbType() Obtain <p>Database type, value ranges from...to... </p><li> MYSQL </li>
+ * @method void setDbType(string $DbType) Set <p>Database type, value ranges from...to... </p><li> MYSQL </li>
+ * @method boolean getIncludeZoneStocks() Obtain <p>Whether required to return AZ information</p>
+ * @method void setIncludeZoneStocks(boolean $IncludeZoneStocks) Set <p>Whether required to return AZ information</p>
+ * @method string getDeviceType() Obtain <p>Instance machine type.</p>
+ * @method void setDeviceType(string $DeviceType) Set <p>Instance machine type.</p>
+ * @method string getClusterLevel() Obtain <p>Cluster level, optional. For example P0, P1</p>
+ * @method void setClusterLevel(string $ClusterLevel) Set <p>Cluster level, optional. For example P0, P1</p>
  */
 class DescribeInstanceSpecsRequest extends AbstractModel
 {
     /**
-     * @var string Database type. Valid values: 
-<li> MYSQL </li>
+     * @var string <p>Database type, value ranges from...to... </p><li> MYSQL </li>
      */
     public $DbType;
 
     /**
-     * @var boolean Whether to return the AZ information.
+     * @var boolean <p>Whether required to return AZ information</p>
      */
     public $IncludeZoneStocks;
 
     /**
-     * @var string Instance machine type.
+     * @var string <p>Instance machine type.</p>
      */
     public $DeviceType;
 
     /**
-     * @param string $DbType Database type. Valid values: 
-<li> MYSQL </li>
-     * @param boolean $IncludeZoneStocks Whether to return the AZ information.
-     * @param string $DeviceType Instance machine type.
+     * @var string <p>Cluster level, optional. For example P0, P1</p>
+     */
+    public $ClusterLevel;
+
+    /**
+     * @param string $DbType <p>Database type, value ranges from...to... </p><li> MYSQL </li>
+     * @param boolean $IncludeZoneStocks <p>Whether required to return AZ information</p>
+     * @param string $DeviceType <p>Instance machine type.</p>
+     * @param string $ClusterLevel <p>Cluster level, optional. For example P0, P1</p>
      */
     function __construct()
     {
@@ -76,6 +80,10 @@ class DescribeInstanceSpecsRequest extends AbstractModel
 
         if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
             $this->DeviceType = $param["DeviceType"];
+        }
+
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
         }
     }
 }

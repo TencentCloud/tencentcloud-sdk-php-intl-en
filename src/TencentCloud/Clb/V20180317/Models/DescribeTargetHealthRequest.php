@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTargetHealth request structure.
  *
- * @method array getLoadBalancerIds() Obtain List of IDs of CLB instances to be queried
- * @method void setLoadBalancerIds(array $LoadBalancerIds) Set List of IDs of CLB instances to be queried
- * @method array getListenerIds() Obtain Specifies the listener ID list to query.
- * @method void setListenerIds(array $ListenerIds) Set Specifies the listener ID list to query.
- * @method array getLocationIds() Obtain Specifies the list of rule ids to be queried.
- * @method void setLocationIds(array $LocationIds) Set Specifies the list of rule ids to be queried.
+ * @method array getLoadBalancerIds() Obtain <p>List of Cloud Load Balancer instance IDs to query. The array size supports up to 30.</p>
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set <p>List of Cloud Load Balancer instance IDs to query. The array size supports up to 30.</p>
+ * @method array getListenerIds() Obtain <p>Listener ID list to query.</p>
+ * @method void setListenerIds(array $ListenerIds) Set <p>Listener ID list to query.</p>
+ * @method array getLocationIds() Obtain <p>List of forwarding rule IDs to query.</p>
+ * @method void setLocationIds(array $LocationIds) Set <p>List of forwarding rule IDs to query.</p>
  */
 class DescribeTargetHealthRequest extends AbstractModel
 {
     /**
-     * @var array List of IDs of CLB instances to be queried
+     * @var array <p>List of Cloud Load Balancer instance IDs to query. The array size supports up to 30.</p>
      */
     public $LoadBalancerIds;
 
     /**
-     * @var array Specifies the listener ID list to query.
+     * @var array <p>Listener ID list to query.</p>
      */
     public $ListenerIds;
 
     /**
-     * @var array Specifies the list of rule ids to be queried.
+     * @var array <p>List of forwarding rule IDs to query.</p>
      */
     public $LocationIds;
 
     /**
-     * @param array $LoadBalancerIds List of IDs of CLB instances to be queried
-     * @param array $ListenerIds Specifies the listener ID list to query.
-     * @param array $LocationIds Specifies the list of rule ids to be queried.
+     * @param array $LoadBalancerIds <p>List of Cloud Load Balancer instance IDs to query. The array size supports up to 30.</p>
+     * @param array $ListenerIds <p>Listener ID list to query.</p>
+     * @param array $LocationIds <p>List of forwarding rule IDs to query.</p>
      */
     function __construct()
     {

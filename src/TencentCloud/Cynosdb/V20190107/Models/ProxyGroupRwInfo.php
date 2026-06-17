@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) Set <p>Whether to treat the libra node as an ordinary RO node</p>
  * @method boolean getApQueryToOtherNode() Obtain <p>Whether to forward to other nodes when a libra node fault occurs</p>
  * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) Set <p>Whether to forward to other nodes when a libra node fault occurs</p>
- * @method string getLoadBalanceMode() Obtain 
- * @method void setLoadBalanceMode(string $LoadBalanceMode) Set 
+ * @method string getLoadBalanceMode() Obtain <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+ * @method void setLoadBalanceMode(string $LoadBalanceMode) Set <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
  */
 class ProxyGroupRwInfo extends AbstractModel
 {
@@ -110,7 +110,7 @@ class ProxyGroupRwInfo extends AbstractModel
     public $ApQueryToOtherNode;
 
     /**
-     * @var string 
+     * @var string <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     public $LoadBalanceMode;
 
@@ -127,7 +127,7 @@ class ProxyGroupRwInfo extends AbstractModel
      * @param string $AccessMode <p>Connection mode, available values: balance, nearby</p>
      * @param boolean $ApNodeAsRoNode <p>Whether to treat the libra node as an ordinary RO node</p>
      * @param boolean $ApQueryToOtherNode <p>Whether to forward to other nodes when a libra node fault occurs</p>
-     * @param string $LoadBalanceMode 
+     * @param string $LoadBalanceMode <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     function __construct()
     {

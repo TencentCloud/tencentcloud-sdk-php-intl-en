@@ -25,9 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLoadBalancerName() Obtain CLB instance name.
  * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name.
  * @method string getLoadBalancerType() Obtain Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on [Binding Elastic IP](https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
  * @method void setLoadBalancerType(string $LoadBalancerType) Set Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on [Binding Elastic IP](https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
  * @method integer getForward() Obtain CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
  * @method void setForward(integer $Forward) Set CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
  * @method string getDomain() Obtain The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
@@ -72,20 +72,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setAnycastZone(string $AnycastZone) Set Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
  * @method string getAddressIPVersion() Obtain IP Version, ipv4 | ipv6
  * @method void setAddressIPVersion(string $AddressIPVersion) Set IP Version, ipv4 | ipv6
- * @method integer getNumericalVpcId() Obtain Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
- * @method void setNumericalVpcId(integer $NumericalVpcId) Set Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
+ * @method integer getNumericalVpcId() Obtain Specifies the VPC ID in numerical form, obtainable through the [DescribeVpcs]((https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)) API.
+ * @method void setNumericalVpcId(integer $NumericalVpcId) Set Specifies the VPC ID in numerical form, obtainable through the [DescribeVpcs]((https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)) API.
  * @method string getVipIsp() Obtain Specifies the ISP of the load balancer IP address.
 
--BGP (multi-line).
+- BGP (multi-line).
 - CMCC: CMCC single line network.
--CTCC: ctcc single-line.
+- CTCC: ctcc single-line.
 - CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVipIsp(string $VipIsp) Set Specifies the ISP of the load balancer IP address.
 
--BGP (multi-line).
+- BGP (multi-line).
 - CMCC: CMCC single line network.
--CTCC: ctcc single-line.
+- CTCC: ctcc single-line.
 - CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method ZoneInfo getMasterZone() Obtain Primary AZ
@@ -240,8 +240,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setTargetCount(integer $TargetCount) Set Specifies the number of bound backend services.
  * @method string getAssociateEndpoint() Obtain Specifies the Endpoint id associated with the clb instance.
  * @method void setAssociateEndpoint(string $AssociateEndpoint) Set Specifies the Endpoint id associated with the clb instance.
- * @method AvailableZoneAffinityInfo getAvailableZoneAffinityInfo() Obtain 
- * @method void setAvailableZoneAffinityInfo(AvailableZoneAffinityInfo $AvailableZoneAffinityInfo) Set 
+ * @method AvailableZoneAffinityInfo getAvailableZoneAffinityInfo() Obtain Availability zone forwarding affinity info
+ * @method void setAvailableZoneAffinityInfo(AvailableZoneAffinityInfo $AvailableZoneAffinityInfo) Set Availability zone forwarding affinity info
  */
 class LoadBalancer extends AbstractModel
 {
@@ -257,7 +257,7 @@ class LoadBalancer extends AbstractModel
 
     /**
      * @var string Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on [Binding Elastic IP](https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
      */
     public $LoadBalancerType;
 
@@ -357,16 +357,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AddressIPVersion;
 
     /**
-     * @var integer Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
+     * @var integer Specifies the VPC ID in numerical form, obtainable through the [DescribeVpcs]((https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)) API.
      */
     public $NumericalVpcId;
 
     /**
      * @var string Specifies the ISP of the load balancer IP address.
 
--BGP (multi-line).
+- BGP (multi-line).
 - CMCC: CMCC single line network.
--CTCC: ctcc single-line.
+- CTCC: ctcc single-line.
 - CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -589,7 +589,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AssociateEndpoint;
 
     /**
-     * @var AvailableZoneAffinityInfo 
+     * @var AvailableZoneAffinityInfo Availability zone forwarding affinity info
      */
     public $AvailableZoneAffinityInfo;
 
@@ -597,7 +597,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on [Binding Elastic IP](https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
      * @param integer $Forward CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
      * @param string $Domain The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
      * @param array $LoadBalancerVips List of VIPs of a CLB instance.
@@ -620,12 +620,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param TargetRegionInfo $TargetRegionInfo Basic information of real servers bound to the CLB instance
      * @param string $AnycastZone Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
      * @param string $AddressIPVersion IP Version, ipv4 | ipv6
-     * @param integer $NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
+     * @param integer $NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the [DescribeVpcs]((https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)) API.
      * @param string $VipIsp Specifies the ISP of the load balancer IP address.
 
--BGP (multi-line).
+- BGP (multi-line).
 - CMCC: CMCC single line network.
--CTCC: ctcc single-line.
+- CTCC: ctcc single-line.
 - CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param ZoneInfo $MasterZone Primary AZ
@@ -704,7 +704,7 @@ ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP op
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TargetCount Specifies the number of bound backend services.
      * @param string $AssociateEndpoint Specifies the Endpoint id associated with the clb instance.
-     * @param AvailableZoneAffinityInfo $AvailableZoneAffinityInfo 
+     * @param AvailableZoneAffinityInfo $AvailableZoneAffinityInfo Availability zone forwarding affinity info
      */
     function __construct()
     {

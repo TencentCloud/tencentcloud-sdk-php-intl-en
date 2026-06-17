@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessMode(string $AccessMode) Set <p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p>
  * @method array getInstanceWeights() Obtain <p>Instance weight.</p>
  * @method void setInstanceWeights(array $InstanceWeights) Set <p>Instance weight.</p>
- * @method string getLoadBalanceMode() Obtain 
- * @method void setLoadBalanceMode(string $LoadBalanceMode) Set 
+ * @method string getLoadBalanceMode() Obtain <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+ * @method void setLoadBalanceMode(string $LoadBalanceMode) Set <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
  */
 class CreateProxyEndPointRequest extends AbstractModel
 {
@@ -152,7 +152,7 @@ class CreateProxyEndPointRequest extends AbstractModel
     public $InstanceWeights;
 
     /**
-     * @var string 
+     * @var string <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     public $LoadBalanceMode;
 
@@ -175,7 +175,7 @@ class CreateProxyEndPointRequest extends AbstractModel
      * @param boolean $TransSplit <p>Whether to enable transaction split. Once enabled, read and write operations in a transaction are split and executed on different instances.</p>
      * @param string $AccessMode <p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p>
      * @param array $InstanceWeights <p>Instance weight.</p>
-     * @param string $LoadBalanceMode 
+     * @param string $LoadBalanceMode <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     function __construct()
     {

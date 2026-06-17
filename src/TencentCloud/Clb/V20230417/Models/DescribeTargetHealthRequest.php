@@ -1,0 +1,77 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Clb\V20230417\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * DescribeTargetHealth request structure.
+ *
+ * @method array getLoadBalancerIds() Obtain List of CLB instance IDs to query.
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set List of CLB instance IDs to query.
+ * @method array getListenerIds() Obtain Listener ID list to query.
+ * @method void setListenerIds(array $ListenerIds) Set Listener ID list to query.
+ * @method array getLocationIds() Obtain List of forwarding rule IDs to query.
+ * @method void setLocationIds(array $LocationIds) Set List of forwarding rule IDs to query.
+ */
+class DescribeTargetHealthRequest extends AbstractModel
+{
+    /**
+     * @var array List of CLB instance IDs to query.
+     */
+    public $LoadBalancerIds;
+
+    /**
+     * @var array Listener ID list to query.
+     */
+    public $ListenerIds;
+
+    /**
+     * @var array List of forwarding rule IDs to query.
+     */
+    public $LocationIds;
+
+    /**
+     * @param array $LoadBalancerIds List of CLB instance IDs to query.
+     * @param array $ListenerIds Listener ID list to query.
+     * @param array $LocationIds List of forwarding rule IDs to query.
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
+            $this->LoadBalancerIds = $param["LoadBalancerIds"];
+        }
+
+        if (array_key_exists("ListenerIds",$param) and $param["ListenerIds"] !== null) {
+            $this->ListenerIds = $param["ListenerIds"];
+        }
+
+        if (array_key_exists("LocationIds",$param) and $param["LocationIds"] !== null) {
+            $this->LocationIds = $param["LocationIds"];
+        }
+    }
+}

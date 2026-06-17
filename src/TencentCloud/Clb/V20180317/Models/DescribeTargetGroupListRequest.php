@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTargetGroupList request structure.
  *
- * @method array getTargetGroupIds() Obtain Target group ID array
- * @method void setTargetGroupIds(array $TargetGroupIds) Set Target group ID array
- * @method array getFilters() Obtain Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
- * @method void setFilters(array $Filters) Set Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
- * @method integer getOffset() Obtain Starting display offset
- * @method void setOffset(integer $Offset) Set Starting display offset
- * @method integer getLimit() Obtain Limit of the number of displayed results. Default value: 20.
- * @method void setLimit(integer $Limit) Set Limit of the number of displayed results. Default value: 20.
+ * @method array getTargetGroupIds() Obtain <p>Target group ID array.</p>
+ * @method void setTargetGroupIds(array $TargetGroupIds) Set <p>Target group ID array.</p>
+ * @method array getFilters() Obtain <p>Filter condition array. Support TargetGroupVpcId and TargetGroupName. Mutually exclusive with TargetGroupIds. Prioritize target group ID.</p>
+ * @method void setFilters(array $Filters) Set <p>Filter condition array. Support TargetGroupVpcId and TargetGroupName. Mutually exclusive with TargetGroupIds. Prioritize target group ID.</p>
+ * @method integer getOffset() Obtain <p>Starting display offset.</p>
+ * @method void setOffset(integer $Offset) Set <p>Starting display offset.</p>
+ * @method integer getLimit() Obtain <p>Number of entries displayed per page.</p><p>Value ranges from 0 to 100.</p><p>The default value is 20.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of entries displayed per page.</p><p>Value ranges from 0 to 100.</p><p>The default value is 20.</p>
  */
 class DescribeTargetGroupListRequest extends AbstractModel
 {
     /**
-     * @var array Target group ID array
+     * @var array <p>Target group ID array.</p>
      */
     public $TargetGroupIds;
 
     /**
-     * @var array Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
+     * @var array <p>Filter condition array. Support TargetGroupVpcId and TargetGroupName. Mutually exclusive with TargetGroupIds. Prioritize target group ID.</p>
      */
     public $Filters;
 
     /**
-     * @var integer Starting display offset
+     * @var integer <p>Starting display offset.</p>
      */
     public $Offset;
 
     /**
-     * @var integer Limit of the number of displayed results. Default value: 20.
+     * @var integer <p>Number of entries displayed per page.</p><p>Value ranges from 0 to 100.</p><p>The default value is 20.</p>
      */
     public $Limit;
 
     /**
-     * @param array $TargetGroupIds Target group ID array
-     * @param array $Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
-     * @param integer $Offset Starting display offset
-     * @param integer $Limit Limit of the number of displayed results. Default value: 20.
+     * @param array $TargetGroupIds <p>Target group ID array.</p>
+     * @param array $Filters <p>Filter condition array. Support TargetGroupVpcId and TargetGroupName. Mutually exclusive with TargetGroupIds. Prioritize target group ID.</p>
+     * @param integer $Offset <p>Starting display offset.</p>
+     * @param integer $Limit <p>Number of entries displayed per page.</p><p>Value ranges from 0 to 100.</p><p>The default value is 20.</p>
      */
     function __construct()
     {

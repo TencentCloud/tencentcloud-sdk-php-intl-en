@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchModifyTargetWeight request structure.
  *
- * @method string getLoadBalancerId() Obtain CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method array getModifyList() Obtain List of weights to be modified in batches
- * @method void setModifyList(array $ModifyList) Set List of weights to be modified in batches
+ * @method string getLoadBalancerId() Obtain <p>CLB instance ID.</p>
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set <p>CLB instance ID.</p>
+ * @method array getModifyList() Obtain <p>List of weights to be modified in batch. The ModifyList array can contain no more than 100 elements, ModifyList[i].Targets can have no more than 50, and the total number of Targets must not exceed 500.</p>
+ * @method void setModifyList(array $ModifyList) Set <p>List of weights to be modified in batch. The ModifyList array can contain no more than 100 elements, ModifyList[i].Targets can have no more than 50, and the total number of Targets must not exceed 500.</p>
  */
 class BatchModifyTargetWeightRequest extends AbstractModel
 {
     /**
-     * @var string CLB instance ID
+     * @var string <p>CLB instance ID.</p>
      */
     public $LoadBalancerId;
 
     /**
-     * @var array List of weights to be modified in batches
+     * @var array <p>List of weights to be modified in batch. The ModifyList array can contain no more than 100 elements, ModifyList[i].Targets can have no more than 50, and the total number of Targets must not exceed 500.</p>
      */
     public $ModifyList;
 
     /**
-     * @param string $LoadBalancerId CLB instance ID
-     * @param array $ModifyList List of weights to be modified in batches
+     * @param string $LoadBalancerId <p>CLB instance ID.</p>
+     * @param array $ModifyList <p>List of weights to be modified in batch. The ModifyList array can contain no more than 100 elements, ModifyList[i].Targets can have no more than 50, and the total number of Targets must not exceed 500.</p>
      */
     function __construct()
     {

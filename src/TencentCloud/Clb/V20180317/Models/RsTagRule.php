@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Data type of the modified node tag.
  *
- * @method string getListenerId() Obtain CLB listener ID.
- * @method void setListenerId(string $ListenerId) Set CLB listener ID.
- * @method array getTargets() Obtain List of real servers with tags to be modified.
- * @method void setTargets(array $Targets) Set List of real servers with tags to be modified.
- * @method string getLocationId() Obtain Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
- * @method void setLocationId(string $LocationId) Set Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
- * @method string getTag() Obtain Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
- * @method void setTag(string $Tag) Set Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
+ * @method string getListenerId() Obtain <p>CLB listener ID.</p>
+ * @method void setListenerId(string $ListenerId) Set <p>CLB listener ID.</p>
+ * @method array getTargets() Obtain <p>List of real servers with tags to be modified.</p>
+ * @method void setTargets(array $Targets) Set <p>List of real servers with tags to be modified.</p>
+ * @method string getLocationId() Obtain <p>Forwarding rule ID, required for layer-7 rules, not required for layer-4 rules.</p>
+ * @method void setLocationId(string $LocationId) Set <p>Forwarding rule ID, required for layer-7 rules, not required for layer-4 rules.</p>
+ * @method string getTag() Obtain <p>Modified tag of the backend service. This parameter has a lower priority than the Tag parameter in the aforementioned <a href="https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target">Target</a>. The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.</p>
+ * @method void setTag(string $Tag) Set <p>Modified tag of the backend service. This parameter has a lower priority than the Tag parameter in the aforementioned <a href="https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target">Target</a>. The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.</p>
  */
 class RsTagRule extends AbstractModel
 {
     /**
-     * @var string CLB listener ID.
+     * @var string <p>CLB listener ID.</p>
      */
     public $ListenerId;
 
     /**
-     * @var array List of real servers with tags to be modified.
+     * @var array <p>List of real servers with tags to be modified.</p>
      */
     public $Targets;
 
     /**
-     * @var string Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
+     * @var string <p>Forwarding rule ID, required for layer-7 rules, not required for layer-4 rules.</p>
      */
     public $LocationId;
 
     /**
-     * @var string Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
+     * @var string <p>Modified tag of the backend service. This parameter has a lower priority than the Tag parameter in the aforementioned <a href="https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target">Target</a>. The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.</p>
      */
     public $Tag;
 
     /**
-     * @param string $ListenerId CLB listener ID.
-     * @param array $Targets List of real servers with tags to be modified.
-     * @param string $LocationId Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
-     * @param string $Tag Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
+     * @param string $ListenerId <p>CLB listener ID.</p>
+     * @param array $Targets <p>List of real servers with tags to be modified.</p>
+     * @param string $LocationId <p>Forwarding rule ID, required for layer-7 rules, not required for layer-4 rules.</p>
+     * @param string $Tag <p>Modified tag of the backend service. This parameter has a lower priority than the Tag parameter in the aforementioned <a href="https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target">Target</a>. The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.</p>
      */
     function __construct()
     {

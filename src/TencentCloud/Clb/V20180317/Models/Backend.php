@@ -46,6 +46,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTag() Obtain Tag.
  * @method void setTag(string $Tag) Set Tag.
+ * @method string getZone() Obtain The availability zone where the backend service resides, such as ap-guangzhou-1
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setZone(string $Zone) Set The availability zone where the backend service resides, such as ap-guangzhou-1
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Backend extends AbstractModel
 {
@@ -103,6 +107,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Tag;
 
     /**
+     * @var string The availability zone where the backend service resides, such as ap-guangzhou-1
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Zone;
+
+    /**
      * @param string $Type Specifies the backend service type. valid values: CVM, ENI, CCN, EVM, GLOBALROUTE, NAT, SRV.
      * @param string $InstanceId Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
      * @param integer $Port Specifies the listening port of the backend service. if it is a full listening target group bound to a port range listener, this port returns 0, indicating an invalid port. the port of the bound backend service follows the listener port.
@@ -116,6 +126,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $EniId Unique ENI ID
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Tag Tag.
+     * @param string $Zone The availability zone where the backend service resides, such as ap-guangzhou-1
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -168,6 +180,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

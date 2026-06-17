@@ -20,102 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLoadBalancerAttributes request structure.
  *
- * @method string getLoadBalancerId() Obtain Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
- * @method void setLoadBalancerId(string $LoadBalancerId) Set Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
- * @method string getLoadBalancerName() Obtain Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
- * @method void setLoadBalancerName(string $LoadBalancerName) Set Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
- * @method TargetRegionInfo getTargetRegionInfo() Obtain The backend service information of cross-region binding 1.0
- * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) Set The backend service information of cross-region binding 1.0
- * @method InternetAccessible getInternetChargeInfo() Obtain Network billing parameter
- * @method void setInternetChargeInfo(InternetAccessible $InternetChargeInfo) Set Network billing parameter
- * @method boolean getLoadBalancerPassToTarget() Obtain Specifies whether to allow CLB traffic to the Target.
-Enable pass-through (true): verify security groups on CLB only.
-Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
-Specifies no modification if left blank.
- * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) Set Specifies whether to allow CLB traffic to the Target.
-Enable pass-through (true): verify security groups on CLB only.
-Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
-Specifies no modification if left blank.
- * @method integer getSwitchFlag() Obtain 
- * @method void setSwitchFlag(integer $SwitchFlag) Set 
- * @method boolean getSnatPro() Obtain Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
- * @method void setSnatPro(boolean $SnatPro) Set Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
- * @method boolean getDeleteProtect() Obtain Specifies whether to enable deletion protection. leave it blank to keep the current setting.
- * @method void setDeleteProtect(boolean $DeleteProtect) Set Specifies whether to enable deletion protection. leave it blank to keep the current setting.
- * @method boolean getModifyClassicDomain() Obtain Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
- * @method void setModifyClassicDomain(boolean $ModifyClassicDomain) Set Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
- * @method string getAssociateEndpoint() Obtain The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.com/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
- * @method void setAssociateEndpoint(string $AssociateEndpoint) Set The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.com/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+ * @method string getLoadBalancerId() Obtain <p>Unique ID of the Cloud Load Balancer (CLB). You can call the <a href="https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1">DescribeLoadBalancers</a> API to obtain the ID.</p>
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set <p>Unique ID of the Cloud Load Balancer (CLB). You can call the <a href="https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1">DescribeLoadBalancers</a> API to obtain the ID.</p>
+ * @method string getLoadBalancerName() Obtain <p>CLB instance name. Rules: 1-80 internationally compatible characters including letters, Chinese characters, digits, "-", "_", and other common characters (Unicode supplementary characters such as emojis and rare Chinese characters are forbidden).</p>
+ * @method void setLoadBalancerName(string $LoadBalancerName) Set <p>CLB instance name. Rules: 1-80 internationally compatible characters including letters, Chinese characters, digits, "-", "_", and other common characters (Unicode supplementary characters such as emojis and rare Chinese characters are forbidden).</p>
+ * @method TargetRegionInfo getTargetRegionInfo() Obtain <p>Set the backend service information for cross-region binding 1.0 of Cloud Load Balancer.</p>
+ * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) Set <p>Set the backend service information for cross-region binding 1.0 of Cloud Load Balancer.</p>
+ * @method InternetAccessible getInternetChargeInfo() Obtain <p>Network billing related parameters</p>
+ * @method void setInternetChargeInfo(InternetAccessible $InternetChargeInfo) Set <p>Network billing related parameters</p>
+ * @method boolean getLoadBalancerPassToTarget() Obtain <p>Allow CLB traffic to the Target.<br>Enable (true): verify security groups on CLB;<br>deny CLB traffic to the Target (false): verify security groups on both CLB and backend instances.<br>Leave blank for no modification.</p>
+ * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) Set <p>Allow CLB traffic to the Target.<br>Enable (true): verify security groups on CLB;<br>deny CLB traffic to the Target (false): verify security groups on both CLB and backend instances.<br>Leave blank for no modification.</p>
+ * @method integer getSwitchFlag() Obtain <p>Switchover between different billing modes: 0 means no switchover, 1 means switch between prepaid and postpaid, 2 means switch between postpaid modes. Default value: 0</p>
+ * @method void setSwitchFlag(integer $SwitchFlag) Set <p>Switchover between different billing modes: 0 means no switchover, 1 means switch between prepaid and postpaid, 2 means switch between postpaid modes. Default value: 0</p>
+ * @method boolean getSnatPro() Obtain <p>Whether cross-region binding 2.0 is enabled. Leave it blank for no modification.</p>
+ * @method void setSnatPro(boolean $SnatPro) Set <p>Whether cross-region binding 2.0 is enabled. Leave it blank for no modification.</p>
+ * @method boolean getDeleteProtect() Obtain <p>Whether to enable deletion protection. Leave it empty to skip modification.</p>
+ * @method void setDeleteProtect(boolean $DeleteProtect) Set <p>Whether to enable deletion protection. Leave it empty to skip modification.</p>
+ * @method boolean getModifyClassicDomain() Obtain <p>Change the second-level domain name of Cloud Load Balancer (CLB) from mycloud.com to tencentclb.com. The subdomain will also be transformed. After modification, the mycloud.com domain name will become invalid. Leave it blank if no modification is needed.</p>
+ * @method void setModifyClassicDomain(boolean $ModifyClassicDomain) Set <p>Change the second-level domain name of Cloud Load Balancer (CLB) from mycloud.com to tencentclb.com. The subdomain will also be transformed. After modification, the mycloud.com domain name will become invalid. Leave it blank if no modification is needed.</p>
+ * @method string getAssociateEndpoint() Obtain <p>Id of the associated endpoint, which can be queried via the <a href="https://www.tencentcloud.com/document/product/215/54679?from_cn_redirect=1">DescribeVpcEndPoint</a> api. Input an empty string to unbind.</p>
+ * @method void setAssociateEndpoint(string $AssociateEndpoint) Set <p>Id of the associated endpoint, which can be queried via the <a href="https://www.tencentcloud.com/document/product/215/54679?from_cn_redirect=1">DescribeVpcEndPoint</a> api. Input an empty string to unbind.</p>
  */
 class ModifyLoadBalancerAttributesRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+     * @var string <p>Unique ID of the Cloud Load Balancer (CLB). You can call the <a href="https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1">DescribeLoadBalancers</a> API to obtain the ID.</p>
      */
     public $LoadBalancerId;
 
     /**
-     * @var string Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
+     * @var string <p>CLB instance name. Rules: 1-80 internationally compatible characters including letters, Chinese characters, digits, "-", "_", and other common characters (Unicode supplementary characters such as emojis and rare Chinese characters are forbidden).</p>
      */
     public $LoadBalancerName;
 
     /**
-     * @var TargetRegionInfo The backend service information of cross-region binding 1.0
+     * @var TargetRegionInfo <p>Set the backend service information for cross-region binding 1.0 of Cloud Load Balancer.</p>
      */
     public $TargetRegionInfo;
 
     /**
-     * @var InternetAccessible Network billing parameter
+     * @var InternetAccessible <p>Network billing related parameters</p>
      */
     public $InternetChargeInfo;
 
     /**
-     * @var boolean Specifies whether to allow CLB traffic to the Target.
-Enable pass-through (true): verify security groups on CLB only.
-Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
-Specifies no modification if left blank.
+     * @var boolean <p>Allow CLB traffic to the Target.<br>Enable (true): verify security groups on CLB;<br>deny CLB traffic to the Target (false): verify security groups on both CLB and backend instances.<br>Leave blank for no modification.</p>
      */
     public $LoadBalancerPassToTarget;
 
     /**
-     * @var integer 
+     * @var integer <p>Switchover between different billing modes: 0 means no switchover, 1 means switch between prepaid and postpaid, 2 means switch between postpaid modes. Default value: 0</p>
      */
     public $SwitchFlag;
 
     /**
-     * @var boolean Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
+     * @var boolean <p>Whether cross-region binding 2.0 is enabled. Leave it blank for no modification.</p>
      */
     public $SnatPro;
 
     /**
-     * @var boolean Specifies whether to enable deletion protection. leave it blank to keep the current setting.
+     * @var boolean <p>Whether to enable deletion protection. Leave it empty to skip modification.</p>
      */
     public $DeleteProtect;
 
     /**
-     * @var boolean Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
+     * @var boolean <p>Change the second-level domain name of Cloud Load Balancer (CLB) from mycloud.com to tencentclb.com. The subdomain will also be transformed. After modification, the mycloud.com domain name will become invalid. Leave it blank if no modification is needed.</p>
      */
     public $ModifyClassicDomain;
 
     /**
-     * @var string The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.com/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+     * @var string <p>Id of the associated endpoint, which can be queried via the <a href="https://www.tencentcloud.com/document/product/215/54679?from_cn_redirect=1">DescribeVpcEndPoint</a> api. Input an empty string to unbind.</p>
      */
     public $AssociateEndpoint;
 
     /**
-     * @param string $LoadBalancerId Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
-     * @param string $LoadBalancerName Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
-     * @param TargetRegionInfo $TargetRegionInfo The backend service information of cross-region binding 1.0
-     * @param InternetAccessible $InternetChargeInfo Network billing parameter
-     * @param boolean $LoadBalancerPassToTarget Specifies whether to allow CLB traffic to the Target.
-Enable pass-through (true): verify security groups on CLB only.
-Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
-Specifies no modification if left blank.
-     * @param integer $SwitchFlag 
-     * @param boolean $SnatPro Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
-     * @param boolean $DeleteProtect Specifies whether to enable deletion protection. leave it blank to keep the current setting.
-     * @param boolean $ModifyClassicDomain Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
-     * @param string $AssociateEndpoint The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.com/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+     * @param string $LoadBalancerId <p>Unique ID of the Cloud Load Balancer (CLB). You can call the <a href="https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1">DescribeLoadBalancers</a> API to obtain the ID.</p>
+     * @param string $LoadBalancerName <p>CLB instance name. Rules: 1-80 internationally compatible characters including letters, Chinese characters, digits, "-", "_", and other common characters (Unicode supplementary characters such as emojis and rare Chinese characters are forbidden).</p>
+     * @param TargetRegionInfo $TargetRegionInfo <p>Set the backend service information for cross-region binding 1.0 of Cloud Load Balancer.</p>
+     * @param InternetAccessible $InternetChargeInfo <p>Network billing related parameters</p>
+     * @param boolean $LoadBalancerPassToTarget <p>Allow CLB traffic to the Target.<br>Enable (true): verify security groups on CLB;<br>deny CLB traffic to the Target (false): verify security groups on both CLB and backend instances.<br>Leave blank for no modification.</p>
+     * @param integer $SwitchFlag <p>Switchover between different billing modes: 0 means no switchover, 1 means switch between prepaid and postpaid, 2 means switch between postpaid modes. Default value: 0</p>
+     * @param boolean $SnatPro <p>Whether cross-region binding 2.0 is enabled. Leave it blank for no modification.</p>
+     * @param boolean $DeleteProtect <p>Whether to enable deletion protection. Leave it empty to skip modification.</p>
+     * @param boolean $ModifyClassicDomain <p>Change the second-level domain name of Cloud Load Balancer (CLB) from mycloud.com to tencentclb.com. The subdomain will also be transformed. After modification, the mycloud.com domain name will become invalid. Leave it blank if no modification is needed.</p>
+     * @param string $AssociateEndpoint <p>Id of the associated endpoint, which can be queried via the <a href="https://www.tencentcloud.com/document/product/215/54679?from_cn_redirect=1">DescribeVpcEndPoint</a> api. Input an empty string to unbind.</p>
      */
     function __construct()
     {

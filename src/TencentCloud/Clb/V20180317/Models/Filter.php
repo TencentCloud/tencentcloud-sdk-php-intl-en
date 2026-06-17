@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Filter
  *
- * @method string getName() Obtain Filter name
- * @method void setName(string $Name) Set Filter name
- * @method array getValues() Obtain Filter value array
- * @method void setValues(array $Values) Set Filter value array
+ * @method string getName() Obtain <p>Filter name</p>
+ * @method void setName(string $Name) Set <p>Filter name</p>
+ * @method array getValues() Obtain <p>filter value array</p>
+ * @method void setValues(array $Values) Set <p>filter value array</p>
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string Filter name
+     * @var string <p>Filter name</p>
      */
     public $Name;
 
     /**
-     * @var array Filter value array
+     * @var array <p>filter value array</p>
      */
     public $Values;
 
     /**
-     * @param string $Name Filter name
-     * @param array $Values Filter value array
+     * @param string $Name <p>Filter name</p>
+     * @param array $Values <p>filter value array</p>
      */
     function __construct()
     {

@@ -28,9 +28,9 @@ use TencentCloud\Clb\V20180317\Models as Models;
  * @method Models\AssociateTargetGroupsResponse AssociateTargetGroups(Models\AssociateTargetGroupsRequest $req) This API is used to bind target groups to Cloud Load Balancer listeners (Layer-4 protocol) or forwarding rules (L7 protocol).
 This API is asynchronous. After it returns a successful result, you need to call the [DescribeTaskStatus](https://www.tencentcloud.com/document/product/214/30683?from_cn_redirect=1) API with the returned RequestID as input parameter to check whether this task is successful.
 This API is used to describe restrictions.
--Binding a legacy version target group to a Layer-4 listener requires the listener to have backend target groups enabled.
--Layer-7 bind target group. LocationId is a required item in the data structure TargetGroupAssociation.
--The VPC of the Cloud Load Balancer must match the VPC of the target group.
+- Binding a legacy version target group to a Layer-4 listener requires the listener to have backend target groups enabled.
+- Layer-7 bind target group. LocationId is a required item in the data structure TargetGroupAssociation.
+- The VPC of the Cloud Load Balancer must match the VPC of the target group.
  * @method Models\AutoRewriteResponse AutoRewrite(Models\AutoRewriteRequest $req) An HTTPS:443 listener needs to be created first, along with a forwarding rule. When this API is called, an HTTP:80 listener will be created automatically if it did not exist and a forwarding rule corresponding to `Domains` (specified in the input parameter) under the HTTPS:443 listener will also be created. After successful creation, access requests to an HTTP:80 address will be redirected to an HTTPS:443 address automatically.
  * @method Models\BatchDeregisterTargetsResponse BatchDeregisterTargets(Models\BatchDeregisterTargetsRequest $req) This API is used to batch unbind real servers of the layer-4 and layer-7 VPC-based CLBs. Up to 500 real servers can be unbound in a batch.
  * @method Models\BatchModifyTargetTagResponse BatchModifyTargetTag(Models\BatchModifyTargetTagRequest $req) This API is used to modify the tags of real servers bound to CLB listeners in batches. The maximum number of resources that can be modified in a batch is 500. This is a synchronous API. <br/> It is supported for Layer-4 and Layer-7 listeners of CLB instances, but not for classic CLB instances.
@@ -38,21 +38,22 @@ This API is used to describe restrictions.
  * @method Models\BatchRegisterTargetsResponse BatchRegisterTargets(Models\BatchRegisterTargetsRequest $req) This API is used to batch bind CVM instances or ENIs. Up to 500 servers can be bound in a batch. It supports cross-region binding, layer-4 and layer-7 (TCP/UDP/HTTP/HTTPS) protocols, and VPC-based CLBs only.
  * @method Models\CloneLoadBalancerResponse CloneLoadBalancer(Models\CloneLoadBalancerRequest $req) This API is used to clone a load balancing instance with identical rules and binding relationships based on the designated Cloud Load Balancer. The cloning process is an asynchronous operation. The cloned data is based on the status when calling CloneLoadBalancer. If the source CLB changes after calling CloneLoadBalancer, the change rules will not be cloned.
 
-Note: The instance creation status can be queried based on the returned requestId by accessing the DescribeTaskStatus API (https://www.tencentcloud.com/document/product/214/30683?from_cn_redirect=1).
+Note: The instance creation status can be queried based on the returned requestId by accessing the [DescribeTaskStatus](https://www.tencentcloud.com/document/product/214/30683?from_cn_redirect=1) API.
 
 This API is used to describe restriction descriptions.
 This API is used to set instance attribute restrictions.
--The cloning feature supports both pay-as-you-go and yearly/monthly subscription instances. For cloned yearly/monthly subscription instances, the new instance's network billing mode switches to billing by hourly bandwidth, with its bandwidth and specifications remaining consistent with the settings of the original instance.
--CLB instances not associated with billable items cannot be cloned (historic free activity creation).
--Classic CLB instances and Anti-DDoS CLBs cannot be cloned.
--Cloning of classic network-based instances is not supported.
--Anycast instances cannot be cloned.
--IPv6 NAT64 edition instances cannot be cloned.
--Blocked or frozen instances cannot be cloned.
--Before performing the cloning operation, make sure that all certificates used on the instance have not expired, otherwise cloning will fail.
+- The cloning feature supports both pay-as-you-go and yearly/monthly subscription instances. For cloned yearly/monthly subscription instances, the new instance's network billing mode switches to billing by hourly bandwidth, with its bandwidth and specifications remaining consistent with the settings of the original instance.
+- CLB instances not associated with billable items cannot be cloned (historic free activity creation).
+- Classic CLB instances and Anti-DDoS CLBs cannot be cloned.
+- Cloning of classic network-based instances is not supported.
+- Anycast instances cannot be cloned.
+- IPv6 NAT64 edition instances cannot be cloned.
+- Blocked or frozen instances cannot be cloned.
+- Before performing the cloning operation, make sure that all certificates used on the instance have not expired, otherwise cloning will fail.
+
 This API is used to set quota dimension restrictions.
--Cloning is not supported when the number of instance listeners exceeds 50.
--Cloning is not supported when the public network bandwidth cap of a shared instance exceeds 2G.
+- Cloning is not supported when the number of instance listeners exceeds 50.
+- Cloning is not supported when the public network bandwidth cap of a shared instance exceeds 2G.
 
 This API is used to call APIs.
 This API is used to specify the BGP bandwidth package ID.
@@ -86,14 +87,14 @@ This API is used to perform asynchronous operations. After it returns a successf
 This API is used to perform asynchronous operations. After it returns a successful result, call the [DescribeTaskStatus](https://www.tencentcloud.com/document/product/214/30683?from_cn_redirect=1) API with the returned RequestID as an input parameter to check whether this task is successful.
 This API is used to describe restrictions.
 
--SCF binding is supported only in Guangzhou, Shenzhen Finance, Shanghai, Shanghai Finance, Beijing, Chengdu, Hong Kong (China), Singapore, Tokyo, and Silicon Valley.
--Only the standard account type supports binding SCF. The classic account type is unsupported. We recommend upgrading to the standard account type. For more information, see [Account Types](https://www.tencentcloud.com/document/product/684/15246).
--Classic CLB does not support binding SCF.
--Basic Network Type does not support binding SCF.
--CLB supports binding ALL SCFs in the same region by default, supports cross-VPC binding, but cross-region selection is not supported.
--Currently, only IPv4 and IPv6 NAT64 versions of Cloud Load Balancer support binding SCF. IPv6 version is not currently supported.
--Only layer-7 (HTTP, HTTPS) listeners support binding SCF. Layer-4 (TCP, UDP, TCP SSL) listeners and layer-7 QUIC listeners are unsupported.
--CLB binding SCF only supports binding cloud functions of the "Event function" type.
+- SCF binding is supported only in Guangzhou, Shenzhen Finance, Shanghai, Shanghai Finance, Beijing, Chengdu, Hong Kong (China), Singapore, Tokyo, and Silicon Valley.
+- Only the standard account type supports binding SCF. The classic account type is unsupported. We recommend upgrading to the standard account type. For more information, see [Account Types](https://www.tencentcloud.com/document/product/684/15246).
+- Classic CLB does not support binding SCF.
+- Basic Network Type does not support binding SCF.
+- CLB supports binding ALL SCFs in the same region by default, supports cross-VPC binding, but cross-region selection is not supported.
+- Currently, only IPv4 and IPv6 NAT64 versions of Cloud Load Balancer support binding SCF. IPv6 version is not currently supported.
+- Only layer-7 (HTTP, HTTPS) listeners support binding SCF. Layer-4 (TCP, UDP, TCP SSL) listeners and layer-7 QUIC listeners are unsupported.
+- CLB binding SCF only supports binding cloud functions of the "Event function" type.
  * @method Models\DeregisterTargetGroupInstancesResponse DeregisterTargetGroupInstances(Models\DeregisterTargetGroupInstancesRequest $req) This API is used to unbind a server from a target group.
 This API is used to perform asynchronous operations. After it returns a successful result, call the [DescribeTaskStatus](https://www.tencentcloud.com/document/product/214/30683?from_cn_redirect=1) API with the returned RequestID as an input parameter to check whether this task is successful.
  * @method Models\DeregisterTargetsResponse DeregisterTargets(Models\DeregisterTargetsRequest $req) This API (DeregisterTargets) is used to unbind one or more real servers from a CLB listener or forwarding rule. For layer-4 listeners, only the listener ID needs to be specified. For layer-7 listeners, the forwarding rule also needs to be specified through LocationId or Domain+Url.
@@ -109,7 +110,7 @@ This is an async API. After it is returned successfully, you can call the Descri
  * @method Models\DescribeCrossTargetsResponse DescribeCrossTargets(Models\DescribeCrossTargetsRequest $req) Queries information of CVMs and ENIs that use cross-region binding 2.0
  * @method Models\DescribeCustomizedConfigAssociateListResponse DescribeCustomizedConfigAssociateList(Models\DescribeCustomizedConfigAssociateListRequest $req) This API is used to query the configured location, bound server or bound CLB instance. If there are domain names, the result will be filtered by domain name.
  * @method Models\DescribeCustomizedConfigListResponse DescribeCustomizedConfigList(Models\DescribeCustomizedConfigListRequest $req) This API is used to pull custom configuration lists to return the user configuration of `AppId`.
- * @method Models\DescribeIdleLoadBalancersResponse DescribeIdleLoadBalancers(Models\DescribeIdleLoadBalancersRequest $req) Idle CLB instances are pay-as-you-go load balancers that, within seven days after the creation, do not have rules configured or the configured rules are not associated with any servers. 
+ * @method Models\DescribeIdleLoadBalancersResponse DescribeIdleLoadBalancers(Models\DescribeIdleLoadBalancersRequest $req) Idle CLB instances are pay-as-you-go load balancers that, within seven days after the creation, do not have rules configured or the configured rules are not associated with any servers.
  * @method Models\DescribeLBListenersResponse DescribeLBListeners(Models\DescribeLBListenersRequest $req) This API is used to query CLB instances bound to the CVM or ENI.
  * @method Models\DescribeLBOperateProtectResponse DescribeLBOperateProtect(Models\DescribeLBOperateProtectRequest $req) This API is used to query the operation protection info of Cloud Load Balancer.
  * @method Models\DescribeListenersResponse DescribeListeners(Models\DescribeListenersRequest $req) This API is used to get the list of listeners by CLB ID, listener protocol, or listener port. If no filter is specified, all listeners for the CLB instance will be returned.
@@ -121,6 +122,7 @@ This is an async API. After it is returned successfully, you can call the Descri
  * @method Models\DescribeQuotaResponse DescribeQuota(Models\DescribeQuotaRequest $req) This API is used to query various quotas in the current region.
  * @method Models\DescribeResourcesResponse DescribeResources(Models\DescribeResourcesRequest $req) This API is used to query the list of AZs and resources supported for the user in the current region.
  * @method Models\DescribeRewriteResponse DescribeRewrite(Models\DescribeRewriteRequest $req) This API (DescribeRewrite) is used to query the redirection relationship between the forwarding rules of a CLB instance by instance ID. If no listener ID or forwarding rule ID is specified, all redirection relationships in the instance will be returned.
+ * @method Models\DescribeTargetGroupInstanceStatusResponse DescribeTargetGroupInstanceStatus(Models\DescribeTargetGroupInstanceStatusRequest $req) This API is used to query the backend service status of a target group. Currently, only GWLB type target groups support querying backend service status.
  * @method Models\DescribeTargetGroupInstancesResponse DescribeTargetGroupInstances(Models\DescribeTargetGroupInstancesRequest $req) This API is used to get the information of servers bound to a target group.
  * @method Models\DescribeTargetGroupListResponse DescribeTargetGroupList(Models\DescribeTargetGroupListRequest $req) This API is used to get the target group list.
  * @method Models\DescribeTargetGroupsResponse DescribeTargetGroups(Models\DescribeTargetGroupsRequest $req) This API is used to query the target group information.
@@ -147,16 +149,15 @@ This is an asynchronous API. After it returns the result successfully, you can c
 This is an async API. After it returns a successful result, call the [DescribeTaskStatus](https://www.tencentcloud.com/document/product/214/30683?from_cn_redirect=1) API with the returned RequestId as an input parameter to check whether this task is successful.
  * @method Models\ModifyFunctionTargetsResponse ModifyFunctionTargets(Models\ModifyFunctionTargetsRequest $req) This API is used to modify the SCF bound to a Cloud Load Balancer forwarding rule.
 This API is used to describe restrictions.
--Only supports binding SCF of the "Event function" type.
+- Only supports binding SCF of the "Event function" type.
  * @method Models\ModifyListenerResponse ModifyListener(Models\ModifyListenerRequest $req) This API is used to modify the attributes of a CLB instance listener, including the listener name, health check parameters, certificate information, and forwarding policy. This API does not support classic CLB instances.
 This is an asynchronous API. After it returns the result successfully, you can call the [DescribeTaskStatus](https://intl.cloud.tencent.com/document/product/214/30683?from_cn_redirect=1) API with the returned RequestId as an input parameter to query whether the task is successful.
  * @method Models\ModifyLoadBalancerAttributesResponse ModifyLoadBalancerAttributes(Models\ModifyLoadBalancerAttributesRequest $req) This API is used to modify the attributes of a CLB instance, such as name and cross-region attributes.
 Non-bandwidth-upshift users must add their CLB instance to a bandwidth package to configure cross-domain attributes. To modify the network billing mode, go to the console.
 This API is used to perform asynchronous operations. After returning a successful result, call the [DescribeTaskStatus](https://www.tencentcloud.com/document/product/214/30683?from_cn_redirect=1) API with the returned RequestID as an input parameter to check whether this task is successful.
- * @method Models\ModifyLoadBalancerSlaResponse ModifyLoadBalancerSla(Models\ModifyLoadBalancerSlaRequest $req) This API is used to adjust the performance capacity specification of usage-based billing mode instances, for example upgrading from shared type to performance capacity type or modifying the specification of LCU-supported instances.
-This API is used to set use limits.
--This API only supports adjustments for pay-as-you-go CLB instances. For CLB instance upgrades with annual/monthly subscription, make adjustments through the console.
--After upgrading from a shared instance to a performance and capacity instance, reverting to a shared instance is not supported.
+ * @method Models\ModifyLoadBalancerSlaResponse ModifyLoadBalancerSla(Models\ModifyLoadBalancerSlaRequest $req) This API is used to adjust the performance capacity specification of usage-based billing mode instances, for example, upgrading from shared type to performance capacity type, or adjusting the specification of performance and capacity instances.
+limit:
+-After upgrading from a shared instance to a performance and capacity instance, you cannot revert to a shared instance.
 -A classic CLB instance does not support upgrading to a performance and capacity instance.
  * @method Models\ModifyLoadBalancersProjectResponse ModifyLoadBalancersProject(Models\ModifyLoadBalancersProjectRequest $req) This API is used to modify the projects of CLB instances. 
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) This API is used to modify the properties of forwarding rules under a layer-7 (HTTP/HTTPS) listener in Cloud Load Balancer, including forwarding path, health check attributes and forwarding policy.
@@ -173,27 +174,28 @@ This is an asynchronous API. After it returns the result successfully, you can c
  * @method Models\RegisterFunctionTargetsResponse RegisterFunctionTargets(Models\RegisterFunctionTargetsRequest $req) This API is used to bind a cloud function to the forwarding rule of a Cloud Load Balancer. Before that, you need to create a related HTTP or HTTPS listener and forwarding rule.
 This API is used to perform asynchronous operations. After returning a successful result, call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
 This API is used to describe restrictions.
--SCF binding is supported only in Guangzhou, Shenzhen Finance, Shanghai, Shanghai Finance, Beijing, Chengdu, Hong Kong (China), Singapore, Tokyo, and Silicon Valley.
--Only the standard account type supports binding SCF. The classic account type is unsupported. We recommend upgrading to the standard account type. For more information, see [Checking Account Type](https://www.tencentcloud.com/document/product/684/15246). 
--Classic CLB does not support binding SCF.
--Basic Network Type does not support binding SCF.
--CLB supports binding ALL SCFs in the same region by default, supports cross-VPC binding, but cross-region selection is not supported.
--Currently, only IPv4 and IPv6 NAT64 versions of Cloud Load Balancer support binding SCF. IPv6 version is not currently supported.
--Only layer-7 (HTTP, HTTPS) listeners support binding SCF. Layer-4 (TCP, UDP, TCP SSL) listeners and layer-7 QUIC listeners are unsupported.
+- SCF binding is supported only in Guangzhou, Shenzhen Finance, Shanghai, Shanghai Finance, Beijing, Chengdu, Hong Kong (China), Singapore, Tokyo, and Silicon Valley.
+- Only the standard account type supports binding SCF. The classic account type is unsupported. We recommend upgrading to the standard account type. For more information, see [Checking Account Type](https://www.tencentcloud.com/document/product/684/15246). 
+- Classic CLB does not support binding SCF.
+- Basic Network Type does not support binding SCF.
+- CLB supports binding ALL SCFs in the same region by default, supports cross-VPC binding, but cross-region selection is not supported.
+- Currently, only IPv4 and IPv6 NAT64 versions of Cloud Load Balancer support binding SCF. IPv6 version is not currently supported.
+- Only layer-7 (HTTP, HTTPS) listeners support binding SCF. Layer-4 (TCP, UDP, TCP SSL) listeners and layer-7 QUIC listeners are unsupported.
 - CLB binding SCF only supports binding SCF of the "Event function" type.
--A forwarding rule supports binding only one SCF.
+- A forwarding rule supports binding only one SCF.
  * @method Models\RegisterTargetGroupInstancesResponse RegisterTargetGroupInstances(Models\RegisterTargetGroupInstancesRequest $req) This API is used to register servers to a target group.
 This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
  * @method Models\RegisterTargetsResponse RegisterTargets(Models\RegisterTargetsRequest $req) This API is used to bind one or more backend services to a Cloud Load Balancer listener or layer-7 forwarding rule. Before that, you need to create a related CLB layer-4 listener or layer-7 forwarding rule. For Layer-4 listeners (TCP/UDP), only specify the listener ID. For layer-7 (HTTP/HTTPS) listeners, forwarding rules must be specified through LocationId or Domain+Url.
 This API is used to perform asynchronous operations. After it returns a successful result, call the [DescribeTaskStatus](https://www.tencentcloud.com/document/product/214/30683?from_cn_redirect=1) API with the returned RequestID as an input parameter to check whether this task is successful.
  * @method Models\RegisterTargetsWithClassicalLBResponse RegisterTargetsWithClassicalLB(Models\RegisterTargetsWithClassicalLBRequest $req) This API is used to bind a real server with a classic CLB instance. This is an async API. After it is returned successfully, you can call the API `DescribeTaskStatus` with the returned RequestId as an input parameter to check whether this task is successful.
+ * @method Models\RenewLoadBalancersResponse RenewLoadBalancers(Models\RenewLoadBalancersRequest $req) This API is used to renew annual and monthly subscription instances.
  * @method Models\ReplaceCertForLoadBalancersResponse ReplaceCertForLoadBalancers(Models\ReplaceCertForLoadBalancersRequest $req) This API (ReplaceCertForLoadBalancers) is used to replace the certificate associated with a CLB instance. A new certificates can be associated with a CLB only after the original certificate is disassociated from it.
 This API supports replacing server certificates and client certificates.
 The new certificate to be used can be specified by passing in the certificate ID. If no certificate ID is specified, relevant information such as certificate content must be passed in to create a new certificate and bind it to the CLB.
 Note: This API can only be called in the Guangzhou region; for other regions, an error will occur due to domain name resolution problems.
  * @method Models\SetCustomizedConfigForLoadBalancerResponse SetCustomizedConfigForLoadBalancer(Models\SetCustomizedConfigForLoadBalancerRequest $req) This API is used to create or manage a user-defined CLB configuration template.
  * @method Models\SetLoadBalancerClsLogResponse SetLoadBalancerClsLog(Models\SetLoadBalancerClsLogRequest $req) This API is used to add, delete, and update the CLS topic of a CLB instance.
- * @method Models\SetLoadBalancerSecurityGroupsResponse SetLoadBalancerSecurityGroups(Models\SetLoadBalancerSecurityGroupsRequest $req) This API is used to bind or unbind security groups for a public network load balancing instance. To query currently bound security groups of a load balancing instance, use the DescribeLoadBalancers API (https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1). This API follows set semantics.
+ * @method Models\SetLoadBalancerSecurityGroupsResponse SetLoadBalancerSecurityGroups(Models\SetLoadBalancerSecurityGroupsRequest $req) This API is used to bind or unbind security groups for a public network load balancing instance. To query currently bound security groups of a load balancing instance, use the [DescribeLoadBalancers]((https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1)) API. This API follows set semantics.
 This API is used to pass in all security groups that should be bound to the Cloud Load Balancer instance during the binding operation (bound + new binding).
 For unbinding operations, the input parameters should specify all security groups bound to a CLB instance after unbinding. If you want to unbind all security groups, you can omit this parameter or input an empty array. Note: After a private network CLB is bound to an EIP, the security groups on the CLB do not take effect for the traffic from the EIP, but take effect for the traffic from the private network CLB.
  * @method Models\SetLoadBalancerStartStatusResponse SetLoadBalancerStartStatus(Models\SetLoadBalancerStartStatusRequest $req) This API is used to start or stop a load balancing instance or listener.

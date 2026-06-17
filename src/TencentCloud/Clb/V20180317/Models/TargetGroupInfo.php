@@ -20,206 +20,194 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Target group information
  *
- * @method string getTargetGroupId() Obtain Target group ID
- * @method void setTargetGroupId(string $TargetGroupId) Set Target group ID
- * @method string getVpcId() Obtain `vpcid` of target group
- * @method void setVpcId(string $VpcId) Set `vpcid` of target group
- * @method string getTargetGroupName() Obtain Target group name
- * @method void setTargetGroupName(string $TargetGroupName) Set Target group name
- * @method integer getPort() Obtain Specifies the default port of the target group. for a full listen target group, this field returns 0, indicating an invalid port.
+ * @method string getTargetGroupId() Obtain <p>Target group ID</p>
+ * @method void setTargetGroupId(string $TargetGroupId) Set <p>Target group ID</p>
+ * @method string getVpcId() Obtain <p>VPC ID of the target group</p>
+ * @method void setVpcId(string $VpcId) Set <p>VPC ID of the target group</p>
+ * @method string getTargetGroupName() Obtain <p>Target group name</p>
+ * @method void setTargetGroupName(string $TargetGroupName) Set <p>Target group name</p>
+ * @method integer getPort() Obtain <p>Default port of target group. This field returns 0 for full listen target group, indicating an invalid port.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPort(integer $Port) Set Specifies the default port of the target group. for a full listen target group, this field returns 0, indicating an invalid port.
+ * @method void setPort(integer $Port) Set <p>Default port of target group. This field returns 0 for full listen target group, indicating an invalid port.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreatedTime() Obtain Target group creation time
- * @method void setCreatedTime(string $CreatedTime) Set Target group creation time
- * @method string getUpdatedTime() Obtain Target group modification time
- * @method void setUpdatedTime(string $UpdatedTime) Set Target group modification time
- * @method array getAssociatedRule() Obtain Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAssociatedRule(array $AssociatedRule) Set Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getProtocol() Obtain Backend forwarding protocol of the target group. only returns valid values for the new version (v2) target group.
+ * @method string getCreatedTime() Obtain <p>Creation time of target group</p>
+ * @method void setCreatedTime(string $CreatedTime) Set <p>Creation time of target group</p>
+ * @method string getUpdatedTime() Obtain <p>Target group modification time</p>
+ * @method void setUpdatedTime(string $UpdatedTime) Set <p>Target group modification time</p>
+ * @method array getAssociatedRule() Obtain <p>Associated rule array. This parameter cannot be obtained in the DescribeTargetGroupList API call.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProtocol(string $Protocol) Set Backend forwarding protocol of the target group. only returns valid values for the new version (v2) target group.
+ * @method void setAssociatedRule(array $AssociatedRule) Set <p>Associated rule array. This parameter cannot be obtained in the DescribeTargetGroupList API call.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getScheduleAlgorithm() Obtain Scheduling algorithm. returns a valid value only when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur>
-<Li>WRR: weighted round-robin.</li>.
-<Li>LEAST_CONN: specifies the least connection.</li>.
-<Li>IP_HASH: based on ip hash.</li>.
-</ur>
-
+ * @method string getProtocol() Obtain <p>Backend forwarding protocol of the target group. Only the new version target group v2 returns a valid value.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) Set Scheduling algorithm. returns a valid value only when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur>
-<Li>WRR: weighted round-robin.</li>.
-<Li>LEAST_CONN: specifies the least connection.</li>.
-<Li>IP_HASH: based on ip hash.</li>.
-</ur>
-
+ * @method void setProtocol(string $Protocol) Set <p>Backend forwarding protocol of the target group. Only the new version target group v2 returns a valid value.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method TargetGroupHealthCheck getHealthCheck() Obtain Health check details.
+ * @method string getScheduleAlgorithm() Obtain <p>Scheduling algorithm. This parameter returns valid values only for target groups with backend forwarding protocol (HTTP, HTTPS, GRPC). Available values:</p><ur></p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li></ur>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) Set Health check details.
+ * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) Set <p>Scheduling algorithm. This parameter returns valid values only for target groups with backend forwarding protocol (HTTP, HTTPS, GRPC). Available values:</p><ur></p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li></ur>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTargetGroupType() Obtain Target group type, currently supported v1 (legacy version target group) and v2 (new version target group). defaults to v1 (legacy version target group).
- * @method void setTargetGroupType(string $TargetGroupType) Set Target group type, currently supported v1 (legacy version target group) and v2 (new version target group). defaults to v1 (legacy version target group).
- * @method integer getAssociatedRuleCount() Obtain Number of rules associated with the target group.
- * @method void setAssociatedRuleCount(integer $AssociatedRuleCount) Set Number of rules associated with the target group.
- * @method integer getRegisteredInstancesCount() Obtain Specifies the number of instances in the target group.
- * @method void setRegisteredInstancesCount(integer $RegisteredInstancesCount) Set Specifies the number of instances in the target group.
- * @method array getTag() Obtain Tag.
- * @method void setTag(array $Tag) Set Tag.
- * @method integer getWeight() Obtain Default weight. only target groups of v2 type return this field. when NULL is returned, it means the default weight is not set.
+ * @method TargetGroupHealthCheck getHealthCheck() Obtain <p>Health check details.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWeight(integer $Weight) Set Default weight. only target groups of v2 type return this field. when NULL is returned, it means the default weight is not set.
+ * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) Set <p>Health check details.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getFullListenSwitch() Obtain Specifies whether to listen to all target groups.
- * @method void setFullListenSwitch(boolean $FullListenSwitch) Set Specifies whether to listen to all target groups.
- * @method boolean getKeepaliveEnable() Obtain Whether to enable persistent connections. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and returned by the target group.
- * @method void setKeepaliveEnable(boolean $KeepaliveEnable) Set Whether to enable persistent connections. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and returned by the target group.
- * @method integer getSessionExpireTime() Obtain Session persistence time. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and the target group returns a valid value.
- * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and the target group returns a valid value.
- * @method string getIpVersion() Obtain IP version.
- * @method void setIpVersion(string $IpVersion) Set IP version.
+ * @method string getTargetGroupType() Obtain <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group). Defaults to v1 (legacy version target group).</p>
+ * @method void setTargetGroupType(string $TargetGroupType) Set <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group). Defaults to v1 (legacy version target group).</p>
+ * @method integer getAssociatedRuleCount() Obtain <p>Number of rules associated with the target group.</p>
+ * @method void setAssociatedRuleCount(integer $AssociatedRuleCount) Set <p>Number of rules associated with the target group.</p>
+ * @method integer getRegisteredInstancesCount() Obtain <p>Number of instances in the target group.</p>
+ * @method void setRegisteredInstancesCount(integer $RegisteredInstancesCount) Set <p>Number of instances in the target group.</p>
+ * @method array getTag() Obtain <p>Tag.</p>
+ * @method void setTag(array $Tag) Set <p>Tag.</p>
+ * @method integer getWeight() Obtain <p>Default weight. Only target groups of v2 type return this field. When NULL is returned, it means the default weight is not set.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWeight(integer $Weight) Set <p>Default weight. Only target groups of v2 type return this field. When NULL is returned, it means the default weight is not set.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getFullListenSwitch() Obtain <p>Whether to listen to the target group.</p>
+ * @method void setFullListenSwitch(boolean $FullListenSwitch) Set <p>Whether to listen to the target group.</p>
+ * @method boolean getKeepaliveEnable() Obtain <p>Whether to enable long connections. Only target groups with HTTP/HTTPS/GRPC as the backend forwarding protocol return a valid value.</p>
+ * @method void setKeepaliveEnable(boolean $KeepaliveEnable) Set <p>Whether to enable long connections. Only target groups with HTTP/HTTPS/GRPC as the backend forwarding protocol return a valid value.</p>
+ * @method integer getSessionExpireTime() Obtain <p>Session hold time. Only target groups with backend forwarding protocol set to HTTP/HTTPS/GRPC return a valid value.</p>
+ * @method void setSessionExpireTime(integer $SessionExpireTime) Set <p>Session hold time. Only target groups with backend forwarding protocol set to HTTP/HTTPS/GRPC return a valid value.</p>
+ * @method string getIpVersion() Obtain <p>IP version.</p>
+ * @method void setIpVersion(string $IpVersion) Set <p>IP version.</p>
+ * @method boolean getSnatEnable() Obtain <p>Whether to enable SNAT</p>
+ * @method void setSnatEnable(boolean $SnatEnable) Set <p>Whether to enable SNAT</p>
  */
 class TargetGroupInfo extends AbstractModel
 {
     /**
-     * @var string Target group ID
+     * @var string <p>Target group ID</p>
      */
     public $TargetGroupId;
 
     /**
-     * @var string `vpcid` of target group
+     * @var string <p>VPC ID of the target group</p>
      */
     public $VpcId;
 
     /**
-     * @var string Target group name
+     * @var string <p>Target group name</p>
      */
     public $TargetGroupName;
 
     /**
-     * @var integer Specifies the default port of the target group. for a full listen target group, this field returns 0, indicating an invalid port.
+     * @var integer <p>Default port of target group. This field returns 0 for full listen target group, indicating an invalid port.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Port;
 
     /**
-     * @var string Target group creation time
+     * @var string <p>Creation time of target group</p>
      */
     public $CreatedTime;
 
     /**
-     * @var string Target group modification time
+     * @var string <p>Target group modification time</p>
      */
     public $UpdatedTime;
 
     /**
-     * @var array Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Associated rule array. This parameter cannot be obtained in the DescribeTargetGroupList API call.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AssociatedRule;
 
     /**
-     * @var string Backend forwarding protocol of the target group. only returns valid values for the new version (v2) target group.
+     * @var string <p>Backend forwarding protocol of the target group. Only the new version target group v2 returns a valid value.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Protocol;
 
     /**
-     * @var string Scheduling algorithm. returns a valid value only when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur>
-<Li>WRR: weighted round-robin.</li>.
-<Li>LEAST_CONN: specifies the least connection.</li>.
-<Li>IP_HASH: based on ip hash.</li>.
-</ur>
-
+     * @var string <p>Scheduling algorithm. This parameter returns valid values only for target groups with backend forwarding protocol (HTTP, HTTPS, GRPC). Available values:</p><ur></p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li></ur>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ScheduleAlgorithm;
 
     /**
-     * @var TargetGroupHealthCheck Health check details.
+     * @var TargetGroupHealthCheck <p>Health check details.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HealthCheck;
 
     /**
-     * @var string Target group type, currently supported v1 (legacy version target group) and v2 (new version target group). defaults to v1 (legacy version target group).
+     * @var string <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group). Defaults to v1 (legacy version target group).</p>
      */
     public $TargetGroupType;
 
     /**
-     * @var integer Number of rules associated with the target group.
+     * @var integer <p>Number of rules associated with the target group.</p>
      */
     public $AssociatedRuleCount;
 
     /**
-     * @var integer Specifies the number of instances in the target group.
+     * @var integer <p>Number of instances in the target group.</p>
      */
     public $RegisteredInstancesCount;
 
     /**
-     * @var array Tag.
+     * @var array <p>Tag.</p>
      */
     public $Tag;
 
     /**
-     * @var integer Default weight. only target groups of v2 type return this field. when NULL is returned, it means the default weight is not set.
+     * @var integer <p>Default weight. Only target groups of v2 type return this field. When NULL is returned, it means the default weight is not set.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Weight;
 
     /**
-     * @var boolean Specifies whether to listen to all target groups.
+     * @var boolean <p>Whether to listen to the target group.</p>
      */
     public $FullListenSwitch;
 
     /**
-     * @var boolean Whether to enable persistent connections. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and returned by the target group.
+     * @var boolean <p>Whether to enable long connections. Only target groups with HTTP/HTTPS/GRPC as the backend forwarding protocol return a valid value.</p>
      */
     public $KeepaliveEnable;
 
     /**
-     * @var integer Session persistence time. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and the target group returns a valid value.
+     * @var integer <p>Session hold time. Only target groups with backend forwarding protocol set to HTTP/HTTPS/GRPC return a valid value.</p>
      */
     public $SessionExpireTime;
 
     /**
-     * @var string IP version.
+     * @var string <p>IP version.</p>
      */
     public $IpVersion;
 
     /**
-     * @param string $TargetGroupId Target group ID
-     * @param string $VpcId `vpcid` of target group
-     * @param string $TargetGroupName Target group name
-     * @param integer $Port Specifies the default port of the target group. for a full listen target group, this field returns 0, indicating an invalid port.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreatedTime Target group creation time
-     * @param string $UpdatedTime Target group modification time
-     * @param array $AssociatedRule Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Protocol Backend forwarding protocol of the target group. only returns valid values for the new version (v2) target group.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ScheduleAlgorithm Scheduling algorithm. returns a valid value only when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur>
-<Li>WRR: weighted round-robin.</li>.
-<Li>LEAST_CONN: specifies the least connection.</li>.
-<Li>IP_HASH: based on ip hash.</li>.
-</ur>
+     * @var boolean <p>Whether to enable SNAT</p>
+     */
+    public $SnatEnable;
 
+    /**
+     * @param string $TargetGroupId <p>Target group ID</p>
+     * @param string $VpcId <p>VPC ID of the target group</p>
+     * @param string $TargetGroupName <p>Target group name</p>
+     * @param integer $Port <p>Default port of target group. This field returns 0 for full listen target group, indicating an invalid port.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TargetGroupHealthCheck $HealthCheck Health check details.
+     * @param string $CreatedTime <p>Creation time of target group</p>
+     * @param string $UpdatedTime <p>Target group modification time</p>
+     * @param array $AssociatedRule <p>Associated rule array. This parameter cannot be obtained in the DescribeTargetGroupList API call.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TargetGroupType Target group type, currently supported v1 (legacy version target group) and v2 (new version target group). defaults to v1 (legacy version target group).
-     * @param integer $AssociatedRuleCount Number of rules associated with the target group.
-     * @param integer $RegisteredInstancesCount Specifies the number of instances in the target group.
-     * @param array $Tag Tag.
-     * @param integer $Weight Default weight. only target groups of v2 type return this field. when NULL is returned, it means the default weight is not set.
+     * @param string $Protocol <p>Backend forwarding protocol of the target group. Only the new version target group v2 returns a valid value.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $FullListenSwitch Specifies whether to listen to all target groups.
-     * @param boolean $KeepaliveEnable Whether to enable persistent connections. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and returned by the target group.
-     * @param integer $SessionExpireTime Session persistence time. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and the target group returns a valid value.
-     * @param string $IpVersion IP version.
+     * @param string $ScheduleAlgorithm <p>Scheduling algorithm. This parameter returns valid values only for target groups with backend forwarding protocol (HTTP, HTTPS, GRPC). Available values:</p><ur></p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li></ur>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TargetGroupHealthCheck $HealthCheck <p>Health check details.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TargetGroupType <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group). Defaults to v1 (legacy version target group).</p>
+     * @param integer $AssociatedRuleCount <p>Number of rules associated with the target group.</p>
+     * @param integer $RegisteredInstancesCount <p>Number of instances in the target group.</p>
+     * @param array $Tag <p>Tag.</p>
+     * @param integer $Weight <p>Default weight. Only target groups of v2 type return this field. When NULL is returned, it means the default weight is not set.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $FullListenSwitch <p>Whether to listen to the target group.</p>
+     * @param boolean $KeepaliveEnable <p>Whether to enable long connections. Only target groups with HTTP/HTTPS/GRPC as the backend forwarding protocol return a valid value.</p>
+     * @param integer $SessionExpireTime <p>Session hold time. Only target groups with backend forwarding protocol set to HTTP/HTTPS/GRPC return a valid value.</p>
+     * @param string $IpVersion <p>IP version.</p>
+     * @param boolean $SnatEnable <p>Whether to enable SNAT</p>
      */
     function __construct()
     {
@@ -319,6 +307,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {
             $this->IpVersion = $param["IpVersion"];
+        }
+
+        if (array_key_exists("SnatEnable",$param) and $param["SnatEnable"] !== null) {
+            $this->SnatEnable = $param["SnatEnable"];
         }
     }
 }

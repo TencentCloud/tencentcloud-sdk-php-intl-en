@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) Set <p>Whether to treat the libra node as an ordinary RO node</p>
  * @method boolean getApQueryToOtherNode() Obtain <p>Whether to forward to other nodes when a libra node fault occurs</p>
  * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) Set <p>Whether to forward to other nodes when a libra node fault occurs</p>
- * @method string getLoadBalanceMode() Obtain 
- * @method void setLoadBalanceMode(string $LoadBalanceMode) Set 
+ * @method string getLoadBalanceMode() Obtain <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+ * @method void setLoadBalanceMode(string $LoadBalanceMode) Set <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
  */
 class ModifyProxyRwSplitRequest extends AbstractModel
 {
@@ -145,7 +145,7 @@ class ModifyProxyRwSplitRequest extends AbstractModel
     public $ApQueryToOtherNode;
 
     /**
-     * @var string 
+     * @var string <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     public $LoadBalanceMode;
 
@@ -167,7 +167,7 @@ class ModifyProxyRwSplitRequest extends AbstractModel
      * @param integer $ConnectionPoolTimeOut <p>Connection pool time.<br>Optional range: 0-300 (seconds).</p>
      * @param boolean $ApNodeAsRoNode <p>Whether to treat the libra node as an ordinary RO node</p>
      * @param boolean $ApQueryToOtherNode <p>Whether to forward to other nodes when a libra node fault occurs</p>
-     * @param string $LoadBalanceMode 
+     * @param string $LoadBalanceMode <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     function __construct()
     {

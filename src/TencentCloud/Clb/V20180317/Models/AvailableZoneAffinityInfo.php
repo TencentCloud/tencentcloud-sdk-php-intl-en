@@ -18,36 +18,44 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Availability zone forward affinity info
  *
- * @method boolean getEnable() Obtain 
- * @method void setEnable(boolean $Enable) Set 
- * @method integer getExitRatio() Obtain 
- * @method void setExitRatio(integer $ExitRatio) Set 
- * @method integer getReentryRatio() Obtain 
- * @method void setReentryRatio(integer $ReentryRatio) Set 
+ * @method boolean getEnable() Obtain Whether to enable availability zone forwarding affinity. true: enable availability zone forwarding affinity; false: enable availability zone forwarding affinity.
+ * @method void setEnable(boolean $Enable) Set Whether to enable availability zone forwarding affinity. true: enable availability zone forwarding affinity; false: enable availability zone forwarding affinity.
+ * @method integer getExitRatio() Obtain The threshold for availability zone forwarding affinity failure. When the healthy ratio of backend services in an availability zone is less than this threshold, the Cloud Load Balancer will exit availability zone forwarding affinity and convert to forwarding across all availability zones.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExitRatio(integer $ExitRatio) Set The threshold for availability zone forwarding affinity failure. When the healthy ratio of backend services in an availability zone is less than this threshold, the Cloud Load Balancer will exit availability zone forwarding affinity and convert to forwarding across all availability zones.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getReentryRatio() Obtain The threshold for re-enabling availability zone affinity forwarding. When forwarding across all availability zones and the health ratio of backend services in the Cloud Load Balancer AZ is greater than or equal to this threshold, the CLB will enter availability zone affinity forwarding again.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReentryRatio(integer $ReentryRatio) Set The threshold for re-enabling availability zone affinity forwarding. When forwarding across all availability zones and the health ratio of backend services in the Cloud Load Balancer AZ is greater than or equal to this threshold, the CLB will enter availability zone affinity forwarding again.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AvailableZoneAffinityInfo extends AbstractModel
 {
     /**
-     * @var boolean 
+     * @var boolean Whether to enable availability zone forwarding affinity. true: enable availability zone forwarding affinity; false: enable availability zone forwarding affinity.
      */
     public $Enable;
 
     /**
-     * @var integer 
+     * @var integer The threshold for availability zone forwarding affinity failure. When the healthy ratio of backend services in an availability zone is less than this threshold, the Cloud Load Balancer will exit availability zone forwarding affinity and convert to forwarding across all availability zones.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExitRatio;
 
     /**
-     * @var integer 
+     * @var integer The threshold for re-enabling availability zone affinity forwarding. When forwarding across all availability zones and the health ratio of backend services in the Cloud Load Balancer AZ is greater than or equal to this threshold, the CLB will enter availability zone affinity forwarding again.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReentryRatio;
 
     /**
-     * @param boolean $Enable 
-     * @param integer $ExitRatio 
-     * @param integer $ReentryRatio 
+     * @param boolean $Enable Whether to enable availability zone forwarding affinity. true: enable availability zone forwarding affinity; false: enable availability zone forwarding affinity.
+     * @param integer $ExitRatio The threshold for availability zone forwarding affinity failure. When the healthy ratio of backend services in an availability zone is less than this threshold, the Cloud Load Balancer will exit availability zone forwarding affinity and convert to forwarding across all availability zones.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ReentryRatio The threshold for re-enabling availability zone affinity forwarding. When forwarding across all availability zones and the health ratio of backend services in the Cloud Load Balancer AZ is greater than or equal to this threshold, the CLB will enter availability zone affinity forwarding again.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

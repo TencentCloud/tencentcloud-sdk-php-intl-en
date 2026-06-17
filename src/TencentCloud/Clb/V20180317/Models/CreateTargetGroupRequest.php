@@ -20,142 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTargetGroup request structure.
  *
- * @method string getTargetGroupName() Obtain Target group name (up to 50 characters)
- * @method void setTargetGroupName(string $TargetGroupName) Set Target group name (up to 50 characters)
- * @method string getVpcId() Obtain Specifies the vpc id attribute of the target group. uses the default vpc if left empty.
- * @method void setVpcId(string $VpcId) Set Specifies the vpc id attribute of the target group. uses the default vpc if left empty.
- * @method integer getPort() Obtain Specifies the default Port of the target group. the default Port can be used when servers are added subsequently. this parameter is not supported for full-listen target groups. for non-full-listen target groups, either Port or Port in TargetGroupInstances.N is required.
-
- * @method void setPort(integer $Port) Set Specifies the default Port of the target group. the default Port can be used when servers are added subsequently. this parameter is not supported for full-listen target groups. for non-full-listen target groups, either Port or Port in TargetGroupInstances.N is required.
-
- * @method array getTargetGroupInstances() Obtain Specifies the real servers bound to the target group. supports up to 50 at a time.
- * @method void setTargetGroupInstances(array $TargetGroupInstances) Set Specifies the real servers bound to the target group. supports up to 50 at a time.
- * @method string getType() Obtain Target group type, currently supported v1 (legacy version target group) and v2 (new version target group), defaults to v1 (legacy version target group).
- * @method void setType(string $Type) Set Target group type, currently supported v1 (legacy version target group) and v2 (new version target group), defaults to v1 (legacy version target group).
- * @method string getProtocol() Obtain Backend forwarding protocol of the target group. this field is required for the new version (v2) target group. currently supports TCP, UDP, HTTP, HTTPS, GRPC.
- * @method void setProtocol(string $Protocol) Set Backend forwarding protocol of the target group. this field is required for the new version (v2) target group. currently supports TCP, UDP, HTTP, HTTPS, GRPC.
- * @method TargetGroupHealthCheck getHealthCheck() Obtain Health check.
- * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) Set Health check.
- * @method string getScheduleAlgorithm() Obtain Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
- * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) Set Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
- * @method array getTags() Obtain Tag.
- * @method void setTags(array $Tags) Set Tag.
- * @method integer getWeight() Obtain Specifies the default weight of the backend service. among them:.
-<ul><li>Value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
- * @method void setWeight(integer $Weight) Set Specifies the default weight of the backend service. among them:.
-<ul><li>Value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
- * @method boolean getFullListenSwitch() Obtain Full listen target group flag. valid values: true (yes), false (no). only target groups of the new version V2 event type support this parameter.
- * @method void setFullListenSwitch(boolean $FullListenSwitch) Set Full listen target group flag. valid values: true (yes), false (no). only target groups of the new version V2 event type support this parameter.
- * @method boolean getKeepaliveEnable() Obtain Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. 0: disable; 1: enable. this feature is off by default.
- * @method void setKeepaliveEnable(boolean $KeepaliveEnable) Set Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. 0: disable; 1: enable. this feature is off by default.
- * @method integer getSessionExpireTime() Obtain Session hold time, unit: second. value range: 30-3600. default: 0, disabled. this parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.
- * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session hold time, unit: second. value range: 30-3600. default: 0, disabled. this parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.
- * @method string getIpVersion() Obtain IP version type.
- * @method void setIpVersion(string $IpVersion) Set IP version type.
- * @method boolean getSnatEnable() Obtain 
- * @method void setSnatEnable(boolean $SnatEnable) Set 
+ * @method string getTargetGroupName() Obtain <p>Target group name. Naming rule: 1-80 English letters, Chinese characters and other internationally compatible language characters, digits, connecting line "-", underscore "_" and other common characters (Unicode supplementary characters such as emoji and rare Chinese characters are forbidden).</p>
+ * @method void setTargetGroupName(string $TargetGroupName) Set <p>Target group name. Naming rule: 1-80 English letters, Chinese characters and other internationally compatible language characters, digits, connecting line "-", underscore "_" and other common characters (Unicode supplementary characters such as emoji and rare Chinese characters are forbidden).</p>
+ * @method string getVpcId() Obtain <p>The vpcId attribute of the target group. Leave it blank to use the default VPC.</p>
+ * @method void setVpcId(string $VpcId) Set <p>The vpcId attribute of the target group. Leave it blank to use the default VPC.</p>
+ * @method integer getPort() Obtain <p>Default port of target group. Default port can be used when servers are added subsequently. Full listen target group does not support this parameter. For non-full listen target group, either Port or port in TargetGroupInstances.N is required.</p>
+ * @method void setPort(integer $Port) Set <p>Default port of target group. Default port can be used when servers are added subsequently. Full listen target group does not support this parameter. For non-full listen target group, either Port or port in TargetGroupInstances.N is required.</p>
+ * @method array getTargetGroupInstances() Obtain <p>The target group supports up to 50 real servers bound to it.</p>
+ * @method void setTargetGroupInstances(array $TargetGroupInstances) Set <p>The target group supports up to 50 real servers bound to it.</p>
+ * @method string getType() Obtain <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group), defaults to v1 (legacy version target group).</p>
+ * @method void setType(string $Type) Set <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group), defaults to v1 (legacy version target group).</p>
+ * @method string getProtocol() Obtain <p>Backend forwarding protocol of the target group. This field is required for the new version target group v2. Currently supports TCP, UDP, HTTP, HTTPS, GRPC.</p>
+ * @method void setProtocol(string $Protocol) Set <p>Backend forwarding protocol of the target group. This field is required for the new version target group v2. Currently supports TCP, UDP, HTTP, HTTPS, GRPC.</p>
+ * @method TargetGroupHealthCheck getHealthCheck() Obtain <p>Health check.</p>
+ * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) Set <p>Health check.</p>
+ * @method string getScheduleAlgorithm() Obtain <p>Scheduling algorithm. This parameter is valid only for new version V2 target groups with backend forwarding protocol (HTTP|HTTPS|GRPC). Available values:</p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: least connection.</li><li>IP_HASH: based on IP hash.</li><li>Default WRR.</li>
+ * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) Set <p>Scheduling algorithm. This parameter is valid only for new version V2 target groups with backend forwarding protocol (HTTP|HTTPS|GRPC). Available values:</p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: least connection.</li><li>IP_HASH: based on IP hash.</li><li>Default WRR.</li>
+ * @method array getTags() Obtain <p>Tag.</p>
+ * @method void setTags(array $Tags) Set <p>Tag.</p>
+ * @method integer getWeight() Obtain <p>Default weight of the backend service, where:</p><ul><li>Value ranges from 0 to 100.</li><li>After setting this value, when adding a backend service to the target group, if the backend service does not set the weight separately, use the default weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>
+ * @method void setWeight(integer $Weight) Set <p>Default weight of the backend service, where:</p><ul><li>Value ranges from 0 to 100.</li><li>After setting this value, when adding a backend service to the target group, if the backend service does not set the weight separately, use the default weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>
+ * @method boolean getFullListenSwitch() Obtain <p>Full listen target group flag. true: yes, false: no. Only target groups of the new version V2 support this parameter.</p>
+ * @method void setFullListenSwitch(boolean $FullListenSwitch) Set <p>Full listen target group flag. true: yes, false: no. Only target groups of the new version V2 support this parameter.</p>
+ * @method boolean getKeepaliveEnable() Obtain <p>Whether to enable long connections. This parameter is applicable only to HTTP/HTTPS target groups. 0: off; 1: on. Off by default.</p>
+ * @method void setKeepaliveEnable(boolean $KeepaliveEnable) Set <p>Whether to enable long connections. This parameter is applicable only to HTTP/HTTPS target groups. 0: off; 1: on. Off by default.</p>
+ * @method integer getSessionExpireTime() Obtain <p>Session persistence time, unit: second. Available values: 30-3600, default 0, disabled. This parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.</p>
+ * @method void setSessionExpireTime(integer $SessionExpireTime) Set <p>Session persistence time, unit: second. Available values: 30-3600, default 0, disabled. This parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.</p>
+ * @method string getIpVersion() Obtain <p>IP version type.</p>
+ * @method void setIpVersion(string $IpVersion) Set <p>IP version type.</p>
+ * @method boolean getSnatEnable() Obtain <p>Whether SNAT (source IP replacement) is enabled, True (enabled), False (disabled). Disabled by default. Note: When SnatEnable is enabled, the client source IP will be replaced. At this point, the <code>Pass through client source IP</code> option is disabled, and vice versa.</p>
+ * @method void setSnatEnable(boolean $SnatEnable) Set <p>Whether SNAT (source IP replacement) is enabled, True (enabled), False (disabled). Disabled by default. Note: When SnatEnable is enabled, the client source IP will be replaced. At this point, the <code>Pass through client source IP</code> option is disabled, and vice versa.</p>
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
     /**
-     * @var string Target group name (up to 50 characters)
+     * @var string <p>Target group name. Naming rule: 1-80 English letters, Chinese characters and other internationally compatible language characters, digits, connecting line "-", underscore "_" and other common characters (Unicode supplementary characters such as emoji and rare Chinese characters are forbidden).</p>
      */
     public $TargetGroupName;
 
     /**
-     * @var string Specifies the vpc id attribute of the target group. uses the default vpc if left empty.
+     * @var string <p>The vpcId attribute of the target group. Leave it blank to use the default VPC.</p>
      */
     public $VpcId;
 
     /**
-     * @var integer Specifies the default Port of the target group. the default Port can be used when servers are added subsequently. this parameter is not supported for full-listen target groups. for non-full-listen target groups, either Port or Port in TargetGroupInstances.N is required.
-
+     * @var integer <p>Default port of target group. Default port can be used when servers are added subsequently. Full listen target group does not support this parameter. For non-full listen target group, either Port or port in TargetGroupInstances.N is required.</p>
      */
     public $Port;
 
     /**
-     * @var array Specifies the real servers bound to the target group. supports up to 50 at a time.
+     * @var array <p>The target group supports up to 50 real servers bound to it.</p>
      */
     public $TargetGroupInstances;
 
     /**
-     * @var string Target group type, currently supported v1 (legacy version target group) and v2 (new version target group), defaults to v1 (legacy version target group).
+     * @var string <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group), defaults to v1 (legacy version target group).</p>
      */
     public $Type;
 
     /**
-     * @var string Backend forwarding protocol of the target group. this field is required for the new version (v2) target group. currently supports TCP, UDP, HTTP, HTTPS, GRPC.
+     * @var string <p>Backend forwarding protocol of the target group. This field is required for the new version target group v2. Currently supports TCP, UDP, HTTP, HTTPS, GRPC.</p>
      */
     public $Protocol;
 
     /**
-     * @var TargetGroupHealthCheck Health check.
+     * @var TargetGroupHealthCheck <p>Health check.</p>
      */
     public $HealthCheck;
 
     /**
-     * @var string Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
+     * @var string <p>Scheduling algorithm. This parameter is valid only for new version V2 target groups with backend forwarding protocol (HTTP|HTTPS|GRPC). Available values:</p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: least connection.</li><li>IP_HASH: based on IP hash.</li><li>Default WRR.</li>
      */
     public $ScheduleAlgorithm;
 
     /**
-     * @var array Tag.
+     * @var array <p>Tag.</p>
      */
     public $Tags;
 
     /**
-     * @var integer Specifies the default weight of the backend service. among them:.
-<ul><li>Value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
+     * @var integer <p>Default weight of the backend service, where:</p><ul><li>Value ranges from 0 to 100.</li><li>After setting this value, when adding a backend service to the target group, if the backend service does not set the weight separately, use the default weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>
      */
     public $Weight;
 
     /**
-     * @var boolean Full listen target group flag. valid values: true (yes), false (no). only target groups of the new version V2 event type support this parameter.
+     * @var boolean <p>Full listen target group flag. true: yes, false: no. Only target groups of the new version V2 support this parameter.</p>
      */
     public $FullListenSwitch;
 
     /**
-     * @var boolean Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. 0: disable; 1: enable. this feature is off by default.
+     * @var boolean <p>Whether to enable long connections. This parameter is applicable only to HTTP/HTTPS target groups. 0: off; 1: on. Off by default.</p>
      */
     public $KeepaliveEnable;
 
     /**
-     * @var integer Session hold time, unit: second. value range: 30-3600. default: 0, disabled. this parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.
+     * @var integer <p>Session persistence time, unit: second. Available values: 30-3600, default 0, disabled. This parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.</p>
      */
     public $SessionExpireTime;
 
     /**
-     * @var string IP version type.
+     * @var string <p>IP version type.</p>
      */
     public $IpVersion;
 
     /**
-     * @var boolean 
+     * @var boolean <p>Whether SNAT (source IP replacement) is enabled, True (enabled), False (disabled). Disabled by default. Note: When SnatEnable is enabled, the client source IP will be replaced. At this point, the <code>Pass through client source IP</code> option is disabled, and vice versa.</p>
      */
     public $SnatEnable;
 
     /**
-     * @param string $TargetGroupName Target group name (up to 50 characters)
-     * @param string $VpcId Specifies the vpc id attribute of the target group. uses the default vpc if left empty.
-     * @param integer $Port Specifies the default Port of the target group. the default Port can be used when servers are added subsequently. this parameter is not supported for full-listen target groups. for non-full-listen target groups, either Port or Port in TargetGroupInstances.N is required.
-
-     * @param array $TargetGroupInstances Specifies the real servers bound to the target group. supports up to 50 at a time.
-     * @param string $Type Target group type, currently supported v1 (legacy version target group) and v2 (new version target group), defaults to v1 (legacy version target group).
-     * @param string $Protocol Backend forwarding protocol of the target group. this field is required for the new version (v2) target group. currently supports TCP, UDP, HTTP, HTTPS, GRPC.
-     * @param TargetGroupHealthCheck $HealthCheck Health check.
-     * @param string $ScheduleAlgorithm Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
-     * @param array $Tags Tag.
-     * @param integer $Weight Specifies the default weight of the backend service. among them:.
-<ul><li>Value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
-     * @param boolean $FullListenSwitch Full listen target group flag. valid values: true (yes), false (no). only target groups of the new version V2 event type support this parameter.
-     * @param boolean $KeepaliveEnable Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. 0: disable; 1: enable. this feature is off by default.
-     * @param integer $SessionExpireTime Session hold time, unit: second. value range: 30-3600. default: 0, disabled. this parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.
-     * @param string $IpVersion IP version type.
-     * @param boolean $SnatEnable 
+     * @param string $TargetGroupName <p>Target group name. Naming rule: 1-80 English letters, Chinese characters and other internationally compatible language characters, digits, connecting line "-", underscore "_" and other common characters (Unicode supplementary characters such as emoji and rare Chinese characters are forbidden).</p>
+     * @param string $VpcId <p>The vpcId attribute of the target group. Leave it blank to use the default VPC.</p>
+     * @param integer $Port <p>Default port of target group. Default port can be used when servers are added subsequently. Full listen target group does not support this parameter. For non-full listen target group, either Port or port in TargetGroupInstances.N is required.</p>
+     * @param array $TargetGroupInstances <p>The target group supports up to 50 real servers bound to it.</p>
+     * @param string $Type <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group), defaults to v1 (legacy version target group).</p>
+     * @param string $Protocol <p>Backend forwarding protocol of the target group. This field is required for the new version target group v2. Currently supports TCP, UDP, HTTP, HTTPS, GRPC.</p>
+     * @param TargetGroupHealthCheck $HealthCheck <p>Health check.</p>
+     * @param string $ScheduleAlgorithm <p>Scheduling algorithm. This parameter is valid only for new version V2 target groups with backend forwarding protocol (HTTP|HTTPS|GRPC). Available values:</p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: least connection.</li><li>IP_HASH: based on IP hash.</li><li>Default WRR.</li>
+     * @param array $Tags <p>Tag.</p>
+     * @param integer $Weight <p>Default weight of the backend service, where:</p><ul><li>Value ranges from 0 to 100.</li><li>After setting this value, when adding a backend service to the target group, if the backend service does not set the weight separately, use the default weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>
+     * @param boolean $FullListenSwitch <p>Full listen target group flag. true: yes, false: no. Only target groups of the new version V2 support this parameter.</p>
+     * @param boolean $KeepaliveEnable <p>Whether to enable long connections. This parameter is applicable only to HTTP/HTTPS target groups. 0: off; 1: on. Off by default.</p>
+     * @param integer $SessionExpireTime <p>Session persistence time, unit: second. Available values: 30-3600, default 0, disabled. This parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.</p>
+     * @param string $IpVersion <p>IP version type.</p>
+     * @param boolean $SnatEnable <p>Whether SNAT (source IP replacement) is enabled, True (enabled), False (disabled). Disabled by default. Note: When SnatEnable is enabled, the client source IP will be replaced. At this point, the <code>Pass through client source IP</code> option is disabled, and vice versa.</p>
      */
     function __construct()
     {

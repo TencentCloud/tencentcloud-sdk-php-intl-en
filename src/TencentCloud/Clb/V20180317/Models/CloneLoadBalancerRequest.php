@@ -36,8 +36,8 @@ Note: A primary AZ loads traffic, while a secondary AZ does not load traffic by 
 Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use the `DescribeMasterZones` API to query the primary and secondary AZ list of a region.
  * @method void setSlaveZoneId(string $SlaveZoneId) Set Specifies the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`. It is applicable only to public network CLB.
 Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use the `DescribeMasterZones` API to query the primary and secondary AZ list of a region.
- * @method string getZoneId() Obtain Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
- * @method void setZoneId(string $ZoneId) Set Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
+ * @method string getZoneId() Obtain Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
+ * @method void setZoneId(string $ZoneId) Set Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
  * @method InternetAccessible getInternetAccessible() Obtain CLB network billing mode, applicable only to public network CLB instances.
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set CLB network billing mode, applicable only to public network CLB instances.
  * @method string getVipIsp() Obtain It only applies to public CLB. Currently, the static single-line IP type is supported only for the regions of Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu, and Chongqing. If you need to experience it, contact your business manager. After approval, you can select the ISP type as China Mobile (CMCC), China Unicom (CUCC), or China Telecom (CTCC). The network billing mode should be selected as billing by bandwidth package (BANDWIDTH_PACKAGE). If this parameter is not specified, BGP is used by default. You can use the DescribeResources API to query ISPs supported for a region.
@@ -60,10 +60,10 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
  * @method void setSlaType(string $SlaType) Set Performance capacity specification. <li>clb.c2.medium (standard type)</li> <li>clb.c3.small (advanced type 1)</li> <li>clb.c3.medium (advanced type 2)</li> <li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li>.
  * @method string getClusterTag() Obtain Specifies the Tag of the Stgw exclusive cluster.
  * @method void setClusterTag(string $ClusterTag) Set Specifies the Tag of the Stgw exclusive cluster.
- * @method array getZones() Obtain Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
- * @method void setZones(array $Zones) Set Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
- * @method string getEipAddressId() Obtain The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1).
- * @method void setEipAddressId(string $EipAddressId) Set The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1).
+ * @method array getZones() Obtain Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
+ * @method void setZones(array $Zones) Set Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
+ * @method string getEipAddressId() Obtain The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the [DescribeAddresses](https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1) API .
+ * @method void setEipAddressId(string $EipAddressId) Set The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the [DescribeAddresses](https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1) API .
  */
 class CloneLoadBalancerRequest extends AbstractModel
 {
@@ -96,7 +96,7 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
     public $SlaveZoneId;
 
     /**
-     * @var string Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
+     * @var string Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
      */
     public $ZoneId;
 
@@ -156,12 +156,12 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
     public $ClusterTag;
 
     /**
-     * @var array Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
+     * @var array Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
      */
     public $Zones;
 
     /**
-     * @var string The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1).
+     * @var string The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the [DescribeAddresses](https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1) API .
      */
     public $EipAddressId;
 
@@ -174,7 +174,7 @@ Note: if the name is identical to that of an existing load balancing instance in
 Note: A primary AZ loads traffic, while a secondary AZ does not load traffic by default and will be used only if the primary AZ becomes unavailable. The platform will automatically select the optimal secondary AZ. You can use the `DescribeResource` API to query the primary AZ list of a region.
      * @param string $SlaveZoneId Specifies the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`. It is applicable only to public network CLB.
 Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use the `DescribeMasterZones` API to query the primary and secondary AZ list of a region.
-     * @param string $ZoneId Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
+     * @param string $ZoneId Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
      * @param InternetAccessible $InternetAccessible CLB network billing mode, applicable only to public network CLB instances.
      * @param string $VipIsp It only applies to public CLB. Currently, the static single-line IP type is supported only for the regions of Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu, and Chongqing. If you need to experience it, contact your business manager. After approval, you can select the ISP type as China Mobile (CMCC), China Unicom (CUCC), or China Telecom (CTCC). The network billing mode should be selected as billing by bandwidth package (BANDWIDTH_PACKAGE). If this parameter is not specified, BGP is used by default. You can use the DescribeResources API to query ISPs supported for a region.
      * @param string $Vip Specifies the Vip to apply for cloud load balancer.
@@ -186,8 +186,8 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
      * @param array $ClusterIds Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
      * @param string $SlaType Performance capacity specification. <li>clb.c2.medium (standard type)</li> <li>clb.c3.small (advanced type 1)</li> <li>clb.c3.medium (advanced type 2)</li> <li>clb.c4.small (high-strength type 1)</li> <li>clb.c4.medium (high-strength type 2)</li> <li>clb.c4.large (high-strength type 3)</li> <li>clb.c4.xlarge (high-strength type 4)</li>.
      * @param string $ClusterTag Specifies the Tag of the Stgw exclusive cluster.
-     * @param array $Zones Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
-     * @param string $EipAddressId The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1).
+     * @param array $Zones Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
+     * @param string $EipAddressId The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the [DescribeAddresses](https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1) API .
      */
     function __construct()
     {

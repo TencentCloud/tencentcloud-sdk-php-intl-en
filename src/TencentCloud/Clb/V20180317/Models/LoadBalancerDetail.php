@@ -180,6 +180,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExclusive(integer $Exclusive) Set 0 means non-dedicated instance. 1 means dedicated instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AvailableZoneAffinityInfo getAvailableZoneAffinityInfo() Obtain Availability zone forwarding affinity info
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAvailableZoneAffinityInfo(AvailableZoneAffinityInfo $AvailableZoneAffinityInfo) Set Availability zone forwarding affinity info
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LoadBalancerDetail extends AbstractModel
 {
@@ -432,6 +436,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Exclusive;
 
     /**
+     * @var AvailableZoneAffinityInfo Availability zone forwarding affinity info
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AvailableZoneAffinityInfo;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType Network type of the load balancing instance.
@@ -511,6 +521,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Exclusive 0 means non-dedicated instance. 1 means dedicated instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AvailableZoneAffinityInfo $AvailableZoneAffinityInfo Availability zone forwarding affinity info
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -700,6 +712,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
             $this->Exclusive = $param["Exclusive"];
+        }
+
+        if (array_key_exists("AvailableZoneAffinityInfo",$param) and $param["AvailableZoneAffinityInfo"] !== null) {
+            $this->AvailableZoneAffinityInfo = new AvailableZoneAffinityInfo();
+            $this->AvailableZoneAffinityInfo->deserialize($param["AvailableZoneAffinityInfo"]);
         }
     }
 }

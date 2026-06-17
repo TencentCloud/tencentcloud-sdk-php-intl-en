@@ -205,6 +205,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\OfflineInstanceResponse OfflineInstance(Models\OfflineInstanceRequest $req) This interface (OfflineInstance) is used to terminate an instance.
  * @method Models\OfflineLibraDBClusterResponse OfflineLibraDBCluster(Models\OfflineLibraDBClusterRequest $req) Decommission an analysis cluster
  * @method Models\OfflineLibraDBInstanceResponse OfflineLibraDBInstance(Models\OfflineLibraDBInstanceRequest $req) This API is used to decommission a read-only analysis engine instance.
+ * @method Models\OpenAIOptimizerResponse OpenAIOptimizer(Models\OpenAIOptimizerRequest $req) This API is used to start the optimizer switch of an instance.
  * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) This API is used to enable database audit service for an instance.
  * @method Models\OpenClusterPasswordComplexityResponse OpenClusterPasswordComplexity(Models\OpenClusterPasswordComplexityRequest $req) This API is used to enable the custom password complexity feature.
  * @method Models\OpenClusterReadOnlyInstanceGroupAccessResponse OpenClusterReadOnlyInstanceGroupAccess(Models\OpenClusterReadOnlyInstanceGroupAccessRequest $req) This API is used to enable read-only instance group access.
