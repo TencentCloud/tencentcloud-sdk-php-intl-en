@@ -24,44 +24,42 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskId(string $RiskId) Set Risk ID
  * @method string getVULName() Obtain Vulnerability name
  * @method void setVULName(string $VULName) Set Vulnerability name
- * @method string getRiskLevel() Obtain Risk level
- * @method void setRiskLevel(string $RiskLevel) Set Risk level
+ * @method string getRiskLevel() Obtain Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+ * @method void setRiskLevel(string $RiskLevel) Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
  * @method string getCheckFrom() Obtain Source of the check task
  * @method void setCheckFrom(string $CheckFrom) Set Source of the check task
- * @method integer getEnable() Obtain Whether it's enabled. `1`: Enable; `0`: Disabled
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setEnable(integer $Enable) Set Whether it's enabled. `1`: Enable; `0`: Disabled
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getEnable() Obtain Enable/Disable. 1-Enable; 0-Disable.
+ * @method void setEnable(integer $Enable) Set Enable/Disable. 1-Enable; 0-Disable.
  * @method string getVULType() Obtain Risk type.
  * @method void setVULType(string $VULType) Set Risk type.
  * @method string getImpactVersion() Obtain Affected versions
  * @method void setImpactVersion(string $ImpactVersion) Set Affected versions
- * @method string getCVE() Obtain CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setCVE(string $CVE) Set CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getCVE() Obtain CVE
+ * @method void setCVE(string $CVE) Set CVE
  * @method array getVULTag() Obtain Vulnerability tag
  * @method void setVULTag(array $VULTag) Set Vulnerability tag
- * @method array getFixMethod() Obtain Fix solution
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setFixMethod(array $FixMethod) Set Fix solution
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method array getFixMethod() Obtain Repair method
+ * @method void setFixMethod(array $FixMethod) Set Repair method
  * @method string getReleaseTime() Obtain Disclosure time
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setReleaseTime(string $ReleaseTime) Set Disclosure time
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getEMGCVulType() Obtain Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setEMGCVulType(integer $EMGCVulType) Set Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getEMGCVulType() Obtain Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
+ * @method void setEMGCVulType(integer $EMGCVulType) Set Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
  * @method string getVULDescribe() Obtain Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setVULDescribe(string $VULDescribe) Set Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getImpactComponent() Obtain Affected components
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setImpactComponent(string $ImpactComponent) Set Affected components
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getImpactComponent() Obtain Affected component
+ * @method void setImpactComponent(string $ImpactComponent) Set Affected component
+ * @method string getPayload() Obtain Vulnerability Payload
+ * @method void setPayload(string $Payload) Set Vulnerability Payload
+ * @method string getReferences() Obtain Technology reference
+ * @method void setReferences(string $References) Set Technology reference
+ * @method string getCVSS() Obtain CVSS Score
+ * @method void setCVSS(string $CVSS) Set CVSS Score
+ * @method string getAttackHeat() Obtain Attack intensity
+ * @method void setAttackHeat(string $AttackHeat) Set Attack intensity
+ * @method array getServiceSupport() Obtain Security Product Support Status
+ * @method void setServiceSupport(array $ServiceSupport) Set Security Product Support Status
+ * @method string getRecentScanTime() Obtain Latest detection time
+ * @method void setRecentScanTime(string $RecentScanTime) Set Latest detection time
  */
 class VULRiskAdvanceCFGList extends AbstractModel
 {
@@ -76,7 +74,7 @@ class VULRiskAdvanceCFGList extends AbstractModel
     public $VULName;
 
     /**
-     * @var string Risk level
+     * @var string Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public $RiskLevel;
 
@@ -86,8 +84,7 @@ class VULRiskAdvanceCFGList extends AbstractModel
     public $CheckFrom;
 
     /**
-     * @var integer Whether it's enabled. `1`: Enable; `0`: Disabled
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Enable/Disable. 1-Enable; 0-Disable.
      */
     public $Enable;
 
@@ -102,8 +99,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $ImpactVersion;
 
     /**
-     * @var string CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string CVE
      */
     public $CVE;
 
@@ -113,57 +109,81 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $VULTag;
 
     /**
-     * @var array Fix solution
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Repair method
      */
     public $FixMethod;
 
     /**
      * @var string Disclosure time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $ReleaseTime;
 
     /**
-     * @var integer Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
      */
     public $EMGCVulType;
 
     /**
      * @var string Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $VULDescribe;
 
     /**
-     * @var string Affected components
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Affected component
      */
     public $ImpactComponent;
 
     /**
+     * @var string Vulnerability Payload
+     */
+    public $Payload;
+
+    /**
+     * @var string Technology reference
+     */
+    public $References;
+
+    /**
+     * @var string CVSS Score
+     */
+    public $CVSS;
+
+    /**
+     * @var string Attack intensity
+     */
+    public $AttackHeat;
+
+    /**
+     * @var array Security Product Support Status
+     */
+    public $ServiceSupport;
+
+    /**
+     * @var string Latest detection time
+     */
+    public $RecentScanTime;
+
+    /**
      * @param string $RiskId Risk ID
      * @param string $VULName Vulnerability name
-     * @param string $RiskLevel Risk level
+     * @param string $RiskLevel Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      * @param string $CheckFrom Source of the check task
-     * @param integer $Enable Whether it's enabled. `1`: Enable; `0`: Disabled
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $Enable Enable/Disable. 1-Enable; 0-Disable.
      * @param string $VULType Risk type.
      * @param string $ImpactVersion Affected versions
-     * @param string $CVE CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $CVE CVE
      * @param array $VULTag Vulnerability tag
-     * @param array $FixMethod Fix solution
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param array $FixMethod Repair method
      * @param string $ReleaseTime Disclosure time
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $EMGCVulType Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
      * @param string $VULDescribe Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $ImpactComponent Affected components
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $ImpactComponent Affected component
+     * @param string $Payload Vulnerability Payload
+     * @param string $References Technology reference
+     * @param string $CVSS CVSS Score
+     * @param string $AttackHeat Attack intensity
+     * @param array $ServiceSupport Security Product Support Status
+     * @param string $RecentScanTime Latest detection time
      */
     function __construct()
     {
@@ -232,6 +252,35 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
         if (array_key_exists("ImpactComponent",$param) and $param["ImpactComponent"] !== null) {
             $this->ImpactComponent = $param["ImpactComponent"];
+        }
+
+        if (array_key_exists("Payload",$param) and $param["Payload"] !== null) {
+            $this->Payload = $param["Payload"];
+        }
+
+        if (array_key_exists("References",$param) and $param["References"] !== null) {
+            $this->References = $param["References"];
+        }
+
+        if (array_key_exists("CVSS",$param) and $param["CVSS"] !== null) {
+            $this->CVSS = $param["CVSS"];
+        }
+
+        if (array_key_exists("AttackHeat",$param) and $param["AttackHeat"] !== null) {
+            $this->AttackHeat = $param["AttackHeat"];
+        }
+
+        if (array_key_exists("ServiceSupport",$param) and $param["ServiceSupport"] !== null) {
+            $this->ServiceSupport = [];
+            foreach ($param["ServiceSupport"] as $key => $value){
+                $obj = new ServiceSupport();
+                $obj->deserialize($value);
+                array_push($this->ServiceSupport, $obj);
+            }
+        }
+
+        if (array_key_exists("RecentScanTime",$param) and $param["RecentScanTime"] !== null) {
+            $this->RecentScanTime = $param["RecentScanTime"];
         }
     }
 }

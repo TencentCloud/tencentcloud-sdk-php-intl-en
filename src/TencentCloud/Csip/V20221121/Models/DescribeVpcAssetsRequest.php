@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVpcAssets request structure.
  *
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
  * @method Filter getFilter() Obtain Filter parameters
  * @method void setFilter(Filter $Filter) Set Filter parameters
  */
 class DescribeVpcAssetsRequest extends AbstractModel
 {
     /**
+     * @var array Group Account Member ID
+     */
+    public $MemberId;
+
+    /**
      * @var Filter Filter parameters
      */
     public $Filter;
 
     /**
+     * @param array $MemberId Group Account Member ID
      * @param Filter $Filter Filter parameters
      */
     function __construct()
@@ -46,6 +54,10 @@ class DescribeVpcAssetsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
+        }
+
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);

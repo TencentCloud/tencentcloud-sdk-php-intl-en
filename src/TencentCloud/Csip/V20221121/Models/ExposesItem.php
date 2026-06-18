@@ -20,298 +20,314 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Exposed assets.
  *
- * @method string getProvider() Obtain Cloud service provider.
- * @method void setProvider(string $Provider) Set Cloud service provider.
- * @method string getCloudAccountName() Obtain Account name.
- * @method void setCloudAccountName(string $CloudAccountName) Set Account name.
- * @method string getCloudAccountId() Obtain Cloud account.
- * @method void setCloudAccountId(string $CloudAccountId) Set Cloud account.
- * @method string getDomain() Obtain Domain
- * @method void setDomain(string $Domain) Set Domain
- * @method string getIp() Obtain IP
- * @method void setIp(string $Ip) Set IP
- * @method string getPort() Obtain Port or port range.
- * @method void setPort(string $Port) Set Port or port range.
- * @method string getStatus() Obtain Open.
- * @method void setStatus(string $Status) Set Open.
- * @method string getRiskType() Obtain Risk type.
- * @method void setRiskType(string $RiskType) Set Risk type.
- * @method string getAclType() Obtain acl type.
- * @method void setAclType(string $AclType) Set acl type.
- * @method string getAclList() Obtain ACL list.
- * @method void setAclList(string $AclList) Set ACL list.
- * @method string getAssetId() Obtain Asset ID.
- * @method void setAssetId(string $AssetId) Set Asset ID.
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method string getAssetType() Obtain Asset type.
- * @method void setAssetType(string $AssetType) Set Asset type.
- * @method integer getPortServiceCount() Obtain Port service quantity.
- * @method void setPortServiceCount(integer $PortServiceCount) Set Port service quantity.
- * @method integer getHighRiskPortServiceCount() Obtain Number of high-risk ports.
- * @method void setHighRiskPortServiceCount(integer $HighRiskPortServiceCount) Set Number of high-risk ports.
- * @method integer getWebAppCount() Obtain Number of web applications.
- * @method void setWebAppCount(integer $WebAppCount) Set Number of web applications.
- * @method integer getRiskWebAppCount() Obtain Number of web applications at risk.
- * @method void setRiskWebAppCount(integer $RiskWebAppCount) Set Number of web applications at risk.
- * @method integer getWeakPasswordCount() Obtain Number of Weak Passwords
- * @method void setWeakPasswordCount(integer $WeakPasswordCount) Set Number of Weak Passwords
- * @method integer getVulCount() Obtain Number of vulnerabilities
- * @method void setVulCount(integer $VulCount) Set Number of vulnerabilities
- * @method string getCreateTime() Obtain First detection time
- * @method void setCreateTime(string $CreateTime) Set First detection time
- * @method string getUpdateTime() Obtain Latest update time.
- * @method void setUpdateTime(string $UpdateTime) Set Latest update time.
- * @method string getAssetTypeName() Obtain Instance Type Name
- * @method void setAssetTypeName(string $AssetTypeName) Set Instance Type Name
- * @method string getDisplayStatus() Obtain Open status.
- * @method void setDisplayStatus(string $DisplayStatus) Set Open status.
- * @method string getDisplayRiskType() Obtain Port status.
- * @method void setDisplayRiskType(string $DisplayRiskType) Set Port status.
- * @method string getScanTaskStatus() Obtain Scan task status.
- * @method void setScanTaskStatus(string $ScanTaskStatus) Set Scan task status.
- * @method string getUuid() Obtain uuid
- * @method void setUuid(string $Uuid) Set uuid
- * @method string getHasScan() Obtain Whether a security check has been performed.
- * @method void setHasScan(string $HasScan) Set Whether a security check has been performed.
- * @method integer getAppId() Obtain Tenant ID.
- * @method void setAppId(integer $AppId) Set Tenant ID.
- * @method string getAppIdStr() Obtain Tenant ID string.
- * @method void setAppIdStr(string $AppIdStr) Set Tenant ID string.
- * @method integer getExposureID() Obtain Record ID
- * @method void setExposureID(integer $ExposureID) Set Record ID
- * @method integer getPortDetectCount() Obtain Number of ports open.
- * @method void setPortDetectCount(integer $PortDetectCount) Set Number of ports open.
- * @method string getPortDetectResult() Obtain Port exposure result.
- * @method void setPortDetectResult(string $PortDetectResult) Set Port exposure result.
- * @method string getTag() Obtain Tag.
- * @method void setTag(string $Tag) Set Tag.
- * @method string getComment() Obtain Remarks
- * @method void setComment(string $Comment) Set Remarks
- * @method integer getToGovernedRiskCount() Obtain Number of risks to be governed.
- * @method void setToGovernedRiskCount(integer $ToGovernedRiskCount) Set Number of risks to be governed.
- * @method string getToGovernedRiskContent() Obtain Risk content to be governed.
- * @method void setToGovernedRiskContent(string $ToGovernedRiskContent) Set Risk content to be governed.
+ * @method string getProvider() Obtain <p>Cloud vendor</p>
+ * @method void setProvider(string $Provider) Set <p>Cloud vendor</p>
+ * @method string getCloudAccountName() Obtain <p>Cloud account name</p>
+ * @method void setCloudAccountName(string $CloudAccountName) Set <p>Cloud account name</p>
+ * @method string getCloudAccountId() Obtain <p>Cloud Account</p>
+ * @method void setCloudAccountId(string $CloudAccountId) Set <p>Cloud Account</p>
+ * @method string getDomain() Obtain <p>Domain name</p>
+ * @method void setDomain(string $Domain) Set <p>Domain name</p>
+ * @method string getIp() Obtain <p>IP</p>
+ * @method void setIp(string $Ip) Set <p>IP</p>
+ * @method string getPort() Obtain <p>Port or port range</p>
+ * @method void setPort(string $Port) Set <p>Port or port range</p>
+ * @method string getStatus() Obtain <p>Open</p>
+ * @method void setStatus(string $Status) Set <p>Open</p>
+ * @method string getRiskType() Obtain <p>Risk type</p>
+ * @method void setRiskType(string $RiskType) Set <p>Risk type</p>
+ * @method string getAclType() Obtain <p>acl type</p>
+ * @method void setAclType(string $AclType) Set <p>acl type</p>
+ * @method string getAclList() Obtain <p>acl list</p>
+ * @method void setAclList(string $AclList) Set <p>acl list</p>
+ * @method string getAssetId() Obtain <p>Asset ID</p>
+ * @method void setAssetId(string $AssetId) Set <p>Asset ID</p>
+ * @method string getInstanceName() Obtain <p>Instance name</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name</p>
+ * @method string getAssetType() Obtain <p>Asset type</p>
+ * @method void setAssetType(string $AssetType) Set <p>Asset type</p>
+ * @method integer getPortServiceCount() Obtain <p>Number of port services</p>
+ * @method void setPortServiceCount(integer $PortServiceCount) Set <p>Number of port services</p>
+ * @method integer getHighRiskPortServiceCount() Obtain <p>Number of high-risk ports</p>
+ * @method void setHighRiskPortServiceCount(integer $HighRiskPortServiceCount) Set <p>Number of high-risk ports</p>
+ * @method integer getWebAppCount() Obtain <p>Number of web applications</p>
+ * @method void setWebAppCount(integer $WebAppCount) Set <p>Number of web applications</p>
+ * @method integer getRiskWebAppCount() Obtain <p>Number of web applications at risk</p>
+ * @method void setRiskWebAppCount(integer $RiskWebAppCount) Set <p>Number of web applications at risk</p>
+ * @method integer getWeakPasswordCount() Obtain <p>Number of weak passwords.</p>
+ * @method void setWeakPasswordCount(integer $WeakPasswordCount) Set <p>Number of weak passwords.</p>
+ * @method integer getVulCount() Obtain <p>Vulnerability count</p>
+ * @method void setVulCount(integer $VulCount) Set <p>Vulnerability count</p>
+ * @method string getCreateTime() Obtain <p>First discovery time</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>First discovery time</p>
+ * @method string getUpdateTime() Obtain <p>Latest update time.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Latest update time.</p>
+ * @method string getAssetTypeName() Obtain <p>Instance Type Name</p>
+ * @method void setAssetTypeName(string $AssetTypeName) Set <p>Instance Type Name</p>
+ * @method string getDisplayStatus() Obtain <p>Open status</p>
+ * @method void setDisplayStatus(string $DisplayStatus) Set <p>Open status</p>
+ * @method string getDisplayRiskType() Obtain <p>Port status</p>
+ * @method void setDisplayRiskType(string $DisplayRiskType) Set <p>Port status</p>
+ * @method string getScanTaskStatus() Obtain <p>Scan task status</p>
+ * @method void setScanTaskStatus(string $ScanTaskStatus) Set <p>Scan task status</p>
+ * @method string getUuid() Obtain <p>uuid</p>
+ * @method void setUuid(string $Uuid) Set <p>uuid</p>
+ * @method string getHasScan() Obtain <p>Whether a security check has been performed</p>
+ * @method void setHasScan(string $HasScan) Set <p>Whether a security check has been performed</p>
+ * @method integer getAppId() Obtain <p>Tenant ID</p>
+ * @method void setAppId(integer $AppId) Set <p>Tenant ID</p>
+ * @method string getAppIdStr() Obtain <p>Tenant ID string</p>
+ * @method void setAppIdStr(string $AppIdStr) Set <p>Tenant ID string</p>
+ * @method integer getExposureID() Obtain <p>Record ID</p>
+ * @method void setExposureID(integer $ExposureID) Set <p>Record ID</p>
+ * @method integer getPortDetectCount() Obtain <p>Number of open ports</p>
+ * @method void setPortDetectCount(integer $PortDetectCount) Set <p>Number of open ports</p>
+ * @method string getPortDetectResult() Obtain <p>Port exposure result</p>
+ * @method void setPortDetectResult(string $PortDetectResult) Set <p>Port exposure result</p>
+ * @method string getTag() Obtain <p>Tag.</p>
+ * @method void setTag(string $Tag) Set <p>Tag.</p>
+ * @method string getComment() Obtain <p>Remark</p>
+ * @method void setComment(string $Comment) Set <p>Remark</p>
+ * @method integer getToGovernedRiskCount() Obtain <p>Number of risks to be governed</p>
+ * @method void setToGovernedRiskCount(integer $ToGovernedRiskCount) Set <p>Number of risks to be governed</p>
+ * @method string getToGovernedRiskContent() Obtain <p>Risk content to be governed</p>
+ * @method void setToGovernedRiskContent(string $ToGovernedRiskContent) Set <p>Risk content to be governed</p>
+ * @method string getAssetTypeIconURL() Obtain <p>Type icon of asset</p>
+ * @method void setAssetTypeIconURL(string $AssetTypeIconURL) Set <p>Type icon of asset</p>
+ * @method string getAssetTypeIconSolidURL() Obtain <p>Asset type 3D icon</p>
+ * @method void setAssetTypeIconSolidURL(string $AssetTypeIconSolidURL) Set <p>Asset type 3D icon</p>
  */
 class ExposesItem extends AbstractModel
 {
     /**
-     * @var string Cloud service provider.
+     * @var string <p>Cloud vendor</p>
      */
     public $Provider;
 
     /**
-     * @var string Account name.
+     * @var string <p>Cloud account name</p>
      */
     public $CloudAccountName;
 
     /**
-     * @var string Cloud account.
+     * @var string <p>Cloud Account</p>
      */
     public $CloudAccountId;
 
     /**
-     * @var string Domain
+     * @var string <p>Domain name</p>
      */
     public $Domain;
 
     /**
-     * @var string IP
+     * @var string <p>IP</p>
      */
     public $Ip;
 
     /**
-     * @var string Port or port range.
+     * @var string <p>Port or port range</p>
      */
     public $Port;
 
     /**
-     * @var string Open.
+     * @var string <p>Open</p>
      */
     public $Status;
 
     /**
-     * @var string Risk type.
+     * @var string <p>Risk type</p>
      */
     public $RiskType;
 
     /**
-     * @var string acl type.
+     * @var string <p>acl type</p>
      */
     public $AclType;
 
     /**
-     * @var string ACL list.
+     * @var string <p>acl list</p>
      */
     public $AclList;
 
     /**
-     * @var string Asset ID.
+     * @var string <p>Asset ID</p>
      */
     public $AssetId;
 
     /**
-     * @var string Instance name
+     * @var string <p>Instance name</p>
      */
     public $InstanceName;
 
     /**
-     * @var string Asset type.
+     * @var string <p>Asset type</p>
      */
     public $AssetType;
 
     /**
-     * @var integer Port service quantity.
+     * @var integer <p>Number of port services</p>
      */
     public $PortServiceCount;
 
     /**
-     * @var integer Number of high-risk ports.
+     * @var integer <p>Number of high-risk ports</p>
      */
     public $HighRiskPortServiceCount;
 
     /**
-     * @var integer Number of web applications.
+     * @var integer <p>Number of web applications</p>
      */
     public $WebAppCount;
 
     /**
-     * @var integer Number of web applications at risk.
+     * @var integer <p>Number of web applications at risk</p>
      */
     public $RiskWebAppCount;
 
     /**
-     * @var integer Number of Weak Passwords
+     * @var integer <p>Number of weak passwords.</p>
      */
     public $WeakPasswordCount;
 
     /**
-     * @var integer Number of vulnerabilities
+     * @var integer <p>Vulnerability count</p>
      */
     public $VulCount;
 
     /**
-     * @var string First detection time
+     * @var string <p>First discovery time</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Latest update time.
+     * @var string <p>Latest update time.</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string Instance Type Name
+     * @var string <p>Instance Type Name</p>
      */
     public $AssetTypeName;
 
     /**
-     * @var string Open status.
+     * @var string <p>Open status</p>
      */
     public $DisplayStatus;
 
     /**
-     * @var string Port status.
+     * @var string <p>Port status</p>
      */
     public $DisplayRiskType;
 
     /**
-     * @var string Scan task status.
+     * @var string <p>Scan task status</p>
      */
     public $ScanTaskStatus;
 
     /**
-     * @var string uuid
+     * @var string <p>uuid</p>
      */
     public $Uuid;
 
     /**
-     * @var string Whether a security check has been performed.
+     * @var string <p>Whether a security check has been performed</p>
      */
     public $HasScan;
 
     /**
-     * @var integer Tenant ID.
+     * @var integer <p>Tenant ID</p>
      */
     public $AppId;
 
     /**
-     * @var string Tenant ID string.
+     * @var string <p>Tenant ID string</p>
      */
     public $AppIdStr;
 
     /**
-     * @var integer Record ID
+     * @var integer <p>Record ID</p>
      */
     public $ExposureID;
 
     /**
-     * @var integer Number of ports open.
+     * @var integer <p>Number of open ports</p>
      */
     public $PortDetectCount;
 
     /**
-     * @var string Port exposure result.
+     * @var string <p>Port exposure result</p>
      */
     public $PortDetectResult;
 
     /**
-     * @var string Tag.
+     * @var string <p>Tag.</p>
      */
     public $Tag;
 
     /**
-     * @var string Remarks
+     * @var string <p>Remark</p>
      */
     public $Comment;
 
     /**
-     * @var integer Number of risks to be governed.
+     * @var integer <p>Number of risks to be governed</p>
      */
     public $ToGovernedRiskCount;
 
     /**
-     * @var string Risk content to be governed.
+     * @var string <p>Risk content to be governed</p>
      */
     public $ToGovernedRiskContent;
 
     /**
-     * @param string $Provider Cloud service provider.
-     * @param string $CloudAccountName Account name.
-     * @param string $CloudAccountId Cloud account.
-     * @param string $Domain Domain
-     * @param string $Ip IP
-     * @param string $Port Port or port range.
-     * @param string $Status Open.
-     * @param string $RiskType Risk type.
-     * @param string $AclType acl type.
-     * @param string $AclList ACL list.
-     * @param string $AssetId Asset ID.
-     * @param string $InstanceName Instance name
-     * @param string $AssetType Asset type.
-     * @param integer $PortServiceCount Port service quantity.
-     * @param integer $HighRiskPortServiceCount Number of high-risk ports.
-     * @param integer $WebAppCount Number of web applications.
-     * @param integer $RiskWebAppCount Number of web applications at risk.
-     * @param integer $WeakPasswordCount Number of Weak Passwords
-     * @param integer $VulCount Number of vulnerabilities
-     * @param string $CreateTime First detection time
-     * @param string $UpdateTime Latest update time.
-     * @param string $AssetTypeName Instance Type Name
-     * @param string $DisplayStatus Open status.
-     * @param string $DisplayRiskType Port status.
-     * @param string $ScanTaskStatus Scan task status.
-     * @param string $Uuid uuid
-     * @param string $HasScan Whether a security check has been performed.
-     * @param integer $AppId Tenant ID.
-     * @param string $AppIdStr Tenant ID string.
-     * @param integer $ExposureID Record ID
-     * @param integer $PortDetectCount Number of ports open.
-     * @param string $PortDetectResult Port exposure result.
-     * @param string $Tag Tag.
-     * @param string $Comment Remarks
-     * @param integer $ToGovernedRiskCount Number of risks to be governed.
-     * @param string $ToGovernedRiskContent Risk content to be governed.
+     * @var string <p>Type icon of asset</p>
+     */
+    public $AssetTypeIconURL;
+
+    /**
+     * @var string <p>Asset type 3D icon</p>
+     */
+    public $AssetTypeIconSolidURL;
+
+    /**
+     * @param string $Provider <p>Cloud vendor</p>
+     * @param string $CloudAccountName <p>Cloud account name</p>
+     * @param string $CloudAccountId <p>Cloud Account</p>
+     * @param string $Domain <p>Domain name</p>
+     * @param string $Ip <p>IP</p>
+     * @param string $Port <p>Port or port range</p>
+     * @param string $Status <p>Open</p>
+     * @param string $RiskType <p>Risk type</p>
+     * @param string $AclType <p>acl type</p>
+     * @param string $AclList <p>acl list</p>
+     * @param string $AssetId <p>Asset ID</p>
+     * @param string $InstanceName <p>Instance name</p>
+     * @param string $AssetType <p>Asset type</p>
+     * @param integer $PortServiceCount <p>Number of port services</p>
+     * @param integer $HighRiskPortServiceCount <p>Number of high-risk ports</p>
+     * @param integer $WebAppCount <p>Number of web applications</p>
+     * @param integer $RiskWebAppCount <p>Number of web applications at risk</p>
+     * @param integer $WeakPasswordCount <p>Number of weak passwords.</p>
+     * @param integer $VulCount <p>Vulnerability count</p>
+     * @param string $CreateTime <p>First discovery time</p>
+     * @param string $UpdateTime <p>Latest update time.</p>
+     * @param string $AssetTypeName <p>Instance Type Name</p>
+     * @param string $DisplayStatus <p>Open status</p>
+     * @param string $DisplayRiskType <p>Port status</p>
+     * @param string $ScanTaskStatus <p>Scan task status</p>
+     * @param string $Uuid <p>uuid</p>
+     * @param string $HasScan <p>Whether a security check has been performed</p>
+     * @param integer $AppId <p>Tenant ID</p>
+     * @param string $AppIdStr <p>Tenant ID string</p>
+     * @param integer $ExposureID <p>Record ID</p>
+     * @param integer $PortDetectCount <p>Number of open ports</p>
+     * @param string $PortDetectResult <p>Port exposure result</p>
+     * @param string $Tag <p>Tag.</p>
+     * @param string $Comment <p>Remark</p>
+     * @param integer $ToGovernedRiskCount <p>Number of risks to be governed</p>
+     * @param string $ToGovernedRiskContent <p>Risk content to be governed</p>
+     * @param string $AssetTypeIconURL <p>Type icon of asset</p>
+     * @param string $AssetTypeIconSolidURL <p>Asset type 3D icon</p>
      */
     function __construct()
     {
@@ -468,6 +484,14 @@ class ExposesItem extends AbstractModel
 
         if (array_key_exists("ToGovernedRiskContent",$param) and $param["ToGovernedRiskContent"] !== null) {
             $this->ToGovernedRiskContent = $param["ToGovernedRiskContent"];
+        }
+
+        if (array_key_exists("AssetTypeIconURL",$param) and $param["AssetTypeIconURL"] !== null) {
+            $this->AssetTypeIconURL = $param["AssetTypeIconURL"];
+        }
+
+        if (array_key_exists("AssetTypeIconSolidURL",$param) and $param["AssetTypeIconSolidURL"] !== null) {
+            $this->AssetTypeIconSolidURL = $param["AssetTypeIconSolidURL"];
         }
     }
 }

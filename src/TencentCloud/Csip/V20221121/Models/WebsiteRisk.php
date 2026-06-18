@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAffectAsset() Obtain Affected assets
  * @method void setAffectAsset(string $AffectAsset) Set Affected assets
- * @method string getLevel() Obtain Risk level
- * @method void setLevel(string $Level) Set Risk level
+ * @method string getLevel() Obtain Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+ * @method void setLevel(string $Level) Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
  * @method string getRecentTime() Obtain Last detected
  * @method void setRecentTime(string $RecentTime) Set Last detected
  * @method string getFirstTime() Obtain First detected
  * @method void setFirstTime(string $FirstTime) Set First detected
  * @method integer getStatus() Obtain Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
  * @method void setStatus(integer $Status) Set Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
- * @method string getId() Obtain Unique ID of the asset
- * @method void setId(string $Id) Set Unique ID of the asset
+ * @method string getId() Obtain ID, use to handle risk
+ * @method void setId(string $Id) Set ID, use to handle risk
  * @method string getIndex() Obtain Frontend index
  * @method void setIndex(string $Index) Set Frontend index
  * @method string getInstanceId() Obtain Instance ID
@@ -40,14 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) Set Instance name
  * @method string getAppId() Obtain User `appid`
  * @method void setAppId(string $AppId) Set User `appid`
- * @method string getNick() Obtain User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setNick(string $Nick) Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getUin() Obtain User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setUin(string $Uin) Set User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getNick() Obtain User Nickname
+ * @method void setNick(string $Nick) Set User Nickname
+ * @method string getUin() Obtain User UIN
+ * @method void setUin(string $Uin) Set User UIN
  * @method string getURL() Obtain URL of the risk
  * @method void setURL(string $URL) Set URL of the risk
  * @method string getURLPath() Obtain URL of the risk file
@@ -71,7 +67,7 @@ class WebsiteRisk extends AbstractModel
     public $AffectAsset;
 
     /**
-     * @var string Risk level
+     * @var string Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public $Level;
 
@@ -91,7 +87,7 @@ class WebsiteRisk extends AbstractModel
     public $Status;
 
     /**
-     * @var string Unique ID of the asset
+     * @var string ID, use to handle risk
      */
     public $Id;
 
@@ -116,14 +112,12 @@ class WebsiteRisk extends AbstractModel
     public $AppId;
 
     /**
-     * @var string User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string User Nickname
      */
     public $Nick;
 
     /**
-     * @var string User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string User UIN
      */
     public $Uin;
 
@@ -164,19 +158,17 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * @param string $AffectAsset Affected assets
-     * @param string $Level Risk level
+     * @param string $Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      * @param string $RecentTime Last detected
      * @param string $FirstTime First detected
      * @param integer $Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-     * @param string $Id Unique ID of the asset
+     * @param string $Id ID, use to handle risk
      * @param string $Index Frontend index
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $AppId User `appid`
-     * @param string $Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Nick User Nickname
+     * @param string $Uin User UIN
      * @param string $URL URL of the risk
      * @param string $URLPath URL of the risk file
      * @param string $InstanceType Instance type

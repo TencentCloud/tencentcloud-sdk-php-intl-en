@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain Total number of entries
  * @method void setTotalCount(integer $TotalCount) Set Total number of entries
- * @method array getData() Obtain List of port risks by assets
- * @method void setData(array $Data) Set List of port risks by assets
+ * @method array getData() Obtain Port Risk List from Port's Perspective
+ * @method void setData(array $Data) Set Port Risk List from Port's Perspective
  * @method array getLevelLists() Obtain List of risk levels
  * @method void setLevelLists(array $LevelLists) Set List of risk levels
  * @method array getSuggestionLists() Obtain List of suggestions
@@ -41,7 +41,7 @@ class DescribeRiskCenterPortViewPortRiskListResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array List of port risks by assets
+     * @var array Port Risk List from Port's Perspective
      */
     public $Data;
 
@@ -67,7 +67,7 @@ class DescribeRiskCenterPortViewPortRiskListResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount Total number of entries
-     * @param array $Data List of port risks by assets
+     * @param array $Data Port Risk List from Port's Perspective
      * @param array $LevelLists List of risk levels
      * @param array $SuggestionLists List of suggestions
      * @param array $FromLists List of check source

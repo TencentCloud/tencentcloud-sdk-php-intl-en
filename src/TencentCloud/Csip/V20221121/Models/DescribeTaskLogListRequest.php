@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskLogList request structure.
  *
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
  * @method Filter getFilter() Obtain Filter conditions
  * @method void setFilter(Filter $Filter) Set Filter conditions
  */
 class DescribeTaskLogListRequest extends AbstractModel
 {
     /**
+     * @var array Group Account Member ID
+     */
+    public $MemberId;
+
+    /**
      * @var Filter Filter conditions
      */
     public $Filter;
 
     /**
+     * @param array $MemberId Group Account Member ID
      * @param Filter $Filter Filter conditions
      */
     function __construct()
@@ -46,6 +54,10 @@ class DescribeTaskLogListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
+        }
+
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);

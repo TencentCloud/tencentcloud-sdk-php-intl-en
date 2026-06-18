@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReverseShellSystemPolicyConfig request structure.
  *
- * @method integer getProductType() Obtain 
- * @method void setProductType(integer $ProductType) Set 
+ * @method integer getProductType() Obtain <p>Product type. 0:CWP (default); 1:CSC</p>
+ * @method void setProductType(integer $ProductType) Set <p>Product type. 0:CWP (default); 1:CSC</p>
  */
 class DescribeReverseShellSystemPolicyConfigRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer <p>Product type. 0:CWP (default); 1:CSC</p>
      */
     public $ProductType;
 
     /**
-     * @param integer $ProductType 
+     * @param integer $ProductType <p>Product type. 0:CWP (default); 1:CSC</p>
      */
     function __construct()
     {

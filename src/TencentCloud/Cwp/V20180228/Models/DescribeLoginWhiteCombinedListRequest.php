@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoginWhiteCombinedList request structure.
  *
- * @method integer getLimit() Obtain Number of items to be returned. It is 10 by default, and the maximum value is 100.
- * @method void setLimit(integer $Limit) Set Number of items to be returned. It is 10 by default, and the maximum value is 100.
- * @method integer getOffset() Obtain Offset, which defaults to 0
- * @method void setOffset(integer $Offset) Set Offset, which defaults to 0
- * @method array getFilters() Obtain Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
- * @method void setFilters(array $Filters) Set Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
+ * @method integer getLimit() Obtain <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+ * @method integer getOffset() Obtain <p>Offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset. Default value: 0.</p>
+ * @method array getFilters() Obtain <p>Filter criteria.<li>IpOrAlias - String - Required: No - Host ip or alias filter</li><li>UserName - String - Required: No - UserName filter</li><li>SrcIP - String - Required: No - Source ip filter</li><li>Location - String - Required: No - Login Location filter</li><li>ModifyBeginTime - String - Required: No - Filter by modification time range, start time</li><li>ModifyEndTime - String - Required: No - Filter by modification time range, end time</li></p>
+ * @method void setFilters(array $Filters) Set <p>Filter criteria.<li>IpOrAlias - String - Required: No - Host ip or alias filter</li><li>UserName - String - Required: No - UserName filter</li><li>SrcIP - String - Required: No - Source ip filter</li><li>Location - String - Required: No - Login Location filter</li><li>ModifyBeginTime - String - Required: No - Filter by modification time range, start time</li><li>ModifyEndTime - String - Required: No - Filter by modification time range, end time</li></p>
  */
 class DescribeLoginWhiteCombinedListRequest extends AbstractModel
 {
     /**
-     * @var integer Number of items to be returned. It is 10 by default, and the maximum value is 100.
+     * @var integer <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Offset, which defaults to 0
+     * @var integer <p>Offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var array Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
+     * @var array <p>Filter criteria.<li>IpOrAlias - String - Required: No - Host ip or alias filter</li><li>UserName - String - Required: No - UserName filter</li><li>SrcIP - String - Required: No - Source ip filter</li><li>Location - String - Required: No - Login Location filter</li><li>ModifyBeginTime - String - Required: No - Filter by modification time range, start time</li><li>ModifyEndTime - String - Required: No - Filter by modification time range, end time</li></p>
      */
     public $Filters;
 
     /**
-     * @param integer $Limit Number of items to be returned. It is 10 by default, and the maximum value is 100.
-     * @param integer $Offset Offset, which defaults to 0
-     * @param array $Filters Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
+     * @param integer $Limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+     * @param integer $Offset <p>Offset. Default value: 0.</p>
+     * @param array $Filters <p>Filter criteria.<li>IpOrAlias - String - Required: No - Host ip or alias filter</li><li>UserName - String - Required: No - UserName filter</li><li>SrcIP - String - Required: No - Source ip filter</li><li>Location - String - Required: No - Login Location filter</li><li>ModifyBeginTime - String - Required: No - Filter by modification time range, start time</li><li>ModifyEndTime - String - Required: No - Filter by modification time range, end time</li></p>
      */
     function __construct()
     {

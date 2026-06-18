@@ -22,8 +22,6 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain <p>Instance ID.</p>
  * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
- * @method integer getBackupSetId() Obtain <p>Backup set ID. the value comes from the DescribeDBSBackupSets api response.</p>
- * @method void setBackupSetId(integer $BackupSetId) Set <p>Backup set ID. the value comes from the DescribeDBSBackupSets api response.</p>
  */
 class DescribeDBSAvailableRecoveryTimeRequest extends AbstractModel
 {
@@ -33,13 +31,7 @@ class DescribeDBSAvailableRecoveryTimeRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer <p>Backup set ID. the value comes from the DescribeDBSBackupSets api response.</p>
-     */
-    public $BackupSetId;
-
-    /**
      * @param string $InstanceId <p>Instance ID.</p>
-     * @param integer $BackupSetId <p>Backup set ID. the value comes from the DescribeDBSBackupSets api response.</p>
      */
     function __construct()
     {
@@ -56,10 +48,6 @@ class DescribeDBSAvailableRecoveryTimeRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("BackupSetId",$param) and $param["BackupSetId"] !== null) {
-            $this->BackupSetId = $param["BackupSetId"];
         }
     }
 }

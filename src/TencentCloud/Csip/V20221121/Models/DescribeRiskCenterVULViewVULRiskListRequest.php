@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRiskCenterVULViewVULRiskList request structure.
  *
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
  * @method Filter getFilter() Obtain Filter conditions
  * @method void setFilter(Filter $Filter) Set Filter conditions
  * @method array getTags() Obtain Asset tags
@@ -27,6 +29,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeRiskCenterVULViewVULRiskListRequest extends AbstractModel
 {
+    /**
+     * @var array Group Account Member ID
+     */
+    public $MemberId;
+
     /**
      * @var Filter Filter conditions
      */
@@ -38,6 +45,7 @@ class DescribeRiskCenterVULViewVULRiskListRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @param array $MemberId Group Account Member ID
      * @param Filter $Filter Filter conditions
      * @param array $Tags Asset tags
      */
@@ -54,6 +62,10 @@ class DescribeRiskCenterVULViewVULRiskListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
+        }
+
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);

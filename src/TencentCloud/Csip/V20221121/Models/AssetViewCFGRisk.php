@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(string $InstanceType) Set Instance type
  * @method string getAffectAsset() Obtain Affected assets
  * @method void setAffectAsset(string $AffectAsset) Set Affected assets
- * @method string getLevel() Obtain Risk level
- * @method void setLevel(string $Level) Set Risk level
+ * @method string getLevel() Obtain Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+ * @method void setLevel(string $Level) Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
  * @method string getFirstTime() Obtain First detected
  * @method void setFirstTime(string $FirstTime) Set First detected
  * @method string getRecentTime() Obtain Last detected 
@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrom(string $From) Set Source of the task
  * @method integer getStatus() Obtain Status
  * @method void setStatus(integer $Status) Set Status
- * @method string getCFGSTD() Obtain u200c-
- * @method void setCFGSTD(string $CFGSTD) Set u200c-
+ * @method string getCFGSTD() Obtain relevant standards
+ * @method void setCFGSTD(string $CFGSTD) Set relevant standards
  * @method string getCFGDescribe() Obtain Configuration details.
  * @method void setCFGDescribe(string $CFGDescribe) Set Configuration details.
  * @method string getCFGFix() Obtain Fix suggestion
@@ -56,14 +56,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIndex(string $Index) Set Data entry key
  * @method string getAppId() Obtain User AppId
  * @method void setAppId(string $AppId) Set User AppId
- * @method string getNick() Obtain User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setNick(string $Nick) Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getNick() Obtain User Nickname
+ * @method void setNick(string $Nick) Set User Nickname
  * @method string getUin() Obtain User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setUin(string $Uin) Set User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getClbId() Obtain When the asset type is LBL, show this field to locate the specific LB.
+ * @method void setClbId(string $ClbId) Set When the asset type is LBL, show this field to locate the specific LB.
  */
 class AssetViewCFGRisk extends AbstractModel
 {
@@ -103,7 +101,7 @@ class AssetViewCFGRisk extends AbstractModel
     public $AffectAsset;
 
     /**
-     * @var string Risk level
+     * @var string Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public $Level;
 
@@ -128,7 +126,7 @@ class AssetViewCFGRisk extends AbstractModel
     public $Status;
 
     /**
-     * @var string u200c-
+     * @var string relevant standards
      */
     public $CFGSTD;
 
@@ -158,16 +156,19 @@ class AssetViewCFGRisk extends AbstractModel
     public $AppId;
 
     /**
-     * @var string User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string User Nickname
      */
     public $Nick;
 
     /**
      * @var string User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Uin;
+
+    /**
+     * @var string When the asset type is LBL, show this field to locate the specific LB.
+     */
+    public $ClbId;
 
     /**
      * @param string $Id The unique ID.
@@ -177,21 +178,20 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * @param string $InstanceName Instance name
      * @param string $InstanceType Instance type
      * @param string $AffectAsset Affected assets
-     * @param string $Level Risk level
+     * @param string $Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      * @param string $FirstTime First detected
      * @param string $RecentTime Last detected 
      * @param string $From Source of the task
      * @param integer $Status Status
-     * @param string $CFGSTD u200c-
+     * @param string $CFGSTD relevant standards
      * @param string $CFGDescribe Configuration details.
      * @param string $CFGFix Fix suggestion
      * @param string $CFGHelpURL URL of the help documentation
      * @param string $Index Data entry key
      * @param string $AppId User AppId
-     * @param string $Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Nick User Nickname
      * @param string $Uin User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $ClbId When the asset type is LBL, show this field to locate the specific LB.
      */
     function __construct()
     {
@@ -284,6 +284,10 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
         if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
             $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("ClbId",$param) and $param["ClbId"] !== null) {
+            $this->ClbId = $param["ClbId"];
         }
     }
 }

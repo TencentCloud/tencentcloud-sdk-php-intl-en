@@ -20,153 +20,153 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMachineGeneral response structure.
  *
- * @method integer getMachineCnt() Obtain Total number of assets
- * @method void setMachineCnt(integer $MachineCnt) Set Total number of assets
- * @method integer getTencentCloudMachineCnt() Obtain Number of Tencent Cloud machines
- * @method void setTencentCloudMachineCnt(integer $TencentCloudMachineCnt) Set Number of Tencent Cloud machines
- * @method integer getAliCloudMachineCnt() Obtain Number of Alibaba Cloud machines
- * @method void setAliCloudMachineCnt(integer $AliCloudMachineCnt) Set Number of Alibaba Cloud machines
- * @method integer getBaiduCloudMachineCnt() Obtain Number of Baidu Cloud machines
- * @method void setBaiduCloudMachineCnt(integer $BaiduCloudMachineCnt) Set Number of Baidu Cloud machines
- * @method integer getIDCMachineCnt() Obtain Number of IDC machines
- * @method void setIDCMachineCnt(integer $IDCMachineCnt) Set Number of IDC machines
- * @method integer getOtherCloudMachineCnt() Obtain Number of machines from other cloud service vendors
- * @method void setOtherCloudMachineCnt(integer $OtherCloudMachineCnt) Set Number of machines from other cloud service vendors
- * @method integer getProtectMachineCnt() Obtain Number of protected machines
- * @method void setProtectMachineCnt(integer $ProtectMachineCnt) Set Number of protected machines
- * @method integer getBaseMachineCnt() Obtain Number of protected Basic Edition machines
- * @method void setBaseMachineCnt(integer $BaseMachineCnt) Set Number of protected Basic Edition machines
- * @method integer getSpecialtyMachineCnt() Obtain Number of protected Pro Edition machines
- * @method void setSpecialtyMachineCnt(integer $SpecialtyMachineCnt) Set Number of protected Pro Edition machines
- * @method integer getFlagshipMachineCnt() Obtain Number of protected Ultimate Edition machines
- * @method void setFlagshipMachineCnt(integer $FlagshipMachineCnt) Set Number of protected Ultimate Edition machines
- * @method integer getRiskMachineCnt() Obtain Number of risky machines
- * @method void setRiskMachineCnt(integer $RiskMachineCnt) Set Number of risky machines
- * @method integer getCompareYesterdayRiskMachineCnt() Obtain Number of new risky machines compared with that yesterday
- * @method void setCompareYesterdayRiskMachineCnt(integer $CompareYesterdayRiskMachineCnt) Set Number of new risky machines compared with that yesterday
- * @method integer getCompareYesterdayNotProtectMachineCnt() Obtain Number of new unprotected machines compared with that yesterday
- * @method void setCompareYesterdayNotProtectMachineCnt(integer $CompareYesterdayNotProtectMachineCnt) Set Number of new unprotected machines compared with that yesterday
- * @method integer getCompareYesterdayDeadlineMachineCnt() Obtain Number of new machines about to expire compared with that yesterday
- * @method void setCompareYesterdayDeadlineMachineCnt(integer $CompareYesterdayDeadlineMachineCnt) Set Number of new machines about to expire compared with that yesterday
- * @method integer getDeadlineMachineCnt() Obtain Number of machines about to expire
- * @method void setDeadlineMachineCnt(integer $DeadlineMachineCnt) Set Number of machines about to expire
- * @method integer getNotProtectMachineCnt() Obtain Number of unprotected machines
- * @method void setNotProtectMachineCnt(integer $NotProtectMachineCnt) Set Number of unprotected machines
- * @method integer getLHGeneralDiscountCnt() Obtain Number of protected Lighthouse machines (Lighthouse machines)
- * @method void setLHGeneralDiscountCnt(integer $LHGeneralDiscountCnt) Set Number of protected Lighthouse machines (Lighthouse machines)
- * @method integer getCompareYesterdayMachineCnt() Obtain Number of new hosts compared with that yesterday
- * @method void setCompareYesterdayMachineCnt(integer $CompareYesterdayMachineCnt) Set Number of new hosts compared with that yesterday
- * @method integer getMachineDestroyAfterOfflineHours() Obtain Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
- * @method void setMachineDestroyAfterOfflineHours(integer $MachineDestroyAfterOfflineHours) Set Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
- * @method array getCloudFrom() Obtain Machine type array
- * @method void setCloudFrom(array $CloudFrom) Set Machine type array
+ * @method integer getMachineCnt() Obtain <p>Total number of assets</p>
+ * @method void setMachineCnt(integer $MachineCnt) Set <p>Total number of assets</p>
+ * @method integer getTencentCloudMachineCnt() Obtain <p>Number of Tencent Cloud machines</p>
+ * @method void setTencentCloudMachineCnt(integer $TencentCloudMachineCnt) Set <p>Number of Tencent Cloud machines</p>
+ * @method integer getAliCloudMachineCnt() Obtain <p>Number of Alibaba Cloud machines</p>
+ * @method void setAliCloudMachineCnt(integer $AliCloudMachineCnt) Set <p>Number of Alibaba Cloud machines</p>
+ * @method integer getBaiduCloudMachineCnt() Obtain <p>Number of Baidu Cloud machines</p>
+ * @method void setBaiduCloudMachineCnt(integer $BaiduCloudMachineCnt) Set <p>Number of Baidu Cloud machines</p>
+ * @method integer getIDCMachineCnt() Obtain <p>Number of IDC machines</p>
+ * @method void setIDCMachineCnt(integer $IDCMachineCnt) Set <p>Number of IDC machines</p>
+ * @method integer getOtherCloudMachineCnt() Obtain <p>Number of machines from other cloud service vendors</p>
+ * @method void setOtherCloudMachineCnt(integer $OtherCloudMachineCnt) Set <p>Number of machines from other cloud service vendors</p>
+ * @method integer getProtectMachineCnt() Obtain <p>Number of protected machines</p>
+ * @method void setProtectMachineCnt(integer $ProtectMachineCnt) Set <p>Number of protected machines</p>
+ * @method integer getBaseMachineCnt() Obtain <p>Number of protected Basic Edition machines</p>
+ * @method void setBaseMachineCnt(integer $BaseMachineCnt) Set <p>Number of protected Basic Edition machines</p>
+ * @method integer getSpecialtyMachineCnt() Obtain <p>Number of protected Pro Edition machines</p>
+ * @method void setSpecialtyMachineCnt(integer $SpecialtyMachineCnt) Set <p>Number of protected Pro Edition machines</p>
+ * @method integer getFlagshipMachineCnt() Obtain <p>Number of protected Ultimate Edition machines</p>
+ * @method void setFlagshipMachineCnt(integer $FlagshipMachineCnt) Set <p>Number of protected Ultimate Edition machines</p>
+ * @method integer getRiskMachineCnt() Obtain <p>Number of risky machines</p>
+ * @method void setRiskMachineCnt(integer $RiskMachineCnt) Set <p>Number of risky machines</p>
+ * @method integer getCompareYesterdayRiskMachineCnt() Obtain <p>Change in the number of risky machines compared with yesterday</p>
+ * @method void setCompareYesterdayRiskMachineCnt(integer $CompareYesterdayRiskMachineCnt) Set <p>Change in the number of risky machines compared with yesterday</p>
+ * @method integer getCompareYesterdayNotProtectMachineCnt() Obtain <p>Change in the number of unprotected machines compared with yesterday</p>
+ * @method void setCompareYesterdayNotProtectMachineCnt(integer $CompareYesterdayNotProtectMachineCnt) Set <p>Change in the number of unprotected machines compared with yesterday</p>
+ * @method integer getCompareYesterdayDeadlineMachineCnt() Obtain <p>Change in the number of machines expiring soon compared with yesterday</p>
+ * @method void setCompareYesterdayDeadlineMachineCnt(integer $CompareYesterdayDeadlineMachineCnt) Set <p>Change in the number of machines expiring soon compared with yesterday</p>
+ * @method integer getDeadlineMachineCnt() Obtain <p>Number of machines about to expire</p>
+ * @method void setDeadlineMachineCnt(integer $DeadlineMachineCnt) Set <p>Number of machines about to expire</p>
+ * @method integer getNotProtectMachineCnt() Obtain <p>Number of unprotected machines</p>
+ * @method void setNotProtectMachineCnt(integer $NotProtectMachineCnt) Set <p>Number of unprotected machines</p>
+ * @method integer getLHGeneralDiscountCnt() Obtain <p>Number of protected Lighthouse machines</p>
+ * @method void setLHGeneralDiscountCnt(integer $LHGeneralDiscountCnt) Set <p>Number of protected Lighthouse machines</p>
+ * @method integer getCompareYesterdayMachineCnt() Obtain <p>Change in the number of newly added hosts compared with yesterday</p>
+ * @method void setCompareYesterdayMachineCnt(integer $CompareYesterdayMachineCnt) Set <p>Change in the number of newly added hosts compared with yesterday</p>
+ * @method integer getMachineDestroyAfterOfflineHours() Obtain <p>Automatic cleanup time, maximum 720 hours, minimum 0, default 0, 0=disabled</p>
+ * @method void setMachineDestroyAfterOfflineHours(integer $MachineDestroyAfterOfflineHours) Set <p>Automatic cleanup time, maximum 720 hours, minimum 0, default 0, 0=disabled</p>
+ * @method array getCloudFrom() Obtain <p>Cloud server type array</p>
+ * @method void setCloudFrom(array $CloudFrom) Set <p>Cloud server type array</p>
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribeMachineGeneralResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of assets
+     * @var integer <p>Total number of assets</p>
      */
     public $MachineCnt;
 
     /**
-     * @var integer Number of Tencent Cloud machines
+     * @var integer <p>Number of Tencent Cloud machines</p>
      * @deprecated
      */
     public $TencentCloudMachineCnt;
 
     /**
-     * @var integer Number of Alibaba Cloud machines
+     * @var integer <p>Number of Alibaba Cloud machines</p>
      * @deprecated
      */
     public $AliCloudMachineCnt;
 
     /**
-     * @var integer Number of Baidu Cloud machines
+     * @var integer <p>Number of Baidu Cloud machines</p>
      * @deprecated
      */
     public $BaiduCloudMachineCnt;
 
     /**
-     * @var integer Number of IDC machines
+     * @var integer <p>Number of IDC machines</p>
      * @deprecated
      */
     public $IDCMachineCnt;
 
     /**
-     * @var integer Number of machines from other cloud service vendors
+     * @var integer <p>Number of machines from other cloud service vendors</p>
      * @deprecated
      */
     public $OtherCloudMachineCnt;
 
     /**
-     * @var integer Number of protected machines
+     * @var integer <p>Number of protected machines</p>
      */
     public $ProtectMachineCnt;
 
     /**
-     * @var integer Number of protected Basic Edition machines
+     * @var integer <p>Number of protected Basic Edition machines</p>
      */
     public $BaseMachineCnt;
 
     /**
-     * @var integer Number of protected Pro Edition machines
+     * @var integer <p>Number of protected Pro Edition machines</p>
      */
     public $SpecialtyMachineCnt;
 
     /**
-     * @var integer Number of protected Ultimate Edition machines
+     * @var integer <p>Number of protected Ultimate Edition machines</p>
      */
     public $FlagshipMachineCnt;
 
     /**
-     * @var integer Number of risky machines
+     * @var integer <p>Number of risky machines</p>
      */
     public $RiskMachineCnt;
 
     /**
-     * @var integer Number of new risky machines compared with that yesterday
+     * @var integer <p>Change in the number of risky machines compared with yesterday</p>
      */
     public $CompareYesterdayRiskMachineCnt;
 
     /**
-     * @var integer Number of new unprotected machines compared with that yesterday
+     * @var integer <p>Change in the number of unprotected machines compared with yesterday</p>
      */
     public $CompareYesterdayNotProtectMachineCnt;
 
     /**
-     * @var integer Number of new machines about to expire compared with that yesterday
+     * @var integer <p>Change in the number of machines expiring soon compared with yesterday</p>
      */
     public $CompareYesterdayDeadlineMachineCnt;
 
     /**
-     * @var integer Number of machines about to expire
+     * @var integer <p>Number of machines about to expire</p>
      */
     public $DeadlineMachineCnt;
 
     /**
-     * @var integer Number of unprotected machines
+     * @var integer <p>Number of unprotected machines</p>
      */
     public $NotProtectMachineCnt;
 
     /**
-     * @var integer Number of protected Lighthouse machines (Lighthouse machines)
+     * @var integer <p>Number of protected Lighthouse machines</p>
      */
     public $LHGeneralDiscountCnt;
 
     /**
-     * @var integer Number of new hosts compared with that yesterday
+     * @var integer <p>Change in the number of newly added hosts compared with yesterday</p>
      */
     public $CompareYesterdayMachineCnt;
 
     /**
-     * @var integer Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
+     * @var integer <p>Automatic cleanup time, maximum 720 hours, minimum 0, default 0, 0=disabled</p>
      */
     public $MachineDestroyAfterOfflineHours;
 
     /**
-     * @var array Machine type array
+     * @var array <p>Cloud server type array</p>
      */
     public $CloudFrom;
 
@@ -176,26 +176,26 @@ class DescribeMachineGeneralResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $MachineCnt Total number of assets
-     * @param integer $TencentCloudMachineCnt Number of Tencent Cloud machines
-     * @param integer $AliCloudMachineCnt Number of Alibaba Cloud machines
-     * @param integer $BaiduCloudMachineCnt Number of Baidu Cloud machines
-     * @param integer $IDCMachineCnt Number of IDC machines
-     * @param integer $OtherCloudMachineCnt Number of machines from other cloud service vendors
-     * @param integer $ProtectMachineCnt Number of protected machines
-     * @param integer $BaseMachineCnt Number of protected Basic Edition machines
-     * @param integer $SpecialtyMachineCnt Number of protected Pro Edition machines
-     * @param integer $FlagshipMachineCnt Number of protected Ultimate Edition machines
-     * @param integer $RiskMachineCnt Number of risky machines
-     * @param integer $CompareYesterdayRiskMachineCnt Number of new risky machines compared with that yesterday
-     * @param integer $CompareYesterdayNotProtectMachineCnt Number of new unprotected machines compared with that yesterday
-     * @param integer $CompareYesterdayDeadlineMachineCnt Number of new machines about to expire compared with that yesterday
-     * @param integer $DeadlineMachineCnt Number of machines about to expire
-     * @param integer $NotProtectMachineCnt Number of unprotected machines
-     * @param integer $LHGeneralDiscountCnt Number of protected Lighthouse machines (Lighthouse machines)
-     * @param integer $CompareYesterdayMachineCnt Number of new hosts compared with that yesterday
-     * @param integer $MachineDestroyAfterOfflineHours Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
-     * @param array $CloudFrom Machine type array
+     * @param integer $MachineCnt <p>Total number of assets</p>
+     * @param integer $TencentCloudMachineCnt <p>Number of Tencent Cloud machines</p>
+     * @param integer $AliCloudMachineCnt <p>Number of Alibaba Cloud machines</p>
+     * @param integer $BaiduCloudMachineCnt <p>Number of Baidu Cloud machines</p>
+     * @param integer $IDCMachineCnt <p>Number of IDC machines</p>
+     * @param integer $OtherCloudMachineCnt <p>Number of machines from other cloud service vendors</p>
+     * @param integer $ProtectMachineCnt <p>Number of protected machines</p>
+     * @param integer $BaseMachineCnt <p>Number of protected Basic Edition machines</p>
+     * @param integer $SpecialtyMachineCnt <p>Number of protected Pro Edition machines</p>
+     * @param integer $FlagshipMachineCnt <p>Number of protected Ultimate Edition machines</p>
+     * @param integer $RiskMachineCnt <p>Number of risky machines</p>
+     * @param integer $CompareYesterdayRiskMachineCnt <p>Change in the number of risky machines compared with yesterday</p>
+     * @param integer $CompareYesterdayNotProtectMachineCnt <p>Change in the number of unprotected machines compared with yesterday</p>
+     * @param integer $CompareYesterdayDeadlineMachineCnt <p>Change in the number of machines expiring soon compared with yesterday</p>
+     * @param integer $DeadlineMachineCnt <p>Number of machines about to expire</p>
+     * @param integer $NotProtectMachineCnt <p>Number of unprotected machines</p>
+     * @param integer $LHGeneralDiscountCnt <p>Number of protected Lighthouse machines</p>
+     * @param integer $CompareYesterdayMachineCnt <p>Change in the number of newly added hosts compared with yesterday</p>
+     * @param integer $MachineDestroyAfterOfflineHours <p>Automatic cleanup time, maximum 720 hours, minimum 0, default 0, 0=disabled</p>
+     * @param array $CloudFrom <p>Cloud server type array</p>
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()

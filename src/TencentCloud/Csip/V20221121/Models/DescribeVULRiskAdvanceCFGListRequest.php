@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVULRiskAdvanceCFGList request structure.
  *
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
  * @method string getTaskId() Obtain Task ID
  * @method void setTaskId(string $TaskId) Set Task ID
  * @method Filter getFilter() Obtain Filter conditions.
@@ -27,6 +29,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeVULRiskAdvanceCFGListRequest extends AbstractModel
 {
+    /**
+     * @var array Group Account Member ID
+     */
+    public $MemberId;
+
     /**
      * @var string Task ID
      */
@@ -38,6 +45,7 @@ class DescribeVULRiskAdvanceCFGListRequest extends AbstractModel
     public $Filter;
 
     /**
+     * @param array $MemberId Group Account Member ID
      * @param string $TaskId Task ID
      * @param Filter $Filter Filter conditions.
      */
@@ -54,6 +62,10 @@ class DescribeVULRiskAdvanceCFGListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
+        }
+
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
         }

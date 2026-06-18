@@ -20,66 +20,39 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Task report information
  *
- * @method string getTaskLogName() Obtain Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTaskLogName(string $TaskLogName) Set Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getTaskLogName() Obtain report name
+ * @method void setTaskLogName(string $TaskLogName) Set report name
  * @method string getTaskLogId() Obtain Report ID.
  * @method void setTaskLogId(string $TaskLogId) Set Report ID.
- * @method integer getAssetsNumber() Obtain Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAssetsNumber(integer $AssetsNumber) Set Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getRiskNumber() Obtain Number of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setRiskNumber(integer $RiskNumber) Set Number of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getAssetsNumber() Obtain Associated Asset Count
+ * @method void setAssetsNumber(integer $AssetsNumber) Set Associated Asset Count
+ * @method integer getRiskNumber() Obtain Security Risk Count
+ * @method void setRiskNumber(integer $RiskNumber) Set Security Risk Count
  * @method string getTime() Obtain Report generation time
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setTime(string $Time) Set Report generation time
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Task status. `0`: Initial value; `1`: Scanning; `2`: Completed; `3`: Failed; `4`: Stopped; `5`: Paused; `6`: Retried
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Task status. `0`: Initial value; `1`: Scanning; `2`: Completed; `3`: Failed; `4`: Stopped; `5`: Paused; `6`: Retried
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getTaskName() Obtain Name of the associated task
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTaskName(string $TaskName) Set Name of the associated task
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Task Status Code. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Stopped; 5-Halted; 6-Task Has Been Restarted.
+ * @method void setStatus(integer $Status) Set Task Status Code. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Stopped; 5-Halted; 6-Task Has Been Restarted.
+ * @method string getTaskName() Obtain Associated Task Name
+ * @method void setTaskName(string $TaskName) Set Associated Task Name
  * @method string getStartTime() Obtain Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setStartTime(string $StartTime) Set Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getTaskCenterTaskId() Obtain Scan task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTaskCenterTaskId(string $TaskCenterTaskId) Set Scan task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getAppId() Obtain User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAppId(string $AppId) Set User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getUIN() Obtain User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setUIN(string $UIN) Set User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getUserName() Obtain User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setUserName(string $UserName) Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getReportType() Obtain Report type: `1`: Health check report; `2`: Daily report; `3`: Weekly report; `4`: Monthly report
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setReportType(integer $ReportType) Set Report type: `1`: Health check report; `2`: Daily report; `3`: Weekly report; `4`: Monthly report
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getTemplateId() Obtain Report template ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTemplateId(integer $TemplateId) Set Report template ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getTaskCenterTaskId() Obtain Task Center Scan Task ID
+ * @method void setTaskCenterTaskId(string $TaskCenterTaskId) Set Task Center Scan Task ID
+ * @method string getAppId() Obtain Tenant ID
+ * @method void setAppId(string $AppId) Set Tenant ID
+ * @method string getUIN() Obtain Host Account ID
+ * @method void setUIN(string $UIN) Set Host Account ID
+ * @method string getUserName() Obtain User name
+ * @method void setUserName(string $UserName) Set User name
+ * @method integer getReportType() Obtain Report Type. 1: Security Checkup; 2: Daily Report; 3: Weekly Report; 4: Monthly Report.
+ * @method void setReportType(integer $ReportType) Set Report Type. 1: Security Checkup; 2: Daily Report; 3: Weekly Report; 4: Monthly Report.
+ * @method integer getTemplateId() Obtain Report Template ID
+ * @method void setTemplateId(integer $TemplateId) Set Report Template ID
  */
 class TaskLogInfo extends AbstractModel
 {
     /**
-     * @var string Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string report name
      */
     public $TaskLogName;
 
@@ -89,105 +62,80 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $TaskLogId;
 
     /**
-     * @var integer Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Associated Asset Count
      */
     public $AssetsNumber;
 
     /**
-     * @var integer Number of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Security Risk Count
      */
     public $RiskNumber;
 
     /**
      * @var string Report generation time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Time;
 
     /**
-     * @var integer Task status. `0`: Initial value; `1`: Scanning; `2`: Completed; `3`: Failed; `4`: Stopped; `5`: Paused; `6`: Retried
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Task Status Code. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Stopped; 5-Halted; 6-Task Has Been Restarted.
      */
     public $Status;
 
     /**
-     * @var string Name of the associated task
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Associated Task Name
      */
     public $TaskName;
 
     /**
      * @var string Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $StartTime;
 
     /**
-     * @var string Scan task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Task Center Scan Task ID
      */
     public $TaskCenterTaskId;
 
     /**
-     * @var string User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Tenant ID
      */
     public $AppId;
 
     /**
-     * @var string User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Host Account ID
      */
     public $UIN;
 
     /**
-     * @var string User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string User name
      */
     public $UserName;
 
     /**
-     * @var integer Report type: `1`: Health check report; `2`: Daily report; `3`: Weekly report; `4`: Monthly report
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Report Type. 1: Security Checkup; 2: Daily Report; 3: Weekly Report; 4: Monthly Report.
      */
     public $ReportType;
 
     /**
-     * @var integer Report template ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Report Template ID
      */
     public $TemplateId;
 
     /**
-     * @param string $TaskLogName Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $TaskLogName report name
      * @param string $TaskLogId Report ID.
-     * @param integer $AssetsNumber Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $RiskNumber Number of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $AssetsNumber Associated Asset Count
+     * @param integer $RiskNumber Security Risk Count
      * @param string $Time Report generation time
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Status Task status. `0`: Initial value; `1`: Scanning; `2`: Completed; `3`: Failed; `4`: Stopped; `5`: Paused; `6`: Retried
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $TaskName Name of the associated task
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $Status Task Status Code. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Stopped; 5-Halted; 6-Task Has Been Restarted.
+     * @param string $TaskName Associated Task Name
      * @param string $StartTime Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $TaskCenterTaskId Scan task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $AppId User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $UIN User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $UserName User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $ReportType Report type: `1`: Health check report; `2`: Daily report; `3`: Weekly report; `4`: Monthly report
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $TemplateId Report template ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $TaskCenterTaskId Task Center Scan Task ID
+     * @param string $AppId Tenant ID
+     * @param string $UIN Host Account ID
+     * @param string $UserName User name
+     * @param integer $ReportType Report Type. 1: Security Checkup; 2: Daily Report; 3: Weekly Report; 4: Monthly Report.
+     * @param integer $TemplateId Report Template ID
      */
     function __construct()
     {

@@ -20,486 +20,330 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Data returned in the list of scan tasks list to display information
  *
- * @method string getTaskName() Obtain Task name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskName(string $TaskName) Set Task name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStartTime() Obtain Start time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(string $StartTime) Set Start time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTaskName() Obtain Task name.
+ * @method void setTaskName(string $TaskName) Set Task name.
+ * @method string getStartTime() Obtain start time of the task
+ * @method void setStartTime(string $StartTime) Set start time of the task
  * @method string getEndTime() Obtain Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEndTime(string $EndTime) Set Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getScanPlanContent() Obtain CRON format
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanPlanContent(string $ScanPlanContent) Set CRON format
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTaskType() Obtain Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskType(integer $TaskType) Set Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInsertTime() Obtain Creation time
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setInsertTime(string $InsertTime) Set Creation time
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getTaskId() Obtain Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskId(string $TaskId) Set Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getSelfDefiningAssets() Obtain Custom list of assets to scan
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSelfDefiningAssets(array $SelfDefiningAssets) Set Custom list of assets to scan
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getPredictTime() Obtain Estimated period to complete the task
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPredictTime(integer $PredictTime) Set Estimated period to complete the task
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPredictEndTime() Obtain Estimated completion time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPredictEndTime(string $PredictEndTime) Set Estimated completion time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getReportNumber() Obtain Number of reports
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReportNumber(integer $ReportNumber) Set Number of reports
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getScanPlanContent() Obtain Cron Format
+ * @method void setScanPlanContent(string $ScanPlanContent) Set Cron Format
+ * @method integer getTaskType() Obtain 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
+ * @method void setTaskType(integer $TaskType) Set 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
+ * @method string getInsertTime() Obtain Creation time.
+ * @method void setInsertTime(string $InsertTime) Set Creation time.
+ * @method string getTaskId() Obtain Task ID.
+ * @method void setTaskId(string $TaskId) Set Task ID.
+ * @method array getSelfDefiningAssets() Obtain Custom Specified Scan Asset Information
+ * @method void setSelfDefiningAssets(array $SelfDefiningAssets) Set Custom Specified Scan Asset Information
+ * @method integer getPredictTime() Obtain Estimated Time
+ * @method void setPredictTime(integer $PredictTime) Set Estimated Time
+ * @method string getPredictEndTime() Obtain Estimated Completion Time
+ * @method void setPredictEndTime(string $PredictEndTime) Set Estimated Completion Time
+ * @method integer getReportNumber() Obtain Report Count
+ * @method void setReportNumber(integer $ReportNumber) Set Report Count
  * @method integer getAssetNumber() Obtain Number of assets
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAssetNumber(integer $AssetNumber) Set Number of assets
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getScanStatus() Obtain Scanning status. `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning; `4`: Scanning stopped
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanStatus(integer $ScanStatus) Set Scanning status. `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning; `4`: Scanning stopped
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getScanStatus() Obtain Scan Status. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Scan Stopped.
+ * @method void setScanStatus(integer $ScanStatus) Set Scan Status. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Scan Stopped.
  * @method float getPercent() Obtain Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPercent(float $Percent) Set Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getScanItem() Obtain port/poc/weakpass/webcontent/configrisk
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setScanItem(string $ScanItem) Set port/poc/weakpass/webcontent/configrisk
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getScanAssetType() Obtain Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanAssetType(integer $ScanAssetType) Set Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVSSTaskId() Obtain VSS subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVSSTaskId(string $VSSTaskId) Set VSS subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCSPMTaskId() Obtain CSPM subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCSPMTaskId(string $CSPMTaskId) Set CSPM subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCWPPOCId() Obtain CWPP vulnerability scan task IDHost missed scan subtask id
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCWPPOCId(string $CWPPOCId) Set CWPP vulnerability scan task IDHost missed scan subtask id
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCWPBlId() Obtain CWPP baseline check task ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCWPBlId(string $CWPBlId) Set CWPP baseline check task ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getVSSTaskProcess() Obtain VSS task progess
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVSSTaskProcess(integer $VSSTaskProcess) Set VSS task progess
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCSPMTaskProcess() Obtain CSPM task progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCSPMTaskProcess(integer $CSPMTaskProcess) Set CSPM task progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCWPPOCProcess() Obtain CWPP vulnerability scan task progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCWPPOCProcess(integer $CWPPOCProcess) Set CWPP vulnerability scan task progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCWPBlProcess() Obtain CWPP baseline check task progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCWPBlProcess(integer $CWPBlProcess) Set CWPP baseline check task progress
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getErrorCode() Obtain Exception status codes
- * @method void setErrorCode(integer $ErrorCode) Set Exception status codes
+ * @method integer getScanAssetType() Obtain 0-Full Scan; 1-Specified Asset Scan; 2-Excluded Asset Scan; 3-Custom Specified Asset Scan.
+ * @method void setScanAssetType(integer $ScanAssetType) Set 0-Full Scan; 1-Specified Asset Scan; 2-Excluded Asset Scan; 3-Custom Specified Asset Scan.
+ * @method string getVSSTaskId() Obtain VSS Subtask ID
+ * @method void setVSSTaskId(string $VSSTaskId) Set VSS Subtask ID
+ * @method string getCSPMTaskId() Obtain CSPM Subtask ID
+ * @method void setCSPMTaskId(string $CSPMTaskId) Set CSPM Subtask ID
+ * @method string getCWPPOCId() Obtain Host Vulnerability Scan Subtask ID
+ * @method void setCWPPOCId(string $CWPPOCId) Set Host Vulnerability Scan Subtask ID
+ * @method string getCWPBlId() Obtain Host Baseline Subtask ID
+ * @method void setCWPBlId(string $CWPBlId) Set Host Baseline Subtask ID
+ * @method integer getVSSTaskProcess() Obtain VSS Subtask Progress
+ * @method void setVSSTaskProcess(integer $VSSTaskProcess) Set VSS Subtask Progress
+ * @method integer getCSPMTaskProcess() Obtain CSPM Subtask Progress
+ * @method void setCSPMTaskProcess(integer $CSPMTaskProcess) Set CSPM Subtask Progress
+ * @method integer getCWPPOCProcess() Obtain Host Vulnerability Scan Subtask Progress
+ * @method void setCWPPOCProcess(integer $CWPPOCProcess) Set Host Vulnerability Scan Subtask Progress
+ * @method integer getCWPBlProcess() Obtain Host Baseline Subtask Progress
+ * @method void setCWPBlProcess(integer $CWPBlProcess) Set Host Baseline Subtask Progress
+ * @method integer getErrorCode() Obtain Exception status code
+ * @method void setErrorCode(integer $ErrorCode) Set Exception status code
  * @method string getErrorInfo() Obtain Exception information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setErrorInfo(string $ErrorInfo) Set Exception information
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStartDay() Obtain Day of the month to start the scheduled task
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartDay(integer $StartDay) Set Day of the month to start the scheduled task
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFrequency() Obtain Scan frequency in days. `1`: Every day; `7`: Every seven days; `30`: Every 30 days; `0`: Scan once only
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFrequency(integer $Frequency) Set Scan frequency in days. `1`: Every day; `7`: Every seven days; `30`: Every 30 days; `0`: Scan once only
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCompleteNumber() Obtain Number of completed tasks
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCompleteNumber(integer $CompleteNumber) Set Number of completed tasks
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCompleteAssetNumber() Obtain Number of scanned assets
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCompleteAssetNumber(integer $CompleteAssetNumber) Set Number of scanned assets
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRiskCount() Obtain Number of risks
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRiskCount(integer $RiskCount) Set Number of risks
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getAssets() Obtain Assets
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAssets(array $Assets) Set Assets
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAppId() Obtain User `Appid`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAppId(string $AppId) Set User `Appid`
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUIN() Obtain User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUIN(string $UIN) Set User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUserName() Obtain User name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserName(string $UserName) Set User name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTaskMode() Obtain Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskMode(integer $TaskMode) Set Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getScanFrom() Obtain Source of scanning request
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanFrom(string $ScanFrom) Set Source of scanning request
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsFree() Obtain Whether it's a limited-time free health check. `0`: No; `1`: Yes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsFree(integer $IsFree) Set Whether it's a limited-time free health check. `0`: No; `1`: Yes
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsDelete() Obtain Whether the user is authorized to delete this task. `1` :Yes; `0`: No. It's available for multi-account management.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsDelete(integer $IsDelete) Set Whether the user is authorized to delete this task. `1` :Yes; `0`: No. It's available for multi-account management.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSourceType() Obtain Source of the task. `0`: Default, `1`: Assistant; `2`: Health check
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSourceType(integer $SourceType) Set Source of the task. `0`: Default, `1`: Assistant; `2`: Health check
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStartDay() Obtain Number of Days for Periodic Task to Start
+ * @method void setStartDay(integer $StartDay) Set Number of Days for Periodic Task to Start
+ * @method integer getFrequency() Obtain Scanning Frequency, in Days. 1-Daily; 7-Weekly; 30-Monthly; 0-Scan Once.
+ * @method void setFrequency(integer $Frequency) Set Scanning Frequency, in Days. 1-Daily; 7-Weekly; 30-Monthly; 0-Scan Once.
+ * @method integer getCompleteNumber() Obtain Completion Count
+ * @method void setCompleteNumber(integer $CompleteNumber) Set Completion Count
+ * @method integer getCompleteAssetNumber() Obtain Completed Asset Count
+ * @method void setCompleteAssetNumber(integer $CompleteAssetNumber) Set Completed Asset Count
+ * @method integer getRiskCount() Obtain risk count
+ * @method void setRiskCount(integer $RiskCount) Set risk count
+ * @method array getAssets() Obtain Asset
+ * @method void setAssets(array $Assets) Set Asset
+ * @method string getAppId() Obtain User Appid
+ * @method void setAppId(string $AppId) Set User Appid
+ * @method string getUIN() Obtain User Host Account ID
+ * @method void setUIN(string $UIN) Set User Host Account ID
+ * @method string getUserName() Obtain User name
+ * @method void setUserName(string $UserName) Set User name
+ * @method integer getTaskMode() Obtain Checkup Mode. 0-Standard Mode; 1-Quick Mode; 2-Advanced Mode.
+ * @method void setTaskMode(integer $TaskMode) Set Checkup Mode. 0-Standard Mode; 1-Quick Mode; 2-Advanced Mode.
+ * @method string getScanFrom() Obtain Scan Source
+ * @method void setScanFrom(string $ScanFrom) Set Scan Source
+ * @method integer getIsFree() Obtain Whether health checkup is limited or exempted. 0-No; 1-Yes.
+ * @method void setIsFree(integer $IsFree) Set Whether health checkup is limited or exempted. 0-No; 1-Yes.
+ * @method integer getIsDelete() Obtain Whether it can be deleted. 1-Yes; 0-No. For use with multi-account management.
+ * @method void setIsDelete(integer $IsDelete) Set Whether it can be deleted. 1-Yes; 0-No. For use with multi-account management.
+ * @method integer getSourceType() Obtain Task Source Type. 0: Default; 1: Assistant; 2: Health Checkup Items.
+ * @method void setSourceType(integer $SourceType) Set Task Source Type. 0: Default; 1: Assistant; 2: Health Checkup Items.
  */
 class ScanTaskInfoList extends AbstractModel
 {
     /**
-     * @var string Task name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Task name.
      */
     public $TaskName;
 
     /**
-     * @var string Start time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string start time of the task
      */
     public $StartTime;
 
     /**
      * @var string Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EndTime;
 
     /**
-     * @var string CRON format
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Cron Format
      */
     public $ScanPlanContent;
 
     /**
-     * @var integer Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
      */
     public $TaskType;
 
     /**
-     * @var string Creation time
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Creation time.
      */
     public $InsertTime;
 
     /**
-     * @var string Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Task ID.
      */
     public $TaskId;
 
     /**
-     * @var array Custom list of assets to scan
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Custom Specified Scan Asset Information
      */
     public $SelfDefiningAssets;
 
     /**
-     * @var integer Estimated period to complete the task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Estimated Time
      */
     public $PredictTime;
 
     /**
-     * @var string Estimated completion time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Estimated Completion Time
      */
     public $PredictEndTime;
 
     /**
-     * @var integer Number of reports
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Report Count
      */
     public $ReportNumber;
 
     /**
      * @var integer Number of assets
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AssetNumber;
 
     /**
-     * @var integer Scanning status. `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning; `4`: Scanning stopped
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Scan Status. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Scan Stopped.
      */
     public $ScanStatus;
 
     /**
      * @var float Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Percent;
 
     /**
      * @var string port/poc/weakpass/webcontent/configrisk
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ScanItem;
 
     /**
-     * @var integer Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 0-Full Scan; 1-Specified Asset Scan; 2-Excluded Asset Scan; 3-Custom Specified Asset Scan.
      */
     public $ScanAssetType;
 
     /**
-     * @var string VSS subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string VSS Subtask ID
      */
     public $VSSTaskId;
 
     /**
-     * @var string CSPM subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string CSPM Subtask ID
      */
     public $CSPMTaskId;
 
     /**
-     * @var string CWPP vulnerability scan task IDHost missed scan subtask id
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host Vulnerability Scan Subtask ID
      */
     public $CWPPOCId;
 
     /**
-     * @var string CWPP baseline check task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Host Baseline Subtask ID
      */
     public $CWPBlId;
 
     /**
-     * @var integer VSS task progess
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer VSS Subtask Progress
      */
     public $VSSTaskProcess;
 
     /**
-     * @var integer CSPM task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer CSPM Subtask Progress
      */
     public $CSPMTaskProcess;
 
     /**
-     * @var integer CWPP vulnerability scan task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Host Vulnerability Scan Subtask Progress
      */
     public $CWPPOCProcess;
 
     /**
-     * @var integer CWPP baseline check task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Host Baseline Subtask Progress
      */
     public $CWPBlProcess;
 
     /**
-     * @var integer Exception status codes
+     * @var integer Exception status code
      */
     public $ErrorCode;
 
     /**
      * @var string Exception information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ErrorInfo;
 
     /**
-     * @var integer Day of the month to start the scheduled task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of Days for Periodic Task to Start
      */
     public $StartDay;
 
     /**
-     * @var integer Scan frequency in days. `1`: Every day; `7`: Every seven days; `30`: Every 30 days; `0`: Scan once only
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Scanning Frequency, in Days. 1-Daily; 7-Weekly; 30-Monthly; 0-Scan Once.
      */
     public $Frequency;
 
     /**
-     * @var integer Number of completed tasks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Completion Count
      */
     public $CompleteNumber;
 
     /**
-     * @var integer Number of scanned assets
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Completed Asset Count
      */
     public $CompleteAssetNumber;
 
     /**
-     * @var integer Number of risks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer risk count
      */
     public $RiskCount;
 
     /**
-     * @var array Assets
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Asset
      */
     public $Assets;
 
     /**
-     * @var string User `Appid`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string User Appid
      */
     public $AppId;
 
     /**
-     * @var string User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string User Host Account ID
      */
     public $UIN;
 
     /**
-     * @var string User name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string User name
      */
     public $UserName;
 
     /**
-     * @var integer Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Checkup Mode. 0-Standard Mode; 1-Quick Mode; 2-Advanced Mode.
      */
     public $TaskMode;
 
     /**
-     * @var string Source of scanning request
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Scan Source
      */
     public $ScanFrom;
 
     /**
-     * @var integer Whether it's a limited-time free health check. `0`: No; `1`: Yes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether health checkup is limited or exempted. 0-No; 1-Yes.
      */
     public $IsFree;
 
     /**
-     * @var integer Whether the user is authorized to delete this task. `1` :Yes; `0`: No. It's available for multi-account management.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether it can be deleted. 1-Yes; 0-No. For use with multi-account management.
      */
     public $IsDelete;
 
     /**
-     * @var integer Source of the task. `0`: Default, `1`: Assistant; `2`: Health check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Task Source Type. 0: Default; 1: Assistant; 2: Health Checkup Items.
      */
     public $SourceType;
 
     /**
-     * @param string $TaskName Task name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StartTime Start time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TaskName Task name.
+     * @param string $StartTime start time of the task
      * @param string $EndTime Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ScanPlanContent CRON format
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TaskType Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InsertTime Creation time
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $SelfDefiningAssets Custom list of assets to scan
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $PredictTime Estimated period to complete the task
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PredictEndTime Estimated completion time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ReportNumber Number of reports
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ScanPlanContent Cron Format
+     * @param integer $TaskType 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
+     * @param string $InsertTime Creation time.
+     * @param string $TaskId Task ID.
+     * @param array $SelfDefiningAssets Custom Specified Scan Asset Information
+     * @param integer $PredictTime Estimated Time
+     * @param string $PredictEndTime Estimated Completion Time
+     * @param integer $ReportNumber Report Count
      * @param integer $AssetNumber Number of assets
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ScanStatus Scanning status. `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning; `4`: Scanning stopped
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ScanStatus Scan Status. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Scan Stopped.
      * @param float $Percent Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ScanItem port/poc/weakpass/webcontent/configrisk
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ScanAssetType Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VSSTaskId VSS subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CSPMTaskId CSPM subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CWPPOCId CWPP vulnerability scan task IDHost missed scan subtask id
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CWPBlId CWPP baseline check task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $VSSTaskProcess VSS task progess
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CSPMTaskProcess CSPM task progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CWPPOCProcess CWPP vulnerability scan task progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CWPBlProcess CWPP baseline check task progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ErrorCode Exception status codes
+     * @param integer $ScanAssetType 0-Full Scan; 1-Specified Asset Scan; 2-Excluded Asset Scan; 3-Custom Specified Asset Scan.
+     * @param string $VSSTaskId VSS Subtask ID
+     * @param string $CSPMTaskId CSPM Subtask ID
+     * @param string $CWPPOCId Host Vulnerability Scan Subtask ID
+     * @param string $CWPBlId Host Baseline Subtask ID
+     * @param integer $VSSTaskProcess VSS Subtask Progress
+     * @param integer $CSPMTaskProcess CSPM Subtask Progress
+     * @param integer $CWPPOCProcess Host Vulnerability Scan Subtask Progress
+     * @param integer $CWPBlProcess Host Baseline Subtask Progress
+     * @param integer $ErrorCode Exception status code
      * @param string $ErrorInfo Exception information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $StartDay Day of the month to start the scheduled task
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Frequency Scan frequency in days. `1`: Every day; `7`: Every seven days; `30`: Every 30 days; `0`: Scan once only
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CompleteNumber Number of completed tasks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CompleteAssetNumber Number of scanned assets
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RiskCount Number of risks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Assets Assets
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AppId User `Appid`
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UIN User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UserName User name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TaskMode Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ScanFrom Source of scanning request
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsFree Whether it's a limited-time free health check. `0`: No; `1`: Yes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsDelete Whether the user is authorized to delete this task. `1` :Yes; `0`: No. It's available for multi-account management.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SourceType Source of the task. `0`: Default, `1`: Assistant; `2`: Health check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $StartDay Number of Days for Periodic Task to Start
+     * @param integer $Frequency Scanning Frequency, in Days. 1-Daily; 7-Weekly; 30-Monthly; 0-Scan Once.
+     * @param integer $CompleteNumber Completion Count
+     * @param integer $CompleteAssetNumber Completed Asset Count
+     * @param integer $RiskCount risk count
+     * @param array $Assets Asset
+     * @param string $AppId User Appid
+     * @param string $UIN User Host Account ID
+     * @param string $UserName User name
+     * @param integer $TaskMode Checkup Mode. 0-Standard Mode; 1-Quick Mode; 2-Advanced Mode.
+     * @param string $ScanFrom Scan Source
+     * @param integer $IsFree Whether health checkup is limited or exempted. 0-No; 1-Yes.
+     * @param integer $IsDelete Whether it can be deleted. 1-Yes; 0-No. For use with multi-account management.
+     * @param integer $SourceType Task Source Type. 0: Default; 1: Assistant; 2: Health Checkup Items.
      */
     function __construct()
     {

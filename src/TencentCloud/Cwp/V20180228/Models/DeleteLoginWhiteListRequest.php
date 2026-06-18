@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLoginWhiteList request structure.
  *
- * @method array getIds() Obtain Allowlisted IDs (The maximum number is 100.)
- * @method void setIds(array $Ids) Set Allowlisted IDs (The maximum number is 100.)
+ * @method array getIds() Obtain <p>Allowlist ID (maximum 100)</p>
+ * @method void setIds(array $Ids) Set <p>Allowlist ID (maximum 100)</p>
  */
 class DeleteLoginWhiteListRequest extends AbstractModel
 {
     /**
-     * @var array Allowlisted IDs (The maximum number is 100.)
+     * @var array <p>Allowlist ID (maximum 100)</p>
      */
     public $Ids;
 
     /**
-     * @param array $Ids Allowlisted IDs (The maximum number is 100.)
+     * @param array $Ids <p>Allowlist ID (maximum 100)</p>
      */
     function __construct()
     {

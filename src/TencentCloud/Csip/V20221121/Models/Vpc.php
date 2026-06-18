@@ -30,14 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set Region
  * @method integer getCVM() Obtain CVM (only 32-bit)
  * @method void setCVM(integer $CVM) Set CVM (only 32-bit)
- * @method array getTag() Obtain Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTag(array $Tag) Set Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getDNS() Obtain DNS domain
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setDNS(array $DNS) Set DNS domain
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method array getTag() Obtain Tag.
+ * @method void setTag(array $Tag) Set Tag.
+ * @method array getDNS() Obtain DNS Domain
+ * @method void setDNS(array $DNS) Set DNS Domain
  * @method string getAssetName() Obtain Asset name
  * @method void setAssetName(string $AssetName) Set Asset name
  * @method string getCIDR() Obtain CIDR block
@@ -50,14 +46,10 @@ Note: This field may return·null, indicating that no valid values can be obtain
  * @method void setUin(string $Uin) Set UIN
  * @method string getNick() Obtain User name
  * @method void setNick(string $Nick) Set User name
- * @method integer getIsNewAsset() Obtain Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsNewAsset(integer $IsNewAsset) Set Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsCore() Obtain Whether it's a critical asset. `1`: Yes; `2`: No
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsCore(integer $IsCore) Set Whether it's a critical asset. `1`: Yes; `2`: No
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getIsNewAsset() Obtain New Asset or Not. 1: New
+ * @method void setIsNewAsset(integer $IsNewAsset) Set New Asset or Not. 1: New
+ * @method integer getIsCore() Obtain Whether it is a core asset. 1-Yes, 2-No.
+ * @method void setIsCore(integer $IsCore) Set Whether it is a core asset. 1-Yes, 2-No.
  */
 class Vpc extends AbstractModel
 {
@@ -87,14 +79,12 @@ class Vpc extends AbstractModel
     public $CVM;
 
     /**
-     * @var array Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Tag.
      */
     public $Tag;
 
     /**
-     * @var array DNS domain
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array DNS Domain
      */
     public $DNS;
 
@@ -129,14 +119,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $Nick;
 
     /**
-     * @var integer Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer New Asset or Not. 1: New
      */
     public $IsNewAsset;
 
     /**
-     * @var integer Whether it's a critical asset. `1`: Yes; `2`: No
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Whether it is a core asset. 1-Yes, 2-No.
      */
     public $IsCore;
 
@@ -146,20 +134,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * @param string $AssetId Asset ID
      * @param string $Region Region
      * @param integer $CVM CVM (only 32-bit)
-     * @param array $Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $DNS DNS domain
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param array $Tag Tag.
+     * @param array $DNS DNS Domain
      * @param string $AssetName Asset name
      * @param string $CIDR CIDR block
      * @param string $CreateTime Asset creation time
      * @param string $AppId appid
      * @param string $Uin UIN
      * @param string $Nick User name
-     * @param integer $IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsCore Whether it's a critical asset. `1`: Yes; `2`: No
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $IsNewAsset New Asset or Not. 1: New
+     * @param integer $IsCore Whether it is a core asset. 1-Yes, 2-No.
      */
     function __construct()
     {

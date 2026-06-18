@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Risk details
  *
- * @method string getTitle() Obtain Risk title
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTitle(string $Title) Set Risk title
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getBody() Obtain Risk details
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setBody(string $Body) Set Risk details
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getTitle() Obtain Title.
+ * @method void setTitle(string $Title) Set Title.
+ * @method string getBody() Obtain Details.
+ * @method void setBody(string $Body) Set Details.
  */
 class ServerRiskSuggestion extends AbstractModel
 {
     /**
-     * @var string Risk title
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Title.
      */
     public $Title;
 
     /**
-     * @var string Risk details
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Details.
      */
     public $Body;
 
     /**
-     * @param string $Title Risk title
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Body Risk details
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Title Title.
+     * @param string $Body Details.
      */
     function __construct()
     {

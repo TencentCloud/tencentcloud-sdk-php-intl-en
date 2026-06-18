@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubUserInfo request structure.
  *
- * @method array getMemberId() Obtain Member ID of the group account
- * @method void setMemberId(array $MemberId) Set Member ID of the group account
- * @method Filter getFilter() Obtain Filter content
- * @method void setFilter(Filter $Filter) Set Filter content
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
+ * @method Filter getFilter() Obtain Filtered Content
+ * @method void setFilter(Filter $Filter) Set Filtered Content
  */
 class DescribeSubUserInfoRequest extends AbstractModel
 {
     /**
-     * @var array Member ID of the group account
+     * @var array Group Account Member ID
      */
     public $MemberId;
 
     /**
-     * @var Filter Filter content
+     * @var Filter Filtered Content
      */
     public $Filter;
 
     /**
-     * @param array $MemberId Member ID of the group account
-     * @param Filter $Filter Filter content
+     * @param array $MemberId Group Account Member ID
+     * @param Filter $Filter Filtered Content
      */
     function __construct()
     {

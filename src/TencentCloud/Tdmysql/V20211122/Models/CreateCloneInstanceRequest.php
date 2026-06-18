@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFullReplications(integer $FullReplications) Set <p>Number of replicas</p>
  * @method string getInstanceMode() Obtain <p>Instance mode, normal: standard type; enhanced: enhanced</p>
  * @method void setInstanceMode(string $InstanceMode) Set <p>Instance mode, normal: standard type; enhanced: enhanced</p>
+ * @method array getSecurityGroupIds() Obtain <p>Security group id list</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>Security group id list</p>
  */
 class CreateCloneInstanceRequest extends AbstractModel
 {
@@ -164,6 +166,11 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $InstanceMode;
 
     /**
+     * @var array <p>Security group id list</p>
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $Zone <p>Creating an Instance Region</p>
      * @param string $VpcId <p>Character type vpcid</p>
      * @param string $SubnetId <p>Character type subnetid</p>
@@ -184,6 +191,7 @@ class CreateCloneInstanceRequest extends AbstractModel
      * @param array $Zones <p>Multi-AZ list, Zones[0] refers to the primary AZ</p>
      * @param integer $FullReplications <p>Number of replicas</p>
      * @param string $InstanceMode <p>Instance mode, normal: standard type; enhanced: enhanced</p>
+     * @param array $SecurityGroupIds <p>Security group id list</p>
      */
     function __construct()
     {
@@ -281,6 +289,10 @@ class CreateCloneInstanceRequest extends AbstractModel
 
         if (array_key_exists("InstanceMode",$param) and $param["InstanceMode"] !== null) {
             $this->InstanceMode = $param["InstanceMode"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

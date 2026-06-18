@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceTag() Obtain Service tag
  * @method void setServiceTag(string $ServiceTag) Set Service tag
- * @method integer getPort() Obtain Port
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPort(integer $Port) Set Port
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getPort() Obtain Port.
+ * @method void setPort(integer $Port) Set Port.
  * @method string getAffectAsset() Obtain Affected assets
  * @method void setAffectAsset(string $AffectAsset) Set Affected assets
  * @method string getInstanceId() Obtain Instance ID
@@ -34,8 +32,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
  * @method void setInstanceName(string $InstanceName) Set Instance name
  * @method string getInstanceType() Obtain Asset type
  * @method void setInstanceType(string $InstanceType) Set Asset type
- * @method string getLevel() Obtain Risk level
- * @method void setLevel(string $Level) Set Risk level
+ * @method string getLevel() Obtain Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+ * @method void setLevel(string $Level) Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
  * @method string getProtocol() Obtain Network protocol
  * @method void setProtocol(string $Protocol) Set Network protocol
  * @method string getComponent() Obtain Components
@@ -46,50 +44,36 @@ Note: This field may return·null, indicating that no valid values can be obtain
  * @method void setRecentTime(string $RecentTime) Set Last detected 
  * @method string getFirstTime() Obtain First detected
  * @method void setFirstTime(string $FirstTime) Set First detected
- * @method string getRiskDetails() Obtain Risk Details
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setRiskDetails(string $RiskDetails) Set Risk Details
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getRiskDetails() Obtain Risk details
+ * @method void setRiskDetails(string $RiskDetails) Set Risk details
  * @method string getSuggestion() Obtain Handling suggestion
  * @method void setSuggestion(string $Suggestion) Set Handling suggestion
- * @method integer getStatus() Obtain Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
- * @method void setStatus(integer $Status) Set Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+ * @method integer getStatus() Obtain Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+ * @method void setStatus(integer $Status) Set Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
  * @method string getId() Obtain Unique ID of the asset
  * @method void setId(string $Id) Set Unique ID of the asset
  * @method string getAppId() Obtain User `appid`
  * @method void setAppId(string $AppId) Set User `appid`
- * @method string getNick() Obtain User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setNick(string $Nick) Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getUin() Obtain User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setUin(string $Uin) Set User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getServiceSnapshot() Obtain Service snapshot
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setServiceSnapshot(string $ServiceSnapshot) Set Service snapshot
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getUrl() Obtain Service access URL.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setUrl(string $Url) Set Service access URL.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getIndex() Obtain Data entry key
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIndex(string $Index) Set Data entry key
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getRiskList() Obtain List of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setRiskList(array $RiskList) Set List of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getSuggestionList() Obtain List of fix suggestions 
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setSuggestionList(array $SuggestionList) Set List of fix suggestions 
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getStatusCode() Obtain HTTP response code
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setStatusCode(string $StatusCode) Set HTTP response code
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getNick() Obtain User Nickname
+ * @method void setNick(string $Nick) Set User Nickname
+ * @method string getUin() Obtain User UIN
+ * @method void setUin(string $Uin) Set User UIN
+ * @method string getServiceSnapshot() Obtain Service Snapshot
+ * @method void setServiceSnapshot(string $ServiceSnapshot) Set Service Snapshot
+ * @method string getUrl() Obtain Service Access URL
+ * @method void setUrl(string $Url) Set Service Access URL
+ * @method string getIndex() Obtain List Index Value
+ * @method void setIndex(string $Index) Set List Index Value
+ * @method array getRiskList() Obtain Risk list
+ * @method void setRiskList(array $RiskList) Set Risk list
+ * @method array getSuggestionList() Obtain Recommendation List
+ * @method void setSuggestionList(array $SuggestionList) Set Recommendation List
+ * @method string getStatusCode() Obtain HTTP Response Status Code
+ * @method void setStatusCode(string $StatusCode) Set HTTP Response Status Code
+ * @method string getNewLevel() Obtain New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+ * @method void setNewLevel(string $NewLevel) Set New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+ * @method integer getXspmStatus() Obtain Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+ * @method void setXspmStatus(integer $XspmStatus) Set Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
  */
 class ServerRisk extends AbstractModel
 {
@@ -99,8 +83,7 @@ class ServerRisk extends AbstractModel
     public $ServiceTag;
 
     /**
-     * @var integer Port
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Port.
      */
     public $Port;
 
@@ -125,7 +108,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $InstanceType;
 
     /**
-     * @var string Risk level
+     * @var string Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public $Level;
 
@@ -155,8 +138,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $FirstTime;
 
     /**
-     * @var string Risk Details
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Risk details
      */
     public $RiskDetails;
 
@@ -166,7 +148,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $Suggestion;
 
     /**
-     * @var integer Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * @var integer Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
      */
     public $Status;
 
@@ -181,89 +163,83 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $AppId;
 
     /**
-     * @var string User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string User Nickname
      */
     public $Nick;
 
     /**
-     * @var string User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string User UIN
      */
     public $Uin;
 
     /**
-     * @var string Service snapshot
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Service Snapshot
      */
     public $ServiceSnapshot;
 
     /**
-     * @var string Service access URL.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Service Access URL
      */
     public $Url;
 
     /**
-     * @var string Data entry key
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string List Index Value
      */
     public $Index;
 
     /**
-     * @var array List of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Risk list
      */
     public $RiskList;
 
     /**
-     * @var array List of fix suggestions 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Recommendation List
      */
     public $SuggestionList;
 
     /**
-     * @var string HTTP response code
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string HTTP Response Status Code
      */
     public $StatusCode;
 
     /**
+     * @var string New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+     */
+    public $NewLevel;
+
+    /**
+     * @var integer Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+     */
+    public $XspmStatus;
+
+    /**
      * @param string $ServiceTag Service tag
-     * @param integer $Port Port
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $Port Port.
      * @param string $AffectAsset Affected assets
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $InstanceType Asset type
-     * @param string $Level Risk level
+     * @param string $Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      * @param string $Protocol Network protocol
      * @param string $Component Components
      * @param string $Service Service
      * @param string $RecentTime Last detected 
      * @param string $FirstTime First detected
-     * @param string $RiskDetails Risk Details
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $RiskDetails Risk details
      * @param string $Suggestion Handling suggestion
-     * @param integer $Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * @param integer $Status Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
      * @param string $Id Unique ID of the asset
      * @param string $AppId User `appid`
-     * @param string $Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $ServiceSnapshot Service snapshot
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Url Service access URL.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Index Data entry key
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $RiskList List of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $SuggestionList List of fix suggestions 
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $StatusCode HTTP response code
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Nick User Nickname
+     * @param string $Uin User UIN
+     * @param string $ServiceSnapshot Service Snapshot
+     * @param string $Url Service Access URL
+     * @param string $Index List Index Value
+     * @param array $RiskList Risk list
+     * @param array $SuggestionList Recommendation List
+     * @param string $StatusCode HTTP Response Status Code
+     * @param string $NewLevel New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+     * @param integer $XspmStatus Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
      */
     function __construct()
     {
@@ -386,6 +362,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
         if (array_key_exists("StatusCode",$param) and $param["StatusCode"] !== null) {
             $this->StatusCode = $param["StatusCode"];
+        }
+
+        if (array_key_exists("NewLevel",$param) and $param["NewLevel"] !== null) {
+            $this->NewLevel = $param["NewLevel"];
+        }
+
+        if (array_key_exists("XspmStatus",$param) and $param["XspmStatus"] !== null) {
+            $this->XspmStatus = $param["XspmStatus"];
         }
     }
 }

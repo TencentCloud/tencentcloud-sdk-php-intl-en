@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getType() Obtain Type of the task. `0`: Preview; `1`: Download
  * @method void setType(integer $Type) Set Type of the task. `0`: Preview; `1`: Download
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
  * @method array getReportItemKeyList() Obtain List of task report IDs
  * @method void setReportItemKeyList(array $ReportItemKeyList) Set List of task report IDs
  * @method array getReportTaskIdList() Obtain List of task IDs in the report
@@ -35,6 +37,11 @@ class DescribeTaskLogURLRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var array Group Account Member ID
+     */
+    public $MemberId;
+
+    /**
      * @var array List of task report IDs
      */
     public $ReportItemKeyList;
@@ -46,6 +53,7 @@ class DescribeTaskLogURLRequest extends AbstractModel
 
     /**
      * @param integer $Type Type of the task. `0`: Preview; `1`: Download
+     * @param array $MemberId Group Account Member ID
      * @param array $ReportItemKeyList List of task report IDs
      * @param array $ReportTaskIdList List of task IDs in the report
      */
@@ -64,6 +72,10 @@ class DescribeTaskLogURLRequest extends AbstractModel
         }
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
         }
 
         if (array_key_exists("ReportItemKeyList",$param) and $param["ReportItemKeyList"] !== null) {

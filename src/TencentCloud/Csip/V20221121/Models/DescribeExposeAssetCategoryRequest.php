@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExposeAssetCategory request structure.
  *
- * @method array getMemberId() Obtain Group Account Member ID
- * @method void setMemberId(array $MemberId) Set Group Account Member ID
+ * @method array getMemberId() Obtain <p>Group account member id</p>
+ * @method void setMemberId(array $MemberId) Set <p>Group account member id</p>
  */
 class DescribeExposeAssetCategoryRequest extends AbstractModel
 {
     /**
-     * @var array Group Account Member ID
+     * @var array <p>Group account member id</p>
      */
     public $MemberId;
 
     /**
-     * @param array $MemberId Group Account Member ID
+     * @param array $MemberId <p>Group account member id</p>
      */
     function __construct()
     {

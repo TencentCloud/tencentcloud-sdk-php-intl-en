@@ -20,15 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDbAssets request structure.
  *
- * @method Filter getFilter() Obtain u200c-
- * @method void setFilter(Filter $Filter) Set u200c-
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
+ * @method Filter getFilter() Obtain Filter parameters
+ * @method void setFilter(Filter $Filter) Set Filter parameters
  * @method array getAssetTypes() Obtain Asset types. Values: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
  * @method void setAssetTypes(array $AssetTypes) Set Asset types. Values: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
  */
 class DescribeDbAssetsRequest extends AbstractModel
 {
     /**
-     * @var Filter u200c-
+     * @var array Group Account Member ID
+     */
+    public $MemberId;
+
+    /**
+     * @var Filter Filter parameters
      */
     public $Filter;
 
@@ -38,7 +45,8 @@ class DescribeDbAssetsRequest extends AbstractModel
     public $AssetTypes;
 
     /**
-     * @param Filter $Filter u200c-
+     * @param array $MemberId Group Account Member ID
+     * @param Filter $Filter Filter parameters
      * @param array $AssetTypes Asset types. Values: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
      */
     function __construct()
@@ -54,6 +62,10 @@ class DescribeDbAssetsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
+        }
+
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);

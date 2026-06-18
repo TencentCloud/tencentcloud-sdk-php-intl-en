@@ -21,191 +21,115 @@ use TencentCloud\Common\AbstractModel;
  * List of IPs
  *
  * @method string getAssetId() Obtain Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAssetId(string $AssetId) Set Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getAssetName() Obtain Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAssetName(string $AssetName) Set Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getAssetName() Obtain Asset Name
+ * @method void setAssetName(string $AssetName) Set Asset Name
  * @method string getAssetType() Obtain Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAssetType(string $AssetType) Set Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getRegion() Obtain Region
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getCFWStatus() Obtain CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setCFWStatus(integer $CFWStatus) Set CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getRegion() Obtain Region.
+ * @method void setRegion(string $Region) Set Region.
+ * @method integer getCFWStatus() Obtain Cloud Defense Status
+ * @method void setCFWStatus(integer $CFWStatus) Set Cloud Defense Status
  * @method string getAssetCreateTime() Obtain Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAssetCreateTime(string $AssetCreateTime) Set Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getPublicIp() Obtain Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPublicIp(string $PublicIp) Set Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getPublicIpType() Obtain Public IP type
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPublicIpType(integer $PublicIpType) Set Public IP type
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getPublicIp() Obtain Public IP address
+ * @method void setPublicIp(string $PublicIp) Set Public IP address
+ * @method integer getPublicIpType() Obtain Public IP Type
+ * @method void setPublicIpType(integer $PublicIpType) Set Public IP Type
  * @method string getVpcId() Obtain vpc
  * @method void setVpcId(string $VpcId) Set vpc
- * @method string getVpcName() Obtain VPC name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setVpcName(string $VpcName) Set VPC name
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getVpcName() Obtain VPC Name
+ * @method void setVpcName(string $VpcName) Set VPC Name
  * @method integer getAppId() Obtain appid
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAppId(integer $AppId) Set appid
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getUin() Obtain User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setUin(string $Uin) Set User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getUin() Obtain User UIN
+ * @method void setUin(string $Uin) Set User UIN
  * @method string getNickName() Obtain Name
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setNickName(string $NickName) Set Name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsCore() Obtain Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsCore(integer $IsCore) Set Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsCloud() Obtain Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsCloud(integer $IsCloud) Set Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getAttack() Obtain Number of network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAttack(integer $Attack) Set Number of network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getAccess() Obtain Number of network access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAccess(integer $Access) Set Number of network access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIntercept() Obtain Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIntercept(integer $Intercept) Set Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getIsCore() Obtain Core
+ * @method void setIsCore(integer $IsCore) Set Core
+ * @method integer getIsCloud() Obtain On-Cloud
+ * @method void setIsCloud(integer $IsCloud) Set On-Cloud
+ * @method integer getAttack() Obtain network attack
+ * @method void setAttack(integer $Attack) Set network attack
+ * @method integer getAccess() Obtain Network access
+ * @method void setAccess(integer $Access) Set Network access
+ * @method integer getIntercept() Obtain Network Interception
+ * @method void setIntercept(integer $Intercept) Set Network Interception
  * @method string getInBandwidth() Obtain Inbound bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setInBandwidth(string $InBandwidth) Set Inbound bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getOutBandwidth() Obtain Outbound bandwidthtraffic peak bandwidth (bps)
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setOutBandwidth(string $OutBandwidth) Set Outbound bandwidthtraffic peak bandwidth (bps)
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getOutBandwidth() Obtain Outbound bandwidth
+ * @method void setOutBandwidth(string $OutBandwidth) Set Outbound bandwidth
  * @method string getInFlow() Obtain Inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setInFlow(string $InFlow) Set Inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getOutFlow() Obtain Outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setOutFlow(string $OutFlow) Set Outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getOutFlow() Obtain outbound traffic
+ * @method void setOutFlow(string $OutFlow) Set outbound traffic
  * @method string getLastScanTime() Obtain Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setLastScanTime(string $LastScanTime) Set Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getPortRisk() Obtain Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPortRisk(integer $PortRisk) Set Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getVulnerabilityRisk() Obtain Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setVulnerabilityRisk(integer $VulnerabilityRisk) Set Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getConfigurationRisk() Obtain Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setConfigurationRisk(integer $ConfigurationRisk) Set Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getScanTask() Obtain Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setScanTask(integer $ScanTask) Set Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getWeakPassword() Obtain Weak passwords
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setWeakPassword(integer $WeakPassword) Set Weak passwords
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getWebContentRisk() Obtain Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setWebContentRisk(integer $WebContentRisk) Set Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getTag() Obtain Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTag(array $Tag) Set Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getAddressId() Obtain EIP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAddressId(string $AddressId) Set EIP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getMemberId() Obtain Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setMemberId(string $MemberId) Set Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getRiskExposure() Obtain Risk exposure
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setRiskExposure(integer $RiskExposure) Set Risk exposure
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsNewAsset() Obtain Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsNewAsset(integer $IsNewAsset) Set Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getVerifyStatus() Obtain Asset ownership verification status. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3` and above: Verification failed
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setVerifyStatus(integer $VerifyStatus) Set Asset ownership verification status. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3` and above: Verification failed
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getPortRisk() Obtain Port risk
+ * @method void setPortRisk(integer $PortRisk) Set Port risk
+ * @method integer getVulnerabilityRisk() Obtain Vulnerability risk
+ * @method void setVulnerabilityRisk(integer $VulnerabilityRisk) Set Vulnerability risk
+ * @method integer getConfigurationRisk() Obtain Configuration risk
+ * @method void setConfigurationRisk(integer $ConfigurationRisk) Set Configuration risk
+ * @method integer getScanTask() Obtain Scan Task
+ * @method void setScanTask(integer $ScanTask) Set Scan Task
+ * @method integer getWeakPassword() Obtain weak password
+ * @method void setWeakPassword(integer $WeakPassword) Set weak password
+ * @method integer getWebContentRisk() Obtain Content risk
+ * @method void setWebContentRisk(integer $WebContentRisk) Set Content risk
+ * @method array getTag() Obtain Tag.
+ * @method void setTag(array $Tag) Set Tag.
+ * @method string getAddressId() Obtain EIP Primary Key
+ * @method void setAddressId(string $AddressId) Set EIP Primary Key
+ * @method string getMemberId() Obtain Member ID information
+ * @method void setMemberId(string $MemberId) Set Member ID information
+ * @method integer getRiskExposure() Obtain risk service exposure
+ * @method void setRiskExposure(integer $RiskExposure) Set risk service exposure
+ * @method integer getIsNewAsset() Obtain New Asset or Not. 1: New
+ * @method void setIsNewAsset(integer $IsNewAsset) Set New Asset or Not. 1: New
+ * @method integer getVerifyStatus() Obtain Asset Authentication Status. 0-Pending Authentication; 1-Authentication Succeeded; 2-Authentication in Progress; 3+-Authentication Failed.
+ * @method void setVerifyStatus(integer $VerifyStatus) Set Asset Authentication Status. 0-Pending Authentication; 1-Authentication Succeeded; 2-Authentication in Progress; 3+-Authentication Failed.
  */
 class IpAssetListVO extends AbstractModel
 {
     /**
      * @var string Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AssetId;
 
     /**
-     * @var string Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Asset Name
      */
     public $AssetName;
 
     /**
      * @var string Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AssetType;
 
     /**
-     * @var string Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Region.
      */
     public $Region;
 
     /**
-     * @var integer CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Cloud Defense Status
      */
     public $CFWStatus;
 
     /**
      * @var string Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AssetCreateTime;
 
     /**
-     * @var string Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Public IP address
      */
     public $PublicIp;
 
     /**
-     * @var integer Public IP type
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Public IP Type
      */
     public $PublicIpType;
 
@@ -215,231 +139,171 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $VpcId;
 
     /**
-     * @var string VPC name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string VPC Name
      */
     public $VpcName;
 
     /**
      * @var integer appid
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AppId;
 
     /**
-     * @var string User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string User UIN
      */
     public $Uin;
 
     /**
      * @var string Name
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $NickName;
 
     /**
-     * @var integer Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Core
      */
     public $IsCore;
 
     /**
-     * @var integer Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer On-Cloud
      */
     public $IsCloud;
 
     /**
-     * @var integer Number of network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer network attack
      */
     public $Attack;
 
     /**
-     * @var integer Number of network access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Network access
      */
     public $Access;
 
     /**
-     * @var integer Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Network Interception
      */
     public $Intercept;
 
     /**
      * @var string Inbound bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $InBandwidth;
 
     /**
-     * @var string Outbound bandwidthtraffic peak bandwidth (bps)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Outbound bandwidth
      */
     public $OutBandwidth;
 
     /**
      * @var string Inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $InFlow;
 
     /**
-     * @var string Outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string outbound traffic
      */
     public $OutFlow;
 
     /**
      * @var string Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $LastScanTime;
 
     /**
-     * @var integer Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Port risk
      */
     public $PortRisk;
 
     /**
-     * @var integer Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Vulnerability risk
      */
     public $VulnerabilityRisk;
 
     /**
-     * @var integer Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Configuration risk
      */
     public $ConfigurationRisk;
 
     /**
-     * @var integer Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Scan Task
      */
     public $ScanTask;
 
     /**
-     * @var integer Weak passwords
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer weak password
      */
     public $WeakPassword;
 
     /**
-     * @var integer Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Content risk
      */
     public $WebContentRisk;
 
     /**
-     * @var array Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Tag.
      */
     public $Tag;
 
     /**
-     * @var string EIP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string EIP Primary Key
      */
     public $AddressId;
 
     /**
-     * @var string Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Member ID information
      */
     public $MemberId;
 
     /**
-     * @var integer Risk exposure
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer risk service exposure
      */
     public $RiskExposure;
 
     /**
-     * @var integer Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer New Asset or Not. 1: New
      */
     public $IsNewAsset;
 
     /**
-     * @var integer Asset ownership verification status. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3` and above: Verification failed
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Asset Authentication Status. 0-Pending Authentication; 1-Authentication Succeeded; 2-Authentication in Progress; 3+-Authentication Failed.
      */
     public $VerifyStatus;
 
     /**
      * @param string $AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $AssetName Asset Name
      * @param string $AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $CFWStatus CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Region Region.
+     * @param integer $CFWStatus Cloud Defense Status
      * @param string $AssetCreateTime Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $PublicIpType Public IP type
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $PublicIp Public IP address
+     * @param integer $PublicIpType Public IP Type
      * @param string $VpcId vpc
-     * @param string $VpcName VPC name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $VpcName VPC Name
      * @param integer $AppId appid
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Uin User UIN
      * @param string $NickName Name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsCore Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsCloud Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Attack Number of network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Access Number of network access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Intercept Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $IsCore Core
+     * @param integer $IsCloud On-Cloud
+     * @param integer $Attack network attack
+     * @param integer $Access Network access
+     * @param integer $Intercept Network Interception
      * @param string $InBandwidth Inbound bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $OutBandwidth Outbound bandwidthtraffic peak bandwidth (bps)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $OutBandwidth Outbound bandwidth
      * @param string $InFlow Inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $OutFlow Outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $OutFlow outbound traffic
      * @param string $LastScanTime Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $PortRisk Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $VulnerabilityRisk Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $ConfigurationRisk Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $ScanTask Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $WeakPassword Weak passwords
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $WebContentRisk Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $AddressId EIP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $MemberId Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $RiskExposure Risk exposure
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $VerifyStatus Asset ownership verification status. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3` and above: Verification failed
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $PortRisk Port risk
+     * @param integer $VulnerabilityRisk Vulnerability risk
+     * @param integer $ConfigurationRisk Configuration risk
+     * @param integer $ScanTask Scan Task
+     * @param integer $WeakPassword weak password
+     * @param integer $WebContentRisk Content risk
+     * @param array $Tag Tag.
+     * @param string $AddressId EIP Primary Key
+     * @param string $MemberId Member ID information
+     * @param integer $RiskExposure risk service exposure
+     * @param integer $IsNewAsset New Asset or Not. 1: New
+     * @param integer $VerifyStatus Asset Authentication Status. 0-Pending Authentication; 1-Authentication Succeeded; 2-Authentication in Progress; 3+-Authentication Failed.
      */
     function __construct()
     {

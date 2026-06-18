@@ -34,10 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method string getVpcName() Obtain VPC name
  * @method void setVpcName(string $VpcName) Set VPC name
- * @method array getTag() Obtain Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTag(array $Tag) Set Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method array getTag() Obtain Tag.
+ * @method void setTag(array $Tag) Set Tag.
  * @method string getNick() Obtain User name
  * @method void setNick(string $Nick) Set User name
  * @method string getCIDR() Obtain CIDR block
@@ -56,14 +54,10 @@ Note: This field may return·null, indicating that no valid values can be obtain
  * @method void setScanTask(integer $ScanTask) Set Number of tasks.
  * @method string getLastScanTime() Obtain Last scan time
  * @method void setLastScanTime(string $LastScanTime) Set Last scan time
- * @method integer getIsCore() Obtain Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsCore(integer $IsCore) Set Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsNewAsset() Obtain Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsNewAsset(integer $IsNewAsset) Set Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getIsCore() Obtain Core or Not
+ * @method void setIsCore(integer $IsCore) Set Core or Not
+ * @method integer getIsNewAsset() Obtain New Asset or Not. 1: New
+ * @method void setIsNewAsset(integer $IsNewAsset) Set New Asset or Not. 1: New
  */
 class SubnetAsset extends AbstractModel
 {
@@ -103,8 +97,7 @@ class SubnetAsset extends AbstractModel
     public $VpcName;
 
     /**
-     * @var array Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Tag.
      */
     public $Tag;
 
@@ -154,14 +147,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $LastScanTime;
 
     /**
-     * @var integer Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Core or Not
      */
     public $IsCore;
 
     /**
-     * @var integer Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer New Asset or Not. 1: New
      */
     public $IsNewAsset;
 
@@ -173,8 +164,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * @param string $Region Region
      * @param string $VpcId VPC ID
      * @param string $VpcName VPC name
-     * @param array $Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param array $Tag Tag.
      * @param string $Nick User name
      * @param string $CIDR CIDR block
      * @param string $Zone Availability zone
@@ -184,10 +174,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * @param integer $ConfigureRisk Configuration risks
      * @param integer $ScanTask Number of tasks.
      * @param string $LastScanTime Last scan time
-     * @param integer $IsCore Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $IsCore Core or Not
+     * @param integer $IsNewAsset New Asset or Not. 1: New
      */
     function __construct()
     {

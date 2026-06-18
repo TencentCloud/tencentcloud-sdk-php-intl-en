@@ -20,183 +20,183 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLicenseGeneral response structure.
  *
- * @method integer getLicenseCnt() Obtain Total number of authorizations (including those that are isolated, expired, and in other states)
- * @method void setLicenseCnt(integer $LicenseCnt) Set Total number of authorizations (including those that are isolated, expired, and in other states)
- * @method integer getAvailableLicenseCnt() Obtain Number of available authorizations
- * @method void setAvailableLicenseCnt(integer $AvailableLicenseCnt) Set Number of available authorizations
- * @method integer getAvailableProVersionLicenseCnt() Obtain Number of available Professional Edition authorizations (including those in postpaid mode)
- * @method void setAvailableProVersionLicenseCnt(integer $AvailableProVersionLicenseCnt) Set Number of available Professional Edition authorizations (including those in postpaid mode)
- * @method integer getAvailableFlagshipVersionLicenseCnt() Obtain Number of available Ultimate Edition authorizations
- * @method void setAvailableFlagshipVersionLicenseCnt(integer $AvailableFlagshipVersionLicenseCnt) Set Number of available Ultimate Edition authorizations
- * @method integer getNearExpiryLicenseCnt() Obtain Number of authorizations about to expire (no more than 15 days left)
- * @method void setNearExpiryLicenseCnt(integer $NearExpiryLicenseCnt) Set Number of authorizations about to expire (no more than 15 days left)
- * @method integer getExpireLicenseCnt() Obtain Number of expired authorizations (excluding deleted ones)
- * @method void setExpireLicenseCnt(integer $ExpireLicenseCnt) Set Number of expired authorizations (excluding deleted ones)
- * @method boolean getAutoOpenStatus() Obtain Automatic upgrade enabling status. True: enabled; false: disabled. Default value: false.
- * @method void setAutoOpenStatus(boolean $AutoOpenStatus) Set Automatic upgrade enabling status. True: enabled; false: disabled. Default value: false.
- * @method string getProtectType() Obtain PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.
- * @method void setProtectType(string $ProtectType) Set PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.
- * @method boolean getIsOpenStatusHistory() Obtain Whether automatic upgrade has been enabled before
- * @method void setIsOpenStatusHistory(boolean $IsOpenStatusHistory) Set Whether automatic upgrade has been enabled before
- * @method integer getUsedLicenseCnt() Obtain Number of used authorizations
- * @method void setUsedLicenseCnt(integer $UsedLicenseCnt) Set Number of used authorizations
- * @method integer getNotExpiredLicenseCnt() Obtain Number of authorizations that have not expired
- * @method void setNotExpiredLicenseCnt(integer $NotExpiredLicenseCnt) Set Number of authorizations that have not expired
- * @method integer getFlagshipVersionLicenseCnt() Obtain Total number of Ultimate Edition authorizations (valid orders)
- * @method void setFlagshipVersionLicenseCnt(integer $FlagshipVersionLicenseCnt) Set Total number of Ultimate Edition authorizations (valid orders)
- * @method integer getProVersionLicenseCnt() Obtain Total number of Pro Edition authorizations (valid orders)
- * @method void setProVersionLicenseCnt(integer $ProVersionLicenseCnt) Set Total number of Pro Edition authorizations (valid orders)
- * @method integer getCwpVersionLicenseCnt() Obtain Total number of Lite Edition authorizations (those of valid orders)
- * @method void setCwpVersionLicenseCnt(integer $CwpVersionLicenseCnt) Set Total number of Lite Edition authorizations (those of valid orders)
- * @method integer getAvailableLHLicenseCnt() Obtain Number of available Inclusive Edition authorizations
- * @method void setAvailableLHLicenseCnt(integer $AvailableLHLicenseCnt) Set Number of available Inclusive Edition authorizations
- * @method boolean getAutoRepurchaseSwitch() Obtain Auto-purchase switch, true for ON, false for OFF
- * @method void setAutoRepurchaseSwitch(boolean $AutoRepurchaseSwitch) Set Auto-purchase switch, true for ON, false for OFF
- * @method boolean getAutoRepurchaseRenewSwitch() Obtain Is auto-renewal required for auto-purchase orders, true for ON, false for OFF
- * @method void setAutoRepurchaseRenewSwitch(boolean $AutoRepurchaseRenewSwitch) Set Is auto-renewal required for auto-purchase orders, true for ON, false for OFF
- * @method integer getDestroyOrderNum() Obtain Number of terminated orders
- * @method void setDestroyOrderNum(integer $DestroyOrderNum) Set Number of terminated orders
- * @method boolean getRepurchaseRenewSwitch() Obtain Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled.
- * @method void setRepurchaseRenewSwitch(boolean $RepurchaseRenewSwitch) Set Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled.
- * @method boolean getAutoBindRaspSwitch() Obtain Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise.
- * @method void setAutoBindRaspSwitch(boolean $AutoBindRaspSwitch) Set Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise.
- * @method boolean getAutoOpenRaspSwitch() Obtain Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled.
- * @method void setAutoOpenRaspSwitch(boolean $AutoOpenRaspSwitch) Set Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled.
- * @method boolean getAutoDowngradeSwitch() Obtain Whether the automatic scaling down switch is on
- * @method void setAutoDowngradeSwitch(boolean $AutoDowngradeSwitch) Set Whether the automatic scaling down switch is on
- * @method integer getAvailableAISecurityLicenseCnt() Obtain 
- * @method void setAvailableAISecurityLicenseCnt(integer $AvailableAISecurityLicenseCnt) Set 
- * @method integer getAISecurityVersionLicenseCnt() Obtain 
- * @method void setAISecurityVersionLicenseCnt(integer $AISecurityVersionLicenseCnt) Set 
- * @method integer getApplicationAvailableLicenseCnt() Obtain 
- * @method void setApplicationAvailableLicenseCnt(integer $ApplicationAvailableLicenseCnt) Set 
+ * @method integer getLicenseCnt() Obtain <p>Total number of licenses (including unavailable licenses such as isolated and expired ones)</p>
+ * @method void setLicenseCnt(integer $LicenseCnt) Set <p>Total number of licenses (including unavailable licenses such as isolated and expired ones)</p>
+ * @method integer getAvailableLicenseCnt() Obtain <p>Available licenses</p>
+ * @method void setAvailableLicenseCnt(integer $AvailableLicenseCnt) Set <p>Available licenses</p>
+ * @method integer getAvailableProVersionLicenseCnt() Obtain <p>Number of available Pro Edition licenses (including postpaid licenses)</p>
+ * @method void setAvailableProVersionLicenseCnt(integer $AvailableProVersionLicenseCnt) Set <p>Number of available Pro Edition licenses (including postpaid licenses)</p>
+ * @method integer getAvailableFlagshipVersionLicenseCnt() Obtain <p>Number of available Ultimate Edition licenses</p>
+ * @method void setAvailableFlagshipVersionLicenseCnt(integer $AvailableFlagshipVersionLicenseCnt) Set <p>Number of available Ultimate Edition licenses</p>
+ * @method integer getNearExpiryLicenseCnt() Obtain <p>Number of licenses expiring within 15 days</p>
+ * @method void setNearExpiryLicenseCnt(integer $NearExpiryLicenseCnt) Set <p>Number of licenses expiring within 15 days</p>
+ * @method integer getExpireLicenseCnt() Obtain <p>Number of expired licenses (excluding deleted records)</p>
+ * @method void setExpireLicenseCnt(integer $ExpireLicenseCnt) Set <p>Number of expired licenses (excluding deleted records)</p>
+ * @method boolean getAutoOpenStatus() Obtain <p>Automatic upgrade switch status. Default value: false. true: enabled; false: disabled.</p>
+ * @method void setAutoOpenStatus(boolean $AutoOpenStatus) Set <p>Automatic upgrade switch status. Default value: false. true: enabled; false: disabled.</p>
+ * @method string getProtectType() Obtain <p>PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro Edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.</p>
+ * @method void setProtectType(string $ProtectType) Set <p>PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro Edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.</p>
+ * @method boolean getIsOpenStatusHistory() Obtain <p>Whether automatic upgrade has been enabled before</p>
+ * @method void setIsOpenStatusHistory(boolean $IsOpenStatusHistory) Set <p>Whether automatic upgrade has been enabled before</p>
+ * @method integer getUsedLicenseCnt() Obtain <p>Number of used licenses</p>
+ * @method void setUsedLicenseCnt(integer $UsedLicenseCnt) Set <p>Number of used licenses</p>
+ * @method integer getNotExpiredLicenseCnt() Obtain <p>Number of unexpired licenses</p>
+ * @method void setNotExpiredLicenseCnt(integer $NotExpiredLicenseCnt) Set <p>Number of unexpired licenses</p>
+ * @method integer getFlagshipVersionLicenseCnt() Obtain <p>Total number of Ultimate Edition licenses (valid orders)</p>
+ * @method void setFlagshipVersionLicenseCnt(integer $FlagshipVersionLicenseCnt) Set <p>Total number of Ultimate Edition licenses (valid orders)</p>
+ * @method integer getProVersionLicenseCnt() Obtain <p>Total number of Pro Edition licenses (valid orders)</p>
+ * @method void setProVersionLicenseCnt(integer $ProVersionLicenseCnt) Set <p>Total number of Pro Edition licenses (valid orders)</p>
+ * @method integer getCwpVersionLicenseCnt() Obtain <p>Lightweight edition total number of licenses (valid order licenses count)</p>
+ * @method void setCwpVersionLicenseCnt(integer $CwpVersionLicenseCnt) Set <p>Lightweight edition total number of licenses (valid order licenses count)</p>
+ * @method integer getAvailableLHLicenseCnt() Obtain <p>Number of available Lightweight Edition licenses</p>
+ * @method void setAvailableLHLicenseCnt(integer $AvailableLHLicenseCnt) Set <p>Number of available Lightweight Edition licenses</p>
+ * @method boolean getAutoRepurchaseSwitch() Obtain <p>Auto-purchase switch. true: enabled; false: disabled.</p>
+ * @method void setAutoRepurchaseSwitch(boolean $AutoRepurchaseSwitch) Set <p>Auto-purchase switch. true: enabled; false: disabled.</p>
+ * @method boolean getAutoRepurchaseRenewSwitch() Obtain <p>Whether auto-purchase orders are automatically renewed. true: enabled; false: disabled.</p>
+ * @method void setAutoRepurchaseRenewSwitch(boolean $AutoRepurchaseRenewSwitch) Set <p>Whether auto-purchase orders are automatically renewed. true: enabled; false: disabled.</p>
+ * @method integer getDestroyOrderNum() Obtain <p>Number of terminated orders</p>
+ * @method void setDestroyOrderNum(integer $DestroyOrderNum) Set <p>Number of terminated orders</p>
+ * @method boolean getRepurchaseRenewSwitch() Obtain <p>Auto-renewal switch for auto-purchase. true: enabled; false: disabled.</p>
+ * @method void setRepurchaseRenewSwitch(boolean $RepurchaseRenewSwitch) Set <p>Auto-renewal switch for auto-purchase. true: enabled; false: disabled.</p>
+ * @method boolean getAutoBindRaspSwitch() Obtain <p>Whether to automatically bind RASP protection to newly added machines. false: disabled; true: enabled.</p>
+ * @method void setAutoBindRaspSwitch(boolean $AutoBindRaspSwitch) Set <p>Whether to automatically bind RASP protection to newly added machines. false: disabled; true: enabled.</p>
+ * @method boolean getAutoOpenRaspSwitch() Obtain <p>Whether to automatically enable RASP protection for newly added machines. false: disabled; true: enabled.</p>
+ * @method void setAutoOpenRaspSwitch(boolean $AutoOpenRaspSwitch) Set <p>Whether to automatically enable RASP protection for newly added machines. false: disabled; true: enabled.</p>
+ * @method boolean getAutoDowngradeSwitch() Obtain <p>Whether the auto-downgrade switch is enabled</p>
+ * @method void setAutoDowngradeSwitch(boolean $AutoDowngradeSwitch) Set <p>Whether the auto-downgrade switch is enabled</p>
+ * @method integer getAvailableAISecurityLicenseCnt() Obtain <p>Number of available AI Protection Edition licenses</p>
+ * @method void setAvailableAISecurityLicenseCnt(integer $AvailableAISecurityLicenseCnt) Set <p>Number of available AI Protection Edition licenses</p>
+ * @method integer getAISecurityVersionLicenseCnt() Obtain <p>Total number of AI Protection Edition licenses</p>
+ * @method void setAISecurityVersionLicenseCnt(integer $AISecurityVersionLicenseCnt) Set <p>Total number of AI Protection Edition licenses</p>
+ * @method integer getApplicationAvailableLicenseCnt() Obtain <p>Number of available licenses after combining application protection licenses with Ultimate Edition licenses</p>
+ * @method void setApplicationAvailableLicenseCnt(integer $ApplicationAvailableLicenseCnt) Set <p>Number of available licenses after combining application protection licenses with Ultimate Edition licenses</p>
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribeLicenseGeneralResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of authorizations (including those that are isolated, expired, and in other states)
+     * @var integer <p>Total number of licenses (including unavailable licenses such as isolated and expired ones)</p>
      */
     public $LicenseCnt;
 
     /**
-     * @var integer Number of available authorizations
+     * @var integer <p>Available licenses</p>
      */
     public $AvailableLicenseCnt;
 
     /**
-     * @var integer Number of available Professional Edition authorizations (including those in postpaid mode)
+     * @var integer <p>Number of available Pro Edition licenses (including postpaid licenses)</p>
      */
     public $AvailableProVersionLicenseCnt;
 
     /**
-     * @var integer Number of available Ultimate Edition authorizations
+     * @var integer <p>Number of available Ultimate Edition licenses</p>
      */
     public $AvailableFlagshipVersionLicenseCnt;
 
     /**
-     * @var integer Number of authorizations about to expire (no more than 15 days left)
+     * @var integer <p>Number of licenses expiring within 15 days</p>
      */
     public $NearExpiryLicenseCnt;
 
     /**
-     * @var integer Number of expired authorizations (excluding deleted ones)
+     * @var integer <p>Number of expired licenses (excluding deleted records)</p>
      */
     public $ExpireLicenseCnt;
 
     /**
-     * @var boolean Automatic upgrade enabling status. True: enabled; false: disabled. Default value: false.
+     * @var boolean <p>Automatic upgrade switch status. Default value: false. true: enabled; false: disabled.</p>
      */
     public $AutoOpenStatus;
 
     /**
-     * @var string PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.
+     * @var string <p>PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro Edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.</p>
      */
     public $ProtectType;
 
     /**
-     * @var boolean Whether automatic upgrade has been enabled before
+     * @var boolean <p>Whether automatic upgrade has been enabled before</p>
      */
     public $IsOpenStatusHistory;
 
     /**
-     * @var integer Number of used authorizations
+     * @var integer <p>Number of used licenses</p>
      */
     public $UsedLicenseCnt;
 
     /**
-     * @var integer Number of authorizations that have not expired
+     * @var integer <p>Number of unexpired licenses</p>
      */
     public $NotExpiredLicenseCnt;
 
     /**
-     * @var integer Total number of Ultimate Edition authorizations (valid orders)
+     * @var integer <p>Total number of Ultimate Edition licenses (valid orders)</p>
      */
     public $FlagshipVersionLicenseCnt;
 
     /**
-     * @var integer Total number of Pro Edition authorizations (valid orders)
+     * @var integer <p>Total number of Pro Edition licenses (valid orders)</p>
      */
     public $ProVersionLicenseCnt;
 
     /**
-     * @var integer Total number of Lite Edition authorizations (those of valid orders)
+     * @var integer <p>Lightweight edition total number of licenses (valid order licenses count)</p>
      */
     public $CwpVersionLicenseCnt;
 
     /**
-     * @var integer Number of available Inclusive Edition authorizations
+     * @var integer <p>Number of available Lightweight Edition licenses</p>
      */
     public $AvailableLHLicenseCnt;
 
     /**
-     * @var boolean Auto-purchase switch, true for ON, false for OFF
+     * @var boolean <p>Auto-purchase switch. true: enabled; false: disabled.</p>
      */
     public $AutoRepurchaseSwitch;
 
     /**
-     * @var boolean Is auto-renewal required for auto-purchase orders, true for ON, false for OFF
+     * @var boolean <p>Whether auto-purchase orders are automatically renewed. true: enabled; false: disabled.</p>
      */
     public $AutoRepurchaseRenewSwitch;
 
     /**
-     * @var integer Number of terminated orders
+     * @var integer <p>Number of terminated orders</p>
      */
     public $DestroyOrderNum;
 
     /**
-     * @var boolean Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled.
+     * @var boolean <p>Auto-renewal switch for auto-purchase. true: enabled; false: disabled.</p>
      */
     public $RepurchaseRenewSwitch;
 
     /**
-     * @var boolean Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise.
+     * @var boolean <p>Whether to automatically bind RASP protection to newly added machines. false: disabled; true: enabled.</p>
      */
     public $AutoBindRaspSwitch;
 
     /**
-     * @var boolean Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled.
+     * @var boolean <p>Whether to automatically enable RASP protection for newly added machines. false: disabled; true: enabled.</p>
      */
     public $AutoOpenRaspSwitch;
 
     /**
-     * @var boolean Whether the automatic scaling down switch is on
+     * @var boolean <p>Whether the auto-downgrade switch is enabled</p>
      */
     public $AutoDowngradeSwitch;
 
     /**
-     * @var integer 
+     * @var integer <p>Number of available AI Protection Edition licenses</p>
      */
     public $AvailableAISecurityLicenseCnt;
 
     /**
-     * @var integer 
+     * @var integer <p>Total number of AI Protection Edition licenses</p>
      */
     public $AISecurityVersionLicenseCnt;
 
     /**
-     * @var integer 
+     * @var integer <p>Number of available licenses after combining application protection licenses with Ultimate Edition licenses</p>
      */
     public $ApplicationAvailableLicenseCnt;
 
@@ -206,31 +206,31 @@ class DescribeLicenseGeneralResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $LicenseCnt Total number of authorizations (including those that are isolated, expired, and in other states)
-     * @param integer $AvailableLicenseCnt Number of available authorizations
-     * @param integer $AvailableProVersionLicenseCnt Number of available Professional Edition authorizations (including those in postpaid mode)
-     * @param integer $AvailableFlagshipVersionLicenseCnt Number of available Ultimate Edition authorizations
-     * @param integer $NearExpiryLicenseCnt Number of authorizations about to expire (no more than 15 days left)
-     * @param integer $ExpireLicenseCnt Number of expired authorizations (excluding deleted ones)
-     * @param boolean $AutoOpenStatus Automatic upgrade enabling status. True: enabled; false: disabled. Default value: false.
-     * @param string $ProtectType PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.
-     * @param boolean $IsOpenStatusHistory Whether automatic upgrade has been enabled before
-     * @param integer $UsedLicenseCnt Number of used authorizations
-     * @param integer $NotExpiredLicenseCnt Number of authorizations that have not expired
-     * @param integer $FlagshipVersionLicenseCnt Total number of Ultimate Edition authorizations (valid orders)
-     * @param integer $ProVersionLicenseCnt Total number of Pro Edition authorizations (valid orders)
-     * @param integer $CwpVersionLicenseCnt Total number of Lite Edition authorizations (those of valid orders)
-     * @param integer $AvailableLHLicenseCnt Number of available Inclusive Edition authorizations
-     * @param boolean $AutoRepurchaseSwitch Auto-purchase switch, true for ON, false for OFF
-     * @param boolean $AutoRepurchaseRenewSwitch Is auto-renewal required for auto-purchase orders, true for ON, false for OFF
-     * @param integer $DestroyOrderNum Number of terminated orders
-     * @param boolean $RepurchaseRenewSwitch Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled.
-     * @param boolean $AutoBindRaspSwitch Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise.
-     * @param boolean $AutoOpenRaspSwitch Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled.
-     * @param boolean $AutoDowngradeSwitch Whether the automatic scaling down switch is on
-     * @param integer $AvailableAISecurityLicenseCnt 
-     * @param integer $AISecurityVersionLicenseCnt 
-     * @param integer $ApplicationAvailableLicenseCnt 
+     * @param integer $LicenseCnt <p>Total number of licenses (including unavailable licenses such as isolated and expired ones)</p>
+     * @param integer $AvailableLicenseCnt <p>Available licenses</p>
+     * @param integer $AvailableProVersionLicenseCnt <p>Number of available Pro Edition licenses (including postpaid licenses)</p>
+     * @param integer $AvailableFlagshipVersionLicenseCnt <p>Number of available Ultimate Edition licenses</p>
+     * @param integer $NearExpiryLicenseCnt <p>Number of licenses expiring within 15 days</p>
+     * @param integer $ExpireLicenseCnt <p>Number of expired licenses (excluding deleted records)</p>
+     * @param boolean $AutoOpenStatus <p>Automatic upgrade switch status. Default value: false. true: enabled; false: disabled.</p>
+     * @param string $ProtectType <p>PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro Edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.</p>
+     * @param boolean $IsOpenStatusHistory <p>Whether automatic upgrade has been enabled before</p>
+     * @param integer $UsedLicenseCnt <p>Number of used licenses</p>
+     * @param integer $NotExpiredLicenseCnt <p>Number of unexpired licenses</p>
+     * @param integer $FlagshipVersionLicenseCnt <p>Total number of Ultimate Edition licenses (valid orders)</p>
+     * @param integer $ProVersionLicenseCnt <p>Total number of Pro Edition licenses (valid orders)</p>
+     * @param integer $CwpVersionLicenseCnt <p>Lightweight edition total number of licenses (valid order licenses count)</p>
+     * @param integer $AvailableLHLicenseCnt <p>Number of available Lightweight Edition licenses</p>
+     * @param boolean $AutoRepurchaseSwitch <p>Auto-purchase switch. true: enabled; false: disabled.</p>
+     * @param boolean $AutoRepurchaseRenewSwitch <p>Whether auto-purchase orders are automatically renewed. true: enabled; false: disabled.</p>
+     * @param integer $DestroyOrderNum <p>Number of terminated orders</p>
+     * @param boolean $RepurchaseRenewSwitch <p>Auto-renewal switch for auto-purchase. true: enabled; false: disabled.</p>
+     * @param boolean $AutoBindRaspSwitch <p>Whether to automatically bind RASP protection to newly added machines. false: disabled; true: enabled.</p>
+     * @param boolean $AutoOpenRaspSwitch <p>Whether to automatically enable RASP protection for newly added machines. false: disabled; true: enabled.</p>
+     * @param boolean $AutoDowngradeSwitch <p>Whether the auto-downgrade switch is enabled</p>
+     * @param integer $AvailableAISecurityLicenseCnt <p>Number of available AI Protection Edition licenses</p>
+     * @param integer $AISecurityVersionLicenseCnt <p>Total number of AI Protection Edition licenses</p>
+     * @param integer $ApplicationAvailableLicenseCnt <p>Number of available licenses after combining application protection licenses with Ultimate Edition licenses</p>
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()

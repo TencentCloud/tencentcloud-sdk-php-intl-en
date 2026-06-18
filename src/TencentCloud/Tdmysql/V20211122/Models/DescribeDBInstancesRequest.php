@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstances request structure.
  *
- * @method array getFilters() Obtain Filter parameters.
- * @method void setFilters(array $Filters) Set Filter parameters.
- * @method integer getLimit() Obtain Maximum return count, defaults to 20, maximum 100
- * @method void setLimit(integer $Limit) Set Maximum return count, defaults to 20, maximum 100
- * @method integer getOffset() Obtain Offset, which is an integer multiple of Limit.
- * @method void setOffset(integer $Offset) Set Offset, which is an integer multiple of Limit.
+ * @method array getFilters() Obtain <p>Filter parameters</p>
+ * @method void setFilters(array $Filters) Set <p>Filter parameters</p>
+ * @method integer getLimit() Obtain <p>Maximum return count, defaults to 20, maximum 100</p>
+ * @method void setLimit(integer $Limit) Set <p>Maximum return count, defaults to 20, maximum 100</p>
+ * @method integer getOffset() Obtain <p>Offset, which is an integer multiple of Limit.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset, which is an integer multiple of Limit.</p>
+ * @method string getEngineType() Obtain <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+ * @method void setEngineType(string $EngineType) Set <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Filter parameters.
+     * @var array <p>Filter parameters</p>
      */
     public $Filters;
 
     /**
-     * @var integer Maximum return count, defaults to 20, maximum 100
+     * @var integer <p>Maximum return count, defaults to 20, maximum 100</p>
      */
     public $Limit;
 
     /**
-     * @var integer Offset, which is an integer multiple of Limit.
+     * @var integer <p>Offset, which is an integer multiple of Limit.</p>
      */
     public $Offset;
 
     /**
-     * @param array $Filters Filter parameters.
-     * @param integer $Limit Maximum return count, defaults to 20, maximum 100
-     * @param integer $Offset Offset, which is an integer multiple of Limit.
+     * @var string <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+     */
+    public $EngineType;
+
+    /**
+     * @param array $Filters <p>Filter parameters</p>
+     * @param integer $Limit <p>Maximum return count, defaults to 20, maximum 100</p>
+     * @param integer $Offset <p>Offset, which is an integer multiple of Limit.</p>
+     * @param string $EngineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
         }
     }
 }

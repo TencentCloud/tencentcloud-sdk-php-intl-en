@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteMachineClearHistory request structure.
  *
- * @method array getIds() Obtain IDs of records to be deleted, up to 100 characters in length
- * @method void setIds(array $Ids) Set IDs of records to be deleted, up to 100 characters in length
+ * @method array getIds() Obtain <p>IDs of the records to be deleted. Maximum: 100</p>
+ * @method void setIds(array $Ids) Set <p>IDs of the records to be deleted. Maximum: 100</p>
  */
 class DeleteMachineClearHistoryRequest extends AbstractModel
 {
     /**
-     * @var array IDs of records to be deleted, up to 100 characters in length
+     * @var array <p>IDs of the records to be deleted. Maximum: 100</p>
      */
     public $Ids;
 
     /**
-     * @param array $Ids IDs of records to be deleted, up to 100 characters in length
+     * @param array $Ids <p>IDs of the records to be deleted. Maximum: 100</p>
      */
     function __construct()
     {

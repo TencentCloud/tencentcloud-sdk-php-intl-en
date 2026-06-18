@@ -80,6 +80,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSQLMode(string $SQLMode) Set <p>Compatible mode, enum:MySQL,HBase</p>
  * @method AutoScalingConfig getAutoScaleConfig() Obtain <p>ccu configuration of the svls instance</p>
  * @method void setAutoScaleConfig(AutoScalingConfig $AutoScaleConfig) Set <p>ccu configuration of the svls instance</p>
+ * @method array getSecurityGroupIds() Obtain <p>Bind to security group list</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>Bind to security group list</p>
+ * @method string getUserName() Obtain <p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+ * @method void setUserName(string $UserName) Set <p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+ * @method string getPassword() Obtain <p>dbaadmin password</p>
+ * @method void setPassword(string $Password) Set <p>dbaadmin password</p>
+ * @method integer getEncryptionEnable() Obtain <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+ * @method void setEncryptionEnable(integer $EncryptionEnable) Set <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -234,6 +242,26 @@ class CreateDBInstancesRequest extends AbstractModel
     public $AutoScaleConfig;
 
     /**
+     * @var array <p>Bind to security group list</p>
+     */
+    public $SecurityGroupIds;
+
+    /**
+     * @var string <p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+     */
+    public $UserName;
+
+    /**
+     * @var string <p>dbaadmin password</p>
+     */
+    public $Password;
+
+    /**
+     * @var integer <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+     */
+    public $EncryptionEnable;
+
+    /**
      * @param string $Zone <p>Creating an Instance Region</p>
      * @param string $VpcId <p>Character type vpcid</p>
      * @param string $SubnetId <p>Character type subnetid</p>
@@ -264,6 +292,10 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param string $TemplateId <p>Parameter template id</p>
      * @param string $SQLMode <p>Compatible mode, enum:MySQL,HBase</p>
      * @param AutoScalingConfig $AutoScaleConfig <p>ccu configuration of the svls instance</p>
+     * @param array $SecurityGroupIds <p>Bind to security group list</p>
+     * @param string $UserName <p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+     * @param string $Password <p>dbaadmin password</p>
+     * @param integer $EncryptionEnable <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
      */
     function __construct()
     {
@@ -407,6 +439,22 @@ class CreateDBInstancesRequest extends AbstractModel
         if (array_key_exists("AutoScaleConfig",$param) and $param["AutoScaleConfig"] !== null) {
             $this->AutoScaleConfig = new AutoScalingConfig();
             $this->AutoScaleConfig->deserialize($param["AutoScaleConfig"]);
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("EncryptionEnable",$param) and $param["EncryptionEnable"] !== null) {
+            $this->EncryptionEnable = $param["EncryptionEnable"];
         }
     }
 }

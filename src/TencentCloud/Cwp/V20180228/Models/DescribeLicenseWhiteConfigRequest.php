@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLicenseWhiteConfig request structure.
  *
- * @method string getRuleName() Obtain Rule name. For example, cwp.
- * @method void setRuleName(string $RuleName) Set Rule name. For example, cwp.
+ * @method string getRuleName() Obtain <p>Rule name, for example: cwp</p>
+ * @method void setRuleName(string $RuleName) Set <p>Rule name, for example: cwp</p>
  */
 class DescribeLicenseWhiteConfigRequest extends AbstractModel
 {
     /**
-     * @var string Rule name. For example, cwp.
+     * @var string <p>Rule name, for example: cwp</p>
      */
     public $RuleName;
 
     /**
-     * @param string $RuleName Rule name. For example, cwp.
+     * @param string $RuleName <p>Rule name, for example: cwp</p>
      */
     function __construct()
     {

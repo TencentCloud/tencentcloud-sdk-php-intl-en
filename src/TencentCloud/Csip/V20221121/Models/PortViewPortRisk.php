@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Port risk details
  *
- * @method integer getNoHandleCount() Obtain Affected assets
- * @method void setNoHandleCount(integer $NoHandleCount) Set Affected assets
- * @method string getLevel() Obtain Risk level
- * @method void setLevel(string $Level) Set Risk level
+ * @method integer getNoHandleCount() Obtain Unprocessed quantity.
+ * @method void setNoHandleCount(integer $NoHandleCount) Set Unprocessed quantity.
+ * @method string getLevel() Obtain Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+ * @method void setLevel(string $Level) Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
  * @method string getProtocol() Obtain Network protocol
  * @method void setProtocol(string $Protocol) Set Network protocol
  * @method string getComponent() Obtain Components
@@ -36,36 +36,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstTime(string $FirstTime) Set First detected
  * @method integer getSuggestion() Obtain Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
  * @method void setSuggestion(integer $Suggestion) Set Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
- * @method string getAffectAssetCount() Obtain Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
- * @method void setAffectAssetCount(string $AffectAssetCount) Set Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
- * @method string getId() Obtain Unique ID of the asset
- * @method void setId(string $Id) Set Unique ID of the asset
- * @method string getFrom() Obtain Asset sub-category
- * @method void setFrom(string $From) Set Asset sub-category
+ * @method string getAffectAssetCount() Obtain Number of Affected Assets
+ * @method void setAffectAssetCount(string $AffectAssetCount) Set Number of Affected Assets
+ * @method string getId() Obtain ID
+ * @method void setId(string $Id) Set ID
+ * @method string getFrom() Obtain Source recognition
+ * @method void setFrom(string $From) Set Source recognition
  * @method string getIndex() Obtain Data entry key
  * @method void setIndex(string $Index) Set Data entry key
  * @method string getAppId() Obtain User AppId
  * @method void setAppId(string $AppId) Set User AppId
- * @method string getNick() Obtain User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setNick(string $Nick) Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getUin() Obtain User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setUin(string $Uin) Set User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getNick() Obtain User Nickname
+ * @method void setNick(string $Nick) Set User Nickname
+ * @method string getUin() Obtain User UIN
+ * @method void setUin(string $Uin) Set User UIN
  * @method string getService() Obtain Service
  * @method void setService(string $Service) Set Service
  */
 class PortViewPortRisk extends AbstractModel
 {
     /**
-     * @var integer Affected assets
+     * @var integer Unprocessed quantity.
      */
     public $NoHandleCount;
 
     /**
-     * @var string Risk level
+     * @var string Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public $Level;
 
@@ -100,17 +96,17 @@ class PortViewPortRisk extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * @var string Number of Affected Assets
      */
     public $AffectAssetCount;
 
     /**
-     * @var string Unique ID of the asset
+     * @var string ID
      */
     public $Id;
 
     /**
-     * @var string Asset sub-category
+     * @var string Source recognition
      */
     public $From;
 
@@ -125,14 +121,12 @@ class PortViewPortRisk extends AbstractModel
     public $AppId;
 
     /**
-     * @var string User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string User Nickname
      */
     public $Nick;
 
     /**
-     * @var string User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string User UIN
      */
     public $Uin;
 
@@ -142,23 +136,21 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $Service;
 
     /**
-     * @param integer $NoHandleCount Affected assets
-     * @param string $Level Risk level
+     * @param integer $NoHandleCount Unprocessed quantity.
+     * @param string $Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      * @param string $Protocol Network protocol
      * @param string $Component Components
      * @param integer $Port Port
      * @param string $RecentTime Last detected 
      * @param string $FirstTime First detected
      * @param integer $Suggestion Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
-     * @param string $AffectAssetCount Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-     * @param string $Id Unique ID of the asset
-     * @param string $From Asset sub-category
+     * @param string $AffectAssetCount Number of Affected Assets
+     * @param string $Id ID
+     * @param string $From Source recognition
      * @param string $Index Data entry key
      * @param string $AppId User AppId
-     * @param string $Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Nick User Nickname
+     * @param string $Uin User UIN
      * @param string $Service Service
      */
     function __construct()

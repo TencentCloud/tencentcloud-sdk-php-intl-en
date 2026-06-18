@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRiskCenterAssetViewCFGRiskList request structure.
  *
- * @method array getMemberId() Obtain Group account member ID
- * @method void setMemberId(array $MemberId) Set Group account member ID
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
  * @method Filter getFilter() Obtain Filter conditions
  * @method void setFilter(Filter $Filter) Set Filter conditions
  * @method array getTags() Obtain Asset tags
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRiskCenterAssetViewCFGRiskListRequest extends AbstractModel
 {
     /**
-     * @var array Group account member ID
+     * @var array Group Account Member ID
      */
     public $MemberId;
 
@@ -45,7 +45,7 @@ class DescribeRiskCenterAssetViewCFGRiskListRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param array $MemberId Group account member ID
+     * @param array $MemberId Group Account Member ID
      * @param Filter $Filter Filter conditions
      * @param array $Tags Asset tags
      */

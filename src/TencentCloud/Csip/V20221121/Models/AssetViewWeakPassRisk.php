@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAffectAsset() Obtain Affected assets
  * @method void setAffectAsset(string $AffectAsset) Set Affected assets
- * @method string getLevel() Obtain Risk level
- * @method void setLevel(string $Level) Set Risk level
+ * @method string getLevel() Obtain Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+ * @method void setLevel(string $Level) Set Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
  * @method string getInstanceType() Obtain Asset type
  * @method void setInstanceType(string $InstanceType) Set Asset type
  * @method string getComponent() Obtain Components
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstTime(string $FirstTime) Set First detected
  * @method integer getStatus() Obtain Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
  * @method void setStatus(integer $Status) Set Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
- * @method string getId() Obtain Unique ID of the asset
- * @method void setId(string $Id) Set Unique ID of the asset
+ * @method string getId() Obtain ID, handle risk usage
+ * @method void setId(string $Id) Set ID, handle risk usage
  * @method string getIndex() Obtain Frontend index
  * @method void setIndex(string $Index) Set Frontend index
  * @method string getInstanceId() Obtain Instance ID
@@ -46,14 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) Set Instance name
  * @method string getAppId() Obtain User AppId
  * @method void setAppId(string $AppId) Set User AppId
- * @method string getNick() Obtain User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setNick(string $Nick) Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getUin() Obtain User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setUin(string $Uin) Set User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getNick() Obtain User Nickname
+ * @method void setNick(string $Nick) Set User Nickname
+ * @method string getUin() Obtain User UIN
+ * @method void setUin(string $Uin) Set User UIN
  * @method string getPasswordType() Obtain Weak password type
  * @method void setPasswordType(string $PasswordType) Set Weak password type
  * @method string getFrom() Obtain Source of the task
@@ -64,8 +60,10 @@ Note: This field may return·null, indicating that no valid values can be obtain
  * @method void setVULURL(string $VULURL) Set Vulnerability URL
  * @method string getFix() Obtain Fix suggestion
  * @method void setFix(string $Fix) Set Fix suggestion
- * @method string getPayload() Obtain Pay load
- * @method void setPayload(string $Payload) Set Pay load
+ * @method string getPayload() Obtain proof
+ * @method void setPayload(string $Payload) Set proof
+ * @method integer getPort() Obtain Port.
+ * @method void setPort(integer $Port) Set Port.
  */
 class AssetViewWeakPassRisk extends AbstractModel
 {
@@ -75,7 +73,7 @@ class AssetViewWeakPassRisk extends AbstractModel
     public $AffectAsset;
 
     /**
-     * @var string Risk level
+     * @var string Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public $Level;
 
@@ -110,7 +108,7 @@ class AssetViewWeakPassRisk extends AbstractModel
     public $Status;
 
     /**
-     * @var string Unique ID of the asset
+     * @var string ID, handle risk usage
      */
     public $Id;
 
@@ -135,14 +133,12 @@ class AssetViewWeakPassRisk extends AbstractModel
     public $AppId;
 
     /**
-     * @var string User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string User Nickname
      */
     public $Nick;
 
     /**
-     * @var string User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string User UIN
      */
     public $Uin;
 
@@ -172,34 +168,38 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $Fix;
 
     /**
-     * @var string Pay load
+     * @var string proof
      */
     public $Payload;
 
     /**
+     * @var integer Port.
+     */
+    public $Port;
+
+    /**
      * @param string $AffectAsset Affected assets
-     * @param string $Level Risk level
+     * @param string $Level Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      * @param string $InstanceType Asset type
      * @param string $Component Components
      * @param string $Service Service
      * @param string $RecentTime Last detected 
      * @param string $FirstTime First detected
      * @param integer $Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-     * @param string $Id Unique ID of the asset
+     * @param string $Id ID, handle risk usage
      * @param string $Index Frontend index
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $AppId User AppId
-     * @param string $Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Nick User Nickname
+     * @param string $Uin User UIN
      * @param string $PasswordType Weak password type
      * @param string $From Source of the task
      * @param string $VULType Vulnerability type
      * @param string $VULURL Vulnerability URL
      * @param string $Fix Fix suggestion
-     * @param string $Payload Pay load
+     * @param string $Payload proof
+     * @param integer $Port Port.
      */
     function __construct()
     {
@@ -296,6 +296,10 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
         if (array_key_exists("Payload",$param) and $param["Payload"] !== null) {
             $this->Payload = $param["Payload"];
+        }
+
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
         }
     }
 }

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterPodAssets request structure.
  *
- * @method array getMemberId() Obtain Member id
- * @method void setMemberId(array $MemberId) Set Member id
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
  * @method Filter getFilter() Obtain Filter conditions
  * @method void setFilter(Filter $Filter) Set Filter conditions
  */
 class DescribeClusterPodAssetsRequest extends AbstractModel
 {
     /**
-     * @var array Member id
+     * @var array Group Account Member ID
      */
     public $MemberId;
 
@@ -38,7 +38,7 @@ class DescribeClusterPodAssetsRequest extends AbstractModel
     public $Filter;
 
     /**
-     * @param array $MemberId Member id
+     * @param array $MemberId Group Account Member ID
      * @param Filter $Filter Filter conditions
      */
     function __construct()

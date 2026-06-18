@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganizationInfo request structure.
  *
- * @method array getMemberId() Obtain Member ID of the group account
- * @method void setMemberId(array $MemberId) Set Member ID of the group account
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
 class DescribeOrganizationInfoRequest extends AbstractModel
 {
     /**
-     * @var array Member ID of the group account
+     * @var array Group Account Member ID
      */
     public $MemberId;
 
     /**
-     * @param array $MemberId Member ID of the group account
+     * @param array $MemberId Group Account Member ID
      */
     function __construct()
     {

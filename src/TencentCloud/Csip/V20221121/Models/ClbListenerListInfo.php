@@ -21,165 +21,113 @@ use TencentCloud\Common\AbstractModel;
  * CLB instance and listener information
  *
  * @method string getListenerId() Obtain Listener ID
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setListenerId(string $ListenerId) Set Listener ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getListenerName() Obtain The listener name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setListenerName(string $ListenerName) Set The listener name.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getLoadBalancerId() Obtain Load balancer ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setLoadBalancerId(string $LoadBalancerId) Set Load balancer ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getLoadBalancerName() Obtain CLB instance name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getProtocol() Obtain Network protocol
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setProtocol(string $Protocol) Set Network protocol
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getRegion() Obtain Region
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getVip() Obtain CLB instance IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setVip(string $Vip) Set CLB instance IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getVPort() Obtain Port
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setVPort(integer $VPort) Set Port
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getZone() Obtain Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setZone(string $Zone) Set Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getNumericalVpcId() Obtain VPC ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setNumericalVpcId(integer $NumericalVpcId) Set VPC ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getLoadBalancerType() Obtain CLB instance type
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setLoadBalancerType(string $LoadBalancerType) Set CLB instance type
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getDomain() Obtain Listener domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) Set Listener domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getLoadBalancerDomain() Obtain Load balancer domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setLoadBalancerDomain(string $LoadBalancerDomain) Set Load balancer domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getListenerName() Obtain listener name
+ * @method void setListenerName(string $ListenerName) Set listener name
+ * @method string getLoadBalancerId() Obtain CLB Id
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB Id
+ * @method string getLoadBalancerName() Obtain CLB name
+ * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB name
+ * @method string getProtocol() Obtain Protocol
+ * @method void setProtocol(string $Protocol) Set Protocol
+ * @method string getRegion() Obtain Region.
+ * @method void setRegion(string $Region) Set Region.
+ * @method string getVip() Obtain Load balancing ip
+ * @method void setVip(string $Vip) Set Load balancing ip
+ * @method integer getVPort() Obtain Port.
+ * @method void setVPort(integer $VPort) Set Port.
+ * @method string getZone() Obtain Region.
+ * @method void setZone(string $Zone) Set Region.
+ * @method integer getNumericalVpcId() Obtain VPC id
+ * @method void setNumericalVpcId(integer $NumericalVpcId) Set VPC id
+ * @method string getLoadBalancerType() Obtain CLB Type
+ * @method void setLoadBalancerType(string $LoadBalancerType) Set CLB Type
+ * @method string getDomain() Obtain Listener Domain Name
+ * @method void setDomain(string $Domain) Set Listener Domain Name
+ * @method string getLoadBalancerDomain() Obtain CLB domain name
+ * @method void setLoadBalancerDomain(string $LoadBalancerDomain) Set CLB domain name
  */
 class ClbListenerListInfo extends AbstractModel
 {
     /**
      * @var string Listener ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $ListenerId;
 
     /**
-     * @var string The listener name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string listener name
      */
     public $ListenerName;
 
     /**
-     * @var string Load balancer ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string CLB Id
      */
     public $LoadBalancerId;
 
     /**
-     * @var string CLB instance name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string CLB name
      */
     public $LoadBalancerName;
 
     /**
-     * @var string Network protocol
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Protocol
      */
     public $Protocol;
 
     /**
-     * @var string Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Region.
      */
     public $Region;
 
     /**
-     * @var string CLB instance IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Load balancing ip
      */
     public $Vip;
 
     /**
-     * @var integer Port
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Port.
      */
     public $VPort;
 
     /**
-     * @var string Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Region.
      */
     public $Zone;
 
     /**
-     * @var integer VPC ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer VPC id
      */
     public $NumericalVpcId;
 
     /**
-     * @var string CLB instance type
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string CLB Type
      */
     public $LoadBalancerType;
 
     /**
-     * @var string Listener domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Listener Domain Name
      */
     public $Domain;
 
     /**
-     * @var string Load balancer domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string CLB domain name
      */
     public $LoadBalancerDomain;
 
     /**
      * @param string $ListenerId Listener ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $ListenerName The listener name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $LoadBalancerId Load balancer ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $LoadBalancerName CLB instance name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Protocol Network protocol
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Vip CLB instance IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $VPort Port
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Zone Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $NumericalVpcId VPC ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $LoadBalancerType CLB instance type
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Domain Listener domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $LoadBalancerDomain Load balancer domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $ListenerName listener name
+     * @param string $LoadBalancerId CLB Id
+     * @param string $LoadBalancerName CLB name
+     * @param string $Protocol Protocol
+     * @param string $Region Region.
+     * @param string $Vip Load balancing ip
+     * @param integer $VPort Port.
+     * @param string $Zone Region.
+     * @param integer $NumericalVpcId VPC id
+     * @param string $LoadBalancerType CLB Type
+     * @param string $Domain Listener Domain Name
+     * @param string $LoadBalancerDomain CLB domain name
      */
     function __construct()
     {

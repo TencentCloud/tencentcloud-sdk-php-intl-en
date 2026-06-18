@@ -20,130 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMachines request structure.
  *
- * @method string getMachineType() Obtain Type of the machine's zone
-CVM: Cloud Virtual Machine
-BM: BMECM: Edge Computing Machine
-LH: Lighthouse
-Other: Hybrid Cloud Zone
- * @method void setMachineType(string $MachineType) Set Type of the machine's zone
-CVM: Cloud Virtual Machine
-BM: BMECM: Edge Computing Machine
-LH: Lighthouse
-Other: Hybrid Cloud Zone
- * @method string getMachineRegion() Obtain Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
- * @method void setMachineRegion(string $MachineRegion) Set Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
- * @method integer getLimit() Obtain Number of returns. It is 10 by default, and the maximum value is 100.
- * @method void setLimit(integer $Limit) Set Number of returns. It is 10 by default, and the maximum value is 100.
- * @method integer getOffset() Obtain Offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
- * @method array getFilters() Obtain Filter criteria
-<li>Ips - String - Required: No - Query by ip</li>
-<li>Names - String - required: no - query by instance name</li>
-<li>InstanceIds - String - Required: No - Query by instance id</li>
-<li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
-<li>Risk - String - required: no - risky host (yes)</li>
-<li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
-Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
-<li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
-<li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
-<li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
-<li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
-<li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li>
- * @method void setFilters(array $Filters) Set Filter criteria
-<li>Ips - String - Required: No - Query by ip</li>
-<li>Names - String - required: no - query by instance name</li>
-<li>InstanceIds - String - Required: No - Query by instance id</li>
-<li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
-<li>Risk - String - required: no - risky host (yes)</li>
-<li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
-Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
-<li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
-<li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
-<li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
-<li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
-<li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li>
- * @method array getProjectIds() Obtain ID List of Businesses to which machines belong
- * @method void setProjectIds(array $ProjectIds) Set ID List of Businesses to which machines belong
- * @method integer getMachineAppId() Obtain 
- * @method void setMachineAppId(integer $MachineAppId) Set 
+ * @method string getMachineType() Obtain <p>Machine zone type<br>CVM: Cloud Virtual Machine<br>BM: Blackstone<br>ECM: Edge Computing Machine<br>LH: Lighthouse<br>Other: Hybrid cloud zone</p>
+ * @method void setMachineType(string $MachineType) Set <p>Machine zone type<br>CVM: Cloud Virtual Machine<br>BM: Blackstone<br>ECM: Edge Computing Machine<br>LH: Lighthouse<br>Other: Hybrid cloud zone</p>
+ * @method string getMachineRegion() Obtain <p>Machine region, for example, ap-guangzhou or ap-shanghai. For non-Tencent Cloud hosts, use ap-others.</p>
+ * @method void setMachineRegion(string $MachineRegion) Set <p>Machine region, for example, ap-guangzhou or ap-shanghai. For non-Tencent Cloud hosts, use ap-others.</p>
+ * @method integer getLimit() Obtain <p>Number of returned results. The default number is 10, and the maximum value is 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned results. The default number is 10, and the maximum value is 100.</p>
+ * @method integer getOffset() Obtain <p>Offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset. Default value: 0.</p>
+ * @method array getFilters() Obtain <p>Filter criteria.</p><li>Ips - String - Required: No - Query by IP</li><li>Names - String - Required: No - Query by instance name</li><li>InstanceIds - String - Required: No - Query by instance id</li><li>Version - String - Required: No - Current protection edition (PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Version | Flagship: Ultimate Edition | ProtectedMachines: Pro Edition + Ultimate Edition)</li><li>Risk - String - Required: No - Risk host (yes)</li><li>Os - String - Required: No - Operating system (DescribeMachineOsList API value). Each filter criterion only supports one value and does not support multiple values or relationship query.</li><li>Quuid - String - Required: No - Cloud server UUID. Maximum 100 entries.</li><li>AddedOnTheFifteen - String - Required: No - Query only hosts added within the last 15 days (1: yes)</li><li>TagId - String - Required: No - Query host list associated with the specified tag</li><li>AgentStatus - String - Required: No - ALL: All; ONLINE: Under protection; OFFLINE: Offline; UNINSTALLED: Not installed</li><li>MachineStatus - String - Required: No - ALL: All; RUNNING: Running; STOPPED: Shut down; EXPIRED: Pending recycling</li>
+ * @method void setFilters(array $Filters) Set <p>Filter criteria.</p><li>Ips - String - Required: No - Query by IP</li><li>Names - String - Required: No - Query by instance name</li><li>InstanceIds - String - Required: No - Query by instance id</li><li>Version - String - Required: No - Current protection edition (PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Version | Flagship: Ultimate Edition | ProtectedMachines: Pro Edition + Ultimate Edition)</li><li>Risk - String - Required: No - Risk host (yes)</li><li>Os - String - Required: No - Operating system (DescribeMachineOsList API value). Each filter criterion only supports one value and does not support multiple values or relationship query.</li><li>Quuid - String - Required: No - Cloud server UUID. Maximum 100 entries.</li><li>AddedOnTheFifteen - String - Required: No - Query only hosts added within the last 15 days (1: yes)</li><li>TagId - String - Required: No - Query host list associated with the specified tag</li><li>AgentStatus - String - Required: No - ALL: All; ONLINE: Under protection; OFFLINE: Offline; UNINSTALLED: Not installed</li><li>MachineStatus - String - Required: No - ALL: All; RUNNING: Running; STOPPED: Shut down; EXPIRED: Pending recycling</li>
+ * @method array getProjectIds() Obtain <p>List of business IDs to which the machines belong</p>
+ * @method void setProjectIds(array $ProjectIds) Set <p>List of business IDs to which the machines belong</p>
+ * @method integer getMachineAppId() Obtain <p>APPID of the machine</p>
+ * @method void setMachineAppId(integer $MachineAppId) Set <p>APPID of the machine</p>
  */
 class DescribeMachinesRequest extends AbstractModel
 {
     /**
-     * @var string Type of the machine's zone
-CVM: Cloud Virtual Machine
-BM: BMECM: Edge Computing Machine
-LH: Lighthouse
-Other: Hybrid Cloud Zone
+     * @var string <p>Machine zone type<br>CVM: Cloud Virtual Machine<br>BM: Blackstone<br>ECM: Edge Computing Machine<br>LH: Lighthouse<br>Other: Hybrid cloud zone</p>
      */
     public $MachineType;
 
     /**
-     * @var string Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
+     * @var string <p>Machine region, for example, ap-guangzhou or ap-shanghai. For non-Tencent Cloud hosts, use ap-others.</p>
      */
     public $MachineRegion;
 
     /**
-     * @var integer Number of returns. It is 10 by default, and the maximum value is 100.
+     * @var integer <p>Number of returned results. The default number is 10, and the maximum value is 100.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Offset. Default value: 0.
+     * @var integer <p>Offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var array Filter criteria
-<li>Ips - String - Required: No - Query by ip</li>
-<li>Names - String - required: no - query by instance name</li>
-<li>InstanceIds - String - Required: No - Query by instance id</li>
-<li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
-<li>Risk - String - required: no - risky host (yes)</li>
-<li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
-Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
-<li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
-<li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
-<li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
-<li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
-<li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li>
+     * @var array <p>Filter criteria.</p><li>Ips - String - Required: No - Query by IP</li><li>Names - String - Required: No - Query by instance name</li><li>InstanceIds - String - Required: No - Query by instance id</li><li>Version - String - Required: No - Current protection edition (PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Version | Flagship: Ultimate Edition | ProtectedMachines: Pro Edition + Ultimate Edition)</li><li>Risk - String - Required: No - Risk host (yes)</li><li>Os - String - Required: No - Operating system (DescribeMachineOsList API value). Each filter criterion only supports one value and does not support multiple values or relationship query.</li><li>Quuid - String - Required: No - Cloud server UUID. Maximum 100 entries.</li><li>AddedOnTheFifteen - String - Required: No - Query only hosts added within the last 15 days (1: yes)</li><li>TagId - String - Required: No - Query host list associated with the specified tag</li><li>AgentStatus - String - Required: No - ALL: All; ONLINE: Under protection; OFFLINE: Offline; UNINSTALLED: Not installed</li><li>MachineStatus - String - Required: No - ALL: All; RUNNING: Running; STOPPED: Shut down; EXPIRED: Pending recycling</li>
      */
     public $Filters;
 
     /**
-     * @var array ID List of Businesses to which machines belong
+     * @var array <p>List of business IDs to which the machines belong</p>
      */
     public $ProjectIds;
 
     /**
-     * @var integer 
+     * @var integer <p>APPID of the machine</p>
      */
     public $MachineAppId;
 
     /**
-     * @param string $MachineType Type of the machine's zone
-CVM: Cloud Virtual Machine
-BM: BMECM: Edge Computing Machine
-LH: Lighthouse
-Other: Hybrid Cloud Zone
-     * @param string $MachineRegion Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
-     * @param integer $Limit Number of returns. It is 10 by default, and the maximum value is 100.
-     * @param integer $Offset Offset. Default value: 0.
-     * @param array $Filters Filter criteria
-<li>Ips - String - Required: No - Query by ip</li>
-<li>Names - String - required: no - query by instance name</li>
-<li>InstanceIds - String - Required: No - Query by instance id</li>
-<li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
-<li>Risk - String - required: no - risky host (yes)</li>
-<li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
-Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
-<li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
-<li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
-<li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
-<li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
-<li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li>
-     * @param array $ProjectIds ID List of Businesses to which machines belong
-     * @param integer $MachineAppId 
+     * @param string $MachineType <p>Machine zone type<br>CVM: Cloud Virtual Machine<br>BM: Blackstone<br>ECM: Edge Computing Machine<br>LH: Lighthouse<br>Other: Hybrid cloud zone</p>
+     * @param string $MachineRegion <p>Machine region, for example, ap-guangzhou or ap-shanghai. For non-Tencent Cloud hosts, use ap-others.</p>
+     * @param integer $Limit <p>Number of returned results. The default number is 10, and the maximum value is 100.</p>
+     * @param integer $Offset <p>Offset. Default value: 0.</p>
+     * @param array $Filters <p>Filter criteria.</p><li>Ips - String - Required: No - Query by IP</li><li>Names - String - Required: No - Query by instance name</li><li>InstanceIds - String - Required: No - Query by instance id</li><li>Version - String - Required: No - Current protection edition (PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Version | Flagship: Ultimate Edition | ProtectedMachines: Pro Edition + Ultimate Edition)</li><li>Risk - String - Required: No - Risk host (yes)</li><li>Os - String - Required: No - Operating system (DescribeMachineOsList API value). Each filter criterion only supports one value and does not support multiple values or relationship query.</li><li>Quuid - String - Required: No - Cloud server UUID. Maximum 100 entries.</li><li>AddedOnTheFifteen - String - Required: No - Query only hosts added within the last 15 days (1: yes)</li><li>TagId - String - Required: No - Query host list associated with the specified tag</li><li>AgentStatus - String - Required: No - ALL: All; ONLINE: Under protection; OFFLINE: Offline; UNINSTALLED: Not installed</li><li>MachineStatus - String - Required: No - ALL: All; RUNNING: Running; STOPPED: Shut down; EXPIRED: Pending recycling</li>
+     * @param array $ProjectIds <p>List of business IDs to which the machines belong</p>
+     * @param integer $MachineAppId <p>APPID of the machine</p>
      */
     function __construct()
     {

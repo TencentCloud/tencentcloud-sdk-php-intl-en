@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNetAttackSetting request structure.
  *
- * @method integer getNetAttackEnable() Obtain 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
- * @method void setNetAttackEnable(integer $NetAttackEnable) Set 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
- * @method integer getNetAttackAlarmStatus() Obtain 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
- * @method void setNetAttackAlarmStatus(integer $NetAttackAlarmStatus) Set 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
- * @method integer getScope() Obtain 1 - All Ultimate edition hosts; 0 - list of hosts with Quuids
- * @method void setScope(integer $Scope) Set 1 - All Ultimate edition hosts; 0 - list of hosts with Quuids
- * @method array getInstanceIds() Obtain Specified hosts
- * @method void setInstanceIds(array $InstanceIds) Set Specified hosts
- * @method array getExcludeInstanceIds() Obtain Manually Excluded Hosts
- * @method void setExcludeInstanceIds(array $ExcludeInstanceIds) Set Manually Excluded Hosts
- * @method integer getAutoInclude() Obtain New assets automatically include: 0 - Do not include, 1 - include.
- * @method void setAutoInclude(integer $AutoInclude) Set New assets automatically include: 0 - Do not include, 1 - include.
- * @method integer getProductType() Obtain 
- * @method void setProductType(integer $ProductType) Set 
+ * @method integer getNetAttackEnable() Obtain <p>0: Disable network attack detection; 1: Enable network attack detection</p>
+ * @method void setNetAttackEnable(integer $NetAttackEnable) Set <p>0: Disable network attack detection; 1: Enable network attack detection</p>
+ * @method integer getNetAttackAlarmStatus() Obtain <p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
+ * @method void setNetAttackAlarmStatus(integer $NetAttackAlarmStatus) Set <p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
+ * @method integer getScope() Obtain <p>1: All Ultimate Edition hosts; 0: Hosts in the Quuids list</p>
+ * @method void setScope(integer $Scope) Set <p>1: All Ultimate Edition hosts; 0: Hosts in the Quuids list</p>
+ * @method array getInstanceIds() Obtain <p>Selected hosts</p>
+ * @method void setInstanceIds(array $InstanceIds) Set <p>Selected hosts</p>
+ * @method array getExcludeInstanceIds() Obtain <p>Custom excluded hosts</p>
+ * @method void setExcludeInstanceIds(array $ExcludeInstanceIds) Set <p>Custom excluded hosts</p>
+ * @method integer getAutoInclude() Obtain <p>Automatically include newly added assets. 0: No; 1: Yes</p>
+ * @method void setAutoInclude(integer $AutoInclude) Set <p>Automatically include newly added assets. 0: No; 1: Yes</p>
+ * @method integer getProductType() Obtain <p>Product type. 0: CWP; 1: CSC</p>
+ * @method void setProductType(integer $ProductType) Set <p>Product type. 0: CWP; 1: CSC</p>
  */
 class ModifyNetAttackSettingRequest extends AbstractModel
 {
     /**
-     * @var integer 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
+     * @var integer <p>0: Disable network attack detection; 1: Enable network attack detection</p>
      */
     public $NetAttackEnable;
 
     /**
-     * @var integer 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
+     * @var integer <p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
      */
     public $NetAttackAlarmStatus;
 
     /**
-     * @var integer 1 - All Ultimate edition hosts; 0 - list of hosts with Quuids
+     * @var integer <p>1: All Ultimate Edition hosts; 0: Hosts in the Quuids list</p>
      */
     public $Scope;
 
     /**
-     * @var array Specified hosts
+     * @var array <p>Selected hosts</p>
      */
     public $InstanceIds;
 
     /**
-     * @var array Manually Excluded Hosts
+     * @var array <p>Custom excluded hosts</p>
      */
     public $ExcludeInstanceIds;
 
     /**
-     * @var integer New assets automatically include: 0 - Do not include, 1 - include.
+     * @var integer <p>Automatically include newly added assets. 0: No; 1: Yes</p>
      */
     public $AutoInclude;
 
     /**
-     * @var integer 
+     * @var integer <p>Product type. 0: CWP; 1: CSC</p>
      */
     public $ProductType;
 
     /**
-     * @param integer $NetAttackEnable 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
-     * @param integer $NetAttackAlarmStatus 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
-     * @param integer $Scope 1 - All Ultimate edition hosts; 0 - list of hosts with Quuids
-     * @param array $InstanceIds Specified hosts
-     * @param array $ExcludeInstanceIds Manually Excluded Hosts
-     * @param integer $AutoInclude New assets automatically include: 0 - Do not include, 1 - include.
-     * @param integer $ProductType 
+     * @param integer $NetAttackEnable <p>0: Disable network attack detection; 1: Enable network attack detection</p>
+     * @param integer $NetAttackAlarmStatus <p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
+     * @param integer $Scope <p>1: All Ultimate Edition hosts; 0: Hosts in the Quuids list</p>
+     * @param array $InstanceIds <p>Selected hosts</p>
+     * @param array $ExcludeInstanceIds <p>Custom excluded hosts</p>
+     * @param integer $AutoInclude <p>Automatically include newly added assets. 0: No; 1: Yes</p>
+     * @param integer $ProductType <p>Product type. 0: CWP; 1: CSC</p>
      */
     function __construct()
     {

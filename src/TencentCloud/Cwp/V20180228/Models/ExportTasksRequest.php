@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportTasks request structure.
  *
- * @method string getTaskId() Obtain Task ID
- * @method void setTaskId(string $TaskId) Set Task ID
+ * @method string getTaskId() Obtain <p>Task ID.</p>
+ * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
  */
 class ExportTasksRequest extends AbstractModel
 {
     /**
-     * @var string Task ID
+     * @var string <p>Task ID.</p>
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId Task ID
+     * @param string $TaskId <p>Task ID.</p>
      */
     function __construct()
     {

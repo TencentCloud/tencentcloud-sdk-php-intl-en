@@ -21,477 +21,321 @@ use TencentCloud\Common\AbstractModel;
  * Domain assets 
  *
  * @method array getAssetId() Obtain Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAssetId(array $AssetId) Set Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getAssetName() Obtain Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAssetName(array $AssetName) Set Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method array getAssetName() Obtain Asset Name
+ * @method void setAssetName(array $AssetName) Set Asset Name
  * @method array getAssetType() Obtain Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAssetType(array $AssetType) Set Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getRegion() Obtain Region
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setRegion(array $Region) Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getWAFStatus() Obtain WAF status
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setWAFStatus(integer $WAFStatus) Set WAF status
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getAssetCreateTime() Obtain Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAssetCreateTime(string $AssetCreateTime) Set Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method array getRegion() Obtain Region.
+ * @method void setRegion(array $Region) Set Region.
+ * @method integer getWAFStatus() Obtain WAF Status
+ * @method void setWAFStatus(integer $WAFStatus) Set WAF Status
+ * @method string getAssetCreateTime() Obtain Asset Creation Time
+ * @method void setAssetCreateTime(string $AssetCreateTime) Set Asset Creation Time
  * @method integer getAppId() Obtain Appid
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAppId(integer $AppId) Set Appid
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getUin() Obtain Account ID
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setUin(string $Uin) Set Account ID
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getNickName() Obtain Account name
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setNickName(string $NickName) Set Account name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsCore() Obtain Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsCore(integer $IsCore) Set Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsCloud() Obtain Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsCloud(integer $IsCloud) Set Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getAttack() Obtain Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAttack(integer $Attack) Set Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getIsCore() Obtain Core or Not
+ * @method void setIsCore(integer $IsCore) Set Core or Not
+ * @method integer getIsCloud() Obtain Whether it is on-cloud asset.
+ * @method void setIsCloud(integer $IsCloud) Set Whether it is on-cloud asset.
+ * @method integer getAttack() Obtain network attack
+ * @method void setAttack(integer $Attack) Set network attack
  * @method integer getAccess() Obtain Network access
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAccess(integer $Access) Set Network access
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIntercept() Obtain Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIntercept(integer $Intercept) Set Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getIntercept() Obtain Network Interception
+ * @method void setIntercept(integer $Intercept) Set Network Interception
  * @method string getInBandwidth() Obtain Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setInBandwidth(string $InBandwidth) Set Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getOutBandwidth() Obtain Outbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setOutBandwidth(string $OutBandwidth) Set Outbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getInFlow() Obtain Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setInFlow(string $InFlow) Set Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getOutFlow() Obtain Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setOutFlow(string $OutFlow) Set Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getInFlow() Obtain Cumulative Inbound Traffic
+ * @method void setInFlow(string $InFlow) Set Cumulative Inbound Traffic
+ * @method string getOutFlow() Obtain Cumulative Outbound Traffic
+ * @method void setOutFlow(string $OutFlow) Set Cumulative Outbound Traffic
  * @method string getLastScanTime() Obtain Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setLastScanTime(string $LastScanTime) Set Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getPortRisk() Obtain Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPortRisk(integer $PortRisk) Set Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getVulnerabilityRisk() Obtain Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setVulnerabilityRisk(integer $VulnerabilityRisk) Set Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getConfigurationRisk() Obtain Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setConfigurationRisk(integer $ConfigurationRisk) Set Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getScanTask() Obtain Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setScanTask(integer $ScanTask) Set Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getSubDomain() Obtain Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setSubDomain(string $SubDomain) Set Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getSeverIp() Obtain Resolved IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setSeverIp(array $SeverIp) Set Resolved IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getBotCount() Obtain Bot access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setBotCount(integer $BotCount) Set Bot access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getWeakPassword() Obtain Weak password risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setWeakPassword(integer $WeakPassword) Set Weak password risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getWebContentRisk() Obtain Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setWebContentRisk(integer $WebContentRisk) Set Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getTag() Obtain Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTag(array $Tag) Set Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getSourceType() Obtain The type of associated instances.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setSourceType(string $SourceType) Set The type of associated instances.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getMemberId() Obtain Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setMemberId(string $MemberId) Set Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getCCAttack() Obtain CC attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setCCAttack(integer $CCAttack) Set CC attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getWebAttack() Obtain Web attack
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setWebAttack(integer $WebAttack) Set Web attack
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getServiceRisk() Obtain Services exposed to risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setServiceRisk(integer $ServiceRisk) Set Services exposed to risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsNewAsset() Obtain Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsNewAsset(integer $IsNewAsset) Set Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getVerifyDomain() Obtain Random third-level domain name of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setVerifyDomain(string $VerifyDomain) Set Random third-level domain name of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getVerifyTXTRecord() Obtain TXT record of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setVerifyTXTRecord(string $VerifyTXTRecord) Set TXT record of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getVerifyStatus() Obtain Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setVerifyStatus(integer $VerifyStatus) Set Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getBotAccessCount() Obtain u200cNumber of bot attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setBotAccessCount(integer $BotAccessCount) Set u200cNumber of bot attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getPortRisk() Obtain port risk
+ * @method void setPortRisk(integer $PortRisk) Set port risk
+ * @method integer getVulnerabilityRisk() Obtain Vulnerability risk
+ * @method void setVulnerabilityRisk(integer $VulnerabilityRisk) Set Vulnerability risk
+ * @method integer getConfigurationRisk() Obtain Configuration risk
+ * @method void setConfigurationRisk(integer $ConfigurationRisk) Set Configuration risk
+ * @method integer getScanTask() Obtain Scan Task
+ * @method void setScanTask(integer $ScanTask) Set Scan Task
+ * @method string getSubDomain() Obtain Domain
+ * @method void setSubDomain(string $SubDomain) Set Domain
+ * @method array getSeverIp() Obtain Resolve IP
+ * @method void setSeverIp(array $SeverIp) Set Resolve IP
+ * @method integer getBotCount() Obtain Number of Bot Attacks
+ * @method void setBotCount(integer $BotCount) Set Number of Bot Attacks
+ * @method integer getWeakPassword() Obtain Weak password risk
+ * @method void setWeakPassword(integer $WeakPassword) Set Weak password risk
+ * @method integer getWebContentRisk() Obtain Content risk
+ * @method void setWebContentRisk(integer $WebContentRisk) Set Content risk
+ * @method array getTag() Obtain tag
+ * @method void setTag(array $Tag) Set tag
+ * @method string getSourceType() Obtain Associated instance type
+ * @method void setSourceType(string $SourceType) Set Associated instance type
+ * @method string getMemberId() Obtain Member ID information
+ * @method void setMemberId(string $MemberId) Set Member ID information
+ * @method integer getCCAttack() Obtain CC Attack
+ * @method void setCCAttack(integer $CCAttack) Set CC Attack
+ * @method integer getWebAttack() Obtain Web Attack
+ * @method void setWebAttack(integer $WebAttack) Set Web Attack
+ * @method integer getServiceRisk() Obtain Number of Risk Service Exposures
+ * @method void setServiceRisk(integer $ServiceRisk) Set Number of Risk Service Exposures
+ * @method integer getIsNewAsset() Obtain New Asset or Not. 1: New
+ * @method void setIsNewAsset(integer $IsNewAsset) Set New Asset or Not. 1: New
+ * @method string getVerifyDomain() Obtain Random Layer-3 Domain of Assets to Be Recognized
+ * @method void setVerifyDomain(string $VerifyDomain) Set Random Layer-3 Domain of Assets to Be Recognized
+ * @method string getVerifyTXTRecord() Obtain TXT Record Content of Pending Confirmation Assets
+ * @method void setVerifyTXTRecord(string $VerifyTXTRecord) Set TXT Record Content of Pending Confirmation Assets
+ * @method integer getVerifyStatus() Obtain Authentication Status of Assets Pending Recognition. 0: Pending Authentication; 1: Authentication Succeeded; 2: Authentication in Progress; 3: TXT Authentication Failed; 4: Manual Authentication Failed.
+ * @method void setVerifyStatus(integer $VerifyStatus) Set Authentication Status of Assets Pending Recognition. 0: Pending Authentication; 1: Authentication Succeeded; 2: Authentication in Progress; 3: TXT Authentication Failed; 4: Manual Authentication Failed.
+ * @method integer getBotAccessCount() Obtain Bot Access Count
+ * @method void setBotAccessCount(integer $BotAccessCount) Set Bot Access Count
  */
 class DomainAssetVO extends AbstractModel
 {
     /**
      * @var array Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AssetId;
 
     /**
-     * @var array Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Asset Name
      */
     public $AssetName;
 
     /**
      * @var array Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AssetType;
 
     /**
-     * @var array Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Region.
      */
     public $Region;
 
     /**
-     * @var integer WAF status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer WAF Status
      */
     public $WAFStatus;
 
     /**
-     * @var string Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Asset Creation Time
      */
     public $AssetCreateTime;
 
     /**
      * @var integer Appid
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AppId;
 
     /**
      * @var string Account ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Uin;
 
     /**
      * @var string Account name
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $NickName;
 
     /**
-     * @var integer Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Core or Not
      */
     public $IsCore;
 
     /**
-     * @var integer Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Whether it is on-cloud asset.
      */
     public $IsCloud;
 
     /**
-     * @var integer Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer network attack
      */
     public $Attack;
 
     /**
      * @var integer Network access
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Access;
 
     /**
-     * @var integer Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Network Interception
      */
     public $Intercept;
 
     /**
      * @var string Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $InBandwidth;
 
     /**
      * @var string Outbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $OutBandwidth;
 
     /**
-     * @var string Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Cumulative Inbound Traffic
      */
     public $InFlow;
 
     /**
-     * @var string Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Cumulative Outbound Traffic
      */
     public $OutFlow;
 
     /**
      * @var string Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $LastScanTime;
 
     /**
-     * @var integer Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer port risk
      */
     public $PortRisk;
 
     /**
-     * @var integer Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Vulnerability risk
      */
     public $VulnerabilityRisk;
 
     /**
-     * @var integer Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Configuration risk
      */
     public $ConfigurationRisk;
 
     /**
-     * @var integer Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Scan Task
      */
     public $ScanTask;
 
     /**
-     * @var string Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Domain
      */
     public $SubDomain;
 
     /**
-     * @var array Resolved IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Resolve IP
      */
     public $SeverIp;
 
     /**
-     * @var integer Bot access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Number of Bot Attacks
      */
     public $BotCount;
 
     /**
-     * @var integer Weak password risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Weak password risk
      */
     public $WeakPassword;
 
     /**
-     * @var integer Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Content risk
      */
     public $WebContentRisk;
 
     /**
-     * @var array Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array tag
      */
     public $Tag;
 
     /**
-     * @var string The type of associated instances.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Associated instance type
      */
     public $SourceType;
 
     /**
-     * @var string Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Member ID information
      */
     public $MemberId;
 
     /**
-     * @var integer CC attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer CC Attack
      */
     public $CCAttack;
 
     /**
-     * @var integer Web attack
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Web Attack
      */
     public $WebAttack;
 
     /**
-     * @var integer Services exposed to risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Number of Risk Service Exposures
      */
     public $ServiceRisk;
 
     /**
-     * @var integer Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer New Asset or Not. 1: New
      */
     public $IsNewAsset;
 
     /**
-     * @var string Random third-level domain name of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Random Layer-3 Domain of Assets to Be Recognized
      */
     public $VerifyDomain;
 
     /**
-     * @var string TXT record of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string TXT Record Content of Pending Confirmation Assets
      */
     public $VerifyTXTRecord;
 
     /**
-     * @var integer Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Authentication Status of Assets Pending Recognition. 0: Pending Authentication; 1: Authentication Succeeded; 2: Authentication in Progress; 3: TXT Authentication Failed; 4: Manual Authentication Failed.
      */
     public $VerifyStatus;
 
     /**
-     * @var integer u200cNumber of bot attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Bot Access Count
      */
     public $BotAccessCount;
 
     /**
      * @param array $AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param array $AssetName Asset Name
      * @param array $AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $WAFStatus WAF status
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $AssetCreateTime Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param array $Region Region.
+     * @param integer $WAFStatus WAF Status
+     * @param string $AssetCreateTime Asset Creation Time
      * @param integer $AppId Appid
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $Uin Account ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $NickName Account name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsCore Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsCloud Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Attack Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $IsCore Core or Not
+     * @param integer $IsCloud Whether it is on-cloud asset.
+     * @param integer $Attack network attack
      * @param integer $Access Network access
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Intercept Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $Intercept Network Interception
      * @param string $InBandwidth Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $OutBandwidth Outbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $InFlow Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $OutFlow Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $InFlow Cumulative Inbound Traffic
+     * @param string $OutFlow Cumulative Outbound Traffic
      * @param string $LastScanTime Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $PortRisk Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $VulnerabilityRisk Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $ConfigurationRisk Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $ScanTask Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $SubDomain Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $SeverIp Resolved IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $BotCount Bot access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $WeakPassword Weak password risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $WebContentRisk Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $SourceType The type of associated instances.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $MemberId Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $CCAttack CC attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $WebAttack Web attack
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $ServiceRisk Services exposed to risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $VerifyDomain Random third-level domain name of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $VerifyTXTRecord TXT record of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $VerifyStatus Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $BotAccessCount u200cNumber of bot attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $PortRisk port risk
+     * @param integer $VulnerabilityRisk Vulnerability risk
+     * @param integer $ConfigurationRisk Configuration risk
+     * @param integer $ScanTask Scan Task
+     * @param string $SubDomain Domain
+     * @param array $SeverIp Resolve IP
+     * @param integer $BotCount Number of Bot Attacks
+     * @param integer $WeakPassword Weak password risk
+     * @param integer $WebContentRisk Content risk
+     * @param array $Tag tag
+     * @param string $SourceType Associated instance type
+     * @param string $MemberId Member ID information
+     * @param integer $CCAttack CC Attack
+     * @param integer $WebAttack Web Attack
+     * @param integer $ServiceRisk Number of Risk Service Exposures
+     * @param integer $IsNewAsset New Asset or Not. 1: New
+     * @param string $VerifyDomain Random Layer-3 Domain of Assets to Be Recognized
+     * @param string $VerifyTXTRecord TXT Record Content of Pending Confirmation Assets
+     * @param integer $VerifyStatus Authentication Status of Assets Pending Recognition. 0: Pending Authentication; 1: Authentication Succeeded; 2: Authentication in Progress; 3: TXT Authentication Failed; 4: Manual Authentication Failed.
+     * @param integer $BotAccessCount Bot Access Count
      */
     function __construct()
     {

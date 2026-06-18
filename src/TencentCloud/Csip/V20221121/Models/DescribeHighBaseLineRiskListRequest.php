@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHighBaseLineRiskList request structure.
  *
- * @method array getMemberId() Obtain Group Account Member ID
- * @method void setMemberId(array $MemberId) Set Group Account Member ID
+ * @method array getMemberId() Obtain <p>Group account member id</p>
+ * @method void setMemberId(array $MemberId) Set <p>Group account member id</p>
  * @method array getFilters() Obtain Filtered Content
  * @method void setFilters(array $Filters) Set Filtered Content
  * @method integer getLimit() Obtain Pagination size.
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeHighBaseLineRiskListRequest extends AbstractModel
 {
     /**
-     * @var array Group Account Member ID
+     * @var array <p>Group account member id</p>
      */
     public $MemberId;
 
@@ -80,7 +80,7 @@ class DescribeHighBaseLineRiskListRequest extends AbstractModel
     public $Provider;
 
     /**
-     * @param array $MemberId Group Account Member ID
+     * @param array $MemberId <p>Group account member id</p>
      * @param array $Filters Filtered Content
      * @param integer $Limit Pagination size.
      * @param integer $Offset Offset.

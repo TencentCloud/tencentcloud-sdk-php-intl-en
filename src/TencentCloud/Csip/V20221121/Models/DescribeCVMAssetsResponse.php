@@ -20,120 +20,108 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCVMAssets response structure.
  *
- * @method integer getTotal() Obtain u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTotal(integer $Total) Set u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getData() Obtain u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setData(array $Data) Set u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getRegionList() Obtain List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setRegionList(array $RegionList) Set List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getTotal() Obtain Total number.
+ * @method void setTotal(integer $Total) Set Total number.
+ * @method array getData() Obtain Machine list
+ * @method void setData(array $Data) Set Machine list
+ * @method array getRegionList() Obtain Region list
+ * @method void setRegionList(array $RegionList) Set Region list
  * @method array getDefenseStatusList() Obtain Protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setDefenseStatusList(array $DefenseStatusList) Set Protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getVpcList() Obtain List of VPCs
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setVpcList(array $VpcList) Set List of VPCs
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getAssetTypeList() Obtain List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAssetTypeList(array $AssetTypeList) Set List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getSystemTypeList() Obtain List of operating systems
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setSystemTypeList(array $SystemTypeList) Set List of operating systems
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getIpTypeList() Obtain List of IP types
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIpTypeList(array $IpTypeList) Set List of IP types
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getAppIdList() Obtain List of AppIds
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAppIdList(array $AppIdList) Set List of AppIds
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getZoneList() Obtain List of availability zones
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setZoneList(array $ZoneList) Set List of availability zones
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getOsList() Obtain List of operating systems
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setOsList(array $OsList) Set List of operating systems
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method array getVpcList() Obtain VPC Enumeration
+ * @method void setVpcList(array $VpcList) Set VPC Enumeration
+ * @method array getAssetTypeList() Obtain Asset Type Enumeration
+ * @method void setAssetTypeList(array $AssetTypeList) Set Asset Type Enumeration
+ * @method array getSystemTypeList() Obtain Operating System Enumeration
+ * @method void setSystemTypeList(array $SystemTypeList) Set Operating System Enumeration
+ * @method array getIpTypeList() Obtain IP List
+ * @method void setIpTypeList(array $IpTypeList) Set IP List
+ * @method array getAppIdList() Obtain AppID List
+ * @method void setAppIdList(array $AppIdList) Set AppID List
+ * @method array getZoneList() Obtain Availability Zone List
+ * @method void setZoneList(array $ZoneList) Set Availability Zone List
+ * @method array getOsList() Obtain OS List
+ * @method void setOsList(array $OsList) Set OS List
+ * @method array getAssetMapInstanceTypeList() Obtain Mapping of asset type and instance type.
+ * @method void setAssetMapInstanceTypeList(array $AssetMapInstanceTypeList) Set Mapping of asset type and instance type.
+ * @method array getPublicPrivateAttr() Obtain Public network private network enumeration.
+ * @method void setPublicPrivateAttr(array $PublicPrivateAttr) Set Public network private network enumeration.
+ * @method array getProtectStatusList() Obtain Host protection status.
+ * @method void setProtectStatusList(array $ProtectStatusList) Set Host protection status.
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribeCVMAssetsResponse extends AbstractModel
 {
     /**
-     * @var integer u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Total number.
      */
     public $Total;
 
     /**
-     * @var array u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Machine list
      */
     public $Data;
 
     /**
-     * @var array List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Region list
      */
     public $RegionList;
 
     /**
      * @var array Protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $DefenseStatusList;
 
     /**
-     * @var array List of VPCs
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array VPC Enumeration
      */
     public $VpcList;
 
     /**
-     * @var array List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Asset Type Enumeration
      */
     public $AssetTypeList;
 
     /**
-     * @var array List of operating systems
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Operating System Enumeration
      */
     public $SystemTypeList;
 
     /**
-     * @var array List of IP types
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array IP List
      */
     public $IpTypeList;
 
     /**
-     * @var array List of AppIds
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array AppID List
      */
     public $AppIdList;
 
     /**
-     * @var array List of availability zones
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Availability Zone List
      */
     public $ZoneList;
 
     /**
-     * @var array List of operating systems
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array OS List
      */
     public $OsList;
+
+    /**
+     * @var array Mapping of asset type and instance type.
+     */
+    public $AssetMapInstanceTypeList;
+
+    /**
+     * @var array Public network private network enumeration.
+     */
+    public $PublicPrivateAttr;
+
+    /**
+     * @var array Host protection status.
+     */
+    public $ProtectStatusList;
 
     /**
      * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -141,28 +129,20 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $RequestId;
 
     /**
-     * @param integer $Total u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $Data u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $RegionList List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $Total Total number.
+     * @param array $Data Machine list
+     * @param array $RegionList Region list
      * @param array $DefenseStatusList Protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $VpcList List of VPCs
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $AssetTypeList List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $SystemTypeList List of operating systems
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $IpTypeList List of IP types
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $AppIdList List of AppIds
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $ZoneList List of availability zones
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $OsList List of operating systems
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param array $VpcList VPC Enumeration
+     * @param array $AssetTypeList Asset Type Enumeration
+     * @param array $SystemTypeList Operating System Enumeration
+     * @param array $IpTypeList IP List
+     * @param array $AppIdList AppID List
+     * @param array $ZoneList Availability Zone List
+     * @param array $OsList OS List
+     * @param array $AssetMapInstanceTypeList Mapping of asset type and instance type.
+     * @param array $PublicPrivateAttr Public network private network enumeration.
+     * @param array $ProtectStatusList Host protection status.
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -269,6 +249,33 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 $obj = new FilterDataObject();
                 $obj->deserialize($value);
                 array_push($this->OsList, $obj);
+            }
+        }
+
+        if (array_key_exists("AssetMapInstanceTypeList",$param) and $param["AssetMapInstanceTypeList"] !== null) {
+            $this->AssetMapInstanceTypeList = [];
+            foreach ($param["AssetMapInstanceTypeList"] as $key => $value){
+                $obj = new AssetInstanceTypeMap();
+                $obj->deserialize($value);
+                array_push($this->AssetMapInstanceTypeList, $obj);
+            }
+        }
+
+        if (array_key_exists("PublicPrivateAttr",$param) and $param["PublicPrivateAttr"] !== null) {
+            $this->PublicPrivateAttr = [];
+            foreach ($param["PublicPrivateAttr"] as $key => $value){
+                $obj = new FilterDataObject();
+                $obj->deserialize($value);
+                array_push($this->PublicPrivateAttr, $obj);
+            }
+        }
+
+        if (array_key_exists("ProtectStatusList",$param) and $param["ProtectStatusList"] !== null) {
+            $this->ProtectStatusList = [];
+            foreach ($param["ProtectStatusList"] as $key => $value){
+                $obj = new FilterDataObject();
+                $obj->deserialize($value);
+                array_push($this->ProtectStatusList, $obj);
             }
         }
 

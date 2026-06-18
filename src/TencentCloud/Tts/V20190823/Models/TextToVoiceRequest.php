@@ -44,8 +44,8 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
 <li>101054-zhiyou (Chinese)</li>
 <li>101055-zhiyou (Chinese)</li>
 <li>101056-zhilin (Northeastern Mandarin)</li>
- * @method string getFastVoiceType() Obtain 
- * @method void setFastVoiceType(string $FastVoiceType) Set 
+ * @method string getFastVoiceType() Obtain Instant Voice Clone Voice ID. Required when using Instant Voice Clone voices.
+ * @method void setFastVoiceType(string $FastVoiceType) Set Instant Voice Clone Voice ID. Required when using Instant Voice Clone voices.
  * @method integer getPrimaryLanguage() Obtain Primary language type: <li>1 - Chinese (default)</li><li>2 - English</li>
  * @method void setPrimaryLanguage(integer $PrimaryLanguage) Set Primary language type: <li>1 - Chinese (default)</li><li>2 - English</li>
  * @method integer getSampleRate() Obtain Audio sample rate: <li>16000: 16k (default)</li><li>8000: 8k</li>
@@ -56,10 +56,10 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
  * @method void setEnableSubtitle(boolean $EnableSubtitle) Set Whether to enable the timestamp feature. Default value: `false`.
  * @method integer getSegmentRate() Obtain The threshold of speech segmentation sensibility, which can be `0` (default), `1`, or `2`. A larger value indicates fewer segments, and the model tends to only segment sentences based on punctuation marks. We recommend you not change this parameter to avoid adverse effect on speech synthesis.
  * @method void setSegmentRate(integer $SegmentRate) Set The threshold of speech segmentation sensibility, which can be `0` (default), `1`, or `2`. A larger value indicates fewer segments, and the model tends to only segment sentences based on punctuation marks. We recommend you not change this parameter to avoid adverse effect on speech synthesis.
- * @method string getEmotionCategory() Obtain 
- * @method void setEmotionCategory(string $EmotionCategory) Set 
- * @method integer getEmotionIntensity() Obtain 
- * @method void setEmotionIntensity(integer $EmotionIntensity) Set 
+ * @method string getEmotionCategory() Obtain Controls the emotion of synthesized speech. This parameter is supported only by multi-emotion voices. Valid values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao, disgusted, amaze, peaceful, exciting, aojiao, jieshuo. <br>Example value: neutral.
+ * @method void setEmotionCategory(string $EmotionCategory) Set Controls the emotion of synthesized speech. This parameter is supported only by multi-emotion voices. Valid values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao, disgusted, amaze, peaceful, exciting, aojiao, jieshuo. <br>Example value: neutral.
+ * @method integer getEmotionIntensity() Obtain Controls the intensity of emotion in synthesized speech. Valid values: [50, 200]. Default: 100. Takes effect only when EmotionCategoryis specified.
+ * @method void setEmotionIntensity(integer $EmotionIntensity) Set Controls the intensity of emotion in synthesized speech. Valid values: [50, 200]. Default: 100. Takes effect only when EmotionCategoryis specified.
  */
 class TextToVoiceRequest extends AbstractModel
 {
@@ -104,7 +104,7 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     public $VoiceType;
 
     /**
-     * @var string 
+     * @var string Instant Voice Clone Voice ID. Required when using Instant Voice Clone voices.
      */
     public $FastVoiceType;
 
@@ -134,12 +134,12 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     public $SegmentRate;
 
     /**
-     * @var string 
+     * @var string Controls the emotion of synthesized speech. This parameter is supported only by multi-emotion voices. Valid values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao, disgusted, amaze, peaceful, exciting, aojiao, jieshuo. <br>Example value: neutral.
      */
     public $EmotionCategory;
 
     /**
-     * @var integer 
+     * @var integer Controls the intensity of emotion in synthesized speech. Valid values: [50, 200]. Default: 100. Takes effect only when EmotionCategoryis specified.
      */
     public $EmotionIntensity;
 
@@ -156,14 +156,14 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
 <li>101054-zhiyou (Chinese)</li>
 <li>101055-zhiyou (Chinese)</li>
 <li>101056-zhilin (Northeastern Mandarin)</li>
-     * @param string $FastVoiceType 
+     * @param string $FastVoiceType Instant Voice Clone Voice ID. Required when using Instant Voice Clone voices.
      * @param integer $PrimaryLanguage Primary language type: <li>1 - Chinese (default)</li><li>2 - English</li>
      * @param integer $SampleRate Audio sample rate: <li>16000: 16k (default)</li><li>8000: 8k</li>
      * @param string $Codec Format of returned audio. Valid values: WAV (default), MP3, and PCM.
      * @param boolean $EnableSubtitle Whether to enable the timestamp feature. Default value: `false`.
      * @param integer $SegmentRate The threshold of speech segmentation sensibility, which can be `0` (default), `1`, or `2`. A larger value indicates fewer segments, and the model tends to only segment sentences based on punctuation marks. We recommend you not change this parameter to avoid adverse effect on speech synthesis.
-     * @param string $EmotionCategory 
-     * @param integer $EmotionIntensity 
+     * @param string $EmotionCategory Controls the emotion of synthesized speech. This parameter is supported only by multi-emotion voices. Valid values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao, disgusted, amaze, peaceful, exciting, aojiao, jieshuo. <br>Example value: neutral.
+     * @param integer $EmotionIntensity Controls the intensity of emotion in synthesized speech. Valid values: [50, 200]. Default: 100. Takes effect only when EmotionCategoryis specified.
      */
     function __construct()
     {

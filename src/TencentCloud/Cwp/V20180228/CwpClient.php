@@ -226,6 +226,7 @@ This API is used to call the billing payment API for payment since prepaid order
  * @method Models\DescribeMachineDefenseCntResponse DescribeMachineDefenseCnt(Models\DescribeMachineDefenseCntRequest $req) This API is used to query the statistics of advanced defense events for hosts.
  * @method Models\DescribeMachineFileTamperRulesResponse DescribeMachineFileTamperRules(Models\DescribeMachineFileTamperRulesRequest $req) This API is used to query the list of host-related core file monitoring rules.
  * @method Models\DescribeMachineGeneralResponse DescribeMachineGeneral(Models\DescribeMachineGeneralRequest $req) This API is used to query the information of the host overview.
+ * @method Models\DescribeMachineInfoResponse DescribeMachineInfo(Models\DescribeMachineInfoRequest $req) This API is used to get server details.
  * @method Models\DescribeMachineLicenseDetailResponse DescribeMachineLicenseDetail(Models\DescribeMachineLicenseDetailRequest $req) This API is used to query the machine authorization information.
  * @method Models\DescribeMachineOsListResponse DescribeMachineOsList(Models\DescribeMachineOsListRequest $req) This API is used to query the machine operating system list.
  * @method Models\DescribeMachineRegionListResponse DescribeMachineRegionList(Models\DescribeMachineRegionListRequest $req) This API is used to query the list of host regions.

@@ -20,130 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of asset scan result
  *
- * @method string getAppID() Obtain AppID of the user
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAppID(string $AppID) Set AppID of the user
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getCVEId() Obtain CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setCVEId(string $CVEId) Set CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsScan() Obtain Whether the asset is scanned. Values: `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsScan(integer $IsScan) Set Whether the asset is scanned. Values: `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getInfluenceAsset() Obtain Number of affected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setInfluenceAsset(integer $InfluenceAsset) Set Number of affected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getNotRepairAsset() Obtain Number of not fixed assets
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setNotRepairAsset(integer $NotRepairAsset) Set Number of not fixed assets
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getNotProtectAsset() Obtain Number of not protected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setNotProtectAsset(integer $NotProtectAsset) Set Number of not protected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getTaskId() Obtain Task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTaskId(string $TaskId) Set Task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getTaskPercent() Obtain Task progress in terms of percentage
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTaskPercent(integer $TaskPercent) Set Task progress in terms of percentage
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getTaskTime() Obtain Task creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTaskTime(integer $TaskTime) Set Task creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getScanTime() Obtain Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setScanTime(string $ScanTime) Set Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getAppID() Obtain User appid.
+ * @method void setAppID(string $AppID) Set User appid.
+ * @method string getCVEId() Obtain CVE id
+ * @method void setCVEId(string $CVEId) Set CVE id
+ * @method integer getIsScan() Obtain Scan Status. 0-Not Scanned by Default; 1-Scanning; 2-Scan Completed; 3-Scan Error.
+ * @method void setIsScan(integer $IsScan) Set Scan Status. 0-Not Scanned by Default; 1-Scanning; 2-Scan Completed; 3-Scan Error.
+ * @method integer getInfluenceAsset() Obtain Number of Affected Assets
+ * @method void setInfluenceAsset(integer $InfluenceAsset) Set Number of Affected Assets
+ * @method integer getNotRepairAsset() Obtain Number of Unfixed Assets
+ * @method void setNotRepairAsset(integer $NotRepairAsset) Set Number of Unfixed Assets
+ * @method integer getNotProtectAsset() Obtain Unprotected Asset Count
+ * @method void setNotProtectAsset(integer $NotProtectAsset) Set Unprotected Asset Count
+ * @method string getTaskId() Obtain Task ID.
+ * @method void setTaskId(string $TaskId) Set Task ID.
+ * @method integer getTaskPercent() Obtain Task Percentage
+ * @method void setTaskPercent(integer $TaskPercent) Set Task Percentage
+ * @method integer getTaskTime() Obtain Task Time
+ * @method void setTaskTime(integer $TaskTime) Set Task Time
+ * @method string getScanTime() Obtain Scan time
+ * @method void setScanTime(string $ScanTime) Set Scan time
  */
 class AssetInfoDetail extends AbstractModel
 {
     /**
-     * @var string AppID of the user
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string User appid.
      */
     public $AppID;
 
     /**
-     * @var string CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string CVE id
      */
     public $CVEId;
 
     /**
-     * @var integer Whether the asset is scanned. Values: `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Scan Status. 0-Not Scanned by Default; 1-Scanning; 2-Scan Completed; 3-Scan Error.
      */
     public $IsScan;
 
     /**
-     * @var integer Number of affected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Number of Affected Assets
      */
     public $InfluenceAsset;
 
     /**
-     * @var integer Number of not fixed assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Number of Unfixed Assets
      */
     public $NotRepairAsset;
 
     /**
-     * @var integer Number of not protected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Unprotected Asset Count
      */
     public $NotProtectAsset;
 
     /**
-     * @var string Task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Task ID.
      */
     public $TaskId;
 
     /**
-     * @var integer Task progress in terms of percentage
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Task Percentage
      */
     public $TaskPercent;
 
     /**
-     * @var integer Task creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Task Time
      */
     public $TaskTime;
 
     /**
-     * @var string Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Scan time
      */
     public $ScanTime;
 
     /**
-     * @param string $AppID AppID of the user
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $CVEId CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsScan Whether the asset is scanned. Values: `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $InfluenceAsset Number of affected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $NotRepairAsset Number of not fixed assets
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $NotProtectAsset Number of not protected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $TaskId Task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $TaskPercent Task progress in terms of percentage
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $TaskTime Task creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $ScanTime Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $AppID User appid.
+     * @param string $CVEId CVE id
+     * @param integer $IsScan Scan Status. 0-Not Scanned by Default; 1-Scanning; 2-Scan Completed; 3-Scan Error.
+     * @param integer $InfluenceAsset Number of Affected Assets
+     * @param integer $NotRepairAsset Number of Unfixed Assets
+     * @param integer $NotProtectAsset Unprotected Asset Count
+     * @param string $TaskId Task ID.
+     * @param integer $TaskPercent Task Percentage
+     * @param integer $TaskTime Task Time
+     * @param string $ScanTime Scan time
      */
     function __construct()
     {

@@ -20,326 +20,298 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Host list
  *
- * @method string getMachineName() Obtain Host name.
- * @method void setMachineName(string $MachineName) Set Host name.
- * @method string getMachineOs() Obtain Host System.
- * @method void setMachineOs(string $MachineOs) Set Host System.
- * @method string getMachineStatus() Obtain Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
- * @method void setMachineStatus(string $MachineStatus) Set Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
- * @method string getAgentStatus() Obtain ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
- * @method void setAgentStatus(string $AgentStatus) Set ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
- * @method string getInstanceStatus() Obtain RUNNING; is shut down; to be recycled	
- * @method void setInstanceStatus(string $InstanceStatus) Set RUNNING; is shut down; to be recycled	
- * @method string getUuid() Obtain CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
- * @method void setUuid(string $Uuid) Set CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
- * @method string getQuuid() Obtain CVM or BM Machine Unique UUID.
- * @method void setQuuid(string $Quuid) Set CVM or BM Machine Unique UUID.
- * @method integer getVulNum() Obtain Number of vulnerabilities
- * @method void setVulNum(integer $VulNum) Set Number of vulnerabilities
- * @method string getMachineIp() Obtain Host IP.
- * @method void setMachineIp(string $MachineIp) Set Host IP.
- * @method boolean getIsProVersion() Obtain Whether the edition is Pro Edition
-<li>true: yes</li>
-<li>false: no</li>
- * @method void setIsProVersion(boolean $IsProVersion) Set Whether the edition is Pro Edition
-<li>true: yes</li>
-<li>false: no</li>
- * @method string getMachineWanIp() Obtain Public IP address of a host
- * @method void setMachineWanIp(string $MachineWanIp) Set Public IP address of a host
- * @method string getPayMode() Obtain Host status
-<li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
- * @method void setPayMode(string $PayMode) Set Host status
-<li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
- * @method integer getMalwareNum() Obtain Number of Trojans
- * @method void setMalwareNum(integer $MalwareNum) Set Number of Trojans
- * @method array getTag() Obtain Tag information
- * @method void setTag(array $Tag) Set Tag information
- * @method integer getBaselineNum() Obtain Number of baseline risks
- * @method void setBaselineNum(integer $BaselineNum) Set Number of baseline risks
- * @method integer getCyberAttackNum() Obtain Number of network risks
- * @method void setCyberAttackNum(integer $CyberAttackNum) Set Number of network risks
- * @method string getSecurityStatus() Obtain Risk status
-<li>SAFE: Safe</li>
-<li>RISK: Risk</li>
-<li>UNKNOWN: Unknown</li>
- * @method void setSecurityStatus(string $SecurityStatus) Set Risk status
-<li>SAFE: Safe</li>
-<li>RISK: Risk</li>
-<li>UNKNOWN: Unknown</li>
- * @method integer getInvasionNum() Obtain Number of intrusion events
- * @method void setInvasionNum(integer $InvasionNum) Set Number of intrusion events
- * @method RegionInfo getRegionInfo() Obtain Region information
- * @method void setRegionInfo(RegionInfo $RegionInfo) Set Region information
- * @method string getInstanceState() Obtain Instance status: TERMINATED_PRO_VERSION - terminated
- * @method void setInstanceState(string $InstanceState) Set Instance status: TERMINATED_PRO_VERSION - terminated
- * @method integer getLicenseStatus() Obtain Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized
- * @method void setLicenseStatus(integer $LicenseStatus) Set Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method integer getHasAssetScan() Obtain Whether there is an available asset scanning API: 0 - no; 1 - yes
- * @method void setHasAssetScan(integer $HasAssetScan) Set Whether there is an available asset scanning API: 0 - no; 1 - yes
- * @method string getMachineType() Obtain Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
- * @method void setMachineType(string $MachineType) Set Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
- * @method string getKernelVersion() Obtain Kernel version
- * @method void setKernelVersion(string $KernelVersion) Set Kernel version
- * @method string getProtectType() Obtain Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
- * @method void setProtectType(string $ProtectType) Set Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
- * @method array getCloudTags() Obtain Cloud Tag Information
- * @method void setCloudTags(array $CloudTags) Set Cloud Tag Information
- * @method integer getIsAddedOnTheFifteen() Obtain Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
- * @method void setIsAddedOnTheFifteen(integer $IsAddedOnTheFifteen) Set Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
- * @method string getIpList() Obtain Host IP List
- * @method void setIpList(string $IpList) Set Host IP List
- * @method string getVpcId() Obtain Network
- * @method void setVpcId(string $VpcId) Set Network
- * @method MachineExtraInfo getMachineExtraInfo() Obtain Additional information
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set Additional information
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getRemark() Obtain Remarks
- * @method void setRemark(string $Remark) Set Remarks
- * @method string getAgentVersion() Obtain Host security agent version
- * @method void setAgentVersion(string $AgentVersion) Set Host security agent version
- * @method integer getAppId() Obtain 
- * @method void setAppId(integer $AppId) Set 
- * @method string getCSIPProtectType() Obtain 
- * @method void setCSIPProtectType(string $CSIPProtectType) Set 
+ * @method string getMachineName() Obtain <p>Host name.</p>
+ * @method void setMachineName(string $MachineName) Set <p>Host name.</p>
+ * @method string getMachineOs() Obtain <p>Host operating system.</p>
+ * @method void setMachineOs(string $MachineOs) Set <p>Host operating system.</p>
+ * @method string getMachineStatus() Obtain <p>Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shut down</li> <li>UNINSTALLED: Unprotected</li></p>
+ * @method void setMachineStatus(string $MachineStatus) Set <p>Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shut down</li> <li>UNINSTALLED: Unprotected</li></p>
+ * @method string getAgentStatus() Obtain <p>ONLINE: Protected; OFFLINE: Offline; UNINSTALLED: Not installed</p>
+ * @method void setAgentStatus(string $AgentStatus) Set <p>ONLINE: Protected; OFFLINE: Offline; UNINSTALLED: Not installed</p>
+ * @method string getInstanceStatus() Obtain <p>RUNNING: Running; STOPED: Shut down; EXPIRED: Pending reclamation</p>
+ * @method void setInstanceStatus(string $InstanceStatus) Set <p>RUNNING: Running; STOPED: Shut down; EXPIRED: Pending reclamation</p>
+ * @method string getUuid() Obtain <p>CWP Uuid. Returns an empty string if the client is offline long-term.</p>
+ * @method void setUuid(string $Uuid) Set <p>CWP Uuid. Returns an empty string if the client is offline long-term.</p>
+ * @method string getQuuid() Obtain <p>Unique Uuid of a CVM or BM machine.</p>
+ * @method void setQuuid(string $Quuid) Set <p>Unique Uuid of a CVM or BM machine.</p>
+ * @method integer getVulNum() Obtain <p>Number of vulnerabilities.</p>
+ * @method void setVulNum(integer $VulNum) Set <p>Number of vulnerabilities.</p>
+ * @method string getMachineIp() Obtain <p>Host IP.</p>
+ * @method void setMachineIp(string $MachineIp) Set <p>Host IP.</p>
+ * @method boolean getIsProVersion() Obtain <p>Whether the host is Pro Edition.</p><li>true: Yes</li><li>false: No</li>
+ * @method void setIsProVersion(boolean $IsProVersion) Set <p>Whether the host is Pro Edition.</p><li>true: Yes</li><li>false: No</li>
+ * @method string getMachineWanIp() Obtain <p>Host public IP.</p>
+ * @method void setMachineWanIp(string $MachineWanIp) Set <p>Host public IP.</p>
+ * @method string getPayMode() Obtain <p>Host status.</p><li>POSTPAY: Postpaid (pay-as-you-go)</li><li>PREPAY: Prepaid (monthly or yearly subscription)</li>
+ * @method void setPayMode(string $PayMode) Set <p>Host status.</p><li>POSTPAY: Postpaid (pay-as-you-go)</li><li>PREPAY: Prepaid (monthly or yearly subscription)</li>
+ * @method integer getMalwareNum() Obtain <p>Number of trojans.</p>
+ * @method void setMalwareNum(integer $MalwareNum) Set <p>Number of trojans.</p>
+ * @method array getTag() Obtain <p>Tag information</p>
+ * @method void setTag(array $Tag) Set <p>Tag information</p>
+ * @method integer getBaselineNum() Obtain <p>Number of baseline risks.</p>
+ * @method void setBaselineNum(integer $BaselineNum) Set <p>Number of baseline risks.</p>
+ * @method integer getCyberAttackNum() Obtain <p>Number of network risks.</p>
+ * @method void setCyberAttackNum(integer $CyberAttackNum) Set <p>Number of network risks.</p>
+ * @method string getSecurityStatus() Obtain <p>Risk status.</p><li>SAFE: Safe</li><li>RISK: Risk</li><li>UNKNOWN: Unknown</li>
+ * @method void setSecurityStatus(string $SecurityStatus) Set <p>Risk status.</p><li>SAFE: Safe</li><li>RISK: Risk</li><li>UNKNOWN: Unknown</li>
+ * @method integer getInvasionNum() Obtain <p>Number of intrusion events</p>
+ * @method void setInvasionNum(integer $InvasionNum) Set <p>Number of intrusion events</p>
+ * @method RegionInfo getRegionInfo() Obtain <p>Region information</p>
+ * @method void setRegionInfo(RegionInfo $RegionInfo) Set <p>Region information</p>
+ * @method string getInstanceState() Obtain <p>Instance status. TERMINATED_PRO_VERSION: terminated.</p>
+ * @method void setInstanceState(string $InstanceState) Set <p>Instance status. TERMINATED_PRO_VERSION: terminated.</p>
+ * @method integer getLicenseStatus() Obtain <p>Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized</p>
+ * @method void setLicenseStatus(integer $LicenseStatus) Set <p>Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized</p>
+ * @method integer getProjectId() Obtain <p>Project ID</p>
+ * @method void setProjectId(integer $ProjectId) Set <p>Project ID</p>
+ * @method integer getHasAssetScan() Obtain <p>Whether the asset scanning API is available. 0: No; 1: Yes</p>
+ * @method void setHasAssetScan(integer $HasAssetScan) Set <p>Whether the asset scanning API is available. 0: No; 1: Yes</p>
+ * @method string getMachineType() Obtain <p>Machine zone type. CVM: Cloud Virtual Machine; BM: Blackstone; ECM: Edge Computing Machine; LH: Lighthouse; Other: Hybrid cloud zone</p>
+ * @method void setMachineType(string $MachineType) Set <p>Machine zone type. CVM: Cloud Virtual Machine; BM: Blackstone; ECM: Edge Computing Machine; LH: Lighthouse; Other: Hybrid cloud zone</p>
+ * @method string getKernelVersion() Obtain <p>Kernel version</p>
+ * @method void setKernelVersion(string $KernelVersion) Set <p>Kernel version</p>
+ * @method string getProtectType() Obtain <p>Protection edition: BASIC_VERSION: Basic Edition; PRO_VERSION: Pro Edition; Flagship: Ultimate Edition; GENERAL_DISCOUNT: Lighthouse Edition</p>
+ * @method void setProtectType(string $ProtectType) Set <p>Protection edition: BASIC_VERSION: Basic Edition; PRO_VERSION: Pro Edition; Flagship: Ultimate Edition; GENERAL_DISCOUNT: Lighthouse Edition</p>
+ * @method array getCloudTags() Obtain <p>Cloud tag information</p>
+ * @method void setCloudTags(array $CloudTags) Set <p>Cloud tag information</p>
+ * @method integer getIsAddedOnTheFifteen() Obtain <p>Whether the host was added within the last 15 days. 0: No; 1: Yes</p>
+ * @method void setIsAddedOnTheFifteen(integer $IsAddedOnTheFifteen) Set <p>Whether the host was added within the last 15 days. 0: No; 1: Yes</p>
+ * @method string getIpList() Obtain <p>Host IP list</p>
+ * @method void setIpList(string $IpList) Set <p>Host IP list</p>
+ * @method string getVpcId() Obtain <p>Network</p>
+ * @method void setVpcId(string $VpcId) Set <p>Network</p>
+ * @method MachineExtraInfo getMachineExtraInfo() Obtain <p>Additional information</p>
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) Set <p>Additional information</p>
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method string getRemark() Obtain <p>Remarks</p>
+ * @method void setRemark(string $Remark) Set <p>Remarks</p>
+ * @method string getAgentVersion() Obtain <p>CWP agent version</p>
+ * @method void setAgentVersion(string $AgentVersion) Set <p>CWP agent version</p>
+ * @method integer getAppId() Obtain <p>APPID of the machine</p>
+ * @method void setAppId(integer $AppId) Set <p>APPID of the machine</p>
+ * @method string getCSIPProtectType() Obtain <p>CSC paid edition</p>
+ * @method void setCSIPProtectType(string $CSIPProtectType) Set <p>CSC paid edition</p>
  */
 class Machine extends AbstractModel
 {
     /**
-     * @var string Host name.
+     * @var string <p>Host name.</p>
      */
     public $MachineName;
 
     /**
-     * @var string Host System.
+     * @var string <p>Host operating system.</p>
      */
     public $MachineOs;
 
     /**
-     * @var string Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
+     * @var string <p>Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shut down</li> <li>UNINSTALLED: Unprotected</li></p>
      */
     public $MachineStatus;
 
     /**
-     * @var string ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
+     * @var string <p>ONLINE: Protected; OFFLINE: Offline; UNINSTALLED: Not installed</p>
      */
     public $AgentStatus;
 
     /**
-     * @var string RUNNING; is shut down; to be recycled	
+     * @var string <p>RUNNING: Running; STOPED: Shut down; EXPIRED: Pending reclamation</p>
      */
     public $InstanceStatus;
 
     /**
-     * @var string CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+     * @var string <p>CWP Uuid. Returns an empty string if the client is offline long-term.</p>
      */
     public $Uuid;
 
     /**
-     * @var string CVM or BM Machine Unique UUID.
+     * @var string <p>Unique Uuid of a CVM or BM machine.</p>
      */
     public $Quuid;
 
     /**
-     * @var integer Number of vulnerabilities
+     * @var integer <p>Number of vulnerabilities.</p>
      */
     public $VulNum;
 
     /**
-     * @var string Host IP.
+     * @var string <p>Host IP.</p>
      */
     public $MachineIp;
 
     /**
-     * @var boolean Whether the edition is Pro Edition
-<li>true: yes</li>
-<li>false: no</li>
+     * @var boolean <p>Whether the host is Pro Edition.</p><li>true: Yes</li><li>false: No</li>
      */
     public $IsProVersion;
 
     /**
-     * @var string Public IP address of a host
+     * @var string <p>Host public IP.</p>
      */
     public $MachineWanIp;
 
     /**
-     * @var string Host status
-<li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
+     * @var string <p>Host status.</p><li>POSTPAY: Postpaid (pay-as-you-go)</li><li>PREPAY: Prepaid (monthly or yearly subscription)</li>
      */
     public $PayMode;
 
     /**
-     * @var integer Number of Trojans
+     * @var integer <p>Number of trojans.</p>
      */
     public $MalwareNum;
 
     /**
-     * @var array Tag information
+     * @var array <p>Tag information</p>
      */
     public $Tag;
 
     /**
-     * @var integer Number of baseline risks
+     * @var integer <p>Number of baseline risks.</p>
      */
     public $BaselineNum;
 
     /**
-     * @var integer Number of network risks
+     * @var integer <p>Number of network risks.</p>
      */
     public $CyberAttackNum;
 
     /**
-     * @var string Risk status
-<li>SAFE: Safe</li>
-<li>RISK: Risk</li>
-<li>UNKNOWN: Unknown</li>
+     * @var string <p>Risk status.</p><li>SAFE: Safe</li><li>RISK: Risk</li><li>UNKNOWN: Unknown</li>
      */
     public $SecurityStatus;
 
     /**
-     * @var integer Number of intrusion events
+     * @var integer <p>Number of intrusion events</p>
      */
     public $InvasionNum;
 
     /**
-     * @var RegionInfo Region information
+     * @var RegionInfo <p>Region information</p>
      */
     public $RegionInfo;
 
     /**
-     * @var string Instance status: TERMINATED_PRO_VERSION - terminated
+     * @var string <p>Instance status. TERMINATED_PRO_VERSION: terminated.</p>
      */
     public $InstanceState;
 
     /**
-     * @var integer Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized
+     * @var integer <p>Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized</p>
      */
     public $LicenseStatus;
 
     /**
-     * @var integer Project ID
+     * @var integer <p>Project ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer Whether there is an available asset scanning API: 0 - no; 1 - yes
+     * @var integer <p>Whether the asset scanning API is available. 0: No; 1: Yes</p>
      */
     public $HasAssetScan;
 
     /**
-     * @var string Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+     * @var string <p>Machine zone type. CVM: Cloud Virtual Machine; BM: Blackstone; ECM: Edge Computing Machine; LH: Lighthouse; Other: Hybrid cloud zone</p>
      */
     public $MachineType;
 
     /**
-     * @var string Kernel version
+     * @var string <p>Kernel version</p>
      */
     public $KernelVersion;
 
     /**
-     * @var string Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
+     * @var string <p>Protection edition: BASIC_VERSION: Basic Edition; PRO_VERSION: Pro Edition; Flagship: Ultimate Edition; GENERAL_DISCOUNT: Lighthouse Edition</p>
      */
     public $ProtectType;
 
     /**
-     * @var array Cloud Tag Information
+     * @var array <p>Cloud tag information</p>
      */
     public $CloudTags;
 
     /**
-     * @var integer Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
+     * @var integer <p>Whether the host was added within the last 15 days. 0: No; 1: Yes</p>
      */
     public $IsAddedOnTheFifteen;
 
     /**
-     * @var string Host IP List
+     * @var string <p>Host IP list</p>
      */
     public $IpList;
 
     /**
-     * @var string Network
+     * @var string <p>Network</p>
      */
     public $VpcId;
 
     /**
-     * @var MachineExtraInfo Additional information
+     * @var MachineExtraInfo <p>Additional information</p>
      */
     public $MachineExtraInfo;
 
     /**
-     * @var string Instance ID
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Remarks
+     * @var string <p>Remarks</p>
      */
     public $Remark;
 
     /**
-     * @var string Host security agent version
+     * @var string <p>CWP agent version</p>
      */
     public $AgentVersion;
 
     /**
-     * @var integer 
+     * @var integer <p>APPID of the machine</p>
      */
     public $AppId;
 
     /**
-     * @var string 
+     * @var string <p>CSC paid edition</p>
      */
     public $CSIPProtectType;
 
     /**
-     * @param string $MachineName Host name.
-     * @param string $MachineOs Host System.
-     * @param string $MachineStatus Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
-     * @param string $AgentStatus ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
-     * @param string $InstanceStatus RUNNING; is shut down; to be recycled	
-     * @param string $Uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
-     * @param string $Quuid CVM or BM Machine Unique UUID.
-     * @param integer $VulNum Number of vulnerabilities
-     * @param string $MachineIp Host IP.
-     * @param boolean $IsProVersion Whether the edition is Pro Edition
-<li>true: yes</li>
-<li>false: no</li>
-     * @param string $MachineWanIp Public IP address of a host
-     * @param string $PayMode Host status
-<li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
-     * @param integer $MalwareNum Number of Trojans
-     * @param array $Tag Tag information
-     * @param integer $BaselineNum Number of baseline risks
-     * @param integer $CyberAttackNum Number of network risks
-     * @param string $SecurityStatus Risk status
-<li>SAFE: Safe</li>
-<li>RISK: Risk</li>
-<li>UNKNOWN: Unknown</li>
-     * @param integer $InvasionNum Number of intrusion events
-     * @param RegionInfo $RegionInfo Region information
-     * @param string $InstanceState Instance status: TERMINATED_PRO_VERSION - terminated
-     * @param integer $LicenseStatus Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized
-     * @param integer $ProjectId Project ID
-     * @param integer $HasAssetScan Whether there is an available asset scanning API: 0 - no; 1 - yes
-     * @param string $MachineType Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
-     * @param string $KernelVersion Kernel version
-     * @param string $ProtectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
-     * @param array $CloudTags Cloud Tag Information
-     * @param integer $IsAddedOnTheFifteen Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
-     * @param string $IpList Host IP List
-     * @param string $VpcId Network
-     * @param MachineExtraInfo $MachineExtraInfo Additional information
-     * @param string $InstanceId Instance ID
-     * @param string $Remark Remarks
-     * @param string $AgentVersion Host security agent version
-     * @param integer $AppId 
-     * @param string $CSIPProtectType 
+     * @param string $MachineName <p>Host name.</p>
+     * @param string $MachineOs <p>Host operating system.</p>
+     * @param string $MachineStatus <p>Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shut down</li> <li>UNINSTALLED: Unprotected</li></p>
+     * @param string $AgentStatus <p>ONLINE: Protected; OFFLINE: Offline; UNINSTALLED: Not installed</p>
+     * @param string $InstanceStatus <p>RUNNING: Running; STOPED: Shut down; EXPIRED: Pending reclamation</p>
+     * @param string $Uuid <p>CWP Uuid. Returns an empty string if the client is offline long-term.</p>
+     * @param string $Quuid <p>Unique Uuid of a CVM or BM machine.</p>
+     * @param integer $VulNum <p>Number of vulnerabilities.</p>
+     * @param string $MachineIp <p>Host IP.</p>
+     * @param boolean $IsProVersion <p>Whether the host is Pro Edition.</p><li>true: Yes</li><li>false: No</li>
+     * @param string $MachineWanIp <p>Host public IP.</p>
+     * @param string $PayMode <p>Host status.</p><li>POSTPAY: Postpaid (pay-as-you-go)</li><li>PREPAY: Prepaid (monthly or yearly subscription)</li>
+     * @param integer $MalwareNum <p>Number of trojans.</p>
+     * @param array $Tag <p>Tag information</p>
+     * @param integer $BaselineNum <p>Number of baseline risks.</p>
+     * @param integer $CyberAttackNum <p>Number of network risks.</p>
+     * @param string $SecurityStatus <p>Risk status.</p><li>SAFE: Safe</li><li>RISK: Risk</li><li>UNKNOWN: Unknown</li>
+     * @param integer $InvasionNum <p>Number of intrusion events</p>
+     * @param RegionInfo $RegionInfo <p>Region information</p>
+     * @param string $InstanceState <p>Instance status. TERMINATED_PRO_VERSION: terminated.</p>
+     * @param integer $LicenseStatus <p>Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized</p>
+     * @param integer $ProjectId <p>Project ID</p>
+     * @param integer $HasAssetScan <p>Whether the asset scanning API is available. 0: No; 1: Yes</p>
+     * @param string $MachineType <p>Machine zone type. CVM: Cloud Virtual Machine; BM: Blackstone; ECM: Edge Computing Machine; LH: Lighthouse; Other: Hybrid cloud zone</p>
+     * @param string $KernelVersion <p>Kernel version</p>
+     * @param string $ProtectType <p>Protection edition: BASIC_VERSION: Basic Edition; PRO_VERSION: Pro Edition; Flagship: Ultimate Edition; GENERAL_DISCOUNT: Lighthouse Edition</p>
+     * @param array $CloudTags <p>Cloud tag information</p>
+     * @param integer $IsAddedOnTheFifteen <p>Whether the host was added within the last 15 days. 0: No; 1: Yes</p>
+     * @param string $IpList <p>Host IP list</p>
+     * @param string $VpcId <p>Network</p>
+     * @param MachineExtraInfo $MachineExtraInfo <p>Additional information</p>
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param string $Remark <p>Remarks</p>
+     * @param string $AgentVersion <p>CWP agent version</p>
+     * @param integer $AppId <p>APPID of the machine</p>
+     * @param string $CSIPProtectType <p>CSC paid edition</p>
      */
     function __construct()
     {

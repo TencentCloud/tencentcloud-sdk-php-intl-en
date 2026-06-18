@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
  * @method integer getType() Obtain Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
  * @method void setType(integer $Type) Set Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
 class ModifyRiskCenterRiskStatusRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyRiskCenterRiskStatusRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var array Group Account Member ID
+     */
+    public $MemberId;
+
+    /**
      * @param array $RiskStatusKeys Data of risk assets
      * @param integer $Status Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
      * @param integer $Type Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
+     * @param array $MemberId Group Account Member ID
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class ModifyRiskCenterRiskStatusRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
         }
     }
 }

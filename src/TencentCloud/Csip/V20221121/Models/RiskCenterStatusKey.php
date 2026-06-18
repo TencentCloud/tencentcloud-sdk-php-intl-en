@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getId() Obtain Risk ID
  * @method void setId(string $Id) Set Risk ID
- * @method string getAppId() Obtain User AppId
- * @method void setAppId(string $AppId) Set User AppId
  * @method string getPublicIPDomain() Obtain Public IP/domain name
  * @method void setPublicIPDomain(string $PublicIPDomain) Set Public IP/domain name
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getAppId() Obtain User AppId
+ * @method void setAppId(string $AppId) Set User AppId
  */
 class RiskCenterStatusKey extends AbstractModel
 {
@@ -35,11 +35,6 @@ class RiskCenterStatusKey extends AbstractModel
      * @var string Risk ID
      */
     public $Id;
-
-    /**
-     * @var string User AppId
-     */
-    public $AppId;
 
     /**
      * @var string Public IP/domain name
@@ -52,10 +47,15 @@ class RiskCenterStatusKey extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string User AppId
+     */
+    public $AppId;
+
+    /**
      * @param string $Id Risk ID
-     * @param string $AppId User AppId
      * @param string $PublicIPDomain Public IP/domain name
      * @param string $InstanceId Instance ID.
+     * @param string $AppId User AppId
      */
     function __construct()
     {
@@ -74,16 +74,16 @@ class RiskCenterStatusKey extends AbstractModel
             $this->Id = $param["Id"];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
-        }
-
         if (array_key_exists("PublicIPDomain",$param) and $param["PublicIPDomain"] !== null) {
             $this->PublicIPDomain = $param["PublicIPDomain"];
         }
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
         }
     }
 }

@@ -27,34 +27,34 @@ If multiple values exist in one filter, the logical relationship between these v
 * If a single filter has multiple values, the number of values cannot exceed 5.
 
  *
- * @method string getName() Obtain Name of filter key
- * @method void setName(string $Name) Set Name of filter key
- * @method array getValues() Obtain One or more filter values
- * @method void setValues(array $Values) Set One or more filter values
- * @method boolean getExactMatch() Obtain Fuzzy search
- * @method void setExactMatch(boolean $ExactMatch) Set Fuzzy search
+ * @method string getName() Obtain <p>Name of filter key.</p>
+ * @method void setName(string $Name) Set <p>Name of filter key.</p>
+ * @method array getValues() Obtain <p>One or more filter values.</p>
+ * @method void setValues(array $Values) Set <p>One or more filter values.</p>
+ * @method boolean getExactMatch() Obtain <p>Fuzzy search</p>
+ * @method void setExactMatch(boolean $ExactMatch) Set <p>Fuzzy search</p>
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string Name of filter key
+     * @var string <p>Name of filter key.</p>
      */
     public $Name;
 
     /**
-     * @var array One or more filter values
+     * @var array <p>One or more filter values.</p>
      */
     public $Values;
 
     /**
-     * @var boolean Fuzzy search
+     * @var boolean <p>Fuzzy search</p>
      */
     public $ExactMatch;
 
     /**
-     * @param string $Name Name of filter key
-     * @param array $Values One or more filter values
-     * @param boolean $ExactMatch Fuzzy search
+     * @param string $Name <p>Name of filter key.</p>
+     * @param array $Values <p>One or more filter values.</p>
+     * @param boolean $ExactMatch <p>Fuzzy search</p>
      */
     function __construct()
     {

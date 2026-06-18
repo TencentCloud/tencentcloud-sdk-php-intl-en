@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLoginWhiteRecord request structure.
  *
- * @method string getUserName() Obtain Allowlisted users (Multiple users are separated by commas.)
- * @method void setUserName(string $UserName) Set Allowlisted users (Multiple users are separated by commas.)
- * @method string getSrcIp() Obtain Allowlisted dimension information recorded after the update
- * @method void setSrcIp(string $SrcIp) Set Allowlisted dimension information recorded after the update
- * @method string getStartTime() Obtain Start time
- * @method void setStartTime(string $StartTime) Set Start time
- * @method string getEndTime() Obtain End time
- * @method void setEndTime(string $EndTime) Set End time
- * @method string getRemark() Obtain Remarks
- * @method void setRemark(string $Remark) Set Remarks
- * @method integer getIsGlobal() Obtain Whether it applies to all servers: 0: no; 1: yes
- * @method void setIsGlobal(integer $IsGlobal) Set Whether it applies to all servers: 0: no; 1: yes
- * @method integer getId() Obtain Allowlist ID
- * @method void setId(integer $Id) Set Allowlist ID
- * @method array getHosts() Obtain Server list
- * @method void setHosts(array $Hosts) Set Server list
- * @method array getPlaces() Obtain Region list
- * @method void setPlaces(array $Places) Set Region list
+ * @method string getUserName() Obtain <p>Allowlisted users (multiple users separated by commas)</p>
+ * @method void setUserName(string $UserName) Set <p>Allowlisted users (multiple users separated by commas)</p>
+ * @method string getSrcIp() Obtain <p>Allowlisted dimension information recorded after the update</p>
+ * @method void setSrcIp(string $SrcIp) Set <p>Allowlisted dimension information recorded after the update</p>
+ * @method string getStartTime() Obtain <p>Start time.</p>
+ * @method void setStartTime(string $StartTime) Set <p>Start time.</p>
+ * @method string getEndTime() Obtain <p>End time.</p>
+ * @method void setEndTime(string $EndTime) Set <p>End time.</p>
+ * @method string getRemark() Obtain <p>Remark</p>
+ * @method void setRemark(string $Remark) Set <p>Remark</p>
+ * @method integer getIsGlobal() Obtain <p>Whether it applies to all servers: 0 - no; 1 - yes</p>
+ * @method void setIsGlobal(integer $IsGlobal) Set <p>Whether it applies to all servers: 0 - no; 1 - yes</p>
+ * @method integer getId() Obtain <p>Allowlist ID</p>
+ * @method void setId(integer $Id) Set <p>Allowlist ID</p>
+ * @method array getHosts() Obtain <p>Server list</p>
+ * @method void setHosts(array $Hosts) Set <p>Server list</p>
+ * @method array getPlaces() Obtain <p>Region list</p>
+ * @method void setPlaces(array $Places) Set <p>Region list</p>
  */
 class ModifyLoginWhiteRecordRequest extends AbstractModel
 {
     /**
-     * @var string Allowlisted users (Multiple users are separated by commas.)
+     * @var string <p>Allowlisted users (multiple users separated by commas)</p>
      */
     public $UserName;
 
     /**
-     * @var string Allowlisted dimension information recorded after the update
+     * @var string <p>Allowlisted dimension information recorded after the update</p>
      */
     public $SrcIp;
 
     /**
-     * @var string Start time
+     * @var string <p>Start time.</p>
      */
     public $StartTime;
 
     /**
-     * @var string End time
+     * @var string <p>End time.</p>
      */
     public $EndTime;
 
     /**
-     * @var string Remarks
+     * @var string <p>Remark</p>
      */
     public $Remark;
 
     /**
-     * @var integer Whether it applies to all servers: 0: no; 1: yes
+     * @var integer <p>Whether it applies to all servers: 0 - no; 1 - yes</p>
      */
     public $IsGlobal;
 
     /**
-     * @var integer Allowlist ID
+     * @var integer <p>Allowlist ID</p>
      */
     public $Id;
 
     /**
-     * @var array Server list
+     * @var array <p>Server list</p>
      */
     public $Hosts;
 
     /**
-     * @var array Region list
+     * @var array <p>Region list</p>
      */
     public $Places;
 
     /**
-     * @param string $UserName Allowlisted users (Multiple users are separated by commas.)
-     * @param string $SrcIp Allowlisted dimension information recorded after the update
-     * @param string $StartTime Start time
-     * @param string $EndTime End time
-     * @param string $Remark Remarks
-     * @param integer $IsGlobal Whether it applies to all servers: 0: no; 1: yes
-     * @param integer $Id Allowlist ID
-     * @param array $Hosts Server list
-     * @param array $Places Region list
+     * @param string $UserName <p>Allowlisted users (multiple users separated by commas)</p>
+     * @param string $SrcIp <p>Allowlisted dimension information recorded after the update</p>
+     * @param string $StartTime <p>Start time.</p>
+     * @param string $EndTime <p>End time.</p>
+     * @param string $Remark <p>Remark</p>
+     * @param integer $IsGlobal <p>Whether it applies to all servers: 0 - no; 1 - yes</p>
+     * @param integer $Id <p>Allowlist ID</p>
+     * @param array $Hosts <p>Server list</p>
+     * @param array $Places <p>Region list</p>
      */
     function __construct()
     {

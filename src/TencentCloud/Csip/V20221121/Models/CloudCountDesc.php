@@ -18,40 +18,40 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Multi-cloud account statistics
+ * Multi-Cloud Account Statistics
  *
- * @method integer getCloudType() Obtain 0 represents Tencent Cloud
-1 represents AWS
- * @method void setCloudType(integer $CloudType) Set 0 represents Tencent Cloud
-1 represents AWS
- * @method integer getCloudCount() Obtain Account quantity
- * @method void setCloudCount(integer $CloudCount) Set Account quantity
- * @method string getCloudDesc() Obtain The cloud account type description
- * @method void setCloudDesc(string $CloudDesc) Set The cloud account type description
+ * @method integer getCloudType() Obtain 0 means Tencent Cloud
+1 indicates AWS
+ * @method void setCloudType(integer $CloudType) Set 0 means Tencent Cloud
+1 indicates AWS
+ * @method integer getCloudCount() Obtain Account Quantity
+ * @method void setCloudCount(integer $CloudCount) Set Account Quantity
+ * @method string getCloudDesc() Obtain Description of The Cloud Account Type
+ * @method void setCloudDesc(string $CloudDesc) Set Description of The Cloud Account Type
  */
 class CloudCountDesc extends AbstractModel
 {
     /**
-     * @var integer 0 represents Tencent Cloud
-1 represents AWS
+     * @var integer 0 means Tencent Cloud
+1 indicates AWS
      */
     public $CloudType;
 
     /**
-     * @var integer Account quantity
+     * @var integer Account Quantity
      */
     public $CloudCount;
 
     /**
-     * @var string The cloud account type description
+     * @var string Description of The Cloud Account Type
      */
     public $CloudDesc;
 
     /**
-     * @param integer $CloudType 0 represents Tencent Cloud
-1 represents AWS
-     * @param integer $CloudCount Account quantity
-     * @param string $CloudDesc The cloud account type description
+     * @param integer $CloudType 0 means Tencent Cloud
+1 indicates AWS
+     * @param integer $CloudCount Account Quantity
+     * @param string $CloudDesc Description of The Cloud Account Type
      */
     function __construct()
     {

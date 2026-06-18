@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExposePath request structure.
  *
- * @method array getMemberId() Obtain Group Account Member ID
- * @method void setMemberId(array $MemberId) Set Group Account Member ID
+ * @method array getMemberId() Obtain <p>Group account member id</p>
+ * @method void setMemberId(array $MemberId) Set <p>Group account member id</p>
  * @method string getAssetId() Obtain Asset ID.
  * @method void setAssetId(string $AssetId) Set Asset ID.
  * @method string getIp() Obtain Asset IP.
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeExposePathRequest extends AbstractModel
 {
     /**
-     * @var array Group Account Member ID
+     * @var array <p>Group account member id</p>
      */
     public $MemberId;
 
@@ -59,7 +59,7 @@ class DescribeExposePathRequest extends AbstractModel
     public $Port;
 
     /**
-     * @param array $MemberId Group Account Member ID
+     * @param array $MemberId <p>Group account member id</p>
      * @param string $AssetId Asset ID.
      * @param string $Ip Asset IP.
      * @param string $Domain Asset domain name.

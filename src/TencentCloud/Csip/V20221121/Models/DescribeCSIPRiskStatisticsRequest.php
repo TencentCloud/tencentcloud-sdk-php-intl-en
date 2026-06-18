@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCSIPRiskStatistics request structure.
  *
- * @method array getMemberId() Obtain Group Account Member ID
- * @method void setMemberId(array $MemberId) Set Group Account Member ID
+ * @method array getMemberId() Obtain <p>Group account member id</p>
+ * @method void setMemberId(array $MemberId) Set <p>Group account member id</p>
  * @method Filter getFilter() Obtain Filtered Content
  * @method void setFilter(Filter $Filter) Set Filtered Content
  */
 class DescribeCSIPRiskStatisticsRequest extends AbstractModel
 {
     /**
-     * @var array Group Account Member ID
+     * @var array <p>Group account member id</p>
      */
     public $MemberId;
 
@@ -38,7 +38,7 @@ class DescribeCSIPRiskStatisticsRequest extends AbstractModel
     public $Filter;
 
     /**
-     * @param array $MemberId Group Account Member ID
+     * @param array $MemberId <p>Group account member id</p>
      * @param Filter $Filter Filtered Content
      */
     function __construct()

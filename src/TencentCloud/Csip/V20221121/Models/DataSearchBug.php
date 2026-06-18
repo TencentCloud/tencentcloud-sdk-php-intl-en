@@ -22,34 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStateCode() Obtain Query status code
  * @method void setStateCode(string $StateCode) Set Query status code
- * @method array getDataBug() Obtain  
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setDataBug(array $DataBug) Set  
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getDataAsset() Obtain None
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setDataAsset(array $DataAsset) Set None
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method boolean getVSSScan() Obtain `true`: Support vulnerability scan; `false`: Do not support vulnerability scan
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setVSSScan(boolean $VSSScan) Set `true`: Support vulnerability scan; `false`: Do not support vulnerability scan
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getCWPScan() Obtain `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setCWPScan(string $CWPScan) Set `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getCFWPatch() Obtain `1`: Support virtual patches; `0` or null: Do not support
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setCFWPatch(string $CFWPatch) Set `1`: Support virtual patches; `0` or null: Do not support
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getWafPatch() Obtain `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setWafPatch(integer $WafPatch) Set `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getCWPFix() Obtain `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setCWPFix(integer $CWPFix) Set `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method array getDataBug() Obtain Vulnerability details
+ * @method void setDataBug(array $DataBug) Set Vulnerability details
+ * @method array getDataAsset() Obtain Vulnerability impact assets details
+ * @method void setDataAsset(array $DataAsset) Set Vulnerability impact assets details
+ * @method boolean getVSSScan() Obtain True supports scanning. False does not support scanning.
+ * @method void setVSSScan(boolean $VSSScan) Set True supports scanning. False does not support scanning.
+ * @method string getCWPScan() Obtain 0-Not Supported; 1-Supported
+ * @method void setCWPScan(string $CWPScan) Set 0-Not Supported; 1-Supported
+ * @method string getCFWPatch() Obtain 1 indicates virtual patches supported, 0 or null indicates not supported.
+ * @method void setCFWPatch(string $CFWPatch) Set 1 indicates virtual patches supported, 0 or null indicates not supported.
+ * @method integer getWafPatch() Obtain 0-Not Supported; 1-Supported
+ * @method void setWafPatch(integer $WafPatch) Set 0-Not Supported; 1-Supported
+ * @method integer getCWPFix() Obtain 0-Not Supported; 1-Supported
+ * @method void setCWPFix(integer $CWPFix) Set 0-Not Supported; 1-Supported
+ * @method array getDataSupport() Obtain Product Support Status
+ * @method void setDataSupport(array $DataSupport) Set Product Support Status
+ * @method string getCveId() Obtain cveId
+ * @method void setCveId(string $CveId) Set cveId
  */
 class DataSearchBug extends AbstractModel
 {
@@ -59,63 +49,61 @@ class DataSearchBug extends AbstractModel
     public $StateCode;
 
     /**
-     * @var array  
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Vulnerability details
      */
     public $DataBug;
 
     /**
-     * @var array None
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Vulnerability impact assets details
      */
     public $DataAsset;
 
     /**
-     * @var boolean `true`: Support vulnerability scan; `false`: Do not support vulnerability scan
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var boolean True supports scanning. False does not support scanning.
      */
     public $VSSScan;
 
     /**
-     * @var string `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string 0-Not Supported; 1-Supported
      */
     public $CWPScan;
 
     /**
-     * @var string `1`: Support virtual patches; `0` or null: Do not support
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string 1 indicates virtual patches supported, 0 or null indicates not supported.
      */
     public $CFWPatch;
 
     /**
-     * @var integer `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer 0-Not Supported; 1-Supported
      */
     public $WafPatch;
 
     /**
-     * @var integer `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer 0-Not Supported; 1-Supported
      */
     public $CWPFix;
 
     /**
+     * @var array Product Support Status
+     */
+    public $DataSupport;
+
+    /**
+     * @var string cveId
+     */
+    public $CveId;
+
+    /**
      * @param string $StateCode Query status code
-     * @param array $DataBug  
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $DataAsset None
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param boolean $VSSScan `true`: Support vulnerability scan; `false`: Do not support vulnerability scan
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $CWPScan `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $CFWPatch `1`: Support virtual patches; `0` or null: Do not support
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $WafPatch `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $CWPFix `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param array $DataBug Vulnerability details
+     * @param array $DataAsset Vulnerability impact assets details
+     * @param boolean $VSSScan True supports scanning. False does not support scanning.
+     * @param string $CWPScan 0-Not Supported; 1-Supported
+     * @param string $CFWPatch 1 indicates virtual patches supported, 0 or null indicates not supported.
+     * @param integer $WafPatch 0-Not Supported; 1-Supported
+     * @param integer $CWPFix 0-Not Supported; 1-Supported
+     * @param array $DataSupport Product Support Status
+     * @param string $CveId cveId
      */
     function __construct()
     {
@@ -170,6 +158,19 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
         if (array_key_exists("CWPFix",$param) and $param["CWPFix"] !== null) {
             $this->CWPFix = $param["CWPFix"];
+        }
+
+        if (array_key_exists("DataSupport",$param) and $param["DataSupport"] !== null) {
+            $this->DataSupport = [];
+            foreach ($param["DataSupport"] as $key => $value){
+                $obj = new ProductSupport();
+                $obj->deserialize($value);
+                array_push($this->DataSupport, $obj);
+            }
+        }
+
+        if (array_key_exists("CveId",$param) and $param["CveId"] !== null) {
+            $this->CveId = $param["CveId"];
         }
     }
 }

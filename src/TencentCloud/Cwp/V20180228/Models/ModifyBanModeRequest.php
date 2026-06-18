@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBanMode request structure.
  *
- * @method string getMode() Obtain Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
- * @method void setMode(string $Mode) Set Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
- * @method integer getTtl() Obtain Blocking time. This parameter is valid in standard blocking mode.
- * @method void setTtl(integer $Ttl) Set Blocking time. This parameter is valid in standard blocking mode.
+ * @method string getMode() Obtain <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
+ * @method void setMode(string $Mode) Set <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
+ * @method integer getTtl() Obtain <p>Blocking duration, used in standard blocking mode</p>
+ * @method void setTtl(integer $Ttl) Set <p>Blocking duration, used in standard blocking mode</p>
  */
 class ModifyBanModeRequest extends AbstractModel
 {
     /**
-     * @var string Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
+     * @var string <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
      */
     public $Mode;
 
     /**
-     * @var integer Blocking time. This parameter is valid in standard blocking mode.
+     * @var integer <p>Blocking duration, used in standard blocking mode</p>
      */
     public $Ttl;
 
     /**
-     * @param string $Mode Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
-     * @param integer $Ttl Blocking time. This parameter is valid in standard blocking mode.
+     * @param string $Mode <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
+     * @param integer $Ttl <p>Blocking duration, used in standard blocking mode</p>
      */
     function __construct()
     {

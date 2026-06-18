@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() Obtain Task ID
  * @method void setTaskId(string $TaskId) Set Task ID
+ * @method string getTargetAppId() Obtain APP ID
+ * @method void setTargetAppId(string $TargetAppId) Set APP ID
  */
 class TaskIdListKey extends AbstractModel
 {
@@ -31,7 +33,13 @@ class TaskIdListKey extends AbstractModel
     public $TaskId;
 
     /**
+     * @var string APP ID
+     */
+    public $TargetAppId;
+
+    /**
      * @param string $TaskId Task ID
+     * @param string $TargetAppId APP ID
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class TaskIdListKey extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("TargetAppId",$param) and $param["TargetAppId"] !== null) {
+            $this->TargetAppId = $param["TargetAppId"];
         }
     }
 }

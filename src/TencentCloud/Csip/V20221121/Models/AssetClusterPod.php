@@ -26,70 +26,40 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(string $Uin) Set Tenant UIN
  * @method string getNick() Obtain Tenant name
  * @method void setNick(string $Nick) Set Tenant name
- * @method string getRegion() Obtain Region
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getRegion() Obtain Region.
+ * @method void setRegion(string $Region) Set Region.
  * @method string getAssetId() Obtain Pod ID
  * @method void setAssetId(string $AssetId) Set Pod ID
  * @method string getAssetName() Obtain Pod name
  * @method void setAssetName(string $AssetName) Set Pod name
- * @method string getInstanceCreateTime() Obtain Creation time of the pod
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setInstanceCreateTime(string $InstanceCreateTime) Set Creation time of the pod
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getInstanceCreateTime() Obtain Pod Creation Time
+ * @method void setInstanceCreateTime(string $InstanceCreateTime) Set Pod Creation Time
  * @method string getNamespace() Obtain Namespace
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setNamespace(string $Namespace) Set Namespace
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain Status
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Status
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getClusterId() Obtain Cluster ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setClusterId(string $ClusterId) Set Cluster ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getClusterName() Obtain Cluster name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setClusterName(string $ClusterName) Set Cluster name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getMachineId() Obtain Server ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setMachineId(string $MachineId) Set Server ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getMachineName() Obtain Server name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setMachineName(string $MachineName) Set Server name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getPodIp() Obtain Pod IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPodIp(string $PodIp) Set Pod IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getServiceCount() Obtain Number of associated services
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setServiceCount(integer $ServiceCount) Set Number of associated services
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getContainerCount() Obtain Number of associated containers
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setContainerCount(integer $ContainerCount) Set Number of associated containers
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getPublicIp() Obtain Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPublicIp(string $PublicIp) Set Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getPrivateIp() Obtain Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPrivateIp(string $PrivateIp) Set Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsCore() Obtain Whether it's a critical asset. Values: `1` (critical asset), `0` (non-critical asset)
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsCore(integer $IsCore) Set Whether it's a critical asset. Values: `1` (critical asset), `0` (non-critical asset)
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsNewAsset() Obtain Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsNewAsset(integer $IsNewAsset) Set Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain Status.
+ * @method void setStatus(string $Status) Set Status.
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method string getClusterName() Obtain Cluster name.
+ * @method void setClusterName(string $ClusterName) Set Cluster name.
+ * @method string getMachineId() Obtain Host ID
+ * @method void setMachineId(string $MachineId) Set Host ID
+ * @method string getMachineName() Obtain host name
+ * @method void setMachineName(string $MachineName) Set host name
+ * @method string getPodIp() Obtain pod ip
+ * @method void setPodIp(string $PodIp) Set pod ip
+ * @method integer getServiceCount() Obtain Associated Service Count
+ * @method void setServiceCount(integer $ServiceCount) Set Associated Service Count
+ * @method integer getContainerCount() Obtain Associated container number
+ * @method void setContainerCount(integer $ContainerCount) Set Associated container number
+ * @method string getPublicIp() Obtain Public IP address
+ * @method void setPublicIp(string $PublicIp) Set Public IP address
+ * @method string getPrivateIp() Obtain Private IP address
+ * @method void setPrivateIp(string $PrivateIp) Set Private IP address
+ * @method integer getIsCore() Obtain Whether it is core. 1: Core; 2: Non-core.
+ * @method void setIsCore(integer $IsCore) Set Whether it is core. 1: Core; 2: Non-core.
+ * @method integer getIsNewAsset() Obtain New Asset or Not. 1: New
+ * @method void setIsNewAsset(integer $IsNewAsset) Set New Asset or Not. 1: New
  */
 class AssetClusterPod extends AbstractModel
 {
@@ -109,8 +79,7 @@ class AssetClusterPod extends AbstractModel
     public $Nick;
 
     /**
-     * @var string Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Region.
      */
     public $Region;
 
@@ -125,86 +94,72 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $AssetName;
 
     /**
-     * @var string Creation time of the pod
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Pod Creation Time
      */
     public $InstanceCreateTime;
 
     /**
      * @var string Namespace
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $Namespace;
 
     /**
-     * @var string Status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Status.
      */
     public $Status;
 
     /**
-     * @var string Cluster ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var string Cluster name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Cluster name.
      */
     public $ClusterName;
 
     /**
-     * @var string Server ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Host ID
      */
     public $MachineId;
 
     /**
-     * @var string Server name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string host name
      */
     public $MachineName;
 
     /**
-     * @var string Pod IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string pod ip
      */
     public $PodIp;
 
     /**
-     * @var integer Number of associated services
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Associated Service Count
      */
     public $ServiceCount;
 
     /**
-     * @var integer Number of associated containers
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Associated container number
      */
     public $ContainerCount;
 
     /**
-     * @var string Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Public IP address
      */
     public $PublicIp;
 
     /**
-     * @var string Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Private IP address
      */
     public $PrivateIp;
 
     /**
-     * @var integer Whether it's a critical asset. Values: `1` (critical asset), `0` (non-critical asset)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Whether it is core. 1: Core; 2: Non-core.
      */
     public $IsCore;
 
     /**
-     * @var integer Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer New Asset or Not. 1: New
      */
     public $IsNewAsset;
 
@@ -212,38 +167,23 @@ Note: This field may return·null, indicating that no valid values can be obtain
      * @param integer $AppId Tenant ID
      * @param string $Uin Tenant UIN
      * @param string $Nick Tenant name
-     * @param string $Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Region Region.
      * @param string $AssetId Pod ID
      * @param string $AssetName Pod name
-     * @param string $InstanceCreateTime Creation time of the pod
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $InstanceCreateTime Pod Creation Time
      * @param string $Namespace Namespace
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Status Status
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $ClusterId Cluster ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $ClusterName Cluster name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $MachineId Server ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $MachineName Server name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $PodIp Pod IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $ServiceCount Number of associated services
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $ContainerCount Number of associated containers
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsCore Whether it's a critical asset. Values: `1` (critical asset), `0` (non-critical asset)
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Status Status.
+     * @param string $ClusterId Cluster ID.
+     * @param string $ClusterName Cluster name.
+     * @param string $MachineId Host ID
+     * @param string $MachineName host name
+     * @param string $PodIp pod ip
+     * @param integer $ServiceCount Associated Service Count
+     * @param integer $ContainerCount Associated container number
+     * @param string $PublicIp Public IP address
+     * @param string $PrivateIp Private IP address
+     * @param integer $IsCore Whether it is core. 1: Core; 2: Non-core.
+     * @param integer $IsNewAsset New Asset or Not. 1: New
      */
     function __construct()
     {

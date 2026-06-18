@@ -20,66 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMachineClearHistory request structure.
  *
- * @method array getFilters() Obtain Filtering criteria
-Return entries that match both Keywords and TimeBetween when multiple filtering criteria are used
-<li> Keywords: instance name, private IP address, public IP address</li>
-<li> TimeBetween: time interval</li>
- * @method void setFilters(array $Filters) Set Filtering criteria
-Return entries that match both Keywords and TimeBetween when multiple filtering criteria are used
-<li> Keywords: instance name, private IP address, public IP address</li>
-<li> TimeBetween: time interval</li>
- * @method integer getLimit() Obtain Limit Entries, 10 by default, up to 100.
- * @method void setLimit(integer $Limit) Set Limit Entries, 10 by default, up to 100.
- * @method integer getOffset() Obtain Offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
- * @method string getOrder() Obtain Ascending order, ASC, Descending order DESC, ASC by default.
- * @method void setOrder(string $Order) Set Ascending order, ASC, Descending order DESC, ASC by default.
- * @method string getBy() Obtain AgentLastOfflineTime: last offline time of client
-AutoClearTime: clearing time
- * @method void setBy(string $By) Set AgentLastOfflineTime: last offline time of client
-AutoClearTime: clearing time
+ * @method array getFilters() Obtain <p>Filter conditions<br>When multiple conditions are used, Keywords and TimeBetween are intersected</p><li>Keywords: instance name, private IP, or public IP</li><li>TimeBetween: time range</li>
+ * @method void setFilters(array $Filters) Set <p>Filter conditions<br>When multiple conditions are used, Keywords and TimeBetween are intersected</p><li>Keywords: instance name, private IP, or public IP</li><li>TimeBetween: time range</li>
+ * @method integer getLimit() Obtain <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
+ * @method integer getOffset() Obtain <p>Offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset. Default value: 0.</p>
+ * @method string getOrder() Obtain <p>Sort order: ASC for ascending, DESC for descending. Default: ASC</p>
+ * @method void setOrder(string $Order) Set <p>Sort order: ASC for ascending, DESC for descending. Default: ASC</p>
+ * @method string getBy() Obtain <p>AgentLastOfflineTime: Time when the client was last offline<br>AutoClearTime: Cleanup time</p>
+ * @method void setBy(string $By) Set <p>AgentLastOfflineTime: Time when the client was last offline<br>AutoClearTime: Cleanup time</p>
  */
 class DescribeMachineClearHistoryRequest extends AbstractModel
 {
     /**
-     * @var array Filtering criteria
-Return entries that match both Keywords and TimeBetween when multiple filtering criteria are used
-<li> Keywords: instance name, private IP address, public IP address</li>
-<li> TimeBetween: time interval</li>
+     * @var array <p>Filter conditions<br>When multiple conditions are used, Keywords and TimeBetween are intersected</p><li>Keywords: instance name, private IP, or public IP</li><li>TimeBetween: time range</li>
      */
     public $Filters;
 
     /**
-     * @var integer Limit Entries, 10 by default, up to 100.
+     * @var integer <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Offset. Default value: 0.
+     * @var integer <p>Offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var string Ascending order, ASC, Descending order DESC, ASC by default.
+     * @var string <p>Sort order: ASC for ascending, DESC for descending. Default: ASC</p>
      */
     public $Order;
 
     /**
-     * @var string AgentLastOfflineTime: last offline time of client
-AutoClearTime: clearing time
+     * @var string <p>AgentLastOfflineTime: Time when the client was last offline<br>AutoClearTime: Cleanup time</p>
      */
     public $By;
 
     /**
-     * @param array $Filters Filtering criteria
-Return entries that match both Keywords and TimeBetween when multiple filtering criteria are used
-<li> Keywords: instance name, private IP address, public IP address</li>
-<li> TimeBetween: time interval</li>
-     * @param integer $Limit Limit Entries, 10 by default, up to 100.
-     * @param integer $Offset Offset. Default value: 0.
-     * @param string $Order Ascending order, ASC, Descending order DESC, ASC by default.
-     * @param string $By AgentLastOfflineTime: last offline time of client
-AutoClearTime: clearing time
+     * @param array $Filters <p>Filter conditions<br>When multiple conditions are used, Keywords and TimeBetween are intersected</p><li>Keywords: instance name, private IP, or public IP</li><li>TimeBetween: time range</li>
+     * @param integer $Limit <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
+     * @param integer $Offset <p>Offset. Default value: 0.</p>
+     * @param string $Order <p>Sort order: ASC for ascending, DESC for descending. Default: ASC</p>
+     * @param string $By <p>AgentLastOfflineTime: Time when the client was last offline<br>AutoClearTime: Cleanup time</p>
      */
     function __construct()
     {

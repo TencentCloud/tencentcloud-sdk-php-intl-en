@@ -18,48 +18,36 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Filters
+ * Filter conditions. Multiple Values under the same Name are in an OR relationship, and different Names are in an AND relationship.
  *
- * @method string getName() Obtain Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getValues() Obtain Instance ID content.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setValues(array $Values) Set Instance ID content.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExactMatch() Obtain Fuzzy matching.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExactMatch(string $ExactMatch) Set Fuzzy matching.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain Filter condition name.
+ * @method void setName(string $Name) Set Filter condition name.
+ * @method array getValues() Obtain Filter condition value list
+ * @method void setValues(array $Values) Set Filter condition value list
+ * @method string getExactMatch() Obtain Exact match: 1 - exact match; default - fuzzy match
+ * @method void setExactMatch(string $ExactMatch) Set Exact match: 1 - exact match; default - fuzzy match
  */
 class Filters extends AbstractModel
 {
     /**
-     * @var string Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Filter condition name.
      */
     public $Name;
 
     /**
-     * @var array Instance ID content.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Filter condition value list
      */
     public $Values;
 
     /**
-     * @var string Fuzzy matching.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Exact match: 1 - exact match; default - fuzzy match
      */
     public $ExactMatch;
 
     /**
-     * @param string $Name Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Values Instance ID content.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExactMatch Fuzzy matching.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Name Filter condition name.
+     * @param array $Values Filter condition value list
+     * @param string $ExactMatch Exact match: 1 - exact match; default - fuzzy match
      */
     function __construct()
     {

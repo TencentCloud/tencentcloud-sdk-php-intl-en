@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganizationUserInfo response structure.
  *
- * @method integer getTotalCount() Obtain Total number of items
- * @method void setTotalCount(integer $TotalCount) Set Total number of items
+ * @method integer getTotalCount() Obtain Total quantity.
+ * @method void setTotalCount(integer $TotalCount) Set Total quantity.
  * @method array getData() Obtain Group User List
  * @method void setData(array $Data) Set Group User List
  * @method array getJoinTypeLst() Obtain Join method enumeration
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeOrganizationUserInfoResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of items
+     * @var integer Total quantity.
      */
     public $TotalCount;
 
@@ -59,7 +59,7 @@ class DescribeOrganizationUserInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total number of items
+     * @param integer $TotalCount Total quantity.
      * @param array $Data Group User List
      * @param array $JoinTypeLst Join method enumeration
      * @param array $CloudTypeLst Cloud vendor enumeration

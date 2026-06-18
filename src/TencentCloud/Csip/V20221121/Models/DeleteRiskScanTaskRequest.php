@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRiskScanTask request structure.
  *
- * @method array getTaskIdList() Obtain List of task IDs
- * @method void setTaskIdList(array $TaskIdList) Set List of task IDs
+ * @method array getTaskIdList() Obtain task id and target AppID list
+ * @method void setTaskIdList(array $TaskIdList) Set task id and target AppID list
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
 class DeleteRiskScanTaskRequest extends AbstractModel
 {
     /**
-     * @var array List of task IDs
+     * @var array task id and target AppID list
      */
     public $TaskIdList;
 
     /**
-     * @param array $TaskIdList List of task IDs
+     * @var array Group Account Member ID
+     */
+    public $MemberId;
+
+    /**
+     * @param array $TaskIdList task id and target AppID list
+     * @param array $MemberId Group Account Member ID
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class DeleteRiskScanTaskRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TaskIdList, $obj);
             }
+        }
+
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
         }
     }
 }

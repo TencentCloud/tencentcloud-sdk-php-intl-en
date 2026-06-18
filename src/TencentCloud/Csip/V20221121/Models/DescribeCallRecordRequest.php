@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceIPID(integer $SourceIPID) Set ID of the source IP for the call.
  * @method string getAccUin() Obtain Access account uin.
  * @method void setAccUin(string $AccUin) Set Access account uin.
+ * @method string getAccessKey() Obtain Access key. Note: Temporary key is unsupported.
+ * @method void setAccessKey(string $AccessKey) Set Access key. Note: Temporary key is unsupported.
  * @method Filter getFilter() Obtain Filter.
  * @method void setFilter(Filter $Filter) Set Filter.
  */
@@ -54,6 +56,11 @@ class DescribeCallRecordRequest extends AbstractModel
     public $AccUin;
 
     /**
+     * @var string Access key. Note: Temporary key is unsupported.
+     */
+    public $AccessKey;
+
+    /**
      * @var Filter Filter.
      */
     public $Filter;
@@ -63,6 +70,7 @@ class DescribeCallRecordRequest extends AbstractModel
      * @param integer $AccessKeyID Access key ID.
      * @param integer $SourceIPID ID of the source IP for the call.
      * @param string $AccUin Access account uin.
+     * @param string $AccessKey Access key. Note: Temporary key is unsupported.
      * @param Filter $Filter Filter.
      */
     function __construct()
@@ -92,6 +100,10 @@ class DescribeCallRecordRequest extends AbstractModel
 
         if (array_key_exists("AccUin",$param) and $param["AccUin"] !== null) {
             $this->AccUin = $param["AccUin"];
+        }
+
+        if (array_key_exists("AccessKey",$param) and $param["AccessKey"] !== null) {
+            $this->AccessKey = $param["AccessKey"];
         }
 
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {

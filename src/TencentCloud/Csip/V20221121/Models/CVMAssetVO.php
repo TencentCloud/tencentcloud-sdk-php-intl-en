@@ -18,258 +18,205 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of a server asset
+ * Host Asset Information
+
+Enumerate host protection status. left is a constant, right side displays.
+0: not installed.
+Basic edition protection.
+2: inclusive edition protection.
+3: protection by pro edition.
+4: flagship protection.
+5: offline.
+6: shut down.
  *
  * @method string getAssetId() Obtain Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAssetId(string $AssetId) Set Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getAssetName() Obtain Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAssetName(string $AssetName) Set Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getAssetType() Obtain Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAssetType(string $AssetType) Set Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getRegion() Obtain Region
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getAssetName() Obtain Asset name.
+ * @method void setAssetName(string $AssetName) Set Asset name.
+ * @method string getAssetType() Obtain Asset type.
+ * @method void setAssetType(string $AssetType) Set Asset type.
+ * @method string getRegion() Obtain Region.
+ * @method void setRegion(string $Region) Set Region.
  * @method integer getCWPStatus() Obtain Protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setCWPStatus(integer $CWPStatus) Set Protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getAssetCreateTime() Obtain Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAssetCreateTime(string $AssetCreateTime) Set Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getPublicIp() Obtain Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPublicIp(string $PublicIp) Set Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getPrivateIp() Obtain Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPrivateIp(string $PrivateIp) Set Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getAssetCreateTime() Obtain Asset creation time.
+ * @method void setAssetCreateTime(string $AssetCreateTime) Set Asset creation time.
+ * @method string getPublicIp() Obtain Public IP address
+ * @method void setPublicIp(string $PublicIp) Set Public IP address
+ * @method string getPrivateIp() Obtain Private IP.
+ * @method void setPrivateIp(string $PrivateIp) Set Private IP.
  * @method string getVpcId() Obtain vpc id
  * @method void setVpcId(string $VpcId) Set vpc id
- * @method string getVpcName() Obtain VPC name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setVpcName(string $VpcName) Set VPC name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getAppId() Obtain App ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAppId(integer $AppId) Set App ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getUin() Obtain User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setUin(string $Uin) Set User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getNickName() Obtain User name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setNickName(string $NickName) Set User name
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getVpcName() Obtain VPC Name
+ * @method void setVpcName(string $VpcName) Set VPC Name
+ * @method integer getAppId() Obtain App ID information
+ * @method void setAppId(integer $AppId) Set App ID information
+ * @method string getUin() Obtain User UIN
+ * @method void setUin(string $Uin) Set User UIN
+ * @method string getNickName() Obtain Nickname.
+ * @method void setNickName(string $NickName) Set Nickname.
  * @method string getAvailableArea() Obtain Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAvailableArea(string $AvailableArea) Set Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsCore() Obtain Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsCore(integer $IsCore) Set Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getIsCore() Obtain Core or Not
+ * @method void setIsCore(integer $IsCore) Set Core or Not
  * @method string getSubnetId() Obtain Subnet ID
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getSubnetName() Obtain Subnet name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setSubnetName(string $SubnetName) Set Subnet name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getInstanceUuid() Obtain UUID of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setInstanceUuid(string $InstanceUuid) Set UUID of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getInstanceQUuid() Obtain QUuid of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setInstanceQUuid(string $InstanceQUuid) Set QUuid of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getOsName() Obtain OS name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setOsName(string $OsName) Set OS name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getPartitionCount() Obtain Number of partitions
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPartitionCount(integer $PartitionCount) Set Number of partitions
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getCPUInfo() Obtain CPU information
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setCPUInfo(string $CPUInfo) Set CPU information
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getCPUSize() Obtain CPU size
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setCPUSize(integer $CPUSize) Set CPU size
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getCPULoad() Obtain CPU load
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setCPULoad(string $CPULoad) Set CPU load
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getMemorySize() Obtain Memory size
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setMemorySize(string $MemorySize) Set Memory size
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getMemoryLoad() Obtain Memory load
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setMemoryLoad(string $MemoryLoad) Set Memory load
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getDiskSize() Obtain Disk size.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setDiskSize(string $DiskSize) Set Disk size.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getDiskLoad() Obtain Disk load
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setDiskLoad(string $DiskLoad) Set Disk load
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getAccountCount() Obtain Number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAccountCount(string $AccountCount) Set Number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getProcessCount() Obtain Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setProcessCount(string $ProcessCount) Set Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getAppCount() Obtain Number of applications
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAppCount(string $AppCount) Set Number of applications
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getPortCount() Obtain Number of listened ports.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPortCount(integer $PortCount) Set Number of listened ports.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getAttack() Obtain Number of network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAttack(integer $Attack) Set Number of network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getAccess() Obtain Number of network access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAccess(integer $Access) Set Number of network access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIntercept() Obtain Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIntercept(integer $Intercept) Set Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getInBandwidth() Obtain Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setInBandwidth(string $InBandwidth) Set Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getOutBandwidth() Obtain OutInbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setOutBandwidth(string $OutBandwidth) Set OutInbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getInFlow() Obtain Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setInFlow(string $InFlow) Set Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getOutFlow() Obtain Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setOutFlow(string $OutFlow) Set Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getSubnetName() Obtain Subnet Name
+ * @method void setSubnetName(string $SubnetName) Set Subnet Name
+ * @method string getInstanceUuid() Obtain CWP Agent UUID.
+ * @method void setInstanceUuid(string $InstanceUuid) Set CWP Agent UUID.
+ * @method string getInstanceQUuid() Obtain CVM host UUID.
+ * @method void setInstanceQUuid(string $InstanceQUuid) Set CVM host UUID.
+ * @method string getOsName() Obtain OS Name
+ * @method void setOsName(string $OsName) Set OS Name
+ * @method integer getPartitionCount() Obtain Partition
+ * @method void setPartitionCount(integer $PartitionCount) Set Partition
+ * @method string getCPUInfo() Obtain CPU Information
+ * @method void setCPUInfo(string $CPUInfo) Set CPU Information
+ * @method integer getCPUSize() Obtain CPU Size
+ * @method void setCPUSize(integer $CPUSize) Set CPU Size
+ * @method string getCPULoad() Obtain CPU Load
+ * @method void setCPULoad(string $CPULoad) Set CPU Load
+ * @method string getMemorySize() Obtain Memory size.
+ * @method void setMemorySize(string $MemorySize) Set Memory size.
+ * @method string getMemoryLoad() Obtain Memory Load
+ * @method void setMemoryLoad(string $MemoryLoad) Set Memory Load
+ * @method string getDiskSize() Obtain Hard disk size.
+ * @method void setDiskSize(string $DiskSize) Set Hard disk size.
+ * @method string getDiskLoad() Obtain Hard Disk Load
+ * @method void setDiskLoad(string $DiskLoad) Set Hard Disk Load
+ * @method string getAccountCount() Obtain Number of Accounts
+ * @method void setAccountCount(string $AccountCount) Set Number of Accounts
+ * @method string getProcessCount() Obtain Number of Processes
+ * @method void setProcessCount(string $ProcessCount) Set Number of Processes
+ * @method string getAppCount() Obtain Software application.
+ * @method void setAppCount(string $AppCount) Set Software application.
+ * @method integer getPortCount() Obtain Listening port
+ * @method void setPortCount(integer $PortCount) Set Listening port
+ * @method integer getAttack() Obtain Network attack.
+ * @method void setAttack(integer $Attack) Set Network attack.
+ * @method integer getAccess() Obtain Network access.
+ * @method void setAccess(integer $Access) Set Network access.
+ * @method integer getIntercept() Obtain Network Interception
+ * @method void setIntercept(integer $Intercept) Set Network Interception
+ * @method string getInBandwidth() Obtain Inbound peak bandwidth.
+ * @method void setInBandwidth(string $InBandwidth) Set Inbound peak bandwidth.
+ * @method string getOutBandwidth() Obtain Outbound peak bandwidth.
+ * @method void setOutBandwidth(string $OutBandwidth) Set Outbound peak bandwidth.
+ * @method string getInFlow() Obtain Total inbound traffic.
+ * @method void setInFlow(string $InFlow) Set Total inbound traffic.
+ * @method string getOutFlow() Obtain Outbound cumulative traffic.
+ * @method void setOutFlow(string $OutFlow) Set Outbound cumulative traffic.
  * @method string getLastScanTime() Obtain Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setLastScanTime(string $LastScanTime) Set Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getNetWorkOut() Obtain Proactive malicious outgoing requests
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setNetWorkOut(integer $NetWorkOut) Set Proactive malicious outgoing requests
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getPortRisk() Obtain Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPortRisk(integer $PortRisk) Set Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getVulnerabilityRisk() Obtain Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setVulnerabilityRisk(integer $VulnerabilityRisk) Set Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getConfigurationRisk() Obtain Configuraiton risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setConfigurationRisk(integer $ConfigurationRisk) Set Configuraiton risks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getScanTask() Obtain Number of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setScanTask(integer $ScanTask) Set Number of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getTag() Obtain Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTag(array $Tag) Set Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getMemberId() Obtain Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setMemberId(string $MemberId) Set Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getOs() Obtain Full name of the operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setOs(string $Os) Set Full name of the operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getRiskExposure() Obtain Risk exposure
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setRiskExposure(integer $RiskExposure) Set Risk exposure
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getBASAgentStatus() Obtain BAS toolkit status. `0`: Not installed; `1`: Installed; `2`: Offline.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setBASAgentStatus(integer $BASAgentStatus) Set BAS toolkit status. `0`: Not installed; `1`: Installed; `2`: Offline.
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getIsNewAsset() Obtain `1`: New asset; `0`: Not a new asset
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setIsNewAsset(integer $IsNewAsset) Set `1`: New asset; `0`: Not a new asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getNetWorkOut() Obtain Malicious outgoing request.
+ * @method void setNetWorkOut(integer $NetWorkOut) Set Malicious outgoing request.
+ * @method integer getPortRisk() Obtain Port risk.
+ * @method void setPortRisk(integer $PortRisk) Set Port risk.
+ * @method integer getVulnerabilityRisk() Obtain Vulnerability risk.
+ * @method void setVulnerabilityRisk(integer $VulnerabilityRisk) Set Vulnerability risk.
+ * @method integer getConfigurationRisk() Obtain Configuration risk.
+ * @method void setConfigurationRisk(integer $ConfigurationRisk) Set Configuration risk.
+ * @method integer getScanTask() Obtain Scan Task Count
+ * @method void setScanTask(integer $ScanTask) Set Scan Task Count
+ * @method array getTag() Obtain Tag.
+ * @method void setTag(array $Tag) Set Tag.
+ * @method string getMemberId() Obtain memberId
+ * @method void setMemberId(string $MemberId) Set memberId
+ * @method string getOs() Obtain Full OS Name
+ * @method void setOs(string $Os) Set Full OS Name
+ * @method integer getRiskExposure() Obtain Risk service exposure.
+ * @method void setRiskExposure(integer $RiskExposure) Set Risk service exposure.
+ * @method integer getBASAgentStatus() Obtain Simulated Attack Tool Status. 0 indicates not installed. 1 indicates installed. 2 indicates offline.
+ * @method void setBASAgentStatus(integer $BASAgentStatus) Set Simulated Attack Tool Status. 0 indicates not installed. 1 indicates installed. 2 indicates offline.
+ * @method integer getIsNewAsset() Obtain 1-New Asset; 0-Not a New Asset
+ * @method void setIsNewAsset(integer $IsNewAsset) Set 1-New Asset; 0-Not a New Asset
+ * @method integer getCVMAgentStatus() Obtain 0: not installed; 1: install; 2: installing.
+ * @method void setCVMAgentStatus(integer $CVMAgentStatus) Set 0: not installed; 1: install; 2: installing.
+ * @method integer getCVMStatus() Obtain 1: enable 0: not enabled.
+ * @method void setCVMStatus(integer $CVMStatus) Set 1: enable 0: not enabled.
+ * @method integer getDefenseModel() Obtain 1: client installed 0: not installed 2: Agentless.
+ * @method void setDefenseModel(integer $DefenseModel) Set 1: client installed 0: not installed 2: Agentless.
+ * @method integer getTatStatus() Obtain 1: installed 0: not installed.
+ * @method void setTatStatus(integer $TatStatus) Set 1: installed 0: not installed.
+ * @method array getCpuTrend() Obtain cpu trend chart.
+ * @method void setCpuTrend(array $CpuTrend) Set cpu trend chart.
+ * @method array getMemoryTrend() Obtain Memory trend chart.
+ * @method void setMemoryTrend(array $MemoryTrend) Set Memory trend chart.
+ * @method integer getAgentStatus() Obtain 1: agent online 0: agent offline 2: host offline.
+ * @method void setAgentStatus(integer $AgentStatus) Set 1: agent online 0: agent offline 2: host offline.
+ * @method integer getCloseDefenseCount() Obtain Number of shutdowns this month.
+ * @method void setCloseDefenseCount(integer $CloseDefenseCount) Set Number of shutdowns this month.
+ * @method string getInstanceState() Obtain Running state.
+ * @method void setInstanceState(string $InstanceState) Set Running state.
+ * @method array getSecurityGroupIds() Obtain Security group data.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group data.
+ * @method integer getAgentMemRss() Obtain Physical memory occupied KB.
+ * @method void setAgentMemRss(integer $AgentMemRss) Set Physical memory occupied KB.
+ * @method float getAgentCpuPer() Obtain CPU utilization percentage.
+ * @method void setAgentCpuPer(float $AgentCpuPer) Set CPU utilization percentage.
+ * @method integer getRealAppid() Obtain Actual appid belonging to cvm.
+ * @method void setRealAppid(integer $RealAppid) Set Actual appid belonging to cvm.
+ * @method integer getCloudType() Obtain Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+ * @method void setCloudType(integer $CloudType) Set Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+ * @method integer getProtectStatus() Obtain Host protection status enumeration.
+0: not installed.
+Basic edition protection.
+2: inclusive edition protection.
+3: protection by pro edition.
+4: ultimate edition protection.
+5: offline.
+6: shutdown.
+ * @method void setProtectStatus(integer $ProtectStatus) Set Host protection status enumeration.
+0: not installed.
+Basic edition protection.
+2: inclusive edition protection.
+3: protection by pro edition.
+4: ultimate edition protection.
+5: offline.
+6: shutdown.
+ * @method string getOfflineTime() Obtain Last offline time.
+ * @method void setOfflineTime(string $OfflineTime) Set Last offline time.
  */
 class CVMAssetVO extends AbstractModel
 {
     /**
      * @var string Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AssetId;
 
     /**
-     * @var string Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Asset name.
      */
     public $AssetName;
 
     /**
-     * @var string Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Asset type.
      */
     public $AssetType;
 
     /**
-     * @var string Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Region.
      */
     public $Region;
 
     /**
      * @var integer Protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $CWPStatus;
 
     /**
-     * @var string Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Asset creation time.
      */
     public $AssetCreateTime;
 
     /**
-     * @var string Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Public IP address
      */
     public $PublicIp;
 
     /**
-     * @var string Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Private IP.
      */
     public $PrivateIp;
 
@@ -279,359 +226,377 @@ Note: This field may return·null, indicating that no valid values can be obtain
     public $VpcId;
 
     /**
-     * @var string VPC name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string VPC Name
      */
     public $VpcName;
 
     /**
-     * @var integer App ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer App ID information
      */
     public $AppId;
 
     /**
-     * @var string User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string User UIN
      */
     public $Uin;
 
     /**
-     * @var string User name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Nickname.
      */
     public $NickName;
 
     /**
      * @var string Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AvailableArea;
 
     /**
-     * @var integer Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Core or Not
      */
     public $IsCore;
 
     /**
      * @var string Subnet ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $SubnetId;
 
     /**
-     * @var string Subnet name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Subnet Name
      */
     public $SubnetName;
 
     /**
-     * @var string UUID of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string CWP Agent UUID.
      */
     public $InstanceUuid;
 
     /**
-     * @var string QUuid of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string CVM host UUID.
      */
     public $InstanceQUuid;
 
     /**
-     * @var string OS name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string OS Name
      */
     public $OsName;
 
     /**
-     * @var integer Number of partitions
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Partition
      */
     public $PartitionCount;
 
     /**
-     * @var string CPU information
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string CPU Information
      */
     public $CPUInfo;
 
     /**
-     * @var integer CPU size
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer CPU Size
      */
     public $CPUSize;
 
     /**
-     * @var string CPU load
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string CPU Load
      */
     public $CPULoad;
 
     /**
-     * @var string Memory size
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Memory size.
      */
     public $MemorySize;
 
     /**
-     * @var string Memory load
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Memory Load
      */
     public $MemoryLoad;
 
     /**
-     * @var string Disk size.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Hard disk size.
      */
     public $DiskSize;
 
     /**
-     * @var string Disk load
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Hard Disk Load
      */
     public $DiskLoad;
 
     /**
-     * @var string Number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Number of Accounts
      */
     public $AccountCount;
 
     /**
-     * @var string Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Number of Processes
      */
     public $ProcessCount;
 
     /**
-     * @var string Number of applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Software application.
      */
     public $AppCount;
 
     /**
-     * @var integer Number of listened ports.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Listening port
      */
     public $PortCount;
 
     /**
-     * @var integer Number of network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Network attack.
      */
     public $Attack;
 
     /**
-     * @var integer Number of network access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Network access.
      */
     public $Access;
 
     /**
-     * @var integer Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Network Interception
      */
     public $Intercept;
 
     /**
-     * @var string Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Inbound peak bandwidth.
      */
     public $InBandwidth;
 
     /**
-     * @var string OutInbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Outbound peak bandwidth.
      */
     public $OutBandwidth;
 
     /**
-     * @var string Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Total inbound traffic.
      */
     public $InFlow;
 
     /**
-     * @var string Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Outbound cumulative traffic.
      */
     public $OutFlow;
 
     /**
      * @var string Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $LastScanTime;
 
     /**
-     * @var integer Proactive malicious outgoing requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Malicious outgoing request.
      */
     public $NetWorkOut;
 
     /**
-     * @var integer Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Port risk.
      */
     public $PortRisk;
 
     /**
-     * @var integer Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Vulnerability risk.
      */
     public $VulnerabilityRisk;
 
     /**
-     * @var integer Configuraiton risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Configuration risk.
      */
     public $ConfigurationRisk;
 
     /**
-     * @var integer Number of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Scan Task Count
      */
     public $ScanTask;
 
     /**
-     * @var array Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Tag.
      */
     public $Tag;
 
     /**
-     * @var string Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string memberId
      */
     public $MemberId;
 
     /**
-     * @var string Full name of the operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Full OS Name
      */
     public $Os;
 
     /**
-     * @var integer Risk exposure
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Risk service exposure.
      */
     public $RiskExposure;
 
     /**
-     * @var integer BAS toolkit status. `0`: Not installed; `1`: Installed; `2`: Offline.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Simulated Attack Tool Status. 0 indicates not installed. 1 indicates installed. 2 indicates offline.
      */
     public $BASAgentStatus;
 
     /**
-     * @var integer `1`: New asset; `0`: Not a new asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer 1-New Asset; 0-Not a New Asset
      */
     public $IsNewAsset;
 
     /**
+     * @var integer 0: not installed; 1: install; 2: installing.
+     */
+    public $CVMAgentStatus;
+
+    /**
+     * @var integer 1: enable 0: not enabled.
+     */
+    public $CVMStatus;
+
+    /**
+     * @var integer 1: client installed 0: not installed 2: Agentless.
+     */
+    public $DefenseModel;
+
+    /**
+     * @var integer 1: installed 0: not installed.
+     */
+    public $TatStatus;
+
+    /**
+     * @var array cpu trend chart.
+     */
+    public $CpuTrend;
+
+    /**
+     * @var array Memory trend chart.
+     */
+    public $MemoryTrend;
+
+    /**
+     * @var integer 1: agent online 0: agent offline 2: host offline.
+     */
+    public $AgentStatus;
+
+    /**
+     * @var integer Number of shutdowns this month.
+     */
+    public $CloseDefenseCount;
+
+    /**
+     * @var string Running state.
+     */
+    public $InstanceState;
+
+    /**
+     * @var array Security group data.
+     */
+    public $SecurityGroupIds;
+
+    /**
+     * @var integer Physical memory occupied KB.
+     */
+    public $AgentMemRss;
+
+    /**
+     * @var float CPU utilization percentage.
+     */
+    public $AgentCpuPer;
+
+    /**
+     * @var integer Actual appid belonging to cvm.
+     */
+    public $RealAppid;
+
+    /**
+     * @var integer Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+     */
+    public $CloudType;
+
+    /**
+     * @var integer Host protection status enumeration.
+0: not installed.
+Basic edition protection.
+2: inclusive edition protection.
+3: protection by pro edition.
+4: ultimate edition protection.
+5: offline.
+6: shutdown.
+     */
+    public $ProtectStatus;
+
+    /**
+     * @var string Last offline time.
+     */
+    public $OfflineTime;
+
+    /**
      * @param string $AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $AssetName Asset name.
+     * @param string $AssetType Asset type.
+     * @param string $Region Region.
      * @param integer $CWPStatus Protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $AssetCreateTime Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $AssetCreateTime Asset creation time.
+     * @param string $PublicIp Public IP address
+     * @param string $PrivateIp Private IP.
      * @param string $VpcId vpc id
-     * @param string $VpcName VPC name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $AppId App ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $NickName User name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $VpcName VPC Name
+     * @param integer $AppId App ID information
+     * @param string $Uin User UIN
+     * @param string $NickName Nickname.
      * @param string $AvailableArea Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsCore Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $IsCore Core or Not
      * @param string $SubnetId Subnet ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $SubnetName Subnet name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $InstanceUuid UUID of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $InstanceQUuid QUuid of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $OsName OS name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $PartitionCount Number of partitions
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $CPUInfo CPU information
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $CPUSize CPU size
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $CPULoad CPU load
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $MemorySize Memory size
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $MemoryLoad Memory load
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $DiskSize Disk size.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $DiskLoad Disk load
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $AccountCount Number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $ProcessCount Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $AppCount Number of applications
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $PortCount Number of listened ports.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Attack Number of network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Access Number of network access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $Intercept Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $InBandwidth Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $OutBandwidth OutInbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $InFlow Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $OutFlow Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $SubnetName Subnet Name
+     * @param string $InstanceUuid CWP Agent UUID.
+     * @param string $InstanceQUuid CVM host UUID.
+     * @param string $OsName OS Name
+     * @param integer $PartitionCount Partition
+     * @param string $CPUInfo CPU Information
+     * @param integer $CPUSize CPU Size
+     * @param string $CPULoad CPU Load
+     * @param string $MemorySize Memory size.
+     * @param string $MemoryLoad Memory Load
+     * @param string $DiskSize Hard disk size.
+     * @param string $DiskLoad Hard Disk Load
+     * @param string $AccountCount Number of Accounts
+     * @param string $ProcessCount Number of Processes
+     * @param string $AppCount Software application.
+     * @param integer $PortCount Listening port
+     * @param integer $Attack Network attack.
+     * @param integer $Access Network access.
+     * @param integer $Intercept Network Interception
+     * @param string $InBandwidth Inbound peak bandwidth.
+     * @param string $OutBandwidth Outbound peak bandwidth.
+     * @param string $InFlow Total inbound traffic.
+     * @param string $OutFlow Outbound cumulative traffic.
      * @param string $LastScanTime Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $NetWorkOut Proactive malicious outgoing requests
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $PortRisk Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $VulnerabilityRisk Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $ConfigurationRisk Configuraiton risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $ScanTask Number of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $MemberId Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Os Full name of the operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $RiskExposure Risk exposure
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $BASAgentStatus BAS toolkit status. `0`: Not installed; `1`: Installed; `2`: Offline.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $IsNewAsset `1`: New asset; `0`: Not a new asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $NetWorkOut Malicious outgoing request.
+     * @param integer $PortRisk Port risk.
+     * @param integer $VulnerabilityRisk Vulnerability risk.
+     * @param integer $ConfigurationRisk Configuration risk.
+     * @param integer $ScanTask Scan Task Count
+     * @param array $Tag Tag.
+     * @param string $MemberId memberId
+     * @param string $Os Full OS Name
+     * @param integer $RiskExposure Risk service exposure.
+     * @param integer $BASAgentStatus Simulated Attack Tool Status. 0 indicates not installed. 1 indicates installed. 2 indicates offline.
+     * @param integer $IsNewAsset 1-New Asset; 0-Not a New Asset
+     * @param integer $CVMAgentStatus 0: not installed; 1: install; 2: installing.
+     * @param integer $CVMStatus 1: enable 0: not enabled.
+     * @param integer $DefenseModel 1: client installed 0: not installed 2: Agentless.
+     * @param integer $TatStatus 1: installed 0: not installed.
+     * @param array $CpuTrend cpu trend chart.
+     * @param array $MemoryTrend Memory trend chart.
+     * @param integer $AgentStatus 1: agent online 0: agent offline 2: host offline.
+     * @param integer $CloseDefenseCount Number of shutdowns this month.
+     * @param string $InstanceState Running state.
+     * @param array $SecurityGroupIds Security group data.
+     * @param integer $AgentMemRss Physical memory occupied KB.
+     * @param float $AgentCpuPer CPU utilization percentage.
+     * @param integer $RealAppid Actual appid belonging to cvm.
+     * @param integer $CloudType Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+     * @param integer $ProtectStatus Host protection status enumeration.
+0: not installed.
+Basic edition protection.
+2: inclusive edition protection.
+3: protection by pro edition.
+4: ultimate edition protection.
+5: offline.
+6: shutdown.
+     * @param string $OfflineTime Last offline time.
      */
     function __construct()
     {
@@ -853,6 +818,80 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
         if (array_key_exists("IsNewAsset",$param) and $param["IsNewAsset"] !== null) {
             $this->IsNewAsset = $param["IsNewAsset"];
+        }
+
+        if (array_key_exists("CVMAgentStatus",$param) and $param["CVMAgentStatus"] !== null) {
+            $this->CVMAgentStatus = $param["CVMAgentStatus"];
+        }
+
+        if (array_key_exists("CVMStatus",$param) and $param["CVMStatus"] !== null) {
+            $this->CVMStatus = $param["CVMStatus"];
+        }
+
+        if (array_key_exists("DefenseModel",$param) and $param["DefenseModel"] !== null) {
+            $this->DefenseModel = $param["DefenseModel"];
+        }
+
+        if (array_key_exists("TatStatus",$param) and $param["TatStatus"] !== null) {
+            $this->TatStatus = $param["TatStatus"];
+        }
+
+        if (array_key_exists("CpuTrend",$param) and $param["CpuTrend"] !== null) {
+            $this->CpuTrend = [];
+            foreach ($param["CpuTrend"] as $key => $value){
+                $obj = new Element();
+                $obj->deserialize($value);
+                array_push($this->CpuTrend, $obj);
+            }
+        }
+
+        if (array_key_exists("MemoryTrend",$param) and $param["MemoryTrend"] !== null) {
+            $this->MemoryTrend = [];
+            foreach ($param["MemoryTrend"] as $key => $value){
+                $obj = new Element();
+                $obj->deserialize($value);
+                array_push($this->MemoryTrend, $obj);
+            }
+        }
+
+        if (array_key_exists("AgentStatus",$param) and $param["AgentStatus"] !== null) {
+            $this->AgentStatus = $param["AgentStatus"];
+        }
+
+        if (array_key_exists("CloseDefenseCount",$param) and $param["CloseDefenseCount"] !== null) {
+            $this->CloseDefenseCount = $param["CloseDefenseCount"];
+        }
+
+        if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
+            $this->InstanceState = $param["InstanceState"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("AgentMemRss",$param) and $param["AgentMemRss"] !== null) {
+            $this->AgentMemRss = $param["AgentMemRss"];
+        }
+
+        if (array_key_exists("AgentCpuPer",$param) and $param["AgentCpuPer"] !== null) {
+            $this->AgentCpuPer = $param["AgentCpuPer"];
+        }
+
+        if (array_key_exists("RealAppid",$param) and $param["RealAppid"] !== null) {
+            $this->RealAppid = $param["RealAppid"];
+        }
+
+        if (array_key_exists("CloudType",$param) and $param["CloudType"] !== null) {
+            $this->CloudType = $param["CloudType"];
+        }
+
+        if (array_key_exists("ProtectStatus",$param) and $param["ProtectStatus"] !== null) {
+            $this->ProtectStatus = $param["ProtectStatus"];
+        }
+
+        if (array_key_exists("OfflineTime",$param) and $param["OfflineTime"] !== null) {
+            $this->OfflineTime = $param["OfflineTime"];
         }
     }
 }

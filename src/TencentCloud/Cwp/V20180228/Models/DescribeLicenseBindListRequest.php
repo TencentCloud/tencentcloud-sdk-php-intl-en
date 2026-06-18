@@ -20,66 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLicenseBindList request structure.
  *
- * @method integer getLicenseId() Obtain Authorization ID
- * @method void setLicenseId(integer $LicenseId) Set Authorization ID
- * @method integer getLicenseType() Obtain Authorization type
- * @method void setLicenseType(integer $LicenseType) Set Authorization type
- * @method string getResourceId() Obtain Resource ID
- * @method void setResourceId(string $ResourceId) Set Resource ID
- * @method array getFilters() Obtain <li>InstanceID, IP,
-
-and MachineName for fuzzy search</li>
- * @method void setFilters(array $Filters) Set <li>InstanceID, IP,
-
-and MachineName for fuzzy search</li>
- * @method integer getLimit() Obtain Limit number, 10 by default.
- * @method void setLimit(integer $Limit) Set Limit number, 10 by default.
- * @method integer getOffset() Obtain Offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
+ * @method integer getLicenseId() Obtain <p>License ID. The value is the value of the LicenseId parameter under the List object of the DescribeLicenseList API.</p>
+ * @method void setLicenseId(integer $LicenseId) Set <p>License ID. The value is the value of the LicenseId parameter under the List object of the DescribeLicenseList API.</p>
+ * @method integer getLicenseType() Obtain <p>License type</p><p>Valid values:</p><ul><li>0: Pro Edition - pay-as-you-go</li><li>1: Pro Edition - monthly subscription (CWP)</li><li>2: Ultimate Edition - monthly subscription (CWP)</li><li>3: Lightweight Edition - LH monthly subscription</li><li>6: Pro Edition - monthly subscription (CSC)</li><li>7: Ultimate Edition - monthly subscription (CSC)</li></ul>
+ * @method void setLicenseType(integer $LicenseType) Set <p>License type</p><p>Valid values:</p><ul><li>0: Pro Edition - pay-as-you-go</li><li>1: Pro Edition - monthly subscription (CWP)</li><li>2: Ultimate Edition - monthly subscription (CWP)</li><li>3: Lightweight Edition - LH monthly subscription</li><li>6: Pro Edition - monthly subscription (CSC)</li><li>7: Ultimate Edition - monthly subscription (CSC)</li></ul>
+ * @method string getResourceId() Obtain <p>Resource ID. The value is the value of the ResourceId parameter under the List object of the DescribeLicenseList API.</p>
+ * @method void setResourceId(string $ResourceId) Set <p>Resource ID. The value is the value of the ResourceId parameter under the List object of the DescribeLicenseList API.</p>
+ * @method array getFilters() Obtain <li>Fuzzy search by InstanceID, IP, or <p>MachineName</p></li>
+ * @method void setFilters(array $Filters) Set <li>Fuzzy search by InstanceID, IP, or <p>MachineName</p></li>
+ * @method integer getLimit() Obtain <p>The maximum number of entries. Default value: 10.</p>
+ * @method void setLimit(integer $Limit) Set <p>The maximum number of entries. Default value: 10.</p>
+ * @method integer getOffset() Obtain <p>Offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset. Default value: 0.</p>
  */
 class DescribeLicenseBindListRequest extends AbstractModel
 {
     /**
-     * @var integer Authorization ID
+     * @var integer <p>License ID. The value is the value of the LicenseId parameter under the List object of the DescribeLicenseList API.</p>
      */
     public $LicenseId;
 
     /**
-     * @var integer Authorization type
+     * @var integer <p>License type</p><p>Valid values:</p><ul><li>0: Pro Edition - pay-as-you-go</li><li>1: Pro Edition - monthly subscription (CWP)</li><li>2: Ultimate Edition - monthly subscription (CWP)</li><li>3: Lightweight Edition - LH monthly subscription</li><li>6: Pro Edition - monthly subscription (CSC)</li><li>7: Ultimate Edition - monthly subscription (CSC)</li></ul>
      */
     public $LicenseType;
 
     /**
-     * @var string Resource ID
+     * @var string <p>Resource ID. The value is the value of the ResourceId parameter under the List object of the DescribeLicenseList API.</p>
      */
     public $ResourceId;
 
     /**
-     * @var array <li>InstanceID, IP,
-
-and MachineName for fuzzy search</li>
+     * @var array <li>Fuzzy search by InstanceID, IP, or <p>MachineName</p></li>
      */
     public $Filters;
 
     /**
-     * @var integer Limit number, 10 by default.
+     * @var integer <p>The maximum number of entries. Default value: 10.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Offset. Default value: 0.
+     * @var integer <p>Offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @param integer $LicenseId Authorization ID
-     * @param integer $LicenseType Authorization type
-     * @param string $ResourceId Resource ID
-     * @param array $Filters <li>InstanceID, IP,
-
-and MachineName for fuzzy search</li>
-     * @param integer $Limit Limit number, 10 by default.
-     * @param integer $Offset Offset. Default value: 0.
+     * @param integer $LicenseId <p>License ID. The value is the value of the LicenseId parameter under the List object of the DescribeLicenseList API.</p>
+     * @param integer $LicenseType <p>License type</p><p>Valid values:</p><ul><li>0: Pro Edition - pay-as-you-go</li><li>1: Pro Edition - monthly subscription (CWP)</li><li>2: Ultimate Edition - monthly subscription (CWP)</li><li>3: Lightweight Edition - LH monthly subscription</li><li>6: Pro Edition - monthly subscription (CSC)</li><li>7: Ultimate Edition - monthly subscription (CSC)</li></ul>
+     * @param string $ResourceId <p>Resource ID. The value is the value of the ResourceId parameter under the List object of the DescribeLicenseList API.</p>
+     * @param array $Filters <li>Fuzzy search by InstanceID, IP, or <p>MachineName</p></li>
+     * @param integer $Limit <p>The maximum number of entries. Default value: 10.</p>
+     * @param integer $Offset <p>Offset. Default value: 0.</p>
      */
     function __construct()
     {

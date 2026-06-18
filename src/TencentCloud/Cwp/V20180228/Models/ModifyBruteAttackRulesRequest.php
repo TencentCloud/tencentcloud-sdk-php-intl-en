@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBruteAttackRules request structure.
  *
- * @method array getRules() Obtain Rule of determining brute force cracking
- * @method void setRules(array $Rules) Set Rule of determining brute force cracking
+ * @method array getRules() Obtain <p>Brute-force attack determination rule</p>
+ * @method void setRules(array $Rules) Set <p>Brute-force attack determination rule</p>
  */
 class ModifyBruteAttackRulesRequest extends AbstractModel
 {
     /**
-     * @var array Rule of determining brute force cracking
+     * @var array <p>Brute-force attack determination rule</p>
      */
     public $Rules;
 
     /**
-     * @param array $Rules Rule of determining brute force cracking
+     * @param array $Rules <p>Brute-force attack determination rule</p>
      */
     function __construct()
     {

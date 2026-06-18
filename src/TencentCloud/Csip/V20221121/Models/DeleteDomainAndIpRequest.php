@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDomainAndIp request structure.
  *
- * @method array getContent() Obtain u200c-
- * @method void setContent(array $Content) Set u200c-
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
+ * @method array getContent() Obtain asset
+ * @method void setContent(array $Content) Set asset
  * @method integer getRetainPath() Obtain Whether to retain the path configuration. `1`: Retain; Others: Do not retain. It defaults to do not retain if not specified.
  * @method void setRetainPath(integer $RetainPath) Set Whether to retain the path configuration. `1`: Retain; Others: Do not retain. It defaults to do not retain if not specified.
  * @method integer getIgnoreAsset() Obtain Whether to ignore this asset in the future. `1`: Ignore; Others: Do not ignore. It defaults to ignore if not specified.
@@ -34,7 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class DeleteDomainAndIpRequest extends AbstractModel
 {
     /**
-     * @var array u200c-
+     * @var array Group Account Member ID
+     */
+    public $MemberId;
+
+    /**
+     * @var array asset
      */
     public $Content;
 
@@ -59,7 +66,8 @@ class DeleteDomainAndIpRequest extends AbstractModel
     public $Type;
 
     /**
-     * @param array $Content u200c-
+     * @param array $MemberId Group Account Member ID
+     * @param array $Content asset
      * @param integer $RetainPath Whether to retain the path configuration. `1`: Retain; Others: Do not retain. It defaults to do not retain if not specified.
      * @param integer $IgnoreAsset Whether to ignore this asset in the future. `1`: Ignore; Others: Do not ignore. It defaults to ignore if not specified.
      * @param array $Tags Asset tags
@@ -78,6 +86,10 @@ class DeleteDomainAndIpRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
+        }
+
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = [];
             foreach ($param["Content"] as $key => $value){

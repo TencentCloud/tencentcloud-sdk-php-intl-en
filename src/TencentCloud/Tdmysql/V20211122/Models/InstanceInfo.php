@@ -200,6 +200,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setAnalysisMode(string $AnalysisMode) Set <p>Analytical engine mode</p><p>Enumeration value:</p><ul><li>libra: LibraDB analytical engine mode</li></ul>
  * @method array getAnalysisRelationInfos() Obtain <p>Analysis engine relationship information</p>
  * @method void setAnalysisRelationInfos(array $AnalysisRelationInfos) Set <p>Analysis engine relationship information</p>
+ * @method AnalysisInstanceInfo getAnalysisInstanceInfo() Obtain <p>Analysis engine instance info</p>
+ * @method void setAnalysisInstanceInfo(AnalysisInstanceInfo $AnalysisInstanceInfo) Set <p>Analysis engine instance info</p>
  */
 class InstanceInfo extends AbstractModel
 {
@@ -554,6 +556,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AnalysisRelationInfos;
 
     /**
+     * @var AnalysisInstanceInfo <p>Analysis engine instance info</p>
+     */
+    public $AnalysisInstanceInfo;
+
+    /**
      * @param integer $ComputeNodeNum <p>Number of compute nodes</p>
      * @param string $Zone <p>Region</p>
      * @param string $CreateVersion <p>Creating an Instance Version</p>
@@ -644,6 +651,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param AutoScalingConfig $AutoScaleConfig <p>Auto-scaling configuration</p>
      * @param string $AnalysisMode <p>Analytical engine mode</p><p>Enumeration value:</p><ul><li>libra: LibraDB analytical engine mode</li></ul>
      * @param array $AnalysisRelationInfos <p>Analysis engine relationship information</p>
+     * @param AnalysisInstanceInfo $AnalysisInstanceInfo <p>Analysis engine instance info</p>
      */
     function __construct()
     {
@@ -925,6 +933,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->AnalysisRelationInfos, $obj);
             }
+        }
+
+        if (array_key_exists("AnalysisInstanceInfo",$param) and $param["AnalysisInstanceInfo"] !== null) {
+            $this->AnalysisInstanceInfo = new AnalysisInstanceInfo();
+            $this->AnalysisInstanceInfo->deserialize($param["AnalysisInstanceInfo"]);
         }
     }
 }

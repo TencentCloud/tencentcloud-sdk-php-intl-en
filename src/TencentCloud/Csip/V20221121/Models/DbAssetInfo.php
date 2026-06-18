@@ -20,138 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of a database asset. 
  *
- * @method integer getCFWStatus() Obtain CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setCFWStatus(integer $CFWStatus) Set CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getCFWStatus() Obtain Cloud Defense Status
+ * @method void setCFWStatus(integer $CFWStatus) Set Cloud Defense Status
  * @method string getAssetId() Obtain Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAssetId(string $AssetId) Set Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getVpcName() Obtain VPC information
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setVpcName(string $VpcName) Set VPC information
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getAssetType() Obtain Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAssetType(string $AssetType) Set Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getPublicIp() Obtain Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPublicIp(string $PublicIp) Set Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getPrivateIp() Obtain Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPrivateIp(string $PrivateIp) Set Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getRegion() Obtain Region
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getVpcId() Obtain vpc information
- * @method void setVpcId(string $VpcId) Set vpc information
+ * @method string getPublicIp() Obtain Public IP address
+ * @method void setPublicIp(string $PublicIp) Set Public IP address
+ * @method string getPrivateIp() Obtain VPC IP
+ * @method void setPrivateIp(string $PrivateIp) Set VPC IP
+ * @method string getRegion() Obtain Region.
+ * @method void setRegion(string $Region) Set Region.
+ * @method string getVpcId() Obtain VPC information
+ * @method void setVpcId(string $VpcId) Set VPC information
  * @method string getAssetName() Obtain Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAssetName(string $AssetName) Set Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getCFWProtectLevel() Obtain CFW edition
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setCFWProtectLevel(integer $CFWProtectLevel) Set CFW edition
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getTag() Obtain Tag information
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTag(array $Tag) Set Tag information
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getCFWProtectLevel() Obtain Cloud Defense Protection Edition
+ * @method void setCFWProtectLevel(integer $CFWProtectLevel) Set Cloud Defense Protection Edition
+ * @method array getTag() Obtain Tag Information
+ * @method void setTag(array $Tag) Set Tag Information
  */
 class DbAssetInfo extends AbstractModel
 {
     /**
-     * @var integer CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Cloud Defense Status
      */
     public $CFWStatus;
 
     /**
      * @var string Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AssetId;
 
     /**
      * @var string VPC information
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $VpcName;
 
     /**
      * @var string Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AssetType;
 
     /**
-     * @var string Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Public IP address
      */
     public $PublicIp;
 
     /**
-     * @var string Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string VPC IP
      */
     public $PrivateIp;
 
     /**
-     * @var string Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Region.
      */
     public $Region;
 
     /**
-     * @var string vpc information
+     * @var string VPC information
      */
     public $VpcId;
 
     /**
      * @var string Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AssetName;
 
     /**
-     * @var integer CFW edition
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Cloud Defense Protection Edition
      */
     public $CFWProtectLevel;
 
     /**
-     * @var array Tag information
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Tag Information
      */
     public $Tag;
 
     /**
-     * @param integer $CFWStatus CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $CFWStatus Cloud Defense Status
      * @param string $AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $VpcName VPC information
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $VpcId vpc information
+     * @param string $PublicIp Public IP address
+     * @param string $PrivateIp VPC IP
+     * @param string $Region Region.
+     * @param string $VpcId VPC information
      * @param string $AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $CFWProtectLevel CFW edition
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $Tag Tag information
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $CFWProtectLevel Cloud Defense Protection Edition
+     * @param array $Tag Tag Information
      */
     function __construct()
     {

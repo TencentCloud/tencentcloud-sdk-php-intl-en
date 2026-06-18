@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoginWhiteHostList request structure.
  *
- * @method integer getId() Obtain Allowlist ID
- * @method void setId(integer $Id) Set Allowlist ID
- * @method integer getLimit() Obtain Number of results to be returned. Maximum value: 1000.
- * @method void setLimit(integer $Limit) Set Number of results to be returned. Maximum value: 1000.
- * @method integer getOffset() Obtain Offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
- * @method array getFilters() Obtain Filtering criteria <li>IpOrAlias - String - required: no - host IP or alias for filtering</li>
- * @method void setFilters(array $Filters) Set Filtering criteria <li>IpOrAlias - String - required: no - host IP or alias for filtering</li>
+ * @method integer getId() Obtain <p>Allowlist ID</p>
+ * @method void setId(integer $Id) Set <p>Allowlist ID</p>
+ * @method integer getLimit() Obtain <p>Number of items to return. Maximum value: 1000.</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of items to return. Maximum value: 1000.</p>
+ * @method integer getOffset() Obtain <p>Offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset. Default value: 0.</p>
+ * @method array getFilters() Obtain <p>Filter criteria<li>IpOrAlias - String - Required: No - Host IP or alias filter</li></p>
+ * @method void setFilters(array $Filters) Set <p>Filter criteria<li>IpOrAlias - String - Required: No - Host IP or alias filter</li></p>
  */
 class DescribeLoginWhiteHostListRequest extends AbstractModel
 {
     /**
-     * @var integer Allowlist ID
+     * @var integer <p>Allowlist ID</p>
      */
     public $Id;
 
     /**
-     * @var integer Number of results to be returned. Maximum value: 1000.
+     * @var integer <p>Number of items to return. Maximum value: 1000.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Offset. Default value: 0.
+     * @var integer <p>Offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var array Filtering criteria <li>IpOrAlias - String - required: no - host IP or alias for filtering</li>
+     * @var array <p>Filter criteria<li>IpOrAlias - String - Required: No - Host IP or alias filter</li></p>
      */
     public $Filters;
 
     /**
-     * @param integer $Id Allowlist ID
-     * @param integer $Limit Number of results to be returned. Maximum value: 1000.
-     * @param integer $Offset Offset. Default value: 0.
-     * @param array $Filters Filtering criteria <li>IpOrAlias - String - required: no - host IP or alias for filtering</li>
+     * @param integer $Id <p>Allowlist ID</p>
+     * @param integer $Limit <p>Number of items to return. Maximum value: 1000.</p>
+     * @param integer $Offset <p>Offset. Default value: 0.</p>
+     * @param array $Filters <p>Filter criteria<li>IpOrAlias - String - Required: No - Host IP or alias filter</li></p>
      */
     function __construct()
     {

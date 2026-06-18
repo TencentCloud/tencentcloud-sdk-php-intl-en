@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMachineAutoClearConfig request structure.
  *
- * @method integer getClearRule() Obtain Clean-up rule time, 0 for OFF, in days, up to 30 days
- * @method void setClearRule(integer $ClearRule) Set Clean-up rule time, 0 for OFF, in days, up to 30 days
+ * @method integer getClearRule() Obtain <p>Cleanup rule retention period. 0: Disabled. Unit: day. Maximum: 30 days</p>
+ * @method void setClearRule(integer $ClearRule) Set <p>Cleanup rule retention period. 0: Disabled. Unit: day. Maximum: 30 days</p>
  */
 class ModifyMachineAutoClearConfigRequest extends AbstractModel
 {
     /**
-     * @var integer Clean-up rule time, 0 for OFF, in days, up to 30 days
+     * @var integer <p>Cleanup rule retention period. 0: Disabled. Unit: day. Maximum: 30 days</p>
      */
     public $ClearRule;
 
     /**
-     * @param integer $ClearRule Clean-up rule time, 0 for OFF, in days, up to 30 days
+     * @param integer $ClearRule <p>Cleanup rule retention period. 0: Disabled. Unit: day. Maximum: 30 days</p>
      */
     function __construct()
     {

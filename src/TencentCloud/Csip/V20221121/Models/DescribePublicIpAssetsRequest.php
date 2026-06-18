@@ -20,15 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePublicIpAssets request structure.
  *
- * @method Filter getFilter() Obtain Filter conditions
- * @method void setFilter(Filter $Filter) Set Filter conditions
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
+ * @method Filter getFilter() Obtain Filter parameters
+ * @method void setFilter(Filter $Filter) Set Filter parameters
  * @method array getTags() Obtain CSC tags of the asset
  * @method void setTags(array $Tags) Set CSC tags of the asset
  */
 class DescribePublicIpAssetsRequest extends AbstractModel
 {
     /**
-     * @var Filter Filter conditions
+     * @var array Group Account Member ID
+     */
+    public $MemberId;
+
+    /**
+     * @var Filter Filter parameters
      */
     public $Filter;
 
@@ -38,7 +45,8 @@ class DescribePublicIpAssetsRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param Filter $Filter Filter conditions
+     * @param array $MemberId Group Account Member ID
+     * @param Filter $Filter Filter parameters
      * @param array $Tags CSC tags of the asset
      */
     function __construct()
@@ -54,6 +62,10 @@ class DescribePublicIpAssetsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
+        }
+
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);

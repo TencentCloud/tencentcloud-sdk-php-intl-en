@@ -20,38 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddLoginWhiteLists request structure.
  *
- * @method HostLoginWhiteObj getHostLoginWhiteObj() Obtain Cross-region log-in allowlist entity
- * @method void setHostLoginWhiteObj(HostLoginWhiteObj $HostLoginWhiteObj) Set Cross-region log-in allowlist entity
- * @method string getProcessType() Obtain Synchronous event processing method:
-"": do not process"All": add all events that match this configuration to the allowlist"Id": add the event corresponding to the event ID to the allowlist
- * @method void setProcessType(string $ProcessType) Set Synchronous event processing method:
-"": do not process"All": add all events that match this configuration to the allowlist"Id": add the event corresponding to the event ID to the allowlist
- * @method integer getEventId() Obtain Cross-region log-in event ID. This parameter is required when ProcessType is set to Id.
- * @method void setEventId(integer $EventId) Set Cross-region log-in event ID. This parameter is required when ProcessType is set to Id.
+ * @method HostLoginWhiteObj getHostLoginWhiteObj() Obtain <p>Unusual-login allowlist entry</p>
+ * @method void setHostLoginWhiteObj(HostLoginWhiteObj $HostLoginWhiteObj) Set <p>Unusual-login allowlist entry</p>
+ * @method string getProcessType() Obtain <p>Event sync processing method:<br>"" -- No action<br>"All" -- Add all event records matching this configuration to the allowlist<br>"Id" -- Add the event record corresponding to EventId to the allowlist</p>
+ * @method void setProcessType(string $ProcessType) Set <p>Event sync processing method:<br>"" -- No action<br>"All" -- Add all event records matching this configuration to the allowlist<br>"Id" -- Add the event record corresponding to EventId to the allowlist</p>
+ * @method integer getEventId() Obtain <p>Unusual-login event ID. This parameter is required when ProcessType is Id.</p>
+ * @method void setEventId(integer $EventId) Set <p>Unusual-login event ID. This parameter is required when ProcessType is Id.</p>
  */
 class AddLoginWhiteListsRequest extends AbstractModel
 {
     /**
-     * @var HostLoginWhiteObj Cross-region log-in allowlist entity
+     * @var HostLoginWhiteObj <p>Unusual-login allowlist entry</p>
      */
     public $HostLoginWhiteObj;
 
     /**
-     * @var string Synchronous event processing method:
-"": do not process"All": add all events that match this configuration to the allowlist"Id": add the event corresponding to the event ID to the allowlist
+     * @var string <p>Event sync processing method:<br>"" -- No action<br>"All" -- Add all event records matching this configuration to the allowlist<br>"Id" -- Add the event record corresponding to EventId to the allowlist</p>
      */
     public $ProcessType;
 
     /**
-     * @var integer Cross-region log-in event ID. This parameter is required when ProcessType is set to Id.
+     * @var integer <p>Unusual-login event ID. This parameter is required when ProcessType is Id.</p>
      */
     public $EventId;
 
     /**
-     * @param HostLoginWhiteObj $HostLoginWhiteObj Cross-region log-in allowlist entity
-     * @param string $ProcessType Synchronous event processing method:
-"": do not process"All": add all events that match this configuration to the allowlist"Id": add the event corresponding to the event ID to the allowlist
-     * @param integer $EventId Cross-region log-in event ID. This parameter is required when ProcessType is set to Id.
+     * @param HostLoginWhiteObj $HostLoginWhiteObj <p>Unusual-login allowlist entry</p>
+     * @param string $ProcessType <p>Event sync processing method:<br>"" -- No action<br>"All" -- Add all event records matching this configuration to the allowlist<br>"Id" -- Add the event record corresponding to EventId to the allowlist</p>
+     * @param integer $EventId <p>Unusual-login event ID. This parameter is required when ProcessType is Id.</p>
      */
     function __construct()
     {

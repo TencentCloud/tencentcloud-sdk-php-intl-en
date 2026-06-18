@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSearchBugInfo request structure.
  *
- * @method string getId() Obtain Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
- * @method void setId(string $Id) Set Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+ * @method string getId() Obtain 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
+ * @method void setId(string $Id) Set 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
  * @method string getCVEId() Obtain CVE number of the vulnerability. It's required when `Id=3`.
  * @method void setCVEId(string $CVEId) Set CVE number of the vulnerability. It's required when `Id=3`.
  */
 class DescribeSearchBugInfoRequest extends AbstractModel
 {
     /**
-     * @var string Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+     * @var string 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
      */
     public $Id;
 
@@ -38,7 +38,7 @@ class DescribeSearchBugInfoRequest extends AbstractModel
     public $CVEId;
 
     /**
-     * @param string $Id Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+     * @param string $Id 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
      * @param string $CVEId CVE number of the vulnerability. It's required when `Id=3`.
      */
     function __construct()

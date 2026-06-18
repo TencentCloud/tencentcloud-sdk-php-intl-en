@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Server tag information
  *
- * @method string getTagKey() Obtain None
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTagKey(string $TagKey) Set None
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getTagValue() Obtain None
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTagValue(string $TagValue) Set None
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getTagKey() Obtain Host tag key
+ * @method void setTagKey(string $TagKey) Set Host tag key
+ * @method string getTagValue() Obtain Host tag value
+ * @method void setTagValue(string $TagValue) Set Host tag value
  */
 class Tags extends AbstractModel
 {
     /**
-     * @var string None
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Host tag key
      */
     public $TagKey;
 
     /**
-     * @var string None
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Host tag value
      */
     public $TagValue;
 
     /**
-     * @param string $TagKey None
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $TagValue None
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $TagKey Host tag key
+     * @param string $TagValue Host tag value
      */
     function __construct()
     {

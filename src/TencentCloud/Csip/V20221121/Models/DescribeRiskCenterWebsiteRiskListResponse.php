@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain Total number of entries
  * @method void setTotalCount(integer $TotalCount) Set Total number of entries
- * @method array getData() Obtain List of content risks
- * @method void setData(array $Data) Set List of content risks
+ * @method array getData() Obtain Content Risk List
+ * @method void setData(array $Data) Set Content Risk List
  * @method array getStatusLists() Obtain List of risk handling status
  * @method void setStatusLists(array $StatusLists) Set List of risk handling status
  * @method array getLevelLists() Obtain List of risk levels
@@ -43,7 +43,7 @@ class DescribeRiskCenterWebsiteRiskListResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array List of content risks
+     * @var array Content Risk List
      */
     public $Data;
 
@@ -74,7 +74,7 @@ class DescribeRiskCenterWebsiteRiskListResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount Total number of entries
-     * @param array $Data List of content risks
+     * @param array $Data Content Risk List
      * @param array $StatusLists List of risk handling status
      * @param array $LevelLists List of risk levels
      * @param array $InstanceTypeLists List of asset types

@@ -28,20 +28,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanItem(array $ScanItem) Set Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
  * @method integer getScanPlanType() Obtain Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
  * @method void setScanPlanType(integer $ScanPlanType) Set Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
  * @method array getAssets() Obtain List of assets to scan
  * @method void setAssets(array $Assets) Set List of assets to scan
  * @method string getScanPlanContent() Obtain Details of a scheduled scan task
  * @method void setScanPlanContent(string $ScanPlanContent) Set Details of a scheduled scan task
  * @method array getSelfDefiningAssets() Obtain IP/Domain name/URL
  * @method void setSelfDefiningAssets(array $SelfDefiningAssets) Set IP/Domain name/URL
- * @method string getScanFrom() Obtain Request source. Values: `vss` (Vulnerability Scan Service), `csip` (Cloud Security Center). It defaults to `vss`.
- * @method void setScanFrom(string $ScanFrom) Set Request source. Values: `vss` (Vulnerability Scan Service), `csip` (Cloud Security Center). It defaults to `vss`.
+ * @method string getScanFrom() Obtain Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
+ * @method void setScanFrom(string $ScanFrom) Set Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
  * @method TaskAdvanceCFG getTaskAdvanceCFG() Obtain Advanced settings
  * @method void setTaskAdvanceCFG(TaskAdvanceCFG $TaskAdvanceCFG) Set Advanced settings
  * @method integer getTaskMode() Obtain Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
  * @method void setTaskMode(integer $TaskMode) Set Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
  * @method AssetTag getTags() Obtain Asset tags
  * @method void setTags(AssetTag $Tags) Set Asset tags
+ * @method string getFinishWebHook() Obtain Task completed callback webhook url
+ * @method void setFinishWebHook(string $FinishWebHook) Set Task completed callback webhook url
  */
 class CreateRiskCenterScanTaskRequest extends AbstractModel
 {
@@ -66,6 +70,11 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
     public $ScanPlanType;
 
     /**
+     * @var array Group Account Member ID
+     */
+    public $MemberId;
+
+    /**
      * @var array List of assets to scan
      */
     public $Assets;
@@ -81,7 +90,7 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
     public $SelfDefiningAssets;
 
     /**
-     * @var string Request source. Values: `vss` (Vulnerability Scan Service), `csip` (Cloud Security Center). It defaults to `vss`.
+     * @var string Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
      */
     public $ScanFrom;
 
@@ -101,17 +110,24 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string Task completed callback webhook url
+     */
+    public $FinishWebHook;
+
+    /**
      * @param string $TaskName Task name
      * @param integer $ScanAssetType Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required. 
      * @param array $ScanItem Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
      * @param integer $ScanPlanType Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
+     * @param array $MemberId Group Account Member ID
      * @param array $Assets List of assets to scan
      * @param string $ScanPlanContent Details of a scheduled scan task
      * @param array $SelfDefiningAssets IP/Domain name/URL
-     * @param string $ScanFrom Request source. Values: `vss` (Vulnerability Scan Service), `csip` (Cloud Security Center). It defaults to `vss`.
+     * @param string $ScanFrom Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
      * @param TaskAdvanceCFG $TaskAdvanceCFG Advanced settings
      * @param integer $TaskMode Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
      * @param AssetTag $Tags Asset tags
+     * @param string $FinishWebHook Task completed callback webhook url
      */
     function __construct()
     {
@@ -140,6 +156,10 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
 
         if (array_key_exists("ScanPlanType",$param) and $param["ScanPlanType"] !== null) {
             $this->ScanPlanType = $param["ScanPlanType"];
+        }
+
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
         }
 
         if (array_key_exists("Assets",$param) and $param["Assets"] !== null) {
@@ -175,6 +195,10 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
             $this->Tags = new AssetTag();
             $this->Tags->deserialize($param["Tags"]);
+        }
+
+        if (array_key_exists("FinishWebHook",$param) and $param["FinishWebHook"] !== null) {
+            $this->FinishWebHook = $param["FinishWebHook"];
         }
     }
 }

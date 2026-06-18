@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganizationUserInfo request structure.
  *
- * @method array getMemberId() Obtain Member ID of the group account
- * @method void setMemberId(array $MemberId) Set Member ID of the group account
- * @method Filter getFilter() Obtain Filter content
- * @method void setFilter(Filter $Filter) Set Filter content
- * @method boolean getNotSupportCloud() Obtain No support for multi-cloud
- * @method void setNotSupportCloud(boolean $NotSupportCloud) Set No support for multi-cloud
+ * @method array getMemberId() Obtain Group Account Member ID
+ * @method void setMemberId(array $MemberId) Set Group Account Member ID
+ * @method Filter getFilter() Obtain Filtered Content
+ * @method void setFilter(Filter $Filter) Set Filtered Content
+ * @method boolean getNotSupportCloud() Obtain Does not support multi-cloud.
+ * @method void setNotSupportCloud(boolean $NotSupportCloud) Set Does not support multi-cloud.
  */
 class DescribeOrganizationUserInfoRequest extends AbstractModel
 {
     /**
-     * @var array Member ID of the group account
+     * @var array Group Account Member ID
      */
     public $MemberId;
 
     /**
-     * @var Filter Filter content
+     * @var Filter Filtered Content
      */
     public $Filter;
 
     /**
-     * @var boolean No support for multi-cloud
+     * @var boolean Does not support multi-cloud.
      */
     public $NotSupportCloud;
 
     /**
-     * @param array $MemberId Member ID of the group account
-     * @param Filter $Filter Filter content
-     * @param boolean $NotSupportCloud No support for multi-cloud
+     * @param array $MemberId Group Account Member ID
+     * @param Filter $Filter Filtered Content
+     * @param boolean $NotSupportCloud Does not support multi-cloud.
      */
     function __construct()
     {

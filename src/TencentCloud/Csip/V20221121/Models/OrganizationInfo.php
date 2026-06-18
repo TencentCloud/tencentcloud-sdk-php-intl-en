@@ -18,107 +18,107 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Group account details
+ * Group Account Details
  *
- * @method string getNickName() Obtain Member account name
- * @method void setNickName(string $NickName) Set Member account name
- * @method string getNodeName() Obtain Department node name, department of account
- * @method void setNodeName(string $NodeName) Set Department node name, department of account
- * @method string getRole() Obtain Member/Admin/DelegatedAdmin/EntityAdmin; Member/Admin/DelegatedAdmin/EntityAdmin
- * @method void setRole(string $Role) Set Member/Admin/DelegatedAdmin/EntityAdmin; Member/Admin/DelegatedAdmin/EntityAdmin
- * @method string getMemberId() Obtain Member account id
- * @method void setMemberId(string $MemberId) Set Member account id
- * @method string getJoinType() Obtain account joining method,create/invite
- * @method void setJoinType(string $JoinType) Set account joining method,create/invite
- * @method string getGroupName() Obtain Group name
- * @method void setGroupName(string $GroupName) Set Group name
- * @method string getAdminName() Obtain Admin account name
- * @method void setAdminName(string $AdminName) Set Admin account name
- * @method string getAdminUin() Obtain Admin Uin
- * @method void setAdminUin(string $AdminUin) Set Admin Uin
- * @method string getCreateTime() Obtain Creation Time
- * @method void setCreateTime(string $CreateTime) Set Creation Time
+ * @method string getNickName() Obtain member account name
+ * @method void setNickName(string $NickName) Set member account name
+ * @method string getNodeName() Obtain Department Node Name, Account's Department
+ * @method void setNodeName(string $NodeName) Set Department Node Name, Account's Department
+ * @method string getRole() Obtain Member/Admin/DelegatedAdmin/EntityAdmin, corresponding to Member/Administrator/Delegated Administrator/Entity Administrator
+ * @method void setRole(string $Role) Set Member/Admin/DelegatedAdmin/EntityAdmin, corresponding to Member/Administrator/Delegated Administrator/Entity Administrator
+ * @method string getMemberId() Obtain Member Account ID
+ * @method void setMemberId(string $MemberId) Set Member Account ID
+ * @method string getJoinType() Obtain Account Joining Method: Create/Invite.
+ * @method void setJoinType(string $JoinType) Set Account Joining Method: Create/Invite.
+ * @method string getGroupName() Obtain Group Name
+ * @method void setGroupName(string $GroupName) Set Group Name
+ * @method string getAdminName() Obtain administrator account name
+ * @method void setAdminName(string $AdminName) Set administrator account name
+ * @method string getAdminUin() Obtain Administrator UIN
+ * @method void setAdminUin(string $AdminUin) Set Administrator UIN
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
  * @method integer getNodeCount() Obtain Number of departments
  * @method void setNodeCount(integer $NodeCount) Set Number of departments
  * @method integer getMemberCount() Obtain Number of members
  * @method void setMemberCount(integer $MemberCount) Set Number of members
- * @method integer getSubAccountCount() Obtain Sub-account count
- * @method void setSubAccountCount(integer $SubAccountCount) Set Sub-account count
- * @method integer getAbnormalSubUserCount() Obtain Abnormal sub-account quantity
- * @method void setAbnormalSubUserCount(integer $AbnormalSubUserCount) Set Abnormal sub-account quantity
- * @method array getGroupPermission() Obtain Organization Relationship Policy Permissions
- * @method void setGroupPermission(array $GroupPermission) Set Organization Relationship Policy Permissions
+ * @method integer getSubAccountCount() Obtain Number of sub-accounts
+ * @method void setSubAccountCount(integer $SubAccountCount) Set Number of sub-accounts
+ * @method integer getAbnormalSubUserCount() Obtain Number of abnormal sub-accounts
+ * @method void setAbnormalSubUserCount(integer $AbnormalSubUserCount) Set Number of abnormal sub-accounts
+ * @method array getGroupPermission() Obtain Group Relationship Policy Permissions
+ * @method void setGroupPermission(array $GroupPermission) Set Group Relationship Policy Permissions
  * @method array getMemberPermission() Obtain Membership Policy Permissions
  * @method void setMemberPermission(array $MemberPermission) Set Membership Policy Permissions
- * @method integer getGroupPayMode() Obtain Organization Billing Mode; 0/Self-paid, 1/Proxy-paid
- * @method void setGroupPayMode(integer $GroupPayMode) Set Organization Billing Mode; 0/Self-paid, 1/Proxy-paid
- * @method integer getMemberPayMode() Obtain Personal Billing Mode; 0/Self-paid, 1/Proxy-paid
- * @method void setMemberPayMode(integer $MemberPayMode) Set Personal Billing Mode; 0/Self-paid, 1/Proxy-paid
- * @method string getCFWProtect() Obtain If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
- * @method void setCFWProtect(string $CFWProtect) Set If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
- * @method string getWAFProtect() Obtain If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
- * @method void setWAFProtect(string $WAFProtect) Set If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
- * @method string getCWPProtect() Obtain If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
- * @method void setCWPProtect(string $CWPProtect) Set If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
- * @method array getDepartments() Obtain Array of all departments
- * @method void setDepartments(array $Departments) Set Array of all departments
+ * @method integer getGroupPayMode() Obtain Group Payment Mode. 0: Self-payment; 1: Proxy Payment.
+ * @method void setGroupPayMode(integer $GroupPayMode) Set Group Payment Mode. 0: Self-payment; 1: Proxy Payment.
+ * @method integer getMemberPayMode() Obtain Personal Payment Mode. 0: Self-payment; 1: Proxy payment.
+ * @method void setMemberPayMode(integer $MemberPayMode) Set Personal Payment Mode. 0: Self-payment; 1: Proxy payment.
+ * @method string getCFWProtect() Obtain Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+ * @method void setCFWProtect(string $CFWProtect) Set Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+ * @method string getWAFProtect() Obtain Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+ * @method void setWAFProtect(string $WAFProtect) Set Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+ * @method string getCWPProtect() Obtain Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+ * @method void setCWPProtect(string $CWPProtect) Set Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+ * @method array getDepartments() Obtain Array of Collections for All Departments
+ * @method void setDepartments(array $Departments) Set Array of Collections for All Departments
  * @method string getMemberCreateTime() Obtain Member Creation Time
  * @method void setMemberCreateTime(string $MemberCreateTime) Set Member Creation Time
  * @method string getCSIPProtect() Obtain Advanced/Enterprise/Ultimate 
  * @method void setCSIPProtect(string $CSIPProtect) Set Advanced/Enterprise/Ultimate 
- * @method integer getQuotaConsumer() Obtain 1 indicates the quota consumer
- * @method void setQuotaConsumer(integer $QuotaConsumer) Set 1 indicates the quota consumer
- * @method integer getEnableAdminCount() Obtain Number of enabled Admin/Delegated Admin accounts
- * @method void setEnableAdminCount(integer $EnableAdminCount) Set Number of enabled Admin/Delegated Admin accounts
- * @method array getCloudCountDesc() Obtain Multi-cloud account statistics in array format. Refer to the CloudCountDesc description for details.
- * @method void setCloudCountDesc(array $CloudCountDesc) Set Multi-cloud account statistics in array format. Refer to the CloudCountDesc description for details.
- * @method integer getAdminCount() Obtain Total Number of Admin/Delegated Admin Accounts
- * @method void setAdminCount(integer $AdminCount) Set Total Number of Admin/Delegated Admin Accounts
+ * @method integer getQuotaConsumer() Obtain 1 indicates the quota consumer.
+ * @method void setQuotaConsumer(integer $QuotaConsumer) Set 1 indicates the quota consumer.
+ * @method integer getEnableAdminCount() Obtain Number of activations by admin/delegated admin
+ * @method void setEnableAdminCount(integer $EnableAdminCount) Set Number of activations by admin/delegated admin
+ * @method array getCloudCountDesc() Obtain Account Multi-Cloud Information Statistics, in array format. Refer to the description of CloudCountDesc for details.
+ * @method void setCloudCountDesc(array $CloudCountDesc) Set Account Multi-Cloud Information Statistics, in array format. Refer to the description of CloudCountDesc for details.
+ * @method integer getAdminCount() Obtain Total number of admins/delegated admins
+ * @method void setAdminCount(integer $AdminCount) Set Total number of admins/delegated admins
  */
 class OrganizationInfo extends AbstractModel
 {
     /**
-     * @var string Member account name
+     * @var string member account name
      */
     public $NickName;
 
     /**
-     * @var string Department node name, department of account
+     * @var string Department Node Name, Account's Department
      */
     public $NodeName;
 
     /**
-     * @var string Member/Admin/DelegatedAdmin/EntityAdmin; Member/Admin/DelegatedAdmin/EntityAdmin
+     * @var string Member/Admin/DelegatedAdmin/EntityAdmin, corresponding to Member/Administrator/Delegated Administrator/Entity Administrator
      */
     public $Role;
 
     /**
-     * @var string Member account id
+     * @var string Member Account ID
      */
     public $MemberId;
 
     /**
-     * @var string account joining method,create/invite
+     * @var string Account Joining Method: Create/Invite.
      */
     public $JoinType;
 
     /**
-     * @var string Group name
+     * @var string Group Name
      */
     public $GroupName;
 
     /**
-     * @var string Admin account name
+     * @var string administrator account name
      */
     public $AdminName;
 
     /**
-     * @var string Admin Uin
+     * @var string Administrator UIN
      */
     public $AdminUin;
 
     /**
-     * @var string Creation Time
+     * @var string Creation time.
      */
     public $CreateTime;
 
@@ -133,17 +133,17 @@ class OrganizationInfo extends AbstractModel
     public $MemberCount;
 
     /**
-     * @var integer Sub-account count
+     * @var integer Number of sub-accounts
      */
     public $SubAccountCount;
 
     /**
-     * @var integer Abnormal sub-account quantity
+     * @var integer Number of abnormal sub-accounts
      */
     public $AbnormalSubUserCount;
 
     /**
-     * @var array Organization Relationship Policy Permissions
+     * @var array Group Relationship Policy Permissions
      */
     public $GroupPermission;
 
@@ -153,32 +153,32 @@ class OrganizationInfo extends AbstractModel
     public $MemberPermission;
 
     /**
-     * @var integer Organization Billing Mode; 0/Self-paid, 1/Proxy-paid
+     * @var integer Group Payment Mode. 0: Self-payment; 1: Proxy Payment.
      */
     public $GroupPayMode;
 
     /**
-     * @var integer Personal Billing Mode; 0/Self-paid, 1/Proxy-paid
+     * @var integer Personal Payment Mode. 0: Self-payment; 1: Proxy payment.
      */
     public $MemberPayMode;
 
     /**
-     * @var string If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+     * @var string Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
      */
     public $CFWProtect;
 
     /**
-     * @var string If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+     * @var string Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
      */
     public $WAFProtect;
 
     /**
-     * @var string If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+     * @var string Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
      */
     public $CWPProtect;
 
     /**
-     * @var array Array of all departments
+     * @var array Array of Collections for All Departments
      */
     public $Departments;
 
@@ -193,53 +193,53 @@ class OrganizationInfo extends AbstractModel
     public $CSIPProtect;
 
     /**
-     * @var integer 1 indicates the quota consumer
+     * @var integer 1 indicates the quota consumer.
      */
     public $QuotaConsumer;
 
     /**
-     * @var integer Number of enabled Admin/Delegated Admin accounts
+     * @var integer Number of activations by admin/delegated admin
      */
     public $EnableAdminCount;
 
     /**
-     * @var array Multi-cloud account statistics in array format. Refer to the CloudCountDesc description for details.
+     * @var array Account Multi-Cloud Information Statistics, in array format. Refer to the description of CloudCountDesc for details.
      */
     public $CloudCountDesc;
 
     /**
-     * @var integer Total Number of Admin/Delegated Admin Accounts
+     * @var integer Total number of admins/delegated admins
      */
     public $AdminCount;
 
     /**
-     * @param string $NickName Member account name
-     * @param string $NodeName Department node name, department of account
-     * @param string $Role Member/Admin/DelegatedAdmin/EntityAdmin; Member/Admin/DelegatedAdmin/EntityAdmin
-     * @param string $MemberId Member account id
-     * @param string $JoinType account joining method,create/invite
-     * @param string $GroupName Group name
-     * @param string $AdminName Admin account name
-     * @param string $AdminUin Admin Uin
-     * @param string $CreateTime Creation Time
+     * @param string $NickName member account name
+     * @param string $NodeName Department Node Name, Account's Department
+     * @param string $Role Member/Admin/DelegatedAdmin/EntityAdmin, corresponding to Member/Administrator/Delegated Administrator/Entity Administrator
+     * @param string $MemberId Member Account ID
+     * @param string $JoinType Account Joining Method: Create/Invite.
+     * @param string $GroupName Group Name
+     * @param string $AdminName administrator account name
+     * @param string $AdminUin Administrator UIN
+     * @param string $CreateTime Creation time.
      * @param integer $NodeCount Number of departments
      * @param integer $MemberCount Number of members
-     * @param integer $SubAccountCount Sub-account count
-     * @param integer $AbnormalSubUserCount Abnormal sub-account quantity
-     * @param array $GroupPermission Organization Relationship Policy Permissions
+     * @param integer $SubAccountCount Number of sub-accounts
+     * @param integer $AbnormalSubUserCount Number of abnormal sub-accounts
+     * @param array $GroupPermission Group Relationship Policy Permissions
      * @param array $MemberPermission Membership Policy Permissions
-     * @param integer $GroupPayMode Organization Billing Mode; 0/Self-paid, 1/Proxy-paid
-     * @param integer $MemberPayMode Personal Billing Mode; 0/Self-paid, 1/Proxy-paid
-     * @param string $CFWProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
-     * @param string $WAFProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
-     * @param string $CWPProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
-     * @param array $Departments Array of all departments
+     * @param integer $GroupPayMode Group Payment Mode. 0: Self-payment; 1: Proxy Payment.
+     * @param integer $MemberPayMode Personal Payment Mode. 0: Self-payment; 1: Proxy payment.
+     * @param string $CFWProtect Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+     * @param string $WAFProtect Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+     * @param string $CWPProtect Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+     * @param array $Departments Array of Collections for All Departments
      * @param string $MemberCreateTime Member Creation Time
      * @param string $CSIPProtect Advanced/Enterprise/Ultimate 
-     * @param integer $QuotaConsumer 1 indicates the quota consumer
-     * @param integer $EnableAdminCount Number of enabled Admin/Delegated Admin accounts
-     * @param array $CloudCountDesc Multi-cloud account statistics in array format. Refer to the CloudCountDesc description for details.
-     * @param integer $AdminCount Total Number of Admin/Delegated Admin Accounts
+     * @param integer $QuotaConsumer 1 indicates the quota consumer.
+     * @param integer $EnableAdminCount Number of activations by admin/delegated admin
+     * @param array $CloudCountDesc Account Multi-Cloud Information Statistics, in array format. Refer to the description of CloudCountDesc for details.
+     * @param integer $AdminCount Total number of admins/delegated admins
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCVMAssetInfo request structure.
  *
- * @method string getAssetId() Obtain u200c-
- * @method void setAssetId(string $AssetId) Set u200c-
+ * @method string getAssetId() Obtain Asset ID
+ * @method void setAssetId(string $AssetId) Set Asset ID
  */
 class DescribeCVMAssetInfoRequest extends AbstractModel
 {
     /**
-     * @var string u200c-
+     * @var string Asset ID
      */
     public $AssetId;
 
     /**
-     * @param string $AssetId u200c-
+     * @param string $AssetId Asset ID
      */
     function __construct()
     {

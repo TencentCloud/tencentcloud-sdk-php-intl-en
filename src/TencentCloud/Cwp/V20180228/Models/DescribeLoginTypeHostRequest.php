@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFilters() Obtain <li>Name - string - Required: No - Host name</li> <li>InstanceId - string - Required: No - Instance ID</li> <li>PublicIp - string - Required: No - Public IP address</li> <li>PrivateIp - string - Required: No - Private IP</li>
  * @method void setFilters(array $Filters) Set <li>Name - string - Required: No - Host name</li> <li>InstanceId - string - Required: No - Instance ID</li> <li>PublicIp - string - Required: No - Public IP address</li> <li>PrivateIp - string - Required: No - Private IP</li>
- * @method integer getLimit() Obtain Limit Entries, 10 by default, up to 100
- * @method void setLimit(integer $Limit) Set Limit Entries, 10 by default, up to 100
- * @method integer getOffset() Obtain Offset, which is 0 by default.
- * @method void setOffset(integer $Offset) Set Offset, which is 0 by default.
- * @method string getOrder() Obtain Sorting Method: [ASC: Ascending Order, DESC: Descending Order]
- * @method void setOrder(string $Order) Set Sorting Method: [ASC: Ascending Order, DESC: Descending Order]
- * @method string getBy() Obtain Sorting column: [Id].
- * @method void setBy(string $By) Set Sorting column: [Id].
+ * @method integer getLimit() Obtain <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
+ * @method integer getOffset() Obtain <p>Offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset. Default value: 0.</p>
+ * @method string getOrder() Obtain <p>Sort order: [ASC: ascending | DESC: descending]</p>
+ * @method void setOrder(string $Order) Set <p>Sort order: [ASC: ascending | DESC: descending]</p>
+ * @method string getBy() Obtain <p>Optional sorting column: [Id]</p>
+ * @method void setBy(string $By) Set <p>Optional sorting column: [Id]</p>
  */
 class DescribeLoginTypeHostRequest extends AbstractModel
 {
@@ -39,31 +39,31 @@ class DescribeLoginTypeHostRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer Limit Entries, 10 by default, up to 100
+     * @var integer <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Offset, which is 0 by default.
+     * @var integer <p>Offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var string Sorting Method: [ASC: Ascending Order, DESC: Descending Order]
+     * @var string <p>Sort order: [ASC: ascending | DESC: descending]</p>
      */
     public $Order;
 
     /**
-     * @var string Sorting column: [Id].
+     * @var string <p>Optional sorting column: [Id]</p>
      */
     public $By;
 
     /**
      * @param array $Filters <li>Name - string - Required: No - Host name</li> <li>InstanceId - string - Required: No - Instance ID</li> <li>PublicIp - string - Required: No - Public IP address</li> <li>PrivateIp - string - Required: No - Private IP</li>
-     * @param integer $Limit Limit Entries, 10 by default, up to 100
-     * @param integer $Offset Offset, which is 0 by default.
-     * @param string $Order Sorting Method: [ASC: Ascending Order, DESC: Descending Order]
-     * @param string $By Sorting column: [Id].
+     * @param integer $Limit <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
+     * @param integer $Offset <p>Offset. Default value: 0.</p>
+     * @param string $Order <p>Sort order: [ASC: ascending | DESC: descending]</p>
+     * @param string $By <p>Optional sorting column: [Id]</p>
      */
     function __construct()
     {

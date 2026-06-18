@@ -23,117 +23,61 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVpcId() Obtain vpc-id
  * @method void setVpcId(string $VpcId) Set vpc-id
  * @method string getVpcName() Obtain vpc-name
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setVpcName(string $VpcName) Set vpc-name
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getAssetName() Obtain Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAssetName(string $AssetName) Set Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getOs() Obtain Operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setOs(string $Os) Set Operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getPublicIp() Obtain Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPublicIp(string $PublicIp) Set Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getPrivateIp() Obtain Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPrivateIp(string $PrivateIp) Set Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getRegion() Obtain Region
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getOs() Obtain Operating system.
+ * @method void setOs(string $Os) Set Operating system.
+ * @method string getPublicIp() Obtain Public IP address
+ * @method void setPublicIp(string $PublicIp) Set Public IP address
+ * @method string getPrivateIp() Obtain Private IP address
+ * @method void setPrivateIp(string $PrivateIp) Set Private IP address
+ * @method string getRegion() Obtain Region.
+ * @method void setRegion(string $Region) Set Region.
  * @method string getAssetType() Obtain Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAssetType(string $AssetType) Set Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method string getAssetId() Obtain Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAssetId(string $AssetId) Set Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getAccountNum() Obtain Total number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setAccountNum(integer $AccountNum) Set Total number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getPortNum() Obtain Number of ports
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setPortNum(integer $PortNum) Set Number of ports
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getProcessNum() Obtain Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setProcessNum(integer $ProcessNum) Set Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getSoftApplicationNum() Obtain Numbernumb of software applications
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setSoftApplicationNum(integer $SoftApplicationNum) Set Numbernumb of software applications
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getDatabaseNum() Obtain Number of databases
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setDatabaseNum(integer $DatabaseNum) Set Number of databases
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getWebApplicationNum() Obtain Number of web applications
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setWebApplicationNum(integer $WebApplicationNum) Set Number of web applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getAccountNum() Obtain Number of accounts
+ * @method void setAccountNum(integer $AccountNum) Set Number of accounts
+ * @method integer getPortNum() Obtain Number of Ports
+ * @method void setPortNum(integer $PortNum) Set Number of Ports
+ * @method integer getProcessNum() Obtain Process quantity
+ * @method void setProcessNum(integer $ProcessNum) Set Process quantity
+ * @method integer getSoftApplicationNum() Obtain Number of Software Applications
+ * @method void setSoftApplicationNum(integer $SoftApplicationNum) Set Number of Software Applications
+ * @method integer getDatabaseNum() Obtain Database Count
+ * @method void setDatabaseNum(integer $DatabaseNum) Set Database Count
+ * @method integer getWebApplicationNum() Obtain Number of Web Applications
+ * @method void setWebApplicationNum(integer $WebApplicationNum) Set Number of Web Applications
  * @method integer getServiceNum() Obtain Number of services
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setServiceNum(integer $ServiceNum) Set Number of services
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getWebFrameworkNum() Obtain Number of web frameworks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setWebFrameworkNum(integer $WebFrameworkNum) Set Number of web frameworks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getWebSiteNum() Obtain Number of websites
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setWebSiteNum(integer $WebSiteNum) Set Number of websites
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getJarPackageNum() Obtain Number of JAR packages
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setJarPackageNum(integer $JarPackageNum) Set Number of JAR packages
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getStartServiceNum() Obtain Number of enabled services
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setStartServiceNum(integer $StartServiceNum) Set Number of enabled services
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getScheduledTaskNum() Obtain Number of scheduled tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setScheduledTaskNum(integer $ScheduledTaskNum) Set Number of scheduled tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getEnvironmentVariableNum() Obtain Number of environment variables
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setEnvironmentVariableNum(integer $EnvironmentVariableNum) Set Number of environment variables
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getKernelModuleNum() Obtain Number of kernel modules
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setKernelModuleNum(integer $KernelModuleNum) Set Number of kernel modules
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getSystemInstallationPackageNum() Obtain Number of system installation packages
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setSystemInstallationPackageNum(integer $SystemInstallationPackageNum) Set Number of system installation packages
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getSurplusProtectDay() Obtain Remaining service validity in days
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setSurplusProtectDay(integer $SurplusProtectDay) Set Remaining service validity in days
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getCWPStatus() Obtain Whether the CWPP agent is installed. Values: `1` (installed) and `0` (not installed)
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setCWPStatus(integer $CWPStatus) Set Whether the CWPP agent is installed. Values: `1` (installed) and `0` (not installed)
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method array getTag() Obtain Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTag(array $Tag) Set Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getWebFrameworkNum() Obtain Web Framework Count
+ * @method void setWebFrameworkNum(integer $WebFrameworkNum) Set Web Framework Count
+ * @method integer getWebSiteNum() Obtain Website Count
+ * @method void setWebSiteNum(integer $WebSiteNum) Set Website Count
+ * @method integer getJarPackageNum() Obtain Jar Package Count
+ * @method void setJarPackageNum(integer $JarPackageNum) Set Jar Package Count
+ * @method integer getStartServiceNum() Obtain Started Service Count
+ * @method void setStartServiceNum(integer $StartServiceNum) Set Started Service Count
+ * @method integer getScheduledTaskNum() Obtain Number of Scheduled Tasks
+ * @method void setScheduledTaskNum(integer $ScheduledTaskNum) Set Number of Scheduled Tasks
+ * @method integer getEnvironmentVariableNum() Obtain Number of Environment Variables
+ * @method void setEnvironmentVariableNum(integer $EnvironmentVariableNum) Set Number of Environment Variables
+ * @method integer getKernelModuleNum() Obtain Number of Kernel Modules
+ * @method void setKernelModuleNum(integer $KernelModuleNum) Set Number of Kernel Modules
+ * @method integer getSystemInstallationPackageNum() Obtain System Installation Package Count
+ * @method void setSystemInstallationPackageNum(integer $SystemInstallationPackageNum) Set System Installation Package Count
+ * @method integer getSurplusProtectDay() Obtain remaining protection duration
+ * @method void setSurplusProtectDay(integer $SurplusProtectDay) Set remaining protection duration
+ * @method integer getCWPStatus() Obtain Whether client is installed. 1 for Installed, 0 for Not Installed.
+ * @method void setCWPStatus(integer $CWPStatus) Set Whether client is installed. 1 for Installed, 0 for Not Installed.
+ * @method array getTag() Obtain Tag.
+ * @method void setTag(array $Tag) Set Tag.
  * @method string getProtectLevel() Obtain Protection level
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setProtectLevel(string $ProtectLevel) Set Protection level
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method integer getProtectedDay() Obtain Usage of CWPP service in days
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setProtectedDay(integer $ProtectedDay) Set Usage of CWPP service in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method integer getProtectedDay() Obtain protection duration
+ * @method void setProtectedDay(integer $ProtectedDay) Set protection duration
  */
 class AssetBaseInfoResponse extends AbstractModel
 {
@@ -144,230 +88,174 @@ class AssetBaseInfoResponse extends AbstractModel
 
     /**
      * @var string vpc-name
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $VpcName;
 
     /**
      * @var string Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AssetName;
 
     /**
-     * @var string Operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Operating system.
      */
     public $Os;
 
     /**
-     * @var string Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Public IP address
      */
     public $PublicIp;
 
     /**
-     * @var string Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Private IP address
      */
     public $PrivateIp;
 
     /**
-     * @var string Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Region.
      */
     public $Region;
 
     /**
      * @var string Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AssetType;
 
     /**
      * @var string Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AssetId;
 
     /**
-     * @var integer Total number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Number of accounts
      */
     public $AccountNum;
 
     /**
-     * @var integer Number of ports
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Number of Ports
      */
     public $PortNum;
 
     /**
-     * @var integer Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Process quantity
      */
     public $ProcessNum;
 
     /**
-     * @var integer Numbernumb of software applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Number of Software Applications
      */
     public $SoftApplicationNum;
 
     /**
-     * @var integer Number of databases
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Database Count
      */
     public $DatabaseNum;
 
     /**
-     * @var integer Number of web applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Number of Web Applications
      */
     public $WebApplicationNum;
 
     /**
      * @var integer Number of services
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $ServiceNum;
 
     /**
-     * @var integer Number of web frameworks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Web Framework Count
      */
     public $WebFrameworkNum;
 
     /**
-     * @var integer Number of websites
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Website Count
      */
     public $WebSiteNum;
 
     /**
-     * @var integer Number of JAR packages
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Jar Package Count
      */
     public $JarPackageNum;
 
     /**
-     * @var integer Number of enabled services
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Started Service Count
      */
     public $StartServiceNum;
 
     /**
-     * @var integer Number of scheduled tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Number of Scheduled Tasks
      */
     public $ScheduledTaskNum;
 
     /**
-     * @var integer Number of environment variables
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Number of Environment Variables
      */
     public $EnvironmentVariableNum;
 
     /**
-     * @var integer Number of kernel modules
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Number of Kernel Modules
      */
     public $KernelModuleNum;
 
     /**
-     * @var integer Number of system installation packages
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer System Installation Package Count
      */
     public $SystemInstallationPackageNum;
 
     /**
-     * @var integer Remaining service validity in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer remaining protection duration
      */
     public $SurplusProtectDay;
 
     /**
-     * @var integer Whether the CWPP agent is installed. Values: `1` (installed) and `0` (not installed)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer Whether client is installed. 1 for Installed, 0 for Not Installed.
      */
     public $CWPStatus;
 
     /**
-     * @var array Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var array Tag.
      */
     public $Tag;
 
     /**
      * @var string Protection level
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $ProtectLevel;
 
     /**
-     * @var integer Usage of CWPP service in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var integer protection duration
      */
     public $ProtectedDay;
 
     /**
      * @param string $VpcId vpc-id
      * @param string $VpcName vpc-name
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Os Operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $Os Operating system.
+     * @param string $PublicIp Public IP address
+     * @param string $PrivateIp Private IP address
+     * @param string $Region Region.
      * @param string $AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param string $AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $AccountNum Total number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $PortNum Number of ports
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $ProcessNum Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $SoftApplicationNum Numbernumb of software applications
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $DatabaseNum Number of databases
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $WebApplicationNum Number of web applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $AccountNum Number of accounts
+     * @param integer $PortNum Number of Ports
+     * @param integer $ProcessNum Process quantity
+     * @param integer $SoftApplicationNum Number of Software Applications
+     * @param integer $DatabaseNum Database Count
+     * @param integer $WebApplicationNum Number of Web Applications
      * @param integer $ServiceNum Number of services
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $WebFrameworkNum Number of web frameworks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $WebSiteNum Number of websites
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $JarPackageNum Number of JAR packages
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $StartServiceNum Number of enabled services
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $ScheduledTaskNum Number of scheduled tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $EnvironmentVariableNum Number of environment variables
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $KernelModuleNum Number of kernel modules
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $SystemInstallationPackageNum Number of system installation packages
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $SurplusProtectDay Remaining service validity in days
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $CWPStatus Whether the CWPP agent is installed. Values: `1` (installed) and `0` (not installed)
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param array $Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $WebFrameworkNum Web Framework Count
+     * @param integer $WebSiteNum Website Count
+     * @param integer $JarPackageNum Jar Package Count
+     * @param integer $StartServiceNum Started Service Count
+     * @param integer $ScheduledTaskNum Number of Scheduled Tasks
+     * @param integer $EnvironmentVariableNum Number of Environment Variables
+     * @param integer $KernelModuleNum Number of Kernel Modules
+     * @param integer $SystemInstallationPackageNum System Installation Package Count
+     * @param integer $SurplusProtectDay remaining protection duration
+     * @param integer $CWPStatus Whether client is installed. 1 for Installed, 0 for Not Installed.
+     * @param array $Tag Tag.
      * @param string $ProtectLevel Protection level
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param integer $ProtectedDay Usage of CWPP service in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param integer $ProtectedDay protection duration
      */
     function __construct()
     {

@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Temp download URL for the report PDF
  *
- * @method string getURL() Obtain Temp download URL for the report
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setURL(string $URL) Set Temp download URL for the report
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getLogId() Obtain Task report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setLogId(string $LogId) Set Task report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method string getTaskLogName() Obtain Task report name
-Note: This field may return·null, indicating that no valid values can be obtained.
- * @method void setTaskLogName(string $TaskLogName) Set Task report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+ * @method string getURL() Obtain Temporary Link for Report Download
+ * @method void setURL(string $URL) Set Temporary Link for Report Download
+ * @method string getLogId() Obtain Task Report ID
+ * @method void setLogId(string $LogId) Set Task Report ID
+ * @method string getTaskLogName() Obtain Task Report Name
+ * @method void setTaskLogName(string $TaskLogName) Set Task Report Name
  * @method string getAppId() Obtain APP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
  * @method void setAppId(string $AppId) Set APP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
  */
 class TaskLogURL extends AbstractModel
 {
     /**
-     * @var string Temp download URL for the report
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Temporary Link for Report Download
      */
     public $URL;
 
     /**
-     * @var string Task report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Task Report ID
      */
     public $LogId;
 
     /**
-     * @var string Task report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @var string Task Report Name
      */
     public $TaskLogName;
 
     /**
      * @var string APP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public $AppId;
 
     /**
-     * @param string $URL Temp download URL for the report
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $LogId Task report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param string $TaskLogName Task report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * @param string $URL Temporary Link for Report Download
+     * @param string $LogId Task Report ID
+     * @param string $TaskLogName Task Report Name
      * @param string $AppId APP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
