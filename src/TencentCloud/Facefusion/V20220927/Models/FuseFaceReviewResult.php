@@ -18,60 +18,60 @@ namespace TencentCloud\Facefusion\V20220927\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Face Fusion Inappropriate Content Detection Response Parameter item
  *
- * @method string getCategory() Obtain 
- * @method void setCategory(string $Category) Set 
- * @method string getCode() Obtain 
- * @method void setCode(string $Code) Set 
- * @method string getCodeDescription() Obtain 
- * @method void setCodeDescription(string $CodeDescription) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
- * @method array getDetailSet() Obtain 
- * @method void setDetailSet(array $DetailSet) Set 
+ * @method string getCategory() Obtain Reserved field
+ * @method void setCategory(string $Category) Set Reserved field
+ * @method string getCode() Obtain Status code. 0 indicates successful processing; other values indicate failure.
+ * @method void setCode(string $Code) Set Status code. 0 indicates successful processing; other values indicate failure.
+ * @method string getCodeDescription() Obtain Corresponding Status Code Description
+ * @method void setCodeDescription(string $CodeDescription) Set Corresponding Status Code Description
+ * @method float getConfidence() Obtain Reserved field
+ * @method void setConfidence(float $Confidence) Set Reserved field
+ * @method string getSuggestion() Obtain Reserved field
+ * @method void setSuggestion(string $Suggestion) Set Reserved field
+ * @method array getDetailSet() Obtain Detailed Moderation Content
+ * @method void setDetailSet(array $DetailSet) Set Detailed Moderation Content
  */
 class FuseFaceReviewResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Reserved field
      */
     public $Category;
 
     /**
-     * @var string 
+     * @var string Status code. 0 indicates successful processing; other values indicate failure.
      */
     public $Code;
 
     /**
-     * @var string 
+     * @var string Corresponding Status Code Description
      */
     public $CodeDescription;
 
     /**
-     * @var float 
+     * @var float Reserved field
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Reserved field
      */
     public $Suggestion;
 
     /**
-     * @var array 
+     * @var array Detailed Moderation Content
      */
     public $DetailSet;
 
     /**
-     * @param string $Category 
-     * @param string $Code 
-     * @param string $CodeDescription 
-     * @param float $Confidence 
-     * @param string $Suggestion 
-     * @param array $DetailSet 
+     * @param string $Category Reserved field
+     * @param string $Code Status code. 0 indicates successful processing; other values indicate failure.
+     * @param string $CodeDescription Corresponding Status Code Description
+     * @param float $Confidence Reserved field
+     * @param string $Suggestion Reserved field
+     * @param array $DetailSet Detailed Moderation Content
      */
     function __construct()
     {

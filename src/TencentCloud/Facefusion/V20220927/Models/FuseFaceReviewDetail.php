@@ -18,44 +18,68 @@ namespace TencentCloud\Facefusion\V20220927\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Facial Information of Inappropriate Content Detection in Face Fusion
  *
- * @method string getField() Obtain 
- * @method void setField(string $Field) Set 
- * @method string getLabel() Obtain 
- * @method void setLabel(string $Label) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
- * @method string getSuggestion() Obtain 
- * @method void setSuggestion(string $Suggestion) Set 
+ * @method string getField() Obtain Reserved field
+ * @method void setField(string $Field) Set Reserved field
+ * @method string getLabel() Obtain Label Names Matched by Content Moderation
+ * @method void setLabel(string $Label) Set Label Names Matched by Content Moderation
+ * @method float getConfidence() Obtain Confidence score of the detection label. A higher score means a greater likelihood of violations.
+0-70: Suggestion = PASS
+70-80: Suggestion = REVIEW
+80-100: Suggestion = BLOCK
+ * @method void setConfidence(float $Confidence) Set Confidence score of the detection label. A higher score means a greater likelihood of violations.
+0-70: Suggestion = PASS
+70-80: Suggestion = REVIEW
+80-100: Suggestion = BLOCK
+ * @method string getSuggestion() Obtain Moderation Conclusion for Detection Scenarios
+PASS: Normal
+REVIEW: Suspicious
+BLOCK: Violation
+ * @method void setSuggestion(string $Suggestion) Set Moderation Conclusion for Detection Scenarios
+PASS: Normal
+REVIEW: Suspicious
+BLOCK: Violation
  */
 class FuseFaceReviewDetail extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Reserved field
      */
     public $Field;
 
     /**
-     * @var string 
+     * @var string Label Names Matched by Content Moderation
      */
     public $Label;
 
     /**
-     * @var float 
+     * @var float Confidence score of the detection label. A higher score means a greater likelihood of violations.
+0-70: Suggestion = PASS
+70-80: Suggestion = REVIEW
+80-100: Suggestion = BLOCK
      */
     public $Confidence;
 
     /**
-     * @var string 
+     * @var string Moderation Conclusion for Detection Scenarios
+PASS: Normal
+REVIEW: Suspicious
+BLOCK: Violation
      */
     public $Suggestion;
 
     /**
-     * @param string $Field 
-     * @param string $Label 
-     * @param float $Confidence 
-     * @param string $Suggestion 
+     * @param string $Field Reserved field
+     * @param string $Label Label Names Matched by Content Moderation
+     * @param float $Confidence Confidence score of the detection label. A higher score means a greater likelihood of violations.
+0-70: Suggestion = PASS
+70-80: Suggestion = REVIEW
+80-100: Suggestion = BLOCK
+     * @param string $Suggestion Moderation Conclusion for Detection Scenarios
+PASS: Normal
+REVIEW: Suspicious
+BLOCK: Violation
      */
     function __construct()
     {

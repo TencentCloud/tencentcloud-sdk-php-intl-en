@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
  * @method string getProductCodeName() Obtain Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
  * @method void setProductCodeName(string $ProductCodeName) Set Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
- * @method string getPayModeName() Obtain Billing mode, which can be monthly subscription or pay-as-you-go.
- * @method void setPayModeName(string $PayModeName) Set Billing mode, which can be monthly subscription or pay-as-you-go.
+ * @method string getPayModeName() Obtain Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
+ * @method void setPayModeName(string $PayModeName) Set Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
  * @method string getProjectName() Obtain Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
  * @method void setProjectName(string $ProjectName) Set Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
  * @method string getRegionName() Obtain Region: The region to which a resource belongs, such as South China (Guangzhou).
@@ -36,11 +36,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) Set Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.
  * @method string getResourceName() Obtain Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
  * @method void setResourceName(string $ResourceName) Set Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
- * @method string getActionTypeName() Obtain Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
- * @method void setActionTypeName(string $ActionTypeName) Set Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
- * @method string getOrderId() Obtain Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+ * @method string getActionTypeName() Obtain Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
+ * @method void setActionTypeName(string $ActionTypeName) Set Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
+ * @method string getOrderId() Obtain Order ID: The sub-order number corresponding to the yearly/monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
 
- * @method void setOrderId(string $OrderId) Set Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+ * @method void setOrderId(string $OrderId) Set Order ID: The sub-order number corresponding to the yearly/monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
 
  * @method string getBillId() Obtain Transaction ID: The bill number for a deducted payment
  * @method void setBillId(string $BillId) Set Transaction ID: The bill number for a deducted payment
@@ -110,7 +110,7 @@ class BillDetail extends AbstractModel
     public $ProductCodeName;
 
     /**
-     * @var string Billing mode, which can be monthly subscription or pay-as-you-go.
+     * @var string Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      */
     public $PayModeName;
 
@@ -140,12 +140,12 @@ class BillDetail extends AbstractModel
     public $ResourceName;
 
     /**
-     * @var string Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * @var string Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
      */
     public $ActionTypeName;
 
     /**
-     * @var string Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+     * @var string Order ID: The sub-order number corresponding to the yearly/monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
 
      */
     public $OrderId;
@@ -288,14 +288,14 @@ class BillDetail extends AbstractModel
     /**
      * @param string $BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      * @param string $ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
-     * @param string $PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
+     * @param string $PayModeName Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      * @param string $ProjectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      * @param string $RegionName Region: The region to which a resource belongs, such as South China (Guangzhou).
      * @param string $ZoneName Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3
      * @param string $ResourceId Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.
      * @param string $ResourceName Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
-     * @param string $ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
-     * @param string $OrderId Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+     * @param string $ActionTypeName Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
+     * @param string $OrderId Order ID: The sub-order number corresponding to the yearly/monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
 
      * @param string $BillId Transaction ID: The bill number for a deducted payment
      * @param string $PayTime Transaction time: The time at which a payment was deducted

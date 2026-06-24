@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
  * @method string getProductCodeName() Obtain Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
  * @method void setProductCodeName(string $ProductCodeName) Set Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
- * @method string getPayModeName() Obtain Billing mode, which can be monthly subscription or pay-as-you-go.
- * @method void setPayModeName(string $PayModeName) Set Billing mode, which can be monthly subscription or pay-as-you-go.
+ * @method string getPayModeName() Obtain Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
+ * @method void setPayModeName(string $PayModeName) Set Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
  * @method string getProjectName() Obtain Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
  * @method void setProjectName(string $ProjectName) Set Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
  * @method string getRegionName() Obtain Region: The region to which a resource belongs, such as South China (Guangzhou).
@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) Set Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
  * @method string getResourceName() Obtain Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
  * @method void setResourceName(string $ResourceName) Set Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
- * @method string getActionTypeName() Obtain Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
- * @method void setActionTypeName(string $ActionTypeName) Set Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
- * @method string getOrderId() Obtain Order ID: The order number for a monthly subscription purchase
- * @method void setOrderId(string $OrderId) Set Order ID: The order number for a monthly subscription purchase
+ * @method string getActionTypeName() Obtain Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
+ * @method void setActionTypeName(string $ActionTypeName) Set Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
+ * @method string getOrderId() Obtain Order ID: The order number for a yearly/monthly subscription purchase
+ * @method void setOrderId(string $OrderId) Set Order ID: The order number for a yearly/monthly subscription purchase
  * @method string getPayTime() Obtain Transaction time: The time at which a payment was deducted
  * @method void setPayTime(string $PayTime) Set Transaction time: The time at which a payment was deducted
  * @method string getFeeBeginTime() Obtain Usage start time: The time at which product or service usage starts
@@ -116,7 +116,7 @@ class BillResourceSummary extends AbstractModel
     public $ProductCodeName;
 
     /**
-     * @var string Billing mode, which can be monthly subscription or pay-as-you-go.
+     * @var string Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      */
     public $PayModeName;
 
@@ -146,12 +146,12 @@ class BillResourceSummary extends AbstractModel
     public $ResourceName;
 
     /**
-     * @var string Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * @var string Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
      */
     public $ActionTypeName;
 
     /**
-     * @var string Order ID: The order number for a monthly subscription purchase
+     * @var string Order ID: The order number for a yearly/monthly subscription purchase
      */
     public $OrderId;
 
@@ -306,14 +306,14 @@ class BillResourceSummary extends AbstractModel
     /**
      * @param string $BusinessCodeName Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
      * @param string $ProductCodeName Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
-     * @param string $PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
+     * @param string $PayModeName Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      * @param string $ProjectName Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
      * @param string $RegionName Region: The region to which a resource belongs, such as South China (Guangzhou).
      * @param string $ZoneName Availability zone: The availability zone to which a resource belongs, such as Guangzhou Zone 3.
      * @param string $ResourceId Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
      * @param string $ResourceName Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
-     * @param string $ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
-     * @param string $OrderId Order ID: The order number for a monthly subscription purchase
+     * @param string $ActionTypeName Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
+     * @param string $OrderId Order ID: The order number for a yearly/monthly subscription purchase
      * @param string $PayTime Transaction time: The time at which a payment was deducted
      * @param string $FeeBeginTime Usage start time: The time at which product or service usage starts
      * @param string $FeeEndTime Usage end time: The time at which product or service usage ends
