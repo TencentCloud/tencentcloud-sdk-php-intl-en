@@ -66,6 +66,7 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(Models\ModifyMaintenanceWindowRequest $req) Add new or modify instance maintenance time window configurations
  * @method Models\ModifyUserPrivilegesResponse ModifyUserPrivileges(Models\ModifyUserPrivilegesRequest $req) This API is used to modify user permissions.
  * @method Models\ResetUserPasswordResponse ResetUserPassword(Models\ResetUserPasswordRequest $req) This API is used to reset user password.
+ * @method Models\ResetUsersPasswordResponse ResetUsersPassword(Models\ResetUsersPasswordRequest $req) This API is used to batch reset user password.
  * @method Models\RestartDBInstancesResponse RestartDBInstances(Models\RestartDBInstancesRequest $req) This API is used to restart database instances.
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) This API is used to scale up a TDSQL Boundless instance, which can be a primary instance or a disaster recovery instance.
  */

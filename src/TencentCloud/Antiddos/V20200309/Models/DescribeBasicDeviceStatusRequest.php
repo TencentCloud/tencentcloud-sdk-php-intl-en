@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBasicDeviceStatus request structure.
  *
- * @method array getIpList() Obtain List of IP resources
- * @method void setIpList(array $IpList) Set List of IP resources
- * @method array getIdList() Obtain Pass id for domain-bound resources
- * @method void setIdList(array $IdList) Set Pass id for domain-bound resources
- * @method integer getFilterRegion() Obtain region name
- * @method void setFilterRegion(integer $FilterRegion) Set region name
- * @method array getCnameWafIdList() Obtain CNAME WAF resource
- * @method void setCnameWafIdList(array $CnameWafIdList) Set CNAME WAF resource
+ * @method array getIpList() Obtain List of IP resources.
+ * @method void setIpList(array $IpList) Set List of IP resources.
+ * @method array getIdList() Obtain List of domain asset IDs.
+ * @method void setIdList(array $IdList) Set List of domain asset IDs.
+ * @method integer getFilterRegion() Obtain Region name for filtering.
+ * @method void setFilterRegion(integer $FilterRegion) Set Region name for filtering.
+ * @method array getCnameWafIdList() Obtain List of CNAME WAF resource IDs.
+ * @method void setCnameWafIdList(array $CnameWafIdList) Set List of CNAME WAF resource IDs.
  */
 class DescribeBasicDeviceStatusRequest extends AbstractModel
 {
     /**
-     * @var array List of IP resources
+     * @var array List of IP resources.
      */
     public $IpList;
 
     /**
-     * @var array Pass id for domain-bound resources
+     * @var array List of domain asset IDs.
      */
     public $IdList;
 
     /**
-     * @var integer region name
+     * @var integer Region name for filtering.
      */
     public $FilterRegion;
 
     /**
-     * @var array CNAME WAF resource
+     * @var array List of CNAME WAF resource IDs.
      */
     public $CnameWafIdList;
 
     /**
-     * @param array $IpList List of IP resources
-     * @param array $IdList Pass id for domain-bound resources
-     * @param integer $FilterRegion region name
-     * @param array $CnameWafIdList CNAME WAF resource
+     * @param array $IpList List of IP resources.
+     * @param array $IdList List of domain asset IDs.
+     * @param integer $FilterRegion Region name for filtering.
+     * @param array $CnameWafIdList List of CNAME WAF resource IDs.
      */
     function __construct()
     {

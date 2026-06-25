@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeDealsByCond request structure.
  *
  * @method string getStartTime() Obtain Start time 
-Example :2016-01-01 00:00:00
+Example :2016-01-01 00:00:00.
  * @method void setStartTime(string $StartTime) Set Start time 
-Example :2016-01-01 00:00:00
+Example :2016-01-01 00:00:00.
  * @method string getEndTime() Obtain End time 
 Example:2016-02-01 00:00:00. 
 It is recommended that the span does not exceed 3 months.
@@ -40,11 +40,11 @@ Status of the order
 2: paid 
 3: shipment in progress
 4: shipped
-5`: Shipment Failed
-6`: Refunded
-7`: Ticket closed
-8`: Order expired
-9`: Order invalid
+5: Shipment Failed
+6: Refunded
+7: Ticket closed
+8: Order expired
+9: Order invalid
 10: product invalidated
 11: third-party payment refused
 12: payment in process
@@ -54,11 +54,11 @@ Status of the order
 2: paid 
 3: shipment in progress
 4: shipped
-5`: Shipment Failed
-6`: Refunded
-7`: Ticket closed
-8`: Order expired
-9`: Order invalid
+5: Shipment Failed
+6: Refunded
+7: Ticket closed
+8: Order expired
+9: Order invalid
 10: product invalidated
 11: third-party payment refused
 12: payment in process
@@ -81,7 +81,7 @@ class DescribeDealsByCondRequest extends AbstractModel
 {
     /**
      * @var string Start time 
-Example :2016-01-01 00:00:00
+Example :2016-01-01 00:00:00.
      */
     public $StartTime;
 
@@ -109,11 +109,11 @@ Status of the order
 2: paid 
 3: shipment in progress
 4: shipped
-5`: Shipment Failed
-6`: Refunded
-7`: Ticket closed
-8`: Order expired
-9`: Order invalid
+5: Shipment Failed
+6: Refunded
+7: Ticket closed
+8: Order expired
+9: Order invalid
 10: product invalidated
 11: third-party payment refused
 12: payment in process
@@ -145,7 +145,7 @@ Example:ins-a2bb34
 
     /**
      * @param string $StartTime Start time 
-Example :2016-01-01 00:00:00
+Example :2016-01-01 00:00:00.
      * @param string $EndTime End time 
 Example:2016-02-01 00:00:00. 
 It is recommended that the span does not exceed 3 months.
@@ -157,11 +157,11 @@ Status of the order
 2: paid 
 3: shipment in progress
 4: shipped
-5`: Shipment Failed
-6`: Refunded
-7`: Ticket closed
-8`: Order expired
-9`: Order invalid
+5: Shipment Failed
+6: Refunded
+7: Ticket closed
+8: Order expired
+9: Order invalid
 10: product invalidated
 11: third-party payment refused
 12: payment in process

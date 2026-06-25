@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
  * @method array getI18nList() Obtain <p>Mini game information in multiple languages.</p>
  * @method void setI18nList(array $I18nList) Set <p>Mini game information in multiple languages.</p>
+ * @method integer getTeamTypeId() Obtain Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+ * @method void setTeamTypeId(integer $TeamTypeId) Set Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
  */
 class DescribeMNGManagerDetailData extends AbstractModel
 {
@@ -115,6 +117,11 @@ class DescribeMNGManagerDetailData extends AbstractModel
     public $I18nList;
 
     /**
+     * @var integer Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     */
+    public $TeamTypeId;
+
+    /**
      * @param string $MNPType <p>Mini game category.</p>
      * @param string $MNPId <p>Mini game appid.</p>
      * @param string $MNPName <p>Mini game name.</p>
@@ -128,6 +135,7 @@ class DescribeMNGManagerDetailData extends AbstractModel
      * @param string $TeamId <p>Team ID.</p>
      * @param integer $Status <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
      * @param array $I18nList <p>Mini game information in multiple languages.</p>
+     * @param integer $TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
      */
     function __construct()
     {
@@ -197,6 +205,10 @@ class DescribeMNGManagerDetailData extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->I18nList, $obj);
             }
+        }
+
+        if (array_key_exists("TeamTypeId",$param) and $param["TeamTypeId"] !== null) {
+            $this->TeamTypeId = $param["TeamTypeId"];
         }
     }
 }

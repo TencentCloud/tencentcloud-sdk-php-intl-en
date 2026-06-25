@@ -42,6 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineType(integer $EngineType) Set Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
  * @method array getCategoryList() Obtain Category information.
  * @method void setCategoryList(array $CategoryList) Set Category information.
+ * @method string getTeamId() Obtain Team ID.
+ * @method void setTeamId(string $TeamId) Set Team ID.
+ * @method string getTeamName() Obtain Team name.
+ * @method void setTeamName(string $TeamName) Set Team name.
+ * @method integer getTeamTypeId() Obtain Team type ID.
+ * @method void setTeamTypeId(integer $TeamTypeId) Set Team type ID.
  */
 class DescribeApplicationMNPInfoResp extends AbstractModel
 {
@@ -101,6 +107,21 @@ class DescribeApplicationMNPInfoResp extends AbstractModel
     public $CategoryList;
 
     /**
+     * @var string Team ID.
+     */
+    public $TeamId;
+
+    /**
+     * @var string Team name.
+     */
+    public $TeamName;
+
+    /**
+     * @var integer Team type ID.
+     */
+    public $TeamTypeId;
+
+    /**
      * @param string $MNPId Mini program or mini game appid.
      * @param string $MNPIcon Mini program or mini game icon.
      * @param string $MNPName Mini program or mini game name.
@@ -112,6 +133,9 @@ class DescribeApplicationMNPInfoResp extends AbstractModel
      * @param integer $OnlineStatus Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
      * @param integer $EngineType Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
      * @param array $CategoryList Category information.
+     * @param string $TeamId Team ID.
+     * @param string $TeamName Team name.
+     * @param integer $TeamTypeId Team type ID.
      */
     function __construct()
     {
@@ -173,6 +197,18 @@ class DescribeApplicationMNPInfoResp extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CategoryList, $obj);
             }
+        }
+
+        if (array_key_exists("TeamId",$param) and $param["TeamId"] !== null) {
+            $this->TeamId = $param["TeamId"];
+        }
+
+        if (array_key_exists("TeamName",$param) and $param["TeamName"] !== null) {
+            $this->TeamName = $param["TeamName"];
+        }
+
+        if (array_key_exists("TeamTypeId",$param) and $param["TeamTypeId"] !== null) {
+            $this->TeamTypeId = $param["TeamTypeId"];
         }
     }
 }

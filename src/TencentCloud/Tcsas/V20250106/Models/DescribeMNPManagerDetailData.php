@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set <p>Mini program available status. Valid values: 1: Available; 2: Not available.</p>
  * @method array getI18nList() Obtain <p>The mini program name and description in multiple languages.</p>
  * @method void setI18nList(array $I18nList) Set <p>The mini program name and description in multiple languages.</p>
+ * @method integer getTeamTypeId() Obtain Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+ * @method void setTeamTypeId(integer $TeamTypeId) Set Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
  */
 class DescribeMNPManagerDetailData extends AbstractModel
 {
@@ -115,6 +117,11 @@ class DescribeMNPManagerDetailData extends AbstractModel
     public $I18nList;
 
     /**
+     * @var integer Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     */
+    public $TeamTypeId;
+
+    /**
      * @param string $MNPType <p>Mini program category.</p>
      * @param string $MNPId <p>Mini program appid.</p>
      * @param string $MNPName <p>Mini program name.</p>
@@ -128,6 +135,7 @@ class DescribeMNPManagerDetailData extends AbstractModel
      * @param string $TeamId <p>Team ID.</p>
      * @param integer $Status <p>Mini program available status. Valid values: 1: Available; 2: Not available.</p>
      * @param array $I18nList <p>The mini program name and description in multiple languages.</p>
+     * @param integer $TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
      */
     function __construct()
     {
@@ -197,6 +205,10 @@ class DescribeMNPManagerDetailData extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->I18nList, $obj);
             }
+        }
+
+        if (array_key_exists("TeamTypeId",$param) and $param["TeamTypeId"] !== null) {
+            $this->TeamTypeId = $param["TeamTypeId"];
         }
     }
 }

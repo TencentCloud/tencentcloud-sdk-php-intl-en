@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEffectMNPVersionId(integer $EffectMNPVersionId) Set Effective mini program version ID bound to the superapp. 
  * @method string getEffectMNPVersion() Obtain Effective mini program version number bound to the superapp. 
  * @method void setEffectMNPVersion(string $EffectMNPVersion) Set Effective mini program version number bound to the superapp. 
+ * @method string getTeamId() Obtain Team ID.
+ * @method void setTeamId(string $TeamId) Set Team ID.
+ * @method integer getTeamTypeId() Obtain Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+ * @method void setTeamTypeId(integer $TeamTypeId) Set Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
  */
 class DescribeMNPListData extends AbstractModel
 {
@@ -129,6 +133,16 @@ class DescribeMNPListData extends AbstractModel
     public $EffectMNPVersion;
 
     /**
+     * @var string Team ID.
+     */
+    public $TeamId;
+
+    /**
+     * @var integer Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     */
+    public $TeamTypeId;
+
+    /**
      * @param string $MNPId Mini program appid.
      * @param string $MNPIcon Mini program icon.
      * @param string $MNPName Mini program name.
@@ -144,6 +158,8 @@ class DescribeMNPListData extends AbstractModel
      * @param integer $EffectStatus Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
      * @param integer $EffectMNPVersionId Effective mini program version ID bound to the superapp. 
      * @param string $EffectMNPVersion Effective mini program version number bound to the superapp. 
+     * @param string $TeamId Team ID.
+     * @param integer $TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
      */
     function __construct()
     {
@@ -216,6 +232,14 @@ class DescribeMNPListData extends AbstractModel
 
         if (array_key_exists("EffectMNPVersion",$param) and $param["EffectMNPVersion"] !== null) {
             $this->EffectMNPVersion = $param["EffectMNPVersion"];
+        }
+
+        if (array_key_exists("TeamId",$param) and $param["TeamId"] !== null) {
+            $this->TeamId = $param["TeamId"];
+        }
+
+        if (array_key_exists("TeamTypeId",$param) and $param["TeamTypeId"] !== null) {
+            $this->TeamTypeId = $param["TeamTypeId"];
         }
     }
 }
