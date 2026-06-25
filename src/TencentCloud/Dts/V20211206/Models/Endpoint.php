@@ -122,12 +122,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setCcnOwnerUin(string $CcnOwnerUin) Set The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getChildInstanceId() Obtain The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
- * @method void setChildInstanceId(string $ChildInstanceId) Set The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
- * @method string getChildInstanceType() Obtain When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
- * @method void setChildInstanceType(string $ChildInstanceType) Set When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
- * @method string getSetId() Obtain Shard id of tdsql. Mandatory when node type is set.
- * @method void setSetId(string $SetId) Set Shard id of tdsql. Mandatory when node type is set.
+ * @method string getChildInstanceId() Obtain 
+ * @method void setChildInstanceId(string $ChildInstanceId) Set 
+ * @method string getChildInstanceType() Obtain 
+ * @method void setChildInstanceType(string $ChildInstanceType) Set 
+ * @method string getSetId() Obtain 
+ * @method void setSetId(string $SetId) Set 
  */
 class Endpoint extends AbstractModel
 {
@@ -291,17 +291,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $CcnOwnerUin;
 
     /**
-     * @var string The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
+     * @var string 
      */
     public $ChildInstanceId;
 
     /**
-     * @var string When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
+     * @var string 
      */
     public $ChildInstanceType;
 
     /**
-     * @var string Shard id of tdsql. Mandatory when node type is set.
+     * @var string 
      */
     public $SetId;
 
@@ -357,9 +357,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CcnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ChildInstanceId The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
-     * @param string $ChildInstanceType When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
-     * @param string $SetId Shard id of tdsql. Mandatory when node type is set.
+     * @param string $ChildInstanceId 
+     * @param string $ChildInstanceType 
+     * @param string $SetId 
      */
     function __construct()
     {

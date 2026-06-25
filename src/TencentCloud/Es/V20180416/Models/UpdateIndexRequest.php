@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) Set Password for cluster access
  * @method boolean getRolloverBackingIndex() Obtain Whether to roll over the backup index
  * @method void setRolloverBackingIndex(boolean $RolloverBackingIndex) Set Whether to roll over the backup index
+ * @method boolean getMountIndex() Obtain 
+ * @method void setMountIndex(boolean $MountIndex) Set 
+ * @method string getIndexUuid() Obtain 
+ * @method void setIndexUuid(string $IndexUuid) Set 
+ * @method string getBackingIndexName() Obtain 
+ * @method void setBackingIndexName(string $BackingIndexName) Set 
  */
 class UpdateIndexRequest extends AbstractModel
 {
@@ -73,6 +79,21 @@ class UpdateIndexRequest extends AbstractModel
     public $RolloverBackingIndex;
 
     /**
+     * @var boolean 
+     */
+    public $MountIndex;
+
+    /**
+     * @var string 
+     */
+    public $IndexUuid;
+
+    /**
+     * @var string 
+     */
+    public $BackingIndexName;
+
+    /**
      * @param string $InstanceId ES cluster ID
      * @param string $IndexType Type of the index to update. `auto`: Automated; `normal`: General.
      * @param string $IndexName Name of the index to update
@@ -80,6 +101,9 @@ class UpdateIndexRequest extends AbstractModel
      * @param string $Username Username for cluster access
      * @param string $Password Password for cluster access
      * @param boolean $RolloverBackingIndex Whether to roll over the backup index
+     * @param boolean $MountIndex 
+     * @param string $IndexUuid 
+     * @param string $BackingIndexName 
      */
     function __construct()
     {
@@ -120,6 +144,18 @@ class UpdateIndexRequest extends AbstractModel
 
         if (array_key_exists("RolloverBackingIndex",$param) and $param["RolloverBackingIndex"] !== null) {
             $this->RolloverBackingIndex = $param["RolloverBackingIndex"];
+        }
+
+        if (array_key_exists("MountIndex",$param) and $param["MountIndex"] !== null) {
+            $this->MountIndex = $param["MountIndex"];
+        }
+
+        if (array_key_exists("IndexUuid",$param) and $param["IndexUuid"] !== null) {
+            $this->IndexUuid = $param["IndexUuid"];
+        }
+
+        if (array_key_exists("BackingIndexName",$param) and $param["BackingIndexName"] !== null) {
+            $this->BackingIndexName = $param["BackingIndexName"];
         }
     }
 }

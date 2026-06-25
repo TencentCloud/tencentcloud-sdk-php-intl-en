@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Chdfs\V20201112\Models;
+namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeFileSystems request structure.
+ * DescribeAutoBackUpStrategy request structure.
  *
- * @method string getFileSystemIdMarker() Obtain 
- * @method void setFileSystemIdMarker(string $FileSystemIdMarker) Set 
+ * @method string getInstanceId() Obtain Instance name.
+ * @method void setInstanceId(string $InstanceId) Set Instance name.
  */
-class DescribeFileSystemsRequest extends AbstractModel
+class DescribeAutoBackUpStrategyRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Instance name.
      */
-    public $FileSystemIdMarker;
+    public $InstanceId;
 
     /**
-     * @param string $FileSystemIdMarker 
+     * @param string $InstanceId Instance name.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeFileSystemsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileSystemIdMarker",$param) and $param["FileSystemIdMarker"] !== null) {
-            $this->FileSystemIdMarker = $param["FileSystemIdMarker"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

@@ -94,6 +94,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setTmpSecretKey(string $TmpSecretKey) Set Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTmpToken() Obtain Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTmpToken(string $TmpToken) Set Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEncryptConn() Obtain 
+ * @method void setEncryptConn(string $EncryptConn) Set 
  */
 class DBInfo extends AbstractModel
 {
@@ -215,6 +217,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TmpToken;
 
     /**
+     * @var string 
+     */
+    public $EncryptConn;
+
+    /**
      * @param string $Role Node role in a distributed database, such as the mongos node in MongoDB.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DbKernel Kernel version, such as the different kernel versions of MariaDB.
@@ -252,6 +259,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $TmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EncryptConn 
      */
     function __construct()
     {
@@ -344,6 +352,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TmpToken",$param) and $param["TmpToken"] !== null) {
             $this->TmpToken = $param["TmpToken"];
+        }
+
+        if (array_key_exists("EncryptConn",$param) and $param["EncryptConn"] !== null) {
+            $this->EncryptConn = $param["EncryptConn"];
         }
     }
 }

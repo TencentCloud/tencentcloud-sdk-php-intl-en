@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSubscribeId() Obtain Subscription ID (exact match)
  * @method void setSubscribeId(string $SubscribeId) Set Subscription ID (exact match)
+ * @method array getSubscribeIds() Obtain 
+ * @method void setSubscribeIds(array $SubscribeIds) Set 
  * @method string getSubscribeName() Obtain Subscription name (prefix fuzzy match)
  * @method void setSubscribeName(string $SubscribeName) Set Subscription name (prefix fuzzy match)
  * @method string getInstanceId() Obtain Subscribed cloud database instance ID (exact match)
  * @method void setInstanceId(string $InstanceId) Set Subscribed cloud database instance ID (exact match)
+ * @method string getTopic() Obtain 
+ * @method void setTopic(string $Topic) Set 
  * @method integer getPayType() Obtain Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
  * @method void setPayType(integer $PayType) Set Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
  * @method string getProduct() Obtain Subscribed database product. Currently, cynosdbmysql, mariadb, mongodb, mysql, percona, tdpg, tdsqlpercona are supported.
@@ -51,6 +55,11 @@ class DescribeSubscribeJobsRequest extends AbstractModel
     public $SubscribeId;
 
     /**
+     * @var array 
+     */
+    public $SubscribeIds;
+
+    /**
      * @var string Subscription name (prefix fuzzy match)
      */
     public $SubscribeName;
@@ -59,6 +68,11 @@ class DescribeSubscribeJobsRequest extends AbstractModel
      * @var string Subscribed cloud database instance ID (exact match)
      */
     public $InstanceId;
+
+    /**
+     * @var string 
+     */
+    public $Topic;
 
     /**
      * @var integer Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
@@ -102,8 +116,10 @@ class DescribeSubscribeJobsRequest extends AbstractModel
 
     /**
      * @param string $SubscribeId Subscription ID (exact match)
+     * @param array $SubscribeIds 
      * @param string $SubscribeName Subscription name (prefix fuzzy match)
      * @param string $InstanceId Subscribed cloud database instance ID (exact match)
+     * @param string $Topic 
      * @param integer $PayType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
      * @param string $Product Subscribed database product. Currently, cynosdbmysql, mariadb, mongodb, mysql, percona, tdpg, tdsqlpercona are supported.
      * @param array $Status Data subscription lifecycle status. Valid values: normal, isolating, isolated, offline, post2PrePayIng.
@@ -130,12 +146,20 @@ class DescribeSubscribeJobsRequest extends AbstractModel
             $this->SubscribeId = $param["SubscribeId"];
         }
 
+        if (array_key_exists("SubscribeIds",$param) and $param["SubscribeIds"] !== null) {
+            $this->SubscribeIds = $param["SubscribeIds"];
+        }
+
         if (array_key_exists("SubscribeName",$param) and $param["SubscribeName"] !== null) {
             $this->SubscribeName = $param["SubscribeName"];
         }
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
+            $this->Topic = $param["Topic"];
         }
 
         if (array_key_exists("PayType",$param) and $param["PayType"] !== null) {

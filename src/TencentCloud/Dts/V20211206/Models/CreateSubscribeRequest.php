@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) Set Instance resource tags
  * @method string getName() Obtain Custom task name
  * @method void setName(string $Name) Set Custom task name
+ * @method string getInstanceClass() Obtain 
+ * @method void setInstanceClass(string $InstanceClass) Set 
  */
 class CreateSubscribeRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateSubscribeRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var string 
+     */
+    public $InstanceClass;
+
+    /**
      * @param string $Product Subscription database type. Currently, cynosdbmysql, mariadb, mongodb, mysql, percona, tdpg, and tdsqlpercona are supported.
      * @param integer $PayType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
      * @param integer $Duration Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
@@ -80,6 +87,7 @@ class CreateSubscribeRequest extends AbstractModel
      * @param integer $Count Quantity. Default value: 1. Maximum value: 10.
      * @param array $Tags Instance resource tags
      * @param string $Name Custom task name
+     * @param string $InstanceClass 
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class CreateSubscribeRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("InstanceClass",$param) and $param["InstanceClass"] !== null) {
+            $this->InstanceClass = $param["InstanceClass"];
         }
     }
 }

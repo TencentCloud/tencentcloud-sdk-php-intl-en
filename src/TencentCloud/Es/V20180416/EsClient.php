@@ -23,10 +23,13 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Es\V20180416\Models as Models;
 
 /**
+ * @method Models\CreateAutoBackUpStrategyResponse CreateAutoBackUpStrategy(Models\CreateAutoBackUpStrategyRequest $req) This API is used to create an auto backup snapshot policy.
  * @method Models\CreateIndexResponse CreateIndex(Models\CreateIndexRequest $req) This API is used to create indices.
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) This API is used to create an ES cluster instance with the specified specification.
+ * @method Models\DeleteAutoBackUpStrategyResponse DeleteAutoBackUpStrategy(Models\DeleteAutoBackUpStrategyRequest $req) This API is used to delete an auto backup snapshot policy.
  * @method Models\DeleteIndexResponse DeleteIndex(Models\DeleteIndexRequest $req) This API is used to delete indices.
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) This API is used to terminate a cluster instance. 
+ * @method Models\DescribeAutoBackUpStrategyResponse DescribeAutoBackUpStrategy(Models\DescribeAutoBackUpStrategyRequest $req) This API is used to obtain an auto backup snapshot policy.
  * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) This API is used to obtain the index list.
  * @method Models\DescribeIndexMetaResponse DescribeIndexMeta(Models\DescribeIndexMetaRequest $req) This API is used to obtain index metadata.
  * @method Models\DescribeInstanceLogsResponse DescribeInstanceLogs(Models\DescribeInstanceLogsRequest $req) This API is used to query the eligible ES cluster logs in the current region.
@@ -34,6 +37,8 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) This API is used to query all eligible instances in the current region under the current account.
  * @method Models\DescribeViewsResponse DescribeViews(Models\DescribeViewsRequest $req) This API is used to query view data from three dimensions: cluster, node, and Kibana.
  * @method Models\GetRequestTargetNodeTypesResponse GetRequestTargetNodeTypes(Models\GetRequestTargetNodeTypesRequest $req) This API is used to get the node types used to receive client requests.
+ * @method Models\ModifyAutoBackUpCommonInfoResponse ModifyAutoBackUpCommonInfo(Models\ModifyAutoBackUpCommonInfoRequest $req) This API is used to modify the common information of an auto backup snapshot policy.
+ * @method Models\ModifyAutoBackUpStrategyResponse ModifyAutoBackUpStrategy(Models\ModifyAutoBackUpStrategyRequest $req) This API is used to modify an auto backup snapshot policy.
  * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) This API is used to restart an ES cluster instance (for operations such as system update). 
  * @method Models\RestartKibanaResponse RestartKibana(Models\RestartKibanaRequest $req) This API is used to restart Kibana. 
  * @method Models\RestartNodesResponse RestartNodes(Models\RestartNodesRequest $req) This API is used to restart cluster nodes.

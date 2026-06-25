@@ -152,6 +152,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOfflineTime(string $OfflineTime) Set Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOptObjStatus() Obtain 
+ * @method void setOptObjStatus(string $OptObjStatus) Set 
  * @method integer getAutoRetryTimeRangeMinutes() Obtain Settings of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) Set Settings of automatic retry time
@@ -362,6 +364,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OfflineTime;
 
     /**
+     * @var string 
+     */
+    public $OptObjStatus;
+
+    /**
      * @var integer Settings of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -440,6 +447,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OfflineTime Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OptObjStatus 
      * @param integer $AutoRetryTimeRangeMinutes Settings of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DumperResumeCtrl Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
@@ -600,6 +608,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("OfflineTime",$param) and $param["OfflineTime"] !== null) {
             $this->OfflineTime = $param["OfflineTime"];
+        }
+
+        if (array_key_exists("OptObjStatus",$param) and $param["OptObjStatus"] !== null) {
+            $this->OptObjStatus = $param["OptObjStatus"];
         }
 
         if (array_key_exists("AutoRetryTimeRangeMinutes",$param) and $param["AutoRetryTimeRangeMinutes"] !== null) {

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileSystemName() Obtain File system name
  * @method void setFileSystemName(string $FileSystemName) Set File system name
- * @method integer getCapacityQuota() Obtain File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
- * @method void setCapacityQuota(integer $CapacityQuota) Set File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
  * @method boolean getPosixAcl() Obtain Whether to verify POSIX ACL
  * @method void setPosixAcl(boolean $PosixAcl) Set Whether to verify POSIX ACL
  * @method string getDescription() Obtain File system description, which is an empty string by default
  * @method void setDescription(string $Description) Set File system description, which is an empty string by default
+ * @method integer getCapacityQuota() Obtain File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+ * @method void setCapacityQuota(integer $CapacityQuota) Set File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
  * @method array getSuperUsers() Obtain List of superuser names, which is an empty array by default
  * @method void setSuperUsers(array $SuperUsers) Set List of superuser names, which is an empty array by default
  * @method string getRootInodeUser() Obtain Username of the root directory Inode, which is `hadoop` by default
@@ -49,11 +49,6 @@ class CreateFileSystemRequest extends AbstractModel
     public $FileSystemName;
 
     /**
-     * @var integer File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
-     */
-    public $CapacityQuota;
-
-    /**
      * @var boolean Whether to verify POSIX ACL
      */
     public $PosixAcl;
@@ -62,6 +57,11 @@ class CreateFileSystemRequest extends AbstractModel
      * @var string File system description, which is an empty string by default
      */
     public $Description;
+
+    /**
+     * @var integer File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+     */
+    public $CapacityQuota;
 
     /**
      * @var array List of superuser names, which is an empty array by default
@@ -95,9 +95,9 @@ class CreateFileSystemRequest extends AbstractModel
 
     /**
      * @param string $FileSystemName File system name
-     * @param integer $CapacityQuota File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
      * @param boolean $PosixAcl Whether to verify POSIX ACL
      * @param string $Description File system description, which is an empty string by default
+     * @param integer $CapacityQuota File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
      * @param array $SuperUsers List of superuser names, which is an empty array by default
      * @param string $RootInodeUser Username of the root directory Inode, which is `hadoop` by default
      * @param string $RootInodeGroup Group name of the root directory Inode, which is `supergroup` by default
@@ -122,16 +122,16 @@ class CreateFileSystemRequest extends AbstractModel
             $this->FileSystemName = $param["FileSystemName"];
         }
 
-        if (array_key_exists("CapacityQuota",$param) and $param["CapacityQuota"] !== null) {
-            $this->CapacityQuota = $param["CapacityQuota"];
-        }
-
         if (array_key_exists("PosixAcl",$param) and $param["PosixAcl"] !== null) {
             $this->PosixAcl = $param["PosixAcl"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("CapacityQuota",$param) and $param["CapacityQuota"] !== null) {
+            $this->CapacityQuota = $param["CapacityQuota"];
         }
 
         if (array_key_exists("SuperUsers",$param) and $param["SuperUsers"] !== null) {

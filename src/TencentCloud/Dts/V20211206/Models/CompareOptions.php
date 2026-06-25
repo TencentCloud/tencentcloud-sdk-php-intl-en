@@ -30,6 +30,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setThreadCount(integer $ThreadCount) Set The number of threads, which defaults to 1. Value range: 1-5.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
  */
 class CompareOptions extends AbstractModel
 {
@@ -51,11 +53,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ThreadCount;
 
     /**
+     * @var string 
+     */
+    public $Type;
+
+    /**
      * @param string $Method Comparative Method: dataCheck (Complete Data Comparison), sampleDataCheck (Sampling Data Comparison), rowsCount (Row Count Comparison)Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $SampleRate Sampling rate. Value range: 0-100%.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ThreadCount The number of threads, which defaults to 1. Value range: 1-5.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Type 
      */
     function __construct()
     {
@@ -80,6 +88,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ThreadCount",$param) and $param["ThreadCount"] !== null) {
             $this->ThreadCount = $param["ThreadCount"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

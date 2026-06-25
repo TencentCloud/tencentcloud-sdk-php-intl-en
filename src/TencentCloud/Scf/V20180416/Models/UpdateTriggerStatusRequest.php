@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerName(string $TriggerName) Set Trigger name
  * @method string getType() Obtain Trigger Type
  * @method void setType(string $Type) Set Trigger Type
- * @method string getQualifier() Obtain Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
- * @method void setQualifier(string $Qualifier) Set Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
+ * @method string getQualifier() Obtain Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458) for canary release.
+ * @method void setQualifier(string $Qualifier) Set Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458) for canary release.
  * @method string getNamespace() Obtain Function namespace
  * @method void setNamespace(string $Namespace) Set Function namespace
  * @method string getTriggerDesc() Obtain To update a COS trigger, this field is required. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
@@ -58,7 +58,7 @@ class UpdateTriggerStatusRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var string Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
+     * @var string Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458) for canary release.
      */
     public $Qualifier;
 
@@ -77,7 +77,7 @@ class UpdateTriggerStatusRequest extends AbstractModel
      * @param string $FunctionName Function name.
      * @param string $TriggerName Trigger name
      * @param string $Type Trigger Type
-     * @param string $Qualifier Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
+     * @param string $Qualifier Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458) for canary release.
      * @param string $Namespace Function namespace
      * @param string $TriggerDesc To update a COS trigger, this field is required. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
      */

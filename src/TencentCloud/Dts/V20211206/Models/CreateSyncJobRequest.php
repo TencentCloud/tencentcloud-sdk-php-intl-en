@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstRegion(string $DstRegion) Set Target database region, such as `ap-guangzhou`.
  * @method string getSpecification() Obtain Sync task specification, such as `Standard`.
  * @method void setSpecification(string $Specification) Set Sync task specification, such as `Standard`.
+ * @method integer getTimeSpan() Obtain 
+ * @method void setTimeSpan(integer $TimeSpan) Set 
  * @method array getTags() Obtain Tag information
  * @method void setTags(array $Tags) Set Tag information
  * @method integer getCount() Obtain The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
@@ -78,6 +80,11 @@ class CreateSyncJobRequest extends AbstractModel
     public $Specification;
 
     /**
+     * @var integer 
+     */
+    public $TimeSpan;
+
+    /**
      * @var array Tag information
      */
     public $Tags;
@@ -114,6 +121,7 @@ class CreateSyncJobRequest extends AbstractModel
      * @param string $DstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, `tdsqlmysql`, and `kafka`.
      * @param string $DstRegion Target database region, such as `ap-guangzhou`.
      * @param string $Specification Sync task specification, such as `Standard`.
+     * @param integer $TimeSpan 
      * @param array $Tags Tag information
      * @param integer $Count The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
      * @param integer $AutoRenew Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
@@ -156,6 +164,10 @@ class CreateSyncJobRequest extends AbstractModel
 
         if (array_key_exists("Specification",$param) and $param["Specification"] !== null) {
             $this->Specification = $param["Specification"];
+        }
+
+        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
+            $this->TimeSpan = $param["TimeSpan"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

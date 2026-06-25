@@ -49,11 +49,13 @@ class DstInfo extends AbstractModel
 
     /**
      * @var string Target instance VIP, which has been disused and does not need to be entered
+     * @deprecated
      */
     public $Ip;
 
     /**
      * @var integer Target instance Vport, which has been disused and does not need to be entered
+     * @deprecated
      */
     public $Port;
 

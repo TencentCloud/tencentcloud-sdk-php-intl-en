@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPipelineInfo(array $PipelineInfo) Set mongo optional parameter: output aggregation settings.
  * @method array getExtraAttr() Obtain Additional information added for the business. The parameter name is called key, and the parameter value is called value.Optional parameters for mysql: ProcessXA. If true is filled in, it will be processed. If it is left blank or filled with other values, it will not be processed.Optional parameters for mongo: SubscribeType. Currently only changeStream is supported. If not filled in, the default is changeStream.Other businesses currently have no optional parameters.
  * @method void setExtraAttr(array $ExtraAttr) Set Additional information added for the business. The parameter name is called key, and the parameter value is called value.Optional parameters for mysql: ProcessXA. If true is filled in, it will be processed. If it is left blank or filled with other values, it will not be processed.Optional parameters for mongo: SubscribeType. Currently only changeStream is supported. If not filled in, the default is changeStream.Other businesses currently have no optional parameters.
+ * @method string getConsumerVpcId() Obtain 
+ * @method void setConsumerVpcId(string $ConsumerVpcId) Set 
+ * @method string getConsumerSubnetId() Obtain 
+ * @method void setConsumerSubnetId(string $ConsumerSubnetId) Set 
  */
 class ConfigureSubscribeJobRequest extends AbstractModel
 {
@@ -87,6 +91,16 @@ class ConfigureSubscribeJobRequest extends AbstractModel
     public $ExtraAttr;
 
     /**
+     * @var string 
+     */
+    public $ConsumerVpcId;
+
+    /**
+     * @var string 
+     */
+    public $ConsumerSubnetId;
+
+    /**
      * @param string $SubscribeId Data subscription instance ID
      * @param string $SubscribeMode Data subscription type. Valid values for non-mongo DatabaseType: all (full instance update); dml (data update); ddl (structure update); dmlAndDdl (data + structure update). Valid values for mongo DatabaseType: all (full instance update); database (subscribe to a table); collection (subscribe to a collection).
      * @param string $AccessType Source database access type. Valid values: extranet (public network); vpncloud (VPN access); dcg (Direct Connect); ccn (CCN); cdb (database); cvm (self-build on CVM); intranet (intranet); vpc (VPC). Note: The specific optional values depend on the current link support capabilities.
@@ -96,6 +110,8 @@ class ConfigureSubscribeJobRequest extends AbstractModel
      * @param string $Protocol Subscription data format, such as: protobuf, json, avro. Note: The specific optional values depend on the current link support capabilities. For details on the data format, please refer to the consumption demo documentation on the official website.
      * @param array $PipelineInfo mongo optional parameter: output aggregation settings.
      * @param array $ExtraAttr Additional information added for the business. The parameter name is called key, and the parameter value is called value.Optional parameters for mysql: ProcessXA. If true is filled in, it will be processed. If it is left blank or filled with other values, it will not be processed.Optional parameters for mongo: SubscribeType. Currently only changeStream is supported. If not filled in, the default is changeStream.Other businesses currently have no optional parameters.
+     * @param string $ConsumerVpcId 
+     * @param string $ConsumerSubnetId 
      */
     function __construct()
     {
@@ -165,6 +181,14 @@ class ConfigureSubscribeJobRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ExtraAttr, $obj);
             }
+        }
+
+        if (array_key_exists("ConsumerVpcId",$param) and $param["ConsumerVpcId"] !== null) {
+            $this->ConsumerVpcId = $param["ConsumerVpcId"];
+        }
+
+        if (array_key_exists("ConsumerSubnetId",$param) and $param["ConsumerSubnetId"] !== null) {
+            $this->ConsumerSubnetId = $param["ConsumerSubnetId"];
         }
     }
 }

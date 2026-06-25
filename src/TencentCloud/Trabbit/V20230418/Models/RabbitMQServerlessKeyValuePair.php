@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Chdfs\V20201112\Models;
+namespace TencentCloud\Trabbit\V20230418\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeFileSystems request structure.
+ * 
  *
- * @method string getFileSystemIdMarker() Obtain 
- * @method void setFileSystemIdMarker(string $FileSystemIdMarker) Set 
+ * @method string getKey() Obtain 
+ * @method void setKey(string $Key) Set 
+ * @method string getValue() Obtain 
+ * @method void setValue(string $Value) Set 
  */
-class DescribeFileSystemsRequest extends AbstractModel
+class RabbitMQServerlessKeyValuePair extends AbstractModel
 {
     /**
      * @var string 
      */
-    public $FileSystemIdMarker;
+    public $Key;
 
     /**
-     * @param string $FileSystemIdMarker 
+     * @var string 
+     */
+    public $Value;
+
+    /**
+     * @param string $Key 
+     * @param string $Value 
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeFileSystemsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileSystemIdMarker",$param) and $param["FileSystemIdMarker"] !== null) {
-            $this->FileSystemIdMarker = $param["FileSystemIdMarker"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

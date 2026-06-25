@@ -14,28 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Online DDL type
+ * ModifyAutoBackUpCommonInfo request structure.
  *
- * @method string getStatus() Obtain Status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Status
-Note: This field may return null, indicating that no valid values can be obtained.
+
  */
-class OnlineDDL extends AbstractModel
+class ModifyAutoBackUpCommonInfoRequest extends AbstractModel
 {
-    /**
-     * @var string Status
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $Status;
+
 
     /**
-     * @param string $Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+
      */
     function __construct()
     {
@@ -50,8 +42,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
-        }
+
     }
 }

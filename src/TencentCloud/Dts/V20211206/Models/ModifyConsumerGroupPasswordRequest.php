@@ -26,8 +26,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountName(string $AccountName) Set Account name. The full name of the actual account is in the form: account-#{SubscribeId}-#{AccountName}.
  * @method string getConsumerGroupName() Obtain Consumer group name. The full name of the actual consumer group is in the form: consumer-grp-#{SubscribeId}-#{ConsumerGroupName}.
  * @method void setConsumerGroupName(string $ConsumerGroupName) Set Consumer group name. The full name of the actual consumer group is in the form: consumer-grp-#{SubscribeId}-#{ConsumerGroupName}.
- * @method string getOldPassword() Obtain Old Password.
- * @method void setOldPassword(string $OldPassword) Set Old Password.
  * @method string getNewPassword() Obtain New password. The character length is no less than 3 and no more than 32.
  * @method void setNewPassword(string $NewPassword) Set New password. The character length is no less than 3 and no more than 32.
  */
@@ -49,11 +47,6 @@ class ModifyConsumerGroupPasswordRequest extends AbstractModel
     public $ConsumerGroupName;
 
     /**
-     * @var string Old Password.
-     */
-    public $OldPassword;
-
-    /**
      * @var string New password. The character length is no less than 3 and no more than 32.
      */
     public $NewPassword;
@@ -62,7 +55,6 @@ class ModifyConsumerGroupPasswordRequest extends AbstractModel
      * @param string $SubscribeId Data subscription instance ID
      * @param string $AccountName Account name. The full name of the actual account is in the form: account-#{SubscribeId}-#{AccountName}.
      * @param string $ConsumerGroupName Consumer group name. The full name of the actual consumer group is in the form: consumer-grp-#{SubscribeId}-#{ConsumerGroupName}.
-     * @param string $OldPassword Old Password.
      * @param string $NewPassword New password. The character length is no less than 3 and no more than 32.
      */
     function __construct()
@@ -88,10 +80,6 @@ class ModifyConsumerGroupPasswordRequest extends AbstractModel
 
         if (array_key_exists("ConsumerGroupName",$param) and $param["ConsumerGroupName"] !== null) {
             $this->ConsumerGroupName = $param["ConsumerGroupName"];
-        }
-
-        if (array_key_exists("OldPassword",$param) and $param["OldPassword"] !== null) {
-            $this->OldPassword = $param["OldPassword"];
         }
 
         if (array_key_exists("NewPassword",$param) and $param["NewPassword"] !== null) {

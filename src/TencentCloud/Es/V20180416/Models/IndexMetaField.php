@@ -28,6 +28,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setIndexName(string $IndexName) Set Index name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getIndexMetaJson() Obtain 
+ * @method void setIndexMetaJson(string $IndexMetaJson) Set 
  * @method string getIndexStatus() Obtain Index status
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setIndexStatus(string $IndexStatus) Set Index status
@@ -90,6 +92,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $IndexName;
+
+    /**
+     * @var string 
+     */
+    public $IndexMetaJson;
 
     /**
      * @var string Index status
@@ -168,6 +175,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $IndexName Index name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $IndexMetaJson 
      * @param string $IndexStatus Index status
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $IndexStorage Index size (in byte)
@@ -212,6 +220,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IndexName",$param) and $param["IndexName"] !== null) {
             $this->IndexName = $param["IndexName"];
+        }
+
+        if (array_key_exists("IndexMetaJson",$param) and $param["IndexMetaJson"] !== null) {
+            $this->IndexMetaJson = $param["IndexMetaJson"];
         }
 
         if (array_key_exists("IndexStatus",$param) and $param["IndexStatus"] !== null) {

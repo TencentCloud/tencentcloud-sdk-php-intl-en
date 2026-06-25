@@ -24,6 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set instance ID		
  * @method string getVirtualHost() Obtain Specifies the vhost name.
  * @method void setVirtualHost(string $VirtualHost) Set Specifies the vhost name.
+ * @method string getSortElement() Obtain Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+ * @method void setSortElement(string $SortElement) Set Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+ * @method string getSortType() Obtain Sort order: ASC, DESC
+ * @method void setSortType(string $SortType) Set Sort order: ASC, DESC
+ * @method integer getOffset() Obtain 
+ * @method void setOffset(integer $Offset) Set 
+ * @method integer getLimit() Obtain 
+ * @method void setLimit(integer $Limit) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
  */
 class DescribeRabbitMQServerlessConnectionRequest extends AbstractModel
 {
@@ -38,8 +48,38 @@ class DescribeRabbitMQServerlessConnectionRequest extends AbstractModel
     public $VirtualHost;
 
     /**
+     * @var string Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+     */
+    public $SortElement;
+
+    /**
+     * @var string Sort order: ASC, DESC
+     */
+    public $SortType;
+
+    /**
+     * @var integer 
+     */
+    public $Offset;
+
+    /**
+     * @var integer 
+     */
+    public $Limit;
+
+    /**
+     * @var string 
+     */
+    public $Name;
+
+    /**
      * @param string $InstanceId instance ID		
      * @param string $VirtualHost Specifies the vhost name.
+     * @param string $SortElement Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+     * @param string $SortType Sort order: ASC, DESC
+     * @param integer $Offset 
+     * @param integer $Limit 
+     * @param string $Name 
      */
     function __construct()
     {
@@ -60,6 +100,26 @@ class DescribeRabbitMQServerlessConnectionRequest extends AbstractModel
 
         if (array_key_exists("VirtualHost",$param) and $param["VirtualHost"] !== null) {
             $this->VirtualHost = $param["VirtualHost"];
+        }
+
+        if (array_key_exists("SortElement",$param) and $param["SortElement"] !== null) {
+            $this->SortElement = $param["SortElement"];
+        }
+
+        if (array_key_exists("SortType",$param) and $param["SortType"] !== null) {
+            $this->SortType = $param["SortType"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

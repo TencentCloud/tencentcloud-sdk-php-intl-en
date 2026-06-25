@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDestination(string $Destination) Set Target queue or exchange.
  * @method string getRoutingKey() Obtain Binding key.
  * @method void setRoutingKey(string $RoutingKey) Set Binding key.
+ * @method array getArguments() Obtain 
+ * @method void setArguments(array $Arguments) Set 
  */
 class CreateRabbitMQServerlessBindingRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateRabbitMQServerlessBindingRequest extends AbstractModel
     public $RoutingKey;
 
     /**
+     * @var array 
+     */
+    public $Arguments;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $VirtualHost Vhost parameter.
      * @param string $Source Source exchange.
      * @param string $DestinationType Target type. valid values: queue or exchange.
      * @param string $Destination Target queue or exchange.
      * @param string $RoutingKey Binding key.
+     * @param array $Arguments 
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class CreateRabbitMQServerlessBindingRequest extends AbstractModel
 
         if (array_key_exists("RoutingKey",$param) and $param["RoutingKey"] !== null) {
             $this->RoutingKey = $param["RoutingKey"];
+        }
+
+        if (array_key_exists("Arguments",$param) and $param["Arguments"] !== null) {
+            $this->Arguments = [];
+            foreach ($param["Arguments"] as $key => $value){
+                $obj = new RabbitMQServerlessKeyValuePair();
+                $obj->deserialize($value);
+                array_push($this->Arguments, $obj);
+            }
         }
     }
 }
