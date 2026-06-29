@@ -20,230 +20,142 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyCardVerificationExternal request structure.
  *
- * @method string getNationality() Obtain Specifies the country of the document.
-ARG:Argentina
-AUS:Australia
-KHM:Cambodia
-CAN:Canada
-SGP:Singapore
-CHL:Chile
-DEU:Germany
-MEX:Mexico
-MMR:Myanmar
-NZL:New Zealand
-BGD:Bangladesh
-NGA:Nigeria
-PAK:Pakistan
-RUS:Russia
-IDN:Indonesia
-HKG:Hong Kong, China
-THA:Thailand
-MYS:Malaysia
-JPN:Japan
-PHL:Philippines
-MAC:Macao, China
-CHN:ChinaPermit
-TWN:Taiwan, China
-BGD:Bangladesh
-NGA:Nigeria 
-PAK:Pakistan
-
-AUTO: supports cards and documents from 200+ countries
- * @method void setNationality(string $Nationality) Set Specifies the country of the document.
-ARG:Argentina
-AUS:Australia
-KHM:Cambodia
-CAN:Canada
-SGP:Singapore
-CHL:Chile
-DEU:Germany
-MEX:Mexico
-MMR:Myanmar
-NZL:New Zealand
-BGD:Bangladesh
-NGA:Nigeria
-PAK:Pakistan
-RUS:Russia
-IDN:Indonesia
-HKG:Hong Kong, China
-THA:Thailand
-MYS:Malaysia
-JPN:Japan
-PHL:Philippines
-MAC:Macao, China
-CHN:ChinaPermit
-TWN:Taiwan, China
-BGD:Bangladesh
-NGA:Nigeria 
-PAK:Pakistan
-
-AUTO: supports cards and documents from 200+ countries
- * @method string getCardType() Obtain Document type.
-ID_CARD
-PASSPORT
-DRIVING_LICENSE
-RESIDENCE_PERMIT (Supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
- * @method void setCardType(string $CardType) Set Document type.
-ID_CARD
-PASSPORT
-DRIVING_LICENSE
-RESIDENCE_PERMIT (Supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
- * @method string getImageBase64Front() Obtain The Base64 value of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
- * @method void setImageBase64Front(string $ImageBase64Front) Set The Base64 value of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+ * @method string getNationality() Obtain Country/Region of the document. For the full list of supported countries/regions, refer to the API description.
+ * @method void setNationality(string $Nationality) Set Country/Region of the document. For the full list of supported countries/regions, refer to the API description.
+ * @method string getCardType() Obtain Document type. Supported values: ID_CARD, PASSPORT, DRIVING_LICENSE, RESIDENCE_PERMIT (only supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
+ * @method void setCardType(string $CardType) Set Document type. Supported values: ID_CARD, PASSPORT, DRIVING_LICENSE, RESIDENCE_PERMIT (only supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
+ * @method string getImageBase64Front() Obtain Base64-encoded image of the document front.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
+ * @method void setImageBase64Front(string $ImageBase64Front) Set Base64-encoded image of the document front.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
  * @method string getImageBase64Back() Obtain The Base64 value of the reverse side of the document. Supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
+Supported image size: the downloaded image after Base64 encoding must be no more than 2M. Image download time must be no more than 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlBack is used.
  * @method void setImageBase64Back(string $ImageBase64Back) Set The Base64 value of the reverse side of the document. Supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
+Supported image size: the downloaded image after Base64 encoding must be no more than 2M. Image download time must be no more than 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlBack is used.
- * @method string getImageUrlFront() Obtain Url of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
- * @method void setImageUrlFront(string $ImageUrlFront) Set Url of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
- * @method string getImageUrlBack() Obtain Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
-Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
-
- * @method void setImageUrlBack(string $ImageUrlBack) Set Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
-Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
-
- * @method boolean getReturnHeadImage() Obtain Whether to extract the ID portrait. Default value: false.
- * @method void setReturnHeadImage(boolean $ReturnHeadImage) Set Whether to extract the ID portrait. Default value: false.
+ * @method string getImageUrlFront() Obtain URL of the document front image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
+ * @method void setImageUrlFront(string $ImageUrlFront) Set URL of the document front image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
+ * @method string getImageUrlBack() Obtain URL of the document back image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: For some documents, you must provide either ImageUrlBack or ImageBase64Back. If both are provided, only ImageUrlBack is used.
+ * @method void setImageUrlBack(string $ImageUrlBack) Set URL of the document back image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: For some documents, you must provide either ImageUrlBack or ImageBase64Back. If both are provided, only ImageUrlBack is used.
+ * @method boolean getReturnHeadImage() Obtain Whether to crop and return the face image from the document. Default: false.
+If set to true, the image constraints are:
+- Size after Base64 encoding must not exceed 5 MB.
+- Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
+- Minimum pixel width/height: 64.
+- Supported formats: PNG, JPG, JPEG, BMP (GIF not supported).
+ * @method void setReturnHeadImage(boolean $ReturnHeadImage) Set Whether to crop and return the face image from the document. Default: false.
+If set to true, the image constraints are:
+- Size after Base64 encoding must not exceed 5 MB.
+- Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
+- Minimum pixel width/height: 64.
+- Supported formats: PNG, JPG, JPEG, BMP (GIF not supported).
  */
 class ApplyCardVerificationExternalRequest extends AbstractModel
 {
     /**
-     * @var string Specifies the country of the document.
-ARG:Argentina
-AUS:Australia
-KHM:Cambodia
-CAN:Canada
-SGP:Singapore
-CHL:Chile
-DEU:Germany
-MEX:Mexico
-MMR:Myanmar
-NZL:New Zealand
-BGD:Bangladesh
-NGA:Nigeria
-PAK:Pakistan
-RUS:Russia
-IDN:Indonesia
-HKG:Hong Kong, China
-THA:Thailand
-MYS:Malaysia
-JPN:Japan
-PHL:Philippines
-MAC:Macao, China
-CHN:ChinaPermit
-TWN:Taiwan, China
-BGD:Bangladesh
-NGA:Nigeria 
-PAK:Pakistan
-
-AUTO: supports cards and documents from 200+ countries
+     * @var string Country/Region of the document. For the full list of supported countries/regions, refer to the API description.
      */
     public $Nationality;
 
     /**
-     * @var string Document type.
-ID_CARD
-PASSPORT
-DRIVING_LICENSE
-RESIDENCE_PERMIT (Supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
+     * @var string Document type. Supported values: ID_CARD, PASSPORT, DRIVING_LICENSE, RESIDENCE_PERMIT (only supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
      */
     public $CardType;
 
     /**
-     * @var string The Base64 value of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+     * @var string Base64-encoded image of the document front.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
      */
     public $ImageBase64Front;
 
     /**
      * @var string The Base64 value of the reverse side of the document. Supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
+Supported image size: the downloaded image after Base64 encoding must be no more than 2M. Image download time must be no more than 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlBack is used.
      */
     public $ImageBase64Back;
 
     /**
-     * @var string Url of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+     * @var string URL of the document front image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
      */
     public $ImageUrlFront;
 
     /**
-     * @var string Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
-Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
-
+     * @var string URL of the document back image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: For some documents, you must provide either ImageUrlBack or ImageBase64Back. If both are provided, only ImageUrlBack is used.
      */
     public $ImageUrlBack;
 
     /**
-     * @var boolean Whether to extract the ID portrait. Default value: false.
+     * @var boolean Whether to crop and return the face image from the document. Default: false.
+If set to true, the image constraints are:
+- Size after Base64 encoding must not exceed 5 MB.
+- Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
+- Minimum pixel width/height: 64.
+- Supported formats: PNG, JPG, JPEG, BMP (GIF not supported).
      */
     public $ReturnHeadImage;
 
     /**
-     * @param string $Nationality Specifies the country of the document.
-ARG:Argentina
-AUS:Australia
-KHM:Cambodia
-CAN:Canada
-SGP:Singapore
-CHL:Chile
-DEU:Germany
-MEX:Mexico
-MMR:Myanmar
-NZL:New Zealand
-BGD:Bangladesh
-NGA:Nigeria
-PAK:Pakistan
-RUS:Russia
-IDN:Indonesia
-HKG:Hong Kong, China
-THA:Thailand
-MYS:Malaysia
-JPN:Japan
-PHL:Philippines
-MAC:Macao, China
-CHN:ChinaPermit
-TWN:Taiwan, China
-BGD:Bangladesh
-NGA:Nigeria 
-PAK:Pakistan
-
-AUTO: supports cards and documents from 200+ countries
-     * @param string $CardType Document type.
-ID_CARD
-PASSPORT
-DRIVING_LICENSE
-RESIDENCE_PERMIT (Supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
-     * @param string $ImageBase64Front The Base64 value of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+     * @param string $Nationality Country/Region of the document. For the full list of supported countries/regions, refer to the API description.
+     * @param string $CardType Document type. Supported values: ID_CARD, PASSPORT, DRIVING_LICENSE, RESIDENCE_PERMIT (only supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
+     * @param string $ImageBase64Front Base64-encoded image of the document front.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
      * @param string $ImageBase64Back The Base64 value of the reverse side of the document. Supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
+Supported image size: the downloaded image after Base64 encoding must be no more than 2M. Image download time must be no more than 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlBack is used.
-     * @param string $ImageUrlFront Url of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
-     * @param string $ImageUrlBack Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
-Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
-
-     * @param boolean $ReturnHeadImage Whether to extract the ID portrait. Default value: false.
+     * @param string $ImageUrlFront URL of the document front image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
+     * @param string $ImageUrlBack URL of the document back image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: For some documents, you must provide either ImageUrlBack or ImageBase64Back. If both are provided, only ImageUrlBack is used.
+     * @param boolean $ReturnHeadImage Whether to crop and return the face image from the document. Default: false.
+If set to true, the image constraints are:
+- Size after Base64 encoding must not exceed 5 MB.
+- Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
+- Minimum pixel width/height: 64.
+- Supported formats: PNG, JPG, JPEG, BMP (GIF not supported).
      */
     function __construct()
     {

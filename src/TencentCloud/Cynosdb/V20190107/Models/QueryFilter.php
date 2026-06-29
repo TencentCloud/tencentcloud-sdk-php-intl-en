@@ -18,53 +18,53 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Query filter
+ * Query filter. Filter criteria for the DescribeClusterAndInstances API.
  *
- * @method array getNames() Obtain Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
- * @method void setNames(array $Names) Set Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
- * @method array getValues() Obtain Search string
- * @method void setValues(array $Values) Set Search string
- * @method boolean getExactMatch() Obtain Whether to use exact match
- * @method void setExactMatch(boolean $ExactMatch) Set Whether to use exact match
- * @method string getName() Obtain Search field
- * @method void setName(string $Name) Set Search field
- * @method string getOperator() Obtain Operator
- * @method void setOperator(string $Operator) Set Operator
+ * @method array getValues() Obtain Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
+ * @method void setValues(array $Values) Set Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
+ * @method array getNames() Obtain Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
+ * @method void setNames(array $Names) Set Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
+ * @method boolean getExactMatch() Obtain Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
+ * @method void setExactMatch(boolean $ExactMatch) Set Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
+ * @method string getName() Obtain Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
+ * @method void setName(string $Name) Set Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
+ * @method string getOperator() Obtain Operator (reserved field, currently disabled). Available values: >, >=, !=, =, <, <=
+ * @method void setOperator(string $Operator) Set Operator (reserved field, currently disabled). Available values: >, >=, !=, =, <, <=
  */
 class QueryFilter extends AbstractModel
 {
     /**
-     * @var array Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
-     */
-    public $Names;
-
-    /**
-     * @var array Search string
+     * @var array Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
      */
     public $Values;
 
     /**
-     * @var boolean Whether to use exact match
+     * @var array Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
+     */
+    public $Names;
+
+    /**
+     * @var boolean Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
      */
     public $ExactMatch;
 
     /**
-     * @var string Search field
+     * @var string Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
      */
     public $Name;
 
     /**
-     * @var string Operator
+     * @var string Operator (reserved field, currently disabled). Available values: >, >=, !=, =, <, <=
      * @deprecated
      */
     public $Operator;
 
     /**
-     * @param array $Names Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
-     * @param array $Values Search string
-     * @param boolean $ExactMatch Whether to use exact match
-     * @param string $Name Search field
-     * @param string $Operator Operator
+     * @param array $Values Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
+     * @param array $Names Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
+     * @param boolean $ExactMatch Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
+     * @param string $Name Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
+     * @param string $Operator Operator (reserved field, currently disabled). Available values: >, >=, !=, =, <, <=
      */
     function __construct()
     {
@@ -79,12 +79,12 @@ class QueryFilter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Names",$param) and $param["Names"] !== null) {
-            $this->Names = $param["Names"];
-        }
-
         if (array_key_exists("Values",$param) and $param["Values"] !== null) {
             $this->Values = $param["Values"];
+        }
+
+        if (array_key_exists("Names",$param) and $param["Names"] !== null) {
+            $this->Names = $param["Names"];
         }
 
         if (array_key_exists("ExactMatch",$param) and $param["ExactMatch"] !== null) {

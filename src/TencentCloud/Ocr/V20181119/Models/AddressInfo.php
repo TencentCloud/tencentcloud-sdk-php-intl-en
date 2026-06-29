@@ -28,17 +28,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPostalCode(string $PostalCode) Set Postal code.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSubdivision() Obtain Specifies the sub-region.
+ * @method string getSubdivision() Obtain Sub-region or state/province.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubdivision(string $Subdivision) Set Specifies the sub-region.
+ * @method void setSubdivision(string $Subdivision) Set Sub-region or state/province.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCity() Obtain Specifies the city.
+ * @method string getDistrict() Obtain District or county.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCity(string $City) Set Specifies the city.
+ * @method void setDistrict(string $District) Set District or county.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFormattedAddress() Obtain Complete address.
+ * @method string getCity() Obtain City name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFormattedAddress(string $FormattedAddress) Set Complete address.
+ * @method void setCity(string $City) Set City name.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSubdistrict() Obtain Subdistrict or township.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubdistrict(string $Subdistrict) Set Subdistrict or township.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFormattedAddress() Obtain Formatted complete address.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFormattedAddress(string $FormattedAddress) Set Formatted complete address.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getLineOne() Obtain First line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -56,9 +64,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLineFour(string $LineFour) Set Specifies the fourth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLineFive() Obtain Specifies the fifth line in the address bar.
+ * @method string getLineFive() Obtain Specifies the fifth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLineFive(string $LineFive) Set Specifies the fifth line in the address bar.
+ * @method void setLineFive(string $LineFive) Set Specifies the fifth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AddressInfo extends AbstractModel
@@ -76,19 +84,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PostalCode;
 
     /**
-     * @var string Specifies the sub-region.
+     * @var string Sub-region or state/province.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Subdivision;
 
     /**
-     * @var string Specifies the city.
+     * @var string District or county.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $District;
+
+    /**
+     * @var string City name.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $City;
 
     /**
-     * @var string Complete address.
+     * @var string Subdistrict or township.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Subdistrict;
+
+    /**
+     * @var string Formatted complete address.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FormattedAddress;
@@ -118,7 +138,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $LineFour;
 
     /**
-     * @var string Specifies the fifth line in the address bar.
+     * @var string Specifies the fifth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LineFive;
@@ -128,11 +148,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PostalCode Postal code.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Subdivision Specifies the sub-region.
+     * @param string $Subdivision Sub-region or state/province.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $City Specifies the city.
+     * @param string $District District or county.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FormattedAddress Complete address.
+     * @param string $City City name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Subdistrict Subdistrict or township.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $FormattedAddress Formatted complete address.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $LineOne First line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -142,7 +166,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $LineFour Specifies the fourth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LineFive Specifies the fifth line in the address bar.
+     * @param string $LineFive Specifies the fifth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -170,8 +194,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->Subdivision = $param["Subdivision"];
         }
 
+        if (array_key_exists("District",$param) and $param["District"] !== null) {
+            $this->District = $param["District"];
+        }
+
         if (array_key_exists("City",$param) and $param["City"] !== null) {
             $this->City = $param["City"];
+        }
+
+        if (array_key_exists("Subdistrict",$param) and $param["Subdistrict"] !== null) {
+            $this->Subdistrict = $param["Subdistrict"];
         }
 
         if (array_key_exists("FormattedAddress",$param) and $param["FormattedAddress"] !== null) {

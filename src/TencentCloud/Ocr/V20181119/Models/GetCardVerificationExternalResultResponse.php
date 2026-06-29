@@ -20,83 +20,109 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetCardVerificationExternalResult response structure.
  *
- * @method string getStatus() Obtain Indicates the status. valid values: 
-PASSED
+ * @method string getStatus() Obtain Verification status. Valid values: 
 PROCESSING
-WARNING
- * @method void setStatus(string $Status) Set Indicates the status. valid values: 
-PASSED
+ABNORMAL
+COMPLETED
+ * @method void setStatus(string $Status) Set Verification status. Valid values: 
 PROCESSING
-WARNING
- * @method array getWarnInfo() Obtain Indicates the anti-counterfeiting information.
--ScreenshotSuspected: The image is a screenshot.
--RetakeSuspected: The image is taken from another screen.
--PaperCopy: The image is a black and white, or color photocopy.
--FakeSuspected: The image of the card, or the information on the card has been edited or altered.
--OtherWarning: Document's authenticity is not verified for various reasons.
+ABNORMAL
+COMPLETED
+ * @method array getWarnInfo() Obtain Anti-counterfeiting information. 
+- ScreenshotSuspected: The image is a screenshot.
+- RetakeSuspected: The image is taken from another screen.
+- PaperCopy: The image is a black and white, or color photocopy.
+- FakeSuspected: The image of the card, or the information on the card has been edited or altered.
+- PoorImageQuality: The image is bad quality.
+- InformationVerificationFailed: Information verification failed based on OCR recognition results
+- TooManyCards: Multiple cards present in the frame.
+- IncompleteCard: Captured document is incomplete.
+- OtherWarning: Document's authenticity is not verified for various reasons.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWarnInfo(array $WarnInfo) Set Indicates the anti-counterfeiting information.
--ScreenshotSuspected: The image is a screenshot.
--RetakeSuspected: The image is taken from another screen.
--PaperCopy: The image is a black and white, or color photocopy.
--FakeSuspected: The image of the card, or the information on the card has been edited or altered.
--OtherWarning: Document's authenticity is not verified for various reasons.
+ * @method void setWarnInfo(array $WarnInfo) Set Anti-counterfeiting information. 
+- ScreenshotSuspected: The image is a screenshot.
+- RetakeSuspected: The image is taken from another screen.
+- PaperCopy: The image is a black and white, or color photocopy.
+- FakeSuspected: The image of the card, or the information on the card has been edited or altered.
+- PoorImageQuality: The image is bad quality.
+- InformationVerificationFailed: Information verification failed based on OCR recognition results
+- TooManyCards: Multiple cards present in the frame.
+- IncompleteCard: Captured document is incomplete.
+- OtherWarning: Document's authenticity is not verified for various reasons.
+
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNationality() Obtain Country Code.
+ * @method string getNationality() Obtain Country or region of the document.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNationality(string $Nationality) Set Country Code.
+ * @method void setNationality(string $Nationality) Set Country or region of the document.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method GeneralCard getCardInfo() Obtain Recognition result of the text in the id photo.	
+ * @method GeneralCard getCardInfo() Obtain Front-side document recognition results. 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCardInfo(GeneralCard $CardInfo) Set Recognition result of the text in the id photo.	
+ * @method void setCardInfo(GeneralCard $CardInfo) Set Front-side document recognition results. 
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCardVerificationToken() Obtain Specifies the token in the request parameters.
- * @method void setCardVerificationToken(string $CardVerificationToken) Set Specifies the token in the request parameters.
- * @method string getHeadImageBase64() Obtain If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image.
- * @method void setHeadImageBase64(string $HeadImageBase64) Set If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image.
+ * @method GeneralCard getBackCardInfo() Obtain Back-side document recognition results.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBackCardInfo(GeneralCard $BackCardInfo) Set Back-side document recognition results.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCardVerificationToken() Obtain The token passed in the input parameters.
+ * @method void setCardVerificationToken(string $CardVerificationToken) Set The token passed in the input parameters.
+ * @method string getHeadImageBase64() Obtain Base64-encoded head image from the document. If ReturnHeadImage was set to false or not provided in the request, this field returns an empty string. If ReturnHeadImage was set to true and this field returns an empty string, indicating a failure to extract the head image extraction failed. Please check the input document photo.
+ * @method void setHeadImageBase64(string $HeadImageBase64) Set Base64-encoded head image from the document. If ReturnHeadImage was set to false or not provided in the request, this field returns an empty string. If ReturnHeadImage was set to true and this field returns an empty string, indicating a failure to extract the head image extraction failed. Please check the input document photo.
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class GetCardVerificationExternalResultResponse extends AbstractModel
 {
     /**
-     * @var string Indicates the status. valid values: 
-PASSED
+     * @var string Verification status. Valid values: 
 PROCESSING
-WARNING
+ABNORMAL
+COMPLETED
      */
     public $Status;
 
     /**
-     * @var array Indicates the anti-counterfeiting information.
--ScreenshotSuspected: The image is a screenshot.
--RetakeSuspected: The image is taken from another screen.
--PaperCopy: The image is a black and white, or color photocopy.
--FakeSuspected: The image of the card, or the information on the card has been edited or altered.
--OtherWarning: Document's authenticity is not verified for various reasons.
+     * @var array Anti-counterfeiting information. 
+- ScreenshotSuspected: The image is a screenshot.
+- RetakeSuspected: The image is taken from another screen.
+- PaperCopy: The image is a black and white, or color photocopy.
+- FakeSuspected: The image of the card, or the information on the card has been edited or altered.
+- PoorImageQuality: The image is bad quality.
+- InformationVerificationFailed: Information verification failed based on OCR recognition results
+- TooManyCards: Multiple cards present in the frame.
+- IncompleteCard: Captured document is incomplete.
+- OtherWarning: Document's authenticity is not verified for various reasons.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $WarnInfo;
 
     /**
-     * @var string Country Code.
+     * @var string Country or region of the document.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
     public $Nationality;
 
     /**
-     * @var GeneralCard Recognition result of the text in the id photo.	
+     * @var GeneralCard Front-side document recognition results. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CardInfo;
 
     /**
-     * @var string Specifies the token in the request parameters.
+     * @var GeneralCard Back-side document recognition results.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BackCardInfo;
+
+    /**
+     * @var string The token passed in the input parameters.
      */
     public $CardVerificationToken;
 
     /**
-     * @var string If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image.
+     * @var string Base64-encoded head image from the document. If ReturnHeadImage was set to false or not provided in the request, this field returns an empty string. If ReturnHeadImage was set to true and this field returns an empty string, indicating a failure to extract the head image extraction failed. Please check the input document photo.
      */
     public $HeadImageBase64;
 
@@ -106,23 +132,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $Status Indicates the status. valid values: 
-PASSED
+     * @param string $Status Verification status. Valid values: 
 PROCESSING
-WARNING
-     * @param array $WarnInfo Indicates the anti-counterfeiting information.
--ScreenshotSuspected: The image is a screenshot.
--RetakeSuspected: The image is taken from another screen.
--PaperCopy: The image is a black and white, or color photocopy.
--FakeSuspected: The image of the card, or the information on the card has been edited or altered.
--OtherWarning: Document's authenticity is not verified for various reasons.
+ABNORMAL
+COMPLETED
+     * @param array $WarnInfo Anti-counterfeiting information. 
+- ScreenshotSuspected: The image is a screenshot.
+- RetakeSuspected: The image is taken from another screen.
+- PaperCopy: The image is a black and white, or color photocopy.
+- FakeSuspected: The image of the card, or the information on the card has been edited or altered.
+- PoorImageQuality: The image is bad quality.
+- InformationVerificationFailed: Information verification failed based on OCR recognition results
+- TooManyCards: Multiple cards present in the frame.
+- IncompleteCard: Captured document is incomplete.
+- OtherWarning: Document's authenticity is not verified for various reasons.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Nationality Country Code.
+     * @param string $Nationality Country or region of the document.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GeneralCard $CardInfo Recognition result of the text in the id photo.	
+     * @param GeneralCard $CardInfo Front-side document recognition results. 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CardVerificationToken Specifies the token in the request parameters.
-     * @param string $HeadImageBase64 If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image.
+     * @param GeneralCard $BackCardInfo Back-side document recognition results.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CardVerificationToken The token passed in the input parameters.
+     * @param string $HeadImageBase64 Base64-encoded head image from the document. If ReturnHeadImage was set to false or not provided in the request, this field returns an empty string. If ReturnHeadImage was set to true and this field returns an empty string, indicating a failure to extract the head image extraction failed. Please check the input document photo.
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -153,6 +186,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("CardInfo",$param) and $param["CardInfo"] !== null) {
             $this->CardInfo = new GeneralCard();
             $this->CardInfo->deserialize($param["CardInfo"]);
+        }
+
+        if (array_key_exists("BackCardInfo",$param) and $param["BackCardInfo"] !== null) {
+            $this->BackCardInfo = new GeneralCard();
+            $this->BackCardInfo->deserialize($param["BackCardInfo"]);
         }
 
         if (array_key_exists("CardVerificationToken",$param) and $param["CardVerificationToken"] !== null) {

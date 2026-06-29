@@ -23,9 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ocr\V20181119\Models as Models;
 
 /**
- * @method Models\ApplyCardVerificationExternalResponse ApplyCardVerificationExternal(Models\ApplyCardVerificationExternalRequest $req) This API is used for general recognition of overseas cards.
+ * @method Models\ApplyCardVerificationExternalResponse ApplyCardVerificationExternal(Models\ApplyCardVerificationExternalRequest $req) This API provides general OCR recognition for overseas identity documents.
 
-The following list details the countries or regions, document types supported by the overseas document recognition API and whether the back side of the document is required:
+The following table lists the supported countries or regions, document types, and whether the back side is required:
 
 <table>
 <thead>
