@@ -22,28 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() Obtain Specifies a domain name for the query
  * @method void setDomain(string $Domain) Set Specifies a domain name for the query
- * @method string getStartTime() Obtain Starting time, such as `2019-09-04 00:00:00`
- * @method void setStartTime(string $StartTime) Set Starting time, such as `2019-09-04 00:00:00`
- * @method string getEndTime() Obtain End time, such as `2019-09-04 12:00:00`
- * @method void setEndTime(string $EndTime) Set End time, such as `2019-09-04 12:00:00`
+ * @method string getStartTime() Obtain Start time.
+ * @method void setStartTime(string $StartTime) Set Start time.
+ * @method string getEndTime() Obtain End time.
+ * @method void setEndTime(string $EndTime) Set End time.
  * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0
  * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 100. Maximum value: 1,000
  * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 100. Maximum value: 1,000
- * @method string getArea() Obtain Specifies a region for the query.
-`mainland`: specifies to return the download link of logs on acceleration within Mainland China;
-`overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
-`global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
-Default value: `mainland`.
- * @method void setArea(string $Area) Set Specifies a region for the query.
-`mainland`: specifies to return the download link of logs on acceleration within Mainland China;
-`overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
-`global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
-Default value: `mainland`.
- * @method string getLogType() Obtain Specifies the type of logs to download (only access logs supported).
-`access`: Access logs.
- * @method void setLogType(string $LogType) Set Specifies the type of logs to download (only access logs supported).
-`access`: Access logs.
+ * @method string getArea() Obtain Specifies the region for log download, defaults to mainland. valid values:.
+<li>mainland: specifies the download url for the domestic acceleration log package.</li>.
+<Li>Overseas: specifies the url for obtaining overseas acceleration logs package download.</li>.
+<li>global: simultaneously obtain domestic and overseas acceleration logs package download urls (separately packaged).</li>.
+ * @method void setArea(string $Area) Set Specifies the region for log download, defaults to mainland. valid values:.
+<li>mainland: specifies the download url for the domestic acceleration log package.</li>.
+<Li>Overseas: specifies the url for obtaining overseas acceleration logs package download.</li>.
+<li>global: simultaneously obtain domestic and overseas acceleration logs package download urls (separately packaged).</li>.
+ * @method string getLogType() Obtain Specifies the type of logs to download. valid values:.
+<Li>Access: specifies the access log.</li>.
+ * @method void setLogType(string $LogType) Set Specifies the type of logs to download. valid values:.
+<Li>Access: specifies the access log.</li>.
  */
 class DescribeCdnDomainLogsRequest extends AbstractModel
 {
@@ -53,12 +51,12 @@ class DescribeCdnDomainLogsRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string Starting time, such as `2019-09-04 00:00:00`
+     * @var string Start time.
      */
     public $StartTime;
 
     /**
-     * @var string End time, such as `2019-09-04 12:00:00`
+     * @var string End time.
      */
     public $EndTime;
 
@@ -73,33 +71,31 @@ class DescribeCdnDomainLogsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Specifies a region for the query.
-`mainland`: specifies to return the download link of logs on acceleration within Mainland China;
-`overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
-`global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
-Default value: `mainland`.
+     * @var string Specifies the region for log download, defaults to mainland. valid values:.
+<li>mainland: specifies the download url for the domestic acceleration log package.</li>.
+<Li>Overseas: specifies the url for obtaining overseas acceleration logs package download.</li>.
+<li>global: simultaneously obtain domestic and overseas acceleration logs package download urls (separately packaged).</li>.
      */
     public $Area;
 
     /**
-     * @var string Specifies the type of logs to download (only access logs supported).
-`access`: Access logs.
+     * @var string Specifies the type of logs to download. valid values:.
+<Li>Access: specifies the access log.</li>.
      */
     public $LogType;
 
     /**
      * @param string $Domain Specifies a domain name for the query
-     * @param string $StartTime Starting time, such as `2019-09-04 00:00:00`
-     * @param string $EndTime End time, such as `2019-09-04 12:00:00`
+     * @param string $StartTime Start time.
+     * @param string $EndTime End time.
      * @param integer $Offset Offset for paginated queries. Default value: 0
      * @param integer $Limit Limit on paginated queries. Default value: 100. Maximum value: 1,000
-     * @param string $Area Specifies a region for the query.
-`mainland`: specifies to return the download link of logs on acceleration within Mainland China;
-`overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
-`global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
-Default value: `mainland`.
-     * @param string $LogType Specifies the type of logs to download (only access logs supported).
-`access`: Access logs.
+     * @param string $Area Specifies the region for log download, defaults to mainland. valid values:.
+<li>mainland: specifies the download url for the domestic acceleration log package.</li>.
+<Li>Overseas: specifies the url for obtaining overseas acceleration logs package download.</li>.
+<li>global: simultaneously obtain domestic and overseas acceleration logs package download urls (separately packaged).</li>.
+     * @param string $LogType Specifies the type of logs to download. valid values:.
+<Li>Access: specifies the access log.</li>.
      */
     function __construct()
     {

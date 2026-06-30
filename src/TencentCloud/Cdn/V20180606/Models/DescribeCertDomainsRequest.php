@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCert() Obtain Base64-encoded string of certificate in PEM format
  * @method void setCert(string $Cert) Set Base64-encoded string of certificate in PEM format
- * @method string getCertId() Obtain Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
- * @method void setCertId(string $CertId) Set Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+ * @method string getCertId() Obtain Managed certificate ID. Cert and CertId cannot both be empty. if both are filled in, CertId takes precedence.
+ * @method void setCertId(string $CertId) Set Managed certificate ID. Cert and CertId cannot both be empty. if both are filled in, CertId takes precedence.
  * @method string getProduct() Obtain Product of the domain name, either `cdn` (default) or `ecdn`.
  * @method void setProduct(string $Product) Set Product of the domain name, either `cdn` (default) or `ecdn`.
  */
@@ -35,7 +35,7 @@ class DescribeCertDomainsRequest extends AbstractModel
     public $Cert;
 
     /**
-     * @var string Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+     * @var string Managed certificate ID. Cert and CertId cannot both be empty. if both are filled in, CertId takes precedence.
      */
     public $CertId;
 
@@ -46,7 +46,7 @@ class DescribeCertDomainsRequest extends AbstractModel
 
     /**
      * @param string $Cert Base64-encoded string of certificate in PEM format
-     * @param string $CertId Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+     * @param string $CertId Managed certificate ID. Cert and CertId cannot both be empty. if both are filled in, CertId takes precedence.
      * @param string $Product Product of the domain name, either `cdn` (default) or `ecdn`.
      */
     function __construct()

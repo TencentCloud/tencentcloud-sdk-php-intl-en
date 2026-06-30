@@ -74,10 +74,10 @@ If the domain name information is specified, this parameter can be ignored.
 `5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
 `hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
 `day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
- * @method boolean getDetail() Obtain The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
- * @method void setDetail(boolean $Detail) Set The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
+ * @method boolean getDetail() Obtain Domains specifies multiple domain names to import. default (false) indicates aggregated data for multiple domain names.
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
+ * @method void setDetail(boolean $Detail) Set Domains specifies multiple domain names to import. default (false) indicates aggregated data for multiple domain names.
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
  * @method string getArea() Obtain Specifies the service region. If this value is left blank, it means to query CDN data within the Chinese mainland.
 `mainland`: Query CDN data in the Chinese mainland.
 `overseas`: Query CDN data outside the Chinese mainland.
@@ -141,8 +141,8 @@ If the domain name information is specified, this parameter can be ignored.
     public $Interval;
 
     /**
-     * @var boolean The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
+     * @var boolean Domains specifies multiple domain names to import. default (false) indicates aggregated data for multiple domain names.
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
      */
     public $Detail;
 
@@ -186,8 +186,8 @@ If the domain name information is specified, this parameter can be ignored.
 `5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
 `hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
 `day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
-     * @param boolean $Detail The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
+     * @param boolean $Detail Domains specifies multiple domain names to import. default (false) indicates aggregated data for multiple domain names.
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
      * @param string $Area Specifies the service region. If this value is left blank, it means to query CDN data within the Chinese mainland.
 `mainland`: Query CDN data in the Chinese mainland.
 `overseas`: Query CDN data outside the Chinese mainland.

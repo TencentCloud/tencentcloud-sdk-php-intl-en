@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DDoS configuration
+ * StopMigration request structure.
  *
- * @method string getSwitch() Obtain Whether to enable SCDN DDoS configuration. Values:
-`on`: Enable
-`off`: Disable
- * @method void setSwitch(string $Switch) Set Whether to enable SCDN DDoS configuration. Values:
-`on`: Enable
-`off`: Disable
+ * @method integer getMigrateId() Obtain Migration task ID.
+ * @method void setMigrateId(integer $MigrateId) Set Migration task ID.
  */
-class ScdnDdosConfig extends AbstractModel
+class StopMigrationRequest extends AbstractModel
 {
     /**
-     * @var string Whether to enable SCDN DDoS configuration. Values:
-`on`: Enable
-`off`: Disable
+     * @var integer Migration task ID.
      */
-    public $Switch;
+    public $MigrateId;
 
     /**
-     * @param string $Switch Whether to enable SCDN DDoS configuration. Values:
-`on`: Enable
-`off`: Disable
+     * @param integer $MigrateId Migration task ID.
      */
     function __construct()
     {
@@ -54,8 +46,8 @@ class ScdnDdosConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("MigrateId",$param) and $param["MigrateId"] !== null) {
+            $this->MigrateId = $param["MigrateId"];
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannel(string $Channel) Set Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
  * @method array getDomainAreaConfigs() Obtain Domain name region information
  * @method void setDomainAreaConfigs(array $DomainAreaConfigs) Set Domain name region information
+ * @method boolean getInheritDomainTags() Obtain Specifies whether to inherit the domain name tag. default false.
+ * @method void setInheritDomainTags(boolean $InheritDomainTags) Set Specifies whether to inherit the domain name tag. default false.
  */
 class CreateClsLogTopicRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateClsLogTopicRequest extends AbstractModel
     public $DomainAreaConfigs;
 
     /**
+     * @var boolean Specifies whether to inherit the domain name tag. default false.
+     */
+    public $InheritDomainTags;
+
+    /**
      * @param string $TopicName Log topic name
      * @param string $LogsetId Logset ID
      * @param string $Channel Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
      * @param array $DomainAreaConfigs Domain name region information
+     * @param boolean $InheritDomainTags Specifies whether to inherit the domain name tag. default false.
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class CreateClsLogTopicRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DomainAreaConfigs, $obj);
             }
+        }
+
+        if (array_key_exists("InheritDomainTags",$param) and $param["InheritDomainTags"] !== null) {
+            $this->InheritDomainTags = $param["InheritDomainTags"];
         }
     }
 }

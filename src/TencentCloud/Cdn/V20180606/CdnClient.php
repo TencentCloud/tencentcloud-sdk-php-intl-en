@@ -26,7 +26,6 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\AddCLSTopicDomainsResponse AddCLSTopicDomains(Models\AddCLSTopicDomainsRequest $req) This API is used to add one or more domains to a specified log topic.
  * @method Models\AddCdnDomainResponse AddCdnDomain(Models\AddCdnDomainRequest $req) This API is used to add a CDN acceleration domain name. Up to 100 domain names can be added per minute.
  * @method Models\CreateClsLogTopicResponse CreateClsLogTopic(Models\CreateClsLogTopicRequest $req) This API is used to create a log topic. Up to 10 log topics can be created under one logset.
- * @method Models\CreateScdnFailedLogTaskResponse CreateScdnFailedLogTask(Models\CreateScdnFailedLogTaskRequest $req) This API is used to recreate a failed event log task.
  * @method Models\DeleteCdnDomainResponse DeleteCdnDomain(Models\DeleteCdnDomainRequest $req) This API is used to delete a specified acceleration domain name.
  * @method Models\DeleteClsLogTopicResponse DeleteClsLogTopic(Models\DeleteClsLogTopicRequest $req) This API is used to delete a log topic. Note: when a log topic is deleted, all logs of the domain names bound to it will no longer be published to the topic, and the logs previously published to the topic will be deleted. This action will take effect within 5–15 minutes.
  * @method Models\DescribeBillingDataResponse DescribeBillingData(Models\DescribeBillingDataRequest $req) This API is used to query billing data details. 
@@ -48,7 +47,9 @@ If you have a strong requirement for data timeliness, it is recommended to use t
 + Aggregate list of 5xx status codes and the details of status codes starting with 5 (in entries)
  * @method Models\DescribeCdnDomainLogsResponse DescribeCdnDomainLogs(Models\DescribeCdnDomainLogsRequest $req) This API is used to query the download link of an access log. You can use this API for access logs in the last 30 days either within or outside Mainland China.
  * @method Models\DescribeCdnIpResponse DescribeCdnIp(Models\DescribeCdnIpRequest $req) This API is used to query CDN IP ownership.
- * @method Models\DescribeCdnOriginIpResponse DescribeCdnOriginIp(Models\DescribeCdnOriginIpRequest $req) This API is used to query the IP information of CDN intermediate nodes. Note: this API will be deactivated soon and no longer be maintained. Please call `DescribeIpStatus` instead.
+This API is used to create and bind a policy. (Note: The API request frequency limit follows CDN's restriction: 200 requests/10 minutes).
+ * @method Models\DescribeCdnOriginIpResponse DescribeCdnOriginIp(Models\DescribeCdnOriginIpRequest $req) **This API is deprecated.**.
+This API is used to query the IP information of CDN origin-pull nodes. (Note: The replace API is DescribeIpStatus.).
  * @method Models\DescribeCertDomainsResponse DescribeCertDomains(Models\DescribeCertDomainsRequest $req) This API is used to verify a SSL certificate and obtain its domain names.
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) This API is used to query the basic configuration information of CDN acceleration domain names (inside and outside mainland China), including the project ID, service status, service type, creation time, and update time, etc.
  * @method Models\DescribeDomainsConfigResponse DescribeDomainsConfig(Models\DescribeDomainsConfigRequest $req) This API is used to query the complete configuration information of CDN acceleration domain names (inside and outside mainland China).
@@ -77,14 +78,12 @@ If you have migrated your ECDN service to CDN, you can use the [DescribeIpStatus
  * @method Models\DescribePushQuotaResponse DescribePushQuota(Models\DescribePushQuotaRequest $req) This API is used to query the prefetch quota and daily available usage.
  * @method Models\DescribePushTasksResponse DescribePushTasks(Models\DescribePushTasksRequest $req) This API is used to query the submission record and progress of prefetch tasks.
  * @method Models\DescribeReportDataResponse DescribeReportData(Models\DescribeReportDataRequest $req) This API is used to query the daily/weekly/monthly report data at domain name/project levels.
- * @method Models\DescribeUrlViolationsResponse DescribeUrlViolations(Models\DescribeUrlViolationsRequest $req) This API is used to query the list of domain name URLs containing regulation-violating content scanned and detected by the CDN system, and the current status of the URLs.
-It corresponds to the **Pornography Detection** page on the CDN Console.
- * @method Models\DisableCachesResponse DisableCaches(Models\DisableCachesRequest $req) This API is used to block access to a specific URL on CDN. When a URL is blocked, error 403 will be returned for requests from the Chinese mainland. URL blocking is not permanent. Note that this API is only available to beta users now. 
+ * @method Models\DescribeUrlViolationsResponse DescribeUrlViolations(Models\DescribeUrlViolationsRequest $req) This API is used to query the URL list with domain violations detected by the CDN system scan and their status.
+This API is used to correspond to the content compliant webpage in the CDN console.
  * @method Models\DisableClsLogTopicResponse DisableClsLogTopic(Models\DisableClsLogTopicRequest $req) This API is used to stop publishing to a log topic. Note: after a log topic is disabled, all logs of the domain names bound to it will no longer be published to the topic, and the logs that have already been published will be retained. This action will take effect within 5–15 minutes.
 
- * @method Models\EnableCachesResponse EnableCaches(Models\EnableCachesRequest $req) This API (EnableCaches) is used to unblock manually blocked URLs. After a URL is successfully unblocked, it takes about 5 to 10 minutes to take effect across the entire network. (This API is during beta test and not fully available now.)
+ * @method Models\DuplicateDomainConfigResponse DuplicateDomainConfig(Models\DuplicateDomainConfigRequest $req) This API is used to copy the configuration of a reference domain to a new domain name. Self-owned certificates and customization options are not currently supported.
  * @method Models\EnableClsLogTopicResponse EnableClsLogTopic(Models\EnableClsLogTopicRequest $req) This API is used to start publishing to a log topic. Note: after a log topic is enabled, all logs of the domain names bound to the topic will be published to it. This action will take effect within 5–15 minutes.
- * @method Models\GetDisableRecordsResponse GetDisableRecords(Models\GetDisableRecordsRequest $req) This API is used to query the resource blocking history and the current URL status. (This API is in beta test and not generally available yet.)
  * @method Models\ListClsLogTopicsResponse ListClsLogTopics(Models\ListClsLogTopicsRequest $req) This API is used to display the list of log topics. Note: a logset can contain up to 10 log topics.
  * @method Models\ListClsTopicDomainsResponse ListClsTopicDomains(Models\ListClsTopicDomainsRequest $req) This API is used to get the list of domain names bound to a log topic.
  * @method Models\ListTopDataResponse ListTopData(Models\ListTopDataRequest $req) This API is used to list data sorted the following ways by using different combinations of the Metric and Filter input parameters:
@@ -116,7 +115,6 @@ Note: after the acceleration service has been suspended, requests to the cache n
 Note: If you need to update a complex type configuration item, you must transmit all attributes of the entire object. Untransmitted attributes will use default values. It is recommended to pass the configuration attributes obtained from the query API after direct modification to this interface. If only modifying an individual configuration item, just pass the corresponding configuration parameter.
 This API is used for CloudAudit-related operations. The input parameters may contain sensitive information such as keys, so they will not be reported to CloudAudit.
  * @method Models\UpdatePayTypeResponse UpdatePayType(Models\UpdatePayTypeRequest $req) This API is used to modify the billing mode of an account. At present, the billing mode of accounts on a monthly billing cycle and sub-accounts cannot be modified.
- * @method Models\UpdateScdnDomainResponse UpdateScdnDomain(Models\UpdateScdnDomainRequest $req) This API is used to modify security configurations of SCDN acceleration domain names.
  */
 
 class CdnClient extends AbstractClient

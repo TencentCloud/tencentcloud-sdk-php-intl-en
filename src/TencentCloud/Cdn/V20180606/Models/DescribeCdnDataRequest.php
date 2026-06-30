@@ -90,10 +90,10 @@ Note that `Project` will be ignored if `Domains` is specified.
 `5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
 `hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
 `day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
- * @method boolean getDetail() Obtain The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
- * @method void setDetail(boolean $Detail) Set The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
+ * @method boolean getDetail() Obtain Queries multiple domain names and returns aggregated data by default (false).
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
+ * @method void setDetail(boolean $Detail) Set Queries multiple domain names and returns aggregated data by default (false).
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
  * @method integer getIsp() Obtain Specifies an ISP when you query the CDN data within the Chinese mainland. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
@@ -209,8 +209,8 @@ Note that `Project` will be ignored if `Domains` is specified.
     public $Interval;
 
     /**
-     * @var boolean The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
+     * @var boolean Queries multiple domain names and returns aggregated data by default (false).
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
      */
     public $Detail;
 
@@ -312,8 +312,8 @@ Note that `Project` will be ignored if `Domains` is specified.
 `5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
 `hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
 `day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
-     * @param boolean $Detail The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
+     * @param boolean $Detail Queries multiple domain names and returns aggregated data by default (false).
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
      * @param integer $Isp Specifies an ISP when you query the CDN data within the Chinese mainland. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 Note that only one of `District`, `Isp` and `IpProtocol` can be specified.

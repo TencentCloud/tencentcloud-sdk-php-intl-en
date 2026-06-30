@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SeriesInfos type
  *
- * @method array getColumns() Obtain Data columns
- * @method void setColumns(array $Columns) Set Data columns
- * @method array getValues() Obtain Data values
- * @method void setValues(array $Values) Set Data values
+ * @method array getColumns() Obtain Data column
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setColumns(array $Columns) Set Data column
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getValues() Obtain Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setValues(array $Values) Set Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SeriesInfos extends AbstractModel
 {
     /**
-     * @var array Data columns
+     * @var array Data column
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Columns;
 
     /**
-     * @var array Data values
+     * @var array Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Values;
 
     /**
-     * @param array $Columns Data columns
-     * @param array $Values Data values
+     * @param array $Columns Data column
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Values Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

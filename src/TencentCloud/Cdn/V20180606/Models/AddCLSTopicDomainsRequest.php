@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainAreaConfigs(array $DomainAreaConfigs) Set Region configuration for domains
  * @method string getChannel() Obtain Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
  * @method void setChannel(string $Channel) Set Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
+ * @method boolean getInheritDomainTags() Obtain Specifies whether to inherit the domain name tag. default reservation is the value changed last time.
+ * @method void setInheritDomainTags(boolean $InheritDomainTags) Set Specifies whether to inherit the domain name tag. default reservation is the value changed last time.
  */
 class AddCLSTopicDomainsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class AddCLSTopicDomainsRequest extends AbstractModel
     public $Channel;
 
     /**
+     * @var boolean Specifies whether to inherit the domain name tag. default reservation is the value changed last time.
+     */
+    public $InheritDomainTags;
+
+    /**
      * @param string $LogsetId Logset ID
      * @param string $TopicId Log topic ID
      * @param array $DomainAreaConfigs Region configuration for domains
      * @param string $Channel Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
+     * @param boolean $InheritDomainTags Specifies whether to inherit the domain name tag. default reservation is the value changed last time.
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class AddCLSTopicDomainsRequest extends AbstractModel
 
         if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
             $this->Channel = $param["Channel"];
+        }
+
+        if (array_key_exists("InheritDomainTags",$param) and $param["InheritDomainTags"] !== null) {
+            $this->InheritDomainTags = $param["InheritDomainTags"];
         }
     }
 }

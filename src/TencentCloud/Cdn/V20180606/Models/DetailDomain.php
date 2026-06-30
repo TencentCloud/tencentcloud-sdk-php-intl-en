@@ -320,6 +320,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setOthersPrivateAccess(OthersPrivateAccess $OthersPrivateAccess) Set Origin-pull authentication for other origins
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method ParamFilter getParamFilter() Obtain Specifies the blocklist parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setParamFilter(ParamFilter $ParamFilter) Set Specifies the blocklist parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AutoGuard getAutoGuard() Obtain 
+ * @method void setAutoGuard(AutoGuard $AutoGuard) Set 
  */
 class DetailDomain extends AbstractModel
 {
@@ -738,6 +744,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $OthersPrivateAccess;
 
     /**
+     * @var ParamFilter Specifies the blocklist parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ParamFilter;
+
+    /**
+     * @var AutoGuard 
+     */
+    public $AutoGuard;
+
+    /**
      * @param string $ResourceId Domain name ID
      * @param integer $AppId Tencent Cloud account ID
      * @param string $Domain Accelerated domain name.
@@ -888,6 +905,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param OthersPrivateAccess $OthersPrivateAccess Origin-pull authentication for other origins
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ParamFilter $ParamFilter Specifies the blocklist parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AutoGuard $AutoGuard 
      */
     function __construct()
     {
@@ -1223,6 +1243,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("OthersPrivateAccess",$param) and $param["OthersPrivateAccess"] !== null) {
             $this->OthersPrivateAccess = new OthersPrivateAccess();
             $this->OthersPrivateAccess->deserialize($param["OthersPrivateAccess"]);
+        }
+
+        if (array_key_exists("ParamFilter",$param) and $param["ParamFilter"] !== null) {
+            $this->ParamFilter = new ParamFilter();
+            $this->ParamFilter->deserialize($param["ParamFilter"]);
+        }
+
+        if (array_key_exists("AutoGuard",$param) and $param["AutoGuard"] !== null) {
+            $this->AutoGuard = new AutoGuard();
+            $this->AutoGuard->deserialize($param["AutoGuard"]);
         }
     }
 }

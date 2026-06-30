@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EnableCaches request structure.
+ * ModifyDBInstanceRenewFlag request structure.
  *
- * @method array getUrls() Obtain List of unblocked URLs
- * @method void setUrls(array $Urls) Set List of unblocked URLs
- * @method string getDate() Obtain URL blocking date
- * @method void setDate(string $Date) Set URL blocking date
+ * @method array getRenewFlags() Obtain Instance renewal flag information.
+ * @method void setRenewFlags(array $RenewFlags) Set Instance renewal flag information.
  */
-class EnableCachesRequest extends AbstractModel
+class ModifyDBInstanceRenewFlagRequest extends AbstractModel
 {
     /**
-     * @var array List of unblocked URLs
+     * @var array Instance renewal flag information.
      */
-    public $Urls;
+    public $RenewFlags;
 
     /**
-     * @var string URL blocking date
-     */
-    public $Date;
-
-    /**
-     * @param array $Urls List of unblocked URLs
-     * @param string $Date URL blocking date
+     * @param array $RenewFlags Instance renewal flag information.
      */
     function __construct()
     {
@@ -54,12 +46,13 @@ class EnableCachesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
-        }
-
-        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
-            $this->Date = $param["Date"];
+        if (array_key_exists("RenewFlags",$param) and $param["RenewFlags"] !== null) {
+            $this->RenewFlags = [];
+            foreach ($param["RenewFlags"] as $key => $value){
+                $obj = new InstanceRenewInfo();
+                $obj->deserialize($value);
+                array_push($this->RenewFlags, $obj);
+            }
         }
     }
 }

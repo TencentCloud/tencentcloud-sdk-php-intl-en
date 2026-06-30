@@ -20,18 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Two-dimensional array of SeriesInfo type
  *
- * @method array getRowValue() Obtain Data value
- * @method void setRowValue(array $RowValue) Set Data value
+ * @method array getRowValue() Obtain Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRowValue(array $RowValue) Set Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getRowValueFloat() Obtain Data value.
+ * @method void setRowValueFloat(array $RowValueFloat) Set Data value.
  */
 class RowValues extends AbstractModel
 {
     /**
-     * @var array Data value
+     * @var array Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RowValue;
 
     /**
-     * @param array $RowValue Data value
+     * @var array Data value.
+     */
+    public $RowValueFloat;
+
+    /**
+     * @param array $RowValue Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $RowValueFloat Data value.
      */
     function __construct()
     {
@@ -48,6 +60,10 @@ class RowValues extends AbstractModel
         }
         if (array_key_exists("RowValue",$param) and $param["RowValue"] !== null) {
             $this->RowValue = $param["RowValue"];
+        }
+
+        if (array_key_exists("RowValueFloat",$param) and $param["RowValueFloat"] !== null) {
+            $this->RowValueFloat = $param["RowValueFloat"];
         }
     }
 }

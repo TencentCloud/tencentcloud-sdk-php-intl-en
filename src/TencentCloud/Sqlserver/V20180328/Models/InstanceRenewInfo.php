@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * WAF rule information
+ * 
  *
- * @method string getAttackType() Obtain Attack type
- * @method void setAttackType(string $AttackType) Set Attack type
- * @method string getOperate() Obtain Defense action. Valid value: `observe`.
- * @method void setOperate(string $Operate) Set Defense action. Valid value: `observe`.
+ * @method string getInstanceId() Obtain 
+ * @method void setInstanceId(string $InstanceId) Set 
+ * @method integer getRenewFlag() Obtain 
+ * @method void setRenewFlag(integer $RenewFlag) Set 
  */
-class ScdnWafRule extends AbstractModel
+class InstanceRenewInfo extends AbstractModel
 {
     /**
-     * @var string Attack type
+     * @var string 
      */
-    public $AttackType;
+    public $InstanceId;
 
     /**
-     * @var string Defense action. Valid value: `observe`.
+     * @var integer 
      */
-    public $Operate;
+    public $RenewFlag;
 
     /**
-     * @param string $AttackType Attack type
-     * @param string $Operate Defense action. Valid value: `observe`.
+     * @param string $InstanceId 
+     * @param integer $RenewFlag 
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ScdnWafRule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AttackType",$param) and $param["AttackType"] !== null) {
-            $this->AttackType = $param["AttackType"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("Operate",$param) and $param["Operate"] !== null) {
-            $this->Operate = $param["Operate"];
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
         }
     }
 }

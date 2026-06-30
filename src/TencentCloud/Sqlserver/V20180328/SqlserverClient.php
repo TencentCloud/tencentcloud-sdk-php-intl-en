@@ -52,6 +52,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DeleteIncrementalMigrationResponse DeleteIncrementalMigration(Models\DeleteIncrementalMigrationRequest $req) This API is used to delete an incremental backup import task.
  * @method Models\DeleteMigrationResponse DeleteMigration(Models\DeleteMigrationRequest $req) This API is used to delete a migration task.
  * @method Models\DeletePublishSubscribeResponse DeletePublishSubscribe(Models\DeletePublishSubscribeRequest $req) This API is used to delete the publish/subscribe relationship between two databases.
+ * @method Models\DeleteRestoreTaskResponse DeleteRestoreTask(Models\DeleteRestoreTaskRequest $req) This API is used to delete rollback task records.
  * @method Models\DescribeAccountPrivilegeByDBResponse DescribeAccountPrivilegeByDB(Models\DescribeAccountPrivilegeByDBRequest $req) This API is used to query information on the account and permissions associated with the database.
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) This API is used to pull the list of instance accounts.
  * @method Models\DescribeBackupByFlowIdResponse DescribeBackupByFlowId(Models\DescribeBackupByFlowIdRequest $req) This API is used to query the created backup details through the backup creation process ID. The process ID can be obtained through the CreateBackup API.
@@ -109,10 +110,12 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeSpecSellStatusResponse DescribeSpecSellStatus(Models\DescribeSpecSellStatusRequest $req) This API is used to query the status information on specifications, including the sales status and reference price. (The actual price is subject to the result returned by price querying APIs.)
  * @method Models\DescribeUpgradeInstanceCheckResponse DescribeUpgradeInstanceCheck(Models\DescribeUpgradeInstanceCheckRequest $req) This API is used to pre-check the impact of the instance configuration adjustment before the adjustment.
  * @method Models\DescribeUploadBackupInfoResponse DescribeUploadBackupInfo(Models\DescribeUploadBackupInfoRequest $req) This API is used to query a backup upload permission.
+ * @method Models\DescribeUploadIncrementalInfoResponse DescribeUploadIncrementalInfo(Models\DescribeUploadIncrementalInfoRequest $req) This API is used to query upload permissions for incremental backups.
  * @method Models\DescribeXEventsResponse DescribeXEvents(Models\DescribeXEventsRequest $req) This API is used to query the list of extended events.
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) This API is used to query currently purchasable AZs.
  * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) This API is used to unbind security groups from instances in batches.
  * @method Models\InquiryPriceCreateDBInstancesResponse InquiryPriceCreateDBInstances(Models\InquiryPriceCreateDBInstancesRequest $req) This API is used to query the price of requested instances.
+ * @method Models\InquiryPriceRenewDBInstanceResponse InquiryPriceRenewDBInstance(Models\InquiryPriceRenewDBInstanceRequest $req) This API is used to query the renewal price of a monthly subscription instance.
  * @method Models\InquiryPriceUpgradeDBInstanceResponse InquiryPriceUpgradeDBInstance(Models\InquiryPriceUpgradeDBInstanceRequest $req) This API is used to query the upgrade prices of a yearly/monthly subscribed instance.
 .
  * @method Models\ModifyAccountPrivilegeResponse ModifyAccountPrivilege(Models\ModifyAccountPrivilegeRequest $req) This API is used to modify instance account permissions.
@@ -127,6 +130,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\ModifyDBInstanceNetworkResponse ModifyDBInstanceNetwork(Models\ModifyDBInstanceNetworkRequest $req) This API is used to switch a running instance from a VPC to another.
  * @method Models\ModifyDBInstanceNoteResponse ModifyDBInstanceNote(Models\ModifyDBInstanceNoteRequest $req) This API is used to modify the instance remarks.
  * @method Models\ModifyDBInstanceProjectResponse ModifyDBInstanceProject(Models\ModifyDBInstanceProjectRequest $req) This API is used to modify the project to which a database instance belongs.
+ * @method Models\ModifyDBInstanceRenewFlagResponse ModifyDBInstanceRenewFlag(Models\ModifyDBInstanceRenewFlagRequest $req) This API is used to modify the instance renewal flag.
  * @method Models\ModifyDBInstanceSSLResponse ModifyDBInstanceSSL(Models\ModifyDBInstanceSSLRequest $req) This API is used to enable/disable/update SSL encryption.
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) This API is used to modify security groups bound to an instance.
  * @method Models\ModifyDBNameResponse ModifyDBName(Models\ModifyDBNameRequest $req) This API is used to rename a database.
@@ -153,6 +157,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
  * @method Models\RecycleDBInstanceResponse RecycleDBInstance(Models\RecycleDBInstanceRequest $req) This API is used to return a deactivated SQL Server instance.
  * @method Models\RecycleReadOnlyGroupResponse RecycleReadOnlyGroup(Models\RecycleReadOnlyGroupRequest $req) This API is used to reclaim resources of read-only groups immediately. The resources, such as VIP, occupied by the read-only group will be released immediately and cannot be recovered.
  * @method Models\RemoveBackupsResponse RemoveBackups(Models\RemoveBackupsRequest $req) This API is used to delete backup files created by users manually. The backup policy to be deleted can be instance backup or multi-database backup.
+ * @method Models\RenewDBInstanceResponse RenewDBInstance(Models\RenewDBInstanceRequest $req) This API is used to renew instances. For pay-as-you-go instances, the billing method will change to monthly subscription after renewal. You can call the InquiryPriceRenewDBInstance API for the renewal price of pay-as-you-go instances.
  * @method Models\RenewPostpaidDBInstanceResponse RenewPostpaidDBInstance(Models\RenewPostpaidDBInstanceRequest $req) This API is used to recover the pay-as-you-go instance that is manually isolated through the API TerminateDBInstance from the recycle bin.
  * @method Models\ResetAccountPasswordResponse ResetAccountPassword(Models\ResetAccountPasswordRequest $req) This API is used to reset the account password of an instance.
  * @method Models\RestartDBInstanceResponse RestartDBInstance(Models\RestartDBInstanceRequest $req) This API is used to restart a database instance.
@@ -162,6 +167,8 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
  * @method Models\StartBackupMigrationResponse StartBackupMigration(Models\StartBackupMigrationRequest $req) This API is used to start a backup import task.
  * @method Models\StartIncrementalMigrationResponse StartIncrementalMigration(Models\StartIncrementalMigrationRequest $req) This API is used to start an incremental backup import task.
  * @method Models\StartInstanceXEventResponse StartInstanceXEvent(Models\StartInstanceXEventRequest $req) This API is used to start and stop an extended event.
+ * @method Models\StartMigrationCheckResponse StartMigrationCheck(Models\StartMigrationCheckRequest $req) This API is used to start a pre-migration verification task, applicable to the migration method where the migration source type is TencentDB for SQL Server.
+ * @method Models\StopMigrationResponse StopMigration(Models\StopMigrationRequest $req) This API is used to terminate a migration task.
  * @method Models\SwitchCloudInstanceHAResponse SwitchCloudInstanceHA(Models\SwitchCloudInstanceHARequest $req) This API is used to manually switch between primary and secondary.
  * @method Models\TerminateDBInstanceResponse TerminateDBInstance(Models\TerminateDBInstanceRequest $req) This API is used to isolate an instance to move it into a recycle bin.
  * @method Models\UpgradeDBInstanceResponse UpgradeDBInstance(Models\UpgradeDBInstanceRequest $req) This API is used to upgrade an instance.

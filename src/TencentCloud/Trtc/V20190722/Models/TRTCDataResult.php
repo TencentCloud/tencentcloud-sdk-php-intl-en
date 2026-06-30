@@ -20,34 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TRTC Data Dashboard/Real-Time Monitoring API output parameters
  *
- * @method integer getStatementID() Obtain StatementID value, fixed at 0 for Monitoring Dashboard.
- * @method void setStatementID(integer $StatementID) Set StatementID value, fixed at 0 for Monitoring Dashboard.
- * @method array getSeries() Obtain Query result data, returned in Columns-Values format.
- * @method void setSeries(array $Series) Set Query result data, returned in Columns-Values format.
- * @method integer getTotal() Obtain Total value, fixed at 1 for Monitoring Dashboard.
- * @method void setTotal(integer $Total) Set Total value, fixed at 1 for Monitoring Dashboard.
+ * @method integer getStatementID() Obtain The StatementID value is fixed as 0 in the monitoring dashboard.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatementID(integer $StatementID) Set The StatementID value is fixed as 0 in the monitoring dashboard.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getSeries() Obtain Query result data is returned in Columns-Values format.	
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSeries(array $Series) Set Query result data is returned in Columns-Values format.	
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotal() Obtain The Total value is fixed as 1 in the dashboard feature monitoring.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTotal(integer $Total) Set The Total value is fixed as 1 in the dashboard feature monitoring.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TRTCDataResult extends AbstractModel
 {
     /**
-     * @var integer StatementID value, fixed at 0 for Monitoring Dashboard.
+     * @var integer The StatementID value is fixed as 0 in the monitoring dashboard.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StatementID;
 
     /**
-     * @var array Query result data, returned in Columns-Values format.
+     * @var array Query result data is returned in Columns-Values format.	
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Series;
 
     /**
-     * @var integer Total value, fixed at 1 for Monitoring Dashboard.
+     * @var integer The Total value is fixed as 1 in the dashboard feature monitoring.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Total;
 
     /**
-     * @param integer $StatementID StatementID value, fixed at 0 for Monitoring Dashboard.
-     * @param array $Series Query result data, returned in Columns-Values format.
-     * @param integer $Total Total value, fixed at 1 for Monitoring Dashboard.
+     * @param integer $StatementID The StatementID value is fixed as 0 in the monitoring dashboard.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Series Query result data is returned in Columns-Values format.	
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Total The Total value is fixed as 1 in the dashboard feature monitoring.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

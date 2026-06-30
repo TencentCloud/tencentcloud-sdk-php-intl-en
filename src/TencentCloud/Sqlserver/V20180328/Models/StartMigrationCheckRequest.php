@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCdnIp request structure.
+ * StartMigrationCheck request structure.
  *
- * @method array getIps() Obtain IP list you want to query. supports 1-20 ip inquiries at a time.
- * @method void setIps(array $Ips) Set IP list you want to query. supports 1-20 ip inquiries at a time.
+ * @method integer getMigrateId() Obtain Migration task ID.
+ * @method void setMigrateId(integer $MigrateId) Set Migration task ID.
  */
-class DescribeCdnIpRequest extends AbstractModel
+class StartMigrationCheckRequest extends AbstractModel
 {
     /**
-     * @var array IP list you want to query. supports 1-20 ip inquiries at a time.
+     * @var integer Migration task ID.
      */
-    public $Ips;
+    public $MigrateId;
 
     /**
-     * @param array $Ips IP list you want to query. supports 1-20 ip inquiries at a time.
+     * @param integer $MigrateId Migration task ID.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeCdnIpRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ips",$param) and $param["Ips"] !== null) {
-            $this->Ips = $param["Ips"];
+        if (array_key_exists("MigrateId",$param) and $param["MigrateId"] !== null) {
+            $this->MigrateId = $param["MigrateId"];
         }
     }
 }
