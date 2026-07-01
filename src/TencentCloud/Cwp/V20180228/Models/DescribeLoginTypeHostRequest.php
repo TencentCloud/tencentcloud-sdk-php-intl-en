@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
  * @method integer getOffset() Obtain <p>Offset. Default value: 0.</p>
  * @method void setOffset(integer $Offset) Set <p>Offset. Default value: 0.</p>
- * @method string getOrder() Obtain <p>Sort order: [ASC: ascending | DESC: descending]</p>
- * @method void setOrder(string $Order) Set <p>Sort order: [ASC: ascending | DESC: descending]</p>
+ * @method string getOrder() Obtain <p>Sort order: [ASC: ascending, DESC: descending]</p>
+ * @method void setOrder(string $Order) Set <p>Sort order: [ASC: ascending, DESC: descending]</p>
  * @method string getBy() Obtain <p>Optional sorting column: [Id]</p>
  * @method void setBy(string $By) Set <p>Optional sorting column: [Id]</p>
  */
@@ -49,7 +49,7 @@ class DescribeLoginTypeHostRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string <p>Sort order: [ASC: ascending | DESC: descending]</p>
+     * @var string <p>Sort order: [ASC: ascending, DESC: descending]</p>
      */
     public $Order;
 
@@ -62,7 +62,7 @@ class DescribeLoginTypeHostRequest extends AbstractModel
      * @param array $Filters <li>Name - string - Required: No - Host name</li> <li>InstanceId - string - Required: No - Instance ID</li> <li>PublicIp - string - Required: No - Public IP address</li> <li>PrivateIp - string - Required: No - Private IP</li>
      * @param integer $Limit <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
      * @param integer $Offset <p>Offset. Default value: 0.</p>
-     * @param string $Order <p>Sort order: [ASC: ascending | DESC: descending]</p>
+     * @param string $Order <p>Sort order: [ASC: ascending, DESC: descending]</p>
      * @param string $By <p>Optional sorting column: [Id]</p>
      */
     function __construct()
