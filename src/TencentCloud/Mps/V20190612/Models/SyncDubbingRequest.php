@@ -38,8 +38,31 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutput(SyncDubbingOutputOption $Output) Set <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
  * @method string getResourceId() Obtain <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
  * @method void setResourceId(string $ResourceId) Set <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
- * @method string getExtParam() Obtain <p>Extended parameters in the format of a JSON string.</p><p><strong>synExt</strong>    Object    Extended text to speech parameter.<br>  <strong>duration</strong>    Float    Synthesized audio duration, in seconds. Example: 5.2.<br>  <strong>sampleRate</strong>    Integer    Synthesized audio sample rate. Default value: 16000. Valid values: [8000, 16000, 22050, 24000, 32000, 44100].<br>  <strong>pitch</strong>    Integer    Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br><strong>cloneExt</strong>    Object    Extended voice cloning parameter.<br>  <strong>timeRanges</strong>    Float[][]    Specifies the time ranges for audio cloning. The default value is the first 20 seconds of the audio. Example: [[5.2, 10], [45, 59.8]].</p>
- * @method void setExtParam(string $ExtParam) Set <p>Extended parameters in the format of a JSON string.</p><p><strong>synExt</strong>    Object    Extended text to speech parameter.<br>  <strong>duration</strong>    Float    Synthesized audio duration, in seconds. Example: 5.2.<br>  <strong>sampleRate</strong>    Integer    Synthesized audio sample rate. Default value: 16000. Valid values: [8000, 16000, 22050, 24000, 32000, 44100].<br>  <strong>pitch</strong>    Integer    Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br><strong>cloneExt</strong>    Object    Extended voice cloning parameter.<br>  <strong>timeRanges</strong>    Float[][]    Specifies the time ranges for audio cloning. The default value is the first 20 seconds of the audio. Example: [[5.2, 10], [45, 59.8]].</p>
+ * @method string getExtParam() Obtain <p>Extended parameters in the format of a JSON string.</p>
+<p>
+
+- <strong>synExt</strong>    Object;    Extended text to speech parameter.<br>
+- <strong>duration</strong>    Float;    Synthesized audio duration, in seconds. Example: 5.2.<br>
+- <strong>sampleRate</strong>    Integer;    Synthesized audio sample rate. Default value: 16000. Valid values: [8000, 16000, 22050, 24000, 32000, 44100].<br>
+- <strong>pitch</strong>    Integer;    Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>
+- <strong>cloneExt</strong>    Object;    Extended voice cloning parameter.<br>
+- <strong>timeRanges</strong>    Float;    Specifies the time ranges for audio cloning. The default value is the first 20 seconds of the audio. Example: [[5.2, 10], [45, 59.8]].
+
+</p>
+
+
+
+ * @method void setExtParam(string $ExtParam) Set <p>Extended parameters in the format of a JSON string.</p>
+<p>
+
+- <strong>synExt</strong>    Object;    Extended text to speech parameter.<br>
+- <strong>duration</strong>    Float;    Synthesized audio duration, in seconds. Example: 5.2.<br>
+- <strong>sampleRate</strong>    Integer;    Synthesized audio sample rate. Default value: 16000. Valid values: [8000, 16000, 22050, 24000, 32000, 44100].<br>
+- <strong>pitch</strong>    Integer;    Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>
+- <strong>cloneExt</strong>    Object;    Extended voice cloning parameter.<br>
+- <strong>timeRanges</strong>    Float;    Specifies the time ranges for audio cloning. The default value is the first 20 seconds of the audio. Example: [[5.2, 10], [45, 59.8]].
+
+</p>
  */
 class SyncDubbingRequest extends AbstractModel
 {
@@ -89,7 +112,20 @@ class SyncDubbingRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string <p>Extended parameters in the format of a JSON string.</p><p><strong>synExt</strong>    Object    Extended text to speech parameter.<br>  <strong>duration</strong>    Float    Synthesized audio duration, in seconds. Example: 5.2.<br>  <strong>sampleRate</strong>    Integer    Synthesized audio sample rate. Default value: 16000. Valid values: [8000, 16000, 22050, 24000, 32000, 44100].<br>  <strong>pitch</strong>    Integer    Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br><strong>cloneExt</strong>    Object    Extended voice cloning parameter.<br>  <strong>timeRanges</strong>    Float[][]    Specifies the time ranges for audio cloning. The default value is the first 20 seconds of the audio. Example: [[5.2, 10], [45, 59.8]].</p>
+     * @var string <p>Extended parameters in the format of a JSON string.</p>
+<p>
+
+- <strong>synExt</strong>    Object;    Extended text to speech parameter.<br>
+- <strong>duration</strong>    Float;    Synthesized audio duration, in seconds. Example: 5.2.<br>
+- <strong>sampleRate</strong>    Integer;    Synthesized audio sample rate. Default value: 16000. Valid values: [8000, 16000, 22050, 24000, 32000, 44100].<br>
+- <strong>pitch</strong>    Integer;    Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>
+- <strong>cloneExt</strong>    Object;    Extended voice cloning parameter.<br>
+- <strong>timeRanges</strong>    Float;    Specifies the time ranges for audio cloning. The default value is the first 20 seconds of the audio. Example: [[5.2, 10], [45, 59.8]].
+
+</p>
+
+
+
      */
     public $ExtParam;
 
@@ -103,7 +139,17 @@ class SyncDubbingRequest extends AbstractModel
      * @param VoiceProfile $VoiceProfile <p>Voice attribute.</p>
      * @param SyncDubbingOutputOption $Output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
      * @param string $ResourceId <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
-     * @param string $ExtParam <p>Extended parameters in the format of a JSON string.</p><p><strong>synExt</strong>    Object    Extended text to speech parameter.<br>  <strong>duration</strong>    Float    Synthesized audio duration, in seconds. Example: 5.2.<br>  <strong>sampleRate</strong>    Integer    Synthesized audio sample rate. Default value: 16000. Valid values: [8000, 16000, 22050, 24000, 32000, 44100].<br>  <strong>pitch</strong>    Integer    Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br><strong>cloneExt</strong>    Object    Extended voice cloning parameter.<br>  <strong>timeRanges</strong>    Float[][]    Specifies the time ranges for audio cloning. The default value is the first 20 seconds of the audio. Example: [[5.2, 10], [45, 59.8]].</p>
+     * @param string $ExtParam <p>Extended parameters in the format of a JSON string.</p>
+<p>
+
+- <strong>synExt</strong>    Object;    Extended text to speech parameter.<br>
+- <strong>duration</strong>    Float;    Synthesized audio duration, in seconds. Example: 5.2.<br>
+- <strong>sampleRate</strong>    Integer;    Synthesized audio sample rate. Default value: 16000. Valid values: [8000, 16000, 22050, 24000, 32000, 44100].<br>
+- <strong>pitch</strong>    Integer;    Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>
+- <strong>cloneExt</strong>    Object;    Extended voice cloning parameter.<br>
+- <strong>timeRanges</strong>    Float;    Specifies the time ranges for audio cloning. The default value is the first 20 seconds of the audio. Example: [[5.2, 10], [45, 59.8]].
+
+</p>
      */
     function __construct()
     {
