@@ -100,6 +100,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DeleteSnapshotByTimeOffsetTemplateResponse DeleteSnapshotByTimeOffsetTemplate(Models\DeleteSnapshotByTimeOffsetTemplateRequest $req) This API is used to delete a custom time point screencapturing template.
  * @method Models\DeleteSubtitleEmbedTemplateResponse DeleteSubtitleEmbedTemplate(Models\DeleteSubtitleEmbedTemplateRequest $req) Delete a user-customized Subtitle Suppression Template.
  * @method Models\DeleteTranscodeTemplateResponse DeleteTranscodeTemplate(Models\DeleteTranscodeTemplateRequest $req) This API is used to delete a custom transcoding template.
+ * @method Models\DeleteVoiceResponse DeleteVoice(Models\DeleteVoiceRequest $req) This API is used to delete a voice (created via voice cloning or design).
  * @method Models\DeleteWatermarkTemplateResponse DeleteWatermarkTemplate(Models\DeleteWatermarkTemplateRequest $req) This API is used to delete a custom watermarking template.
  * @method Models\DeleteWordSamplesResponse DeleteWordSamples(Models\DeleteWordSamplesRequest $req) This API is used to delete keyword samples in batches.
  * @method Models\DeleteWorkflowResponse DeleteWorkflow(Models\DeleteWorkflowRequest $req) This API is used to delete a workflow. An enabled workflow must be disabled before it can be deleted.
@@ -143,7 +144,9 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DescribeWatermarkTemplatesResponse DescribeWatermarkTemplates(Models\DescribeWatermarkTemplatesRequest $req) This API is used to query custom watermarking templates and supports paged queries by filters.
  * @method Models\DescribeWordSamplesResponse DescribeWordSamples(Models\DescribeWordSamplesRequest $req) This API is used to perform paged queries of keyword sample information by use case, keyword, and tag.
  * @method Models\DescribeWorkflowsResponse DescribeWorkflows(Models\DescribeWorkflowsRequest $req) This API is used to get the list of workflow details by workflow ID.
- * @method Models\DesignVoiceAsyncResponse DesignVoiceAsync(Models\DesignVoiceAsyncRequest $req) This API is used to design a voice. It generates a voice ID based on a prompt.
+ * @method Models\DesignVoiceAsyncResponse DesignVoiceAsync(Models\DesignVoiceAsyncRequest $req) This API is used to design a voice. It generates a voice ID based on a prompt. The default maximum number of cloned or designed voices is 100.
+ * @method Models\DetectVideoSubtitleAreaResponse DetectVideoSubtitleArea(Models\DetectVideoSubtitleAreaRequest $req) This API is used to quickly detect the hard subtitle area in a video file.
+ * @method Models\DetectVideoWatermarkResponse DetectVideoWatermark(Models\DetectVideoWatermarkRequest $req) This API is used to quickly detect whether a video file contains a watermark.
  * @method Models\DisableScheduleResponse DisableSchedule(Models\DisableScheduleRequest $req) This API is used to disable a scheme.
  * @method Models\DisableWorkflowResponse DisableWorkflow(Models\DisableWorkflowRequest $req) This API is used to disable a workflow.
  * @method Models\EditMediaResponse EditMedia(Models\EditMediaRequest $req) This API is used to edit a video to generate a new one. Editing features include:
@@ -220,10 +223,11 @@ Live stream processing event notification supports HTTP callback and also suppor
  * @method Models\QueryProjectResponse QueryProject(Models\QueryProjectRequest $req) This API is used to query an episode project.
  * @method Models\RecognizeAudioResponse RecognizeAudio(Models\RecognizeAudioRequest $req) This API is used to return the speech recognition results synchronously.
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) This API is used to reset an existing workflow that is disabled.
- * @method Models\SyncDubbingResponse SyncDubbing(Models\SyncDubbingRequest $req) This API is used to return the clone voice type Id or synthetic audio results synchronously.
+ * @method Models\SyncDubbingResponse SyncDubbing(Models\SyncDubbingRequest $req) This API is used to return the cloned voice ID or synthetic audio result. The default maximum number of cloned or designed voices is 100.
  * @method Models\TextToSpeechAsyncResponse TextToSpeechAsync(Models\TextToSpeechAsyncRequest $req) This API is used to convert text to speech asynchronously and supports long text to speech.
  * @method Models\TextTranslationResponse TextTranslation(Models\TextTranslationRequest $req) 
  * @method Models\UpdateProjectResponse UpdateProject(Models\UpdateProjectRequest $req) This API is used to update an episode project.
+ * @method Models\UpdateVoiceResponse UpdateVoice(Models\UpdateVoiceRequest $req) This API is used to update the voice information.
  */
 
 class MpsClient extends AbstractClient

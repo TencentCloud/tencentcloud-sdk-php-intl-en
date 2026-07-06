@@ -20,40 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecognizeMacaoIDCardOCR response structure.
  *
- * @method string getCnLastName() Obtain Chinese last name
- * @method void setCnLastName(string $CnLastName) Set Chinese last name
- * @method string getEnLastName() Obtain English last name
- * @method void setEnLastName(string $EnLastName) Set English last name
- * @method string getLastNameCode() Obtain Last name code
- * @method void setLastNameCode(string $LastNameCode) Set Last name code
- * @method string getCnFirstName() Obtain Chinese first name
- * @method void setCnFirstName(string $CnFirstName) Set Chinese first name
- * @method string getEnFirstName() Obtain English first name
- * @method void setEnFirstName(string $EnFirstName) Set English first name
- * @method string getFirstNameCode() Obtain First name code
- * @method void setFirstNameCode(string $FirstNameCode) Set First name code
- * @method string getID() Obtain ID Number
- * @method void setID(string $ID) Set ID Number
- * @method string getBirthday() Obtain Birthday(DD-MM-YYYY)
- * @method void setBirthday(string $Birthday) Set Birthday(DD-MM-YYYY)
- * @method string getSex() Obtain gender
- * @method void setSex(string $Sex) Set gender
- * @method string getFirstIssueDate() Obtain First issue Date (DD-MM-YYYY)
- * @method void setFirstIssueDate(string $FirstIssueDate) Set First issue Date (DD-MM-YYYY)
- * @method string getCurrentIssueDate() Obtain Issue date (DD-MM-YYYY)
- * @method void setCurrentIssueDate(string $CurrentIssueDate) Set Issue date (DD-MM-YYYY)
+ * @method string getCnLastName() Obtain Last name in Chinese
+ * @method void setCnLastName(string $CnLastName) Set Last name in Chinese
+ * @method string getEnLastName() Obtain Last name in English
+ * @method void setEnLastName(string $EnLastName) Set Last name in English
+ * @method string getLastNameCode() Obtain Telecode of the last name in Chinese
+ * @method void setLastNameCode(string $LastNameCode) Set Telecode of the last name in Chinese
+ * @method string getCnFirstName() Obtain First name in Chinese
+ * @method void setCnFirstName(string $CnFirstName) Set First name in Chinese
+ * @method string getEnFirstName() Obtain First name in English
+ * @method void setEnFirstName(string $EnFirstName) Set First name in English
+ * @method string getFirstNameCode() Obtain Telecode of the first name in Chinese
+ * @method void setFirstNameCode(string $FirstNameCode) Set Telecode of the first name in Chinese
+ * @method string getID() Obtain Identity card number
+ * @method void setID(string $ID) Set Identity card number
+ * @method string getBirthday() Obtain Date of birth (DD-MM-YYYY)
+ * @method void setBirthday(string $Birthday) Set Date of birth (DD-MM-YYYY)
+ * @method string getSex() Obtain Gender
+ * @method void setSex(string $Sex) Set Gender
+ * @method string getFirstIssueDate() Obtain Date of first issue (DD-MM-YYYY)
+ * @method void setFirstIssueDate(string $FirstIssueDate) Set Date of first issue (DD-MM-YYYY)
+ * @method string getCurrentIssueDate() Obtain Date of issue (DD-MM-YYYY)
+ * @method void setCurrentIssueDate(string $CurrentIssueDate) Set Date of issue (DD-MM-YYYY)
  * @method string getValidityPeriod() Obtain Validity period (DD-MM-YYYY)
  * @method void setValidityPeriod(string $ValidityPeriod) Set Validity period (DD-MM-YYYY)
- * @method string getSymbol() Obtain ID symbol
- * @method void setSymbol(string $Symbol) Set ID symbol
+ * @method string getSymbol() Obtain Document symbol
+ * @method void setSymbol(string $Symbol) Set Document symbol
  * @method string getHeight() Obtain Height (unit: meters)
  * @method void setHeight(string $Height) Set Height (unit: meters)
  * @method string getRetImage() Obtain Processed image (Base64)
  * @method void setRetImage(string $RetImage) Set Processed image (Base64)
- * @method string getAngle() Obtain Image rotation angle, the horizontal direction of the text is 0, clockwise is positive, counterclockwise is negative
- * @method void setAngle(string $Angle) Set Image rotation angle, the horizontal direction of the text is 0, clockwise is positive, counterclockwise is negative
- * @method string getResidentType() Obtain Resident type.
- * @method void setResidentType(string $ResidentType) Set Resident type.
+ * @method string getAngle() Obtain This field is deprecated and will always return null. Usage is not recommended.
+ * @method void setAngle(string $Angle) Set This field is deprecated and will always return null. Usage is not recommended.
+ * @method string getResidentType() Obtain Resident type. 
+Valid values: Permanent Resident Identity Card, Non-permanent Resident Identity Card.
+ * @method void setResidentType(string $ResidentType) Set Resident type. 
+Valid values: Permanent Resident Identity Card, Non-permanent Resident Identity Card.
  * @method array getWarnCardInfos() Obtain Card Warning Information
 
 -9101 Alarm for covered certificate,
@@ -78,57 +80,57 @@ use TencentCloud\Common\AbstractModel;
 class RecognizeMacaoIDCardOCRResponse extends AbstractModel
 {
     /**
-     * @var string Chinese last name
+     * @var string Last name in Chinese
      */
     public $CnLastName;
 
     /**
-     * @var string English last name
+     * @var string Last name in English
      */
     public $EnLastName;
 
     /**
-     * @var string Last name code
+     * @var string Telecode of the last name in Chinese
      */
     public $LastNameCode;
 
     /**
-     * @var string Chinese first name
+     * @var string First name in Chinese
      */
     public $CnFirstName;
 
     /**
-     * @var string English first name
+     * @var string First name in English
      */
     public $EnFirstName;
 
     /**
-     * @var string First name code
+     * @var string Telecode of the first name in Chinese
      */
     public $FirstNameCode;
 
     /**
-     * @var string ID Number
+     * @var string Identity card number
      */
     public $ID;
 
     /**
-     * @var string Birthday(DD-MM-YYYY)
+     * @var string Date of birth (DD-MM-YYYY)
      */
     public $Birthday;
 
     /**
-     * @var string gender
+     * @var string Gender
      */
     public $Sex;
 
     /**
-     * @var string First issue Date (DD-MM-YYYY)
+     * @var string Date of first issue (DD-MM-YYYY)
      */
     public $FirstIssueDate;
 
     /**
-     * @var string Issue date (DD-MM-YYYY)
+     * @var string Date of issue (DD-MM-YYYY)
      */
     public $CurrentIssueDate;
 
@@ -138,7 +140,7 @@ class RecognizeMacaoIDCardOCRResponse extends AbstractModel
     public $ValidityPeriod;
 
     /**
-     * @var string ID symbol
+     * @var string Document symbol
      */
     public $Symbol;
 
@@ -153,12 +155,14 @@ class RecognizeMacaoIDCardOCRResponse extends AbstractModel
     public $RetImage;
 
     /**
-     * @var string Image rotation angle, the horizontal direction of the text is 0, clockwise is positive, counterclockwise is negative
+     * @var string This field is deprecated and will always return null. Usage is not recommended.
+     * @deprecated
      */
     public $Angle;
 
     /**
-     * @var string Resident type.
+     * @var string Resident type. 
+Valid values: Permanent Resident Identity Card, Non-permanent Resident Identity Card.
      */
     public $ResidentType;
 
@@ -181,23 +185,24 @@ class RecognizeMacaoIDCardOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CnLastName Chinese last name
-     * @param string $EnLastName English last name
-     * @param string $LastNameCode Last name code
-     * @param string $CnFirstName Chinese first name
-     * @param string $EnFirstName English first name
-     * @param string $FirstNameCode First name code
-     * @param string $ID ID Number
-     * @param string $Birthday Birthday(DD-MM-YYYY)
-     * @param string $Sex gender
-     * @param string $FirstIssueDate First issue Date (DD-MM-YYYY)
-     * @param string $CurrentIssueDate Issue date (DD-MM-YYYY)
+     * @param string $CnLastName Last name in Chinese
+     * @param string $EnLastName Last name in English
+     * @param string $LastNameCode Telecode of the last name in Chinese
+     * @param string $CnFirstName First name in Chinese
+     * @param string $EnFirstName First name in English
+     * @param string $FirstNameCode Telecode of the first name in Chinese
+     * @param string $ID Identity card number
+     * @param string $Birthday Date of birth (DD-MM-YYYY)
+     * @param string $Sex Gender
+     * @param string $FirstIssueDate Date of first issue (DD-MM-YYYY)
+     * @param string $CurrentIssueDate Date of issue (DD-MM-YYYY)
      * @param string $ValidityPeriod Validity period (DD-MM-YYYY)
-     * @param string $Symbol ID symbol
+     * @param string $Symbol Document symbol
      * @param string $Height Height (unit: meters)
      * @param string $RetImage Processed image (Base64)
-     * @param string $Angle Image rotation angle, the horizontal direction of the text is 0, clockwise is positive, counterclockwise is negative
-     * @param string $ResidentType Resident type.
+     * @param string $Angle This field is deprecated and will always return null. Usage is not recommended.
+     * @param string $ResidentType Resident type. 
+Valid values: Permanent Resident Identity Card, Non-permanent Resident Identity Card.
      * @param array $WarnCardInfos Card Warning Information
 
 -9101 Alarm for covered certificate,

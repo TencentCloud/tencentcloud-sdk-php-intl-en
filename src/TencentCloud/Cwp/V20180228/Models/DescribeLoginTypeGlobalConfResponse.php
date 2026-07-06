@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoginTypeGlobalConf response structure.
  *
- * @method integer getEnable() Obtain <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
- * @method void setEnable(integer $Enable) Set <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
+ * @method integer getEnable() Obtain <p>Whether to enable QR code log-in <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li></p>
+ * @method void setEnable(integer $Enable) Set <p>Whether to enable QR code log-in <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li></p>
  * @method integer getScope() Obtain <p>Scope <li>0: Selected hosts</li> <li>1: All hosts</li></p>
  * @method void setScope(integer $Scope) Set <p>Scope <li>0: Selected hosts</li> <li>1: All hosts</li></p>
  * @method integer getIncludeHostCount() Obtain <p>Number of selected host configurations</p>
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLoginTypeGlobalConfResponse extends AbstractModel
 {
     /**
-     * @var integer <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
+     * @var integer <p>Whether to enable QR code log-in <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li></p>
      */
     public $Enable;
 
@@ -87,7 +87,7 @@ class DescribeLoginTypeGlobalConfResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Enable <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
+     * @param integer $Enable <p>Whether to enable QR code log-in <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li></p>
      * @param integer $Scope <p>Scope <li>0: Selected hosts</li> <li>1: All hosts</li></p>
      * @param integer $IncludeHostCount <p>Number of selected host configurations</p>
      * @param integer $ExcludeHostCount <p>Number of excluded host configurations</p>

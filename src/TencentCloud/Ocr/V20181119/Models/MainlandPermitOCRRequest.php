@@ -40,6 +40,12 @@ We recommend that you store the image in Tencent Cloud for higher download speed
 The download speed and stability of non-Tencent Cloud URLs may be low.
  * @method boolean getRetProfile() Obtain Whether to return the ID photo. By default, the ID photo is not returned.
  * @method void setRetProfile(boolean $RetProfile) Set Whether to return the ID photo. By default, the ID photo is not returned.
+ * @method string getCardSide() Obtain The side of the document. Valid values: FRONT (front side, default),
+BACK (back side, only supported for Mainland Travel Permit for inbound visits). 
+Note: Back side recognition is only supported for the "Mainland Travel Permit for Hong Kong and Macao Residents" , and is not supported for Hong Kong, Macao, or Taiwan passes.
+ * @method void setCardSide(string $CardSide) Set The side of the document. Valid values: FRONT (front side, default),
+BACK (back side, only supported for Mainland Travel Permit for inbound visits). 
+Note: Back side recognition is only supported for the "Mainland Travel Permit for Hong Kong and Macao Residents" , and is not supported for Hong Kong, Macao, or Taiwan passes.
  */
 class MainlandPermitOCRRequest extends AbstractModel
 {
@@ -66,6 +72,13 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     public $RetProfile;
 
     /**
+     * @var string The side of the document. Valid values: FRONT (front side, default),
+BACK (back side, only supported for Mainland Travel Permit for inbound visits). 
+Note: Back side recognition is only supported for the "Mainland Travel Permit for Hong Kong and Macao Residents" , and is not supported for Hong Kong, Macao, or Taiwan passes.
+     */
+    public $CardSide;
+
+    /**
      * @param string $ImageBase64 The Base64-encoded value of the image.
 Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
@@ -76,6 +89,9 @@ Supported image size: The downloaded image after Base64 encoding can be up to 7 
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
      * @param boolean $RetProfile Whether to return the ID photo. By default, the ID photo is not returned.
+     * @param string $CardSide The side of the document. Valid values: FRONT (front side, default),
+BACK (back side, only supported for Mainland Travel Permit for inbound visits). 
+Note: Back side recognition is only supported for the "Mainland Travel Permit for Hong Kong and Macao Residents" , and is not supported for Hong Kong, Macao, or Taiwan passes.
      */
     function __construct()
     {
@@ -100,6 +116,10 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
 
         if (array_key_exists("RetProfile",$param) and $param["RetProfile"] !== null) {
             $this->RetProfile = $param["RetProfile"];
+        }
+
+        if (array_key_exists("CardSide",$param) and $param["CardSide"] !== null) {
+            $this->CardSide = $param["CardSide"];
         }
     }
 }

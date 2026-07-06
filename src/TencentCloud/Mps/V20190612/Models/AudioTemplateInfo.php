@@ -20,194 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio stream configuration parameter
  *
- * @method string getCodec() Obtain Specifies the encoding format of the audio stream.
-When audio transcoding is not needed, the optional values are:.
-<li>copy.</li>
-When the outer parameter Container is mp3, the valid values are:.
-<li>mp3.</li>
-When the outer parameter Container is ogg or flac, the valid values are:.
-<li>flac.</li>
-When the outer parameter Container is m4a, valid values are:.
-<li>aac;</li>
-<li>ac3.</li>
-When the outer parameter Container is mp4 or flv, valid values are:.
-<li>aac: more suitable for mp4;</li>.
-<li>mp3: more suitable for flv;</li>.
-<li>mp2.</li>
-When the outer parameter Container is hls, valid values are:.
-<li>aac;</li>
-<li>mp3;</li>
-<li>eac3: used when merging adaptive transcoding audio tracks.</li>.
- * @method void setCodec(string $Codec) Set Specifies the encoding format of the audio stream.
-When audio transcoding is not needed, the optional values are:.
-<li>copy.</li>
-When the outer parameter Container is mp3, the valid values are:.
-<li>mp3.</li>
-When the outer parameter Container is ogg or flac, the valid values are:.
-<li>flac.</li>
-When the outer parameter Container is m4a, valid values are:.
-<li>aac;</li>
-<li>ac3.</li>
-When the outer parameter Container is mp4 or flv, valid values are:.
-<li>aac: more suitable for mp4;</li>.
-<li>mp3: more suitable for flv;</li>.
-<li>mp2.</li>
-When the outer parameter Container is hls, valid values are:.
-<li>aac;</li>
-<li>mp3;</li>
-<li>eac3: used when merging adaptive transcoding audio tracks.</li>.
- * @method integer getBitrate() Obtain The bitrate of the audio stream. value ranges from 0 to 26 and in the range of [26, 256]. measurement unit: kbps.
-If the value is 0, the audio bitrate will be the same as that of the original audio.
-Specifies that when using the TrackChannelInfo parameter for adaptive transcoding audio track merging, the valid values are:.
-Cannot be set to 0.
-2). when Codec is aac, valid values: [26, 256].
-3). when Codec is ac3, valid values: [26, 640].
-4) when Codec is eac3, value range: [26, 6144]. remark: when SampleRate is 44100HZ, maximum value: 5644. when SampleRate is 48000HZ, maximum value: 6144.
-
-
- * @method void setBitrate(integer $Bitrate) Set The bitrate of the audio stream. value ranges from 0 to 26 and in the range of [26, 256]. measurement unit: kbps.
-If the value is 0, the audio bitrate will be the same as that of the original audio.
-Specifies that when using the TrackChannelInfo parameter for adaptive transcoding audio track merging, the valid values are:.
-Cannot be set to 0.
-2). when Codec is aac, valid values: [26, 256].
-3). when Codec is ac3, valid values: [26, 640].
-4) when Codec is eac3, value range: [26, 6144]. remark: when SampleRate is 44100HZ, maximum value: 5644. when SampleRate is 48000HZ, maximum value: 6144.
-
-
- * @method integer getSampleRate() Obtain Sampling rate of the audio stream. Different encoding standards support different sampling rate options. The value of 0 indicates using the sampling rate value of the source audio.
-For details, see [Supported Range of Audio Sampling Rate](https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
-Unit: Hz.
-Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
- * @method void setSampleRate(integer $SampleRate) Set Sampling rate of the audio stream. Different encoding standards support different sampling rate options. The value of 0 indicates using the sampling rate value of the source audio.
-For details, see [Supported Range of Audio Sampling Rate](https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
-Unit: Hz.
-Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
- * @method integer getAudioChannel() Obtain Audio channel mode. Valid values:
-<li>1: mono-channel.</li>
-<li>2: dual-channel.</li>
-<li>6: 5.1 surround sound.
-<li>Default value: 2.
-When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
- * @method void setAudioChannel(integer $AudioChannel) Set Audio channel mode. Valid values:
-<li>1: mono-channel.</li>
-<li>2: dual-channel.</li>
-<li>6: 5.1 surround sound.
-<li>Default value: 2.
-When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
- * @method AudioTrackChannelInfo getTrackChannelInfo() Obtain Merge audio track information.
-This field only takes effect in adaptive bitrate transcoding.
-
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setTrackChannelInfo(AudioTrackChannelInfo $TrackChannelInfo) Set Merge audio track information.
-This field only takes effect in adaptive bitrate transcoding.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getCodec() Obtain <p>Audio stream encoding format.<br>When audio transcoding is not needed, the valid value is:</p><li>copy.</li>When the outer parameter Container is mp3, the valid value is:<li>mp3.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>aac;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>aac: suitable for mp4.</li><li>mp3: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid values are:<li>aac.</li><li>mp3.</li><li>eac3: used when merging audio tracks with adaptive transcoding.</li>When the outer parameter Container is wav, the valid values are:<li>pcm16 and pcm24.</li>
+ * @method void setCodec(string $Codec) Set <p>Audio stream encoding format.<br>When audio transcoding is not needed, the valid value is:</p><li>copy.</li>When the outer parameter Container is mp3, the valid value is:<li>mp3.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>aac;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>aac: suitable for mp4.</li><li>mp3: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid values are:<li>aac.</li><li>mp3.</li><li>eac3: used when merging audio tracks with adaptive transcoding.</li>When the outer parameter Container is wav, the valid values are:<li>pcm16 and pcm24.</li>
+ * @method integer getBitrate() Obtain <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256].<br>When the value is 0, it means the audio bitrate remains consistent with that of the original audio.<br>Note: If the TrackChannelInfo parameter is used for audio track merging with adaptive transcoding, the value range:<br>1) cannot be 0.<br>2) When Codec is aac, the value range is [26, 256].<br>3) When Codec is ac3, the value range is [26, 640].<br>4) When Codec is eac3, the value range is [26, 6144]. Note: When SampleRate is 44100HZ, the maximum value is 5644. When SampleRate is 48000HZ, the maximum value is 6144.</p>
+ * @method void setBitrate(integer $Bitrate) Set <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256].<br>When the value is 0, it means the audio bitrate remains consistent with that of the original audio.<br>Note: If the TrackChannelInfo parameter is used for audio track merging with adaptive transcoding, the value range:<br>1) cannot be 0.<br>2) When Codec is aac, the value range is [26, 256].<br>3) When Codec is ac3, the value range is [26, 640].<br>4) When Codec is eac3, the value range is [26, 6144]. Note: When SampleRate is 44100HZ, the maximum value is 5644. When SampleRate is 48000HZ, the maximum value is 6144.</p>
+ * @method integer getSampleRate() Obtain <p>Audio stream sampling rate. Different sampling rate options are provided for different encoding standards. Enter 0 to use the source audio sampling rate.<br>For details, see <a href="https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53">Audio Sampling Rate Range</a>.<br>Unit: Hz.<br>Note: Ensure the source audio stream sampling rate is within the supported range. Otherwise, transcoding may fail.</p>
+ * @method void setSampleRate(integer $SampleRate) Set <p>Audio stream sampling rate. Different sampling rate options are provided for different encoding standards. Enter 0 to use the source audio sampling rate.<br>For details, see <a href="https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53">Audio Sampling Rate Range</a>.<br>Unit: Hz.<br>Note: Ensure the source audio stream sampling rate is within the supported range. Otherwise, transcoding may fail.</p>
+ * @method integer getAudioChannel() Obtain <p>Audio channel mode. Valid values:</p><li>0: The number of audio channels follows that of the source.</li><li>1: Single channel.</li><li>2: Two channels.</li><li>6: 5.1 channels.</li>When the media container format is an audio format (mp3), the number of audio channels cannot be set to 5.1.<p>Default value: 2.<br>Note: If you set the audio channel to follow that of the source and the audio encoding format does not support the current audio channel, the transcoding task may fail.</p>
+ * @method void setAudioChannel(integer $AudioChannel) Set <p>Audio channel mode. Valid values:</p><li>0: The number of audio channels follows that of the source.</li><li>1: Single channel.</li><li>2: Two channels.</li><li>6: 5.1 channels.</li>When the media container format is an audio format (mp3), the number of audio channels cannot be set to 5.1.<p>Default value: 2.<br>Note: If you set the audio channel to follow that of the source and the audio encoding format does not support the current audio channel, the transcoding task may fail.</p>
+ * @method AudioTrackChannelInfo getTrackChannelInfo() Obtain <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTrackChannelInfo(AudioTrackChannelInfo $TrackChannelInfo) Set <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AudioTemplateInfo extends AbstractModel
 {
     /**
-     * @var string Specifies the encoding format of the audio stream.
-When audio transcoding is not needed, the optional values are:.
-<li>copy.</li>
-When the outer parameter Container is mp3, the valid values are:.
-<li>mp3.</li>
-When the outer parameter Container is ogg or flac, the valid values are:.
-<li>flac.</li>
-When the outer parameter Container is m4a, valid values are:.
-<li>aac;</li>
-<li>ac3.</li>
-When the outer parameter Container is mp4 or flv, valid values are:.
-<li>aac: more suitable for mp4;</li>.
-<li>mp3: more suitable for flv;</li>.
-<li>mp2.</li>
-When the outer parameter Container is hls, valid values are:.
-<li>aac;</li>
-<li>mp3;</li>
-<li>eac3: used when merging adaptive transcoding audio tracks.</li>.
+     * @var string <p>Audio stream encoding format.<br>When audio transcoding is not needed, the valid value is:</p><li>copy.</li>When the outer parameter Container is mp3, the valid value is:<li>mp3.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>aac;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>aac: suitable for mp4.</li><li>mp3: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid values are:<li>aac.</li><li>mp3.</li><li>eac3: used when merging audio tracks with adaptive transcoding.</li>When the outer parameter Container is wav, the valid values are:<li>pcm16 and pcm24.</li>
      */
     public $Codec;
 
     /**
-     * @var integer The bitrate of the audio stream. value ranges from 0 to 26 and in the range of [26, 256]. measurement unit: kbps.
-If the value is 0, the audio bitrate will be the same as that of the original audio.
-Specifies that when using the TrackChannelInfo parameter for adaptive transcoding audio track merging, the valid values are:.
-Cannot be set to 0.
-2). when Codec is aac, valid values: [26, 256].
-3). when Codec is ac3, valid values: [26, 640].
-4) when Codec is eac3, value range: [26, 6144]. remark: when SampleRate is 44100HZ, maximum value: 5644. when SampleRate is 48000HZ, maximum value: 6144.
-
-
+     * @var integer <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256].<br>When the value is 0, it means the audio bitrate remains consistent with that of the original audio.<br>Note: If the TrackChannelInfo parameter is used for audio track merging with adaptive transcoding, the value range:<br>1) cannot be 0.<br>2) When Codec is aac, the value range is [26, 256].<br>3) When Codec is ac3, the value range is [26, 640].<br>4) When Codec is eac3, the value range is [26, 6144]. Note: When SampleRate is 44100HZ, the maximum value is 5644. When SampleRate is 48000HZ, the maximum value is 6144.</p>
      */
     public $Bitrate;
 
     /**
-     * @var integer Sampling rate of the audio stream. Different encoding standards support different sampling rate options. The value of 0 indicates using the sampling rate value of the source audio.
-For details, see [Supported Range of Audio Sampling Rate](https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
-Unit: Hz.
-Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
+     * @var integer <p>Audio stream sampling rate. Different sampling rate options are provided for different encoding standards. Enter 0 to use the source audio sampling rate.<br>For details, see <a href="https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53">Audio Sampling Rate Range</a>.<br>Unit: Hz.<br>Note: Ensure the source audio stream sampling rate is within the supported range. Otherwise, transcoding may fail.</p>
      */
     public $SampleRate;
 
     /**
-     * @var integer Audio channel mode. Valid values:
-<li>1: mono-channel.</li>
-<li>2: dual-channel.</li>
-<li>6: 5.1 surround sound.
-<li>Default value: 2.
-When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
+     * @var integer <p>Audio channel mode. Valid values:</p><li>0: The number of audio channels follows that of the source.</li><li>1: Single channel.</li><li>2: Two channels.</li><li>6: 5.1 channels.</li>When the media container format is an audio format (mp3), the number of audio channels cannot be set to 5.1.<p>Default value: 2.<br>Note: If you set the audio channel to follow that of the source and the audio encoding format does not support the current audio channel, the transcoding task may fail.</p>
      */
     public $AudioChannel;
 
     /**
-     * @var AudioTrackChannelInfo Merge audio track information.
-This field only takes effect in adaptive bitrate transcoding.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var AudioTrackChannelInfo <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TrackChannelInfo;
 
     /**
-     * @param string $Codec Specifies the encoding format of the audio stream.
-When audio transcoding is not needed, the optional values are:.
-<li>copy.</li>
-When the outer parameter Container is mp3, the valid values are:.
-<li>mp3.</li>
-When the outer parameter Container is ogg or flac, the valid values are:.
-<li>flac.</li>
-When the outer parameter Container is m4a, valid values are:.
-<li>aac;</li>
-<li>ac3.</li>
-When the outer parameter Container is mp4 or flv, valid values are:.
-<li>aac: more suitable for mp4;</li>.
-<li>mp3: more suitable for flv;</li>.
-<li>mp2.</li>
-When the outer parameter Container is hls, valid values are:.
-<li>aac;</li>
-<li>mp3;</li>
-<li>eac3: used when merging adaptive transcoding audio tracks.</li>.
-     * @param integer $Bitrate The bitrate of the audio stream. value ranges from 0 to 26 and in the range of [26, 256]. measurement unit: kbps.
-If the value is 0, the audio bitrate will be the same as that of the original audio.
-Specifies that when using the TrackChannelInfo parameter for adaptive transcoding audio track merging, the valid values are:.
-Cannot be set to 0.
-2). when Codec is aac, valid values: [26, 256].
-3). when Codec is ac3, valid values: [26, 640].
-4) when Codec is eac3, value range: [26, 6144]. remark: when SampleRate is 44100HZ, maximum value: 5644. when SampleRate is 48000HZ, maximum value: 6144.
-
-
-     * @param integer $SampleRate Sampling rate of the audio stream. Different encoding standards support different sampling rate options. The value of 0 indicates using the sampling rate value of the source audio.
-For details, see [Supported Range of Audio Sampling Rate](https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
-Unit: Hz.
-Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
-     * @param integer $AudioChannel Audio channel mode. Valid values:
-<li>1: mono-channel.</li>
-<li>2: dual-channel.</li>
-<li>6: 5.1 surround sound.
-<li>Default value: 2.
-When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
-     * @param AudioTrackChannelInfo $TrackChannelInfo Merge audio track information.
-This field only takes effect in adaptive bitrate transcoding.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Codec <p>Audio stream encoding format.<br>When audio transcoding is not needed, the valid value is:</p><li>copy.</li>When the outer parameter Container is mp3, the valid value is:<li>mp3.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>aac;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>aac: suitable for mp4.</li><li>mp3: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid values are:<li>aac.</li><li>mp3.</li><li>eac3: used when merging audio tracks with adaptive transcoding.</li>When the outer parameter Container is wav, the valid values are:<li>pcm16 and pcm24.</li>
+     * @param integer $Bitrate <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256].<br>When the value is 0, it means the audio bitrate remains consistent with that of the original audio.<br>Note: If the TrackChannelInfo parameter is used for audio track merging with adaptive transcoding, the value range:<br>1) cannot be 0.<br>2) When Codec is aac, the value range is [26, 256].<br>3) When Codec is ac3, the value range is [26, 640].<br>4) When Codec is eac3, the value range is [26, 6144]. Note: When SampleRate is 44100HZ, the maximum value is 5644. When SampleRate is 48000HZ, the maximum value is 6144.</p>
+     * @param integer $SampleRate <p>Audio stream sampling rate. Different sampling rate options are provided for different encoding standards. Enter 0 to use the source audio sampling rate.<br>For details, see <a href="https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53">Audio Sampling Rate Range</a>.<br>Unit: Hz.<br>Note: Ensure the source audio stream sampling rate is within the supported range. Otherwise, transcoding may fail.</p>
+     * @param integer $AudioChannel <p>Audio channel mode. Valid values:</p><li>0: The number of audio channels follows that of the source.</li><li>1: Single channel.</li><li>2: Two channels.</li><li>6: 5.1 channels.</li>When the media container format is an audio format (mp3), the number of audio channels cannot be set to 5.1.<p>Default value: 2.<br>Note: If you set the audio channel to follow that of the source and the audio encoding format does not support the current audio channel, the transcoding task may fail.</p>
+     * @param AudioTrackChannelInfo $TrackChannelInfo <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

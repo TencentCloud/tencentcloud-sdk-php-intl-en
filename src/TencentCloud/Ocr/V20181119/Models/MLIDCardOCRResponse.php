@@ -28,52 +28,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddress(string $Address) Set Address
  * @method string getSex() Obtain Gender
  * @method void setSex(string $Sex) Set Gender
- * @method array getWarn() Obtain Alarm codes
--9103 Alarm for photographed certificate
--9102 Alarm for photocopied certificate
--9106 Alarm for covered certificate
--9107 Alarm for blurry image
- * @method void setWarn(array $Warn) Set Alarm codes
--9103 Alarm for photographed certificate
--9102 Alarm for photocopied certificate
--9106 Alarm for covered certificate
--9107 Alarm for blurry image
+ * @method array getWarn() Obtain This field is deprecated and will always return an empty array. Usage is not recommended.
+ * @method void setWarn(array $Warn) Set This field is deprecated and will always return an empty array. Usage is not recommended.
  * @method string getImage() Obtain Identity photo
  * @method void setImage(string $Image) Set Identity photo
- * @method string getAdvancedInfo() Obtain This is an extended field, 
-with the confidence of a field recognition result returned in the following format.
-{
-  Field name:{
-    Confidence:0.9999
-  }
-}
- * @method void setAdvancedInfo(string $AdvancedInfo) Set This is an extended field, 
-with the confidence of a field recognition result returned in the following format.
-{
-  Field name:{
-    Confidence:0.9999
-  }
-}
- * @method string getType() Obtain Certificate type
-MyKad  ID card
-MyPR    Permanent resident card
-MyTentera   Military identity card
-MyKAS    Temporary ID card
-POLIS  Police card
-IKAD   Work permit
-MyKid   Kid card
- * @method void setType(string $Type) Set Certificate type
-MyKad  ID card
-MyPR    Permanent resident card
-MyTentera   Military identity card
-MyKAS    Temporary ID card
-POLIS  Police card
-IKAD   Work permit
-MyKid   Kid card
+ * @method string getAdvancedInfo() Obtain This field is deprecated and will always return "1". Usage is not recommended.
+ * @method void setAdvancedInfo(string $AdvancedInfo) Set This field is deprecated and will always return "1". Usage is not recommended.
+ * @method string getType() Obtain Certificate type: 
+- MyKad: ID card 
+- MyPR: Permanent resident card 
+- MyTentera: Military identity card 
+- MyKAS: Temporary ID card 
+- POLIS: Police card 
+- IKAD: Work permit 
+- MyKid: Child ID card
+ * @method void setType(string $Type) Set Certificate type: 
+- MyKad: ID card 
+- MyPR: Permanent resident card 
+- MyTentera: Military identity card 
+- MyKAS: Temporary ID card 
+- POLIS: Police card 
+- IKAD: Work permit 
+- MyKid: Child ID card
  * @method string getBirthday() Obtain Date of birth. This field is available only for work permits (i-Kad) and ID cards (MyKad).
  * @method void setBirthday(string $Birthday) Set Date of birth. This field is available only for work permits (i-Kad) and ID cards (MyKad).
- * @method string getMyKadNumber() Obtain Number on the back of Malaysia ID card 
- * @method void setMyKadNumber(string $MyKadNumber) Set Number on the back of Malaysia ID card 
+ * @method string getMyKadNumber() Obtain Number on the back of the Malaysian ID card
+ * @method void setMyKadNumber(string $MyKadNumber) Set Number on the back of the Malaysian ID card
  * @method array getWarnCardInfos() Obtain Card Warning Information
 
 -9101 Alarm for covered certificate,
@@ -118,11 +98,7 @@ class MLIDCardOCRResponse extends AbstractModel
     public $Sex;
 
     /**
-     * @var array Alarm codes
--9103 Alarm for photographed certificate
--9102 Alarm for photocopied certificate
--9106 Alarm for covered certificate
--9107 Alarm for blurry image
+     * @var array This field is deprecated and will always return an empty array. Usage is not recommended.
      * @deprecated
      */
     public $Warn;
@@ -133,25 +109,20 @@ class MLIDCardOCRResponse extends AbstractModel
     public $Image;
 
     /**
-     * @var string This is an extended field, 
-with the confidence of a field recognition result returned in the following format.
-{
-  Field name:{
-    Confidence:0.9999
-  }
-}
+     * @var string This field is deprecated and will always return "1". Usage is not recommended.
+     * @deprecated
      */
     public $AdvancedInfo;
 
     /**
-     * @var string Certificate type
-MyKad  ID card
-MyPR    Permanent resident card
-MyTentera   Military identity card
-MyKAS    Temporary ID card
-POLIS  Police card
-IKAD   Work permit
-MyKid   Kid card
+     * @var string Certificate type: 
+- MyKad: ID card 
+- MyPR: Permanent resident card 
+- MyTentera: Military identity card 
+- MyKAS: Temporary ID card 
+- POLIS: Police card 
+- IKAD: Work permit 
+- MyKid: Child ID card
      */
     public $Type;
 
@@ -161,7 +132,7 @@ MyKid   Kid card
     public $Birthday;
 
     /**
-     * @var string Number on the back of Malaysia ID card 
+     * @var string Number on the back of the Malaysian ID card
      */
     public $MyKadNumber;
 
@@ -188,29 +159,19 @@ MyKid   Kid card
      * @param string $Name Full name
      * @param string $Address Address
      * @param string $Sex Gender
-     * @param array $Warn Alarm codes
--9103 Alarm for photographed certificate
--9102 Alarm for photocopied certificate
--9106 Alarm for covered certificate
--9107 Alarm for blurry image
+     * @param array $Warn This field is deprecated and will always return an empty array. Usage is not recommended.
      * @param string $Image Identity photo
-     * @param string $AdvancedInfo This is an extended field, 
-with the confidence of a field recognition result returned in the following format.
-{
-  Field name:{
-    Confidence:0.9999
-  }
-}
-     * @param string $Type Certificate type
-MyKad  ID card
-MyPR    Permanent resident card
-MyTentera   Military identity card
-MyKAS    Temporary ID card
-POLIS  Police card
-IKAD   Work permit
-MyKid   Kid card
+     * @param string $AdvancedInfo This field is deprecated and will always return "1". Usage is not recommended.
+     * @param string $Type Certificate type: 
+- MyKad: ID card 
+- MyPR: Permanent resident card 
+- MyTentera: Military identity card 
+- MyKAS: Temporary ID card 
+- POLIS: Police card 
+- IKAD: Work permit 
+- MyKid: Child ID card
      * @param string $Birthday Date of birth. This field is available only for work permits (i-Kad) and ID cards (MyKad).
-     * @param string $MyKadNumber Number on the back of Malaysia ID card 
+     * @param string $MyKadNumber Number on the back of the Malaysian ID card
      * @param array $WarnCardInfos Card Warning Information
 
 -9101 Alarm for covered certificate,

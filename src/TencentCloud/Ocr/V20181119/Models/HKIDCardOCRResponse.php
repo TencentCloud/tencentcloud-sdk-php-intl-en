@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCnName(string $CnName) Set Name in Chinese
  * @method string getEnName() Obtain Name in English
  * @method void setEnName(string $EnName) Set Name in English
- * @method string getTelexCode() Obtain Telecode for the name in Chinese
- * @method void setTelexCode(string $TelexCode) Set Telecode for the name in Chinese
+ * @method string getTelexCode() Obtain Telecode of the name in Chinese
+ * @method void setTelexCode(string $TelexCode) Set Telecode of the name in Chinese
  * @method string getSex() Obtain Gender. Valid values: Male, Female
  * @method void setSex(string $Sex) Set Gender. Valid values: Male, Female
  * @method string getBirthday() Obtain Date of birth
@@ -42,10 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdNum(string $IdNum) Set Identity card number
  * @method string getSymbol() Obtain Document symbol, i.e., the symbol under the date of birth, such as "***AZ"
  * @method void setSymbol(string $Symbol) Set Document symbol, i.e., the symbol under the date of birth, such as "***AZ"
- * @method string getFirstIssueDate() Obtain First issue date
- * @method void setFirstIssueDate(string $FirstIssueDate) Set First issue date
- * @method string getCurrentIssueDate() Obtain Last receipt date
- * @method void setCurrentIssueDate(string $CurrentIssueDate) Set Last receipt date
+ * @method string getFirstIssueDate() Obtain Date of first issue
+ * @method void setFirstIssueDate(string $FirstIssueDate) Set Date of first issue
+ * @method string getCurrentIssueDate() Obtain Date of last receipt
+ * @method void setCurrentIssueDate(string $CurrentIssueDate) Set Date of last receipt
  * @method integer getFakeDetectResult() Obtain Authenticity check.
 0: unable to judge (because the image is blurred, incomplete, reflective, too dark, etc.);
 1: forged;
@@ -104,7 +104,7 @@ class HKIDCardOCRResponse extends AbstractModel
     public $EnName;
 
     /**
-     * @var string Telecode for the name in Chinese
+     * @var string Telecode of the name in Chinese
      */
     public $TelexCode;
 
@@ -137,12 +137,12 @@ class HKIDCardOCRResponse extends AbstractModel
     public $Symbol;
 
     /**
-     * @var string First issue date
+     * @var string Date of first issue
      */
     public $FirstIssueDate;
 
     /**
-     * @var string Last receipt date
+     * @var string Date of last receipt
      */
     public $CurrentIssueDate;
 
@@ -205,7 +205,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $CnName Name in Chinese
      * @param string $EnName Name in English
-     * @param string $TelexCode Telecode for the name in Chinese
+     * @param string $TelexCode Telecode of the name in Chinese
      * @param string $Sex Gender. Valid values: Male, Female
      * @param string $Birthday Date of birth
      * @param integer $Permanent Permanent identity card.
@@ -214,8 +214,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 -1: unknown.
      * @param string $IdNum Identity card number
      * @param string $Symbol Document symbol, i.e., the symbol under the date of birth, such as "***AZ"
-     * @param string $FirstIssueDate First issue date
-     * @param string $CurrentIssueDate Last receipt date
+     * @param string $FirstIssueDate Date of first issue
+     * @param string $CurrentIssueDate Date of last receipt
      * @param integer $FakeDetectResult Authenticity check.
 0: unable to judge (because the image is blurred, incomplete, reflective, too dark, etc.);
 1: forged;

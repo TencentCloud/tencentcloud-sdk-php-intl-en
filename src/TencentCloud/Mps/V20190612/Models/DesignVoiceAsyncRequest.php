@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPrompt() Obtain <p>Voice description.</p>
  * @method void setPrompt(string $Prompt) Set <p>Voice description.</p>
+ * @method VoiceProfile getVoiceProfile() Obtain <p>Voice attribute.</p>
+ * @method void setVoiceProfile(VoiceProfile $VoiceProfile) Set <p>Voice attribute.</p>
+ * @method string getText() Obtain <p>Audition audio text. The length cannot exceed 500.</p>
+ * @method void setText(string $Text) Set <p>Audition audio text. The length cannot exceed 500.</p>
  * @method string getExtParam() Obtain <p>Extended parameters in the format of a JSON string.</p>
  * @method void setExtParam(string $ExtParam) Set <p>Extended parameters in the format of a JSON string.</p>
  */
@@ -33,12 +37,24 @@ class DesignVoiceAsyncRequest extends AbstractModel
     public $Prompt;
 
     /**
+     * @var VoiceProfile <p>Voice attribute.</p>
+     */
+    public $VoiceProfile;
+
+    /**
+     * @var string <p>Audition audio text. The length cannot exceed 500.</p>
+     */
+    public $Text;
+
+    /**
      * @var string <p>Extended parameters in the format of a JSON string.</p>
      */
     public $ExtParam;
 
     /**
      * @param string $Prompt <p>Voice description.</p>
+     * @param VoiceProfile $VoiceProfile <p>Voice attribute.</p>
+     * @param string $Text <p>Audition audio text. The length cannot exceed 500.</p>
      * @param string $ExtParam <p>Extended parameters in the format of a JSON string.</p>
      */
     function __construct()
@@ -56,6 +72,15 @@ class DesignVoiceAsyncRequest extends AbstractModel
         }
         if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {
             $this->Prompt = $param["Prompt"];
+        }
+
+        if (array_key_exists("VoiceProfile",$param) and $param["VoiceProfile"] !== null) {
+            $this->VoiceProfile = new VoiceProfile();
+            $this->VoiceProfile->deserialize($param["VoiceProfile"]);
+        }
+
+        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
+            $this->Text = $param["Text"];
         }
 
         if (array_key_exists("ExtParam",$param) and $param["ExtParam"] !== null) {

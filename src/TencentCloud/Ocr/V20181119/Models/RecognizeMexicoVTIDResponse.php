@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecognizeMexicoVTID response structure.
  *
- * @method string getName() Obtain Name
- * @method void setName(string $Name) Set Name
- * @method string getSex() Obtain Sex
- * @method void setSex(string $Sex) Set Sex
+ * @method string getName() Obtain The full name.
+ * @method void setName(string $Name) Set The full name.
+ * @method string getSex() Obtain Gender.
+ * @method void setSex(string $Sex) Set Gender.
  * @method string getAddress() Obtain Address
  * @method void setAddress(string $Address) Set Address
  * @method string getVotePIN() Obtain Vote PIN Code
  * @method void setVotePIN(string $VotePIN) Set Vote PIN Code
  * @method string getCURP() Obtain Unique Population Registry Code
  * @method void setCURP(string $CURP) Set Unique Population Registry Code
- * @method string getBirth() Obtain Birthday
- * @method void setBirth(string $Birth) Set Birthday
+ * @method string getBirth() Obtain Date of birth.
+ * @method void setBirth(string $Birth) Set Date of birth.
  * @method string getSECCION() Obtain Section Number
  * @method void setSECCION(string $SECCION) Set Section Number
  * @method string getIssueDate() Obtain IssueDate
  * @method void setIssueDate(string $IssueDate) Set IssueDate
- * @method string getValidDate() Obtain ValidDate
- * @method void setValidDate(string $ValidDate) Set ValidDate
+ * @method string getValidDate() Obtain The validity period (expiration date).
+ * @method void setValidDate(string $ValidDate) Set The validity period (expiration date).
  * @method string getState() Obtain State
  * @method void setState(string $State) Set State
  * @method string getCity() Obtain City
@@ -54,12 +54,12 @@ use TencentCloud\Common\AbstractModel;
 class RecognizeMexicoVTIDResponse extends AbstractModel
 {
     /**
-     * @var string Name
+     * @var string The full name.
      */
     public $Name;
 
     /**
-     * @var string Sex
+     * @var string Gender.
      */
     public $Sex;
 
@@ -79,7 +79,7 @@ class RecognizeMexicoVTIDResponse extends AbstractModel
     public $CURP;
 
     /**
-     * @var string Birthday
+     * @var string Date of birth.
      */
     public $Birth;
 
@@ -94,7 +94,7 @@ class RecognizeMexicoVTIDResponse extends AbstractModel
     public $IssueDate;
 
     /**
-     * @var string ValidDate
+     * @var string The validity period (expiration date).
      */
     public $ValidDate;
 
@@ -129,15 +129,15 @@ class RecognizeMexicoVTIDResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Name Name
-     * @param string $Sex Sex
+     * @param string $Name The full name.
+     * @param string $Sex Gender.
      * @param string $Address Address
      * @param string $VotePIN Vote PIN Code
      * @param string $CURP Unique Population Registry Code
-     * @param string $Birth Birthday
+     * @param string $Birth Date of birth.
      * @param string $SECCION Section Number
      * @param string $IssueDate IssueDate
-     * @param string $ValidDate ValidDate
+     * @param string $ValidDate The validity period (expiration date).
      * @param string $State State
      * @param string $City City
      * @param string $Locality Locality

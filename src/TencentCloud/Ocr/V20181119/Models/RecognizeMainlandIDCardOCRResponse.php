@@ -22,38 +22,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Name((portrait side))
  * @method void setName(string $Name) Set Name((portrait side))
- * @method string getSex() Obtain Sex((portrait side))
- * @method void setSex(string $Sex) Set Sex((portrait side))
- * @method string getNation() Obtain Nation((portrait side))
- * @method void setNation(string $Nation) Set Nation((portrait side))
- * @method string getBirth() Obtain Brithday((portrait side))
- * @method void setBirth(string $Birth) Set Brithday((portrait side))
+ * @method string getSex() Obtain Gender (portrait side)
+ * @method void setSex(string $Sex) Set Gender (portrait side)
+ * @method string getNation() Obtain Ethnicity (portrait side)
+ * @method void setNation(string $Nation) Set Ethnicity (portrait side)
+ * @method string getBirth() Obtain Date of birth (portrait side)
+ * @method void setBirth(string $Birth) Set Date of birth (portrait side)
  * @method string getAddress() Obtain Address(portrait side)
  * @method void setAddress(string $Address) Set Address(portrait side)
  * @method string getIdNum() Obtain ID number (portrait side)
  * @method void setIdNum(string $IdNum) Set ID number (portrait side)
- * @method string getAuthority() Obtain Card authority(national emblem side)
- * @method void setAuthority(string $Authority) Set Card authority(national emblem side)
- * @method string getValidDate() Obtain Card valid date (national emblem side)
- * @method void setValidDate(string $ValidDate) Set Card valid date (national emblem side)
- * @method array getWarnCardInfos() Obtain Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
- * @method void setWarnCardInfos(array $WarnCardInfos) Set Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+ * @method string getAuthority() Obtain Issuing authority (national emblem side)
+ * @method void setAuthority(string $Authority) Set Issuing authority (national emblem side)
+ * @method string getValidDate() Obtain Validity period (national emblem side)
+ * @method void setValidDate(string $ValidDate) Set Validity period (national emblem side)
+ * @method array getWarnCardInfos() Obtain Warning information for the ID card. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), 
+-9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
+ * @method void setWarnCardInfos(array $WarnCardInfos) Set Warning information for the ID card. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), 
+-9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
  * @method string getPortraitImage() Obtain Portrait image base64
  * @method void setPortraitImage(string $PortraitImage) Set Portrait image base64
  * @method string getIdCardImage() Obtain ID card photo cropping results base64
@@ -69,17 +67,17 @@ class RecognizeMainlandIDCardOCRResponse extends AbstractModel
     public $Name;
 
     /**
-     * @var string Sex((portrait side))
+     * @var string Gender (portrait side)
      */
     public $Sex;
 
     /**
-     * @var string Nation((portrait side))
+     * @var string Ethnicity (portrait side)
      */
     public $Nation;
 
     /**
-     * @var string Brithday((portrait side))
+     * @var string Date of birth (portrait side)
      */
     public $Birth;
 
@@ -94,25 +92,24 @@ class RecognizeMainlandIDCardOCRResponse extends AbstractModel
     public $IdNum;
 
     /**
-     * @var string Card authority(national emblem side)
+     * @var string Issuing authority (national emblem side)
      */
     public $Authority;
 
     /**
-     * @var string Card valid date (national emblem side)
+     * @var string Validity period (national emblem side)
      */
     public $ValidDate;
 
     /**
-     * @var array Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+     * @var array Warning information for the ID card. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), 
+-9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
      */
     public $WarnCardInfos;
 
@@ -133,22 +130,21 @@ class RecognizeMainlandIDCardOCRResponse extends AbstractModel
 
     /**
      * @param string $Name Name((portrait side))
-     * @param string $Sex Sex((portrait side))
-     * @param string $Nation Nation((portrait side))
-     * @param string $Birth Brithday((portrait side))
+     * @param string $Sex Gender (portrait side)
+     * @param string $Nation Ethnicity (portrait side)
+     * @param string $Birth Date of birth (portrait side)
      * @param string $Address Address(portrait side)
      * @param string $IdNum ID number (portrait side)
-     * @param string $Authority Card authority(national emblem side)
-     * @param string $ValidDate Card valid date (national emblem side)
-     * @param array $WarnCardInfos Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+     * @param string $Authority Issuing authority (national emblem side)
+     * @param string $ValidDate Validity period (national emblem side)
+     * @param array $WarnCardInfos Warning information for the ID card. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), 
+-9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
      * @param string $PortraitImage Portrait image base64
      * @param string $IdCardImage ID card photo cropping results base64
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.

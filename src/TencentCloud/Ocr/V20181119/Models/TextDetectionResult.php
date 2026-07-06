@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getValue() Obtain The recognized text line content.
  * @method void setValue(string $Value) Set The recognized text line content.
- * @method array getPolygon() Obtain The coordinates, represented in the coordinates of the four points.
- * @method void setPolygon(array $Polygon) Set The coordinates, represented in the coordinates of the four points.
+ * @method array getPolygon() Obtain This field is deprecated and will always return an empty array. Usage is not recommended.
+ * @method void setPolygon(array $Polygon) Set This field is deprecated and will always return an empty array. Usage is not recommended.
  */
 class TextDetectionResult extends AbstractModel
 {
@@ -33,13 +33,14 @@ class TextDetectionResult extends AbstractModel
     public $Value;
 
     /**
-     * @var array The coordinates, represented in the coordinates of the four points.
+     * @var array This field is deprecated and will always return an empty array. Usage is not recommended.
+     * @deprecated
      */
     public $Polygon;
 
     /**
      * @param string $Value The recognized text line content.
-     * @param array $Polygon The coordinates, represented in the coordinates of the four points.
+     * @param array $Polygon This field is deprecated and will always return an empty array. Usage is not recommended.
      */
     function __construct()
     {

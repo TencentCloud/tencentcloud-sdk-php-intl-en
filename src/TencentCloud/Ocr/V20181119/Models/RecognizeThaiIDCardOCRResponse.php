@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setID(string $ID) Set ID card number
  * @method string getThaiName() Obtain Name in Thai
  * @method void setThaiName(string $ThaiName) Set Name in Thai
- * @method string getEnFirstName() Obtain Name in English
- * @method void setEnFirstName(string $EnFirstName) Set Name in English
- * @method string getEnLastName() Obtain Name in English
- * @method void setEnLastName(string $EnLastName) Set Name in English
+ * @method string getEnFirstName() Obtain First name in English
+ * @method void setEnFirstName(string $EnFirstName) Set First name in English
+ * @method string getEnLastName() Obtain Last name in English
+ * @method void setEnLastName(string $EnLastName) Set Last name in English
  * @method string getIssueDate() Obtain Date of issue in Thai
  * @method void setIssueDate(string $IssueDate) Set Date of issue in Thai
  * @method string getExpirationDate() Obtain Expiration date in Thai
@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSerialNumber(string $SerialNumber) Set Serial number
  * @method string getAddress() Obtain Address
  * @method void setAddress(string $Address) Set Address
- * @method string getLaserID() Obtain LaserID in the back of the card.
- * @method void setLaserID(string $LaserID) Set LaserID in the back of the card.
+ * @method string getLaserID() Obtain Laser ID on the back of the card.
+ * @method void setLaserID(string $LaserID) Set Laser ID on the back of the card.
  * @method string getPortraitImage() Obtain Identity photo
  * @method void setPortraitImage(string $PortraitImage) Set Identity photo
  * @method array getWarnCardInfos() Obtain Card Warning Information
@@ -92,12 +92,12 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
     public $ThaiName;
 
     /**
-     * @var string Name in English
+     * @var string First name in English
      */
     public $EnFirstName;
 
     /**
-     * @var string Name in English
+     * @var string Last name in English
      */
     public $EnLastName;
 
@@ -147,7 +147,7 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
     public $Address;
 
     /**
-     * @var string LaserID in the back of the card.
+     * @var string Laser ID on the back of the card.
      */
     public $LaserID;
 
@@ -194,8 +194,8 @@ true: complete; false: incomplete
     /**
      * @param string $ID ID card number
      * @param string $ThaiName Name in Thai
-     * @param string $EnFirstName Name in English
-     * @param string $EnLastName Name in English
+     * @param string $EnFirstName First name in English
+     * @param string $EnLastName Last name in English
      * @param string $IssueDate Date of issue in Thai
      * @param string $ExpirationDate Expiration date in Thai
      * @param string $EnIssueDate Date of issue in English
@@ -205,7 +205,7 @@ true: complete; false: incomplete
      * @param string $Religion Religion
      * @param string $SerialNumber Serial number
      * @param string $Address Address
-     * @param string $LaserID LaserID in the back of the card.
+     * @param string $LaserID Laser ID on the back of the card.
      * @param string $PortraitImage Identity photo
      * @param array $WarnCardInfos Card Warning Information
 

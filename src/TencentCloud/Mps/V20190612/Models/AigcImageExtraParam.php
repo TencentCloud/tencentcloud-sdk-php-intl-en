@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Extended parameters used for AIGC image generation.
  *
- * @method string getAspectRatio() Obtain <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
- * @method void setAspectRatio(string $AspectRatio) Set <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
+ * @method string getAspectRatio() Obtain <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, and 3:2.</li><li>MJ v7: The aspect ratio needs to be specified in the prompt.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
+ * @method void setAspectRatio(string $AspectRatio) Set <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, and 3:2.</li><li>MJ v7: The aspect ratio needs to be specified in the prompt.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
  * @method string getResolution() Obtain <p>Output resolution of the image.</p><p>Models that support this parameter:<br>Valid values: 720P, 1080P, 2K, and 4K.</p>
  * @method void setResolution(string $Resolution) Set <p>Output resolution of the image.</p><p>Models that support this parameter:<br>Valid values: 720P, 1080P, 2K, and 4K.</p>
  * @method integer getLogoAdd() Obtain <p>Indicates whether to add a logo watermark. No watermark is added by default. 1 - A watermark is added. 0 - No watermark is added.</p><p>Value range: [0, 1].</p><p>Default value: 0.</p>
  * @method void setLogoAdd(integer $LogoAdd) Set <p>Indicates whether to add a logo watermark. No watermark is added by default. 1 - A watermark is added. 0 - No watermark is added.</p><p>Value range: [0, 1].</p><p>Default value: 0.</p>
- * @method string getOutputFormat() Obtain 
- * @method void setOutputFormat(string $OutputFormat) Set 
+ * @method string getOutputFormat() Obtain <p>Specifies the output format of the image. JPEG and PNG formats are supported.</p>
+ * @method void setOutputFormat(string $OutputFormat) Set <p>Specifies the output format of the image. JPEG and PNG formats are supported.</p>
  */
 class AigcImageExtraParam extends AbstractModel
 {
     /**
-     * @var string <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
+     * @var string <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, and 3:2.</li><li>MJ v7: The aspect ratio needs to be specified in the prompt.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
      */
     public $AspectRatio;
 
@@ -47,15 +47,15 @@ class AigcImageExtraParam extends AbstractModel
     public $LogoAdd;
 
     /**
-     * @var string 
+     * @var string <p>Specifies the output format of the image. JPEG and PNG formats are supported.</p>
      */
     public $OutputFormat;
 
     /**
-     * @param string $AspectRatio <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
+     * @param string $AspectRatio <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, and 3:2.</li><li>MJ v7: The aspect ratio needs to be specified in the prompt.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
      * @param string $Resolution <p>Output resolution of the image.</p><p>Models that support this parameter:<br>Valid values: 720P, 1080P, 2K, and 4K.</p>
      * @param integer $LogoAdd <p>Indicates whether to add a logo watermark. No watermark is added by default. 1 - A watermark is added. 0 - No watermark is added.</p><p>Value range: [0, 1].</p><p>Default value: 0.</p>
-     * @param string $OutputFormat 
+     * @param string $OutputFormat <p>Specifies the output format of the image. JPEG and PNG formats are supported.</p>
      */
     function __construct()
     {

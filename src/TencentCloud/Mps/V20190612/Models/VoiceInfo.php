@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCategory(string $Category) Set <p>Voice type. </p><p>Enumeration value: </p><ul><li>system: System audio.</li></ul>
  * @method string getGender() Obtain <p>Gender. </p><p>Enumeration values: </p><ul><li>male: Male, </li><li>female: Female.</li></ul>
  * @method void setGender(string $Gender) Set <p>Gender. </p><p>Enumeration values: </p><ul><li>male: Male, </li><li>female: Female.</li></ul>
+ * @method string getAge() Obtain <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+ * @method void setAge(string $Age) Set <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
  * @method array getLanguages() Obtain <p>List of supported languages. </p><p>For example: en.</p>
  * @method void setLanguages(array $Languages) Set <p>List of supported languages. </p><p>For example: en.</p>
  * @method string getAudioUrl() Obtain <p>Audition audio URL.</p>
@@ -67,6 +69,11 @@ class VoiceInfo extends AbstractModel
     public $Gender;
 
     /**
+     * @var string <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+     */
+    public $Age;
+
+    /**
      * @var array <p>List of supported languages. </p><p>For example: en.</p>
      */
     public $Languages;
@@ -92,6 +99,7 @@ class VoiceInfo extends AbstractModel
      * @param string $Description <p>Voice description.</p>
      * @param string $Category <p>Voice type. </p><p>Enumeration value: </p><ul><li>system: System audio.</li></ul>
      * @param string $Gender <p>Gender. </p><p>Enumeration values: </p><ul><li>male: Male, </li><li>female: Female.</li></ul>
+     * @param string $Age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
      * @param array $Languages <p>List of supported languages. </p><p>For example: en.</p>
      * @param string $AudioUrl <p>Audition audio URL.</p>
      * @param array $Labels <p>List of tags. </p><p>For example: gentle.</p>
@@ -128,6 +136,10 @@ class VoiceInfo extends AbstractModel
 
         if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
             $this->Gender = $param["Gender"];
+        }
+
+        if (array_key_exists("Age",$param) and $param["Age"] !== null) {
+            $this->Age = $param["Age"];
         }
 
         if (array_key_exists("Languages",$param) and $param["Languages"] !== null) {

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQualityControlResultSet(array $QualityControlResultSet) Set <p>Exception items detected in content quality inspection.</p>
  * @method array getContainerDiagnoseResultSet() Obtain <p>Exception items detected in format diagnosis.</p>
  * @method void setContainerDiagnoseResultSet(array $ContainerDiagnoseResultSet) Set <p>Exception items detected in format diagnosis.</p>
+ * @method LLMDetectionReport getLLMDetectionReport() Obtain <p>LLM AIGC quality detection result.</p>
+ * @method void setLLMDetectionReport(LLMDetectionReport $LLMDetectionReport) Set <p>LLM AIGC quality detection result.</p>
  */
 class QualityControlData extends AbstractModel
 {
@@ -73,6 +75,11 @@ class QualityControlData extends AbstractModel
     public $ContainerDiagnoseResultSet;
 
     /**
+     * @var LLMDetectionReport <p>LLM AIGC quality detection result.</p>
+     */
+    public $LLMDetectionReport;
+
+    /**
      * @param boolean $NoAudio <p>A value of true indicates that the video has no audio track.</p>
      * @param boolean $NoVideo <p>A value of true indicates that the video has no video track.</p>
      * @param integer $QualityEvaluationScore <p>No-reference quality score of the video, on a scale of 0 to 100.</p>
@@ -80,6 +87,7 @@ class QualityControlData extends AbstractModel
      * @param integer $AestheticEvaluationScore <p>Video aesthetic score. Value range: [0, 100].</p>
      * @param array $QualityControlResultSet <p>Exception items detected in content quality inspection.</p>
      * @param array $ContainerDiagnoseResultSet <p>Exception items detected in format diagnosis.</p>
+     * @param LLMDetectionReport $LLMDetectionReport <p>LLM AIGC quality detection result.</p>
      */
     function __construct()
     {
@@ -130,6 +138,11 @@ class QualityControlData extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ContainerDiagnoseResultSet, $obj);
             }
+        }
+
+        if (array_key_exists("LLMDetectionReport",$param) and $param["LLMDetectionReport"] !== null) {
+            $this->LLMDetectionReport = new LLMDetectionReport();
+            $this->LLMDetectionReport->deserialize($param["LLMDetectionReport"]);
         }
     }
 }

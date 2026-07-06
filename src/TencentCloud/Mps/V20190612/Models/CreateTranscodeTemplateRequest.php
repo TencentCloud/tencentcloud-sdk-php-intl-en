@@ -20,114 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTranscodeTemplate request structure.
  *
- * @method string getContainer() Obtain Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
- * @method void setContainer(string $Container) Set Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
- * @method string getName() Obtain Name of a transcoding template. Length limit: 64 characters.
- * @method void setName(string $Name) Set Name of a transcoding template. Length limit: 64 characters.
- * @method string getComment() Obtain Template description. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
- * @method integer getRemoveVideo() Obtain Whether to remove video data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
- * @method void setRemoveVideo(integer $RemoveVideo) Set Whether to remove video data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
- * @method integer getRemoveAudio() Obtain Whether to remove audio data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
- * @method void setRemoveAudio(integer $RemoveAudio) Set Whether to remove audio data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
- * @method VideoTemplateInfo getVideoTemplate() Obtain Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
- * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) Set Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
- * @method AudioTemplateInfo getAudioTemplate() Obtain Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
- * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) Set Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
- * @method TEHDConfig getTEHDConfig() Obtain TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
- * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
- * @method EnhanceConfig getEnhanceConfig() Obtain Audio/Video enhancement configuration.
- * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement configuration.
- * @method string getStdExtInfo() Obtain Additional parameter, which is a serialized JSON string.
- * @method void setStdExtInfo(string $StdExtInfo) Set Additional parameter, which is a serialized JSON string.
+ * @method string getContainer() Obtain <p>Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+ * @method void setContainer(string $Container) Set <p>Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+ * @method string getName() Obtain <p>Transcoding template name. Length limit: 64 characters.</p>
+ * @method void setName(string $Name) Set <p>Transcoding template name. Length limit: 64 characters.</p>
+ * @method string getComment() Obtain <p>Transcoding template description. Length limit: 256 characters.</p>
+ * @method void setComment(string $Comment) Set <p>Transcoding template description. Length limit: 256 characters.</p>
+ * @method integer getRemoveVideo() Obtain <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
+ * @method void setRemoveVideo(integer $RemoveVideo) Set <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
+ * @method integer getRemoveAudio() Obtain <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
+ * @method void setRemoveAudio(integer $RemoveAudio) Set <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
+ * @method VideoTemplateInfo getVideoTemplate() Obtain <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
+ * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) Set <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
+ * @method AudioTemplateInfo getAudioTemplate() Obtain <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
+ * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) Set <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
+ * @method TEHDConfig getTEHDConfig() Obtain <p>Top Speed Codec transcoding parameters.</p>
+ * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set <p>Top Speed Codec transcoding parameters.</p>
+ * @method EnhanceConfig getEnhanceConfig() Obtain <p>Audio/video enhancement configurations.</p>
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set <p>Audio/video enhancement configurations.</p>
+ * @method string getStdExtInfo() Obtain <p>Extended parameter, which is a serialized JSON string.</p>
+ * @method void setStdExtInfo(string $StdExtInfo) Set <p>Extended parameter, which is a serialized JSON string.</p>
  */
 class CreateTranscodeTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
+     * @var string <p>Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
      */
     public $Container;
 
     /**
-     * @var string Name of a transcoding template. Length limit: 64 characters.
+     * @var string <p>Transcoding template name. Length limit: 64 characters.</p>
      */
     public $Name;
 
     /**
-     * @var string Template description. Length limit: 256 characters.
+     * @var string <p>Transcoding template description. Length limit: 256 characters.</p>
      */
     public $Comment;
 
     /**
-     * @var integer Whether to remove video data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
+     * @var integer <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
      */
     public $RemoveVideo;
 
     /**
-     * @var integer Whether to remove audio data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
+     * @var integer <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
      */
     public $RemoveAudio;
 
     /**
-     * @var VideoTemplateInfo Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+     * @var VideoTemplateInfo <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
      */
     public $VideoTemplate;
 
     /**
-     * @var AudioTemplateInfo Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+     * @var AudioTemplateInfo <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
      */
     public $AudioTemplate;
 
     /**
-     * @var TEHDConfig TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
+     * @var TEHDConfig <p>Top Speed Codec transcoding parameters.</p>
      */
     public $TEHDConfig;
 
     /**
-     * @var EnhanceConfig Audio/Video enhancement configuration.
+     * @var EnhanceConfig <p>Audio/video enhancement configurations.</p>
      */
     public $EnhanceConfig;
 
     /**
-     * @var string Additional parameter, which is a serialized JSON string.
+     * @var string <p>Extended parameter, which is a serialized JSON string.</p>
      */
     public $StdExtInfo;
 
     /**
-     * @param string $Container Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
-     * @param string $Name Name of a transcoding template. Length limit: 64 characters.
-     * @param string $Comment Template description. Length limit: 256 characters.
-     * @param integer $RemoveVideo Whether to remove video data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
-     * @param integer $RemoveAudio Whether to remove audio data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
-     * @param VideoTemplateInfo $VideoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
-     * @param AudioTemplateInfo $AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
-     * @param TEHDConfig $TEHDConfig TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
-     * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement configuration.
-     * @param string $StdExtInfo Additional parameter, which is a serialized JSON string.
+     * @param string $Container <p>Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+     * @param string $Name <p>Transcoding template name. Length limit: 64 characters.</p>
+     * @param string $Comment <p>Transcoding template description. Length limit: 256 characters.</p>
+     * @param integer $RemoveVideo <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
+     * @param integer $RemoveAudio <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
+     * @param VideoTemplateInfo $VideoTemplate <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
+     * @param AudioTemplateInfo $AudioTemplate <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
+     * @param TEHDConfig $TEHDConfig <p>Top Speed Codec transcoding parameters.</p>
+     * @param EnhanceConfig $EnhanceConfig <p>Audio/video enhancement configurations.</p>
+     * @param string $StdExtInfo <p>Extended parameter, which is a serialized JSON string.</p>
      */
     function __construct()
     {

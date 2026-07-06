@@ -65,6 +65,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
  * @method Models\GetAccountSummaryResponse GetAccountSummary(Models\GetAccountSummaryRequest $req) This API is used to query account summary. 
  * @method Models\GetCustomMFATokenInfoResponse GetCustomMFATokenInfo(Models\GetCustomMFATokenInfoRequest $req) This API is used to get information associated with a custom multi-factor Token
  * @method Models\GetGroupResponse GetGroup(Models\GetGroupRequest $req) This API is used to query user group details.
+ * @method Models\GetPasswordRulesResponse GetPasswordRules(Models\GetPasswordRulesRequest $req) Obtaining CAM Console Password Rules
  * @method Models\GetPolicyResponse GetPolicy(Models\GetPolicyRequest $req) This API (GetPolicy) is used to query and view policy details.
  * @method Models\GetPolicyVersionResponse GetPolicyVersion(Models\GetPolicyVersionRequest $req) This API is used to query policy version details.
  * @method Models\GetRoleResponse GetRole(Models\GetRoleRequest $req) This API (GetRole) is used to get the details of a specified role.
@@ -98,6 +99,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
  * @method Models\UpdateAssumeRolePolicyResponse UpdateAssumeRolePolicy(Models\UpdateAssumeRolePolicyRequest $req) This API (UpdateAssumeRolePolicy) is used to modify the trust policy of a role.
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) This API is used to update a user group.
  * @method Models\UpdateOIDCConfigResponse UpdateOIDCConfig(Models\UpdateOIDCConfigRequest $req) This API is used to modify role OIDC configurations.
+ * @method Models\UpdatePasswordRulesResponse UpdatePasswordRules(Models\UpdatePasswordRulesRequest $req) Updating CAM Console Password Rules
  * @method Models\UpdatePolicyResponse UpdatePolicy(Models\UpdatePolicyRequest $req) This API is used to update a policy.
 This API will update the default version of an existing policy instead of creating a new one. If no policy exists, a default version will be created.
  * @method Models\UpdateRoleConsoleLoginResponse UpdateRoleConsoleLogin(Models\UpdateRoleConsoleLoginRequest $req) This API is used to modify a role's login permissions.

@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackImageUrl(string $BackImageUrl) Set The URL address of the image. It is required that the image after Base64 encoding should not exceed 7M, the resolution is recommended to be 500*800 or above, and PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies at least 2/3 of the picture. It is recommended that images be stored in Tencent Cloud to ensure higher download speed and stability.
  * @method boolean getCropPortrait() Obtain Picture switch. The default is false, and the base64 encoding of the avatar photo is not returned. When set to true, the base64 encoding of the portrait photo is returned.
  * @method void setCropPortrait(boolean $CropPortrait) Set Picture switch. The default is false, and the base64 encoding of the avatar photo is not returned. When set to true, the base64 encoding of the portrait photo is returned.
+ * @method string getLicenceVersion() Obtain Version of the driver's license image. 
+Valid values: 
+OLD (old version), 
+NEW (new version). 
+The default value is OLD.
+ * @method void setLicenceVersion(string $LicenceVersion) Set Version of the driver's license image. 
+Valid values: 
+OLD (old version), 
+NEW (new version). 
+The default value is OLD.
  */
 class RecognizeBrazilDriverLicenseOCRRequest extends AbstractModel
 {
@@ -59,11 +69,25 @@ class RecognizeBrazilDriverLicenseOCRRequest extends AbstractModel
     public $CropPortrait;
 
     /**
+     * @var string Version of the driver's license image. 
+Valid values: 
+OLD (old version), 
+NEW (new version). 
+The default value is OLD.
+     */
+    public $LicenceVersion;
+
+    /**
      * @param string $ImageBase64 The Base64 value of the image. It is required that the image after Base64 encoding should not exceed 7M, the resolution is recommended to be 500*800 or above, and PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies at least 2/3 of the picture. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
      * @param string $BackImageBase64 The Base64 value of the image. It is required that the image after Base64 encoding should not exceed 7M, the resolution is recommended to be 500*800 or above, and PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies at least 2/3 of the picture. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
      * @param string $ImageUrl The URL address of the image. It is required that the image after Base64 encoding should not exceed 7M, the resolution is recommended to be 500*800 or above, and PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies at least 2/3 of the picture. It is recommended that images be stored in Tencent Cloud to ensure higher download speed and stability.
      * @param string $BackImageUrl The URL address of the image. It is required that the image after Base64 encoding should not exceed 7M, the resolution is recommended to be 500*800 or above, and PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies at least 2/3 of the picture. It is recommended that images be stored in Tencent Cloud to ensure higher download speed and stability.
      * @param boolean $CropPortrait Picture switch. The default is false, and the base64 encoding of the avatar photo is not returned. When set to true, the base64 encoding of the portrait photo is returned.
+     * @param string $LicenceVersion Version of the driver's license image. 
+Valid values: 
+OLD (old version), 
+NEW (new version). 
+The default value is OLD.
      */
     function __construct()
     {
@@ -96,6 +120,10 @@ class RecognizeBrazilDriverLicenseOCRRequest extends AbstractModel
 
         if (array_key_exists("CropPortrait",$param) and $param["CropPortrait"] !== null) {
             $this->CropPortrait = $param["CropPortrait"];
+        }
+
+        if (array_key_exists("LicenceVersion",$param) and $param["LicenceVersion"] !== null) {
+            $this->LicenceVersion = $param["LicenceVersion"];
         }
     }
 }

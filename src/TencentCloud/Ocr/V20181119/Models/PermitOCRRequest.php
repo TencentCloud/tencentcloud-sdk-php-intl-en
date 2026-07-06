@@ -20,38 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PermitOCR request structure.
  *
- * @method string getImageBase64() Obtain The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
- * @method void setImageBase64(string $ImageBase64) Set The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
- * @method string getImageUrl() Obtain The URL of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: no more than 7M after Base64 encoding. Image download time: no more than 3 seconds. We recommend that you store the image in Tencent Cloud for higher download speed and stability.
-The download speed and stability of non-Tencent Cloud URLs may be low.
- * @method void setImageUrl(string $ImageUrl) Set The URL of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: no more than 7M after Base64 encoding. Image download time: no more than 3 seconds. We recommend that you store the image in Tencent Cloud for higher download speed and stability.
-The download speed and stability of non-Tencent Cloud URLs may be low.
- * @method boolean getCropPortrait() Obtain Whether to return the avatar image. Default is false.
- * @method void setCropPortrait(boolean $CropPortrait) Set Whether to return the avatar image. Default is false.
+ * @method string getImageBase64() Obtain The Base64-encoded value of the image. Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported. Supported image size: The downloaded image after Base64 encoding cannot exceed 7 MB. The download time of the image cannot exceed 3 seconds. Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, only ImageUrl is used.
+ * @method void setImageBase64(string $ImageBase64) Set The Base64-encoded value of the image. Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported. Supported image size: The downloaded image after Base64 encoding cannot exceed 7 MB. The download time of the image cannot exceed 3 seconds. Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, only ImageUrl is used.
+ * @method string getImageUrl() Obtain The URL of the image. Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported. Supported image size: The downloaded image after Base64 encoding cannot exceed 7 MB. The download time of the image cannot exceed 3 seconds. We recommend that you store the image in Tencent Cloud for higher download speed and stability. The download speed and stability of images stored outside Tencent Cloud may be compromised.
+ * @method void setImageUrl(string $ImageUrl) Set The URL of the image. Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported. Supported image size: The downloaded image after Base64 encoding cannot exceed 7 MB. The download time of the image cannot exceed 3 seconds. We recommend that you store the image in Tencent Cloud for higher download speed and stability. The download speed and stability of images stored outside Tencent Cloud may be compromised.
+ * @method boolean getCropPortrait() Obtain Whether to return the ID photo. The default value is false.
+ * @method void setCropPortrait(boolean $CropPortrait) Set Whether to return the ID photo. The default value is false.
  */
 class PermitOCRRequest extends AbstractModel
 {
     /**
-     * @var string The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
+     * @var string The Base64-encoded value of the image. Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported. Supported image size: The downloaded image after Base64 encoding cannot exceed 7 MB. The download time of the image cannot exceed 3 seconds. Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, only ImageUrl is used.
      */
     public $ImageBase64;
 
     /**
-     * @var string The URL of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: no more than 7M after Base64 encoding. Image download time: no more than 3 seconds. We recommend that you store the image in Tencent Cloud for higher download speed and stability.
-The download speed and stability of non-Tencent Cloud URLs may be low.
+     * @var string The URL of the image. Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported. Supported image size: The downloaded image after Base64 encoding cannot exceed 7 MB. The download time of the image cannot exceed 3 seconds. We recommend that you store the image in Tencent Cloud for higher download speed and stability. The download speed and stability of images stored outside Tencent Cloud may be compromised.
      */
     public $ImageUrl;
 
     /**
-     * @var boolean Whether to return the avatar image. Default is false.
+     * @var boolean Whether to return the ID photo. The default value is false.
      */
     public $CropPortrait;
 
     /**
-     * @param string $ImageBase64 The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
-     * @param string $ImageUrl The URL of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: no more than 7M after Base64 encoding. Image download time: no more than 3 seconds. We recommend that you store the image in Tencent Cloud for higher download speed and stability.
-The download speed and stability of non-Tencent Cloud URLs may be low.
-     * @param boolean $CropPortrait Whether to return the avatar image. Default is false.
+     * @param string $ImageBase64 The Base64-encoded value of the image. Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported. Supported image size: The downloaded image after Base64 encoding cannot exceed 7 MB. The download time of the image cannot exceed 3 seconds. Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, only ImageUrl is used.
+     * @param string $ImageUrl The URL of the image. Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported. Supported image size: The downloaded image after Base64 encoding cannot exceed 7 MB. The download time of the image cannot exceed 3 seconds. We recommend that you store the image in Tencent Cloud for higher download speed and stability. The download speed and stability of images stored outside Tencent Cloud may be compromised.
+     * @param boolean $CropPortrait Whether to return the ID photo. The default value is false.
      */
     function __construct()
     {

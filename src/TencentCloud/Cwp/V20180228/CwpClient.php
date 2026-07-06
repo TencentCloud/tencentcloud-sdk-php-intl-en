@@ -217,7 +217,7 @@ This API is used to call the billing payment API for payment since prepaid order
  * @method Models\DescribeLogStorageRecordResponse DescribeLogStorageRecord(Models\DescribeLogStorageRecordRequest $req) This API is used to obtain the record of stored log size.
  * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) This API is used to obtain the statistics of the used log retrieval capacity.
  * @method Models\DescribeLogTypeResponse DescribeLogType(Models\DescribeLogTypeRequest $req) This API is used to obtain log types, and the returned result of this API indicates temporarily filterable log types.
- * @method Models\DescribeLoginTypeGlobalConfResponse DescribeLoginTypeGlobalConf(Models\DescribeLoginTypeGlobalConfRequest $req) Retrieve the global configuration for uninstall protection
+ * @method Models\DescribeLoginTypeGlobalConfResponse DescribeLoginTypeGlobalConf(Models\DescribeLoginTypeGlobalConfRequest $req) This API is used to obtain the global configuration for QR code login.
  * @method Models\DescribeLoginTypeHostResponse DescribeLoginTypeHost(Models\DescribeLoginTypeHostRequest $req) Retrieve the host list via QR code log-in
  * @method Models\DescribeLoginWhiteCombinedListResponse DescribeLoginWhiteCombinedList(Models\DescribeLoginWhiteCombinedListRequest $req) This API is used to obtain the list of cross-region log-in allowlists after merge.
  * @method Models\DescribeLoginWhiteHostListResponse DescribeLoginWhiteHostList(Models\DescribeLoginWhiteHostListRequest $req) This API is used to query the list of allowlisted machines after merge.

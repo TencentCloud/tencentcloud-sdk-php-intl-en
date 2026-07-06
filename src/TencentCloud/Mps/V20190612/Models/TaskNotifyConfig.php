@@ -20,114 +20,86 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Event notification configuration of a task.
  *
- * @method string getNotifyType() Obtain Notification type. available values:.
-<li>CMQ: offline. switch to TDMQ-CMQ.</li>.
-<Li>TDMQ-CMQ: message queue</li>.
-<li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
-<Li>SCF: not recommended. additional configuration is required in the console.</li>.
-<Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
-<font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>.
- * @method void setNotifyType(string $NotifyType) Set Notification type. available values:.
-<li>CMQ: offline. switch to TDMQ-CMQ.</li>.
-<Li>TDMQ-CMQ: message queue</li>.
-<li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
-<Li>SCF: not recommended. additional configuration is required in the console.</li>.
-<Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
-<font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>.
- * @method string getNotifyMode() Obtain Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
- * @method void setNotifyMode(string $NotifyMode) Set Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
- * @method string getNotifyUrl() Obtain HTTP callback URL, required if `NotifyType` is set to `URL`
- * @method void setNotifyUrl(string $NotifyUrl) Set HTTP callback URL, required if `NotifyType` is set to `URL`
- * @method string getCmqModel() Obtain The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
- * @method void setCmqModel(string $CmqModel) Set The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
- * @method string getCmqRegion() Obtain The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
- * @method void setCmqRegion(string $CmqRegion) Set The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
- * @method string getTopicName() Obtain The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
- * @method void setTopicName(string $TopicName) Set The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
- * @method string getQueueName() Obtain The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
- * @method void setQueueName(string $QueueName) Set The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
- * @method AwsSQS getAwsSQS() Obtain The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
-
+ * @method string getNotifyType() Obtain <p>Notification type. Valid values:</p><li>CMQ: Removed. We recommend that you switch to TDMQ-CMQ.</li><li>TDMQ-CMQ: TDMQ.</li><li>URL: If URL is specified, HTTP callbacks are pushed to the URL specified in NotifyUrl. The callback protocol is HTTP and JSON. The packet body is the same as the output parameter of the event parsing notification API.</li><li>SCF: This is not recommended. Additional configuration for SCF is required in the console.</li><li>AWS-SQS: AWS queue. This is only suitable for AWS tasks in the same region.</li><font color="red"> Note: The default value is TDMQ-CMQ if this is not specified or empty. To use another type, you need to specify the corresponding value. If TDMQ-CMQ is used, oversized task response may cause failure to write to the queue. </font>
+ * @method void setNotifyType(string $NotifyType) Set <p>Notification type. Valid values:</p><li>CMQ: Removed. We recommend that you switch to TDMQ-CMQ.</li><li>TDMQ-CMQ: TDMQ.</li><li>URL: If URL is specified, HTTP callbacks are pushed to the URL specified in NotifyUrl. The callback protocol is HTTP and JSON. The packet body is the same as the output parameter of the event parsing notification API.</li><li>SCF: This is not recommended. Additional configuration for SCF is required in the console.</li><li>AWS-SQS: AWS queue. This is only suitable for AWS tasks in the same region.</li><font color="red"> Note: The default value is TDMQ-CMQ if this is not specified or empty. To use another type, you need to specify the corresponding value. If TDMQ-CMQ is used, oversized task response may cause failure to write to the queue. </font>
+ * @method string getNotifyMode() Obtain <p>Workflow notification mode. Valid values are Finish and Change. If this is not specified, the default value is Finish.</p>
+ * @method void setNotifyMode(string $NotifyMode) Set <p>Workflow notification mode. Valid values are Finish and Change. If this is not specified, the default value is Finish.</p>
+ * @method string getNotifyUrl() Obtain <p>HTTP callback URL. This is required if NotifyType is URL.</p>
+ * @method void setNotifyUrl(string $NotifyUrl) Set <p>HTTP callback URL. This is required if NotifyType is URL.</p>
+ * @method string getCmqModel() Obtain <p>CMQ or TDMQ for CMQ model. Valid values are Queue and Topic.</p>
+ * @method void setCmqModel(string $CmqModel) Set <p>CMQ or TDMQ for CMQ model. Valid values are Queue and Topic.</p>
+ * @method string getCmqRegion() Obtain <p>CMQ or TDMQ for CMQ region, such as sh or bj.</p>
+ * @method void setCmqRegion(string $CmqRegion) Set <p>CMQ or TDMQ for CMQ region, such as sh or bj.</p>
+ * @method string getTopicName() Obtain <p>This field takes effect if the model is Topic. It indicates the topic name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
+ * @method void setTopicName(string $TopicName) Set <p>This field takes effect if the model is Topic. It indicates the topic name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
+ * @method string getQueueName() Obtain <p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
+ * @method void setQueueName(string $QueueName) Set <p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
+ * @method AwsSQS getAwsSQS() Obtain <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAwsSQS(AwsSQS $AwsSQS) Set The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
-
+ * @method void setAwsSQS(AwsSQS $AwsSQS) Set <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNotifyKey() Obtain key used to generate a callback signature.
- * @method void setNotifyKey(string $NotifyKey) Set key used to generate a callback signature.
+ * @method string getNotifyKey() Obtain <p>Key used to generate the callback signature.</p>
+ * @method void setNotifyKey(string $NotifyKey) Set <p>Key used to generate the callback signature.</p>
  */
 class TaskNotifyConfig extends AbstractModel
 {
     /**
-     * @var string Notification type. available values:.
-<li>CMQ: offline. switch to TDMQ-CMQ.</li>.
-<Li>TDMQ-CMQ: message queue</li>.
-<li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
-<Li>SCF: not recommended. additional configuration is required in the console.</li>.
-<Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
-<font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>.
+     * @var string <p>Notification type. Valid values:</p><li>CMQ: Removed. We recommend that you switch to TDMQ-CMQ.</li><li>TDMQ-CMQ: TDMQ.</li><li>URL: If URL is specified, HTTP callbacks are pushed to the URL specified in NotifyUrl. The callback protocol is HTTP and JSON. The packet body is the same as the output parameter of the event parsing notification API.</li><li>SCF: This is not recommended. Additional configuration for SCF is required in the console.</li><li>AWS-SQS: AWS queue. This is only suitable for AWS tasks in the same region.</li><font color="red"> Note: The default value is TDMQ-CMQ if this is not specified or empty. To use another type, you need to specify the corresponding value. If TDMQ-CMQ is used, oversized task response may cause failure to write to the queue. </font>
      */
     public $NotifyType;
 
     /**
-     * @var string Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
+     * @var string <p>Workflow notification mode. Valid values are Finish and Change. If this is not specified, the default value is Finish.</p>
      */
     public $NotifyMode;
 
     /**
-     * @var string HTTP callback URL, required if `NotifyType` is set to `URL`
+     * @var string <p>HTTP callback URL. This is required if NotifyType is URL.</p>
      */
     public $NotifyUrl;
 
     /**
-     * @var string The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
+     * @var string <p>CMQ or TDMQ for CMQ model. Valid values are Queue and Topic.</p>
      */
     public $CmqModel;
 
     /**
-     * @var string The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
+     * @var string <p>CMQ or TDMQ for CMQ region, such as sh or bj.</p>
      */
     public $CmqRegion;
 
     /**
-     * @var string The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
+     * @var string <p>This field takes effect if the model is Topic. It indicates the topic name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
      */
     public $TopicName;
 
     /**
-     * @var string The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+     * @var string <p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
      */
     public $QueueName;
 
     /**
-     * @var AwsSQS The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
-
+     * @var AwsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AwsSQS;
 
     /**
-     * @var string key used to generate a callback signature.
+     * @var string <p>Key used to generate the callback signature.</p>
      */
     public $NotifyKey;
 
     /**
-     * @param string $NotifyType Notification type. available values:.
-<li>CMQ: offline. switch to TDMQ-CMQ.</li>.
-<Li>TDMQ-CMQ: message queue</li>.
-<li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
-<Li>SCF: not recommended. additional configuration is required in the console.</li>.
-<Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
-<font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>.
-     * @param string $NotifyMode Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
-     * @param string $NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
-     * @param string $CmqModel The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
-     * @param string $CmqRegion The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
-     * @param string $TopicName The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
-     * @param string $QueueName The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
-     * @param AwsSQS $AwsSQS The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
-
+     * @param string $NotifyType <p>Notification type. Valid values:</p><li>CMQ: Removed. We recommend that you switch to TDMQ-CMQ.</li><li>TDMQ-CMQ: TDMQ.</li><li>URL: If URL is specified, HTTP callbacks are pushed to the URL specified in NotifyUrl. The callback protocol is HTTP and JSON. The packet body is the same as the output parameter of the event parsing notification API.</li><li>SCF: This is not recommended. Additional configuration for SCF is required in the console.</li><li>AWS-SQS: AWS queue. This is only suitable for AWS tasks in the same region.</li><font color="red"> Note: The default value is TDMQ-CMQ if this is not specified or empty. To use another type, you need to specify the corresponding value. If TDMQ-CMQ is used, oversized task response may cause failure to write to the queue. </font>
+     * @param string $NotifyMode <p>Workflow notification mode. Valid values are Finish and Change. If this is not specified, the default value is Finish.</p>
+     * @param string $NotifyUrl <p>HTTP callback URL. This is required if NotifyType is URL.</p>
+     * @param string $CmqModel <p>CMQ or TDMQ for CMQ model. Valid values are Queue and Topic.</p>
+     * @param string $CmqRegion <p>CMQ or TDMQ for CMQ region, such as sh or bj.</p>
+     * @param string $TopicName <p>This field takes effect if the model is Topic. It indicates the topic name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
+     * @param string $QueueName <p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
+     * @param AwsSQS $AwsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $NotifyKey key used to generate a callback signature.
+     * @param string $NotifyKey <p>Key used to generate the callback signature.</p>
      */
     function __construct()
     {

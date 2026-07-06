@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The translated segments.
  *
- * @method float getConfidence() Obtain The confidence score for a segment. Value range: 0-100.
- * @method void setConfidence(float $Confidence) Set The confidence score for a segment. Value range: 0-100.
- * @method float getStartTimeOffset() Obtain The start time offset (seconds) of a segment.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set The start time offset (seconds) of a segment.
- * @method float getEndTimeOffset() Obtain The end time offset (seconds) of a segment.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set The end time offset (seconds) of a segment.
- * @method string getText() Obtain The text transcript.
- * @method void setText(string $Text) Set The text transcript.
- * @method string getTrans() Obtain The translation.
- * @method void setTrans(string $Trans) Set The translation.
- * @method array getWordlist() Obtain Word timestamp information.
- * @method void setWordlist(array $Wordlist) Set Word timestamp information.
+ * @method float getConfidence() Obtain <p>Confidence of the recognized segment. Value range: 0–100.</p>
+ * @method void setConfidence(float $Confidence) Set <p>Confidence of the recognized segment. Value range: 0–100.</p>
+ * @method float getStartTimeOffset() Obtain <p>Start time offset of the recognized segment, in seconds.</p>
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set <p>Start time offset of the recognized segment, in seconds.</p>
+ * @method float getEndTimeOffset() Obtain <p>End time offset of the recognized segment, in seconds.</p>
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set <p>End time offset of the recognized segment, in seconds.</p>
+ * @method string getText() Obtain <p>Recognized text.</p>
+ * @method void setText(string $Text) Set <p>Recognized text.</p>
+ * @method string getTrans() Obtain <p>Translated text.</p>
+ * @method void setTrans(string $Trans) Set <p>Translated text.</p>
+ * @method array getWordlist() Obtain <p>Word timestamp information.</p>
+ * @method void setWordlist(array $Wordlist) Set <p>Word timestamp information.</p>
  */
 class AiRecognitionTaskTransTextSegmentItem extends AbstractModel
 {
     /**
-     * @var float The confidence score for a segment. Value range: 0-100.
+     * @var float <p>Confidence of the recognized segment. Value range: 0–100.</p>
      */
     public $Confidence;
 
     /**
-     * @var float The start time offset (seconds) of a segment.
+     * @var float <p>Start time offset of the recognized segment, in seconds.</p>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float The end time offset (seconds) of a segment.
+     * @var float <p>End time offset of the recognized segment, in seconds.</p>
      */
     public $EndTimeOffset;
 
     /**
-     * @var string The text transcript.
+     * @var string <p>Recognized text.</p>
      */
     public $Text;
 
     /**
-     * @var string The translation.
+     * @var string <p>Translated text.</p>
      */
     public $Trans;
 
     /**
-     * @var array Word timestamp information.
+     * @var array <p>Word timestamp information.</p>
      */
     public $Wordlist;
 
     /**
-     * @param float $Confidence The confidence score for a segment. Value range: 0-100.
-     * @param float $StartTimeOffset The start time offset (seconds) of a segment.
-     * @param float $EndTimeOffset The end time offset (seconds) of a segment.
-     * @param string $Text The text transcript.
-     * @param string $Trans The translation.
-     * @param array $Wordlist Word timestamp information.
+     * @param float $Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
+     * @param float $StartTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
+     * @param float $EndTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
+     * @param string $Text <p>Recognized text.</p>
+     * @param string $Trans <p>Translated text.</p>
+     * @param array $Wordlist <p>Word timestamp information.</p>
      */
     function __construct()
     {

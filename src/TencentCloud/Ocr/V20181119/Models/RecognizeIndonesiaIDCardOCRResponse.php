@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGolDarah(string $GolDarah) Set The blood type.
  * @method string getAlamat() Obtain The address.
  * @method void setAlamat(string $Alamat) Set The address.
- * @method string getRTRW() Obtain The street.
- * @method void setRTRW(string $RTRW) Set The street.
+ * @method string getRTRW() Obtain The neighborhood/community unit (RT/RW).
+ * @method void setRTRW(string $RTRW) Set The neighborhood/community unit (RT/RW).
  * @method string getKelDesa() Obtain The village.
  * @method void setKelDesa(string $KelDesa) Set The village.
  * @method string getKecamatan() Obtain The region.
@@ -114,7 +114,7 @@ class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel
     public $Alamat;
 
     /**
-     * @var string The street.
+     * @var string The neighborhood/community unit (RT/RW).
      */
     public $RTRW;
 
@@ -200,7 +200,7 @@ class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel
      * @param string $JenisKelamin The gender.
      * @param string $GolDarah The blood type.
      * @param string $Alamat The address.
-     * @param string $RTRW The street.
+     * @param string $RTRW The neighborhood/community unit (RT/RW).
      * @param string $KelDesa The village.
      * @param string $Kecamatan The region.
      * @param string $Agama The religion.

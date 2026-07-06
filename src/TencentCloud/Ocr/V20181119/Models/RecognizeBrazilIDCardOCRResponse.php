@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNome(string $Nome) Set Name
  * @method string getMemberShip() Obtain Family information
  * @method void setMemberShip(string $MemberShip) Set Family information
- * @method string getDataNascimento() Obtain Birthday
- * @method void setDataNascimento(string $DataNascimento) Set Birthday
+ * @method string getDataNascimento() Obtain Date of birth
+ * @method void setDataNascimento(string $DataNascimento) Set Date of birth
  * @method string getIssuingAgency() Obtain Issuing agency
  * @method void setIssuingAgency(string $IssuingAgency) Set Issuing agency
- * @method string getFatorrh() Obtain blood type
- * @method void setFatorrh(string $Fatorrh) Set blood type
+ * @method string getFatorrh() Obtain Blood type
+ * @method void setFatorrh(string $Fatorrh) Set Blood type
  * @method string getNaturalIDade() Obtain Birth place
  * @method void setNaturalIDade(string $NaturalIDade) Set Birth place
  * @method string getObservations() Obtain Additional information 
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCPF(string $CPF) Set CPF
  * @method string getDNI() Obtain DNI
  * @method void setDNI(string $DNI) Set DNI
- * @method string getRegistroGeral() Obtain universal registration
- * @method void setRegistroGeral(string $RegistroGeral) Set universal registration
+ * @method string getRegistroGeral() Obtain General registry (Registro Geral)
+ * @method void setRegistroGeral(string $RegistroGeral) Set General registry (Registro Geral)
  * @method string getDispatchDate() Obtain Issue date
  * @method void setDispatchDate(string $DispatchDate) Set Issue date
  * @method string getRegistro() Obtain address
@@ -64,7 +64,7 @@ class RecognizeBrazilIDCardOCRResponse extends AbstractModel
     public $MemberShip;
 
     /**
-     * @var string Birthday
+     * @var string Date of birth
      */
     public $DataNascimento;
 
@@ -74,7 +74,7 @@ class RecognizeBrazilIDCardOCRResponse extends AbstractModel
     public $IssuingAgency;
 
     /**
-     * @var string blood type
+     * @var string Blood type
      */
     public $Fatorrh;
 
@@ -99,7 +99,7 @@ class RecognizeBrazilIDCardOCRResponse extends AbstractModel
     public $DNI;
 
     /**
-     * @var string universal registration
+     * @var string General registry (Registro Geral)
      */
     public $RegistroGeral;
 
@@ -131,14 +131,14 @@ class RecognizeBrazilIDCardOCRResponse extends AbstractModel
     /**
      * @param string $Nome Name
      * @param string $MemberShip Family information
-     * @param string $DataNascimento Birthday
+     * @param string $DataNascimento Date of birth
      * @param string $IssuingAgency Issuing agency
-     * @param string $Fatorrh blood type
+     * @param string $Fatorrh Blood type
      * @param string $NaturalIDade Birth place
      * @param string $Observations Additional information 
      * @param string $CPF CPF
      * @param string $DNI DNI
-     * @param string $RegistroGeral universal registration
+     * @param string $RegistroGeral General registry (Registro Geral)
      * @param string $DispatchDate Issue date
      * @param string $Registro address
      * @param string $PortraitImage Portrait image

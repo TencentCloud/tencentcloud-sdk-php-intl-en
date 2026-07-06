@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Full speech recognition segment.
  *
- * @method float getConfidence() Obtain Confidence of a recognition segment. Value range: 0-100.
- * @method void setConfidence(float $Confidence) Set Confidence of a recognition segment. Value range: 0-100.
- * @method float getStartTimeOffset() Obtain Start time offset of a recognition segment in seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a recognition segment in seconds.
- * @method float getEndTimeOffset() Obtain End time offset of a recognition segment in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a recognition segment in seconds.
- * @method string getText() Obtain Recognized text.
- * @method void setText(string $Text) Set Recognized text.
- * @method array getWordlist() Obtain Word timestamp information.
- * @method void setWordlist(array $Wordlist) Set Word timestamp information.
+ * @method float getConfidence() Obtain <p>Confidence of the recognized segment. Value range: 0–100.</p>
+ * @method void setConfidence(float $Confidence) Set <p>Confidence of the recognized segment. Value range: 0–100.</p>
+ * @method float getStartTimeOffset() Obtain <p>Start time offset of the recognized segment, in seconds.</p>
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set <p>Start time offset of the recognized segment, in seconds.</p>
+ * @method float getEndTimeOffset() Obtain <p>End time offset of the recognized segment, in seconds.</p>
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set <p>End time offset of the recognized segment, in seconds.</p>
+ * @method string getText() Obtain <p>Recognized text.</p>
+ * @method void setText(string $Text) Set <p>Recognized text.</p>
+ * @method array getWordlist() Obtain <p>Word timestamp information.</p>
+ * @method void setWordlist(array $Wordlist) Set <p>Word timestamp information.</p>
  */
 class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel
 {
     /**
-     * @var float Confidence of a recognition segment. Value range: 0-100.
+     * @var float <p>Confidence of the recognized segment. Value range: 0–100.</p>
      */
     public $Confidence;
 
     /**
-     * @var float Start time offset of a recognition segment in seconds.
+     * @var float <p>Start time offset of the recognized segment, in seconds.</p>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of a recognition segment in seconds.
+     * @var float <p>End time offset of the recognized segment, in seconds.</p>
      */
     public $EndTimeOffset;
 
     /**
-     * @var string Recognized text.
+     * @var string <p>Recognized text.</p>
      */
     public $Text;
 
     /**
-     * @var array Word timestamp information.
+     * @var array <p>Word timestamp information.</p>
      */
     public $Wordlist;
 
     /**
-     * @param float $Confidence Confidence of a recognition segment. Value range: 0-100.
-     * @param float $StartTimeOffset Start time offset of a recognition segment in seconds.
-     * @param float $EndTimeOffset End time offset of a recognition segment in seconds.
-     * @param string $Text Recognized text.
-     * @param array $Wordlist Word timestamp information.
+     * @param float $Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
+     * @param float $StartTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
+     * @param float $EndTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
+     * @param string $Text <p>Recognized text.</p>
+     * @param array $Wordlist <p>Word timestamp information.</p>
      */
     function __construct()
     {

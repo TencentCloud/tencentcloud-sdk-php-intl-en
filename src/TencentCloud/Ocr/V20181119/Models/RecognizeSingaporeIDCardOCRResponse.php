@@ -24,22 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChName(string $ChName) Set Chinese name
  * @method string getEnName() Obtain English name
  * @method void setEnName(string $EnName) Set English name
- * @method string getSex() Obtain gender
- * @method void setSex(string $Sex) Set gender
- * @method string getCountryOfBirth() Obtain Birth Country
- * @method void setCountryOfBirth(string $CountryOfBirth) Set Birth Country
- * @method string getBirthday() Obtain Brithday
- * @method void setBirthday(string $Birthday) Set Brithday
- * @method string getAddress() Obtain Address(back side)
- * @method void setAddress(string $Address) Set Address(back side)
- * @method string getID() Obtain License number
- * @method void setID(string $ID) Set License number
+ * @method string getSex() Obtain Gender
+ * @method void setSex(string $Sex) Set Gender
+ * @method string getCountryOfBirth() Obtain Country of birth
+ * @method void setCountryOfBirth(string $CountryOfBirth) Set Country of birth
+ * @method string getBirthday() Obtain Date of birth
+ * @method void setBirthday(string $Birthday) Set Date of birth
+ * @method string getAddress() Obtain Address (back side)
+ * @method void setAddress(string $Address) Set Address (back side)
+ * @method string getID() Obtain ID number
+ * @method void setID(string $ID) Set ID number
  * @method string getRace() Obtain Nationality(back side)
  * @method void setRace(string $Race) Set Nationality(back side)
  * @method string getNRICCode() Obtain NRIC code(back side)
  * @method void setNRICCode(string $NRICCode) Set NRIC code(back side)
- * @method string getPostCode() Obtain Post code(back side)
- * @method void setPostCode(string $PostCode) Set Post code(back side)
+ * @method string getPostCode() Obtain Postal code (back side)
+ * @method void setPostCode(string $PostCode) Set Postal code (back side)
  * @method string getDateOfExpiration() Obtain Date of Expiration(back side)
  * @method void setDateOfExpiration(string $DateOfExpiration) Set Date of Expiration(back side)
  * @method string getDateOfIssue() Obtain Date of issue(back side)
@@ -80,27 +80,27 @@ class RecognizeSingaporeIDCardOCRResponse extends AbstractModel
     public $EnName;
 
     /**
-     * @var string gender
+     * @var string Gender
      */
     public $Sex;
 
     /**
-     * @var string Birth Country
+     * @var string Country of birth
      */
     public $CountryOfBirth;
 
     /**
-     * @var string Brithday
+     * @var string Date of birth
      */
     public $Birthday;
 
     /**
-     * @var string Address(back side)
+     * @var string Address (back side)
      */
     public $Address;
 
     /**
-     * @var string License number
+     * @var string ID number
      */
     public $ID;
 
@@ -115,7 +115,7 @@ class RecognizeSingaporeIDCardOCRResponse extends AbstractModel
     public $NRICCode;
 
     /**
-     * @var string Post code(back side)
+     * @var string Postal code (back side)
      */
     public $PostCode;
 
@@ -155,14 +155,14 @@ class RecognizeSingaporeIDCardOCRResponse extends AbstractModel
     /**
      * @param string $ChName Chinese name
      * @param string $EnName English name
-     * @param string $Sex gender
-     * @param string $CountryOfBirth Birth Country
-     * @param string $Birthday Brithday
-     * @param string $Address Address(back side)
-     * @param string $ID License number
+     * @param string $Sex Gender
+     * @param string $CountryOfBirth Country of birth
+     * @param string $Birthday Date of birth
+     * @param string $Address Address (back side)
+     * @param string $ID ID number
      * @param string $Race Nationality(back side)
      * @param string $NRICCode NRIC code(back side)
-     * @param string $PostCode Post code(back side)
+     * @param string $PostCode Postal code (back side)
      * @param string $DateOfExpiration Date of Expiration(back side)
      * @param string $DateOfIssue Date of issue(back side)
      * @param string $Photo Head image 

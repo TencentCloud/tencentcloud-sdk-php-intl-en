@@ -20,46 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Image task input parameters
  *
- * @method ImageEncodeConfig getEncodeConfig() Obtain Image encoding configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setEncodeConfig(ImageEncodeConfig $EncodeConfig) Set Image encoding configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method ImageEnhanceConfig getEnhanceConfig() Obtain Image enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setEnhanceConfig(ImageEnhanceConfig $EnhanceConfig) Set Image enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method ImageEraseConfig getEraseConfig() Obtain Image erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setEraseConfig(ImageEraseConfig $EraseConfig) Set Image erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method ImageEncodeConfig getEncodeConfig() Obtain <p>Image encoding configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEncodeConfig(ImageEncodeConfig $EncodeConfig) Set <p>Image encoding configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ImageEnhanceConfig getEnhanceConfig() Obtain <p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEnhanceConfig(ImageEnhanceConfig $EnhanceConfig) Set <p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ImageEraseConfig getEraseConfig() Obtain <p>Image erasing configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEraseConfig(ImageEraseConfig $EraseConfig) Set <p>Image erasing configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiPosterSuiteConfig getAiPosterSuiteConfig() Obtain 
+ * @method void setAiPosterSuiteConfig(AiPosterSuiteConfig $AiPosterSuiteConfig) Set 
  */
 class ImageTaskInput extends AbstractModel
 {
     /**
-     * @var ImageEncodeConfig Image encoding configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var ImageEncodeConfig <p>Image encoding configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EncodeConfig;
 
     /**
-     * @var ImageEnhanceConfig Image enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var ImageEnhanceConfig <p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EnhanceConfig;
 
     /**
-     * @var ImageEraseConfig Image erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var ImageEraseConfig <p>Image erasing configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EraseConfig;
 
     /**
-     * @param ImageEncodeConfig $EncodeConfig Image encoding configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ImageEnhanceConfig $EnhanceConfig Image enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ImageEraseConfig $EraseConfig Image erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var AiPosterSuiteConfig 
+     */
+    public $AiPosterSuiteConfig;
+
+    /**
+     * @param ImageEncodeConfig $EncodeConfig <p>Image encoding configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ImageEnhanceConfig $EnhanceConfig <p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ImageEraseConfig $EraseConfig <p>Image erasing configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiPosterSuiteConfig $AiPosterSuiteConfig 
      */
     function __construct()
     {
@@ -87,6 +95,11 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (array_key_exists("EraseConfig",$param) and $param["EraseConfig"] !== null) {
             $this->EraseConfig = new ImageEraseConfig();
             $this->EraseConfig->deserialize($param["EraseConfig"]);
+        }
+
+        if (array_key_exists("AiPosterSuiteConfig",$param) and $param["AiPosterSuiteConfig"] !== null) {
+            $this->AiPosterSuiteConfig = new AiPosterSuiteConfig();
+            $this->AiPosterSuiteConfig->deserialize($param["AiPosterSuiteConfig"]);
         }
     }
 }

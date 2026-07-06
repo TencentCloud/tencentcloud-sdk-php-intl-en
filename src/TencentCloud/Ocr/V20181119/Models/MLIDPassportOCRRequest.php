@@ -20,27 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MLIDPassportOCR request structure.
  *
- * @method string getImageBase64() Obtain Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
- * @method void setImageBase64(string $ImageBase64) Set Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
+ * @method string getImageBase64() Obtain Base64-encoded image data. The image must be no larger than 7 MB after Base64 encoding. A resolution of at least 500x800 is recommended. Supported image formats: PNG, JPG, JPEG, BMP, and PDF. The document should occupy more than 2/3 of the image area.
+ * @method void setImageBase64(string $ImageBase64) Set Base64-encoded image data. The image must be no larger than 7 MB after Base64 encoding. A resolution of at least 500x800 is recommended. Supported image formats: PNG, JPG, JPEG, BMP, and PDF. The document should occupy more than 2/3 of the image area.
  * @method boolean getRetImage() Obtain Whether to return an image. 
 Default value: false.
  * @method void setRetImage(boolean $RetImage) Set Whether to return an image. 
 Default value: false.
- * @method string getImageUrl() Obtain URL address of image. (This field is not supported outside Chinese mainland)
-Supported image formats: PNG, JPG, JPEG, BMP, PDF.
-Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
-The download speed and stability of non-Tencent Cloud URLs may be low.
- * @method void setImageUrl(string $ImageUrl) Set URL address of image. (This field is not supported outside Chinese mainland)
-Supported image formats: PNG, JPG, JPEG, BMP, PDF.
-Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
-The download speed and stability of non-Tencent Cloud URLs may be low.
+ * @method string getImageUrl() Obtain URL of the image. The downloaded image must be no larger than 7 MB after Base64 encoding. A resolution of at least 500x800 is recommended. Supported image formats: PNG, JPG, JPEG, BMP, and PDF. The document should occupy more than 2/3 of the image area. Image download must complete within 3 seconds. We recommend storing images in Tencent Cloud for higher download speed and stability. The speed and stability of URLs from non-Tencent Cloud storage may be affected. Note: This field is not supported outside the Chinese mainland region.
+ * @method void setImageUrl(string $ImageUrl) Set URL of the image. The downloaded image must be no larger than 7 MB after Base64 encoding. A resolution of at least 500x800 is recommended. Supported image formats: PNG, JPG, JPEG, BMP, and PDF. The document should occupy more than 2/3 of the image area. Image download must complete within 3 seconds. We recommend storing images in Tencent Cloud for higher download speed and stability. The speed and stability of URLs from non-Tencent Cloud storage may be affected. Note: This field is not supported outside the Chinese mainland region.
  */
 class MLIDPassportOCRRequest extends AbstractModel
 {
     /**
-     * @var string Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
+     * @var string Base64-encoded image data. The image must be no larger than 7 MB after Base64 encoding. A resolution of at least 500x800 is recommended. Supported image formats: PNG, JPG, JPEG, BMP, and PDF. The document should occupy more than 2/3 of the image area.
      */
     public $ImageBase64;
 
@@ -51,23 +43,15 @@ Default value: false.
     public $RetImage;
 
     /**
-     * @var string URL address of image. (This field is not supported outside Chinese mainland)
-Supported image formats: PNG, JPG, JPEG, BMP, PDF.
-Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
-The download speed and stability of non-Tencent Cloud URLs may be low.
+     * @var string URL of the image. The downloaded image must be no larger than 7 MB after Base64 encoding. A resolution of at least 500x800 is recommended. Supported image formats: PNG, JPG, JPEG, BMP, and PDF. The document should occupy more than 2/3 of the image area. Image download must complete within 3 seconds. We recommend storing images in Tencent Cloud for higher download speed and stability. The speed and stability of URLs from non-Tencent Cloud storage may be affected. Note: This field is not supported outside the Chinese mainland region.
      */
     public $ImageUrl;
 
     /**
-     * @param string $ImageBase64 Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
+     * @param string $ImageBase64 Base64-encoded image data. The image must be no larger than 7 MB after Base64 encoding. A resolution of at least 500x800 is recommended. Supported image formats: PNG, JPG, JPEG, BMP, and PDF. The document should occupy more than 2/3 of the image area.
      * @param boolean $RetImage Whether to return an image. 
 Default value: false.
-     * @param string $ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
-Supported image formats: PNG, JPG, JPEG, BMP, PDF.
-Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
-The download speed and stability of non-Tencent Cloud URLs may be low.
+     * @param string $ImageUrl URL of the image. The downloaded image must be no larger than 7 MB after Base64 encoding. A resolution of at least 500x800 is recommended. Supported image formats: PNG, JPG, JPEG, BMP, and PDF. The document should occupy more than 2/3 of the image area. Image download must complete within 3 seconds. We recommend storing images in Tencent Cloud for higher download speed and stability. The speed and stability of URLs from non-Tencent Cloud storage may be affected. Note: This field is not supported outside the Chinese mainland region.
      */
     function __construct()
     {

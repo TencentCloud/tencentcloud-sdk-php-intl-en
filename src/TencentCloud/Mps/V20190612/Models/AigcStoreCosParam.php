@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information required for uploading AIGC result files to COS. The LVB_QCSRole role needs to be created and authorized.
+ * Information required for uploading AIGC result files to COS. The MPS_QcsRole role needs to be created and authorized.
  *
  * @method string getCosBucketName() Obtain Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
  * @method void setCosBucketName(string $CosBucketName) Set Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
