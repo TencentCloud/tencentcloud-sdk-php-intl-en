@@ -23,12 +23,16 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tokenhub\V20260322\Models as Models;
 
 /**
+ * @method Models\CreateApiKeyResponse CreateApiKey(Models\CreateApiKeyRequest $req) Create an API key.
+
+Create a new API key. Upon successful creation, return the API Key ID. Specify the platform kind, binding method, and initial state.
  * @method Models\CreateGlossaryResponse CreateGlossary(Models\CreateGlossaryRequest $req) Create a Termbase.
 
 Create a new Termbase in this application for custom definition source to target language terminology mapping. Return the Termbase ID upon success, which can be used to carry out other management operations on terminology entries.
  * @method Models\CreateGlossaryEntriesResponse CreateGlossaryEntries(Models\CreateGlossaryEntriesRequest $req) Create terminology entries in batches.
 
 Create terminology entries in batches under the designated Termbase. You can create up to 100 entries at a time.
+ * @method Models\DeleteApiKeyResponse DeleteApiKey(Models\DeleteApiKeyRequest $req) This API is used to delete specified api keys and clean up associated model binding relationships.
  * @method Models\DeleteGlossaryResponse DeleteGlossary(Models\DeleteGlossaryRequest $req) Delete a termbase.
 
 This API is used to delete specified Termbase and ALL terminology entries under it. The deletion is idempotent and returns a successful result for non-existing Termbase. After calling the API, if the corresponding Termbase cannot be found via DescribeGlossaries, it indicates successful deletion.
@@ -41,6 +45,10 @@ Query the Termbase list under this application. Support paginate, filter, and so
  * @method Models\DescribeGlossaryEntriesResponse DescribeGlossaryEntries(Models\DescribeGlossaryEntriesRequest $req) Query the terminology entry list.
 
 Query specified entries in a Termbase. Support pagination.
+ * @method Models\ModifyApiKeyInfoResponse ModifyApiKeyInfo(Models\ModifyApiKeyInfoRequest $req) Refresh API key information.
+
+This API is used to update the remark information, IP allowlist and Token quota of an API key (recommended to use QuotaDesired parameter for quota modification). Passing no optional parameters means no modification.
+ * @method Models\ModifyApiKeyStatusResponse ModifyApiKeyStatus(Models\ModifyApiKeyStatusRequest $req) This API is used to enable or disable the status of an api key.
  * @method Models\ModifyGlossaryEntriesResponse ModifyGlossaryEntries(Models\ModifyGlossaryEntriesRequest $req) Batch modify terminology entries.
 
 This API is used to batch modify terminology entries in a designated Termbase. You can modify up to 200 entries at a time.
