@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrivateZoneRecordList request structure.
  *
- * @method string getZoneId() Obtain Private domain ID: zone-xxxxxx
- * @method void setZoneId(string $ZoneId) Set Private domain ID: zone-xxxxxx
- * @method array getFilters() Obtain Filter parameter
- * @method void setFilters(array $Filters) Set Filter parameter
- * @method integer getOffset() Obtain Pagination offset, starting from 0
- * @method void setOffset(integer $Offset) Set Pagination offset, starting from 0
- * @method integer getLimit() Obtain Number of entries per page. Maximum value: 100. Default value: 20
- * @method void setLimit(integer $Limit) Set Number of entries per page. Maximum value: 100. Default value: 20
+ * @method string getZoneId() Obtain Private domain ID, which is in zone-xxxxxx format.
+ * @method void setZoneId(string $ZoneId) Set Private domain ID, which is in zone-xxxxxx format.
+ * @method array getFilters() Obtain Filter parameters. (Valid values: Value and RecordType.)
+ * @method void setFilters(array $Filters) Set Filter parameters. (Valid values: Value and RecordType.)
+ * @method integer getOffset() Obtain Pagination offset, starting from 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset, starting from 0.
+ * @method integer getLimit() Obtain Pagination limit. Maximum value: 200. Default value: 20.
+ * @method void setLimit(integer $Limit) Set Pagination limit. Maximum value: 200. Default value: 20.
  */
 class DescribePrivateZoneRecordListRequest extends AbstractModel
 {
     /**
-     * @var string Private domain ID: zone-xxxxxx
+     * @var string Private domain ID, which is in zone-xxxxxx format.
      */
     public $ZoneId;
 
     /**
-     * @var array Filter parameter
+     * @var array Filter parameters. (Valid values: Value and RecordType.)
      */
     public $Filters;
 
     /**
-     * @var integer Pagination offset, starting from 0
+     * @var integer Pagination offset, starting from 0.
      */
     public $Offset;
 
     /**
-     * @var integer Number of entries per page. Maximum value: 100. Default value: 20
+     * @var integer Pagination limit. Maximum value: 200. Default value: 20.
      */
     public $Limit;
 
     /**
-     * @param string $ZoneId Private domain ID: zone-xxxxxx
-     * @param array $Filters Filter parameter
-     * @param integer $Offset Pagination offset, starting from 0
-     * @param integer $Limit Number of entries per page. Maximum value: 100. Default value: 20
+     * @param string $ZoneId Private domain ID, which is in zone-xxxxxx format.
+     * @param array $Filters Filter parameters. (Valid values: Value and RecordType.)
+     * @param integer $Offset Pagination offset, starting from 0.
+     * @param integer $Limit Pagination limit. Maximum value: 200. Default value: 20.
      */
     function __construct()
     {

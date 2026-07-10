@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Privatedns\V20201028\Models as Models;
 
 /**
+ * @method Models\AddSpecifyPrivateZoneVpcResponse AddSpecifyPrivateZoneVpc(Models\AddSpecifyPrivateZoneVpcRequest $req) This API is used to add the VPC associated with the private domain.
  * @method Models\CreateEndPointResponse CreateEndPoint(Models\CreateEndPointRequest $req) This API is used to create an endpoint.
  * @method Models\CreateEndPointAndEndPointServiceResponse CreateEndPointAndEndPointService(Models\CreateEndPointAndEndPointServiceRequest $req) This API is used to create an endpoint and an endpoint service simultaneously.
  * @method Models\CreateExtendEndpointResponse CreateExtendEndpoint(Models\CreateExtendEndpointRequest $req) This API is used to create an endpoint.
@@ -32,7 +33,8 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
  * @method Models\CreatePrivateZoneRecordResponse CreatePrivateZoneRecord(Models\CreatePrivateZoneRecordRequest $req) This API is used to add a DNS record for a private domain.
  * @method Models\DeleteEndPointResponse DeleteEndPoint(Models\DeleteEndPointRequest $req) Deletes an endpoint
  * @method Models\DeleteForwardRuleResponse DeleteForwardRule(Models\DeleteForwardRuleRequest $req) This API is used to delete a forwarding rule and stop forwarding.
- * @method Models\DeletePrivateZoneRecordResponse DeletePrivateZoneRecord(Models\DeletePrivateZoneRecordRequest $req) This API is used to delete a DNS record for a private domain.
+ * @method Models\DeletePrivateZoneRecordResponse DeletePrivateZoneRecord(Models\DeletePrivateZoneRecordRequest $req) This API is used to delete the private DNS records.
+ * @method Models\DeleteSpecifyPrivateZoneVpcResponse DeleteSpecifyPrivateZoneVpc(Models\DeleteSpecifyPrivateZoneVpcRequest $req) This API is used to delete the VPC associated with the private domain.
  * @method Models\DescribeAccountVpcListResponse DescribeAccountVpcList(Models\DescribeAccountVpcListRequest $req) This API is used to get the VPC list of a Private DNS account.
  * @method Models\DescribeAuditLogResponse DescribeAuditLog(Models\DescribeAuditLogRequest $req) This API is used to get the list of operation logs.
  * @method Models\DescribeDashboardResponse DescribeDashboard(Models\DescribeDashboardRequest $req) This API is used to get the overview of private DNS records.
@@ -43,7 +45,7 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
  * @method Models\DescribeForwardRuleListResponse DescribeForwardRuleList(Models\DescribeForwardRuleListRequest $req) This API is used to query the forwarding rule list.
  * @method Models\DescribePrivateDNSAccountListResponse DescribePrivateDNSAccountList(Models\DescribePrivateDNSAccountListRequest $req) This API is used to get the list of Private DNS accounts.
  * @method Models\DescribePrivateZoneListResponse DescribePrivateZoneList(Models\DescribePrivateZoneListRequest $req) This API is used to obtain the private domain list.
- * @method Models\DescribePrivateZoneRecordListResponse DescribePrivateZoneRecordList(Models\DescribePrivateZoneRecordListRequest $req) This API is used to get the list of records for a private domain.
+ * @method Models\DescribePrivateZoneRecordListResponse DescribePrivateZoneRecordList(Models\DescribePrivateZoneRecordListRequest $req) This API is used to obtain the private domain record list.
  * @method Models\DescribePrivateZoneServiceResponse DescribePrivateZoneService(Models\DescribePrivateZoneServiceRequest $req) This API is used to query the Private DNS activation status.
  * @method Models\DescribeQuotaUsageResponse DescribeQuotaUsage(Models\DescribeQuotaUsageRequest $req) This API is used to query quota usage.
  * @method Models\DescribeRecordResponse DescribeRecord(Models\DescribeRecordRequest $req) This API is used to obtain the private domain records.
@@ -53,6 +55,7 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
  * @method Models\ModifyPrivateZoneRecordResponse ModifyPrivateZoneRecord(Models\ModifyPrivateZoneRecordRequest $req) This API is used to modify a DNS record for a private domain.
  * @method Models\ModifyPrivateZoneVpcResponse ModifyPrivateZoneVpc(Models\ModifyPrivateZoneVpcRequest $req) This API is used to modify the VPC associated with a private domain.
  * @method Models\ModifyRecordsStatusResponse ModifyRecordsStatus(Models\ModifyRecordsStatusRequest $req) This API is used to modify the DNS record status.
+ * @method Models\QueryAsyncBindVpcStatusResponse QueryAsyncBindVpcStatus(Models\QueryAsyncBindVpcStatusRequest $req) This API is used to query the asynchronous VPC binding status.
  * @method Models\SubscribePrivateZoneServiceResponse SubscribePrivateZoneService(Models\SubscribePrivateZoneServiceRequest $req) This API is used to activate the Private DNS service.
  */
 

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeletePrivateZoneRecord request structure.
  *
- * @method string getZoneId() Obtain Private domain ID
- * @method void setZoneId(string $ZoneId) Set Private domain ID
- * @method string getRecordId() Obtain Record ID
- * @method void setRecordId(string $RecordId) Set Record ID
- * @method array getRecordIdSet() Obtain Array of record IDs. `RecordId` takes precedence.
- * @method void setRecordIdSet(array $RecordIdSet) Set Array of record IDs. `RecordId` takes precedence.
+ * @method string getZoneId() Obtain Private domain ID.
+ * @method void setZoneId(string $ZoneId) Set Private domain ID.
+ * @method string getRecordId() Obtain Record ID (which can be obtained by calling DescribePrivateZoneRecordList).
+ * @method void setRecordId(string $RecordId) Set Record ID (which can be obtained by calling DescribePrivateZoneRecordList).
+ * @method array getRecordIdSet() Obtain Record ID array, with RecordId preferred.
+ * @method void setRecordIdSet(array $RecordIdSet) Set Record ID array, with RecordId preferred.
  */
 class DeletePrivateZoneRecordRequest extends AbstractModel
 {
     /**
-     * @var string Private domain ID
+     * @var string Private domain ID.
      */
     public $ZoneId;
 
     /**
-     * @var string Record ID
+     * @var string Record ID (which can be obtained by calling DescribePrivateZoneRecordList).
      */
     public $RecordId;
 
     /**
-     * @var array Array of record IDs. `RecordId` takes precedence.
+     * @var array Record ID array, with RecordId preferred.
      */
     public $RecordIdSet;
 
     /**
-     * @param string $ZoneId Private domain ID
-     * @param string $RecordId Record ID
-     * @param array $RecordIdSet Array of record IDs. `RecordId` takes precedence.
+     * @param string $ZoneId Private domain ID.
+     * @param string $RecordId Record ID (which can be obtained by calling DescribePrivateZoneRecordList).
+     * @param array $RecordIdSet Record ID array, with RecordId preferred.
      */
     function __construct()
     {

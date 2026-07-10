@@ -18,120 +18,136 @@ namespace TencentCloud\Privatedns\V20201028\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Private domain information
+ * Private domain information.
  *
- * @method string getRecordId() Obtain Record ID
- * @method void setRecordId(string $RecordId) Set Record ID
- * @method string getZoneId() Obtain Private domain ID: zone-xxxxxxxx
- * @method void setZoneId(string $ZoneId) Set Private domain ID: zone-xxxxxxxx
- * @method string getSubDomain() Obtain Subdomain
- * @method void setSubDomain(string $SubDomain) Set Subdomain
- * @method string getRecordType() Obtain Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
- * @method void setRecordType(string $RecordType) Set Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
- * @method string getRecordValue() Obtain Record value
- * @method void setRecordValue(string $RecordValue) Set Record value
- * @method integer getTTL() Obtain Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
- * @method void setTTL(integer $TTL) Set Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
- * @method integer getMX() Obtain MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMX(integer $MX) Set MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain Record status: ENABLED
- * @method void setStatus(string $Status) Set Record status: ENABLED
- * @method integer getWeight() Obtain Record weight. Value range: 1–100
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setWeight(integer $Weight) Set Record weight. Value range: 1–100
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCreatedOn() Obtain Record creation time
- * @method void setCreatedOn(string $CreatedOn) Set Record creation time
- * @method string getUpdatedOn() Obtain Record update time
- * @method void setUpdatedOn(string $UpdatedOn) Set Record update time
+ * @method string getRecordId() Obtain Record ID.
+ * @method void setRecordId(string $RecordId) Set Record ID.
+ * @method string getZoneId() Obtain Private domain ID, which is in zone-xxxxxxxx format.
+ * @method void setZoneId(string $ZoneId) Set Private domain ID, which is in zone-xxxxxxxx format.
+ * @method string getSubDomain() Obtain Subdomain name.
+ * @method void setSubDomain(string $SubDomain) Set Subdomain name.
+ * @method string getRecordType() Obtain Record type. Valid values: A, AAAA, CNAME, MX, TXT, and PTR.
+ * @method void setRecordType(string $RecordType) Set Record type. Valid values: A, AAAA, CNAME, MX, TXT, and PTR.
+ * @method string getRecordValue() Obtain Record value.
+ * @method void setRecordValue(string $RecordValue) Set Record value.
+ * @method integer getTTL() Obtain Record cache time. The smaller the value, the faster the record will take effect. Value range: 1-86,400s. Default value: 600.
+ * @method void setTTL(integer $TTL) Set Record cache time. The smaller the value, the faster the record will take effect. Value range: 1-86,400s. Default value: 600.
+ * @method integer getMX() Obtain MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, and 50.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMX(integer $MX) Set MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, and 50.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain Record status: ENABLED.
+ * @method void setStatus(string $Status) Set Record status: ENABLED.
+ * @method integer getWeight() Obtain Record weight. Value range: 1–100.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWeight(integer $Weight) Set Record weight. Value range: 1–100.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCreatedOn() Obtain Record creation time.
+ * @method void setCreatedOn(string $CreatedOn) Set Record creation time.
+ * @method string getUpdatedOn() Obtain Record update time.
+ * @method void setUpdatedOn(string $UpdatedOn) Set Record update time.
  * @method string getExtra() Obtain Additional information
-Note: this field may return null, indicating that no valid values can be obtained.
+
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExtra(string $Extra) Set Additional information
-Note: this field may return null, indicating that no valid values can be obtained.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getEnabled() Obtain 0: pause; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEnabled(integer $Enabled) Set 0: pause; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PrivateZoneRecord extends AbstractModel
 {
     /**
-     * @var string Record ID
+     * @var string Record ID.
      */
     public $RecordId;
 
     /**
-     * @var string Private domain ID: zone-xxxxxxxx
+     * @var string Private domain ID, which is in zone-xxxxxxxx format.
      */
     public $ZoneId;
 
     /**
-     * @var string Subdomain
+     * @var string Subdomain name.
      */
     public $SubDomain;
 
     /**
-     * @var string Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
+     * @var string Record type. Valid values: A, AAAA, CNAME, MX, TXT, and PTR.
      */
     public $RecordType;
 
     /**
-     * @var string Record value
+     * @var string Record value.
      */
     public $RecordValue;
 
     /**
-     * @var integer Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
+     * @var integer Record cache time. The smaller the value, the faster the record will take effect. Value range: 1-86,400s. Default value: 600.
      */
     public $TTL;
 
     /**
-     * @var integer MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, and 50.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MX;
 
     /**
-     * @var string Record status: ENABLED
+     * @var string Record status: ENABLED.
      */
     public $Status;
 
     /**
-     * @var integer Record weight. Value range: 1–100
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Record weight. Value range: 1–100.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Weight;
 
     /**
-     * @var string Record creation time
+     * @var string Record creation time.
      */
     public $CreatedOn;
 
     /**
-     * @var string Record update time
+     * @var string Record update time.
      */
     public $UpdatedOn;
 
     /**
      * @var string Additional information
-Note: this field may return null, indicating that no valid values can be obtained.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Extra;
 
     /**
-     * @param string $RecordId Record ID
-     * @param string $ZoneId Private domain ID: zone-xxxxxxxx
-     * @param string $SubDomain Subdomain
-     * @param string $RecordType Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
-     * @param string $RecordValue Record value
-     * @param integer $TTL Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
-     * @param integer $MX MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Status Record status: ENABLED
-     * @param integer $Weight Record weight. Value range: 1–100
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CreatedOn Record creation time
-     * @param string $UpdatedOn Record update time
+     * @var integer 0: pause; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Enabled;
+
+    /**
+     * @param string $RecordId Record ID.
+     * @param string $ZoneId Private domain ID, which is in zone-xxxxxxxx format.
+     * @param string $SubDomain Subdomain name.
+     * @param string $RecordType Record type. Valid values: A, AAAA, CNAME, MX, TXT, and PTR.
+     * @param string $RecordValue Record value.
+     * @param integer $TTL Record cache time. The smaller the value, the faster the record will take effect. Value range: 1-86,400s. Default value: 600.
+     * @param integer $MX MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, and 50.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Status Record status: ENABLED.
+     * @param integer $Weight Record weight. Value range: 1–100.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CreatedOn Record creation time.
+     * @param string $UpdatedOn Record update time.
      * @param string $Extra Additional information
-Note: this field may return null, indicating that no valid values can be obtained.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Enabled 0: pause; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -192,6 +208,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
             $this->Extra = $param["Extra"];
+        }
+
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
         }
     }
 }

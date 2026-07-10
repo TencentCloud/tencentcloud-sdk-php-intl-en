@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEmailIdentity() Obtain Domain to be verified.
  * @method void setEmailIdentity(string $EmailIdentity) Set Domain to be verified.
+ * @method boolean getNewAPI() Obtain The  DKIMOption parameter is effective or not
+ * @method void setNewAPI(boolean $NewAPI) Set The  DKIMOption parameter is effective or not
+ * @method integer getDKIMOption() Obtain dkim option, 0: 1024, 1: 2048, 2: both
+ * @method void setDKIMOption(integer $DKIMOption) Set dkim option, 0: 1024, 1: 2048, 2: both
  */
 class UpdateEmailIdentityRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class UpdateEmailIdentityRequest extends AbstractModel
     public $EmailIdentity;
 
     /**
+     * @var boolean The  DKIMOption parameter is effective or not
+     */
+    public $NewAPI;
+
+    /**
+     * @var integer dkim option, 0: 1024, 1: 2048, 2: both
+     */
+    public $DKIMOption;
+
+    /**
      * @param string $EmailIdentity Domain to be verified.
+     * @param boolean $NewAPI The  DKIMOption parameter is effective or not
+     * @param integer $DKIMOption dkim option, 0: 1024, 1: 2048, 2: both
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class UpdateEmailIdentityRequest extends AbstractModel
         }
         if (array_key_exists("EmailIdentity",$param) and $param["EmailIdentity"] !== null) {
             $this->EmailIdentity = $param["EmailIdentity"];
+        }
+
+        if (array_key_exists("NewAPI",$param) and $param["NewAPI"] !== null) {
+            $this->NewAPI = $param["NewAPI"];
+        }
+
+        if (array_key_exists("DKIMOption",$param) and $param["DKIMOption"] !== null) {
+            $this->DKIMOption = $param["DKIMOption"];
         }
     }
 }

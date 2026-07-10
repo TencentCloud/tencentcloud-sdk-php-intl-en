@@ -39,6 +39,10 @@ This API is used to delete specified Termbase and ALL terminology entries under 
  * @method Models\DeleteGlossaryEntriesResponse DeleteGlossaryEntries(Models\DeleteGlossaryEntriesRequest $req) Delete terminology entries in batches.
 
 Delete terminology entries in batches under the specified Termbase. You can delete up to 200 entries at a time. If the Termbase is nonexistent or NOT_IN this application, it returns a ResourceNotFound error.
+ * @method Models\DescribeApiKeyResponse DescribeApiKey(Models\DescribeApiKeyRequest $req) This API is used to query API Key details based on API Key ID or key value, and return the plaintext key. At least one of ApiKeyId and ApiKey must be input, with priority given to ApiKeyId.
+ * @method Models\DescribeApiKeyListResponse DescribeApiKeyList(Models\DescribeApiKeyListRequest $req) Query API key list.
+
+Query the API key list of the current user with key values in masking display. Support pagination, filtering, and sorting.
  * @method Models\DescribeGlossariesResponse DescribeGlossaries(Models\DescribeGlossariesRequest $req) Query the terminology repository list.
 
 Query the Termbase list under this application. Support paginate, filter, and sort.
