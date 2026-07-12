@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsExpect(boolean $IsExpect) Set Whether the execution result meets expectations (This field is required when the task status is Execution Ended.)
  * @method string getSummary() Obtain Experiment result (This field is required when the experiment status changes to Execution Ended.)
  * @method void setSummary(string $Summary) Set Experiment result (This field is required when the experiment status changes to Execution Ended.)
+ * @method string getIssue() Obtain 
+ * @method void setIssue(string $Issue) Set 
+ * @method string getRecord() Obtain 
+ * @method void setRecord(string $Record) Set 
+ * @method integer getIncludeRecordInReport() Obtain 
+ * @method void setIncludeRecordInReport(integer $IncludeRecordInReport) Set 
  */
 class ModifyTaskRunStatusRequest extends AbstractModel
 {
@@ -52,10 +58,28 @@ class ModifyTaskRunStatusRequest extends AbstractModel
     public $Summary;
 
     /**
+     * @var string 
+     */
+    public $Issue;
+
+    /**
+     * @var string 
+     */
+    public $Record;
+
+    /**
+     * @var integer 
+     */
+    public $IncludeRecordInReport;
+
+    /**
      * @param integer $TaskId Task ID
      * @param integer $Status Task status. 1001: not started; 1002: in progress (executing); 1003: in progress (paused); 1004: execution ended.
      * @param boolean $IsExpect Whether the execution result meets expectations (This field is required when the task status is Execution Ended.)
      * @param string $Summary Experiment result (This field is required when the experiment status changes to Execution Ended.)
+     * @param string $Issue 
+     * @param string $Record 
+     * @param integer $IncludeRecordInReport 
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class ModifyTaskRunStatusRequest extends AbstractModel
 
         if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
             $this->Summary = $param["Summary"];
+        }
+
+        if (array_key_exists("Issue",$param) and $param["Issue"] !== null) {
+            $this->Issue = $param["Issue"];
+        }
+
+        if (array_key_exists("Record",$param) and $param["Record"] !== null) {
+            $this->Record = $param["Record"];
+        }
+
+        if (array_key_exists("IncludeRecordInReport",$param) and $param["IncludeRecordInReport"] !== null) {
+            $this->IncludeRecordInReport = $param["IncludeRecordInReport"];
         }
     }
 }

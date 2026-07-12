@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResumeGrafanaInstance request structure.
  *
- * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-12345678”.
- * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-12345678”.
+ * @method string getInstanceId() Obtain TCMG instance ID, such as grafana-12345678.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as grafana-12345678.
  */
 class ResumeGrafanaInstanceRequest extends AbstractModel
 {
     /**
-     * @var string TCMG instance ID, such as “grafana-12345678”.
+     * @var string TCMG instance ID, such as grafana-12345678.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId TCMG instance ID, such as “grafana-12345678”.
+     * @param string $InstanceId TCMG instance ID, such as grafana-12345678.
      */
     function __construct()
     {

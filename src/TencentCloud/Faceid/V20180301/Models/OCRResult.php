@@ -56,6 +56,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOriginalCardInfo(string $OriginalCardInfo) Set <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHeadImageBase64() Obtain Base64 of the cropped portrait image extracted from the identity document</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHeadImageBase64(string $HeadImageBase64) Set Base64 of the cropped portrait image extracted from the identity document</p>
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OCRResult extends AbstractModel
 {
@@ -115,6 +119,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OriginalCardInfo;
 
     /**
+     * @var string Base64 of the cropped portrait image extracted from the identity document</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HeadImageBase64;
+
+    /**
      * @param boolean $IsPass <p>Whether the identity authentication or OCR process is successful.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CardImageBase64 <p>Base64 of the ID image</p>
@@ -132,6 +142,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $WarnCardInfos <p>Alarm code</p><p>Enumeration value:</p><ul><li>9101: Alarm for incomplete document border</li><li>9102: Alarm for document photocopy</li><li>9103: Alarm for rephotographing</li><li>9104: PS alarm</li><li>9107: Reflective alarm</li><li>9108: Blurry alarm</li><li>9109: Alarm capability not enabled</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OriginalCardInfo <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HeadImageBase64 Base64 of the cropped portrait image extracted from the identity document</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -183,6 +195,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("OriginalCardInfo",$param) and $param["OriginalCardInfo"] !== null) {
             $this->OriginalCardInfo = $param["OriginalCardInfo"];
+        }
+
+        if (array_key_exists("HeadImageBase64",$param) and $param["HeadImageBase64"] !== null) {
+            $this->HeadImageBase64 = $param["HeadImageBase64"];
         }
     }
 }

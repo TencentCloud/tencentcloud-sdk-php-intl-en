@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPrometheusInstanceAttributes request structure.
  *
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getDataRetentionTime() Obtain Storage period. Valid values: 15, 30, 45. This parameter is not applicable to monthly subscribed instances.
- * @method void setDataRetentionTime(integer $DataRetentionTime) Set Storage period. Valid values: 15, 30, 45. This parameter is not applicable to monthly subscribed instances.
+ * @method string getInstanceName() Obtain Instance name
+ * @method void setInstanceName(string $InstanceName) Set Instance name
+ * @method integer getDataRetentionTime() Obtain Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
+ * @method void setDataRetentionTime(integer $DataRetentionTime) Set Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
+ * @method array getInstanceAttributes() Obtain 
+ * @method void setInstanceAttributes(array $InstanceAttributes) Set 
  */
 class ModifyPrometheusInstanceAttributesRequest extends AbstractModel
 {
-    /**
-     * @var string Instance name
-     */
-    public $InstanceName;
-
     /**
      * @var string Instance ID
      */
     public $InstanceId;
 
     /**
-     * @var integer Storage period. Valid values: 15, 30, 45. This parameter is not applicable to monthly subscribed instances.
+     * @var string Instance name
+     */
+    public $InstanceName;
+
+    /**
+     * @var integer Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
      */
     public $DataRetentionTime;
 
     /**
-     * @param string $InstanceName Instance name
+     * @var array 
+     */
+    public $InstanceAttributes;
+
+    /**
      * @param string $InstanceId Instance ID
-     * @param integer $DataRetentionTime Storage period. Valid values: 15, 30, 45. This parameter is not applicable to monthly subscribed instances.
+     * @param string $InstanceName Instance name
+     * @param integer $DataRetentionTime Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
+     * @param array $InstanceAttributes 
      */
     function __construct()
     {
@@ -62,16 +70,25 @@ class ModifyPrometheusInstanceAttributesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
-        }
-
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
         }
 
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
         if (array_key_exists("DataRetentionTime",$param) and $param["DataRetentionTime"] !== null) {
             $this->DataRetentionTime = $param["DataRetentionTime"];
+        }
+
+        if (array_key_exists("InstanceAttributes",$param) and $param["InstanceAttributes"] !== null) {
+            $this->InstanceAttributes = [];
+            foreach ($param["InstanceAttributes"] as $key => $value){
+                $obj = new PrometheusRuleKV();
+                $obj->deserialize($value);
+                array_push($this->InstanceAttributes, $obj);
+            }
         }
     }
 }

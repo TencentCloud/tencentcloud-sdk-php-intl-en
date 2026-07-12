@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskActionCustomConfiguration(string $TaskActionCustomConfiguration) Set Action custom parameters need to be passed in as json serialization. They can be obtained from the action details interface DescribeActionFieldConfigList. If not filled in, the default action parameters will be used. Note: Required parameters have no default values. Be sure to pass in valid values.
  * @method integer getTaskPauseDuration() Obtain Automatic experiment pause time, in minutes. If this parameter is left blank, the default value 60 is used.
  * @method void setTaskPauseDuration(integer $TaskPauseDuration) Set Automatic experiment pause time, in minutes. If this parameter is left blank, the default value 60 is used.
+ * @method array getTaskTags() Obtain 
+ * @method void setTaskTags(array $TaskTags) Set 
  */
 class CreateTaskFromActionRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateTaskFromActionRequest extends AbstractModel
     public $TaskPauseDuration;
 
     /**
+     * @var array 
+     */
+    public $TaskTags;
+
+    /**
      * @param integer $TaskActionId Action ID, which can be obtained by using the action list API DescribeActionLibraryList.
      * @param array $TaskInstances ID of the instance participating in the experiment.
      * @param string $TaskTitle Experiment name. If this parameter is left blank, the action name is used by default.
@@ -80,6 +87,7 @@ class CreateTaskFromActionRequest extends AbstractModel
      * @param string $TaskActionGeneralConfiguration General action parameters, which need to be passed in after JSON serialization. The parameters can be obtained by using the action details API DescribeActionFieldConfigList. If this field is left blank, the default action parameters are used by default.
      * @param string $TaskActionCustomConfiguration Action custom parameters need to be passed in as json serialization. They can be obtained from the action details interface DescribeActionFieldConfigList. If not filled in, the default action parameters will be used. Note: Required parameters have no default values. Be sure to pass in valid values.
      * @param integer $TaskPauseDuration Automatic experiment pause time, in minutes. If this parameter is left blank, the default value 60 is used.
+     * @param array $TaskTags 
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class CreateTaskFromActionRequest extends AbstractModel
 
         if (array_key_exists("TaskPauseDuration",$param) and $param["TaskPauseDuration"] !== null) {
             $this->TaskPauseDuration = $param["TaskPauseDuration"];
+        }
+
+        if (array_key_exists("TaskTags",$param) and $param["TaskTags"] !== null) {
+            $this->TaskTags = [];
+            foreach ($param["TaskTags"] as $key => $value){
+                $obj = new TagWithCreate();
+                $obj->deserialize($value);
+                array_push($this->TaskTags, $obj);
+            }
         }
     }
 }

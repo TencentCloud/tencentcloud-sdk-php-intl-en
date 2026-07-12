@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) Set Instance name.
  * @method integer getInstanceChargeType() Obtain Instance billing mode. Valid values:
 <ul>
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
  * @method void setInstanceChargeType(integer $InstanceChargeType) Set Instance billing mode. Valid values:
 <ul>
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
  * @method integer getRegionId() Obtain Region ID
@@ -204,6 +204,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMigrationType(integer $MigrationType) Set Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getInstanceAttributes() Obtain 
+ * @method void setInstanceAttributes(array $InstanceAttributes) Set 
  */
 class PrometheusInstancesItem extends AbstractModel
 {
@@ -220,7 +222,7 @@ class PrometheusInstancesItem extends AbstractModel
     /**
      * @var integer Instance billing mode. Valid values:
 <ul>
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
      */
@@ -420,11 +422,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MigrationType;
 
     /**
+     * @var array 
+     */
+    public $InstanceAttributes;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $InstanceName Instance name.
      * @param integer $InstanceChargeType Instance billing mode. Valid values:
 <ul>
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
      * @param integer $RegionId Region ID
@@ -512,6 +519,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MigrationType Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $InstanceAttributes 
      */
     function __construct()
     {
@@ -650,6 +658,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MigrationType",$param) and $param["MigrationType"] !== null) {
             $this->MigrationType = $param["MigrationType"];
+        }
+
+        if (array_key_exists("InstanceAttributes",$param) and $param["InstanceAttributes"] !== null) {
+            $this->InstanceAttributes = [];
+            foreach ($param["InstanceAttributes"] as $key => $value){
+                $obj = new PrometheusRuleKV();
+                $obj->deserialize($value);
+                array_push($this->InstanceAttributes, $obj);
+            }
         }
     }
 }

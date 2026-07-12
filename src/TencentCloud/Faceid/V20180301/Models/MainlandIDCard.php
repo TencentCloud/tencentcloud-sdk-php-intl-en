@@ -52,6 +52,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFormattedAddress(string $FormattedAddress) Set Address
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAuthority() Obtain Issuing authority
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAuthority(string $Authority) Set Issuing authority
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getValidDate() Obtain Validity period
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setValidDate(string $ValidDate) Set Validity period
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MainlandIDCard extends AbstractModel
 {
@@ -101,6 +109,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $FormattedAddress;
 
     /**
+     * @var string Issuing authority
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Authority;
+
+    /**
+     * @var string Validity period
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ValidDate;
+
+    /**
      * @param string $FullName Chinese name
 Note: This field may return null, indicating that no valid values can be obtained.
 
@@ -116,6 +136,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
 
      * @param string $FormattedAddress Address
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Authority Issuing authority
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ValidDate Validity period
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -157,6 +181,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("FormattedAddress",$param) and $param["FormattedAddress"] !== null) {
             $this->FormattedAddress = $param["FormattedAddress"];
+        }
+
+        if (array_key_exists("Authority",$param) and $param["Authority"] !== null) {
+            $this->Authority = $param["Authority"];
+        }
+
+        if (array_key_exists("ValidDate",$param) and $param["ValidDate"] !== null) {
+            $this->ValidDate = $param["ValidDate"];
         }
     }
 }

@@ -57,10 +57,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  * @method integer getInstanceChargeType() Obtain Filter by billing mode
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
  * @method void setInstanceChargeType(integer $InstanceChargeType) Set Filter by billing mode
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
  */
 class DescribePrometheusInstancesRequest extends AbstractModel
@@ -117,7 +117,7 @@ class DescribePrometheusInstancesRequest extends AbstractModel
 
     /**
      * @var integer Filter by billing mode
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
      */
     public $InstanceChargeType;
@@ -142,7 +142,7 @@ class DescribePrometheusInstancesRequest extends AbstractModel
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
      * @param integer $InstanceChargeType Filter by billing mode
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
      */
     function __construct()

@@ -48,10 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationName(array $ApplicationName) Set Associated application for filtering
  * @method array getTaskStatusList() Obtain Task status for filtering, supporting multiple states (1001: not started; 1002: in progress; 1003: paused; 1004: ended)
  * @method void setTaskStatusList(array $TaskStatusList) Set Task status for filtering, supporting multiple states (1001: not started; 1002: in progress; 1003: paused; 1004: ended)
- * @method string getArchId() Obtain Architecture ID
- * @method void setArchId(string $ArchId) Set Architecture ID
- * @method string getArchName() Obtain Architecture Name
- * @method void setArchName(string $ArchName) Set Architecture Name
+ * @method string getArchId() Obtain 
+ * @method void setArchId(string $ArchId) Set 
+ * @method string getArchName() Obtain 
+ * @method void setArchName(string $ArchName) Set 
  */
 class DescribeTaskListRequest extends AbstractModel
 {
@@ -126,12 +126,12 @@ class DescribeTaskListRequest extends AbstractModel
     public $TaskStatusList;
 
     /**
-     * @var string Architecture ID
+     * @var string 
      */
     public $ArchId;
 
     /**
-     * @var string Architecture Name
+     * @var string 
      */
     public $ArchName;
 
@@ -150,8 +150,8 @@ class DescribeTaskListRequest extends AbstractModel
      * @param array $ApplicationId ID of the associated application for filtering
      * @param array $ApplicationName Associated application for filtering
      * @param array $TaskStatusList Task status for filtering, supporting multiple states (1001: not started; 1002: in progress; 1003: paused; 1004: ended)
-     * @param string $ArchId Architecture ID
-     * @param string $ArchName Architecture Name
+     * @param string $ArchId 
+     * @param string $ArchName 
      */
     function __construct()
     {

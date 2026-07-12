@@ -26,12 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method array getSubnetIds() Obtain Array of subnet IDs
  * @method void setSubnetIds(array $SubnetIds) Set Array of subnet IDs
- * @method string getGrafanaInitPassword() Obtain Initial Grafana password
- * @method void setGrafanaInitPassword(string $GrafanaInitPassword) Set Initial Grafana password
  * @method boolean getEnableInternet() Obtain Whether to enable public network access
  * @method void setEnableInternet(boolean $EnableInternet) Set Whether to enable public network access
+ * @method string getGrafanaInitPassword() Obtain Initial Grafana password
+ * @method void setGrafanaInitPassword(string $GrafanaInitPassword) Set Initial Grafana password
  * @method array getTagSpecification() Obtain Tag
  * @method void setTagSpecification(array $TagSpecification) Set Tag
+ * @method boolean getAutoVoucher() Obtain 
+ * @method void setAutoVoucher(boolean $AutoVoucher) Set 
  */
 class CreateGrafanaInstanceRequest extends AbstractModel
 {
@@ -51,14 +53,14 @@ class CreateGrafanaInstanceRequest extends AbstractModel
     public $SubnetIds;
 
     /**
-     * @var string Initial Grafana password
-     */
-    public $GrafanaInitPassword;
-
-    /**
      * @var boolean Whether to enable public network access
      */
     public $EnableInternet;
+
+    /**
+     * @var string Initial Grafana password
+     */
+    public $GrafanaInitPassword;
 
     /**
      * @var array Tag
@@ -66,12 +68,18 @@ class CreateGrafanaInstanceRequest extends AbstractModel
     public $TagSpecification;
 
     /**
+     * @var boolean 
+     */
+    public $AutoVoucher;
+
+    /**
      * @param string $InstanceName Instance name
      * @param string $VpcId VPC ID
      * @param array $SubnetIds Array of subnet IDs
-     * @param string $GrafanaInitPassword Initial Grafana password
      * @param boolean $EnableInternet Whether to enable public network access
+     * @param string $GrafanaInitPassword Initial Grafana password
      * @param array $TagSpecification Tag
+     * @param boolean $AutoVoucher 
      */
     function __construct()
     {
@@ -98,12 +106,12 @@ class CreateGrafanaInstanceRequest extends AbstractModel
             $this->SubnetIds = $param["SubnetIds"];
         }
 
-        if (array_key_exists("GrafanaInitPassword",$param) and $param["GrafanaInitPassword"] !== null) {
-            $this->GrafanaInitPassword = $param["GrafanaInitPassword"];
-        }
-
         if (array_key_exists("EnableInternet",$param) and $param["EnableInternet"] !== null) {
             $this->EnableInternet = $param["EnableInternet"];
+        }
+
+        if (array_key_exists("GrafanaInitPassword",$param) and $param["GrafanaInitPassword"] !== null) {
+            $this->GrafanaInitPassword = $param["GrafanaInitPassword"];
         }
 
         if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
@@ -113,6 +121,10 @@ class CreateGrafanaInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSpecification, $obj);
             }
+        }
+
+        if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
+            $this->AutoVoucher = $param["AutoVoucher"];
         }
     }
 }
