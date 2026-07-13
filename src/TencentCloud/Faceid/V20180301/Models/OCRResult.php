@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsPass(boolean $IsPass) Set <p>Whether the identity authentication or OCR process is successful.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCardImageBase64() Obtain <p>Base64 of the ID image</p>
+ * @method string getCardImageBase64() Obtain <p>Base64 of the front side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCardImageBase64(string $CardImageBase64) Set <p>Base64 of the ID image</p>
+ * @method void setCardImageBase64(string $CardImageBase64) Set <p>Base64 of the front side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method CardInfo getCardInfo() Obtain <p>ID card recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -56,9 +56,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOriginalCardInfo(string $OriginalCardInfo) Set <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHeadImageBase64() Obtain Base64 of the cropped portrait image extracted from the identity document</p>
+ * @method string getHeadImageBase64() Obtain <p>Document portrait matting</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHeadImageBase64(string $HeadImageBase64) Set Base64 of the cropped portrait image extracted from the identity document</p>
+ * @method void setHeadImageBase64(string $HeadImageBase64) Set <p>Document portrait matting</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCardBackImageBase64() Obtain <p>Base64 of the back side ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCardBackImageBase64(string $CardBackImageBase64) Set <p>Base64 of the back side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OCRResult extends AbstractModel
@@ -70,7 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsPass;
 
     /**
-     * @var string <p>Base64 of the ID image</p>
+     * @var string <p>Base64 of the front side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CardImageBase64;
@@ -119,15 +123,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OriginalCardInfo;
 
     /**
-     * @var string Base64 of the cropped portrait image extracted from the identity document</p>
+     * @var string <p>Document portrait matting</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HeadImageBase64;
 
     /**
+     * @var string <p>Base64 of the back side ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CardBackImageBase64;
+
+    /**
      * @param boolean $IsPass <p>Whether the identity authentication or OCR process is successful.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CardImageBase64 <p>Base64 of the ID image</p>
+     * @param string $CardImageBase64 <p>Base64 of the front side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param CardInfo $CardInfo <p>ID card recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -143,7 +153,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OriginalCardInfo <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HeadImageBase64 Base64 of the cropped portrait image extracted from the identity document</p>
+     * @param string $HeadImageBase64 <p>Document portrait matting</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CardBackImageBase64 <p>Base64 of the back side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -199,6 +211,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("HeadImageBase64",$param) and $param["HeadImageBase64"] !== null) {
             $this->HeadImageBase64 = $param["HeadImageBase64"];
+        }
+
+        if (array_key_exists("CardBackImageBase64",$param) and $param["CardBackImageBase64"] !== null) {
+            $this->CardBackImageBase64 = $param["CardBackImageBase64"];
         }
     }
 }

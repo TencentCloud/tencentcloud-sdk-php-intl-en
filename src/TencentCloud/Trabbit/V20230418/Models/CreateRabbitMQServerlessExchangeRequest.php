@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternal(boolean $Internal) Set Specifies whether it is an internal exchange. if set to "true", messages cannot be directly delivered to this exchange. they need to be forwarded through another exchange in the routing settings.
  * @method string getAlternateExchange() Obtain Alternative exchange. if a message cannot be sent to the current exchange, it will be sent to this alternative exchange.
  * @method void setAlternateExchange(string $AlternateExchange) Set Alternative exchange. if a message cannot be sent to the current exchange, it will be sent to this alternative exchange.
+ * @method string getDelayedExchangeType() Obtain exchange type behind delay type, supports "fanout", "direct", "topic", "headers".
+ * @method void setDelayedExchangeType(string $DelayedExchangeType) Set exchange type behind delay type, supports "fanout", "direct", "topic", "headers".
  */
 class CreateRabbitMQServerlessExchangeRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateRabbitMQServerlessExchangeRequest extends AbstractModel
     public $AlternateExchange;
 
     /**
+     * @var string exchange type behind delay type, supports "fanout", "direct", "topic", "headers".
+     */
+    public $DelayedExchangeType;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $VirtualHost VHost parameter.
      * @param string $ExchangeName exchange name.
@@ -96,6 +103,7 @@ class CreateRabbitMQServerlessExchangeRequest extends AbstractModel
      * @param boolean $AutoDelete Whether to auto-delete this exchange. if set to "true", the exchange will be automatically deleted when all routing relationships on the current exchange are unbound.
      * @param boolean $Internal Specifies whether it is an internal exchange. if set to "true", messages cannot be directly delivered to this exchange. they need to be forwarded through another exchange in the routing settings.
      * @param string $AlternateExchange Alternative exchange. if a message cannot be sent to the current exchange, it will be sent to this alternative exchange.
+     * @param string $DelayedExchangeType exchange type behind delay type, supports "fanout", "direct", "topic", "headers".
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class CreateRabbitMQServerlessExchangeRequest extends AbstractModel
 
         if (array_key_exists("AlternateExchange",$param) and $param["AlternateExchange"] !== null) {
             $this->AlternateExchange = $param["AlternateExchange"];
+        }
+
+        if (array_key_exists("DelayedExchangeType",$param) and $param["DelayedExchangeType"] !== null) {
+            $this->DelayedExchangeType = $param["DelayedExchangeType"];
         }
     }
 }

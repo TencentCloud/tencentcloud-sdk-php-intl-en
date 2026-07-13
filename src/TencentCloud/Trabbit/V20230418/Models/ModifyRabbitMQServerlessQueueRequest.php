@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueueName(string $QueueName) Set Queue name.
  * @method string getRemark() Obtain Newly modified remark.
  * @method void setRemark(string $Remark) Set Newly modified remark.
+ * @method integer getMessageTTL() Obtain MessageTTL parameter in milliseconds, dedicated to classic event type	
+ * @method void setMessageTTL(integer $MessageTTL) Set MessageTTL parameter in milliseconds, dedicated to classic event type	
+ * @method string getDeadLetterExchange() Obtain DeadLetterExchange parameter. It specifies that expired or rejected messages can be delivered to the specified dead letter exchange.
+ * @method void setDeadLetterExchange(string $DeadLetterExchange) Set DeadLetterExchange parameter. It specifies that expired or rejected messages can be delivered to the specified dead letter exchange.
+ * @method string getDeadLetterRoutingKey() Obtain DeadLetterRoutingKey parameter. The value can only contain letters, digits, periods (.), hyphens (-), at signs (@), and underscores (_).
+ * @method void setDeadLetterRoutingKey(string $DeadLetterRoutingKey) Set DeadLetterRoutingKey parameter. The value can only contain letters, digits, periods (.), hyphens (-), at signs (@), and underscores (_).
  */
 class ModifyRabbitMQServerlessQueueRequest extends AbstractModel
 {
@@ -52,10 +58,28 @@ class ModifyRabbitMQServerlessQueueRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var integer MessageTTL parameter in milliseconds, dedicated to classic event type	
+     */
+    public $MessageTTL;
+
+    /**
+     * @var string DeadLetterExchange parameter. It specifies that expired or rejected messages can be delivered to the specified dead letter exchange.
+     */
+    public $DeadLetterExchange;
+
+    /**
+     * @var string DeadLetterRoutingKey parameter. The value can only contain letters, digits, periods (.), hyphens (-), at signs (@), and underscores (_).
+     */
+    public $DeadLetterRoutingKey;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $VirtualHost Vhost parameter.
      * @param string $QueueName Queue name.
      * @param string $Remark Newly modified remark.
+     * @param integer $MessageTTL MessageTTL parameter in milliseconds, dedicated to classic event type	
+     * @param string $DeadLetterExchange DeadLetterExchange parameter. It specifies that expired or rejected messages can be delivered to the specified dead letter exchange.
+     * @param string $DeadLetterRoutingKey DeadLetterRoutingKey parameter. The value can only contain letters, digits, periods (.), hyphens (-), at signs (@), and underscores (_).
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class ModifyRabbitMQServerlessQueueRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("MessageTTL",$param) and $param["MessageTTL"] !== null) {
+            $this->MessageTTL = $param["MessageTTL"];
+        }
+
+        if (array_key_exists("DeadLetterExchange",$param) and $param["DeadLetterExchange"] !== null) {
+            $this->DeadLetterExchange = $param["DeadLetterExchange"];
+        }
+
+        if (array_key_exists("DeadLetterRoutingKey",$param) and $param["DeadLetterRoutingKey"] !== null) {
+            $this->DeadLetterRoutingKey = $param["DeadLetterRoutingKey"];
         }
     }
 }

@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rabbitmq binding relationship list member.
  *
- * @method integer getBindingId() Obtain binding id.
- * @method void setBindingId(integer $BindingId) Set binding id.
- * @method string getVirtualHost() Obtain Vhost parameter.
- * @method void setVirtualHost(string $VirtualHost) Set Vhost parameter.
- * @method string getSource() Obtain Source exchange name.
- * @method void setSource(string $Source) Set Source exchange name.
- * @method string getDestinationType() Obtain Target type. valid values: queue or exchange.
- * @method void setDestinationType(string $DestinationType) Set Target type. valid values: queue or exchange.
- * @method string getDestination() Obtain Target resource name.
- * @method void setDestination(string $Destination) Set Target resource name.
- * @method string getRoutingKey() Obtain Binding key.
- * @method void setRoutingKey(string $RoutingKey) Set Binding key.
- * @method string getSourceExchangeType() Obtain Source exchange type.
- * @method void setSourceExchangeType(string $SourceExchangeType) Set Source exchange type.
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getModifyTime() Obtain Modification time
- * @method void setModifyTime(string $ModifyTime) Set Modification time
+ * @method integer getBindingId() Obtain <p>Routing relationship id</p>
+ * @method void setBindingId(integer $BindingId) Set <p>Routing relationship id</p>
+ * @method string getVirtualHost() Obtain <p>Vhost parameter</p>
+ * @method void setVirtualHost(string $VirtualHost) Set <p>Vhost parameter</p>
+ * @method string getSource() Obtain <p>Source exchange name</p>
+ * @method void setSource(string $Source) Set <p>Source exchange name</p>
+ * @method string getDestinationType() Obtain <p>Target type, queue or exchange</p>
+ * @method void setDestinationType(string $DestinationType) Set <p>Target type, queue or exchange</p>
+ * @method string getDestination() Obtain <p>Target resource name</p>
+ * @method void setDestination(string $Destination) Set <p>Target resource name</p>
+ * @method string getRoutingKey() Obtain <p>Bind key</p>
+ * @method void setRoutingKey(string $RoutingKey) Set <p>Bind key</p>
+ * @method string getSourceExchangeType() Obtain <p>Source exchange type</p>
+ * @method void setSourceExchangeType(string $SourceExchangeType) Set <p>Source exchange type</p>
+ * @method string getCreateTime() Obtain <p>Creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
+ * @method string getModifyTime() Obtain <p>Modification time.</p>
+ * @method void setModifyTime(string $ModifyTime) Set <p>Modification time.</p>
+ * @method array getArguments() Obtain <p>Bind parameter. Parameters can be passed in during binding for header type Exchange. No need to input for other types of Exchange.</p>
+ * @method void setArguments(array $Arguments) Set <p>Bind parameter. Parameters can be passed in during binding for header type Exchange. No need to input for other types of Exchange.</p>
  */
 class RabbitMQBindingListInfo extends AbstractModel
 {
     /**
-     * @var integer binding id.
+     * @var integer <p>Routing relationship id</p>
      */
     public $BindingId;
 
     /**
-     * @var string Vhost parameter.
+     * @var string <p>Vhost parameter</p>
      */
     public $VirtualHost;
 
     /**
-     * @var string Source exchange name.
+     * @var string <p>Source exchange name</p>
      */
     public $Source;
 
     /**
-     * @var string Target type. valid values: queue or exchange.
+     * @var string <p>Target type, queue or exchange</p>
      */
     public $DestinationType;
 
     /**
-     * @var string Target resource name.
+     * @var string <p>Target resource name</p>
      */
     public $Destination;
 
     /**
-     * @var string Binding key.
+     * @var string <p>Bind key</p>
      */
     public $RoutingKey;
 
     /**
-     * @var string Source exchange type.
+     * @var string <p>Source exchange type</p>
      */
     public $SourceExchangeType;
 
     /**
-     * @var string Creation time
+     * @var string <p>Creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Modification time
+     * @var string <p>Modification time.</p>
      */
     public $ModifyTime;
 
     /**
-     * @param integer $BindingId binding id.
-     * @param string $VirtualHost Vhost parameter.
-     * @param string $Source Source exchange name.
-     * @param string $DestinationType Target type. valid values: queue or exchange.
-     * @param string $Destination Target resource name.
-     * @param string $RoutingKey Binding key.
-     * @param string $SourceExchangeType Source exchange type.
-     * @param string $CreateTime Creation time
-     * @param string $ModifyTime Modification time
+     * @var array <p>Bind parameter. Parameters can be passed in during binding for header type Exchange. No need to input for other types of Exchange.</p>
+     */
+    public $Arguments;
+
+    /**
+     * @param integer $BindingId <p>Routing relationship id</p>
+     * @param string $VirtualHost <p>Vhost parameter</p>
+     * @param string $Source <p>Source exchange name</p>
+     * @param string $DestinationType <p>Target type, queue or exchange</p>
+     * @param string $Destination <p>Target resource name</p>
+     * @param string $RoutingKey <p>Bind key</p>
+     * @param string $SourceExchangeType <p>Source exchange type</p>
+     * @param string $CreateTime <p>Creation time.</p>
+     * @param string $ModifyTime <p>Modification time.</p>
+     * @param array $Arguments <p>Bind parameter. Parameters can be passed in during binding for header type Exchange. No need to input for other types of Exchange.</p>
      */
     function __construct()
     {
@@ -144,6 +152,15 @@ class RabbitMQBindingListInfo extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("Arguments",$param) and $param["Arguments"] !== null) {
+            $this->Arguments = [];
+            foreach ($param["Arguments"] as $key => $value){
+                $obj = new RabbitMQServerlessKeyValuePair();
+                $obj->deserialize($value);
+                array_push($this->Arguments, $obj);
+            }
         }
     }
 }

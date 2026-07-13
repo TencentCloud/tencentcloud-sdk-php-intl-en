@@ -18,28 +18,28 @@ namespace TencentCloud\Trabbit\V20230418\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Key-value pair
+ * Tag.
  *
- * @method string getKey() Obtain Key.
- * @method void setKey(string $Key) Set Key.
- * @method string getValue() Obtain Value.
- * @method void setValue(string $Value) Set Value.
+ * @method string getTagKey() Obtain Tag key.
+ * @method void setTagKey(string $TagKey) Set Tag key.
+ * @method string getTagValue() Obtain Tag value.
+ * @method void setTagValue(string $TagValue) Set Tag value.
  */
-class RabbitMQServerlessKeyValuePair extends AbstractModel
+class RabbitMQServerlessTag extends AbstractModel
 {
     /**
-     * @var string Key.
+     * @var string Tag key.
      */
-    public $Key;
+    public $TagKey;
 
     /**
-     * @var string Value.
+     * @var string Tag value.
      */
-    public $Value;
+    public $TagValue;
 
     /**
-     * @param string $Key Key.
-     * @param string $Value Value.
+     * @param string $TagKey Tag key.
+     * @param string $TagValue Tag value.
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class RabbitMQServerlessKeyValuePair extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
+            $this->TagKey = $param["TagKey"];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
+            $this->TagValue = $param["TagValue"];
         }
     }
 }

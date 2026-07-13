@@ -20,210 +20,266 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RabbitMQ cluster basic information.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getClusterName() Obtain Cluster name.
- * @method void setClusterName(string $ClusterName) Set Cluster name.
- * @method string getRegion() Obtain Region information
- * @method void setRegion(string $Region) Set Region information
- * @method integer getCreateTime() Obtain Creation time, in milliseconds
- * @method void setCreateTime(integer $CreateTime) Set Creation time, in milliseconds
- * @method string getRemark() Obtain Cluster description remark information
- * @method void setRemark(string $Remark) Set Cluster description remark information
- * @method array getVpcs() Obtain VPC and network information.
- * @method void setVpcs(array $Vpcs) Set VPC and network information.
- * @method array getZoneIds() Obtain Availability zone information
- * @method void setZoneIds(array $ZoneIds) Set Availability zone information
- * @method integer getVirtualHostNumber() Obtain number of virtual hosts.
- * @method void setVirtualHostNumber(integer $VirtualHostNumber) Set number of virtual hosts.
- * @method integer getQueueNumber() Obtain Number of queues
- * @method void setQueueNumber(integer $QueueNumber) Set Number of queues
- * @method float getMessagePublishRate() Obtain Number of messages produced per second (measurement unit: messages/second).
- * @method void setMessagePublishRate(float $MessagePublishRate) Set Number of messages produced per second (measurement unit: messages/second).
- * @method integer getMessageStackNumber() Obtain Number of accumulated messages. valid values: pieces.
- * @method void setMessageStackNumber(integer $MessageStackNumber) Set Number of accumulated messages. valid values: pieces.
- * @method integer getExpireTime() Obtain Expiration time
- * @method void setExpireTime(integer $ExpireTime) Set Expiration time
- * @method integer getChannelNumber() Obtain number of channels.
- * @method void setChannelNumber(integer $ChannelNumber) Set number of channels.
- * @method integer getConnectionNumber() Obtain number of connections.
- * @method void setConnectionNumber(integer $ConnectionNumber) Set number of connections.
- * @method integer getConsumerNumber() Obtain Number of consumers.
- * @method void setConsumerNumber(integer $ConsumerNumber) Set Number of consumers.
- * @method integer getExchangeNumber() Obtain Number of Exchanges.
- * @method void setExchangeNumber(integer $ExchangeNumber) Set Number of Exchanges.
- * @method string getExceptionInformation() Obtain Cluster exception information.
- * @method void setExceptionInformation(string $ExceptionInformation) Set Cluster exception information.
- * @method integer getClusterStatus() Obtain Instance status. 0 indicates creating in progress. 1 indicates normal. 2 indicates isolated. 3 indicates terminated. 4 indicates exception. 5 indicates delivery failed.
- * @method void setClusterStatus(integer $ClusterStatus) Set Instance status. 0 indicates creating in progress. 1 indicates normal. 2 indicates isolated. 3 indicates terminated. 4 indicates exception. 5 indicates delivery failed.
- * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. 0 indicates the default status (If the default status is not configured, manual renewal is enabled), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (configured by the user).
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. 0 indicates the default status (If the default status is not configured, manual renewal is enabled), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (configured by the user).
- * @method integer getMirrorQueuePolicyFlag() Obtain Whether the mirrored queue strategy is enabled. 1 indicates enabled, and 0 indicates not enabled.
- * @method void setMirrorQueuePolicyFlag(integer $MirrorQueuePolicyFlag) Set Whether the mirrored queue strategy is enabled. 1 indicates enabled, and 0 indicates not enabled.
- * @method float getMessageConsumeRate() Obtain Number of messages consumed per second (measurement unit: messages/second).
- * @method void setMessageConsumeRate(float $MessageConsumeRate) Set Number of messages consumed per second (measurement unit: messages/second).
- * @method string getClusterVersion() Obtain Specifies the cluster version information.
- * @method void setClusterVersion(string $ClusterVersion) Set Specifies the cluster version information.
- * @method integer getPayMode() Obtain Billing mode. valid values: 0 (postpaid), 1 (prepaid).
- * @method void setPayMode(integer $PayMode) Set Billing mode. valid values: 0 (postpaid), 1 (prepaid).
- * @method integer getInstanceType() Obtain Specifies the cluster type.
- * @method void setInstanceType(integer $InstanceType) Set Specifies the cluster type.
- * @method integer getMessageRetainTime() Obtain Specifies the message retention time, in hours.
- * @method void setMessageRetainTime(integer $MessageRetainTime) Set Specifies the message retention time, in hours.
+ * @method string getClusterId() Obtain <p>Cluster ID.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method string getClusterName() Obtain <p>Cluster name.</p>
+ * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
+ * @method string getRegion() Obtain <p>Regional information</p>
+ * @method void setRegion(string $Region) Set <p>Regional information</p>
+ * @method integer getCreateTime() Obtain <p>Creation time in milliseconds</p>
+ * @method void setCreateTime(integer $CreateTime) Set <p>Creation time in milliseconds</p>
+ * @method string getRemark() Obtain <p>Cluster description information</p>
+ * @method void setRemark(string $Remark) Set <p>Cluster description information</p>
+ * @method array getVpcs() Obtain <p>VPC and network info</p>
+ * @method void setVpcs(array $Vpcs) Set <p>VPC and network info</p>
+ * @method array getZoneIds() Obtain <p>AZ information</p>
+ * @method void setZoneIds(array $ZoneIds) Set <p>AZ information</p>
+ * @method integer getVirtualHostNumber() Obtain <p>Number of virtual hosts</p>
+ * @method void setVirtualHostNumber(integer $VirtualHostNumber) Set <p>Number of virtual hosts</p>
+ * @method integer getQueueNumber() Obtain <p>Number of queues</p>
+ * @method void setQueueNumber(integer $QueueNumber) Set <p>Number of queues</p>
+ * @method float getMessagePublishRate() Obtain <p>Number of messages produced per second Unit: messages/second</p>
+ * @method void setMessagePublishRate(float $MessagePublishRate) Set <p>Number of messages produced per second Unit: messages/second</p>
+ * @method integer getMessageStackNumber() Obtain <p>Number of accumulated messages Unit: unit</p>
+ * @method void setMessageStackNumber(integer $MessageStackNumber) Set <p>Number of accumulated messages Unit: unit</p>
+ * @method integer getExpireTime() Obtain <p>Expiration time</p>
+ * @method void setExpireTime(integer $ExpireTime) Set <p>Expiration time</p>
+ * @method integer getChannelNumber() Obtain <p>Number of channels</p>
+ * @method void setChannelNumber(integer $ChannelNumber) Set <p>Number of channels</p>
+ * @method integer getConnectionNumber() Obtain <p>Number of connections</p>
+ * @method void setConnectionNumber(integer $ConnectionNumber) Set <p>Number of connections</p>
+ * @method integer getConsumerNumber() Obtain <p>Number of consumers</p>
+ * @method void setConsumerNumber(integer $ConsumerNumber) Set <p>Number of consumers</p>
+ * @method integer getExchangeNumber() Obtain <p>Number of Exchanges</p>
+ * @method void setExchangeNumber(integer $ExchangeNumber) Set <p>Number of Exchanges</p>
+ * @method string getExceptionInformation() Obtain <p>Cluster exception information</p>
+ * @method void setExceptionInformation(string $ExceptionInformation) Set <p>Cluster exception information</p>
+ * @method integer getClusterStatus() Obtain <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
+ * @method void setClusterStatus(integer $ClusterStatus) Set <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
+ * @method integer getAutoRenewFlag() Obtain <p>Automatic renewal flag. 0: default status (initial status (that is manual renewal) if no status is set by the user); 1: automatic renewal; 2: no automatic renewal (set by the user).</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set <p>Automatic renewal flag. 0: default status (initial status (that is manual renewal) if no status is set by the user); 1: automatic renewal; 2: no automatic renewal (set by the user).</p>
+ * @method integer getMirrorQueuePolicyFlag() Obtain <p>Whether to enable the mirror queue policy. 1 means enabled, 0 means disabled.</p>
+ * @method void setMirrorQueuePolicyFlag(integer $MirrorQueuePolicyFlag) Set <p>Whether to enable the mirror queue policy. 1 means enabled, 0 means disabled.</p>
+ * @method float getMessageConsumeRate() Obtain <p>Number of messages consumed per second Unit: messages/second</p>
+ * @method void setMessageConsumeRate(float $MessageConsumeRate) Set <p>Number of messages consumed per second Unit: messages/second</p>
+ * @method string getClusterVersion() Obtain <p>Cluster version information</p>
+ * @method void setClusterVersion(string $ClusterVersion) Set <p>Cluster version information</p>
+ * @method integer getPayMode() Obtain <p>Billing mode. 0 - Postpaid, 1 - Prepaid</p>
+ * @method void setPayMode(integer $PayMode) Set <p>Billing mode. 0 - Postpaid, 1 - Prepaid</p>
+ * @method integer getInstanceType() Obtain <p>Cluster type.</p>
+ * @method void setInstanceType(integer $InstanceType) Set <p>Cluster type.</p>
+ * @method integer getMessageRetainTime() Obtain <p>Message retention period Unit: hour</p>
+ * @method void setMessageRetainTime(integer $MessageRetainTime) Set <p>Message retention period Unit: hour</p>
+ * @method float getSendReceiveRatio() Obtain <p>Traffic ratio of sending messages</p>
+ * @method void setSendReceiveRatio(float $SendReceiveRatio) Set <p>Traffic ratio of sending messages</p>
+ * @method integer getTraceTime() Obtain <p>Message trace retention time in hours</p>
+ * @method void setTraceTime(integer $TraceTime) Set <p>Message trace retention time in hours</p>
+ * @method array getTags() Obtain <p>Instance tag list</p>
+ * @method void setTags(array $Tags) Set <p>Instance tag list</p>
+ * @method boolean getElasticTpsFlag() Obtain <p>Elastic scaling enabled tps</p>
+ * @method void setElasticTpsFlag(boolean $ElasticTpsFlag) Set <p>Elastic scaling enabled tps</p>
+ * @method float getElasticTpsRatio() Obtain <p>Elastic tps multiple, default is 1x</p>
+ * @method void setElasticTpsRatio(float $ElasticTpsRatio) Set <p>Elastic tps multiple, default is 1x</p>
+ * @method integer getMaxRedeliverCount() Obtain <p>Maximum retry count</p>
+ * @method void setMaxRedeliverCount(integer $MaxRedeliverCount) Set <p>Maximum retry count</p>
+ * @method integer getConsumerTimeout() Obtain <p>Consumption timeout period Unit: min</p>
+ * @method void setConsumerTimeout(integer $ConsumerTimeout) Set <p>Consumption timeout period Unit: min</p>
  */
 class RabbitMQClusterInfo extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterId;
 
     /**
-     * @var string Cluster name.
+     * @var string <p>Cluster name.</p>
      */
     public $ClusterName;
 
     /**
-     * @var string Region information
+     * @var string <p>Regional information</p>
      */
     public $Region;
 
     /**
-     * @var integer Creation time, in milliseconds
+     * @var integer <p>Creation time in milliseconds</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Cluster description remark information
+     * @var string <p>Cluster description information</p>
      */
     public $Remark;
 
     /**
-     * @var array VPC and network information.
+     * @var array <p>VPC and network info</p>
      */
     public $Vpcs;
 
     /**
-     * @var array Availability zone information
+     * @var array <p>AZ information</p>
      */
     public $ZoneIds;
 
     /**
-     * @var integer number of virtual hosts.
+     * @var integer <p>Number of virtual hosts</p>
      */
     public $VirtualHostNumber;
 
     /**
-     * @var integer Number of queues
+     * @var integer <p>Number of queues</p>
      */
     public $QueueNumber;
 
     /**
-     * @var float Number of messages produced per second (measurement unit: messages/second).
+     * @var float <p>Number of messages produced per second Unit: messages/second</p>
      */
     public $MessagePublishRate;
 
     /**
-     * @var integer Number of accumulated messages. valid values: pieces.
+     * @var integer <p>Number of accumulated messages Unit: unit</p>
      */
     public $MessageStackNumber;
 
     /**
-     * @var integer Expiration time
+     * @var integer <p>Expiration time</p>
      */
     public $ExpireTime;
 
     /**
-     * @var integer number of channels.
+     * @var integer <p>Number of channels</p>
      */
     public $ChannelNumber;
 
     /**
-     * @var integer number of connections.
+     * @var integer <p>Number of connections</p>
      */
     public $ConnectionNumber;
 
     /**
-     * @var integer Number of consumers.
+     * @var integer <p>Number of consumers</p>
      */
     public $ConsumerNumber;
 
     /**
-     * @var integer Number of Exchanges.
+     * @var integer <p>Number of Exchanges</p>
      */
     public $ExchangeNumber;
 
     /**
-     * @var string Cluster exception information.
+     * @var string <p>Cluster exception information</p>
      */
     public $ExceptionInformation;
 
     /**
-     * @var integer Instance status. 0 indicates creating in progress. 1 indicates normal. 2 indicates isolated. 3 indicates terminated. 4 indicates exception. 5 indicates delivery failed.
+     * @var integer <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
      */
     public $ClusterStatus;
 
     /**
-     * @var integer Auto-renewal flag. 0 indicates the default status (If the default status is not configured, manual renewal is enabled), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (configured by the user).
+     * @var integer <p>Automatic renewal flag. 0: default status (initial status (that is manual renewal) if no status is set by the user); 1: automatic renewal; 2: no automatic renewal (set by the user).</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer Whether the mirrored queue strategy is enabled. 1 indicates enabled, and 0 indicates not enabled.
+     * @var integer <p>Whether to enable the mirror queue policy. 1 means enabled, 0 means disabled.</p>
      */
     public $MirrorQueuePolicyFlag;
 
     /**
-     * @var float Number of messages consumed per second (measurement unit: messages/second).
+     * @var float <p>Number of messages consumed per second Unit: messages/second</p>
      */
     public $MessageConsumeRate;
 
     /**
-     * @var string Specifies the cluster version information.
+     * @var string <p>Cluster version information</p>
      */
     public $ClusterVersion;
 
     /**
-     * @var integer Billing mode. valid values: 0 (postpaid), 1 (prepaid).
+     * @var integer <p>Billing mode. 0 - Postpaid, 1 - Prepaid</p>
      */
     public $PayMode;
 
     /**
-     * @var integer Specifies the cluster type.
+     * @var integer <p>Cluster type.</p>
      */
     public $InstanceType;
 
     /**
-     * @var integer Specifies the message retention time, in hours.
+     * @var integer <p>Message retention period Unit: hour</p>
      */
     public $MessageRetainTime;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param string $ClusterName Cluster name.
-     * @param string $Region Region information
-     * @param integer $CreateTime Creation time, in milliseconds
-     * @param string $Remark Cluster description remark information
-     * @param array $Vpcs VPC and network information.
-     * @param array $ZoneIds Availability zone information
-     * @param integer $VirtualHostNumber number of virtual hosts.
-     * @param integer $QueueNumber Number of queues
-     * @param float $MessagePublishRate Number of messages produced per second (measurement unit: messages/second).
-     * @param integer $MessageStackNumber Number of accumulated messages. valid values: pieces.
-     * @param integer $ExpireTime Expiration time
-     * @param integer $ChannelNumber number of channels.
-     * @param integer $ConnectionNumber number of connections.
-     * @param integer $ConsumerNumber Number of consumers.
-     * @param integer $ExchangeNumber Number of Exchanges.
-     * @param string $ExceptionInformation Cluster exception information.
-     * @param integer $ClusterStatus Instance status. 0 indicates creating in progress. 1 indicates normal. 2 indicates isolated. 3 indicates terminated. 4 indicates exception. 5 indicates delivery failed.
-     * @param integer $AutoRenewFlag Auto-renewal flag. 0 indicates the default status (If the default status is not configured, manual renewal is enabled), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (configured by the user).
-     * @param integer $MirrorQueuePolicyFlag Whether the mirrored queue strategy is enabled. 1 indicates enabled, and 0 indicates not enabled.
-     * @param float $MessageConsumeRate Number of messages consumed per second (measurement unit: messages/second).
-     * @param string $ClusterVersion Specifies the cluster version information.
-     * @param integer $PayMode Billing mode. valid values: 0 (postpaid), 1 (prepaid).
-     * @param integer $InstanceType Specifies the cluster type.
-     * @param integer $MessageRetainTime Specifies the message retention time, in hours.
+     * @var float <p>Traffic ratio of sending messages</p>
+     */
+    public $SendReceiveRatio;
+
+    /**
+     * @var integer <p>Message trace retention time in hours</p>
+     */
+    public $TraceTime;
+
+    /**
+     * @var array <p>Instance tag list</p>
+     */
+    public $Tags;
+
+    /**
+     * @var boolean <p>Elastic scaling enabled tps</p>
+     */
+    public $ElasticTpsFlag;
+
+    /**
+     * @var float <p>Elastic tps multiple, default is 1x</p>
+     */
+    public $ElasticTpsRatio;
+
+    /**
+     * @var integer <p>Maximum retry count</p>
+     */
+    public $MaxRedeliverCount;
+
+    /**
+     * @var integer <p>Consumption timeout period Unit: min</p>
+     */
+    public $ConsumerTimeout;
+
+    /**
+     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param string $ClusterName <p>Cluster name.</p>
+     * @param string $Region <p>Regional information</p>
+     * @param integer $CreateTime <p>Creation time in milliseconds</p>
+     * @param string $Remark <p>Cluster description information</p>
+     * @param array $Vpcs <p>VPC and network info</p>
+     * @param array $ZoneIds <p>AZ information</p>
+     * @param integer $VirtualHostNumber <p>Number of virtual hosts</p>
+     * @param integer $QueueNumber <p>Number of queues</p>
+     * @param float $MessagePublishRate <p>Number of messages produced per second Unit: messages/second</p>
+     * @param integer $MessageStackNumber <p>Number of accumulated messages Unit: unit</p>
+     * @param integer $ExpireTime <p>Expiration time</p>
+     * @param integer $ChannelNumber <p>Number of channels</p>
+     * @param integer $ConnectionNumber <p>Number of connections</p>
+     * @param integer $ConsumerNumber <p>Number of consumers</p>
+     * @param integer $ExchangeNumber <p>Number of Exchanges</p>
+     * @param string $ExceptionInformation <p>Cluster exception information</p>
+     * @param integer $ClusterStatus <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
+     * @param integer $AutoRenewFlag <p>Automatic renewal flag. 0: default status (initial status (that is manual renewal) if no status is set by the user); 1: automatic renewal; 2: no automatic renewal (set by the user).</p>
+     * @param integer $MirrorQueuePolicyFlag <p>Whether to enable the mirror queue policy. 1 means enabled, 0 means disabled.</p>
+     * @param float $MessageConsumeRate <p>Number of messages consumed per second Unit: messages/second</p>
+     * @param string $ClusterVersion <p>Cluster version information</p>
+     * @param integer $PayMode <p>Billing mode. 0 - Postpaid, 1 - Prepaid</p>
+     * @param integer $InstanceType <p>Cluster type.</p>
+     * @param integer $MessageRetainTime <p>Message retention period Unit: hour</p>
+     * @param float $SendReceiveRatio <p>Traffic ratio of sending messages</p>
+     * @param integer $TraceTime <p>Message trace retention time in hours</p>
+     * @param array $Tags <p>Instance tag list</p>
+     * @param boolean $ElasticTpsFlag <p>Elastic scaling enabled tps</p>
+     * @param float $ElasticTpsRatio <p>Elastic tps multiple, default is 1x</p>
+     * @param integer $MaxRedeliverCount <p>Maximum retry count</p>
+     * @param integer $ConsumerTimeout <p>Consumption timeout period Unit: min</p>
      */
     function __construct()
     {
@@ -341,6 +397,39 @@ class RabbitMQClusterInfo extends AbstractModel
 
         if (array_key_exists("MessageRetainTime",$param) and $param["MessageRetainTime"] !== null) {
             $this->MessageRetainTime = $param["MessageRetainTime"];
+        }
+
+        if (array_key_exists("SendReceiveRatio",$param) and $param["SendReceiveRatio"] !== null) {
+            $this->SendReceiveRatio = $param["SendReceiveRatio"];
+        }
+
+        if (array_key_exists("TraceTime",$param) and $param["TraceTime"] !== null) {
+            $this->TraceTime = $param["TraceTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new RabbitMQServerlessTag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("ElasticTpsFlag",$param) and $param["ElasticTpsFlag"] !== null) {
+            $this->ElasticTpsFlag = $param["ElasticTpsFlag"];
+        }
+
+        if (array_key_exists("ElasticTpsRatio",$param) and $param["ElasticTpsRatio"] !== null) {
+            $this->ElasticTpsRatio = $param["ElasticTpsRatio"];
+        }
+
+        if (array_key_exists("MaxRedeliverCount",$param) and $param["MaxRedeliverCount"] !== null) {
+            $this->MaxRedeliverCount = $param["MaxRedeliverCount"];
+        }
+
+        if (array_key_exists("ConsumerTimeout",$param) and $param["ConsumerTimeout"] !== null) {
+            $this->ConsumerTimeout = $param["ConsumerTimeout"];
         }
     }
 }

@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRabbitMQServerlessBinding request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getVirtualHost() Obtain Vhost parameter.
- * @method void setVirtualHost(string $VirtualHost) Set Vhost parameter.
- * @method string getSource() Obtain Source exchange.
- * @method void setSource(string $Source) Set Source exchange.
- * @method string getDestinationType() Obtain Target type. valid values: queue or exchange.
- * @method void setDestinationType(string $DestinationType) Set Target type. valid values: queue or exchange.
- * @method string getDestination() Obtain Target queue or exchange.
- * @method void setDestination(string $Destination) Set Target queue or exchange.
- * @method string getRoutingKey() Obtain Binding key.
- * @method void setRoutingKey(string $RoutingKey) Set Binding key.
- * @method array getArguments() Obtain 
- * @method void setArguments(array $Arguments) Set 
+ * @method string getInstanceId() Obtain <p>Instance Id</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance Id</p>
+ * @method string getVirtualHost() Obtain <p>Vhost parameter</p>
+ * @method void setVirtualHost(string $VirtualHost) Set <p>Vhost parameter</p>
+ * @method string getSource() Obtain <p>Source exchange</p>
+ * @method void setSource(string $Source) Set <p>Source exchange</p>
+ * @method string getDestinationType() Obtain <p>Target type, value queue or exchange</p>
+ * @method void setDestinationType(string $DestinationType) Set <p>Target type, value queue or exchange</p>
+ * @method string getDestination() Obtain <p>Target queue or switch</p>
+ * @method void setDestination(string $Destination) Set <p>Target queue or switch</p>
+ * @method string getRoutingKey() Obtain <p>Bind key</p>
+ * @method void setRoutingKey(string $RoutingKey) Set <p>Bind key</p>
+ * @method array getArguments() Obtain <p>When creating a Binding for Header type Exchange, parameters can be passed in. No need to input for other types of Exchange.</p>
+ * @method void setArguments(array $Arguments) Set <p>When creating a Binding for Header type Exchange, parameters can be passed in. No need to input for other types of Exchange.</p>
  */
 class CreateRabbitMQServerlessBindingRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string <p>Instance Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Vhost parameter.
+     * @var string <p>Vhost parameter</p>
      */
     public $VirtualHost;
 
     /**
-     * @var string Source exchange.
+     * @var string <p>Source exchange</p>
      */
     public $Source;
 
     /**
-     * @var string Target type. valid values: queue or exchange.
+     * @var string <p>Target type, value queue or exchange</p>
      */
     public $DestinationType;
 
     /**
-     * @var string Target queue or exchange.
+     * @var string <p>Target queue or switch</p>
      */
     public $Destination;
 
     /**
-     * @var string Binding key.
+     * @var string <p>Bind key</p>
      */
     public $RoutingKey;
 
     /**
-     * @var array 
+     * @var array <p>When creating a Binding for Header type Exchange, parameters can be passed in. No need to input for other types of Exchange.</p>
      */
     public $Arguments;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $VirtualHost Vhost parameter.
-     * @param string $Source Source exchange.
-     * @param string $DestinationType Target type. valid values: queue or exchange.
-     * @param string $Destination Target queue or exchange.
-     * @param string $RoutingKey Binding key.
-     * @param array $Arguments 
+     * @param string $InstanceId <p>Instance Id</p>
+     * @param string $VirtualHost <p>Vhost parameter</p>
+     * @param string $Source <p>Source exchange</p>
+     * @param string $DestinationType <p>Target type, value queue or exchange</p>
+     * @param string $Destination <p>Target queue or switch</p>
+     * @param string $RoutingKey <p>Bind key</p>
+     * @param array $Arguments <p>When creating a Binding for Header type Exchange, parameters can be passed in. No need to input for other types of Exchange.</p>
      */
     function __construct()
     {

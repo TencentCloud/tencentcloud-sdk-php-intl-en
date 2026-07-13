@@ -26,12 +26,14 @@ use TencentCloud\Billing\V20180709\Models as Models;
  * @method Models\CreateAllocationRuleResponse CreateAllocationRule(Models\CreateAllocationRuleRequest $req) Create a sharing rule.
  * @method Models\CreateAllocationTagResponse CreateAllocationTag(Models\CreateAllocationTagRequest $req) This API is used to batch set cost allocation tags.
  * @method Models\CreateAllocationUnitResponse CreateAllocationUnit(Models\CreateAllocationUnitRequest $req) This API is used to create allocation units.
+ * @method Models\CreateBudgetResponse CreateBudget(Models\CreateBudgetRequest $req) Create budget information
  * @method Models\CreateGatherRuleResponse CreateGatherRule(Models\CreateGatherRuleRequest $req) Create a collection rule.
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) Creating an instance resource will generate an order for the newly purchased instance resource and automatically complete the payment using the balance of the Tencent Cloud account. The account calling this API must be granted the finace:trade permission; otherwise, the payment will fail.
 Currently, the integrated and supported product for purchase includes: Cloud Firewall.
  * @method Models\DeleteAllocationRuleResponse DeleteAllocationRule(Models\DeleteAllocationRuleRequest $req) Delete sharing rule interface.
  * @method Models\DeleteAllocationTagResponse DeleteAllocationTag(Models\DeleteAllocationTagRequest $req) u200cThis API is used to batch cancel cost allocation tags.
  * @method Models\DeleteAllocationUnitResponse DeleteAllocationUnit(Models\DeleteAllocationUnitRequest $req) Delete a cost allocation unit.
+ * @method Models\DeleteBudgetResponse DeleteBudget(Models\DeleteBudgetRequest $req) Delete the corresponding budget project based on the budget ID
  * @method Models\DeleteGatherRuleResponse DeleteGatherRule(Models\DeleteGatherRuleRequest $req) Delete a collection rule.
  * @method Models\DescribeAccountBalanceResponse DescribeAccountBalance(Models\DescribeAccountBalanceRequest $req) This API is used to check the Tencent Cloud account balance.
  * @method Models\DescribeAllocateConditionsResponse DescribeAllocateConditions(Models\DescribeAllocateConditionsRequest $req) This API is used to query the filter conditions of a resource directory.
@@ -64,6 +66,9 @@ Note: The API request may fail due to network instability or other exceptions. I
  * @method Models\DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(Models\DescribeBillSummaryByRegionRequest $req) Gets the bill summarized according to region
  * @method Models\DescribeBillSummaryByTagResponse DescribeBillSummaryByTag(Models\DescribeBillSummaryByTagRequest $req) This API is used to get the cost distribution over different tags.
  * @method Models\DescribeBillSummaryForOrganizationResponse DescribeBillSummaryForOrganization(Models\DescribeBillSummaryForOrganizationRequest $req) This API is used to get bills summarized by product, project, region, billing mode, and tag by passing in parameters.
+ * @method Models\DescribeBudgetResponse DescribeBudget(Models\DescribeBudgetRequest $req) Retrieve budget details
+ * @method Models\DescribeBudgetOperationLogResponse DescribeBudgetOperationLog(Models\DescribeBudgetOperationLogRequest $req) Query budget modification records
+ * @method Models\DescribeBudgetRemindRecordListResponse DescribeBudgetRemindRecordList(Models\DescribeBudgetRemindRecordListRequest $req) Return budget alert records, including budget period, detection time, notification time, reminder type, and content.
  * @method Models\DescribeCPQBillingMappingResponse DescribeCPQBillingMapping(Models\DescribeCPQBillingMappingRequest $req) Query the four-layer matching relationship between the quoted product name and billing products
  * @method Models\DescribeCostDetailResponse DescribeCostDetail(Models\DescribeCostDetailRequest $req) This API is used to query consumption details.
 
@@ -87,6 +92,7 @@ For customers with large-scale consumption detail (for example, monthly consumpt
  * @method Models\DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetails(Models\DescribeVoucherUsageDetailsRequest $req) This API is used to query voucher usage details.
  * @method Models\ModifyAllocationRuleResponse ModifyAllocationRule(Models\ModifyAllocationRuleRequest $req) Edit sharing rules.
  * @method Models\ModifyAllocationUnitResponse ModifyAllocationUnit(Models\ModifyAllocationUnitRequest $req) This API is used to modify cost allocation unit information.
+ * @method Models\ModifyBudgetResponse ModifyBudget(Models\ModifyBudgetRequest $req) Refresh budget information
  * @method Models\ModifyGatherRuleResponse ModifyGatherRule(Models\ModifyGatherRuleRequest $req) Edit a collection rule.
  * @method Models\PayDealsResponse PayDeals(Models\PayDealsRequest $req) This API is used to pay for an order.
  * @method Models\RefundInstanceResponse RefundInstance(Models\RefundInstanceRequest $req) To unsubscribe from an unneeded instance, only the actual payment amount will be refunded, any used vouchers will not be returned. The refunded amount will be credited to your Tencent Cloud account balance by default.The account calling this API must be granted the finace:RefundInstance permission; otherwise, the refund process will fail.

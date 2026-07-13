@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxBandWidth(integer $MaxBandWidth) Set Peak bandwidth. abandoned.
  * @method integer getPublicNetworkTps() Obtain Public network bandwidth. abandoned.
  * @method void setPublicNetworkTps(integer $PublicNetworkTps) Set Public network bandwidth. abandoned.
+ * @method string getFeatures() Obtain Feature list corresponding to the instance, yes means supported, no means unsupported
+ * @method void setFeatures(string $Features) Set Feature list corresponding to the instance, yes means supported, no means unsupported
  */
 class RabbitMQClusterSpecInfo extends AbstractModel
 {
@@ -87,6 +89,11 @@ class RabbitMQClusterSpecInfo extends AbstractModel
     public $PublicNetworkTps;
 
     /**
+     * @var string Feature list corresponding to the instance, yes means supported, no means unsupported
+     */
+    public $Features;
+
+    /**
      * @param string $SpecName Specifies the cluster specification name.
      * @param integer $MaxTps Max tps.
      * @param integer $MaxQueueNum Maximum number of queues.
@@ -96,6 +103,7 @@ class RabbitMQClusterSpecInfo extends AbstractModel
      * @param integer $MaxUserNum Maximum number of users.
      * @param integer $MaxBandWidth Peak bandwidth. abandoned.
      * @param integer $PublicNetworkTps Public network bandwidth. abandoned.
+     * @param string $Features Feature list corresponding to the instance, yes means supported, no means unsupported
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class RabbitMQClusterSpecInfo extends AbstractModel
 
         if (array_key_exists("PublicNetworkTps",$param) and $param["PublicNetworkTps"] !== null) {
             $this->PublicNetworkTps = $param["PublicNetworkTps"];
+        }
+
+        if (array_key_exists("Features",$param) and $param["Features"] !== null) {
+            $this->Features = $param["Features"];
         }
     }
 }

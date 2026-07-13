@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxStorage(integer $MaxStorage) Set For compatibility with the managed version, the fixed value is 0.
  * @method integer getIsolatedTime() Obtain Isolation time
  * @method void setIsolatedTime(integer $IsolatedTime) Set Isolation time
+ * @method string getServerlessExt() Obtain Serverless Extension Fields
+ * @method void setServerlessExt(string $ServerlessExt) Set Serverless Extension Fields
+ * @method array getTags() Obtain Instance tag list.
+ * @method void setTags(array $Tags) Set Instance tag list.
  */
 class RabbitMQServerlessInstance extends AbstractModel
 {
@@ -167,6 +171,16 @@ class RabbitMQServerlessInstance extends AbstractModel
     public $IsolatedTime;
 
     /**
+     * @var string Serverless Extension Fields
+     */
+    public $ServerlessExt;
+
+    /**
+     * @var array Instance tag list.
+     */
+    public $Tags;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $InstanceVersion Instance version.
@@ -188,6 +202,8 @@ class RabbitMQServerlessInstance extends AbstractModel
      * @param integer $NodeCount For compatibility with the managed version, the fixed value is 0.
      * @param integer $MaxStorage For compatibility with the managed version, the fixed value is 0.
      * @param integer $IsolatedTime Isolation time
+     * @param string $ServerlessExt Serverless Extension Fields
+     * @param array $Tags Instance tag list.
      */
     function __construct()
     {
@@ -285,6 +301,19 @@ class RabbitMQServerlessInstance extends AbstractModel
 
         if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
             $this->IsolatedTime = $param["IsolatedTime"];
+        }
+
+        if (array_key_exists("ServerlessExt",$param) and $param["ServerlessExt"] !== null) {
+            $this->ServerlessExt = $param["ServerlessExt"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new RabbitMQServerlessTag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

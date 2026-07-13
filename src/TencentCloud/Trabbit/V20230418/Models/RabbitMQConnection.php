@@ -34,6 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) Set Connection protocol.
  * @method integer getChannels() Obtain Specifies the number of channels under the connection.
  * @method void setChannels(integer $Channels) Set Specifies the number of channels under the connection.
+ * @method float getIncomingBytes() Obtain Inbound traffic volume in bytes
+ * @method void setIncomingBytes(float $IncomingBytes) Set Inbound traffic volume in bytes
+ * @method float getOutgoingBytes() Obtain Outbound traffic volume in bytes
+ * @method void setOutgoingBytes(float $OutgoingBytes) Set Outbound traffic volume in bytes
+ * @method integer getHeartbeat() Obtain Heartbeat interval. Default 60s.
+ * @method void setHeartbeat(integer $Heartbeat) Set Heartbeat interval. Default 60s.
+ * @method integer getMaxChannel() Obtain Maximum number of channels per link. Default 1024.
+ * @method void setMaxChannel(integer $MaxChannel) Set Maximum number of channels per link. Default 1024.
+ * @method string getIdleSince() Obtain Idle time point
+ * @method void setIdleSince(string $IdleSince) Set Idle time point
  */
 class RabbitMQConnection extends AbstractModel
 {
@@ -73,6 +83,31 @@ class RabbitMQConnection extends AbstractModel
     public $Channels;
 
     /**
+     * @var float Inbound traffic volume in bytes
+     */
+    public $IncomingBytes;
+
+    /**
+     * @var float Outbound traffic volume in bytes
+     */
+    public $OutgoingBytes;
+
+    /**
+     * @var integer Heartbeat interval. Default 60s.
+     */
+    public $Heartbeat;
+
+    /**
+     * @var integer Maximum number of channels per link. Default 1024.
+     */
+    public $MaxChannel;
+
+    /**
+     * @var string Idle time point
+     */
+    public $IdleSince;
+
+    /**
      * @param string $ConnectionName Connection name.
      * @param string $PeerHost Client IP
      * @param string $State Specifies the connection status, including starting, tuning, opening, running, flow, blocking, blocked, closing, and closed.
@@ -80,6 +115,11 @@ class RabbitMQConnection extends AbstractModel
      * @param boolean $SSL Whether ssl is enabled.
      * @param string $Protocol Connection protocol.
      * @param integer $Channels Specifies the number of channels under the connection.
+     * @param float $IncomingBytes Inbound traffic volume in bytes
+     * @param float $OutgoingBytes Outbound traffic volume in bytes
+     * @param integer $Heartbeat Heartbeat interval. Default 60s.
+     * @param integer $MaxChannel Maximum number of channels per link. Default 1024.
+     * @param string $IdleSince Idle time point
      */
     function __construct()
     {
@@ -120,6 +160,26 @@ class RabbitMQConnection extends AbstractModel
 
         if (array_key_exists("Channels",$param) and $param["Channels"] !== null) {
             $this->Channels = $param["Channels"];
+        }
+
+        if (array_key_exists("IncomingBytes",$param) and $param["IncomingBytes"] !== null) {
+            $this->IncomingBytes = $param["IncomingBytes"];
+        }
+
+        if (array_key_exists("OutgoingBytes",$param) and $param["OutgoingBytes"] !== null) {
+            $this->OutgoingBytes = $param["OutgoingBytes"];
+        }
+
+        if (array_key_exists("Heartbeat",$param) and $param["Heartbeat"] !== null) {
+            $this->Heartbeat = $param["Heartbeat"];
+        }
+
+        if (array_key_exists("MaxChannel",$param) and $param["MaxChannel"] !== null) {
+            $this->MaxChannel = $param["MaxChannel"];
+        }
+
+        if (array_key_exists("IdleSince",$param) and $param["IdleSince"] !== null) {
+            $this->IdleSince = $param["IdleSince"];
         }
     }
 }

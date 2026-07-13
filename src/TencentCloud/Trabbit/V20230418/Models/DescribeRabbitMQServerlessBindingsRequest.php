@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRabbitMQServerlessBindings request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getVirtualHost() Obtain Vhost parameter.
- * @method void setVirtualHost(string $VirtualHost) Set Vhost parameter.
- * @method integer getOffset() Obtain Pagination Offset
- * @method void setOffset(integer $Offset) Set Pagination Offset
- * @method integer getLimit() Obtain Pagination Limit
- * @method void setLimit(integer $Limit) Set Pagination Limit
- * @method string getSearchWord() Obtain Search keywords. do fuzzy search based on source exchange name, target resource name or binding key.
- * @method void setSearchWord(string $SearchWord) Set Search keywords. do fuzzy search based on source exchange name, target resource name or binding key.
- * @method string getSourceExchange() Obtain Search and filter precisely according to the source Exchange.
- * @method void setSourceExchange(string $SourceExchange) Set Search and filter precisely according to the source Exchange.
- * @method string getQueueName() Obtain Specifies precise search filter based on target QueueName. cannot set simultaneously with DestinationExchange filter.
- * @method void setQueueName(string $QueueName) Set Specifies precise search filter based on target QueueName. cannot set simultaneously with DestinationExchange filter.
- * @method string getDestinationExchange() Obtain Precise search filter based on target Exchange. cannot set it simultaneously with QueueName filter.
- * @method void setDestinationExchange(string $DestinationExchange) Set Precise search filter based on target Exchange. cannot set it simultaneously with QueueName filter.
+ * @method string getInstanceId() Obtain <p>Instance Id</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance Id</p>
+ * @method string getVirtualHost() Obtain <p>Vhost parameter</p>
+ * @method void setVirtualHost(string $VirtualHost) Set <p>Vhost parameter</p>
+ * @method integer getOffset() Obtain <p>Pagination offset</p>
+ * @method void setOffset(integer $Offset) Set <p>Pagination offset</p>
+ * @method integer getLimit() Obtain <p>Pagination limit</p>
+ * @method void setLimit(integer $Limit) Set <p>Pagination limit</p>
+ * @method string getSearchWord() Obtain <p>Search keywords, do fuzzy search based on source exchange name/target resource name</p>
+ * @method void setSearchWord(string $SearchWord) Set <p>Search keywords, do fuzzy search based on source exchange name/target resource name</p>
+ * @method string getSourceExchange() Obtain <p>Precise search and filter based on source Exchange</p>
+ * @method void setSourceExchange(string $SourceExchange) Set <p>Precise search and filter based on source Exchange</p>
+ * @method string getQueueName() Obtain <p>Precise search filter based on target QueueName and DestinationExchange cannot be set both at the same time</p>
+ * @method void setQueueName(string $QueueName) Set <p>Precise search filter based on target QueueName and DestinationExchange cannot be set both at the same time</p>
+ * @method string getDestinationExchange() Obtain <p>Precise search filter based on target Exchange and QueueName filter cannot be set both at the same time</p>
+ * @method void setDestinationExchange(string $DestinationExchange) Set <p>Precise search filter based on target Exchange and QueueName filter cannot be set both at the same time</p>
  */
 class DescribeRabbitMQServerlessBindingsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string <p>Instance Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Vhost parameter.
+     * @var string <p>Vhost parameter</p>
      */
     public $VirtualHost;
 
     /**
-     * @var integer Pagination Offset
+     * @var integer <p>Pagination offset</p>
      */
     public $Offset;
 
     /**
-     * @var integer Pagination Limit
+     * @var integer <p>Pagination limit</p>
      */
     public $Limit;
 
     /**
-     * @var string Search keywords. do fuzzy search based on source exchange name, target resource name or binding key.
+     * @var string <p>Search keywords, do fuzzy search based on source exchange name/target resource name</p>
      */
     public $SearchWord;
 
     /**
-     * @var string Search and filter precisely according to the source Exchange.
+     * @var string <p>Precise search and filter based on source Exchange</p>
      */
     public $SourceExchange;
 
     /**
-     * @var string Specifies precise search filter based on target QueueName. cannot set simultaneously with DestinationExchange filter.
+     * @var string <p>Precise search filter based on target QueueName and DestinationExchange cannot be set both at the same time</p>
      */
     public $QueueName;
 
     /**
-     * @var string Precise search filter based on target Exchange. cannot set it simultaneously with QueueName filter.
+     * @var string <p>Precise search filter based on target Exchange and QueueName filter cannot be set both at the same time</p>
      */
     public $DestinationExchange;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $VirtualHost Vhost parameter.
-     * @param integer $Offset Pagination Offset
-     * @param integer $Limit Pagination Limit
-     * @param string $SearchWord Search keywords. do fuzzy search based on source exchange name, target resource name or binding key.
-     * @param string $SourceExchange Search and filter precisely according to the source Exchange.
-     * @param string $QueueName Specifies precise search filter based on target QueueName. cannot set simultaneously with DestinationExchange filter.
-     * @param string $DestinationExchange Precise search filter based on target Exchange. cannot set it simultaneously with QueueName filter.
+     * @param string $InstanceId <p>Instance Id</p>
+     * @param string $VirtualHost <p>Vhost parameter</p>
+     * @param integer $Offset <p>Pagination offset</p>
+     * @param integer $Limit <p>Pagination limit</p>
+     * @param string $SearchWord <p>Search keywords, do fuzzy search based on source exchange name/target resource name</p>
+     * @param string $SourceExchange <p>Precise search and filter based on source Exchange</p>
+     * @param string $QueueName <p>Precise search filter based on target QueueName and DestinationExchange cannot be set both at the same time</p>
+     * @param string $DestinationExchange <p>Precise search filter based on target Exchange and QueueName filter cannot be set both at the same time</p>
      */
     function __construct()
     {

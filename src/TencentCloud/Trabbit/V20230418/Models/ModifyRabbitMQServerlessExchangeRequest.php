@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExchangeName(string $ExchangeName) Set exchange name.
  * @method string getRemark() Obtain Remarks
  * @method void setRemark(string $Remark) Set Remarks
+ * @method string getAlternateExchange() Obtain standby switch
+ * @method void setAlternateExchange(string $AlternateExchange) Set standby switch
  */
 class ModifyRabbitMQServerlessExchangeRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyRabbitMQServerlessExchangeRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var string standby switch
+     */
+    public $AlternateExchange;
+
+    /**
      * @param string $InstanceId Instance id.
      * @param string $VirtualHost Specifies the vhost parameter.
      * @param string $ExchangeName exchange name.
      * @param string $Remark Remarks
+     * @param string $AlternateExchange standby switch
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyRabbitMQServerlessExchangeRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("AlternateExchange",$param) and $param["AlternateExchange"] !== null) {
+            $this->AlternateExchange = $param["AlternateExchange"];
         }
     }
 }

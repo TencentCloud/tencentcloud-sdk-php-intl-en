@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trabbit\V20230418\Models;
+namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Key-value pair
+ * DeleteBudget request structure.
  *
- * @method string getKey() Obtain Key.
- * @method void setKey(string $Key) Set Key.
- * @method string getValue() Obtain Value.
- * @method void setValue(string $Value) Set Value.
+ * @method array getBudgetIds() Obtain Budget project id
+ * @method void setBudgetIds(array $BudgetIds) Set Budget project id
  */
-class RabbitMQServerlessKeyValuePair extends AbstractModel
+class DeleteBudgetRequest extends AbstractModel
 {
     /**
-     * @var string Key.
+     * @var array Budget project id
      */
-    public $Key;
+    public $BudgetIds;
 
     /**
-     * @var string Value.
-     */
-    public $Value;
-
-    /**
-     * @param string $Key Key.
-     * @param string $Value Value.
+     * @param array $BudgetIds Budget project id
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class RabbitMQServerlessKeyValuePair extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
-        }
-
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("BudgetIds",$param) and $param["BudgetIds"] !== null) {
+            $this->BudgetIds = $param["BudgetIds"];
         }
     }
 }

@@ -20,126 +20,118 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Mainland (China) ID Card OCR
  *
- * @method string getFullName() Obtain Chinese name
+ * @method string getFullName() Obtain <p>name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-
- * @method void setFullName(string $FullName) Set Chinese name
+ * @method void setFullName(string $FullName) Set <p>name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-
- * @method string getSex() Obtain Sex
+ * @method string getSex() Obtain <p>Gender</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSex(string $Sex) Set Sex
+ * @method void setSex(string $Sex) Set <p>Gender</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNation() Obtain Nation
+ * @method string getNation() Obtain <p>Ethnicity</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNation(string $Nation) Set Nation
+ * @method void setNation(string $Nation) Set <p>Ethnicity</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBirthday() Obtain Birthday
+ * @method string getBirthday() Obtain <p>Birthday</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBirthday(string $Birthday) Set Birthday
+ * @method void setBirthday(string $Birthday) Set <p>Birthday</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAddress() Obtain Address
+ * @method string getAddress() Obtain <p>Address</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAddress(string $Address) Set Address
+ * @method void setAddress(string $Address) Set <p>Address</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLicenseNumber() Obtain License number
+ * @method string getLicenseNumber() Obtain <p>Identity card number</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-
- * @method void setLicenseNumber(string $LicenseNumber) Set License number
+ * @method void setLicenseNumber(string $LicenseNumber) Set <p>Identity card number</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-
- * @method string getFormattedAddress() Obtain Address
+ * @method string getFormattedAddress() Obtain <p>Address</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFormattedAddress(string $FormattedAddress) Set Address
+ * @method void setFormattedAddress(string $FormattedAddress) Set <p>Address</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAuthority() Obtain Issuing authority
+ * @method string getAuthority() Obtain <p>Issuing authority</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAuthority(string $Authority) Set Issuing authority
+ * @method void setAuthority(string $Authority) Set <p>Issuing authority</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getValidDate() Obtain Validity period
+ * @method string getValidDate() Obtain <p>Validity period</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setValidDate(string $ValidDate) Set Validity period
+ * @method void setValidDate(string $ValidDate) Set <p>Validity period</p>
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MainlandIDCard extends AbstractModel
 {
     /**
-     * @var string Chinese name
+     * @var string <p>name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-
      */
     public $FullName;
 
     /**
-     * @var string Sex
+     * @var string <p>Gender</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Sex;
 
     /**
-     * @var string Nation
+     * @var string <p>Ethnicity</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Nation;
 
     /**
-     * @var string Birthday
+     * @var string <p>Birthday</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Birthday;
 
     /**
-     * @var string Address
+     * @var string <p>Address</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     public $Address;
 
     /**
-     * @var string License number
+     * @var string <p>Identity card number</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-
      */
     public $LicenseNumber;
 
     /**
-     * @var string Address
+     * @var string <p>Address</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FormattedAddress;
 
     /**
-     * @var string Issuing authority
+     * @var string <p>Issuing authority</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Authority;
 
     /**
-     * @var string Validity period
+     * @var string <p>Validity period</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ValidDate;
 
     /**
-     * @param string $FullName Chinese name
+     * @param string $FullName <p>name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-
-     * @param string $Sex Sex
+     * @param string $Sex <p>Gender</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Nation Nation
+     * @param string $Nation <p>Ethnicity</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Birthday Birthday
+     * @param string $Birthday <p>Birthday</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Address Address
+     * @param string $Address <p>Address</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LicenseNumber License number
+     * @param string $LicenseNumber <p>Identity card number</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-
-     * @param string $FormattedAddress Address
+     * @param string $FormattedAddress <p>Address</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Authority Issuing authority
+     * @param string $Authority <p>Issuing authority</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ValidDate Validity period
+     * @param string $ValidDate <p>Validity period</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

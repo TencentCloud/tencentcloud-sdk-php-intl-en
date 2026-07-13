@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) Set Remarks
  * @method boolean getTraceFlag() Obtain Whether trace is enabled.
  * @method void setTraceFlag(boolean $TraceFlag) Set Whether trace is enabled.
+ * @method float getSendReceiveRatio() Obtain Traffic throttling production consumption ratio
+ * @method void setSendReceiveRatio(float $SendReceiveRatio) Set Traffic throttling production consumption ratio
+ * @method boolean getDeleteAllTags() Obtain Specifies whether to delete all tags. Default value: false.
+ * @method void setDeleteAllTags(boolean $DeleteAllTags) Set Specifies whether to delete all tags. Default value: false.
+ * @method array getInstanceTags() Obtain Modified instance tag list
+ * @method void setInstanceTags(array $InstanceTags) Set Modified instance tag list
  */
 class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel
 {
@@ -52,10 +58,28 @@ class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel
     public $TraceFlag;
 
     /**
+     * @var float Traffic throttling production consumption ratio
+     */
+    public $SendReceiveRatio;
+
+    /**
+     * @var boolean Specifies whether to delete all tags. Default value: false.
+     */
+    public $DeleteAllTags;
+
+    /**
+     * @var array Modified instance tag list
+     */
+    public $InstanceTags;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $ClusterName Cluster name.
      * @param string $Remark Remarks
      * @param boolean $TraceFlag Whether trace is enabled.
+     * @param float $SendReceiveRatio Traffic throttling production consumption ratio
+     * @param boolean $DeleteAllTags Specifies whether to delete all tags. Default value: false.
+     * @param array $InstanceTags Modified instance tag list
      */
     function __construct()
     {
@@ -84,6 +108,23 @@ class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel
 
         if (array_key_exists("TraceFlag",$param) and $param["TraceFlag"] !== null) {
             $this->TraceFlag = $param["TraceFlag"];
+        }
+
+        if (array_key_exists("SendReceiveRatio",$param) and $param["SendReceiveRatio"] !== null) {
+            $this->SendReceiveRatio = $param["SendReceiveRatio"];
+        }
+
+        if (array_key_exists("DeleteAllTags",$param) and $param["DeleteAllTags"] !== null) {
+            $this->DeleteAllTags = $param["DeleteAllTags"];
+        }
+
+        if (array_key_exists("InstanceTags",$param) and $param["InstanceTags"] !== null) {
+            $this->InstanceTags = [];
+            foreach ($param["InstanceTags"] as $key => $value){
+                $obj = new RabbitMQServerlessTag();
+                $obj->deserialize($value);
+                array_push($this->InstanceTags, $obj);
+            }
         }
     }
 }

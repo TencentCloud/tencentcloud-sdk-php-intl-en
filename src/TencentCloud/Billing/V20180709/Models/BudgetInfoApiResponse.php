@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trabbit\V20230418\Models;
+namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Key-value pair
+ * Return information after the budget operation
  *
- * @method string getKey() Obtain Key.
- * @method void setKey(string $Key) Set Key.
- * @method string getValue() Obtain Value.
- * @method void setValue(string $Value) Set Value.
+ * @method string getBudgetId() Obtain Budget project id
+ * @method void setBudgetId(string $BudgetId) Set Budget project id
+ * @method string getUpdateTime() Obtain Update budget time
+ * @method void setUpdateTime(string $UpdateTime) Set Update budget time
  */
-class RabbitMQServerlessKeyValuePair extends AbstractModel
+class BudgetInfoApiResponse extends AbstractModel
 {
     /**
-     * @var string Key.
+     * @var string Budget project id
      */
-    public $Key;
+    public $BudgetId;
 
     /**
-     * @var string Value.
+     * @var string Update budget time
      */
-    public $Value;
+    public $UpdateTime;
 
     /**
-     * @param string $Key Key.
-     * @param string $Value Value.
+     * @param string $BudgetId Budget project id
+     * @param string $UpdateTime Update budget time
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class RabbitMQServerlessKeyValuePair extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists("BudgetId",$param) and $param["BudgetId"] !== null) {
+            $this->BudgetId = $param["BudgetId"];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

@@ -20,94 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRabbitMQServerlessQueues request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getVirtualHost() Obtain Vhost parameter.
- * @method void setVirtualHost(string $VirtualHost) Set Vhost parameter.
- * @method integer getOffset() Obtain Pagination offset
- * @method void setOffset(integer $Offset) Set Pagination offset
- * @method integer getLimit() Obtain Pagination limit
- * @method void setLimit(integer $Limit) Set Pagination limit
- * @method string getSearchWord() Obtain Search keywords
- * @method void setSearchWord(string $SearchWord) Set Search keywords
- * @method string getQueueType() Obtain Specifies the queue type filter criteria. if it is left blank or set to "all", it indicates classic and quorum queues; if set to "classic", it filters classic queues; if set to "quorum", it filters quorum queues.
- * @method void setQueueType(string $QueueType) Set Specifies the queue type filter criteria. if it is left blank or set to "all", it indicates classic and quorum queues; if set to "classic", it filters classic queues; if set to "quorum", it filters quorum queues.
- * @method string getSortElement() Obtain Sorting field.
-ConsumerNumber: specifies the number of online consumers.
-MessageHeapCount specifies the number of message backlogs.
-MessageRateInOut specifies the total production and consumption rate.
-MessageRateIn specifies the production rate.
-MessageRateOut specifies the consumption rate.
- * @method void setSortElement(string $SortElement) Set Sorting field.
-ConsumerNumber: specifies the number of online consumers.
-MessageHeapCount specifies the number of message backlogs.
-MessageRateInOut specifies the total production and consumption rate.
-MessageRateIn specifies the production rate.
-MessageRateOut specifies the consumption rate.
- * @method string getSortOrder() Obtain Sort order. valid values: ascend or descend.
- * @method void setSortOrder(string $SortOrder) Set Sort order. valid values: ascend or descend.
+ * @method string getInstanceId() Obtain <p>Instance Id</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance Id</p>
+ * @method string getVirtualHost() Obtain <p>Vhost parameter</p>
+ * @method void setVirtualHost(string $VirtualHost) Set <p>Vhost parameter</p>
+ * @method integer getOffset() Obtain <p>Pagination offset.</p>
+ * @method void setOffset(integer $Offset) Set <p>Pagination offset.</p>
+ * @method integer getLimit() Obtain <p>Pagination limit.</p>
+ * @method void setLimit(integer $Limit) Set <p>Pagination limit.</p>
+ * @method string getSearchWord() Obtain <p>Search keyword</p>
+ * @method void setSearchWord(string $SearchWord) Set <p>Search keyword</p>
+ * @method string getQueueType() Obtain <p>Queue type filter criteria. Leave blank or use "all" for classic and quorum queues; "classic" for classic queues; "quorum" for quorum queues.</p>
+ * @method void setQueueType(string $QueueType) Set <p>Queue type filter criteria. Leave blank or use "all" for classic and quorum queues; "classic" for classic queues; "quorum" for quorum queues.</p>
+ * @method string getSortElement() Obtain <p>Sorting field:<br>messages_ready - message backlog;<br>publish - production rate;<br>deliver - consumption rate;<br>consumers - number of online consumers;</p>
+ * @method void setSortElement(string $SortElement) Set <p>Sorting field:<br>messages_ready - message backlog;<br>publish - production rate;<br>deliver - consumption rate;<br>consumers - number of online consumers;</p>
+ * @method string getSortOrder() Obtain <p>Sort order, asc or desc</p>
+ * @method void setSortOrder(string $SortOrder) Set <p>Sort order, asc or desc</p>
  */
 class DescribeRabbitMQServerlessQueuesRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string <p>Instance Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Vhost parameter.
+     * @var string <p>Vhost parameter</p>
      */
     public $VirtualHost;
 
     /**
-     * @var integer Pagination offset
+     * @var integer <p>Pagination offset.</p>
      */
     public $Offset;
 
     /**
-     * @var integer Pagination limit
+     * @var integer <p>Pagination limit.</p>
      */
     public $Limit;
 
     /**
-     * @var string Search keywords
+     * @var string <p>Search keyword</p>
      */
     public $SearchWord;
 
     /**
-     * @var string Specifies the queue type filter criteria. if it is left blank or set to "all", it indicates classic and quorum queues; if set to "classic", it filters classic queues; if set to "quorum", it filters quorum queues.
+     * @var string <p>Queue type filter criteria. Leave blank or use "all" for classic and quorum queues; "classic" for classic queues; "quorum" for quorum queues.</p>
      */
     public $QueueType;
 
     /**
-     * @var string Sorting field.
-ConsumerNumber: specifies the number of online consumers.
-MessageHeapCount specifies the number of message backlogs.
-MessageRateInOut specifies the total production and consumption rate.
-MessageRateIn specifies the production rate.
-MessageRateOut specifies the consumption rate.
+     * @var string <p>Sorting field:<br>messages_ready - message backlog;<br>publish - production rate;<br>deliver - consumption rate;<br>consumers - number of online consumers;</p>
      */
     public $SortElement;
 
     /**
-     * @var string Sort order. valid values: ascend or descend.
+     * @var string <p>Sort order, asc or desc</p>
      */
     public $SortOrder;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $VirtualHost Vhost parameter.
-     * @param integer $Offset Pagination offset
-     * @param integer $Limit Pagination limit
-     * @param string $SearchWord Search keywords
-     * @param string $QueueType Specifies the queue type filter criteria. if it is left blank or set to "all", it indicates classic and quorum queues; if set to "classic", it filters classic queues; if set to "quorum", it filters quorum queues.
-     * @param string $SortElement Sorting field.
-ConsumerNumber: specifies the number of online consumers.
-MessageHeapCount specifies the number of message backlogs.
-MessageRateInOut specifies the total production and consumption rate.
-MessageRateIn specifies the production rate.
-MessageRateOut specifies the consumption rate.
-     * @param string $SortOrder Sort order. valid values: ascend or descend.
+     * @param string $InstanceId <p>Instance Id</p>
+     * @param string $VirtualHost <p>Vhost parameter</p>
+     * @param integer $Offset <p>Pagination offset.</p>
+     * @param integer $Limit <p>Pagination limit.</p>
+     * @param string $SearchWord <p>Search keyword</p>
+     * @param string $QueueType <p>Queue type filter criteria. Leave blank or use "all" for classic and quorum queues; "classic" for classic queues; "quorum" for quorum queues.</p>
+     * @param string $SortElement <p>Sorting field:<br>messages_ready - message backlog;<br>publish - production rate;<br>deliver - consumption rate;<br>consumers - number of online consumers;</p>
+     * @param string $SortOrder <p>Sort order, asc or desc</p>
      */
     function __construct()
     {

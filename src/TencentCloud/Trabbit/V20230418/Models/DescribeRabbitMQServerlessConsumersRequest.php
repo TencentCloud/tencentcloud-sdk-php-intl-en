@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Pagination offset
  * @method string getSearchWord() Obtain Search keywords
  * @method void setSearchWord(string $SearchWord) Set Search keywords
+ * @method string getChannel() Obtain channelId
+ * @method void setChannel(string $Channel) Set channelId
  */
 class DescribeRabbitMQServerlessConsumersRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeRabbitMQServerlessConsumersRequest extends AbstractModel
     public $SearchWord;
 
     /**
+     * @var string channelId
+     */
+    public $Channel;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $VirtualHost Vhost parameter.
      * @param string $QueueName Queue name.
      * @param integer $Limit Pagination limit
      * @param integer $Offset Pagination offset
      * @param string $SearchWord Search keywords
+     * @param string $Channel channelId
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeRabbitMQServerlessConsumersRequest extends AbstractModel
 
         if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
             $this->SearchWord = $param["SearchWord"];
+        }
+
+        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
+            $this->Channel = $param["Channel"];
         }
     }
 }

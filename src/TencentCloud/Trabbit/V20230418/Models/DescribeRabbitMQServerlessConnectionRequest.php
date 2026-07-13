@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set instance ID		
  * @method string getVirtualHost() Obtain Specifies the vhost name.
  * @method void setVirtualHost(string $VirtualHost) Set Specifies the vhost name.
- * @method string getSortElement() Obtain Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
- * @method void setSortElement(string $SortElement) Set Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
- * @method string getSortType() Obtain Sort order: ASC, DESC
- * @method void setSortType(string $SortType) Set Sort order: ASC, DESC
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
+ * @method string getSortElement() Obtain Sort by which field. Supported values: channel (number of channels), incoming_bytes (inbound traffic volume), outgoing_bytes (outbound traffic volume).
+ * @method void setSortElement(string $SortElement) Set Sort by which field. Supported values: channel (number of channels), incoming_bytes (inbound traffic volume), outgoing_bytes (outbound traffic volume).
+ * @method string getSortType() Obtain Sorting method: ASC, DESC
+ * @method void setSortType(string $SortType) Set Sorting method: ASC, DESC
+ * @method integer getOffset() Obtain Pagination parameters, started from which data entry
+ * @method void setOffset(integer $Offset) Set Pagination parameters, started from which data entry
+ * @method integer getLimit() Obtain Page size.
+ * @method void setLimit(integer $Limit) Set Page size.
+ * @method string getName() Obtain Connection name fuzzy search
+ * @method void setName(string $Name) Set Connection name fuzzy search
  */
 class DescribeRabbitMQServerlessConnectionRequest extends AbstractModel
 {
@@ -48,38 +48,38 @@ class DescribeRabbitMQServerlessConnectionRequest extends AbstractModel
     public $VirtualHost;
 
     /**
-     * @var string Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+     * @var string Sort by which field. Supported values: channel (number of channels), incoming_bytes (inbound traffic volume), outgoing_bytes (outbound traffic volume).
      */
     public $SortElement;
 
     /**
-     * @var string Sort order: ASC, DESC
+     * @var string Sorting method: ASC, DESC
      */
     public $SortType;
 
     /**
-     * @var integer 
+     * @var integer Pagination parameters, started from which data entry
      */
     public $Offset;
 
     /**
-     * @var integer 
+     * @var integer Page size.
      */
     public $Limit;
 
     /**
-     * @var string 
+     * @var string Connection name fuzzy search
      */
     public $Name;
 
     /**
      * @param string $InstanceId instance ID		
      * @param string $VirtualHost Specifies the vhost name.
-     * @param string $SortElement Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
-     * @param string $SortType Sort order: ASC, DESC
-     * @param integer $Offset 
-     * @param integer $Limit 
-     * @param string $Name 
+     * @param string $SortElement Sort by which field. Supported values: channel (number of channels), incoming_bytes (inbound traffic volume), outgoing_bytes (outbound traffic volume).
+     * @param string $SortType Sorting method: ASC, DESC
+     * @param integer $Offset Pagination parameters, started from which data entry
+     * @param integer $Limit Page size.
+     * @param string $Name Connection name fuzzy search
      */
     function __construct()
     {
