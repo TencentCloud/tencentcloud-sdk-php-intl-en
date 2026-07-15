@@ -20,98 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCloudProductLogCollection request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getAssumerName() Obtain Cloud product identifier, support enumerate: CDS, CWP, CDB, TDSQL-C, MongoDB, TDStore, DCDB, MariaDB, PostgreSQL, BH, APIS.
- * @method void setAssumerName(string $AssumerName) Set Cloud product identifier, support enumerate: CDS, CWP, CDB, TDSQL-C, MongoDB, TDStore, DCDB, MariaDB, PostgreSQL, BH, APIS.
- * @method string getLogType() Obtain Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS
- * @method void setLogType(string $LogType) Set Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS
- * @method string getCloudProductRegion() Obtain Cloud product region. Data discrepancies exist in the format of region input parameters for different log types (LogType). Refer to the following example:
--All log types of CDS: ap-guangzhou
-- CDB-AUDIT: gz
-- TDSQL-C-AUDIT: gz
-- MongoDB-AUDIT: gz
-- MongoDB-SlowLog:ap-guangzhou
-- MongoDB-ErrorLog:ap-guangzhou
-- TDMYSQL-SLOW:gz
--All log types of DCDB: gz
--All log types of MariaDB: gz
--PostgreSQL all log types: gz
--BH all log types: overseas-polaris (Hong Kong (China) and other)/fsi-polaris (financial district)/general-polaris (general zone)/intl-sg-prod (international site)
--All log types of APIS: gz
- * @method void setCloudProductRegion(string $CloudProductRegion) Set Cloud product region. Data discrepancies exist in the format of region input parameters for different log types (LogType). Refer to the following example:
--All log types of CDS: ap-guangzhou
-- CDB-AUDIT: gz
-- TDSQL-C-AUDIT: gz
-- MongoDB-AUDIT: gz
-- MongoDB-SlowLog:ap-guangzhou
-- MongoDB-ErrorLog:ap-guangzhou
-- TDMYSQL-SLOW:gz
--All log types of DCDB: gz
--All log types of MariaDB: gz
--PostgreSQL all log types: gz
--BH all log types: overseas-polaris (Hong Kong (China) and other)/fsi-polaris (financial district)/general-polaris (general zone)/intl-sg-prod (international site)
--All log types of APIS: gz
- * @method string getExtend() Obtain Logging configuration extended information, normally used to store additional log shipping configuration
- * @method void setExtend(string $Extend) Set Logging configuration extended information, normally used to store additional log shipping configuration
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method string getAssumerName() Obtain <p>Cloud product identifier, supports enumerate: CDS, CWP, CDB, TDSQL-C, MongoDB, TDStore, DCDB, MariaDB, PostgreSQL, BH, APIS</p>
+ * @method void setAssumerName(string $AssumerName) Set <p>Cloud product identifier, supports enumerate: CDS, CWP, CDB, TDSQL-C, MongoDB, TDStore, DCDB, MariaDB, PostgreSQL, BH, APIS</p>
+ * @method string getLogType() Obtain <p>Log type. Supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB  ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p>
+ * @method void setLogType(string $LogType) Set <p>Log type. Supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB  ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p>
+ * @method string getCloudProductRegion() Obtain <p>Product region. Different log types have different region input formats. Refer to the following example:</p><ul><li>All CDS log types: ap-guangzhou</li><li>CDB-AUDIT: gz</li><li>TDSQL-C-AUDIT: gz</li><li>MongoDB-AUDIT: gz</li><li>MongoDB-SlowLog: ap-guangzhou</li><li>MongoDB-ErrorLog: ap-guangzhou</li><li>TDMYSQL-SLOW: gz</li><li>All DCDB log types: gz</li><li>All MariaDB log types: gz</li><li>All PostgreSQL log types: gz</li><li>All BH log types: overseas-polaris(Hong Kong (China) and other)/fsi-polaris(financial district)/general-polaris(general zone)/intl-sg-prod(international site)</li><li>All APIS log types: gz</li></ul>
+ * @method void setCloudProductRegion(string $CloudProductRegion) Set <p>Product region. Different log types have different region input formats. Refer to the following example:</p><ul><li>All CDS log types: ap-guangzhou</li><li>CDB-AUDIT: gz</li><li>TDSQL-C-AUDIT: gz</li><li>MongoDB-AUDIT: gz</li><li>MongoDB-SlowLog: ap-guangzhou</li><li>MongoDB-ErrorLog: ap-guangzhou</li><li>TDMYSQL-SLOW: gz</li><li>All DCDB log types: gz</li><li>All MariaDB log types: gz</li><li>All PostgreSQL log types: gz</li><li>All BH log types: overseas-polaris(Hong Kong (China) and other)/fsi-polaris(financial district)/general-polaris(general zone)/intl-sg-prod(international site)</li><li>All APIS log types: gz</li></ul>
+ * @method string getExtend() Obtain <p>Logging configuration extended information, generally used to store additional log delivery configuration</p>
+ * @method void setExtend(string $Extend) Set <p>Logging configuration extended information, generally used to store additional log delivery configuration</p>
+ * @method array getTags() Obtain <p>Description list of tags. By specifying this parameter, you can simultaneously bind tags to the appropriate logset and topic. Supports a maximum of 10 tag key-value pairs. The same resource can only be bound to the same tag key.</p>
+ * @method void setTags(array $Tags) Set <p>Description list of tags. By specifying this parameter, you can simultaneously bind tags to the appropriate logset and topic. Supports a maximum of 10 tag key-value pairs. The same resource can only be bound to the same tag key.</p>
  */
 class ModifyCloudProductLogCollectionRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Cloud product identifier, support enumerate: CDS, CWP, CDB, TDSQL-C, MongoDB, TDStore, DCDB, MariaDB, PostgreSQL, BH, APIS.
+     * @var string <p>Cloud product identifier, supports enumerate: CDS, CWP, CDB, TDSQL-C, MongoDB, TDStore, DCDB, MariaDB, PostgreSQL, BH, APIS</p>
      */
     public $AssumerName;
 
     /**
-     * @var string Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS
+     * @var string <p>Log type. Supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB  ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p>
      */
     public $LogType;
 
     /**
-     * @var string Cloud product region. Data discrepancies exist in the format of region input parameters for different log types (LogType). Refer to the following example:
--All log types of CDS: ap-guangzhou
-- CDB-AUDIT: gz
-- TDSQL-C-AUDIT: gz
-- MongoDB-AUDIT: gz
-- MongoDB-SlowLog:ap-guangzhou
-- MongoDB-ErrorLog:ap-guangzhou
-- TDMYSQL-SLOW:gz
--All log types of DCDB: gz
--All log types of MariaDB: gz
--PostgreSQL all log types: gz
--BH all log types: overseas-polaris (Hong Kong (China) and other)/fsi-polaris (financial district)/general-polaris (general zone)/intl-sg-prod (international site)
--All log types of APIS: gz
+     * @var string <p>Product region. Different log types have different region input formats. Refer to the following example:</p><ul><li>All CDS log types: ap-guangzhou</li><li>CDB-AUDIT: gz</li><li>TDSQL-C-AUDIT: gz</li><li>MongoDB-AUDIT: gz</li><li>MongoDB-SlowLog: ap-guangzhou</li><li>MongoDB-ErrorLog: ap-guangzhou</li><li>TDMYSQL-SLOW: gz</li><li>All DCDB log types: gz</li><li>All MariaDB log types: gz</li><li>All PostgreSQL log types: gz</li><li>All BH log types: overseas-polaris(Hong Kong (China) and other)/fsi-polaris(financial district)/general-polaris(general zone)/intl-sg-prod(international site)</li><li>All APIS log types: gz</li></ul>
      */
     public $CloudProductRegion;
 
     /**
-     * @var string Logging configuration extended information, normally used to store additional log shipping configuration
+     * @var string <p>Logging configuration extended information, generally used to store additional log delivery configuration</p>
      */
     public $Extend;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param string $AssumerName Cloud product identifier, support enumerate: CDS, CWP, CDB, TDSQL-C, MongoDB, TDStore, DCDB, MariaDB, PostgreSQL, BH, APIS.
-     * @param string $LogType Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS
-     * @param string $CloudProductRegion Cloud product region. Data discrepancies exist in the format of region input parameters for different log types (LogType). Refer to the following example:
--All log types of CDS: ap-guangzhou
-- CDB-AUDIT: gz
-- TDSQL-C-AUDIT: gz
-- MongoDB-AUDIT: gz
-- MongoDB-SlowLog:ap-guangzhou
-- MongoDB-ErrorLog:ap-guangzhou
-- TDMYSQL-SLOW:gz
--All log types of DCDB: gz
--All log types of MariaDB: gz
--PostgreSQL all log types: gz
--BH all log types: overseas-polaris (Hong Kong (China) and other)/fsi-polaris (financial district)/general-polaris (general zone)/intl-sg-prod (international site)
--All log types of APIS: gz
-     * @param string $Extend Logging configuration extended information, normally used to store additional log shipping configuration
+     * @var array <p>Description list of tags. By specifying this parameter, you can simultaneously bind tags to the appropriate logset and topic. Supports a maximum of 10 tag key-value pairs. The same resource can only be bound to the same tag key.</p>
+     */
+    public $Tags;
+
+    /**
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param string $AssumerName <p>Cloud product identifier, supports enumerate: CDS, CWP, CDB, TDSQL-C, MongoDB, TDStore, DCDB, MariaDB, PostgreSQL, BH, APIS</p>
+     * @param string $LogType <p>Log type. Supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB  ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p>
+     * @param string $CloudProductRegion <p>Product region. Different log types have different region input formats. Refer to the following example:</p><ul><li>All CDS log types: ap-guangzhou</li><li>CDB-AUDIT: gz</li><li>TDSQL-C-AUDIT: gz</li><li>MongoDB-AUDIT: gz</li><li>MongoDB-SlowLog: ap-guangzhou</li><li>MongoDB-ErrorLog: ap-guangzhou</li><li>TDMYSQL-SLOW: gz</li><li>All DCDB log types: gz</li><li>All MariaDB log types: gz</li><li>All PostgreSQL log types: gz</li><li>All BH log types: overseas-polaris(Hong Kong (China) and other)/fsi-polaris(financial district)/general-polaris(general zone)/intl-sg-prod(international site)</li><li>All APIS log types: gz</li></ul>
+     * @param string $Extend <p>Logging configuration extended information, generally used to store additional log delivery configuration</p>
+     * @param array $Tags <p>Description list of tags. By specifying this parameter, you can simultaneously bind tags to the appropriate logset and topic. Supports a maximum of 10 tag key-value pairs. The same resource can only be bound to the same tag key.</p>
      */
     function __construct()
     {
@@ -144,6 +104,15 @@ class ModifyCloudProductLogCollectionRequest extends AbstractModel
 
         if (array_key_exists("Extend",$param) and $param["Extend"] !== null) {
             $this->Extend = $param["Extend"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

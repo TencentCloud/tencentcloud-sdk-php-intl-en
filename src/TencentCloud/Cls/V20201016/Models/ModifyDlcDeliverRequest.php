@@ -42,6 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHasServicesLog(integer $HasServicesLog) Set <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled. Enabled by default.</p>
  * @method integer getStatus() Obtain <p>Task status.</p><p>Enumeration values: </p><ul><li>1: Running, </li><li>2: Stop.</li></ul>
  * @method void setStatus(integer $Status) Set <p>Task status.</p><p>Enumeration values: </p><ul><li>1: Running, </li><li>2: Stop.</li></ul>
+ * @method boolean getAutoCreateField() Obtain <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+ * @method void setAutoCreateField(boolean $AutoCreateField) Set <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+ * @method DlcFailHandle getDlcFailHandle() Obtain <p>Store logs with delivery failure in a DLC table</p>
+ * @method void setDlcFailHandle(DlcFailHandle $DlcFailHandle) Set <p>Store logs with delivery failure in a DLC table</p>
+ * @method string getDSLFilter() Obtain <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+ * @method void setDSLFilter(string $DSLFilter) Set <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
  */
 class ModifyDlcDeliverRequest extends AbstractModel
 {
@@ -101,6 +107,21 @@ class ModifyDlcDeliverRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var boolean <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+     */
+    public $AutoCreateField;
+
+    /**
+     * @var DlcFailHandle <p>Store logs with delivery failure in a DLC table</p>
+     */
+    public $DlcFailHandle;
+
+    /**
+     * @var string <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+     */
+    public $DSLFilter;
+
+    /**
      * @param string $TopicId <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li></ul>
      * @param string $TaskId <p>Task id.</p>
      * @param string $Name <p>Name: Length not exceeding 64 characters, starts with a letter, accepts 0-9, a-z, A-Z, _, -, Chinese character.</p>
@@ -112,6 +133,9 @@ class ModifyDlcDeliverRequest extends AbstractModel
      * @param DlcInfo $DlcInfo <p>dlc configuration message</p>
      * @param integer $HasServicesLog <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled. Enabled by default.</p>
      * @param integer $Status <p>Task status.</p><p>Enumeration values: </p><ul><li>1: Running, </li><li>2: Stop.</li></ul>
+     * @param boolean $AutoCreateField <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+     * @param DlcFailHandle $DlcFailHandle <p>Store logs with delivery failure in a DLC table</p>
+     * @param string $DSLFilter <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
      */
     function __construct()
     {
@@ -169,6 +193,19 @@ class ModifyDlcDeliverRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("AutoCreateField",$param) and $param["AutoCreateField"] !== null) {
+            $this->AutoCreateField = $param["AutoCreateField"];
+        }
+
+        if (array_key_exists("DlcFailHandle",$param) and $param["DlcFailHandle"] !== null) {
+            $this->DlcFailHandle = new DlcFailHandle();
+            $this->DlcFailHandle->deserialize($param["DlcFailHandle"]);
+        }
+
+        if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
+            $this->DSLFilter = $param["DSLFilter"];
         }
     }
 }

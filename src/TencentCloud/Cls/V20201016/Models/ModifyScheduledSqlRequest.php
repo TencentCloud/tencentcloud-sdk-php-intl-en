@@ -20,98 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyScheduledSql request structure.
  *
- * @method string getTaskId() Obtain Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
- * @method void setTaskId(string $TaskId) Set Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
- * @method string getSrcTopicId() Obtain Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
- * @method void setSrcTopicId(string $SrcTopicId) Set Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
- * @method integer getEnableFlag() Obtain Task start status. 1: Enabled, 2: Disabled
- * @method void setEnableFlag(integer $EnableFlag) Set Task start status. 1: Enabled, 2: Disabled
- * @method ScheduledSqlResouceInfo getDstResource() Obtain Target log topic for scheduled SQL analysis
- * @method void setDstResource(ScheduledSqlResouceInfo $DstResource) Set Target log topic for scheduled SQL analysis
- * @method string getScheduledSqlContent() Obtain Queries statements
- * @method void setScheduledSqlContent(string $ScheduledSqlContent) Set Queries statements
- * @method integer getProcessPeriod() Obtain Scheduling cycle (minutes), 1-1440 minutes
- * @method void setProcessPeriod(integer $ProcessPeriod) Set Scheduling cycle (minutes), 1-1440 minutes
- * @method string getProcessTimeWindow() Obtain Time window for a single query. Example: last 15 minutes
- * @method void setProcessTimeWindow(string $ProcessTimeWindow) Set Time window for a single query. Example: last 15 minutes
- * @method integer getProcessDelay() Obtain Execution delay (seconds), 0-120 seconds, default 60
- * @method void setProcessDelay(integer $ProcessDelay) Set Execution delay (seconds), 0-120 seconds, default 60
- * @method string getSrcTopicRegion() Obtain Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
- * @method void setSrcTopicRegion(string $SrcTopicRegion) Set Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
- * @method string getName() Obtain Task name, 0-255 characters
- * @method void setName(string $Name) Set Task name, 0-255 characters
- * @method integer getSyntaxRule() Obtain Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax
- * @method void setSyntaxRule(integer $SyntaxRule) Set Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax
+ * @method string getTaskId() Obtain <p>Task ID, obtained by <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">searching the scheduled SQL analysis task list</a>.</p>
+ * @method void setTaskId(string $TaskId) Set <p>Task ID, obtained by <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">searching the scheduled SQL analysis task list</a>.</p>
+ * @method string getSrcTopicId() Obtain <p>Source log topic, obtained via <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">search scheduled SQL analysis task list</a></p>
+ * @method void setSrcTopicId(string $SrcTopicId) Set <p>Source log topic, obtained via <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">search scheduled SQL analysis task list</a></p>
+ * @method integer getEnableFlag() Obtain <p>Task start status. 1: Enabled, 2: Disabled</p>
+ * @method void setEnableFlag(integer $EnableFlag) Set <p>Task start status. 1: Enabled, 2: Disabled</p>
+ * @method ScheduledSqlResouceInfo getDstResource() Obtain <p>Target log topic for scheduled SQL analysis</p>
+ * @method void setDstResource(ScheduledSqlResouceInfo $DstResource) Set <p>Target log topic for scheduled SQL analysis</p>
+ * @method string getScheduledSqlContent() Obtain <p>Query statement</p>
+ * @method void setScheduledSqlContent(string $ScheduledSqlContent) Set <p>Query statement</p>
+ * @method integer getProcessPeriod() Obtain <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
+ * @method void setProcessPeriod(integer $ProcessPeriod) Set <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
+ * @method string getProcessTimeWindow() Obtain <p>Time window for a single query. Example: last 15 minutes</p>
+ * @method void setProcessTimeWindow(string $ProcessTimeWindow) Set <p>Time window for a single query. Example: last 15 minutes</p>
+ * @method integer getProcessDelay() Obtain <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
+ * @method void setProcessDelay(integer $ProcessDelay) Set <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
+ * @method string getSrcTopicRegion() Obtain <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
+ * @method void setSrcTopicRegion(string $SrcTopicRegion) Set <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
+ * @method string getName() Obtain <p>Task name, 0-255 characters</p>
+ * @method void setName(string $Name) Set <p>Task name, 0-255 characters</p>
+ * @method integer getSyntaxRule() Obtain <p>Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p>
+ * @method void setSyntaxRule(integer $SyntaxRule) Set <p>Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p>
+ * @method integer getHasServicesLog() Obtain <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p>
+ * @method void setHasServicesLog(integer $HasServicesLog) Set <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p>
+ * @method integer getFullQuery() Obtain <p>Full-text search query tag. 1: Off, 2: On.</p>
+ * @method void setFullQuery(integer $FullQuery) Set <p>Full-text search query tag. 1: Off, 2: On.</p>
+ * @method integer getProcessPeriodUnit() Obtain <p>Scheduling period unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+ * @method void setProcessPeriodUnit(integer $ProcessPeriodUnit) Set <p>Scheduling period unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
  */
 class ModifyScheduledSqlRequest extends AbstractModel
 {
     /**
-     * @var string Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+     * @var string <p>Task ID, obtained by <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">searching the scheduled SQL analysis task list</a>.</p>
      */
     public $TaskId;
 
     /**
-     * @var string Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
+     * @var string <p>Source log topic, obtained via <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">search scheduled SQL analysis task list</a></p>
      */
     public $SrcTopicId;
 
     /**
-     * @var integer Task start status. 1: Enabled, 2: Disabled
+     * @var integer <p>Task start status. 1: Enabled, 2: Disabled</p>
      */
     public $EnableFlag;
 
     /**
-     * @var ScheduledSqlResouceInfo Target log topic for scheduled SQL analysis
+     * @var ScheduledSqlResouceInfo <p>Target log topic for scheduled SQL analysis</p>
      */
     public $DstResource;
 
     /**
-     * @var string Queries statements
+     * @var string <p>Query statement</p>
      */
     public $ScheduledSqlContent;
 
     /**
-     * @var integer Scheduling cycle (minutes), 1-1440 minutes
+     * @var integer <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
      */
     public $ProcessPeriod;
 
     /**
-     * @var string Time window for a single query. Example: last 15 minutes
+     * @var string <p>Time window for a single query. Example: last 15 minutes</p>
      */
     public $ProcessTimeWindow;
 
     /**
-     * @var integer Execution delay (seconds), 0-120 seconds, default 60
+     * @var integer <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
      */
     public $ProcessDelay;
 
     /**
-     * @var string Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+     * @var string <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
      */
     public $SrcTopicRegion;
 
     /**
-     * @var string Task name, 0-255 characters
+     * @var string <p>Task name, 0-255 characters</p>
      */
     public $Name;
 
     /**
-     * @var integer Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax
+     * @var integer <p>Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p>
      */
     public $SyntaxRule;
 
     /**
-     * @param string $TaskId Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
-     * @param string $SrcTopicId Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
-     * @param integer $EnableFlag Task start status. 1: Enabled, 2: Disabled
-     * @param ScheduledSqlResouceInfo $DstResource Target log topic for scheduled SQL analysis
-     * @param string $ScheduledSqlContent Queries statements
-     * @param integer $ProcessPeriod Scheduling cycle (minutes), 1-1440 minutes
-     * @param string $ProcessTimeWindow Time window for a single query. Example: last 15 minutes
-     * @param integer $ProcessDelay Execution delay (seconds), 0-120 seconds, default 60
-     * @param string $SrcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-     * @param string $Name Task name, 0-255 characters
-     * @param integer $SyntaxRule Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax
+     * @var integer <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p>
+     */
+    public $HasServicesLog;
+
+    /**
+     * @var integer <p>Full-text search query tag. 1: Off, 2: On.</p>
+     */
+    public $FullQuery;
+
+    /**
+     * @var integer <p>Scheduling period unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+     */
+    public $ProcessPeriodUnit;
+
+    /**
+     * @param string $TaskId <p>Task ID, obtained by <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">searching the scheduled SQL analysis task list</a>.</p>
+     * @param string $SrcTopicId <p>Source log topic, obtained via <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">search scheduled SQL analysis task list</a></p>
+     * @param integer $EnableFlag <p>Task start status. 1: Enabled, 2: Disabled</p>
+     * @param ScheduledSqlResouceInfo $DstResource <p>Target log topic for scheduled SQL analysis</p>
+     * @param string $ScheduledSqlContent <p>Query statement</p>
+     * @param integer $ProcessPeriod <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
+     * @param string $ProcessTimeWindow <p>Time window for a single query. Example: last 15 minutes</p>
+     * @param integer $ProcessDelay <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
+     * @param string $SrcTopicRegion <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
+     * @param string $Name <p>Task name, 0-255 characters</p>
+     * @param integer $SyntaxRule <p>Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p>
+     * @param integer $HasServicesLog <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p>
+     * @param integer $FullQuery <p>Full-text search query tag. 1: Off, 2: On.</p>
+     * @param integer $ProcessPeriodUnit <p>Scheduling period unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
      */
     function __construct()
     {
@@ -169,6 +193,18 @@ class ModifyScheduledSqlRequest extends AbstractModel
 
         if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
             $this->SyntaxRule = $param["SyntaxRule"];
+        }
+
+        if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
+            $this->HasServicesLog = $param["HasServicesLog"];
+        }
+
+        if (array_key_exists("FullQuery",$param) and $param["FullQuery"] !== null) {
+            $this->FullQuery = $param["FullQuery"];
+        }
+
+        if (array_key_exists("ProcessPeriodUnit",$param) and $param["ProcessPeriodUnit"] !== null) {
+            $this->ProcessPeriodUnit = $param["ProcessPeriodUnit"];
         }
     }
 }

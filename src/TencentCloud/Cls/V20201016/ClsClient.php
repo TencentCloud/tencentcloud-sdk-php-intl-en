@@ -74,6 +74,7 @@ Note:
 -The index rebuilding time range is subject to the log time. When the log uploading time has a deviation exceeding one hour from the index rebuilding time range (for example, reporting a new log at 16:00 for 02:00 to CLS and rebuilding the log index for 00:00–12:00), the logs will not be rebuilt and cannot be retrieved subsequently. When reporting a new log to the reconstructed log time range, it will not be rebuilt and cannot be retrieved subsequently.
  * @method Models\CreateRecordingRuleTaskResponse CreateRecordingRuleTask(Models\CreateRecordingRuleTaskRequest $req) Creating a Metric Pre-Aggregation Task
  * @method Models\CreateRecordingRuleYamlTaskResponse CreateRecordingRuleYamlTask(Models\CreateRecordingRuleYamlTaskRequest $req) Creating a Metric Pre-Aggregation Task Through a YAML File
+ * @method Models\CreateRemoteWriteTaskResponse CreateRemoteWriteTask(Models\CreateRemoteWriteTaskRequest $req) This API is used to create a remote write delivery task.
  * @method Models\CreateScheduledSqlResponse CreateScheduledSql(Models\CreateScheduledSqlRequest $req) This API is used to create a scheduled SQL analysis task.
  * @method Models\CreateSearchViewResponse CreateSearchView(Models\CreateSearchViewRequest $req) Create a query view
  * @method Models\CreateShipperResponse CreateShipper(Models\CreateShipperRequest $req) This API is used to create a task to ship to COS. Note: To use this API, you need to check whether you have configured the role and permission for shipping to COS. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
@@ -108,6 +109,7 @@ Note:
  * @method Models\DeleteNoticeContentResponse DeleteNoticeContent(Models\DeleteNoticeContentRequest $req) This API is used to delete notification content configuration.
  * @method Models\DeleteRecordingRuleTaskResponse DeleteRecordingRuleTask(Models\DeleteRecordingRuleTaskRequest $req) This API is used to delete a pre-aggregation analysis task.
  * @method Models\DeleteRecordingRuleYamlTaskResponse DeleteRecordingRuleYamlTask(Models\DeleteRecordingRuleYamlTaskRequest $req) This API is used to delete the pre-aggregation task in yaml.
+ * @method Models\DeleteRemoteWriteTaskResponse DeleteRemoteWriteTask(Models\DeleteRemoteWriteTaskRequest $req) This API is used to delete a RemoteWrite task.
  * @method Models\DeleteScheduledSqlResponse DeleteScheduledSql(Models\DeleteScheduledSqlRequest $req) This API is used to delete a scheduled SQL analysis task.
  * @method Models\DeleteSearchViewResponse DeleteSearchView(Models\DeleteSearchViewRequest $req) This API is used to delete a query view.
  * @method Models\DeleteShipperResponse DeleteShipper(Models\DeleteShipperRequest $req) This API is used to delete a COS shipping task.
@@ -160,6 +162,7 @@ Note:
  * @method Models\DescribeRebuildIndexTasksResponse DescribeRebuildIndexTasks(Models\DescribeRebuildIndexTasksRequest $req) This API is used to obtain the list of rebuild index tasks.
  * @method Models\DescribeRecordingRuleTaskResponse DescribeRecordingRuleTask(Models\DescribeRecordingRuleTaskRequest $req) This API is used to retrieve the pre-aggregation task list.
  * @method Models\DescribeRecordingRuleYamlTaskResponse DescribeRecordingRuleYamlTask(Models\DescribeRecordingRuleYamlTaskRequest $req) This API is used to retrieve the pre-aggregation task list in yaml.
+ * @method Models\DescribeRemoteWriteTasksResponse DescribeRemoteWriteTasks(Models\DescribeRemoteWriteTasksRequest $req) This API is used to obtain the list of RemoteWrite delivery tasks.
  * @method Models\DescribeScheduledSqlInfoResponse DescribeScheduledSqlInfo(Models\DescribeScheduledSqlInfoRequest $req) This API is used to access the scheduled SQL analysis task list.
  * @method Models\DescribeSearchViewsResponse DescribeSearchViews(Models\DescribeSearchViewsRequest $req) Query view list
  * @method Models\DescribeShipperTasksResponse DescribeShipperTasks(Models\DescribeShipperTasksRequest $req) This API is used to get the list of shipping tasks.
@@ -204,6 +207,7 @@ Note: Modifying the interface will directly overwrite historical data and change
  * @method Models\ModifyNoticeContentResponse ModifyNoticeContent(Models\ModifyNoticeContentRequest $req) This API is used to modify notification content configuration.
  * @method Models\ModifyRecordingRuleTaskResponse ModifyRecordingRuleTask(Models\ModifyRecordingRuleTaskRequest $req) This API is used to modify a scheduled pre-aggregation task.
  * @method Models\ModifyRecordingRuleYamlTaskResponse ModifyRecordingRuleYamlTask(Models\ModifyRecordingRuleYamlTaskRequest $req) Modifying a Metric Pre-Aggregation Task Through a YAML File
+ * @method Models\ModifyRemoteWriteTaskResponse ModifyRemoteWriteTask(Models\ModifyRemoteWriteTaskRequest $req) This API is used to modify a RemoteWrite task.
  * @method Models\ModifyScheduledSqlResponse ModifyScheduledSql(Models\ModifyScheduledSqlRequest $req) This API is used to modify a scheduled SQL analysis task.
  * @method Models\ModifySearchViewResponse ModifySearchView(Models\ModifySearchViewRequest $req) This API is used to modify a query view.
  * @method Models\ModifyShipperResponse ModifyShipper(Models\ModifyShipperRequest $req) This API is used to modify an existing shipping rule. To use this API, you need to grant CLS the write permission of the specified bucket.

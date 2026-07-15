@@ -20,138 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Submit DLC task configuration
  *
- * @method string getTaskId() Obtain Task ID.
- * @method void setTaskId(string $TaskId) Set Task ID.
- * @method integer getUin() Obtain Account id.
- * @method void setUin(integer $Uin) Set Account id.
- * @method string getTopicId() Obtain Log topic ID.
- * @method void setTopicId(string $TopicId) Set Log topic ID.
- * @method string getName() Obtain Task name.
- * @method void setName(string $Name) Set Task name.
- * @method integer getDeliverType() Obtain Delivery Type. Valid values: 0: real-time delivery; 1: historic delivery.
- * @method void setDeliverType(integer $DeliverType) Set Delivery Type. Valid values: 0: real-time delivery; 1: historic delivery.
- * @method integer getMaxSize() Obtain Delivery file size in MB
- * @method void setMaxSize(integer $MaxSize) Set Delivery file size in MB
- * @method integer getInterval() Obtain Delivery interval in seconds
- * @method void setInterval(integer $Interval) Set Delivery interval in seconds
- * @method integer getStartTime() Obtain Start time of the delivery time range
- * @method void setStartTime(integer $StartTime) Set Start time of the delivery time range
- * @method integer getEndTime() Obtain End time of the delivery time range
- * @method void setEndTime(integer $EndTime) Set End time of the delivery time range
- * @method DlcInfo getDlcInfo() Obtain dlc configuration message
- * @method void setDlcInfo(DlcInfo $DlcInfo) Set dlc configuration message
- * @method integer getHasServicesLog() Obtain Whether to enable delivery service log. 1 for disabled, 2 for enabled
- * @method void setHasServicesLog(integer $HasServicesLog) Set Whether to enable delivery service log. 1 for disabled, 2 for enabled
- * @method integer getStatus() Obtain Task status.
- * @method void setStatus(integer $Status) Set Task status.
- * @method integer getProgress() Obtain Task progress. Historic delivery tasks take effect.
- * @method void setProgress(integer $Progress) Set Task progress. Historic delivery tasks take effect.
- * @method integer getBizType() Obtain Topic type of logs. 0: standard topic; 1: metric topic.
- * @method void setBizType(integer $BizType) Set Topic type of logs. 0: standard topic; 1: metric topic.
- * @method integer getCreateTime() Obtain Task creation time.
- * @method void setCreateTime(integer $CreateTime) Set Task creation time.
- * @method integer getUpdateTime() Obtain Task modification time.
- * @method void setUpdateTime(integer $UpdateTime) Set Task modification time.
+ * @method string getTaskId() Obtain <p>Task id.</p>
+ * @method void setTaskId(string $TaskId) Set <p>Task id.</p>
+ * @method integer getUin() Obtain <p>Account id.</p>
+ * @method void setUin(integer $Uin) Set <p>Account id.</p>
+ * @method string getTopicId() Obtain <p>Log topic id.</p>
+ * @method void setTopicId(string $TopicId) Set <p>Log topic id.</p>
+ * @method string getName() Obtain <p>Task name.</p>
+ * @method void setName(string $Name) Set <p>Task name.</p>
+ * @method integer getDeliverType() Obtain <p>Delivery Type, 0: real-time delivery, 1: history delivery</p>
+ * @method void setDeliverType(integer $DeliverType) Set <p>Delivery Type, 0: real-time delivery, 1: history delivery</p>
+ * @method integer getMaxSize() Obtain <p>Delivery file size, in MB.</p>
+ * @method void setMaxSize(integer $MaxSize) Set <p>Delivery file size, in MB.</p>
+ * @method integer getInterval() Obtain <p>Delivery interval in seconds</p>
+ * @method void setInterval(integer $Interval) Set <p>Delivery interval in seconds</p>
+ * @method integer getStartTime() Obtain <p>Start time of the delivery time range</p>
+ * @method void setStartTime(integer $StartTime) Set <p>Start time of the delivery time range</p>
+ * @method integer getEndTime() Obtain <p>End time of the delivery time range</p>
+ * @method void setEndTime(integer $EndTime) Set <p>End time of the delivery time range</p>
+ * @method DlcInfo getDlcInfo() Obtain <p>dlc configuration message</p>
+ * @method void setDlcInfo(DlcInfo $DlcInfo) Set <p>dlc configuration message</p>
+ * @method integer getHasServicesLog() Obtain <p>Whether to enable delivery service log. 1 Disabled, 2 Enabled</p>
+ * @method void setHasServicesLog(integer $HasServicesLog) Set <p>Whether to enable delivery service log. 1 Disabled, 2 Enabled</p>
+ * @method integer getStatus() Obtain <p>Task status.</p>
+ * @method void setStatus(integer $Status) Set <p>Task status.</p>
+ * @method integer getProgress() Obtain <p>Task progress. Historic delivery tasks take effect.</p>
+ * @method void setProgress(integer $Progress) Set <p>Task progress. Historic delivery tasks take effect.</p>
+ * @method integer getBizType() Obtain <p>Log topic type. 0: Standard topic, 1: Metric topic</p>
+ * @method void setBizType(integer $BizType) Set <p>Log topic type. 0: Standard topic, 1: Metric topic</p>
+ * @method integer getCreateTime() Obtain <p>Task creation time.</p>
+ * @method void setCreateTime(integer $CreateTime) Set <p>Task creation time.</p>
+ * @method integer getUpdateTime() Obtain <p>Task last modified.</p>
+ * @method void setUpdateTime(integer $UpdateTime) Set <p>Task last modified.</p>
+ * @method boolean getAutoCreateField() Obtain <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+ * @method void setAutoCreateField(boolean $AutoCreateField) Set <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+ * @method DlcFailHandle getDlcFailHandle() Obtain <p>Store logs with delivery failure in a DLC table</p>
+ * @method void setDlcFailHandle(DlcFailHandle $DlcFailHandle) Set <p>Store logs with delivery failure in a DLC table</p>
+ * @method string getDSLFilter() Obtain <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+ * @method void setDSLFilter(string $DSLFilter) Set <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
  */
 class DlcDeliverInfo extends AbstractModel
 {
     /**
-     * @var string Task ID.
+     * @var string <p>Task id.</p>
      */
     public $TaskId;
 
     /**
-     * @var integer Account id.
+     * @var integer <p>Account id.</p>
      */
     public $Uin;
 
     /**
-     * @var string Log topic ID.
+     * @var string <p>Log topic id.</p>
      */
     public $TopicId;
 
     /**
-     * @var string Task name.
+     * @var string <p>Task name.</p>
      */
     public $Name;
 
     /**
-     * @var integer Delivery Type. Valid values: 0: real-time delivery; 1: historic delivery.
+     * @var integer <p>Delivery Type, 0: real-time delivery, 1: history delivery</p>
      */
     public $DeliverType;
 
     /**
-     * @var integer Delivery file size in MB
+     * @var integer <p>Delivery file size, in MB.</p>
      */
     public $MaxSize;
 
     /**
-     * @var integer Delivery interval in seconds
+     * @var integer <p>Delivery interval in seconds</p>
      */
     public $Interval;
 
     /**
-     * @var integer Start time of the delivery time range
+     * @var integer <p>Start time of the delivery time range</p>
      */
     public $StartTime;
 
     /**
-     * @var integer End time of the delivery time range
+     * @var integer <p>End time of the delivery time range</p>
      */
     public $EndTime;
 
     /**
-     * @var DlcInfo dlc configuration message
+     * @var DlcInfo <p>dlc configuration message</p>
      */
     public $DlcInfo;
 
     /**
-     * @var integer Whether to enable delivery service log. 1 for disabled, 2 for enabled
+     * @var integer <p>Whether to enable delivery service log. 1 Disabled, 2 Enabled</p>
      */
     public $HasServicesLog;
 
     /**
-     * @var integer Task status.
+     * @var integer <p>Task status.</p>
      */
     public $Status;
 
     /**
-     * @var integer Task progress. Historic delivery tasks take effect.
+     * @var integer <p>Task progress. Historic delivery tasks take effect.</p>
      */
     public $Progress;
 
     /**
-     * @var integer Topic type of logs. 0: standard topic; 1: metric topic.
+     * @var integer <p>Log topic type. 0: Standard topic, 1: Metric topic</p>
      */
     public $BizType;
 
     /**
-     * @var integer Task creation time.
+     * @var integer <p>Task creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer Task modification time.
+     * @var integer <p>Task last modified.</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $TaskId Task ID.
-     * @param integer $Uin Account id.
-     * @param string $TopicId Log topic ID.
-     * @param string $Name Task name.
-     * @param integer $DeliverType Delivery Type. Valid values: 0: real-time delivery; 1: historic delivery.
-     * @param integer $MaxSize Delivery file size in MB
-     * @param integer $Interval Delivery interval in seconds
-     * @param integer $StartTime Start time of the delivery time range
-     * @param integer $EndTime End time of the delivery time range
-     * @param DlcInfo $DlcInfo dlc configuration message
-     * @param integer $HasServicesLog Whether to enable delivery service log. 1 for disabled, 2 for enabled
-     * @param integer $Status Task status.
-     * @param integer $Progress Task progress. Historic delivery tasks take effect.
-     * @param integer $BizType Topic type of logs. 0: standard topic; 1: metric topic.
-     * @param integer $CreateTime Task creation time.
-     * @param integer $UpdateTime Task modification time.
+     * @var boolean <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+     */
+    public $AutoCreateField;
+
+    /**
+     * @var DlcFailHandle <p>Store logs with delivery failure in a DLC table</p>
+     */
+    public $DlcFailHandle;
+
+    /**
+     * @var string <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+     */
+    public $DSLFilter;
+
+    /**
+     * @param string $TaskId <p>Task id.</p>
+     * @param integer $Uin <p>Account id.</p>
+     * @param string $TopicId <p>Log topic id.</p>
+     * @param string $Name <p>Task name.</p>
+     * @param integer $DeliverType <p>Delivery Type, 0: real-time delivery, 1: history delivery</p>
+     * @param integer $MaxSize <p>Delivery file size, in MB.</p>
+     * @param integer $Interval <p>Delivery interval in seconds</p>
+     * @param integer $StartTime <p>Start time of the delivery time range</p>
+     * @param integer $EndTime <p>End time of the delivery time range</p>
+     * @param DlcInfo $DlcInfo <p>dlc configuration message</p>
+     * @param integer $HasServicesLog <p>Whether to enable delivery service log. 1 Disabled, 2 Enabled</p>
+     * @param integer $Status <p>Task status.</p>
+     * @param integer $Progress <p>Task progress. Historic delivery tasks take effect.</p>
+     * @param integer $BizType <p>Log topic type. 0: Standard topic, 1: Metric topic</p>
+     * @param integer $CreateTime <p>Task creation time.</p>
+     * @param integer $UpdateTime <p>Task last modified.</p>
+     * @param boolean $AutoCreateField <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+     * @param DlcFailHandle $DlcFailHandle <p>Store logs with delivery failure in a DLC table</p>
+     * @param string $DSLFilter <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
      */
     function __construct()
     {
@@ -229,6 +253,19 @@ class DlcDeliverInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("AutoCreateField",$param) and $param["AutoCreateField"] !== null) {
+            $this->AutoCreateField = $param["AutoCreateField"];
+        }
+
+        if (array_key_exists("DlcFailHandle",$param) and $param["DlcFailHandle"] !== null) {
+            $this->DlcFailHandle = new DlcFailHandle();
+            $this->DlcFailHandle->deserialize($param["DlcFailHandle"]);
+        }
+
+        if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
+            $this->DSLFilter = $param["DSLFilter"];
         }
     }
 }

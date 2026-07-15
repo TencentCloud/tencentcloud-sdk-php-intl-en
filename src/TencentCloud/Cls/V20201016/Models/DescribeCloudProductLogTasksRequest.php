@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set <p>Number of entries per page. Default value: 20. Maximum value: 100.</p>
  * @method array getFilters() Obtain <ul><li>assumerName<ul><li>Filter by [cloud product identifier].</li><li>Type: String</li><li>Required: No</li><li>Enumerate: CDS, CWP, CDB, TDSQL-C, MongoDB, TDStore, DCDB, MariaDB, PostgreSQL, BH, APIS</li></ul></li><li>logType<ul><li>Filter by [log type].</li><li>Type: String</li><li>Required: No</li><li>Enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</li></ul></li><li>instanceId<ul><li>Filter by [instance ID].</li><li>Type: String</li><li>Required: No</li></ul></li></ul>
  * @method void setFilters(array $Filters) Set <ul><li>assumerName<ul><li>Filter by [cloud product identifier].</li><li>Type: String</li><li>Required: No</li><li>Enumerate: CDS, CWP, CDB, TDSQL-C, MongoDB, TDStore, DCDB, MariaDB, PostgreSQL, BH, APIS</li></ul></li><li>logType<ul><li>Filter by [log type].</li><li>Type: String</li><li>Required: No</li><li>Enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</li></ul></li><li>instanceId<ul><li>Filter by [instance ID].</li><li>Type: String</li><li>Required: No</li></ul></li></ul>
+ * @method boolean getWithTags() Obtain <p>Whether to carry tag information of the topic and logset</p>
+ * @method void setWithTags(boolean $WithTags) Set <p>Whether to carry tag information of the topic and logset</p>
  */
 class DescribeCloudProductLogTasksRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeCloudProductLogTasksRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var boolean <p>Whether to carry tag information of the topic and logset</p>
+     */
+    public $WithTags;
+
+    /**
      * @param integer $Offset <p>Paging offset. Default value: 0.</p>
      * @param integer $Limit <p>Number of entries per page. Default value: 20. Maximum value: 100.</p>
      * @param array $Filters <ul><li>assumerName<ul><li>Filter by [cloud product identifier].</li><li>Type: String</li><li>Required: No</li><li>Enumerate: CDS, CWP, CDB, TDSQL-C, MongoDB, TDStore, DCDB, MariaDB, PostgreSQL, BH, APIS</li></ul></li><li>logType<ul><li>Filter by [log type].</li><li>Type: String</li><li>Required: No</li><li>Enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</li></ul></li><li>instanceId<ul><li>Filter by [instance ID].</li><li>Type: String</li><li>Required: No</li></ul></li></ul>
+     * @param boolean $WithTags <p>Whether to carry tag information of the topic and logset</p>
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class DescribeCloudProductLogTasksRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("WithTags",$param) and $param["WithTags"] !== null) {
+            $this->WithTags = $param["WithTags"];
         }
     }
 }

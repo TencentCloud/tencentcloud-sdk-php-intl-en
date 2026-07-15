@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) Set <p>End time of the delivery time range. If empty, it means unlimited time. When EndTime is not empty, it must be greater than StartTime.</p>
  * @method integer getHasServicesLog() Obtain <p>Whether to enable delivery service log. Valid values: 1: disable; 2: enable. Enabled by default.</p>
  * @method void setHasServicesLog(integer $HasServicesLog) Set <p>Whether to enable delivery service log. Valid values: 1: disable; 2: enable. Enabled by default.</p>
+ * @method boolean getAutoCreateField() Obtain <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+ * @method void setAutoCreateField(boolean $AutoCreateField) Set <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+ * @method DlcFailHandle getDlcFailHandle() Obtain <p>Store delivery failure logs in DLC tables</p>
+ * @method void setDlcFailHandle(DlcFailHandle $DlcFailHandle) Set <p>Store delivery failure logs in DLC tables</p>
+ * @method string getDSLFilter() Obtain <p>Log pre-filtering - Perform pre-filtering on original data for data ingestion into Splunk</p>
+ * @method void setDSLFilter(string $DSLFilter) Set <p>Log pre-filtering - Perform pre-filtering on original data for data ingestion into Splunk</p>
  */
 class CreateDlcDeliverRequest extends AbstractModel
 {
@@ -87,6 +93,21 @@ class CreateDlcDeliverRequest extends AbstractModel
     public $HasServicesLog;
 
     /**
+     * @var boolean <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+     */
+    public $AutoCreateField;
+
+    /**
+     * @var DlcFailHandle <p>Store delivery failure logs in DLC tables</p>
+     */
+    public $DlcFailHandle;
+
+    /**
+     * @var string <p>Log pre-filtering - Perform pre-filtering on original data for data ingestion into Splunk</p>
+     */
+    public $DSLFilter;
+
+    /**
      * @param string $TopicId <p>Log topic id.</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li></ul>
      * @param string $Name <p>Name: Length not exceeding 64 characters, starts with a letter, accepts 0-9, a-z, A-Z, _, -, Chinese character.</p>
      * @param integer $DeliverType <p>Delivery Type. 0: Batch delivery, 1: Real-time delivery</p>
@@ -96,6 +117,9 @@ class CreateDlcDeliverRequest extends AbstractModel
      * @param integer $Interval <p>Delivery interval in seconds. Required when DeliverType=0. Valid range: 300 &lt;= Interval &lt;= 900.</p>
      * @param integer $EndTime <p>End time of the delivery time range. If empty, it means unlimited time. When EndTime is not empty, it must be greater than StartTime.</p>
      * @param integer $HasServicesLog <p>Whether to enable delivery service log. Valid values: 1: disable; 2: enable. Enabled by default.</p>
+     * @param boolean $AutoCreateField <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+     * @param DlcFailHandle $DlcFailHandle <p>Store delivery failure logs in DLC tables</p>
+     * @param string $DSLFilter <p>Log pre-filtering - Perform pre-filtering on original data for data ingestion into Splunk</p>
      */
     function __construct()
     {
@@ -145,6 +169,19 @@ class CreateDlcDeliverRequest extends AbstractModel
 
         if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
             $this->HasServicesLog = $param["HasServicesLog"];
+        }
+
+        if (array_key_exists("AutoCreateField",$param) and $param["AutoCreateField"] !== null) {
+            $this->AutoCreateField = $param["AutoCreateField"];
+        }
+
+        if (array_key_exists("DlcFailHandle",$param) and $param["DlcFailHandle"] !== null) {
+            $this->DlcFailHandle = new DlcFailHandle();
+            $this->DlcFailHandle->deserialize($param["DlcFailHandle"]);
+        }
+
+        if (array_key_exists("DSLFilter",$param) and $param["DSLFilter"] !== null) {
+            $this->DSLFilter = $param["DSLFilter"];
         }
     }
 }

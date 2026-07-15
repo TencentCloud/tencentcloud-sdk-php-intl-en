@@ -20,494 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Log import rule
  *
- * @method string getRechargeType() Obtain Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log (single-line full regex)
- * @method void setRechargeType(string $RechargeType) Set Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log (single-line full regex)
- * @method integer getEncodingFormat() Obtain Encoding format. Valid values: 0 (default, UTF-8) and 1 GBK).
- * @method void setEncodingFormat(integer $EncodingFormat) Set Encoding format. Valid values: 0 (default, UTF-8) and 1 GBK).
- * @method boolean getDefaultTimeSwitch() Obtain Use default time status. true: when enabled, current system time or Kafka message timestamp will be used as log timestamp. false: when disabled, time field in the log will be used as log timestamp. Default: true.
- * @method void setDefaultTimeSwitch(boolean $DefaultTimeSwitch) Set Use default time status. true: when enabled, current system time or Kafka message timestamp will be used as log timestamp. false: when disabled, time field in the log will be used as log timestamp. Default: true.
- * @method string getLogRegex() Obtain Full log matching rule. It is valid only when RechargeType is fullregex_log.
- * @method void setLogRegex(string $LogRegex) Set Full log matching rule. It is valid only when RechargeType is fullregex_log.
- * @method boolean getUnMatchLogSwitch() Obtain Whether to upload the logs that failed to be parsed. Valid values: `true` and `false`.
- * @method void setUnMatchLogSwitch(boolean $UnMatchLogSwitch) Set Whether to upload the logs that failed to be parsed. Valid values: `true` and `false`.
- * @method string getUnMatchLogKey() Obtain key name of parsing-failed logs
- * @method void setUnMatchLogKey(string $UnMatchLogKey) Set key name of parsing-failed logs
- * @method integer getUnMatchLogTimeSrc() Obtain Time source for parsing failure logs. 0: current time of the system; 1: Kafka message timestamp.
- * @method void setUnMatchLogTimeSrc(integer $UnMatchLogTimeSrc) Set Time source for parsing failure logs. 0: current time of the system; 1: Kafka message timestamp.
- * @method integer getDefaultTimeSrc() Obtain Default time source. 0: Current system time; 1: Kafka message timestamp.
- * @method void setDefaultTimeSrc(integer $DefaultTimeSrc) Set Default time source. 0: Current system time; 1: Kafka message timestamp.
- * @method string getTimeKey() Obtain Time field. Field name representing time in logs.
-
--When DefaultTimeSwitch is false and RechargeType data extraction mode is `json_log` JSON file log or `fullregex_log` single-line full regex file log, TimeKey cannot be empty.
- * @method void setTimeKey(string $TimeKey) Set Time field. Field name representing time in logs.
-
--When DefaultTimeSwitch is false and RechargeType data extraction mode is `json_log` JSON file log or `fullregex_log` single-line full regex file log, TimeKey cannot be empty.
- * @method string getTimeRegex() Obtain Time extraction regular expression.
--When DefaultTimeSwitch is false and the data extraction mode of RechargeType is `minimalist_log` (single-line full text - file log), TimeRegex cannot be empty.
--Only need to input the regular expression representing the time field in logs. If multiple fields are matched to, the first will be used.
-Example: The original log is "message with time 2022-08-08 14:20:20". You can set the retrieval time regex to \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d.
-
- * @method void setTimeRegex(string $TimeRegex) Set Time extraction regular expression.
--When DefaultTimeSwitch is false and the data extraction mode of RechargeType is `minimalist_log` (single-line full text - file log), TimeRegex cannot be empty.
--Only need to input the regular expression representing the time field in logs. If multiple fields are matched to, the first will be used.
-Example: The original log is "message with time 2022-08-08 14:20:20". You can set the retrieval time regex to \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d.
-
- * @method string getTimeFormat() Obtain Time field format.
--When DefaultTimeSwitch is false, TimeFormat cannot be empty.
- * @method void setTimeFormat(string $TimeFormat) Set Time field format.
--When DefaultTimeSwitch is false, TimeFormat cannot be empty.
- * @method string getTimeZone() Obtain Time field time zone.
--When DefaultTimeSwitch is false, TimeZone cannot be empty.
--Time zone format rule
-Prefix: Use GMT or UTC as the time zone benchmark.
-Offset:
--`-` indicates a western time zone (later than the benchmark time).
--`+` means the east time zone (earlier than the benchmark time).
--Format ±HH:MM (hr:min)
-
--Currently supported:
-```
-"GMT-12:00" 
-"GMT-11:00" 
-"GMT-10:00" 
-"GMT-09:30" 
-"GMT-09:00" 
-"GMT-08:00" 
-"GMT-07:00" 
-"GMT-06:00" 
-"GMT-05:00" 
-"GMT-04:00" 
-"GMT-03:30" 
-"GMT-03:00" 
-"GMT-02:00" 
-"GMT-01:00" 
-"GMT+00:00"
-"GMT+01:00"
-"GMT+02:00"
-"GMT+03:30"
-"GMT+04:00"
-"GMT+04:30"
-"GMT+05:00"
-"GMT+05:30"
-"GMT+05:45"
-"GMT+06:00"
-"GMT+06:30"
-"GMT+07:00"
-"GMT+08:00"
-"GMT+09:00"
-"GMT+09:30"
-"GMT+10:00"
-"GMT+10:30"
-"GMT+11:00"
-"GMT+11:30"
-"GMT+12:00"
-"GMT+12:45"
-"GMT+13:00"
-"GMT+14:00"
-"UTC-11:00"
-"UTC-10:00"
-"UTC-09:00"
-"UTC-08:00"
-"UTC-12:00"
-"UTC-07:00"
-"UTC-06:00"
-"UTC-05:00"
-"UTC-04:30"
-"UTC-04:00"
-"UTC-03:30"
-"UTC-03:00"
-"UTC-02:00"
-"UTC-01:00"
-"UTC+00:00"
-"UTC+01:00"
-"UTC+02:00"
-"UTC+03:00"
-"UTC+03:30"
-"UTC+04:00"
-"UTC+04:30"
-"UTC+05:00"
-"UTC+05:45"
-"UTC+06:00"
-"UTC+06:30"
-"UTC+07:00"
-"UTC+08:00"
-"UTC+09:00"
-"UTC+09:30"
-"UTC+10:00"
-"UTC+11:00"
-"UTC+12:00"
-"UTC+13:00"
-```
- * @method void setTimeZone(string $TimeZone) Set Time field time zone.
--When DefaultTimeSwitch is false, TimeZone cannot be empty.
--Time zone format rule
-Prefix: Use GMT or UTC as the time zone benchmark.
-Offset:
--`-` indicates a western time zone (later than the benchmark time).
--`+` means the east time zone (earlier than the benchmark time).
--Format ±HH:MM (hr:min)
-
--Currently supported:
-```
-"GMT-12:00" 
-"GMT-11:00" 
-"GMT-10:00" 
-"GMT-09:30" 
-"GMT-09:00" 
-"GMT-08:00" 
-"GMT-07:00" 
-"GMT-06:00" 
-"GMT-05:00" 
-"GMT-04:00" 
-"GMT-03:30" 
-"GMT-03:00" 
-"GMT-02:00" 
-"GMT-01:00" 
-"GMT+00:00"
-"GMT+01:00"
-"GMT+02:00"
-"GMT+03:30"
-"GMT+04:00"
-"GMT+04:30"
-"GMT+05:00"
-"GMT+05:30"
-"GMT+05:45"
-"GMT+06:00"
-"GMT+06:30"
-"GMT+07:00"
-"GMT+08:00"
-"GMT+09:00"
-"GMT+09:30"
-"GMT+10:00"
-"GMT+10:30"
-"GMT+11:00"
-"GMT+11:30"
-"GMT+12:00"
-"GMT+12:45"
-"GMT+13:00"
-"GMT+14:00"
-"UTC-11:00"
-"UTC-10:00"
-"UTC-09:00"
-"UTC-08:00"
-"UTC-12:00"
-"UTC-07:00"
-"UTC-06:00"
-"UTC-05:00"
-"UTC-04:30"
-"UTC-04:00"
-"UTC-03:30"
-"UTC-03:00"
-"UTC-02:00"
-"UTC-01:00"
-"UTC+00:00"
-"UTC+01:00"
-"UTC+02:00"
-"UTC+03:00"
-"UTC+03:30"
-"UTC+04:00"
-"UTC+04:30"
-"UTC+05:00"
-"UTC+05:45"
-"UTC+06:00"
-"UTC+06:30"
-"UTC+07:00"
-"UTC+08:00"
-"UTC+09:00"
-"UTC+09:30"
-"UTC+10:00"
-"UTC+11:00"
-"UTC+12:00"
-"UTC+13:00"
-```
- * @method array getMetadata() Obtain Metadata information. Kafka import supports kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp.
- * @method void setMetadata(array $Metadata) Set Metadata information. Kafka import supports kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp.
- * @method array getKeys() Obtain log Key list. It is required when RechargeType is full_regex_log or delimiter_log.
- * @method void setKeys(array $Keys) Set log Key list. It is required when RechargeType is full_regex_log or delimiter_log.
- * @method boolean getParseArray() Obtain JSON parsing mode. The first-level data parsing is enabled.
- * @method void setParseArray(boolean $ParseArray) Set JSON parsing mode. The first-level data parsing is enabled.
- * @method string getDelimiter() Obtain Delimiter parsing mode - Separator
-This field is required when the parsing format is delimiter extraction.
- * @method void setDelimiter(string $Delimiter) Set Delimiter parsing mode - Separator
-This field is required when the parsing format is delimiter extraction.
+ * @method string getRechargeType() Obtain <p>Import type, support json_log: JSON logs, minimalist_log: single-line full-text log, fullregex_log: single-line full regular expression</p>
+ * @method void setRechargeType(string $RechargeType) Set <p>Import type, support json_log: JSON logs, minimalist_log: single-line full-text log, fullregex_log: single-line full regular expression</p>
+ * @method integer getEncodingFormat() Obtain <p>Parse encoding format. 0: UTF-8 (default value), 1: GBK</p>
+ * @method void setEncodingFormat(integer $EncodingFormat) Set <p>Parse encoding format. 0: UTF-8 (default value), 1: GBK</p>
+ * @method boolean getDefaultTimeSwitch() Obtain <p>Use default time status. true: once enabled, current system time or Kafka message timestamp will be used as log timestamp; false: when turned off, time field in the log will be used as log timestamp. Default: true</p>
+ * @method void setDefaultTimeSwitch(boolean $DefaultTimeSwitch) Set <p>Use default time status. true: once enabled, current system time or Kafka message timestamp will be used as log timestamp; false: when turned off, time field in the log will be used as log timestamp. Default: true</p>
+ * @method string getLogRegex() Obtain <p>The whole log matching rule is valid only when RechargeType is fullregex_log.</p>
+ * @method void setLogRegex(string $LogRegex) Set <p>The whole log matching rule is valid only when RechargeType is fullregex_log.</p>
+ * @method boolean getUnMatchLogSwitch() Obtain <p>Whether to upload logs that failed to be parsed. true for upload, false for not uploading.</p>
+ * @method void setUnMatchLogSwitch(boolean $UnMatchLogSwitch) Set <p>Whether to upload logs that failed to be parsed. true for upload, false for not uploading.</p>
+ * @method string getUnMatchLogKey() Obtain <p>Key name of parsing-failed logs</p>
+ * @method void setUnMatchLogKey(string $UnMatchLogKey) Set <p>Key name of parsing-failed logs</p>
+ * @method integer getUnMatchLogTimeSrc() Obtain <p>Parsing failure log time source. 0: Current system time. 1: Kafka message timestamp.</p>
+ * @method void setUnMatchLogTimeSrc(integer $UnMatchLogTimeSrc) Set <p>Parsing failure log time source. 0: Current system time. 1: Kafka message timestamp.</p>
+ * @method integer getDefaultTimeSrc() Obtain <p>Default time source. 0: Current system time, 1: Kafka message timestamp</p>
+ * @method void setDefaultTimeSrc(integer $DefaultTimeSrc) Set <p>Default time source. 0: Current system time, 1: Kafka message timestamp</p>
+ * @method string getTimeKey() Obtain <p>Time field. Field name that represents time in logs.</p><ul><li>When DefaultTimeSwitch is false and the RechargeType data extraction mode is <code>json_log</code> JSON-file log or <code>fullregex_log</code> single-line full regex-file log, the TimeKey cannot be empty.</li></ul>
+ * @method void setTimeKey(string $TimeKey) Set <p>Time field. Field name that represents time in logs.</p><ul><li>When DefaultTimeSwitch is false and the RechargeType data extraction mode is <code>json_log</code> JSON-file log or <code>fullregex_log</code> single-line full regex-file log, the TimeKey cannot be empty.</li></ul>
+ * @method string getTimeRegex() Obtain <p>Time extraction regular expression.</p><ul><li>When DefaultTimeSwitch is false and the RechargeType data extraction mode is <code>minimalist_log</code> single-line full text - file log, the TimeRegex cannot be empty.</li><li>Only need to input the regular expression for the field representing time in logs. If multiple fields are matched to, the first one will be used.<br> For example: If the original log is: message with time 2022-08-08 14:20:20, you can set the retrieval time regular expression to \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d</li></ul>
+ * @method void setTimeRegex(string $TimeRegex) Set <p>Time extraction regular expression.</p><ul><li>When DefaultTimeSwitch is false and the RechargeType data extraction mode is <code>minimalist_log</code> single-line full text - file log, the TimeRegex cannot be empty.</li><li>Only need to input the regular expression for the field representing time in logs. If multiple fields are matched to, the first one will be used.<br> For example: If the original log is: message with time 2022-08-08 14:20:20, you can set the retrieval time regular expression to \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d</li></ul>
+ * @method string getTimeFormat() Obtain <p>Time field format.</p><ul><li>When DefaultTimeSwitch is false, TimeFormat cannot be empty.</li></ul>
+ * @method void setTimeFormat(string $TimeFormat) Set <p>Time field format.</p><ul><li>When DefaultTimeSwitch is false, TimeFormat cannot be empty.</li></ul>
+ * @method string getTimeZone() Obtain <p>Time field time zone.</p><ul><li><p>When DefaultTimeSwitch is false, TimeZone cannot be empty.</p></li><li><p>Time zone format rule<br>Prefix: Use GMT or UTC as the time zone benchmark<br>Offset:</p><ul><li><code>-</code> indicates a western time zone (later than the benchmark time)</li><li><code>+</code> indicates an eastern time zone (earlier than the benchmark time)</li><li>Format is ±HH:MM (hour:minute)</li></ul></li><li><p>Currently supported:<br><pre><code>&quot;GMT-12:00&quot; &quot;GMT-11:00&quot; &quot;GMT-10:00&quot; &quot;GMT-09:30&quot; &quot;GMT-09:00&quot; &quot;GMT-08:00&quot; &quot;GMT-07:00&quot; &quot;GMT-06:00&quot; &quot;GMT-05:00&quot; &quot;GMT-04:00&quot; &quot;GMT-03:30&quot; &quot;GMT-03:00&quot; &quot;GMT-02:00&quot; &quot;GMT-01:00&quot; &quot;GMT+00:00&quot;&quot;GMT+01:00&quot;&quot;GMT+02:00&quot;&quot;GMT+03:30&quot;&quot;GMT+04:00&quot;&quot;GMT+04:30&quot;&quot;GMT+05:00&quot;&quot;GMT+05:30&quot;&quot;GMT+05:45&quot;&quot;GMT+06:00&quot;&quot;GMT+06:30&quot;&quot;GMT+07:00&quot;&quot;GMT+08:00&quot;&quot;GMT+09:00&quot;&quot;GMT+09:30&quot;&quot;GMT+10:00&quot;&quot;GMT+10:30&quot;&quot;GMT+11:00&quot;&quot;GMT+11:30&quot;&quot;GMT+12:00&quot;&quot;GMT+12:45&quot;&quot;GMT+13:00&quot;&quot;GMT+14:00&quot;&quot;UTC-11:00&quot;&quot;UTC-10:00&quot;&quot;UTC-09:00&quot;&quot;UTC-08:00&quot;&quot;UTC-12:00&quot;&quot;UTC-07:00&quot;&quot;UTC-06:00&quot;&quot;UTC-05:00&quot;&quot;UTC-04:30&quot;&quot;UTC-04:00&quot;&quot;UTC-03:30&quot;&quot;UTC-03:00&quot;&quot;UTC-02:00&quot;&quot;UTC-01:00&quot;&quot;UTC+00:00&quot;&quot;UTC+01:00&quot;&quot;UTC+02:00&quot;&quot;UTC+03:00&quot;&quot;UTC+03:30&quot;&quot;UTC+04:00&quot;&quot;UTC+04:30&quot;&quot;UTC+05:00&quot;&quot;UTC+05:45&quot;&quot;UTC+06:00&quot;&quot;UTC+06:30&quot;&quot;UTC+07:00&quot;&quot;UTC+08:00&quot;&quot;UTC+09:00&quot;&quot;UTC+09:30&quot;&quot;UTC+10:00&quot;&quot;UTC+11:00&quot;&quot;UTC+12:00&quot;&quot;UTC+13:00&quot;</code></pre></p></li></ul>
+ * @method void setTimeZone(string $TimeZone) Set <p>Time field time zone.</p><ul><li><p>When DefaultTimeSwitch is false, TimeZone cannot be empty.</p></li><li><p>Time zone format rule<br>Prefix: Use GMT or UTC as the time zone benchmark<br>Offset:</p><ul><li><code>-</code> indicates a western time zone (later than the benchmark time)</li><li><code>+</code> indicates an eastern time zone (earlier than the benchmark time)</li><li>Format is ±HH:MM (hour:minute)</li></ul></li><li><p>Currently supported:<br><pre><code>&quot;GMT-12:00&quot; &quot;GMT-11:00&quot; &quot;GMT-10:00&quot; &quot;GMT-09:30&quot; &quot;GMT-09:00&quot; &quot;GMT-08:00&quot; &quot;GMT-07:00&quot; &quot;GMT-06:00&quot; &quot;GMT-05:00&quot; &quot;GMT-04:00&quot; &quot;GMT-03:30&quot; &quot;GMT-03:00&quot; &quot;GMT-02:00&quot; &quot;GMT-01:00&quot; &quot;GMT+00:00&quot;&quot;GMT+01:00&quot;&quot;GMT+02:00&quot;&quot;GMT+03:30&quot;&quot;GMT+04:00&quot;&quot;GMT+04:30&quot;&quot;GMT+05:00&quot;&quot;GMT+05:30&quot;&quot;GMT+05:45&quot;&quot;GMT+06:00&quot;&quot;GMT+06:30&quot;&quot;GMT+07:00&quot;&quot;GMT+08:00&quot;&quot;GMT+09:00&quot;&quot;GMT+09:30&quot;&quot;GMT+10:00&quot;&quot;GMT+10:30&quot;&quot;GMT+11:00&quot;&quot;GMT+11:30&quot;&quot;GMT+12:00&quot;&quot;GMT+12:45&quot;&quot;GMT+13:00&quot;&quot;GMT+14:00&quot;&quot;UTC-11:00&quot;&quot;UTC-10:00&quot;&quot;UTC-09:00&quot;&quot;UTC-08:00&quot;&quot;UTC-12:00&quot;&quot;UTC-07:00&quot;&quot;UTC-06:00&quot;&quot;UTC-05:00&quot;&quot;UTC-04:30&quot;&quot;UTC-04:00&quot;&quot;UTC-03:30&quot;&quot;UTC-03:00&quot;&quot;UTC-02:00&quot;&quot;UTC-01:00&quot;&quot;UTC+00:00&quot;&quot;UTC+01:00&quot;&quot;UTC+02:00&quot;&quot;UTC+03:00&quot;&quot;UTC+03:30&quot;&quot;UTC+04:00&quot;&quot;UTC+04:30&quot;&quot;UTC+05:00&quot;&quot;UTC+05:45&quot;&quot;UTC+06:00&quot;&quot;UTC+06:30&quot;&quot;UTC+07:00&quot;&quot;UTC+08:00&quot;&quot;UTC+09:00&quot;&quot;UTC+09:30&quot;&quot;UTC+10:00&quot;&quot;UTC+11:00&quot;&quot;UTC+12:00&quot;&quot;UTC+13:00&quot;</code></pre></p></li></ul>
+ * @method array getMetadata() Obtain <p>Metadata information, Kafka import supports kafka_topic, kafka_partition, kafka_offset, kafka_timestamp</p>
+ * @method void setMetadata(array $Metadata) Set <p>Metadata information, Kafka import supports kafka_topic, kafka_partition, kafka_offset, kafka_timestamp</p>
+ * @method array getKeys() Obtain <p>log Key list, required when RechargeType is full_regex_log or delimiter_log.</p>
+ * @method void setKeys(array $Keys) Set <p>log Key list, required when RechargeType is full_regex_log or delimiter_log.</p>
+ * @method boolean getParseArray() Obtain <p>json parsing mode, enable first level data parsing</p>
+ * @method void setParseArray(boolean $ParseArray) Set <p>json parsing mode, enable first level data parsing</p>
+ * @method string getDelimiter() Obtain <p>Delimiter parsing mode - Separator<br>This field is required when the parsing format is delimiter extraction.</p>
+ * @method void setDelimiter(string $Delimiter) Set <p>Delimiter parsing mode - Separator<br>This field is required when the parsing format is delimiter extraction.</p>
+ * @method JsonExpandInfo getJsonExpand() Obtain <p>JSON nest unfold configuration. This parameter is valid only when RechargeType is json_log. If it is not passed, it is disabled.</p>
+ * @method void setJsonExpand(JsonExpandInfo $JsonExpand) Set <p>JSON nest unfold configuration. This parameter is valid only when RechargeType is json_log. If it is not passed, it is disabled.</p>
  */
 class LogRechargeRuleInfo extends AbstractModel
 {
     /**
-     * @var string Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log (single-line full regex)
+     * @var string <p>Import type, support json_log: JSON logs, minimalist_log: single-line full-text log, fullregex_log: single-line full regular expression</p>
      */
     public $RechargeType;
 
     /**
-     * @var integer Encoding format. Valid values: 0 (default, UTF-8) and 1 GBK).
+     * @var integer <p>Parse encoding format. 0: UTF-8 (default value), 1: GBK</p>
      */
     public $EncodingFormat;
 
     /**
-     * @var boolean Use default time status. true: when enabled, current system time or Kafka message timestamp will be used as log timestamp. false: when disabled, time field in the log will be used as log timestamp. Default: true.
+     * @var boolean <p>Use default time status. true: once enabled, current system time or Kafka message timestamp will be used as log timestamp; false: when turned off, time field in the log will be used as log timestamp. Default: true</p>
      */
     public $DefaultTimeSwitch;
 
     /**
-     * @var string Full log matching rule. It is valid only when RechargeType is fullregex_log.
+     * @var string <p>The whole log matching rule is valid only when RechargeType is fullregex_log.</p>
      */
     public $LogRegex;
 
     /**
-     * @var boolean Whether to upload the logs that failed to be parsed. Valid values: `true` and `false`.
+     * @var boolean <p>Whether to upload logs that failed to be parsed. true for upload, false for not uploading.</p>
      */
     public $UnMatchLogSwitch;
 
     /**
-     * @var string key name of parsing-failed logs
+     * @var string <p>Key name of parsing-failed logs</p>
      */
     public $UnMatchLogKey;
 
     /**
-     * @var integer Time source for parsing failure logs. 0: current time of the system; 1: Kafka message timestamp.
+     * @var integer <p>Parsing failure log time source. 0: Current system time. 1: Kafka message timestamp.</p>
      */
     public $UnMatchLogTimeSrc;
 
     /**
-     * @var integer Default time source. 0: Current system time; 1: Kafka message timestamp.
+     * @var integer <p>Default time source. 0: Current system time, 1: Kafka message timestamp</p>
      */
     public $DefaultTimeSrc;
 
     /**
-     * @var string Time field. Field name representing time in logs.
-
--When DefaultTimeSwitch is false and RechargeType data extraction mode is `json_log` JSON file log or `fullregex_log` single-line full regex file log, TimeKey cannot be empty.
+     * @var string <p>Time field. Field name that represents time in logs.</p><ul><li>When DefaultTimeSwitch is false and the RechargeType data extraction mode is <code>json_log</code> JSON-file log or <code>fullregex_log</code> single-line full regex-file log, the TimeKey cannot be empty.</li></ul>
      */
     public $TimeKey;
 
     /**
-     * @var string Time extraction regular expression.
--When DefaultTimeSwitch is false and the data extraction mode of RechargeType is `minimalist_log` (single-line full text - file log), TimeRegex cannot be empty.
--Only need to input the regular expression representing the time field in logs. If multiple fields are matched to, the first will be used.
-Example: The original log is "message with time 2022-08-08 14:20:20". You can set the retrieval time regex to \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d.
-
+     * @var string <p>Time extraction regular expression.</p><ul><li>When DefaultTimeSwitch is false and the RechargeType data extraction mode is <code>minimalist_log</code> single-line full text - file log, the TimeRegex cannot be empty.</li><li>Only need to input the regular expression for the field representing time in logs. If multiple fields are matched to, the first one will be used.<br> For example: If the original log is: message with time 2022-08-08 14:20:20, you can set the retrieval time regular expression to \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d</li></ul>
      */
     public $TimeRegex;
 
     /**
-     * @var string Time field format.
--When DefaultTimeSwitch is false, TimeFormat cannot be empty.
+     * @var string <p>Time field format.</p><ul><li>When DefaultTimeSwitch is false, TimeFormat cannot be empty.</li></ul>
      */
     public $TimeFormat;
 
     /**
-     * @var string Time field time zone.
--When DefaultTimeSwitch is false, TimeZone cannot be empty.
--Time zone format rule
-Prefix: Use GMT or UTC as the time zone benchmark.
-Offset:
--`-` indicates a western time zone (later than the benchmark time).
--`+` means the east time zone (earlier than the benchmark time).
--Format ±HH:MM (hr:min)
-
--Currently supported:
-```
-"GMT-12:00" 
-"GMT-11:00" 
-"GMT-10:00" 
-"GMT-09:30" 
-"GMT-09:00" 
-"GMT-08:00" 
-"GMT-07:00" 
-"GMT-06:00" 
-"GMT-05:00" 
-"GMT-04:00" 
-"GMT-03:30" 
-"GMT-03:00" 
-"GMT-02:00" 
-"GMT-01:00" 
-"GMT+00:00"
-"GMT+01:00"
-"GMT+02:00"
-"GMT+03:30"
-"GMT+04:00"
-"GMT+04:30"
-"GMT+05:00"
-"GMT+05:30"
-"GMT+05:45"
-"GMT+06:00"
-"GMT+06:30"
-"GMT+07:00"
-"GMT+08:00"
-"GMT+09:00"
-"GMT+09:30"
-"GMT+10:00"
-"GMT+10:30"
-"GMT+11:00"
-"GMT+11:30"
-"GMT+12:00"
-"GMT+12:45"
-"GMT+13:00"
-"GMT+14:00"
-"UTC-11:00"
-"UTC-10:00"
-"UTC-09:00"
-"UTC-08:00"
-"UTC-12:00"
-"UTC-07:00"
-"UTC-06:00"
-"UTC-05:00"
-"UTC-04:30"
-"UTC-04:00"
-"UTC-03:30"
-"UTC-03:00"
-"UTC-02:00"
-"UTC-01:00"
-"UTC+00:00"
-"UTC+01:00"
-"UTC+02:00"
-"UTC+03:00"
-"UTC+03:30"
-"UTC+04:00"
-"UTC+04:30"
-"UTC+05:00"
-"UTC+05:45"
-"UTC+06:00"
-"UTC+06:30"
-"UTC+07:00"
-"UTC+08:00"
-"UTC+09:00"
-"UTC+09:30"
-"UTC+10:00"
-"UTC+11:00"
-"UTC+12:00"
-"UTC+13:00"
-```
+     * @var string <p>Time field time zone.</p><ul><li><p>When DefaultTimeSwitch is false, TimeZone cannot be empty.</p></li><li><p>Time zone format rule<br>Prefix: Use GMT or UTC as the time zone benchmark<br>Offset:</p><ul><li><code>-</code> indicates a western time zone (later than the benchmark time)</li><li><code>+</code> indicates an eastern time zone (earlier than the benchmark time)</li><li>Format is ±HH:MM (hour:minute)</li></ul></li><li><p>Currently supported:<br><pre><code>&quot;GMT-12:00&quot; &quot;GMT-11:00&quot; &quot;GMT-10:00&quot; &quot;GMT-09:30&quot; &quot;GMT-09:00&quot; &quot;GMT-08:00&quot; &quot;GMT-07:00&quot; &quot;GMT-06:00&quot; &quot;GMT-05:00&quot; &quot;GMT-04:00&quot; &quot;GMT-03:30&quot; &quot;GMT-03:00&quot; &quot;GMT-02:00&quot; &quot;GMT-01:00&quot; &quot;GMT+00:00&quot;&quot;GMT+01:00&quot;&quot;GMT+02:00&quot;&quot;GMT+03:30&quot;&quot;GMT+04:00&quot;&quot;GMT+04:30&quot;&quot;GMT+05:00&quot;&quot;GMT+05:30&quot;&quot;GMT+05:45&quot;&quot;GMT+06:00&quot;&quot;GMT+06:30&quot;&quot;GMT+07:00&quot;&quot;GMT+08:00&quot;&quot;GMT+09:00&quot;&quot;GMT+09:30&quot;&quot;GMT+10:00&quot;&quot;GMT+10:30&quot;&quot;GMT+11:00&quot;&quot;GMT+11:30&quot;&quot;GMT+12:00&quot;&quot;GMT+12:45&quot;&quot;GMT+13:00&quot;&quot;GMT+14:00&quot;&quot;UTC-11:00&quot;&quot;UTC-10:00&quot;&quot;UTC-09:00&quot;&quot;UTC-08:00&quot;&quot;UTC-12:00&quot;&quot;UTC-07:00&quot;&quot;UTC-06:00&quot;&quot;UTC-05:00&quot;&quot;UTC-04:30&quot;&quot;UTC-04:00&quot;&quot;UTC-03:30&quot;&quot;UTC-03:00&quot;&quot;UTC-02:00&quot;&quot;UTC-01:00&quot;&quot;UTC+00:00&quot;&quot;UTC+01:00&quot;&quot;UTC+02:00&quot;&quot;UTC+03:00&quot;&quot;UTC+03:30&quot;&quot;UTC+04:00&quot;&quot;UTC+04:30&quot;&quot;UTC+05:00&quot;&quot;UTC+05:45&quot;&quot;UTC+06:00&quot;&quot;UTC+06:30&quot;&quot;UTC+07:00&quot;&quot;UTC+08:00&quot;&quot;UTC+09:00&quot;&quot;UTC+09:30&quot;&quot;UTC+10:00&quot;&quot;UTC+11:00&quot;&quot;UTC+12:00&quot;&quot;UTC+13:00&quot;</code></pre></p></li></ul>
      */
     public $TimeZone;
 
     /**
-     * @var array Metadata information. Kafka import supports kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp.
+     * @var array <p>Metadata information, Kafka import supports kafka_topic, kafka_partition, kafka_offset, kafka_timestamp</p>
      */
     public $Metadata;
 
     /**
-     * @var array log Key list. It is required when RechargeType is full_regex_log or delimiter_log.
+     * @var array <p>log Key list, required when RechargeType is full_regex_log or delimiter_log.</p>
      */
     public $Keys;
 
     /**
-     * @var boolean JSON parsing mode. The first-level data parsing is enabled.
+     * @var boolean <p>json parsing mode, enable first level data parsing</p>
      */
     public $ParseArray;
 
     /**
-     * @var string Delimiter parsing mode - Separator
-This field is required when the parsing format is delimiter extraction.
+     * @var string <p>Delimiter parsing mode - Separator<br>This field is required when the parsing format is delimiter extraction.</p>
      */
     public $Delimiter;
 
     /**
-     * @param string $RechargeType Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log (single-line full regex)
-     * @param integer $EncodingFormat Encoding format. Valid values: 0 (default, UTF-8) and 1 GBK).
-     * @param boolean $DefaultTimeSwitch Use default time status. true: when enabled, current system time or Kafka message timestamp will be used as log timestamp. false: when disabled, time field in the log will be used as log timestamp. Default: true.
-     * @param string $LogRegex Full log matching rule. It is valid only when RechargeType is fullregex_log.
-     * @param boolean $UnMatchLogSwitch Whether to upload the logs that failed to be parsed. Valid values: `true` and `false`.
-     * @param string $UnMatchLogKey key name of parsing-failed logs
-     * @param integer $UnMatchLogTimeSrc Time source for parsing failure logs. 0: current time of the system; 1: Kafka message timestamp.
-     * @param integer $DefaultTimeSrc Default time source. 0: Current system time; 1: Kafka message timestamp.
-     * @param string $TimeKey Time field. Field name representing time in logs.
+     * @var JsonExpandInfo <p>JSON nest unfold configuration. This parameter is valid only when RechargeType is json_log. If it is not passed, it is disabled.</p>
+     */
+    public $JsonExpand;
 
--When DefaultTimeSwitch is false and RechargeType data extraction mode is `json_log` JSON file log or `fullregex_log` single-line full regex file log, TimeKey cannot be empty.
-     * @param string $TimeRegex Time extraction regular expression.
--When DefaultTimeSwitch is false and the data extraction mode of RechargeType is `minimalist_log` (single-line full text - file log), TimeRegex cannot be empty.
--Only need to input the regular expression representing the time field in logs. If multiple fields are matched to, the first will be used.
-Example: The original log is "message with time 2022-08-08 14:20:20". You can set the retrieval time regex to \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d.
-
-     * @param string $TimeFormat Time field format.
--When DefaultTimeSwitch is false, TimeFormat cannot be empty.
-     * @param string $TimeZone Time field time zone.
--When DefaultTimeSwitch is false, TimeZone cannot be empty.
--Time zone format rule
-Prefix: Use GMT or UTC as the time zone benchmark.
-Offset:
--`-` indicates a western time zone (later than the benchmark time).
--`+` means the east time zone (earlier than the benchmark time).
--Format ±HH:MM (hr:min)
-
--Currently supported:
-```
-"GMT-12:00" 
-"GMT-11:00" 
-"GMT-10:00" 
-"GMT-09:30" 
-"GMT-09:00" 
-"GMT-08:00" 
-"GMT-07:00" 
-"GMT-06:00" 
-"GMT-05:00" 
-"GMT-04:00" 
-"GMT-03:30" 
-"GMT-03:00" 
-"GMT-02:00" 
-"GMT-01:00" 
-"GMT+00:00"
-"GMT+01:00"
-"GMT+02:00"
-"GMT+03:30"
-"GMT+04:00"
-"GMT+04:30"
-"GMT+05:00"
-"GMT+05:30"
-"GMT+05:45"
-"GMT+06:00"
-"GMT+06:30"
-"GMT+07:00"
-"GMT+08:00"
-"GMT+09:00"
-"GMT+09:30"
-"GMT+10:00"
-"GMT+10:30"
-"GMT+11:00"
-"GMT+11:30"
-"GMT+12:00"
-"GMT+12:45"
-"GMT+13:00"
-"GMT+14:00"
-"UTC-11:00"
-"UTC-10:00"
-"UTC-09:00"
-"UTC-08:00"
-"UTC-12:00"
-"UTC-07:00"
-"UTC-06:00"
-"UTC-05:00"
-"UTC-04:30"
-"UTC-04:00"
-"UTC-03:30"
-"UTC-03:00"
-"UTC-02:00"
-"UTC-01:00"
-"UTC+00:00"
-"UTC+01:00"
-"UTC+02:00"
-"UTC+03:00"
-"UTC+03:30"
-"UTC+04:00"
-"UTC+04:30"
-"UTC+05:00"
-"UTC+05:45"
-"UTC+06:00"
-"UTC+06:30"
-"UTC+07:00"
-"UTC+08:00"
-"UTC+09:00"
-"UTC+09:30"
-"UTC+10:00"
-"UTC+11:00"
-"UTC+12:00"
-"UTC+13:00"
-```
-     * @param array $Metadata Metadata information. Kafka import supports kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp.
-     * @param array $Keys log Key list. It is required when RechargeType is full_regex_log or delimiter_log.
-     * @param boolean $ParseArray JSON parsing mode. The first-level data parsing is enabled.
-     * @param string $Delimiter Delimiter parsing mode - Separator
-This field is required when the parsing format is delimiter extraction.
+    /**
+     * @param string $RechargeType <p>Import type, support json_log: JSON logs, minimalist_log: single-line full-text log, fullregex_log: single-line full regular expression</p>
+     * @param integer $EncodingFormat <p>Parse encoding format. 0: UTF-8 (default value), 1: GBK</p>
+     * @param boolean $DefaultTimeSwitch <p>Use default time status. true: once enabled, current system time or Kafka message timestamp will be used as log timestamp; false: when turned off, time field in the log will be used as log timestamp. Default: true</p>
+     * @param string $LogRegex <p>The whole log matching rule is valid only when RechargeType is fullregex_log.</p>
+     * @param boolean $UnMatchLogSwitch <p>Whether to upload logs that failed to be parsed. true for upload, false for not uploading.</p>
+     * @param string $UnMatchLogKey <p>Key name of parsing-failed logs</p>
+     * @param integer $UnMatchLogTimeSrc <p>Parsing failure log time source. 0: Current system time. 1: Kafka message timestamp.</p>
+     * @param integer $DefaultTimeSrc <p>Default time source. 0: Current system time, 1: Kafka message timestamp</p>
+     * @param string $TimeKey <p>Time field. Field name that represents time in logs.</p><ul><li>When DefaultTimeSwitch is false and the RechargeType data extraction mode is <code>json_log</code> JSON-file log or <code>fullregex_log</code> single-line full regex-file log, the TimeKey cannot be empty.</li></ul>
+     * @param string $TimeRegex <p>Time extraction regular expression.</p><ul><li>When DefaultTimeSwitch is false and the RechargeType data extraction mode is <code>minimalist_log</code> single-line full text - file log, the TimeRegex cannot be empty.</li><li>Only need to input the regular expression for the field representing time in logs. If multiple fields are matched to, the first one will be used.<br> For example: If the original log is: message with time 2022-08-08 14:20:20, you can set the retrieval time regular expression to \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d</li></ul>
+     * @param string $TimeFormat <p>Time field format.</p><ul><li>When DefaultTimeSwitch is false, TimeFormat cannot be empty.</li></ul>
+     * @param string $TimeZone <p>Time field time zone.</p><ul><li><p>When DefaultTimeSwitch is false, TimeZone cannot be empty.</p></li><li><p>Time zone format rule<br>Prefix: Use GMT or UTC as the time zone benchmark<br>Offset:</p><ul><li><code>-</code> indicates a western time zone (later than the benchmark time)</li><li><code>+</code> indicates an eastern time zone (earlier than the benchmark time)</li><li>Format is ±HH:MM (hour:minute)</li></ul></li><li><p>Currently supported:<br><pre><code>&quot;GMT-12:00&quot; &quot;GMT-11:00&quot; &quot;GMT-10:00&quot; &quot;GMT-09:30&quot; &quot;GMT-09:00&quot; &quot;GMT-08:00&quot; &quot;GMT-07:00&quot; &quot;GMT-06:00&quot; &quot;GMT-05:00&quot; &quot;GMT-04:00&quot; &quot;GMT-03:30&quot; &quot;GMT-03:00&quot; &quot;GMT-02:00&quot; &quot;GMT-01:00&quot; &quot;GMT+00:00&quot;&quot;GMT+01:00&quot;&quot;GMT+02:00&quot;&quot;GMT+03:30&quot;&quot;GMT+04:00&quot;&quot;GMT+04:30&quot;&quot;GMT+05:00&quot;&quot;GMT+05:30&quot;&quot;GMT+05:45&quot;&quot;GMT+06:00&quot;&quot;GMT+06:30&quot;&quot;GMT+07:00&quot;&quot;GMT+08:00&quot;&quot;GMT+09:00&quot;&quot;GMT+09:30&quot;&quot;GMT+10:00&quot;&quot;GMT+10:30&quot;&quot;GMT+11:00&quot;&quot;GMT+11:30&quot;&quot;GMT+12:00&quot;&quot;GMT+12:45&quot;&quot;GMT+13:00&quot;&quot;GMT+14:00&quot;&quot;UTC-11:00&quot;&quot;UTC-10:00&quot;&quot;UTC-09:00&quot;&quot;UTC-08:00&quot;&quot;UTC-12:00&quot;&quot;UTC-07:00&quot;&quot;UTC-06:00&quot;&quot;UTC-05:00&quot;&quot;UTC-04:30&quot;&quot;UTC-04:00&quot;&quot;UTC-03:30&quot;&quot;UTC-03:00&quot;&quot;UTC-02:00&quot;&quot;UTC-01:00&quot;&quot;UTC+00:00&quot;&quot;UTC+01:00&quot;&quot;UTC+02:00&quot;&quot;UTC+03:00&quot;&quot;UTC+03:30&quot;&quot;UTC+04:00&quot;&quot;UTC+04:30&quot;&quot;UTC+05:00&quot;&quot;UTC+05:45&quot;&quot;UTC+06:00&quot;&quot;UTC+06:30&quot;&quot;UTC+07:00&quot;&quot;UTC+08:00&quot;&quot;UTC+09:00&quot;&quot;UTC+09:30&quot;&quot;UTC+10:00&quot;&quot;UTC+11:00&quot;&quot;UTC+12:00&quot;&quot;UTC+13:00&quot;</code></pre></p></li></ul>
+     * @param array $Metadata <p>Metadata information, Kafka import supports kafka_topic, kafka_partition, kafka_offset, kafka_timestamp</p>
+     * @param array $Keys <p>log Key list, required when RechargeType is full_regex_log or delimiter_log.</p>
+     * @param boolean $ParseArray <p>json parsing mode, enable first level data parsing</p>
+     * @param string $Delimiter <p>Delimiter parsing mode - Separator<br>This field is required when the parsing format is delimiter extraction.</p>
+     * @param JsonExpandInfo $JsonExpand <p>JSON nest unfold configuration. This parameter is valid only when RechargeType is json_log. If it is not passed, it is disabled.</p>
      */
     function __construct()
     {
@@ -584,6 +236,11 @@ This field is required when the parsing format is delimiter extraction.
 
         if (array_key_exists("Delimiter",$param) and $param["Delimiter"] !== null) {
             $this->Delimiter = $param["Delimiter"];
+        }
+
+        if (array_key_exists("JsonExpand",$param) and $param["JsonExpand"] !== null) {
+            $this->JsonExpand = new JsonExpandInfo();
+            $this->JsonExpand->deserialize($param["JsonExpand"]);
         }
     }
 }
