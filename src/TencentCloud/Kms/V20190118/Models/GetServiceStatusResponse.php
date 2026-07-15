@@ -20,136 +20,157 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetServiceStatus response structure.
  *
- * @method boolean getServiceEnabled() Obtain Whether the KMS service has been activated. true: activated
- * @method void setServiceEnabled(boolean $ServiceEnabled) Set Whether the KMS service has been activated. true: activated
- * @method integer getInvalidType() Obtain Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
- * @method void setInvalidType(integer $InvalidType) Set Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
- * @method integer getUserLevel() Obtain 0: Basic Edition, 1: Ultimate Edition
- * @method void setUserLevel(integer $UserLevel) Set 0: Basic Edition, 1: Ultimate Edition
- * @method integer getProExpireTime() Obtain Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
- * @method void setProExpireTime(integer $ProExpireTime) Set Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
- * @method integer getProRenewFlag() Obtain Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
- * @method void setProRenewFlag(integer $ProRenewFlag) Set Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
- * @method string getProResourceId() Obtain Flagship edition purchase record unique identifier. if not activated, the return value is empty.
- * @method void setProResourceId(string $ProResourceId) Set Flagship edition purchase record unique identifier. if not activated, the return value is empty.
- * @method boolean getExclusiveVSMEnabled() Obtain Whether to enable the KMS-managed version.
- * @method void setExclusiveVSMEnabled(boolean $ExclusiveVSMEnabled) Set Whether to enable the KMS-managed version.
- * @method boolean getExclusiveHSMEnabled() Obtain Whether to enable the exclusive edition of KMS.
- * @method void setExclusiveHSMEnabled(boolean $ExclusiveHSMEnabled) Set Whether to enable the exclusive edition of KMS.
- * @method string getSubscriptionInfo() Obtain Specifies the KMS subscription information.
- * @method void setSubscriptionInfo(string $SubscriptionInfo) Set Specifies the KMS subscription information.
- * @method integer getCmkUserCount() Obtain Returns the amount of KMS user secret keys used.
- * @method void setCmkUserCount(integer $CmkUserCount) Set Returns the amount of KMS user secret keys used.
- * @method integer getCmkLimit() Obtain Returns the specification quantity of KMS user secret keys.
- * @method void setCmkLimit(integer $CmkLimit) Set Returns the specification quantity of KMS user secret keys.
- * @method array getExclusiveHSMList() Obtain Return dedicated cluster group.
- * @method void setExclusiveHSMList(array $ExclusiveHSMList) Set Return dedicated cluster group.
- * @method boolean getIsAllowedDataKeyHosted() Obtain Whether data key management is supported. valid values: 1 (supported), 0 (unsupported).
- * @method void setIsAllowedDataKeyHosted(boolean $IsAllowedDataKeyHosted) Set Whether data key management is supported. valid values: 1 (supported), 0 (unsupported).
- * @method integer getDataKeyLimit() Obtain Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys.
- * @method void setDataKeyLimit(integer $DataKeyLimit) Set Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys.
- * @method integer getFreeDataKeyLimit() Obtain Valid when IsAllowedDataKeyHosted is 1. data key free quota.
- * @method void setFreeDataKeyLimit(integer $FreeDataKeyLimit) Set Valid when IsAllowedDataKeyHosted is 1. data key free quota.
- * @method integer getDataKeyUsedCount() Obtain Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used.
- * @method void setDataKeyUsedCount(integer $DataKeyUsedCount) Set Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used.
- * @method array getSyncTaskList() Obtain Specifies the target region of the sync task.
- * @method void setSyncTaskList(array $SyncTaskList) Set Specifies the target region of the sync task.
- * @method boolean getIsAllowedSync() Obtain Whether synchronization task is supported. true: supported; false: unsupported.
- * @method void setIsAllowedSync(boolean $IsAllowedSync) Set Whether synchronization task is supported. true: supported; false: unsupported.
+ * @method boolean getServiceEnabled() Obtain <p>Whether the KMS service is enabled. true means enabled</p>
+ * @method void setServiceEnabled(boolean $ServiceEnabled) Set <p>Whether the KMS service is enabled. true means enabled</p>
+ * @method integer getInvalidType() Obtain <p>Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release</p>
+ * @method void setInvalidType(integer $InvalidType) Set <p>Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release</p>
+ * @method integer getUserLevel() Obtain <p>0-Standard Edition, 1-Flagship Edition</p>
+ * @method void setUserLevel(integer $UserLevel) Set <p>0-Standard Edition, 1-Flagship Edition</p>
+ * @method integer getProExpireTime() Obtain <p>Expiry time of the flagship edition (Epoch Unix Timestamp).</p>
+ * @method void setProExpireTime(integer $ProExpireTime) Set <p>Expiry time of the flagship edition (Epoch Unix Timestamp).</p>
+ * @method integer getProRenewFlag() Obtain <p>Whether the flagship edition is automatically renewed: 0-no auto-renewal, 1-auto-renewal</p>
+ * @method void setProRenewFlag(integer $ProRenewFlag) Set <p>Whether the flagship edition is automatically renewed: 0-no auto-renewal, 1-auto-renewal</p>
+ * @method string getProResourceId() Obtain <p>Unique identifier of the flagship edition purchase record. If the flagship edition is not activated, the return value is empty.</p>
+ * @method void setProResourceId(string $ProResourceId) Set <p>Unique identifier of the flagship edition purchase record. If the flagship edition is not activated, the return value is empty.</p>
+ * @method boolean getExclusiveVSMEnabled() Obtain <p>Whether to enable managed by KMS</p>
+ * @method void setExclusiveVSMEnabled(boolean $ExclusiveVSMEnabled) Set <p>Whether to enable managed by KMS</p>
+ * @method boolean getExclusiveHSMEnabled() Obtain <p>Whether to enable KMS exclusive edition</p>
+ * @method void setExclusiveHSMEnabled(boolean $ExclusiveHSMEnabled) Set <p>Whether to enable KMS exclusive edition</p>
+ * @method string getSubscriptionInfo() Obtain <p>KMS subscription information.</p>
+ * @method void setSubscriptionInfo(string $SubscriptionInfo) Set <p>KMS subscription information.</p>
+ * @method integer getCmkUserCount() Obtain <p>Return the usage quantity of KMS user secret key</p>
+ * @method void setCmkUserCount(integer $CmkUserCount) Set <p>Return the usage quantity of KMS user secret key</p>
+ * @method integer getCmkLimit() Obtain <p>Return the specification quantity of KMS user secret keys</p>
+ * @method void setCmkLimit(integer $CmkLimit) Set <p>Return the specification quantity of KMS user secret keys</p>
+ * @method array getExclusiveHSMList() Obtain <p>Return the dedicated cluster group</p>
+ * @method void setExclusiveHSMList(array $ExclusiveHSMList) Set <p>Return the dedicated cluster group</p>
+ * @method boolean getIsAllowedDataKeyHosted() Obtain <p>Indicates whether data key management is supported. 1: supported. 0: not supported.</p>
+ * @method void setIsAllowedDataKeyHosted(boolean $IsAllowedDataKeyHosted) Set <p>Indicates whether data key management is supported. 1: supported. 0: not supported.</p>
+ * @method integer getDataKeyLimit() Obtain <p>Valid when IsAllowedDataKeyHosted is 1. Purchase quota of the data key</p>
+ * @method void setDataKeyLimit(integer $DataKeyLimit) Set <p>Valid when IsAllowedDataKeyHosted is 1. Purchase quota of the data key</p>
+ * @method integer getFreeDataKeyLimit() Obtain <p>Valid at that time when IsAllowedDataKeyHosted is 1. Data key free quota.</p>
+ * @method void setFreeDataKeyLimit(integer $FreeDataKeyLimit) Set <p>Valid at that time when IsAllowedDataKeyHosted is 1. Data key free quota.</p>
+ * @method integer getDataKeyUsedCount() Obtain <p>Valid when IsAllowedDataKeyHosted is 1. Number of used data keys.</p>
+ * @method void setDataKeyUsedCount(integer $DataKeyUsedCount) Set <p>Valid when IsAllowedDataKeyHosted is 1. Number of used data keys.</p>
+ * @method array getSyncTaskList() Obtain <p>Target region info of the sync task</p>
+ * @method void setSyncTaskList(array $SyncTaskList) Set <p>Target region info of the sync task</p>
+ * @method boolean getIsAllowedSync() Obtain <p>Whether sync task is supported. true: supported, false: unsupported.</p>
+ * @method void setIsAllowedSync(boolean $IsAllowedSync) Set <p>Whether sync task is supported. true: supported, false: unsupported.</p>
+ * @method integer getQpsLimit() Obtain <p>QPS in the region</p>
+ * @method void setQpsLimit(integer $QpsLimit) Set <p>QPS in the region</p>
+ * @method integer getQpsTotalLimit() Obtain <p>Total QPS value</p>
+ * @method void setQpsTotalLimit(integer $QpsTotalLimit) Set <p>Total QPS value</p>
+ * @method array getRegionsQps() Obtain <p>QPS in the region</p>
+ * @method void setRegionsQps(array $RegionsQps) Set <p>QPS in the region</p>
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class GetServiceStatusResponse extends AbstractModel
 {
     /**
-     * @var boolean Whether the KMS service has been activated. true: activated
+     * @var boolean <p>Whether the KMS service is enabled. true means enabled</p>
      */
     public $ServiceEnabled;
 
     /**
-     * @var integer Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
+     * @var integer <p>Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release</p>
      */
     public $InvalidType;
 
     /**
-     * @var integer 0: Basic Edition, 1: Ultimate Edition
+     * @var integer <p>0-Standard Edition, 1-Flagship Edition</p>
      */
     public $UserLevel;
 
     /**
-     * @var integer Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
+     * @var integer <p>Expiry time of the flagship edition (Epoch Unix Timestamp).</p>
      */
     public $ProExpireTime;
 
     /**
-     * @var integer Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
+     * @var integer <p>Whether the flagship edition is automatically renewed: 0-no auto-renewal, 1-auto-renewal</p>
      */
     public $ProRenewFlag;
 
     /**
-     * @var string Flagship edition purchase record unique identifier. if not activated, the return value is empty.
+     * @var string <p>Unique identifier of the flagship edition purchase record. If the flagship edition is not activated, the return value is empty.</p>
      */
     public $ProResourceId;
 
     /**
-     * @var boolean Whether to enable the KMS-managed version.
+     * @var boolean <p>Whether to enable managed by KMS</p>
      */
     public $ExclusiveVSMEnabled;
 
     /**
-     * @var boolean Whether to enable the exclusive edition of KMS.
+     * @var boolean <p>Whether to enable KMS exclusive edition</p>
      */
     public $ExclusiveHSMEnabled;
 
     /**
-     * @var string Specifies the KMS subscription information.
+     * @var string <p>KMS subscription information.</p>
      */
     public $SubscriptionInfo;
 
     /**
-     * @var integer Returns the amount of KMS user secret keys used.
+     * @var integer <p>Return the usage quantity of KMS user secret key</p>
      */
     public $CmkUserCount;
 
     /**
-     * @var integer Returns the specification quantity of KMS user secret keys.
+     * @var integer <p>Return the specification quantity of KMS user secret keys</p>
      */
     public $CmkLimit;
 
     /**
-     * @var array Return dedicated cluster group.
+     * @var array <p>Return the dedicated cluster group</p>
      */
     public $ExclusiveHSMList;
 
     /**
-     * @var boolean Whether data key management is supported. valid values: 1 (supported), 0 (unsupported).
+     * @var boolean <p>Indicates whether data key management is supported. 1: supported. 0: not supported.</p>
      */
     public $IsAllowedDataKeyHosted;
 
     /**
-     * @var integer Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys.
+     * @var integer <p>Valid when IsAllowedDataKeyHosted is 1. Purchase quota of the data key</p>
      */
     public $DataKeyLimit;
 
     /**
-     * @var integer Valid when IsAllowedDataKeyHosted is 1. data key free quota.
+     * @var integer <p>Valid at that time when IsAllowedDataKeyHosted is 1. Data key free quota.</p>
      */
     public $FreeDataKeyLimit;
 
     /**
-     * @var integer Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used.
+     * @var integer <p>Valid when IsAllowedDataKeyHosted is 1. Number of used data keys.</p>
      */
     public $DataKeyUsedCount;
 
     /**
-     * @var array Specifies the target region of the sync task.
+     * @var array <p>Target region info of the sync task</p>
      */
     public $SyncTaskList;
 
     /**
-     * @var boolean Whether synchronization task is supported. true: supported; false: unsupported.
+     * @var boolean <p>Whether sync task is supported. true: supported, false: unsupported.</p>
      */
     public $IsAllowedSync;
+
+    /**
+     * @var integer <p>QPS in the region</p>
+     */
+    public $QpsLimit;
+
+    /**
+     * @var integer <p>Total QPS value</p>
+     */
+    public $QpsTotalLimit;
+
+    /**
+     * @var array <p>QPS in the region</p>
+     */
+    public $RegionsQps;
 
     /**
      * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -157,24 +178,27 @@ class GetServiceStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $ServiceEnabled Whether the KMS service has been activated. true: activated
-     * @param integer $InvalidType Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
-     * @param integer $UserLevel 0: Basic Edition, 1: Ultimate Edition
-     * @param integer $ProExpireTime Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
-     * @param integer $ProRenewFlag Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
-     * @param string $ProResourceId Flagship edition purchase record unique identifier. if not activated, the return value is empty.
-     * @param boolean $ExclusiveVSMEnabled Whether to enable the KMS-managed version.
-     * @param boolean $ExclusiveHSMEnabled Whether to enable the exclusive edition of KMS.
-     * @param string $SubscriptionInfo Specifies the KMS subscription information.
-     * @param integer $CmkUserCount Returns the amount of KMS user secret keys used.
-     * @param integer $CmkLimit Returns the specification quantity of KMS user secret keys.
-     * @param array $ExclusiveHSMList Return dedicated cluster group.
-     * @param boolean $IsAllowedDataKeyHosted Whether data key management is supported. valid values: 1 (supported), 0 (unsupported).
-     * @param integer $DataKeyLimit Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys.
-     * @param integer $FreeDataKeyLimit Valid when IsAllowedDataKeyHosted is 1. data key free quota.
-     * @param integer $DataKeyUsedCount Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used.
-     * @param array $SyncTaskList Specifies the target region of the sync task.
-     * @param boolean $IsAllowedSync Whether synchronization task is supported. true: supported; false: unsupported.
+     * @param boolean $ServiceEnabled <p>Whether the KMS service is enabled. true means enabled</p>
+     * @param integer $InvalidType <p>Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release</p>
+     * @param integer $UserLevel <p>0-Standard Edition, 1-Flagship Edition</p>
+     * @param integer $ProExpireTime <p>Expiry time of the flagship edition (Epoch Unix Timestamp).</p>
+     * @param integer $ProRenewFlag <p>Whether the flagship edition is automatically renewed: 0-no auto-renewal, 1-auto-renewal</p>
+     * @param string $ProResourceId <p>Unique identifier of the flagship edition purchase record. If the flagship edition is not activated, the return value is empty.</p>
+     * @param boolean $ExclusiveVSMEnabled <p>Whether to enable managed by KMS</p>
+     * @param boolean $ExclusiveHSMEnabled <p>Whether to enable KMS exclusive edition</p>
+     * @param string $SubscriptionInfo <p>KMS subscription information.</p>
+     * @param integer $CmkUserCount <p>Return the usage quantity of KMS user secret key</p>
+     * @param integer $CmkLimit <p>Return the specification quantity of KMS user secret keys</p>
+     * @param array $ExclusiveHSMList <p>Return the dedicated cluster group</p>
+     * @param boolean $IsAllowedDataKeyHosted <p>Indicates whether data key management is supported. 1: supported. 0: not supported.</p>
+     * @param integer $DataKeyLimit <p>Valid when IsAllowedDataKeyHosted is 1. Purchase quota of the data key</p>
+     * @param integer $FreeDataKeyLimit <p>Valid at that time when IsAllowedDataKeyHosted is 1. Data key free quota.</p>
+     * @param integer $DataKeyUsedCount <p>Valid when IsAllowedDataKeyHosted is 1. Number of used data keys.</p>
+     * @param array $SyncTaskList <p>Target region info of the sync task</p>
+     * @param boolean $IsAllowedSync <p>Whether sync task is supported. true: supported, false: unsupported.</p>
+     * @param integer $QpsLimit <p>QPS in the region</p>
+     * @param integer $QpsTotalLimit <p>Total QPS value</p>
+     * @param array $RegionsQps <p>QPS in the region</p>
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -270,6 +294,23 @@ class GetServiceStatusResponse extends AbstractModel
 
         if (array_key_exists("IsAllowedSync",$param) and $param["IsAllowedSync"] !== null) {
             $this->IsAllowedSync = $param["IsAllowedSync"];
+        }
+
+        if (array_key_exists("QpsLimit",$param) and $param["QpsLimit"] !== null) {
+            $this->QpsLimit = $param["QpsLimit"];
+        }
+
+        if (array_key_exists("QpsTotalLimit",$param) and $param["QpsTotalLimit"] !== null) {
+            $this->QpsTotalLimit = $param["QpsTotalLimit"];
+        }
+
+        if (array_key_exists("RegionsQps",$param) and $param["RegionsQps"] !== null) {
+            $this->RegionsQps = [];
+            foreach ($param["RegionsQps"] as $key => $value){
+                $obj = new RegionQps();
+                $obj->deserialize($value);
+                array_push($this->RegionsQps, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

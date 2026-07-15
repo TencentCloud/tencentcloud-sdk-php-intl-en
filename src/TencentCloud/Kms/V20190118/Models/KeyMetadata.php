@@ -20,234 +20,234 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CMK attribute information
  *
- * @method string getKeyId() Obtain Globally unique CMK ID
- * @method void setKeyId(string $KeyId) Set Globally unique CMK ID
- * @method string getAlias() Obtain Alias that makes a key more recognizable and understandable
- * @method void setAlias(string $Alias) Set Alias that makes a key more recognizable and understandable
- * @method integer getCreateTime() Obtain Key creation time
- * @method void setCreateTime(integer $CreateTime) Set Key creation time
- * @method string getDescription() Obtain CMK description
- * @method void setDescription(string $Description) Set CMK description
- * @method string getKeyState() Obtain CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
- * @method void setKeyState(string $KeyState) Set CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
- * @method string getKeyUsage() Obtain CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
- * @method void setKeyUsage(string $KeyUsage) Set CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
- * @method integer getType() Obtain CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
- * @method void setType(integer $Type) Set CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
- * @method integer getCreatorUin() Obtain Creator
- * @method void setCreatorUin(integer $CreatorUin) Set Creator
- * @method boolean getKeyRotationEnabled() Obtain Whether key rotation is enabled
- * @method void setKeyRotationEnabled(boolean $KeyRotationEnabled) Set Whether key rotation is enabled
- * @method string getOwner() Obtain CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
- * @method void setOwner(string $Owner) Set CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
- * @method integer getNextRotateTime() Obtain Time of next rotation if key rotation is enabled
- * @method void setNextRotateTime(integer $NextRotateTime) Set Time of next rotation if key rotation is enabled
- * @method integer getDeletionDate() Obtain The time when scheduled deletion occurs.
- * @method void setDeletionDate(integer $DeletionDate) Set The time when scheduled deletion occurs.
- * @method string getOrigin() Obtain CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
- * @method void setOrigin(string $Origin) Set CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
- * @method integer getValidTo() Obtain Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
- * @method void setValidTo(integer $ValidTo) Set Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
- * @method string getResourceId() Obtain Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
- * @method void setResourceId(string $ResourceId) Set Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
- * @method string getHsmClusterId() Obtain HSM cluster ID (valid only for exclusive or managed version KMS service instances).
- * @method void setHsmClusterId(string $HsmClusterId) Set HSM cluster ID (valid only for exclusive or managed version KMS service instances).
- * @method integer getRotateDays() Obtain Key rotation period (days).
- * @method void setRotateDays(integer $RotateDays) Set Key rotation period (days).
- * @method integer getLastRotateTime() Obtain Last disorderly rotation time (Unix timestamp).
- * @method void setLastRotateTime(integer $LastRotateTime) Set Last disorderly rotation time (Unix timestamp).
- * @method integer getIsSyncReplica() Obtain Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
- * @method void setIsSyncReplica(integer $IsSyncReplica) Set Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
- * @method string getSourceRegion() Obtain Synchronous original region.
- * @method void setSourceRegion(string $SourceRegion) Set Synchronous original region.
- * @method integer getSyncStatus() Obtain The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
- * @method void setSyncStatus(integer $SyncStatus) Set The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
- * @method string getSyncMessages() Obtain Describes the synchronous result.
- * @method void setSyncMessages(string $SyncMessages) Set Describes the synchronous result.
- * @method integer getSyncStartTime() Obtain Start time of synchronization.
- * @method void setSyncStartTime(integer $SyncStartTime) Set Start time of synchronization.
- * @method integer getSyncEndTime() Obtain Specifies the synchronous end time.
- * @method void setSyncEndTime(integer $SyncEndTime) Set Specifies the synchronous end time.
- * @method string getSourceHsmClusterId() Obtain Synchronous original cluster. if empty, it is a public cloud public cluster.
- * @method void setSourceHsmClusterId(string $SourceHsmClusterId) Set Synchronous original cluster. if empty, it is a public cloud public cluster.
- * @method integer getAccountAppId() Obtain Member account appId.
- * @method void setAccountAppId(integer $AccountAppId) Set Member account appId.
- * @method integer getAccountUin() Obtain Member account UIN
- * @method void setAccountUin(integer $AccountUin) Set Member account UIN
- * @method string getAccountName() Obtain Member account name.
- * @method void setAccountName(string $AccountName) Set Member account name.
+ * @method string getKeyId() Obtain <p>Globally unique ID of the CMK.</p>
+ * @method void setKeyId(string $KeyId) Set <p>Globally unique ID of the CMK.</p>
+ * @method string getAlias() Obtain <p>An alias name as a key that is easier to identify and understand</p>
+ * @method void setAlias(string $Alias) Set <p>An alias name as a key that is easier to identify and understand</p>
+ * @method integer getCreateTime() Obtain <p>Key creation time</p>
+ * @method void setCreateTime(integer $CreateTime) Set <p>Key creation time</p>
+ * @method string getDescription() Obtain <p>Description of the CMK.</p>
+ * @method void setDescription(string $Description) Set <p>Description of the CMK.</p>
+ * @method string getKeyState() Obtain <p>CMK state, value: Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
+ * @method void setKeyState(string $KeyState) Set <p>CMK state, value: Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
+ * @method string getKeyUsage() Obtain <p>CMK purpose. Value: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
+ * @method void setKeyUsage(string $KeyUsage) Set <p>CMK purpose. Value: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
+ * @method integer getType() Obtain <p>CMK type. 2 means compliant with FIPS 140-2 standard. 4 means compliant with national cryptography standards.</p><p>Enumeration value:</p><ul><li>2: Complies with FIPS 140-2 standard</li><li>4: Complies with national cryptography standards</li></ul>
+ * @method void setType(integer $Type) Set <p>CMK type. 2 means compliant with FIPS 140-2 standard. 4 means compliant with national cryptography standards.</p><p>Enumeration value:</p><ul><li>2: Complies with FIPS 140-2 standard</li><li>4: Complies with national cryptography standards</li></ul>
+ * @method integer getCreatorUin() Obtain <p>Creator.</p>
+ * @method void setCreatorUin(integer $CreatorUin) Set <p>Creator.</p>
+ * @method boolean getKeyRotationEnabled() Obtain <p>Is key rotation function enabled?</p>
+ * @method void setKeyRotationEnabled(boolean $KeyRotationEnabled) Set <p>Is key rotation function enabled?</p>
+ * @method string getOwner() Obtain <p>Creator of the CMK. For user-created CMKs, the value is user. For CMKs auto-created by authorized Cloud services, the value is the corresponding product name.</p>
+ * @method void setOwner(string $Owner) Set <p>Creator of the CMK. For user-created CMKs, the value is user. For CMKs auto-created by authorized Cloud services, the value is the corresponding product name.</p>
+ * @method integer getNextRotateTime() Obtain <p>The time when the next rotation occurs with key rotation enabled</p>
+ * @method void setNextRotateTime(integer $NextRotateTime) Set <p>The time when the next rotation occurs with key rotation enabled</p>
+ * @method integer getDeletionDate() Obtain <p>The time when schedule deletion</p>
+ * @method void setDeletionDate(integer $DeletionDate) Set <p>The time when schedule deletion</p>
+ * @method string getOrigin() Obtain <p>CMK key material type. TENCENT_KMS for those created by KMS, EXTERNAL for user import.</p>
+ * @method void setOrigin(string $Origin) Set <p>CMK key material type. TENCENT_KMS for those created by KMS, EXTERNAL for user import.</p>
+ * @method integer getValidTo() Obtain <p>Valid when Origin is EXTERNAL. Indicates the expiration date of the key material. 0 means never expire.</p>
+ * @method void setValidTo(integer $ValidTo) Set <p>Valid when Origin is EXTERNAL. Indicates the expiration date of the key material. 0 means never expire.</p>
+ * @method string getResourceId() Obtain <p>Resource ID, format: creatorUin/$creatorUin/$keyId</p>
+ * @method void setResourceId(string $ResourceId) Set <p>Resource ID, format: creatorUin/$creatorUin/$keyId</p>
+ * @method string getHsmClusterId() Obtain <p>HSM Cluster ID (only applicable to KMS exclusive/managed service instance)</p>
+ * @method void setHsmClusterId(string $HsmClusterId) Set <p>HSM Cluster ID (only applicable to KMS exclusive/managed service instance)</p>
+ * @method integer getRotateDays() Obtain <p>Key rotation cycle (days)</p>
+ * @method void setRotateDays(integer $RotateDays) Set <p>Key rotation cycle (days)</p>
+ * @method integer getLastRotateTime() Obtain <p>Last rotation time (Unix timestamp).</p>
+ * @method void setLastRotateTime(integer $LastRotateTime) Set <p>Last rotation time (Unix timestamp).</p>
+ * @method integer getIsSyncReplica() Obtain <p>Whether the key is the primary replica. 0: primary replica, 1: synced replica.</p>
+ * @method void setIsSyncReplica(integer $IsSyncReplica) Set <p>Whether the key is the primary replica. 0: primary replica, 1: synced replica.</p>
+ * @method string getSourceRegion() Obtain <p>Synchronous original region</p>
+ * @method void setSourceRegion(string $SourceRegion) Set <p>Synchronous original region</p>
+ * @method integer getSyncStatus() Obtain <p>Key synchronization state: 0: unsynced, 1: synced successfully, 2: synchronization failed, 3: syncing.</p>
+ * @method void setSyncStatus(integer $SyncStatus) Set <p>Key synchronization state: 0: unsynced, 1: synced successfully, 2: synchronization failed, 3: syncing.</p>
+ * @method string getSyncMessages() Obtain <p>Synchronous result description</p>
+ * @method void setSyncMessages(string $SyncMessages) Set <p>Synchronous result description</p>
+ * @method integer getSyncStartTime() Obtain <p>Start time of synchronization</p>
+ * @method void setSyncStartTime(integer $SyncStartTime) Set <p>Start time of synchronization</p>
+ * @method integer getSyncEndTime() Obtain <p>Synchronous end time</p>
+ * @method void setSyncEndTime(integer $SyncEndTime) Set <p>Synchronous end time</p>
+ * @method string getSourceHsmClusterId() Obtain <p>Synchronous original cluster. If empty, it is a public cloud public cluster.</p>
+ * @method void setSourceHsmClusterId(string $SourceHsmClusterId) Set <p>Synchronous original cluster. If empty, it is a public cloud public cluster.</p>
+ * @method integer getAccountAppId() Obtain <p>Member account appId</p>
+ * @method void setAccountAppId(integer $AccountAppId) Set <p>Member account appId</p>
+ * @method integer getAccountUin() Obtain <p>member account uin</p>
+ * @method void setAccountUin(integer $AccountUin) Set <p>member account uin</p>
+ * @method string getAccountName() Obtain <p>Member account name</p>
+ * @method void setAccountName(string $AccountName) Set <p>Member account name</p>
  */
 class KeyMetadata extends AbstractModel
 {
     /**
-     * @var string Globally unique CMK ID
+     * @var string <p>Globally unique ID of the CMK.</p>
      */
     public $KeyId;
 
     /**
-     * @var string Alias that makes a key more recognizable and understandable
+     * @var string <p>An alias name as a key that is easier to identify and understand</p>
      */
     public $Alias;
 
     /**
-     * @var integer Key creation time
+     * @var integer <p>Key creation time</p>
      */
     public $CreateTime;
 
     /**
-     * @var string CMK description
+     * @var string <p>Description of the CMK.</p>
      */
     public $Description;
 
     /**
-     * @var string CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
+     * @var string <p>CMK state, value: Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
      */
     public $KeyState;
 
     /**
-     * @var string CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
+     * @var string <p>CMK purpose. Value: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
      */
     public $KeyUsage;
 
     /**
-     * @var integer CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
+     * @var integer <p>CMK type. 2 means compliant with FIPS 140-2 standard. 4 means compliant with national cryptography standards.</p><p>Enumeration value:</p><ul><li>2: Complies with FIPS 140-2 standard</li><li>4: Complies with national cryptography standards</li></ul>
      */
     public $Type;
 
     /**
-     * @var integer Creator
+     * @var integer <p>Creator.</p>
      */
     public $CreatorUin;
 
     /**
-     * @var boolean Whether key rotation is enabled
+     * @var boolean <p>Is key rotation function enabled?</p>
      */
     public $KeyRotationEnabled;
 
     /**
-     * @var string CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
+     * @var string <p>Creator of the CMK. For user-created CMKs, the value is user. For CMKs auto-created by authorized Cloud services, the value is the corresponding product name.</p>
      */
     public $Owner;
 
     /**
-     * @var integer Time of next rotation if key rotation is enabled
+     * @var integer <p>The time when the next rotation occurs with key rotation enabled</p>
      */
     public $NextRotateTime;
 
     /**
-     * @var integer The time when scheduled deletion occurs.
+     * @var integer <p>The time when schedule deletion</p>
      */
     public $DeletionDate;
 
     /**
-     * @var string CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
+     * @var string <p>CMK key material type. TENCENT_KMS for those created by KMS, EXTERNAL for user import.</p>
      */
     public $Origin;
 
     /**
-     * @var integer Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
+     * @var integer <p>Valid when Origin is EXTERNAL. Indicates the expiration date of the key material. 0 means never expire.</p>
      */
     public $ValidTo;
 
     /**
-     * @var string Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+     * @var string <p>Resource ID, format: creatorUin/$creatorUin/$keyId</p>
      */
     public $ResourceId;
 
     /**
-     * @var string HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+     * @var string <p>HSM Cluster ID (only applicable to KMS exclusive/managed service instance)</p>
      */
     public $HsmClusterId;
 
     /**
-     * @var integer Key rotation period (days).
+     * @var integer <p>Key rotation cycle (days)</p>
      */
     public $RotateDays;
 
     /**
-     * @var integer Last disorderly rotation time (Unix timestamp).
+     * @var integer <p>Last rotation time (Unix timestamp).</p>
      */
     public $LastRotateTime;
 
     /**
-     * @var integer Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+     * @var integer <p>Whether the key is the primary replica. 0: primary replica, 1: synced replica.</p>
      */
     public $IsSyncReplica;
 
     /**
-     * @var string Synchronous original region.
+     * @var string <p>Synchronous original region</p>
      */
     public $SourceRegion;
 
     /**
-     * @var integer The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+     * @var integer <p>Key synchronization state: 0: unsynced, 1: synced successfully, 2: synchronization failed, 3: syncing.</p>
      */
     public $SyncStatus;
 
     /**
-     * @var string Describes the synchronous result.
+     * @var string <p>Synchronous result description</p>
      */
     public $SyncMessages;
 
     /**
-     * @var integer Start time of synchronization.
+     * @var integer <p>Start time of synchronization</p>
      */
     public $SyncStartTime;
 
     /**
-     * @var integer Specifies the synchronous end time.
+     * @var integer <p>Synchronous end time</p>
      */
     public $SyncEndTime;
 
     /**
-     * @var string Synchronous original cluster. if empty, it is a public cloud public cluster.
+     * @var string <p>Synchronous original cluster. If empty, it is a public cloud public cluster.</p>
      */
     public $SourceHsmClusterId;
 
     /**
-     * @var integer Member account appId.
+     * @var integer <p>Member account appId</p>
      */
     public $AccountAppId;
 
     /**
-     * @var integer Member account UIN
+     * @var integer <p>member account uin</p>
      */
     public $AccountUin;
 
     /**
-     * @var string Member account name.
+     * @var string <p>Member account name</p>
      */
     public $AccountName;
 
     /**
-     * @param string $KeyId Globally unique CMK ID
-     * @param string $Alias Alias that makes a key more recognizable and understandable
-     * @param integer $CreateTime Key creation time
-     * @param string $Description CMK description
-     * @param string $KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
-     * @param string $KeyUsage CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
-     * @param integer $Type CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
-     * @param integer $CreatorUin Creator
-     * @param boolean $KeyRotationEnabled Whether key rotation is enabled
-     * @param string $Owner CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
-     * @param integer $NextRotateTime Time of next rotation if key rotation is enabled
-     * @param integer $DeletionDate The time when scheduled deletion occurs.
-     * @param string $Origin CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
-     * @param integer $ValidTo Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
-     * @param string $ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
-     * @param string $HsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
-     * @param integer $RotateDays Key rotation period (days).
-     * @param integer $LastRotateTime Last disorderly rotation time (Unix timestamp).
-     * @param integer $IsSyncReplica Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
-     * @param string $SourceRegion Synchronous original region.
-     * @param integer $SyncStatus The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
-     * @param string $SyncMessages Describes the synchronous result.
-     * @param integer $SyncStartTime Start time of synchronization.
-     * @param integer $SyncEndTime Specifies the synchronous end time.
-     * @param string $SourceHsmClusterId Synchronous original cluster. if empty, it is a public cloud public cluster.
-     * @param integer $AccountAppId Member account appId.
-     * @param integer $AccountUin Member account UIN
-     * @param string $AccountName Member account name.
+     * @param string $KeyId <p>Globally unique ID of the CMK.</p>
+     * @param string $Alias <p>An alias name as a key that is easier to identify and understand</p>
+     * @param integer $CreateTime <p>Key creation time</p>
+     * @param string $Description <p>Description of the CMK.</p>
+     * @param string $KeyState <p>CMK state, value: Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
+     * @param string $KeyUsage <p>CMK purpose. Value: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
+     * @param integer $Type <p>CMK type. 2 means compliant with FIPS 140-2 standard. 4 means compliant with national cryptography standards.</p><p>Enumeration value:</p><ul><li>2: Complies with FIPS 140-2 standard</li><li>4: Complies with national cryptography standards</li></ul>
+     * @param integer $CreatorUin <p>Creator.</p>
+     * @param boolean $KeyRotationEnabled <p>Is key rotation function enabled?</p>
+     * @param string $Owner <p>Creator of the CMK. For user-created CMKs, the value is user. For CMKs auto-created by authorized Cloud services, the value is the corresponding product name.</p>
+     * @param integer $NextRotateTime <p>The time when the next rotation occurs with key rotation enabled</p>
+     * @param integer $DeletionDate <p>The time when schedule deletion</p>
+     * @param string $Origin <p>CMK key material type. TENCENT_KMS for those created by KMS, EXTERNAL for user import.</p>
+     * @param integer $ValidTo <p>Valid when Origin is EXTERNAL. Indicates the expiration date of the key material. 0 means never expire.</p>
+     * @param string $ResourceId <p>Resource ID, format: creatorUin/$creatorUin/$keyId</p>
+     * @param string $HsmClusterId <p>HSM Cluster ID (only applicable to KMS exclusive/managed service instance)</p>
+     * @param integer $RotateDays <p>Key rotation cycle (days)</p>
+     * @param integer $LastRotateTime <p>Last rotation time (Unix timestamp).</p>
+     * @param integer $IsSyncReplica <p>Whether the key is the primary replica. 0: primary replica, 1: synced replica.</p>
+     * @param string $SourceRegion <p>Synchronous original region</p>
+     * @param integer $SyncStatus <p>Key synchronization state: 0: unsynced, 1: synced successfully, 2: synchronization failed, 3: syncing.</p>
+     * @param string $SyncMessages <p>Synchronous result description</p>
+     * @param integer $SyncStartTime <p>Start time of synchronization</p>
+     * @param integer $SyncEndTime <p>Synchronous end time</p>
+     * @param string $SourceHsmClusterId <p>Synchronous original cluster. If empty, it is a public cloud public cluster.</p>
+     * @param integer $AccountAppId <p>Member account appId</p>
+     * @param integer $AccountUin <p>member account uin</p>
+     * @param string $AccountName <p>Member account name</p>
      */
     function __construct()
     {

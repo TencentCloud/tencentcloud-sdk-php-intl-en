@@ -20,86 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The information of the subtitles to add.
  *
- * @method string getType() Obtain The mode. Valid values:
-<li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
-<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
+ * @method string getType() Obtain <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set The mode. Valid values:
-<li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
-<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
+ * @method void setType(string $Type) Set <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method MediaInputInfo getSubtitle() Obtain The subtitle file.
+ * @method MediaInputInfo getSubtitle() Obtain <p>Subtitle file.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubtitle(MediaInputInfo $Subtitle) Set The subtitle file.
+ * @method void setSubtitle(MediaInputInfo $Subtitle) Set <p>Subtitle file.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSubtitleName() Obtain Subtitle name.
-Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSubtitleName(string $SubtitleName) Set Subtitle name.
-Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getOutputFormat() Obtain Output format of the subtitle. valid values: "WebVTT", "TTML".
-Default value: "WebVTT".
- * @method void setOutputFormat(string $OutputFormat) Set Output format of the subtitle. valid values: "WebVTT", "TTML".
-Default value: "WebVTT".
- * @method boolean getDefaultTrack() Obtain Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
-Default value: `false`.
- * @method void setDefaultTrack(boolean $DefaultTrack) Set Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
-Default value: `false`.
+ * @method string getSubtitleName() Obtain <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubtitleName(string $SubtitleName) Set <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSubtitleLanguage() Obtain <p>Subtitle language, such as eng.</p>
+ * @method void setSubtitleLanguage(string $SubtitleLanguage) Set <p>Subtitle language, such as eng.</p>
+ * @method string getOutputFormat() Obtain <p>Subtitle output format. Valid values: {&quot;WebVTT&quot;,&quot;TTML&quot;}.<br>Default value: &quot;WebVTT&quot;.</p>
+ * @method void setOutputFormat(string $OutputFormat) Set <p>Subtitle output format. Valid values: {&quot;WebVTT&quot;,&quot;TTML&quot;}.<br>Default value: &quot;WebVTT&quot;.</p>
+ * @method boolean getDefaultTrack() Obtain <p>Default subtitle track. When set to true, the current subtitle is designated as the default subtitle track. A maximum of 1 default subtitle track can be specified.<br>Default value: false.</p>
+ * @method void setDefaultTrack(boolean $DefaultTrack) Set <p>Default subtitle track. When set to true, the current subtitle is designated as the default subtitle track. A maximum of 1 default subtitle track can be specified.<br>Default value: false.</p>
  */
 class AddOnSubtitle extends AbstractModel
 {
     /**
-     * @var string The mode. Valid values:
-<li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
-<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
+     * @var string <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
     /**
-     * @var MediaInputInfo The subtitle file.
+     * @var MediaInputInfo <p>Subtitle file.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Subtitle;
 
     /**
-     * @var string Subtitle name.
-Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubtitleName;
 
     /**
-     * @var string Output format of the subtitle. valid values: "WebVTT", "TTML".
-Default value: "WebVTT".
+     * @var string <p>Subtitle language, such as eng.</p>
+     */
+    public $SubtitleLanguage;
+
+    /**
+     * @var string <p>Subtitle output format. Valid values: {&quot;WebVTT&quot;,&quot;TTML&quot;}.<br>Default value: &quot;WebVTT&quot;.</p>
      */
     public $OutputFormat;
 
     /**
-     * @var boolean Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
-Default value: `false`.
+     * @var boolean <p>Default subtitle track. When set to true, the current subtitle is designated as the default subtitle track. A maximum of 1 default subtitle track can be specified.<br>Default value: false.</p>
      */
     public $DefaultTrack;
 
     /**
-     * @param string $Type The mode. Valid values:
-<li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
-<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
+     * @param string $Type <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaInputInfo $Subtitle The subtitle file.
+     * @param MediaInputInfo $Subtitle <p>Subtitle file.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SubtitleName Subtitle name.
-Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $OutputFormat Output format of the subtitle. valid values: "WebVTT", "TTML".
-Default value: "WebVTT".
-     * @param boolean $DefaultTrack Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
-Default value: `false`.
+     * @param string $SubtitleName <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SubtitleLanguage <p>Subtitle language, such as eng.</p>
+     * @param string $OutputFormat <p>Subtitle output format. Valid values: {&quot;WebVTT&quot;,&quot;TTML&quot;}.<br>Default value: &quot;WebVTT&quot;.</p>
+     * @param boolean $DefaultTrack <p>Default subtitle track. When set to true, the current subtitle is designated as the default subtitle track. A maximum of 1 default subtitle track can be specified.<br>Default value: false.</p>
      */
     function __construct()
     {
@@ -125,6 +109,10 @@ Default value: `false`.
 
         if (array_key_exists("SubtitleName",$param) and $param["SubtitleName"] !== null) {
             $this->SubtitleName = $param["SubtitleName"];
+        }
+
+        if (array_key_exists("SubtitleLanguage",$param) and $param["SubtitleLanguage"] !== null) {
+            $this->SubtitleLanguage = $param["SubtitleLanguage"];
         }
 
         if (array_key_exists("OutputFormat",$param) and $param["OutputFormat"] !== null) {

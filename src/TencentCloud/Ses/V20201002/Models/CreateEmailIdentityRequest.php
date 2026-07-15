@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEmailIdentity request structure.
  *
- * @method string getEmailIdentity() Obtain Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
- * @method void setEmailIdentity(string $EmailIdentity) Set Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
- * @method integer getDKIMOption() Obtain Generated dkim key length. valid values: 0 (1024), 1 (2048).
- * @method void setDKIMOption(integer $DKIMOption) Set Generated dkim key length. valid values: 0 (1024), 1 (2048).
- * @method array getTagList() Obtain tag.
- * @method void setTagList(array $TagList) Set tag.
+ * @method string getEmailIdentity() Obtain <p>For your sender domain name, recommend using a level 3 or higher domain name. Example: mail.qcloud.com.</p>
+ * @method void setEmailIdentity(string $EmailIdentity) Set <p>For your sender domain name, recommend using a level 3 or higher domain name. Example: mail.qcloud.com.</p>
+ * @method integer getDKIMOption() Obtain <p>Generated dkim key length. 0:1024, 1:2048</p>
+ * @method void setDKIMOption(integer $DKIMOption) Set <p>Generated dkim key length. 0:1024, 1:2048</p>
+ * @method array getTagList() Obtain <p>tag</p>
+ * @method void setTagList(array $TagList) Set <p>tag</p>
  */
 class CreateEmailIdentityRequest extends AbstractModel
 {
     /**
-     * @var string Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
+     * @var string <p>For your sender domain name, recommend using a level 3 or higher domain name. Example: mail.qcloud.com.</p>
      */
     public $EmailIdentity;
 
     /**
-     * @var integer Generated dkim key length. valid values: 0 (1024), 1 (2048).
+     * @var integer <p>Generated dkim key length. 0:1024, 1:2048</p>
      */
     public $DKIMOption;
 
     /**
-     * @var array tag.
+     * @var array <p>tag</p>
      */
     public $TagList;
 
     /**
-     * @param string $EmailIdentity Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
-     * @param integer $DKIMOption Generated dkim key length. valid values: 0 (1024), 1 (2048).
-     * @param array $TagList tag.
+     * @param string $EmailIdentity <p>For your sender domain name, recommend using a level 3 or higher domain name. Example: mail.qcloud.com.</p>
+     * @param integer $DKIMOption <p>Generated dkim key length. 0:1024, 1:2048</p>
+     * @param array $TagList <p>tag</p>
      */
     function __construct()
     {

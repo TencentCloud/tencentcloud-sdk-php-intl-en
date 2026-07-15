@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateEmailIdentity request structure.
  *
- * @method string getEmailIdentity() Obtain Domain to be verified.
- * @method void setEmailIdentity(string $EmailIdentity) Set Domain to be verified.
- * @method boolean getNewAPI() Obtain The  DKIMOption parameter is effective or not
- * @method void setNewAPI(boolean $NewAPI) Set The  DKIMOption parameter is effective or not
- * @method integer getDKIMOption() Obtain dkim option, 0: 1024, 1: 2048, 2: both
- * @method void setDKIMOption(integer $DKIMOption) Set dkim option, 0: 1024, 1: 2048, 2: both
+ * @method string getEmailIdentity() Obtain <p>Domain name for request verification</p>
+ * @method void setEmailIdentity(string $EmailIdentity) Set <p>Domain name for request verification</p>
+ * @method boolean getNewAPI() Obtain <p>Match the new and old APIs in the console</p>
+ * @method void setNewAPI(boolean $NewAPI) Set <p>Match the new and old APIs in the console</p>
+ * @method integer getDKIMOption() Obtain <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
+ * @method void setDKIMOption(integer $DKIMOption) Set <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
  */
 class UpdateEmailIdentityRequest extends AbstractModel
 {
     /**
-     * @var string Domain to be verified.
+     * @var string <p>Domain name for request verification</p>
      */
     public $EmailIdentity;
 
     /**
-     * @var boolean The  DKIMOption parameter is effective or not
+     * @var boolean <p>Match the new and old APIs in the console</p>
      */
     public $NewAPI;
 
     /**
-     * @var integer dkim option, 0: 1024, 1: 2048, 2: both
+     * @var integer <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
      */
     public $DKIMOption;
 
     /**
-     * @param string $EmailIdentity Domain to be verified.
-     * @param boolean $NewAPI The  DKIMOption parameter is effective or not
-     * @param integer $DKIMOption dkim option, 0: 1024, 1: 2048, 2: both
+     * @param string $EmailIdentity <p>Domain name for request verification</p>
+     * @param boolean $NewAPI <p>Match the new and old APIs in the console</p>
+     * @param integer $DKIMOption <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
      */
     function __construct()
     {

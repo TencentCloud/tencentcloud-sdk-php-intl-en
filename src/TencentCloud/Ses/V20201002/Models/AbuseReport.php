@@ -20,114 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Reported spam data.
  *
- * @method string getDeliverTime() Obtain Send time.
- * @method void setDeliverTime(string $DeliverTime) Set Send time.
- * @method string getOriginalMailFrom() Obtain Sender address.
- * @method void setOriginalMailFrom(string $OriginalMailFrom) Set Sender address.
- * @method string getOriginalRcptTo() Obtain Receive email.
- * @method void setOriginalRcptTo(string $OriginalRcptTo) Set Receive email.
- * @method string getFromDomain() Obtain Sender domain name.
- * @method void setFromDomain(string $FromDomain) Set Sender domain name.
- * @method string getComplainTime() Obtain Complaint time.
- * @method void setComplainTime(string $ComplainTime) Set Complaint time.
- * @method string getMta() Obtain Recipient domain name.
- * @method void setMta(string $Mta) Set Recipient domain name.
- * @method string getSourceIp() Obtain Source IP
- * @method void setSourceIp(string $SourceIp) Set Source IP
- * @method string getInsertTime() Obtain Data time.
- * @method void setInsertTime(string $InsertTime) Set Data time.
- * @method string getTemplateId() Obtain Template ID
- * @method void setTemplateId(string $TemplateId) Set Template ID
- * @method string getBulkId() Obtain bulkId
- * @method void setBulkId(string $BulkId) Set bulkId
- * @method string getMessageId() Obtain Message-Id in mail.
- * @method void setMessageId(string $MessageId) Set Message-Id in mail.
- * @method string getAbuseTime() Obtain Complaint time.
- * @method void setAbuseTime(string $AbuseTime) Set Complaint time.
- * @method string getSubject() Obtain Email subject.
- * @method void setSubject(string $Subject) Set Email subject.
+ * @method string getDeliverTime() Obtain <p>Send time</p>
+ * @method void setDeliverTime(string $DeliverTime) Set <p>Send time</p>
+ * @method string getOriginalMailFrom() Obtain <p>Sender address</p>
+ * @method void setOriginalMailFrom(string $OriginalMailFrom) Set <p>Sender address</p>
+ * @method string getOriginalRcptTo() Obtain <p>Receive email address</p>
+ * @method void setOriginalRcptTo(string $OriginalRcptTo) Set <p>Receive email address</p>
+ * @method string getFromDomain() Obtain <p>Sender domain name</p>
+ * @method void setFromDomain(string $FromDomain) Set <p>Sender domain name</p>
+ * @method string getComplainTime() Obtain <p>Complaint time</p>
+ * @method void setComplainTime(string $ComplainTime) Set <p>Complaint time</p>
+ * @method string getMta() Obtain <p>Recipient domain name</p>
+ * @method void setMta(string $Mta) Set <p>Recipient domain name</p>
+ * @method string getSourceIp() Obtain <p>Source ip</p>
+ * @method void setSourceIp(string $SourceIp) Set <p>Source ip</p>
+ * @method string getInsertTime() Obtain <p>Data time</p>
+ * @method void setInsertTime(string $InsertTime) Set <p>Data time</p>
+ * @method string getTemplateId() Obtain <p>Template ID</p>
+ * @method void setTemplateId(string $TemplateId) Set <p>Template ID</p>
+ * @method string getBulkId() Obtain <p>bulkId</p>
+ * @method void setBulkId(string $BulkId) Set <p>bulkId</p>
+ * @method string getMessageId() Obtain <p>Message-Id of the mail</p>
+ * @method void setMessageId(string $MessageId) Set <p>Message-Id of the mail</p>
+ * @method string getAbuseTime() Obtain <p>Complaint time</p>
+ * @method void setAbuseTime(string $AbuseTime) Set <p>Complaint time</p>
+ * @method string getSubject() Obtain <p>Email Subject</p>
+ * @method void setSubject(string $Subject) Set <p>Email Subject</p>
  */
 class AbuseReport extends AbstractModel
 {
     /**
-     * @var string Send time.
+     * @var string <p>Send time</p>
      */
     public $DeliverTime;
 
     /**
-     * @var string Sender address.
+     * @var string <p>Sender address</p>
      */
     public $OriginalMailFrom;
 
     /**
-     * @var string Receive email.
+     * @var string <p>Receive email address</p>
      */
     public $OriginalRcptTo;
 
     /**
-     * @var string Sender domain name.
+     * @var string <p>Sender domain name</p>
      */
     public $FromDomain;
 
     /**
-     * @var string Complaint time.
+     * @var string <p>Complaint time</p>
      */
     public $ComplainTime;
 
     /**
-     * @var string Recipient domain name.
+     * @var string <p>Recipient domain name</p>
      */
     public $Mta;
 
     /**
-     * @var string Source IP
+     * @var string <p>Source ip</p>
      */
     public $SourceIp;
 
     /**
-     * @var string Data time.
+     * @var string <p>Data time</p>
      */
     public $InsertTime;
 
     /**
-     * @var string Template ID
+     * @var string <p>Template ID</p>
      */
     public $TemplateId;
 
     /**
-     * @var string bulkId
+     * @var string <p>bulkId</p>
      */
     public $BulkId;
 
     /**
-     * @var string Message-Id in mail.
+     * @var string <p>Message-Id of the mail</p>
      */
     public $MessageId;
 
     /**
-     * @var string Complaint time.
+     * @var string <p>Complaint time</p>
      */
     public $AbuseTime;
 
     /**
-     * @var string Email subject.
+     * @var string <p>Email Subject</p>
      */
     public $Subject;
 
     /**
-     * @param string $DeliverTime Send time.
-     * @param string $OriginalMailFrom Sender address.
-     * @param string $OriginalRcptTo Receive email.
-     * @param string $FromDomain Sender domain name.
-     * @param string $ComplainTime Complaint time.
-     * @param string $Mta Recipient domain name.
-     * @param string $SourceIp Source IP
-     * @param string $InsertTime Data time.
-     * @param string $TemplateId Template ID
-     * @param string $BulkId bulkId
-     * @param string $MessageId Message-Id in mail.
-     * @param string $AbuseTime Complaint time.
-     * @param string $Subject Email subject.
+     * @param string $DeliverTime <p>Send time</p>
+     * @param string $OriginalMailFrom <p>Sender address</p>
+     * @param string $OriginalRcptTo <p>Receive email address</p>
+     * @param string $FromDomain <p>Sender domain name</p>
+     * @param string $ComplainTime <p>Complaint time</p>
+     * @param string $Mta <p>Recipient domain name</p>
+     * @param string $SourceIp <p>Source ip</p>
+     * @param string $InsertTime <p>Data time</p>
+     * @param string $TemplateId <p>Template ID</p>
+     * @param string $BulkId <p>bulkId</p>
+     * @param string $MessageId <p>Message-Id of the mail</p>
+     * @param string $AbuseTime <p>Complaint time</p>
+     * @param string $Subject <p>Email Subject</p>
      */
     function __construct()
     {

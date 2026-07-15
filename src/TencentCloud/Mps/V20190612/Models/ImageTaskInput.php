@@ -32,8 +32,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEraseConfig(ImageEraseConfig $EraseConfig) Set <p>Image erasing configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiPosterSuiteConfig getAiPosterSuiteConfig() Obtain 
- * @method void setAiPosterSuiteConfig(AiPosterSuiteConfig $AiPosterSuiteConfig) Set 
+ * @method AiPosterSuiteConfig getAiPosterSuiteConfig() Obtain <p>AI image set configuration.</p>
+ * @method void setAiPosterSuiteConfig(AiPosterSuiteConfig $AiPosterSuiteConfig) Set <p>AI image set configuration.</p>
  */
 class ImageTaskInput extends AbstractModel
 {
@@ -56,7 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EraseConfig;
 
     /**
-     * @var AiPosterSuiteConfig 
+     * @var AiPosterSuiteConfig <p>AI image set configuration.</p>
      */
     public $AiPosterSuiteConfig;
 
@@ -67,7 +67,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param ImageEraseConfig $EraseConfig <p>Image erasing configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiPosterSuiteConfig $AiPosterSuiteConfig 
+     * @param AiPosterSuiteConfig $AiPosterSuiteConfig <p>AI image set configuration.</p>
      */
     function __construct()
     {

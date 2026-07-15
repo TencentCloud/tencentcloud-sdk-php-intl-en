@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAigcAudioTask request structure.
  *
- * @method string getTaskId() Obtain The task ID returned when creating the AIGC audio generation task.Example value: 24000145-****d**-cb46b8040b684b539bbd46****e*e2fd
- * @method void setTaskId(string $TaskId) Set The task ID returned when creating the AIGC audio generation task.Example value: 24000145-****d**-cb46b8040b684b539bbd46****e*e2fd
+ * @method string getTaskId() Obtain <p>Task ID returned when the AIGC video generation task is created.</p>
+ * @method void setTaskId(string $TaskId) Set <p>Task ID returned when the AIGC video generation task is created.</p>
  */
 class DescribeAigcAudioTaskRequest extends AbstractModel
 {
     /**
-     * @var string The task ID returned when creating the AIGC audio generation task.Example value: 24000145-****d**-cb46b8040b684b539bbd46****e*e2fd
+     * @var string <p>Task ID returned when the AIGC video generation task is created.</p>
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId The task ID returned when creating the AIGC audio generation task.Example value: 24000145-****d**-cb46b8040b684b539bbd46****e*e2fd
+     * @param string $TaskId <p>Task ID returned when the AIGC video generation task is created.</p>
      */
     function __construct()
     {

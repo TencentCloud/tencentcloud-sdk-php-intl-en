@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetEmailIdentity request structure.
  *
- * @method string getEmailIdentity() Obtain Sender domain.
- * @method void setEmailIdentity(string $EmailIdentity) Set Sender domain.
+ * @method string getEmailIdentity() Obtain <p>Sender domain name</p>
+ * @method void setEmailIdentity(string $EmailIdentity) Set <p>Sender domain name</p>
  */
 class GetEmailIdentityRequest extends AbstractModel
 {
     /**
-     * @var string Sender domain.
+     * @var string <p>Sender domain name</p>
      */
     public $EmailIdentity;
 
     /**
-     * @param string $EmailIdentity Sender domain.
+     * @param string $EmailIdentity <p>Sender domain name</p>
      */
     function __construct()
     {

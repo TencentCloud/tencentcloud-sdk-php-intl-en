@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Statistics structure.
  *
- * @method string getSendDate() Obtain Date
- * @method void setSendDate(string $SendDate) Set Date
- * @method integer getRequestCount() Obtain Number of email requests.
- * @method void setRequestCount(integer $RequestCount) Set Number of email requests.
- * @method integer getAcceptedCount() Obtain Number of email requests accepted by Tencent Cloud.
- * @method void setAcceptedCount(integer $AcceptedCount) Set Number of email requests accepted by Tencent Cloud.
- * @method integer getDeliveredCount() Obtain Number of delivered emails.
- * @method void setDeliveredCount(integer $DeliveredCount) Set Number of delivered emails.
- * @method integer getOpenedCount() Obtain Number of users (deduplicated) who opened emails.
- * @method void setOpenedCount(integer $OpenedCount) Set Number of users (deduplicated) who opened emails.
- * @method integer getClickedCount() Obtain Number of recipients who clicked on links in emails.
- * @method void setClickedCount(integer $ClickedCount) Set Number of recipients who clicked on links in emails.
- * @method integer getBounceCount() Obtain Number of bounced emails.
- * @method void setBounceCount(integer $BounceCount) Set Number of bounced emails.
- * @method integer getUnsubscribeCount() Obtain Number of users for unsubscription.
- * @method void setUnsubscribeCount(integer $UnsubscribeCount) Set Number of users for unsubscription.
+ * @method string getSendDate() Obtain <p>Date</p>
+ * @method void setSendDate(string $SendDate) Set <p>Date</p>
+ * @method integer getRequestCount() Obtain <p>Request quantity by email</p>
+ * @method void setRequestCount(integer $RequestCount) Set <p>Request quantity by email</p>
+ * @method integer getAcceptedCount() Obtain <p>Tencent Cloud pass count</p>
+ * @method void setAcceptedCount(integer $AcceptedCount) Set <p>Tencent Cloud pass count</p>
+ * @method integer getDeliveredCount() Obtain <p>Delivery quantity</p>
+ * @method void setDeliveredCount(integer $DeliveredCount) Set <p>Delivery quantity</p>
+ * @method integer getOpenedCount() Obtain <p>Total number of times emails were opened</p>
+ * @method void setOpenedCount(integer $OpenedCount) Set <p>Total number of times emails were opened</p>
+ * @method integer getClickedCount() Obtain <p>Number of users who clicked the link in the mail</p>
+ * @method void setClickedCount(integer $ClickedCount) Set <p>Number of users who clicked the link in the mail</p>
+ * @method integer getBounceCount() Obtain <p>Bounced count</p>
+ * @method void setBounceCount(integer $BounceCount) Set <p>Bounced count</p>
+ * @method integer getUnsubscribeCount() Obtain <p>Number of users for unsubscription</p>
+ * @method void setUnsubscribeCount(integer $UnsubscribeCount) Set <p>Number of users for unsubscription</p>
  */
 class Volume extends AbstractModel
 {
     /**
-     * @var string Date
+     * @var string <p>Date</p>
      */
     public $SendDate;
 
     /**
-     * @var integer Number of email requests.
+     * @var integer <p>Request quantity by email</p>
      */
     public $RequestCount;
 
     /**
-     * @var integer Number of email requests accepted by Tencent Cloud.
+     * @var integer <p>Tencent Cloud pass count</p>
      */
     public $AcceptedCount;
 
     /**
-     * @var integer Number of delivered emails.
+     * @var integer <p>Delivery quantity</p>
      */
     public $DeliveredCount;
 
     /**
-     * @var integer Number of users (deduplicated) who opened emails.
+     * @var integer <p>Total number of times emails were opened</p>
      */
     public $OpenedCount;
 
     /**
-     * @var integer Number of recipients who clicked on links in emails.
+     * @var integer <p>Number of users who clicked the link in the mail</p>
      */
     public $ClickedCount;
 
     /**
-     * @var integer Number of bounced emails.
+     * @var integer <p>Bounced count</p>
      */
     public $BounceCount;
 
     /**
-     * @var integer Number of users for unsubscription.
+     * @var integer <p>Number of users for unsubscription</p>
      */
     public $UnsubscribeCount;
 
     /**
-     * @param string $SendDate Date
-     * @param integer $RequestCount Number of email requests.
-     * @param integer $AcceptedCount Number of email requests accepted by Tencent Cloud.
-     * @param integer $DeliveredCount Number of delivered emails.
-     * @param integer $OpenedCount Number of users (deduplicated) who opened emails.
-     * @param integer $ClickedCount Number of recipients who clicked on links in emails.
-     * @param integer $BounceCount Number of bounced emails.
-     * @param integer $UnsubscribeCount Number of users for unsubscription.
+     * @param string $SendDate <p>Date</p>
+     * @param integer $RequestCount <p>Request quantity by email</p>
+     * @param integer $AcceptedCount <p>Tencent Cloud pass count</p>
+     * @param integer $DeliveredCount <p>Delivery quantity</p>
+     * @param integer $OpenedCount <p>Total number of times emails were opened</p>
+     * @param integer $ClickedCount <p>Number of users who clicked the link in the mail</p>
+     * @param integer $BounceCount <p>Bounced count</p>
+     * @param integer $UnsubscribeCount <p>Number of users for unsubscription</p>
      */
     function __construct()
     {

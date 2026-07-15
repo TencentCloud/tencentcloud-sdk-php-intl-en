@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sender domain verification list structure
  *
- * @method string getIdentityName() Obtain Sender domain.
- * @method void setIdentityName(string $IdentityName) Set Sender domain.
- * @method string getIdentityType() Obtain Verification type. The value is fixed to `DOMAIN`.
- * @method void setIdentityType(string $IdentityType) Set Verification type. The value is fixed to `DOMAIN`.
- * @method boolean getSendingEnabled() Obtain Verification passed or not.
- * @method void setSendingEnabled(boolean $SendingEnabled) Set Verification passed or not.
- * @method integer getCurrentReputationLevel() Obtain Current reputation level
- * @method void setCurrentReputationLevel(integer $CurrentReputationLevel) Set Current reputation level
- * @method integer getDailyQuota() Obtain Maximum number of messages sent per day
- * @method void setDailyQuota(integer $DailyQuota) Set Maximum number of messages sent per day
- * @method array getSendIp() Obtain Independent ip for domain configuration.
- * @method void setSendIp(array $SendIp) Set Independent ip for domain configuration.
- * @method array getTagList() Obtain tag.
- * @method void setTagList(array $TagList) Set tag.
+ * @method string getIdentityName() Obtain <p>Sender domain name</p>
+ * @method void setIdentityName(string $IdentityName) Set <p>Sender domain name</p>
+ * @method string getIdentityType() Obtain <p>Validation type, fixed as DOMAIN</p>
+ * @method void setIdentityType(string $IdentityType) Set <p>Validation type, fixed as DOMAIN</p>
+ * @method boolean getSendingEnabled() Obtain <p>Whether verified</p>
+ * @method void setSendingEnabled(boolean $SendingEnabled) Set <p>Whether verified</p>
+ * @method integer getCurrentReputationLevel() Obtain <p>Current reputation level</p>
+ * @method void setCurrentReputationLevel(integer $CurrentReputationLevel) Set <p>Current reputation level</p>
+ * @method integer getDailyQuota() Obtain <p>Maximum message sending capacity of the current day</p>
+ * @method void setDailyQuota(integer $DailyQuota) Set <p>Maximum message sending capacity of the current day</p>
+ * @method array getSendIp() Obtain <p>Independent ip for domain configuration</p>
+ * @method void setSendIp(array $SendIp) Set <p>Independent ip for domain configuration</p>
+ * @method array getTagList() Obtain <p>tag</p>
+ * @method void setTagList(array $TagList) Set <p>tag</p>
+ * @method integer getDKIMOption() Obtain <p>dkim bit number</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul><p>Default value: 0</p>
+ * @method void setDKIMOption(integer $DKIMOption) Set <p>dkim bit number</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul><p>Default value: 0</p>
  */
 class EmailIdentity extends AbstractModel
 {
     /**
-     * @var string Sender domain.
+     * @var string <p>Sender domain name</p>
      */
     public $IdentityName;
 
     /**
-     * @var string Verification type. The value is fixed to `DOMAIN`.
+     * @var string <p>Validation type, fixed as DOMAIN</p>
      */
     public $IdentityType;
 
     /**
-     * @var boolean Verification passed or not.
+     * @var boolean <p>Whether verified</p>
      */
     public $SendingEnabled;
 
     /**
-     * @var integer Current reputation level
+     * @var integer <p>Current reputation level</p>
      */
     public $CurrentReputationLevel;
 
     /**
-     * @var integer Maximum number of messages sent per day
+     * @var integer <p>Maximum message sending capacity of the current day</p>
      */
     public $DailyQuota;
 
     /**
-     * @var array Independent ip for domain configuration.
+     * @var array <p>Independent ip for domain configuration</p>
      */
     public $SendIp;
 
     /**
-     * @var array tag.
+     * @var array <p>tag</p>
      */
     public $TagList;
 
     /**
-     * @param string $IdentityName Sender domain.
-     * @param string $IdentityType Verification type. The value is fixed to `DOMAIN`.
-     * @param boolean $SendingEnabled Verification passed or not.
-     * @param integer $CurrentReputationLevel Current reputation level
-     * @param integer $DailyQuota Maximum number of messages sent per day
-     * @param array $SendIp Independent ip for domain configuration.
-     * @param array $TagList tag.
+     * @var integer <p>dkim bit number</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul><p>Default value: 0</p>
+     */
+    public $DKIMOption;
+
+    /**
+     * @param string $IdentityName <p>Sender domain name</p>
+     * @param string $IdentityType <p>Validation type, fixed as DOMAIN</p>
+     * @param boolean $SendingEnabled <p>Whether verified</p>
+     * @param integer $CurrentReputationLevel <p>Current reputation level</p>
+     * @param integer $DailyQuota <p>Maximum message sending capacity of the current day</p>
+     * @param array $SendIp <p>Independent ip for domain configuration</p>
+     * @param array $TagList <p>tag</p>
+     * @param integer $DKIMOption <p>dkim bit number</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul><p>Default value: 0</p>
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class EmailIdentity extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("DKIMOption",$param) and $param["DKIMOption"] !== null) {
+            $this->DKIMOption = $param["DKIMOption"];
         }
     }
 }

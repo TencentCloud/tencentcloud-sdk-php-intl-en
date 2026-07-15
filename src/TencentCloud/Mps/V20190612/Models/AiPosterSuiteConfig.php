@@ -18,76 +18,76 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Intelligent image set configuration.
  *
- * @method string getMode() Obtain 
- * @method void setMode(string $Mode) Set 
- * @method integer getDefinition() Obtain 
- * @method void setDefinition(integer $Definition) Set 
- * @method array getRecipe() Obtain 
- * @method void setRecipe(array $Recipe) Set 
- * @method string getLanguage() Obtain 
- * @method void setLanguage(string $Language) Set 
- * @method string getPanelRatio() Obtain 
- * @method void setPanelRatio(string $PanelRatio) Set 
- * @method string getPanelResolution() Obtain 
- * @method void setPanelResolution(string $PanelResolution) Set 
- * @method array getCustomVariables() Obtain 
- * @method void setCustomVariables(array $CustomVariables) Set 
- * @method string getModel() Obtain 
- * @method void setModel(string $Model) Set 
+ * @method string getMode() Obtain <p>Image output mode.</p><p>Enumeration values:</p><ul><li>auto: fully automatic mode. CustomVariables can be passed in this mode.</li><li>modify: modification mode. The corresponding description needs to be provided in the AddOnParameter.ExtPrompt field in this mode. CustomVariables cannot be passed in this mode.</li></ul><p>Default value: auto.</p>
+ * @method void setMode(string $Mode) Set <p>Image output mode.</p><p>Enumeration values:</p><ul><li>auto: fully automatic mode. CustomVariables can be passed in this mode.</li><li>modify: modification mode. The corresponding description needs to be provided in the AddOnParameter.ExtPrompt field in this mode. CustomVariables cannot be passed in this mode.</li></ul><p>Default value: auto.</p>
+ * @method integer getDefinition() Obtain <p>Ecommerce platform visual template ID.</p><p>If you need a personalized visual template, submit a ticket.</p>
+ * @method void setDefinition(integer $Definition) Set <p>Ecommerce platform visual template ID.</p><p>If you need a personalized visual template, submit a ticket.</p>
+ * @method array getRecipe() Obtain <p>Sub-image configuration.</p>
+ * @method void setRecipe(array $Recipe) Set <p>Sub-image configuration.</p>
+ * @method string getLanguage() Obtain <p>Sub-image text language.</p><p>Enumeration values:</p><ul><li>zh-CN: Simplified Chinese.</li><li>en-US: American English.</li></ul><p>Default value: zh-CN.</p><p>If you need more languages, submit a ticket.</p>
+ * @method void setLanguage(string $Language) Set <p>Sub-image text language.</p><p>Enumeration values:</p><ul><li>zh-CN: Simplified Chinese.</li><li>en-US: American English.</li></ul><p>Default value: zh-CN.</p><p>If you need more languages, submit a ticket.</p>
+ * @method string getPanelRatio() Obtain <p>Sub-image aspect ratio.</p><p>Enumeration values:</p><ul><li>1:1: 1:1.</li><li>3:4: 3:4.</li><li>4:3: 4:3.</li><li>9:16: 9:16.</li><li>16:9: 16:9.</li></ul><p>Default value: 1:1.</p>
+ * @method void setPanelRatio(string $PanelRatio) Set <p>Sub-image aspect ratio.</p><p>Enumeration values:</p><ul><li>1:1: 1:1.</li><li>3:4: 3:4.</li><li>4:3: 4:3.</li><li>9:16: 9:16.</li><li>16:9: 16:9.</li></ul><p>Default value: 1:1.</p>
+ * @method string getPanelResolution() Obtain <p>Sub-image resolution.</p><p>Enumeration values:</p><ul><li>720: 720.</li><li>1K: 1K.</li><li>2K: 2K.</li><li>4K: 4K.</li></ul><p>Default value: 1K.</p>
+ * @method void setPanelResolution(string $PanelResolution) Set <p>Sub-image resolution.</p><p>Enumeration values:</p><ul><li>720: 720.</li><li>1K: 1K.</li><li>2K: 2K.</li><li>4K: 4K.</li></ul><p>Default value: 1K.</p>
+ * @method array getCustomVariables() Obtain <p>User-defined variable.</p>
+ * @method void setCustomVariables(array $CustomVariables) Set <p>User-defined variable.</p>
+ * @method string getModel() Obtain <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
+ * @method void setModel(string $Model) Set <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
  */
 class AiPosterSuiteConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Image output mode.</p><p>Enumeration values:</p><ul><li>auto: fully automatic mode. CustomVariables can be passed in this mode.</li><li>modify: modification mode. The corresponding description needs to be provided in the AddOnParameter.ExtPrompt field in this mode. CustomVariables cannot be passed in this mode.</li></ul><p>Default value: auto.</p>
      */
     public $Mode;
 
     /**
-     * @var integer 
+     * @var integer <p>Ecommerce platform visual template ID.</p><p>If you need a personalized visual template, submit a ticket.</p>
      */
     public $Definition;
 
     /**
-     * @var array 
+     * @var array <p>Sub-image configuration.</p>
      */
     public $Recipe;
 
     /**
-     * @var string 
+     * @var string <p>Sub-image text language.</p><p>Enumeration values:</p><ul><li>zh-CN: Simplified Chinese.</li><li>en-US: American English.</li></ul><p>Default value: zh-CN.</p><p>If you need more languages, submit a ticket.</p>
      */
     public $Language;
 
     /**
-     * @var string 
+     * @var string <p>Sub-image aspect ratio.</p><p>Enumeration values:</p><ul><li>1:1: 1:1.</li><li>3:4: 3:4.</li><li>4:3: 4:3.</li><li>9:16: 9:16.</li><li>16:9: 16:9.</li></ul><p>Default value: 1:1.</p>
      */
     public $PanelRatio;
 
     /**
-     * @var string 
+     * @var string <p>Sub-image resolution.</p><p>Enumeration values:</p><ul><li>720: 720.</li><li>1K: 1K.</li><li>2K: 2K.</li><li>4K: 4K.</li></ul><p>Default value: 1K.</p>
      */
     public $PanelResolution;
 
     /**
-     * @var array 
+     * @var array <p>User-defined variable.</p>
      */
     public $CustomVariables;
 
     /**
-     * @var string 
+     * @var string <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
      */
     public $Model;
 
     /**
-     * @param string $Mode 
-     * @param integer $Definition 
-     * @param array $Recipe 
-     * @param string $Language 
-     * @param string $PanelRatio 
-     * @param string $PanelResolution 
-     * @param array $CustomVariables 
-     * @param string $Model 
+     * @param string $Mode <p>Image output mode.</p><p>Enumeration values:</p><ul><li>auto: fully automatic mode. CustomVariables can be passed in this mode.</li><li>modify: modification mode. The corresponding description needs to be provided in the AddOnParameter.ExtPrompt field in this mode. CustomVariables cannot be passed in this mode.</li></ul><p>Default value: auto.</p>
+     * @param integer $Definition <p>Ecommerce platform visual template ID.</p><p>If you need a personalized visual template, submit a ticket.</p>
+     * @param array $Recipe <p>Sub-image configuration.</p>
+     * @param string $Language <p>Sub-image text language.</p><p>Enumeration values:</p><ul><li>zh-CN: Simplified Chinese.</li><li>en-US: American English.</li></ul><p>Default value: zh-CN.</p><p>If you need more languages, submit a ticket.</p>
+     * @param string $PanelRatio <p>Sub-image aspect ratio.</p><p>Enumeration values:</p><ul><li>1:1: 1:1.</li><li>3:4: 3:4.</li><li>4:3: 4:3.</li><li>9:16: 9:16.</li><li>16:9: 16:9.</li></ul><p>Default value: 1:1.</p>
+     * @param string $PanelResolution <p>Sub-image resolution.</p><p>Enumeration values:</p><ul><li>720: 720.</li><li>1K: 1K.</li><li>2K: 2K.</li><li>4K: 4K.</li></ul><p>Default value: 1K.</p>
+     * @param array $CustomVariables <p>User-defined variable.</p>
+     * @param string $Model <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
      */
     function __construct()
     {

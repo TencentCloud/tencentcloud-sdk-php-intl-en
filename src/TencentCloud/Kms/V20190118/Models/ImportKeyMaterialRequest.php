@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImportKeyMaterial request structure.
  *
- * @method string getEncryptedKeyMaterial() Obtain Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
- * @method void setEncryptedKeyMaterial(string $EncryptedKeyMaterial) Set Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
- * @method string getImportToken() Obtain Import token obtained by calling `GetParametersForImport`.
- * @method void setImportToken(string $ImportToken) Set Import token obtained by calling `GetParametersForImport`.
- * @method string getKeyId() Obtain Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
- * @method void setKeyId(string $KeyId) Set Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
- * @method integer getValidTo() Obtain Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
- * @method void setValidTo(integer $ValidTo) Set Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
+ * @method string getEncryptedKeyMaterial() Obtain <p>base64-encoded encrypted key material using the PublicKey returned by GetParametersForImport. For KMS in national cryptography version regions, the length requirement for imported key material is 128 bit. For KMS in FIPS 140-2 version regions, the length requirement for imported key material is 256 bit.</p>
+ * @method void setEncryptedKeyMaterial(string $EncryptedKeyMaterial) Set <p>base64-encoded encrypted key material using the PublicKey returned by GetParametersForImport. For KMS in national cryptography version regions, the length requirement for imported key material is 128 bit. For KMS in FIPS 140-2 version regions, the length requirement for imported key material is 256 bit.</p>
+ * @method string getImportToken() Obtain <p>Import token obtained by calling GetParametersForImport.</p>
+ * @method void setImportToken(string $ImportToken) Set <p>Import token obtained by calling GetParametersForImport.</p>
+ * @method string getKeyId() Obtain <p>The CMK designated for importing key material must be identical to the CMK specified in GetParametersForImport.</p>
+ * @method void setKeyId(string $KeyId) Set <p>The CMK designated for importing key material must be identical to the CMK specified in GetParametersForImport.</p>
+ * @method integer getValidTo() Obtain <p>Expiration time of the key material in unix timestamp. If unspecified or 0, the key material does not expire. If specified, the expiration time must be greater than the current time and supports up to 2147443200.</p>
+ * @method void setValidTo(integer $ValidTo) Set <p>Expiration time of the key material in unix timestamp. If unspecified or 0, the key material does not expire. If specified, the expiration time must be greater than the current time and supports up to 2147443200.</p>
  */
 class ImportKeyMaterialRequest extends AbstractModel
 {
     /**
-     * @var string Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
+     * @var string <p>base64-encoded encrypted key material using the PublicKey returned by GetParametersForImport. For KMS in national cryptography version regions, the length requirement for imported key material is 128 bit. For KMS in FIPS 140-2 version regions, the length requirement for imported key material is 256 bit.</p>
      */
     public $EncryptedKeyMaterial;
 
     /**
-     * @var string Import token obtained by calling `GetParametersForImport`.
+     * @var string <p>Import token obtained by calling GetParametersForImport.</p>
      */
     public $ImportToken;
 
     /**
-     * @var string Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
+     * @var string <p>The CMK designated for importing key material must be identical to the CMK specified in GetParametersForImport.</p>
      */
     public $KeyId;
 
     /**
-     * @var integer Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
+     * @var integer <p>Expiration time of the key material in unix timestamp. If unspecified or 0, the key material does not expire. If specified, the expiration time must be greater than the current time and supports up to 2147443200.</p>
      */
     public $ValidTo;
 
     /**
-     * @param string $EncryptedKeyMaterial Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
-     * @param string $ImportToken Import token obtained by calling `GetParametersForImport`.
-     * @param string $KeyId Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
-     * @param integer $ValidTo Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
+     * @param string $EncryptedKeyMaterial <p>base64-encoded encrypted key material using the PublicKey returned by GetParametersForImport. For KMS in national cryptography version regions, the length requirement for imported key material is 128 bit. For KMS in FIPS 140-2 version regions, the length requirement for imported key material is 256 bit.</p>
+     * @param string $ImportToken <p>Import token obtained by calling GetParametersForImport.</p>
+     * @param string $KeyId <p>The CMK designated for importing key material must be identical to the CMK specified in GetParametersForImport.</p>
+     * @param integer $ValidTo <p>Expiration time of the key material in unix timestamp. If unspecified or 0, the key material does not expire. If specified, the expiration time must be greater than the current time and supports up to 2147443200.</p>
      */
     function __construct()
     {

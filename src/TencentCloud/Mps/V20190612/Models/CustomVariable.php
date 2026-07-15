@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Custom description variable.
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getDescription() Obtain 
- * @method void setDescription(string $Description) Set 
+ * @method string getType() Obtain <p>User-defined variable type.</p><p>Parameter format: PascalCase format.</p><p>This cannot be UserPrompt. The default platform template is not adapted for custom content. Submit a ticket if needed.</p>
+ * @method void setType(string $Type) Set <p>User-defined variable type.</p><p>Parameter format: PascalCase format.</p><p>This cannot be UserPrompt. The default platform template is not adapted for custom content. Submit a ticket if needed.</p>
+ * @method string getDescription() Obtain <p>Custom variable description.</p>
+ * @method void setDescription(string $Description) Set <p>Custom variable description.</p>
  */
 class CustomVariable extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>User-defined variable type.</p><p>Parameter format: PascalCase format.</p><p>This cannot be UserPrompt. The default platform template is not adapted for custom content. Submit a ticket if needed.</p>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string <p>Custom variable description.</p>
      */
     public $Description;
 
     /**
-     * @param string $Type 
-     * @param string $Description 
+     * @param string $Type <p>User-defined variable type.</p><p>Parameter format: PascalCase format.</p><p>This cannot be UserPrompt. The default platform template is not adapted for custom content. Submit a ticket if needed.</p>
+     * @param string $Description <p>Custom variable description.</p>
      */
     function __construct()
     {

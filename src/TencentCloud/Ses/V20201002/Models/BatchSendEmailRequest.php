@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFromEmailAddress(string $FromEmailAddress) Set <p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
  * @method integer getReceiverId() Obtain <p>Recipient list ID</p>
  * @method void setReceiverId(integer $ReceiverId) Set <p>Recipient list ID</p>
- * @method string getSubject() Obtain <p>Email Subject</p>
- * @method void setSubject(string $Subject) Set <p>Email Subject</p>
+ * @method string getSubject() Obtain <p>Email Subject</p><p>When sending with templates, supports the use of template variable parameters for fill</p>
+ * @method void setSubject(string $Subject) Set <p>Email Subject</p><p>When sending with templates, supports the use of template variable parameters for fill</p>
  * @method integer getTaskType() Obtain <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
  * @method void setTaskType(integer $TaskType) Set <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
  * @method string getReplyToAddresses() Obtain <p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
@@ -58,7 +58,7 @@ class BatchSendEmailRequest extends AbstractModel
     public $ReceiverId;
 
     /**
-     * @var string <p>Email Subject</p>
+     * @var string <p>Email Subject</p><p>When sending with templates, supports the use of template variable parameters for fill</p>
      */
     public $Subject;
 
@@ -110,7 +110,7 @@ class BatchSendEmailRequest extends AbstractModel
     /**
      * @param string $FromEmailAddress <p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
      * @param integer $ReceiverId <p>Recipient list ID</p>
-     * @param string $Subject <p>Email Subject</p>
+     * @param string $Subject <p>Email Subject</p><p>When sending with templates, supports the use of template variable parameters for fill</p>
      * @param integer $TaskType <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
      * @param string $ReplyToAddresses <p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
      * @param Template $Template <p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>

@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Output video information of the AIGC audio generation task.
  *
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
- * @method integer getDuration() Obtain 
- * @method void setDuration(integer $Duration) Set 
+ * @method string getUrl() Obtain <p>Video URL.</p>
+ * @method void setUrl(string $Url) Set <p>Video URL.</p>
+ * @method integer getDuration() Obtain <p>Video duration.</p>
+ * @method void setDuration(integer $Duration) Set <p>Video duration.</p>
  */
 class AigcAudioOutputVideoInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Video URL.</p>
      */
     public $Url;
 
     /**
-     * @var integer 
+     * @var integer <p>Video duration.</p>
      */
     public $Duration;
 
     /**
-     * @param string $Url 
-     * @param integer $Duration 
+     * @param string $Url <p>Video URL.</p>
+     * @param integer $Duration <p>Video duration.</p>
      */
     function __construct()
     {

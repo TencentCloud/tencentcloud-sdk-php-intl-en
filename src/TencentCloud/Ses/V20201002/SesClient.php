@@ -37,7 +37,8 @@ Note: Only an approved template can be used to send emails.
  * @method Models\DeleteBlackListResponse DeleteBlackList(Models\DeleteBlackListRequest $req) This API is used to unblocklist email addresses. If you confirm that a blocklisted recipient address is valid and active, you can remove it from Tencent Cloud’s address blocklist database.
  * @method Models\DeleteCustomBlackListResponse DeleteCustomBlackList(Models\DeleteCustomBlackListRequest $req) Delete a custom blocklist email address.
  * @method Models\DeleteEmailAddressResponse DeleteEmailAddress(Models\DeleteEmailAddressRequest $req) This API is used to delete a sender address.
- * @method Models\DeleteEmailIdentityResponse DeleteEmailIdentity(Models\DeleteEmailIdentityRequest $req) This API is used to delete a sender domain. After deleted, the sender domain can no longer be used to send emails.
+ * @method Models\DeleteEmailIdentityResponse DeleteEmailIdentity(Models\DeleteEmailIdentityRequest $req) **The delete interface for sending domain names is only available to corporate users.**
+Delete the sender domain name. Once deleted, that domain name cannot be used anymore to send email.
  * @method Models\DeleteEmailTemplateResponse DeleteEmailTemplate(Models\DeleteEmailTemplateRequest $req) This API is used to delete an email template.
  * @method Models\DeleteReceiverResponse DeleteReceiver(Models\DeleteReceiverRequest $req) This API is used to delete a recipient group and all recipient email addresses in the group based on the recipient group ID.
  * @method Models\GetAbuseReportResponse GetAbuseReport(Models\GetAbuseReportRequest $req) Retrieve reported spam data.

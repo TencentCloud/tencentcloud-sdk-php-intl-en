@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Smart subtitle recognition result.
  *
+ * @method array getSegmentSet() Obtain <p>List of segments for smart subtitle recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSegmentSet(array $SegmentSet) Set <p>List of segments for smart subtitle recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getRecognizeSubtitleResult() Obtain <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRecognizeSubtitleResult(array $RecognizeSubtitleResult) Set <p>Subtitle recognition result</p>
@@ -35,6 +39,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
  */
 class SmartSubtitleTaskTextResultOutput extends AbstractModel
 {
+    /**
+     * @var array <p>List of segments for smart subtitle recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SegmentSet;
+
     /**
      * @var array <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -54,6 +64,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OutputStorage;
 
     /**
+     * @param array $SegmentSet <p>List of segments for smart subtitle recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $RecognizeSubtitleResult <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $TransSubtitleResult <p>Translated subtitles</p>
@@ -74,6 +86,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SegmentSet",$param) and $param["SegmentSet"] !== null) {
+            $this->SegmentSet = [];
+            foreach ($param["SegmentSet"] as $key => $value){
+                $obj = new SmartSubtitleTaskFullTextSegmentItem();
+                $obj->deserialize($value);
+                array_push($this->SegmentSet, $obj);
+            }
+        }
+
         if (array_key_exists("RecognizeSubtitleResult",$param) and $param["RecognizeSubtitleResult"] !== null) {
             $this->RecognizeSubtitleResult = [];
             foreach ($param["RecognizeSubtitleResult"] as $key => $value){

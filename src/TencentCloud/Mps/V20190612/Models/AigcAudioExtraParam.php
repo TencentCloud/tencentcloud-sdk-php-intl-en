@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Extended parameters for AIGC audio generation.
  *
- * @method string getResourceId() Obtain 
- * @method void setResourceId(string $ResourceId) Set 
+ * @method string getResourceId() Obtain <p>Resource ID. Specify this based on your needs.</p>
+ * @method void setResourceId(string $ResourceId) Set <p>Resource ID. Specify this based on your needs.</p>
  */
 class AigcAudioExtraParam extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>Resource ID. Specify this based on your needs.</p>
      */
     public $ResourceId;
 
     /**
-     * @param string $ResourceId 
+     * @param string $ResourceId <p>Resource ID. Specify this based on your needs.</p>
      */
     function __construct()
     {

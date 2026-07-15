@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mps\V20190612\Models;
+namespace TencentCloud\Kms\V20190118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Reference video asset for AIGC video generation.
+ * Region extra QPS package
  *
- * @method string getVideoUrl() Obtain <p>Reference video URL, which must be accessible from the public network.</p>
- * @method void setVideoUrl(string $VideoUrl) Set <p>Reference video URL, which must be accessible from the public network.</p>
+ * @method string getRegion() Obtain <p>Region.</p>
+ * @method void setRegion(string $Region) Set <p>Region.</p>
+ * @method integer getQps() Obtain <p>qps size</p>
+ * @method void setQps(integer $Qps) Set <p>qps size</p>
  */
-class AigcAudioReferenceVideoInfo extends AbstractModel
+class RegionQps extends AbstractModel
 {
     /**
-     * @var string <p>Reference video URL, which must be accessible from the public network.</p>
+     * @var string <p>Region.</p>
      */
-    public $VideoUrl;
+    public $Region;
 
     /**
-     * @param string $VideoUrl <p>Reference video URL, which must be accessible from the public network.</p>
+     * @var integer <p>qps size</p>
+     */
+    public $Qps;
+
+    /**
+     * @param string $Region <p>Region.</p>
+     * @param integer $Qps <p>qps size</p>
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class AigcAudioReferenceVideoInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VideoUrl",$param) and $param["VideoUrl"] !== null) {
-            $this->VideoUrl = $param["VideoUrl"];
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
+            $this->Qps = $param["Qps"];
         }
     }
 }
