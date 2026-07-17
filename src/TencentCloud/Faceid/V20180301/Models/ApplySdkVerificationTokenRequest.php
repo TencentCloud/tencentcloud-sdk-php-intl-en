@@ -44,32 +44,32 @@ Default value: 4
 Default value: 4
  * @method string getIdCardType() Obtain Specifies the identity document type used for authentication. valid values:.  
 
-HK (default): hong kong (china) identity card.
+1. HK (default): hong kong (china) identity card.
 2. ML: malaysian identity card.
-Indonesian identity card.
+3. Indonesian identity card.
 4. PhilippinesVoteID: specifies the voter card in the philippines.
 5. PhilippinesDrivingLicense: specifies the driving license in philippines.
 6. PhilippinesTinID: specifies the philippines tin id.
 7. PhilippinesSSSID: specifies the SSSID in the philippines.
 8. philippines UMID: specifies the philippines UMID.
 9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-ThailandIDCard: specifies the thai identity card.
-Mainland id card.
+10. ThailandIDCard: specifies the thai identity card.
+11. Mainland id card.
 12. SingaporeIDCard: specifies the Singapore id card.
 13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
  * @method void setIdCardType(string $IdCardType) Set Specifies the identity document type used for authentication. valid values:.  
 
-HK (default): hong kong (china) identity card.
+1. HK (default): hong kong (china) identity card.
 2. ML: malaysian identity card.
-Indonesian identity card.
+3. Indonesian identity card.
 4. PhilippinesVoteID: specifies the voter card in the philippines.
 5. PhilippinesDrivingLicense: specifies the driving license in philippines.
 6. PhilippinesTinID: specifies the philippines tin id.
 7. PhilippinesSSSID: specifies the SSSID in the philippines.
 8. philippines UMID: specifies the philippines UMID.
 9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-ThailandIDCard: specifies the thai identity card.
-Mainland id card.
+10. ThailandIDCard: specifies the thai identity card.
+11. Mainland id card.
 12. SingaporeIDCard: specifies the Singapore id card.
 13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
  * @method string getCompareImage() Obtain The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
@@ -124,8 +124,8 @@ false : Expired HKID is rejected and cannot enter the liveness process.
  * @method void setAllowExpiredDocument(boolean $AllowExpiredDocument) Set Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
 true (default value): Expired HKID is allowed to enter the liveness process.
 false : Expired HKID is rejected and cannot enter the liveness process.
- * @method boolean getSkipResultPage() Obtain <p>Whether to display the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
- * @method void setSkipResultPage(boolean $SkipResultPage) Set <p>Whether to display the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
+ * @method boolean getSkipResultPage() Obtain <p>Controls visibility of the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
+ * @method void setSkipResultPage(boolean $SkipResultPage) Set <p>Controls visibility of the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
  * @method array getCardOcrDisplayFields() Obtain <p>Identified fields displayed during document OCR</p><p>Parameter format: ["ChineseName","FullName"]</p><p>Input constraints: <strong>Supported field names by document type:</strong><br><strong>HK (Hong Kong Identity Card):</strong> "ChineseName","FullName","LicenseNumber","Birthday","Sex", "IssuedDate", "Permanent", "Symbol", "CurrentIssueDate"<br><strong>ML (Malaysia Identity Card):</strong> "FullName","LicenseNumber","Sex", "Birthday", "Type", "FormattedAddress"<br><strong>IndonesiaIDCard (Indonesia Identity Card):</strong> "LicenseNumber","FullName","Sex", "Birthday", "FormattedAddress", "Nationality", "DueDate", "IssuedDate", "Street", "Village","Area","Province","City","MaritalStatus", "BloodType", "Religion", "Occupation"<br><strong>PhilippinesVoteID (Philippines Voter's ID):</strong> "FirstName","LastName","Birthday"<br><strong>PhilippinesDrivingLicense (Philippines Driving License):</strong> "LastName","FirstName","MiddleName","Sex","Birthday"<br><strong>PhilippinesTinID (Philippines TIN ID):</strong> "LicenseNumber", "FullName", "Birthday"<br><strong>PhilippinesSSSID (Philippines SSS ID):</strong> "LicenseNumber", "FullName", "Birthday"<br><strong>PhilippinesUMID (Philippines UMID):</strong> "Surname", "MiddleName", "GivenName", "Sex", "Birthday"<br><strong>MLIDPassport (Passports of Hong Kong, Macao, Taiwan and overseas regions):</strong> "LicenseNumber","FullName", "Surname", "GivenName", "Birthday", "Sex","DateOfExpiration","IssuingCountry"<br><strong>ThailandIDCard (Thailand Identity Card):</strong> "FullName", "LastName", "FirstName", "FormattedAddress", "LicenseNumber", "Birthday", "ExpirationDate", "IssuedDate", "RegistrationNumber", "Religion", "ThaiBirthday", "ThaiExpirationDate", "ThaiIssueDate"<br><strong>MainlandIDCard (Chinese Mainland Identity Card):</strong> "LicenseNumber", "FullName", "Sex", "Nation", "Birthday", "FormattedAddress"<br><strong>SingaporeIDCard (Singapore Identity Card):</strong> "ChineseName","Sex","Birthday","LicenseNumber","Nationality","FullName","Address"<br><strong>HMTPermit (Mainland Travel Permit for Hong Kong and Macao Residents / Mainland Travel Permit for Taiwan Residents):</strong> "Name", "EnglishName", "Sex", "Number", "ValidDate", "Birthday"</p><p>If no fields are specified, all identified fields will be displayed by default.</p>
 
  * @method void setCardOcrDisplayFields(array $CardOcrDisplayFields) Set <p>Identified fields displayed during document OCR</p><p>Parameter format: ["ChineseName","FullName"]</p><p>Input constraints: <strong>Supported field names by document type:</strong><br><strong>HK (Hong Kong Identity Card):</strong> "ChineseName","FullName","LicenseNumber","Birthday","Sex", "IssuedDate", "Permanent", "Symbol", "CurrentIssueDate"<br><strong>ML (Malaysia Identity Card):</strong> "FullName","LicenseNumber","Sex", "Birthday", "Type", "FormattedAddress"<br><strong>IndonesiaIDCard (Indonesia Identity Card):</strong> "LicenseNumber","FullName","Sex", "Birthday", "FormattedAddress", "Nationality", "DueDate", "IssuedDate", "Street", "Village","Area","Province","City","MaritalStatus", "BloodType", "Religion", "Occupation"<br><strong>PhilippinesVoteID (Philippines Voter's ID):</strong> "FirstName","LastName","Birthday"<br><strong>PhilippinesDrivingLicense (Philippines Driving License):</strong> "LastName","FirstName","MiddleName","Sex","Birthday"<br><strong>PhilippinesTinID (Philippines TIN ID):</strong> "LicenseNumber", "FullName", "Birthday"<br><strong>PhilippinesSSSID (Philippines SSS ID):</strong> "LicenseNumber", "FullName", "Birthday"<br><strong>PhilippinesUMID (Philippines UMID):</strong> "Surname", "MiddleName", "GivenName", "Sex", "Birthday"<br><strong>MLIDPassport (Passports of Hong Kong, Macao, Taiwan and overseas regions):</strong> "LicenseNumber","FullName", "Surname", "GivenName", "Birthday", "Sex","DateOfExpiration","IssuingCountry"<br><strong>ThailandIDCard (Thailand Identity Card):</strong> "FullName", "LastName", "FirstName", "FormattedAddress", "LicenseNumber", "Birthday", "ExpirationDate", "IssuedDate", "RegistrationNumber", "Religion", "ThaiBirthday", "ThaiExpirationDate", "ThaiIssueDate"<br><strong>MainlandIDCard (Chinese Mainland Identity Card):</strong> "LicenseNumber", "FullName", "Sex", "Nation", "Birthday", "FormattedAddress"<br><strong>SingaporeIDCard (Singapore Identity Card):</strong> "ChineseName","Sex","Birthday","LicenseNumber","Nationality","FullName","Address"<br><strong>HMTPermit (Mainland Travel Permit for Hong Kong and Macao Residents / Mainland Travel Permit for Taiwan Residents):</strong> "Name", "EnglishName", "Sex", "Number", "ValidDate", "Birthday"</p><p>If no fields are specified, all identified fields will be displayed by default.</p>
@@ -134,6 +134,18 @@ false : Expired HKID is rejected and cannot enter the liveness process.
  * @method void setRetryLimit(integer $RetryLimit) Set <p>Liveness retry attempts</p><p>Value range: [1, 5]</p><p>Default value: 5</p>
  * @method boolean getEnableForgeryDetectionImages() Obtain <p>Enable multi-image anti-spoofing for single-angle Identity Document Recognition</p><p>Default value: false</p><p>true - Enabled; false - Disabled</p>
  * @method void setEnableForgeryDetectionImages(boolean $EnableForgeryDetectionImages) Set <p>Enable multi-image anti-spoofing for single-angle Identity Document Recognition</p><p>Default value: false</p><p>true - Enabled; false - Disabled</p>
+ * @method string getMetaData() Obtain Encrypted metadata generated by the SDK
+ * @method void setMetaData(string $MetaData) Set Encrypted metadata generated by the SDK
+ * @method boolean getSkipLaunchPage() Obtain <p>Controls visibility of the launch page</p><p>Enumeration values:</p><ul><li>true: Do not display the launch page</li><li>false: Display the launch page</li></ul><p>Default value: false</p>
+ * @method void setSkipLaunchPage(boolean $SkipLaunchPage) Set <p>Controls visibility of the launch page</p><p>Enumeration values:</p><ul><li>true: Do not display the launch page</li><li>false: Display the launch page</li></ul><p>Default value: false</p>
+ * @method boolean getSkipOcrConfirmPage() Obtain <p>Controls visibility of the information confirmation page </p><p>Enumeration values:</p><ul><li>true: Do not display the information confirmation page</li><li>false: Display the information confirmation page</li></ul><p>Default value: false</p>
+ * @method void setSkipOcrConfirmPage(boolean $SkipOcrConfirmPage) Set <p>Controls visibility of the information confirmation page </p><p>Enumeration values:</p><ul><li>true: Do not display the information confirmation page</li><li>false: Display the information confirmation page</li></ul><p>Default value: false</p>
+ * @method boolean getHideProgressBar() Obtain <p>Controls whether to hide the top progress bar across all pages of the entire process </p><p>Enumeration values:</p><ul><li>true: Do not display the progress bar</li><li>false: Display the progress bar</li></ul><p>Default value: false</p>
+ * @method void setHideProgressBar(boolean $HideProgressBar) Set <p>Controls whether to hide the top progress bar across all pages of the entire process </p><p>Enumeration values:</p><ul><li>true: Do not display the progress bar</li><li>false: Display the progress bar</li></ul><p>Default value: false</p>
+ * @method boolean getAllowUploadPhoto() Obtain <p>Whether uploading photos from the album is permitted for verification during the ID validation phase (prohibited when single-angle multi-image forgery detection is enabled)
+ </p><p>Enumeration values:</p><ul><li>true: Album photo upload for verification enabled</li><li>false: Album photo upload for verification disabled</li></ul><p>Default value: false</p>
+ * @method void setAllowUploadPhoto(boolean $AllowUploadPhoto) Set <p>Whether uploading photos from the album is permitted for verification during the ID validation phase (prohibited when single-angle multi-image forgery detection is enabled)
+ </p><p>Enumeration values:</p><ul><li>true: Album photo upload for verification enabled</li><li>false: Album photo upload for verification disabled</li></ul><p>Default value: false</p>
  */
 class ApplySdkVerificationTokenRequest extends AbstractModel
 {
@@ -159,17 +171,17 @@ Default value: 4
     /**
      * @var string Specifies the identity document type used for authentication. valid values:.  
 
-HK (default): hong kong (china) identity card.
+1. HK (default): hong kong (china) identity card.
 2. ML: malaysian identity card.
-Indonesian identity card.
+3. Indonesian identity card.
 4. PhilippinesVoteID: specifies the voter card in the philippines.
 5. PhilippinesDrivingLicense: specifies the driving license in philippines.
 6. PhilippinesTinID: specifies the philippines tin id.
 7. PhilippinesSSSID: specifies the SSSID in the philippines.
 8. philippines UMID: specifies the philippines UMID.
 9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-ThailandIDCard: specifies the thai identity card.
-Mainland id card.
+10. ThailandIDCard: specifies the thai identity card.
+11. Mainland id card.
 12. SingaporeIDCard: specifies the Singapore id card.
 13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
      */
@@ -239,7 +251,7 @@ false : Expired HKID is rejected and cannot enter the liveness process.
     public $AllowExpiredDocument;
 
     /**
-     * @var boolean <p>Whether to display the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
+     * @var boolean <p>Controls visibility of the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
      */
     public $SkipResultPage;
 
@@ -260,6 +272,32 @@ false : Expired HKID is rejected and cannot enter the liveness process.
     public $EnableForgeryDetectionImages;
 
     /**
+     * @var string Encrypted metadata generated by the SDK
+     */
+    public $MetaData;
+
+    /**
+     * @var boolean <p>Controls visibility of the launch page</p><p>Enumeration values:</p><ul><li>true: Do not display the launch page</li><li>false: Display the launch page</li></ul><p>Default value: false</p>
+     */
+    public $SkipLaunchPage;
+
+    /**
+     * @var boolean <p>Controls visibility of the information confirmation page </p><p>Enumeration values:</p><ul><li>true: Do not display the information confirmation page</li><li>false: Display the information confirmation page</li></ul><p>Default value: false</p>
+     */
+    public $SkipOcrConfirmPage;
+
+    /**
+     * @var boolean <p>Controls whether to hide the top progress bar across all pages of the entire process </p><p>Enumeration values:</p><ul><li>true: Do not display the progress bar</li><li>false: Display the progress bar</li></ul><p>Default value: false</p>
+     */
+    public $HideProgressBar;
+
+    /**
+     * @var boolean <p>Whether uploading photos from the album is permitted for verification during the ID validation phase (prohibited when single-angle multi-image forgery detection is enabled)
+ </p><p>Enumeration values:</p><ul><li>true: Album photo upload for verification enabled</li><li>false: Album photo upload for verification disabled</li></ul><p>Default value: false</p>
+     */
+    public $AllowUploadPhoto;
+
+    /**
      * @param integer $CheckMode The verification mode. Valid values:
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
@@ -273,17 +311,17 @@ Default value: 1
 Default value: 4
      * @param string $IdCardType Specifies the identity document type used for authentication. valid values:.  
 
-HK (default): hong kong (china) identity card.
+1. HK (default): hong kong (china) identity card.
 2. ML: malaysian identity card.
-Indonesian identity card.
+3. Indonesian identity card.
 4. PhilippinesVoteID: specifies the voter card in the philippines.
 5. PhilippinesDrivingLicense: specifies the driving license in philippines.
 6. PhilippinesTinID: specifies the philippines tin id.
 7. PhilippinesSSSID: specifies the SSSID in the philippines.
 8. philippines UMID: specifies the philippines UMID.
 9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-ThailandIDCard: specifies the thai identity card.
-Mainland id card.
+10. ThailandIDCard: specifies the thai identity card.
+11. Mainland id card.
 12. SingaporeIDCard: specifies the Singapore id card.
 13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
      * @param string $CompareImage The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
@@ -312,11 +350,17 @@ The default value is blink. The different action types passed in this parameter 
      * @param boolean $AllowExpiredDocument Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
 true (default value): Expired HKID is allowed to enter the liveness process.
 false : Expired HKID is rejected and cannot enter the liveness process.
-     * @param boolean $SkipResultPage <p>Whether to display the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
+     * @param boolean $SkipResultPage <p>Controls visibility of the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
      * @param array $CardOcrDisplayFields <p>Identified fields displayed during document OCR</p><p>Parameter format: ["ChineseName","FullName"]</p><p>Input constraints: <strong>Supported field names by document type:</strong><br><strong>HK (Hong Kong Identity Card):</strong> "ChineseName","FullName","LicenseNumber","Birthday","Sex", "IssuedDate", "Permanent", "Symbol", "CurrentIssueDate"<br><strong>ML (Malaysia Identity Card):</strong> "FullName","LicenseNumber","Sex", "Birthday", "Type", "FormattedAddress"<br><strong>IndonesiaIDCard (Indonesia Identity Card):</strong> "LicenseNumber","FullName","Sex", "Birthday", "FormattedAddress", "Nationality", "DueDate", "IssuedDate", "Street", "Village","Area","Province","City","MaritalStatus", "BloodType", "Religion", "Occupation"<br><strong>PhilippinesVoteID (Philippines Voter's ID):</strong> "FirstName","LastName","Birthday"<br><strong>PhilippinesDrivingLicense (Philippines Driving License):</strong> "LastName","FirstName","MiddleName","Sex","Birthday"<br><strong>PhilippinesTinID (Philippines TIN ID):</strong> "LicenseNumber", "FullName", "Birthday"<br><strong>PhilippinesSSSID (Philippines SSS ID):</strong> "LicenseNumber", "FullName", "Birthday"<br><strong>PhilippinesUMID (Philippines UMID):</strong> "Surname", "MiddleName", "GivenName", "Sex", "Birthday"<br><strong>MLIDPassport (Passports of Hong Kong, Macao, Taiwan and overseas regions):</strong> "LicenseNumber","FullName", "Surname", "GivenName", "Birthday", "Sex","DateOfExpiration","IssuingCountry"<br><strong>ThailandIDCard (Thailand Identity Card):</strong> "FullName", "LastName", "FirstName", "FormattedAddress", "LicenseNumber", "Birthday", "ExpirationDate", "IssuedDate", "RegistrationNumber", "Religion", "ThaiBirthday", "ThaiExpirationDate", "ThaiIssueDate"<br><strong>MainlandIDCard (Chinese Mainland Identity Card):</strong> "LicenseNumber", "FullName", "Sex", "Nation", "Birthday", "FormattedAddress"<br><strong>SingaporeIDCard (Singapore Identity Card):</strong> "ChineseName","Sex","Birthday","LicenseNumber","Nationality","FullName","Address"<br><strong>HMTPermit (Mainland Travel Permit for Hong Kong and Macao Residents / Mainland Travel Permit for Taiwan Residents):</strong> "Name", "EnglishName", "Sex", "Number", "ValidDate", "Birthday"</p><p>If no fields are specified, all identified fields will be displayed by default.</p>
 
      * @param integer $RetryLimit <p>Liveness retry attempts</p><p>Value range: [1, 5]</p><p>Default value: 5</p>
      * @param boolean $EnableForgeryDetectionImages <p>Enable multi-image anti-spoofing for single-angle Identity Document Recognition</p><p>Default value: false</p><p>true - Enabled; false - Disabled</p>
+     * @param string $MetaData Encrypted metadata generated by the SDK
+     * @param boolean $SkipLaunchPage <p>Controls visibility of the launch page</p><p>Enumeration values:</p><ul><li>true: Do not display the launch page</li><li>false: Display the launch page</li></ul><p>Default value: false</p>
+     * @param boolean $SkipOcrConfirmPage <p>Controls visibility of the information confirmation page </p><p>Enumeration values:</p><ul><li>true: Do not display the information confirmation page</li><li>false: Display the information confirmation page</li></ul><p>Default value: false</p>
+     * @param boolean $HideProgressBar <p>Controls whether to hide the top progress bar across all pages of the entire process </p><p>Enumeration values:</p><ul><li>true: Do not display the progress bar</li><li>false: Display the progress bar</li></ul><p>Default value: false</p>
+     * @param boolean $AllowUploadPhoto <p>Whether uploading photos from the album is permitted for verification during the ID validation phase (prohibited when single-angle multi-image forgery detection is enabled)
+ </p><p>Enumeration values:</p><ul><li>true: Album photo upload for verification enabled</li><li>false: Album photo upload for verification disabled</li></ul><p>Default value: false</p>
      */
     function __construct()
     {
@@ -393,6 +437,26 @@ false : Expired HKID is rejected and cannot enter the liveness process.
 
         if (array_key_exists("EnableForgeryDetectionImages",$param) and $param["EnableForgeryDetectionImages"] !== null) {
             $this->EnableForgeryDetectionImages = $param["EnableForgeryDetectionImages"];
+        }
+
+        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+            $this->MetaData = $param["MetaData"];
+        }
+
+        if (array_key_exists("SkipLaunchPage",$param) and $param["SkipLaunchPage"] !== null) {
+            $this->SkipLaunchPage = $param["SkipLaunchPage"];
+        }
+
+        if (array_key_exists("SkipOcrConfirmPage",$param) and $param["SkipOcrConfirmPage"] !== null) {
+            $this->SkipOcrConfirmPage = $param["SkipOcrConfirmPage"];
+        }
+
+        if (array_key_exists("HideProgressBar",$param) and $param["HideProgressBar"] !== null) {
+            $this->HideProgressBar = $param["HideProgressBar"];
+        }
+
+        if (array_key_exists("AllowUploadPhoto",$param) and $param["AllowUploadPhoto"] !== null) {
+            $this->AllowUploadPhoto = $param["AllowUploadPhoto"];
         }
     }
 }
