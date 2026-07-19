@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTeamId(string $TeamId) Set <p>Team ID.</p>
  * @method array getI18nList() Obtain <p>Mini program name and introduction in multiple languages.</p>
  * @method void setI18nList(array $I18nList) Set <p>Mini program name and introduction in multiple languages.</p>
+ * @method array getAgeRatings() Obtain <p>Age rating information.</p>
+ * @method void setAgeRatings(array $AgeRatings) Set <p>Age rating information.</p>
  */
 class CreateMNPRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateMNPRequest extends AbstractModel
     public $I18nList;
 
     /**
+     * @var array <p>Age rating information.</p>
+     */
+    public $AgeRatings;
+
+    /**
      * @param string $MNPType <p>Mini program category.</p>
      * @param string $MNPName <p>Mini program name.</p>
      * @param string $MNPIcon <p>Mini program icon.</p>
@@ -88,6 +95,7 @@ class CreateMNPRequest extends AbstractModel
      * @param string $PlatformId <p>Platform ID.</p>
      * @param string $TeamId <p>Team ID.</p>
      * @param array $I18nList <p>Mini program name and introduction in multiple languages.</p>
+     * @param array $AgeRatings <p>Age rating information.</p>
      */
     function __construct()
     {
@@ -136,6 +144,15 @@ class CreateMNPRequest extends AbstractModel
                 $obj = new MNPI18NSyncDto();
                 $obj->deserialize($value);
                 array_push($this->I18nList, $obj);
+            }
+        }
+
+        if (array_key_exists("AgeRatings",$param) and $param["AgeRatings"] !== null) {
+            $this->AgeRatings = [];
+            foreach ($param["AgeRatings"] as $key => $value){
+                $obj = new AgeRatingItemReq();
+                $obj->deserialize($value);
+                array_push($this->AgeRatings, $obj);
             }
         }
     }

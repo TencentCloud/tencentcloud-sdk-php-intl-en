@@ -20,122 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The mini program or mini game data associated with a superapp.
  *
- * @method string getMNPId() Obtain Mini program or mini game appid.
- * @method void setMNPId(string $MNPId) Set Mini program or mini game appid.
- * @method string getMNPIcon() Obtain Mini program or mini game icon.
- * @method void setMNPIcon(string $MNPIcon) Set Mini program or mini game icon.
- * @method string getMNPName() Obtain Mini program or mini game name.
- * @method void setMNPName(string $MNPName) Set Mini program or mini game name.
- * @method string getMNPIntro() Obtain Mini program or mini game information.
- * @method void setMNPIntro(string $MNPIntro) Set Mini program or mini game information.
- * @method string getCreateUser() Obtain Creator.
- * @method void setCreateUser(string $CreateUser) Set Creator.
- * @method string getCreateTime() Obtain Creation time.
- * @method void setCreateTime(string $CreateTime) Set Creation time.
- * @method string getUpdateUser() Obtain Last modifier.
- * @method void setUpdateUser(string $UpdateUser) Set Last modifier.
- * @method string getUpdateTime() Obtain Last modified time.
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time.
- * @method integer getOnlineStatus() Obtain Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
- * @method void setOnlineStatus(integer $OnlineStatus) Set Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
- * @method integer getEngineType() Obtain Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
- * @method void setEngineType(integer $EngineType) Set Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
- * @method array getCategoryList() Obtain Category information.
- * @method void setCategoryList(array $CategoryList) Set Category information.
- * @method string getTeamId() Obtain Team ID.
- * @method void setTeamId(string $TeamId) Set Team ID.
- * @method string getTeamName() Obtain Team name.
- * @method void setTeamName(string $TeamName) Set Team name.
- * @method integer getTeamTypeId() Obtain Team type ID.
- * @method void setTeamTypeId(integer $TeamTypeId) Set Team type ID.
+ * @method string getMNPId() Obtain <p>Mini program or mini game appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini program or mini game appid.</p>
+ * @method string getMNPIcon() Obtain <p>Mini program or mini game icon.</p>
+ * @method void setMNPIcon(string $MNPIcon) Set <p>Mini program or mini game icon.</p>
+ * @method string getMNPName() Obtain <p>Mini program or mini game name.</p>
+ * @method void setMNPName(string $MNPName) Set <p>Mini program or mini game name.</p>
+ * @method string getMNPIntro() Obtain <p>Mini program or mini game introduction.</p>
+ * @method void setMNPIntro(string $MNPIntro) Set <p>Mini program or mini game introduction.</p>
+ * @method string getCreateUser() Obtain <p>Creator.</p>
+ * @method void setCreateUser(string $CreateUser) Set <p>Creator.</p>
+ * @method string getCreateTime() Obtain <p>Creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
+ * @method string getUpdateUser() Obtain <p>Last modifier.</p>
+ * @method void setUpdateUser(string $UpdateUser) Set <p>Last modifier.</p>
+ * @method string getUpdateTime() Obtain <p>Last modified time.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Last modified time.</p>
+ * @method integer getOnlineStatus() Obtain <p>Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.</p>
+ * @method void setOnlineStatus(integer $OnlineStatus) Set <p>Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.</p>
+ * @method integer getEngineType() Obtain <p>Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.</p>
+ * @method void setEngineType(integer $EngineType) Set <p>Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.</p>
+ * @method array getCategoryList() Obtain <p>Category information.</p>
+ * @method void setCategoryList(array $CategoryList) Set <p>Category information.</p>
+ * @method string getTeamId() Obtain <p>Team ID.</p>
+ * @method void setTeamId(string $TeamId) Set <p>Team ID.</p>
+ * @method string getTeamName() Obtain <p>Team name.</p>
+ * @method void setTeamName(string $TeamName) Set <p>Team name.</p>
+ * @method integer getTeamTypeId() Obtain <p>Team type ID.</p>
+ * @method void setTeamTypeId(integer $TeamTypeId) Set <p>Team type ID.</p>
+ * @method array getAgeRatings() Obtain <p>Age rating information.</p>
+ * @method void setAgeRatings(array $AgeRatings) Set <p>Age rating information.</p>
  */
 class DescribeApplicationMNPInfoResp extends AbstractModel
 {
     /**
-     * @var string Mini program or mini game appid.
+     * @var string <p>Mini program or mini game appid.</p>
      */
     public $MNPId;
 
     /**
-     * @var string Mini program or mini game icon.
+     * @var string <p>Mini program or mini game icon.</p>
      */
     public $MNPIcon;
 
     /**
-     * @var string Mini program or mini game name.
+     * @var string <p>Mini program or mini game name.</p>
      */
     public $MNPName;
 
     /**
-     * @var string Mini program or mini game information.
+     * @var string <p>Mini program or mini game introduction.</p>
      */
     public $MNPIntro;
 
     /**
-     * @var string Creator.
+     * @var string <p>Creator.</p>
      */
     public $CreateUser;
 
     /**
-     * @var string Creation time.
+     * @var string <p>Creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Last modifier.
+     * @var string <p>Last modifier.</p>
      */
     public $UpdateUser;
 
     /**
-     * @var string Last modified time.
+     * @var string <p>Last modified time.</p>
      */
     public $UpdateTime;
 
     /**
-     * @var integer Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
+     * @var integer <p>Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.</p>
      */
     public $OnlineStatus;
 
     /**
-     * @var integer Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
+     * @var integer <p>Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.</p>
      */
     public $EngineType;
 
     /**
-     * @var array Category information.
+     * @var array <p>Category information.</p>
      */
     public $CategoryList;
 
     /**
-     * @var string Team ID.
+     * @var string <p>Team ID.</p>
      */
     public $TeamId;
 
     /**
-     * @var string Team name.
+     * @var string <p>Team name.</p>
      */
     public $TeamName;
 
     /**
-     * @var integer Team type ID.
+     * @var integer <p>Team type ID.</p>
      */
     public $TeamTypeId;
 
     /**
-     * @param string $MNPId Mini program or mini game appid.
-     * @param string $MNPIcon Mini program or mini game icon.
-     * @param string $MNPName Mini program or mini game name.
-     * @param string $MNPIntro Mini program or mini game information.
-     * @param string $CreateUser Creator.
-     * @param string $CreateTime Creation time.
-     * @param string $UpdateUser Last modifier.
-     * @param string $UpdateTime Last modified time.
-     * @param integer $OnlineStatus Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
-     * @param integer $EngineType Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
-     * @param array $CategoryList Category information.
-     * @param string $TeamId Team ID.
-     * @param string $TeamName Team name.
-     * @param integer $TeamTypeId Team type ID.
+     * @var array <p>Age rating information.</p>
+     */
+    public $AgeRatings;
+
+    /**
+     * @param string $MNPId <p>Mini program or mini game appid.</p>
+     * @param string $MNPIcon <p>Mini program or mini game icon.</p>
+     * @param string $MNPName <p>Mini program or mini game name.</p>
+     * @param string $MNPIntro <p>Mini program or mini game introduction.</p>
+     * @param string $CreateUser <p>Creator.</p>
+     * @param string $CreateTime <p>Creation time.</p>
+     * @param string $UpdateUser <p>Last modifier.</p>
+     * @param string $UpdateTime <p>Last modified time.</p>
+     * @param integer $OnlineStatus <p>Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.</p>
+     * @param integer $EngineType <p>Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.</p>
+     * @param array $CategoryList <p>Category information.</p>
+     * @param string $TeamId <p>Team ID.</p>
+     * @param string $TeamName <p>Team name.</p>
+     * @param integer $TeamTypeId <p>Team type ID.</p>
+     * @param array $AgeRatings <p>Age rating information.</p>
      */
     function __construct()
     {
@@ -209,6 +217,15 @@ class DescribeApplicationMNPInfoResp extends AbstractModel
 
         if (array_key_exists("TeamTypeId",$param) and $param["TeamTypeId"] !== null) {
             $this->TeamTypeId = $param["TeamTypeId"];
+        }
+
+        if (array_key_exists("AgeRatings",$param) and $param["AgeRatings"] !== null) {
+            $this->AgeRatings = [];
+            foreach ($param["AgeRatings"] as $key => $value){
+                $obj = new AgeRatingItem();
+                $obj->deserialize($value);
+                array_push($this->AgeRatings, $obj);
+            }
         }
     }
 }

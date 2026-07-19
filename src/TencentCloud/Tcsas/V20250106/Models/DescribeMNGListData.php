@@ -50,10 +50,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEffectMNPVersionId(integer $EffectMNPVersionId) Set <p>Effective mini game version ID bound to the superapp.</p>
  * @method string getEffectMNPVersion() Obtain <p>Effective mini game version number bound to the superapp. </p>
  * @method void setEffectMNPVersion(string $EffectMNPVersion) Set <p>Effective mini game version number bound to the superapp. </p>
- * @method string getTeamId() Obtain Team ID.
- * @method void setTeamId(string $TeamId) Set Team ID.
- * @method integer getTeamTypeId() Obtain Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
- * @method void setTeamTypeId(integer $TeamTypeId) Set Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+ * @method string getTeamId() Obtain <p>Team ID.</p>
+ * @method void setTeamId(string $TeamId) Set <p>Team ID.</p>
+ * @method integer getTeamTypeId() Obtain <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
+ * @method void setTeamTypeId(integer $TeamTypeId) Set <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
+ * @method array getAgeRatings() Obtain <p>Age rating information.</p>
+ * @method void setAgeRatings(array $AgeRatings) Set <p>Age rating information.</p>
  */
 class DescribeMNGListData extends AbstractModel
 {
@@ -133,14 +135,19 @@ class DescribeMNGListData extends AbstractModel
     public $EffectMNPVersion;
 
     /**
-     * @var string Team ID.
+     * @var string <p>Team ID.</p>
      */
     public $TeamId;
 
     /**
-     * @var integer Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     * @var integer <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
      */
     public $TeamTypeId;
+
+    /**
+     * @var array <p>Age rating information.</p>
+     */
+    public $AgeRatings;
 
     /**
      * @param string $MNPId <p>Mini game appid.</p>
@@ -158,8 +165,9 @@ class DescribeMNGListData extends AbstractModel
      * @param integer $EffectStatus <p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
      * @param integer $EffectMNPVersionId <p>Effective mini game version ID bound to the superapp.</p>
      * @param string $EffectMNPVersion <p>Effective mini game version number bound to the superapp. </p>
-     * @param string $TeamId Team ID.
-     * @param integer $TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     * @param string $TeamId <p>Team ID.</p>
+     * @param integer $TeamTypeId <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
+     * @param array $AgeRatings <p>Age rating information.</p>
      */
     function __construct()
     {
@@ -240,6 +248,15 @@ class DescribeMNGListData extends AbstractModel
 
         if (array_key_exists("TeamTypeId",$param) and $param["TeamTypeId"] !== null) {
             $this->TeamTypeId = $param["TeamTypeId"];
+        }
+
+        if (array_key_exists("AgeRatings",$param) and $param["AgeRatings"] !== null) {
+            $this->AgeRatings = [];
+            foreach ($param["AgeRatings"] as $key => $value){
+                $obj = new AgeRatingItem();
+                $obj->deserialize($value);
+                array_push($this->AgeRatings, $obj);
+            }
         }
     }
 }

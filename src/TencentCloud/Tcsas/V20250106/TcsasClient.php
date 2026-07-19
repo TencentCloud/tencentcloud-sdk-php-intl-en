@@ -24,6 +24,9 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
 
 /**
  * @method Models\AddTeamMemberResponse AddTeamMember(Models\AddTeamMemberRequest $req) This API is used to add a team member.
+ * @method Models\ApproveMNPPaymentEnableResponse ApproveMNPPaymentEnable(Models\ApproveMNPPaymentEnableRequest $req) This API is used to allow the superapp to approve the activation of mini program payment.
+ * @method Models\ApprovePaymentMerchantBindingResponse ApprovePaymentMerchantBinding(Models\ApprovePaymentMerchantBindingRequest $req) This API is used to allow the superapp to approve the payment merchant binding request of a mini program team.
+ * @method Models\ChangePaymentBoundMerchantResponse ChangePaymentBoundMerchant(Models\ChangePaymentBoundMerchantRequest $req) This API is used to change the bound payment merchant.
  * @method Models\ConfigureMNGPreviewResponse ConfigureMNGPreview(Models\ConfigureMNGPreviewRequest $req) This API is used to configure the preview of a mini game.
  * @method Models\ConfigureMNPPreviewResponse ConfigureMNPPreview(Models\ConfigureMNPPreviewRequest $req) This API is used to configure the preview of a mini program.
  * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) This API is used to create a superapp.
@@ -117,6 +120,7 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\DescribeMNPMAUMetricCardResponse DescribeMNPMAUMetricCard(Models\DescribeMNPMAUMetricCardRequest $req) This API is used to query the MAU comparison data for a mini program between two months.
  * @method Models\DescribeMNPOfflinePackageURLResponse DescribeMNPOfflinePackageURL(Models\DescribeMNPOfflinePackageURLRequest $req) This API is used to query the download URL of the mini program package.
  * @method Models\DescribeMNPPageAnalysisDetailResponse DescribeMNPPageAnalysisDetail(Models\DescribeMNPPageAnalysisDetailRequest $req) This API is used to query the detailed mini program page visit data.
+ * @method Models\DescribeMNPPaymentApprovalInfoResponse DescribeMNPPaymentApprovalInfo(Models\DescribeMNPPaymentApprovalInfoRequest $req) This API is used to query the mini program payment approval information.
  * @method Models\DescribeMNPPreviewResponse DescribeMNPPreview(Models\DescribeMNPPreviewRequest $req) This API is used to query the mini program preview details.
  * @method Models\DescribeMNPReleasedVersionHistoryResponse DescribeMNPReleasedVersionHistory(Models\DescribeMNPReleasedVersionHistoryRequest $req) This API is used to query the release version history of a mini program.
  * @method Models\DescribeMNPReportDataLineChartResponse DescribeMNPReportDataLineChart(Models\DescribeMNPReportDataLineChartRequest $req) This API is used to query the mini program visit analysis line chart within a given date range.
@@ -141,6 +145,7 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) This API is used to query the user details.
  * @method Models\DescribeUserListResponse DescribeUserList(Models\DescribeUserListRequest $req) This API is used to query a list of users.
  * @method Models\DisableApplicationSensitiveAPIResponse DisableApplicationSensitiveAPI(Models\DisableApplicationSensitiveAPIRequest $req) This API is used to disable a superapp sensitive API.
+ * @method Models\DisableMNPPaymentResponse DisableMNPPayment(Models\DisableMNPPaymentRequest $req) This API is used to allow the superapp to actively disable mini program payment.
  * @method Models\EnableApplicationSensitiveAPIResponse EnableApplicationSensitiveAPI(Models\EnableApplicationSensitiveAPIRequest $req) This API is used to enable a superapp sensitive API.
  * @method Models\ModifyApplicationResponse ModifyApplication(Models\ModifyApplicationRequest $req) This API is used to change the superapp information.
  * @method Models\ModifyApplicationConfigResponse ModifyApplicationConfig(Models\ModifyApplicationConfigRequest $req) This API is used to edit the configuration of a superapp.
@@ -156,14 +161,19 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) This API is used to modify the user information.
  * @method Models\ProcessMNPApprovalResponse ProcessMNPApproval(Models\ProcessMNPApprovalRequest $req) This API is used to process mini program approval requests.
  * @method Models\ProcessMNPSensitiveAPIPermissionApprovalResponse ProcessMNPSensitiveAPIPermissionApproval(Models\ProcessMNPSensitiveAPIPermissionApprovalRequest $req) This API is used to process a sensitive API permission request for a mini program.
+ * @method Models\QueryMNPMerchantInfoResponse QueryMNPMerchantInfo(Models\QueryMNPMerchantInfoRequest $req) This API is used to query the merchant information of a mini program.
  * @method Models\ReleaseMNGVersionResponse ReleaseMNGVersion(Models\ReleaseMNGVersionRequest $req) This API is used to release a mini game version.
  * @method Models\ReleaseMNPVersionResponse ReleaseMNPVersion(Models\ReleaseMNPVersionRequest $req) This API is used to release a mini program version.
  * @method Models\RemoveMNGResponse RemoveMNG(Models\RemoveMNGRequest $req) This API is used to remove a mini game.
  * @method Models\RemoveMNPResponse RemoveMNP(Models\RemoveMNPRequest $req) This API is used to remove a mini program.
+ * @method Models\RequestPaymentEnableResponse RequestPaymentEnable(Models\RequestPaymentEnableRequest $req) This API is used to request the activation of mini program payment.
+ * @method Models\RequestPaymentMerchantBindingResponse RequestPaymentMerchantBinding(Models\RequestPaymentMerchantBindingRequest $req) This API is used to request the binding of a payment merchant to a team.
  * @method Models\ResetMNGAppSecretResponse ResetMNGAppSecret(Models\ResetMNGAppSecretRequest $req) This API is used to reset a mini game secret key.
  * @method Models\ResetMNPAppSecretResponse ResetMNPAppSecret(Models\ResetMNPAppSecretRequest $req) This API is used to reset a mini program secret key.
  * @method Models\RollbackMNGVersionResponse RollbackMNGVersion(Models\RollbackMNGVersionRequest $req) This API is used to roll back the released version of a mini game to a specified version.
  * @method Models\RollbackMNPVersionResponse RollbackMNPVersion(Models\RollbackMNPVersionRequest $req) This API is used to roll back the released version of a mini program to a specified version.
+ * @method Models\UnbindMNPPaymentMerchantResponse UnbindMNPPaymentMerchant(Models\UnbindMNPPaymentMerchantRequest $req) This API is used to allow a mini program team to actively unbind the payment merchant.
+ * @method Models\UnbindPaymentMerchantResponse UnbindPaymentMerchant(Models\UnbindPaymentMerchantRequest $req) This API is used to allow the superapp to actively unbind the payment merchant.
  */
 
 class TcsasClient extends AbstractClient

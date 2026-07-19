@@ -18,16 +18,16 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateMNPSecretKey request structure.
+ * UnbindPaymentMerchant request structure.
  *
  * @method string getPlatformId() Obtain <p>Platform ID.</p>
  * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
- * @method string getMNPId() Obtain <p>Mini program or mini game appid.</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini program or mini game appid.</p>
- * @method string getPipelineId() Obtain <p>CICD ID</p>
- * @method void setPipelineId(string $PipelineId) Set <p>CICD ID</p>
+ * @method string getApplicationId() Obtain <p>Superapp ID.</p>
+ * @method void setApplicationId(string $ApplicationId) Set <p>Superapp ID.</p>
+ * @method integer getID() Obtain <p>Primary key ID, obtained from the API response of approving the merchant binding of a mini program team.</p>
+ * @method void setID(integer $ID) Set <p>Primary key ID, obtained from the API response of approving the merchant binding of a mini program team.</p>
  */
-class CreateMNPSecretKeyRequest extends AbstractModel
+class UnbindPaymentMerchantRequest extends AbstractModel
 {
     /**
      * @var string <p>Platform ID.</p>
@@ -35,19 +35,19 @@ class CreateMNPSecretKeyRequest extends AbstractModel
     public $PlatformId;
 
     /**
-     * @var string <p>Mini program or mini game appid.</p>
+     * @var string <p>Superapp ID.</p>
      */
-    public $MNPId;
+    public $ApplicationId;
 
     /**
-     * @var string <p>CICD ID</p>
+     * @var integer <p>Primary key ID, obtained from the API response of approving the merchant binding of a mini program team.</p>
      */
-    public $PipelineId;
+    public $ID;
 
     /**
      * @param string $PlatformId <p>Platform ID.</p>
-     * @param string $MNPId <p>Mini program or mini game appid.</p>
-     * @param string $PipelineId <p>CICD ID</p>
+     * @param string $ApplicationId <p>Superapp ID.</p>
+     * @param integer $ID <p>Primary key ID, obtained from the API response of approving the merchant binding of a mini program team.</p>
      */
     function __construct()
     {
@@ -66,12 +66,12 @@ class CreateMNPSecretKeyRequest extends AbstractModel
             $this->PlatformId = $param["PlatformId"];
         }
 
-        if (array_key_exists("MNPId",$param) and $param["MNPId"] !== null) {
-            $this->MNPId = $param["MNPId"];
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
         }
 
-        if (array_key_exists("PipelineId",$param) and $param["PipelineId"] !== null) {
-            $this->PipelineId = $param["PipelineId"];
+        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
+            $this->ID = $param["ID"];
         }
     }
 }

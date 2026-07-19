@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Subpackage information.
  *
- * @method string getName() Obtain Package name.
- * @method void setName(string $Name) Set Package name.
- * @method integer getSize() Obtain Package size. 
- * @method void setSize(integer $Size) Set Package size. 
+ * @method string getName() Obtain <p>Package name.</p>
+ * @method void setName(string $Name) Set <p>Package name.</p>
+ * @method integer getSize() Obtain <p>Package size.</p>
+ * @method void setSize(integer $Size) Set <p>Package size.</p>
  */
 class MNPVersionSubPackageInfo extends AbstractModel
 {
     /**
-     * @var string Package name.
+     * @var string <p>Package name.</p>
      */
     public $Name;
 
     /**
-     * @var integer Package size. 
+     * @var integer <p>Package size.</p>
      */
     public $Size;
 
     /**
-     * @param string $Name Package name.
-     * @param integer $Size Package size. 
+     * @param string $Name <p>Package name.</p>
+     * @param integer $Size <p>Package size.</p>
      */
     function __construct()
     {

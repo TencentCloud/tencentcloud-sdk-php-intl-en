@@ -18,16 +18,14 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateMNPSecretKey request structure.
+ * DescribeMNPPaymentApprovalInfo request structure.
  *
  * @method string getPlatformId() Obtain <p>Platform ID.</p>
  * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
- * @method string getMNPId() Obtain <p>Mini program or mini game appid.</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini program or mini game appid.</p>
- * @method string getPipelineId() Obtain <p>CICD ID</p>
- * @method void setPipelineId(string $PipelineId) Set <p>CICD ID</p>
+ * @method string getMNPId() Obtain <p>Mini program appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini program appid.</p>
  */
-class CreateMNPSecretKeyRequest extends AbstractModel
+class DescribeMNPPaymentApprovalInfoRequest extends AbstractModel
 {
     /**
      * @var string <p>Platform ID.</p>
@@ -35,19 +33,13 @@ class CreateMNPSecretKeyRequest extends AbstractModel
     public $PlatformId;
 
     /**
-     * @var string <p>Mini program or mini game appid.</p>
+     * @var string <p>Mini program appid.</p>
      */
     public $MNPId;
 
     /**
-     * @var string <p>CICD ID</p>
-     */
-    public $PipelineId;
-
-    /**
      * @param string $PlatformId <p>Platform ID.</p>
-     * @param string $MNPId <p>Mini program or mini game appid.</p>
-     * @param string $PipelineId <p>CICD ID</p>
+     * @param string $MNPId <p>Mini program appid.</p>
      */
     function __construct()
     {
@@ -68,10 +60,6 @@ class CreateMNPSecretKeyRequest extends AbstractModel
 
         if (array_key_exists("MNPId",$param) and $param["MNPId"] !== null) {
             $this->MNPId = $param["MNPId"];
-        }
-
-        if (array_key_exists("PipelineId",$param) and $param["PipelineId"] !== null) {
-            $this->PipelineId = $param["PipelineId"];
         }
     }
 }

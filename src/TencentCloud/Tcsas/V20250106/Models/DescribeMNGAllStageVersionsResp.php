@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set <p>Available status.</p>
  * @method integer getVersionCurrentStatus() Obtain <p>Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
  * @method void setVersionCurrentStatus(integer $VersionCurrentStatus) Set <p>Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
+ * @method array getAgeRatings() Obtain <p>Age rating information.</p>
+ * @method void setAgeRatings(array $AgeRatings) Set <p>Age rating information.</p>
  */
 class DescribeMNGAllStageVersionsResp extends AbstractModel
 {
@@ -150,6 +152,11 @@ class DescribeMNGAllStageVersionsResp extends AbstractModel
     public $VersionCurrentStatus;
 
     /**
+     * @var array <p>Age rating information.</p>
+     */
+    public $AgeRatings;
+
+    /**
      * @param string $MNPId <p>Mini game appid.</p>
      * @param integer $MNPVersionId <p>Mini game version ID.</p>
      * @param string $MNPName <p>Mini game name.</p>
@@ -168,6 +175,7 @@ class DescribeMNGAllStageVersionsResp extends AbstractModel
      * @param integer $RollbackVersion <p>Rollback version number.</p>
      * @param integer $Status <p>Available status.</p>
      * @param integer $VersionCurrentStatus <p>Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
+     * @param array $AgeRatings <p>Age rating information.</p>
      */
     function __construct()
     {
@@ -252,6 +260,15 @@ class DescribeMNGAllStageVersionsResp extends AbstractModel
 
         if (array_key_exists("VersionCurrentStatus",$param) and $param["VersionCurrentStatus"] !== null) {
             $this->VersionCurrentStatus = $param["VersionCurrentStatus"];
+        }
+
+        if (array_key_exists("AgeRatings",$param) and $param["AgeRatings"] !== null) {
+            $this->AgeRatings = [];
+            foreach ($param["AgeRatings"] as $key => $value){
+                $obj = new AgeRatingItem();
+                $obj->deserialize($value);
+                array_push($this->AgeRatings, $obj);
+            }
         }
     }
 }

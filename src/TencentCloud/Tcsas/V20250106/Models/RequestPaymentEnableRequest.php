@@ -18,16 +18,16 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateMNPSecretKey request structure.
+ * RequestPaymentEnable request structure.
  *
  * @method string getPlatformId() Obtain <p>Platform ID.</p>
  * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
- * @method string getMNPId() Obtain <p>Mini program or mini game appid.</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini program or mini game appid.</p>
- * @method string getPipelineId() Obtain <p>CICD ID</p>
- * @method void setPipelineId(string $PipelineId) Set <p>CICD ID</p>
+ * @method string getMNPId() Obtain <p>Mini program appid.</p>
+ * @method void setMNPId(string $MNPId) Set <p>Mini program appid.</p>
+ * @method string getApplyNote() Obtain <p>Note for requesting payment activation.</p>
+ * @method void setApplyNote(string $ApplyNote) Set <p>Note for requesting payment activation.</p>
  */
-class CreateMNPSecretKeyRequest extends AbstractModel
+class RequestPaymentEnableRequest extends AbstractModel
 {
     /**
      * @var string <p>Platform ID.</p>
@@ -35,19 +35,19 @@ class CreateMNPSecretKeyRequest extends AbstractModel
     public $PlatformId;
 
     /**
-     * @var string <p>Mini program or mini game appid.</p>
+     * @var string <p>Mini program appid.</p>
      */
     public $MNPId;
 
     /**
-     * @var string <p>CICD ID</p>
+     * @var string <p>Note for requesting payment activation.</p>
      */
-    public $PipelineId;
+    public $ApplyNote;
 
     /**
      * @param string $PlatformId <p>Platform ID.</p>
-     * @param string $MNPId <p>Mini program or mini game appid.</p>
-     * @param string $PipelineId <p>CICD ID</p>
+     * @param string $MNPId <p>Mini program appid.</p>
+     * @param string $ApplyNote <p>Note for requesting payment activation.</p>
      */
     function __construct()
     {
@@ -70,8 +70,8 @@ class CreateMNPSecretKeyRequest extends AbstractModel
             $this->MNPId = $param["MNPId"];
         }
 
-        if (array_key_exists("PipelineId",$param) and $param["PipelineId"] !== null) {
-            $this->PipelineId = $param["PipelineId"];
+        if (array_key_exists("ApplyNote",$param) and $param["ApplyNote"] !== null) {
+            $this->ApplyNote = $param["ApplyNote"];
         }
     }
 }

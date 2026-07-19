@@ -46,8 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set <p>Mini program available status. Valid values: 1: Available; 2: Not available.</p>
  * @method array getI18nList() Obtain <p>The mini program name and description in multiple languages.</p>
  * @method void setI18nList(array $I18nList) Set <p>The mini program name and description in multiple languages.</p>
- * @method integer getTeamTypeId() Obtain Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
- * @method void setTeamTypeId(integer $TeamTypeId) Set Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+ * @method integer getTeamTypeId() Obtain <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
+ * @method void setTeamTypeId(integer $TeamTypeId) Set <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
+ * @method array getAgeRatings() Obtain <p>Age rating information.</p>
+ * @method void setAgeRatings(array $AgeRatings) Set <p>Age rating information.</p>
+ * @method string getMerchantId() Obtain <p>Merchant ID bound to the team to which the mini program belongs.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMerchantId(string $MerchantId) Set <p>Merchant ID bound to the team to which the mini program belongs.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DescribeMNPManagerDetailData extends AbstractModel
 {
@@ -117,9 +123,20 @@ class DescribeMNPManagerDetailData extends AbstractModel
     public $I18nList;
 
     /**
-     * @var integer Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     * @var integer <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
      */
     public $TeamTypeId;
+
+    /**
+     * @var array <p>Age rating information.</p>
+     */
+    public $AgeRatings;
+
+    /**
+     * @var string <p>Merchant ID bound to the team to which the mini program belongs.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MerchantId;
 
     /**
      * @param string $MNPType <p>Mini program category.</p>
@@ -135,7 +152,10 @@ class DescribeMNPManagerDetailData extends AbstractModel
      * @param string $TeamId <p>Team ID.</p>
      * @param integer $Status <p>Mini program available status. Valid values: 1: Available; 2: Not available.</p>
      * @param array $I18nList <p>The mini program name and description in multiple languages.</p>
-     * @param integer $TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     * @param integer $TeamTypeId <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
+     * @param array $AgeRatings <p>Age rating information.</p>
+     * @param string $MerchantId <p>Merchant ID bound to the team to which the mini program belongs.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -209,6 +229,19 @@ class DescribeMNPManagerDetailData extends AbstractModel
 
         if (array_key_exists("TeamTypeId",$param) and $param["TeamTypeId"] !== null) {
             $this->TeamTypeId = $param["TeamTypeId"];
+        }
+
+        if (array_key_exists("AgeRatings",$param) and $param["AgeRatings"] !== null) {
+            $this->AgeRatings = [];
+            foreach ($param["AgeRatings"] as $key => $value){
+                $obj = new AgeRatingItem();
+                $obj->deserialize($value);
+                array_push($this->AgeRatings, $obj);
+            }
+        }
+
+        if (array_key_exists("MerchantId",$param) and $param["MerchantId"] !== null) {
+            $this->MerchantId = $param["MerchantId"];
         }
     }
 }

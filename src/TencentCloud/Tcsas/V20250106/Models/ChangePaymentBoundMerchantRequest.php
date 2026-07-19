@@ -18,16 +18,18 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateMNPSecretKey request structure.
+ * ChangePaymentBoundMerchant request structure.
  *
  * @method string getPlatformId() Obtain <p>Platform ID.</p>
  * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
- * @method string getMNPId() Obtain <p>Mini program or mini game appid.</p>
- * @method void setMNPId(string $MNPId) Set <p>Mini program or mini game appid.</p>
- * @method string getPipelineId() Obtain <p>CICD ID</p>
- * @method void setPipelineId(string $PipelineId) Set <p>CICD ID</p>
+ * @method string getTeamId() Obtain <p>Mini program appid.</p>
+ * @method void setTeamId(string $TeamId) Set <p>Mini program appid.</p>
+ * @method string getMerchantID() Obtain <p>Merchant ID.</p>
+ * @method void setMerchantID(string $MerchantID) Set <p>Merchant ID.</p>
+ * @method string getMerchantName() Obtain <p>Merchant name.</p>
+ * @method void setMerchantName(string $MerchantName) Set <p>Merchant name.</p>
  */
-class CreateMNPSecretKeyRequest extends AbstractModel
+class ChangePaymentBoundMerchantRequest extends AbstractModel
 {
     /**
      * @var string <p>Platform ID.</p>
@@ -35,19 +37,25 @@ class CreateMNPSecretKeyRequest extends AbstractModel
     public $PlatformId;
 
     /**
-     * @var string <p>Mini program or mini game appid.</p>
+     * @var string <p>Mini program appid.</p>
      */
-    public $MNPId;
+    public $TeamId;
 
     /**
-     * @var string <p>CICD ID</p>
+     * @var string <p>Merchant ID.</p>
      */
-    public $PipelineId;
+    public $MerchantID;
+
+    /**
+     * @var string <p>Merchant name.</p>
+     */
+    public $MerchantName;
 
     /**
      * @param string $PlatformId <p>Platform ID.</p>
-     * @param string $MNPId <p>Mini program or mini game appid.</p>
-     * @param string $PipelineId <p>CICD ID</p>
+     * @param string $TeamId <p>Mini program appid.</p>
+     * @param string $MerchantID <p>Merchant ID.</p>
+     * @param string $MerchantName <p>Merchant name.</p>
      */
     function __construct()
     {
@@ -66,12 +74,16 @@ class CreateMNPSecretKeyRequest extends AbstractModel
             $this->PlatformId = $param["PlatformId"];
         }
 
-        if (array_key_exists("MNPId",$param) and $param["MNPId"] !== null) {
-            $this->MNPId = $param["MNPId"];
+        if (array_key_exists("TeamId",$param) and $param["TeamId"] !== null) {
+            $this->TeamId = $param["TeamId"];
         }
 
-        if (array_key_exists("PipelineId",$param) and $param["PipelineId"] !== null) {
-            $this->PipelineId = $param["PipelineId"];
+        if (array_key_exists("MerchantID",$param) and $param["MerchantID"] !== null) {
+            $this->MerchantID = $param["MerchantID"];
+        }
+
+        if (array_key_exists("MerchantName",$param) and $param["MerchantName"] !== null) {
+            $this->MerchantName = $param["MerchantName"];
         }
     }
 }

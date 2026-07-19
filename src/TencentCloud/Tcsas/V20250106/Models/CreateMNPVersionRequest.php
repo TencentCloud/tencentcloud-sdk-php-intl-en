@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
  * @method string getMNPVersionIntro() Obtain <p>Version description.</p>
  * @method void setMNPVersionIntro(string $MNPVersionIntro) Set <p>Version description.</p>
- * @method integer getVersionType() Obtain <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
- * @method void setVersionType(integer $VersionType) Set <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
- * @method string getCompileCondition() Obtain <p>Compilation condition.</p>
- * @method void setCompileCondition(string $CompileCondition) Set <p>Compilation condition.</p>
+ * @method integer getVersionType() Obtain <p>Version type. Valid values: 1: Debug version; 2: Development version. Default value: 2.</p>
+ * @method void setVersionType(integer $VersionType) Set <p>Version type. Valid values: 1: Debug version; 2: Development version. Default value: 2.</p>
+ * @method string getCompileCondition() Obtain <p>Compilation conditions.</p>
+ * @method void setCompileCondition(string $CompileCondition) Set <p>Compilation conditions.</p>
  * @method string getCompileConfig() Obtain <p>Compilation configuration.</p>
  * @method void setCompileConfig(string $CompileConfig) Set <p>Compilation configuration.</p>
- * @method string getPipelineId() Obtain <p>CI/CD key ID.</p>
- * @method void setPipelineId(string $PipelineId) Set <p>CI/CD key ID.</p>
+ * @method string getPipelineId() Obtain <p>CICD ID</p>
+ * @method void setPipelineId(string $PipelineId) Set <p>CICD ID</p>
  * @method string getFileInnerUrl() Obtain <p>Internal file URL.</p>
  * @method void setFileInnerUrl(string $FileInnerUrl) Set <p>Internal file URL.</p>
  */
@@ -69,12 +69,12 @@ class CreateMNPVersionRequest extends AbstractModel
     public $MNPVersionIntro;
 
     /**
-     * @var integer <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+     * @var integer <p>Version type. Valid values: 1: Debug version; 2: Development version. Default value: 2.</p>
      */
     public $VersionType;
 
     /**
-     * @var string <p>Compilation condition.</p>
+     * @var string <p>Compilation conditions.</p>
      */
     public $CompileCondition;
 
@@ -84,7 +84,7 @@ class CreateMNPVersionRequest extends AbstractModel
     public $CompileConfig;
 
     /**
-     * @var string <p>CI/CD key ID.</p>
+     * @var string <p>CICD ID</p>
      */
     public $PipelineId;
 
@@ -99,10 +99,10 @@ class CreateMNPVersionRequest extends AbstractModel
      * @param string $FileUrl <p>URL of the mini program file exported from the IDE and uploaded to the file server.<p>
      * @param string $PlatformId <p>Platform ID.</p>
      * @param string $MNPVersionIntro <p>Version description.</p>
-     * @param integer $VersionType <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
-     * @param string $CompileCondition <p>Compilation condition.</p>
+     * @param integer $VersionType <p>Version type. Valid values: 1: Debug version; 2: Development version. Default value: 2.</p>
+     * @param string $CompileCondition <p>Compilation conditions.</p>
      * @param string $CompileConfig <p>Compilation configuration.</p>
-     * @param string $PipelineId <p>CI/CD key ID.</p>
+     * @param string $PipelineId <p>CICD ID</p>
      * @param string $FileInnerUrl <p>Internal file URL.</p>
      */
     function __construct()
