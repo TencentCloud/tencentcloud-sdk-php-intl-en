@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(float $StartTimeOffset) Set <p>Start time offset of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video starts from the start position of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video starts from the nth second position of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
  * @method float getEndTimeOffset() Obtain <p>Offset of the termination time of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video lasts until the end of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video lasts until the nth second of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
  * @method void setEndTimeOffset(float $EndTimeOffset) Set <p>Offset of the termination time of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video lasts until the end of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video lasts until the nth second of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
+ * @method OverrideTranscodeParameter getOverrideParameter() Obtain <p>Custom video transcoding parameters.</p>
+ * @method void setOverrideParameter(OverrideTranscodeParameter $OverrideParameter) Set <p>Custom video transcoding parameters.</p>
  * @method array getSubtitleInfoSet() Obtain <p>List of subtitle suppression information. Up to 2 are supported.</p>
  * @method void setSubtitleInfoSet(array $SubtitleInfoSet) Set <p>List of subtitle suppression information. Up to 2 are supported.</p>
  */
@@ -89,6 +91,11 @@ class TranscodeTaskInput extends AbstractModel
     public $EndTimeOffset;
 
     /**
+     * @var OverrideTranscodeParameter <p>Custom video transcoding parameters.</p>
+     */
+    public $OverrideParameter;
+
+    /**
      * @var array <p>List of subtitle suppression information. Up to 2 are supported.</p>
      */
     public $SubtitleInfoSet;
@@ -103,6 +110,7 @@ class TranscodeTaskInput extends AbstractModel
      * @param array $HeadTailSet <p>Opening and ending list. Up to 10 opening and ending sequences are supported.</p>
      * @param float $StartTimeOffset <p>Start time offset of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video starts from the start position of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video starts from the nth second position of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
      * @param float $EndTimeOffset <p>Offset of the termination time of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video lasts until the end of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video lasts until the nth second of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
+     * @param OverrideTranscodeParameter $OverrideParameter <p>Custom video transcoding parameters.</p>
      * @param array $SubtitleInfoSet <p>List of subtitle suppression information. Up to 2 are supported.</p>
      */
     function __construct()
@@ -170,6 +178,11 @@ class TranscodeTaskInput extends AbstractModel
 
         if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
             $this->EndTimeOffset = $param["EndTimeOffset"];
+        }
+
+        if (array_key_exists("OverrideParameter",$param) and $param["OverrideParameter"] !== null) {
+            $this->OverrideParameter = new OverrideTranscodeParameter();
+            $this->OverrideParameter->deserialize($param["OverrideParameter"]);
         }
 
         if (array_key_exists("SubtitleInfoSet",$param) and $param["SubtitleInfoSet"] !== null) {

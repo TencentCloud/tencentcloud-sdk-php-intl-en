@@ -20,510 +20,422 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Event notification content, where TranscodeCompleteEvent, ConcatCompleteEvent, ClipCompleteEvent, CreateImageSpriteCompleteEvent, and SnapshotByTimeOffsetCompleteEvent are event notifications for tasks that are initiated by v2017-compatible APIs.
  *
- * @method string getEventHandle() Obtain Event handler. The caller must call ConfirmEvents to acknowledge the message has been received. Confirmed Valid Time is 30 seconds. After expiration, the event can be retrieved again.
- * @method void setEventHandle(string $EventHandle) Set Event handler. The caller must call ConfirmEvents to acknowledge the message has been received. Confirmed Valid Time is 30 seconds. After expiration, the event can be retrieved again.
- * @method string getEventType() Obtain <b>Supported event types:</b>
-<li>NewFileUpload: Video upload completed;</li>
-<li>ProcedureStateChanged: Task flow status change.</li>
-<li>FileDeleted: Video deletion completed;</li>
-<li>RestoreMediaComplete: Video retrieval completion;</li>
-<li>PullComplete: Video conversion pull completed.</li>
-<li>EditMediaComplete: Video editing completed;</li>
-<li>SplitMediaComplete: Video splitting completed;</li>
-<li>ComposeMediaComplete: Media file creation completion;</li>
-<li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li>
-<li>RemoveWatermark: Intelligent watermark removal completion.</li>
-<li>RebuildMediaComplete: Audio and video quality rebirth completion event (This is not recommended).</li>
-<li>ReviewAudioVideoComplete: Audio/video moderation completed;</li>
-<li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li>
-<li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion.</li>
-<li>DescribeFileAttributesComplete: File attribute acquisition completion.</li>
-<li>QualityInspectComplete: Audio and video quality inspection completed;</li>
-<li>QualityEnhanceComplete: Audio and video quality rebirth task completion;</li>
-<li>PersistenceComplete: Edit completed.</li>
-<li>ComplexAdaptiveDynamicStreamingComplete: complex adaptive bitstream task completed.</li>
-<li>ProcessMediaByMPSComplete: MPS video processing is completed.</li>
-<li>AigcImageTaskComplete: AIGC image generation task complete.</li>
-<li>AigcVideoTaskComplete: AIGC video generation task completed.</li>
-<b>Event types compatible with the 2017 version:</b>
-<li>TranscodeComplete: video transcoding completion;</li>
-<li>ConcatComplete: Video splicing completion.</li>
-<li>ClipComplete: Video editing completed;</li>
-<li>CreateImageSpriteComplete: Video thumbnail capture completion.</li>
-<li>CreateSnapshotByTimeOffsetComplete: Video screenshot by time point.</li>
- * @method void setEventType(string $EventType) Set <b>Supported event types:</b>
-<li>NewFileUpload: Video upload completed;</li>
-<li>ProcedureStateChanged: Task flow status change.</li>
-<li>FileDeleted: Video deletion completed;</li>
-<li>RestoreMediaComplete: Video retrieval completion;</li>
-<li>PullComplete: Video conversion pull completed.</li>
-<li>EditMediaComplete: Video editing completed;</li>
-<li>SplitMediaComplete: Video splitting completed;</li>
-<li>ComposeMediaComplete: Media file creation completion;</li>
-<li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li>
-<li>RemoveWatermark: Intelligent watermark removal completion.</li>
-<li>RebuildMediaComplete: Audio and video quality rebirth completion event (This is not recommended).</li>
-<li>ReviewAudioVideoComplete: Audio/video moderation completed;</li>
-<li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li>
-<li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion.</li>
-<li>DescribeFileAttributesComplete: File attribute acquisition completion.</li>
-<li>QualityInspectComplete: Audio and video quality inspection completed;</li>
-<li>QualityEnhanceComplete: Audio and video quality rebirth task completion;</li>
-<li>PersistenceComplete: Edit completed.</li>
-<li>ComplexAdaptiveDynamicStreamingComplete: complex adaptive bitstream task completed.</li>
-<li>ProcessMediaByMPSComplete: MPS video processing is completed.</li>
-<li>AigcImageTaskComplete: AIGC image generation task complete.</li>
-<li>AigcVideoTaskComplete: AIGC video generation task completed.</li>
-<b>Event types compatible with the 2017 version:</b>
-<li>TranscodeComplete: video transcoding completion;</li>
-<li>ConcatComplete: Video splicing completion.</li>
-<li>ClipComplete: Video editing completed;</li>
-<li>CreateImageSpriteComplete: Video thumbnail capture completion.</li>
-<li>CreateSnapshotByTimeOffsetComplete: Video screenshot by time point.</li>
- * @method FileUploadTask getFileUploadEvent() Obtain Video upload completion event. Valid when the event type is NewFileUpload.
+ * @method string getEventHandle() Obtain <p>Event handler. The caller must call ConfirmEvents to acknowledge the message has been received. Confirmed Valid Time is 30 seconds. After expiration, the event can be retrieved again.</p>
+ * @method void setEventHandle(string $EventHandle) Set <p>Event handler. The caller must call ConfirmEvents to acknowledge the message has been received. Confirmed Valid Time is 30 seconds. After expiration, the event can be retrieved again.</p>
+ * @method string getEventType() Obtain <p><b>Supported event types:</b></p><li>NewFileUpload: Video upload complete;</li><li>ProcedureStateChanged: Task flow status change;</li><li>FileDeleted: Video deletion completed;</li><li>RestoreMediaComplete: Video retrieval completion;</li><li>PullComplete: Video conversion completed;</li><li>EditMediaComplete: Video editing completed;</li><li>SplitMediaComplete: Video splitting completed;</li><li>ComposeMediaComplete: Media file creation completion;</li><li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li><li>RemoveWatermark: Intelligent watermark removal completion.</li><li>RebuildMediaComplete: Audio and video quality rebirth completion event (not recommended).</li><li>ReviewAudioVideoComplete: Audio/video moderation completed;</li><li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li><li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion;</li><li>DescribeFileAttributesComplete: File attribute acquisition completion;</li><li>QualityInspectComplete: Audio and video quality inspection completed;</li><li>QualityEnhanceComplete: Audio and video quality rebirth task completion;</li><li>PersistenceComplete: Edit persistence completed;</li><li>ComplexAdaptiveDynamicStreamingComplete: Complex adaptive bitstream task completion.</li><li>ProcessMediaByMPSComplete: MPS video processing completed.</li><li>AigcImageTaskComplete: AIGC image generation task completed.</li><li>AigcVideoTaskComplete: AIGC video generation task completed.</li><li>DescribeAigcFaceInfoAsyncComplete: Asynchronously fetch AIGC human face information task completed.</li><b>Event types compatible with the 2017 version:</b><li>TranscodeComplete: Video transcoding completion;</li><li>ConcatComplete: Video splicing completion;</li><li>ClipComplete: Video editing completed;</li><li>CreateImageSpriteComplete: Video thumbnail capture completion;</li><li>CreateSnapshotByTimeOffsetComplete: Video screenshot by time point.</li>
+ * @method void setEventType(string $EventType) Set <p><b>Supported event types:</b></p><li>NewFileUpload: Video upload complete;</li><li>ProcedureStateChanged: Task flow status change;</li><li>FileDeleted: Video deletion completed;</li><li>RestoreMediaComplete: Video retrieval completion;</li><li>PullComplete: Video conversion completed;</li><li>EditMediaComplete: Video editing completed;</li><li>SplitMediaComplete: Video splitting completed;</li><li>ComposeMediaComplete: Media file creation completion;</li><li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li><li>RemoveWatermark: Intelligent watermark removal completion.</li><li>RebuildMediaComplete: Audio and video quality rebirth completion event (not recommended).</li><li>ReviewAudioVideoComplete: Audio/video moderation completed;</li><li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li><li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion;</li><li>DescribeFileAttributesComplete: File attribute acquisition completion;</li><li>QualityInspectComplete: Audio and video quality inspection completed;</li><li>QualityEnhanceComplete: Audio and video quality rebirth task completion;</li><li>PersistenceComplete: Edit persistence completed;</li><li>ComplexAdaptiveDynamicStreamingComplete: Complex adaptive bitstream task completion.</li><li>ProcessMediaByMPSComplete: MPS video processing completed.</li><li>AigcImageTaskComplete: AIGC image generation task completed.</li><li>AigcVideoTaskComplete: AIGC video generation task completed.</li><li>DescribeAigcFaceInfoAsyncComplete: Asynchronously fetch AIGC human face information task completed.</li><b>Event types compatible with the 2017 version:</b><li>TranscodeComplete: Video transcoding completion;</li><li>ConcatComplete: Video splicing completion;</li><li>ClipComplete: Video editing completed;</li><li>CreateImageSpriteComplete: Video thumbnail capture completion;</li><li>CreateSnapshotByTimeOffsetComplete: Video screenshot by time point.</li>
+ * @method FileUploadTask getFileUploadEvent() Obtain <p>Video upload completion event. Valid when the event type is NewFileUpload.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileUploadEvent(FileUploadTask $FileUploadEvent) Set Video upload completion event. Valid when the event type is NewFileUpload.
+ * @method void setFileUploadEvent(FileUploadTask $FileUploadEvent) Set <p>Video upload completion event. Valid when the event type is NewFileUpload.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ProcedureTask getProcedureStateChangeEvent() Obtain Task flow status change event. Valid when the event type is ProcedureStateChanged.
+ * @method ProcedureTask getProcedureStateChangeEvent() Obtain <p>Task flow status change event. Valid when the event type is ProcedureStateChanged.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProcedureStateChangeEvent(ProcedureTask $ProcedureStateChangeEvent) Set Task flow status change event. Valid when the event type is ProcedureStateChanged.
+ * @method void setProcedureStateChangeEvent(ProcedureTask $ProcedureStateChangeEvent) Set <p>Task flow status change event. Valid when the event type is ProcedureStateChanged.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method FileDeleteTask getFileDeleteEvent() Obtain File deletion event. Valid when the event type is FileDeleted.
+ * @method FileDeleteTask getFileDeleteEvent() Obtain <p>File deletion event. Valid when the event type is FileDeleted.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileDeleteEvent(FileDeleteTask $FileDeleteEvent) Set File deletion event. Valid when the event type is FileDeleted.
+ * @method void setFileDeleteEvent(FileDeleteTask $FileDeleteEvent) Set <p>File deletion event. Valid when the event type is FileDeleted.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method PullUploadTask getPullCompleteEvent() Obtain Video pull completion event. Valid when the event type is PullComplete.
+ * @method PullUploadTask getPullCompleteEvent() Obtain <p>Video pull completion event. Valid when the event type is PullComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPullCompleteEvent(PullUploadTask $PullCompleteEvent) Set Video pull completion event. Valid when the event type is PullComplete.
+ * @method void setPullCompleteEvent(PullUploadTask $PullCompleteEvent) Set <p>Video pull completion event. Valid when the event type is PullComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method EditMediaTask getEditMediaCompleteEvent() Obtain Video editing completion event. Valid when the event type is EditMediaComplete.
+ * @method EditMediaTask getEditMediaCompleteEvent() Obtain <p>Video editing completion event. Valid when the event type is EditMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEditMediaCompleteEvent(EditMediaTask $EditMediaCompleteEvent) Set Video editing completion event. Valid when the event type is EditMediaComplete.
+ * @method void setEditMediaCompleteEvent(EditMediaTask $EditMediaCompleteEvent) Set <p>Video editing completion event. Valid when the event type is EditMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method SplitMediaTask getSplitMediaCompleteEvent() Obtain Video splitting completion event. Valid when the event type is SplitMediaComplete.
+ * @method SplitMediaTask getSplitMediaCompleteEvent() Obtain <p>Video splitting completion event. Valid when the event type is SplitMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSplitMediaCompleteEvent(SplitMediaTask $SplitMediaCompleteEvent) Set Video splitting completion event. Valid when the event type is SplitMediaComplete.
+ * @method void setSplitMediaCompleteEvent(SplitMediaTask $SplitMediaCompleteEvent) Set <p>Video splitting completion event. Valid when the event type is SplitMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ComposeMediaTask getComposeMediaCompleteEvent() Obtain Media file creation task completion event. Valid when the event type is ComposeMediaComplete.
+ * @method ComposeMediaTask getComposeMediaCompleteEvent() Obtain <p>Media file creation task completion event. Valid when the event type is ComposeMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComposeMediaCompleteEvent(ComposeMediaTask $ComposeMediaCompleteEvent) Set Media file creation task completion event. Valid when the event type is ComposeMediaComplete.
+ * @method void setComposeMediaCompleteEvent(ComposeMediaTask $ComposeMediaCompleteEvent) Set <p>Media file creation task completion event. Valid when the event type is ComposeMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ClipTask2017 getClipCompleteEvent() Obtain Video editing completion event. Valid when the event type is ClipComplete.
+ * @method ClipTask2017 getClipCompleteEvent() Obtain <p>Video editing completion event. Valid when the event type is ClipComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClipCompleteEvent(ClipTask2017 $ClipCompleteEvent) Set Video editing completion event. Valid when the event type is ClipComplete.
+ * @method void setClipCompleteEvent(ClipTask2017 $ClipCompleteEvent) Set <p>Video editing completion event. Valid when the event type is ClipComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method TranscodeTask2017 getTranscodeCompleteEvent() Obtain Video transcoding completion event, valid when the event type is TranscodeComplete.
+ * @method TranscodeTask2017 getTranscodeCompleteEvent() Obtain <p>Video transcoding completion event. Valid when the event type is TranscodeComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTranscodeCompleteEvent(TranscodeTask2017 $TranscodeCompleteEvent) Set Video transcoding completion event, valid when the event type is TranscodeComplete.
+ * @method void setTranscodeCompleteEvent(TranscodeTask2017 $TranscodeCompleteEvent) Set <p>Video transcoding completion event. Valid when the event type is TranscodeComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method CreateImageSpriteTask2017 getCreateImageSpriteCompleteEvent() Obtain Video thumbnail capture completion event. Valid when the event type is CreateImageSpriteComplete.
+ * @method CreateImageSpriteTask2017 getCreateImageSpriteCompleteEvent() Obtain <p>Video thumbnail capture completion event. Valid when the event type is CreateImageSpriteComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateImageSpriteCompleteEvent(CreateImageSpriteTask2017 $CreateImageSpriteCompleteEvent) Set Video thumbnail capture completion event. Valid when the event type is CreateImageSpriteComplete.
+ * @method void setCreateImageSpriteCompleteEvent(CreateImageSpriteTask2017 $CreateImageSpriteCompleteEvent) Set <p>Video thumbnail capture completion event. Valid when the event type is CreateImageSpriteComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ConcatTask2017 getConcatCompleteEvent() Obtain Video splicing completion event. Valid when the event type is ConcatComplete.
+ * @method ConcatTask2017 getConcatCompleteEvent() Obtain <p>Video splicing completion event. Valid when the event type is ConcatComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConcatCompleteEvent(ConcatTask2017 $ConcatCompleteEvent) Set Video splicing completion event. Valid when the event type is ConcatComplete.
+ * @method void setConcatCompleteEvent(ConcatTask2017 $ConcatCompleteEvent) Set <p>Video splicing completion event. Valid when the event type is ConcatComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetCompleteEvent() Obtain Video screenshot by time point completion event. Valid when the event type is CreateSnapshotByTimeOffsetComplete.
+ * @method SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetCompleteEvent() Obtain <p>Video screenshot by time point completion event. Valid when the event type is CreateSnapshotByTimeOffsetComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSnapshotByTimeOffsetCompleteEvent(SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetCompleteEvent) Set Video screenshot by time point completion event. Valid when the event type is CreateSnapshotByTimeOffsetComplete.
+ * @method void setSnapshotByTimeOffsetCompleteEvent(SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetCompleteEvent) Set <p>Video screenshot by time point completion event. Valid when the event type is CreateSnapshotByTimeOffsetComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method WechatPublishTask getWechatPublishCompleteEvent() Obtain WeChat Publishing Completion Event. Valid when the event type is WechatPublishComplete.
+ * @method WechatPublishTask getWechatPublishCompleteEvent() Obtain <p>WeChat Publishing Completion Event. Valid when the event type is WechatPublishComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWechatPublishCompleteEvent(WechatPublishTask $WechatPublishCompleteEvent) Set WeChat Publishing Completion Event. Valid when the event type is WechatPublishComplete.
+ * @method void setWechatPublishCompleteEvent(WechatPublishTask $WechatPublishCompleteEvent) Set <p>WeChat Publishing Completion Event. Valid when the event type is WechatPublishComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method WechatMiniProgramPublishTask getWechatMiniProgramPublishCompleteEvent() Obtain WeChat Mini Program Publishing Task Completion Event. Valid when the event type is WechatMiniProgramPublishComplete.
+ * @method WechatMiniProgramPublishTask getWechatMiniProgramPublishCompleteEvent() Obtain <p>WeChat Mini Program Publishing Task Completion Event. Valid when the event type is WechatMiniProgramPublishComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWechatMiniProgramPublishCompleteEvent(WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent) Set WeChat Mini Program Publishing Task Completion Event. Valid when the event type is WechatMiniProgramPublishComplete.
+ * @method void setWechatMiniProgramPublishCompleteEvent(WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent) Set <p>WeChat Mini Program Publishing Task Completion Event. Valid when the event type is WechatMiniProgramPublishComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method RemoveWatermarkTask getRemoveWatermarkCompleteEvent() Obtain Intelligent Watermark Removal Completion Event is valid when the event type is RemoveWatermark.
+ * @method RemoveWatermarkTask getRemoveWatermarkCompleteEvent() Obtain <p>Intelligent Watermark Removal Completion Event. Valid when the event type is RemoveWatermark.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRemoveWatermarkCompleteEvent(RemoveWatermarkTask $RemoveWatermarkCompleteEvent) Set Intelligent Watermark Removal Completion Event is valid when the event type is RemoveWatermark.
+ * @method void setRemoveWatermarkCompleteEvent(RemoveWatermarkTask $RemoveWatermarkCompleteEvent) Set <p>Intelligent Watermark Removal Completion Event. Valid when the event type is RemoveWatermark.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method RestoreMediaTask getRestoreMediaCompleteEvent() Obtain Video retrieval completion event. Valid when the event type is RestoreMediaComplete.
+ * @method RestoreMediaTask getRestoreMediaCompleteEvent() Obtain <p>Video retrieval completion event. Valid when the event type is RestoreMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRestoreMediaCompleteEvent(RestoreMediaTask $RestoreMediaCompleteEvent) Set Video retrieval completion event. Valid when the event type is RestoreMediaComplete.
+ * @method void setRestoreMediaCompleteEvent(RestoreMediaTask $RestoreMediaCompleteEvent) Set <p>Video retrieval completion event. Valid when the event type is RestoreMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method RebuildMediaTask getRebuildMediaCompleteEvent() Obtain Audio and video quality rebirth completion event. Valid when the event type is RebuildMediaComplete.
+ * @method RebuildMediaTask getRebuildMediaCompleteEvent() Obtain <p>Audio and video quality rebirth completion event. Valid when the event type is RebuildMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRebuildMediaCompleteEvent(RebuildMediaTask $RebuildMediaCompleteEvent) Set Audio and video quality rebirth completion event. Valid when the event type is RebuildMediaComplete.
+ * @method void setRebuildMediaCompleteEvent(RebuildMediaTask $RebuildMediaCompleteEvent) Set <p>Audio and video quality rebirth completion event. Valid when the event type is RebuildMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ExtractTraceWatermarkTask getExtractTraceWatermarkCompleteEvent() Obtain Traceability watermark extraction completion event. Valid when the event type is ExtractTraceWatermarkComplete.
+ * @method ExtractTraceWatermarkTask getExtractTraceWatermarkCompleteEvent() Obtain <p>Traceability watermark extraction completion event. Valid when the event type is ExtractTraceWatermarkComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExtractTraceWatermarkCompleteEvent(ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent) Set Traceability watermark extraction completion event. Valid when the event type is ExtractTraceWatermarkComplete.
+ * @method void setExtractTraceWatermarkCompleteEvent(ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent) Set <p>Traceability watermark extraction completion event. Valid when the event type is ExtractTraceWatermarkComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkCompleteEvent() Obtain Copyright watermark extraction completion event. Valid when the event type is ExtractCopyRightWatermarkComplete.
+ * @method ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkCompleteEvent() Obtain <p>Copyright watermark extraction completion event. Valid when the event type is ExtractCopyRightWatermarkComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExtractCopyRightWatermarkCompleteEvent(ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkCompleteEvent) Set Copyright watermark extraction completion event. Valid when the event type is ExtractCopyRightWatermarkComplete.
+ * @method void setExtractCopyRightWatermarkCompleteEvent(ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkCompleteEvent) Set <p>Copyright watermark extraction completion event. Valid when the event type is ExtractCopyRightWatermarkComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ReviewAudioVideoTask getReviewAudioVideoCompleteEvent() Obtain Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.
+ * @method ReviewAudioVideoTask getReviewAudioVideoCompleteEvent() Obtain <p>Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReviewAudioVideoCompleteEvent(ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent) Set Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.
+ * @method void setReviewAudioVideoCompleteEvent(ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent) Set <p>Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ReduceMediaBitrateTask getReduceMediaBitrateCompleteEvent() Obtain This field is invalid.
+ * @method ReduceMediaBitrateTask getReduceMediaBitrateCompleteEvent() Obtain <p>This field is invalid.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReduceMediaBitrateCompleteEvent(ReduceMediaBitrateTask $ReduceMediaBitrateCompleteEvent) Set This field is invalid.
+ * @method void setReduceMediaBitrateCompleteEvent(ReduceMediaBitrateTask $ReduceMediaBitrateCompleteEvent) Set <p>This field is invalid.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method DescribeFileAttributesTask getDescribeFileAttributesCompleteEvent() Obtain File attribute acquisition completion event. Valid when the event type is DescribeFileAttributesComplete.
+ * @method DescribeFileAttributesTask getDescribeFileAttributesCompleteEvent() Obtain <p>File attribute acquisition completion event. Valid when the event type is DescribeFileAttributesComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDescribeFileAttributesCompleteEvent(DescribeFileAttributesTask $DescribeFileAttributesCompleteEvent) Set File attribute acquisition completion event. Valid when the event type is DescribeFileAttributesComplete.
+ * @method void setDescribeFileAttributesCompleteEvent(DescribeFileAttributesTask $DescribeFileAttributesCompleteEvent) Set <p>File attribute acquisition completion event. Valid when the event type is DescribeFileAttributesComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method QualityInspectTask getQualityInspectCompleteEvent() Obtain Audio and video quality detection completion event. Valid when the event type is QualityInspectComplete.
+ * @method QualityInspectTask getQualityInspectCompleteEvent() Obtain <p>Audio and video quality detection completion event. Valid when the event type is QualityInspectComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQualityInspectCompleteEvent(QualityInspectTask $QualityInspectCompleteEvent) Set Audio and video quality detection completion event. Valid when the event type is QualityInspectComplete.
+ * @method void setQualityInspectCompleteEvent(QualityInspectTask $QualityInspectCompleteEvent) Set <p>Audio and video quality detection completion event. Valid when the event type is QualityInspectComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method QualityEnhanceTask getQualityEnhanceCompleteEvent() Obtain Audio and video quality rebirth completion event. Valid when the event type is QualityEnhanceComplete.
+ * @method QualityEnhanceTask getQualityEnhanceCompleteEvent() Obtain <p>Audio and video quality rebirth completion event. Valid when the event type is QualityEnhanceComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQualityEnhanceCompleteEvent(QualityEnhanceTask $QualityEnhanceCompleteEvent) Set Audio and video quality rebirth completion event. Valid when the event type is QualityEnhanceComplete.
+ * @method void setQualityEnhanceCompleteEvent(QualityEnhanceTask $QualityEnhanceCompleteEvent) Set <p>Audio and video quality rebirth completion event. Valid when the event type is QualityEnhanceComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method MediaCastEvent getMediaCastStatusChangedEvent() Obtain MediaCastStatus changed event, valid when the event type is MediaCastStatusChanged.
-Pay attention to: this field may return null, indicating that no valid value can be obtained.
- * @method void setMediaCastStatusChangedEvent(MediaCastEvent $MediaCastStatusChangedEvent) Set MediaCastStatus changed event, valid when the event type is MediaCastStatusChanged.
-Pay attention to: this field may return null, indicating that no valid value can be obtained.
- * @method PersistenceCompleteTask getPersistenceCompleteEvent() Obtain Editing solidification completion event. Valid when the event type is PersistenceComplete.
+ * @method MediaCastEvent getMediaCastStatusChangedEvent() Obtain <p>Media forwarding status change event. Valid when the event type is MediaCastStatusChanged.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPersistenceCompleteEvent(PersistenceCompleteTask $PersistenceCompleteEvent) Set Editing solidification completion event. Valid when the event type is PersistenceComplete.
+ * @method void setMediaCastStatusChangedEvent(MediaCastEvent $MediaCastStatusChangedEvent) Set <p>Media forwarding status change event. Valid when the event type is MediaCastStatusChanged.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ComplexAdaptiveDynamicStreamingTask getComplexAdaptiveDynamicStreamingCompleteEvent() Obtain Adaptive bitrate task information, valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.
+ * @method PersistenceCompleteTask getPersistenceCompleteEvent() Obtain <p>Editing solidification completion event. Valid when the event type is PersistenceComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComplexAdaptiveDynamicStreamingCompleteEvent(ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingCompleteEvent) Set Adaptive bitrate task information, valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.
+ * @method void setPersistenceCompleteEvent(PersistenceCompleteTask $PersistenceCompleteEvent) Set <p>Editing solidification completion event. Valid when the event type is PersistenceComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ProcessMediaByMPS getProcessMediaByMPSCompleteEvent() Obtain MPS video processing task information. Valid only when EventType is ProcessMediaByMPSComplete.
- * @method void setProcessMediaByMPSCompleteEvent(ProcessMediaByMPS $ProcessMediaByMPSCompleteEvent) Set MPS video processing task information. Valid only when EventType is ProcessMediaByMPSComplete.
- * @method AigcImageTask getAigcImageCompleteEvent() Obtain AIGC image generation task info. Valid only when EventType is AigcImageTaskComplete.
- * @method void setAigcImageCompleteEvent(AigcImageTask $AigcImageCompleteEvent) Set AIGC image generation task info. Valid only when EventType is AigcImageTaskComplete.
- * @method AigcVideoTask getAigcVideoCompleteEvent() Obtain AIGC video task info. Valid only when EventType is AigcVideoTaskComplete.
- * @method void setAigcVideoCompleteEvent(AigcVideoTask $AigcVideoCompleteEvent) Set AIGC video task info. Valid only when EventType is AigcVideoTaskComplete.
- * @method ExtractBlindWatermarkTask getExtractBlindWatermarkComplete() Obtain Extract digital watermark information. Valid at that time only when EventType is ExtractBlindWatermarkComplete.
- * @method void setExtractBlindWatermarkComplete(ExtractBlindWatermarkTask $ExtractBlindWatermarkComplete) Set Extract digital watermark information. Valid at that time only when EventType is ExtractBlindWatermarkComplete.
- * @method SceneAigcImageTask getSceneAigcImageCompleteEvent() Obtain AIGC scenario-based image generation task info, valid only when EventType is SceneAigcImageCompleteEvent.
- * @method void setSceneAigcImageCompleteEvent(SceneAigcImageTask $SceneAigcImageCompleteEvent) Set AIGC scenario-based image generation task info, valid only when EventType is SceneAigcImageCompleteEvent.
- * @method ProcessImageAsyncTask getProcessImageAsyncCompleteEvent() Obtain Image asynchronous task processing info, valid only when EventType is ProcessImageAsyncCompleteEvent.
- * @method void setProcessImageAsyncCompleteEvent(ProcessImageAsyncTask $ProcessImageAsyncCompleteEvent) Set Image asynchronous task processing info, valid only when EventType is ProcessImageAsyncCompleteEvent.
+ * @method ComplexAdaptiveDynamicStreamingTask getComplexAdaptiveDynamicStreamingCompleteEvent() Obtain <p>Adaptive bitrate task information. Valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setComplexAdaptiveDynamicStreamingCompleteEvent(ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingCompleteEvent) Set <p>Adaptive bitrate task information. Valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ProcessMediaByMPS getProcessMediaByMPSCompleteEvent() Obtain <p>MPS video processing task information. Valid only when EventType is ProcessMediaByMPSComplete.</p>
+ * @method void setProcessMediaByMPSCompleteEvent(ProcessMediaByMPS $ProcessMediaByMPSCompleteEvent) Set <p>MPS video processing task information. Valid only when EventType is ProcessMediaByMPSComplete.</p>
+ * @method AigcImageTask getAigcImageCompleteEvent() Obtain <p>AIGC image generation task info, valid only when EventType is AigcImageTaskComplete.</p>
+ * @method void setAigcImageCompleteEvent(AigcImageTask $AigcImageCompleteEvent) Set <p>AIGC image generation task info, valid only when EventType is AigcImageTaskComplete.</p>
+ * @method AigcVideoTask getAigcVideoCompleteEvent() Obtain <p>AIGC video task info, valid only when EventType is AigcVideoTaskComplete.</p>
+ * @method void setAigcVideoCompleteEvent(AigcVideoTask $AigcVideoCompleteEvent) Set <p>AIGC video task info, valid only when EventType is AigcVideoTaskComplete.</p>
+ * @method ExtractBlindWatermarkTask getExtractBlindWatermarkComplete() Obtain <p>Extract digital watermark info, valid only when EventType is ExtractBlindWatermarkComplete.</p>
+ * @method void setExtractBlindWatermarkComplete(ExtractBlindWatermarkTask $ExtractBlindWatermarkComplete) Set <p>Extract digital watermark info, valid only when EventType is ExtractBlindWatermarkComplete.</p>
+ * @method SceneAigcImageTask getSceneAigcImageCompleteEvent() Obtain <p>Scenario-based AIGC image generation task info. Valid only when EventType is SceneAigcImageCompleteEvent.</p>
+ * @method void setSceneAigcImageCompleteEvent(SceneAigcImageTask $SceneAigcImageCompleteEvent) Set <p>Scenario-based AIGC image generation task info. Valid only when EventType is SceneAigcImageCompleteEvent.</p>
+ * @method ProcessImageAsyncTask getProcessImageAsyncCompleteEvent() Obtain <p>Image asynchronous task processing information. Valid only when EventType is ProcessImageAsyncCompleteEvent.</p>
+ * @method void setProcessImageAsyncCompleteEvent(ProcessImageAsyncTask $ProcessImageAsyncCompleteEvent) Set <p>Image asynchronous task processing information. Valid only when EventType is ProcessImageAsyncCompleteEvent.</p>
+ * @method CreateAigcAdvancedCustomElementTask getCreateAigcAdvancedCustomElementCompleteEvent() Obtain <p>AIGC custom entity information, valid only when EventType is CreateAigcAdvancedCustomElementCompleteEvent and this field has a value.</p>
+ * @method void setCreateAigcAdvancedCustomElementCompleteEvent(CreateAigcAdvancedCustomElementTask $CreateAigcAdvancedCustomElementCompleteEvent) Set <p>AIGC custom entity information, valid only when EventType is CreateAigcAdvancedCustomElementCompleteEvent and this field has a value.</p>
+ * @method CreateAigcCustomVoiceTask getCreateAigcCustomVoiceCompleteEvent() Obtain <p>AIGC custom tone information. This field has a value only when EventType is CreateAigcCustomVoiceCompleteEvent.</p>
+ * @method void setCreateAigcCustomVoiceCompleteEvent(CreateAigcCustomVoiceTask $CreateAigcCustomVoiceCompleteEvent) Set <p>AIGC custom tone information. This field has a value only when EventType is CreateAigcCustomVoiceCompleteEvent.</p>
+ * @method DescribeAigcFaceInfoAsyncTask getDescribeAigcFaceInfoAsyncCompleteEvent() Obtain <p>Asynchronously fetch AIGC face information. This field has a value only when EventType is DescribeAigcFaceInfoAsyncComplete.</p>
+ * @method void setDescribeAigcFaceInfoAsyncCompleteEvent(DescribeAigcFaceInfoAsyncTask $DescribeAigcFaceInfoAsyncCompleteEvent) Set <p>Asynchronously fetch AIGC face information. This field has a value only when EventType is DescribeAigcFaceInfoAsyncComplete.</p>
  */
 class EventContent extends AbstractModel
 {
     /**
-     * @var string Event handler. The caller must call ConfirmEvents to acknowledge the message has been received. Confirmed Valid Time is 30 seconds. After expiration, the event can be retrieved again.
+     * @var string <p>Event handler. The caller must call ConfirmEvents to acknowledge the message has been received. Confirmed Valid Time is 30 seconds. After expiration, the event can be retrieved again.</p>
      */
     public $EventHandle;
 
     /**
-     * @var string <b>Supported event types:</b>
-<li>NewFileUpload: Video upload completed;</li>
-<li>ProcedureStateChanged: Task flow status change.</li>
-<li>FileDeleted: Video deletion completed;</li>
-<li>RestoreMediaComplete: Video retrieval completion;</li>
-<li>PullComplete: Video conversion pull completed.</li>
-<li>EditMediaComplete: Video editing completed;</li>
-<li>SplitMediaComplete: Video splitting completed;</li>
-<li>ComposeMediaComplete: Media file creation completion;</li>
-<li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li>
-<li>RemoveWatermark: Intelligent watermark removal completion.</li>
-<li>RebuildMediaComplete: Audio and video quality rebirth completion event (This is not recommended).</li>
-<li>ReviewAudioVideoComplete: Audio/video moderation completed;</li>
-<li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li>
-<li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion.</li>
-<li>DescribeFileAttributesComplete: File attribute acquisition completion.</li>
-<li>QualityInspectComplete: Audio and video quality inspection completed;</li>
-<li>QualityEnhanceComplete: Audio and video quality rebirth task completion;</li>
-<li>PersistenceComplete: Edit completed.</li>
-<li>ComplexAdaptiveDynamicStreamingComplete: complex adaptive bitstream task completed.</li>
-<li>ProcessMediaByMPSComplete: MPS video processing is completed.</li>
-<li>AigcImageTaskComplete: AIGC image generation task complete.</li>
-<li>AigcVideoTaskComplete: AIGC video generation task completed.</li>
-<b>Event types compatible with the 2017 version:</b>
-<li>TranscodeComplete: video transcoding completion;</li>
-<li>ConcatComplete: Video splicing completion.</li>
-<li>ClipComplete: Video editing completed;</li>
-<li>CreateImageSpriteComplete: Video thumbnail capture completion.</li>
-<li>CreateSnapshotByTimeOffsetComplete: Video screenshot by time point.</li>
+     * @var string <p><b>Supported event types:</b></p><li>NewFileUpload: Video upload complete;</li><li>ProcedureStateChanged: Task flow status change;</li><li>FileDeleted: Video deletion completed;</li><li>RestoreMediaComplete: Video retrieval completion;</li><li>PullComplete: Video conversion completed;</li><li>EditMediaComplete: Video editing completed;</li><li>SplitMediaComplete: Video splitting completed;</li><li>ComposeMediaComplete: Media file creation completion;</li><li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li><li>RemoveWatermark: Intelligent watermark removal completion.</li><li>RebuildMediaComplete: Audio and video quality rebirth completion event (not recommended).</li><li>ReviewAudioVideoComplete: Audio/video moderation completed;</li><li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li><li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion;</li><li>DescribeFileAttributesComplete: File attribute acquisition completion;</li><li>QualityInspectComplete: Audio and video quality inspection completed;</li><li>QualityEnhanceComplete: Audio and video quality rebirth task completion;</li><li>PersistenceComplete: Edit persistence completed;</li><li>ComplexAdaptiveDynamicStreamingComplete: Complex adaptive bitstream task completion.</li><li>ProcessMediaByMPSComplete: MPS video processing completed.</li><li>AigcImageTaskComplete: AIGC image generation task completed.</li><li>AigcVideoTaskComplete: AIGC video generation task completed.</li><li>DescribeAigcFaceInfoAsyncComplete: Asynchronously fetch AIGC human face information task completed.</li><b>Event types compatible with the 2017 version:</b><li>TranscodeComplete: Video transcoding completion;</li><li>ConcatComplete: Video splicing completion;</li><li>ClipComplete: Video editing completed;</li><li>CreateImageSpriteComplete: Video thumbnail capture completion;</li><li>CreateSnapshotByTimeOffsetComplete: Video screenshot by time point.</li>
      */
     public $EventType;
 
     /**
-     * @var FileUploadTask Video upload completion event. Valid when the event type is NewFileUpload.
+     * @var FileUploadTask <p>Video upload completion event. Valid when the event type is NewFileUpload.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FileUploadEvent;
 
     /**
-     * @var ProcedureTask Task flow status change event. Valid when the event type is ProcedureStateChanged.
+     * @var ProcedureTask <p>Task flow status change event. Valid when the event type is ProcedureStateChanged.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProcedureStateChangeEvent;
 
     /**
-     * @var FileDeleteTask File deletion event. Valid when the event type is FileDeleted.
+     * @var FileDeleteTask <p>File deletion event. Valid when the event type is FileDeleted.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FileDeleteEvent;
 
     /**
-     * @var PullUploadTask Video pull completion event. Valid when the event type is PullComplete.
+     * @var PullUploadTask <p>Video pull completion event. Valid when the event type is PullComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PullCompleteEvent;
 
     /**
-     * @var EditMediaTask Video editing completion event. Valid when the event type is EditMediaComplete.
+     * @var EditMediaTask <p>Video editing completion event. Valid when the event type is EditMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EditMediaCompleteEvent;
 
     /**
-     * @var SplitMediaTask Video splitting completion event. Valid when the event type is SplitMediaComplete.
+     * @var SplitMediaTask <p>Video splitting completion event. Valid when the event type is SplitMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SplitMediaCompleteEvent;
 
     /**
-     * @var ComposeMediaTask Media file creation task completion event. Valid when the event type is ComposeMediaComplete.
+     * @var ComposeMediaTask <p>Media file creation task completion event. Valid when the event type is ComposeMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ComposeMediaCompleteEvent;
 
     /**
-     * @var ClipTask2017 Video editing completion event. Valid when the event type is ClipComplete.
+     * @var ClipTask2017 <p>Video editing completion event. Valid when the event type is ClipComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClipCompleteEvent;
 
     /**
-     * @var TranscodeTask2017 Video transcoding completion event, valid when the event type is TranscodeComplete.
+     * @var TranscodeTask2017 <p>Video transcoding completion event. Valid when the event type is TranscodeComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TranscodeCompleteEvent;
 
     /**
-     * @var CreateImageSpriteTask2017 Video thumbnail capture completion event. Valid when the event type is CreateImageSpriteComplete.
+     * @var CreateImageSpriteTask2017 <p>Video thumbnail capture completion event. Valid when the event type is CreateImageSpriteComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateImageSpriteCompleteEvent;
 
     /**
-     * @var ConcatTask2017 Video splicing completion event. Valid when the event type is ConcatComplete.
+     * @var ConcatTask2017 <p>Video splicing completion event. Valid when the event type is ConcatComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ConcatCompleteEvent;
 
     /**
-     * @var SnapshotByTimeOffsetTask2017 Video screenshot by time point completion event. Valid when the event type is CreateSnapshotByTimeOffsetComplete.
+     * @var SnapshotByTimeOffsetTask2017 <p>Video screenshot by time point completion event. Valid when the event type is CreateSnapshotByTimeOffsetComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SnapshotByTimeOffsetCompleteEvent;
 
     /**
-     * @var WechatPublishTask WeChat Publishing Completion Event. Valid when the event type is WechatPublishComplete.
+     * @var WechatPublishTask <p>WeChat Publishing Completion Event. Valid when the event type is WechatPublishComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $WechatPublishCompleteEvent;
 
     /**
-     * @var WechatMiniProgramPublishTask WeChat Mini Program Publishing Task Completion Event. Valid when the event type is WechatMiniProgramPublishComplete.
+     * @var WechatMiniProgramPublishTask <p>WeChat Mini Program Publishing Task Completion Event. Valid when the event type is WechatMiniProgramPublishComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $WechatMiniProgramPublishCompleteEvent;
 
     /**
-     * @var RemoveWatermarkTask Intelligent Watermark Removal Completion Event is valid when the event type is RemoveWatermark.
+     * @var RemoveWatermarkTask <p>Intelligent Watermark Removal Completion Event. Valid when the event type is RemoveWatermark.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RemoveWatermarkCompleteEvent;
 
     /**
-     * @var RestoreMediaTask Video retrieval completion event. Valid when the event type is RestoreMediaComplete.
+     * @var RestoreMediaTask <p>Video retrieval completion event. Valid when the event type is RestoreMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RestoreMediaCompleteEvent;
 
     /**
-     * @var RebuildMediaTask Audio and video quality rebirth completion event. Valid when the event type is RebuildMediaComplete.
+     * @var RebuildMediaTask <p>Audio and video quality rebirth completion event. Valid when the event type is RebuildMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RebuildMediaCompleteEvent;
 
     /**
-     * @var ExtractTraceWatermarkTask Traceability watermark extraction completion event. Valid when the event type is ExtractTraceWatermarkComplete.
+     * @var ExtractTraceWatermarkTask <p>Traceability watermark extraction completion event. Valid when the event type is ExtractTraceWatermarkComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExtractTraceWatermarkCompleteEvent;
 
     /**
-     * @var ExtractCopyRightWatermarkTask Copyright watermark extraction completion event. Valid when the event type is ExtractCopyRightWatermarkComplete.
+     * @var ExtractCopyRightWatermarkTask <p>Copyright watermark extraction completion event. Valid when the event type is ExtractCopyRightWatermarkComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExtractCopyRightWatermarkCompleteEvent;
 
     /**
-     * @var ReviewAudioVideoTask Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.
+     * @var ReviewAudioVideoTask <p>Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReviewAudioVideoCompleteEvent;
 
     /**
-     * @var ReduceMediaBitrateTask This field is invalid.
+     * @var ReduceMediaBitrateTask <p>This field is invalid.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReduceMediaBitrateCompleteEvent;
 
     /**
-     * @var DescribeFileAttributesTask File attribute acquisition completion event. Valid when the event type is DescribeFileAttributesComplete.
+     * @var DescribeFileAttributesTask <p>File attribute acquisition completion event. Valid when the event type is DescribeFileAttributesComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DescribeFileAttributesCompleteEvent;
 
     /**
-     * @var QualityInspectTask Audio and video quality detection completion event. Valid when the event type is QualityInspectComplete.
+     * @var QualityInspectTask <p>Audio and video quality detection completion event. Valid when the event type is QualityInspectComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $QualityInspectCompleteEvent;
 
     /**
-     * @var QualityEnhanceTask Audio and video quality rebirth completion event. Valid when the event type is QualityEnhanceComplete.
+     * @var QualityEnhanceTask <p>Audio and video quality rebirth completion event. Valid when the event type is QualityEnhanceComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $QualityEnhanceCompleteEvent;
 
     /**
-     * @var MediaCastEvent MediaCastStatus changed event, valid when the event type is MediaCastStatusChanged.
-Pay attention to: this field may return null, indicating that no valid value can be obtained.
+     * @var MediaCastEvent <p>Media forwarding status change event. Valid when the event type is MediaCastStatusChanged.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MediaCastStatusChangedEvent;
 
     /**
-     * @var PersistenceCompleteTask Editing solidification completion event. Valid when the event type is PersistenceComplete.
+     * @var PersistenceCompleteTask <p>Editing solidification completion event. Valid when the event type is PersistenceComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PersistenceCompleteEvent;
 
     /**
-     * @var ComplexAdaptiveDynamicStreamingTask Adaptive bitrate task information, valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.
+     * @var ComplexAdaptiveDynamicStreamingTask <p>Adaptive bitrate task information. Valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ComplexAdaptiveDynamicStreamingCompleteEvent;
 
     /**
-     * @var ProcessMediaByMPS MPS video processing task information. Valid only when EventType is ProcessMediaByMPSComplete.
+     * @var ProcessMediaByMPS <p>MPS video processing task information. Valid only when EventType is ProcessMediaByMPSComplete.</p>
      */
     public $ProcessMediaByMPSCompleteEvent;
 
     /**
-     * @var AigcImageTask AIGC image generation task info. Valid only when EventType is AigcImageTaskComplete.
+     * @var AigcImageTask <p>AIGC image generation task info, valid only when EventType is AigcImageTaskComplete.</p>
      */
     public $AigcImageCompleteEvent;
 
     /**
-     * @var AigcVideoTask AIGC video task info. Valid only when EventType is AigcVideoTaskComplete.
+     * @var AigcVideoTask <p>AIGC video task info, valid only when EventType is AigcVideoTaskComplete.</p>
      */
     public $AigcVideoCompleteEvent;
 
     /**
-     * @var ExtractBlindWatermarkTask Extract digital watermark information. Valid at that time only when EventType is ExtractBlindWatermarkComplete.
+     * @var ExtractBlindWatermarkTask <p>Extract digital watermark info, valid only when EventType is ExtractBlindWatermarkComplete.</p>
      */
     public $ExtractBlindWatermarkComplete;
 
     /**
-     * @var SceneAigcImageTask AIGC scenario-based image generation task info, valid only when EventType is SceneAigcImageCompleteEvent.
+     * @var SceneAigcImageTask <p>Scenario-based AIGC image generation task info. Valid only when EventType is SceneAigcImageCompleteEvent.</p>
      */
     public $SceneAigcImageCompleteEvent;
 
     /**
-     * @var ProcessImageAsyncTask Image asynchronous task processing info, valid only when EventType is ProcessImageAsyncCompleteEvent.
+     * @var ProcessImageAsyncTask <p>Image asynchronous task processing information. Valid only when EventType is ProcessImageAsyncCompleteEvent.</p>
      */
     public $ProcessImageAsyncCompleteEvent;
 
     /**
-     * @param string $EventHandle Event handler. The caller must call ConfirmEvents to acknowledge the message has been received. Confirmed Valid Time is 30 seconds. After expiration, the event can be retrieved again.
-     * @param string $EventType <b>Supported event types:</b>
-<li>NewFileUpload: Video upload completed;</li>
-<li>ProcedureStateChanged: Task flow status change.</li>
-<li>FileDeleted: Video deletion completed;</li>
-<li>RestoreMediaComplete: Video retrieval completion;</li>
-<li>PullComplete: Video conversion pull completed.</li>
-<li>EditMediaComplete: Video editing completed;</li>
-<li>SplitMediaComplete: Video splitting completed;</li>
-<li>ComposeMediaComplete: Media file creation completion;</li>
-<li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li>
-<li>RemoveWatermark: Intelligent watermark removal completion.</li>
-<li>RebuildMediaComplete: Audio and video quality rebirth completion event (This is not recommended).</li>
-<li>ReviewAudioVideoComplete: Audio/video moderation completed;</li>
-<li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li>
-<li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion.</li>
-<li>DescribeFileAttributesComplete: File attribute acquisition completion.</li>
-<li>QualityInspectComplete: Audio and video quality inspection completed;</li>
-<li>QualityEnhanceComplete: Audio and video quality rebirth task completion;</li>
-<li>PersistenceComplete: Edit completed.</li>
-<li>ComplexAdaptiveDynamicStreamingComplete: complex adaptive bitstream task completed.</li>
-<li>ProcessMediaByMPSComplete: MPS video processing is completed.</li>
-<li>AigcImageTaskComplete: AIGC image generation task complete.</li>
-<li>AigcVideoTaskComplete: AIGC video generation task completed.</li>
-<b>Event types compatible with the 2017 version:</b>
-<li>TranscodeComplete: video transcoding completion;</li>
-<li>ConcatComplete: Video splicing completion.</li>
-<li>ClipComplete: Video editing completed;</li>
-<li>CreateImageSpriteComplete: Video thumbnail capture completion.</li>
-<li>CreateSnapshotByTimeOffsetComplete: Video screenshot by time point.</li>
-     * @param FileUploadTask $FileUploadEvent Video upload completion event. Valid when the event type is NewFileUpload.
+     * @var CreateAigcAdvancedCustomElementTask <p>AIGC custom entity information, valid only when EventType is CreateAigcAdvancedCustomElementCompleteEvent and this field has a value.</p>
+     */
+    public $CreateAigcAdvancedCustomElementCompleteEvent;
+
+    /**
+     * @var CreateAigcCustomVoiceTask <p>AIGC custom tone information. This field has a value only when EventType is CreateAigcCustomVoiceCompleteEvent.</p>
+     */
+    public $CreateAigcCustomVoiceCompleteEvent;
+
+    /**
+     * @var DescribeAigcFaceInfoAsyncTask <p>Asynchronously fetch AIGC face information. This field has a value only when EventType is DescribeAigcFaceInfoAsyncComplete.</p>
+     */
+    public $DescribeAigcFaceInfoAsyncCompleteEvent;
+
+    /**
+     * @param string $EventHandle <p>Event handler. The caller must call ConfirmEvents to acknowledge the message has been received. Confirmed Valid Time is 30 seconds. After expiration, the event can be retrieved again.</p>
+     * @param string $EventType <p><b>Supported event types:</b></p><li>NewFileUpload: Video upload complete;</li><li>ProcedureStateChanged: Task flow status change;</li><li>FileDeleted: Video deletion completed;</li><li>RestoreMediaComplete: Video retrieval completion;</li><li>PullComplete: Video conversion completed;</li><li>EditMediaComplete: Video editing completed;</li><li>SplitMediaComplete: Video splitting completed;</li><li>ComposeMediaComplete: Media file creation completion;</li><li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li><li>RemoveWatermark: Intelligent watermark removal completion.</li><li>RebuildMediaComplete: Audio and video quality rebirth completion event (not recommended).</li><li>ReviewAudioVideoComplete: Audio/video moderation completed;</li><li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li><li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion;</li><li>DescribeFileAttributesComplete: File attribute acquisition completion;</li><li>QualityInspectComplete: Audio and video quality inspection completed;</li><li>QualityEnhanceComplete: Audio and video quality rebirth task completion;</li><li>PersistenceComplete: Edit persistence completed;</li><li>ComplexAdaptiveDynamicStreamingComplete: Complex adaptive bitstream task completion.</li><li>ProcessMediaByMPSComplete: MPS video processing completed.</li><li>AigcImageTaskComplete: AIGC image generation task completed.</li><li>AigcVideoTaskComplete: AIGC video generation task completed.</li><li>DescribeAigcFaceInfoAsyncComplete: Asynchronously fetch AIGC human face information task completed.</li><b>Event types compatible with the 2017 version:</b><li>TranscodeComplete: Video transcoding completion;</li><li>ConcatComplete: Video splicing completion;</li><li>ClipComplete: Video editing completed;</li><li>CreateImageSpriteComplete: Video thumbnail capture completion;</li><li>CreateSnapshotByTimeOffsetComplete: Video screenshot by time point.</li>
+     * @param FileUploadTask $FileUploadEvent <p>Video upload completion event. Valid when the event type is NewFileUpload.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcedureTask $ProcedureStateChangeEvent Task flow status change event. Valid when the event type is ProcedureStateChanged.
+     * @param ProcedureTask $ProcedureStateChangeEvent <p>Task flow status change event. Valid when the event type is ProcedureStateChanged.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileDeleteTask $FileDeleteEvent File deletion event. Valid when the event type is FileDeleted.
+     * @param FileDeleteTask $FileDeleteEvent <p>File deletion event. Valid when the event type is FileDeleted.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PullUploadTask $PullCompleteEvent Video pull completion event. Valid when the event type is PullComplete.
+     * @param PullUploadTask $PullCompleteEvent <p>Video pull completion event. Valid when the event type is PullComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EditMediaTask $EditMediaCompleteEvent Video editing completion event. Valid when the event type is EditMediaComplete.
+     * @param EditMediaTask $EditMediaCompleteEvent <p>Video editing completion event. Valid when the event type is EditMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SplitMediaTask $SplitMediaCompleteEvent Video splitting completion event. Valid when the event type is SplitMediaComplete.
+     * @param SplitMediaTask $SplitMediaCompleteEvent <p>Video splitting completion event. Valid when the event type is SplitMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ComposeMediaTask $ComposeMediaCompleteEvent Media file creation task completion event. Valid when the event type is ComposeMediaComplete.
+     * @param ComposeMediaTask $ComposeMediaCompleteEvent <p>Media file creation task completion event. Valid when the event type is ComposeMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClipTask2017 $ClipCompleteEvent Video editing completion event. Valid when the event type is ClipComplete.
+     * @param ClipTask2017 $ClipCompleteEvent <p>Video editing completion event. Valid when the event type is ClipComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TranscodeTask2017 $TranscodeCompleteEvent Video transcoding completion event, valid when the event type is TranscodeComplete.
+     * @param TranscodeTask2017 $TranscodeCompleteEvent <p>Video transcoding completion event. Valid when the event type is TranscodeComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateImageSpriteTask2017 $CreateImageSpriteCompleteEvent Video thumbnail capture completion event. Valid when the event type is CreateImageSpriteComplete.
+     * @param CreateImageSpriteTask2017 $CreateImageSpriteCompleteEvent <p>Video thumbnail capture completion event. Valid when the event type is CreateImageSpriteComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConcatTask2017 $ConcatCompleteEvent Video splicing completion event. Valid when the event type is ConcatComplete.
+     * @param ConcatTask2017 $ConcatCompleteEvent <p>Video splicing completion event. Valid when the event type is ConcatComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetCompleteEvent Video screenshot by time point completion event. Valid when the event type is CreateSnapshotByTimeOffsetComplete.
+     * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetCompleteEvent <p>Video screenshot by time point completion event. Valid when the event type is CreateSnapshotByTimeOffsetComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WechatPublishTask $WechatPublishCompleteEvent WeChat Publishing Completion Event. Valid when the event type is WechatPublishComplete.
+     * @param WechatPublishTask $WechatPublishCompleteEvent <p>WeChat Publishing Completion Event. Valid when the event type is WechatPublishComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent WeChat Mini Program Publishing Task Completion Event. Valid when the event type is WechatMiniProgramPublishComplete.
+     * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent <p>WeChat Mini Program Publishing Task Completion Event. Valid when the event type is WechatMiniProgramPublishComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RemoveWatermarkTask $RemoveWatermarkCompleteEvent Intelligent Watermark Removal Completion Event is valid when the event type is RemoveWatermark.
+     * @param RemoveWatermarkTask $RemoveWatermarkCompleteEvent <p>Intelligent Watermark Removal Completion Event. Valid when the event type is RemoveWatermark.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RestoreMediaTask $RestoreMediaCompleteEvent Video retrieval completion event. Valid when the event type is RestoreMediaComplete.
+     * @param RestoreMediaTask $RestoreMediaCompleteEvent <p>Video retrieval completion event. Valid when the event type is RestoreMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RebuildMediaTask $RebuildMediaCompleteEvent Audio and video quality rebirth completion event. Valid when the event type is RebuildMediaComplete.
+     * @param RebuildMediaTask $RebuildMediaCompleteEvent <p>Audio and video quality rebirth completion event. Valid when the event type is RebuildMediaComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent Traceability watermark extraction completion event. Valid when the event type is ExtractTraceWatermarkComplete.
+     * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent <p>Traceability watermark extraction completion event. Valid when the event type is ExtractTraceWatermarkComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkCompleteEvent Copyright watermark extraction completion event. Valid when the event type is ExtractCopyRightWatermarkComplete.
+     * @param ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkCompleteEvent <p>Copyright watermark extraction completion event. Valid when the event type is ExtractCopyRightWatermarkComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.
+     * @param ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent <p>Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReduceMediaBitrateTask $ReduceMediaBitrateCompleteEvent This field is invalid.
+     * @param ReduceMediaBitrateTask $ReduceMediaBitrateCompleteEvent <p>This field is invalid.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DescribeFileAttributesTask $DescribeFileAttributesCompleteEvent File attribute acquisition completion event. Valid when the event type is DescribeFileAttributesComplete.
+     * @param DescribeFileAttributesTask $DescribeFileAttributesCompleteEvent <p>File attribute acquisition completion event. Valid when the event type is DescribeFileAttributesComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QualityInspectTask $QualityInspectCompleteEvent Audio and video quality detection completion event. Valid when the event type is QualityInspectComplete.
+     * @param QualityInspectTask $QualityInspectCompleteEvent <p>Audio and video quality detection completion event. Valid when the event type is QualityInspectComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QualityEnhanceTask $QualityEnhanceCompleteEvent Audio and video quality rebirth completion event. Valid when the event type is QualityEnhanceComplete.
+     * @param QualityEnhanceTask $QualityEnhanceCompleteEvent <p>Audio and video quality rebirth completion event. Valid when the event type is QualityEnhanceComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaCastEvent $MediaCastStatusChangedEvent MediaCastStatus changed event, valid when the event type is MediaCastStatusChanged.
-Pay attention to: this field may return null, indicating that no valid value can be obtained.
-     * @param PersistenceCompleteTask $PersistenceCompleteEvent Editing solidification completion event. Valid when the event type is PersistenceComplete.
+     * @param MediaCastEvent $MediaCastStatusChangedEvent <p>Media forwarding status change event. Valid when the event type is MediaCastStatusChanged.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingCompleteEvent Adaptive bitrate task information, valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.
+     * @param PersistenceCompleteTask $PersistenceCompleteEvent <p>Editing solidification completion event. Valid when the event type is PersistenceComplete.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcessMediaByMPS $ProcessMediaByMPSCompleteEvent MPS video processing task information. Valid only when EventType is ProcessMediaByMPSComplete.
-     * @param AigcImageTask $AigcImageCompleteEvent AIGC image generation task info. Valid only when EventType is AigcImageTaskComplete.
-     * @param AigcVideoTask $AigcVideoCompleteEvent AIGC video task info. Valid only when EventType is AigcVideoTaskComplete.
-     * @param ExtractBlindWatermarkTask $ExtractBlindWatermarkComplete Extract digital watermark information. Valid at that time only when EventType is ExtractBlindWatermarkComplete.
-     * @param SceneAigcImageTask $SceneAigcImageCompleteEvent AIGC scenario-based image generation task info, valid only when EventType is SceneAigcImageCompleteEvent.
-     * @param ProcessImageAsyncTask $ProcessImageAsyncCompleteEvent Image asynchronous task processing info, valid only when EventType is ProcessImageAsyncCompleteEvent.
+     * @param ComplexAdaptiveDynamicStreamingTask $ComplexAdaptiveDynamicStreamingCompleteEvent <p>Adaptive bitrate task information. Valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProcessMediaByMPS $ProcessMediaByMPSCompleteEvent <p>MPS video processing task information. Valid only when EventType is ProcessMediaByMPSComplete.</p>
+     * @param AigcImageTask $AigcImageCompleteEvent <p>AIGC image generation task info, valid only when EventType is AigcImageTaskComplete.</p>
+     * @param AigcVideoTask $AigcVideoCompleteEvent <p>AIGC video task info, valid only when EventType is AigcVideoTaskComplete.</p>
+     * @param ExtractBlindWatermarkTask $ExtractBlindWatermarkComplete <p>Extract digital watermark info, valid only when EventType is ExtractBlindWatermarkComplete.</p>
+     * @param SceneAigcImageTask $SceneAigcImageCompleteEvent <p>Scenario-based AIGC image generation task info. Valid only when EventType is SceneAigcImageCompleteEvent.</p>
+     * @param ProcessImageAsyncTask $ProcessImageAsyncCompleteEvent <p>Image asynchronous task processing information. Valid only when EventType is ProcessImageAsyncCompleteEvent.</p>
+     * @param CreateAigcAdvancedCustomElementTask $CreateAigcAdvancedCustomElementCompleteEvent <p>AIGC custom entity information, valid only when EventType is CreateAigcAdvancedCustomElementCompleteEvent and this field has a value.</p>
+     * @param CreateAigcCustomVoiceTask $CreateAigcCustomVoiceCompleteEvent <p>AIGC custom tone information. This field has a value only when EventType is CreateAigcCustomVoiceCompleteEvent.</p>
+     * @param DescribeAigcFaceInfoAsyncTask $DescribeAigcFaceInfoAsyncCompleteEvent <p>Asynchronously fetch AIGC face information. This field has a value only when EventType is DescribeAigcFaceInfoAsyncComplete.</p>
      */
     function __construct()
     {
@@ -709,6 +621,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("ProcessImageAsyncCompleteEvent",$param) and $param["ProcessImageAsyncCompleteEvent"] !== null) {
             $this->ProcessImageAsyncCompleteEvent = new ProcessImageAsyncTask();
             $this->ProcessImageAsyncCompleteEvent->deserialize($param["ProcessImageAsyncCompleteEvent"]);
+        }
+
+        if (array_key_exists("CreateAigcAdvancedCustomElementCompleteEvent",$param) and $param["CreateAigcAdvancedCustomElementCompleteEvent"] !== null) {
+            $this->CreateAigcAdvancedCustomElementCompleteEvent = new CreateAigcAdvancedCustomElementTask();
+            $this->CreateAigcAdvancedCustomElementCompleteEvent->deserialize($param["CreateAigcAdvancedCustomElementCompleteEvent"]);
+        }
+
+        if (array_key_exists("CreateAigcCustomVoiceCompleteEvent",$param) and $param["CreateAigcCustomVoiceCompleteEvent"] !== null) {
+            $this->CreateAigcCustomVoiceCompleteEvent = new CreateAigcCustomVoiceTask();
+            $this->CreateAigcCustomVoiceCompleteEvent->deserialize($param["CreateAigcCustomVoiceCompleteEvent"]);
+        }
+
+        if (array_key_exists("DescribeAigcFaceInfoAsyncCompleteEvent",$param) and $param["DescribeAigcFaceInfoAsyncCompleteEvent"] !== null) {
+            $this->DescribeAigcFaceInfoAsyncCompleteEvent = new DescribeAigcFaceInfoAsyncTask();
+            $this->DescribeAigcFaceInfoAsyncCompleteEvent->deserialize($param["DescribeAigcFaceInfoAsyncCompleteEvent"]);
         }
     }
 }

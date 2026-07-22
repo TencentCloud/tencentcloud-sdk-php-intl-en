@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getBases() Obtain <p>Current library list of media assets to import</p>
  * @method void setBases(array $Bases) Set <p>Current library list of media assets to import</p>
+ * @method array getKnowledgeAnalysisInfos() Obtain <p>Media analysis information in the knowledge base</p>
+ * @method void setKnowledgeAnalysisInfos(array $KnowledgeAnalysisInfos) Set <p>Media analysis information in the knowledge base</p>
  */
 class KnowledgeBasesInfo extends AbstractModel
 {
@@ -31,7 +33,13 @@ class KnowledgeBasesInfo extends AbstractModel
     public $Bases;
 
     /**
+     * @var array <p>Media analysis information in the knowledge base</p>
+     */
+    public $KnowledgeAnalysisInfos;
+
+    /**
      * @param array $Bases <p>Current library list of media assets to import</p>
+     * @param array $KnowledgeAnalysisInfos <p>Media analysis information in the knowledge base</p>
      */
     function __construct()
     {
@@ -48,6 +56,15 @@ class KnowledgeBasesInfo extends AbstractModel
         }
         if (array_key_exists("Bases",$param) and $param["Bases"] !== null) {
             $this->Bases = $param["Bases"];
+        }
+
+        if (array_key_exists("KnowledgeAnalysisInfos",$param) and $param["KnowledgeAnalysisInfos"] !== null) {
+            $this->KnowledgeAnalysisInfos = [];
+            foreach ($param["KnowledgeAnalysisInfos"] as $key => $value){
+                $obj = new KnowledgeAnalysisInfo();
+                $obj->deserialize($value);
+                array_push($this->KnowledgeAnalysisInfos, $obj);
+            }
         }
     }
 }

@@ -24,14 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
  * @method string getEndTime() Obtain <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
  * @method void setEndTime(string $EndTime) Set <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
- * @method string getAigcType() Obtain <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
- * @method void setAigcType(string $AigcType) Set <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
+ * @method string getAigcType() Obtain <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
+ * @method void setAigcType(string $AigcType) Set <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
  * @method integer getSubAppId() Obtain <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
  * @method void setSubAppId(integer $SubAppId) Set <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
  * @method string getAPIKey() Obtain <p>API Key</p>
  * @method void setAPIKey(string $APIKey) Set <p>API Key</p>
  * @method array getAPIKeys() Obtain <p>API Key</p>
  * @method void setAPIKeys(array $APIKeys) Set <p>API Key</p>
+ * @method string getScrollToken() Obtain <p>Query cursor</p>
+ * @method void setScrollToken(string $ScrollToken) Set <p>Query cursor</p>
+ * @method integer getPageSize() Obtain <p>Size per page, maximum 200, it will be truncated to 200</p>
+ * @method void setPageSize(integer $PageSize) Set <p>Size per page, maximum 200, it will be truncated to 200</p>
+ * @method string getReqId() Obtain <p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p>
+ * @method void setReqId(string $ReqId) Set <p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p>
  */
 class DescribeAigcUsageDataRequest extends AbstractModel
 {
@@ -46,7 +52,7 @@ class DescribeAigcUsageDataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
+     * @var string <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
      */
     public $AigcType;
 
@@ -66,12 +72,30 @@ class DescribeAigcUsageDataRequest extends AbstractModel
     public $APIKeys;
 
     /**
+     * @var string <p>Query cursor</p>
+     */
+    public $ScrollToken;
+
+    /**
+     * @var integer <p>Size per page, maximum 200, it will be truncated to 200</p>
+     */
+    public $PageSize;
+
+    /**
+     * @var string <p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p>
+     */
+    public $ReqId;
+
+    /**
      * @param string $StartTime <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
      * @param string $EndTime <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
-     * @param string $AigcType <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
+     * @param string $AigcType <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
      * @param integer $SubAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      * @param string $APIKey <p>API Key</p>
      * @param array $APIKeys <p>API Key</p>
+     * @param string $ScrollToken <p>Query cursor</p>
+     * @param integer $PageSize <p>Size per page, maximum 200, it will be truncated to 200</p>
+     * @param string $ReqId <p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p>
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ class DescribeAigcUsageDataRequest extends AbstractModel
 
         if (array_key_exists("APIKeys",$param) and $param["APIKeys"] !== null) {
             $this->APIKeys = $param["APIKeys"];
+        }
+
+        if (array_key_exists("ScrollToken",$param) and $param["ScrollToken"] !== null) {
+            $this->ScrollToken = $param["ScrollToken"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("ReqId",$param) and $param["ReqId"] !== null) {
+            $this->ReqId = $param["ReqId"];
         }
     }
 }

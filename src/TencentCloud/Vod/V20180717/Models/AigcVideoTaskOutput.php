@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileInfos(array $FileInfos) Set <p>Output file info of the AIGC video task.</p>
  * @method array getProcedureTaskIds() Obtain <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
  * @method void setProcedureTaskIds(array $ProcedureTaskIds) Set <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+ * @method AigcVideoTaskUsage getUsage() Obtain <p>Usage information for AIGC video tasks.</p>
+ * @method void setUsage(AigcVideoTaskUsage $Usage) Set <p>Usage information for AIGC video tasks.</p>
  */
 class AigcVideoTaskOutput extends AbstractModel
 {
@@ -38,8 +40,14 @@ class AigcVideoTaskOutput extends AbstractModel
     public $ProcedureTaskIds;
 
     /**
+     * @var AigcVideoTaskUsage <p>Usage information for AIGC video tasks.</p>
+     */
+    public $Usage;
+
+    /**
      * @param array $FileInfos <p>Output file info of the AIGC video task.</p>
      * @param array $ProcedureTaskIds <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+     * @param AigcVideoTaskUsage $Usage <p>Usage information for AIGC video tasks.</p>
      */
     function __construct()
     {
@@ -65,6 +73,11 @@ class AigcVideoTaskOutput extends AbstractModel
 
         if (array_key_exists("ProcedureTaskIds",$param) and $param["ProcedureTaskIds"] !== null) {
             $this->ProcedureTaskIds = $param["ProcedureTaskIds"];
+        }
+
+        if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
+            $this->Usage = new AigcVideoTaskUsage();
+            $this->Usage->deserialize($param["Usage"]);
         }
     }
 }

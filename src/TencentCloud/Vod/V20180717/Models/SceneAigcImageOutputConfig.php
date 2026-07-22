@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireTime(string $ExpireTime) Set <p>Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
  * @method string getAspectRatio() Obtain <p>Specify the aspect ratio of the generated image. The input format is W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9.</li><li>AI image expansion scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>When only AspectRatio is specified, adaptively adjust based on the original image input.</li><li>When AspectRatio and ImageWidth are specified, ImageHeight is calculated based on both, and vice versa.</li><li>When AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, prioritize using ImageWidth and ImageHeight.</li></ol></li></ul>
  * @method void setAspectRatio(string $AspectRatio) Set <p>Specify the aspect ratio of the generated image. The input format is W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9.</li><li>AI image expansion scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>When only AspectRatio is specified, adaptively adjust based on the original image input.</li><li>When AspectRatio and ImageWidth are specified, ImageHeight is calculated based on both, and vice versa.</li><li>When AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, prioritize using ImageWidth and ImageHeight.</li></ol></li></ul>
- * @method ImageSceneAigcEncodeConfig getEncodeConfig() Obtain <p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p>
- * @method void setEncodeConfig(ImageSceneAigcEncodeConfig $EncodeConfig) Set <p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p>
+ * @method ImageSceneAigcEncodeConfig getEncodeConfig() Obtain <p>Output image encoding format parameters.</p>
+ * @method void setEncodeConfig(ImageSceneAigcEncodeConfig $EncodeConfig) Set <p>Output image encoding format parameters.</p>
  * @method integer getImageWidth() Obtain <p>Output image width. <strong>Valid only for AI image expansion scenarios.</strong></p>
  * @method void setImageWidth(integer $ImageWidth) Set <p>Output image width. <strong>Valid only for AI image expansion scenarios.</strong></p>
  * @method integer getImageHeight() Obtain <p>Output image height, <strong>valid only for AI image expansion scenarios</strong>.</p>
  * @method void setImageHeight(integer $ImageHeight) Set <p>Output image height, <strong>valid only for AI image expansion scenarios</strong>.</p>
- * @method string getResolution() Obtain <p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p>
- * @method void setResolution(string $Resolution) Set <p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p>
+ * @method string getResolution() Obtain <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
+ * @method void setResolution(string $Resolution) Set <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
  */
 class SceneAigcImageOutputConfig extends AbstractModel
 {
@@ -67,7 +67,7 @@ class SceneAigcImageOutputConfig extends AbstractModel
     public $AspectRatio;
 
     /**
-     * @var ImageSceneAigcEncodeConfig <p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p>
+     * @var ImageSceneAigcEncodeConfig <p>Output image encoding format parameters.</p>
      */
     public $EncodeConfig;
 
@@ -82,7 +82,7 @@ class SceneAigcImageOutputConfig extends AbstractModel
     public $ImageHeight;
 
     /**
-     * @var string <p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p>
+     * @var string <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
      */
     public $Resolution;
 
@@ -92,10 +92,10 @@ class SceneAigcImageOutputConfig extends AbstractModel
      * @param integer $ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
      * @param string $ExpireTime <p>Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      * @param string $AspectRatio <p>Specify the aspect ratio of the generated image. The input format is W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9.</li><li>AI image expansion scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>When only AspectRatio is specified, adaptively adjust based on the original image input.</li><li>When AspectRatio and ImageWidth are specified, ImageHeight is calculated based on both, and vice versa.</li><li>When AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, prioritize using ImageWidth and ImageHeight.</li></ol></li></ul>
-     * @param ImageSceneAigcEncodeConfig $EncodeConfig <p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p>
+     * @param ImageSceneAigcEncodeConfig $EncodeConfig <p>Output image encoding format parameters.</p>
      * @param integer $ImageWidth <p>Output image width. <strong>Valid only for AI image expansion scenarios.</strong></p>
      * @param integer $ImageHeight <p>Output image height, <strong>valid only for AI image expansion scenarios</strong>.</p>
-     * @param string $Resolution <p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p>
+     * @param string $Resolution <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
      */
     function __construct()
     {

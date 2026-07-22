@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Asynchronous task processing info for images.
  *
- * @method string getFileId() Obtain FileId for image processing.
- * @method void setFileId(string $FileId) Set FileId for image processing.
- * @method ProcessImageAsyncTaskInput getImageTaskInput() Obtain Image processing parameter.
- * @method void setImageTaskInput(ProcessImageAsyncTaskInput $ImageTaskInput) Set Image processing parameter.
- * @method ProcessImageAsyncOutputConfig getOutputConfig() Obtain Output media file configuration for image processing tasks.
- * @method void setOutputConfig(ProcessImageAsyncOutputConfig $OutputConfig) Set Output media file configuration for image processing tasks.
+ * @method string getFileId() Obtain <p>FileId of image processing.</p>
+ * @method void setFileId(string $FileId) Set <p>FileId of image processing.</p>
+ * @method string getUrl() Obtain <p>Image URL.</p>
+ * @method void setUrl(string $Url) Set <p>Image URL.</p>
+ * @method ProcessImageAsyncTaskInput getImageTaskInput() Obtain <p>Image processing parameter.</p>
+ * @method void setImageTaskInput(ProcessImageAsyncTaskInput $ImageTaskInput) Set <p>Image processing parameter.</p>
+ * @method ProcessImageAsyncOutputConfig getOutputConfig() Obtain <p>Output media file configuration for the image processing task.</p>
+ * @method void setOutputConfig(ProcessImageAsyncOutputConfig $OutputConfig) Set <p>Output media file configuration for the image processing task.</p>
  */
 class ProcessImageAsyncInput extends AbstractModel
 {
     /**
-     * @var string FileId for image processing.
+     * @var string <p>FileId of image processing.</p>
      */
     public $FileId;
 
     /**
-     * @var ProcessImageAsyncTaskInput Image processing parameter.
+     * @var string <p>Image URL.</p>
+     */
+    public $Url;
+
+    /**
+     * @var ProcessImageAsyncTaskInput <p>Image processing parameter.</p>
      */
     public $ImageTaskInput;
 
     /**
-     * @var ProcessImageAsyncOutputConfig Output media file configuration for image processing tasks.
+     * @var ProcessImageAsyncOutputConfig <p>Output media file configuration for the image processing task.</p>
      */
     public $OutputConfig;
 
     /**
-     * @param string $FileId FileId for image processing.
-     * @param ProcessImageAsyncTaskInput $ImageTaskInput Image processing parameter.
-     * @param ProcessImageAsyncOutputConfig $OutputConfig Output media file configuration for image processing tasks.
+     * @param string $FileId <p>FileId of image processing.</p>
+     * @param string $Url <p>Image URL.</p>
+     * @param ProcessImageAsyncTaskInput $ImageTaskInput <p>Image processing parameter.</p>
+     * @param ProcessImageAsyncOutputConfig $OutputConfig <p>Output media file configuration for the image processing task.</p>
      */
     function __construct()
     {
@@ -64,6 +72,10 @@ class ProcessImageAsyncInput extends AbstractModel
         }
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
 
         if (array_key_exists("ImageTaskInput",$param) and $param["ImageTaskInput"] !== null) {

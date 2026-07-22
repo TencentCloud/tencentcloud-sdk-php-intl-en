@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method AigcVideoRedrawTaskInputFileInfo getFileInfo() Obtain <p>Input info of the AIGC video conversion task.</p>
  * @method void setFileInfo(AigcVideoRedrawTaskInputFileInfo $FileInfo) Set <p>Input info of the AIGC video conversion task.</p>
+ * @method AigcVideoRedrawTaskInfo getTaskInfo() Obtain <p>AIGC video conversion task parameter information.</p>
+ * @method void setTaskInfo(AigcVideoRedrawTaskInfo $TaskInfo) Set <p>AIGC video conversion task parameter information.</p>
  * @method AigcVideoRedrawOutputConfig getOutputConfig() Obtain <p>AIGC video conversion output configuration.</p>
  * @method void setOutputConfig(AigcVideoRedrawOutputConfig $OutputConfig) Set <p>AIGC video conversion output configuration.</p>
  */
@@ -33,12 +35,18 @@ class AigcVideoRedrawTaskInput extends AbstractModel
     public $FileInfo;
 
     /**
+     * @var AigcVideoRedrawTaskInfo <p>AIGC video conversion task parameter information.</p>
+     */
+    public $TaskInfo;
+
+    /**
      * @var AigcVideoRedrawOutputConfig <p>AIGC video conversion output configuration.</p>
      */
     public $OutputConfig;
 
     /**
      * @param AigcVideoRedrawTaskInputFileInfo $FileInfo <p>Input info of the AIGC video conversion task.</p>
+     * @param AigcVideoRedrawTaskInfo $TaskInfo <p>AIGC video conversion task parameter information.</p>
      * @param AigcVideoRedrawOutputConfig $OutputConfig <p>AIGC video conversion output configuration.</p>
      */
     function __construct()
@@ -57,6 +65,11 @@ class AigcVideoRedrawTaskInput extends AbstractModel
         if (array_key_exists("FileInfo",$param) and $param["FileInfo"] !== null) {
             $this->FileInfo = new AigcVideoRedrawTaskInputFileInfo();
             $this->FileInfo->deserialize($param["FileInfo"]);
+        }
+
+        if (array_key_exists("TaskInfo",$param) and $param["TaskInfo"] !== null) {
+            $this->TaskInfo = new AigcVideoRedrawTaskInfo();
+            $this->TaskInfo->deserialize($param["TaskInfo"]);
         }
 
         if (array_key_exists("OutputConfig",$param) and $param["OutputConfig"] !== null) {

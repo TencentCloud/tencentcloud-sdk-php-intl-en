@@ -18,35 +18,47 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image async processing configuration
+ * Image async processing configuration.
  *
- * @method ImageEncodeConfig getEncodeConfig() Obtain Image transcoding output configuration.
+ * @method ImageEncodeConfig getEncodeConfig() Obtain <p>Image transcoding output configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEncodeConfig(ImageEncodeConfig $EncodeConfig) Set Image transcoding output configuration.
+ * @method void setEncodeConfig(ImageEncodeConfig $EncodeConfig) Set <p>Image transcoding output configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ImageEnhanceConfig getEnhanceConfig() Obtain Image enhancement configuration.
+ * @method ImageEnhanceConfig getEnhanceConfig() Obtain <p>Image enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEnhanceConfig(ImageEnhanceConfig $EnhanceConfig) Set Image enhancement configuration.
+ * @method void setEnhanceConfig(ImageEnhanceConfig $EnhanceConfig) Set <p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ImageBeautyConfig getBeautyConfig() Obtain <p>Image beauty effect configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBeautyConfig(ImageBeautyConfig $BeautyConfig) Set <p>Image beauty effect configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ProcessImageAsyncTask extends AbstractModel
 {
     /**
-     * @var ImageEncodeConfig Image transcoding output configuration.
+     * @var ImageEncodeConfig <p>Image transcoding output configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EncodeConfig;
 
     /**
-     * @var ImageEnhanceConfig Image enhancement configuration.
+     * @var ImageEnhanceConfig <p>Image enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EnhanceConfig;
 
     /**
-     * @param ImageEncodeConfig $EncodeConfig Image transcoding output configuration.
+     * @var ImageBeautyConfig <p>Image beauty effect configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageEnhanceConfig $EnhanceConfig Image enhancement configuration.
+     */
+    public $BeautyConfig;
+
+    /**
+     * @param ImageEncodeConfig $EncodeConfig <p>Image transcoding output configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ImageEnhanceConfig $EnhanceConfig <p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ImageBeautyConfig $BeautyConfig <p>Image beauty effect configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -70,6 +82,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
             $this->EnhanceConfig = new ImageEnhanceConfig();
             $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
+        }
+
+        if (array_key_exists("BeautyConfig",$param) and $param["BeautyConfig"] !== null) {
+            $this->BeautyConfig = new ImageBeautyConfig();
+            $this->BeautyConfig->deserialize($param["BeautyConfig"]);
         }
     }
 }

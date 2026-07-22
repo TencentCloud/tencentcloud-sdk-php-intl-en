@@ -20,150 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio stream configuration parameter
  *
- * @method string getCodec() Obtain The audio codec.
-If `Container` is `mp3`, the valid value is:
-<li>`libmp3lame`</li>
-If `Container` is `ogg` or `flac`, the valid value is:
-<li>`flac`</li>
-If `Container` is `m4a`, the valid values are:
-<li>`libfdk_aac`</li>
-<li>`libmp3lame`</li>
-<li>`ac3`</li>
-If `Container` is `mp4` or `flv`, the valid values are:
-<li>`libfdk_aac` (Recommended for MP4)</li>
-<li>`libmp3lame` (Recommended for FLV)</li>
-<li>`mp2`</li>
-If `Container` is `hls`, the valid value is:
-<li>`libfdk_aac`</li>
-If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
-<li>`libfdk_aac`</li>
-If `Container` is `wav`, the valid value is:
-<li>`pcm16`</li>
- * @method void setCodec(string $Codec) Set The audio codec.
-If `Container` is `mp3`, the valid value is:
-<li>`libmp3lame`</li>
-If `Container` is `ogg` or `flac`, the valid value is:
-<li>`flac`</li>
-If `Container` is `m4a`, the valid values are:
-<li>`libfdk_aac`</li>
-<li>`libmp3lame`</li>
-<li>`ac3`</li>
-If `Container` is `mp4` or `flv`, the valid values are:
-<li>`libfdk_aac` (Recommended for MP4)</li>
-<li>`libmp3lame` (Recommended for FLV)</li>
-<li>`mp2`</li>
-If `Container` is `hls`, the valid value is:
-<li>`libfdk_aac`</li>
-If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
-<li>`libfdk_aac`</li>
-If `Container` is `wav`, the valid value is:
-<li>`pcm16`</li>
- * @method integer getBitrate() Obtain Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps. When value is 0, it means VOD automatically sets bitrate.
- * @method void setBitrate(integer $Bitrate) Set Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps. When value is 0, it means VOD automatically sets bitrate.
- * @method integer getSampleRate() Obtain The audio sample rate. Valid values:
-<li>`16000` (valid only if `Codec` is `pcm16`)</li>
-<li>`32000`</li>
-<li>`44100`</li>
-<li>`48000`</li>
-Unit: Hz.
- * @method void setSampleRate(integer $SampleRate) Set The audio sample rate. Valid values:
-<li>`16000` (valid only if `Codec` is `pcm16`)</li>
-<li>`32000`</li>
-<li>`44100`</li>
-<li>`48000`</li>
-Unit: Hz.
- * @method integer getAudioChannel() Obtain Audio channel system. Valid values:
-<li>1: mono-channel</li>
-<li>2: dual-channel</li>
-<li>6: stereo</li>
-You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
- * @method void setAudioChannel(integer $AudioChannel) Set Audio channel system. Valid values:
-<li>1: mono-channel</li>
-<li>2: dual-channel</li>
-<li>6: stereo</li>
-You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
+ * @method string getCodec() Obtain <p>Audio stream encoding format.<br>When the outer parameter Container is mp3, the valid value is:</p><li>libmp3lame.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>libfdk_aac;</li><li>libmp3lame;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>libfdk_aac: suitable for mp4.</li><li>libmp3lame: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid value is:<li>libfdk_aac.</li>When the outer parameter Format is HLS or MPEG-DASH, the valid value is:<li>libfdk_aac.</li>When the outer parameter Container is wav, the valid value is:<li>pcm16.</li>
+ * @method void setCodec(string $Codec) Set <p>Audio stream encoding format.<br>When the outer parameter Container is mp3, the valid value is:</p><li>libmp3lame.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>libfdk_aac;</li><li>libmp3lame;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>libfdk_aac: suitable for mp4.</li><li>libmp3lame: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid value is:<li>libfdk_aac.</li>When the outer parameter Format is HLS or MPEG-DASH, the valid value is:<li>libfdk_aac.</li>When the outer parameter Container is wav, the valid value is:<li>pcm16.</li>
+ * @method integer getBitrate() Obtain <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means the bitrate is set automatically by VOD.</p>
+ * @method void setBitrate(integer $Bitrate) Set <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means the bitrate is set automatically by VOD.</p>
+ * @method integer getSampleRate() Obtain <p>Sampling rate of the audio stream. Available values:</p><li>16000. Available only when Codec is pcm16.</li><li>32000</li><li>44100</li><li>48000</li>Unit: Hz.
+ * @method void setSampleRate(integer $SampleRate) Set <p>Sampling rate of the audio stream. Available values:</p><li>16000. Available only when Codec is pcm16.</li><li>32000</li><li>44100</li><li>48000</li>Unit: Hz.
+ * @method integer getAudioChannel() Obtain <p>Audio channel. Available values:</p><li>1: Single channel.</li><li>2: Two channels.</li><li>6: Stereo.</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media container format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo.
+ * @method void setAudioChannel(integer $AudioChannel) Set <p>Audio channel. Available values:</p><li>1: Single channel.</li><li>2: Two channels.</li><li>6: Stereo.</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media container format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo.
+ * @method array getStreamSelects() Obtain <p>Specifies the retained audio tracks for output. All source tracks are retained. </p><p>This parameter is valid only when specified in the OverrideParameter parameter and is disabled in other cases.</p>
+ * @method void setStreamSelects(array $StreamSelects) Set <p>Specifies the retained audio tracks for output. All source tracks are retained. </p><p>This parameter is valid only when specified in the OverrideParameter parameter and is disabled in other cases.</p>
  */
 class AudioTemplateInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string The audio codec.
-If `Container` is `mp3`, the valid value is:
-<li>`libmp3lame`</li>
-If `Container` is `ogg` or `flac`, the valid value is:
-<li>`flac`</li>
-If `Container` is `m4a`, the valid values are:
-<li>`libfdk_aac`</li>
-<li>`libmp3lame`</li>
-<li>`ac3`</li>
-If `Container` is `mp4` or `flv`, the valid values are:
-<li>`libfdk_aac` (Recommended for MP4)</li>
-<li>`libmp3lame` (Recommended for FLV)</li>
-<li>`mp2`</li>
-If `Container` is `hls`, the valid value is:
-<li>`libfdk_aac`</li>
-If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
-<li>`libfdk_aac`</li>
-If `Container` is `wav`, the valid value is:
-<li>`pcm16`</li>
+     * @var string <p>Audio stream encoding format.<br>When the outer parameter Container is mp3, the valid value is:</p><li>libmp3lame.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>libfdk_aac;</li><li>libmp3lame;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>libfdk_aac: suitable for mp4.</li><li>libmp3lame: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid value is:<li>libfdk_aac.</li>When the outer parameter Format is HLS or MPEG-DASH, the valid value is:<li>libfdk_aac.</li>When the outer parameter Container is wav, the valid value is:<li>pcm16.</li>
      */
     public $Codec;
 
     /**
-     * @var integer Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps. When value is 0, it means VOD automatically sets bitrate.
+     * @var integer <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means the bitrate is set automatically by VOD.</p>
      */
     public $Bitrate;
 
     /**
-     * @var integer The audio sample rate. Valid values:
-<li>`16000` (valid only if `Codec` is `pcm16`)</li>
-<li>`32000`</li>
-<li>`44100`</li>
-<li>`48000`</li>
-Unit: Hz.
+     * @var integer <p>Sampling rate of the audio stream. Available values:</p><li>16000. Available only when Codec is pcm16.</li><li>32000</li><li>44100</li><li>48000</li>Unit: Hz.
      */
     public $SampleRate;
 
     /**
-     * @var integer Audio channel system. Valid values:
-<li>1: mono-channel</li>
-<li>2: dual-channel</li>
-<li>6: stereo</li>
-You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
+     * @var integer <p>Audio channel. Available values:</p><li>1: Single channel.</li><li>2: Two channels.</li><li>6: Stereo.</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media container format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo.
      */
     public $AudioChannel;
 
     /**
-     * @param string $Codec The audio codec.
-If `Container` is `mp3`, the valid value is:
-<li>`libmp3lame`</li>
-If `Container` is `ogg` or `flac`, the valid value is:
-<li>`flac`</li>
-If `Container` is `m4a`, the valid values are:
-<li>`libfdk_aac`</li>
-<li>`libmp3lame`</li>
-<li>`ac3`</li>
-If `Container` is `mp4` or `flv`, the valid values are:
-<li>`libfdk_aac` (Recommended for MP4)</li>
-<li>`libmp3lame` (Recommended for FLV)</li>
-<li>`mp2`</li>
-If `Container` is `hls`, the valid value is:
-<li>`libfdk_aac`</li>
-If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
-<li>`libfdk_aac`</li>
-If `Container` is `wav`, the valid value is:
-<li>`pcm16`</li>
-     * @param integer $Bitrate Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps. When value is 0, it means VOD automatically sets bitrate.
-     * @param integer $SampleRate The audio sample rate. Valid values:
-<li>`16000` (valid only if `Codec` is `pcm16`)</li>
-<li>`32000`</li>
-<li>`44100`</li>
-<li>`48000`</li>
-Unit: Hz.
-     * @param integer $AudioChannel Audio channel system. Valid values:
-<li>1: mono-channel</li>
-<li>2: dual-channel</li>
-<li>6: stereo</li>
-You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
+     * @var array <p>Specifies the retained audio tracks for output. All source tracks are retained. </p><p>This parameter is valid only when specified in the OverrideParameter parameter and is disabled in other cases.</p>
+     */
+    public $StreamSelects;
+
+    /**
+     * @param string $Codec <p>Audio stream encoding format.<br>When the outer parameter Container is mp3, the valid value is:</p><li>libmp3lame.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>libfdk_aac;</li><li>libmp3lame;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>libfdk_aac: suitable for mp4.</li><li>libmp3lame: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid value is:<li>libfdk_aac.</li>When the outer parameter Format is HLS or MPEG-DASH, the valid value is:<li>libfdk_aac.</li>When the outer parameter Container is wav, the valid value is:<li>pcm16.</li>
+     * @param integer $Bitrate <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means the bitrate is set automatically by VOD.</p>
+     * @param integer $SampleRate <p>Sampling rate of the audio stream. Available values:</p><li>16000. Available only when Codec is pcm16.</li><li>32000</li><li>44100</li><li>48000</li>Unit: Hz.
+     * @param integer $AudioChannel <p>Audio channel. Available values:</p><li>1: Single channel.</li><li>2: Two channels.</li><li>6: Stereo.</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media container format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo.
+     * @param array $StreamSelects <p>Specifies the retained audio tracks for output. All source tracks are retained. </p><p>This parameter is valid only when specified in the OverrideParameter parameter and is disabled in other cases.</p>
      */
     function __construct()
     {
@@ -192,6 +92,10 @@ You cannot set the sound channel as stereo for media files in container formats 
 
         if (array_key_exists("AudioChannel",$param) and $param["AudioChannel"] !== null) {
             $this->AudioChannel = $param["AudioChannel"];
+        }
+
+        if (array_key_exists("StreamSelects",$param) and $param["StreamSelects"] !== null) {
+            $this->StreamSelects = $param["StreamSelects"];
         }
     }
 }
