@@ -21,31 +21,31 @@ use TencentCloud\Common\AbstractModel;
  * Monthly subscription configuration
  *
  * @method integer getPeriod() Obtain Billing cycle of the pay-as-you-go mode (unit: month):
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60
+1,2,3,4,5,6,7, 8,9,10,11,12,24,36,48,60
  * @method void setPeriod(integer $Period) Set Billing cycle of the pay-as-you-go mode (unit: month):
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60
+1,2,3,4,5,6,7, 8,9,10,11,12,24,36,48,60
  * @method string getRenewFlag() Obtain Renewal method of the prepayment mode:
-- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew (default)
-- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but do not auto-renew
+- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew 
+- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but auto-renewal is not performed (default)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify the user of expiration and do not auto-renew
 
  * @method void setRenewFlag(string $RenewFlag) Set Renewal method of the prepayment mode:
-- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew (default)
-- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but do not auto-renew
+- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew 
+- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but auto-renewal is not performed (default)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify the user of expiration and do not auto-renew
  */
 class InstanceChargePrepaid extends AbstractModel
 {
     /**
      * @var integer Billing cycle of the pay-as-you-go mode (unit: month):
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60
+1,2,3,4,5,6,7, 8,9,10,11,12,24,36,48,60
      */
     public $Period;
 
     /**
      * @var string Renewal method of the prepayment mode:
-- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew (default)
-- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but do not auto-renew
+- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew 
+- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but auto-renewal is not performed (default)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify the user of expiration and do not auto-renew
 
      */
@@ -53,10 +53,10 @@ class InstanceChargePrepaid extends AbstractModel
 
     /**
      * @param integer $Period Billing cycle of the pay-as-you-go mode (unit: month):
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60
+1,2,3,4,5,6,7, 8,9,10,11,12,24,36,48,60
      * @param string $RenewFlag Renewal method of the prepayment mode:
-- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew (default)
-- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but do not auto-renew
+- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew 
+- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but auto-renewal is not performed (default)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify the user of expiration and do not auto-renew
      */
     function __construct()

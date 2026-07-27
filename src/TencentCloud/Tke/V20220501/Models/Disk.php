@@ -22,14 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDiskType() Obtain Cloud disk type
  * @method void setDiskType(string $DiskType) Set Cloud disk type
- * @method integer getDiskSize() Obtain Cloud disk size (GB)
- * @method void setDiskSize(integer $DiskSize) Set Cloud disk size (GB)
+ * @method integer getDiskSize() Obtain Cloud disk size (G)
+ * @method void setDiskSize(integer $DiskSize) Set Cloud disk size (G)
  * @method boolean getAutoFormatAndMount() Obtain Whether to automatically format and mount disks.
  * @method void setAutoFormatAndMount(boolean $AutoFormatAndMount) Set Whether to automatically format and mount disks.
  * @method string getFileSystem() Obtain File system
  * @method void setFileSystem(string $FileSystem) Set File system
  * @method string getMountTarget() Obtain Mounting directory
  * @method void setMountTarget(string $MountTarget) Set Mounting directory
+ * @method string getDiskId() Obtain Cloud disk ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method void setDiskId(string $DiskId) Set Cloud disk ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method string getEncrypt() Obtain Encrypt the system disk
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method void setEncrypt(string $Encrypt) Set Encrypt the system disk
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method string getKmsKeyId() Obtain Custom KMS ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+ * @method void setKmsKeyId(string $KmsKeyId) Set Custom KMS ID
+Note: This field may return "null", indicating that no valid value can be obtained.
  */
 class Disk extends AbstractModel
 {
@@ -39,7 +51,7 @@ class Disk extends AbstractModel
     public $DiskType;
 
     /**
-     * @var integer Cloud disk size (GB)
+     * @var integer Cloud disk size (G)
      */
     public $DiskSize;
 
@@ -59,11 +71,35 @@ class Disk extends AbstractModel
     public $MountTarget;
 
     /**
+     * @var string Cloud disk ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public $DiskId;
+
+    /**
+     * @var string Encrypt the system disk
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public $Encrypt;
+
+    /**
+     * @var string Custom KMS ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public $KmsKeyId;
+
+    /**
      * @param string $DiskType Cloud disk type
-     * @param integer $DiskSize Cloud disk size (GB)
+     * @param integer $DiskSize Cloud disk size (G)
      * @param boolean $AutoFormatAndMount Whether to automatically format and mount disks.
      * @param string $FileSystem File system
      * @param string $MountTarget Mounting directory
+     * @param string $DiskId Cloud disk ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param string $Encrypt Encrypt the system disk
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param string $KmsKeyId Custom KMS ID
+Note: This field may return "null", indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -96,6 +132,18 @@ class Disk extends AbstractModel
 
         if (array_key_exists("MountTarget",$param) and $param["MountTarget"] !== null) {
             $this->MountTarget = $param["MountTarget"];
+        }
+
+        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
+            $this->DiskId = $param["DiskId"];
+        }
+
+        if (array_key_exists("Encrypt",$param) and $param["Encrypt"] !== null) {
+            $this->Encrypt = $param["Encrypt"];
+        }
+
+        if (array_key_exists("KmsKeyId",$param) and $param["KmsKeyId"] !== null) {
+            $this->KmsKeyId = $param["KmsKeyId"];
         }
     }
 }

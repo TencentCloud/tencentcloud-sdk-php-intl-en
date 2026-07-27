@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSkillInfo request structure.
  *
- * @method array getIds() Obtain Event ID
- * @method void setIds(array $Ids) Set Event ID
+ * @method array getIds() Obtain <p>Event ID.</p>
+ * @method void setIds(array $Ids) Set <p>Event ID.</p>
  */
 class DescribeSkillInfoRequest extends AbstractModel
 {
     /**
-     * @var array Event ID
+     * @var array <p>Event ID.</p>
      */
     public $Ids;
 
     /**
-     * @param array $Ids Event ID
+     * @param array $Ids <p>Event ID.</p>
      */
     function __construct()
     {
