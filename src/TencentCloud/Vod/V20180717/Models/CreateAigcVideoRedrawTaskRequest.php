@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAppId(integer $SubAppId) Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</b></p>
  * @method AigcVideoRedrawTaskInputFileInfo getFileInfo() Obtain <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
  * @method void setFileInfo(AigcVideoRedrawTaskInputFileInfo $FileInfo) Set <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
+ * @method AigcVideoRedrawTaskInfo getTaskInfo() Obtain <p>Parameters for the AIGC video conversion task.</p>
+ * @method void setTaskInfo(AigcVideoRedrawTaskInfo $TaskInfo) Set <p>Parameters for the AIGC video conversion task.</p>
  * @method AigcVideoRedrawOutputConfig getOutputConfig() Obtain <p>Output media file configuration for the AIGC video conversion task.</p>
  * @method void setOutputConfig(AigcVideoRedrawOutputConfig $OutputConfig) Set <p>Output media file configuration for the AIGC video conversion task.</p>
  * @method string getSessionId() Obtain <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
@@ -46,6 +48,11 @@ class CreateAigcVideoRedrawTaskRequest extends AbstractModel
      * @var AigcVideoRedrawTaskInputFileInfo <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
      */
     public $FileInfo;
+
+    /**
+     * @var AigcVideoRedrawTaskInfo <p>Parameters for the AIGC video conversion task.</p>
+     */
+    public $TaskInfo;
 
     /**
      * @var AigcVideoRedrawOutputConfig <p>Output media file configuration for the AIGC video conversion task.</p>
@@ -75,6 +82,7 @@ class CreateAigcVideoRedrawTaskRequest extends AbstractModel
     /**
      * @param integer $SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</b></p>
      * @param AigcVideoRedrawTaskInputFileInfo $FileInfo <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
+     * @param AigcVideoRedrawTaskInfo $TaskInfo <p>Parameters for the AIGC video conversion task.</p>
      * @param AigcVideoRedrawOutputConfig $OutputConfig <p>Output media file configuration for the AIGC video conversion task.</p>
      * @param string $SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      * @param string $SessionContext <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
@@ -101,6 +109,11 @@ class CreateAigcVideoRedrawTaskRequest extends AbstractModel
         if (array_key_exists("FileInfo",$param) and $param["FileInfo"] !== null) {
             $this->FileInfo = new AigcVideoRedrawTaskInputFileInfo();
             $this->FileInfo->deserialize($param["FileInfo"]);
+        }
+
+        if (array_key_exists("TaskInfo",$param) and $param["TaskInfo"] !== null) {
+            $this->TaskInfo = new AigcVideoRedrawTaskInfo();
+            $this->TaskInfo->deserialize($param["TaskInfo"]);
         }
 
         if (array_key_exists("OutputConfig",$param) and $param["OutputConfig"] !== null) {

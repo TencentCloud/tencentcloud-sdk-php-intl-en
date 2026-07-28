@@ -42,14 +42,14 @@ use TencentCloud\Common\AbstractModel;
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 
 voucherPayAmount: Coupon 
-tax: tax. 
-costBeforeTax: pre-tax price
+tax: tax
+amountBeforeTax: pre-tax price
  * @method void setFeeType(string $FeeType) Set Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 
 voucherPayAmount: Coupon 
-tax: tax. 
-costBeforeTax: pre-tax price
+tax: tax
+amountBeforeTax: pre-tax price
  * @method string getPayerUins() Obtain User UIN for querying cost analysis data
  * @method void setPayerUins(string $PayerUins) Set User UIN for querying cost analysis data
  * @method string getOwnerUins() Obtain User UIN for using resources
@@ -109,8 +109,8 @@ class AnalyseConditions extends AbstractModel
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 
 voucherPayAmount: Coupon 
-tax: tax. 
-costBeforeTax: pre-tax price
+tax: tax
+amountBeforeTax: pre-tax price
      */
     public $FeeType;
 
@@ -143,8 +143,8 @@ costBeforeTax: pre-tax price
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 
 voucherPayAmount: Coupon 
-tax: tax. 
-costBeforeTax: pre-tax price
+tax: tax
+amountBeforeTax: pre-tax price
      * @param string $PayerUins User UIN for querying cost analysis data
      * @param string $OwnerUins User UIN for using resources
      * @param string $ConsumptionTypes Consumption type. Query consumption type (please use consumption type code input parameter).
