@@ -44,8 +44,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getZone() Obtain Instance AZ
  * @method void setZone(string $Zone) Set Instance AZ
- * @method integer getInstanceChargeType() Obtain Billing mode. Valid value: `1` (monthly subscription).
- * @method void setInstanceChargeType(integer $InstanceChargeType) Set Billing mode. Valid value: `1` (monthly subscription).
+ * @method integer getInstanceChargeType() Obtain Billing mode. Valid value: `1` (yearly/monthly subscription).
+ * @method void setInstanceChargeType(integer $InstanceChargeType) Set Billing mode. Valid value: `1` (yearly/monthly subscription).
  * @method string getVpcName() Obtain VPC name
  * @method void setVpcName(string $VpcName) Set VPC name
  * @method string getSubnetName() Obtain Subnet name
@@ -120,7 +120,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Zone;
 
     /**
-     * @var integer Billing mode. Valid value: `1` (monthly subscription).
+     * @var integer Billing mode. Valid value: `1` (yearly/monthly subscription).
      */
     public $InstanceChargeType;
 
@@ -172,7 +172,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $TagSpecification Instance tag
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Zone Instance AZ
-     * @param integer $InstanceChargeType Billing mode. Valid value: `1` (monthly subscription).
+     * @param integer $InstanceChargeType Billing mode. Valid value: `1` (yearly/monthly subscription).
      * @param string $VpcName VPC name
      * @param string $SubnetName Subnet name
      * @param integer $RegionId Region ID
