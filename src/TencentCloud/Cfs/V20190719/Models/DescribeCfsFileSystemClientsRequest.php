@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCfsFileSystemClients request structure.
  *
- * @method string getFileSystemId() Obtain File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
- * @method void setFileSystemId(string $FileSystemId) Set File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+ * @method string getFileSystemId() Obtain File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
+ * @method void setFileSystemId(string $FileSystemId) Set File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
  * @method integer getOffset() Obtain Offset paging number, defaults to 0.
  * @method void setOffset(integer $Offset) Set Offset paging number, defaults to 0.
  * @method integer getLimit() Obtain Limit page size. default value 10. maximum value 100.
@@ -30,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCfsFileSystemClientsRequest extends AbstractModel
 {
     /**
-     * @var string File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+     * @var string File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
      */
     public $FileSystemId;
 
@@ -45,7 +48,8 @@ class DescribeCfsFileSystemClientsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $FileSystemId File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+     * @param string $FileSystemId File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
      * @param integer $Offset Offset paging number, defaults to 0.
      * @param integer $Limit Limit page size. default value 10. maximum value 100.
      */

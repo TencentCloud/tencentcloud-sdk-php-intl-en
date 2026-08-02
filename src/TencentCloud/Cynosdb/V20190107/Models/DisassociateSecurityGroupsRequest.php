@@ -47,6 +47,7 @@ Description: To get the instance group ID of a cluster, perform [query cluster i
     /**
      * @var string Availability zone.
 Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
+     * @deprecated
      */
     public $Zone;
 

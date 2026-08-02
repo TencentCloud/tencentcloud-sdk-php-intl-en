@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Backup setting.
  *
- * @method boolean getBackupCustomAutoTime() Obtain System automation time.
- * @method void setBackupCustomAutoTime(boolean $BackupCustomAutoTime) Set System automation time.
- * @method integer getBackupTimeBeg() Obtain Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
- * @method void setBackupTimeBeg(integer $BackupTimeBeg) Set Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
- * @method integer getBackupTimeEnd() Obtain Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
- * @method void setBackupTimeEnd(integer $BackupTimeEnd) Set Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
- * @method array getBackupWeekDays() Obtain Currently this parameter cannot be modified. no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+ * @method boolean getBackupCustomAutoTime() Obtain <p>System automation time</p>
+ * @method void setBackupCustomAutoTime(boolean $BackupCustomAutoTime) Set <p>System automation time</p>
+ * @method integer getBackupTimeBeg() Obtain <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+ * @method void setBackupTimeBeg(integer $BackupTimeBeg) Set <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+ * @method integer getBackupTimeEnd() Obtain <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+ * @method void setBackupTimeEnd(integer $BackupTimeEnd) Set <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+ * @method array getBackupWeekDays() Obtain <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBackupWeekDays(array $BackupWeekDays) Set Currently this parameter cannot be modified. no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+ * @method void setBackupWeekDays(array $BackupWeekDays) Set <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getBackupIntervalTime() Obtain Interval.
- * @method void setBackupIntervalTime(integer $BackupIntervalTime) Set Interval.
- * @method integer getReserveDuration() Obtain Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
- * @method void setReserveDuration(integer $ReserveDuration) Set Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
- * @method string getCrossRegionsEnable() Obtain Enable cross-region backup.
-Enable.
-0: disabled.
- * @method void setCrossRegionsEnable(string $CrossRegionsEnable) Set Enable cross-region backup.
-Enable.
-0: disabled.
- * @method array getCrossRegions() Obtain Cross-Regional backup region.
+ * @method integer getBackupIntervalTime() Obtain <p>Interval</p>
+ * @method void setBackupIntervalTime(integer $BackupIntervalTime) Set <p>Interval</p>
+ * @method integer getReserveDuration() Obtain <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
+ * @method void setReserveDuration(integer $ReserveDuration) Set <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
+ * @method string getCrossRegionsEnable() Obtain <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
+ * @method void setCrossRegionsEnable(string $CrossRegionsEnable) Set <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
+ * @method array getCrossRegions() Obtain <p>Cross-regional backup region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCrossRegions(array $CrossRegions) Set Cross-Regional backup region.
+ * @method void setCrossRegions(array $CrossRegions) Set <p>Cross-regional backup region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBackupTriggerStrategy() Obtain Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
- * @method void setBackupTriggerStrategy(string $BackupTriggerStrategy) Set Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
- * @method array getAutoCopyVaults() Obtain Backup delivery relationship
- * @method void setAutoCopyVaults(array $AutoCopyVaults) Set Backup delivery relationship
+ * @method integer getCrossRegionSaveDays() Obtain <p>Cross-region backup retention period</p><p>Unit: Day</p>
+ * @method void setCrossRegionSaveDays(integer $CrossRegionSaveDays) Set <p>Cross-region backup retention period</p><p>Unit: Day</p>
+ * @method string getBackupTriggerStrategy() Obtain <p>Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high frequency backup</p>
+ * @method void setBackupTriggerStrategy(string $BackupTriggerStrategy) Set <p>Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high frequency backup</p>
+ * @method array getAutoCopyVaults() Obtain <p>Backup delivery relationship</p>
+ * @method void setAutoCopyVaults(array $AutoCopyVaults) Set <p>Backup delivery relationship</p>
  */
 class BackupConfigInfo extends AbstractModel
 {
     /**
-     * @var boolean System automation time.
+     * @var boolean <p>System automation time</p>
      */
     public $BackupCustomAutoTime;
 
     /**
-     * @var integer Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+     * @var integer <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
      */
     public $BackupTimeBeg;
 
     /**
-     * @var integer Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+     * @var integer <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
      */
     public $BackupTimeEnd;
 
     /**
-     * @var array Currently this parameter cannot be modified. no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+     * @var array <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BackupWeekDays;
 
     /**
-     * @var integer Interval.
+     * @var integer <p>Interval</p>
      */
     public $BackupIntervalTime;
 
     /**
-     * @var integer Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
+     * @var integer <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
      */
     public $ReserveDuration;
 
     /**
-     * @var string Enable cross-region backup.
-Enable.
-0: disabled.
+     * @var string <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
      */
     public $CrossRegionsEnable;
 
     /**
-     * @var array Cross-Regional backup region.
+     * @var array <p>Cross-regional backup region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CrossRegions;
 
     /**
-     * @var string Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
+     * @var integer <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     */
+    public $CrossRegionSaveDays;
+
+    /**
+     * @var string <p>Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high frequency backup</p>
      */
     public $BackupTriggerStrategy;
 
     /**
-     * @var array Backup delivery relationship
+     * @var array <p>Backup delivery relationship</p>
      */
     public $AutoCopyVaults;
 
     /**
-     * @param boolean $BackupCustomAutoTime System automation time.
-     * @param integer $BackupTimeBeg Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
-     * @param integer $BackupTimeEnd Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
-     * @param array $BackupWeekDays Currently this parameter cannot be modified. no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+     * @param boolean $BackupCustomAutoTime <p>System automation time</p>
+     * @param integer $BackupTimeBeg <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * @param integer $BackupTimeEnd <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * @param array $BackupWeekDays <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $BackupIntervalTime Interval.
-     * @param integer $ReserveDuration Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
-     * @param string $CrossRegionsEnable Enable cross-region backup.
-Enable.
-0: disabled.
-     * @param array $CrossRegions Cross-Regional backup region.
+     * @param integer $BackupIntervalTime <p>Interval</p>
+     * @param integer $ReserveDuration <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
+     * @param string $CrossRegionsEnable <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
+     * @param array $CrossRegions <p>Cross-regional backup region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BackupTriggerStrategy Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
-     * @param array $AutoCopyVaults Backup delivery relationship
+     * @param integer $CrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     * @param string $BackupTriggerStrategy <p>Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high frequency backup</p>
+     * @param array $AutoCopyVaults <p>Backup delivery relationship</p>
      */
     function __construct()
     {
@@ -164,6 +164,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CrossRegions",$param) and $param["CrossRegions"] !== null) {
             $this->CrossRegions = $param["CrossRegions"];
+        }
+
+        if (array_key_exists("CrossRegionSaveDays",$param) and $param["CrossRegionSaveDays"] !== null) {
+            $this->CrossRegionSaveDays = $param["CrossRegionSaveDays"];
         }
 
         if (array_key_exists("BackupTriggerStrategy",$param) and $param["BackupTriggerStrategy"] !== null) {

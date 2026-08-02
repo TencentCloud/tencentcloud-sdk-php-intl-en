@@ -44,6 +44,7 @@ Description: To get the instance group ID of a cluster, perform [query cluster i
 
     /**
      * @var string Availability zone
+     * @deprecated
      */
     public $Zone;
 

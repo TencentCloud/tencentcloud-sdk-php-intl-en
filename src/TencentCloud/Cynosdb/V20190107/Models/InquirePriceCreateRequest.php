@@ -20,106 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceCreate request structure.
  *
- * @method string getZone() Obtain AZ
- * @method void setZone(string $Zone) Set AZ
- * @method integer getGoodsNum() Obtain Number of compute node to purchase
- * @method void setGoodsNum(integer $GoodsNum) Set Number of compute node to purchase
- * @method string getInstancePayMode() Obtain Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
- * @method void setInstancePayMode(string $InstancePayMode) Set Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
- * @method string getStoragePayMode() Obtain Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
- * @method void setStoragePayMode(string $StoragePayMode) Set Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
- * @method string getDeviceType() Obtain Instance device type. Supported values are as follows:
-- common: indicates the general type
-- exclusive: indicates the exclusive type.
- * @method void setDeviceType(string $DeviceType) Set Instance device type. Supported values are as follows:
-- common: indicates the general type
-- exclusive: indicates the exclusive type.
- * @method integer getCpu() Obtain Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
- * @method void setCpu(integer $Cpu) Set Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
- * @method integer getMemory() Obtain Memory size in GB, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
- * @method void setMemory(integer $Memory) Set Memory size in GB, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
- * @method float getCcu() Obtain CCU size, which is required when `InstancePayMode` is `SERVERLESS`.
- * @method void setCcu(float $Ccu) Set CCU size, which is required when `InstancePayMode` is `SERVERLESS`.
- * @method integer getStorageLimit() Obtain Storage size, which is required when `StoragePayMode` is `PREPAID`.
- * @method void setStorageLimit(integer $StorageLimit) Set Storage size, which is required when `StoragePayMode` is `PREPAID`.
- * @method integer getTimeSpan() Obtain Validity period, which is required when `InstancePayMode` is `PREPAID`.
- * @method void setTimeSpan(integer $TimeSpan) Set Validity period, which is required when `InstancePayMode` is `PREPAID`.
- * @method string getTimeUnit() Obtain Duration unit, which is required when `InstancePayMode` is `PREPAID`. Valid values: `m` (month), `d` (day).
- * @method void setTimeUnit(string $TimeUnit) Set Duration unit, which is required when `InstancePayMode` is `PREPAID`. Valid values: `m` (month), `d` (day).
+ * @method string getZone() Obtain <p>Availability zone, each region provision best practice</p>
+ * @method void setZone(string $Zone) Set <p>Availability zone, each region provision best practice</p>
+ * @method integer getGoodsNum() Obtain <p>Number of compute nodes to purchase</p>
+ * @method void setGoodsNum(integer $GoodsNum) Set <p>Number of compute nodes to purchase</p>
+ * @method string getInstancePayMode() Obtain <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
+ * @method void setInstancePayMode(string $InstancePayMode) Set <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
+ * @method string getStoragePayMode() Obtain <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
+ * @method void setStoragePayMode(string $StoragePayMode) Set <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
+ * @method string getDeviceType() Obtain <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
+ * @method void setDeviceType(string $DeviceType) Set <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
+ * @method integer getCpu() Obtain <p>Number of CPU cores. Required for PREPAID and POSTPAID instance types.</p>
+ * @method void setCpu(integer $Cpu) Set <p>Number of CPU cores. Required for PREPAID and POSTPAID instance types.</p>
+ * @method integer getMemory() Obtain <p>Memory size in GB. Required for PREPAID and POSTPAID instance types.</p>
+ * @method void setMemory(integer $Memory) Set <p>Memory size in GB. Required for PREPAID and POSTPAID instance types.</p>
+ * @method float getCcu() Obtain <p>Ccu size. Required for the serverless type.</p>
+ * @method void setCcu(float $Ccu) Set <p>Ccu size. Required for the serverless type.</p>
+ * @method integer getStorageLimit() Obtain <p>Storage size. Required for PREPAID storage type</p>
+ * @method void setStorageLimit(integer $StorageLimit) Set <p>Storage size. Required for PREPAID storage type</p>
+ * @method integer getTimeSpan() Obtain <p>Purchase period, required for PREPAID purchase type</p>
+ * @method void setTimeSpan(integer $TimeSpan) Set <p>Purchase period, required for PREPAID purchase type</p>
+ * @method string getTimeUnit() Obtain <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
+ * @method void setTimeUnit(string $TimeUnit) Set <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
+ * @method string getStorageVersion() Obtain <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+ * @method void setStorageVersion(string $StorageVersion) Set <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+ * @method boolean getIsMultiAz() Obtain <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
+ * @method void setIsMultiAz(boolean $IsMultiAz) Set <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
  */
 class InquirePriceCreateRequest extends AbstractModel
 {
     /**
-     * @var string AZ
+     * @var string <p>Availability zone, each region provision best practice</p>
      */
     public $Zone;
 
     /**
-     * @var integer Number of compute node to purchase
+     * @var integer <p>Number of compute nodes to purchase</p>
      */
     public $GoodsNum;
 
     /**
-     * @var string Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
+     * @var string <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
      */
     public $InstancePayMode;
 
     /**
-     * @var string Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
+     * @var string <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
      */
     public $StoragePayMode;
 
     /**
-     * @var string Instance device type. Supported values are as follows:
-- common: indicates the general type
-- exclusive: indicates the exclusive type.
+     * @var string <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
      */
     public $DeviceType;
 
     /**
-     * @var integer Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
+     * @var integer <p>Number of CPU cores. Required for PREPAID and POSTPAID instance types.</p>
      */
     public $Cpu;
 
     /**
-     * @var integer Memory size in GB, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
+     * @var integer <p>Memory size in GB. Required for PREPAID and POSTPAID instance types.</p>
      */
     public $Memory;
 
     /**
-     * @var float CCU size, which is required when `InstancePayMode` is `SERVERLESS`.
+     * @var float <p>Ccu size. Required for the serverless type.</p>
      */
     public $Ccu;
 
     /**
-     * @var integer Storage size, which is required when `StoragePayMode` is `PREPAID`.
+     * @var integer <p>Storage size. Required for PREPAID storage type</p>
      */
     public $StorageLimit;
 
     /**
-     * @var integer Validity period, which is required when `InstancePayMode` is `PREPAID`.
+     * @var integer <p>Purchase period, required for PREPAID purchase type</p>
      */
     public $TimeSpan;
 
     /**
-     * @var string Duration unit, which is required when `InstancePayMode` is `PREPAID`. Valid values: `m` (month), `d` (day).
+     * @var string <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
      */
     public $TimeUnit;
 
     /**
-     * @param string $Zone AZ
-     * @param integer $GoodsNum Number of compute node to purchase
-     * @param string $InstancePayMode Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
-     * @param string $StoragePayMode Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
-     * @param string $DeviceType Instance device type. Supported values are as follows:
-- common: indicates the general type
-- exclusive: indicates the exclusive type.
-     * @param integer $Cpu Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
-     * @param integer $Memory Memory size in GB, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
-     * @param float $Ccu CCU size, which is required when `InstancePayMode` is `SERVERLESS`.
-     * @param integer $StorageLimit Storage size, which is required when `StoragePayMode` is `PREPAID`.
-     * @param integer $TimeSpan Validity period, which is required when `InstancePayMode` is `PREPAID`.
-     * @param string $TimeUnit Duration unit, which is required when `InstancePayMode` is `PREPAID`. Valid values: `m` (month), `d` (day).
+     * @var string <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+     */
+    public $StorageVersion;
+
+    /**
+     * @var boolean <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
+     */
+    public $IsMultiAz;
+
+    /**
+     * @param string $Zone <p>Availability zone, each region provision best practice</p>
+     * @param integer $GoodsNum <p>Number of compute nodes to purchase</p>
+     * @param string $InstancePayMode <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
+     * @param string $StoragePayMode <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
+     * @param string $DeviceType <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
+     * @param integer $Cpu <p>Number of CPU cores. Required for PREPAID and POSTPAID instance types.</p>
+     * @param integer $Memory <p>Memory size in GB. Required for PREPAID and POSTPAID instance types.</p>
+     * @param float $Ccu <p>Ccu size. Required for the serverless type.</p>
+     * @param integer $StorageLimit <p>Storage size. Required for PREPAID storage type</p>
+     * @param integer $TimeSpan <p>Purchase period, required for PREPAID purchase type</p>
+     * @param string $TimeUnit <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
+     * @param string $StorageVersion <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+     * @param boolean $IsMultiAz <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
      */
     function __construct()
     {
@@ -176,6 +184,14 @@ class InquirePriceCreateRequest extends AbstractModel
 
         if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
             $this->TimeUnit = $param["TimeUnit"];
+        }
+
+        if (array_key_exists("StorageVersion",$param) and $param["StorageVersion"] !== null) {
+            $this->StorageVersion = $param["StorageVersion"];
+        }
+
+        if (array_key_exists("IsMultiAz",$param) and $param["IsMultiAz"] !== null) {
+            $this->IsMultiAz = $param["IsMultiAz"];
         }
     }
 }

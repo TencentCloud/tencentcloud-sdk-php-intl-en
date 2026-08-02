@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCfsFileSystemName request structure.
  *
- * @method string getFileSystemId() Obtain File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
- * @method void setFileSystemId(string $FileSystemId) Set File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+ * @method string getFileSystemId() Obtain File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
+ * @method void setFileSystemId(string $FileSystemId) Set File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
  * @method string getFsName() Obtain User-Defined file system name, alphanumeric chinese characters or _,- within 64 bytes. at least one of them or CreationToken must be provided.
  * @method void setFsName(string $FsName) Set User-Defined file system name, alphanumeric chinese characters or _,- within 64 bytes. at least one of them or CreationToken must be provided.
  */
 class UpdateCfsFileSystemNameRequest extends AbstractModel
 {
     /**
-     * @var string File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+     * @var string File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
      */
     public $FileSystemId;
 
@@ -38,7 +41,8 @@ class UpdateCfsFileSystemNameRequest extends AbstractModel
     public $FsName;
 
     /**
-     * @param string $FileSystemId File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+     * @param string $FileSystemId File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
      * @param string $FsName User-Defined file system name, alphanumeric chinese characters or _,- within 64 bytes. at least one of them or CreationToken must be provided.
      */
     function __construct()

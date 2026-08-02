@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientIp(string $ClientIp) Set Client IP
  * @method string getVpcId() Obtain File system VPCID
  * @method void setVpcId(string $VpcId) Set File system VPCID
- * @method string getZone() Obtain Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.com/document/api/582/38144?from_cn_redirect=1).
- * @method void setZone(string $Zone) Set Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.com/document/api/582/38144?from_cn_redirect=1).
+ * @method string getZone() Obtain Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description [Introduction
+](https://www.tencentcloud.com/zh/document/product/582/50830)
+ * @method void setZone(string $Zone) Set Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description [Introduction
+](https://www.tencentcloud.com/zh/document/product/582/50830)
  * @method string getZoneName() Obtain AZ name
  * @method void setZoneName(string $ZoneName) Set AZ name
  * @method string getMountDirectory() Obtain Path in which the file system is mounted to the client
@@ -51,7 +53,8 @@ class FileSystemClient extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.com/document/api/582/38144?from_cn_redirect=1).
+     * @var string Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description [Introduction
+](https://www.tencentcloud.com/zh/document/product/582/50830)
      */
     public $Zone;
 
@@ -69,7 +72,8 @@ class FileSystemClient extends AbstractModel
      * @param string $CfsVip IP address of the file system
      * @param string $ClientIp Client IP
      * @param string $VpcId File system VPCID
-     * @param string $Zone Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.com/document/api/582/38144?from_cn_redirect=1).
+     * @param string $Zone Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description [Introduction
+](https://www.tencentcloud.com/zh/document/product/582/50830)
      * @param string $ZoneName AZ name
      * @param string $MountDirectory Path in which the file system is mounted to the client
      */

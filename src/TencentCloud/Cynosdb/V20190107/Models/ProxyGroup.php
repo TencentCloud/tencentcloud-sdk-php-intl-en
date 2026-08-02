@@ -20,82 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Proxy group
  *
- * @method string getProxyGroupId() Obtain Database proxy group ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy group ID
- * @method integer getProxyNodeCount() Obtain Number of nodes in the proxy group
- * @method void setProxyNodeCount(integer $ProxyNodeCount) Set Number of nodes in the proxy group
- * @method string getStatus() Obtain Database proxy group status
- * @method void setStatus(string $Status) Set Database proxy group status
- * @method string getRegion() Obtain Region
- * @method void setRegion(string $Region) Set Region
- * @method string getZone() Obtain AZ
- * @method void setZone(string $Zone) Set AZ
- * @method string getCurrentProxyVersion() Obtain Current proxy version
- * @method void setCurrentProxyVersion(string $CurrentProxyVersion) Set Current proxy version
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method integer getAppId() Obtain User AppId
- * @method void setAppId(integer $AppId) Set User AppId
- * @method string getOpenRw() Obtain Specifies that a read-write node activates the database proxy.
- * @method void setOpenRw(string $OpenRw) Set Specifies that a read-write node activates the database proxy.
+ * @method string getProxyGroupId() Obtain <p>Database Proxy Group ID.</p>
+ * @method void setProxyGroupId(string $ProxyGroupId) Set <p>Database Proxy Group ID.</p>
+ * @method integer getProxyNodeCount() Obtain <p>Number of database proxy group nodes</p>
+ * @method void setProxyNodeCount(integer $ProxyNodeCount) Set <p>Number of database proxy group nodes</p>
+ * @method string getStatus() Obtain <p>Database Proxy Group status</p>
+ * @method void setStatus(string $Status) Set <p>Database Proxy Group status</p>
+ * @method string getRegion() Obtain <p>Region.</p>
+ * @method void setRegion(string $Region) Set <p>Region.</p>
+ * @method string getZone() Obtain <p>AZ.</p>
+ * @method void setZone(string $Zone) Set <p>AZ.</p>
+ * @method string getCurrentProxyVersion() Obtain <p>Current proxy version</p>
+ * @method void setCurrentProxyVersion(string $CurrentProxyVersion) Set <p>Current proxy version</p>
+ * @method string getClusterId() Obtain <p>Cluster ID.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method integer getAppId() Obtain <p>User AppId</p>
+ * @method void setAppId(integer $AppId) Set <p>User AppId</p>
+ * @method string getOpenRw() Obtain <p>Activate database proxy for RWNode</p>
+ * @method void setOpenRw(string $OpenRw) Set <p>Activate database proxy for RWNode</p>
+ * @method string getCreateTime() Obtain <p>Creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
+ * @method string getUpdateTime() Obtain <p>Update time.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Update time.</p>
  */
 class ProxyGroup extends AbstractModel
 {
     /**
-     * @var string Database proxy group ID
+     * @var string <p>Database Proxy Group ID.</p>
      */
     public $ProxyGroupId;
 
     /**
-     * @var integer Number of nodes in the proxy group
+     * @var integer <p>Number of database proxy group nodes</p>
      */
     public $ProxyNodeCount;
 
     /**
-     * @var string Database proxy group status
+     * @var string <p>Database Proxy Group status</p>
      */
     public $Status;
 
     /**
-     * @var string Region
+     * @var string <p>Region.</p>
      */
     public $Region;
 
     /**
-     * @var string AZ
+     * @var string <p>AZ.</p>
      */
     public $Zone;
 
     /**
-     * @var string Current proxy version
+     * @var string <p>Current proxy version</p>
      */
     public $CurrentProxyVersion;
 
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer User AppId
+     * @var integer <p>User AppId</p>
      */
     public $AppId;
 
     /**
-     * @var string Specifies that a read-write node activates the database proxy.
+     * @var string <p>Activate database proxy for RWNode</p>
      */
     public $OpenRw;
 
     /**
-     * @param string $ProxyGroupId Database proxy group ID
-     * @param integer $ProxyNodeCount Number of nodes in the proxy group
-     * @param string $Status Database proxy group status
-     * @param string $Region Region
-     * @param string $Zone AZ
-     * @param string $CurrentProxyVersion Current proxy version
-     * @param string $ClusterId Cluster ID
-     * @param integer $AppId User AppId
-     * @param string $OpenRw Specifies that a read-write node activates the database proxy.
+     * @var string <p>Creation time.</p>
+     */
+    public $CreateTime;
+
+    /**
+     * @var string <p>Update time.</p>
+     */
+    public $UpdateTime;
+
+    /**
+     * @param string $ProxyGroupId <p>Database Proxy Group ID.</p>
+     * @param integer $ProxyNodeCount <p>Number of database proxy group nodes</p>
+     * @param string $Status <p>Database Proxy Group status</p>
+     * @param string $Region <p>Region.</p>
+     * @param string $Zone <p>AZ.</p>
+     * @param string $CurrentProxyVersion <p>Current proxy version</p>
+     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param integer $AppId <p>User AppId</p>
+     * @param string $OpenRw <p>Activate database proxy for RWNode</p>
+     * @param string $CreateTime <p>Creation time.</p>
+     * @param string $UpdateTime <p>Update time.</p>
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class ProxyGroup extends AbstractModel
 
         if (array_key_exists("OpenRw",$param) and $param["OpenRw"] !== null) {
             $this->OpenRw = $param["OpenRw"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

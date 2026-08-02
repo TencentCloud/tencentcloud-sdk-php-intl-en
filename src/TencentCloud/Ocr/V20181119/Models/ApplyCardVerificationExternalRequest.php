@@ -72,6 +72,8 @@ If set to true, the image constraints are:
 - Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
 - Minimum pixel width/height: 64.
 - Supported formats: PNG, JPG, JPEG, BMP (GIF not supported).
+ * @method string getWebhookUrl() Obtain Verification status callback URL. When set, this endpoint will be actively notified with the final verification result upon process completion. Leave blank to disable callbacks. Since callbacks are not fully reliable, a polling mechanism is advised to guarantee retrieval of the final status.
+ * @method void setWebhookUrl(string $WebhookUrl) Set Verification status callback URL. When set, this endpoint will be actively notified with the final verification result upon process completion. Leave blank to disable callbacks. Since callbacks are not fully reliable, a polling mechanism is advised to guarantee retrieval of the final status.
  */
 class ApplyCardVerificationExternalRequest extends AbstractModel
 {
@@ -130,6 +132,11 @@ If set to true, the image constraints are:
     public $ReturnHeadImage;
 
     /**
+     * @var string Verification status callback URL. When set, this endpoint will be actively notified with the final verification result upon process completion. Leave blank to disable callbacks. Since callbacks are not fully reliable, a polling mechanism is advised to guarantee retrieval of the final status.
+     */
+    public $WebhookUrl;
+
+    /**
      * @param string $Nationality Country/Region of the document. For the full list of supported countries/regions, refer to the API description.
      * @param string $CardType Document type. Supported values: ID_CARD, PASSPORT, DRIVING_LICENSE, RESIDENCE_PERMIT (only supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
      * @param string $ImageBase64Front Base64-encoded image of the document front.
@@ -156,6 +163,7 @@ If set to true, the image constraints are:
 - Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
 - Minimum pixel width/height: 64.
 - Supported formats: PNG, JPG, JPEG, BMP (GIF not supported).
+     * @param string $WebhookUrl Verification status callback URL. When set, this endpoint will be actively notified with the final verification result upon process completion. Leave blank to disable callbacks. Since callbacks are not fully reliable, a polling mechanism is advised to guarantee retrieval of the final status.
      */
     function __construct()
     {
@@ -196,6 +204,10 @@ If set to true, the image constraints are:
 
         if (array_key_exists("ReturnHeadImage",$param) and $param["ReturnHeadImage"] !== null) {
             $this->ReturnHeadImage = $param["ReturnHeadImage"];
+        }
+
+        if (array_key_exists("WebhookUrl",$param) and $param["WebhookUrl"] !== null) {
+            $this->WebhookUrl = $param["WebhookUrl"];
         }
     }
 }

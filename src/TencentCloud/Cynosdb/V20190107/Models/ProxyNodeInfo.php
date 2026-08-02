@@ -20,98 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Node in the database proxy group.
  *
- * @method string getProxyNodeId() Obtain Database proxy node ID.
- * @method void setProxyNodeId(string $ProxyNodeId) Set Database proxy node ID.
- * @method integer getProxyNodeConnections() Obtain Current node connections, which is not returned by the `DescribeProxyNodes` API.
- * @method void setProxyNodeConnections(integer $ProxyNodeConnections) Set Current node connections, which is not returned by the `DescribeProxyNodes` API.
- * @method integer getCpu() Obtain CPU of the database proxy node.
- * @method void setCpu(integer $Cpu) Set CPU of the database proxy node.
- * @method integer getMem() Obtain Memory of the database proxy node.
- * @method void setMem(integer $Mem) Set Memory of the database proxy node.
- * @method string getStatus() Obtain Status of the database proxy node.
- * @method void setStatus(string $Status) Set Status of the database proxy node.
- * @method string getProxyGroupId() Obtain Database proxy group ID.
- * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy group ID.
- * @method string getClusterId() Obtain Cluster ID.
- * @method void setClusterId(string $ClusterId) Set Cluster ID.
- * @method integer getAppId() Obtain User AppID.
- * @method void setAppId(integer $AppId) Set User AppID.
- * @method string getRegion() Obtain Region.
- * @method void setRegion(string $Region) Set Region.
- * @method string getZone() Obtain AZ.
- * @method void setZone(string $Zone) Set AZ.
- * @method string getOssProxyNodeName() Obtain Database proxy node name.
- * @method void setOssProxyNodeName(string $OssProxyNodeName) Set Database proxy node name.
+ * @method string getProxyNodeId() Obtain <p>Database Proxy Node ID</p>
+ * @method void setProxyNodeId(string $ProxyNodeId) Set <p>Database Proxy Node ID</p>
+ * @method integer getProxyNodeConnections() Obtain <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
+ * @method void setProxyNodeConnections(integer $ProxyNodeConnections) Set <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
+ * @method integer getCpu() Obtain <p>Database proxy node cpu</p>
+ * @method void setCpu(integer $Cpu) Set <p>Database proxy node cpu</p>
+ * @method integer getMem() Obtain <p>Database proxy node memory</p>
+ * @method void setMem(integer $Mem) Set <p>Database proxy node memory</p>
+ * @method string getStatus() Obtain <p>Database Proxy Node Status</p>
+ * @method void setStatus(string $Status) Set <p>Database Proxy Node Status</p>
+ * @method string getProxyGroupId() Obtain <p>Database Proxy Group ID</p>
+ * @method void setProxyGroupId(string $ProxyGroupId) Set <p>Database Proxy Group ID</p>
+ * @method string getClusterId() Obtain <p>Cluster ID.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method integer getAppId() Obtain <p>User AppID</p>
+ * @method void setAppId(integer $AppId) Set <p>User AppID</p>
+ * @method string getRegion() Obtain <p>Region.</p>
+ * @method void setRegion(string $Region) Set <p>Region.</p>
+ * @method string getZone() Obtain <p>AZ.</p>
+ * @method void setZone(string $Zone) Set <p>AZ.</p>
+ * @method string getOssProxyNodeName() Obtain <p>Database Proxy Node Name</p>
+ * @method void setOssProxyNodeName(string $OssProxyNodeName) Set <p>Database Proxy Node Name</p>
+ * @method string getCreateTime() Obtain <p>Creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
+ * @method string getUpdateTime() Obtain <p>Update time.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Update time.</p>
  */
 class ProxyNodeInfo extends AbstractModel
 {
     /**
-     * @var string Database proxy node ID.
+     * @var string <p>Database Proxy Node ID</p>
      */
     public $ProxyNodeId;
 
     /**
-     * @var integer Current node connections, which is not returned by the `DescribeProxyNodes` API.
+     * @var integer <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
      */
     public $ProxyNodeConnections;
 
     /**
-     * @var integer CPU of the database proxy node.
+     * @var integer <p>Database proxy node cpu</p>
      */
     public $Cpu;
 
     /**
-     * @var integer Memory of the database proxy node.
+     * @var integer <p>Database proxy node memory</p>
      */
     public $Mem;
 
     /**
-     * @var string Status of the database proxy node.
+     * @var string <p>Database Proxy Node Status</p>
      */
     public $Status;
 
     /**
-     * @var string Database proxy group ID.
+     * @var string <p>Database Proxy Group ID</p>
      */
     public $ProxyGroupId;
 
     /**
-     * @var string Cluster ID.
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer User AppID.
+     * @var integer <p>User AppID</p>
      */
     public $AppId;
 
     /**
-     * @var string Region.
+     * @var string <p>Region.</p>
      */
     public $Region;
 
     /**
-     * @var string AZ.
+     * @var string <p>AZ.</p>
      */
     public $Zone;
 
     /**
-     * @var string Database proxy node name.
+     * @var string <p>Database Proxy Node Name</p>
      */
     public $OssProxyNodeName;
 
     /**
-     * @param string $ProxyNodeId Database proxy node ID.
-     * @param integer $ProxyNodeConnections Current node connections, which is not returned by the `DescribeProxyNodes` API.
-     * @param integer $Cpu CPU of the database proxy node.
-     * @param integer $Mem Memory of the database proxy node.
-     * @param string $Status Status of the database proxy node.
-     * @param string $ProxyGroupId Database proxy group ID.
-     * @param string $ClusterId Cluster ID.
-     * @param integer $AppId User AppID.
-     * @param string $Region Region.
-     * @param string $Zone AZ.
-     * @param string $OssProxyNodeName Database proxy node name.
+     * @var string <p>Creation time.</p>
+     */
+    public $CreateTime;
+
+    /**
+     * @var string <p>Update time.</p>
+     */
+    public $UpdateTime;
+
+    /**
+     * @param string $ProxyNodeId <p>Database Proxy Node ID</p>
+     * @param integer $ProxyNodeConnections <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
+     * @param integer $Cpu <p>Database proxy node cpu</p>
+     * @param integer $Mem <p>Database proxy node memory</p>
+     * @param string $Status <p>Database Proxy Node Status</p>
+     * @param string $ProxyGroupId <p>Database Proxy Group ID</p>
+     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param integer $AppId <p>User AppID</p>
+     * @param string $Region <p>Region.</p>
+     * @param string $Zone <p>AZ.</p>
+     * @param string $OssProxyNodeName <p>Database Proxy Node Name</p>
+     * @param string $CreateTime <p>Creation time.</p>
+     * @param string $UpdateTime <p>Update time.</p>
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class ProxyNodeInfo extends AbstractModel
 
         if (array_key_exists("OssProxyNodeName",$param) and $param["OssProxyNodeName"] !== null) {
             $this->OssProxyNodeName = $param["OssProxyNodeName"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

@@ -79,6 +79,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeBackupDownloadUserRestrictionResponse DescribeBackupDownloadUserRestriction(Models\DescribeBackupDownloadUserRestrictionRequest $req) This API is used to query the default backup download access restrictions of user-level settings in the current region.
  * @method Models\DescribeBackupListResponse DescribeBackupList(Models\DescribeBackupListRequest $req) This API is used to query the backup file list of a cluster.
  * @method Models\DescribeBackupListByVaultResponse DescribeBackupListByVault(Models\DescribeBackupListByVaultRequest $req) Query backup file list based on safe ID
+ * @method Models\DescribeBackupOverviewResponse DescribeBackupOverview(Models\DescribeBackupOverviewRequest $req) This API is used to query the backup usage overview.
  * @method Models\DescribeBinlogConfigResponse DescribeBinlogConfig(Models\DescribeBinlogConfigRequest $req) This API is used to query binlog configurations.
  * @method Models\DescribeBinlogDownloadUrlResponse DescribeBinlogDownloadUrl(Models\DescribeBinlogDownloadUrlRequest $req) This API is used to query the download address of Binlog.
  * @method Models\DescribeBinlogListByVaultResponse DescribeBinlogListByVault(Models\DescribeBinlogListByVaultRequest $req) Query binlog backups in the insurance box
@@ -236,7 +237,9 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\SwitchClusterVpcResponse SwitchClusterVpc(Models\SwitchClusterVpcRequest $req) This API is used to replace the cluster vpc.
  * @method Models\SwitchClusterZoneResponse SwitchClusterZone(Models\SwitchClusterZoneRequest $req) This API is used to switch the primary and secondary AZs of a cluster.
  * @method Models\SwitchProxyVpcResponse SwitchProxyVpc(Models\SwitchProxyVpcRequest $req) This API is used to replace the vpc of the database proxy.
+ * @method Models\TransferClusterPrepayToPostpayResponse TransferClusterPrepayToPostpay(Models\TransferClusterPrepayToPostpayRequest $req) This API is used to convert a Prepaid Cluster to a postpaid cluster.
  * @method Models\TransferClusterZoneResponse TransferClusterZone(Models\TransferClusterZoneRequest $req) This API is used to trigger cross-AZ migration.
+ * @method Models\TransferStoragePrepayToPostpayResponse TransferStoragePrepayToPostpay(Models\TransferStoragePrepayToPostpayRequest $req) This API is used to convert prepaid storage to postpaid storage.
  * @method Models\UnbindClusterResourcePackagesResponse UnbindClusterResourcePackages(Models\UnbindClusterResourcePackagesRequest $req) This API is used to unbind resource packages from clusters.
  * @method Models\UpgradeClusterVersionResponse UpgradeClusterVersion(Models\UpgradeClusterVersionRequest $req) This interface (UpgradeClusterVersion) is used to update the kernel minor version.
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) This interface (UpgradeInstance) is used to upgrade instances.

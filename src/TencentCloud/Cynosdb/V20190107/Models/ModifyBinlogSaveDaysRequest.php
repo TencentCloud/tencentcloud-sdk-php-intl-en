@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBinlogSaveDays request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method integer getBinlogSaveDays() Obtain Binlog retention period in days
- * @method void setBinlogSaveDays(integer $BinlogSaveDays) Set Binlog retention period in days
+ * @method string getClusterId() Obtain <p>Cluster ID.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method integer getBinlogSaveDays() Obtain <p>Binlog retention days</p>
+ * @method void setBinlogSaveDays(integer $BinlogSaveDays) Set <p>Binlog retention days</p>
+ * @method integer getBinlogCrossRegionSaveDays() Obtain <p>Cross-region backup retention period</p><p>Unit: Day</p>
+ * @method void setBinlogCrossRegionSaveDays(integer $BinlogCrossRegionSaveDays) Set <p>Cross-region backup retention period</p><p>Unit: Day</p>
  */
 class ModifyBinlogSaveDaysRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer Binlog retention period in days
+     * @var integer <p>Binlog retention days</p>
      */
     public $BinlogSaveDays;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param integer $BinlogSaveDays Binlog retention period in days
+     * @var integer <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     */
+    public $BinlogCrossRegionSaveDays;
+
+    /**
+     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param integer $BinlogSaveDays <p>Binlog retention days</p>
+     * @param integer $BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyBinlogSaveDaysRequest extends AbstractModel
 
         if (array_key_exists("BinlogSaveDays",$param) and $param["BinlogSaveDays"] !== null) {
             $this->BinlogSaveDays = $param["BinlogSaveDays"];
+        }
+
+        if (array_key_exists("BinlogCrossRegionSaveDays",$param) and $param["BinlogCrossRegionSaveDays"] !== null) {
+            $this->BinlogCrossRegionSaveDays = $param["BinlogCrossRegionSaveDays"];
         }
     }
 }

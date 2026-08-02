@@ -20,46 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Specifies the binlog configuration message.
  *
- * @method integer getBinlogSaveDays() Obtain Specifies the retention time of binlogs.
- * @method void setBinlogSaveDays(integer $BinlogSaveDays) Set Specifies the retention time of binlogs.
- * @method string getBinlogCrossRegionsEnable() Obtain Whether binlog cross-region backup is enabled.
- * @method void setBinlogCrossRegionsEnable(string $BinlogCrossRegionsEnable) Set Whether binlog cross-region backup is enabled.
- * @method array getBinlogCrossRegions() Obtain binlog in a different region.
+ * @method integer getBinlogSaveDays() Obtain <p>binlog retention time</p>
+ * @method void setBinlogSaveDays(integer $BinlogSaveDays) Set <p>binlog retention time</p>
+ * @method string getBinlogCrossRegionsEnable() Obtain <p>Whether cross-region backup of binlog is enabled</p>
+ * @method void setBinlogCrossRegionsEnable(string $BinlogCrossRegionsEnable) Set <p>Whether cross-region backup of binlog is enabled</p>
+ * @method array getBinlogCrossRegions() Obtain <p>binlog cross-region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBinlogCrossRegions(array $BinlogCrossRegions) Set binlog in a different region.
+ * @method void setBinlogCrossRegions(array $BinlogCrossRegions) Set <p>binlog cross-region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getAutoCopyVaults() Obtain Safe info
- * @method void setAutoCopyVaults(array $AutoCopyVaults) Set Safe info
+ * @method integer getBinlogCrossRegionSaveDays() Obtain <p>Cross-region backup retention period</p><p>Unit: Day</p>
+ * @method void setBinlogCrossRegionSaveDays(integer $BinlogCrossRegionSaveDays) Set <p>Cross-region backup retention period</p><p>Unit: Day</p>
+ * @method array getAutoCopyVaults() Obtain <p>Safe info</p>
+ * @method void setAutoCopyVaults(array $AutoCopyVaults) Set <p>Safe info</p>
  */
 class BinlogConfigInfo extends AbstractModel
 {
     /**
-     * @var integer Specifies the retention time of binlogs.
+     * @var integer <p>binlog retention time</p>
      */
     public $BinlogSaveDays;
 
     /**
-     * @var string Whether binlog cross-region backup is enabled.
+     * @var string <p>Whether cross-region backup of binlog is enabled</p>
      */
     public $BinlogCrossRegionsEnable;
 
     /**
-     * @var array binlog in a different region.
+     * @var array <p>binlog cross-region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BinlogCrossRegions;
 
     /**
-     * @var array Safe info
+     * @var integer <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     */
+    public $BinlogCrossRegionSaveDays;
+
+    /**
+     * @var array <p>Safe info</p>
      */
     public $AutoCopyVaults;
 
     /**
-     * @param integer $BinlogSaveDays Specifies the retention time of binlogs.
-     * @param string $BinlogCrossRegionsEnable Whether binlog cross-region backup is enabled.
-     * @param array $BinlogCrossRegions binlog in a different region.
+     * @param integer $BinlogSaveDays <p>binlog retention time</p>
+     * @param string $BinlogCrossRegionsEnable <p>Whether cross-region backup of binlog is enabled</p>
+     * @param array $BinlogCrossRegions <p>binlog cross-region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $AutoCopyVaults Safe info
+     * @param integer $BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     * @param array $AutoCopyVaults <p>Safe info</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("BinlogCrossRegions",$param) and $param["BinlogCrossRegions"] !== null) {
             $this->BinlogCrossRegions = $param["BinlogCrossRegions"];
+        }
+
+        if (array_key_exists("BinlogCrossRegionSaveDays",$param) and $param["BinlogCrossRegionSaveDays"] !== null) {
+            $this->BinlogCrossRegionSaveDays = $param["BinlogCrossRegionSaveDays"];
         }
 
         if (array_key_exists("AutoCopyVaults",$param) and $param["AutoCopyVaults"] !== null) {

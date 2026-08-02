@@ -20,74 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Logical backup configuration information.
  *
- * @method string getLogicBackupEnable() Obtain Whether automatic logical backup is enabled.
- * @method void setLogicBackupEnable(string $LogicBackupEnable) Set Whether automatic logical backup is enabled.
- * @method integer getLogicBackupTimeBeg() Obtain Specifies the automatic logic backup start time.
- * @method void setLogicBackupTimeBeg(integer $LogicBackupTimeBeg) Set Specifies the automatic logic backup start time.
- * @method integer getLogicBackupTimeEnd() Obtain Specifies the termination time of automatic logical backup.
- * @method void setLogicBackupTimeEnd(integer $LogicBackupTimeEnd) Set Specifies the termination time of automatic logical backup.
- * @method integer getLogicReserveDuration() Obtain Automatic logical backup retention time.
-Unit: seconds.
- * @method void setLogicReserveDuration(integer $LogicReserveDuration) Set Automatic logical backup retention time.
-Unit: seconds.
- * @method string getLogicCrossRegionsEnable() Obtain Is cross-regional logical backup enabled?.
-Valid values: ON/OFF.
- * @method void setLogicCrossRegionsEnable(string $LogicCrossRegionsEnable) Set Is cross-regional logical backup enabled?.
-Valid values: ON/OFF.
- * @method array getLogicCrossRegions() Obtain Regions covered by logical backup.
- * @method void setLogicCrossRegions(array $LogicCrossRegions) Set Regions covered by logical backup.
- * @method array getAutoCopyVaults() Obtain Backup delivery relationship
- * @method void setAutoCopyVaults(array $AutoCopyVaults) Set Backup delivery relationship
+ * @method string getLogicBackupEnable() Obtain <p>Whether automatic logical backup is enabled</p>
+ * @method void setLogicBackupEnable(string $LogicBackupEnable) Set <p>Whether automatic logical backup is enabled</p>
+ * @method integer getLogicBackupTimeBeg() Obtain <p>Automatic logic backup start time</p>
+ * @method void setLogicBackupTimeBeg(integer $LogicBackupTimeBeg) Set <p>Automatic logic backup start time</p>
+ * @method integer getLogicBackupTimeEnd() Obtain <p>Automated logic backup end time</p>
+ * @method void setLogicBackupTimeEnd(integer $LogicBackupTimeEnd) Set <p>Automated logic backup end time</p>
+ * @method integer getLogicReserveDuration() Obtain <p>Automatic logical backup retention time<br>Unit: second</p>
+ * @method void setLogicReserveDuration(integer $LogicReserveDuration) Set <p>Automatic logical backup retention time<br>Unit: second</p>
+ * @method string getLogicCrossRegionsEnable() Obtain <p>Whether cross-regional logical backup is enabled<br>Available values: ON/OFF</p>
+ * @method void setLogicCrossRegionsEnable(string $LogicCrossRegionsEnable) Set <p>Whether cross-regional logical backup is enabled<br>Available values: ON/OFF</p>
+ * @method array getLogicCrossRegions() Obtain <p>Cross-regional logic backup</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLogicCrossRegions(array $LogicCrossRegions) Set <p>Cross-regional logic backup</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getAutoCopyVaults() Obtain <p>Backup delivery relationship</p>
+ * @method void setAutoCopyVaults(array $AutoCopyVaults) Set <p>Backup delivery relationship</p>
+ * @method integer getLogicCrossRegionSaveDays() Obtain <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+ * @method void setLogicCrossRegionSaveDays(integer $LogicCrossRegionSaveDays) Set <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
  */
 class LogicBackupConfigInfo extends AbstractModel
 {
     /**
-     * @var string Whether automatic logical backup is enabled.
+     * @var string <p>Whether automatic logical backup is enabled</p>
      */
     public $LogicBackupEnable;
 
     /**
-     * @var integer Specifies the automatic logic backup start time.
+     * @var integer <p>Automatic logic backup start time</p>
      */
     public $LogicBackupTimeBeg;
 
     /**
-     * @var integer Specifies the termination time of automatic logical backup.
+     * @var integer <p>Automated logic backup end time</p>
      */
     public $LogicBackupTimeEnd;
 
     /**
-     * @var integer Automatic logical backup retention time.
-Unit: seconds.
+     * @var integer <p>Automatic logical backup retention time<br>Unit: second</p>
      */
     public $LogicReserveDuration;
 
     /**
-     * @var string Is cross-regional logical backup enabled?.
-Valid values: ON/OFF.
+     * @var string <p>Whether cross-regional logical backup is enabled<br>Available values: ON/OFF</p>
      */
     public $LogicCrossRegionsEnable;
 
     /**
-     * @var array Regions covered by logical backup.
+     * @var array <p>Cross-regional logic backup</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LogicCrossRegions;
 
     /**
-     * @var array Backup delivery relationship
+     * @var array <p>Backup delivery relationship</p>
      */
     public $AutoCopyVaults;
 
     /**
-     * @param string $LogicBackupEnable Whether automatic logical backup is enabled.
-     * @param integer $LogicBackupTimeBeg Specifies the automatic logic backup start time.
-     * @param integer $LogicBackupTimeEnd Specifies the termination time of automatic logical backup.
-     * @param integer $LogicReserveDuration Automatic logical backup retention time.
-Unit: seconds.
-     * @param string $LogicCrossRegionsEnable Is cross-regional logical backup enabled?.
-Valid values: ON/OFF.
-     * @param array $LogicCrossRegions Regions covered by logical backup.
-     * @param array $AutoCopyVaults Backup delivery relationship
+     * @var integer <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+     */
+    public $LogicCrossRegionSaveDays;
+
+    /**
+     * @param string $LogicBackupEnable <p>Whether automatic logical backup is enabled</p>
+     * @param integer $LogicBackupTimeBeg <p>Automatic logic backup start time</p>
+     * @param integer $LogicBackupTimeEnd <p>Automated logic backup end time</p>
+     * @param integer $LogicReserveDuration <p>Automatic logical backup retention time<br>Unit: second</p>
+     * @param string $LogicCrossRegionsEnable <p>Whether cross-regional logical backup is enabled<br>Available values: ON/OFF</p>
+     * @param array $LogicCrossRegions <p>Cross-regional logic backup</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $AutoCopyVaults <p>Backup delivery relationship</p>
+     * @param integer $LogicCrossRegionSaveDays <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
      */
     function __construct()
     {
@@ -133,6 +137,10 @@ Valid values: ON/OFF.
                 $obj->deserialize($value);
                 array_push($this->AutoCopyVaults, $obj);
             }
+        }
+
+        if (array_key_exists("LogicCrossRegionSaveDays",$param) and $param["LogicCrossRegionSaveDays"] !== null) {
+            $this->LogicCrossRegionSaveDays = $param["LogicCrossRegionSaveDays"];
         }
     }
 }

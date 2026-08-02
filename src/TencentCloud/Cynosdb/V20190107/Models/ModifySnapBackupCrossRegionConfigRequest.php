@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySnapBackupCrossRegionConfig request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getCrossRegionsEnable() Obtain Whether cross-region snapshot backup is enabled.
- * @method void setCrossRegionsEnable(string $CrossRegionsEnable) Set Whether cross-region snapshot backup is enabled.
- * @method array getCrossRegions() Obtain Cross-Regional snapshot backup.
- * @method void setCrossRegions(array $CrossRegions) Set Cross-Regional snapshot backup.
+ * @method string getClusterId() Obtain <p>Cluster ID.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method string getCrossRegionsEnable() Obtain <p>Whether cross-region snapshot backup is enabled ON/OFF</p>
+ * @method void setCrossRegionsEnable(string $CrossRegionsEnable) Set <p>Whether cross-region snapshot backup is enabled ON/OFF</p>
+ * @method array getCrossRegions() Obtain <p>Cross-regional snapshot backup</p>
+ * @method void setCrossRegions(array $CrossRegions) Set <p>Cross-regional snapshot backup</p>
+ * @method integer getCrossRegionSaveDays() Obtain <p>Cross-region backup retention period</p><p>Unit: day</p>
+ * @method void setCrossRegionSaveDays(integer $CrossRegionSaveDays) Set <p>Cross-region backup retention period</p><p>Unit: day</p>
  */
 class ModifySnapBackupCrossRegionConfigRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterId;
 
     /**
-     * @var string Whether cross-region snapshot backup is enabled.
+     * @var string <p>Whether cross-region snapshot backup is enabled ON/OFF</p>
      */
     public $CrossRegionsEnable;
 
     /**
-     * @var array Cross-Regional snapshot backup.
+     * @var array <p>Cross-regional snapshot backup</p>
      */
     public $CrossRegions;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param string $CrossRegionsEnable Whether cross-region snapshot backup is enabled.
-     * @param array $CrossRegions Cross-Regional snapshot backup.
+     * @var integer <p>Cross-region backup retention period</p><p>Unit: day</p>
+     */
+    public $CrossRegionSaveDays;
+
+    /**
+     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param string $CrossRegionsEnable <p>Whether cross-region snapshot backup is enabled ON/OFF</p>
+     * @param array $CrossRegions <p>Cross-regional snapshot backup</p>
+     * @param integer $CrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifySnapBackupCrossRegionConfigRequest extends AbstractModel
 
         if (array_key_exists("CrossRegions",$param) and $param["CrossRegions"] !== null) {
             $this->CrossRegions = $param["CrossRegions"];
+        }
+
+        if (array_key_exists("CrossRegionSaveDays",$param) and $param["CrossRegionSaveDays"] !== null) {
+            $this->CrossRegionSaveDays = $param["CrossRegionSaveDays"];
         }
     }
 }

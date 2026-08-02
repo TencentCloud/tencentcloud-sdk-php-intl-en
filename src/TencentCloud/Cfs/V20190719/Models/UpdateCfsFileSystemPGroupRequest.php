@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPGroupId() Obtain Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
  * @method void setPGroupId(string $PGroupId) Set Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
- * @method string getFileSystemId() Obtain File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
- * @method void setFileSystemId(string $FileSystemId) Set File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+ * @method string getFileSystemId() Obtain File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
+ * @method void setFileSystemId(string $FileSystemId) Set File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
  */
 class UpdateCfsFileSystemPGroupRequest extends AbstractModel
 {
@@ -33,13 +35,15 @@ class UpdateCfsFileSystemPGroupRequest extends AbstractModel
     public $PGroupId;
 
     /**
-     * @var string File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+     * @var string File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
      */
     public $FileSystemId;
 
     /**
      * @param string $PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
-     * @param string $FileSystemId File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+     * @param string $FileSystemId File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
      */
     function __construct()
     {

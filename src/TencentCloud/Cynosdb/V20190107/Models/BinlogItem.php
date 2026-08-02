@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Binlog description
  *
- * @method string getFileName() Obtain Binlog filename
- * @method void setFileName(string $FileName) Set Binlog filename
- * @method integer getFileSize() Obtain File size in bytes
- * @method void setFileSize(integer $FileSize) Set File size in bytes
- * @method string getStartTime() Obtain Transaction start time
- * @method void setStartTime(string $StartTime) Set Transaction start time
- * @method string getFinishTime() Obtain Transaction end time
- * @method void setFinishTime(string $FinishTime) Set Transaction end time
- * @method integer getBinlogId() Obtain Binlog file ID
- * @method void setBinlogId(integer $BinlogId) Set Binlog file ID
- * @method array getCrossRegions() Obtain binlog cross-region coverage
- * @method void setCrossRegions(array $CrossRegions) Set binlog cross-region coverage
- * @method string getCopyStatus() Obtain Backup delivery status
- * @method void setCopyStatus(string $CopyStatus) Set Backup delivery status
- * @method array getVaultInfos() Obtain Safe info
- * @method void setVaultInfos(array $VaultInfos) Set Safe info
- * @method string getEncryptKeyId() Obtain Encryption key
- * @method void setEncryptKeyId(string $EncryptKeyId) Set Encryption key
- * @method string getEncryptRegion() Obtain Encrypt key region
- * @method void setEncryptRegion(string $EncryptRegion) Set Encrypt key region
+ * @method string getFileName() Obtain <p>Binlog filename</p>
+ * @method void setFileName(string $FileName) Set <p>Binlog filename</p>
+ * @method integer getFileSize() Obtain <p>File size, measurement unit: byte</p>
+ * @method void setFileSize(integer $FileSize) Set <p>File size, measurement unit: byte</p>
+ * @method string getStartTime() Obtain <p>Earliest transaction time</p>
+ * @method void setStartTime(string $StartTime) Set <p>Earliest transaction time</p>
+ * @method string getFinishTime() Obtain <p>Latest transaction time</p>
+ * @method void setFinishTime(string $FinishTime) Set <p>Latest transaction time</p>
+ * @method integer getBinlogId() Obtain <p>Binlog file ID</p>
+ * @method void setBinlogId(integer $BinlogId) Set <p>Binlog file ID</p>
+ * @method array getCrossRegions() Obtain <p>Cross-regional binlog</p>
+ * @method void setCrossRegions(array $CrossRegions) Set <p>Cross-regional binlog</p>
+ * @method string getCopyStatus() Obtain <p>Backup delivery status</p>
+ * @method void setCopyStatus(string $CopyStatus) Set <p>Backup delivery status</p>
+ * @method array getVaultInfos() Obtain <p>Safe information</p>
+ * @method void setVaultInfos(array $VaultInfos) Set <p>Safe information</p>
+ * @method string getEncryptKeyId() Obtain <p>Encryption key</p>
+ * @method void setEncryptKeyId(string $EncryptKeyId) Set <p>Encryption key</p>
+ * @method string getEncryptRegion() Obtain <p>Key region for encryption</p>
+ * @method void setEncryptRegion(string $EncryptRegion) Set <p>Key region for encryption</p>
+ * @method array getExistRegions() Obtain <p>Geographical distribution of backups</p>
+ * @method void setExistRegions(array $ExistRegions) Set <p>Geographical distribution of backups</p>
  */
 class BinlogItem extends AbstractModel
 {
     /**
-     * @var string Binlog filename
+     * @var string <p>Binlog filename</p>
      */
     public $FileName;
 
     /**
-     * @var integer File size in bytes
+     * @var integer <p>File size, measurement unit: byte</p>
      */
     public $FileSize;
 
     /**
-     * @var string Transaction start time
+     * @var string <p>Earliest transaction time</p>
      */
     public $StartTime;
 
     /**
-     * @var string Transaction end time
+     * @var string <p>Latest transaction time</p>
      */
     public $FinishTime;
 
     /**
-     * @var integer Binlog file ID
+     * @var integer <p>Binlog file ID</p>
      */
     public $BinlogId;
 
     /**
-     * @var array binlog cross-region coverage
+     * @var array <p>Cross-regional binlog</p>
      */
     public $CrossRegions;
 
     /**
-     * @var string Backup delivery status
+     * @var string <p>Backup delivery status</p>
      */
     public $CopyStatus;
 
     /**
-     * @var array Safe info
+     * @var array <p>Safe information</p>
      */
     public $VaultInfos;
 
     /**
-     * @var string Encryption key
+     * @var string <p>Encryption key</p>
      */
     public $EncryptKeyId;
 
     /**
-     * @var string Encrypt key region
+     * @var string <p>Key region for encryption</p>
      */
     public $EncryptRegion;
 
     /**
-     * @param string $FileName Binlog filename
-     * @param integer $FileSize File size in bytes
-     * @param string $StartTime Transaction start time
-     * @param string $FinishTime Transaction end time
-     * @param integer $BinlogId Binlog file ID
-     * @param array $CrossRegions binlog cross-region coverage
-     * @param string $CopyStatus Backup delivery status
-     * @param array $VaultInfos Safe info
-     * @param string $EncryptKeyId Encryption key
-     * @param string $EncryptRegion Encrypt key region
+     * @var array <p>Geographical distribution of backups</p>
+     */
+    public $ExistRegions;
+
+    /**
+     * @param string $FileName <p>Binlog filename</p>
+     * @param integer $FileSize <p>File size, measurement unit: byte</p>
+     * @param string $StartTime <p>Earliest transaction time</p>
+     * @param string $FinishTime <p>Latest transaction time</p>
+     * @param integer $BinlogId <p>Binlog file ID</p>
+     * @param array $CrossRegions <p>Cross-regional binlog</p>
+     * @param string $CopyStatus <p>Backup delivery status</p>
+     * @param array $VaultInfos <p>Safe information</p>
+     * @param string $EncryptKeyId <p>Encryption key</p>
+     * @param string $EncryptRegion <p>Key region for encryption</p>
+     * @param array $ExistRegions <p>Geographical distribution of backups</p>
      */
     function __construct()
     {
@@ -161,6 +169,15 @@ class BinlogItem extends AbstractModel
 
         if (array_key_exists("EncryptRegion",$param) and $param["EncryptRegion"] !== null) {
             $this->EncryptRegion = $param["EncryptRegion"];
+        }
+
+        if (array_key_exists("ExistRegions",$param) and $param["ExistRegions"] !== null) {
+            $this->ExistRegions = [];
+            foreach ($param["ExistRegions"] as $key => $value){
+                $obj = new BinlogRegionInfo();
+                $obj->deserialize($value);
+                array_push($this->ExistRegions, $obj);
+            }
         }
     }
 }
