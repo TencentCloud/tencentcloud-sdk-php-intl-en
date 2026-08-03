@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAccounts request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getAccounts() Obtain Accounts in array, which contains `account` and `host`.
- * @method void setAccounts(array $Accounts) Set Accounts in array, which contains `account` and `host`.
+ * @method string getClusterId() Obtain <p>Cluster ID.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method array getAccounts() Obtain <p>Account array, including account and host.</p>
+ * @method void setAccounts(array $Accounts) Set <p>Account array, including account and host.</p>
  */
 class DeleteAccountsRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterId;
 
     /**
-     * @var array Accounts in array, which contains `account` and `host`.
+     * @var array <p>Account array, including account and host.</p>
      */
     public $Accounts;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param array $Accounts Accounts in array, which contains `account` and `host`.
+     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param array $Accounts <p>Account array, including account and host.</p>
      */
     function __construct()
     {

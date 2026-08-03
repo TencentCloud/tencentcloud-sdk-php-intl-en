@@ -24,6 +24,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
 
 /**
  * @method Models\AddAcRuleResponse AddAcRule(Models\AddAcRuleRequest $req) This API is used to add edge firewall rules.
+ * @method Models\AddAclRuleResponse AddAclRule(Models\AddAclRuleRequest $req) Add one or more Internet Boundary Access Control Rules.
  * @method Models\AddEnterpriseSecurityGroupRulesResponse AddEnterpriseSecurityGroupRules(Models\AddEnterpriseSecurityGroupRulesRequest $req) This API is used to create enterprise security group rules (new).
  * @method Models\AddNatAcRuleResponse AddNatAcRule(Models\AddNatAcRuleRequest $req) This API is used to add NAT access control rules.
  * @method Models\CreateAcRulesResponse CreateAcRules(Models\CreateAcRulesRequest $req) This API is used to create access control rules.
@@ -41,6 +42,8 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeBlockIgnoreListResponse DescribeBlockIgnoreList(Models\DescribeBlockIgnoreListRequest $req) This API is used to get allowlists or blocklists for intrusion prevention.
  * @method Models\DescribeBlockStaticListResponse DescribeBlockStaticList(Models\DescribeBlockStaticListRequest $req) This API is used to get the most frequent attacker.
 
+ * @method Models\DescribeCfwLogsResponse DescribeCfwLogs(Models\DescribeCfwLogsRequest $req) This API is used to query the firewall log of the current tenant. Only use HasMore/NextToken in Response.Data to paginate.
+ * @method Models\DescribeCfwStatusMonitorResponse DescribeCfwStatusMonitor(Models\DescribeCfwStatusMonitorRequest $req) Query status monitoring scenario. Op=describe_scene is used to detect available scenarios, metrics, perspectives, and secondary dropdown available_options. Op=fetch_scene is used to pull specific scenario snapshots, with results in the JSON string of Response.Data.
  * @method Models\DescribeDefenseSwitchResponse DescribeDefenseSwitch(Models\DescribeDefenseSwitchRequest $req) This API is used to query the list of firewall toggles with Intrusion Defense enabled.
  * @method Models\DescribeEnterpriseSecurityGroupRuleResponse DescribeEnterpriseSecurityGroupRule(Models\DescribeEnterpriseSecurityGroupRuleRequest $req) This API is used to get enterprise security group rules (new).
  * @method Models\DescribeGuideScanInfoResponse DescribeGuideScanInfo(Models\DescribeGuideScanInfoRequest $req) This API is used to get the scan interface information in Get Started.

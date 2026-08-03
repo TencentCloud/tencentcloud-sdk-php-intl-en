@@ -78,6 +78,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoArchive(string $AutoArchive) Set <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
  * @method boolean getFromSaveBackup() Obtain <p>Whether to restore from the saved backup</p>
  * @method void setFromSaveBackup(boolean $FromSaveBackup) Set <p>Whether to restore from the saved backup</p>
+ * @method string getSyncWay() Obtain <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
+ * @method void setSyncWay(string $SyncWay) Set <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
+ * @method integer getSemiSyncTimeout() Obtain <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+ * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) Set <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+ * @method string getSlaveZone() Obtain <p>Standby availability zone</p>
+ * @method void setSlaveZone(string $SlaveZone) Set <p>Standby availability zone</p>
  */
 class RollbackToNewClusterRequest extends AbstractModel
 {
@@ -227,6 +233,21 @@ class RollbackToNewClusterRequest extends AbstractModel
     public $FromSaveBackup;
 
     /**
+     * @var string <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
+     */
+    public $SyncWay;
+
+    /**
+     * @var integer <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+     */
+    public $SemiSyncTimeout;
+
+    /**
+     * @var string <p>Standby availability zone</p>
+     */
+    public $SlaveZone;
+
+    /**
      * @param string $Zone <p>AZ.</p>
      * @param string $OriginalClusterId <p>During rollback, input the source cluster ID to search for the source poolId</p>
      * @param string $UniqVpcId <p>VPC network ID</p>
@@ -256,6 +277,9 @@ class RollbackToNewClusterRequest extends AbstractModel
      * @param integer $ProjectId <p>Project ID.</p>
      * @param string $AutoArchive <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
      * @param boolean $FromSaveBackup <p>Whether to restore from the saved backup</p>
+     * @param string $SyncWay <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
+     * @param integer $SemiSyncTimeout <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+     * @param string $SlaveZone <p>Standby availability zone</p>
      */
     function __construct()
     {
@@ -409,6 +433,18 @@ class RollbackToNewClusterRequest extends AbstractModel
 
         if (array_key_exists("FromSaveBackup",$param) and $param["FromSaveBackup"] !== null) {
             $this->FromSaveBackup = $param["FromSaveBackup"];
+        }
+
+        if (array_key_exists("SyncWay",$param) and $param["SyncWay"] !== null) {
+            $this->SyncWay = $param["SyncWay"];
+        }
+
+        if (array_key_exists("SemiSyncTimeout",$param) and $param["SemiSyncTimeout"] !== null) {
+            $this->SemiSyncTimeout = $param["SemiSyncTimeout"];
+        }
+
+        if (array_key_exists("SlaveZone",$param) and $param["SlaveZone"] !== null) {
+            $this->SlaveZone = $param["SlaveZone"];
         }
     }
 }

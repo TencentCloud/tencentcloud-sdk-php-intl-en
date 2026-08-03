@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set <p>vpc network Id. required when vipType is 3.</p>.
  * @method string getSubnetId() Obtain <p>Specifies the vpc subnet id. required when vipType is 3.</p>.
  * @method void setSubnetId(string $SubnetId) Set <p>Specifies the vpc subnet id. required when vipType is 3.</p>.
- * @method integer getAccessType() Obtain <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. defaults to 0. when vipType=3, supports 0,1,3,4,5. when vipType=7, supports 0,1,3. when vipType=1, supports 1,3.</p>.
- * @method void setAccessType(integer $AccessType) Set <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. defaults to 0. when vipType=3, supports 0,1,3,4,5. when vipType=7, supports 0,1,3. when vipType=1, supports 1,3.</p>.
+ * @method integer getAccessType() Obtain <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. Default is 0.<br>vipType=3, supports 0,1,3,4,5<br>vipType=7, supports 0,1,3<br>vipType=1, supports 1,3</p>
+ * @method void setAccessType(integer $AccessType) Set <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. Default is 0.<br>vipType=3, supports 0,1,3,4,5<br>vipType=7, supports 0,1,3<br>vipType=1, supports 1,3</p>
  * @method integer getAuthFlag() Obtain <P>Specifies whether access management is required. this field has been deprecated.</p>.
  * @method void setAuthFlag(integer $AuthFlag) Set <P>Specifies whether access management is required. this field has been deprecated.</p>.
  * @method integer getCallerAppid() Obtain <p>Specifies the caller appId.</p>.
@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNote(string $Note) Set <P>Specifies the remark information.</p>.
  * @method array getSecurityGroupIds() Obtain <P>Specifies the ordered list of security group associations.</p>.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <P>Specifies the ordered list of security group associations.</p>.
+ * @method array getIpWhitelist() Obtain <p>Preset configuration of public network route IP allowlist</p><p>Input parameter limit: vipType=1</p>
+ * @method void setIpWhitelist(array $IpWhitelist) Set <p>Preset configuration of public network route IP allowlist</p><p>Input parameter limit: vipType=1</p>
  */
 class CreateRouteRequest extends AbstractModel
 {
@@ -66,7 +68,7 @@ class CreateRouteRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. defaults to 0. when vipType=3, supports 0,1,3,4,5. when vipType=7, supports 0,1,3. when vipType=1, supports 1,3.</p>.
+     * @var integer <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. Default is 0.<br>vipType=3, supports 0,1,3,4,5<br>vipType=7, supports 0,1,3<br>vipType=1, supports 1,3</p>
      */
     public $AccessType;
 
@@ -101,17 +103,23 @@ class CreateRouteRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var array <p>Preset configuration of public network route IP allowlist</p><p>Input parameter limit: vipType=1</p>
+     */
+    public $IpWhitelist;
+
+    /**
      * @param string $InstanceId <p>Specifies the ckafka cluster instance id. obtain through the API <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a>.</p>.
      * @param integer $VipType <P>Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).</p>.
      * @param string $VpcId <p>vpc network Id. required when vipType is 3.</p>.
      * @param string $SubnetId <p>Specifies the vpc subnet id. required when vipType is 3.</p>.
-     * @param integer $AccessType <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. defaults to 0. when vipType=3, supports 0,1,3,4,5. when vipType=7, supports 0,1,3. when vipType=1, supports 1,3.</p>.
+     * @param integer $AccessType <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. Default is 0.<br>vipType=3, supports 0,1,3,4,5<br>vipType=7, supports 0,1,3<br>vipType=1, supports 1,3</p>
      * @param integer $AuthFlag <P>Specifies whether access management is required. this field has been deprecated.</p>.
      * @param integer $CallerAppid <p>Specifies the caller appId.</p>.
      * @param integer $PublicNetwork <P>Public network bandwidth. required for public network route. must be a multiple of 3. no default value.</p>.
      * @param string $Ip <p>vip address.</p>.
      * @param string $Note <P>Specifies the remark information.</p>.
      * @param array $SecurityGroupIds <P>Specifies the ordered list of security group associations.</p>.
+     * @param array $IpWhitelist <p>Preset configuration of public network route IP allowlist</p><p>Input parameter limit: vipType=1</p>
      */
     function __construct()
     {
@@ -168,6 +176,15 @@ class CreateRouteRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("IpWhitelist",$param) and $param["IpWhitelist"] !== null) {
+            $this->IpWhitelist = [];
+            foreach ($param["IpWhitelist"] as $key => $value){
+                $obj = new IpWhitelistDTO();
+                $obj->deserialize($value);
+                array_push($this->IpWhitelist, $obj);
+            }
         }
     }
 }

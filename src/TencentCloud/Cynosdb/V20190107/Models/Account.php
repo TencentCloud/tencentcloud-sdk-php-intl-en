@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Database account information
  *
- * @method string getAccountName() Obtain Database account name
- * @method void setAccountName(string $AccountName) Set Database account name
- * @method string getHost() Obtain Host
- * @method void setHost(string $Host) Set Host
- * @method string getDescription() Obtain Database account description
- * @method void setDescription(string $Description) Set Database account description
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getUpdateTime() Obtain Update time
- * @method void setUpdateTime(string $UpdateTime) Set Update time
- * @method integer getMaxUserConnections() Obtain The max connections
- * @method void setMaxUserConnections(integer $MaxUserConnections) Set The max connections
- * @method integer getPasswordRotation() Obtain Whether password rotation is enabled (0: turn off; 1: turn on)
- * @method void setPasswordRotation(integer $PasswordRotation) Set Whether password rotation is enabled (0: turn off; 1: turn on)
+ * @method string getAccountName() Obtain <p>Database account name.</p>
+ * @method void setAccountName(string $AccountName) Set <p>Database account name.</p>
+ * @method string getHost() Obtain <p>host</p>
+ * @method void setHost(string $Host) Set <p>host</p>
+ * @method string getDescription() Obtain <p>Database account description.</p>
+ * @method void setDescription(string $Description) Set <p>Database account description.</p>
+ * @method string getCreateTime() Obtain <p>Creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
+ * @method string getUpdateTime() Obtain <p>Update time.</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Update time.</p>
+ * @method integer getMaxUserConnections() Obtain <p>Maximum user connections</p>
+ * @method void setMaxUserConnections(integer $MaxUserConnections) Set <p>Maximum user connections</p>
+ * @method integer getPasswordRotation() Obtain <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
+ * @method void setPasswordRotation(integer $PasswordRotation) Set <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
  */
 class Account extends AbstractModel
 {
     /**
-     * @var string Database account name
+     * @var string <p>Database account name.</p>
      */
     public $AccountName;
 
     /**
-     * @var string Host
+     * @var string <p>host</p>
      */
     public $Host;
 
     /**
-     * @var string Database account description
+     * @var string <p>Database account description.</p>
      */
     public $Description;
 
     /**
-     * @var string Creation time
+     * @var string <p>Creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Update time
+     * @var string <p>Update time.</p>
      */
     public $UpdateTime;
 
     /**
-     * @var integer The max connections
+     * @var integer <p>Maximum user connections</p>
      */
     public $MaxUserConnections;
 
     /**
-     * @var integer Whether password rotation is enabled (0: turn off; 1: turn on)
+     * @var integer <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
      */
     public $PasswordRotation;
 
     /**
-     * @param string $AccountName Database account name
-     * @param string $Host Host
-     * @param string $Description Database account description
-     * @param string $CreateTime Creation time
-     * @param string $UpdateTime Update time
-     * @param integer $MaxUserConnections The max connections
-     * @param integer $PasswordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
+     * @param string $AccountName <p>Database account name.</p>
+     * @param string $Host <p>host</p>
+     * @param string $Description <p>Database account description.</p>
+     * @param string $CreateTime <p>Creation time.</p>
+     * @param string $UpdateTime <p>Update time.</p>
+     * @param integer $MaxUserConnections <p>Maximum user connections</p>
+     * @param integer $PasswordRotation <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
      */
     function __construct()
     {

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDatahubTopic request structure.
  *
- * @method string getName() Obtain Elastic topic name.
- * @method void setName(string $Name) Set Elastic topic name.
- * @method integer getRetentionMs() Obtain Message retention period in ms. The current minimum value is 60,000 ms.
- * @method void setRetentionMs(integer $RetentionMs) Set Message retention period in ms. The current minimum value is 60,000 ms.
- * @method string getNote() Obtain Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
- * @method void setNote(string $Note) Set Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
- * @method array getTags() Obtain Tag list
- * @method void setTags(array $Tags) Set Tag list
+ * @method string getName() Obtain <p>Elastic topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/86863?from_cn_redirect=1">DescribeDatahubTopics</a></p>
+ * @method void setName(string $Name) Set <p>Elastic topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/86863?from_cn_redirect=1">DescribeDatahubTopics</a></p>
+ * @method integer getRetentionMs() Obtain <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
+ * @method void setRetentionMs(integer $RetentionMs) Set <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
+ * @method string getNote() Obtain <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p>
+ * @method void setNote(string $Note) Set <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p>
+ * @method array getTags() Obtain <p>Tag list</p>
+ * @method void setTags(array $Tags) Set <p>Tag list</p>
  */
 class ModifyDatahubTopicRequest extends AbstractModel
 {
     /**
-     * @var string Elastic topic name.
+     * @var string <p>Elastic topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/86863?from_cn_redirect=1">DescribeDatahubTopics</a></p>
      */
     public $Name;
 
     /**
-     * @var integer Message retention period in ms. The current minimum value is 60,000 ms.
+     * @var integer <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
      */
     public $RetentionMs;
 
     /**
-     * @var string Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * @var string <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p>
      */
     public $Note;
 
     /**
-     * @var array Tag list
+     * @var array <p>Tag list</p>
      */
     public $Tags;
 
     /**
-     * @param string $Name Elastic topic name.
-     * @param integer $RetentionMs Message retention period in ms. The current minimum value is 60,000 ms.
-     * @param string $Note Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-     * @param array $Tags Tag list
+     * @param string $Name <p>Elastic topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/86863?from_cn_redirect=1">DescribeDatahubTopics</a></p>
+     * @param integer $RetentionMs <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
+     * @param string $Note <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p>
+     * @param array $Tags <p>Tag list</p>
      */
     function __construct()
     {

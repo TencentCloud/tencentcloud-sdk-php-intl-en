@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeBrokerVersion request structure.
  *
- * @method string getInstanceId() Obtain The ckafka cluster instance Id.
- * @method void setInstanceId(string $InstanceId) Set The ckafka cluster instance Id.
- * @method integer getType() Obtain 1. smooth configuration upgrade 2. vertical configuration upgrade.
- * @method void setType(integer $Type) Set 1. smooth configuration upgrade 2. vertical configuration upgrade.
- * @method string getSourceVersion() Obtain Version number
- * @method void setSourceVersion(string $SourceVersion) Set Version number
- * @method string getTargetVersion() Obtain Version number
- * @method void setTargetVersion(string $TargetVersion) Set Version number
- * @method string getDelayTimeStamp() Obtain Delay time.
- * @method void setDelayTimeStamp(string $DelayTimeStamp) Set Delay time.
+ * @method string getInstanceId() Obtain <p>ckafka cluster instance Id</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>ckafka cluster instance Id</p>
+ * @method integer getType() Obtain <p>Upgrade type</p><p>Enumeration value:</p><ul><li>1: Minor version migration (recommended)</li></ul>
+ * @method void setType(integer $Type) Set <p>Upgrade type</p><p>Enumeration value:</p><ul><li>1: Minor version migration (recommended)</li></ul>
+ * @method string getSourceVersion() Obtain <p>Version number.</p>
+ * @method void setSourceVersion(string $SourceVersion) Set <p>Version number.</p>
+ * @method string getTargetVersion() Obtain <p>Version number.</p>
+ * @method void setTargetVersion(string $TargetVersion) Set <p>Version number.</p>
+ * @method string getDelayTimeStamp() Obtain <p>Delay time</p>
+ * @method void setDelayTimeStamp(string $DelayTimeStamp) Set <p>Delay time</p>
  */
 class UpgradeBrokerVersionRequest extends AbstractModel
 {
     /**
-     * @var string The ckafka cluster instance Id.
+     * @var string <p>ckafka cluster instance Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 1. smooth configuration upgrade 2. vertical configuration upgrade.
+     * @var integer <p>Upgrade type</p><p>Enumeration value:</p><ul><li>1: Minor version migration (recommended)</li></ul>
      */
     public $Type;
 
     /**
-     * @var string Version number
+     * @var string <p>Version number.</p>
      */
     public $SourceVersion;
 
     /**
-     * @var string Version number
+     * @var string <p>Version number.</p>
      */
     public $TargetVersion;
 
     /**
-     * @var string Delay time.
+     * @var string <p>Delay time</p>
      */
     public $DelayTimeStamp;
 
     /**
-     * @param string $InstanceId The ckafka cluster instance Id.
-     * @param integer $Type 1. smooth configuration upgrade 2. vertical configuration upgrade.
-     * @param string $SourceVersion Version number
-     * @param string $TargetVersion Version number
-     * @param string $DelayTimeStamp Delay time.
+     * @param string $InstanceId <p>ckafka cluster instance Id</p>
+     * @param integer $Type <p>Upgrade type</p><p>Enumeration value:</p><ul><li>1: Minor version migration (recommended)</li></ul>
+     * @param string $SourceVersion <p>Version number.</p>
+     * @param string $TargetVersion <p>Version number.</p>
+     * @param string $DelayTimeStamp <p>Delay time</p>
      */
     function __construct()
     {

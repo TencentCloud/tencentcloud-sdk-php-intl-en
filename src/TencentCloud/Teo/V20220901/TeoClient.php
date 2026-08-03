@@ -196,10 +196,10 @@ This API is used to query the configuration information of an IP group, includin
  * @method Models\DescribeSecurityTemplateBindingsResponse DescribeSecurityTemplateBindings(Models\DescribeSecurityTemplateBindingsRequest $req) This API is used to query bindings of a policy template.
  * @method Models\DescribeSharedCNAMEResponse DescribeSharedCNAME(Models\DescribeSharedCNAMERequest $req) Query the shared CNAME list, support fuzzy search, paginate, and sort.
  * @method Models\DescribeTimingL4DataResponse DescribeTimingL4Data(Models\DescribeTimingL4DataRequest $req) <p>This API is used to query time series monitoring data for L4 proxy instences.</p>
- * @method Models\DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisData(Models\DescribeTimingL7AnalysisDataRequest $req) This API is used to query time series data for L7 domain name business.
-Create and bind policy Query instance Reset instance access password.
-This API is used to query data with a delay of about 10 minutes. It is recommended to pull data from at least 10 minutes before the current time.
-This API is used to return post-protection traffic request data by default. Users can query defended data in `Filters.mitigatedByWebSecurity`.
+ * @method Models\DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisData(Models\DescribeTimingL7AnalysisDataRequest $req) This API is used to query time-series data for Layer 7 domain services.
+Notes:
+1. Data queried by this API has a latency of approximately 10 minutes. It is recommended to pull data from at least 10 minutes prior to the current time.
+2. By default, this API returns post-protection traffic request data. Users can customize queries for mitigated data by using `Filters.mitigatedByWebSecurity`.
  * @method Models\DescribeTimingL7CacheDataResponse DescribeTimingL7CacheData(Models\DescribeTimingL7CacheDataRequest $req) This API is used to query the time series traffic data of the L7 cache analysis. It will be deprecated. Use the <a href="https://intl.cloud.tencent.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a> API instead.
  * @method Models\DescribeTimingL7OriginPullDataResponse DescribeTimingL7OriginPullData(Models\DescribeTimingL7OriginPullDataRequest $req) This API is used to query time series data of the layer-7 domain name business.
 You can choose to perform grouping queries by specifying the query dimension <code>DimensionName</code>, returning multiple groups of time series data. For detailed directions and usage limits, see [How to Implement Group Query in a Single Call Using API](https://www.tencentcloud.com/document/product/1552/127501?from_cn_redirect=1).

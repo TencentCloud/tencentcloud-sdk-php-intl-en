@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Create account
  *
- * @method string getAccountName() Obtain Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
- * @method void setAccountName(string $AccountName) Set Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
- * @method string getHost() Obtain Host
- * @method void setHost(string $Host) Set Host
- * @method string getAccountPassword() Obtain Password, which can contain 8-64 characters.
- * @method void setAccountPassword(string $AccountPassword) Set Password, which can contain 8-64 characters.
- * @method integer getPasswordRotation() Obtain Whether password rotation is enabled (0: turn off; 1: turn on)
- * @method void setPasswordRotation(integer $PasswordRotation) Set Whether password rotation is enabled (0: turn off; 1: turn on)
- * @method string getDescription() Obtain Description
- * @method void setDescription(string $Description) Set Description
- * @method integer getMaxUserConnections() Obtain Maximum number of user connections, which cannot be above 10,240.
- * @method void setMaxUserConnections(integer $MaxUserConnections) Set Maximum number of user connections, which cannot be above 10,240.
+ * @method string getAccountName() Obtain <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
+ * @method void setAccountName(string $AccountName) Set <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
+ * @method string getHost() Obtain <p>host (% or ipv4 address)</p>
+ * @method void setHost(string $Host) Set <p>host (% or ipv4 address)</p>
+ * @method string getAccountPassword() Obtain <p>Password. The length range is 8 to 64 characters.</p>
+ * @method void setAccountPassword(string $AccountPassword) Set <p>Password. The length range is 8 to 64 characters.</p>
+ * @method integer getPasswordRotation() Obtain <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
+ * @method void setPasswordRotation(integer $PasswordRotation) Set <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
+ * @method string getDescription() Obtain <p>Description.</p>
+ * @method void setDescription(string $Description) Set <p>Description.</p>
+ * @method integer getMaxUserConnections() Obtain <p>Maximum user connections cannot be greater than 10240</p>
+ * @method void setMaxUserConnections(integer $MaxUserConnections) Set <p>Maximum user connections cannot be greater than 10240</p>
  */
 class NewAccount extends AbstractModel
 {
     /**
-     * @var string Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+     * @var string <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
      */
     public $AccountName;
 
     /**
-     * @var string Host
+     * @var string <p>host (% or ipv4 address)</p>
      */
     public $Host;
 
     /**
-     * @var string Password, which can contain 8-64 characters.
+     * @var string <p>Password. The length range is 8 to 64 characters.</p>
      */
     public $AccountPassword;
 
     /**
-     * @var integer Whether password rotation is enabled (0: turn off; 1: turn on)
+     * @var integer <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
      */
     public $PasswordRotation;
 
     /**
-     * @var string Description
+     * @var string <p>Description.</p>
      */
     public $Description;
 
     /**
-     * @var integer Maximum number of user connections, which cannot be above 10,240.
+     * @var integer <p>Maximum user connections cannot be greater than 10240</p>
      */
     public $MaxUserConnections;
 
     /**
-     * @param string $AccountName Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
-     * @param string $Host Host
-     * @param string $AccountPassword Password, which can contain 8-64 characters.
-     * @param integer $PasswordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
-     * @param string $Description Description
-     * @param integer $MaxUserConnections Maximum number of user connections, which cannot be above 10,240.
+     * @param string $AccountName <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
+     * @param string $Host <p>host (% or ipv4 address)</p>
+     * @param string $AccountPassword <p>Password. The length range is 8 to 64 characters.</p>
+     * @param integer $PasswordRotation <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
+     * @param string $Description <p>Description.</p>
+     * @param integer $MaxUserConnections <p>Maximum user connections cannot be greater than 10240</p>
      */
     function __construct()
     {

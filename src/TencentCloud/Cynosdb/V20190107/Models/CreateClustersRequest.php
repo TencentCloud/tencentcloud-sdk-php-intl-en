@@ -114,6 +114,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterLevel(string $ClusterLevel) Set <p>Cluster level, optional. Example: P0, P1. (This field can be ignored)</p>
  * @method string getCynosVersion() Obtain <p>Kernel minor version</p>
  * @method void setCynosVersion(string $CynosVersion) Set <p>Kernel minor version</p>
+ * @method string getSyncWay() Obtain <p>Synchronization method. Value range: async, semisync, sync.</p>
+ * @method void setSyncWay(string $SyncWay) Set <p>Synchronization method. Value range: async, semisync, sync.</p>
+ * @method integer getSemiSyncTimeout() Obtain <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+ * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) Set <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
  */
 class CreateClustersRequest extends AbstractModel
 {
@@ -353,6 +357,16 @@ class CreateClustersRequest extends AbstractModel
     public $CynosVersion;
 
     /**
+     * @var string <p>Synchronization method. Value range: async, semisync, sync.</p>
+     */
+    public $SyncWay;
+
+    /**
+     * @var integer <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+     */
+    public $SemiSyncTimeout;
+
+    /**
      * @param string $Zone <p>AZ.</p>
      * @param string $VpcId <p>VPC network ID</p>
      * @param string $SubnetId <p>Subnet ID</p>
@@ -400,6 +414,8 @@ class CreateClustersRequest extends AbstractModel
      * @param integer $AutoArchiveDelayHours <p>Archiving processing time after pausing</p><p>Measurement unit: hour</p><p>Default value: 12</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS.</p>
      * @param string $ClusterLevel <p>Cluster level, optional. Example: P0, P1. (This field can be ignored)</p>
      * @param string $CynosVersion <p>Kernel minor version</p>
+     * @param string $SyncWay <p>Synchronization method. Value range: async, semisync, sync.</p>
+     * @param integer $SemiSyncTimeout <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
      */
     function __construct()
     {
@@ -616,6 +632,14 @@ class CreateClustersRequest extends AbstractModel
 
         if (array_key_exists("CynosVersion",$param) and $param["CynosVersion"] !== null) {
             $this->CynosVersion = $param["CynosVersion"];
+        }
+
+        if (array_key_exists("SyncWay",$param) and $param["SyncWay"] !== null) {
+            $this->SyncWay = $param["SyncWay"];
+        }
+
+        if (array_key_exists("SemiSyncTimeout",$param) and $param["SemiSyncTimeout"] !== null) {
+            $this->SemiSyncTimeout = $param["SemiSyncTimeout"];
         }
     }
 }

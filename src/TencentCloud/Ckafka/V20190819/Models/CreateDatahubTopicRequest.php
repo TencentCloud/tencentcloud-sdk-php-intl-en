@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDatahubTopic request structure.
  *
- * @method string getName() Obtain Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
- * @method void setName(string $Name) Set Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
- * @method integer getPartitionNum() Obtain Number of partitions, which should be greater than 0.
- * @method void setPartitionNum(integer $PartitionNum) Set Number of partitions, which should be greater than 0.
- * @method integer getRetentionMs() Obtain Message retention period in milliseconds. The current minimum value is 60,000 ms.
- * @method void setRetentionMs(integer $RetentionMs) Set Message retention period in milliseconds. The current minimum value is 60,000 ms.
- * @method string getNote() Obtain Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
- * @method void setNote(string $Note) Set Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
- * @method array getTags() Obtain Tag list
- * @method void setTags(array $Tags) Set Tag list
+ * @method string getName() Obtain <p>Name is a string of no more than 128 characters, must start with "AppId-", and the remaining part can contain letters, digits, and hyphens (-). It can be queried through the API DescribeAppInfo.</p>
+ * @method void setName(string $Name) Set <p>Name is a string of no more than 128 characters, must start with "AppId-", and the remaining part can contain letters, digits, and hyphens (-). It can be queried through the API DescribeAppInfo.</p>
+ * @method integer getPartitionNum() Obtain <p>Number of partitions, maximum value is 500, larger than 0</p>
+ * @method void setPartitionNum(integer $PartitionNum) Set <p>Number of partitions, maximum value is 500, larger than 0</p>
+ * @method integer getRetentionMs() Obtain <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
+ * @method void setRetentionMs(integer $RetentionMs) Set <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
+ * @method string getNote() Obtain <p>Topic remark is a string of no more than 64 characters, which can contain letters, digits, and hyphens (-).</p>
+ * @method void setNote(string $Note) Set <p>Topic remark is a string of no more than 64 characters, which can contain letters, digits, and hyphens (-).</p>
+ * @method array getTags() Obtain <p>Tag list</p>
+ * @method void setTags(array $Tags) Set <p>Tag list</p>
  */
 class CreateDatahubTopicRequest extends AbstractModel
 {
     /**
-     * @var string Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
+     * @var string <p>Name is a string of no more than 128 characters, must start with "AppId-", and the remaining part can contain letters, digits, and hyphens (-). It can be queried through the API DescribeAppInfo.</p>
      */
     public $Name;
 
     /**
-     * @var integer Number of partitions, which should be greater than 0.
+     * @var integer <p>Number of partitions, maximum value is 500, larger than 0</p>
      */
     public $PartitionNum;
 
     /**
-     * @var integer Message retention period in milliseconds. The current minimum value is 60,000 ms.
+     * @var integer <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
      */
     public $RetentionMs;
 
     /**
-     * @var string Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * @var string <p>Topic remark is a string of no more than 64 characters, which can contain letters, digits, and hyphens (-).</p>
      */
     public $Note;
 
     /**
-     * @var array Tag list
+     * @var array <p>Tag list</p>
      */
     public $Tags;
 
     /**
-     * @param string $Name Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
-     * @param integer $PartitionNum Number of partitions, which should be greater than 0.
-     * @param integer $RetentionMs Message retention period in milliseconds. The current minimum value is 60,000 ms.
-     * @param string $Note Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-     * @param array $Tags Tag list
+     * @param string $Name <p>Name is a string of no more than 128 characters, must start with "AppId-", and the remaining part can contain letters, digits, and hyphens (-). It can be queried through the API DescribeAppInfo.</p>
+     * @param integer $PartitionNum <p>Number of partitions, maximum value is 500, larger than 0</p>
+     * @param integer $RetentionMs <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
+     * @param string $Note <p>Topic remark is a string of no more than 64 characters, which can contain letters, digits, and hyphens (-).</p>
+     * @param array $Tags <p>Tag list</p>
      */
     function __construct()
     {

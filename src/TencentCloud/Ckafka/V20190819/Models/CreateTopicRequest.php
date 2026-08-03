@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNote(string $Note) Set <p>Topic remark</p><p>Input parameter limit: No more than 64 characters</p>
  * @method integer getMinInsyncReplicas() Obtain <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
  * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) Set <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
- * @method integer getUncleanLeaderElectionEnable() Obtain <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
- * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) Set <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
+ * @method integer getUncleanLeaderElectionEnable() Obtain <p>Whether to allow unsynchronized replicas to be elected as leader. 0: not allowed, 1: allowed. Default value is the instance dimension value.</p>
+ * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) Set <p>Whether to allow unsynchronized replicas to be elected as leader. 0: not allowed, 1: allowed. Default value is the instance dimension value.</p>
  * @method integer getRetentionMs() Obtain <p>Optional parameter, message retention period</p><p>Value ranges from 60000 to 7776000000</p><p>Unit: ms</p><p>Default value: 7200000</p>
  * @method void setRetentionMs(integer $RetentionMs) Set <p>Optional parameter, message retention period</p><p>Value ranges from 60000 to 7776000000</p><p>Unit: ms</p><p>Default value: 7200000</p>
  * @method integer getSegmentMs() Obtain <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
@@ -105,7 +105,7 @@ class CreateTopicRequest extends AbstractModel
     public $MinInsyncReplicas;
 
     /**
-     * @var integer <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
+     * @var integer <p>Whether to allow unsynchronized replicas to be elected as leader. 0: not allowed, 1: allowed. Default value is the instance dimension value.</p>
      */
     public $UncleanLeaderElectionEnable;
 
@@ -159,7 +159,7 @@ class CreateTopicRequest extends AbstractModel
      * @param string $CleanUpPolicy <p>Log cleanup policy. Log cleanup mode, defaults to "delete". "delete": logs are deleted by retention time. "compact": logs are compressed by key. "compact, delete": logs are compressed by key and deleted by retention time.</p>
      * @param string $Note <p>Topic remark</p><p>Input parameter limit: No more than 64 characters</p>
      * @param integer $MinInsyncReplicas <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
-     * @param integer $UncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
+     * @param integer $UncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader. 0: not allowed, 1: allowed. Default value is the instance dimension value.</p>
      * @param integer $RetentionMs <p>Optional parameter, message retention period</p><p>Value ranges from 60000 to 7776000000</p><p>Unit: ms</p><p>Default value: 7200000</p>
      * @param integer $SegmentMs <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
      * @param integer $MaxMessageBytes <p>Maximum topic messages in Bytes, minimum value 1024 Bytes (1 KB), maximum value 12582912 Bytes (12 MB)</p>

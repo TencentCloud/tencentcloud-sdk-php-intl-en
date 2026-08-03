@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccounts request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getAccounts() Obtain List of new accounts
- * @method void setAccounts(array $Accounts) Set List of new accounts
+ * @method string getClusterId() Obtain <p>Cluster ID.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method array getAccounts() Obtain <p>New account list</p>
+ * @method void setAccounts(array $Accounts) Set <p>New account list</p>
  */
 class CreateAccountsRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterId;
 
     /**
-     * @var array List of new accounts
+     * @var array <p>New account list</p>
      */
     public $Accounts;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param array $Accounts List of new accounts
+     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param array $Accounts <p>New account list</p>
      */
     function __construct()
     {

@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Features supported by the cluster
  *
- * @method string getIsSupportSlaveZone() Obtain Whether secondary AZ is supported
- * @method void setIsSupportSlaveZone(string $IsSupportSlaveZone) Set Whether secondary AZ is supported
- * @method string getNonsupportSlaveZoneReason() Obtain The causes for no support from an availability zone.
- * @method void setNonsupportSlaveZoneReason(string $NonsupportSlaveZoneReason) Set The causes for no support from an availability zone.
- * @method string getIsSupportRo() Obtain Whether read-only instance is supported
- * @method void setIsSupportRo(string $IsSupportRo) Set Whether read-only instance is supported
- * @method string getNonsupportRoReason() Obtain Reasons why RO instances are not supported.
- * @method void setNonsupportRoReason(string $NonsupportRoReason) Set Reasons why RO instances are not supported.
- * @method string getIsSupportManualSnapshot() Obtain Whether manual snapshot backup initiation is supported.
- * @method void setIsSupportManualSnapshot(string $IsSupportManualSnapshot) Set Whether manual snapshot backup initiation is supported.
- * @method string getIsSupportTransparentDataEncryption() Obtain Whether transparent data encryption is supported.
- * @method void setIsSupportTransparentDataEncryption(string $IsSupportTransparentDataEncryption) Set Whether transparent data encryption is supported.
- * @method string getNoSupportTransparentDataEncryptionReason() Obtain Reasons for no support of transparent data encryption.
- * @method void setNoSupportTransparentDataEncryptionReason(string $NoSupportTransparentDataEncryptionReason) Set Reasons for no support of transparent data encryption.
- * @method string getIsSupportManualLogic() Obtain Whether manual initiation of logical backup is supported.
- * @method void setIsSupportManualLogic(string $IsSupportManualLogic) Set Whether manual initiation of logical backup is supported.
- * @method string getIsSupportGlobalEncryption() Obtain Enable global encryption.
- * @method void setIsSupportGlobalEncryption(string $IsSupportGlobalEncryption) Set Enable global encryption.
- * @method string getNoSupportGlobalEncryptionReason() Obtain The causes for unsupported global encryption.
- * @method void setNoSupportGlobalEncryptionReason(string $NoSupportGlobalEncryptionReason) Set The causes for unsupported global encryption.
- * @method string getNoSupportTransparentDataEncryptionReasonCode() Obtain Status code for unsupported tde reason.
- * @method void setNoSupportTransparentDataEncryptionReasonCode(string $NoSupportTransparentDataEncryptionReasonCode) Set Status code for unsupported tde reason.
- * @method string getNoSupportGlobalEncryptionReasonCode() Obtain Status code for unsupported global encryption.
- * @method void setNoSupportGlobalEncryptionReasonCode(string $NoSupportGlobalEncryptionReasonCode) Set Status code for unsupported global encryption.
+ * @method string getIsSupportSlaveZone() Obtain <p>Whether support from availability zone is supported</p>
+ * @method void setIsSupportSlaveZone(string $IsSupportSlaveZone) Set <p>Whether support from availability zone is supported</p>
+ * @method string getNonsupportSlaveZoneReason() Obtain <p>The causes for no support from availability zone</p>
+ * @method void setNonsupportSlaveZoneReason(string $NonsupportSlaveZoneReason) Set <p>The causes for no support from availability zone</p>
+ * @method string getIsSupportRo() Obtain <p>Whether RO instance is supported</p>
+ * @method void setIsSupportRo(string $IsSupportRo) Set <p>Whether RO instance is supported</p>
+ * @method string getNonsupportRoReason() Obtain <p>Reason for unsupported RO instance</p>
+ * @method void setNonsupportRoReason(string $NonsupportRoReason) Set <p>Reason for unsupported RO instance</p>
+ * @method string getIsSupportManualSnapshot() Obtain <p>Whether manual snapshot backup initiation is supported</p>
+ * @method void setIsSupportManualSnapshot(string $IsSupportManualSnapshot) Set <p>Whether manual snapshot backup initiation is supported</p>
+ * @method string getIsSupportTransparentDataEncryption() Obtain <p>Whether transparent data encryption is supported</p>
+ * @method void setIsSupportTransparentDataEncryption(string $IsSupportTransparentDataEncryption) Set <p>Whether transparent data encryption is supported</p>
+ * @method string getNoSupportTransparentDataEncryptionReason() Obtain <p>The causes for unsupported transparent data encryption</p>
+ * @method void setNoSupportTransparentDataEncryptionReason(string $NoSupportTransparentDataEncryptionReason) Set <p>The causes for unsupported transparent data encryption</p>
+ * @method string getIsSupportManualLogic() Obtain <p>Whether manual initiation of logical backup is supported</p>
+ * @method void setIsSupportManualLogic(string $IsSupportManualLogic) Set <p>Whether manual initiation of logical backup is supported</p>
+ * @method string getIsSupportGlobalEncryption() Obtain <p>Whether global encryption can be enabled</p>
+ * @method void setIsSupportGlobalEncryption(string $IsSupportGlobalEncryption) Set <p>Whether global encryption can be enabled</p>
+ * @method string getNoSupportGlobalEncryptionReason() Obtain <p>The causes for unsupported global encryption</p>
+ * @method void setNoSupportGlobalEncryptionReason(string $NoSupportGlobalEncryptionReason) Set <p>The causes for unsupported global encryption</p>
+ * @method string getNoSupportTransparentDataEncryptionReasonCode() Obtain <p>Status code for unsupported transparent encryption reason</p>
+ * @method void setNoSupportTransparentDataEncryptionReasonCode(string $NoSupportTransparentDataEncryptionReasonCode) Set <p>Status code for unsupported transparent encryption reason</p>
+ * @method string getNoSupportGlobalEncryptionReasonCode() Obtain <p>Status code for unsupported global encryption reason</p>
+ * @method void setNoSupportGlobalEncryptionReasonCode(string $NoSupportGlobalEncryptionReasonCode) Set <p>Status code for unsupported global encryption reason</p>
  */
 class Ability extends AbstractModel
 {
     /**
-     * @var string Whether secondary AZ is supported
+     * @var string <p>Whether support from availability zone is supported</p>
      */
     public $IsSupportSlaveZone;
 
     /**
-     * @var string The causes for no support from an availability zone.
+     * @var string <p>The causes for no support from availability zone</p>
      */
     public $NonsupportSlaveZoneReason;
 
     /**
-     * @var string Whether read-only instance is supported
+     * @var string <p>Whether RO instance is supported</p>
      */
     public $IsSupportRo;
 
     /**
-     * @var string Reasons why RO instances are not supported.
+     * @var string <p>Reason for unsupported RO instance</p>
      */
     public $NonsupportRoReason;
 
     /**
-     * @var string Whether manual snapshot backup initiation is supported.
+     * @var string <p>Whether manual snapshot backup initiation is supported</p>
      */
     public $IsSupportManualSnapshot;
 
     /**
-     * @var string Whether transparent data encryption is supported.
+     * @var string <p>Whether transparent data encryption is supported</p>
      */
     public $IsSupportTransparentDataEncryption;
 
     /**
-     * @var string Reasons for no support of transparent data encryption.
+     * @var string <p>The causes for unsupported transparent data encryption</p>
      */
     public $NoSupportTransparentDataEncryptionReason;
 
     /**
-     * @var string Whether manual initiation of logical backup is supported.
+     * @var string <p>Whether manual initiation of logical backup is supported</p>
      */
     public $IsSupportManualLogic;
 
     /**
-     * @var string Enable global encryption.
+     * @var string <p>Whether global encryption can be enabled</p>
      */
     public $IsSupportGlobalEncryption;
 
     /**
-     * @var string The causes for unsupported global encryption.
+     * @var string <p>The causes for unsupported global encryption</p>
      */
     public $NoSupportGlobalEncryptionReason;
 
     /**
-     * @var string Status code for unsupported tde reason.
+     * @var string <p>Status code for unsupported transparent encryption reason</p>
      */
     public $NoSupportTransparentDataEncryptionReasonCode;
 
     /**
-     * @var string Status code for unsupported global encryption.
+     * @var string <p>Status code for unsupported global encryption reason</p>
      */
     public $NoSupportGlobalEncryptionReasonCode;
 
     /**
-     * @param string $IsSupportSlaveZone Whether secondary AZ is supported
-     * @param string $NonsupportSlaveZoneReason The causes for no support from an availability zone.
-     * @param string $IsSupportRo Whether read-only instance is supported
-     * @param string $NonsupportRoReason Reasons why RO instances are not supported.
-     * @param string $IsSupportManualSnapshot Whether manual snapshot backup initiation is supported.
-     * @param string $IsSupportTransparentDataEncryption Whether transparent data encryption is supported.
-     * @param string $NoSupportTransparentDataEncryptionReason Reasons for no support of transparent data encryption.
-     * @param string $IsSupportManualLogic Whether manual initiation of logical backup is supported.
-     * @param string $IsSupportGlobalEncryption Enable global encryption.
-     * @param string $NoSupportGlobalEncryptionReason The causes for unsupported global encryption.
-     * @param string $NoSupportTransparentDataEncryptionReasonCode Status code for unsupported tde reason.
-     * @param string $NoSupportGlobalEncryptionReasonCode Status code for unsupported global encryption.
+     * @param string $IsSupportSlaveZone <p>Whether support from availability zone is supported</p>
+     * @param string $NonsupportSlaveZoneReason <p>The causes for no support from availability zone</p>
+     * @param string $IsSupportRo <p>Whether RO instance is supported</p>
+     * @param string $NonsupportRoReason <p>Reason for unsupported RO instance</p>
+     * @param string $IsSupportManualSnapshot <p>Whether manual snapshot backup initiation is supported</p>
+     * @param string $IsSupportTransparentDataEncryption <p>Whether transparent data encryption is supported</p>
+     * @param string $NoSupportTransparentDataEncryptionReason <p>The causes for unsupported transparent data encryption</p>
+     * @param string $IsSupportManualLogic <p>Whether manual initiation of logical backup is supported</p>
+     * @param string $IsSupportGlobalEncryption <p>Whether global encryption can be enabled</p>
+     * @param string $NoSupportGlobalEncryptionReason <p>The causes for unsupported global encryption</p>
+     * @param string $NoSupportTransparentDataEncryptionReasonCode <p>Status code for unsupported transparent encryption reason</p>
+     * @param string $NoSupportGlobalEncryptionReasonCode <p>Status code for unsupported global encryption reason</p>
      */
     function __construct()
     {

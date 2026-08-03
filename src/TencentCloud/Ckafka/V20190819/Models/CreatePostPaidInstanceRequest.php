@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgRetentionTime(integer $MsgRetentionTime) Set <P>The default maximum retention time for instance logs, in minutes. default value: 1440 minutes (1 day) when this parameter is not input. maximum: 30 days. if the message retention time is explicitly set for a topic, the topic retention time takes precedence.</p>.
  * @method integer getClusterId() Obtain <p>Specifies the cluster Id when creating an instance. input this parameter to indicate the cluster Id. leave it empty if no cluster is specified.</p>.
  * @method void setClusterId(integer $ClusterId) Set <p>Specifies the cluster Id when creating an instance. input this parameter to indicate the cluster Id. leave it empty if no cluster is specified.</p>.
- * @method string getKafkaVersion() Obtain <P>Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version, any one can be passed.</p>.
- * @method void setKafkaVersion(string $KafkaVersion) Set <P>Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version, any one can be passed.</p>.
- * @method string getSpecificationsType() Obtain <P>Instance type. "standard": standard version, "profession": professional version. (standard version is only supported on the international site. chinese site currently supports professional version)</p>.
- * @method void setSpecificationsType(string $SpecificationsType) Set <P>Instance type. "standard": standard version, "profession": professional version. (standard version is only supported on the international site. chinese site currently supports professional version)</p>.
- * @method string getDiskType() Obtain <p>Specifies the instance disk type for pro edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
- * @method void setDiskType(string $DiskType) Set <p>Specifies the instance disk type for pro edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+ * @method string getKafkaVersion() Obtain <p>Instance version. Currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". Default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version. You can pass any one of them.</p>
+ * @method void setKafkaVersion(string $KafkaVersion) Set <p>Instance version. Currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". Default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version. You can pass any one of them.</p>
+ * @method string getSpecificationsType() Obtain <p>Instance type. "standard": standard version, "profession": professional version. (The standard version is only supported on the international site. The domestic site currently supports the professional version.)</p>
+ * @method void setSpecificationsType(string $SpecificationsType) Set <p>Instance type. "standard": standard version, "profession": professional version. (The standard version is only supported on the international site. The domestic site currently supports the professional version.)</p>
+ * @method string getDiskType() Obtain <p>Instance disk type for Pro Edition. You do not need to fill it in for standard edition instance. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Default value is "CLOUD_BASIC" if not specified.</p>
+ * @method void setDiskType(string $DiskType) Set <p>Instance disk type for Pro Edition. You do not need to fill it in for standard edition instance. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Default value is "CLOUD_BASIC" if not specified.</p>
  * @method integer getBandWidth() Obtain <p>The peak bandwidth of the instance private network. the default value is 40 MB/s. for standard edition, input the peak bandwidth corresponding to the current instance specifications. note that if the instance created is a pro edition instance, parameter configurations such as peak bandwidth and number of partitions should meet the billing specification of the pro edition. you can view the billing specification through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1</p>.
  * @method void setBandWidth(integer $BandWidth) Set <p>The peak bandwidth of the instance private network. the default value is 40 MB/s. for standard edition, input the peak bandwidth corresponding to the current instance specifications. note that if the instance created is a pro edition instance, parameter configurations such as peak bandwidth and number of partitions should meet the billing specification of the pro edition. you can view the billing specification through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1</p>.
  * @method integer getDiskSize() Obtain <P>Instance disk size. default value is 500. step length is set to 100. should meet the billing specification of the current instance. can be accessed through the following link to view billing specifications: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1</p>.
@@ -54,14 +54,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneIds(array $ZoneIds) Set <p>Specifies the multi-availability zone id list when the instance is a multi-az instance. note the corresponding multi-availability zone for parameter ZoneId must be included in the parameter array. ZoneId and ZoneIds cannot be empty at the same time. obtain through the API <a href="https://www.tencentcloud.com/document/product/597/55246?from_cn_redirect=1">DescribeCkafkaZone</a>.</p>.
  * @method integer getInstanceNum() Obtain <p>Specifies the number of instances to purchase. optional. default value is 1. when input this parameter, it will create multiple instances with case-sensitive suffixes added to instanceName.</p>.
  * @method void setInstanceNum(integer $InstanceNum) Set <p>Specifies the number of instances to purchase. optional. default value is 1. when input this parameter, it will create multiple instances with case-sensitive suffixes added to instanceName.</p>.
- * @method integer getPublicNetworkMonthly() Obtain <p>Public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. ensure the input parameter is a multiple of 3.</p>.
- * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) Set <p>Public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. ensure the input parameter is a multiple of 3.</p>.
+ * @method integer getPublicNetworkMonthly() Obtain <p>Public bandwidth size, measurement unit Mbps.</p><p>Unit: Mbps</p>
+ * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) Set <p>Public bandwidth size, measurement unit Mbps.</p><p>Unit: Mbps</p>
  * @method array getTags() Obtain <p>Tag.</p>.
  * @method void setTags(array $Tags) Set <p>Tag.</p>.
  * @method integer getElasticBandwidthSwitch() Obtain <P>Specifies the elastic bandwidth switch. 0: disable (default); 1: enable.</p>.
  * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) Set <P>Specifies the elastic bandwidth switch. 0: disable (default); 1: enable.</p>.
  * @method string getCustomSSLCertId() Obtain <p>Specifies the custom certificate Id. this parameter is valid only when SpecificationsType is profession. supports custom certificate capacity.</p><p>can be obtained through the <a href="https://www.tencentcloud.com/document/product/400/41673?from_cn_redirect=1">DescribeCertificateDetail</a> api.</p>.
  * @method void setCustomSSLCertId(string $CustomSSLCertId) Set <p>Specifies the custom certificate Id. this parameter is valid only when SpecificationsType is profession. supports custom certificate capacity.</p><p>can be obtained through the <a href="https://www.tencentcloud.com/document/product/400/41673?from_cn_redirect=1">DescribeCertificateDetail</a> api.</p>.
+ * @method integer getStoreQuantityType() Obtain <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+ * @method void setStoreQuantityType(integer $StoreQuantityType) Set <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
  */
 class CreatePostPaidInstanceRequest extends AbstractModel
 {
@@ -96,17 +98,17 @@ class CreatePostPaidInstanceRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string <P>Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version, any one can be passed.</p>.
+     * @var string <p>Instance version. Currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". Default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version. You can pass any one of them.</p>
      */
     public $KafkaVersion;
 
     /**
-     * @var string <P>Instance type. "standard": standard version, "profession": professional version. (standard version is only supported on the international site. chinese site currently supports professional version)</p>.
+     * @var string <p>Instance type. "standard": standard version, "profession": professional version. (The standard version is only supported on the international site. The domestic site currently supports the professional version.)</p>
      */
     public $SpecificationsType;
 
     /**
-     * @var string <p>Specifies the instance disk type for pro edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+     * @var string <p>Instance disk type for Pro Edition. You do not need to fill it in for standard edition instance. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Default value is "CLOUD_BASIC" if not specified.</p>
      */
     public $DiskType;
 
@@ -151,7 +153,7 @@ class CreatePostPaidInstanceRequest extends AbstractModel
     public $InstanceNum;
 
     /**
-     * @var integer <p>Public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. ensure the input parameter is a multiple of 3.</p>.
+     * @var integer <p>Public bandwidth size, measurement unit Mbps.</p><p>Unit: Mbps</p>
      */
     public $PublicNetworkMonthly;
 
@@ -171,15 +173,20 @@ class CreatePostPaidInstanceRequest extends AbstractModel
     public $CustomSSLCertId;
 
     /**
+     * @var integer <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+     */
+    public $StoreQuantityType;
+
+    /**
      * @param string $VpcId <p>VPC Id, can be obtained through the <a href="https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1">DescribeVpcs</a> api.</p>.
      * @param string $SubnetId <p>Subnet Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1">DescribeSubnets</a> api.</p>.
      * @param string $InstanceName <P>Specifies the cluster instance name of ckafka, with a length not exceeding 128 arbitrary characters.</p>.
      * @param integer $InstanceType <P>Specifies the standard edition instance specification for the international site. currently only the standard edition on the international site uses the current field to distinguish specifications, while the domestic site standard edition uses peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.</p>.
      * @param integer $MsgRetentionTime <P>The default maximum retention time for instance logs, in minutes. default value: 1440 minutes (1 day) when this parameter is not input. maximum: 30 days. if the message retention time is explicitly set for a topic, the topic retention time takes precedence.</p>.
      * @param integer $ClusterId <p>Specifies the cluster Id when creating an instance. input this parameter to indicate the cluster Id. leave it empty if no cluster is specified.</p>.
-     * @param string $KafkaVersion <P>Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version, any one can be passed.</p>.
-     * @param string $SpecificationsType <P>Instance type. "standard": standard version, "profession": professional version. (standard version is only supported on the international site. chinese site currently supports professional version)</p>.
-     * @param string $DiskType <p>Specifies the instance disk type for pro edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+     * @param string $KafkaVersion <p>Instance version. Currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". Default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version. You can pass any one of them.</p>
+     * @param string $SpecificationsType <p>Instance type. "standard": standard version, "profession": professional version. (The standard version is only supported on the international site. The domestic site currently supports the professional version.)</p>
+     * @param string $DiskType <p>Instance disk type for Pro Edition. You do not need to fill it in for standard edition instance. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Default value is "CLOUD_BASIC" if not specified.</p>
      * @param integer $BandWidth <p>The peak bandwidth of the instance private network. the default value is 40 MB/s. for standard edition, input the peak bandwidth corresponding to the current instance specifications. note that if the instance created is a pro edition instance, parameter configurations such as peak bandwidth and number of partitions should meet the billing specification of the pro edition. you can view the billing specification through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1</p>.
      * @param integer $DiskSize <P>Instance disk size. default value is 500. step length is set to 100. should meet the billing specification of the current instance. can be accessed through the following link to view billing specifications: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1</p>.
      * @param integer $Partition <P>Specifies the maximum number of partitions for the instance, which should meet the billing specification of the current instance. default value is 800 with a step length of 100. the billing specification can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1</p>.
@@ -188,10 +195,11 @@ class CreatePostPaidInstanceRequest extends AbstractModel
      * @param boolean $MultiZoneFlag <P>Specifies whether the current instance is a multi-az instance.</p>.
      * @param array $ZoneIds <p>Specifies the multi-availability zone id list when the instance is a multi-az instance. note the corresponding multi-availability zone for parameter ZoneId must be included in the parameter array. ZoneId and ZoneIds cannot be empty at the same time. obtain through the API <a href="https://www.tencentcloud.com/document/product/597/55246?from_cn_redirect=1">DescribeCkafkaZone</a>.</p>.
      * @param integer $InstanceNum <p>Specifies the number of instances to purchase. optional. default value is 1. when input this parameter, it will create multiple instances with case-sensitive suffixes added to instanceName.</p>.
-     * @param integer $PublicNetworkMonthly <p>Public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. ensure the input parameter is a multiple of 3.</p>.
+     * @param integer $PublicNetworkMonthly <p>Public bandwidth size, measurement unit Mbps.</p><p>Unit: Mbps</p>
      * @param array $Tags <p>Tag.</p>.
      * @param integer $ElasticBandwidthSwitch <P>Specifies the elastic bandwidth switch. 0: disable (default); 1: enable.</p>.
      * @param string $CustomSSLCertId <p>Specifies the custom certificate Id. this parameter is valid only when SpecificationsType is profession. supports custom certificate capacity.</p><p>can be obtained through the <a href="https://www.tencentcloud.com/document/product/400/41673?from_cn_redirect=1">DescribeCertificateDetail</a> api.</p>.
+     * @param integer $StoreQuantityType <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
      */
     function __construct()
     {
@@ -293,6 +301,10 @@ class CreatePostPaidInstanceRequest extends AbstractModel
 
         if (array_key_exists("CustomSSLCertId",$param) and $param["CustomSSLCertId"] !== null) {
             $this->CustomSSLCertId = $param["CustomSSLCertId"];
+        }
+
+        if (array_key_exists("StoreQuantityType",$param) and $param["StoreQuantityType"] !== null) {
+            $this->StoreQuantityType = $param["StoreQuantityType"];
         }
     }
 }

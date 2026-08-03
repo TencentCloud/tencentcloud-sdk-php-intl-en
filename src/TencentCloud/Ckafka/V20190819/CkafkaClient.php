@@ -46,9 +46,9 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DeleteRouteResponse DeleteRoute(Models\DeleteRouteRequest $req) This API is used to delete a route.
  * @method Models\DeleteRouteTriggerTimeResponse DeleteRouteTriggerTime(Models\DeleteRouteTriggerTimeRequest $req) This API is used to modify the delayed trigger time of route deletion.
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) This API is used to delete a CKafka topic.
- * @method Models\DeleteTopicIpWhiteListResponse DeleteTopicIpWhiteList(Models\DeleteTopicIpWhiteListRequest $req) This API is used to delete a topic IP allowlist.
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) This API is used to delete a user.
  * @method Models\DescribeACLResponse DescribeACL(Models\DescribeACLRequest $req) This API is used to enumerate ACLs.
+ * @method Models\DescribeAccessPolicyResponse DescribeAccessPolicy(Models\DescribeAccessPolicyRequest $req) This API is used to query the public IP allowlist of an instance.
  * @method Models\DescribeAclRuleResponse DescribeAclRule(Models\DescribeAclRuleRequest $req) This API is used to query the ACL rule list.
  * @method Models\DescribeCkafkaVersionResponse DescribeCkafkaVersion(Models\DescribeCkafkaVersionRequest $req) This API is used to query instance version information.
  * @method Models\DescribeCkafkaZoneResponse DescribeCkafkaZone(Models\DescribeCkafkaZoneRequest $req) This API is used to view the AZ list of Ckafka.
@@ -81,6 +81,8 @@ This API is used to get the list of topics in a CKafka instance of a user.
  * @method Models\FetchMessageListByTimestampResponse FetchMessageListByTimestamp(Models\FetchMessageListByTimestampRequest $req) This API is used to query a message list by timestamp.
  * @method Models\InquireCkafkaPriceResponse InquireCkafkaPrice(Models\InquireCkafkaPriceRequest $req) This API is used to purchase a CKafka instance or query the instance renewal price.
  * @method Models\InstanceScalingDownResponse InstanceScalingDown(Models\InstanceScalingDownRequest $req) This API is used to perform downsizing on a pay-as-you-go instance.
+ * @method Models\IsolatedInstancePreResponse IsolatedInstancePre(Models\IsolatedInstancePreRequest $req) Isolate a prepaid instance. This API is used to perform isolation on the instance. After successful execution, the instance is isolated.
+ * @method Models\ModifyAccessPolicyResponse ModifyAccessPolicy(Models\ModifyAccessPolicyRequest $req) This API is used to modify the public IP allowlist of an instance.
  * @method Models\ModifyAclRuleResponse ModifyAclRule(Models\ModifyAclRuleRequest $req) This API is used to modify ACL policy, currently only support whether to apply preset rules to newly-added topics.
  * @method Models\ModifyDatahubTopicResponse ModifyDatahubTopic(Models\ModifyDatahubTopicRequest $req) This API is used to modify DIP topic attributes.
  * @method Models\ModifyGroupOffsetsResponse ModifyGroupOffsets(Models\ModifyGroupOffsetsRequest $req) This API is used to set the consumer group (Groups) offset.

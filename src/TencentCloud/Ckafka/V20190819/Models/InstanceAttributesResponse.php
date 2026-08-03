@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) Set <p>Virtual IP.</p>.
  * @method string getVport() Obtain <P>Virtual port.</p>.
  * @method void setVport(string $Vport) Set <P>Virtual port.</p>.
- * @method integer getStatus() Obtain <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
- * @method void setStatus(integer $Status) Set <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+ * @method integer getStatus() Obtain <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
+ * @method void setStatus(integer $Status) Set <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
  * @method integer getBandwidth() Obtain <p>Instance bandwidth (unit: Mbps).</p>.
  * @method void setBandwidth(integer $Bandwidth) Set <p>Instance bandwidth (unit: Mbps).</p>.
  * @method integer getDiskSize() Obtain <p>Specifies the instance storage size in GB.</p>.
@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxGroupNum(integer $MaxGroupNum) Set <P>Specifies the maximum number of groups.</p>.
  * @method integer getCvm() Obtain <P>Sale type. 0: standard version; 1: pro edition.</p>.
  * @method void setCvm(integer $Cvm) Set <P>Sale type. 0: standard version; 1: pro edition.</p>.
- * @method string getInstanceType() Obtain <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
- * @method void setInstanceType(string $InstanceType) Set <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
+ * @method string getInstanceType() Obtain <p>Instance type</p><p>Enumeration value:</p><ul><li>profession: Pro Edition</li><li>premium: Advanced Edition</li><li>serverless: Serverless Edition</li><li>other: Standard Version (for example: standards2/standard, this version is not available for sale)</li></ul>
+ * @method void setInstanceType(string $InstanceType) Set <p>Instance type</p><p>Enumeration value:</p><ul><li>profession: Pro Edition</li><li>premium: Advanced Edition</li><li>serverless: Serverless Edition</li><li>other: Standard Version (for example: standards2/standard, this version is not available for sale)</li></ul>
  * @method array getFeatures() Obtain <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
  * @method void setFeatures(array $Features) Set <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
  * @method DynamicRetentionTime getRetentionTimeConfig() Obtain <P>Dynamic message retention policy.</p>.
@@ -96,12 +96,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxMessageByte(integer $MaxMessageByte) Set <P>Specifies the maximum size of instance level messages.</p>.
  * @method string getInstanceChargeType() Obtain <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
  * @method void setInstanceChargeType(string $InstanceChargeType) Set <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
- * @method integer getElasticBandwidthSwitch() Obtain <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
- * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) Set <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
- * @method integer getElasticBandwidthOpenStatus() Obtain <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
- * @method void setElasticBandwidthOpenStatus(integer $ElasticBandwidthOpenStatus) Set <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
- * @method string getClusterType() Obtain <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
- * @method void setClusterType(string $ClusterType) Set <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
+ * @method integer getElasticBandwidthSwitch() Obtain <p>Whether to enable elastic bandwidth allowlist<br>1: Elastic bandwidth allowlist is enabled;<br>0: Elastic bandwidth allowlist is not enabled;</p>
+ * @method void setElasticBandwidthSwitch(integer $ElasticBandwidthSwitch) Set <p>Whether to enable elastic bandwidth allowlist<br>1: Elastic bandwidth allowlist is enabled;<br>0: Elastic bandwidth allowlist is not enabled;</p>
+ * @method integer getElasticBandwidthOpenStatus() Obtain <p>Elastic bandwidth activation status<br>1: Elastic bandwidth not enabled;<br>16: Enabling elastic bandwidth;<br>32: Elastic bandwidth enabled successfully;<br>33: Disabling elastic bandwidth;<br>34: Elastic bandwidth disabled successfully;<br>64: Failed to enable elastic bandwidth;<br>65: Failed to disable elastic bandwidth;</p>
+ * @method void setElasticBandwidthOpenStatus(integer $ElasticBandwidthOpenStatus) Set <p>Elastic bandwidth activation status<br>1: Elastic bandwidth not enabled;<br>16: Enabling elastic bandwidth;<br>32: Elastic bandwidth enabled successfully;<br>33: Disabling elastic bandwidth;<br>34: Elastic bandwidth disabled successfully;<br>64: Failed to enable elastic bandwidth;<br>65: Failed to disable elastic bandwidth;</p>
+ * @method string getClusterType() Obtain <p>Cluster type<br>CLOUD_IDC IDC cluster<br>CLOUD_CVM_SHARE CVM shared cluster<br>CLOUD_CVM_YUNTI YunTi CVM cluster<br>CLOUD_CVM CVM cluster<br>CLOUD_CDC cdc cluster<br>CLOUD_EKS_TSE EKS cluster</p>
+ * @method void setClusterType(string $ClusterType) Set <p>Cluster type<br>CLOUD_IDC IDC cluster<br>CLOUD_CVM_SHARE CVM shared cluster<br>CLOUD_CVM_YUNTI YunTi CVM cluster<br>CLOUD_CVM CVM cluster<br>CLOUD_CDC cdc cluster<br>CLOUD_EKS_TSE EKS cluster</p>
  * @method integer getFreePartitionNumber() Obtain <P>Specifies the number of free partitions.</p>.
  * @method void setFreePartitionNumber(integer $FreePartitionNumber) Set <P>Specifies the number of free partitions.</p>.
  * @method integer getElasticFloatBandwidth() Obtain <P>Specifies the elastic bandwidth upper limit.</p>.
@@ -112,10 +112,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) Set <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
  * @method integer getDeleteProtectionEnable() Obtain <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
  * @method void setDeleteProtectionEnable(integer $DeleteProtectionEnable) Set <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
- * @method integer getRetentionBytes() Obtain <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
- * @method void setRetentionBytes(integer $RetentionBytes) Set <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
- * @method integer getTransactionalIdExpirationMs() Obtain <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
- * @method void setTransactionalIdExpirationMs(integer $TransactionalIdExpirationMs) Set <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+ * @method integer getRetentionBytes() Obtain <p>Message retention size at the instance level</p><p>Measurement unit: bytes</p><p>Default value: -1</p>
+ * @method void setRetentionBytes(integer $RetentionBytes) Set <p>Message retention size at the instance level</p><p>Measurement unit: bytes</p><p>Default value: -1</p>
+ * @method integer getTransactionalIdExpirationMs() Obtain <p>Maximum idle time of transaction ID. Uncommitted transactions that time out will be marked with expiration.</p><p>Unit: ms</p>
+ * @method void setTransactionalIdExpirationMs(integer $TransactionalIdExpirationMs) Set <p>Maximum idle time of transaction ID. Uncommitted transactions that time out will be marked with expiration.</p><p>Unit: ms</p>
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -145,7 +145,7 @@ class InstanceAttributesResponse extends AbstractModel
     public $Vport;
 
     /**
-     * @var integer <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+     * @var integer <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
      */
     public $Status;
 
@@ -250,7 +250,7 @@ class InstanceAttributesResponse extends AbstractModel
     public $Cvm;
 
     /**
-     * @var string <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
+     * @var string <p>Instance type</p><p>Enumeration value:</p><ul><li>profession: Pro Edition</li><li>premium: Advanced Edition</li><li>serverless: Serverless Edition</li><li>other: Standard Version (for example: standards2/standard, this version is not available for sale)</li></ul>
      */
     public $InstanceType;
 
@@ -310,17 +310,17 @@ class InstanceAttributesResponse extends AbstractModel
     public $InstanceChargeType;
 
     /**
-     * @var integer <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
+     * @var integer <p>Whether to enable elastic bandwidth allowlist<br>1: Elastic bandwidth allowlist is enabled;<br>0: Elastic bandwidth allowlist is not enabled;</p>
      */
     public $ElasticBandwidthSwitch;
 
     /**
-     * @var integer <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
+     * @var integer <p>Elastic bandwidth activation status<br>1: Elastic bandwidth not enabled;<br>16: Enabling elastic bandwidth;<br>32: Elastic bandwidth enabled successfully;<br>33: Disabling elastic bandwidth;<br>34: Elastic bandwidth disabled successfully;<br>64: Failed to enable elastic bandwidth;<br>65: Failed to disable elastic bandwidth;</p>
      */
     public $ElasticBandwidthOpenStatus;
 
     /**
-     * @var string <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
+     * @var string <p>Cluster type<br>CLOUD_IDC IDC cluster<br>CLOUD_CVM_SHARE CVM shared cluster<br>CLOUD_CVM_YUNTI YunTi CVM cluster<br>CLOUD_CVM CVM cluster<br>CLOUD_CDC cdc cluster<br>CLOUD_EKS_TSE EKS cluster</p>
      */
     public $ClusterType;
 
@@ -350,12 +350,12 @@ class InstanceAttributesResponse extends AbstractModel
     public $DeleteProtectionEnable;
 
     /**
-     * @var integer <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+     * @var integer <p>Message retention size at the instance level</p><p>Measurement unit: bytes</p><p>Default value: -1</p>
      */
     public $RetentionBytes;
 
     /**
-     * @var integer <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+     * @var integer <p>Maximum idle time of transaction ID. Uncommitted transactions that time out will be marked with expiration.</p><p>Unit: ms</p>
      */
     public $TransactionalIdExpirationMs;
 
@@ -365,7 +365,7 @@ class InstanceAttributesResponse extends AbstractModel
      * @param array $VipList <p>Access point VIP list information.</p>.
      * @param string $Vip <p>Virtual IP.</p>.
      * @param string $Vport <P>Virtual port.</p>.
-     * @param integer $Status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+     * @param integer $Status <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
      * @param integer $Bandwidth <p>Instance bandwidth (unit: Mbps).</p>.
      * @param integer $DiskSize <p>Specifies the instance storage size in GB.</p>.
      * @param integer $ZoneId <P>Specifies the availability zone.</p>.
@@ -386,7 +386,7 @@ class InstanceAttributesResponse extends AbstractModel
      * @param string $Version <P>Specifies the ckafka cluster instance version.</p>.
      * @param integer $MaxGroupNum <P>Specifies the maximum number of groups.</p>.
      * @param integer $Cvm <P>Sale type. 0: standard version; 1: pro edition.</p>.
-     * @param string $InstanceType <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
+     * @param string $InstanceType <p>Instance type</p><p>Enumeration value:</p><ul><li>profession: Pro Edition</li><li>premium: Advanced Edition</li><li>serverless: Serverless Edition</li><li>other: Standard Version (for example: standards2/standard, this version is not available for sale)</li></ul>
      * @param array $Features <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
      * @param DynamicRetentionTime $RetentionTimeConfig <P>Dynamic message retention policy.</p>.
      * @param integer $MaxConnection <P>Maximum number of connections.</p>.
@@ -398,16 +398,16 @@ class InstanceAttributesResponse extends AbstractModel
      * @param string $SystemMaintenanceTime <P>Specifies the system maintenance time.</p>.
      * @param integer $MaxMessageByte <P>Specifies the maximum size of instance level messages.</p>.
      * @param string $InstanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
-     * @param integer $ElasticBandwidthSwitch <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
-     * @param integer $ElasticBandwidthOpenStatus <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
-     * @param string $ClusterType <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
+     * @param integer $ElasticBandwidthSwitch <p>Whether to enable elastic bandwidth allowlist<br>1: Elastic bandwidth allowlist is enabled;<br>0: Elastic bandwidth allowlist is not enabled;</p>
+     * @param integer $ElasticBandwidthOpenStatus <p>Elastic bandwidth activation status<br>1: Elastic bandwidth not enabled;<br>16: Enabling elastic bandwidth;<br>32: Elastic bandwidth enabled successfully;<br>33: Disabling elastic bandwidth;<br>34: Elastic bandwidth disabled successfully;<br>64: Failed to enable elastic bandwidth;<br>65: Failed to disable elastic bandwidth;</p>
+     * @param string $ClusterType <p>Cluster type<br>CLOUD_IDC IDC cluster<br>CLOUD_CVM_SHARE CVM shared cluster<br>CLOUD_CVM_YUNTI YunTi CVM cluster<br>CLOUD_CVM CVM cluster<br>CLOUD_CDC cdc cluster<br>CLOUD_EKS_TSE EKS cluster</p>
      * @param integer $FreePartitionNumber <P>Specifies the number of free partitions.</p>.
      * @param integer $ElasticFloatBandwidth <P>Specifies the elastic bandwidth upper limit.</p>.
      * @param string $CustomCertId <p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
      * @param integer $UncleanLeaderElectionEnable <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
      * @param integer $DeleteProtectionEnable <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
-     * @param integer $RetentionBytes <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
-     * @param integer $TransactionalIdExpirationMs <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+     * @param integer $RetentionBytes <p>Message retention size at the instance level</p><p>Measurement unit: bytes</p><p>Default value: -1</p>
+     * @param integer $TransactionalIdExpirationMs <p>Maximum idle time of transaction ID. Uncommitted transactions that time out will be marked with expiration.</p><p>Unit: ms</p>
      */
     function __construct()
     {

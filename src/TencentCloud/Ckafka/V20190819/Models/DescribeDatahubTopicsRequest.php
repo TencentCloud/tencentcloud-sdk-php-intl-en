@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatahubTopics request structure.
  *
- * @method string getSearchWord() Obtain Search term.
- * @method void setSearchWord(string $SearchWord) Set Search term.
- * @method integer getOffset() Obtain Query offset, which defaults to `0`.
- * @method void setOffset(integer $Offset) Set Query offset, which defaults to `0`.
- * @method integer getLimit() Obtain Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
- * @method void setLimit(integer $Limit) Set Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
- * @method boolean getQueryFromConnectResource() Obtain Specifies whether to query the topic list from the connection.
- * @method void setQueryFromConnectResource(boolean $QueryFromConnectResource) Set Specifies whether to query the topic list from the connection.
- * @method string getConnectResourceId() Obtain Connection ID.
- * @method void setConnectResourceId(string $ConnectResourceId) Set Connection ID.
- * @method string getTopicRegularExpression() Obtain topic resource expression.
- * @method void setTopicRegularExpression(string $TopicRegularExpression) Set topic resource expression.
+ * @method string getSearchWord() Obtain <p>Search term</p><p>Performs fuzzy matching on the Name, TopicName, or TopicId field.</p>
+ * @method void setSearchWord(string $SearchWord) Set <p>Search term</p><p>Performs fuzzy matching on the Name, TopicName, or TopicId field.</p>
+ * @method integer getOffset() Obtain <p>Offset position of this page, defaults to 0</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset position of this page, defaults to 0</p>
+ * @method integer getLimit() Obtain <p>Maximum number of returned results this time</p><p>Value ranges from 1 to 100</p><p>Default value: 20</p>
+ * @method void setLimit(integer $Limit) Set <p>Maximum number of returned results this time</p><p>Value ranges from 1 to 100</p><p>Default value: 20</p>
+ * @method boolean getQueryFromConnectResource() Obtain <p>Whether to query the topic list from the connection query</p><p>Default value: false</p>
+ * @method void setQueryFromConnectResource(boolean $QueryFromConnectResource) Set <p>Whether to query the topic list from the connection query</p><p>Default value: false</p>
+ * @method string getConnectResourceId() Obtain <p>Connection ID.</p>
+ * @method void setConnectResourceId(string $ConnectResourceId) Set <p>Connection ID.</p>
+ * @method string getTopicRegularExpression() Obtain <p>topic resource expression</p>
+ * @method void setTopicRegularExpression(string $TopicRegularExpression) Set <p>topic resource expression</p>
  */
 class DescribeDatahubTopicsRequest extends AbstractModel
 {
     /**
-     * @var string Search term.
+     * @var string <p>Search term</p><p>Performs fuzzy matching on the Name, TopicName, or TopicId field.</p>
      */
     public $SearchWord;
 
     /**
-     * @var integer Query offset, which defaults to `0`.
+     * @var integer <p>Offset position of this page, defaults to 0</p>
      */
     public $Offset;
 
     /**
-     * @var integer Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
+     * @var integer <p>Maximum number of returned results this time</p><p>Value ranges from 1 to 100</p><p>Default value: 20</p>
      */
     public $Limit;
 
     /**
-     * @var boolean Specifies whether to query the topic list from the connection.
+     * @var boolean <p>Whether to query the topic list from the connection query</p><p>Default value: false</p>
      */
     public $QueryFromConnectResource;
 
     /**
-     * @var string Connection ID.
+     * @var string <p>Connection ID.</p>
      */
     public $ConnectResourceId;
 
     /**
-     * @var string topic resource expression.
+     * @var string <p>topic resource expression</p>
      */
     public $TopicRegularExpression;
 
     /**
-     * @param string $SearchWord Search term.
-     * @param integer $Offset Query offset, which defaults to `0`.
-     * @param integer $Limit Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
-     * @param boolean $QueryFromConnectResource Specifies whether to query the topic list from the connection.
-     * @param string $ConnectResourceId Connection ID.
-     * @param string $TopicRegularExpression topic resource expression.
+     * @param string $SearchWord <p>Search term</p><p>Performs fuzzy matching on the Name, TopicName, or TopicId field.</p>
+     * @param integer $Offset <p>Offset position of this page, defaults to 0</p>
+     * @param integer $Limit <p>Maximum number of returned results this time</p><p>Value ranges from 1 to 100</p><p>Default value: 20</p>
+     * @param boolean $QueryFromConnectResource <p>Whether to query the topic list from the connection query</p><p>Default value: false</p>
+     * @param string $ConnectResourceId <p>Connection ID.</p>
+     * @param string $TopicRegularExpression <p>topic resource expression</p>
      */
     function __construct()
     {

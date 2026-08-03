@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * User entity
  *
- * @method integer getUserId() Obtain User ID
- * @method void setUserId(integer $UserId) Set User ID
- * @method string getName() Obtain Username
- * @method void setName(string $Name) Set Username
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getUpdateTime() Obtain Last updated time
- * @method void setUpdateTime(string $UpdateTime) Set Last updated time
+ * @method integer getUserId() Obtain <p>User id</p>
+ * @method void setUserId(integer $UserId) Set <p>User id</p>
+ * @method string getName() Obtain <p>Username</p>
+ * @method void setName(string $Name) Set <p>Username</p>
+ * @method string getCreateTime() Obtain <p>Creation time.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
+ * @method string getUpdateTime() Obtain <p>Last update time</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Last update time</p>
  */
 class User extends AbstractModel
 {
     /**
-     * @var integer User ID
+     * @var integer <p>User id</p>
      */
     public $UserId;
 
     /**
-     * @var string Username
+     * @var string <p>Username</p>
      */
     public $Name;
 
     /**
-     * @var string Creation time
+     * @var string <p>Creation time.</p>
      */
     public $CreateTime;
 
     /**
-     * @var string Last updated time
+     * @var string <p>Last update time</p>
      */
     public $UpdateTime;
 
     /**
-     * @param integer $UserId User ID
-     * @param string $Name Username
-     * @param string $CreateTime Creation time
-     * @param string $UpdateTime Last updated time
+     * @param integer $UserId <p>User id</p>
+     * @param string $Name <p>Username</p>
+     * @param string $CreateTime <p>Creation time.</p>
+     * @param string $UpdateTime <p>Last update time</p>
      */
     function __construct()
     {

@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Returned result value of operation
  *
- * @method string getReturnCode() Obtain Returned code. 0: normal, other values: error
- * @method void setReturnCode(string $ReturnCode) Set Returned code. 0: normal, other values: error
- * @method string getReturnMessage() Obtain Success message
- * @method void setReturnMessage(string $ReturnMessage) Set Success message
- * @method OperateResponseData getData() Obtain Data returned by an operation, which may contain `flowId`, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setData(OperateResponseData $Data) Set Data returned by an operation, which may contain `flowId`, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getReturnCode() Obtain <p>Returned code. 0 as normal, non-0 as error.</p>
+ * @method void setReturnCode(string $ReturnCode) Set <p>Returned code. 0 as normal, non-0 as error.</p>
+ * @method string getReturnMessage() Obtain <p>Success message</p>
+ * @method void setReturnMessage(string $ReturnMessage) Set <p>Success message</p>
+ * @method OperateResponseData getData() Obtain <p>The Data returned by the operation may include flowId.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setData(OperateResponseData $Data) Set <p>The Data returned by the operation may include flowId.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class JgwOperateResponse extends AbstractModel
 {
     /**
-     * @var string Returned code. 0: normal, other values: error
+     * @var string <p>Returned code. 0 as normal, non-0 as error.</p>
      */
     public $ReturnCode;
 
     /**
-     * @var string Success message
+     * @var string <p>Success message</p>
      */
     public $ReturnMessage;
 
     /**
-     * @var OperateResponseData Data returned by an operation, which may contain `flowId`, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var OperateResponseData <p>The Data returned by the operation may include flowId.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Data;
 
     /**
-     * @param string $ReturnCode Returned code. 0: normal, other values: error
-     * @param string $ReturnMessage Success message
-     * @param OperateResponseData $Data Data returned by an operation, which may contain `flowId`, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ReturnCode <p>Returned code. 0 as normal, non-0 as error.</p>
+     * @param string $ReturnMessage <p>Success message</p>
+     * @param OperateResponseData $Data <p>The Data returned by the operation may include flowId.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

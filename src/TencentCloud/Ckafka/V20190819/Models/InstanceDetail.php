@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVport(string $Vport) Set <P>Specifies the port information to access the instance.</p>.
  * @method array getVipList() Obtain <p>Specifies the virtual IP list.</p>.
  * @method void setVipList(array $VipList) Set <p>Specifies the virtual IP list.</p>.
- * @method integer getStatus() Obtain <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
- * @method void setStatus(integer $Status) Set <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+ * @method integer getStatus() Obtain <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
+ * @method void setStatus(integer $Status) Set <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
  * @method integer getBandwidth() Obtain <p>Specifies the instance bandwidth in Mbps.</p>.
  * @method void setBandwidth(integer $Bandwidth) Set <p>Specifies the instance bandwidth in Mbps.</p>.
  * @method integer getDiskSize() Obtain <p>Specifies the disk size of the ckafka cluster instance, in gb.</p>.
@@ -84,8 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterType(string $ClusterType) Set <P>Specifies the underlying cluster type of the ckafka cluster instance.</p>.
  * @method array getFeatures() Obtain <P>Specifies the instance feature list.</p>.
  * @method void setFeatures(array $Features) Set <P>Specifies the instance feature list.</p>.
- * @method integer getRetentionBytes() Obtain <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
- * @method void setRetentionBytes(integer $RetentionBytes) Set <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+ * @method integer getRetentionBytes() Obtain <p>Message retention size at the instance level</p><p>Measurement unit: byte</p><p>Default value: -1</p><p>Message retention size at the instance level</p>
+ * @method void setRetentionBytes(integer $RetentionBytes) Set <p>Message retention size at the instance level</p><p>Measurement unit: byte</p><p>Default value: -1</p><p>Message retention size at the instance level</p>
  */
 class InstanceDetail extends AbstractModel
 {
@@ -115,7 +115,7 @@ class InstanceDetail extends AbstractModel
     public $VipList;
 
     /**
-     * @var integer <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+     * @var integer <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
      */
     public $Status;
 
@@ -250,7 +250,7 @@ class InstanceDetail extends AbstractModel
     public $Features;
 
     /**
-     * @var integer <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+     * @var integer <p>Message retention size at the instance level</p><p>Measurement unit: byte</p><p>Default value: -1</p><p>Message retention size at the instance level</p>
      */
     public $RetentionBytes;
 
@@ -260,7 +260,7 @@ class InstanceDetail extends AbstractModel
      * @param string $Vip <P>Specifies the vip information for accessing the instance.</p>.
      * @param string $Vport <P>Specifies the port information to access the instance.</p>.
      * @param array $VipList <p>Specifies the virtual IP list.</p>.
-     * @param integer $Status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+     * @param integer $Status <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
      * @param integer $Bandwidth <p>Specifies the instance bandwidth in Mbps.</p>.
      * @param integer $DiskSize <p>Specifies the disk size of the ckafka cluster instance, in gb.</p>.
      * @param integer $ZoneId <p>Specifies the available zone ID.</p>.
@@ -287,7 +287,7 @@ class InstanceDetail extends AbstractModel
      * @param integer $PublicNetwork <p>Specifies the public network bandwidth. value range: 3Mbps to 999Mbps. only supported in pro edition.</p>.
      * @param string $ClusterType <P>Specifies the underlying cluster type of the ckafka cluster instance.</p>.
      * @param array $Features <P>Specifies the instance feature list.</p>.
-     * @param integer $RetentionBytes <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+     * @param integer $RetentionBytes <p>Message retention size at the instance level</p><p>Measurement unit: byte</p><p>Default value: -1</p><p>Message retention size at the instance level</p>
      */
     function __construct()
     {
