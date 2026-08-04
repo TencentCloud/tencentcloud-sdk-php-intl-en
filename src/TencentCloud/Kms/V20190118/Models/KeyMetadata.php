@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountUin(integer $AccountUin) Set <p>member account uin</p>
  * @method string getAccountName() Obtain <p>Member account name</p>
  * @method void setAccountName(string $AccountName) Set <p>Member account name</p>
+ * @method string getCreatorUinString() Obtain <p>Creator UIN</p>
+ * @method void setCreatorUinString(string $CreatorUinString) Set <p>Creator UIN</p>
  */
 class KeyMetadata extends AbstractModel
 {
@@ -220,6 +222,11 @@ class KeyMetadata extends AbstractModel
     public $AccountName;
 
     /**
+     * @var string <p>Creator UIN</p>
+     */
+    public $CreatorUinString;
+
+    /**
      * @param string $KeyId <p>Globally unique ID of the CMK.</p>
      * @param string $Alias <p>An alias name as a key that is easier to identify and understand</p>
      * @param integer $CreateTime <p>Key creation time</p>
@@ -248,6 +255,7 @@ class KeyMetadata extends AbstractModel
      * @param integer $AccountAppId <p>Member account appId</p>
      * @param integer $AccountUin <p>member account uin</p>
      * @param string $AccountName <p>Member account name</p>
+     * @param string $CreatorUinString <p>Creator UIN</p>
      */
     function __construct()
     {
@@ -372,6 +380,10 @@ class KeyMetadata extends AbstractModel
 
         if (array_key_exists("AccountName",$param) and $param["AccountName"] !== null) {
             $this->AccountName = $param["AccountName"];
+        }
+
+        if (array_key_exists("CreatorUinString",$param) and $param["CreatorUinString"] !== null) {
+            $this->CreatorUinString = $param["CreatorUinString"];
         }
     }
 }

@@ -83,6 +83,7 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
  * @method Models\PostQuantumCryptoSignResponse PostQuantumCryptoSign(Models\PostQuantumCryptoSignRequest $req) This API is used to sign using PQC.
  * @method Models\PostQuantumCryptoVerifyResponse PostQuantumCryptoVerify(Models\PostQuantumCryptoVerifyRequest $req) This API is used to verify a signature using PQC.
  * @method Models\ReEncryptResponse ReEncrypt(Models\ReEncryptRequest $req) Re-encrypt the ciphertext using the specified CMK.
+ * @method Models\RotateKeyResponse RotateKey(Models\RotateKeyRequest $req) Rotate the designated customer master key immediately. You can call DescribeKey to return the last rotation time and the next rotation time, and determine whether the rotation is successful.
  * @method Models\ScheduleDataKeyDeletionResponse ScheduleDataKeyDeletion(Models\ScheduleDataKeyDeletionRequest $req) Schedule deletion for a data key.
  * @method Models\ScheduleKeyDeletionResponse ScheduleKeyDeletion(Models\ScheduleKeyDeletionRequest $req) CMK planned deletion API, used to specify the time of CMK deletion, the optional time interval is [7,30] days
  * @method Models\SignByAsymmetricKeyResponse SignByAsymmetricKey(Models\SignByAsymmetricKeyRequest $req) This API is used to generate a signature with an asymmetric key.

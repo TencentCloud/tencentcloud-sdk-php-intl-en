@@ -99,6 +99,10 @@ Modify events related with the IPs/domains in the blocked/allowed list
  * @method Models\RemoveAcRuleResponse RemoveAcRule(Models\RemoveAcRuleRequest $req) This API is used to delete edge firewall rules.
  * @method Models\RemoveEnterpriseSecurityGroupRuleResponse RemoveEnterpriseSecurityGroupRule(Models\RemoveEnterpriseSecurityGroupRuleRequest $req) This API is used to delete enterprise security group rules (new).
  * @method Models\RemoveNatAcRuleResponse RemoveNatAcRule(Models\RemoveNatAcRuleRequest $req) This API is used to delete NAT access control rules.
+ * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) This API is used to retrieve and analyze logs. Please note the following matters when using this API.
+1. Besides being subject to the default API request rate limit, for a single log topic, the number of concurrent queries must not exceed 15.
+2. For search syntax, it's recommended to use the dedicated CQL syntax rule for log service. Please use the SyntaxRule parameter and set its value to 1. The console uses this syntax rule by default.
+3. The API's return data packet maximum is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
  * @method Models\SetNatFwDnatRuleResponse SetNatFwDnatRule(Models\SetNatFwDnatRuleRequest $req) This API is used to configure firewall DNAT rules.
  * @method Models\SetNatFwEipResponse SetNatFwEip(Models\SetNatFwEipRequest $req) This API is used to set the firewall instance EIP. (Available for firewall instances in the "Create new" mode. only)
  * @method Models\StopSecurityGroupRuleDispatchResponse StopSecurityGroupRuleDispatch(Models\StopSecurityGroupRuleDispatchRequest $req) This API is used to stop publishing security group rules.

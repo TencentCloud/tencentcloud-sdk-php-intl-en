@@ -20,202 +20,210 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Specifies the data key attribute information.
  *
- * @method string getDataKeyId() Obtain DataKey globally unique id.
- * @method void setDataKeyId(string $DataKeyId) Set DataKey globally unique id.
- * @method string getKeyId() Obtain Globally unique id of the CMK.
- * @method void setKeyId(string $KeyId) Set Globally unique id of the CMK.
- * @method string getKeyName() Obtain CMK name.
- * @method void setKeyName(string $KeyName) Set CMK name.
- * @method string getDataKeyName() Obtain Key name as a more recognizable and understandable data key.
- * @method void setDataKeyName(string $DataKeyName) Set Key name as a more recognizable and understandable data key.
- * @method integer getNumberOfBytes() Obtain Specifies the length of the data key in bytes.
- * @method void setNumberOfBytes(integer $NumberOfBytes) Set Specifies the length of the data key in bytes.
- * @method integer getCreateTime() Obtain Key key creation time.
- * @method void setCreateTime(integer $CreateTime) Set Key key creation time.
- * @method string getDescription() Obtain DataKey description.
- * @method void setDescription(string $Description) Set DataKey description.
- * @method string getKeyState() Obtain DataKey status. valid values: Enabled, Disabled, PendingDelete.
- * @method void setKeyState(string $KeyState) Set DataKey status. valid values: Enabled, Disabled, PendingDelete.
- * @method integer getCreatorUin() Obtain Creator.
- * @method void setCreatorUin(integer $CreatorUin) Set Creator.
- * @method string getOwner() Obtain Specifies the creator of the data key. valid values: user (user-created) or product name (auto-created by authorized cloud services).
- * @method void setOwner(string $Owner) Set Specifies the creator of the data key. valid values: user (user-created) or product name (auto-created by authorized cloud services).
- * @method integer getDeletionDate() Obtain The time when schedule deletion.
- * @method void setDeletionDate(integer $DeletionDate) Set The time when schedule deletion.
- * @method string getOrigin() Obtain Specifies the key material type of DataKey. valid values: TENCENT_KMS (created by KMS), EXTERNAL (user import).
- * @method void setOrigin(string $Origin) Set Specifies the key material type of DataKey. valid values: TENCENT_KMS (created by KMS), EXTERNAL (user import).
- * @method string getHsmClusterId() Obtain HSM cluster ID (only applicable to KMS exclusive/managed service instance).
- * @method void setHsmClusterId(string $HsmClusterId) Set HSM cluster ID (only applicable to KMS exclusive/managed service instance).
- * @method string getResourceId() Obtain Resource ID in the format of `creatorUin/$creatorUin/$dataKeyId`.
- * @method void setResourceId(string $ResourceId) Set Resource ID in the format of `creatorUin/$creatorUin/$dataKeyId`.
- * @method integer getIsSyncReplica() Obtain Whether the key is a primary replica. valid values: `0` (primary), `1` (synced replica).
- * @method void setIsSyncReplica(integer $IsSyncReplica) Set Whether the key is a primary replica. valid values: `0` (primary), `1` (synced replica).
- * @method string getSourceRegion() Obtain Synchronous original region.
- * @method void setSourceRegion(string $SourceRegion) Set Synchronous original region.
- * @method integer getSyncStatus() Obtain The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
- * @method void setSyncStatus(integer $SyncStatus) Set The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
- * @method string getSyncMessages() Obtain Sresult description}.
- * @method void setSyncMessages(string $SyncMessages) Set Sresult description}.
- * @method integer getSyncStartTime() Obtain Start time of synchronization.
- * @method void setSyncStartTime(integer $SyncStartTime) Set Start time of synchronization.
- * @method integer getSyncEndTime() Obtain Specifies the synchronous end time.
- * @method void setSyncEndTime(integer $SyncEndTime) Set Specifies the synchronous end time.
- * @method string getSourceHsmClusterId() Obtain Synchronous original cluster. if empty, it is a public cloud public cluster.
- * @method void setSourceHsmClusterId(string $SourceHsmClusterId) Set Synchronous original cluster. if empty, it is a public cloud public cluster.
- * @method integer getAccountAppId() Obtain Member account appId.
- * @method void setAccountAppId(integer $AccountAppId) Set Member account appId.
- * @method integer getAccountUin() Obtain Member account UIN
- * @method void setAccountUin(integer $AccountUin) Set Member account UIN
- * @method string getAccountName() Obtain Member account name.
- * @method void setAccountName(string $AccountName) Set Member account name.
+ * @method string getDataKeyId() Obtain <p>Globally unique ID of the DataKey</p>
+ * @method void setDataKeyId(string $DataKeyId) Set <p>Globally unique ID of the DataKey</p>
+ * @method string getKeyId() Obtain <p>Globally unique ID of the CMK.</p>
+ * @method void setKeyId(string $KeyId) Set <p>Globally unique ID of the CMK.</p>
+ * @method string getKeyName() Obtain <p>CMK name</p>
+ * @method void setKeyName(string $KeyName) Set <p>CMK name</p>
+ * @method string getDataKeyName() Obtain <p>Data key name that is easier to identify and understand as a key</p>
+ * @method void setDataKeyName(string $DataKeyName) Set <p>Data key name that is easier to identify and understand as a key</p>
+ * @method integer getNumberOfBytes() Obtain <p>Length of the data key, in bytes</p>
+ * @method void setNumberOfBytes(integer $NumberOfBytes) Set <p>Length of the data key, in bytes</p>
+ * @method integer getCreateTime() Obtain <p>Key creation time</p>
+ * @method void setCreateTime(integer $CreateTime) Set <p>Key creation time</p>
+ * @method string getDescription() Obtain <p>Description of DataKey</p>
+ * @method void setDescription(string $Description) Set <p>Description of DataKey</p>
+ * @method string getKeyState() Obtain <p>DataKey state, value: Enabled | Disabled | PendingDelete</p>
+ * @method void setKeyState(string $KeyState) Set <p>DataKey state, value: Enabled | Disabled | PendingDelete</p>
+ * @method integer getCreatorUin() Obtain <p>Creator.</p>
+ * @method void setCreatorUin(integer $CreatorUin) Set <p>Creator.</p>
+ * @method string getOwner() Obtain <p>Creator of the data key. For user-created keys, it is user; for keys automatically created by authorized cloud services, it is the corresponding product name.</p>
+ * @method void setOwner(string $Owner) Set <p>Creator of the data key. For user-created keys, it is user; for keys automatically created by authorized cloud services, it is the corresponding product name.</p>
+ * @method integer getDeletionDate() Obtain <p>Schedule deletion time</p>
+ * @method void setDeletionDate(integer $DeletionDate) Set <p>Schedule deletion time</p>
+ * @method string getOrigin() Obtain <p>DataKey key material type. For keys created by KMS: TENCENT_KMS. For keys of user import type: EXTERNAL.</p>
+ * @method void setOrigin(string $Origin) Set <p>DataKey key material type. For keys created by KMS: TENCENT_KMS. For keys of user import type: EXTERNAL.</p>
+ * @method string getHsmClusterId() Obtain <p>HSM Cluster ID (only applicable to KMS exclusive edition/managed version service instances)</p>
+ * @method void setHsmClusterId(string $HsmClusterId) Set <p>HSM Cluster ID (only applicable to KMS exclusive edition/managed version service instances)</p>
+ * @method string getResourceId() Obtain <p>Resource ID, format: creatorUin/$creatorUin/$dataKeyId</p>
+ * @method void setResourceId(string $ResourceId) Set <p>Resource ID, format: creatorUin/$creatorUin/$dataKeyId</p>
+ * @method integer getIsSyncReplica() Obtain <p>Whether the key is a primary replica. 0: primary replica, 1: synced replica.</p>
+ * @method void setIsSyncReplica(integer $IsSyncReplica) Set <p>Whether the key is a primary replica. 0: primary replica, 1: synced replica.</p>
+ * @method string getSourceRegion() Obtain <p>Synchronous original region</p>
+ * @method void setSourceRegion(string $SourceRegion) Set <p>Synchronous original region</p>
+ * @method integer getSyncStatus() Obtain <p>Key synchronization status. 0: unsynced, 1: synchronization successful, 2: synchronization failure, 3: syncing.</p>
+ * @method void setSyncStatus(integer $SyncStatus) Set <p>Key synchronization status. 0: unsynced, 1: synchronization successful, 2: synchronization failure, 3: syncing.</p>
+ * @method string getSyncMessages() Obtain <p>Synchronous result description</p>
+ * @method void setSyncMessages(string $SyncMessages) Set <p>Synchronous result description</p>
+ * @method integer getSyncStartTime() Obtain <p>Start time of synchronization</p>
+ * @method void setSyncStartTime(integer $SyncStartTime) Set <p>Start time of synchronization</p>
+ * @method integer getSyncEndTime() Obtain <p>Synchronous end time</p>
+ * @method void setSyncEndTime(integer $SyncEndTime) Set <p>Synchronous end time</p>
+ * @method string getSourceHsmClusterId() Obtain <p>Synchronous primitive cluster. If empty, it is a public cloud public cluster.</p>
+ * @method void setSourceHsmClusterId(string $SourceHsmClusterId) Set <p>Synchronous primitive cluster. If empty, it is a public cloud public cluster.</p>
+ * @method integer getAccountAppId() Obtain <p>Member account appId</p>
+ * @method void setAccountAppId(integer $AccountAppId) Set <p>Member account appId</p>
+ * @method integer getAccountUin() Obtain <p>member account uin</p>
+ * @method void setAccountUin(integer $AccountUin) Set <p>member account uin</p>
+ * @method string getAccountName() Obtain <p>Enter the member account name.</p>
+ * @method void setAccountName(string $AccountName) Set <p>Enter the member account name.</p>
+ * @method string getCreatorUinString() Obtain <p>Creator UIN</p>
+ * @method void setCreatorUinString(string $CreatorUinString) Set <p>Creator UIN</p>
  */
 class DataKeyMetadata extends AbstractModel
 {
     /**
-     * @var string DataKey globally unique id.
+     * @var string <p>Globally unique ID of the DataKey</p>
      */
     public $DataKeyId;
 
     /**
-     * @var string Globally unique id of the CMK.
+     * @var string <p>Globally unique ID of the CMK.</p>
      */
     public $KeyId;
 
     /**
-     * @var string CMK name.
+     * @var string <p>CMK name</p>
      */
     public $KeyName;
 
     /**
-     * @var string Key name as a more recognizable and understandable data key.
+     * @var string <p>Data key name that is easier to identify and understand as a key</p>
      */
     public $DataKeyName;
 
     /**
-     * @var integer Specifies the length of the data key in bytes.
+     * @var integer <p>Length of the data key, in bytes</p>
      */
     public $NumberOfBytes;
 
     /**
-     * @var integer Key key creation time.
+     * @var integer <p>Key creation time</p>
      */
     public $CreateTime;
 
     /**
-     * @var string DataKey description.
+     * @var string <p>Description of DataKey</p>
      */
     public $Description;
 
     /**
-     * @var string DataKey status. valid values: Enabled, Disabled, PendingDelete.
+     * @var string <p>DataKey state, value: Enabled | Disabled | PendingDelete</p>
      */
     public $KeyState;
 
     /**
-     * @var integer Creator.
+     * @var integer <p>Creator.</p>
      */
     public $CreatorUin;
 
     /**
-     * @var string Specifies the creator of the data key. valid values: user (user-created) or product name (auto-created by authorized cloud services).
+     * @var string <p>Creator of the data key. For user-created keys, it is user; for keys automatically created by authorized cloud services, it is the corresponding product name.</p>
      */
     public $Owner;
 
     /**
-     * @var integer The time when schedule deletion.
+     * @var integer <p>Schedule deletion time</p>
      */
     public $DeletionDate;
 
     /**
-     * @var string Specifies the key material type of DataKey. valid values: TENCENT_KMS (created by KMS), EXTERNAL (user import).
+     * @var string <p>DataKey key material type. For keys created by KMS: TENCENT_KMS. For keys of user import type: EXTERNAL.</p>
      */
     public $Origin;
 
     /**
-     * @var string HSM cluster ID (only applicable to KMS exclusive/managed service instance).
+     * @var string <p>HSM Cluster ID (only applicable to KMS exclusive edition/managed version service instances)</p>
      */
     public $HsmClusterId;
 
     /**
-     * @var string Resource ID in the format of `creatorUin/$creatorUin/$dataKeyId`.
+     * @var string <p>Resource ID, format: creatorUin/$creatorUin/$dataKeyId</p>
      */
     public $ResourceId;
 
     /**
-     * @var integer Whether the key is a primary replica. valid values: `0` (primary), `1` (synced replica).
+     * @var integer <p>Whether the key is a primary replica. 0: primary replica, 1: synced replica.</p>
      */
     public $IsSyncReplica;
 
     /**
-     * @var string Synchronous original region.
+     * @var string <p>Synchronous original region</p>
      */
     public $SourceRegion;
 
     /**
-     * @var integer The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+     * @var integer <p>Key synchronization status. 0: unsynced, 1: synchronization successful, 2: synchronization failure, 3: syncing.</p>
      */
     public $SyncStatus;
 
     /**
-     * @var string Sresult description}.
+     * @var string <p>Synchronous result description</p>
      */
     public $SyncMessages;
 
     /**
-     * @var integer Start time of synchronization.
+     * @var integer <p>Start time of synchronization</p>
      */
     public $SyncStartTime;
 
     /**
-     * @var integer Specifies the synchronous end time.
+     * @var integer <p>Synchronous end time</p>
      */
     public $SyncEndTime;
 
     /**
-     * @var string Synchronous original cluster. if empty, it is a public cloud public cluster.
+     * @var string <p>Synchronous primitive cluster. If empty, it is a public cloud public cluster.</p>
      */
     public $SourceHsmClusterId;
 
     /**
-     * @var integer Member account appId.
+     * @var integer <p>Member account appId</p>
      */
     public $AccountAppId;
 
     /**
-     * @var integer Member account UIN
+     * @var integer <p>member account uin</p>
      */
     public $AccountUin;
 
     /**
-     * @var string Member account name.
+     * @var string <p>Enter the member account name.</p>
      */
     public $AccountName;
 
     /**
-     * @param string $DataKeyId DataKey globally unique id.
-     * @param string $KeyId Globally unique id of the CMK.
-     * @param string $KeyName CMK name.
-     * @param string $DataKeyName Key name as a more recognizable and understandable data key.
-     * @param integer $NumberOfBytes Specifies the length of the data key in bytes.
-     * @param integer $CreateTime Key key creation time.
-     * @param string $Description DataKey description.
-     * @param string $KeyState DataKey status. valid values: Enabled, Disabled, PendingDelete.
-     * @param integer $CreatorUin Creator.
-     * @param string $Owner Specifies the creator of the data key. valid values: user (user-created) or product name (auto-created by authorized cloud services).
-     * @param integer $DeletionDate The time when schedule deletion.
-     * @param string $Origin Specifies the key material type of DataKey. valid values: TENCENT_KMS (created by KMS), EXTERNAL (user import).
-     * @param string $HsmClusterId HSM cluster ID (only applicable to KMS exclusive/managed service instance).
-     * @param string $ResourceId Resource ID in the format of `creatorUin/$creatorUin/$dataKeyId`.
-     * @param integer $IsSyncReplica Whether the key is a primary replica. valid values: `0` (primary), `1` (synced replica).
-     * @param string $SourceRegion Synchronous original region.
-     * @param integer $SyncStatus The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
-     * @param string $SyncMessages Sresult description}.
-     * @param integer $SyncStartTime Start time of synchronization.
-     * @param integer $SyncEndTime Specifies the synchronous end time.
-     * @param string $SourceHsmClusterId Synchronous original cluster. if empty, it is a public cloud public cluster.
-     * @param integer $AccountAppId Member account appId.
-     * @param integer $AccountUin Member account UIN
-     * @param string $AccountName Member account name.
+     * @var string <p>Creator UIN</p>
+     */
+    public $CreatorUinString;
+
+    /**
+     * @param string $DataKeyId <p>Globally unique ID of the DataKey</p>
+     * @param string $KeyId <p>Globally unique ID of the CMK.</p>
+     * @param string $KeyName <p>CMK name</p>
+     * @param string $DataKeyName <p>Data key name that is easier to identify and understand as a key</p>
+     * @param integer $NumberOfBytes <p>Length of the data key, in bytes</p>
+     * @param integer $CreateTime <p>Key creation time</p>
+     * @param string $Description <p>Description of DataKey</p>
+     * @param string $KeyState <p>DataKey state, value: Enabled | Disabled | PendingDelete</p>
+     * @param integer $CreatorUin <p>Creator.</p>
+     * @param string $Owner <p>Creator of the data key. For user-created keys, it is user; for keys automatically created by authorized cloud services, it is the corresponding product name.</p>
+     * @param integer $DeletionDate <p>Schedule deletion time</p>
+     * @param string $Origin <p>DataKey key material type. For keys created by KMS: TENCENT_KMS. For keys of user import type: EXTERNAL.</p>
+     * @param string $HsmClusterId <p>HSM Cluster ID (only applicable to KMS exclusive edition/managed version service instances)</p>
+     * @param string $ResourceId <p>Resource ID, format: creatorUin/$creatorUin/$dataKeyId</p>
+     * @param integer $IsSyncReplica <p>Whether the key is a primary replica. 0: primary replica, 1: synced replica.</p>
+     * @param string $SourceRegion <p>Synchronous original region</p>
+     * @param integer $SyncStatus <p>Key synchronization status. 0: unsynced, 1: synchronization successful, 2: synchronization failure, 3: syncing.</p>
+     * @param string $SyncMessages <p>Synchronous result description</p>
+     * @param integer $SyncStartTime <p>Start time of synchronization</p>
+     * @param integer $SyncEndTime <p>Synchronous end time</p>
+     * @param string $SourceHsmClusterId <p>Synchronous primitive cluster. If empty, it is a public cloud public cluster.</p>
+     * @param integer $AccountAppId <p>Member account appId</p>
+     * @param integer $AccountUin <p>member account uin</p>
+     * @param string $AccountName <p>Enter the member account name.</p>
+     * @param string $CreatorUinString <p>Creator UIN</p>
      */
     function __construct()
     {
@@ -324,6 +332,10 @@ class DataKeyMetadata extends AbstractModel
 
         if (array_key_exists("AccountName",$param) and $param["AccountName"] !== null) {
             $this->AccountName = $param["AccountName"];
+        }
+
+        if (array_key_exists("CreatorUinString",$param) and $param["CreatorUinString"] !== null) {
+            $this->CreatorUinString = $param["CreatorUinString"];
         }
     }
 }
