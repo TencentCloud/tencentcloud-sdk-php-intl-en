@@ -40,6 +40,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVoiceClonedMarkFile(string $VoiceClonedMarkFile) Set <p>File address of the voice type clone annotation</p>
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getErasedVideoPath() Obtain <p>Result path of a video for removal only</p>
+ * @method void setErasedVideoPath(string $ErasedVideoPath) Set <p>Result path of a video for removal only</p>
+ * @method string getDubbingEditInfoUrl() Obtain <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
+ * @method void setDubbingEditInfoUrl(string $DubbingEditInfoUrl) Set <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
+ * @method string getFileId() Obtain <p>FileId of a file after removal.</p>
+ * @method void setFileId(string $FileId) Set <p>FileId of a file after removal.</p>
+ * @method string getOriginSubtitleFileId() Obtain <p>FileId of the subtitle file extracted from video.</p>
+ * @method void setOriginSubtitleFileId(string $OriginSubtitleFileId) Set <p>FileId of the subtitle file extracted from video.</p>
+ * @method string getTranslateSubtitleFileId() Obtain <p>FileId of a subtitle translation file extracted from a video.</p>
+ * @method void setTranslateSubtitleFileId(string $TranslateSubtitleFileId) Set <p>FileId of a subtitle translation file extracted from a video.</p>
  */
 class AiAnalysisTaskDelLogoOutput extends AbstractModel
 {
@@ -82,6 +92,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VoiceClonedMarkFile;
 
     /**
+     * @var string <p>Result path of a video for removal only</p>
+     */
+    public $ErasedVideoPath;
+
+    /**
+     * @var string <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
+     */
+    public $DubbingEditInfoUrl;
+
+    /**
+     * @var string <p>FileId of a file after removal.</p>
+     */
+    public $FileId;
+
+    /**
+     * @var string <p>FileId of the subtitle file extracted from video.</p>
+     */
+    public $OriginSubtitleFileId;
+
+    /**
+     * @var string <p>FileId of a subtitle translation file extracted from a video.</p>
+     */
+    public $TranslateSubtitleFileId;
+
+    /**
      * @param string $Path <p>Path of a file after removal.</p>
      * @param TaskOutputStorage $OutputStorage <p>Storage location of a file after removal.</p>
      * @param string $OriginSubtitlePath <p>Path of subtitle file extracted from video.</p>
@@ -92,6 +127,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VoiceClonedMarkFile <p>File address of the voice type clone annotation</p>
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ErasedVideoPath <p>Result path of a video for removal only</p>
+     * @param string $DubbingEditInfoUrl <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
+     * @param string $FileId <p>FileId of a file after removal.</p>
+     * @param string $OriginSubtitleFileId <p>FileId of the subtitle file extracted from video.</p>
+     * @param string $TranslateSubtitleFileId <p>FileId of a subtitle translation file extracted from a video.</p>
      */
     function __construct()
     {
@@ -134,6 +174,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("VoiceClonedMarkFile",$param) and $param["VoiceClonedMarkFile"] !== null) {
             $this->VoiceClonedMarkFile = $param["VoiceClonedMarkFile"];
+        }
+
+        if (array_key_exists("ErasedVideoPath",$param) and $param["ErasedVideoPath"] !== null) {
+            $this->ErasedVideoPath = $param["ErasedVideoPath"];
+        }
+
+        if (array_key_exists("DubbingEditInfoUrl",$param) and $param["DubbingEditInfoUrl"] !== null) {
+            $this->DubbingEditInfoUrl = $param["DubbingEditInfoUrl"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("OriginSubtitleFileId",$param) and $param["OriginSubtitleFileId"] !== null) {
+            $this->OriginSubtitleFileId = $param["OriginSubtitleFileId"];
+        }
+
+        if (array_key_exists("TranslateSubtitleFileId",$param) and $param["TranslateSubtitleFileId"] !== null) {
+            $this->TranslateSubtitleFileId = $param["TranslateSubtitleFileId"];
         }
     }
 }

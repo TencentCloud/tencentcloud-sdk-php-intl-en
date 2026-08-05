@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceId(string $VoiceId) Set <p>Voice type id</p>
  * @method TaskOutputStorage getOutputStorage() Obtain <p>Storage location of the dubbed video.</p>
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Storage location of the dubbed video.</p>
+ * @method string getExtraOutput() Obtain <p>Additional results, currently including subtitle file result URLs</p>
+ * @method void setExtraOutput(string $ExtraOutput) Set <p>Additional results, currently including subtitle file result URLs</p>
+ * @method string getVideoFileId() Obtain <p>FileId of the dubbed video.</p>
+ * @method void setVideoFileId(string $VideoFileId) Set <p>FileId of the dubbed video.</p>
+ * @method string getSpeakerFileId() Obtain <p>FileId of the tag file.</p>
+ * @method void setSpeakerFileId(string $SpeakerFileId) Set <p>FileId of the tag file.</p>
  */
 class AiAnalysisTaskDubbingOutput extends AbstractModel
 {
@@ -52,10 +58,28 @@ class AiAnalysisTaskDubbingOutput extends AbstractModel
     public $OutputStorage;
 
     /**
+     * @var string <p>Additional results, currently including subtitle file result URLs</p>
+     */
+    public $ExtraOutput;
+
+    /**
+     * @var string <p>FileId of the dubbed video.</p>
+     */
+    public $VideoFileId;
+
+    /**
+     * @var string <p>FileId of the tag file.</p>
+     */
+    public $SpeakerFileId;
+
+    /**
      * @param string $VideoPath <p>Dubbed video path.</p>
      * @param string $SpeakerPath <p>Tag file path</p>
      * @param string $VoiceId <p>Voice type id</p>
      * @param TaskOutputStorage $OutputStorage <p>Storage location of the dubbed video.</p>
+     * @param string $ExtraOutput <p>Additional results, currently including subtitle file result URLs</p>
+     * @param string $VideoFileId <p>FileId of the dubbed video.</p>
+     * @param string $SpeakerFileId <p>FileId of the tag file.</p>
      */
     function __construct()
     {
@@ -85,6 +109,18 @@ class AiAnalysisTaskDubbingOutput extends AbstractModel
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
             $this->OutputStorage->deserialize($param["OutputStorage"]);
+        }
+
+        if (array_key_exists("ExtraOutput",$param) and $param["ExtraOutput"] !== null) {
+            $this->ExtraOutput = $param["ExtraOutput"];
+        }
+
+        if (array_key_exists("VideoFileId",$param) and $param["VideoFileId"] !== null) {
+            $this->VideoFileId = $param["VideoFileId"];
+        }
+
+        if (array_key_exists("SpeakerFileId",$param) and $param["SpeakerFileId"] !== null) {
+            $this->SpeakerFileId = $param["SpeakerFileId"];
         }
     }
 }

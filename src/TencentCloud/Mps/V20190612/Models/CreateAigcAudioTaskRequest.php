@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModelName() Obtain <p>Model name. Supported models for music generation: GL and MiniMaxMusic.</p>
  * @method void setModelName(string $ModelName) Set <p>Model name. Supported models for music generation: GL and MiniMaxMusic.</p>
- * @method string getModelVersion() Obtain <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MinimaxMusic: 2.0, 2.5, and 2.6.</p>
- * @method void setModelVersion(string $ModelVersion) Set <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MinimaxMusic: 2.0, 2.5, and 2.6.</p>
+ * @method string getModelVersion() Obtain <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
+ * @method void setModelVersion(string $ModelVersion) Set <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
  * @method string getSceneType() Obtain <p>Specifies the scenario for audio generation. Music: music.</p>
  * @method void setSceneType(string $SceneType) Set <p>Specifies the scenario for audio generation. Music: music.</p>
  * @method string getPrompt() Obtain <p>Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.</p>
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStoreCosParam(AigcStoreCosParam $StoreCosParam) Set <p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
  * @method AigcAudioExtraParam getExtraParameters() Obtain <p>Additional parameters required.</p>
  * @method void setExtraParameters(AigcAudioExtraParam $ExtraParameters) Set <p>Additional parameters required.</p>
- * @method string getAdditionalParameters() Obtain <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p>
- * @method void setAdditionalParameters(string $AdditionalParameters) Set <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p>
+ * @method string getAdditionalParameters() Obtain <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
+ * @method void setAdditionalParameters(string $AdditionalParameters) Set <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
  * @method string getOperator() Obtain <p>API operator name.</p>
  * @method void setOperator(string $Operator) Set <p>API operator name.</p>
  */
@@ -51,7 +51,7 @@ class CreateAigcAudioTaskRequest extends AbstractModel
     public $ModelName;
 
     /**
-     * @var string <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MinimaxMusic: 2.0, 2.5, and 2.6.</p>
+     * @var string <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
      */
     public $ModelVersion;
 
@@ -91,7 +91,7 @@ class CreateAigcAudioTaskRequest extends AbstractModel
     public $ExtraParameters;
 
     /**
-     * @var string <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p>
+     * @var string <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
      */
     public $AdditionalParameters;
 
@@ -102,7 +102,7 @@ class CreateAigcAudioTaskRequest extends AbstractModel
 
     /**
      * @param string $ModelName <p>Model name. Supported models for music generation: GL and MiniMaxMusic.</p>
-     * @param string $ModelVersion <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MinimaxMusic: 2.0, 2.5, and 2.6.</p>
+     * @param string $ModelVersion <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
      * @param string $SceneType <p>Specifies the scenario for audio generation. Music: music.</p>
      * @param string $Prompt <p>Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.</p>
      * @param array $VideoInfos <p>Reference video information, which is supported by some models.</p>
@@ -110,7 +110,7 @@ class CreateAigcAudioTaskRequest extends AbstractModel
      * @param string $OutputAudioFormat <p>Output audio format. By default, this is not specified. Valid values: mp3 and wav.</p>
      * @param AigcStoreCosParam $StoreCosParam <p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
      * @param AigcAudioExtraParam $ExtraParameters <p>Additional parameters required.</p>
-     * @param string $AdditionalParameters <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p>
+     * @param string $AdditionalParameters <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
      * @param string $Operator <p>API operator name.</p>
      */
     function __construct()

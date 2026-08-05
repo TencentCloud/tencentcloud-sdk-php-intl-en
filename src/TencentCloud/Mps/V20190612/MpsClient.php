@@ -25,9 +25,11 @@ use TencentCloud\Mps\V20190612\Models as Models;
 /**
  * @method Models\BatchProcessMediaResponse BatchProcessMedia(Models\BatchProcessMediaRequest $req) This API is used to initiate batch processing tasks for URL video links, with features including:
 Smart subtitle (full speech, speech hotword, and speech translation).
+ * @method Models\CloneViralResponse CloneViral(Models\CloneViralRequest $req) Clone a hit product. Input a reference video of a hit product and a product image to generate a video with aligned style and pace.
  * @method Models\CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(Models\CreateAIAnalysisTemplateRequest $req) This API is used to create a custom content analysis template. Up to 50 templates can be created.
  * @method Models\CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(Models\CreateAIRecognitionTemplateRequest $req) This API is used to create a custom content recognition template. Up to 50 templates can be created.
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) This API is used to create an adaptive bitrate streaming template. Up up to 100 such templates can be created.
+ * @method Models\CreateAiDramaTaskResponse CreateAiDramaTask(Models\CreateAiDramaTaskRequest $req) AI comic workflow, input a playbook, automatically split scenes, generate an AI comic
  * @method Models\CreateAigcAudioTaskResponse CreateAigcAudioTask(Models\CreateAigcAudioTaskRequest $req) This API is used to create AI audio generation tasks.
  * @method Models\CreateAigcImageTaskResponse CreateAigcImageTask(Models\CreateAigcImageTaskRequest $req) This API is used to create AIGC image generation tasks.
  * @method Models\CreateAigcVideoTaskResponse CreateAigcVideoTask(Models\CreateAigcVideoTaskRequest $req) This API is used to create AI video generation tasks.
@@ -35,6 +37,7 @@ Smart subtitle (full speech, speech hotword, and speech translation).
  * @method Models\CreateAsrHotwordsResponse CreateAsrHotwords(Models\CreateAsrHotwordsRequest $req) This API is used to create a smart subtitle hotword lexicon.
  * @method Models\CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplate(Models\CreateBlindWatermarkTemplateRequest $req) This API is used to create a user-defined digital watermark template.
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) This API is used to create a custom content moderation template. Up to 50 templates can be created in total.
+ * @method Models\CreateDocToVideoTaskResponse CreateDocToVideoTask(Models\CreateDocToVideoTaskRequest $req) Creates an AIGC document-to-video task
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) This API is used to create a custom image sprite generating template. Up to 16 templates can be created.
  * @method Models\CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(Models\CreateLiveRecordTemplateRequest $req) This API is used to create a live recording template.
  * @method Models\CreatePersonSampleResponse CreatePersonSample(Models\CreatePersonSampleRequest $req) This API is used to create image samples for video processing operations such as content recognition and inappropriate information detection with the help of technologies such as facial feature positioning.
@@ -64,6 +67,7 @@ This API is used to create an orchestration, which is in disable status by defau
  * @method Models\CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(Models\CreateSnapshotByTimeOffsetTemplateRequest $req) This API is used to create a custom time point screencapturing template. Up to 16 templates can be created.
  * @method Models\CreateSubtitleEmbedTemplateResponse CreateSubtitleEmbedTemplate(Models\CreateSubtitleEmbedTemplateRequest $req) This API is used to create a custom subtitle suppression template.
  * @method Models\CreateTranscodeTemplateResponse CreateTranscodeTemplate(Models\CreateTranscodeTemplateRequest $req) This API is used to create a custom transcoding template. Up to 1,000 templates can be created.
+ * @method Models\CreateVideoRedrawTaskResponse CreateVideoRedrawTask(Models\CreateVideoRedrawTaskRequest $req) Creates an AIGC redrawing task
  * @method Models\CreateWatermarkTemplateResponse CreateWatermarkTemplate(Models\CreateWatermarkTemplateRequest $req) This API is used to create a custom watermarking template. Up to 1,000 templates can be created.
  * @method Models\CreateWordSamplesResponse CreateWordSamples(Models\CreateWordSamplesRequest $req) This API is used to create keyword samples in batches for video processing operations such as content recognition and inappropriate information detection with the help of the OCR and ASR technologies.
  * @method Models\CreateWorkflowResponse CreateWorkflow(Models\CreateWorkflowRequest $req) This API is used to create a workflow for media files uploaded to a specified COS bucket. A workflow may include the following tasks:
@@ -109,16 +113,19 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(Models\DescribeAdaptiveDynamicStreamingTemplatesRequest $req) This API is used to query the list of adaptive bitrate streaming templates and supports paginated queries by filters.
  * @method Models\DescribeAigcAudioTaskResponse DescribeAigcAudioTask(Models\DescribeAigcAudioTaskRequest $req) This API is used to query the progress of AIGC video generation tasks and obtain the generation results.
  * @method Models\DescribeAigcImageTaskResponse DescribeAigcImageTask(Models\DescribeAigcImageTaskRequest $req) This API is used to query the progress of AIGC image generation tasks and obtain the generation results.
+ * @method Models\DescribeAigcTaskStatusResponse DescribeAigcTaskStatus(Models\DescribeAigcTaskStatusRequest $req) Queries AIGC scenario task APIs
  * @method Models\DescribeAigcVideoTaskResponse DescribeAigcVideoTask(Models\DescribeAigcVideoTaskRequest $req) This API is used to query the progress of AIGC video generation tasks and obtain the generation results.
  * @method Models\DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(Models\DescribeAnimatedGraphicsTemplatesRequest $req) This API is used to query the list of animated image generating templates and supports paged queries by filters.
  * @method Models\DescribeAsrHotwordsResponse DescribeAsrHotwords(Models\DescribeAsrHotwordsRequest $req) This API is used to query a smart subtitle hotword lexicon.
  * @method Models\DescribeAsrHotwordsListResponse DescribeAsrHotwordsList(Models\DescribeAsrHotwordsListRequest $req) This API is used to obtain the hotword lexicon list.
  * @method Models\DescribeBatchTaskDetailResponse DescribeBatchTaskDetail(Models\DescribeBatchTaskDetailRequest $req) This API is used to query the details of the task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
  * @method Models\DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplates(Models\DescribeBlindWatermarkTemplatesRequest $req) This API is used to query a user-defined digital watermark template, and the pagination query is supported based on conditions.
+ * @method Models\DescribeCloneViralTaskResponse DescribeCloneViralTask(Models\DescribeCloneViralTaskRequest $req) Queries the results of a hit product clone task
  * @method Models\DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(Models\DescribeContentReviewTemplatesRequest $req) This API is used to query content moderation templates by template ID. Both custom and preset templates that match the template IDs passed in will be returned.
  * @method Models\DescribeDesignTaskResponse DescribeDesignTask(Models\DescribeDesignTaskRequest $req) This API is used to query the result of an asynchronous voice design task.
  * @method Models\DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(Models\DescribeImageSpriteTemplatesRequest $req) This API is used to query the list of image sprite generating templates and supports paged queries by filters.
  * @method Models\DescribeImageTaskDetailResponse DescribeImageTaskDetail(Models\DescribeImageTaskDetailRequest $req) This API is used to query the details of the task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
+ * @method Models\DescribeImageTasksResponse DescribeImageTasks(Models\DescribeImageTasksRequest $req) Image processing task query API.
  * @method Models\DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(Models\DescribeLiveRecordTemplatesRequest $req) This API is used to get a live recording template.
  * @method Models\DescribeMediaMetaDataResponse DescribeMediaMetaData(Models\DescribeMediaMetaDataRequest $req) This API is used to get the metadata of media, such as video image width/height, codec, length, and frame rate.
  * @method Models\DescribePersonSamplesResponse DescribePersonSamples(Models\DescribePersonSamplesRequest $req) This API is used to query the information of image samples. It supports paginated queries by image ID, name, and tag.
@@ -162,6 +169,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
 2) Image level: mapping, zoom in/out, arbitrary rotation, mirroring, and more.
 3) Audio level: volume control, fade in/out, mixing, and more.
 4) Video level: transition, playback speed adjustment, splicing, clipping, subtitles, picture-in-picture, audio-video separation, entrance and exit animations, and more.
+ * @method Models\EmbeddingDataResponse EmbeddingData(Models\EmbeddingDataRequest $req) Model embedding API
  * @method Models\EnableScheduleResponse EnableSchedule(Models\EnableScheduleRequest $req) This API is used to enable a scheme.
  * @method Models\EnableWorkflowResponse EnableWorkflow(Models\EnableWorkflowRequest $req) This API is used to enable a workflow.
  * @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) This API is reserved for special circumstances. Do not use it unless you are directed to use it by technical support.
@@ -194,10 +202,11 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
 Instead of initiating a video processing task, this API is used to help generate SDKs for various programming languages. You can parse the event notification based on the analytic function of the SDKs.
  * @method Models\ParseNotificationResponse ParseNotification(Models\ParseNotificationRequest $req) This API is used to parse the content of an MPS event notification from the `msgBody` field in the message received from CMQ.
 Instead of initiating a video processing task, this API is used to help generate SDKs for various programming languages. You can parse the event notification based on the analytic function of the SDKs.
- * @method Models\ProcessImageResponse ProcessImage(Models\ProcessImageRequest $req) This API is used to initiate image processing, with features including:
-1. Format conversion.
-2. Image enhancement.
-3. Image erasure.
+ * @method Models\ProcessImageResponse ProcessImage(Models\ProcessImageRequest $req) This API is used to initiate image processing. Its features include:
+1. Format conversion;
+2. Image enhancement;
+3. Image erasure;4. Digital watermark;
+5. Beauty filter;
  * @method Models\ProcessLiveStreamResponse ProcessLiveStream(Models\ProcessLiveStreamRequest $req) This API is used to initiate a processing task for live streaming. Features include:.
 
 Intelligent content moderation (porn detection in images, sensitive information detection, audio pornography detection);.

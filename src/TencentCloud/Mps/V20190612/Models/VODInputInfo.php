@@ -18,44 +18,60 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VOD Pro object information for MPS.
+ * Media processing VOD object information.
  *
- * @method string getBucket() Obtain Specifies the Bucket ID where the input file resides.
- * @method void setBucket(string $Bucket) Set Specifies the Bucket ID where the input file resides.
- * @method string getRegion() Obtain Specifies the region where the input file's Bucket resides.
- * @method void setRegion(string $Region) Set Specifies the region where the input file's Bucket resides.
- * @method string getObject() Obtain Path of the input file.
- * @method void setObject(string $Object) Set Path of the input file.
- * @method integer getSubAppId() Obtain VOD Pro application Id.
- * @method void setSubAppId(integer $SubAppId) Set VOD Pro application Id.
+ * @method string getBucket() Obtain <p><em>Bucket ID</em> where the media processing object file resides</p>
+ * @method void setBucket(string $Bucket) Set <p><em>Bucket ID</em> where the media processing object file resides</p>
+ * @method string getRegion() Obtain <p>Region of the Bucket where the media processing object file resides</p>
+ * @method void setRegion(string $Region) Set <p>Region of the Bucket where the media processing object file resides</p>
+ * @method string getObject() Obtain <p>Input path of the media processing object file</p>
+ * @method void setObject(string $Object) Set <p>Input path of the media processing object file</p>
+ * @method integer getSubAppId() Obtain <p>VOD application ID.</p>
+ * @method void setSubAppId(integer $SubAppId) Set <p>VOD application ID.</p>
+ * @method integer getVodBasic() Obtain <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+ * @method void setVodBasic(integer $VodBasic) Set <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+ * @method string getFileId() Obtain <p>VOD Standard Edition FileId</p>
+ * @method void setFileId(string $FileId) Set <p>VOD Standard Edition FileId</p>
  */
 class VODInputInfo extends AbstractModel
 {
     /**
-     * @var string Specifies the Bucket ID where the input file resides.
+     * @var string <p><em>Bucket ID</em> where the media processing object file resides</p>
      */
     public $Bucket;
 
     /**
-     * @var string Specifies the region where the input file's Bucket resides.
+     * @var string <p>Region of the Bucket where the media processing object file resides</p>
      */
     public $Region;
 
     /**
-     * @var string Path of the input file.
+     * @var string <p>Input path of the media processing object file</p>
      */
     public $Object;
 
     /**
-     * @var integer VOD Pro application Id.
+     * @var integer <p>VOD application ID.</p>
      */
     public $SubAppId;
 
     /**
-     * @param string $Bucket Specifies the Bucket ID where the input file resides.
-     * @param string $Region Specifies the region where the input file's Bucket resides.
-     * @param string $Object Path of the input file.
-     * @param integer $SubAppId VOD Pro application Id.
+     * @var integer <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+     */
+    public $VodBasic;
+
+    /**
+     * @var string <p>VOD Standard Edition FileId</p>
+     */
+    public $FileId;
+
+    /**
+     * @param string $Bucket <p><em>Bucket ID</em> where the media processing object file resides</p>
+     * @param string $Region <p>Region of the Bucket where the media processing object file resides</p>
+     * @param string $Object <p>Input path of the media processing object file</p>
+     * @param integer $SubAppId <p>VOD application ID.</p>
+     * @param integer $VodBasic <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+     * @param string $FileId <p>VOD Standard Edition FileId</p>
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class VODInputInfo extends AbstractModel
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("VodBasic",$param) and $param["VodBasic"] !== null) {
+            $this->VodBasic = $param["VodBasic"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
     }
 }

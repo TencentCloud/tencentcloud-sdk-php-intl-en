@@ -60,6 +60,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getAddOnAudios() Obtain <p>External audio feature. Specifies the audio files to be inserted.</p>
  * @method void setAddOnAudios(array $AddOnAudios) Set <p>External audio feature. Specifies the audio files to be inserted.</p>
+ * @method array getStdExtStreamInfos() Obtain <p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
+ * @method void setStdExtStreamInfos(array $StdExtStreamInfos) Set <p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -140,6 +142,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AddOnAudios;
 
     /**
+     * @var array <p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
+     */
+    public $StdExtStreamInfos;
+
+    /**
      * @param integer $Definition <p>Adaptive bitrate streaming template ID.</p>
      * @param array $WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
      * @param BlindWatermarkInput $BlindWatermark <p>Digital watermark parameter.</p>
@@ -160,6 +167,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $KeyPTSList <p>Specifies frames at specified PTS times as keyframes and splits segments. Unit: milliseconds (relative deviation of up to 1 ms is allowed). When both GOP and segment duration are specified, they function together. Note that you need to enable RawPts, keep the frame rate as that of the source, and ensure the specified PTS time corresponds to a frame in the source.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $AddOnAudios <p>External audio feature. Specifies the audio files to be inserted.</p>
+     * @param array $StdExtStreamInfos <p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
      */
     function __construct()
     {
@@ -246,6 +254,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj = new AddOnAudio();
                 $obj->deserialize($value);
                 array_push($this->AddOnAudios, $obj);
+            }
+        }
+
+        if (array_key_exists("StdExtStreamInfos",$param) and $param["StdExtStreamInfos"] !== null) {
+            $this->StdExtStreamInfos = [];
+            foreach ($param["StdExtStreamInfos"] as $key => $value){
+                $obj = new AdaptiveStreamTemplate();
+                $obj->deserialize($value);
+                array_push($this->StdExtStreamInfos, $obj);
             }
         }
     }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) Set <p>Subtitle file path</p>
  * @method string getSubtitleEmbedPath() Obtain <p>Subtitle suppression video path.</p>
  * @method void setSubtitleEmbedPath(string $SubtitleEmbedPath) Set <p>Subtitle suppression video path.</p>
+ * @method string getSubtitleFileId() Obtain <p>FileId of the subtitle file.</p>
+ * @method void setSubtitleFileId(string $SubtitleFileId) Set <p>FileId of the subtitle file.</p>
  */
 class SubtitleResult extends AbstractModel
 {
@@ -52,10 +54,16 @@ class SubtitleResult extends AbstractModel
     public $SubtitleEmbedPath;
 
     /**
+     * @var string <p>FileId of the subtitle file.</p>
+     */
+    public $SubtitleFileId;
+
+    /**
      * @param string $Language <p>Language of the subtitle file</p>
      * @param string $Status <p>Whether the processing is successful.</p>
      * @param string $Path <p>Subtitle file path</p>
      * @param string $SubtitleEmbedPath <p>Subtitle suppression video path.</p>
+     * @param string $SubtitleFileId <p>FileId of the subtitle file.</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class SubtitleResult extends AbstractModel
 
         if (array_key_exists("SubtitleEmbedPath",$param) and $param["SubtitleEmbedPath"] !== null) {
             $this->SubtitleEmbedPath = $param["SubtitleEmbedPath"];
+        }
+
+        if (array_key_exists("SubtitleFileId",$param) and $param["SubtitleFileId"] !== null) {
+            $this->SubtitleFileId = $param["SubtitleFileId"];
         }
     }
 }

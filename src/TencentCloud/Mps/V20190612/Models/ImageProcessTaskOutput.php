@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Image processing result information.
  *
- * @method string getPath() Obtain Path of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setPath(string $Path) Set Path of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method TaskOutputStorage getOutputStorage() Obtain Storage location of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getContent() Obtain Processing result of the image-to-text task.
- * @method void setContent(string $Content) Set Processing result of the image-to-text task.
+ * @method string getPath() Obtain <p>Path of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPath(string $Path) Set <p>Path of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
+ * @method TaskOutputStorage getOutputStorage() Obtain <p>Storage location of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Storage location of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
+ * @method string getContent() Obtain <p>Processing result of the image-to-text task.</p>
+ * @method void setContent(string $Content) Set <p>Processing result of the image-to-text task.</p>
+ * @method string getFileId() Obtain <p>VOD Standard Edition FileId</p>
+ * @method void setFileId(string $FileId) Set <p>VOD Standard Edition FileId</p>
  */
 class ImageProcessTaskOutput extends AbstractModel
 {
     /**
-     * @var string Path of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string <p>Path of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
      */
     public $Path;
 
     /**
-     * @var TaskOutputStorage Storage location of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var TaskOutputStorage <p>Storage location of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
      */
     public $OutputStorage;
 
     /**
-     * @var string Processing result of the image-to-text task.
+     * @var string <p>Processing result of the image-to-text task.</p>
      */
     public $Content;
 
     /**
-     * @param string $Path Path of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param TaskOutputStorage $OutputStorage Storage location of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Content Processing result of the image-to-text task.
+     * @var string <p>VOD Standard Edition FileId</p>
+     */
+    public $FileId;
+
+    /**
+     * @param string $Path <p>Path of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
+     * @param TaskOutputStorage $OutputStorage <p>Storage location of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Content <p>Processing result of the image-to-text task.</p>
+     * @param string $FileId <p>VOD Standard Edition FileId</p>
      */
     function __construct()
     {
@@ -81,6 +89,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
     }
 }
