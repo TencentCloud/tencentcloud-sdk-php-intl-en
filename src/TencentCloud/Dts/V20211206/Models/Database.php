@@ -40,6 +40,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNewSchemaName(string $NewSchemaName) Set Name of the schema after migration or sync
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSchemaMode() Obtain Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSchemaMode(string $SchemaMode) Set Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTableMode() Obtain Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTableMode(string $TableMode) Set Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
@@ -72,17 +76,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProcedures(array $Procedures) Set This parameter is required if `ProcedureMode` is `Partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTriggerMode() Obtain Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
+ * @method string getTriggerMode() Obtain Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTriggerMode(string $TriggerMode) Set Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
+ * @method void setTriggerMode(string $TriggerMode) Set Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getTriggers() Obtain This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTriggers(array $Triggers) Set This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEventMode() Obtain Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
+ * @method string getEventMode() Obtain Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEventMode(string $EventMode) Set Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
+ * @method void setEventMode(string $EventMode) Set Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getEvents() Obtain This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -120,6 +124,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NewSchemaName;
+
+    /**
+     * @var string Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SchemaMode;
 
     /**
      * @var string Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
@@ -170,7 +180,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Procedures;
 
     /**
-     * @var string Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
+     * @var string Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TriggerMode;
@@ -182,7 +192,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Triggers;
 
     /**
-     * @var string Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
+     * @var string Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EventMode;
@@ -204,6 +214,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $NewSchemaName Name of the schema after migration or sync
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SchemaMode Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TableMode Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Tables The set of table objects, which is required if `TableMode` is `Partial`.
@@ -220,11 +232,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Procedures This parameter is required if `ProcedureMode` is `Partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TriggerMode Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
+     * @param string $TriggerMode Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Triggers This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EventMode Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
+     * @param string $EventMode Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Events This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -260,6 +272,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("NewSchemaName",$param) and $param["NewSchemaName"] !== null) {
             $this->NewSchemaName = $param["NewSchemaName"];
+        }
+
+        if (array_key_exists("SchemaMode",$param) and $param["SchemaMode"] !== null) {
+            $this->SchemaMode = $param["SchemaMode"];
         }
 
         if (array_key_exists("TableMode",$param) and $param["TableMode"] !== null) {
