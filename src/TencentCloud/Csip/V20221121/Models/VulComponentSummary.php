@@ -18,28 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Native tag key-value pair on the cloud.
+ * Host Vulnerability Component Overview
  *
- * @method string getName() Obtain Tag key.
- * @method void setName(string $Name) Set Tag key.
- * @method string getValue() Obtain Tag value.
- * @method void setValue(string $Value) Set Tag value.
+ * @method string getName() Obtain <p>Component name.</p>
+ * @method void setName(string $Name) Set <p>Component name.</p>
+ * @method integer getRelateHostCount() Obtain <p>Associated hosts.</p>
+ * @method void setRelateHostCount(integer $RelateHostCount) Set <p>Associated hosts.</p>
  */
-class Tag extends AbstractModel
+class VulComponentSummary extends AbstractModel
 {
     /**
-     * @var string Tag key.
+     * @var string <p>Component name.</p>
      */
     public $Name;
 
     /**
-     * @var string Tag value.
+     * @var integer <p>Associated hosts.</p>
      */
-    public $Value;
+    public $RelateHostCount;
 
     /**
-     * @param string $Name Tag key.
-     * @param string $Value Tag value.
+     * @param string $Name <p>Component name.</p>
+     * @param integer $RelateHostCount <p>Associated hosts.</p>
      */
     function __construct()
     {
@@ -58,8 +58,8 @@ class Tag extends AbstractModel
             $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("RelateHostCount",$param) and $param["RelateHostCount"] !== null) {
+            $this->RelateHostCount = $param["RelateHostCount"];
         }
     }
 }

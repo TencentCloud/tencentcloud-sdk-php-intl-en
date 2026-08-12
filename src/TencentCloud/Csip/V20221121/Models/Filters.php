@@ -18,19 +18,19 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Filter conditions. Multiple Values under the same Name are in an OR relationship, and different Names are in an AND relationship.
+ * Filtering Conditions. Multiple Values under the same Name are OR; different Names are AND. Supported Names: Status (execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
  *
- * @method string getName() Obtain Filter condition name.
- * @method void setName(string $Name) Set Filter condition name.
+ * @method string getName() Obtain Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
+ * @method void setName(string $Name) Set Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
  * @method array getValues() Obtain Filter condition value list
  * @method void setValues(array $Values) Set Filter condition value list
- * @method string getExactMatch() Obtain Exact match: 1 - exact match; default - fuzzy match
- * @method void setExactMatch(string $ExactMatch) Set Exact match: 1 - exact match; default - fuzzy match
+ * @method string getExactMatch() Obtain Exact match: 1 - exact match; default - fuzzy matching
+ * @method void setExactMatch(string $ExactMatch) Set Exact match: 1 - exact match; default - fuzzy matching
  */
 class Filters extends AbstractModel
 {
     /**
-     * @var string Filter condition name.
+     * @var string Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
      */
     public $Name;
 
@@ -40,14 +40,14 @@ class Filters extends AbstractModel
     public $Values;
 
     /**
-     * @var string Exact match: 1 - exact match; default - fuzzy match
+     * @var string Exact match: 1 - exact match; default - fuzzy matching
      */
     public $ExactMatch;
 
     /**
-     * @param string $Name Filter condition name.
+     * @param string $Name Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
      * @param array $Values Filter condition value list
-     * @param string $ExactMatch Exact match: 1 - exact match; default - fuzzy match
+     * @param string $ExactMatch Exact match: 1 - exact match; default - fuzzy matching
      */
     function __construct()
     {

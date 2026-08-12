@@ -18,28 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Native tag key-value pair on the cloud.
+ * Vulnerability propagation trend
  *
- * @method string getName() Obtain Tag key.
- * @method void setName(string $Name) Set Tag key.
- * @method string getValue() Obtain Tag value.
- * @method void setValue(string $Value) Set Tag value.
+ * @method string getDate() Obtain <p>Date<br>Parameter format: YYYY-MM-DD</p>
+ * @method void setDate(string $Date) Set <p>Date<br>Parameter format: YYYY-MM-DD</p>
+ * @method float getTrend() Obtain <p>Propagation trend numeric value of the date</p>
+ * @method void setTrend(float $Trend) Set <p>Propagation trend numeric value of the date</p>
  */
-class Tag extends AbstractModel
+class VulSpreadTrend extends AbstractModel
 {
     /**
-     * @var string Tag key.
+     * @var string <p>Date<br>Parameter format: YYYY-MM-DD</p>
      */
-    public $Name;
+    public $Date;
 
     /**
-     * @var string Tag value.
+     * @var float <p>Propagation trend numeric value of the date</p>
      */
-    public $Value;
+    public $Trend;
 
     /**
-     * @param string $Name Tag key.
-     * @param string $Value Tag value.
+     * @param string $Date <p>Date<br>Parameter format: YYYY-MM-DD</p>
+     * @param float $Trend <p>Propagation trend numeric value of the date</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Tag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
+            $this->Date = $param["Date"];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("Trend",$param) and $param["Trend"] !== null) {
+            $this->Trend = $param["Trend"];
         }
     }
 }

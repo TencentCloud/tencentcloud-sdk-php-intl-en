@@ -24,18 +24,26 @@ use TencentCloud\Csip\V20221121\Models as Models;
 
 /**
  * @method Models\AddNewBindRoleUserResponse AddNewBindRoleUser(Models\AddNewBindRoleUserRequest $req) This API is used to add the CAM role of Cloud Security Center (CSC) to the current account. The name of the CAM role is "csip".
+ * @method Models\AddVulWhitelistResponse AddVulWhitelist(Models\AddVulWhitelistRequest $req) Add a vulnerability allowlist
  * @method Models\CreateAccessKeyCheckTaskResponse CreateAccessKeyCheckTask(Models\CreateAccessKeyCheckTaskRequest $req) Detect AK async task.
  * @method Models\CreateAccessKeySyncTaskResponse CreateAccessKeySyncTask(Models\CreateAccessKeySyncTaskRequest $req) Trigger an AK asset sync task.
  * @method Models\CreateDomainAndIpResponse CreateDomainAndIp(Models\CreateDomainAndIpRequest $req) This API is used to create an asset with the specific domain/IP.
+ * @method Models\CreateHostVulExportJobResponse CreateHostVulExportJob(Models\CreateHostVulExportJobRequest $req) This API is used to create a host vulnerability table export task.
  * @method Models\CreateIaCAccessTokenResponse CreateIaCAccessToken(Models\CreateIaCAccessTokenRequest $req) Create an IaC detection integration Token
  * @method Models\CreateIaCFileExportJobResponse CreateIaCFileExportJob(Models\CreateIaCFileExportJobRequest $req) Create an IaC detection file export task
  * @method Models\CreateIaCFileReScanTaskResponse CreateIaCFileReScanTask(Models\CreateIaCFileReScanTaskRequest $req) Create an IaC detection file rescan task
  * @method Models\CreateRiskCenterScanTaskResponse CreateRiskCenterScanTask(Models\CreateRiskCenterScanTaskRequest $req) This API is used to create a risk scan task. 
  * @method Models\CreateSkillScanResponse CreateSkillScan(Models\CreateSkillScanRequest $req) Upload the Skill ZIP file to trigger asynchronous security detection. After a successful upload, use the returned ContentHash and EngineVersion to poll the DescribeSkillScanResult API to obtain the result. The upload API is idempotent, and uploading the same file with an identical hash will not create a repetition task. The detection result is reserved for 90 days. If overdue, reupload the file for detection.
+ * @method Models\CreateVulFixRetryTaskResponse CreateVulFixRetryTask(Models\CreateVulFixRetryTaskRequest $req) Retry the vulnerability repair task that failed to fix, and redispatch the repair instruction only for the hosts of the original task that failed to fix. Retry is allowed only when the task status is partially or totally failed to fix.
+ * @method Models\CreateVulFixTaskResponse CreateVulFixTask(Models\CreateVulFixTaskRequest $req) Users manually submit vulnerability repair tasks, specify the vulnerabilities and target hosts that need to be repaired, and the system creates fixing tasks and dispatches execution. It supports options such as specifying the repair timeout period and whether to create a snapshot. The FixItems array is used to precisely control which hosts each vulnerability or KB patch repairs.
+ * @method Models\CreateVulFixedExportJobResponse CreateVulFixedExportJob(Models\CreateVulFixedExportJobRequest $req) Create an export task for the list of fixed vulnerabilities. It supports the same filter criteria as DescribeVulFixedList. The export is implemented via an asynchronous task. After a JobID is returned, the frontend polls to query the export task status. The export fields include vulnerability ID, vulnerability name, vulnerability level, VPR rating, vulnerability type, CVE ID, host name, instance ID, associated component & path, and repair time.
+ * @method Models\CreateVulReScanResponse CreateVulReScan(Models\CreateVulReScanRequest $req) This API is used to create a vulnerability rescan
+ * @method Models\CreateVulScanManualResponse CreateVulScanManual(Models\CreateVulScanManualRequest $req) This API is used to create a vulnerability scanning (one-click scan).
  * @method Models\DeleteDomainAndIpResponse DeleteDomainAndIp(Models\DeleteDomainAndIpRequest $req) This API is used to delete assets.
  * @method Models\DeleteIaCAccessTokenResponse DeleteIaCAccessToken(Models\DeleteIaCAccessTokenRequest $req) Delete an IaC detection integration Token
  * @method Models\DeleteIaCFileResponse DeleteIaCFile(Models\DeleteIaCFileRequest $req) Delete IaC detection file
  * @method Models\DeleteRiskScanTaskResponse DeleteRiskScanTask(Models\DeleteRiskScanTaskRequest $req) This API is used to delete a risk scan task.
+ * @method Models\DeleteVulWhitelistResponse DeleteVulWhitelist(Models\DeleteVulWhitelistRequest $req) This API is used to delete a vulnerability allowlist.
  * @method Models\DescribeAIAgentAssetListResponse DescribeAIAgentAssetList(Models\DescribeAIAgentAssetListRequest $req) Retrieve the AI agent asset list
  * @method Models\DescribeAKAnalysisDetailResponse DescribeAKAnalysisDetail(Models\DescribeAKAnalysisDetailRequest $req) Access key alarm record AI analysis result details
  * @method Models\DescribeAbnormalCallRecordResponse DescribeAbnormalCallRecord(Models\DescribeAbnormalCallRecordRequest $req) Retrieve the call record list.
@@ -67,6 +75,9 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeExposuresResponse DescribeExposures(Models\DescribeExposuresRequest $req) Cloud Boundary Analysis Asset List.
  * @method Models\DescribeGatewayAssetsResponse DescribeGatewayAssets(Models\DescribeGatewayAssetsRequest $req) Obtain Gateway List
  * @method Models\DescribeHighBaseLineRiskListResponse DescribeHighBaseLineRiskList(Models\DescribeHighBaseLineRiskListRequest $req) Query the high-risk baseline risk list of host nodes under the exposed path in cloud boundary analysis.
+ * @method Models\DescribeHostVulItemVPRInfoResponse DescribeHostVulItemVPRInfo(Models\DescribeHostVulItemVPRInfoRequest $req) This API is used to obtain host vulnerability VPR information.
+ * @method Models\DescribeHostVulOverviewResponse DescribeHostVulOverview(Models\DescribeHostVulOverviewRequest $req) This API is used to obtain the host vulnerability overview.
+ * @method Models\DescribeHostVulRiskListResponse DescribeHostVulRiskList(Models\DescribeHostVulRiskListRequest $req) This API is used to retrieve the host vulnerability risk list.
  * @method Models\DescribeIaCFileListResponse DescribeIaCFileList(Models\DescribeIaCFileListRequest $req) Retrieve the IaC detection file list
  * @method Models\DescribeIaCFileOverviewResponse DescribeIaCFileOverview(Models\DescribeIaCFileOverviewRequest $req) Retrieve IaC detection file overview
  * @method Models\DescribeIaCFileReportResponse DescribeIaCFileReport(Models\DescribeIaCFileReportRequest $req) Retrieve the IaC detection file report
@@ -111,13 +122,31 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeVULRiskAdvanceCFGListResponse DescribeVULRiskAdvanceCFGList(Models\DescribeVULRiskAdvanceCFGListRequest $req) This API is used to query the advanced configuration of vulnerability scan.
  * @method Models\DescribeVULRiskDetailResponse DescribeVULRiskDetail(Models\DescribeVULRiskDetailRequest $req) Retrieve vulnerability details.
  * @method Models\DescribeVpcAssetsResponse DescribeVpcAssets(Models\DescribeVpcAssetsRequest $req) This API is used to get the list of VPCs.
+ * @method Models\DescribeVulComponentRelateHostResponse DescribeVulComponentRelateHost(Models\DescribeVulComponentRelateHostRequest $req) This API is used to query the associated server of a vulnerable component.
+ * @method Models\DescribeVulFixTaskDetailResponse DescribeVulFixTaskDetail(Models\DescribeVulFixTaskDetailRequest $req) This API is used to query the details of a specified vulnerability repair task, including detailed data such as remediation status and snapshot status for each host, and supports pagination and filtering.
+ * @method Models\DescribeVulFixTaskListResponse DescribeVulFixTaskList(Models\DescribeVulFixTaskListRequest $req) This API is used to query the vulnerability repair task record list with paging, support by conditional filtering such as remediation status and time range, and show summary information for each repair task.
+ * @method Models\DescribeVulFixableMachineListResponse DescribeVulFixableMachineList(Models\DescribeVulFixableMachineListRequest $req) This API is used to query the host list where specified vulnerabilities can be repaired. Before a user submits a repair task, it is necessary to query which hosts support automatic fix, providing data support for users to select repair targets.
+ * @method Models\DescribeVulFixedHostDetailResponse DescribeVulFixedHostDetail(Models\DescribeVulFixedHostDetailRequest $req) This API is used to query the repair details of a certain fixed vulnerability on a specified host, including basic information about the vulnerability, repair host information, and a detailed list of associated components and paths (component name, version number hit, associated path, repair command).
+ * @method Models\DescribeVulFixedListResponse DescribeVulFixedList(Models\DescribeVulFixedListRequest $req) This API is used to query the list of repaired vulnerabilities, show vulnerability information with successful fixes and statistics on repair conditions, helping users understand the repair results.
+ * @method Models\DescribeVulHostRelateComponentResponse DescribeVulHostRelateComponent(Models\DescribeVulHostRelateComponentRequest $req) This API is used to query host-associated vulnerability components.
+ * @method Models\DescribeVulIgnoreRuleListResponse DescribeVulIgnoreRuleList(Models\DescribeVulIgnoreRuleListRequest $req) This API is used to retrieve the vulnerability ignore list.
+ * @method Models\DescribeVulItemListResponse DescribeVulItemList(Models\DescribeVulItemListRequest $req) This API is used to obtain vulnerability list
+ * @method Models\DescribeVulLabelListResponse DescribeVulLabelList(Models\DescribeVulLabelListRequest $req) Obtains the vulnerability tag list
  * @method Models\DescribeVulRiskListResponse DescribeVulRiskList(Models\DescribeVulRiskListRequest $req) Query the list of vulnerabilities of host nodes under the exposed path in cloud boundary analysis.
+ * @method Models\DescribeVulRiskRelateComponentResponse DescribeVulRiskRelateComponent(Models\DescribeVulRiskRelateComponentRequest $req) Retrieve the associated component of a vulnerability
+ * @method Models\DescribeVulRiskRelateHostResponse DescribeVulRiskRelateHost(Models\DescribeVulRiskRelateHostRequest $req) Search for hosts associated with vulnerabilities or KBs
+ * @method Models\DescribeVulScanPeriodicResponse DescribeVulScanPeriodic(Models\DescribeVulScanPeriodicRequest $req) This API is used to obtain vulnerability scanning (period scanning).
+ * @method Models\DescribeVulScanTaskDetailResponse DescribeVulScanTaskDetail(Models\DescribeVulScanTaskDetailRequest $req) This API is used to retrieve vulnerability scanning task detail
+ * @method Models\DescribeVulScanTaskListResponse DescribeVulScanTaskList(Models\DescribeVulScanTaskListRequest $req) This API is used to search vulnerability scanning task history
  * @method Models\DescribeVulViewVulRiskListResponse DescribeVulViewVulRiskList(Models\DescribeVulViewVulRiskListRequest $req) Obtain Vulnerability Risk List from Vulnerability's Perspective
  * @method Models\ModifyIaCTokenPeriodResponse ModifyIaCTokenPeriod(Models\ModifyIaCTokenPeriodRequest $req) This API is used to modify the storage cycle of the IaC detection integration Token.
  * @method Models\ModifyOrganizationAccountStatusResponse ModifyOrganizationAccountStatus(Models\ModifyOrganizationAccountStatusRequest $req) Modify group account status
  * @method Models\ModifyRiskCenterRiskStatusResponse ModifyRiskCenterRiskStatus(Models\ModifyRiskCenterRiskStatusRequest $req) This API is used to modify the status of a risk. 
  * @method Models\ModifyRiskCenterScanTaskResponse ModifyRiskCenterScanTask(Models\ModifyRiskCenterScanTaskRequest $req) Modify Risk Center Scan Task
  * @method Models\ModifyUebaRuleSwitchResponse ModifyUebaRuleSwitch(Models\ModifyUebaRuleSwitchRequest $req) Refresh the custom policy switch
+ * @method Models\ModifyVulScanPeriodicResponse ModifyVulScanPeriodic(Models\ModifyVulScanPeriodicRequest $req) This API is used to modify vulnerability scanning (period scanning).
+ * @method Models\ModifyVulWhitelistConfigResponse ModifyVulWhitelistConfig(Models\ModifyVulWhitelistConfigRequest $req) This API is used to modify the vulnerability allowlist configuration.
+ * @method Models\ModifyVulWhitelistSwitchResponse ModifyVulWhitelistSwitch(Models\ModifyVulWhitelistSwitchRequest $req) This API is used to modify the vulnerability allowlist switch.
  * @method Models\StopRiskCenterTaskResponse StopRiskCenterTask(Models\StopRiskCenterTaskRequest $req) This API is used to stop a scan task. 
  * @method Models\UpdateAccessKeyAlarmStatusResponse UpdateAccessKeyAlarmStatus(Models\UpdateAccessKeyAlarmStatusRequest $req) Tag the risk or Alarm as processed/ignored.
  * @method Models\UpdateAccessKeyRemarkResponse UpdateAccessKeyRemark(Models\UpdateAccessKeyRemarkRequest $req) Edit access key/Source IP remark.

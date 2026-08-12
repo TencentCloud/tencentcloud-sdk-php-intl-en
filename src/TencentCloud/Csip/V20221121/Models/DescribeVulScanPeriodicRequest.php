@@ -18,28 +18,20 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Native tag key-value pair on the cloud.
+ * DescribeVulScanPeriodic request structure.
  *
- * @method string getName() Obtain Tag key.
- * @method void setName(string $Name) Set Tag key.
- * @method string getValue() Obtain Tag value.
- * @method void setValue(string $Value) Set Tag value.
+ * @method array getMemberId() Obtain <p>Group account member id</p>
+ * @method void setMemberId(array $MemberId) Set <p>Group account member id</p>
  */
-class Tag extends AbstractModel
+class DescribeVulScanPeriodicRequest extends AbstractModel
 {
     /**
-     * @var string Tag key.
+     * @var array <p>Group account member id</p>
      */
-    public $Name;
+    public $MemberId;
 
     /**
-     * @var string Tag value.
-     */
-    public $Value;
-
-    /**
-     * @param string $Name Tag key.
-     * @param string $Value Tag value.
+     * @param array $MemberId <p>Group account member id</p>
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class Tag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
         }
     }
 }

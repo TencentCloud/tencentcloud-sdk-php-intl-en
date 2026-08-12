@@ -18,28 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Native tag key-value pair on the cloud.
+ * DeleteVulWhitelist request structure.
  *
- * @method string getName() Obtain Tag key.
- * @method void setName(string $Name) Set Tag key.
- * @method string getValue() Obtain Tag value.
- * @method void setValue(string $Value) Set Tag value.
+ * @method array getId() Obtain <p>id list</p>
+ * @method void setId(array $Id) Set <p>id list</p>
+ * @method array getMemberId() Obtain <p>Group account member id</p>
+ * @method void setMemberId(array $MemberId) Set <p>Group account member id</p>
  */
-class Tag extends AbstractModel
+class DeleteVulWhitelistRequest extends AbstractModel
 {
     /**
-     * @var string Tag key.
+     * @var array <p>id list</p>
      */
-    public $Name;
+    public $Id;
 
     /**
-     * @var string Tag value.
+     * @var array <p>Group account member id</p>
      */
-    public $Value;
+    public $MemberId;
 
     /**
-     * @param string $Name Tag key.
-     * @param string $Value Tag value.
+     * @param array $Id <p>id list</p>
+     * @param array $MemberId <p>Group account member id</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Tag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
         }
     }
 }
