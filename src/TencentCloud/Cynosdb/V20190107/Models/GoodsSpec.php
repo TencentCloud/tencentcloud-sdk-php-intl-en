@@ -21,33 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * Product specification.
  *
  * @method integer getGoodsNum() Obtain Number of products
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setGoodsNum(integer $GoodsNum) Set Number of products
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCpu() Obtain Number of CPU cores. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCpu(integer $Cpu) Set Number of CPU cores. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMemory() Obtain Memory size in gb. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMemory(integer $Memory) Set Memory size in gb. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getCcu() Obtain Ccu size. required for serverless type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCcu(float $Ccu) Set Ccu size. required for serverless type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStorageLimit() Obtain Storage size. required for PREPAID storage type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStorageLimit(integer $StorageLimit) Set Storage size. required for PREPAID storage type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getTimeSpan() Obtain Purchase duration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTimeSpan(integer $TimeSpan) Set Purchase duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCpu() Obtain Number of CPU cores. Required for PREPAID and POSTPAID instance types.
+ * @method void setCpu(integer $Cpu) Set Number of CPU cores. Required for PREPAID and POSTPAID instance types.
+ * @method integer getMemory() Obtain Memory size, unit G, required for PREPAID and POSTPAID instance types
+ * @method void setMemory(integer $Memory) Set Memory size, unit G, required for PREPAID and POSTPAID instance types
+ * @method float getCcu() Obtain Ccu size, required for serverless type
+ * @method void setCcu(float $Ccu) Set Ccu size, required for serverless type
+ * @method integer getStorageLimit() Obtain Storage size, required for PREPAID storage type
+ * @method void setStorageLimit(integer $StorageLimit) Set Storage size, required for PREPAID storage type
+ * @method integer getTimeSpan() Obtain Purchase period
+ * @method void setTimeSpan(integer $TimeSpan) Set Purchase period
  * @method string getTimeUnit() Obtain Duration unit.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTimeUnit(string $TimeUnit) Set Duration unit.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDeviceType() Obtain Instance machine type
 1. common, universal type.
 2. exclusive, dedicated.
@@ -59,43 +45,36 @@ class GoodsSpec extends AbstractModel
 {
     /**
      * @var integer Number of products
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $GoodsNum;
 
     /**
-     * @var integer Number of CPU cores. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of CPU cores. Required for PREPAID and POSTPAID instance types.
      */
     public $Cpu;
 
     /**
-     * @var integer Memory size in gb. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Memory size, unit G, required for PREPAID and POSTPAID instance types
      */
     public $Memory;
 
     /**
-     * @var float Ccu size. required for serverless type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Ccu size, required for serverless type
      */
     public $Ccu;
 
     /**
-     * @var integer Storage size. required for PREPAID storage type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Storage size, required for PREPAID storage type
      */
     public $StorageLimit;
 
     /**
-     * @var integer Purchase duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Purchase period
      */
     public $TimeSpan;
 
     /**
      * @var string Duration unit.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TimeUnit;
 
@@ -108,19 +87,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $GoodsNum Number of products
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Cpu Number of CPU cores. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Memory Memory size in gb. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $Ccu Ccu size. required for serverless type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $StorageLimit Storage size. required for PREPAID storage type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $TimeSpan Purchase duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Cpu Number of CPU cores. Required for PREPAID and POSTPAID instance types.
+     * @param integer $Memory Memory size, unit G, required for PREPAID and POSTPAID instance types
+     * @param float $Ccu Ccu size, required for serverless type
+     * @param integer $StorageLimit Storage size, required for PREPAID storage type
+     * @param integer $TimeSpan Purchase period
      * @param string $TimeUnit Duration unit.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DeviceType Instance machine type
 1. common, universal type.
 2. exclusive, dedicated.

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Safe info
  *
  * @method string getVaultId() Obtain Safe id
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVaultId(string $VaultId) Set Safe id
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVaultRegion() Obtain Safe region
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVaultRegion(string $VaultRegion) Set Safe region
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CreateBackupVaultItem extends AbstractModel
 {
     /**
      * @var string Safe id
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VaultId;
 
     /**
      * @var string Safe region
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VaultRegion;
 
     /**
      * @param string $VaultId Safe id
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VaultRegion Safe region
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

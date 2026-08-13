@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * sync object list
  *
  * @method MigrateObject getDatabaseTables() Obtain Database table information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDatabaseTables(MigrateObject $DatabaseTables) Set Database table information
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Objects extends AbstractModel
 {
     /**
      * @var MigrateObject Database table information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DatabaseTables;
 
     /**
      * @param MigrateObject $DatabaseTables Database table information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

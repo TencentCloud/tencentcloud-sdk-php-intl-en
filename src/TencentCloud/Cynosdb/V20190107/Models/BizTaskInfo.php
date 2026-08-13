@@ -71,9 +71,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProcess() Obtain <p>Task progress</p>
  * @method void setProcess(integer $Process) Set <p>Task progress</p>
  * @method array getModifyParamsData() Obtain <p>Modify parameter task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setModifyParamsData(array $ModifyParamsData) Set <p>Modify parameter task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method CreateClustersData getCreateClustersData() Obtain <p>Create cluster task information</p>
  * @method void setCreateClustersData(CreateClustersData $CreateClustersData) Set <p>Create cluster task information</p>
  * @method RollbackData getRollbackData() Obtain <p>Cluster rollback task information</p>
@@ -81,21 +79,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method ModifyInstanceData getModifyInstanceData() Obtain <p>Instance configuration change task information</p>
  * @method void setModifyInstanceData(ModifyInstanceData $ModifyInstanceData) Set <p>Instance configuration change task information</p>
  * @method ManualBackupData getManualBackupData() Obtain <p>Manual backup task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setManualBackupData(ManualBackupData $ManualBackupData) Set <p>Manual backup task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method ModifyDbVersionData getModifyDbVersionData() Obtain <p>Modify kernel version task information</p>
  * @method void setModifyDbVersionData(ModifyDbVersionData $ModifyDbVersionData) Set <p>Modify kernel version task information</p>
  * @method ClusterSlaveData getClusterSlaveData() Obtain <p>Cluster Availability Zone Information</p>
  * @method void setClusterSlaveData(ClusterSlaveData $ClusterSlaveData) Set <p>Cluster Availability Zone Information</p>
  * @method SwitchClusterLogBin getSwitchClusterLogBin() Obtain <p>Convert cluster logs</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSwitchClusterLogBin(SwitchClusterLogBin $SwitchClusterLogBin) Set <p>Convert cluster logs</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method BizTaskModifyParamsData getModifyInstanceParamsData() Obtain <p>Modify instance parameter data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setModifyInstanceParamsData(BizTaskModifyParamsData $ModifyInstanceParamsData) Set <p>Modify instance parameter data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method TaskMaintainInfo getTaskMaintainInfo() Obtain <p>Maintenance time</p>
  * @method void setTaskMaintainInfo(TaskMaintainInfo $TaskMaintainInfo) Set <p>Maintenance time</p>
  * @method array getInstanceCLSDeliveryInfos() Obtain <p>Instance Log Delivery Information</p>
@@ -241,7 +233,6 @@ class BizTaskInfo extends AbstractModel
 
     /**
      * @var array <p>Modify parameter task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     public $ModifyParamsData;
@@ -263,7 +254,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var ManualBackupData <p>Manual backup task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ManualBackupData;
 
@@ -279,13 +269,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var SwitchClusterLogBin <p>Convert cluster logs</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SwitchClusterLogBin;
 
     /**
      * @var BizTaskModifyParamsData <p>Modify instance parameter data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ModifyInstanceParamsData;
 
@@ -351,18 +339,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $InstanceName <p>Instance name</p>
      * @param integer $Process <p>Task progress</p>
      * @param array $ModifyParamsData <p>Modify parameter task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateClustersData $CreateClustersData <p>Create cluster task information</p>
      * @param RollbackData $RollbackData <p>Cluster rollback task information</p>
      * @param ModifyInstanceData $ModifyInstanceData <p>Instance configuration change task information</p>
      * @param ManualBackupData $ManualBackupData <p>Manual backup task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ModifyDbVersionData $ModifyDbVersionData <p>Modify kernel version task information</p>
      * @param ClusterSlaveData $ClusterSlaveData <p>Cluster Availability Zone Information</p>
      * @param SwitchClusterLogBin $SwitchClusterLogBin <p>Convert cluster logs</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BizTaskModifyParamsData $ModifyInstanceParamsData <p>Modify instance parameter data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskMaintainInfo $TaskMaintainInfo <p>Maintenance time</p>
      * @param array $InstanceCLSDeliveryInfos <p>Instance Log Delivery Information</p>
      * @param TaskProgressInfo $TaskProgressInfo <p>Task progress information</p>

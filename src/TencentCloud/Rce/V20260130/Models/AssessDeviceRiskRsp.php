@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScore(DataScore $Score) Set <p>The risk score information of the device</p>
  * @method Device getDevice() Obtain <p>The basic information of the device</p>
  * @method void setDevice(Device $Device) Set <p>The basic information of the device</p>
+ * @method Environment getEnvironment() Obtain <p>Basic IP environment information</p>
+ * @method void setEnvironment(Environment $Environment) Set <p>Basic IP environment information</p>
  */
 class AssessDeviceRiskRsp extends AbstractModel
 {
@@ -38,8 +40,14 @@ class AssessDeviceRiskRsp extends AbstractModel
     public $Device;
 
     /**
+     * @var Environment <p>Basic IP environment information</p>
+     */
+    public $Environment;
+
+    /**
      * @param DataScore $Score <p>The risk score information of the device</p>
      * @param Device $Device <p>The basic information of the device</p>
+     * @param Environment $Environment <p>Basic IP environment information</p>
      */
     function __construct()
     {
@@ -62,6 +70,11 @@ class AssessDeviceRiskRsp extends AbstractModel
         if (array_key_exists("Device",$param) and $param["Device"] !== null) {
             $this->Device = new Device();
             $this->Device->deserialize($param["Device"]);
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = new Environment();
+            $this->Environment->deserialize($param["Environment"]);
         }
     }
 }

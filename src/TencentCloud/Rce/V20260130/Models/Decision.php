@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDecisionResult() Obtain <p>Decision result</p><ul><li>pass: Pass</li><li>review: Review</li><li>reject: Reject</li></ul>
  * @method void setDecisionResult(string $DecisionResult) Set <p>Decision result</p><ul><li>pass: Pass</li><li>review: Review</li><li>reject: Reject</li></ul>
+ * @method string getDisposition() Obtain <p>Decision action when a strategy is matched. Configurable in the console.</p>
+ * @method void setDisposition(string $Disposition) Set <p>Decision action when a strategy is matched. Configurable in the console.</p>
  */
 class Decision extends AbstractModel
 {
@@ -31,7 +33,13 @@ class Decision extends AbstractModel
     public $DecisionResult;
 
     /**
+     * @var string <p>Decision action when a strategy is matched. Configurable in the console.</p>
+     */
+    public $Disposition;
+
+    /**
      * @param string $DecisionResult <p>Decision result</p><ul><li>pass: Pass</li><li>review: Review</li><li>reject: Reject</li></ul>
+     * @param string $Disposition <p>Decision action when a strategy is matched. Configurable in the console.</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class Decision extends AbstractModel
         }
         if (array_key_exists("DecisionResult",$param) and $param["DecisionResult"] !== null) {
             $this->DecisionResult = $param["DecisionResult"];
+        }
+
+        if (array_key_exists("Disposition",$param) and $param["Disposition"] !== null) {
+            $this->Disposition = $param["Disposition"];
         }
     }
 }

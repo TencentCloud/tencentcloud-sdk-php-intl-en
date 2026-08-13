@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Synchronized database and table objects.
  *
  * @method string getDbName() Obtain Database name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDbName(string $DbName) Set Database name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMigrateTableMode() Obtain Data table migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMigrateTableMode(string $MigrateTableMode) Set Data table migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getTables() Obtain Data table information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTables(array $Tables) Set Data table information
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MigrateDBItem extends AbstractModel
 {
     /**
      * @var string Database name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DbName;
 
     /**
      * @var string Data table migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MigrateTableMode;
 
     /**
      * @var array Data table information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tables;
 
     /**
      * @param string $DbName Database name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MigrateTableMode Data table migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Tables Data table information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

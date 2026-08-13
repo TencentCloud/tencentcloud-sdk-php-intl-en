@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * Instance specifications in this region
  *
  * @method integer getCpu() Obtain Number of CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCpu(integer $Cpu) Set Number of CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getMemory() Obtain Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMemory(integer $Memory) Set Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getMinStorageSize() Obtain Minimum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMinStorageSize(integer $MinStorageSize) Set Minimum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getMaxStorageSize() Obtain Maximum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMaxStorageSize(integer $MaxStorageSize) Set Maximum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getHasStock() Obtain Whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHasStock(boolean $HasStock) Set Whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstanceType() Obtain Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceType(string $InstanceType) Set Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getStorageType() Obtain Storage type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStorageType(string $StorageType) Set Storage type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMinReplicaNum() Obtain minimum replica count
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMinReplicaNum(integer $MinReplicaNum) Set minimum replica count
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMinReplicaNum() Obtain Minimum replica count
+ * @method void setMinReplicaNum(integer $MinReplicaNum) Set Minimum replica count
  * @method integer getMaxReplicaNum() Obtain Maximum number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMaxReplicaNum(integer $MaxReplicaNum) Set Maximum number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getZoneStockInfos() Obtain Availability zone inventory information list
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setZoneStockInfos(array $ZoneStockInfos) Set Availability zone inventory information list
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RegionInstanceSpecInfo extends AbstractModel
 {
     /**
      * @var integer Number of CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Cpu;
 
     /**
      * @var integer Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Memory;
 
     /**
      * @var integer Minimum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MinStorageSize;
 
     /**
      * @var integer Maximum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MaxStorageSize;
 
     /**
      * @var boolean Whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HasStock;
 
     /**
      * @var string Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceType;
 
     /**
      * @var string Storage type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StorageType;
 
     /**
-     * @var integer minimum replica count
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Minimum replica count
      */
     public $MinReplicaNum;
 
     /**
      * @var integer Maximum number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MaxReplicaNum;
 
     /**
      * @var array Availability zone inventory information list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ZoneStockInfos;
 
     /**
      * @param integer $Cpu Number of CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Memory Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MinStorageSize Minimum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MaxStorageSize Maximum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $HasStock Whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceType Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $StorageType Storage type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MinReplicaNum minimum replica count
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MinReplicaNum Minimum replica count
      * @param integer $MaxReplicaNum Maximum number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ZoneStockInfos Availability zone inventory information list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

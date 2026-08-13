@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxCpu(integer $MaxCpu) Set Roll back to the Serverless cluster with maximum CPU.
  * @method integer getSnapShotId() Obtain Snapshot ID.
  * @method void setSnapShotId(integer $SnapShotId) Set Snapshot ID.
- * @method array getRollbackDatabases() Obtain Rollback database.
- * @method void setRollbackDatabases(array $RollbackDatabases) Set Rollback database.
- * @method array getRollbackTables() Obtain Rollback data table.
- * @method void setRollbackTables(array $RollbackTables) Set Rollback data table.
+ * @method array getRollbackDatabases() Obtain Rollback database
+ * @method void setRollbackDatabases(array $RollbackDatabases) Set Rollback database
+ * @method array getRollbackTables() Obtain Rollback data table
+ * @method void setRollbackTables(array $RollbackTables) Set Rollback data table
  * @method string getBackupFileName() Obtain Specifies the backup file name.
  * @method void setBackupFileName(string $BackupFileName) Set Specifies the backup file name.
  * @method RollbackProcessInfo getRollbackProcess() Obtain Rollback process.
@@ -102,12 +102,12 @@ class RollbackData extends AbstractModel
     public $SnapShotId;
 
     /**
-     * @var array Rollback database.
+     * @var array Rollback database
      */
     public $RollbackDatabases;
 
     /**
-     * @var array Rollback data table.
+     * @var array Rollback data table
      */
     public $RollbackTables;
 
@@ -132,8 +132,8 @@ class RollbackData extends AbstractModel
      * @param integer $MinCpu Roll back to the Serverless cluster with minimum CPU.
      * @param integer $MaxCpu Roll back to the Serverless cluster with maximum CPU.
      * @param integer $SnapShotId Snapshot ID.
-     * @param array $RollbackDatabases Rollback database.
-     * @param array $RollbackTables Rollback data table.
+     * @param array $RollbackDatabases Rollback database
+     * @param array $RollbackTables Rollback data table
      * @param string $BackupFileName Specifies the backup file name.
      * @param RollbackProcessInfo $RollbackProcess Rollback process.
      */

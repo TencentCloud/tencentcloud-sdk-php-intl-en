@@ -79,9 +79,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPhysicalZone() Obtain <p>Physical AZ</p>
  * @method void setPhysicalZone(string $PhysicalZone) Set <p>Physical AZ</p>
  * @method UpgradeAnalysisInstanceVersionInfo getAnalysisUpgradeVersionInfo() Obtain <p>Grayscale information for version upgrade</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAnalysisUpgradeVersionInfo(UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo) Set <p>Grayscale information for version upgrade</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LibraDBClusterDetail extends AbstractModel
 {
@@ -232,7 +230,6 @@ class LibraDBClusterDetail extends AbstractModel
 
     /**
      * @var UpgradeAnalysisInstanceVersionInfo <p>Grayscale information for version upgrade</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AnalysisUpgradeVersionInfo;
 
@@ -267,7 +264,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Zone <p>AZ.</p>
      * @param string $PhysicalZone <p>Physical AZ</p>
      * @param UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo <p>Grayscale information for version upgrade</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

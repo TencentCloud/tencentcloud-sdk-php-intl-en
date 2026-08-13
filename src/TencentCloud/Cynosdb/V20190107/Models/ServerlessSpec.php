@@ -32,10 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHasStock(boolean $HasStock) Set <p>Whether there is inventory</p>
  * @method integer getStockCount() Obtain <p>Inventory quantity</p>
  * @method void setStockCount(integer $StockCount) Set <p>Inventory quantity</p>
- * @method array getZoneStockInfos() Obtain <p>Availability zone inventory information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneStockInfos(array $ZoneStockInfos) Set <p>Availability zone inventory information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getZoneStockInfos() Obtain <p>AZ inventory information</p>
+ * @method void setZoneStockInfos(array $ZoneStockInfos) Set <p>AZ inventory information</p>
  */
 class ServerlessSpec extends AbstractModel
 {
@@ -70,8 +68,7 @@ class ServerlessSpec extends AbstractModel
     public $StockCount;
 
     /**
-     * @var array <p>Availability zone inventory information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>AZ inventory information</p>
      */
     public $ZoneStockInfos;
 
@@ -82,8 +79,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $IsDefault <p>Is the default specification</p>
      * @param boolean $HasStock <p>Whether there is inventory</p>
      * @param integer $StockCount <p>Inventory quantity</p>
-     * @param array $ZoneStockInfos <p>Availability zone inventory information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ZoneStockInfos <p>AZ inventory information</p>
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Forward instance information
  *
  * @method string getInstanceId() Obtain Forward the instance id
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceId(string $InstanceId) Set Forward the instance id
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegion() Obtain Forward instance region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Forward instance region
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRegion() Obtain Forward the instance region
+ * @method void setRegion(string $Region) Set Forward the instance region
  */
 class ForwardInstanceInfo extends AbstractModel
 {
     /**
      * @var string Forward the instance id
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceId;
 
     /**
-     * @var string Forward instance region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Forward the instance region
      */
     public $Region;
 
     /**
      * @param string $InstanceId Forward the instance id
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Region Forward instance region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Region Forward the instance region
      */
     function __construct()
     {

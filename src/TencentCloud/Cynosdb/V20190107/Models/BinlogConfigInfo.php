@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBinlogSaveDays(integer $BinlogSaveDays) Set <p>binlog retention time</p>
  * @method string getBinlogCrossRegionsEnable() Obtain <p>Whether cross-region backup of binlog is enabled</p>
  * @method void setBinlogCrossRegionsEnable(string $BinlogCrossRegionsEnable) Set <p>Whether cross-region backup of binlog is enabled</p>
- * @method array getBinlogCrossRegions() Obtain <p>binlog cross-region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBinlogCrossRegions(array $BinlogCrossRegions) Set <p>binlog cross-region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getBinlogCrossRegions() Obtain <p>Cross-region binlog</p>
+ * @method void setBinlogCrossRegions(array $BinlogCrossRegions) Set <p>Cross-region binlog</p>
  * @method integer getBinlogCrossRegionSaveDays() Obtain <p>Cross-region backup retention period</p><p>Unit: Day</p>
  * @method void setBinlogCrossRegionSaveDays(integer $BinlogCrossRegionSaveDays) Set <p>Cross-region backup retention period</p><p>Unit: Day</p>
  * @method array getAutoCopyVaults() Obtain <p>Safe info</p>
@@ -46,8 +44,7 @@ class BinlogConfigInfo extends AbstractModel
     public $BinlogCrossRegionsEnable;
 
     /**
-     * @var array <p>binlog cross-region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Cross-region binlog</p>
      */
     public $BinlogCrossRegions;
 
@@ -64,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param integer $BinlogSaveDays <p>binlog retention time</p>
      * @param string $BinlogCrossRegionsEnable <p>Whether cross-region backup of binlog is enabled</p>
-     * @param array $BinlogCrossRegions <p>binlog cross-region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $BinlogCrossRegions <p>Cross-region binlog</p>
      * @param integer $BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
      * @param array $AutoCopyVaults <p>Safe info</p>
      */

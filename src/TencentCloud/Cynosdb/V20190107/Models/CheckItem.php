@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Check item
  *
  * @method string getItem() Obtain Check item name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setItem(string $Item) Set Check item name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getResult() Obtain Verification result of this item
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setResult(string $Result) Set Verification result of this item
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCurrentValue() Obtain Detailed explanation of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCurrentValue(string $CurrentValue) Set Detailed explanation of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpectedValue() Obtain Details of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpectedValue(string $ExpectedValue) Set Details of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCurrentValue() Obtain Details of validation failed and modification suggestions
+ * @method void setCurrentValue(string $CurrentValue) Set Details of validation failed and modification suggestions
+ * @method string getExpectedValue() Obtain Detailed explanation of validation failure and modification suggestions
+ * @method void setExpectedValue(string $ExpectedValue) Set Detailed explanation of validation failure and modification suggestions
  */
 class CheckItem extends AbstractModel
 {
     /**
      * @var string Check item name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Item;
 
     /**
      * @var string Verification result of this item
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Result;
 
     /**
-     * @var string Detailed explanation of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Details of validation failed and modification suggestions
      */
     public $CurrentValue;
 
     /**
-     * @var string Details of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Detailed explanation of validation failure and modification suggestions
      */
     public $ExpectedValue;
 
     /**
      * @param string $Item Check item name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Result Verification result of this item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CurrentValue Detailed explanation of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpectedValue Details of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CurrentValue Details of validation failed and modification suggestions
+     * @param string $ExpectedValue Detailed explanation of validation failure and modification suggestions
      */
     function __construct()
     {

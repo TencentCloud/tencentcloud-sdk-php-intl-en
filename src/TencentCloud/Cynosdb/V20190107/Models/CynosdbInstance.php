@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) Set <p>Project ID</p>
  * @method string getRegion() Obtain <p>Region</p>
  * @method void setRegion(string $Region) Set <p>Region</p>
- * @method string getZone() Obtain <p>AZ.</p>
- * @method void setZone(string $Zone) Set <p>AZ.</p>
+ * @method string getZone() Obtain <p>Primary availability zone of the cluster</p>
+ * @method void setZone(string $Zone) Set <p>Primary availability zone of the cluster</p>
  * @method string getStatus() Obtain <p>Instance status</p>
  * @method void setStatus(string $Status) Set <p>Instance status</p>
  * @method string getStatusDesc() Obtain <p>Instance status description in Chinese</p>
@@ -115,21 +115,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIsFreeze() Obtain <p>Whether to freeze</p>
  * @method void setIsFreeze(string $IsFreeze) Set <p>Whether to freeze</p>
  * @method array getResourceTags() Obtain <p>Resource tag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setResourceTags(array $ResourceTags) Set <p>Resource tag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMasterZone() Obtain <p>Primary AZ</p>
- * @method void setMasterZone(string $MasterZone) Set <p>Primary AZ</p>
+ * @method string getMasterZone() Obtain <p>Current instance availability zone for read-write</p>
+ * @method void setMasterZone(string $MasterZone) Set <p>Current instance availability zone for read-write</p>
  * @method array getSlaveZones() Obtain <p>Standby availability zone</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSlaveZones(array $SlaveZones) Set <p>Standby availability zone</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getInstanceNetInfo() Obtain <p>Instance network info</p>
  * @method void setInstanceNetInfo(array $InstanceNetInfo) Set <p>Instance network info</p>
- * @method array getResourcePackages() Obtain <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResourcePackages(array $ResourcePackages) Set <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getResourcePackages() Obtain <p>Instance binding resource package information (only return compute resource package here, for example, packageType=CCU)</p>
+ * @method void setResourcePackages(array $ResourcePackages) Set <p>Instance binding resource package information (only return compute resource package here, for example, packageType=CCU)</p>
  * @method string getInstanceIndexMode() Obtain <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
  * @method void setInstanceIndexMode(string $InstanceIndexMode) Set <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
  * @method InstanceAbility getInstanceAbility() Obtain <p>Supported capabilities of the current instance</p>
@@ -144,6 +138,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setNodeList(array $NodeList) Set <p>libradb node information</p>
  * @method string getGdnId() Obtain <p>Unique ID of the global database</p>
  * @method void setGdnId(string $GdnId) Set <p>Unique ID of the global database</p>
+ * @method string getRealZone() Obtain <p>Current instance availability zone</p>
+ * @method void setRealZone(string $RealZone) Set <p>Current instance availability zone</p>
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -188,7 +184,7 @@ class CynosdbInstance extends AbstractModel
     public $Region;
 
     /**
-     * @var string <p>AZ.</p>
+     * @var string <p>Primary availability zone of the cluster</p>
      */
     public $Zone;
 
@@ -384,18 +380,16 @@ class CynosdbInstance extends AbstractModel
 
     /**
      * @var array <p>Resource tag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ResourceTags;
 
     /**
-     * @var string <p>Primary AZ</p>
+     * @var string <p>Current instance availability zone for read-write</p>
      */
     public $MasterZone;
 
     /**
      * @var array <p>Standby availability zone</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SlaveZones;
 
@@ -405,8 +399,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $InstanceNetInfo;
 
     /**
-     * @var array <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array <p>Instance binding resource package information (only return compute resource package here, for example, packageType=CCU)</p>
      */
     public $ResourcePackages;
 
@@ -446,6 +439,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $GdnId;
 
     /**
+     * @var string <p>Current instance availability zone</p>
+     */
+    public $RealZone;
+
+    /**
      * @param string $Uin <p>User Uin</p>
      * @param integer $AppId <p>User AppId</p>
      * @param string $ClusterId <p>Cluster ID.</p>
@@ -454,7 +452,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $InstanceName <p>Instance name</p>
      * @param integer $ProjectId <p>Project ID</p>
      * @param string $Region <p>Region</p>
-     * @param string $Zone <p>AZ.</p>
+     * @param string $Zone <p>Primary availability zone of the cluster</p>
      * @param string $Status <p>Instance status</p>
      * @param string $StatusDesc <p>Instance status description in Chinese</p>
      * @param string $DbMode <p>Instance form, whether it is a serverless instance</p>
@@ -494,13 +492,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $Tasks <p>Task</p>
      * @param string $IsFreeze <p>Whether to freeze</p>
      * @param array $ResourceTags <p>Resource tag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MasterZone <p>Primary AZ</p>
+     * @param string $MasterZone <p>Current instance availability zone for read-write</p>
      * @param array $SlaveZones <p>Standby availability zone</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $InstanceNetInfo <p>Instance network info</p>
-     * @param array $ResourcePackages <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ResourcePackages <p>Instance binding resource package information (only return compute resource package here, for example, packageType=CCU)</p>
      * @param string $InstanceIndexMode <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
      * @param InstanceAbility $InstanceAbility <p>Supported capabilities of the current instance</p>
      * @param string $DeviceType <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
@@ -508,6 +503,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CynosVersionTag <p>Unknown field</p>
      * @param array $NodeList <p>libradb node information</p>
      * @param string $GdnId <p>Unique ID of the global database</p>
+     * @param string $RealZone <p>Current instance availability zone</p>
      */
     function __construct()
     {
@@ -777,6 +773,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("GdnId",$param) and $param["GdnId"] !== null) {
             $this->GdnId = $param["GdnId"];
+        }
+
+        if (array_key_exists("RealZone",$param) and $param["RealZone"] !== null) {
+            $this->RealZone = $param["RealZone"];
         }
     }
 }

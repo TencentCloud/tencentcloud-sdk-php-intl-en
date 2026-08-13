@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * Analysis engine sync object
  *
  * @method string getSrcInstanceType() Obtain Source instance type
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSrcInstanceType(string $SrcInstanceType) Set Source instance type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSrcClusterId() Obtain Source Cluster Id
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSrcClusterId(string $SrcClusterId) Set Source Cluster Id
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSrcClusterId() Obtain Source cluster Id
+ * @method void setSrcClusterId(string $SrcClusterId) Set Source cluster Id
  * @method string getSrcInstanceId() Obtain Source instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSrcInstanceId(string $SrcInstanceId) Set Source instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getReplicationJobId() Obtain Copy task ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReplicationJobId(string $ReplicationJobId) Set Copy task ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method MigrateOpt getMigrateObjects() Obtain sync object details
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMigrateObjects(MigrateOpt $MigrateObjects) Set sync object details
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method MigrateOpt getMigrateObjects() Obtain Synchronization object details
+ * @method void setMigrateObjects(MigrateOpt $MigrateObjects) Set Synchronization object details
  */
 class ReplicationObject extends AbstractModel
 {
     /**
      * @var string Source instance type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SrcInstanceType;
 
     /**
-     * @var string Source Cluster Id
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Source cluster Id
      */
     public $SrcClusterId;
 
     /**
      * @var string Source instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SrcInstanceId;
 
     /**
      * @var string Copy task ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReplicationJobId;
 
     /**
-     * @var MigrateOpt sync object details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MigrateOpt Synchronization object details
      */
     public $MigrateObjects;
 
     /**
      * @param string $SrcInstanceType Source instance type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SrcClusterId Source Cluster Id
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SrcClusterId Source cluster Id
      * @param string $SrcInstanceId Source instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ReplicationJobId Copy task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MigrateOpt $MigrateObjects sync object details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MigrateOpt $MigrateObjects Synchronization object details
      */
     function __construct()
     {

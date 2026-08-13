@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
  * @method string getRegion() Obtain <p>Region</p>
  * @method void setRegion(string $Region) Set <p>Region</p>
- * @method string getZone() Obtain <p>AZ.</p>
- * @method void setZone(string $Zone) Set <p>AZ.</p>
+ * @method string getZone() Obtain <p>Primary availability zone of the cluster</p>
+ * @method void setZone(string $Zone) Set <p>Primary availability zone of the cluster</p>
  * @method string getPhysicalZone() Obtain <p>Physical AZ</p>
  * @method void setPhysicalZone(string $PhysicalZone) Set <p>Physical AZ</p>
  * @method string getStatus() Obtain <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
@@ -86,8 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsFreeze(string $IsFreeze) Set <p>Freeze or not</p>
  * @method array getTasks() Obtain <p>Task List</p>
  * @method void setTasks(array $Tasks) Set <p>Task List</p>
- * @method string getMasterZone() Obtain <p>Primary AZ</p>
- * @method void setMasterZone(string $MasterZone) Set <p>Primary AZ</p>
+ * @method string getMasterZone() Obtain <p>Current instance located availability zone for read-write</p>
+ * @method void setMasterZone(string $MasterZone) Set <p>Current instance located availability zone for read-write</p>
  * @method array getSlaveZones() Obtain <p>From the AZ list</p>
  * @method void setSlaveZones(array $SlaveZones) Set <p>From the AZ list</p>
  * @method array getInstanceSet() Obtain <p>Instance information</p>
@@ -136,6 +136,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterLevel(string $ClusterLevel) Set <p>Cluster level. For example P0, P1</p>
  * @method boolean getIsOpenTDE() Obtain <p>Whether to enable transparent data encryption</p>
  * @method void setIsOpenTDE(boolean $IsOpenTDE) Set <p>Whether to enable transparent data encryption</p>
+ * @method string getRealZone() Obtain <p>Current instance availability zone</p>
+ * @method void setRealZone(string $RealZone) Set <p>Current instance availability zone</p>
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -155,7 +157,7 @@ class CynosdbClusterDetail extends AbstractModel
     public $Region;
 
     /**
-     * @var string <p>AZ.</p>
+     * @var string <p>Primary availability zone of the cluster</p>
      */
     public $Zone;
 
@@ -305,7 +307,7 @@ class CynosdbClusterDetail extends AbstractModel
     public $Tasks;
 
     /**
-     * @var string <p>Primary AZ</p>
+     * @var string <p>Current instance located availability zone for read-write</p>
      */
     public $MasterZone;
 
@@ -430,10 +432,15 @@ class CynosdbClusterDetail extends AbstractModel
     public $IsOpenTDE;
 
     /**
+     * @var string <p>Current instance availability zone</p>
+     */
+    public $RealZone;
+
+    /**
      * @param string $ClusterId <p>Cluster ID.</p>
      * @param string $ClusterName <p>Cluster name.</p>
      * @param string $Region <p>Region</p>
-     * @param string $Zone <p>AZ.</p>
+     * @param string $Zone <p>Primary availability zone of the cluster</p>
      * @param string $PhysicalZone <p>Physical AZ</p>
      * @param string $Status <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
      * @param string $StatusDesc <p>Status description</p>
@@ -463,7 +470,7 @@ class CynosdbClusterDetail extends AbstractModel
      * @param string $HasSlaveZone <p>Whether there is a secondary AZ</p>
      * @param string $IsFreeze <p>Freeze or not</p>
      * @param array $Tasks <p>Task List</p>
-     * @param string $MasterZone <p>Primary AZ</p>
+     * @param string $MasterZone <p>Current instance located availability zone for read-write</p>
      * @param array $SlaveZones <p>From the AZ list</p>
      * @param array $InstanceSet <p>Instance information</p>
      * @param integer $PayMode <p>Payment mode</p>
@@ -488,6 +495,7 @@ class CynosdbClusterDetail extends AbstractModel
      * @param integer $ArchiveProgress <p>Archive progress, percentage.</p>
      * @param string $ClusterLevel <p>Cluster level. For example P0, P1</p>
      * @param boolean $IsOpenTDE <p>Whether to enable transparent data encryption</p>
+     * @param string $RealZone <p>Current instance availability zone</p>
      */
     function __construct()
     {
@@ -763,6 +771,10 @@ class CynosdbClusterDetail extends AbstractModel
 
         if (array_key_exists("IsOpenTDE",$param) and $param["IsOpenTDE"] !== null) {
             $this->IsOpenTDE = $param["IsOpenTDE"];
+        }
+
+        if (array_key_exists("RealZone",$param) and $param["RealZone"] !== null) {
+            $this->RealZone = $param["RealZone"];
         }
     }
 }

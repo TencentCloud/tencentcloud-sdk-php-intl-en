@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterDetail request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getClusterId() Obtain <p>Cluster Id.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster Id.</p>
  */
 class DescribeClusterDetailRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster Id.</p>
      */
     public $ClusterId;
 
     /**
-     * @param string $ClusterId Cluster ID
+     * @param string $ClusterId <p>Cluster Id.</p>
      */
     function __construct()
     {

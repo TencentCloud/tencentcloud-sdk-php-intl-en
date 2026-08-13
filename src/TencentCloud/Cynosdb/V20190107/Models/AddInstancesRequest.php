@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
  * @method integer getCpu() Obtain <p>Cpu cores</p>
  * @method void setCpu(integer $Cpu) Set <p>Cpu cores</p>
- * @method integer getMemory() Obtain Memory in GB
- * @method void setMemory(integer $Memory) Set Memory in GB
- * @method integer getReadOnlyCount() Obtain Number of added read-only instances. Value range: (0,16].
- * @method void setReadOnlyCount(integer $ReadOnlyCount) Set Number of added read-only instances. Value range: (0,16].
+ * @method integer getMemory() Obtain <p>Memory in GB</p>
+ * @method void setMemory(integer $Memory) Set <p>Memory in GB</p>
+ * @method integer getReadOnlyCount() Obtain <p>Number of newly-added read-only instances, value range (0,15]</p>
+ * @method void setReadOnlyCount(integer $ReadOnlyCount) Set <p>Number of newly-added read-only instances, value range (0,15]</p>
  * @method string getDeviceType() Obtain <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
  * @method void setDeviceType(string $DeviceType) Set <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
  * @method string getInstanceGrpId() Obtain <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set <p>ID of the associated VPC network.</p>
  * @method string getSubnetId() Obtain <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
  * @method void setSubnetId(string $SubnetId) Set <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
- * @method integer getPort() Obtain The port used when adding an RO group. Value range: [0,65535).
- * @method void setPort(integer $Port) Set The port used when adding an RO group. Value range: [0,65535).
- * @method string getInstanceName() Obtain Instance name. String length range: [0,64).
- * @method void setInstanceName(string $InstanceName) Set Instance name. String length range: [0,64).
+ * @method integer getPort() Obtain <p>Port used when adding new RO groups, value range [0,65535)</p>
+ * @method void setPort(integer $Port) Set <p>Port used when adding new RO groups, value range [0,65535)</p>
+ * @method string getInstanceName() Obtain <p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
  * @method integer getAutoVoucher() Obtain <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
  * @method void setAutoVoucher(integer $AutoVoucher) Set <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
  * @method string getDbType() Obtain <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
@@ -70,12 +70,12 @@ class AddInstancesRequest extends AbstractModel
     public $Cpu;
 
     /**
-     * @var integer Memory in GB
+     * @var integer <p>Memory in GB</p>
      */
     public $Memory;
 
     /**
-     * @var integer Number of added read-only instances. Value range: (0,16].
+     * @var integer <p>Number of newly-added read-only instances, value range (0,15]</p>
      */
     public $ReadOnlyCount;
 
@@ -101,12 +101,12 @@ class AddInstancesRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer The port used when adding an RO group. Value range: [0,65535).
+     * @var integer <p>Port used when adding new RO groups, value range [0,65535)</p>
      */
     public $Port;
 
     /**
-     * @var string Instance name. String length range: [0,64).
+     * @var string <p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
      */
     public $InstanceName;
 
@@ -153,14 +153,14 @@ class AddInstancesRequest extends AbstractModel
     /**
      * @param string $ClusterId <p>Cluster ID.</p>
      * @param integer $Cpu <p>Cpu cores</p>
-     * @param integer $Memory Memory in GB
-     * @param integer $ReadOnlyCount Number of added read-only instances. Value range: (0,16].
+     * @param integer $Memory <p>Memory in GB</p>
+     * @param integer $ReadOnlyCount <p>Number of newly-added read-only instances, value range (0,15]</p>
      * @param string $DeviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
      * @param string $InstanceGrpId <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
      * @param string $VpcId <p>ID of the associated VPC network.</p>
      * @param string $SubnetId <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
-     * @param integer $Port The port used when adding an RO group. Value range: [0,65535).
-     * @param string $InstanceName Instance name. String length range: [0,64).
+     * @param integer $Port <p>Port used when adding new RO groups, value range [0,65535)</p>
+     * @param string $InstanceName <p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
      * @param integer $AutoVoucher <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
      * @param string $DbType <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
      * @param string $OrderSource <p>Order source, string length range [0,64)</p>

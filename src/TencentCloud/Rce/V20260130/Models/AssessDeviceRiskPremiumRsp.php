@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method Device getDevice() Obtain <p>The basic information of the device</p>
  * @method void setDevice(Device $Device) Set <p>The basic information of the device</p>
  * @method Environment getEnvironment() Obtain <p>Basic IP environment information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEnvironment(Environment $Environment) Set <p>Basic IP environment information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AssessDeviceRiskPremiumRsp extends AbstractModel
 {
@@ -50,7 +48,6 @@ class AssessDeviceRiskPremiumRsp extends AbstractModel
 
     /**
      * @var Environment <p>Basic IP environment information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Environment;
 
@@ -59,7 +56,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param DataScore $Score <p>The risk score information of the device</p>
      * @param Device $Device <p>The basic information of the device</p>
      * @param Environment $Environment <p>Basic IP environment information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

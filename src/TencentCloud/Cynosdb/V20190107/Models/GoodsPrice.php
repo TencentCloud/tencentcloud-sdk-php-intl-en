@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Item price.
  *
- * @method TradePrice getInstancePrice() Obtain Specifies the instance price.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstancePrice(TradePrice $InstancePrice) Set Specifies the instance price.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method TradePrice getStoragePrice() Obtain Specifies the storage price.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStoragePrice(TradePrice $StoragePrice) Set Specifies the storage price.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method GoodsSpec getGoodsSpec() Obtain Specifies the product specification.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGoodsSpec(GoodsSpec $GoodsSpec) Set Specifies the product specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method TradePrice getInstancePrice() Obtain Instance price
+ * @method void setInstancePrice(TradePrice $InstancePrice) Set Instance price
+ * @method TradePrice getStoragePrice() Obtain Storage price
+ * @method void setStoragePrice(TradePrice $StoragePrice) Set Storage price
+ * @method GoodsSpec getGoodsSpec() Obtain Product specification
+ * @method void setGoodsSpec(GoodsSpec $GoodsSpec) Set Product specification
  */
 class GoodsPrice extends AbstractModel
 {
     /**
-     * @var TradePrice Specifies the instance price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TradePrice Instance price
      */
     public $InstancePrice;
 
     /**
-     * @var TradePrice Specifies the storage price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TradePrice Storage price
      */
     public $StoragePrice;
 
     /**
-     * @var GoodsSpec Specifies the product specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var GoodsSpec Product specification
      */
     public $GoodsSpec;
 
     /**
-     * @param TradePrice $InstancePrice Specifies the instance price.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TradePrice $StoragePrice Specifies the storage price.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GoodsSpec $GoodsSpec Specifies the product specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TradePrice $InstancePrice Instance price
+     * @param TradePrice $StoragePrice Storage price
+     * @param GoodsSpec $GoodsSpec Product specification
      */
     function __construct()
     {

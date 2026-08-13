@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Synchronize data objects
  *
  * @method string getMigrateDBMode() Obtain Database migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMigrateDBMode(string $MigrateDBMode) Set Database migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getDatabases() Obtain Database information
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDatabases(array $Databases) Set Database information
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MigrateObject extends AbstractModel
 {
     /**
      * @var string Database migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MigrateDBMode;
 
     /**
      * @var array Database information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Databases;
 
     /**
      * @param string $MigrateDBMode Database migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Databases Database information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

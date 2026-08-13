@@ -20,326 +20,231 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLibraDBInstanceDetail response structure.
  *
- * @method string getUin() Obtain <p>root account</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUin(string $Uin) Set <p>root account</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUin() Obtain <p>Root account</p>
+ * @method void setUin(string $Uin) Set <p>Root account</p>
  * @method integer getAppId() Obtain <p>Account unique ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAppId(integer $AppId) Set <p>Account unique ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getClusterId() Obtain <p>Cluster ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getClusterName() Obtain <p>Cluster name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setClusterName(string $ClusterName) Set <p>Cluster name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstanceId() Obtain <p>Instance ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getInstanceName() Obtain <p>Instance name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProjectId() Obtain <p>Project ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProjectId(integer $ProjectId) Set <p>Project ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegion() Obtain <p>Region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set <p>Region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getProjectId() Obtain <p>Project ID</p>
+ * @method void setProjectId(integer $ProjectId) Set <p>Project ID</p>
+ * @method string getRegion() Obtain <p>Region.</p>
+ * @method void setRegion(string $Region) Set <p>Region.</p>
  * @method string getZone() Obtain <p>AZ.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setZone(string $Zone) Set <p>AZ.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain <p>Instance status.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set <p>Instance status.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain <p>Instance status</p>
+ * @method void setStatus(string $Status) Set <p>Instance status</p>
  * @method string getStatusDesc() Obtain <p>Status description</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatusDesc(string $StatusDesc) Set <p>Status description</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getLibraDBVersion() Obtain <p>Libra analysis engine version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLibraDBVersion(string $LibraDBVersion) Set <p>Libra analysis engine version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCpu() Obtain <p>cpu cores</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCpu(integer $Cpu) Set <p>cpu cores</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMemory() Obtain <p>Memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMemory(integer $Memory) Set <p>Memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCpu() Obtain <p>cpu cores.</p>
+ * @method void setCpu(integer $Cpu) Set <p>cpu cores.</p>
+ * @method integer getMemory() Obtain <p>Memory size.</p>
+ * @method void setMemory(integer $Memory) Set <p>Memory size.</p>
  * @method integer getStorage() Obtain <p>Storage size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStorage(integer $Storage) Set <p>Storage size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getStorageType() Obtain <p>Storage type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStorageType(string $StorageType) Set <p>Storage type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceType() Obtain <p>Instance type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceType(string $InstanceType) Set <p>Instance type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceType() Obtain <p>Instance type.</p>
+ * @method void setInstanceType(string $InstanceType) Set <p>Instance type.</p>
  * @method string getInstanceRole() Obtain <p>Instance role</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceRole(string $InstanceRole) Set <p>Instance role</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUpdateTime() Obtain <p>Update time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set <p>Update time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain <p>Creation time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getPayMode() Obtain <p>Selling mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPayMode(integer $PayMode) Set <p>Selling mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPeriodStartTime() Obtain <p>Start time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPeriodStartTime(string $PeriodStartTime) Set <p>Start time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPeriodEndTime() Obtain <p>End time of sale</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPeriodEndTime(string $PeriodEndTime) Set <p>End time of sale</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPeriodEndTime() Obtain <p>Termination time</p>
+ * @method void setPeriodEndTime(string $PeriodEndTime) Set <p>Termination time</p>
  * @method integer getRenewFlag() Obtain <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRenewFlag(integer $RenewFlag) Set <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getNetType() Obtain <p>Network type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNetType(integer $NetType) Set <p>Network type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVpcId() Obtain <p>VPC ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVpcId(string $VpcId) Set <p>VPC ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSubnetId() Obtain <p>Subnet ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSubnetId(string $SubnetId) Set <p>Subnet ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVip() Obtain <p>Virtual IP</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVip(string $Vip) Set <p>Virtual IP</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getVport() Obtain <p>Port</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVport(integer $Vport) Set <p>Port</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method InstanceNetInfo getInstanceNetInfo() Obtain <p>Instance network information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceNetInfo(InstanceNetInfo $InstanceNetInfo) Set <p>Instance network information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method InstanceNetInfo getInstanceNetInfo() Obtain <p>Instance network info</p>
+ * @method void setInstanceNetInfo(InstanceNetInfo $InstanceNetInfo) Set <p>Instance network info</p>
  * @method array getResourceTags() Obtain <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setResourceTags(array $ResourceTags) Set <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getNodeInfo() Obtain <p>Instance node information</p>
  * @method void setNodeInfo(array $NodeInfo) Set <p>Instance node information</p>
  * @method integer getNodeCount() Obtain <p>Number of instance nodes</p>
  * @method void setNodeCount(integer $NodeCount) Set <p>Number of instance nodes</p>
- * @method UpgradeAnalysisInstanceVersionInfo getAnalysisUpgradeVersionInfo() Obtain <p>Analyze the information after instance upgrade version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAnalysisUpgradeVersionInfo(UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo) Set <p>Analyze the information after instance upgrade version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method UpgradeAnalysisInstanceVersionInfo getAnalysisUpgradeVersionInfo() Obtain <p>Analyze the information after the instance upgrade version</p>
+ * @method void setAnalysisUpgradeVersionInfo(UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo) Set <p>Analyze the information after the instance upgrade version</p>
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribeLibraDBInstanceDetailResponse extends AbstractModel
 {
     /**
-     * @var string <p>root account</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Root account</p>
      */
     public $Uin;
 
     /**
      * @var integer <p>Account unique ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AppId;
 
     /**
      * @var string <p>Cluster ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClusterId;
 
     /**
      * @var string <p>Cluster name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClusterName;
 
     /**
      * @var string <p>Instance ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceId;
 
     /**
      * @var string <p>Instance name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceName;
 
     /**
-     * @var integer <p>Project ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Project ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string <p>Region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Region.</p>
      */
     public $Region;
 
     /**
      * @var string <p>AZ.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Zone;
 
     /**
-     * @var string <p>Instance status.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Instance status</p>
      */
     public $Status;
 
     /**
      * @var string <p>Status description</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StatusDesc;
 
     /**
      * @var string <p>Libra analysis engine version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LibraDBVersion;
 
     /**
-     * @var integer <p>cpu cores</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>cpu cores.</p>
      */
     public $Cpu;
 
     /**
-     * @var integer <p>Memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer <p>Memory size.</p>
      */
     public $Memory;
 
     /**
      * @var integer <p>Storage size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Storage;
 
     /**
      * @var string <p>Storage type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StorageType;
 
     /**
-     * @var string <p>Instance type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Instance type.</p>
      */
     public $InstanceType;
 
     /**
      * @var string <p>Instance role</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceRole;
 
     /**
      * @var string <p>Update time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
     /**
      * @var string <p>Creation time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
      * @var integer <p>Selling mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PayMode;
 
     /**
      * @var string <p>Start time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PeriodStartTime;
 
     /**
-     * @var string <p>End time of sale</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Termination time</p>
      */
     public $PeriodEndTime;
 
     /**
      * @var integer <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RenewFlag;
 
     /**
      * @var integer <p>Network type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NetType;
 
     /**
      * @var string <p>VPC ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VpcId;
 
     /**
      * @var string <p>Subnet ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubnetId;
 
     /**
      * @var string <p>Virtual IP</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Vip;
 
     /**
      * @var integer <p>Port</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Vport;
 
     /**
-     * @var InstanceNetInfo <p>Instance network information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var InstanceNetInfo <p>Instance network info</p>
      */
     public $InstanceNetInfo;
 
     /**
      * @var array <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ResourceTags;
 
@@ -354,8 +259,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $NodeCount;
 
     /**
-     * @var UpgradeAnalysisInstanceVersionInfo <p>Analyze the information after instance upgrade version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var UpgradeAnalysisInstanceVersionInfo <p>Analyze the information after the instance upgrade version</p>
      */
     public $AnalysisUpgradeVersionInfo;
 
@@ -365,72 +269,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $Uin <p>root account</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Uin <p>Root account</p>
      * @param integer $AppId <p>Account unique ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ClusterId <p>Cluster ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ClusterName <p>Cluster name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceId <p>Instance ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $InstanceName <p>Instance name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ProjectId <p>Project ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Region <p>Region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ProjectId <p>Project ID</p>
+     * @param string $Region <p>Region.</p>
      * @param string $Zone <p>AZ.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status <p>Instance status.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Status <p>Instance status</p>
      * @param string $StatusDesc <p>Status description</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $LibraDBVersion <p>Libra analysis engine version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Cpu <p>cpu cores</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Memory <p>Memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Cpu <p>cpu cores.</p>
+     * @param integer $Memory <p>Memory size.</p>
      * @param integer $Storage <p>Storage size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $StorageType <p>Storage type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceType <p>Instance type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceType <p>Instance type.</p>
      * @param string $InstanceRole <p>Instance role</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UpdateTime <p>Update time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime <p>Creation time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $PayMode <p>Selling mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PeriodStartTime <p>Start time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PeriodEndTime <p>End time of sale</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PeriodEndTime <p>Termination time</p>
      * @param integer $RenewFlag <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $NetType <p>Network type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VpcId <p>VPC ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SubnetId <p>Subnet ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Vip <p>Virtual IP</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Vport <p>Port</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceNetInfo $InstanceNetInfo <p>Instance network information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceNetInfo $InstanceNetInfo <p>Instance network info</p>
      * @param array $ResourceTags <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $NodeInfo <p>Instance node information</p>
      * @param integer $NodeCount <p>Number of instance nodes</p>
-     * @param UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo <p>Analyze the information after instance upgrade version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UpgradeAnalysisInstanceVersionInfo $AnalysisUpgradeVersionInfo <p>Analyze the information after the instance upgrade version</p>
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()

@@ -51,17 +51,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getInstanceSet() Obtain Information of instances contained in instance group
  * @method void setInstanceSet(array $InstanceSet) Set Information of instances contained in instance group
  * @method string getUniqVpcId() Obtain VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUniqSubnetId() Obtain Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method OldAddrInfo getOldAddrInfo() Obtain Information of the old IP
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOldAddrInfo(OldAddrInfo $OldAddrInfo) Set Information of the old IP
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUniqSubnetId() Obtain Subnet ID.
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet ID.
+ * @method OldAddrInfo getOldAddrInfo() Obtain Recycling IP information
+ * @method void setOldAddrInfo(OldAddrInfo $OldAddrInfo) Set Recycling IP information
  * @method array getProcessingTasks() Obtain Task in progress
  * @method void setProcessingTasks(array $ProcessingTasks) Set Task in progress
  * @method array getTasks() Obtain Task list
@@ -148,19 +142,16 @@ class CynosdbInstanceGrp extends AbstractModel
 
     /**
      * @var string VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UniqVpcId;
 
     /**
-     * @var string Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Subnet ID.
      */
     public $UniqSubnetId;
 
     /**
-     * @var OldAddrInfo Information of the old IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var OldAddrInfo Recycling IP information
      */
     public $OldAddrInfo;
 
@@ -196,11 +187,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $WanStatus Public network status
      * @param array $InstanceSet Information of instances contained in instance group
      * @param string $UniqVpcId VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UniqSubnetId Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OldAddrInfo $OldAddrInfo Information of the old IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UniqSubnetId Subnet ID.
+     * @param OldAddrInfo $OldAddrInfo Recycling IP information
      * @param array $ProcessingTasks Task in progress
      * @param array $Tasks Task list
      * @param integer $NetServiceId biz_net_service table ID

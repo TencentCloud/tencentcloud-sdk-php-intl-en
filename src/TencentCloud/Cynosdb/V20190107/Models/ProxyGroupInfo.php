@@ -24,16 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyGroup(ProxyGroup $ProxyGroup) Set Database proxy group.
  * @method ProxyGroupRwInfo getProxyGroupRwInfo() Obtain Database proxy group read-write separation information.
  * @method void setProxyGroupRwInfo(ProxyGroupRwInfo $ProxyGroupRwInfo) Set Database proxy group read-write separation information.
- * @method array getProxyNodes() Obtain Node information of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProxyNodes(array $ProxyNodes) Set Node information of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getProxyNodes() Obtain Database proxy node info
+ * @method void setProxyNodes(array $ProxyNodes) Set Database proxy node info
  * @method ProxyConnectionPoolInfo getConnectionPool() Obtain Database proxy connection pool information.
  * @method void setConnectionPool(ProxyConnectionPoolInfo $ConnectionPool) Set Database proxy connection pool information.
- * @method array getNetAddrInfos() Obtain Network information for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNetAddrInfos(array $NetAddrInfos) Set Network information for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getNetAddrInfos() Obtain Database proxy network info
+ * @method void setNetAddrInfos(array $NetAddrInfos) Set Database proxy network info
  * @method array getTasks() Obtain Database proxy task set.
  * @method void setTasks(array $Tasks) Set Database proxy task set.
  */
@@ -50,8 +46,7 @@ class ProxyGroupInfo extends AbstractModel
     public $ProxyGroupRwInfo;
 
     /**
-     * @var array Node information of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Database proxy node info
      */
     public $ProxyNodes;
 
@@ -61,8 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ConnectionPool;
 
     /**
-     * @var array Network information for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Database proxy network info
      */
     public $NetAddrInfos;
 
@@ -74,11 +68,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param ProxyGroup $ProxyGroup Database proxy group.
      * @param ProxyGroupRwInfo $ProxyGroupRwInfo Database proxy group read-write separation information.
-     * @param array $ProxyNodes Node information of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ProxyNodes Database proxy node info
      * @param ProxyConnectionPoolInfo $ConnectionPool Database proxy connection pool information.
-     * @param array $NetAddrInfos Network information for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $NetAddrInfos Database proxy network info
      * @param array $Tasks Database proxy task set.
      */
     function __construct()

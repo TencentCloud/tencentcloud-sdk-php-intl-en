@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Inventory information of regions sold by Libra
  *
  * @method string getZone() Obtain Availability zone
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setZone(string $Zone) Set Availability zone
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getHasStock() Obtain whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHasStock(boolean $HasStock) Set whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getHasStock() Obtain Whether there is inventory
+ * @method void setHasStock(boolean $HasStock) Set Whether there is inventory
  */
 class ZoneStockInfo4Libra extends AbstractModel
 {
     /**
      * @var string Availability zone
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Zone;
 
     /**
-     * @var boolean whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether there is inventory
      */
     public $HasStock;
 
     /**
      * @param string $Zone Availability zone
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $HasStock whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $HasStock Whether there is inventory
      */
     function __construct()
     {

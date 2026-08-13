@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDbMode() Obtain Database Type. Valid values: `NORMAL`, `SERVERLESS`.
  * @method void setDbMode(string $DbMode) Set Database Type. Valid values: `NORMAL`, `SERVERLESS`.
  * @method array getParamInfoSet() Obtain Parameter template details
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setParamInfoSet(array $ParamInfoSet) Set Parameter template details
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ParamTemplateListInfo extends AbstractModel
 {
@@ -64,7 +62,6 @@ class ParamTemplateListInfo extends AbstractModel
 
     /**
      * @var array Parameter template details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ParamInfoSet;
 
@@ -75,7 +72,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $EngineVersion Engine version
      * @param string $DbMode Database Type. Valid values: `NORMAL`, `SERVERLESS`.
      * @param array $ParamInfoSet Parameter template details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

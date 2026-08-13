@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * Synchronize data table name
  *
  * @method string getTableName() Obtain Data table name
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTableName(string $TableName) Set Data table name
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MigrateTableItem extends AbstractModel
 {
     /**
      * @var string Data table name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TableName;
 
     /**
      * @param string $TableName Data table name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

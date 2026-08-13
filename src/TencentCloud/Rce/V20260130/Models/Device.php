@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSystemVersion(string $SystemVersion) Set <p>Device system version</p>
  * @method string getSdkBuildVersion() Obtain <p>The build version of SDK</p>
  * @method void setSdkBuildVersion(string $SdkBuildVersion) Set <p>The build version of SDK</p>
+ * @method string getSignToken() Obtain <p>Signature verification token. Please contact us to enable signature verification</p>
+ * @method void setSignToken(string $SignToken) Set <p>Signature verification token. Please contact us to enable signature verification</p>
+ * @method string getTokenTime() Obtain <p>Token generation timestamp, in milliseconds</p>
+ * @method void setTokenTime(string $TokenTime) Set <p>Token generation timestamp, in milliseconds</p>
  */
 class Device extends AbstractModel
 {
@@ -94,6 +98,16 @@ class Device extends AbstractModel
     public $SdkBuildVersion;
 
     /**
+     * @var string <p>Signature verification token. Please contact us to enable signature verification</p>
+     */
+    public $SignToken;
+
+    /**
+     * @var string <p>Token generation timestamp, in milliseconds</p>
+     */
+    public $TokenTime;
+
+    /**
      * @param string $DeviceId <p>The unique id of device returned by RCE</p>
      * @param string $AppVersion <p>The version of the application</p>
      * @param string $Brand <p>Device brand</p>
@@ -104,6 +118,8 @@ class Device extends AbstractModel
      * @param string $Platform <p>Device platform</p><p>Enumeration value:</p><ul><li>2: Android</li><li>3: IOS</li><li>4: H5</li><li>5: WeChat Mini Program</li></ul>
      * @param string $SystemVersion <p>Device system version</p>
      * @param string $SdkBuildVersion <p>The build version of SDK</p>
+     * @param string $SignToken <p>Signature verification token. Please contact us to enable signature verification</p>
+     * @param string $TokenTime <p>Token generation timestamp, in milliseconds</p>
      */
     function __construct()
     {
@@ -156,6 +172,14 @@ class Device extends AbstractModel
 
         if (array_key_exists("SdkBuildVersion",$param) and $param["SdkBuildVersion"] !== null) {
             $this->SdkBuildVersion = $param["SdkBuildVersion"];
+        }
+
+        if (array_key_exists("SignToken",$param) and $param["SignToken"] !== null) {
+            $this->SignToken = $param["SignToken"];
+        }
+
+        if (array_key_exists("TokenTime",$param) and $param["TokenTime"] !== null) {
+            $this->TokenTime = $param["TokenTime"];
         }
     }
 }

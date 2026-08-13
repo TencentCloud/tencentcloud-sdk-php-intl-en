@@ -26,14 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcComparisonSymbol(string $VpcComparisonSymbol) Set This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
  * @method string getIpComparisonSymbol() Obtain Specified ips can download; specified ips are not allowed to download.
  * @method void setIpComparisonSymbol(string $IpComparisonSymbol) Set Specified ips can download; specified ips are not allowed to download.
- * @method array getLimitVpcs() Obtain Specifies the vpc setting for download restrictions.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLimitVpcs(array $LimitVpcs) Set Specifies the vpc setting for download restrictions.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getLimitIps() Obtain Specifies the ip settings for limiting downloads.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLimitIps(array $LimitIps) Set Specifies the ip settings for limiting downloads.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getLimitVpcs() Obtain Limit download vpc settings
+ * @method void setLimitVpcs(array $LimitVpcs) Set Limit download vpc settings
+ * @method array getLimitIps() Obtain Limit download ip settings
+ * @method void setLimitIps(array $LimitIps) Set Limit download ip settings
  */
 class BackupLimitRestriction extends AbstractModel
 {
@@ -53,14 +49,12 @@ class BackupLimitRestriction extends AbstractModel
     public $IpComparisonSymbol;
 
     /**
-     * @var array Specifies the vpc setting for download restrictions.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Limit download vpc settings
      */
     public $LimitVpcs;
 
     /**
-     * @var array Specifies the ip settings for limiting downloads.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Limit download ip settings
      */
     public $LimitIps;
 
@@ -68,10 +62,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $LimitType Restriction type.
      * @param string $VpcComparisonSymbol This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
      * @param string $IpComparisonSymbol Specified ips can download; specified ips are not allowed to download.
-     * @param array $LimitVpcs Specifies the vpc setting for download restrictions.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $LimitIps Specifies the ip settings for limiting downloads.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $LimitVpcs Limit download vpc settings
+     * @param array $LimitIps Limit download ip settings
      */
     function __construct()
     {

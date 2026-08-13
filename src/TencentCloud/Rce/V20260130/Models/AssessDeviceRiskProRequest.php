@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDeviceToken() Obtain <p>Device fingerprint token, obtained after integration of the device fingerprint SDK into your website or application</p>
  * @method void setDeviceToken(string $DeviceToken) Set <p>Device fingerprint token, obtained after integration of the device fingerprint SDK into your website or application</p>
- * @method string getUserIp() Obtain <p>User client IP address(IPv4 or IPv6)</p>
- * @method void setUserIp(string $UserIp) Set <p>User client IP address(IPv4 or IPv6)</p>
+ * @method string getUserIp() Obtain <p>User client IP address (IPv4 or IPv6)</p>
+ * @method void setUserIp(string $UserIp) Set <p>User client IP address (IPv4 or IPv6)</p>
  */
 class AssessDeviceRiskProRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AssessDeviceRiskProRequest extends AbstractModel
     public $DeviceToken;
 
     /**
-     * @var string <p>User client IP address(IPv4 or IPv6)</p>
+     * @var string <p>User client IP address (IPv4 or IPv6)</p>
      */
     public $UserIp;
 
     /**
      * @param string $DeviceToken <p>Device fingerprint token, obtained after integration of the device fingerprint SDK into your website or application</p>
-     * @param string $UserIp <p>User client IP address(IPv4 or IPv6)</p>
+     * @param string $UserIp <p>User client IP address (IPv4 or IPv6)</p>
      */
     function __construct()
     {

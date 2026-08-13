@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOldMasterZone() Obtain Old primary availability zone.
  * @method void setOldMasterZone(string $OldMasterZone) Set Old primary availability zone.
- * @method array getOldSlaveZone() Obtain Old slave availability zone.
- * @method void setOldSlaveZone(array $OldSlaveZone) Set Old slave availability zone.
+ * @method array getOldSlaveZone() Obtain Secondary availability zone
+ * @method void setOldSlaveZone(array $OldSlaveZone) Set Secondary availability zone
  * @method string getNewMasterZone() Obtain New primary availability zone.
  * @method void setNewMasterZone(string $NewMasterZone) Set New primary availability zone.
- * @method array getNewSlaveZone() Obtain New slave availability zone.
- * @method void setNewSlaveZone(array $NewSlaveZone) Set New slave availability zone.
+ * @method array getNewSlaveZone() Obtain Secondary AZ
+ * @method void setNewSlaveZone(array $NewSlaveZone) Set Secondary AZ
  * @method array getNewSlaveZoneAttr() Obtain New from availability zone attribute.
  * @method void setNewSlaveZoneAttr(array $NewSlaveZoneAttr) Set New from availability zone attribute.
  * @method array getOldSlaveZoneAttr() Obtain Old availability zone attributes.
@@ -41,7 +41,7 @@ class ClusterSlaveData extends AbstractModel
     public $OldMasterZone;
 
     /**
-     * @var array Old slave availability zone.
+     * @var array Secondary availability zone
      */
     public $OldSlaveZone;
 
@@ -51,7 +51,7 @@ class ClusterSlaveData extends AbstractModel
     public $NewMasterZone;
 
     /**
-     * @var array New slave availability zone.
+     * @var array Secondary AZ
      */
     public $NewSlaveZone;
 
@@ -67,9 +67,9 @@ class ClusterSlaveData extends AbstractModel
 
     /**
      * @param string $OldMasterZone Old primary availability zone.
-     * @param array $OldSlaveZone Old slave availability zone.
+     * @param array $OldSlaveZone Secondary availability zone
      * @param string $NewMasterZone New primary availability zone.
-     * @param array $NewSlaveZone New slave availability zone.
+     * @param array $NewSlaveZone Secondary AZ
      * @param array $NewSlaveZoneAttr New from availability zone attribute.
      * @param array $OldSlaveZoneAttr Old availability zone attributes.
      */

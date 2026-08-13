@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method integer getCpu() Obtain Database CPU.
  * @method void setCpu(integer $Cpu) Set Database CPU.
- * @method integer getMemory() Obtain Database memory in GB.
- * @method void setMemory(integer $Memory) Set Database memory in GB.
+ * @method integer getMemory() Obtain Database memory in GB
+ * @method void setMemory(integer $Memory) Set Database memory in GB
  * @method string getUpgradeType() Obtain Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
  * @method void setUpgradeType(string $UpgradeType) Set Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
  * @method string getDeviceType() Obtain Instance Machine Type
@@ -60,7 +60,7 @@ class UpgradeInstanceRequest extends AbstractModel
     public $Cpu;
 
     /**
-     * @var integer Database memory in GB.
+     * @var integer Database memory in GB
      */
     public $Memory;
 
@@ -109,7 +109,7 @@ class UpgradeInstanceRequest extends AbstractModel
     /**
      * @param string $InstanceId Instance ID
      * @param integer $Cpu Database CPU.
-     * @param integer $Memory Database memory in GB.
+     * @param integer $Memory Database memory in GB
      * @param string $UpgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
      * @param string $DeviceType Instance Machine Type
 1. common: general.

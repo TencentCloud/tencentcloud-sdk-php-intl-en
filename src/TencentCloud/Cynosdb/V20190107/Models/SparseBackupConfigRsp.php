@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sparse backup configuration
  *
- * @method string getSparseBackupSwitch() Obtain <p>Sparse backup switch: ON/OFF</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSparseBackupSwitch(string $SparseBackupSwitch) Set <p>Sparse backup switch: ON/OFF</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSparseBackupSwitch() Obtain <p>Backup switch: ON/OFF</p>
+ * @method void setSparseBackupSwitch(string $SparseBackupSwitch) Set <p>Backup switch: ON/OFF</p>
  * @method array getSparseBackupConfigInfos() Obtain <p>Sparse backup policy list (1-3)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSparseBackupConfigInfos(array $SparseBackupConfigInfos) Set <p>Sparse backup policy list (1-3)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SparseBackupConfigRsp extends AbstractModel
 {
     /**
-     * @var string <p>Sparse backup switch: ON/OFF</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Backup switch: ON/OFF</p>
      */
     public $SparseBackupSwitch;
 
     /**
      * @var array <p>Sparse backup policy list (1-3)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SparseBackupConfigInfos;
 
     /**
-     * @param string $SparseBackupSwitch <p>Sparse backup switch: ON/OFF</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SparseBackupSwitch <p>Backup switch: ON/OFF</p>
      * @param array $SparseBackupConfigInfos <p>Sparse backup policy list (1-3)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

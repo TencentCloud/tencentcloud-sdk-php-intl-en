@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupMethod(string $BackupMethod) Set Backup method. auto - Automatic backup, manual - Manual backup.
  * @method string getSnapshotTime() Obtain Backup time.
  * @method void setSnapshotTime(string $SnapshotTime) Set Backup time.
- * @method array getCrossRegionBackupInfos() Obtain Detailed information of cross-region backup items.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCrossRegionBackupInfos(array $CrossRegionBackupInfos) Set Detailed information of cross-region backup items.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getCrossRegionBackupInfos() Obtain Detailed information of cross-region backup items
+ * @method void setCrossRegionBackupInfos(array $CrossRegionBackupInfos) Set Detailed information of cross-region backup items
  */
 class ManualBackupData extends AbstractModel
 {
@@ -49,8 +47,7 @@ class ManualBackupData extends AbstractModel
     public $SnapshotTime;
 
     /**
-     * @var array Detailed information of cross-region backup items.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Detailed information of cross-region backup items
      */
     public $CrossRegionBackupInfos;
 
@@ -58,8 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $BackupType Backup type. snapshot - Snapshot backup.
      * @param string $BackupMethod Backup method. auto - Automatic backup, manual - Manual backup.
      * @param string $SnapshotTime Backup time.
-     * @param array $CrossRegionBackupInfos Detailed information of cross-region backup items.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $CrossRegionBackupInfos Detailed information of cross-region backup items
      */
     function __construct()
     {
