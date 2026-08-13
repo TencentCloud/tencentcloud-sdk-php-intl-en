@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Additional details
  *
- * @method array getRetrievalLivenessExtraInfo() Obtain Full details of the hit template; return solely the template with the maximum similarity.
- * @method void setRetrievalLivenessExtraInfo(array $RetrievalLivenessExtraInfo) Set Full details of the hit template; return solely the template with the maximum similarity.
+ * @method array getRetrievalLivenessExtraInfo() Obtain Detailed information of the hit template, return only the template information with the highest similarity.
+ * @method void setRetrievalLivenessExtraInfo(array $RetrievalLivenessExtraInfo) Set Detailed information of the hit template, return only the template information with the highest similarity.
  */
 class ExtraInfo extends AbstractModel
 {
     /**
-     * @var array Full details of the hit template; return solely the template with the maximum similarity.
+     * @var array Detailed information of the hit template, return only the template information with the highest similarity.
      */
     public $RetrievalLivenessExtraInfo;
 
     /**
-     * @param array $RetrievalLivenessExtraInfo Full details of the hit template; return solely the template with the maximum similarity.
+     * @param array $RetrievalLivenessExtraInfo Detailed information of the hit template, return only the template information with the highest similarity.
      */
     function __construct()
     {

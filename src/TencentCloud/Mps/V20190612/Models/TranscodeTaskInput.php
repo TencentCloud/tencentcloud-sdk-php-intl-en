@@ -26,20 +26,16 @@ use TencentCloud\Common\AbstractModel;
 This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
  * @method void setRawParameter(RawTranscodeParameter $RawParameter) Set Custom video transcoding parameter. valid when Definition is set to 0.
 This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
- * @method OverrideTranscodeParameter getOverrideParameter() Obtain Video transcoding custom parameter, which is valid when `Definition` is not 0.
-When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
-This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setOverrideParameter(OverrideTranscodeParameter $OverrideParameter) Set Video transcoding custom parameter, which is valid when `Definition` is not 0.
-When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
-This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
-Note: this field may return `null`, indicating that no valid value was found.
+ * @method OverrideTranscodeParameter getOverrideParameter() Obtain Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
+ * @method void setOverrideParameter(OverrideTranscodeParameter $OverrideParameter) Set Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
  * @method array getWatermarkSet() Obtain Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
  * @method void setWatermarkSet(array $WatermarkSet) Set Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
- * @method BlindWatermarkInput getBlindWatermark() Obtain Digital watermark parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set Digital watermark parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method BlindWatermarkInput getBlindWatermark() Obtain Digital watermark parameters.
+ * @method void setBlindWatermark(BlindWatermarkInput $BlindWatermark) Set Digital watermark parameters.
  * @method array getMosaicSet() Obtain List of blurs. Up to 10 ones can be supported.
  * @method void setMosaicSet(array $MosaicSet) Set List of blurs. Up to 10 ones can be supported.
  * @method float getStartTimeOffset() Obtain Start time offset of a transcoded video, in seconds.
@@ -58,10 +54,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
- * @method TaskOutputStorage getOutputStorage() Obtain Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method TaskOutputStorage getOutputStorage() Obtain Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
  * @method string getOutputObjectPath() Obtain Output path of the main file after transcoding, which can be a relative or absolute path.
 If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
 <li>Filename_{Variable name}.{format}.</li>
@@ -79,13 +73,9 @@ If left empty, a relative path is used by default: `{inputName}_transcode_{defin
  * @method string getSegmentObjectName() Obtain Path to an output file part (the path to ts during transcoding to HLS), which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}_{number}.{format}`.
  * @method void setSegmentObjectName(string $SegmentObjectName) Set Path to an output file part (the path to ts during transcoding to HLS), which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}_{number}.{format}`.
  * @method NumberFormat getObjectNumberFormat() Obtain Rule of the `{number}` variable in the output path after transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) Set Rule of the `{number}` variable in the output path after transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method HeadTailParameter getHeadTailParameter() Obtain Opening and closing credits parameters
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setHeadTailParameter(HeadTailParameter $HeadTailParameter) Set Opening and closing credits parameters
-Note: this field may return `null`, indicating that no valid value was found.
+ * @method HeadTailParameter getHeadTailParameter() Obtain Video opening/closing credits parameter.
+ * @method void setHeadTailParameter(HeadTailParameter $HeadTailParameter) Set Video opening/closing credits parameter.
  */
 class TranscodeTaskInput extends AbstractModel
 {
@@ -101,10 +91,9 @@ This parameter is used in high customization scenarios. it is recommended that y
     public $RawParameter;
 
     /**
-     * @var OverrideTranscodeParameter Video transcoding custom parameter, which is valid when `Definition` is not 0.
-When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
-This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var OverrideTranscodeParameter Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
      */
     public $OverrideParameter;
 
@@ -114,8 +103,7 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $WatermarkSet;
 
     /**
-     * @var BlindWatermarkInput Digital watermark parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var BlindWatermarkInput Digital watermark parameters.
      */
     public $BlindWatermark;
 
@@ -141,8 +129,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EndTimeOffset;
 
     /**
-     * @var TaskOutputStorage Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TaskOutputStorage Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
      */
     public $OutputStorage;
 
@@ -164,13 +151,11 @@ If left empty, a relative path is used by default: `{inputName}_transcode_{defin
 
     /**
      * @var NumberFormat Rule of the `{number}` variable in the output path after transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ObjectNumberFormat;
 
     /**
-     * @var HeadTailParameter Opening and closing credits parameters
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var HeadTailParameter Video opening/closing credits parameter.
      */
     public $HeadTailParameter;
 
@@ -178,13 +163,11 @@ Note: this field may return `null`, indicating that no valid value was found.
      * @param integer $Definition ID of a video transcoding template.
      * @param RawTranscodeParameter $RawParameter Custom video transcoding parameter. valid when Definition is set to 0.
 This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
-     * @param OverrideTranscodeParameter $OverrideParameter Video transcoding custom parameter, which is valid when `Definition` is not 0.
-When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
-This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
-Note: this field may return `null`, indicating that no valid value was found.
+     * @param OverrideTranscodeParameter $OverrideParameter Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
      * @param array $WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
-     * @param BlindWatermarkInput $BlindWatermark Digital watermark parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BlindWatermarkInput $BlindWatermark Digital watermark parameters.
      * @param array $MosaicSet List of blurs. Up to 10 ones can be supported.
      * @param float $StartTimeOffset Start time offset of a transcoded video, in seconds.
 <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
@@ -194,8 +177,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
-     * @param TaskOutputStorage $OutputStorage Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TaskOutputStorage $OutputStorage Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
      * @param string $OutputObjectPath Output path of the main file after transcoding, which can be a relative or absolute path.
 If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
 <li>Filename_{Variable name}.{format}.</li>
@@ -205,9 +187,7 @@ Absolute path example:
 If left empty, a relative path is used by default: `{inputName}_transcode_{definition}.{format}`.
      * @param string $SegmentObjectName Path to an output file part (the path to ts during transcoding to HLS), which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}_{number}.{format}`.
      * @param NumberFormat $ObjectNumberFormat Rule of the `{number}` variable in the output path after transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HeadTailParameter $HeadTailParameter Opening and closing credits parameters
-Note: this field may return `null`, indicating that no valid value was found.
+     * @param HeadTailParameter $HeadTailParameter Video opening/closing credits parameter.
      */
     function __construct()
     {

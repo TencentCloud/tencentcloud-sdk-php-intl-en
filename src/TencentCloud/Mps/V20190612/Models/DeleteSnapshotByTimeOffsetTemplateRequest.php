@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSnapshotByTimeOffsetTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique ID of a time point screencapturing template.
- * @method void setDefinition(integer $Definition) Set Unique ID of a time point screencapturing template.
+ * @method integer getDefinition() Obtain Unique identifier of the time point screenshot template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of the time point screenshot template.
  */
 class DeleteSnapshotByTimeOffsetTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique ID of a time point screencapturing template.
+     * @var integer Unique identifier of the time point screenshot template.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Unique ID of a time point screencapturing template.
+     * @param integer $Definition Unique identifier of the time point screenshot template.
      */
     function __construct()
     {

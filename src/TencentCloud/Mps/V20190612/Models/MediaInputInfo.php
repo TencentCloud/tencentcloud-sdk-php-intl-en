@@ -32,18 +32,12 @@ use TencentCloud\Common\AbstractModel;
 <Li>VOD: video-on-demand pro edition (VOD Pro). </li>
  * @method CosInputInfo getCosInputInfo() Obtain The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
  * @method void setCosInputInfo(CosInputInfo $CosInputInfo) Set The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
- * @method UrlInputInfo getUrlInputInfo() Obtain The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setUrlInputInfo(UrlInputInfo $UrlInputInfo) Set The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method S3InputInfo getS3InputInfo() Obtain The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setS3InputInfo(S3InputInfo $S3InputInfo) Set The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method VODInputInfo getVODInputInfo() Obtain The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setVODInputInfo(VODInputInfo $VODInputInfo) Set The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method UrlInputInfo getUrlInputInfo() Obtain Valid when Type is URL. This item is required and indicates the media processing URL object information.
+ * @method void setUrlInputInfo(UrlInputInfo $UrlInputInfo) Set Valid when Type is URL. This item is required and indicates the media processing URL object information.
+ * @method S3InputInfo getS3InputInfo() Obtain Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
+ * @method void setS3InputInfo(S3InputInfo $S3InputInfo) Set Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
+ * @method VODInputInfo getVODInputInfo() Obtain Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
+ * @method void setVODInputInfo(VODInputInfo $VODInputInfo) Set Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
  */
 class MediaInputInfo extends AbstractModel
 {
@@ -62,20 +56,17 @@ class MediaInputInfo extends AbstractModel
     public $CosInputInfo;
 
     /**
-     * @var UrlInputInfo The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var UrlInputInfo Valid when Type is URL. This item is required and indicates the media processing URL object information.
      */
     public $UrlInputInfo;
 
     /**
-     * @var S3InputInfo The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var S3InputInfo Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
      */
     public $S3InputInfo;
 
     /**
-     * @var VODInputInfo The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var VODInputInfo Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
      */
     public $VODInputInfo;
 
@@ -86,12 +77,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 <Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
 <Li>VOD: video-on-demand pro edition (VOD Pro). </li>
      * @param CosInputInfo $CosInputInfo The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
-     * @param UrlInputInfo $UrlInputInfo The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param S3InputInfo $S3InputInfo The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param VODInputInfo $VODInputInfo The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param UrlInputInfo $UrlInputInfo Valid when Type is URL. This item is required and indicates the media processing URL object information.
+     * @param S3InputInfo $S3InputInfo Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
+     * @param VODInputInfo $VODInputInfo Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
      */
     function __construct()
     {

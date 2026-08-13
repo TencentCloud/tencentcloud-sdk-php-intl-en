@@ -28,20 +28,18 @@ Default value: ON.
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
- * @method string getType() Obtain Type. Valid values:
+ * @method string getType() Obtain Type, available values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
+Default Value: HDR10.
 Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set Type. Valid values:
+ * @method void setType(string $Type) Set Type, available values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
+Default Value: HDR10.
 Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class HdrConfig extends AbstractModel
 {
@@ -54,13 +52,12 @@ Default value: ON.
     public $Switch;
 
     /**
-     * @var string Type. Valid values:
+     * @var string Type, available values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
+Default Value: HDR10.
 Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
@@ -69,13 +66,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
-     * @param string $Type Type. Valid values:
+     * @param string $Type Type, available values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
+Default Value: HDR10.
 Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

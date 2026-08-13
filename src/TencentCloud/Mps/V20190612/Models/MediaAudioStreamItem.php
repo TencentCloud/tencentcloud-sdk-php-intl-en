@@ -32,10 +32,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCodec(string $Codec) Set Audio stream codec, such as aac.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getChannel() Obtain Number of sound channels, e.g., 2
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setChannel(integer $Channel) Set Number of sound channels, e.g., 2
-Note: this field may return `null`, indicating that no valid value was found.
+ * @method integer getChannel() Obtain Number of audio channels, for example 2.
+ * @method void setChannel(integer $Channel) Set Number of audio channels, for example 2.
+ * @method string getCodecs() Obtain Audio Codecs.
+ * @method void setCodecs(string $Codecs) Set Audio Codecs.
+ * @method float getLoudness() Obtain Audio loudness.
+ * @method void setLoudness(float $Loudness) Set Audio loudness.
  */
 class MediaAudioStreamItem extends AbstractModel
 {
@@ -58,10 +60,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Codec;
 
     /**
-     * @var integer Number of sound channels, e.g., 2
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var integer Number of audio channels, for example 2.
      */
     public $Channel;
+
+    /**
+     * @var string Audio Codecs.
+     */
+    public $Codecs;
+
+    /**
+     * @var float Audio loudness.
+     */
+    public $Loudness;
 
     /**
      * @param integer $Bitrate Bitrate of an audio stream in bps.
@@ -70,8 +81,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Codec Audio stream codec, such as aac.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Channel Number of sound channels, e.g., 2
-Note: this field may return `null`, indicating that no valid value was found.
+     * @param integer $Channel Number of audio channels, for example 2.
+     * @param string $Codecs Audio Codecs.
+     * @param float $Loudness Audio loudness.
      */
     function __construct()
     {
@@ -100,6 +112,14 @@ Note: this field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
             $this->Channel = $param["Channel"];
+        }
+
+        if (array_key_exists("Codecs",$param) and $param["Codecs"] !== null) {
+            $this->Codecs = $param["Codecs"];
+        }
+
+        if (array_key_exists("Loudness",$param) and $param["Loudness"] !== null) {
+            $this->Loudness = $param["Loudness"];
         }
     }
 }

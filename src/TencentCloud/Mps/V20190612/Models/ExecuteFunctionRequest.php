@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExecuteFunction request structure.
  *
- * @method string getFunctionName() Obtain Name of called backend API.
- * @method void setFunctionName(string $FunctionName) Set Name of called backend API.
- * @method string getFunctionArg() Obtain API parameter. Parameter format will depend on the actual function definition.
- * @method void setFunctionArg(string $FunctionArg) Set API parameter. Parameter format will depend on the actual function definition.
+ * @method string getFunctionName() Obtain Backend interface name invoked.
+ * @method void setFunctionName(string $FunctionName) Set Backend interface name invoked.
+ * @method string getFunctionArg() Obtain API parameter, coordinate with the backend for the specific parameter format when calling.
+ * @method void setFunctionArg(string $FunctionArg) Set API parameter, coordinate with the backend for the specific parameter format when calling.
  */
 class ExecuteFunctionRequest extends AbstractModel
 {
     /**
-     * @var string Name of called backend API.
+     * @var string Backend interface name invoked.
      */
     public $FunctionName;
 
     /**
-     * @var string API parameter. Parameter format will depend on the actual function definition.
+     * @var string API parameter, coordinate with the backend for the specific parameter format when calling.
      */
     public $FunctionArg;
 
     /**
-     * @param string $FunctionName Name of called backend API.
-     * @param string $FunctionArg API parameter. Parameter format will depend on the actual function definition.
+     * @param string $FunctionName Backend interface name invoked.
+     * @param string $FunctionArg API parameter, coordinate with the backend for the specific parameter format when calling.
      */
     function __construct()
     {

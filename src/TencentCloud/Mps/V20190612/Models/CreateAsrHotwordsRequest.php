@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Hotword lexicon name.
  * @method string getContent() Obtain Hotword lexicon text. This field is required if Type is set to 0.
  * @method void setContent(string $Content) Set Hotword lexicon text. This field is required if Type is set to 0.
- * @method string getFileContent() Obtain Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+ * @method string getFileContent() Obtain base64 content of the hot word library file, Type 1 required
 
 
- * @method void setFileContent(string $FileContent) Set Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+ * @method void setFileContent(string $FileContent) Set base64 content of the hot word library file, Type 1 required
 
 
  * @method string getFileName() Obtain Name of the uploaded file.
@@ -53,7 +53,7 @@ class CreateAsrHotwordsRequest extends AbstractModel
     public $Content;
 
     /**
-     * @var string Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+     * @var string base64 content of the hot word library file, Type 1 required
 
 
      */
@@ -68,7 +68,7 @@ class CreateAsrHotwordsRequest extends AbstractModel
      * @param integer $Type 0: temporary hotword; 1 file-based hotword.
      * @param string $Name Hotword lexicon name.
      * @param string $Content Hotword lexicon text. This field is required if Type is set to 0.
-     * @param string $FileContent Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+     * @param string $FileContent base64 content of the hot word library file, Type 1 required
 
 
      * @param string $FileName Name of the uploaded file.

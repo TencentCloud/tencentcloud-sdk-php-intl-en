@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getHotwordsId() Obtain ID of the hotword lexicon to be queried.
  * @method void setHotwordsId(string $HotwordsId) Set ID of the hotword lexicon to be queried.
- * @method integer getStatus() Obtain Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
- * @method void setStatus(integer $Status) Set Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
- * @method string getName() Obtain Name of the hot lexicon.
- * @method void setName(string $Name) Set Name of the hot lexicon.
- * @method integer getType() Obtain Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
-Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
+ * @method integer getStatus() Obtain Current hot lexicon id status. A value of 0 indicates that no template is bound to this hot lexicon at the query moment, and it can be deleted.
+ * @method void setStatus(integer $Status) Set Current hot lexicon id status. A value of 0 indicates that no template is bound to this hot lexicon at the query moment, and it can be deleted.
+ * @method string getName() Obtain Hotword lexicon name
+ * @method void setName(string $Name) Set Hotword lexicon name
+ * @method integer getType() Obtain The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
+The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
 
 
- * @method void setType(integer $Type) Set Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
-Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
+ * @method void setType(integer $Type) Set The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
+The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
 
 
  * @method string getFileName() Obtain Name of the uploaded hotword file.
@@ -40,20 +40,20 @@ Specifies the value is 1 for a file-based hotword lexicon, and returns the conte
  * @method void setHotWords(array $HotWords) Set List of hotwords returned for the query.
  * @method string getContent() Obtain Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
-If the value of Type is 1, the base64-encoded content of the hotword file is returned.
+If the value of Type is 1, the base64-encoded content of the hotword lexicon file is returned.
  * @method void setContent(string $Content) Set Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
-If the value of Type is 1, the base64-encoded content of the hotword file is returned.
- * @method integer getWordCount() Obtain Number of words contained in the hotword lexicon.
- * @method void setWordCount(integer $WordCount) Set Number of words contained in the hotword lexicon.
- * @method integer getOffset() Obtain Paging offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
+If the value of Type is 1, the base64-encoded content of the hotword lexicon file is returned.
+ * @method integer getWordCount() Obtain Number of words contained in the current hotword lexicon.
+ * @method void setWordCount(integer $WordCount) Set Number of words contained in the current hotword lexicon.
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
- * @method string getCreateTime() Obtain Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
- * @method void setCreateTime(string $CreateTime) Set Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
- * @method string getUpdateTime() Obtain Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
- * @method void setUpdateTime(string $UpdateTime) Set Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
+ * @method string getCreateTime() Obtain Creation time of the hot lexicon in ISOUTC format "2006-01-02T15:04:05Z"
+ * @method void setCreateTime(string $CreateTime) Set Creation time of the hot lexicon in ISOUTC format "2006-01-02T15:04:05Z"
+ * @method string getUpdateTime() Obtain Hot lexicon last modified ISOUTC format "2006-01-02T15:04:05Z"
+ * @method void setUpdateTime(string $UpdateTime) Set Hot lexicon last modified ISOUTC format "2006-01-02T15:04:05Z"
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
@@ -65,18 +65,18 @@ class DescribeAsrHotwordsResponse extends AbstractModel
     public $HotwordsId;
 
     /**
-     * @var integer Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
+     * @var integer Current hot lexicon id status. A value of 0 indicates that no template is bound to this hot lexicon at the query moment, and it can be deleted.
      */
     public $Status;
 
     /**
-     * @var string Name of the hot lexicon.
+     * @var string Hotword lexicon name
      */
     public $Name;
 
     /**
-     * @var integer Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
-Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
+     * @var integer The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
+The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
 
 
      */
@@ -95,17 +95,17 @@ Specifies the value is 1 for a file-based hotword lexicon, and returns the conte
     /**
      * @var string Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
-If the value of Type is 1, the base64-encoded content of the hotword file is returned.
+If the value of Type is 1, the base64-encoded content of the hotword lexicon file is returned.
      */
     public $Content;
 
     /**
-     * @var integer Number of words contained in the hotword lexicon.
+     * @var integer Number of words contained in the current hotword lexicon.
      */
     public $WordCount;
 
     /**
-     * @var integer Paging offset. Default value: 0.
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
@@ -115,12 +115,12 @@ If the value of Type is 1, the base64-encoded content of the hotword file is ret
     public $Limit;
 
     /**
-     * @var string Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
+     * @var string Creation time of the hot lexicon in ISOUTC format "2006-01-02T15:04:05Z"
      */
     public $CreateTime;
 
     /**
-     * @var string Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
+     * @var string Hot lexicon last modified ISOUTC format "2006-01-02T15:04:05Z"
      */
     public $UpdateTime;
 
@@ -131,22 +131,22 @@ If the value of Type is 1, the base64-encoded content of the hotword file is ret
 
     /**
      * @param string $HotwordsId ID of the hotword lexicon to be queried.
-     * @param integer $Status Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
-     * @param string $Name Name of the hot lexicon.
-     * @param integer $Type Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
-Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
+     * @param integer $Status Current hot lexicon id status. A value of 0 indicates that no template is bound to this hot lexicon at the query moment, and it can be deleted.
+     * @param string $Name Hotword lexicon name
+     * @param integer $Type The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
+The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
 
 
      * @param string $FileName Name of the uploaded hotword file.
      * @param array $HotWords List of hotwords returned for the query.
      * @param string $Content Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
-If the value of Type is 1, the base64-encoded content of the hotword file is returned.
-     * @param integer $WordCount Number of words contained in the hotword lexicon.
-     * @param integer $Offset Paging offset. Default value: 0.
+If the value of Type is 1, the base64-encoded content of the hotword lexicon file is returned.
+     * @param integer $WordCount Number of words contained in the current hotword lexicon.
+     * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
-     * @param string $CreateTime Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
-     * @param string $UpdateTime Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
+     * @param string $CreateTime Creation time of the hot lexicon in ISOUTC format "2006-01-02T15:04:05Z"
+     * @param string $UpdateTime Hot lexicon last modified ISOUTC format "2006-01-02T15:04:05Z"
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()

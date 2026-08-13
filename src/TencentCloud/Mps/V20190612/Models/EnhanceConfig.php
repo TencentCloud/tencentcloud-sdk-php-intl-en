@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Audio/Video enhancement configuration.
  *
  * @method VideoEnhanceConfig getVideoEnhance() Obtain Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVideoEnhance(VideoEnhanceConfig $VideoEnhance) Set Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AudioEnhanceConfig getAudioEnhance() Obtain The audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAudioEnhance(AudioEnhanceConfig $AudioEnhance) Set The audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AudioEnhanceConfig getAudioEnhance() Obtain Audio enhancement configuration.
+ * @method void setAudioEnhance(AudioEnhanceConfig $AudioEnhance) Set Audio enhancement configuration.
  */
 class EnhanceConfig extends AbstractModel
 {
     /**
      * @var VideoEnhanceConfig Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VideoEnhance;
 
     /**
-     * @var AudioEnhanceConfig The audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AudioEnhanceConfig Audio enhancement configuration.
      */
     public $AudioEnhance;
 
     /**
      * @param VideoEnhanceConfig $VideoEnhance Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioEnhanceConfig $AudioEnhance The audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AudioEnhanceConfig $AudioEnhance Audio enhancement configuration.
      */
     function __construct()
     {

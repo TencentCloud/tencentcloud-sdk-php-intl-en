@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Image encoding format parameters
  *
  * @method string getFormat() Obtain Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setFormat(string $Format) Set Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method integer getQuality() Obtain Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setQuality(integer $Quality) Set Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
-Note: This field may return null, indicating that no valid value can be obtained.
  */
 class ImageEncodeConfig extends AbstractModel
 {
     /**
      * @var string Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Format;
 
     /**
      * @var integer Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Quality;
 
     /**
      * @param string $Format Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $Quality Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

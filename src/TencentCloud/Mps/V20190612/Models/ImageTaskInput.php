@@ -21,37 +21,36 @@ use TencentCloud\Common\AbstractModel;
  * Image task input parameters
  *
  * @method ImageEncodeConfig getEncodeConfig() Obtain <p>Image encoding configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEncodeConfig(ImageEncodeConfig $EncodeConfig) Set <p>Image encoding configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method ImageEnhanceConfig getEnhanceConfig() Obtain <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEnhanceConfig(ImageEnhanceConfig $EnhanceConfig) Set <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method ImageEraseConfig getEraseConfig() Obtain <p>Image erasing configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEraseConfig(ImageEraseConfig $EraseConfig) Set <p>Image erasing configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method AiPosterSuiteConfig getAiPosterSuiteConfig() Obtain <p>AI image set configuration.</p>
  * @method void setAiPosterSuiteConfig(AiPosterSuiteConfig $AiPosterSuiteConfig) Set <p>AI image set configuration.</p>
+ * @method AiCutoutConfig getAiCutoutConfig() Obtain <p>Ai image cutout configuration</p>
+ * @method void setAiCutoutConfig(AiCutoutConfig $AiCutoutConfig) Set <p>Ai image cutout configuration</p>
+ * @method AiExpansionConfig getAiExpansionConfig() Obtain <p>Ai Image Expansion Configuration</p>
+ * @method void setAiExpansionConfig(AiExpansionConfig $AiExpansionConfig) Set <p>Ai Image Expansion Configuration</p>
+ * @method AiStoryboardConfig getAiStoryboardConfig() Obtain <p>Ai storyboard deconstruction configuration</p>
+ * @method void setAiStoryboardConfig(AiStoryboardConfig $AiStoryboardConfig) Set <p>Ai storyboard deconstruction configuration</p>
+ * @method UnderstandImageConfig getUnderstandImageConfig() Obtain <p>Image understanding configuration.</p>
+ * @method void setUnderstandImageConfig(UnderstandImageConfig $UnderstandImageConfig) Set <p>Image understanding configuration.</p>
  */
 class ImageTaskInput extends AbstractModel
 {
     /**
      * @var ImageEncodeConfig <p>Image encoding configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EncodeConfig;
 
     /**
      * @var ImageEnhanceConfig <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EnhanceConfig;
 
     /**
      * @var ImageEraseConfig <p>Image erasing configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EraseConfig;
 
@@ -61,13 +60,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AiPosterSuiteConfig;
 
     /**
+     * @var AiCutoutConfig <p>Ai image cutout configuration</p>
+     */
+    public $AiCutoutConfig;
+
+    /**
+     * @var AiExpansionConfig <p>Ai Image Expansion Configuration</p>
+     */
+    public $AiExpansionConfig;
+
+    /**
+     * @var AiStoryboardConfig <p>Ai storyboard deconstruction configuration</p>
+     */
+    public $AiStoryboardConfig;
+
+    /**
+     * @var UnderstandImageConfig <p>Image understanding configuration.</p>
+     */
+    public $UnderstandImageConfig;
+
+    /**
      * @param ImageEncodeConfig $EncodeConfig <p>Image encoding configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ImageEnhanceConfig $EnhanceConfig <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ImageEraseConfig $EraseConfig <p>Image erasing configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AiPosterSuiteConfig $AiPosterSuiteConfig <p>AI image set configuration.</p>
+     * @param AiCutoutConfig $AiCutoutConfig <p>Ai image cutout configuration</p>
+     * @param AiExpansionConfig $AiExpansionConfig <p>Ai Image Expansion Configuration</p>
+     * @param AiStoryboardConfig $AiStoryboardConfig <p>Ai storyboard deconstruction configuration</p>
+     * @param UnderstandImageConfig $UnderstandImageConfig <p>Image understanding configuration.</p>
      */
     function __construct()
     {
@@ -100,6 +120,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("AiPosterSuiteConfig",$param) and $param["AiPosterSuiteConfig"] !== null) {
             $this->AiPosterSuiteConfig = new AiPosterSuiteConfig();
             $this->AiPosterSuiteConfig->deserialize($param["AiPosterSuiteConfig"]);
+        }
+
+        if (array_key_exists("AiCutoutConfig",$param) and $param["AiCutoutConfig"] !== null) {
+            $this->AiCutoutConfig = new AiCutoutConfig();
+            $this->AiCutoutConfig->deserialize($param["AiCutoutConfig"]);
+        }
+
+        if (array_key_exists("AiExpansionConfig",$param) and $param["AiExpansionConfig"] !== null) {
+            $this->AiExpansionConfig = new AiExpansionConfig();
+            $this->AiExpansionConfig->deserialize($param["AiExpansionConfig"]);
+        }
+
+        if (array_key_exists("AiStoryboardConfig",$param) and $param["AiStoryboardConfig"] !== null) {
+            $this->AiStoryboardConfig = new AiStoryboardConfig();
+            $this->AiStoryboardConfig->deserialize($param["AiStoryboardConfig"]);
+        }
+
+        if (array_key_exists("UnderstandImageConfig",$param) and $param["UnderstandImageConfig"] !== null) {
+            $this->UnderstandImageConfig = new UnderstandImageConfig();
+            $this->UnderstandImageConfig->deserialize($param["UnderstandImageConfig"]);
         }
     }
 }

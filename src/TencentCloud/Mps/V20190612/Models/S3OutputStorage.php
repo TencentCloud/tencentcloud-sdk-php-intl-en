@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The AWS S3 storage information of an output file.
  *
- * @method string getS3Bucket() Obtain The AWS S3 bucket.
- * @method void setS3Bucket(string $S3Bucket) Set The AWS S3 bucket.
- * @method string getS3Region() Obtain The region of the AWS S3 bucket.
- * @method void setS3Region(string $S3Region) Set The region of the AWS S3 bucket.
- * @method string getS3SecretId() Obtain The key ID required to upload files to the AWS S3 object.
- * @method void setS3SecretId(string $S3SecretId) Set The key ID required to upload files to the AWS S3 object.
- * @method string getS3SecretKey() Obtain The key required to upload files to the AWS S3 object.
- * @method void setS3SecretKey(string $S3SecretKey) Set The key required to upload files to the AWS S3 object.
+ * @method string getS3Bucket() Obtain S3 bucket.
+ * @method void setS3Bucket(string $S3Bucket) Set S3 bucket.
+ * @method string getS3Region() Obtain Region of the S3 bucket.
+ * @method void setS3Region(string $S3Region) Set Region of the S3 bucket.
+ * @method string getS3SecretId() Obtain Secret key id for uploading media content to the AWS private network.
+ * @method void setS3SecretId(string $S3SecretId) Set Secret key id for uploading media content to the AWS private network.
+ * @method string getS3SecretKey() Obtain Upload the secret key for media content on the AWS private network.
+ * @method void setS3SecretKey(string $S3SecretKey) Set Upload the secret key for media content on the AWS private network.
  */
 class S3OutputStorage extends AbstractModel
 {
     /**
-     * @var string The AWS S3 bucket.
+     * @var string S3 bucket.
      */
     public $S3Bucket;
 
     /**
-     * @var string The region of the AWS S3 bucket.
+     * @var string Region of the S3 bucket.
      */
     public $S3Region;
 
     /**
-     * @var string The key ID required to upload files to the AWS S3 object.
+     * @var string Secret key id for uploading media content to the AWS private network.
      */
     public $S3SecretId;
 
     /**
-     * @var string The key required to upload files to the AWS S3 object.
+     * @var string Upload the secret key for media content on the AWS private network.
      */
     public $S3SecretKey;
 
     /**
-     * @param string $S3Bucket The AWS S3 bucket.
-     * @param string $S3Region The region of the AWS S3 bucket.
-     * @param string $S3SecretId The key ID required to upload files to the AWS S3 object.
-     * @param string $S3SecretKey The key required to upload files to the AWS S3 object.
+     * @param string $S3Bucket S3 bucket.
+     * @param string $S3Region Region of the S3 bucket.
+     * @param string $S3SecretId Secret key id for uploading media content to the AWS private network.
+     * @param string $S3SecretKey Upload the secret key for media content on the AWS private network.
      */
     function __construct()
     {

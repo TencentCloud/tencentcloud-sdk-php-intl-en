@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Template retrieve detailed information
  *
- * @method string getHitGroup() Obtain <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHitGroup(string $HitGroup) Set <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getSimilarityScore() Obtain <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSimilarityScore(float $SimilarityScore) Set <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHitGroup() Obtain <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
+ * @method void setHitGroup(string $HitGroup) Set <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
+ * @method float getSimilarityScore() Obtain <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
+ * @method void setSimilarityScore(float $SimilarityScore) Set <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
  * @method string getHitTemplate() Obtain <p>Template id of the cache hit</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHitTemplate(string $HitTemplate) Set <p>Template id of the cache hit</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RetrievalLivenessExtraInfo extends AbstractModel
 {
     /**
-     * @var string <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
      */
     public $HitGroup;
 
     /**
-     * @var float <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
      */
     public $SimilarityScore;
 
     /**
      * @var string <p>Template id of the cache hit</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HitTemplate;
 
     /**
-     * @param string $HitGroup <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $SimilarityScore <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HitGroup <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
+     * @param float $SimilarityScore <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
      * @param string $HitTemplate <p>Template id of the cache hit</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -28,16 +28,14 @@ Default value: `ON`.
 <li>`ON`</li>
 <li>`OFF` </li>
 Default value: `ON`.
- * @method array getTypes() Obtain The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTypes(array $Types) Set The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTypes() Obtain Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: Dental Click Suppression</li>
+Default value: declick.
+ * @method void setTypes(array $Types) Set Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: Dental Click Suppression</li>
+Default value: declick.
  */
 class AudioBeautifyConfig extends AbstractModel
 {
@@ -50,11 +48,10 @@ Default value: `ON`.
     public $Switch;
 
     /**
-     * @var array The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: Dental Click Suppression</li>
+Default value: declick.
      */
     public $Types;
 
@@ -63,11 +60,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`ON`</li>
 <li>`OFF` </li>
 Default value: `ON`.
-     * @param array $Types The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Types Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: Dental Click Suppression</li>
+Default value: declick.
      */
     function __construct()
     {

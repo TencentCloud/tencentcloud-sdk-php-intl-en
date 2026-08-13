@@ -28,14 +28,12 @@ Default value: ON.
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
- * @method integer getFps() Obtain The frame rate (Hz). Value range: [0, 100].
+ * @method integer getFps() Obtain Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
 Default value: 0.
-Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFps(integer $Fps) Set The frame rate (Hz). Value range: [0, 100].
+Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
+ * @method void setFps(integer $Fps) Set Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
 Default value: 0.
-Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
  */
 class FrameRateConfig extends AbstractModel
 {
@@ -48,10 +46,9 @@ Default value: ON.
     public $Switch;
 
     /**
-     * @var integer The frame rate (Hz). Value range: [0, 100].
+     * @var integer Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
 Default value: 0.
-Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
      */
     public $Fps;
 
@@ -60,10 +57,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
-     * @param integer $Fps The frame rate (Hz). Value range: [0, 100].
+     * @param integer $Fps Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
 Default value: 0.
-Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
      */
     function __construct()
     {

@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * The information of the subtitles to add.
  *
  * @method string getType() Obtain <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setType(string $Type) Set <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method MediaInputInfo getSubtitle() Obtain <p>Subtitle file.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSubtitle(MediaInputInfo $Subtitle) Set <p>Subtitle file.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSubtitleName() Obtain <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSubtitleName(string $SubtitleName) Set <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSubtitleLanguage() Obtain <p>Subtitle language, such as eng.</p>
  * @method void setSubtitleLanguage(string $SubtitleLanguage) Set <p>Subtitle language, such as eng.</p>
  * @method string getOutputFormat() Obtain <p>Subtitle output format. Valid values: {&quot;WebVTT&quot;,&quot;TTML&quot;}.<br>Default value: &quot;WebVTT&quot;.</p>
@@ -43,19 +37,16 @@ class AddOnSubtitle extends AbstractModel
 {
     /**
      * @var string <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
     /**
      * @var MediaInputInfo <p>Subtitle file.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Subtitle;
 
     /**
      * @var string <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubtitleName;
 
@@ -76,11 +67,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $Type <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MediaInputInfo $Subtitle <p>Subtitle file.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SubtitleName <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SubtitleLanguage <p>Subtitle language, such as eng.</p>
      * @param string $OutputFormat <p>Subtitle output format. Valid values: {&quot;WebVTT&quot;,&quot;TTML&quot;}.<br>Default value: &quot;WebVTT&quot;.</p>
      * @param boolean $DefaultTrack <p>Default subtitle track. When set to true, the current subtitle is designated as the default subtitle track. A maximum of 1 default subtitle track can be specified.<br>Default value: false.</p>

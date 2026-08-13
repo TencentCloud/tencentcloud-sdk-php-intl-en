@@ -28,18 +28,18 @@ Default value: OFF.
 ON: enabled.
 OFF: disabled.
 Default value: OFF.
- * @method string getType() Obtain Strength type. Valid values:
+ * @method string getType() Obtain Strength type, available values:
+
 weak
 normal
 strong
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set Strength type. Valid values:
+ * @method void setType(string $Type) Set Strength type, available values:
+
 weak
 normal
 strong
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DiffusionEnhanceConfig extends AbstractModel
 {
@@ -52,12 +52,12 @@ Default value: OFF.
     public $Switch;
 
     /**
-     * @var string Strength type. Valid values:
+     * @var string Strength type, available values:
+
 weak
 normal
 strong
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
@@ -66,12 +66,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 ON: enabled.
 OFF: disabled.
 Default value: OFF.
-     * @param string $Type Strength type. Valid values:
+     * @param string $Type Strength type, available values:
+
 weak
 normal
 strong
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

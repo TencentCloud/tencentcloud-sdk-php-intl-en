@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisableSchedule request structure.
  *
- * @method integer getScheduleId() Obtain The scheme ID.
- * @method void setScheduleId(integer $ScheduleId) Set The scheme ID.
+ * @method integer getScheduleId() Obtain Orchestration unique representation.
+ * @method void setScheduleId(integer $ScheduleId) Set Orchestration unique representation.
  */
 class DisableScheduleRequest extends AbstractModel
 {
     /**
-     * @var integer The scheme ID.
+     * @var integer Orchestration unique representation.
      */
     public $ScheduleId;
 
     /**
-     * @param integer $ScheduleId The scheme ID.
+     * @param integer $ScheduleId Orchestration unique representation.
      */
     function __construct()
     {

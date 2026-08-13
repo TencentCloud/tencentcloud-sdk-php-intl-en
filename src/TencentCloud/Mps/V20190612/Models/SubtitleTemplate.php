@@ -20,33 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The subtitle settings.
  *
- * @method string getPath() Obtain The URL of the subtitles to add to the video.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPath(string $Path) Set The URL of the subtitles to add to the video.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStreamIndex() Obtain Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
+ * @method string getPath() Obtain Subtitle file URL to be suppressed in the video.
+ * @method void setPath(string $Path) Set Subtitle file URL to be suppressed in the video.
+ * @method integer getStreamIndex() Obtain Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
 
--Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
+-Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setStreamIndex(integer $StreamIndex) Set Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
+ * @method void setStreamIndex(integer $StreamIndex) Set Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
 
--Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
+-Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method MediaInputInfo getSubtitleFileInput() Obtain Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubtitleFileInput(MediaInputInfo $SubtitleFileInput) Set Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method MediaInputInfo getSubtitleFileInput() Obtain Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
+ * @method void setSubtitleFileInput(MediaInputInfo $SubtitleFileInput) Set Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
  * @method MediaInputInfo getFontFileInput() Obtain Input information of the font file of the burned-in subtitle. URL and COS are supported. If both are specified, the URL information is used. If FontFileInput is specified, FontFileInput takes precedence over FontType.
 
  * @method void setFontFileInput(MediaInputInfo $FontFileInput) Set Input information of the font file of the burned-in subtitle. URL and COS are supported. If both are specified, the URL information is used. If FontFileInput is specified, FontFileInput takes precedence over FontType.
 
  * @method string getFontType() Obtain Font type. Valid values:
 <li>hei.ttf: SimHei</li>
-<li>song.ttf: SimSun.</li>
+<li>song.ttf: Song Typeface.</li>
 <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
@@ -82,10 +76,9 @@ Default value: hei.ttf.
 <li>kai.ttf is recommended for SimKai.</li>
 <li>FontFileInput takes precedence when specified.</li>
 
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFontType(string $FontType) Set Font type. Valid values:
 <li>hei.ttf: SimHei</li>
-<li>song.ttf: SimSun.</li>
+<li>song.ttf: Song Typeface.</li>
 <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
@@ -121,117 +114,98 @@ Default value: hei.ttf.
 <li>kai.ttf is recommended for SimKai.</li>
 <li>FontFileInput takes precedence when specified.</li>
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFontSize() Obtain Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+ * @method string getFontSize() Obtain Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
 
-- Pixel: Npx. Value range of N: (0,4096].
+-.
 - Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
 
 The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFontSize(string $FontSize) Set Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+ * @method void setFontSize(string $FontSize) Set Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
 
-- Pixel: Npx. Value range of N: (0,4096].
+-.
 - Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
 
 The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
 
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFontColor() Obtain Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setFontColor(string $FontColor) Set Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method float getFontAlpha() Obtain The text transparency. Value range: 0-1.
-<li>`0`: Fully transparent.</li>
-<li>`1`: Fully opaque.</li>
+ * @method float getFontAlpha() Obtain Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
 Default value: 1.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFontAlpha(float $FontAlpha) Set The text transparency. Value range: 0-1.
-<li>`0`: Fully transparent.</li>
-<li>`1`: Fully opaque.</li>
+ * @method void setFontAlpha(float $FontAlpha) Set Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
 Default value: 1.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getYPos() Obtain Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
+ * @method string getYPos() Obtain Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
 
 By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setYPos(string $YPos) Set Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
+ * @method void setYPos(string $YPos) Set Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
 
 By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getBoardY() Obtain Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
+ * @method string getBoardY() Obtain y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setBoardY(string $BoardY) Set Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
+ * @method void setBoardY(string $BoardY) Set y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method integer getBoardWidth() Obtain Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBoardWidth(integer $BoardWidth) Set Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getBoardHeight() Obtain Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBoardHeight(integer $BoardHeight) Set Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getBoardColor() Obtain Board color. Format: 0xRRGGBB.
 Default value: 0x000000 (black).
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setBoardColor(string $BoardColor) Set Board color. Format: 0xRRGGBB.
 Default value: 0x000000 (black).
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method float getBoardAlpha() Obtain Subtitle background transparency. Value range: [0, 1].
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>
 Default value: 0.8.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setBoardAlpha(float $BoardAlpha) Set Subtitle background transparency. Value range: [0, 1].
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>
 Default value: 0.8.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method float getOutlineWidth() Obtain Stroke width. The value should be a floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
@@ -303,24 +277,21 @@ If this is not specified, no shadow is applied by default.
 class SubtitleTemplate extends AbstractModel
 {
     /**
-     * @var string The URL of the subtitles to add to the video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Subtitle file URL to be suppressed in the video.
      */
     public $Path;
 
     /**
-     * @var integer Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
+     * @var integer Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
 
--Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
+-Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $StreamIndex;
 
     /**
-     * @var MediaInputInfo Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaInputInfo Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
      */
     public $SubtitleFileInput;
 
@@ -333,7 +304,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @var string Font type. Valid values:
 <li>hei.ttf: SimHei</li>
-<li>song.ttf: SimSun.</li>
+<li>song.ttf: Song Typeface.</li>
 <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
@@ -369,62 +340,56 @@ Default value: hei.ttf.
 <li>kai.ttf is recommended for SimKai.</li>
 <li>FontFileInput takes precedence when specified.</li>
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FontType;
 
     /**
-     * @var string Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+     * @var string Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
 
-- Pixel: Npx. Value range of N: (0,4096].
+-.
 - Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
 
 The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FontSize;
 
     /**
      * @var string Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $FontColor;
 
     /**
-     * @var float The text transparency. Value range: 0-1.
-<li>`0`: Fully transparent.</li>
-<li>`1`: Fully opaque.</li>
+     * @var float Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
 Default value: 1.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FontAlpha;
 
     /**
-     * @var string Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
+     * @var string Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
 
 By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $YPos;
 
     /**
-     * @var string Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
+     * @var string y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $BoardY;
 
@@ -434,7 +399,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BoardWidth;
 
@@ -444,14 +408,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BoardHeight;
 
     /**
      * @var string Board color. Format: 0xRRGGBB.
 Default value: 0x000000 (black).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $BoardColor;
 
@@ -460,7 +422,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>
 Default value: 0.8.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $BoardAlpha;
 
@@ -551,21 +512,18 @@ If this is not specified, no shadow is applied by default.
     public $LineSpacingUnit;
 
     /**
-     * @param string $Path The URL of the subtitles to add to the video.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $StreamIndex Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
+     * @param string $Path Subtitle file URL to be suppressed in the video.
+     * @param integer $StreamIndex Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
 
--Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
+-Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param MediaInputInfo $SubtitleFileInput Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MediaInputInfo $SubtitleFileInput Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
      * @param MediaInputInfo $FontFileInput Input information of the font file of the burned-in subtitle. URL and COS are supported. If both are specified, the URL information is used. If FontFileInput is specified, FontFileInput takes precedence over FontType.
 
      * @param string $FontType Font type. Valid values:
 <li>hei.ttf: SimHei</li>
-<li>song.ttf: SimSun.</li>
+<li>song.ttf: Song Typeface.</li>
 <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
@@ -601,62 +559,52 @@ Default value: hei.ttf.
 <li>kai.ttf is recommended for SimKai.</li>
 <li>FontFileInput takes precedence when specified.</li>
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FontSize Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+     * @param string $FontSize Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
 
-- Pixel: Npx. Value range of N: (0,4096].
+-.
 - Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
 
 The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param float $FontAlpha The text transparency. Value range: 0-1.
-<li>`0`: Fully transparent.</li>
-<li>`1`: Fully opaque.</li>
+     * @param float $FontAlpha Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
 Default value: 1.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $YPos Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
+     * @param string $YPos Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
 
 By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $BoardY Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
+     * @param string $BoardY y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $BoardWidth Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $BoardHeight Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $BoardColor Board color. Format: 0xRRGGBB.
 Default value: 0x000000 (black).
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param float $BoardAlpha Subtitle background transparency. Value range: [0, 1].
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>
 Default value: 0.8.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param float $OutlineWidth Stroke width. The value should be a floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].

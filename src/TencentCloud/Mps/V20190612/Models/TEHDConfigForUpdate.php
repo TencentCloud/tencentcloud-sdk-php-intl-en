@@ -20,46 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TESHD parameter configuration.
  *
- * @method string getType() Obtain The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxVideoBitrate() Obtain The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
+Leave it blank to keep it unchanged.
+ * @method void setType(string $Type) Set Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
+Leave it blank to keep it unchanged.
+ * @method integer getMaxVideoBitrate() Obtain Upper limit of video bitrate. Leave blank to keep unchanged.
+ * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set Upper limit of video bitrate. Leave blank to keep unchanged.
  */
 class TEHDConfigForUpdate extends AbstractModel
 {
     /**
-     * @var string The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
+Leave it blank to keep it unchanged.
      */
     public $Type;
 
     /**
-     * @var integer The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Upper limit of video bitrate. Leave blank to keep unchanged.
      */
     public $MaxVideoBitrate;
 
     /**
-     * @param string $Type The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxVideoBitrate The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Type Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
+Leave it blank to keep it unchanged.
+     * @param integer $MaxVideoBitrate Upper limit of video bitrate. Leave blank to keep unchanged.
      */
     function __construct()
     {

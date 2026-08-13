@@ -20,66 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HLS configuration parameters
  *
- * @method integer getItemDuration() Obtain Duration of a single TS file in seconds. Value range: 5-30 seconds.
+ * @method integer getItemDuration() Obtain Duration of TS file, unit: second, value ranges from 5 to 30 seconds.
 
-If this parameter is left empty, 30 seconds will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setItemDuration(integer $ItemDuration) Set Duration of a single TS file in seconds. Value range: 5-30 seconds.
+Leave it blank and it defaults to 30 seconds.
+ * @method void setItemDuration(integer $ItemDuration) Set Duration of TS file, unit: second, value ranges from 5 to 30 seconds.
 
-If this parameter is left empty, 30 seconds will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getInterval() Obtain Recording cycle in seconds. Value range: 10 minutes to 12 hours.
+Leave it blank and it defaults to 30 seconds.
+ * @method integer getInterval() Obtain Recording period, unit: second, value ranges from 10 minutes to 12 hr.
 
-If this parameter is left empty, 10 minutes (3600 seconds) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setInterval(integer $Interval) Set Recording cycle in seconds. Value range: 10 minutes to 12 hours.
+Leave it blank defaults to 10 minutes (3600 seconds).
+ * @method void setInterval(integer $Interval) Set Recording period, unit: second, value ranges from 10 minutes to 12 hr.
 
-If this parameter is left empty, 10 minutes (3600 seconds) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getContinueTimeout() Obtain Resume recording waiting time, unit: seconds. Value range: 60-1800 seconds.
-If this parameter is left empty, 0 (resume recording not enabled) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setContinueTimeout(integer $ContinueTimeout) Set Resume recording waiting time, unit: seconds. Value range: 60-1800 seconds.
-If this parameter is left empty, 0 (resume recording not enabled) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank defaults to 10 minutes (3600 seconds).
+ * @method integer getContinueTimeout() Obtain Continuation waiting time, unit: second. Value range: 60 seconds to 1800 seconds.
+Leave blank defaults to 0 (recording continuation disabled).
+ * @method void setContinueTimeout(integer $ContinueTimeout) Set Continuation waiting time, unit: second. Value range: 60 seconds to 1800 seconds.
+Leave blank defaults to 0 (recording continuation disabled).
  */
 class HLSConfigureInfo extends AbstractModel
 {
     /**
-     * @var integer Duration of a single TS file in seconds. Value range: 5-30 seconds.
+     * @var integer Duration of TS file, unit: second, value ranges from 5 to 30 seconds.
 
-If this parameter is left empty, 30 seconds will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank and it defaults to 30 seconds.
      */
     public $ItemDuration;
 
     /**
-     * @var integer Recording cycle in seconds. Value range: 10 minutes to 12 hours.
+     * @var integer Recording period, unit: second, value ranges from 10 minutes to 12 hr.
 
-If this parameter is left empty, 10 minutes (3600 seconds) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank defaults to 10 minutes (3600 seconds).
      */
     public $Interval;
 
     /**
-     * @var integer Resume recording waiting time, unit: seconds. Value range: 60-1800 seconds.
-If this parameter is left empty, 0 (resume recording not enabled) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Continuation waiting time, unit: second. Value range: 60 seconds to 1800 seconds.
+Leave blank defaults to 0 (recording continuation disabled).
      */
     public $ContinueTimeout;
 
     /**
-     * @param integer $ItemDuration Duration of a single TS file in seconds. Value range: 5-30 seconds.
+     * @param integer $ItemDuration Duration of TS file, unit: second, value ranges from 5 to 30 seconds.
 
-If this parameter is left empty, 30 seconds will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $Interval Recording cycle in seconds. Value range: 10 minutes to 12 hours.
+Leave it blank and it defaults to 30 seconds.
+     * @param integer $Interval Recording period, unit: second, value ranges from 10 minutes to 12 hr.
 
-If this parameter is left empty, 10 minutes (3600 seconds) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $ContinueTimeout Resume recording waiting time, unit: seconds. Value range: 60-1800 seconds.
-If this parameter is left empty, 0 (resume recording not enabled) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank defaults to 10 minutes (3600 seconds).
+     * @param integer $ContinueTimeout Continuation waiting time, unit: second. Value range: 60 seconds to 1800 seconds.
+Leave blank defaults to 0 (recording continuation disabled).
      */
     function __construct()
     {

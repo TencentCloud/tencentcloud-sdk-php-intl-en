@@ -38,10 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoTemplate(VideoTemplateInfoForUpdate $VideoTemplate) Set Video stream configuration parameter.
  * @method AudioTemplateInfoForUpdate getAudioTemplate() Obtain Audio stream configuration parameter.
  * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) Set Audio stream configuration parameter.
- * @method TEHDConfigForUpdate getTEHDConfig() Obtain The TSC transcoding parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set The TSC transcoding parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method TEHDConfigForUpdate getTEHDConfig() Obtain Top Speed Codec transcoding parameter.
+ * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set Top Speed Codec transcoding parameter.
  * @method SubtitleTemplate getSubtitleTemplate() Obtain Subtitle stream configuration parameter.
  * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set Subtitle stream configuration parameter.
  * @method array getAddonAudioStream() Obtain Specifies the external audio track parameter.
@@ -83,8 +81,7 @@ class OverrideTranscodeParameter extends AbstractModel
     public $AudioTemplate;
 
     /**
-     * @var TEHDConfigForUpdate The TSC transcoding parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TEHDConfigForUpdate Top Speed Codec transcoding parameter.
      */
     public $TEHDConfig;
 
@@ -118,8 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>1: remove</li>
      * @param VideoTemplateInfoForUpdate $VideoTemplate Video stream configuration parameter.
      * @param AudioTemplateInfoForUpdate $AudioTemplate Audio stream configuration parameter.
-     * @param TEHDConfigForUpdate $TEHDConfig The TSC transcoding parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TEHDConfigForUpdate $TEHDConfig Top Speed Codec transcoding parameter.
      * @param SubtitleTemplate $SubtitleTemplate Subtitle stream configuration parameter.
      * @param array $AddonAudioStream Specifies the external audio track parameter.
      * @param string $StdExtInfo Extension field for transcoding.

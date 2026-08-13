@@ -28,20 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDir(string $Dir) Set The bucket directory bound. It must be an absolute path that starts and ends with `/`, such as `/movie/201907/`. If you do not specify this, the root directory will be bound.	
  * @method array getFormats() Obtain The file formats that will trigger the scheme, such as ["mp4", "flv", "mov"]. If you do not specify this, the upload of files in any format will trigger the scheme.	
  * @method void setFormats(array $Formats) Set The file formats that will trigger the scheme, such as ["mp4", "flv", "mov"]. If you do not specify this, the upload of files in any format will trigger the scheme.	
- * @method string getS3SecretId() Obtain The key ID of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setS3SecretId(string $S3SecretId) Set The key ID of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getS3SecretKey() Obtain The key of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setS3SecretKey(string $S3SecretKey) Set The key of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AwsSQS getAwsSQS() Obtain The SQS queue of the AWS S3 bucket.
-Note: The queue must be in the same region as the bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAwsSQS(AwsSQS $AwsSQS) Set The SQS queue of the AWS S3 bucket.
-Note: The queue must be in the same region as the bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getS3SecretId() Obtain Secret key ID of the bound AWS S3 bucket.
+ * @method void setS3SecretId(string $S3SecretId) Set Secret key ID of the bound AWS S3 bucket.
+ * @method string getS3SecretKey() Obtain Secret Key of the bound AWS S3 bucket.
+ * @method void setS3SecretKey(string $S3SecretKey) Set Secret Key of the bound AWS S3 bucket.
+ * @method AwsSQS getAwsSQS() Obtain SQS event queue bound to the AWS S3 bucket.
+Note: The queue and bucket need to be in the same region.
+ * @method void setAwsSQS(AwsSQS $AwsSQS) Set SQS event queue bound to the AWS S3 bucket.
+Note: The queue and bucket need to be in the same region.
  */
 class AwsS3FileUploadTrigger extends AbstractModel
 {
@@ -66,21 +60,18 @@ class AwsS3FileUploadTrigger extends AbstractModel
     public $Formats;
 
     /**
-     * @var string The key ID of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Secret key ID of the bound AWS S3 bucket.
      */
     public $S3SecretId;
 
     /**
-     * @var string The key of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Secret Key of the bound AWS S3 bucket.
      */
     public $S3SecretKey;
 
     /**
-     * @var AwsSQS The SQS queue of the AWS S3 bucket.
-Note: The queue must be in the same region as the bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AwsSQS SQS event queue bound to the AWS S3 bucket.
+Note: The queue and bucket need to be in the same region.
      */
     public $AwsSQS;
 
@@ -89,13 +80,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $S3Region The region of the AWS S3 bucket.
      * @param string $Dir The bucket directory bound. It must be an absolute path that starts and ends with `/`, such as `/movie/201907/`. If you do not specify this, the root directory will be bound.	
      * @param array $Formats The file formats that will trigger the scheme, such as ["mp4", "flv", "mov"]. If you do not specify this, the upload of files in any format will trigger the scheme.	
-     * @param string $S3SecretId The key ID of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $S3SecretKey The key of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AwsSQS $AwsSQS The SQS queue of the AWS S3 bucket.
-Note: The queue must be in the same region as the bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $S3SecretId Secret key ID of the bound AWS S3 bucket.
+     * @param string $S3SecretKey Secret Key of the bound AWS S3 bucket.
+     * @param AwsSQS $AwsSQS SQS event queue bound to the AWS S3 bucket.
+Note: The queue and bucket need to be in the same region.
      */
     function __construct()
     {

@@ -21,24 +21,22 @@ use TencentCloud\Common\AbstractModel;
  * ModifyAsrHotwords request structure.
  *
  * @method string getHotwordsId() Obtain Hotword lexicon ID. 
- 
-Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
-Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon. 
+Either Name, FileContent, or FileName should be specified if the hotword vocabulary is a file-based hotword lexicon. 
 
  * @method void setHotwordsId(string $HotwordsId) Set Hotword lexicon ID. 
- 
-Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
-Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon. 
+Either Name, FileContent, or FileName should be specified if the hotword vocabulary is a file-based hotword lexicon. 
 
  * @method string getName() Obtain Hotword lexicon name.
  * @method void setName(string $Name) Set Hotword lexicon name.
  * @method string getContent() Obtain Hotword lexicon text.
  * @method void setContent(string $Content) Set Hotword lexicon text.
- * @method string getFileContent() Obtain Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+ * @method string getFileContent() Obtain base64 content of the hot word library file, Type 1 required
 
 
 
- * @method void setFileContent(string $FileContent) Set Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+ * @method void setFileContent(string $FileContent) Set base64 content of the hot word library file, Type 1 required
 
 
 
@@ -49,9 +47,8 @@ class ModifyAsrHotwordsRequest extends AbstractModel
 {
     /**
      * @var string Hotword lexicon ID. 
- 
-Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
-Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon. 
+Either Name, FileContent, or FileName should be specified if the hotword vocabulary is a file-based hotword lexicon. 
 
      */
     public $HotwordsId;
@@ -67,7 +64,7 @@ Either Name, FileContent, or FileName should be specified if the hotword lexicon
     public $Content;
 
     /**
-     * @var string Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+     * @var string base64 content of the hot word library file, Type 1 required
 
 
 
@@ -81,13 +78,12 @@ Either Name, FileContent, or FileName should be specified if the hotword lexicon
 
     /**
      * @param string $HotwordsId Hotword lexicon ID. 
- 
-Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
-Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon. 
+Either Name, FileContent, or FileName should be specified if the hotword vocabulary is a file-based hotword lexicon. 
 
      * @param string $Name Hotword lexicon name.
      * @param string $Content Hotword lexicon text.
-     * @param string $FileContent Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+     * @param string $FileContent base64 content of the hot word library file, Type 1 required
 
 
 

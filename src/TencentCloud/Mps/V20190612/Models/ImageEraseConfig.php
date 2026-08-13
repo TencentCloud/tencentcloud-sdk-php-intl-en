@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * Image erasing parameter.
  *
  * @method ImageEraseLogoConfig getImageEraseLogo() Obtain Icon erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setImageEraseLogo(ImageEraseLogoConfig $ImageEraseLogo) Set Icon erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
  */
 class ImageEraseConfig extends AbstractModel
 {
     /**
      * @var ImageEraseLogoConfig Icon erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ImageEraseLogo;
 
     /**
      * @param ImageEraseLogoConfig $ImageEraseLogo Icon erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

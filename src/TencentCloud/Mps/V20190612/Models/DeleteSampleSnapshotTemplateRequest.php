@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSampleSnapshotTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique ID of a sampled screencapturing template.
- * @method void setDefinition(integer $Definition) Set Unique ID of a sampled screencapturing template.
+ * @method integer getDefinition() Obtain Unique identifier of the sampled screenshot template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of the sampled screenshot template.
  */
 class DeleteSampleSnapshotTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique ID of a sampled screencapturing template.
+     * @var integer Unique identifier of the sampled screenshot template.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Unique ID of a sampled screencapturing template.
+     * @param integer $Definition Unique identifier of the sampled screenshot template.
      */
     function __construct()
     {

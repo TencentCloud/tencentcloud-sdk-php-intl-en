@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteWatermarkTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique ID of a watermarking template.
- * @method void setDefinition(integer $Definition) Set Unique ID of a watermarking template.
+ * @method integer getDefinition() Obtain Unique identifier of the watermark template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of the watermark template.
  */
 class DeleteWatermarkTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique ID of a watermarking template.
+     * @var integer Unique identifier of the watermark template.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Unique ID of a watermarking template.
+     * @param integer $Definition Unique identifier of the watermark template.
      */
     function __construct()
     {

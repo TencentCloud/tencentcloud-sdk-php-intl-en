@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAnimatedGraphicsTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique ID of an animated image generating template.
- * @method void setDefinition(integer $Definition) Set Unique ID of an animated image generating template.
+ * @method integer getDefinition() Obtain Unique identifier for rotation diagram template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier for rotation diagram template.
  */
 class DeleteAnimatedGraphicsTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique ID of an animated image generating template.
+     * @var integer Unique identifier for rotation diagram template.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Unique ID of an animated image generating template.
+     * @param integer $Definition Unique identifier for rotation diagram template.
      */
     function __construct()
     {

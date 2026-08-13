@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Opening and closing credits parameters
  *
- * @method array getHeadSet() Obtain The opening segments.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHeadSet(array $HeadSet) Set The opening segments.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTailSet() Obtain The closing segments.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTailSet(array $TailSet) Set The closing segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getHeadSet() Obtain Opening scene list.
+ * @method void setHeadSet(array $HeadSet) Set Opening scene list.
+ * @method array getTailSet() Obtain Ending list.
+ * @method void setTailSet(array $TailSet) Set Ending list.
  */
 class HeadTailParameter extends AbstractModel
 {
     /**
-     * @var array The opening segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Opening scene list.
      */
     public $HeadSet;
 
     /**
-     * @var array The closing segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Ending list.
      */
     public $TailSet;
 
     /**
-     * @param array $HeadSet The opening segments.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $TailSet The closing segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $HeadSet Opening scene list.
+     * @param array $TailSet Ending list.
      */
     function __construct()
     {

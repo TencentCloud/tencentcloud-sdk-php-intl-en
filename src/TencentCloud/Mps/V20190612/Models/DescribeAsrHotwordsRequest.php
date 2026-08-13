@@ -28,24 +28,22 @@ use TencentCloud\Common\AbstractModel;
 **Note: Either HotwordsId or Name should be specified. If both are specified, HotwordsId has a higher priority than Name.**
  * @method void setName(string $Name) Set Hotword lexicon name.
 **Note: Either HotwordsId or Name should be specified. If both are specified, HotwordsId has a higher priority than Name.**
- * @method integer getOffset() Obtain Paging offset. Default value: 0.
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
 
-
- * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
-
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
 
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
  * @method string getOrderBy() Obtain Hotword sorting field. Valid values:
 
- - Default: Sort by the hotword upload sequence.
- - Weight: Sort by the weight.
- - Lexical: Sort by the first letter of hotwords.
+- Default: Sort by the order in the default file.
+- Weight: Sort by the weight.
+- Lexical: Sort by the first letter of hotwords.
  * @method void setOrderBy(string $OrderBy) Set Hotword sorting field. Valid values:
 
- - Default: Sort by the hotword upload sequence.
- - Weight: Sort by the weight.
- - Lexical: Sort by the first letter of hotwords.
+- Default: Sort by the order in the default file.
+- Weight: Sort by the weight.
+- Lexical: Sort by the first letter of hotwords.
  * @method integer getOrderType() Obtain Hotword sorting order. 0: ascending (default); 1: descending.
  * @method void setOrderType(integer $OrderType) Set Hotword sorting order. 0: ascending (default); 1: descending.
  */
@@ -64,8 +62,7 @@ class DescribeAsrHotwordsRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer Paging offset. Default value: 0.
-
+     * @var integer Pagination offset. Default value: 0.
 
      */
     public $Offset;
@@ -78,9 +75,9 @@ class DescribeAsrHotwordsRequest extends AbstractModel
     /**
      * @var string Hotword sorting field. Valid values:
 
- - Default: Sort by the hotword upload sequence.
- - Weight: Sort by the weight.
- - Lexical: Sort by the first letter of hotwords.
+- Default: Sort by the order in the default file.
+- Weight: Sort by the weight.
+- Lexical: Sort by the first letter of hotwords.
      */
     public $OrderBy;
 
@@ -94,15 +91,14 @@ class DescribeAsrHotwordsRequest extends AbstractModel
 **Note: Either HotwordsId or Name should be specified. If both are specified, HotwordsId has a higher priority than Name.**
      * @param string $Name Hotword lexicon name.
 **Note: Either HotwordsId or Name should be specified. If both are specified, HotwordsId has a higher priority than Name.**
-     * @param integer $Offset Paging offset. Default value: 0.
-
+     * @param integer $Offset Pagination offset. Default value: 0.
 
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param string $OrderBy Hotword sorting field. Valid values:
 
- - Default: Sort by the hotword upload sequence.
- - Weight: Sort by the weight.
- - Lexical: Sort by the first letter of hotwords.
+- Default: Sort by the order in the default file.
+- Weight: Sort by the weight.
+- Lexical: Sort by the first letter of hotwords.
      * @param integer $OrderType Hotword sorting order. 0: ascending (default); 1: descending.
      */
     function __construct()

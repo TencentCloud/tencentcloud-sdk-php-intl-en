@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteWordSamples request structure.
  *
- * @method array getKeywords() Obtain Keyword. Array length limit: 100 words.
- * @method void setKeywords(array $Keywords) Set Keyword. Array length limit: 100 words.
+ * @method array getKeywords() Obtain Keyword, array length limit: 100 words.
+ * @method void setKeywords(array $Keywords) Set Keyword, array length limit: 100 words.
  */
 class DeleteWordSamplesRequest extends AbstractModel
 {
     /**
-     * @var array Keyword. Array length limit: 100 words.
+     * @var array Keyword, array length limit: 100 words.
      */
     public $Keywords;
 
     /**
-     * @param array $Keywords Keyword. Array length limit: 100 words.
+     * @param array $Keywords Keyword, array length limit: 100 words.
      */
     function __construct()
     {

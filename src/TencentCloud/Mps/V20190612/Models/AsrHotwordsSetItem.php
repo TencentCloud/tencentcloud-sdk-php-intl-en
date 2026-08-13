@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information on a single hotword.
  *
- * @method integer getId() Obtain Hotword ID.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setId(integer $Id) Set Hotword ID.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getText() Obtain Hotword text.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setText(string $Text) Set Hotword text.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getWeight() Obtain Hotword weight. The value can be 11 or 100 or be in the range of 1 to 10.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setWeight(integer $Weight) Set Hotword weight. The value can be 11 or 100 or be in the range of 1 to 10.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getId() Obtain Serial number of the hot word
+ * @method void setId(integer $Id) Set Serial number of the hot word
+ * @method string getText() Obtain Hotword text
+ * @method void setText(string $Text) Set Hotword text
+ * @method integer getWeight() Obtain Hotword weight. The value can be 11 or 100 or be in the range of 1 to -10.
+ * @method void setWeight(integer $Weight) Set Hotword weight. The value can be 11 or 100 or be in the range of 1 to -10.
  */
 class AsrHotwordsSetItem extends AbstractModel
 {
     /**
-     * @var integer Hotword ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Serial number of the hot word
      */
     public $Id;
 
     /**
-     * @var string Hotword text.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Hotword text
      */
     public $Text;
 
     /**
-     * @var integer Hotword weight. The value can be 11 or 100 or be in the range of 1 to 10.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer Hotword weight. The value can be 11 or 100 or be in the range of 1 to -10.
      */
     public $Weight;
 
     /**
-     * @param integer $Id Hotword ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Text Hotword text.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $Weight Hotword weight. The value can be 11 or 100 or be in the range of 1 to 10.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $Id Serial number of the hot word
+     * @param string $Text Hotword text
+     * @param integer $Weight Hotword weight. The value can be 11 or 100 or be in the range of 1 to -10.
      */
     function __construct()
     {

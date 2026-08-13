@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The information of an AWS SQS queue.
  *
- * @method string getSQSRegion() Obtain The region of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSQSRegion(string $SQSRegion) Set The region of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSQSQueueName() Obtain The name of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSQSQueueName(string $SQSQueueName) Set The name of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getS3SecretId() Obtain The key ID required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setS3SecretId(string $S3SecretId) Set The key ID required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getS3SecretKey() Obtain The key required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setS3SecretKey(string $S3SecretKey) Set The key required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSQSRegion() Obtain SQS queue area.
+ * @method void setSQSRegion(string $SQSRegion) Set SQS queue area.
+ * @method string getSQSQueueName() Obtain SQS queue name.
+ * @method void setSQSQueueName(string $SQSQueueName) Set SQS queue name.
+ * @method string getS3SecretId() Obtain Secret id for read-write SQS.
+ * @method void setS3SecretId(string $S3SecretId) Set Secret id for read-write SQS.
+ * @method string getS3SecretKey() Obtain Read-write SQS secret key.
+ * @method void setS3SecretKey(string $S3SecretKey) Set Read-write SQS secret key.
  */
 class AwsSQS extends AbstractModel
 {
     /**
-     * @var string The region of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string SQS queue area.
      */
     public $SQSRegion;
 
     /**
-     * @var string The name of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string SQS queue name.
      */
     public $SQSQueueName;
 
     /**
-     * @var string The key ID required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Secret id for read-write SQS.
      */
     public $S3SecretId;
 
     /**
-     * @var string The key required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Read-write SQS secret key.
      */
     public $S3SecretKey;
 
     /**
-     * @param string $SQSRegion The region of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SQSQueueName The name of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $S3SecretId The key ID required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $S3SecretKey The key required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SQSRegion SQS queue area.
+     * @param string $SQSQueueName SQS queue name.
+     * @param string $S3SecretId Secret id for read-write SQS.
+     * @param string $S3SecretKey Read-write SQS secret key.
      */
     function __construct()
     {

@@ -22,20 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Video content analysis template ID.
  * @method void setDefinition(integer $Definition) Set Video content analysis template ID.
- * @method string getExtendedParameter() Obtain Additional parameter. Its value is a serialized JSON string.
-Note: This parameter is used to meet customization requirements. References:
-[Smart Erase Tutorial]: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
-[Video Splitting (Long Videos to Short Videos) Tutorial](https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1)
-[Intelligent Highlights Tutorial](https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1)
-[Horizontal-to-Vertical Video Transformation Tutorial](https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1)
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setExtendedParameter(string $ExtendedParameter) Set Additional parameter. Its value is a serialized JSON string.
-Note: This parameter is used to meet customization requirements. References:
-[Smart Erase Tutorial]: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
-[Video Splitting (Long Videos to Short Videos) Tutorial](https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1)
-[Intelligent Highlights Tutorial](https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1)
-[Horizontal-to-Vertical Video Transformation Tutorial](https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1)
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getExtendedParameter() Obtain Additional parameters, whose value is a serialized json string.
+Note: This parameter is used to meet customization requirements. See the following:
+[Smart Erase Tutorial](https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1)
+[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
+[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
+[Horizontal-to-Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
+ * @method void setExtendedParameter(string $ExtendedParameter) Set Additional parameters, whose value is a serialized json string.
+Note: This parameter is used to meet customization requirements. See the following:
+[Smart Erase Tutorial](https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1)
+[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
+[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
+[Horizontal-to-Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
  */
 class AiAnalysisTaskInput extends AbstractModel
 {
@@ -45,25 +43,23 @@ class AiAnalysisTaskInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var string Additional parameter. Its value is a serialized JSON string.
-Note: This parameter is used to meet customization requirements. References:
-[Smart Erase Tutorial]: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
-[Video Splitting (Long Videos to Short Videos) Tutorial](https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1)
-[Intelligent Highlights Tutorial](https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1)
-[Horizontal-to-Vertical Video Transformation Tutorial](https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1)
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Additional parameters, whose value is a serialized json string.
+Note: This parameter is used to meet customization requirements. See the following:
+[Smart Erase Tutorial](https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1)
+[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
+[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
+[Horizontal-to-Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
      */
     public $ExtendedParameter;
 
     /**
      * @param integer $Definition Video content analysis template ID.
-     * @param string $ExtendedParameter Additional parameter. Its value is a serialized JSON string.
-Note: This parameter is used to meet customization requirements. References:
-[Smart Erase Tutorial]: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
-[Video Splitting (Long Videos to Short Videos) Tutorial](https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1)
-[Intelligent Highlights Tutorial](https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1)
-[Horizontal-to-Vertical Video Transformation Tutorial](https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1)
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $ExtendedParameter Additional parameters, whose value is a serialized json string.
+Note: This parameter is used to meet customization requirements. See the following:
+[Smart Erase Tutorial](https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1)
+[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
+[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
+[Horizontal-to-Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
      */
     function __construct()
     {

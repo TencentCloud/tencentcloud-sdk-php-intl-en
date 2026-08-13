@@ -28,24 +28,20 @@ Default value: ON.
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
- * @method string getType() Obtain The strength. Valid values:
-<li>lq: For low-resolution videos with obvious noise</li>
-<li>hq: For high-resolution videos</li>
+ * @method string getType() Obtain Type, available values:
+<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
+<li>hq: Targeting high-resolution video super-resolution.</li>
 Default value: lq.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set The strength. Valid values:
-<li>lq: For low-resolution videos with obvious noise</li>
-<li>hq: For high-resolution videos</li>
+ * @method void setType(string $Type) Set Type, available values:
+<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
+<li>hq: Targeting high-resolution video super-resolution.</li>
 Default value: lq.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSize() Obtain The ratio of the target resolution to the original resolution. Valid values:
-<li>2</li>
+ * @method integer getSize() Obtain Super-resolution multiple, optional value:
+<li>2: Currently only support 2x super resolution.</li>
 Default value: 2.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSize(integer $Size) Set The ratio of the target resolution to the original resolution. Valid values:
-<li>2</li>
+ * @method void setSize(integer $Size) Set Super-resolution multiple, optional value:
+<li>2: Currently only support 2x super resolution.</li>
 Default value: 2.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SuperResolutionConfig extends AbstractModel
 {
@@ -58,19 +54,17 @@ Default value: ON.
     public $Switch;
 
     /**
-     * @var string The strength. Valid values:
-<li>lq: For low-resolution videos with obvious noise</li>
-<li>hq: For high-resolution videos</li>
+     * @var string Type, available values:
+<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
+<li>hq: Targeting high-resolution video super-resolution.</li>
 Default value: lq.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
     /**
-     * @var integer The ratio of the target resolution to the original resolution. Valid values:
-<li>2</li>
+     * @var integer Super-resolution multiple, optional value:
+<li>2: Currently only support 2x super resolution.</li>
 Default value: 2.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Size;
 
@@ -79,15 +73,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
-     * @param string $Type The strength. Valid values:
-<li>lq: For low-resolution videos with obvious noise</li>
-<li>hq: For high-resolution videos</li>
+     * @param string $Type Type, available values:
+<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
+<li>hq: Targeting high-resolution video super-resolution.</li>
 Default value: lq.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Size The ratio of the target resolution to the original resolution. Valid values:
-<li>2</li>
+     * @param integer $Size Super-resolution multiple, optional value:
+<li>2: Currently only support 2x super resolution.</li>
 Default value: 2.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

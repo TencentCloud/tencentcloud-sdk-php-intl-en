@@ -28,14 +28,10 @@ Default value: ON.
 <li>ON: enabled.</li>
 <li>OFF: disabled.</li>
 Default value: ON.
- * @method integer getFpsNum() Obtain Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFpsNum(integer $FpsNum) Set Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFpsDen() Obtain Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFpsDen(integer $FpsDen) Set Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getFpsNum() Obtain Frame rate numerator. Value range: non-negative number, less than 120 when divided by the denominator, in Hz. Default value is 0. Note: For transcoding, this parameter overrides the Fps in the VideoTemplate.
+ * @method void setFpsNum(integer $FpsNum) Set Frame rate numerator. Value range: non-negative number, less than 120 when divided by the denominator, in Hz. Default value is 0. Note: For transcoding, this parameter overrides the Fps in the VideoTemplate.
+ * @method integer getFpsDen() Obtain Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
+ * @method void setFpsDen(integer $FpsDen) Set Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
  */
 class FrameRateWithDenConfig extends AbstractModel
 {
@@ -48,14 +44,12 @@ Default value: ON.
     public $Switch;
 
     /**
-     * @var integer Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Frame rate numerator. Value range: non-negative number, less than 120 when divided by the denominator, in Hz. Default value is 0. Note: For transcoding, this parameter overrides the Fps in the VideoTemplate.
      */
     public $FpsNum;
 
     /**
-     * @var integer Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
      */
     public $FpsDen;
 
@@ -64,10 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>ON: enabled.</li>
 <li>OFF: disabled.</li>
 Default value: ON.
-     * @param integer $FpsNum Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $FpsDen Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $FpsNum Frame rate numerator. Value range: non-negative number, less than 120 when divided by the denominator, in Hz. Default value is 0. Note: For transcoding, this parameter overrides the Fps in the VideoTemplate.
+     * @param integer $FpsDen Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
      */
     function __construct()
     {

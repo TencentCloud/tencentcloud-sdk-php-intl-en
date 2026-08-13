@@ -40,32 +40,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFps(integer $Fps) Set Frame rate in Hz.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getColorPrimaries() Obtain Color primaries
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setColorPrimaries(string $ColorPrimaries) Set Color primaries
-Note: this field may return `null`, indicating that no valid value was found.
- * @method string getColorSpace() Obtain Color space
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setColorSpace(string $ColorSpace) Set Color space
-Note: this field may return `null`, indicating that no valid value was found.
- * @method string getColorTransfer() Obtain Color transfer
-Note: this field may return `null`, indicating that no valid value was found.
- * @method void setColorTransfer(string $ColorTransfer) Set Color transfer
-Note: this field may return `null`, indicating that no valid value was found.
- * @method string getHdrType() Obtain HDR type
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setHdrType(string $HdrType) Set HDR type
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getCodecs() Obtain 
- * @method void setCodecs(string $Codecs) Set 
- * @method integer getFpsNumerator() Obtain Numerator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFpsNumerator(integer $FpsNumerator) Set Numerator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFpsDenominator() Obtain Denominator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFpsDenominator(integer $FpsDenominator) Set Denominator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getColorPrimaries() Obtain Colorspace.
+ * @method void setColorPrimaries(string $ColorPrimaries) Set Colorspace.
+ * @method string getColorSpace() Obtain Colorspace.
+ * @method void setColorSpace(string $ColorSpace) Set Colorspace.
+ * @method string getColorTransfer() Obtain Colorspace.
+ * @method void setColorTransfer(string $ColorTransfer) Set Colorspace.
+ * @method string getHdrType() Obtain HDR type.
+ * @method void setHdrType(string $HdrType) Set HDR type.
+ * @method string getCodecs() Obtain Video Codecs.
+ * @method void setCodecs(string $Codecs) Set Video Codecs.
+ * @method integer getFpsNumerator() Obtain Numerator of the frame rate
+ * @method void setFpsNumerator(integer $FpsNumerator) Set Numerator of the frame rate
+ * @method integer getFpsDenominator() Obtain Denominator of the frame rate
+ * @method void setFpsDenominator(integer $FpsDenominator) Set Denominator of the frame rate
  */
 class MediaVideoStreamItem extends AbstractModel
 {
@@ -100,43 +88,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Fps;
 
     /**
-     * @var string Color primaries
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var string Colorspace.
      */
     public $ColorPrimaries;
 
     /**
-     * @var string Color space
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var string Colorspace.
      */
     public $ColorSpace;
 
     /**
-     * @var string Color transfer
-Note: this field may return `null`, indicating that no valid value was found.
+     * @var string Colorspace.
      */
     public $ColorTransfer;
 
     /**
-     * @var string HDR type
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string HDR type.
      */
     public $HdrType;
 
     /**
-     * @var string 
+     * @var string Video Codecs.
      */
     public $Codecs;
 
     /**
-     * @var integer Numerator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Numerator of the frame rate
      */
     public $FpsNumerator;
 
     /**
-     * @var integer Denominator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Denominator of the frame rate
      */
     public $FpsDenominator;
 
@@ -151,19 +133,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Fps Frame rate in Hz.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ColorPrimaries Color primaries
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param string $ColorSpace Color space
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param string $ColorTransfer Color transfer
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param string $HdrType HDR type
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $Codecs 
-     * @param integer $FpsNumerator Numerator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $FpsDenominator Denominator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ColorPrimaries Colorspace.
+     * @param string $ColorSpace Colorspace.
+     * @param string $ColorTransfer Colorspace.
+     * @param string $HdrType HDR type.
+     * @param string $Codecs Video Codecs.
+     * @param integer $FpsNumerator Numerator of the frame rate
+     * @param integer $FpsDenominator Denominator of the frame rate
      */
     function __construct()
     {

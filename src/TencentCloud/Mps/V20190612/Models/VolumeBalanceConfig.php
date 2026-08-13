@@ -28,16 +28,14 @@ Default value: `ON`.
 <li>`ON`</li>
 <li>`OFF` </li>
 Default value: `ON`.
- * @method string getType() Obtain The type. Valid values:
-<li>`loudNorm`: Loudness normalization.</li>
-<li>`gainControl`: Volume leveling.</li>
-Default value: `loudNorm`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set The type. Valid values:
-<li>`loudNorm`: Loudness normalization.</li>
-<li>`gainControl`: Volume leveling.</li>
-Default value: `loudNorm`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain Type, available values:
+<li>loudNorm: Loudness normalization</li>
+<li>gainControl: Reduce abrupt change</li>
+Default value: loudNorm.
+ * @method void setType(string $Type) Set Type, available values:
+<li>loudNorm: Loudness normalization</li>
+<li>gainControl: Reduce abrupt change</li>
+Default value: loudNorm.
  */
 class VolumeBalanceConfig extends AbstractModel
 {
@@ -50,11 +48,10 @@ Default value: `ON`.
     public $Switch;
 
     /**
-     * @var string The type. Valid values:
-<li>`loudNorm`: Loudness normalization.</li>
-<li>`gainControl`: Volume leveling.</li>
-Default value: `loudNorm`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Type, available values:
+<li>loudNorm: Loudness normalization</li>
+<li>gainControl: Reduce abrupt change</li>
+Default value: loudNorm.
      */
     public $Type;
 
@@ -63,11 +60,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`ON`</li>
 <li>`OFF` </li>
 Default value: `ON`.
-     * @param string $Type The type. Valid values:
-<li>`loudNorm`: Loudness normalization.</li>
-<li>`gainControl`: Volume leveling.</li>
-Default value: `loudNorm`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Type Type, available values:
+<li>loudNorm: Loudness normalization</li>
+<li>gainControl: Reduce abrupt change</li>
+Default value: loudNorm.
      */
     function __construct()
     {

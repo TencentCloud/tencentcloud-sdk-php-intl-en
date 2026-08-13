@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMediaMetaData request structure.
  *
- * @method MediaInputInfo getInputInfo() Obtain Input information of file for metadata getting.
- * @method void setInputInfo(MediaInputInfo $InputInfo) Set Input information of file for metadata getting.
+ * @method MediaInputInfo getInputInfo() Obtain Input information of the file that needs to get meta information.
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set Input information of the file that needs to get meta information.
  */
 class DescribeMediaMetaDataRequest extends AbstractModel
 {
     /**
-     * @var MediaInputInfo Input information of file for metadata getting.
+     * @var MediaInputInfo Input information of the file that needs to get meta information.
      */
     public $InputInfo;
 
     /**
-     * @param MediaInputInfo $InputInfo Input information of file for metadata getting.
+     * @param MediaInputInfo $InputInfo Input information of the file that needs to get meta information.
      */
     function __construct()
     {

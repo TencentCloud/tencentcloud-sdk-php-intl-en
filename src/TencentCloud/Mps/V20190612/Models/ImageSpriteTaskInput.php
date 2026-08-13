@@ -23,17 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDefinition() Obtain <p>Sprite screenshot template ID.</p>
  * @method void setDefinition(integer $Definition) Set <p>Sprite screenshot template ID.</p>
  * @method TaskOutputStorage getOutputStorage() Obtain <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getOutputObjectPath() Obtain <p>Output path of the sprite screenshot image file after the sprite screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}_{number}.{format}</code>.
  * @method void setOutputObjectPath(string $OutputObjectPath) Set <p>Output path of the sprite screenshot image file after the sprite screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}_{number}.{format}</code>.
  * @method string getWebVttObjectName() Obtain <p>Output path of the Web VTT file after the sprite screenshot is taken, which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}.{format}</code>.</p>
  * @method void setWebVttObjectName(string $WebVttObjectName) Set <p>Output path of the Web VTT file after the sprite screenshot is taken, which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}.{format}</code>.</p>
  * @method NumberFormat getObjectNumberFormat() Obtain <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) Set <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getExtInfo() Obtain <p>Extended parameter.</p>
  * @method void setExtInfo(string $ExtInfo) Set <p>Extended parameter.</p>
  */
@@ -46,7 +42,6 @@ class ImageSpriteTaskInput extends AbstractModel
 
     /**
      * @var TaskOutputStorage <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OutputStorage;
 
@@ -62,7 +57,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var NumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ObjectNumberFormat;
 
@@ -74,11 +68,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param integer $Definition <p>Sprite screenshot template ID.</p>
      * @param TaskOutputStorage $OutputStorage <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OutputObjectPath <p>Output path of the sprite screenshot image file after the sprite screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}_{number}.{format}</code>.
      * @param string $WebVttObjectName <p>Output path of the Web VTT file after the sprite screenshot is taken, which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}.{format}</code>.</p>
      * @param NumberFormat $ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ExtInfo <p>Extended parameter.</p>
      */
     function __construct()

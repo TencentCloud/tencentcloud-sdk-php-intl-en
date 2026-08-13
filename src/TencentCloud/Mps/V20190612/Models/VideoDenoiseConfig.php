@@ -28,16 +28,14 @@ Default value: ON.
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
- * @method string getType() Obtain The strength. Valid values:
+ * @method string getType() Obtain Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set The strength. Valid values:
+ * @method void setType(string $Type) Set Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class VideoDenoiseConfig extends AbstractModel
 {
@@ -50,11 +48,10 @@ Default value: ON.
     public $Switch;
 
     /**
-     * @var string The strength. Valid values:
+     * @var string Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Type;
 
@@ -63,11 +60,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
-     * @param string $Type The strength. Valid values:
+     * @param string $Type Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

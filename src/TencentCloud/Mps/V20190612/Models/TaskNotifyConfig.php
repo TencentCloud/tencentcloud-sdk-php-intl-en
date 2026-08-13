@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQueueName() Obtain <p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
  * @method void setQueueName(string $QueueName) Set <p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
  * @method AwsSQS getAwsSQS() Obtain <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAwsSQS(AwsSQS $AwsSQS) Set <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getNotifyKey() Obtain <p>Key used to generate the callback signature.</p>
  * @method void setNotifyKey(string $NotifyKey) Set <p>Key used to generate the callback signature.</p>
  */
@@ -80,7 +78,6 @@ class TaskNotifyConfig extends AbstractModel
 
     /**
      * @var AwsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AwsSQS;
 
@@ -98,7 +95,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $TopicName <p>This field takes effect if the model is Topic. It indicates the topic name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
      * @param string $QueueName <p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
      * @param AwsSQS $AwsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $NotifyKey <p>Key used to generate the callback signature.</p>
      */
     function __construct()

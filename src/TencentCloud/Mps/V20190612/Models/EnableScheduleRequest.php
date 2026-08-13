@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableSchedule request structure.
  *
- * @method integer getScheduleId() Obtain The scheme ID.
- * @method void setScheduleId(integer $ScheduleId) Set The scheme ID.
+ * @method integer getScheduleId() Obtain Orchestration unique identifier.
+ * @method void setScheduleId(integer $ScheduleId) Set Orchestration unique identifier.
  */
 class EnableScheduleRequest extends AbstractModel
 {
     /**
-     * @var integer The scheme ID.
+     * @var integer Orchestration unique identifier.
      */
     public $ScheduleId;
 
     /**
-     * @param integer $ScheduleId The scheme ID.
+     * @param integer $ScheduleId Orchestration unique identifier.
      */
     function __construct()
     {

@@ -28,16 +28,14 @@ Default value: ON.
 <li>ON: enabled.</li>
 <li>OFF: disabled.</li>
 Default value: ON.
- * @method string getType() Obtain Type, with valid values including:
+ * @method string getType() Obtain Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setType(string $Type) Set Type, with valid values including:
+ * @method void setType(string $Type) Set Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid value can be obtained.
  */
 class ImageDenoiseConfig extends AbstractModel
 {
@@ -50,11 +48,10 @@ Default value: ON.
     public $Switch;
 
     /**
-     * @var string Type, with valid values including:
+     * @var string Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Type;
 
@@ -63,11 +60,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>ON: enabled.</li>
 <li>OFF: disabled.</li>
 Default value: ON.
-     * @param string $Type Type, with valid values including:
+     * @param string $Type Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

@@ -46,14 +46,10 @@ Default value: 0.
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set TESHD transcoding parameter.
  * @method string getStdExtInfo() Obtain Additional parameter, which is a serialized JSON string.
  * @method void setStdExtInfo(string $StdExtInfo) Set Additional parameter, which is a serialized JSON string.
- * @method EnhanceConfig getEnhanceConfig() Obtain Audio/Video enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method SubtitleTemplate getSubtitleTemplate() Obtain Subtitle parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set Subtitle parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method EnhanceConfig getEnhanceConfig() Obtain Audio/Video enhancement configuration
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement configuration
+ * @method SubtitleTemplate getSubtitleTemplate() Obtain Subtitle parameter
+ * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set Subtitle parameter
  */
 class RawTranscodeParameter extends AbstractModel
 {
@@ -99,14 +95,12 @@ Default value: 0.
     public $StdExtInfo;
 
     /**
-     * @var EnhanceConfig Audio/Video enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var EnhanceConfig Audio/Video enhancement configuration
      */
     public $EnhanceConfig;
 
     /**
-     * @var SubtitleTemplate Subtitle parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SubtitleTemplate Subtitle parameter
      */
     public $SubtitleTemplate;
 
@@ -124,10 +118,8 @@ Default value: 0.
      * @param AudioTemplateInfo $AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
      * @param TEHDConfig $TEHDConfig TESHD transcoding parameter.
      * @param string $StdExtInfo Additional parameter, which is a serialized JSON string.
-     * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SubtitleTemplate $SubtitleTemplate Subtitle parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement configuration
+     * @param SubtitleTemplate $SubtitleTemplate Subtitle parameter
      */
     function __construct()
     {

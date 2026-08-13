@@ -21,41 +21,26 @@ use TencentCloud\Common\AbstractModel;
  * Image enhancement parameters
  *
  * @method SuperResolutionConfig getSuperResolution() Obtain Super-resolution configuration.
-
  * @method void setSuperResolution(SuperResolutionConfig $SuperResolution) Set Super-resolution configuration.
-
  * @method AdvancedSuperResolutionConfig getAdvancedSuperResolutionConfig() Obtain Advanced super-resolution configuration.
  * @method void setAdvancedSuperResolutionConfig(AdvancedSuperResolutionConfig $AdvancedSuperResolutionConfig) Set Advanced super-resolution configuration.
  * @method ImageDenoiseConfig getDenoise() Obtain Denoising configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setDenoise(ImageDenoiseConfig $Denoise) Set Denoising configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method ImageQualityEnhanceConfig getImageQualityEnhance() Obtain Comprehensive enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setImageQualityEnhance(ImageQualityEnhanceConfig $ImageQualityEnhance) Set Comprehensive enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method ColorEnhanceConfig getColorEnhance() Obtain Color enhancement configuration.
-
  * @method void setColorEnhance(ColorEnhanceConfig $ColorEnhance) Set Color enhancement configuration.
-
  * @method SharpEnhanceConfig getSharpEnhance() Obtain Detail enhancement configuration.
-
  * @method void setSharpEnhance(SharpEnhanceConfig $SharpEnhance) Set Detail enhancement configuration.
-
  * @method FaceEnhanceConfig getFaceEnhance() Obtain Face enhancement configuration.
-
  * @method void setFaceEnhance(FaceEnhanceConfig $FaceEnhance) Set Face enhancement configuration.
-
  * @method LowLightEnhanceConfig getLowLightEnhance() Obtain Low-light enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setLowLightEnhance(LowLightEnhanceConfig $LowLightEnhance) Set Low-light enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
  */
 class ImageEnhanceConfig extends AbstractModel
 {
     /**
      * @var SuperResolutionConfig Super-resolution configuration.
-
      */
     public $SuperResolution;
 
@@ -66,56 +51,43 @@ class ImageEnhanceConfig extends AbstractModel
 
     /**
      * @var ImageDenoiseConfig Denoising configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Denoise;
 
     /**
      * @var ImageQualityEnhanceConfig Comprehensive enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $ImageQualityEnhance;
 
     /**
      * @var ColorEnhanceConfig Color enhancement configuration.
-
      */
     public $ColorEnhance;
 
     /**
      * @var SharpEnhanceConfig Detail enhancement configuration.
-
      */
     public $SharpEnhance;
 
     /**
      * @var FaceEnhanceConfig Face enhancement configuration.
-
      */
     public $FaceEnhance;
 
     /**
      * @var LowLightEnhanceConfig Low-light enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $LowLightEnhance;
 
     /**
      * @param SuperResolutionConfig $SuperResolution Super-resolution configuration.
-
      * @param AdvancedSuperResolutionConfig $AdvancedSuperResolutionConfig Advanced super-resolution configuration.
      * @param ImageDenoiseConfig $Denoise Denoising configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param ImageQualityEnhanceConfig $ImageQualityEnhance Comprehensive enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param ColorEnhanceConfig $ColorEnhance Color enhancement configuration.
-
      * @param SharpEnhanceConfig $SharpEnhance Detail enhancement configuration.
-
      * @param FaceEnhanceConfig $FaceEnhance Face enhancement configuration.
-
      * @param LowLightEnhanceConfig $LowLightEnhance Low-light enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The AES-128 encryption details.
  *
- * @method string getUri() Obtain The URI of decryption key.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUri(string $Uri) Set The URI of decryption key.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUri() Obtain Request decryption key uri address.
+ * @method void setUri(string $Uri) Set Request decryption key uri address.
  * @method string getKey() Obtain Encryption key (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setKey(string $Key) Set Encryption key (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getVector() Obtain Initialization vector for encryption (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setVector(string $Vector) Set Initialization vector for encryption (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getVector() Obtain Encryption initialization vector (32-byte hexadecimal string).
+ * @method void setVector(string $Vector) Set Encryption initialization vector (32-byte hexadecimal string).
  */
 class SimpleAesDrm extends AbstractModel
 {
     /**
-     * @var string The URI of decryption key.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Request decryption key uri address.
      */
     public $Uri;
 
     /**
      * @var string Encryption key (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Key;
 
     /**
-     * @var string Initialization vector for encryption (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string Encryption initialization vector (32-byte hexadecimal string).
      */
     public $Vector;
 
     /**
-     * @param string $Uri The URI of decryption key.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Uri Request decryption key uri address.
      * @param string $Key Encryption key (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Vector Initialization vector for encryption (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Vector Encryption initialization vector (32-byte hexadecimal string).
      */
     function __construct()
     {

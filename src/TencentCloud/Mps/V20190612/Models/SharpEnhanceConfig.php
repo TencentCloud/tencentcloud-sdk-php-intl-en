@@ -28,12 +28,10 @@ Default value: ON.
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
- * @method float getIntensity() Obtain The strength. Value range: 0.0-1.0
-Default value: 0.0
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIntensity(float $Intensity) Set The strength. Value range: 0.0-1.0
-Default value: 0.0
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getIntensity() Obtain Strength, value ranges from 0.0 to 1.0.
+Default: 0.0.
+ * @method void setIntensity(float $Intensity) Set Strength, value ranges from 0.0 to 1.0.
+Default: 0.0.
  */
 class SharpEnhanceConfig extends AbstractModel
 {
@@ -46,9 +44,8 @@ Default value: ON.
     public $Switch;
 
     /**
-     * @var float The strength. Value range: 0.0-1.0
-Default value: 0.0
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Strength, value ranges from 0.0 to 1.0.
+Default: 0.0.
      */
     public $Intensity;
 
@@ -57,9 +54,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
-     * @param float $Intensity The strength. Value range: 0.0-1.0
-Default value: 0.0
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $Intensity Strength, value ranges from 0.0 to 1.0.
+Default: 0.0.
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteContentReviewTemplate request structure.
  *
- * @method integer getDefinition() Obtain The unique ID of the content moderation template.
- * @method void setDefinition(integer $Definition) Set The unique ID of the content moderation template.
+ * @method integer getDefinition() Obtain Unique identifier of a content review template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of a content review template.
  */
 class DeleteContentReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer The unique ID of the content moderation template.
+     * @var integer Unique identifier of a content review template.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition The unique ID of the content moderation template.
+     * @param integer $Definition Unique identifier of a content review template.
      */
     function __construct()
     {

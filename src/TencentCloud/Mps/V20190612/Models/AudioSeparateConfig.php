@@ -28,26 +28,22 @@ Default value: `ON`.
 <li>`ON`</li>
 <li>`OFF` </li>
 Default value: `ON`.
- * @method string getType() Obtain The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTrack() Obtain The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTrack(string $Track) Set The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain Scenario type. Valid values:
+<li>normal: Voice background audio scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
+ * @method void setType(string $Type) Set Scenario type. Valid values:
+<li>normal: Voice background audio scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
+ * @method string getTrack() Obtain Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
+Default value: vocal.
+ * @method void setTrack(string $Track) Set Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
+Default value: vocal.
  */
 class AudioSeparateConfig extends AbstractModel
 {
@@ -60,20 +56,18 @@ Default value: `ON`.
     public $Switch;
 
     /**
-     * @var string The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Scenario type. Valid values:
+<li>normal: Voice background audio scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
      */
     public $Type;
 
     /**
-     * @var string The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
+Default value: vocal.
      */
     public $Track;
 
@@ -82,16 +76,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`ON`</li>
 <li>`OFF` </li>
 Default value: `ON`.
-     * @param string $Type The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Track The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Type Scenario type. Valid values:
+<li>normal: Voice background audio scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
+     * @param string $Track Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
+Default value: vocal.
      */
     function __construct()
     {

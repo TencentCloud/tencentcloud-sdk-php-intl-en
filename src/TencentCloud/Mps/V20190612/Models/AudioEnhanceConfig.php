@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The audio enhancement configuration.
  *
- * @method AudioDenoiseConfig getDenoise() Obtain The audio noise reduction configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDenoise(AudioDenoiseConfig $Denoise) Set The audio noise reduction configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AudioSeparateConfig getSeparate() Obtain The audio separation configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSeparate(AudioSeparateConfig $Separate) Set The audio separation configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method VolumeBalanceConfig getVolumeBalance() Obtain The volume equalization configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVolumeBalance(VolumeBalanceConfig $VolumeBalance) Set The volume equalization configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AudioBeautifyConfig getBeautify() Obtain The audio improvement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBeautify(AudioBeautifyConfig $Beautify) Set The audio improvement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AudioDenoiseConfig getDenoise() Obtain Audio noise reduction configuration.
+ * @method void setDenoise(AudioDenoiseConfig $Denoise) Set Audio noise reduction configuration.
+ * @method AudioSeparateConfig getSeparate() Obtain Audio separation configuration.
+ * @method void setSeparate(AudioSeparateConfig $Separate) Set Audio separation configuration.
+ * @method VolumeBalanceConfig getVolumeBalance() Obtain Volume equalization configuration.
+ * @method void setVolumeBalance(VolumeBalanceConfig $VolumeBalance) Set Volume equalization configuration.
+ * @method AudioBeautifyConfig getBeautify() Obtain Audio beautification configuration.
+ * @method void setBeautify(AudioBeautifyConfig $Beautify) Set Audio beautification configuration.
  */
 class AudioEnhanceConfig extends AbstractModel
 {
     /**
-     * @var AudioDenoiseConfig The audio noise reduction configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AudioDenoiseConfig Audio noise reduction configuration.
      */
     public $Denoise;
 
     /**
-     * @var AudioSeparateConfig The audio separation configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AudioSeparateConfig Audio separation configuration.
      */
     public $Separate;
 
     /**
-     * @var VolumeBalanceConfig The volume equalization configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var VolumeBalanceConfig Volume equalization configuration.
      */
     public $VolumeBalance;
 
     /**
-     * @var AudioBeautifyConfig The audio improvement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AudioBeautifyConfig Audio beautification configuration.
      */
     public $Beautify;
 
     /**
-     * @param AudioDenoiseConfig $Denoise The audio noise reduction configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioSeparateConfig $Separate The audio separation configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VolumeBalanceConfig $VolumeBalance The volume equalization configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioBeautifyConfig $Beautify The audio improvement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AudioDenoiseConfig $Denoise Audio noise reduction configuration.
+     * @param AudioSeparateConfig $Separate Audio separation configuration.
+     * @param VolumeBalanceConfig $VolumeBalance Volume equalization configuration.
+     * @param AudioBeautifyConfig $Beautify Audio beautification configuration.
      */
     function __construct()
     {

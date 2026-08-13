@@ -21,57 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * Information on special segment configuration.
  *
  * @method string getSwitch() Obtain Switch for segment duration at startup. Optional values:
-on: Turn on the switch
+on: Turn on
 off: Turn off the switch
 Default value: off
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setSwitch(string $Switch) Set Switch for segment duration at startup. Optional values:
-on: Turn on the switch
+on: Turn on
 off: Turn off the switch
 Default value: off
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method integer getFragmentTime() Obtain Segment duration at startup. Unit: second
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setFragmentTime(integer $FragmentTime) Set Segment duration at startup. Unit: second
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method integer getFragmentEndNum() Obtain Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
-Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setFragmentEndNum(integer $FragmentEndNum) Set Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
-Note: This field may return null, indicating that no valid value can be obtained.
  */
 class SegmentSpecificInfo extends AbstractModel
 {
     /**
      * @var string Switch for segment duration at startup. Optional values:
-on: Turn on the switch
+on: Turn on
 off: Turn off the switch
 Default value: off
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $Switch;
 
     /**
      * @var integer Segment duration at startup. Unit: second
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $FragmentTime;
 
     /**
      * @var integer Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $FragmentEndNum;
 
     /**
      * @param string $Switch Switch for segment duration at startup. Optional values:
-on: Turn on the switch
+on: Turn on
 off: Turn off the switch
 Default value: off
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $FragmentTime Segment duration at startup. Unit: second
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $FragmentEndNum Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

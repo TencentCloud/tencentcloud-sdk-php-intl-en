@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLiveRecordTemplate request structure.
  *
- * @method integer getDefinition() Obtain Specifies the recording template unique identifier.
- * @method void setDefinition(integer $Definition) Set Specifies the recording template unique identifier.
+ * @method integer getDefinition() Obtain Unique identifier of the recording template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of the recording template.
  * @method HLSConfigureInfo getHLSConfigure() Obtain HLS configuration parameter. Either this parameter or MP4Configure should be specified.
  * @method void setHLSConfigure(HLSConfigureInfo $HLSConfigure) Set HLS configuration parameter. Either this parameter or MP4Configure should be specified.
  * @method MP4ConfigureInfo getMP4Configure() Obtain MP4 configuration parameter. Either this parameter or HLSConfigure should be specified.
  * @method void setMP4Configure(MP4ConfigureInfo $MP4Configure) Set MP4 configuration parameter. Either this parameter or HLSConfigure should be specified.
- * @method string getName() Obtain Recording template name. Length limit: 64 characters.
- * @method void setName(string $Name) Set Recording template name. Length limit: 64 characters.
+ * @method string getName() Obtain Recording template name. The length cannot exceed 64 characters.
+ * @method void setName(string $Name) Set Recording template name. The length cannot exceed 64 characters.
  * @method string getComment() Obtain Template description, with a length limit of 256 characters.
  * @method void setComment(string $Comment) Set Template description, with a length limit of 256 characters.
  * @method string getRecordType() Obtain Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyLiveRecordTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Specifies the recording template unique identifier.
+     * @var integer Unique identifier of the recording template.
      */
     public $Definition;
 
@@ -51,7 +51,7 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
     public $MP4Configure;
 
     /**
-     * @var string Recording template name. Length limit: 64 characters.
+     * @var string Recording template name. The length cannot exceed 64 characters.
      */
     public $Name;
 
@@ -66,10 +66,10 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
     public $RecordType;
 
     /**
-     * @param integer $Definition Specifies the recording template unique identifier.
+     * @param integer $Definition Unique identifier of the recording template.
      * @param HLSConfigureInfo $HLSConfigure HLS configuration parameter. Either this parameter or MP4Configure should be specified.
      * @param MP4ConfigureInfo $MP4Configure MP4 configuration parameter. Either this parameter or HLSConfigure should be specified.
-     * @param string $Name Recording template name. Length limit: 64 characters.
+     * @param string $Name Recording template name. The length cannot exceed 64 characters.
      * @param string $Comment Template description, with a length limit of 256 characters.
      * @param string $RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
      */

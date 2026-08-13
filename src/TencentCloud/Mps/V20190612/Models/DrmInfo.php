@@ -76,10 +76,8 @@ Supports slice mode or single file mode.
 Applicable to HLS and MPEG-DASH. the format can only be mp4.
 HLS format can use slice mode or single file mode.
 Specifies that only singlefile mode can be used for MPEG-DASH.
- * @method SimpleAesDrm getSimpleAesDrm() Obtain The AES-128 encryption details.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSimpleAesDrm(SimpleAesDrm $SimpleAesDrm) Set The AES-128 encryption details.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method SimpleAesDrm getSimpleAesDrm() Obtain SimpleAes encrypted information.
+ * @method void setSimpleAesDrm(SimpleAesDrm $SimpleAesDrm) Set SimpleAes encrypted information.
  * @method SpekeDrm getSpekeDrm() Obtain Information about FairPlay, WideVine, and PlayReady encryption.
  * @method void setSpekeDrm(SpekeDrm $SpekeDrm) Set Information about FairPlay, WideVine, and PlayReady encryption.
  */
@@ -118,8 +116,7 @@ Specifies that only singlefile mode can be used for MPEG-DASH.
     public $Type;
 
     /**
-     * @var SimpleAesDrm The AES-128 encryption details.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SimpleAesDrm SimpleAes encrypted information.
      */
     public $SimpleAesDrm;
 
@@ -157,8 +154,7 @@ Supports slice mode or single file mode.
 Applicable to HLS and MPEG-DASH. the format can only be mp4.
 HLS format can use slice mode or single file mode.
 Specifies that only singlefile mode can be used for MPEG-DASH.
-     * @param SimpleAesDrm $SimpleAesDrm The AES-128 encryption details.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SimpleAesDrm $SimpleAesDrm SimpleAes encrypted information.
      * @param SpekeDrm $SpekeDrm Information about FairPlay, WideVine, and PlayReady encryption.
      */
     function __construct()
