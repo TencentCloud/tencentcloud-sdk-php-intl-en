@@ -18,22 +18,22 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Data structure of the video intelligent image masking result.
+ * Data structure of the video intelligence matting result.
  *
  * @method string getStatus() Obtain Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
  * @method void setStatus(string $Status) Set Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method string getMessage() Obtain Error message.
- * @method void setMessage(string $Message) Set Error message.
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method string getMessage() Obtain Error message
+ * @method void setMessage(string $Message) Set Error message
  * @method AiAnalysisTaskCutoutInput getInput() Obtain Input of the video matting task.
  * @method void setInput(AiAnalysisTaskCutoutInput $Input) Set Input of the video matting task.
- * @method AiAnalysisTaskCutoutOutput getOutput() Obtain Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiAnalysisTaskCutoutOutput $Output) Set Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProgress() Obtain Task progress.
- * @method void setProgress(integer $Progress) Set Task progress.
- * @method string getBeginProcessTime() Obtain Task start time, in ISO date and time format.
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Task start time, in ISO date and time format.
+ * @method AiAnalysisTaskCutoutOutput getOutput() Obtain 
+ * @method void setOutput(AiAnalysisTaskCutoutOutput $Output) Set 
+ * @method integer getProgress() Obtain Task progress
+ * @method void setProgress(integer $Progress) Set Task progress
+ * @method string getBeginProcessTime() Obtain Starting time of task execution, in ISO date and time format.
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Starting time of task execution, in ISO date and time format.
  * @method string getFinishTime() Obtain Task completion time, in ISO date and time format.
  * @method void setFinishTime(string $FinishTime) Set Task completion time, in ISO date and time format.
  */
@@ -45,12 +45,12 @@ class AiAnalysisTaskCutoutResult extends AbstractModel
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @var string Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public $ErrCodeExt;
 
     /**
-     * @var string Error message.
+     * @var string Error message
      */
     public $Message;
 
@@ -60,17 +60,17 @@ class AiAnalysisTaskCutoutResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskCutoutOutput Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskCutoutOutput 
      */
     public $Output;
 
     /**
-     * @var integer Task progress.
+     * @var integer Task progress
      */
     public $Progress;
 
     /**
-     * @var string Task start time, in ISO date and time format.
+     * @var string Starting time of task execution, in ISO date and time format.
      */
     public $BeginProcessTime;
 
@@ -81,12 +81,12 @@ class AiAnalysisTaskCutoutResult extends AbstractModel
 
     /**
      * @param string $Status Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
-     * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param string $Message Error message.
+     * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param string $Message Error message
      * @param AiAnalysisTaskCutoutInput $Input Input of the video matting task.
-     * @param AiAnalysisTaskCutoutOutput $Output Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Progress Task progress.
-     * @param string $BeginProcessTime Task start time, in ISO date and time format.
+     * @param AiAnalysisTaskCutoutOutput $Output 
+     * @param integer $Progress Task progress
+     * @param string $BeginProcessTime Starting time of task execution, in ISO date and time format.
      * @param string $FinishTime Task completion time, in ISO date and time format.
      */
     function __construct()

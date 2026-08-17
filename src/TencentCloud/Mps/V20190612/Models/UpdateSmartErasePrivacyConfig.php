@@ -20,41 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Privacy protection configuration for the smart erasing template.
  *
- * @method string getPrivacyModel() Obtain Erasing method of privacy protection.
-- blur
+ * @method string getPrivacyModel() Obtain Privacy protection removal method.
+- Blur: blur detection
 - mosaic
- * @method void setPrivacyModel(string $PrivacyModel) Set Erasing method of privacy protection.
-- blur
+ * @method void setPrivacyModel(string $PrivacyModel) Set Privacy protection removal method.
+- Blur: blur detection
 - mosaic
- * @method array getPrivacyTargets() Obtain Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
-- face: human face.
+ * @method array getPrivacyTargets() Obtain Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
+- face: human face
 - plate: license plate.
- * @method void setPrivacyTargets(array $PrivacyTargets) Set Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
-- face: human face.
+ * @method void setPrivacyTargets(array $PrivacyTargets) Set Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
+- face: human face
 - plate: license plate.
  */
 class UpdateSmartErasePrivacyConfig extends AbstractModel
 {
     /**
-     * @var string Erasing method of privacy protection.
-- blur
+     * @var string Privacy protection removal method.
+- Blur: blur detection
 - mosaic
      */
     public $PrivacyModel;
 
     /**
-     * @var array Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
-- face: human face.
+     * @var array Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
+- face: human face
 - plate: license plate.
      */
     public $PrivacyTargets;
 
     /**
-     * @param string $PrivacyModel Erasing method of privacy protection.
-- blur
+     * @param string $PrivacyModel Privacy protection removal method.
+- Blur: blur detection
 - mosaic
-     * @param array $PrivacyTargets Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
-- face: human face.
+     * @param array $PrivacyTargets Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
+- face: human face
 - plate: license plate.
      */
     function __construct()

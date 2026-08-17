@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of intelligent cover generating task
+ * Intelligent Cover Task Control Parameters
  *
- * @method string getSwitch() Obtain Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
- * @method void setSwitch(string $Switch) Set Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
+ * @method string getSwitch() Obtain Intelligent Cover Task Switch. Valid values:
+<li>ON: Enable intelligent thumbnail generation.</li>
+<li>OFF: Disables the intelligent thumbnail generation task.</li>
+ * @method void setSwitch(string $Switch) Set Intelligent Cover Task Switch. Valid values:
+<li>ON: Enable intelligent thumbnail generation.</li>
+<li>OFF: Disables the intelligent thumbnail generation task.</li>
  */
 class CoverConfigureInfo extends AbstractModel
 {
     /**
-     * @var string Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
+     * @var string Intelligent Cover Task Switch. Valid values:
+<li>ON: Enable intelligent thumbnail generation.</li>
+<li>OFF: Disables the intelligent thumbnail generation task.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
+     * @param string $Switch Intelligent Cover Task Switch. Valid values:
+<li>ON: Enable intelligent thumbnail generation.</li>
+<li>OFF: Disables the intelligent thumbnail generation task.</li>
      */
     function __construct()
     {

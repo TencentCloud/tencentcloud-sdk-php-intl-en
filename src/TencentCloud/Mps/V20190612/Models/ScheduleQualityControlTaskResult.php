@@ -20,40 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Media quality inspection task result type.
  *
- * @method string getStatus() Obtain The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
- * @method void setStatus(string $Status) Set The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
- * @method string getErrCodeExt() Obtain The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://www.tencentcloud.com/document/product/1041/40249).
- * @method void setErrCodeExt(string $ErrCodeExt) Set The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://www.tencentcloud.com/document/product/1041/40249).
- * @method integer getErrCode() Obtain The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
- * @method void setErrCode(integer $ErrCode) Set The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
- * @method string getMessage() Obtain The error message.
- * @method void setMessage(string $Message) Set The error message.
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method integer getErrCode() Obtain Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
  * @method AiQualityControlTaskInput getInput() Obtain Media quality inspection task input.
  * @method void setInput(AiQualityControlTaskInput $Input) Set Media quality inspection task input.
- * @method QualityControlData getOutput() Obtain Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(QualityControlData $Output) Set Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method QualityControlData getOutput() Obtain 
+ * @method void setOutput(QualityControlData $Output) Set 
  * @method integer getProgress() Obtain Task execution progress.
  * @method void setProgress(integer $Progress) Set Task execution progress.
  */
 class ScheduleQualityControlTaskResult extends AbstractModel
 {
     /**
-     * @var string The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var string The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://www.tencentcloud.com/document/product/1041/40249).
+     * @var string Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
+     * @var integer Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      */
     public $ErrCode;
 
     /**
-     * @var string The error message.
+     * @var string Error message.
      */
     public $Message;
 
@@ -63,7 +63,7 @@ class ScheduleQualityControlTaskResult extends AbstractModel
     public $Input;
 
     /**
-     * @var QualityControlData Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var QualityControlData 
      */
     public $Output;
 
@@ -73,12 +73,12 @@ class ScheduleQualityControlTaskResult extends AbstractModel
     public $Progress;
 
     /**
-     * @param string $Status The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
-     * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://www.tencentcloud.com/document/product/1041/40249).
-     * @param integer $ErrCode The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
-     * @param string $Message The error message.
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+     * @param string $Message Error message.
      * @param AiQualityControlTaskInput $Input Media quality inspection task input.
-     * @param QualityControlData $Output Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QualityControlData $Output 
      * @param integer $Progress Task execution progress.
      */
     function __construct()

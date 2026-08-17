@@ -20,90 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceBackups request structure.
  *
- * @method integer getLimit() Obtain Number of backups returned per page. Default value: `20`. Maximum value: `100`.
- * @method void setLimit(integer $Limit) Set Number of backups returned per page. Default value: `20`. Maximum value: `100`.
- * @method integer getOffset() Obtain Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
- * @method void setOffset(integer $Offset) Set Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
- * @method string getInstanceId() Obtain ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
- * @method void setInstanceId(string $InstanceId) Set ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
- * @method string getBeginTime() Obtain Start time for a query, for example, in the format of 2017-02-08 16:46:34, with a maximum query span of 30 days. You can query the list of instances backed up within the [beginTime, endTime] period.
- * @method void setBeginTime(string $BeginTime) Set Start time for a query, for example, in the format of 2017-02-08 16:46:34, with a maximum query span of 30 days. You can query the list of instances backed up within the [beginTime, endTime] period.
- * @method string getEndTime() Obtain End time for a query, for example, in the format of 2017-02-08 19:09:26, with a maximum query span of 30 days. You can query the list of instances backed up within the [BeginTime, EndTime] period.
- * @method void setEndTime(string $EndTime) Set End time for a query, for example, in the format of 2017-02-08 19:09:26, with a maximum query span of 30 days. You can query the list of instances backed up within the [BeginTime, EndTime] period.
- * @method array getStatus() Obtain Backup task status:
-`1`: The backup is in the process.
-`2`: The backup is normal.
-`3`: The backup is being converted to an RDB file.
-`4`: Conversion to RDB has been completed.
-`-1`: The backup expired.
-`-2`: The backup has been deleted.
- * @method void setStatus(array $Status) Set Backup task status:
-`1`: The backup is in the process.
-`2`: The backup is normal.
-`3`: The backup is being converted to an RDB file.
-`4`: Conversion to RDB has been completed.
-`-1`: The backup expired.
-`-2`: The backup has been deleted.
- * @method string getInstanceName() Obtain Instance name, which can be fuzzily searched.
- * @method void setInstanceName(string $InstanceName) Set Instance name, which can be fuzzily searched.
+ * @method integer getLimit() Obtain <p>List size of output backup per page. Default size is 20, maximum value is 100.</p>
+ * @method void setLimit(integer $Limit) Set <p>List size of output backup per page. Default size is 20, maximum value is 100.</p>
+ * @method integer getOffset() Obtain <p>Pagination offset, integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
+ * @method void setOffset(integer $Offset) Set <p>Pagination offset, integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
+ * @method string getInstanceId() Obtain <p>Instance ID to be operated. You can get it from the InstanceId in the return value from the DescribeInstance API.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID to be operated. You can get it from the InstanceId in the return value from the DescribeInstance API.</p>
+ * @method string getBeginTime() Obtain <p>Start time, for example, in the format of 2017-02-08 16:46:34. Query the backup list of instances that started backup during the [beginTime, endTime] period, with a maximum query span of 30 days.</p>
+ * @method void setBeginTime(string $BeginTime) Set <p>Start time, for example, in the format of 2017-02-08 16:46:34. Query the backup list of instances that started backup during the [beginTime, endTime] period, with a maximum query span of 30 days.</p>
+ * @method string getEndTime() Obtain <p>End time, in the format of 2017-02-08 19:09:26. Query the backup list of instances that started backup within the period of [beginTime, endTime]. The maximum query time span is 30 days.</p>
+ * @method void setEndTime(string $EndTime) Set <p>End time, in the format of 2017-02-08 19:09:26. Query the backup list of instances that started backup within the period of [beginTime, endTime]. The maximum query time span is 30 days.</p>
+ * @method array getStatus() Obtain <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
+ * @method void setStatus(array $Status) Set <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
+ * @method string getInstanceName() Obtain <p>Instance name, supports name fuzzy search based on instance name.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name, supports name fuzzy search based on instance name.</p>
  */
 class DescribeInstanceBackupsRequest extends AbstractModel
 {
     /**
-     * @var integer Number of backups returned per page. Default value: `20`. Maximum value: `100`.
+     * @var integer <p>List size of output backup per page. Default size is 20, maximum value is 100.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+     * @var integer <p>Pagination offset, integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
      */
     public $Offset;
 
     /**
-     * @var string ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+     * @var string <p>Instance ID to be operated. You can get it from the InstanceId in the return value from the DescribeInstance API.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Start time for a query, for example, in the format of 2017-02-08 16:46:34, with a maximum query span of 30 days. You can query the list of instances backed up within the [beginTime, endTime] period.
+     * @var string <p>Start time, for example, in the format of 2017-02-08 16:46:34. Query the backup list of instances that started backup during the [beginTime, endTime] period, with a maximum query span of 30 days.</p>
      */
     public $BeginTime;
 
     /**
-     * @var string End time for a query, for example, in the format of 2017-02-08 19:09:26, with a maximum query span of 30 days. You can query the list of instances backed up within the [BeginTime, EndTime] period.
+     * @var string <p>End time, in the format of 2017-02-08 19:09:26. Query the backup list of instances that started backup within the period of [beginTime, endTime]. The maximum query time span is 30 days.</p>
      */
     public $EndTime;
 
     /**
-     * @var array Backup task status:
-`1`: The backup is in the process.
-`2`: The backup is normal.
-`3`: The backup is being converted to an RDB file.
-`4`: Conversion to RDB has been completed.
-`-1`: The backup expired.
-`-2`: The backup has been deleted.
+     * @var array <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
      */
     public $Status;
 
     /**
-     * @var string Instance name, which can be fuzzily searched.
+     * @var string <p>Instance name, supports name fuzzy search based on instance name.</p>
      */
     public $InstanceName;
 
     /**
-     * @param integer $Limit Number of backups returned per page. Default value: `20`. Maximum value: `100`.
-     * @param integer $Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
-     * @param string $InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
-     * @param string $BeginTime Start time for a query, for example, in the format of 2017-02-08 16:46:34, with a maximum query span of 30 days. You can query the list of instances backed up within the [beginTime, endTime] period.
-     * @param string $EndTime End time for a query, for example, in the format of 2017-02-08 19:09:26, with a maximum query span of 30 days. You can query the list of instances backed up within the [BeginTime, EndTime] period.
-     * @param array $Status Backup task status:
-`1`: The backup is in the process.
-`2`: The backup is normal.
-`3`: The backup is being converted to an RDB file.
-`4`: Conversion to RDB has been completed.
-`-1`: The backup expired.
-`-2`: The backup has been deleted.
-     * @param string $InstanceName Instance name, which can be fuzzily searched.
+     * @param integer $Limit <p>List size of output backup per page. Default size is 20, maximum value is 100.</p>
+     * @param integer $Offset <p>Pagination offset, integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
+     * @param string $InstanceId <p>Instance ID to be operated. You can get it from the InstanceId in the return value from the DescribeInstance API.</p>
+     * @param string $BeginTime <p>Start time, for example, in the format of 2017-02-08 16:46:34. Query the backup list of instances that started backup during the [beginTime, endTime] period, with a maximum query span of 30 days.</p>
+     * @param string $EndTime <p>End time, in the format of 2017-02-08 19:09:26. Query the backup list of instances that started backup within the period of [beginTime, endTime]. The maximum query time span is 30 days.</p>
+     * @param array $Status <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
+     * @param string $InstanceName <p>Instance name, supports name fuzzy search based on instance name.</p>
      */
     function __construct()
     {

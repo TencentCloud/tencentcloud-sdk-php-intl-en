@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Face recognition input.
  *
- * @method integer getDefinition() Obtain Face recognition template ID.
- * @method void setDefinition(integer $Definition) Set Face recognition template ID.
+ * @method integer getDefinition() Obtain Face Recognition template ID.
+ * @method void setDefinition(integer $Definition) Set Face Recognition template ID.
  */
 class AiRecognitionTaskFaceResultInput extends AbstractModel
 {
     /**
-     * @var integer Face recognition template ID.
+     * @var integer Face Recognition template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Face recognition template ID.
+     * @param integer $Definition Face Recognition template ID.
      */
     function __construct()
     {

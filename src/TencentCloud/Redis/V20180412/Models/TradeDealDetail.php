@@ -49,6 +49,7 @@ class TradeDealDetail extends AbstractModel
 {
     /**
      * @var string Order ID, which is used when a TencentCloud API is called.
+     * @deprecated
      */
     public $DealId;
 

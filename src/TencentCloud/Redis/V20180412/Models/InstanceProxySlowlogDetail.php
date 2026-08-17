@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Proxy slow query details
  *
- * @method integer getDuration() Obtain Slow query duration in milliseconds
- * @method void setDuration(integer $Duration) Set Slow query duration in milliseconds
- * @method string getClient() Obtain Client address
- * @method void setClient(string $Client) Set Client address
- * @method string getCommand() Obtain Slow query command
- * @method void setCommand(string $Command) Set Slow query command
- * @method string getCommandLine() Obtain Detailed command line information of slow query
- * @method void setCommandLine(string $CommandLine) Set Detailed command line information of slow query
- * @method string getExecuteTime() Obtain Execution time
- * @method void setExecuteTime(string $ExecuteTime) Set Execution time
- * @method integer getRecvClientEnd() Obtain Duration of receiving client requests (ms).
- * @method void setRecvClientEnd(integer $RecvClientEnd) Set Duration of receiving client requests (ms).
- * @method integer getSendClientEnd() Obtain Duration of sending client requests (ms).
- * @method void setSendClientEnd(integer $SendClientEnd) Set Duration of sending client requests (ms).
+ * @method integer getDuration() Obtain <p>Slow query duration. Measurement unit: ms.</p>
+ * @method void setDuration(integer $Duration) Set <p>Slow query duration. Measurement unit: ms.</p>
+ * @method string getClient() Obtain <p>Client address.</p>
+ * @method void setClient(string $Client) Set <p>Client address.</p>
+ * @method string getCommand() Obtain <p>Slow query command.</p>
+ * @method void setCommand(string $Command) Set <p>Slow query command.</p>
+ * @method string getCommandLine() Obtain <p>Slow query command line information.</p>
+ * @method void setCommandLine(string $CommandLine) Set <p>Slow query command line information.</p>
+ * @method string getExecuteTime() Obtain <p>Execution time.</p>
+ * @method void setExecuteTime(string $ExecuteTime) Set <p>Execution time.</p>
+ * @method integer getRecvClientEnd() Obtain <p>Duration of receiving client requests (ms)</p>
+ * @method void setRecvClientEnd(integer $RecvClientEnd) Set <p>Duration of receiving client requests (ms)</p>
+ * @method integer getSendClientEnd() Obtain <p>Duration of sending client requests (ms)</p>
+ * @method void setSendClientEnd(integer $SendClientEnd) Set <p>Duration of sending client requests (ms)</p>
+ * @method string getNode() Obtain <p>Proxy node ID.</p>
+ * @method void setNode(string $Node) Set <p>Proxy node ID.</p>
  */
 class InstanceProxySlowlogDetail extends AbstractModel
 {
     /**
-     * @var integer Slow query duration in milliseconds
+     * @var integer <p>Slow query duration. Measurement unit: ms.</p>
      */
     public $Duration;
 
     /**
-     * @var string Client address
+     * @var string <p>Client address.</p>
      */
     public $Client;
 
     /**
-     * @var string Slow query command
+     * @var string <p>Slow query command.</p>
      */
     public $Command;
 
     /**
-     * @var string Detailed command line information of slow query
+     * @var string <p>Slow query command line information.</p>
      */
     public $CommandLine;
 
     /**
-     * @var string Execution time
+     * @var string <p>Execution time.</p>
      */
     public $ExecuteTime;
 
     /**
-     * @var integer Duration of receiving client requests (ms).
+     * @var integer <p>Duration of receiving client requests (ms)</p>
      */
     public $RecvClientEnd;
 
     /**
-     * @var integer Duration of sending client requests (ms).
+     * @var integer <p>Duration of sending client requests (ms)</p>
      */
     public $SendClientEnd;
 
     /**
-     * @param integer $Duration Slow query duration in milliseconds
-     * @param string $Client Client address
-     * @param string $Command Slow query command
-     * @param string $CommandLine Detailed command line information of slow query
-     * @param string $ExecuteTime Execution time
-     * @param integer $RecvClientEnd Duration of receiving client requests (ms).
-     * @param integer $SendClientEnd Duration of sending client requests (ms).
+     * @var string <p>Proxy node ID.</p>
+     */
+    public $Node;
+
+    /**
+     * @param integer $Duration <p>Slow query duration. Measurement unit: ms.</p>
+     * @param string $Client <p>Client address.</p>
+     * @param string $Command <p>Slow query command.</p>
+     * @param string $CommandLine <p>Slow query command line information.</p>
+     * @param string $ExecuteTime <p>Execution time.</p>
+     * @param integer $RecvClientEnd <p>Duration of receiving client requests (ms)</p>
+     * @param integer $SendClientEnd <p>Duration of sending client requests (ms)</p>
+     * @param string $Node <p>Proxy node ID.</p>
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class InstanceProxySlowlogDetail extends AbstractModel
 
         if (array_key_exists("SendClientEnd",$param) and $param["SendClientEnd"] !== null) {
             $this->SendClientEnd = $param["SendClientEnd"];
+        }
+
+        if (array_key_exists("Node",$param) and $param["Node"] !== null) {
+            $this->Node = $param["Node"];
         }
     }
 }

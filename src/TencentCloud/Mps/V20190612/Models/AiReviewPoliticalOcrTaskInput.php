@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The input parameters for OCR-based detection of politically sensitive information.
+ * Content review Ocr text sensitivity task input parameter type
  *
- * @method integer getDefinition() Obtain The template ID.
- * @method void setDefinition(integer $Definition) Set The template ID.
+ * @method integer getDefinition() Obtain Template ID.
+ * @method void setDefinition(integer $Definition) Set Template ID.
  */
 class AiReviewPoliticalOcrTaskInput extends AbstractModel
 {
     /**
-     * @var integer The template ID.
+     * @var integer Template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition The template ID.
+     * @param integer $Definition Template ID.
      */
     function __construct()
     {

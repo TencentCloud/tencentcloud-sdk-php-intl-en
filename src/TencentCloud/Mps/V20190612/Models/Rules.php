@@ -20,66 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Task judgment conditions.
  *
- * @method string getId() Obtain Judgment condition ID.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setId(string $Id) Set Judgment condition ID.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getConditions() Obtain Judgment condition configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setConditions(array $Conditions) Set Judgment condition configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getId() Obtain 
+ * @method void setId(string $Id) Set 
+ * @method array getConditions() Obtain 
+ * @method void setConditions(array $Conditions) Set 
  * @method string getLinker() Obtain Logical operator for the list of conditions. Valid values:
 
- - &&: logical AND
- - ||: logical OR
+- &&: logical AND
+- ||: logical OR
  * @method void setLinker(string $Linker) Set Logical operator for the list of conditions. Valid values:
 
- - &&: logical AND
- - ||: logical OR
- * @method array getRearDriveIndexs() Obtain Indexes of the nodes to execute if the judgment conditions are met.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setRearDriveIndexs(array $RearDriveIndexs) Set Indexes of the nodes to execute if the judgment conditions are met.
-Note: This field may return null, indicating that no valid value can be obtained.
+- &&: logical AND
+- ||: logical OR
+ * @method array getRearDriveIndexs() Obtain 
+ * @method void setRearDriveIndexs(array $RearDriveIndexs) Set 
  */
 class Rules extends AbstractModel
 {
     /**
-     * @var string Judgment condition ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string 
      */
     public $Id;
 
     /**
-     * @var array Judgment condition configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array 
      */
     public $Conditions;
 
     /**
      * @var string Logical operator for the list of conditions. Valid values:
 
- - &&: logical AND
- - ||: logical OR
+- &&: logical AND
+- ||: logical OR
      */
     public $Linker;
 
     /**
-     * @var array Indexes of the nodes to execute if the judgment conditions are met.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array 
      */
     public $RearDriveIndexs;
 
     /**
-     * @param string $Id Judgment condition ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $Conditions Judgment condition configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Id 
+     * @param array $Conditions 
      * @param string $Linker Logical operator for the list of conditions. Valid values:
 
- - &&: logical AND
- - ||: logical OR
-     * @param array $RearDriveIndexs Indexes of the nodes to execute if the judgment conditions are met.
-Note: This field may return null, indicating that no valid value can be obtained.
+- &&: logical AND
+- ||: logical OR
+     * @param array $RearDriveIndexs 
      */
     function __construct()
     {

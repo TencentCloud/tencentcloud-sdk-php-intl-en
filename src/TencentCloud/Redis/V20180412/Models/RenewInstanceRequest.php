@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewInstance request structure.
  *
- * @method integer getPeriod() Obtain Validity period in months
- * @method void setPeriod(integer $Period) Set Validity period in months
- * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
- * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
- * @method string getModifyPayMode() Obtain The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
- * @method void setModifyPayMode(string $ModifyPayMode) Set The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+ * @method integer getPeriod() Obtain Purchase duration.
+-Unit: month.
+- Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.
+ * @method void setPeriod(integer $Period) Set Purchase duration.
+-Unit: month.
+- Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.
+ * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list) and copy it from the instance list.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list) and copy it from the instance list.
+ * @method string getModifyPayMode() Obtain Flag whether to change billing mode.
+-The billing mode of the current instance is pay-as-you-go. To convert to yearly/monthly subscription and renew, specify this parameter as <b>prepaid</b>.
+-The current instance billing mode is yearly/monthly subscription, so this parameter can be left unset.
+ * @method void setModifyPayMode(string $ModifyPayMode) Set Flag whether to change billing mode.
+-The billing mode of the current instance is pay-as-you-go. To convert to yearly/monthly subscription and renew, specify this parameter as <b>prepaid</b>.
+-The current instance billing mode is yearly/monthly subscription, so this parameter can be left unset.
  */
 class RenewInstanceRequest extends AbstractModel
 {
     /**
-     * @var integer Validity period in months
+     * @var integer Purchase duration.
+-Unit: month.
+- Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.
      */
     public $Period;
 
     /**
-     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @var string Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list) and copy it from the instance list.
      */
     public $InstanceId;
 
     /**
-     * @var string The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+     * @var string Flag whether to change billing mode.
+-The billing mode of the current instance is pay-as-you-go. To convert to yearly/monthly subscription and renew, specify this parameter as <b>prepaid</b>.
+-The current instance billing mode is yearly/monthly subscription, so this parameter can be left unset.
      */
     public $ModifyPayMode;
 
     /**
-     * @param integer $Period Validity period in months
-     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
-     * @param string $ModifyPayMode The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+     * @param integer $Period Purchase duration.
+-Unit: month.
+- Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.
+     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list) and copy it from the instance list.
+     * @param string $ModifyPayMode Flag whether to change billing mode.
+-The billing mode of the current instance is pay-as-you-go. To convert to yearly/monthly subscription and renew, specify this parameter as <b>prepaid</b>.
+-The current instance billing mode is yearly/monthly subscription, so this parameter can be left unset.
      */
     function __construct()
     {

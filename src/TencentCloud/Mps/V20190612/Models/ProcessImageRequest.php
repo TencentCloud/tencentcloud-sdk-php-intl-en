@@ -26,26 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage for image processing output files. If left blank, it inherits the storage location in InputInfo.
  * @method string getOutputDir() Obtain Output file path for image processing. If left blank, it is the directory of the file in InputInfo. If it is a directory, such as `/image/201907/`, it means inheriting the original filename and outputting to this directory.
  * @method void setOutputDir(string $OutputDir) Set Output file path for image processing. If left blank, it is the directory of the file in InputInfo. If it is a directory, such as `/image/201907/`, it means inheriting the original filename and outputting to this directory.
- * @method string getOutputPath() Obtain Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
-**Relative path example:**
-<Li>`Filename_{Variablename}.{format}`.</li>
-<Li>`Filename.{format}`.</li>
-
-**Absolute path example:**
-<Li>`/Path/Filename_{Variablename}.{format}`.</li>
-
-If not filled in, default relative path: `{inputName}.{format}`.
- * @method void setOutputPath(string $OutputPath) Set Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
-**Relative path example:**
-<Li>`Filename_{Variablename}.{format}`.</li>
-<Li>`Filename.{format}`.</li>
-
-**Absolute path example:**
-<Li>`/Path/Filename_{Variablename}.{format}`.</li>
-
-If not filled in, default relative path: `{inputName}.{format}`.
+ * @method string getOutputPath() Obtain Output path, which can be a relative or absolute path.
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
+<li>Filename.{format}</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
+If not filled in, default relative path: {inputName}.{format}.
+ * @method void setOutputPath(string $OutputPath) Set Output path, which can be a relative or absolute path.
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
+<li>Filename.{format}</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
+If not filled in, default relative path: {inputName}.{format}.
  * @method integer getDefinition() Obtain Unique identifier of the image processing template.
 The image template feature is in beta testing. If you want to use it, submit a ticket for application.
  * @method void setDefinition(integer $Definition) Set Unique identifier of the image processing template.
@@ -75,16 +71,14 @@ class ProcessImageRequest extends AbstractModel
     public $OutputDir;
 
     /**
-     * @var string Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
-**Relative path example:**
-<Li>`Filename_{Variablename}.{format}`.</li>
-<Li>`Filename.{format}`.</li>
-
-**Absolute path example:**
-<Li>`/Path/Filename_{Variablename}.{format}`.</li>
-
-If not filled in, default relative path: `{inputName}.{format}`.
+     * @var string Output path, which can be a relative or absolute path.
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
+<li>Filename.{format}</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
+If not filled in, default relative path: {inputName}.{format}.
      */
     public $OutputPath;
 
@@ -113,16 +107,14 @@ The image template feature is in beta testing. If you want to use it, submit a t
      * @param MediaInputInfo $InputInfo File input information for image processing.
      * @param TaskOutputStorage $OutputStorage Target storage for image processing output files. If left blank, it inherits the storage location in InputInfo.
      * @param string $OutputDir Output file path for image processing. If left blank, it is the directory of the file in InputInfo. If it is a directory, such as `/image/201907/`, it means inheriting the original filename and outputting to this directory.
-     * @param string $OutputPath Output path, which can be a relative or an absolute path.
-The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
-**Relative path example:**
-<Li>`Filename_{Variablename}.{format}`.</li>
-<Li>`Filename.{format}`.</li>
-
-**Absolute path example:**
-<Li>`/Path/Filename_{Variablename}.{format}`.</li>
-
-If not filled in, default relative path: `{inputName}.{format}`.
+     * @param string $OutputPath Output path, which can be a relative or absolute path.
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
+<li>Filename.{format}</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
+If not filled in, default relative path: {inputName}.{format}.
      * @param integer $Definition Unique identifier of the image processing template.
 The image template feature is in beta testing. If you want to use it, submit a ticket for application.
      * @param string $ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.

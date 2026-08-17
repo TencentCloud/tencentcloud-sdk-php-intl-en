@@ -18,30 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent translation result type.
+ * Intelligent translation result type
  *
- * @method string getStatus() Obtain Task status, including PROCESSING, SUCCESS, and FAIL.
- * @method void setStatus(string $Status) Set Task status, including PROCESSING, SUCCESS, and FAIL.
- * @method integer getErrCode() Obtain Error code. `0`: Task successful. Other values: Task failed.
- * @method void setErrCode(integer $ErrCode) Set Error code. `0`: Task successful. Other values: Task failed.
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method integer getErrCode() Obtain Error code. 0: Task successful. Other values: Task failed.
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0: Task successful. Other values: Task failed.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiAnalysisTaskDubbingInput getInput() Obtain Describes the task input for intelligent translation.
- * @method void setInput(AiAnalysisTaskDubbingInput $Input) Set Describes the task input for intelligent translation.
- * @method AiAnalysisTaskDubbingOutput getOutput() Obtain Describes the task output of intelligent translation.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setOutput(AiAnalysisTaskDubbingOutput $Output) Set Describes the task output of intelligent translation.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method AiAnalysisTaskDubbingInput getInput() Obtain Intelligent dubbing task input.
+ * @method void setInput(AiAnalysisTaskDubbingInput $Input) Set Intelligent dubbing task input.
+ * @method AiAnalysisTaskDubbingOutput getOutput() Obtain 
+ * @method void setOutput(AiAnalysisTaskDubbingOutput $Output) Set 
  */
 class AiAnalysisTaskDubbingResult extends AbstractModel
 {
     /**
-     * @var string Task status, including PROCESSING, SUCCESS, and FAIL.
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var integer Error code. `0`: Task successful. Other values: Task failed.
+     * @var integer Error code. 0: Task successful. Other values: Task failed.
      */
     public $ErrCode;
 
@@ -51,23 +49,21 @@ class AiAnalysisTaskDubbingResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiAnalysisTaskDubbingInput Describes the task input for intelligent translation.
+     * @var AiAnalysisTaskDubbingInput Intelligent dubbing task input.
      */
     public $Input;
 
     /**
-     * @var AiAnalysisTaskDubbingOutput Describes the task output of intelligent translation.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var AiAnalysisTaskDubbingOutput 
      */
     public $Output;
 
     /**
-     * @param string $Status Task status, including PROCESSING, SUCCESS, and FAIL.
-     * @param integer $ErrCode Error code. `0`: Task successful. Other values: Task failed.
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
      * @param string $Message Error message.
-     * @param AiAnalysisTaskDubbingInput $Input Describes the task input for intelligent translation.
-     * @param AiAnalysisTaskDubbingOutput $Output Describes the task output of intelligent translation.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param AiAnalysisTaskDubbingInput $Input Intelligent dubbing task input.
+     * @param AiAnalysisTaskDubbingOutput $Output 
      */
     function __construct()
     {

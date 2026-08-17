@@ -18,148 +18,148 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Face recognition result
+ * Face Recognition result
  *
- * @method string getId() Obtain Unique ID of a figure.
- * @method void setId(string $Id) Set Unique ID of a figure.
- * @method string getType() Obtain Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
- * @method void setType(string $Type) Set Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
- * @method string getName() Obtain Name of a figure.
- * @method void setName(string $Name) Set Name of a figure.
- * @method array getSegmentSet() Obtain Result set of segments that contain a figure.
- * @method void setSegmentSet(array $SegmentSet) Set Result set of segments that contain a figure.
- * @method string getGender() Obtain Gender of the person.
-<Li>Male: man.</li>.
-<Li>Female: specifies the woman.</li>.
- * @method void setGender(string $Gender) Set Gender of the person.
-<Li>Male: man.</li>.
-<Li>Female: specifies the woman.</li>.
- * @method string getBirthday() Obtain Date of birth.
- * @method void setBirthday(string $Birthday) Set Date of birth.
- * @method string getProfession() Obtain Occupation or position of a person.
- * @method void setProfession(string $Profession) Set Occupation or position of a person.
- * @method string getSchoolOfGraduation() Obtain Specifies the graduation institution of the person.
- * @method void setSchoolOfGraduation(string $SchoolOfGraduation) Set Specifies the graduation institution of the person.
- * @method string getAbstract() Obtain Description of the person.
- * @method void setAbstract(string $Abstract) Set Description of the person.
- * @method string getPlaceOfBirth() Obtain Specifies the birthplace or place of origin.
- * @method void setPlaceOfBirth(string $PlaceOfBirth) Set Specifies the birthplace or place of origin.
- * @method string getPersonType() Obtain Person type.
-<Li>Politician: specifies the official.</li>.
-<Li>Artist: specifies the artist.</li>.
- * @method void setPersonType(string $PersonType) Set Person type.
-<Li>Politician: specifies the official.</li>.
-<Li>Artist: specifies the artist.</li>.
- * @method string getRemark() Obtain Sensitivity labeling.
-<Li>Normal: specifies the scaling group is normal.</li>.
-<Li>Sensitive: specifies sensitivity.</li>.
- * @method void setRemark(string $Remark) Set Sensitivity labeling.
-<Li>Normal: specifies the scaling group is normal.</li>.
-<Li>Sensitive: specifies sensitivity.</li>.
- * @method string getUrl() Obtain Specifies the screenshot link.
- * @method void setUrl(string $Url) Set Specifies the screenshot link.
+ * @method string getId() Obtain Unique identification ID of the figure.
+ * @method void setId(string $Id) Set Unique identification ID of the figure.
+ * @method string getType() Obtain Figure library type, indicates which figure library the recognized figure comes from.
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
+ * @method void setType(string $Type) Set Figure library type, indicates which figure library the recognized figure comes from.
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
+ * @method string getName() Obtain Figure name.
+ * @method void setName(string $Name) Set Figure name.
+ * @method array getSegmentSet() Obtain Result set of segments that contain people.
+ * @method void setSegmentSet(array $SegmentSet) Set Result set of segments that contain people.
+ * @method string getGender() Obtain Gender
+<li>Male: man</li>
+<li>Female: woman.</li>
+ * @method void setGender(string $Gender) Set Gender
+<li>Male: man</li>
+<li>Female: woman.</li>
+ * @method string getBirthday() Obtain Date of birth of a person.
+ * @method void setBirthday(string $Birthday) Set Date of birth of a person.
+ * @method string getProfession() Obtain Occupation or position.
+ * @method void setProfession(string $Profession) Set Occupation or position.
+ * @method string getSchoolOfGraduation() Obtain Graduation institution of the person.
+ * @method void setSchoolOfGraduation(string $SchoolOfGraduation) Set Graduation institution of the person.
+ * @method string getAbstract() Obtain Figure description.
+ * @method void setAbstract(string $Abstract) Set Figure description.
+ * @method string getPlaceOfBirth() Obtain Birthplace or place of origin of a person.
+ * @method void setPlaceOfBirth(string $PlaceOfBirth) Set Birthplace or place of origin of a person.
+ * @method string getPersonType() Obtain Person type:
+<li>Politician: official.</li>
+<li>Artist: artist.</li>
+ * @method void setPersonType(string $PersonType) Set Person type:
+<li>Politician: official.</li>
+<li>Artist: artist.</li>
+ * @method string getRemark() Obtain Sensitivity labeling:
+<li>NORMAL: Normal;</li>
+<li>Sensitive: sensitive.</li>
+ * @method void setRemark(string $Remark) Set Sensitivity labeling:
+<li>NORMAL: Normal;</li>
+<li>Sensitive: sensitive.</li>
+ * @method string getUrl() Obtain Screenshot link
+ * @method void setUrl(string $Url) Set Screenshot link
  */
 class AiRecognitionTaskFaceResultItem extends AbstractModel
 {
     /**
-     * @var string Unique ID of a figure.
+     * @var string Unique identification ID of the figure.
      */
     public $Id;
 
     /**
-     * @var string Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
+     * @var string Figure library type, indicates which figure library the recognized figure comes from.
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
      */
     public $Type;
 
     /**
-     * @var string Name of a figure.
+     * @var string Figure name.
      */
     public $Name;
 
     /**
-     * @var array Result set of segments that contain a figure.
+     * @var array Result set of segments that contain people.
      */
     public $SegmentSet;
 
     /**
-     * @var string Gender of the person.
-<Li>Male: man.</li>.
-<Li>Female: specifies the woman.</li>.
+     * @var string Gender
+<li>Male: man</li>
+<li>Female: woman.</li>
      */
     public $Gender;
 
     /**
-     * @var string Date of birth.
+     * @var string Date of birth of a person.
      */
     public $Birthday;
 
     /**
-     * @var string Occupation or position of a person.
+     * @var string Occupation or position.
      */
     public $Profession;
 
     /**
-     * @var string Specifies the graduation institution of the person.
+     * @var string Graduation institution of the person.
      */
     public $SchoolOfGraduation;
 
     /**
-     * @var string Description of the person.
+     * @var string Figure description.
      */
     public $Abstract;
 
     /**
-     * @var string Specifies the birthplace or place of origin.
+     * @var string Birthplace or place of origin of a person.
      */
     public $PlaceOfBirth;
 
     /**
-     * @var string Person type.
-<Li>Politician: specifies the official.</li>.
-<Li>Artist: specifies the artist.</li>.
+     * @var string Person type:
+<li>Politician: official.</li>
+<li>Artist: artist.</li>
      */
     public $PersonType;
 
     /**
-     * @var string Sensitivity labeling.
-<Li>Normal: specifies the scaling group is normal.</li>.
-<Li>Sensitive: specifies sensitivity.</li>.
+     * @var string Sensitivity labeling:
+<li>NORMAL: Normal;</li>
+<li>Sensitive: sensitive.</li>
      */
     public $Remark;
 
     /**
-     * @var string Specifies the screenshot link.
+     * @var string Screenshot link
      */
     public $Url;
 
     /**
-     * @param string $Id Unique ID of a figure.
-     * @param string $Type Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
-     * @param string $Name Name of a figure.
-     * @param array $SegmentSet Result set of segments that contain a figure.
-     * @param string $Gender Gender of the person.
-<Li>Male: man.</li>.
-<Li>Female: specifies the woman.</li>.
-     * @param string $Birthday Date of birth.
-     * @param string $Profession Occupation or position of a person.
-     * @param string $SchoolOfGraduation Specifies the graduation institution of the person.
-     * @param string $Abstract Description of the person.
-     * @param string $PlaceOfBirth Specifies the birthplace or place of origin.
-     * @param string $PersonType Person type.
-<Li>Politician: specifies the official.</li>.
-<Li>Artist: specifies the artist.</li>.
-     * @param string $Remark Sensitivity labeling.
-<Li>Normal: specifies the scaling group is normal.</li>.
-<Li>Sensitive: specifies sensitivity.</li>.
-     * @param string $Url Specifies the screenshot link.
+     * @param string $Id Unique identification ID of the figure.
+     * @param string $Type Figure library type, indicates which figure library the recognized figure comes from.
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
+     * @param string $Name Figure name.
+     * @param array $SegmentSet Result set of segments that contain people.
+     * @param string $Gender Gender
+<li>Male: man</li>
+<li>Female: woman.</li>
+     * @param string $Birthday Date of birth of a person.
+     * @param string $Profession Occupation or position.
+     * @param string $SchoolOfGraduation Graduation institution of the person.
+     * @param string $Abstract Figure description.
+     * @param string $PlaceOfBirth Birthplace or place of origin of a person.
+     * @param string $PersonType Person type:
+<li>Politician: official.</li>
+<li>Artist: artist.</li>
+     * @param string $Remark Sensitivity labeling:
+<li>NORMAL: Normal;</li>
+<li>Sensitive: sensitive.</li>
+     * @param string $Url Screenshot link
      */
     function __construct()
     {

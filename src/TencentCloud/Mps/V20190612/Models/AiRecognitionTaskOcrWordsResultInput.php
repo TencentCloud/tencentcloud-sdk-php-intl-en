@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input for text keyword recognition.
+ * Text keyword recognition input.
  *
  * @method integer getDefinition() Obtain Text keyword recognition template ID.
  * @method void setDefinition(integer $Definition) Set Text keyword recognition template ID.

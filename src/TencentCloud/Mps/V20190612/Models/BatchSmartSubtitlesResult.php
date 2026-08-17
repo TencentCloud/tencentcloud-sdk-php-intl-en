@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Smart subtitle task result.
  *
- * @method SmartSubtitleTaskResultInput getInput() Obtain Input information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setInput(SmartSubtitleTaskResultInput $Input) Set Input information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getOutputs() Obtain Output information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setOutputs(array $Outputs) Set Output information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method SmartSubtitleTaskResultInput getInput() Obtain 
+ * @method void setInput(SmartSubtitleTaskResultInput $Input) Set 
+ * @method array getOutputs() Obtain 
+ * @method void setOutputs(array $Outputs) Set 
  */
 class BatchSmartSubtitlesResult extends AbstractModel
 {
     /**
-     * @var SmartSubtitleTaskResultInput Input information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var SmartSubtitleTaskResultInput 
      */
     public $Input;
 
     /**
-     * @var array Output information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array 
      */
     public $Outputs;
 
     /**
-     * @param SmartSubtitleTaskResultInput $Input Input information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $Outputs Output information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SmartSubtitleTaskResultInput $Input 
+     * @param array $Outputs 
      */
     function __construct()
     {

@@ -20,46 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Live stream recording result.
  *
- * @method integer getRecordOver() Obtain Whether recording ends.
-0: Recording does not end, returning a single file.
-1: Recording ends, returning all recording files.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRecordOver(integer $RecordOver) Set Whether recording ends.
-0: Recording does not end, returning a single file.
-1: Recording ends, returning all recording files.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getFileResults() Obtain File list.
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFileResults(array $FileResults) Set File list.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRecordOver() Obtain 
+ * @method void setRecordOver(integer $RecordOver) Set 
+ * @method array getFileResults() Obtain 
+ * @method void setFileResults(array $FileResults) Set 
  */
 class LiveStreamRecordResultInfo extends AbstractModel
 {
     /**
-     * @var integer Whether recording ends.
-0: Recording does not end, returning a single file.
-1: Recording ends, returning all recording files.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $RecordOver;
 
     /**
-     * @var array File list.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $FileResults;
 
     /**
-     * @param integer $RecordOver Whether recording ends.
-0: Recording does not end, returning a single file.
-1: Recording ends, returning all recording files.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $FileResults File list.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RecordOver 
+     * @param array $FileResults 
      */
     function __construct()
     {

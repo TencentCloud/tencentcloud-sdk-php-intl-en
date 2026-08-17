@@ -33,11 +33,14 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\CleanUpInstanceResponse CleanUpInstance(Models\CleanUpInstanceRequest $req) This API is used to immediately terminate instances in the recycle bin.
  * @method Models\ClearInstanceResponse ClearInstance(Models\ClearInstanceRequest $req) This API is used to clear instance data.
  * @method Models\CloneInstancesResponse CloneInstances(Models\CloneInstancesRequest $req) This API is used to clone a complete new instance based on the current instance backup file.
+ * @method Models\CloseLogResponse CloseLog(Models\CloseLogRequest $req) Disable logs
  * @method Models\CloseSSLResponse CloseSSL(Models\CloseSSLRequest $req) This API is used to disable SSL encryption and authentication.
+ * @method Models\CreateExportTaskResponse CreateExportTask(Models\CreateExportTaskRequest $req) This API is used to create a log download task.
  * @method Models\CreateInstanceAccountResponse CreateInstanceAccount(Models\CreateInstanceAccountRequest $req) This API is used to customize the account for accessing instances.
  * @method Models\CreateInstancesResponse CreateInstances(Models\CreateInstancesRequest $req) This API is used to create an TencentDB or Redis instance.
  * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) This API is used to create a parameter template.
  * @method Models\CreateReplicationGroupResponse CreateReplicationGroup(Models\CreateReplicationGroupRequest $req) This API is used to create a replication group.
+ * @method Models\DeleteExportTaskResponse DeleteExportTask(Models\DeleteExportTaskRequest $req) This API is used to delete log download tasks.
  * @method Models\DeleteInstanceAccountResponse DeleteInstanceAccount(Models\DeleteInstanceAccountRequest $req) This API is used to delete instance sub-accounts.
  * @method Models\DeleteParamTemplateResponse DeleteParamTemplate(Models\DeleteParamTemplateRequest $req) This API is used to delete a parameter template.
  * @method Models\DeleteReplicationInstanceResponse DeleteReplicationInstance(Models\DeleteReplicationInstanceRequest $req) This API is used to remove a replication group member. Note: This API is being deprecated. Use [RemoveReplicationInstance](https://intl.cloud.tencent.com/document/product/239/90099?from_cn_redirect=1) instead.
@@ -48,6 +51,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeBandwidthRangeResponse DescribeBandwidthRange(Models\DescribeBandwidthRangeRequest $req) This API is used to query the information of instance bandwidth.
  * @method Models\DescribeCommonDBInstancesResponse DescribeCommonDBInstances(Models\DescribeCommonDBInstancesRequest $req) This API is used to query the list of Redis instances. It is now deprecated.
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) This API is used to query the security group details of an instance.
+ * @method Models\DescribeExportTasksResponse DescribeExportTasks(Models\DescribeExportTasksRequest $req) This API is used to query download tasks for log files.
  * @method Models\DescribeGlobalReplicationAreaResponse DescribeGlobalReplicationArea(Models\DescribeGlobalReplicationAreaRequest $req) This API is used to query the information on regions supported for global replication.
  * @method Models\DescribeInstanceAccountResponse DescribeInstanceAccount(Models\DescribeInstanceAccountRequest $req) This API is used to view instance account information.
  * @method Models\DescribeInstanceBackupsResponse DescribeInstanceBackups(Models\DescribeInstanceBackupsRequest $req) This API is used to query the backup list of an instance.
@@ -72,6 +76,8 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeInstanceSupportFeatureResponse DescribeInstanceSupportFeature(Models\DescribeInstanceSupportFeatureRequest $req) This API (DescribeInstanceSupportFeature) is used to query the supported features of the instance.
  * @method Models\DescribeInstanceZoneInfoResponse DescribeInstanceZoneInfo(Models\DescribeInstanceZoneInfoRequest $req) This API is used to query the details of a Redis node.
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) This API is used to query the list of Redis instances.
+ * @method Models\DescribeLogInstanceListResponse DescribeLogInstanceList(Models\DescribeLogInstanceListRequest $req) This API is used to query log instances.
+ * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) This API is used to query logs.
  * @method Models\DescribeMaintenanceWindowResponse DescribeMaintenanceWindow(Models\DescribeMaintenanceWindowRequest $req) This API is used to query the instance maintenance window. Instances that require the version or architecture upgrade will undergo time switching during the maintenance window.
  * @method Models\DescribeParamTemplateInfoResponse DescribeParamTemplateInfo(Models\DescribeParamTemplateInfoRequest $req) This API is used to query the details of a parameter template.
  * @method Models\DescribeParamTemplatesResponse DescribeParamTemplates(Models\DescribeParamTemplatesRequest $req) This API is used to query the parameter template list.
@@ -113,10 +119,12 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ModifyInstanceParamsResponse ModifyInstanceParams(Models\ModifyInstanceParamsRequest $req) This API is used to modify the parameter configuration of a Redis instance.
  * @method Models\ModifyInstancePasswordResponse ModifyInstancePassword(Models\ModifyInstancePasswordRequest $req) This API is used to change the instance access password.
  * @method Models\ModifyInstanceReadOnlyResponse ModifyInstanceReadOnly(Models\ModifyInstanceReadOnlyRequest $req) This API is used to set the instance input mode.
+ * @method Models\ModifyLogResponse ModifyLog(Models\ModifyLogRequest $req) change log
  * @method Models\ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(Models\ModifyMaintenanceWindowRequest $req) This API is used to modify the time of instance maintenance window. Instances that require the version or architecture upgrade will undergo time switching during the maintenance window. Note: If the version or architecture upgrade has been initiated for an instance, its maintenance window cannot be modified.
  * @method Models\ModifyNetworkConfigResponse ModifyNetworkConfig(Models\ModifyNetworkConfigRequest $req) This API is used to modify the network configuration of an instance.
  * @method Models\ModifyParamTemplateResponse ModifyParamTemplate(Models\ModifyParamTemplateRequest $req) This API is used to modify the parameter template.
  * @method Models\ModifyReplicationGroupResponse ModifyReplicationGroup(Models\ModifyReplicationGroupRequest $req) This API is used to modify replication group information.
+ * @method Models\OpenLogResponse OpenLog(Models\OpenLogRequest $req) Enable logging
  * @method Models\OpenSSLResponse OpenSSL(Models\OpenSSLRequest $req) This API is used to enable SSL encryption and authentication.
  * @method Models\ReleaseWanAddressResponse ReleaseWanAddress(Models\ReleaseWanAddressRequest $req) This API is used to disable public network access.
  * @method Models\RemoveReplicationGroupResponse RemoveReplicationGroup(Models\RemoveReplicationGroupRequest $req) This API is used to delete a replication group.
@@ -132,7 +140,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\UpgradeInstanceVersionResponse UpgradeInstanceVersion(Models\UpgradeInstanceVersionRequest $req) This API is used to upgrade the current instance to a later version or upgrade the current standard architecture to a cluster architecture.
  * @method Models\UpgradeProxyVersionResponse UpgradeProxyVersion(Models\UpgradeProxyVersionRequest $req) This API is used to upgrade the instance Proxy version.
  * @method Models\UpgradeSmallVersionResponse UpgradeSmallVersion(Models\UpgradeSmallVersionRequest $req) This API is used to upgrade the minor version of an instance.
- * @method Models\UpgradeVersionToMultiAvailabilityZonesResponse UpgradeVersionToMultiAvailabilityZones(Models\UpgradeVersionToMultiAvailabilityZonesRequest $req) This API is used to upgrade an instance to support multiple AZs.
+ * @method Models\UpgradeVersionToMultiAvailabilityZonesResponse UpgradeVersionToMultiAvailabilityZones(Models\UpgradeVersionToMultiAvailabilityZonesRequest $req) This API is deprecated.
  */
 
 class RedisClient extends AbstractClient

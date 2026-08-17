@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveRecordTemplates request structure.
  *
- * @method array getDefinitions() Obtain Specifies the recording template unique identifier filter condition, with an array length limit of 100.
- * @method void setDefinitions(array $Definitions) Set Specifies the recording template unique identifier filter condition, with an array length limit of 100.
- * @method integer getOffset() Obtain Paging offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
+ * @method array getDefinitions() Obtain Filter condition for the unique identifier of the recording template. The array can contain up to 100 unique identifiers.
+ * @method void setDefinitions(array $Definitions) Set Filter condition for the unique identifier of the recording template. The array can contain up to 100 unique identifiers.
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
- * @method string getType() Obtain Indicates the template type filter condition. If left empty, all templates are returned. Valid values:
-* Preset: System preset template;
-* Custom
- * @method void setType(string $Type) Set Indicates the template type filter condition. If left empty, all templates are returned. Valid values:
-* Preset: System preset template;
-* Custom
- * @method string getName() Obtain Specifies the recording template identifier filter condition, with a length limit of 64 characters.
- * @method void setName(string $Name) Set Specifies the recording template identifier filter condition, with a length limit of 64 characters.
+ * @method string getType() Obtain Condition for filtering templates by type. If this field is not specified, all templates are returned. Available values:
+* Preset: system preset template
+* Custom: user-defined template.
+ * @method void setType(string $Type) Set Condition for filtering templates by type. If this field is not specified, all templates are returned. Available values:
+* Preset: system preset template
+* Custom: user-defined template.
+ * @method string getName() Obtain Filter condition for recording template identifiers, with a length limit of 64 characters.
+ * @method void setName(string $Name) Set Filter condition for recording template identifiers, with a length limit of 64 characters.
  */
 class DescribeLiveRecordTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Specifies the recording template unique identifier filter condition, with an array length limit of 100.
+     * @var array Filter condition for the unique identifier of the recording template. The array can contain up to 100 unique identifiers.
      */
     public $Definitions;
 
     /**
-     * @var integer Paging offset. Default value: 0.
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
@@ -53,25 +53,25 @@ class DescribeLiveRecordTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Indicates the template type filter condition. If left empty, all templates are returned. Valid values:
-* Preset: System preset template;
-* Custom
+     * @var string Condition for filtering templates by type. If this field is not specified, all templates are returned. Available values:
+* Preset: system preset template
+* Custom: user-defined template.
      */
     public $Type;
 
     /**
-     * @var string Specifies the recording template identifier filter condition, with a length limit of 64 characters.
+     * @var string Filter condition for recording template identifiers, with a length limit of 64 characters.
      */
     public $Name;
 
     /**
-     * @param array $Definitions Specifies the recording template unique identifier filter condition, with an array length limit of 100.
-     * @param integer $Offset Paging offset. Default value: 0.
+     * @param array $Definitions Filter condition for the unique identifier of the recording template. The array can contain up to 100 unique identifiers.
+     * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
-     * @param string $Type Indicates the template type filter condition. If left empty, all templates are returned. Valid values:
-* Preset: System preset template;
-* Custom
-     * @param string $Name Specifies the recording template identifier filter condition, with a length limit of 64 characters.
+     * @param string $Type Condition for filtering templates by type. If this field is not specified, all templates are returned. Available values:
+* Preset: system preset template
+* Custom: user-defined template.
+     * @param string $Name Filter condition for recording template identifiers, with a length limit of 64 characters.
      */
     function __construct()
     {

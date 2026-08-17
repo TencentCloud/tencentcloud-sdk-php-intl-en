@@ -18,44 +18,44 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Suspected segment identified during ASR-based text audit during content audit
+ * Content review Asr text audit suspected segment
  *
- * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment in seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment in seconds.
- * @method float getEndTimeOffset() Obtain End time offset of a suspected segment in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment in seconds.
- * @method float getConfidence() Obtain Confidence of a suspected segment.
- * @method void setConfidence(float $Confidence) Set Confidence of a suspected segment.
- * @method string getSuggestion() Obtain Suggestion for suspected segment audit. Valid values:
+ * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of a suspected segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment, in seconds.
+ * @method float getConfidence() Obtain Confidence degree of the suspected segment.
+ * @method void setConfidence(float $Confidence) Set Confidence degree of the suspected segment.
+ * @method string getSuggestion() Obtain Review result suggestion for suspected segment, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Suggestion for suspected segment audit. Valid values:
+ * @method void setSuggestion(string $Suggestion) Set Review result suggestion for suspected segment, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method array getKeywordSet() Obtain List of suspected keywords.
- * @method void setKeywordSet(array $KeywordSet) Set List of suspected keywords.
+ * @method array getKeywordSet() Obtain Suspicious keyword list.
+ * @method void setKeywordSet(array $KeywordSet) Set Suspicious keyword list.
  */
 class MediaContentReviewAsrTextSegmentItem extends AbstractModel
 {
     /**
-     * @var float Start time offset of a suspected segment in seconds.
+     * @var float Start time offset of a suspected segment, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of a suspected segment in seconds.
+     * @var float End time offset of a suspected segment, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @var float Confidence of a suspected segment.
+     * @var float Confidence degree of the suspected segment.
      */
     public $Confidence;
 
     /**
-     * @var string Suggestion for suspected segment audit. Valid values:
+     * @var string Review result suggestion for suspected segment, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -63,19 +63,19 @@ class MediaContentReviewAsrTextSegmentItem extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var array List of suspected keywords.
+     * @var array Suspicious keyword list.
      */
     public $KeywordSet;
 
     /**
-     * @param float $StartTimeOffset Start time offset of a suspected segment in seconds.
-     * @param float $EndTimeOffset End time offset of a suspected segment in seconds.
-     * @param float $Confidence Confidence of a suspected segment.
-     * @param string $Suggestion Suggestion for suspected segment audit. Valid values:
+     * @param float $StartTimeOffset Start time offset of a suspected segment, in seconds.
+     * @param float $EndTimeOffset End time offset of a suspected segment, in seconds.
+     * @param float $Confidence Confidence degree of the suspected segment.
+     * @param string $Suggestion Review result suggestion for suspected segment, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param array $KeywordSet List of suspected keywords.
+     * @param array $KeywordSet Suspicious keyword list.
      */
     function __construct()
     {

@@ -18,53 +18,51 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The live stream translation result.
+ * Live stream real-time translation result
  *
- * @method string getText() Obtain The text transcript.
- * @method void setText(string $Text) Set The text transcript.
- * @method float getStartPtsTime() Obtain The PTS (seconds) of the start of a segment.
- * @method void setStartPtsTime(float $StartPtsTime) Set The PTS (seconds) of the start of a segment.
- * @method float getEndPtsTime() Obtain The PTS (seconds) of the end of a segment.
- * @method void setEndPtsTime(float $EndPtsTime) Set The PTS (seconds) of the end of a segment.
- * @method float getConfidence() Obtain The confidence score for a segment. Value range: 0-100.
- * @method void setConfidence(float $Confidence) Set The confidence score for a segment. Value range: 0-100.
- * @method string getTrans() Obtain The translation.
- * @method void setTrans(string $Trans) Set The translation.
+ * @method string getText() Obtain Recognized text.
+ * @method void setText(string $Text) Set Recognized text.
+ * @method float getStartPtsTime() Obtain Start PTS time of a translated fragment, in seconds.
+ * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a translated fragment, in seconds.
+ * @method float getEndPtsTime() Obtain End PTS time of a translated segment, in seconds.
+ * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a translated segment, in seconds.
+ * @method float getConfidence() Obtain Confidence of a translated segment. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of a translated segment. Value range: 0-100.
+ * @method string getTrans() Obtain Translated text.
+ * @method void setTrans(string $Trans) Set Translated text.
  * @method string getStartTime() Obtain 
  * @method void setStartTime(string $StartTime) Set 
  * @method string getEndTime() Obtain 
  * @method void setEndTime(string $EndTime) Set 
  * @method boolean getSteadyState() Obtain 
  * @method void setSteadyState(boolean $SteadyState) Set 
- * @method string getUserId() Obtain User ID in the result of real-time translation via WebSocket and TRTC.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setUserId(string $UserId) Set User ID in the result of real-time translation via WebSocket and TRTC.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getUserId() Obtain 
+ * @method void setUserId(string $UserId) Set 
  */
 class LiveStreamTransTextRecognitionResult extends AbstractModel
 {
     /**
-     * @var string The text transcript.
+     * @var string Recognized text.
      */
     public $Text;
 
     /**
-     * @var float The PTS (seconds) of the start of a segment.
+     * @var float Start PTS time of a translated fragment, in seconds.
      */
     public $StartPtsTime;
 
     /**
-     * @var float The PTS (seconds) of the end of a segment.
+     * @var float End PTS time of a translated segment, in seconds.
      */
     public $EndPtsTime;
 
     /**
-     * @var float The confidence score for a segment. Value range: 0-100.
+     * @var float Confidence of a translated segment. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @var string The translation.
+     * @var string Translated text.
      */
     public $Trans;
 
@@ -84,22 +82,20 @@ class LiveStreamTransTextRecognitionResult extends AbstractModel
     public $SteadyState;
 
     /**
-     * @var string User ID in the result of real-time translation via WebSocket and TRTC.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string 
      */
     public $UserId;
 
     /**
-     * @param string $Text The text transcript.
-     * @param float $StartPtsTime The PTS (seconds) of the start of a segment.
-     * @param float $EndPtsTime The PTS (seconds) of the end of a segment.
-     * @param float $Confidence The confidence score for a segment. Value range: 0-100.
-     * @param string $Trans The translation.
+     * @param string $Text Recognized text.
+     * @param float $StartPtsTime Start PTS time of a translated fragment, in seconds.
+     * @param float $EndPtsTime End PTS time of a translated segment, in seconds.
+     * @param float $Confidence Confidence of a translated segment. Value range: 0-100.
+     * @param string $Trans Translated text.
      * @param string $StartTime 
      * @param string $EndTime 
      * @param boolean $SteadyState 
-     * @param string $UserId User ID in the result of real-time translation via WebSocket and TRTC.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $UserId 
      */
     function __construct()
     {

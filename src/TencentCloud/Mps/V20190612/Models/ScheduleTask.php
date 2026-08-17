@@ -18,88 +18,76 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of a scheme.
+ * Orchestration task info
  *
- * @method string getTaskId() Obtain The scheme ID.
- * @method void setTaskId(string $TaskId) Set The scheme ID.
- * @method string getStatus() Obtain The scheme status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
- * @method void setStatus(string $Status) Set The scheme status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
- * @method integer getErrCode() Obtain If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
- * @method void setErrCode(integer $ErrCode) Set If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
- * @method string getMessage() Obtain If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
- * @method void setMessage(string $Message) Set If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
- * @method MediaInputInfo getInputInfo() Obtain The information of the file processed.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInputInfo(MediaInputInfo $InputInfo) Set The information of the file processed.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method MediaMetaData getMetaData() Obtain The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMetaData(MediaMetaData $MetaData) Set The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getActivityResultSet() Obtain The output of the scheme.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setActivityResultSet(array $ActivityResultSet) Set The output of the scheme.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTaskId() Obtain Orchestration task ID.
+ * @method void setTaskId(string $TaskId) Set Orchestration task ID.
+ * @method string getStatus() Obtain Task flow status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+ * @method void setStatus(string $Status) Set Task flow status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+ * @method integer getErrCode() Obtain An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+ * @method void setErrCode(integer $ErrCode) Set An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+ * @method string getMessage() Obtain The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+ * @method void setMessage(string $Message) Set The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+ * @method MediaInputInfo getInputInfo() Obtain 
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set 
+ * @method MediaMetaData getMetaData() Obtain 
+ * @method void setMetaData(MediaMetaData $MetaData) Set 
+ * @method array getActivityResultSet() Obtain 
+ * @method void setActivityResultSet(array $ActivityResultSet) Set 
  */
 class ScheduleTask extends AbstractModel
 {
     /**
-     * @var string The scheme ID.
+     * @var string Orchestration task ID.
      */
     public $TaskId;
 
     /**
-     * @var string The scheme status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
+     * @var string Task flow status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public $Status;
 
     /**
-     * @var integer If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+     * @var integer An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
      */
     public $ErrCode;
 
     /**
-     * @var string If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+     * @var string The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
      */
     public $Message;
 
     /**
-     * @var MediaInputInfo The information of the file processed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaInputInfo 
      */
     public $InputInfo;
 
     /**
-     * @var MediaMetaData The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaMetaData 
      */
     public $MetaData;
 
     /**
-     * @var array The output of the scheme.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $ActivityResultSet;
 
     /**
-     * @param string $TaskId The scheme ID.
-     * @param string $Status The scheme status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
-     * @param integer $ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
-     * @param string $Message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-     * @param MediaInputInfo $InputInfo The information of the file processed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaMetaData $MetaData The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ActivityResultSet The output of the scheme.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TaskId Orchestration task ID.
+     * @param string $Status Task flow status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+     * @param integer $ErrCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+     * @param string $Message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+     * @param MediaInputInfo $InputInfo 
+     * @param MediaMetaData $MetaData 
+     * @param array $ActivityResultSet 
      */
     function __construct()
     {

@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Opening and closing segments recognition result.
  *
- * @method float getHeadTimeOffset() Obtain Opening segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHeadTimeOffset(float $HeadTimeOffset) Set Opening segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getTailTimeOffset() Obtain Closing segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTailTimeOffset(float $TailTimeOffset) Set Closing segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getHeadTimeOffset() Obtain 
+ * @method void setHeadTimeOffset(float $HeadTimeOffset) Set 
+ * @method float getTailTimeOffset() Obtain 
+ * @method void setTailTimeOffset(float $TailTimeOffset) Set 
  */
 class AiAnalysisTaskHeadTailOutput extends AbstractModel
 {
     /**
-     * @var float Opening segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $HeadTimeOffset;
 
     /**
-     * @var float Closing segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $TailTimeOffset;
 
     /**
-     * @param float $HeadTimeOffset Opening segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $TailTimeOffset Closing segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $HeadTimeOffset 
+     * @param float $TailTimeOffset 
      */
     function __construct()
     {

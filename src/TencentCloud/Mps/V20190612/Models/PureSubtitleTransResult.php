@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Translation result of pure subtitle files.
  *
- * @method string getStatus() Obtain Task status (the three valid values are as follows):
+ * @method string getStatus() Obtain Task status (the three valid values are as follows): 
 - PROCESSING
 - SUCCESS 
 - FAIL
- * @method void setStatus(string $Status) Set Task status (the three valid values are as follows):
+ * @method void setStatus(string $Status) Set Task status (the three valid values are as follows): 
 - PROCESSING
 - SUCCESS 
 - FAIL
@@ -36,17 +36,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message
  * @method SmartSubtitleTaskResultInput getInput() Obtain Translation task input information.
  * @method void setInput(SmartSubtitleTaskResultInput $Input) Set Translation task input information.
- * @method PureSubtitleTransResultOutput getOutput() Obtain Translation output result of pure subtitle files.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(PureSubtitleTransResultOutput $Output) Set Translation output result of pure subtitle files.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method PureSubtitleTransResultOutput getOutput() Obtain 
+ * @method void setOutput(PureSubtitleTransResultOutput $Output) Set 
  * @method integer getProgress() Obtain Task progress.
  * @method void setProgress(integer $Progress) Set Task progress.
  */
 class PureSubtitleTransResult extends AbstractModel
 {
     /**
-     * @var string Task status (the three valid values are as follows):
+     * @var string Task status (the three valid values are as follows): 
 - PROCESSING
 - SUCCESS 
 - FAIL
@@ -74,8 +72,7 @@ class PureSubtitleTransResult extends AbstractModel
     public $Input;
 
     /**
-     * @var PureSubtitleTransResultOutput Translation output result of pure subtitle files.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var PureSubtitleTransResultOutput 
      */
     public $Output;
 
@@ -85,7 +82,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Progress;
 
     /**
-     * @param string $Status Task status (the three valid values are as follows):
+     * @param string $Status Task status (the three valid values are as follows): 
 - PROCESSING
 - SUCCESS 
 - FAIL
@@ -93,8 +90,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message
      * @param SmartSubtitleTaskResultInput $Input Translation task input information.
-     * @param PureSubtitleTransResultOutput $Output Translation output result of pure subtitle files.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PureSubtitleTransResultOutput $Output 
      * @param integer $Progress Task progress.
      */
     function __construct()

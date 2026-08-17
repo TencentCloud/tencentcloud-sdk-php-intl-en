@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Object recognition result.
  *
- * @method string getStatus() Obtain Task status, including PROCESSING, SUCCESS, and FAIL.
- * @method void setStatus(string $Status) Set Task status, including PROCESSING, SUCCESS, and FAIL.
- * @method integer getErrCode() Obtain Error code. `0`: Task successful. Other values: Task failed.
- * @method void setErrCode(integer $ErrCode) Set Error code. `0`: Task successful. Other values: Task failed.
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method integer getErrCode() Obtain Error code. 0: Task successful. Other values: Task failed.
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0: Task successful. Other values: Task failed.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method AiRecognitionTaskObjectResultInput getInput() Obtain Object recognition task input.
  * @method void setInput(AiRecognitionTaskObjectResultInput $Input) Set Object recognition task input.
- * @method AiRecognitionTaskObjectResultOutput getOutput() Obtain Object recognition task output.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiRecognitionTaskObjectResultOutput $Output) Set Object recognition task output.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiRecognitionTaskObjectResultOutput getOutput() Obtain 
+ * @method void setOutput(AiRecognitionTaskObjectResultOutput $Output) Set 
  */
 class AiRecognitionTaskObjectResult extends AbstractModel
 {
     /**
-     * @var string Task status, including PROCESSING, SUCCESS, and FAIL.
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var integer Error code. `0`: Task successful. Other values: Task failed.
+     * @var integer Error code. 0: Task successful. Other values: Task failed.
      */
     public $ErrCode;
 
@@ -54,16 +54,16 @@ class AiRecognitionTaskObjectResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiRecognitionTaskObjectResultOutput Object recognition task output.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskObjectResultOutput 
      */
     public $Output;
 
     /**
-     * @param string $Status Task status, including PROCESSING, SUCCESS, and FAIL.
-     * @param integer $ErrCode Error code. `0`: Task successful. Other values: Task failed.
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
      * @param string $Message Error message.
      * @param AiRecognitionTaskObjectResultInput $Input Object recognition task input.
-     * @param AiRecognitionTaskObjectResultOutput $Output Object recognition task output.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiRecognitionTaskObjectResultOutput $Output 
      */
     function __construct()
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result information of intelligent tagging
+ * Intelligent tag result information
  *
  * @method string getTag() Obtain Tag name.
  * @method void setTag(string $Tag) Set Tag name.
- * @method float getConfidence() Obtain Confidence of tag between 0 and 100.
- * @method void setConfidence(float $Confidence) Set Confidence of tag between 0 and 100.
+ * @method float getConfidence() Obtain Reliability of the tag, with a value range from 0 to -100.
+ * @method void setConfidence(float $Confidence) Set Reliability of the tag, with a value range from 0 to -100.
  * @method string getSpecialInfo() Obtain Varies based on different types.
  * @method void setSpecialInfo(string $SpecialInfo) Set Varies based on different types.
  */
@@ -35,7 +35,7 @@ class MediaAiAnalysisTagItem extends AbstractModel
     public $Tag;
 
     /**
-     * @var float Confidence of tag between 0 and 100.
+     * @var float Reliability of the tag, with a value range from 0 to -100.
      */
     public $Confidence;
 
@@ -46,7 +46,7 @@ class MediaAiAnalysisTagItem extends AbstractModel
 
     /**
      * @param string $Tag Tag name.
-     * @param float $Confidence Confidence of tag between 0 and 100.
+     * @param float $Confidence Reliability of the tag, with a value range from 0 to -100.
      * @param string $SpecialInfo Varies based on different types.
      */
     function __construct()

@@ -20,50 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent landscape-to-portrait result.
  *
- * @method string getPath() Obtain Intelligent landscape-to-portrait video list.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPath(string $Path) Set Intelligent landscape-to-portrait video list.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method TaskOutputStorage getOutputStorage() Obtain Storage location of intelligent landscape-to-portrait videos.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of intelligent landscape-to-portrait videos.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getConfidence() Obtain Confidence.	
-	
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConfidence(float $Confidence) Set Confidence.	
-	
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPath() Obtain 
+ * @method void setPath(string $Path) Set 
+ * @method TaskOutputStorage getOutputStorage() Obtain 
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
+ * @method float getConfidence() Obtain 
+ * @method void setConfidence(float $Confidence) Set 
  */
 class AiAnalysisTaskHorizontalToVerticalOutput extends AbstractModel
 {
     /**
-     * @var string Intelligent landscape-to-portrait video list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Path;
 
     /**
-     * @var TaskOutputStorage Storage location of intelligent landscape-to-portrait videos.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TaskOutputStorage 
      */
     public $OutputStorage;
 
     /**
-     * @var float Confidence.	
-	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $Confidence;
 
     /**
-     * @param string $Path Intelligent landscape-to-portrait video list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskOutputStorage $OutputStorage Storage location of intelligent landscape-to-portrait videos.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $Confidence Confidence.	
-	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Path 
+     * @param TaskOutputStorage $OutputStorage 
+     * @param float $Confidence 
      */
     function __construct()
     {

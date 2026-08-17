@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVideoComprehensionAnalysisResult() Obtain Details of the video (audio) recognition output content.
  * @method void setVideoComprehensionAnalysisResult(string $VideoComprehensionAnalysisResult) Set Details of the video (audio) recognition output content.
- * @method string getVideoComprehensionExtInfo() Obtain Video (audio) extended information.
- * @method void setVideoComprehensionExtInfo(string $VideoComprehensionExtInfo) Set Video (audio) extended information.
- * @method array getVideoComprehensionResultList() Obtain Video shot understanding result.
- * @method void setVideoComprehensionResultList(array $VideoComprehensionResultList) Set Video shot understanding result.
+ * @method string getVideoComprehensionExtInfo() Obtain Video (Audio) understanding extended information
+ * @method void setVideoComprehensionExtInfo(string $VideoComprehensionExtInfo) Set Video (Audio) understanding extended information
+ * @method array getVideoComprehensionResultList() Obtain Video shot understanding result
+ * @method void setVideoComprehensionResultList(array $VideoComprehensionResultList) Set Video shot understanding result
  */
 class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel
 {
@@ -35,19 +35,19 @@ class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel
     public $VideoComprehensionAnalysisResult;
 
     /**
-     * @var string Video (audio) extended information.
+     * @var string Video (Audio) understanding extended information
      */
     public $VideoComprehensionExtInfo;
 
     /**
-     * @var array Video shot understanding result.
+     * @var array Video shot understanding result
      */
     public $VideoComprehensionResultList;
 
     /**
      * @param string $VideoComprehensionAnalysisResult Details of the video (audio) recognition output content.
-     * @param string $VideoComprehensionExtInfo Video (audio) extended information.
-     * @param array $VideoComprehensionResultList Video shot understanding result.
+     * @param string $VideoComprehensionExtInfo Video (Audio) understanding extended information
+     * @param array $VideoComprehensionResultList Video shot understanding result
      */
     function __construct()
     {

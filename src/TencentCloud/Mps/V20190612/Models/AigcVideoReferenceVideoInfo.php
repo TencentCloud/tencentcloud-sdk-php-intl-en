@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Reference video asset for AIGC video generation.
  *
- * @method string getVideoUrl() Obtain Reference video URL, which must be accessible from the public network.
+ * @method string getVideoUrl() Obtain Reference video url. Must be external network accessible.
 This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
 The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
 If the reference video is a video for editing, the first and last frames cannot be defined.
- * @method void setVideoUrl(string $VideoUrl) Set Reference video URL, which must be accessible from the public network.
+ * @method void setVideoUrl(string $VideoUrl) Set Reference video url. Must be external network accessible.
 This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
 The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
 If the reference video is a video for editing, the first and last frames cannot be defined.
@@ -36,7 +36,7 @@ If the reference video is a video for editing, the first and last frames cannot 
 class AigcVideoReferenceVideoInfo extends AbstractModel
 {
     /**
-     * @var string Reference video URL, which must be accessible from the public network.
+     * @var string Reference video url. Must be external network accessible.
 This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
 The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
 If the reference video is a video for editing, the first and last frames cannot be defined.
@@ -54,7 +54,7 @@ If the reference video is a video for editing, the first and last frames cannot 
     public $KeepOriginalSound;
 
     /**
-     * @param string $VideoUrl Reference video URL, which must be accessible from the public network.
+     * @param string $VideoUrl Reference video url. Must be external network accessible.
 This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
 The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
 If the reference video is a video for editing, the first and last frames cannot be defined.

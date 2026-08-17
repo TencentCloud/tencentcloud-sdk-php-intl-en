@@ -18,33 +18,29 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Smart erasure task result.
+ * Intelligent erasure task result
  *
- * @method string getStatus() Obtain Task status, including PROCESSING, SUCCESS, and FAIL.
- * @method void setStatus(string $Status) Set Task status, including PROCESSING, SUCCESS, and FAIL.
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method string getErrCodeExt() Obtain Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
  * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method SmartEraseTaskInput getInput() Obtain Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setInput(SmartEraseTaskInput $Input) Set Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method AiAnalysisTaskDelLogoOutput getOutput() Obtain Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setOutput(AiAnalysisTaskDelLogoOutput $Output) Set Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getProgress() Obtain Task progress.		
- * @method void setProgress(integer $Progress) Set Task progress.		
- * @method string getBeginProcessTime() Obtain Task execution start time in ISO datetime format.
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Task execution start time in ISO datetime format.
- * @method string getFinishTime() Obtain Task execution completion time in ISO datetime format.
- * @method void setFinishTime(string $FinishTime) Set Task execution completion time in ISO datetime format.
+ * @method SmartEraseTaskInput getInput() Obtain 
+ * @method void setInput(SmartEraseTaskInput $Input) Set 
+ * @method AiAnalysisTaskDelLogoOutput getOutput() Obtain 
+ * @method void setOutput(AiAnalysisTaskDelLogoOutput $Output) Set 
+ * @method integer getProgress() Obtain Task progress.	
+ * @method void setProgress(integer $Progress) Set Task progress.	
+ * @method string getBeginProcessTime() Obtain Starting time of task execution, in ISO date and time format.
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Starting time of task execution, in ISO date and time format.
+ * @method string getFinishTime() Obtain Task completion time, in ISO date and time format.
+ * @method void setFinishTime(string $FinishTime) Set Task completion time, in ISO date and time format.
  */
 class SmartEraseTaskResult extends AbstractModel
 {
     /**
-     * @var string Task status, including PROCESSING, SUCCESS, and FAIL.
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
@@ -59,43 +55,39 @@ class SmartEraseTaskResult extends AbstractModel
     public $Message;
 
     /**
-     * @var SmartEraseTaskInput Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var SmartEraseTaskInput 
      */
     public $Input;
 
     /**
-     * @var AiAnalysisTaskDelLogoOutput Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var AiAnalysisTaskDelLogoOutput 
      */
     public $Output;
 
     /**
-     * @var integer Task progress.		
+     * @var integer Task progress.	
      */
     public $Progress;
 
     /**
-     * @var string Task execution start time in ISO datetime format.
+     * @var string Starting time of task execution, in ISO date and time format.
      */
     public $BeginProcessTime;
 
     /**
-     * @var string Task execution completion time in ISO datetime format.
+     * @var string Task completion time, in ISO date and time format.
      */
     public $FinishTime;
 
     /**
-     * @param string $Status Task status, including PROCESSING, SUCCESS, and FAIL.
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param string $Message Error message.
-     * @param SmartEraseTaskInput $Input Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param AiAnalysisTaskDelLogoOutput $Output Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $Progress Task progress.		
-     * @param string $BeginProcessTime Task execution start time in ISO datetime format.
-     * @param string $FinishTime Task execution completion time in ISO datetime format.
+     * @param SmartEraseTaskInput $Input 
+     * @param AiAnalysisTaskDelLogoOutput $Output 
+     * @param integer $Progress Task progress.	
+     * @param string $BeginProcessTime Starting time of task execution, in ISO date and time format.
+     * @param string $FinishTime Task completion time, in ISO date and time format.
      */
     function __construct()
     {

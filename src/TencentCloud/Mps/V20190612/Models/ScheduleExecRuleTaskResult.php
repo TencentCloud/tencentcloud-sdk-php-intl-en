@@ -18,30 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of the media quality inspection task.
+ * Media quality inspection task result type.
  *
- * @method string getStatus() Obtain Task status, which can be PROCESSING, SUCCESS, or FAIL.
- * @method void setStatus(string $Status) Set Task status, which can be PROCESSING, SUCCESS, or FAIL.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates success, while other values indicate failure. For specific values, see the list of MPS error codes at https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81.
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates success, while other values indicate failure. For specific values, see the list of MPS error codes at https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81.
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method ExecRulesTask getInput() Obtain Input of the conditional judgment task.
  * @method void setInput(ExecRulesTask $Input) Set Input of the conditional judgment task.
- * @method ExecRuleTaskData getOutput() Obtain Output of the conditional judgment task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setOutput(ExecRuleTaskData $Output) Set Output of the conditional judgment task.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method ExecRuleTaskData getOutput() Obtain 
+ * @method void setOutput(ExecRuleTaskData $Output) Set 
  */
 class ScheduleExecRuleTaskResult extends AbstractModel
 {
     /**
-     * @var string Task status, which can be PROCESSING, SUCCESS, or FAIL.
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var string Error code. An empty string indicates success, while other values indicate failure. For specific values, see the list of MPS error codes at https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81.
+     * @var string Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public $ErrCodeExt;
 
@@ -56,18 +54,16 @@ class ScheduleExecRuleTaskResult extends AbstractModel
     public $Input;
 
     /**
-     * @var ExecRuleTaskData Output of the conditional judgment task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var ExecRuleTaskData 
      */
     public $Output;
 
     /**
-     * @param string $Status Task status, which can be PROCESSING, SUCCESS, or FAIL.
-     * @param string $ErrCodeExt Error code. An empty string indicates success, while other values indicate failure. For specific values, see the list of MPS error codes at https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81.
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param string $Message Error message.
      * @param ExecRulesTask $Input Input of the conditional judgment task.
-     * @param ExecRuleTaskData $Output Output of the conditional judgment task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ExecRuleTaskData $Output 
      */
     function __construct()
     {

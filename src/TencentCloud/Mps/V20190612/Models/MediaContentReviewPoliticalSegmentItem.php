@@ -18,192 +18,192 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information about the sensitive segments detected.
+ * Content review suspected segment
  *
- * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment in seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment in seconds.
- * @method float getEndTimeOffset() Obtain End time offset of a suspected segment in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment in seconds.
- * @method float getConfidence() Obtain The confidence score for the detected sensitive segments.
- * @method void setConfidence(float $Confidence) Set The confidence score for the detected sensitive segments.
- * @method string getSuggestion() Obtain The suggestion for handling the sensitive segments. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method void setSuggestion(string $Suggestion) Set The suggestion for handling the sensitive segments. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method string getName() Obtain The name of a sensitive person or banned icon.
- * @method void setName(string $Name) Set The name of a sensitive person or banned icon.
- * @method string getLabel() Obtain The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
+ * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of a suspected segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment, in seconds.
+ * @method float getConfidence() Obtain Suspected segment sensitivity score.
+ * @method void setConfidence(float $Confidence) Set Suspected segment sensitivity score.
+ * @method string getSuggestion() Obtain Suspected segment sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method void setSuggestion(string $Suggestion) Set Suspected segment sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method string getName() Obtain Sensitive person, violative icon name.
+ * @method void setName(string $Name) Set Sensitive person, violative icon name.
+ * @method string getLabel() Obtain Suspected segment sensitive result Tag. The mapping between the LabelSet parameter in the content moderation template [visual sensitive task control parameter](https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
+<li>violation_photo: violation icon.</li>
 politician:
-<li>nation_politician (state leader)</li>
-<li>province_politician (provincial officials)</li>
-<li>bureau_politician (bureau-level officials)</li>
-<li>county_politician (county-level officials)</li>
-<li>rural_politician (township-level officials)</li>
-<li>sensitive_politician (sensitive people)</li>
-<li>foreign_politician (state leaders of other countries)</li>
+<li>nation_politician: State leaders;</li>
+<li>province_politician: provincial and ministerial leaders;</li>
+<li>bureau_politician: bureau-level official;</li>
+<li>county_politician: county-level official;</li>
+<li>rural_politician: township-level official;</li>
+<li>sensitive_politician: sensitive person.</li>
+<li>foreign_politician: state leaders of other countries.</li>
 entertainment:
-<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
+<li>sensitive_entertainment: sensitive entertainment figure.</li>
 sport:
-<li>sensitive_sport (sensitive sports celebrities)</li>
+<li>Sensitive_sport: sensitive sports celebrity.</li>
 entrepreneur:
-<li>sensitive_entrepreneur</li>
+<li>sensitive_entrepreneur: sensitive entrepreneur.</li>
 scholar:
-<li>sensitive_scholar</li>
+<li>sensitive_scholar: Sensitive educational scholars.</li>
 celebrity:
-<li>sensitive_celebrity</li>
-<li>historical_celebrity (sensitive historical figures)</li>
+<li>sensitive_celebrity: sensitive celebrity.</li>
+<li>historical_celebrity: historical celebrity.</li>
 military:
-<li>sensitive_military (sensitive people in military)</li>
- * @method void setLabel(string $Label) Set The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
+<li>sensitive_military: sensitive military figure.</li>
+ * @method void setLabel(string $Label) Set Suspected segment sensitive result Tag. The mapping between the LabelSet parameter in the content moderation template [visual sensitive task control parameter](https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
+<li>violation_photo: violation icon.</li>
 politician:
-<li>nation_politician (state leader)</li>
-<li>province_politician (provincial officials)</li>
-<li>bureau_politician (bureau-level officials)</li>
-<li>county_politician (county-level officials)</li>
-<li>rural_politician (township-level officials)</li>
-<li>sensitive_politician (sensitive people)</li>
-<li>foreign_politician (state leaders of other countries)</li>
+<li>nation_politician: State leaders;</li>
+<li>province_politician: provincial and ministerial leaders;</li>
+<li>bureau_politician: bureau-level official;</li>
+<li>county_politician: county-level official;</li>
+<li>rural_politician: township-level official;</li>
+<li>sensitive_politician: sensitive person.</li>
+<li>foreign_politician: state leaders of other countries.</li>
 entertainment:
-<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
+<li>sensitive_entertainment: sensitive entertainment figure.</li>
 sport:
-<li>sensitive_sport (sensitive sports celebrities)</li>
+<li>Sensitive_sport: sensitive sports celebrity.</li>
 entrepreneur:
-<li>sensitive_entrepreneur</li>
+<li>sensitive_entrepreneur: sensitive entrepreneur.</li>
 scholar:
-<li>sensitive_scholar</li>
+<li>sensitive_scholar: Sensitive educational scholars.</li>
 celebrity:
-<li>sensitive_celebrity</li>
-<li>historical_celebrity (sensitive historical figures)</li>
+<li>sensitive_celebrity: sensitive celebrity.</li>
+<li>historical_celebrity: historical celebrity.</li>
 military:
-<li>sensitive_military (sensitive people in military)</li>
- * @method string getUrl() Obtain URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
- * @method void setUrl(string $Url) Set URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
- * @method array getAreaCoordSet() Obtain The pixel coordinates of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
- * @method void setAreaCoordSet(array $AreaCoordSet) Set The pixel coordinates of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
- * @method string getPicUrlExpireTime() Obtain Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+<li>sensitive_military: sensitive military figure.</li>
+ * @method string getUrl() Obtain Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
+ * @method void setUrl(string $Url) Set Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
+ * @method array getAreaCoordSet() Obtain Area coordinates of sensitive person and violation icon occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Area coordinates of sensitive person and violation icon occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+ * @method string getPicUrlExpireTime() Obtain Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  */
 class MediaContentReviewPoliticalSegmentItem extends AbstractModel
 {
     /**
-     * @var float Start time offset of a suspected segment in seconds.
+     * @var float Start time offset of a suspected segment, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of a suspected segment in seconds.
+     * @var float End time offset of a suspected segment, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @var float The confidence score for the detected sensitive segments.
+     * @var float Suspected segment sensitivity score.
      */
     public $Confidence;
 
     /**
-     * @var string The suggestion for handling the sensitive segments. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * @var string Suspected segment sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public $Suggestion;
 
     /**
-     * @var string The name of a sensitive person or banned icon.
+     * @var string Sensitive person, violative icon name.
      */
     public $Name;
 
     /**
-     * @var string The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
+     * @var string Suspected segment sensitive result Tag. The mapping between the LabelSet parameter in the content moderation template [visual sensitive task control parameter](https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
+<li>violation_photo: violation icon.</li>
 politician:
-<li>nation_politician (state leader)</li>
-<li>province_politician (provincial officials)</li>
-<li>bureau_politician (bureau-level officials)</li>
-<li>county_politician (county-level officials)</li>
-<li>rural_politician (township-level officials)</li>
-<li>sensitive_politician (sensitive people)</li>
-<li>foreign_politician (state leaders of other countries)</li>
+<li>nation_politician: State leaders;</li>
+<li>province_politician: provincial and ministerial leaders;</li>
+<li>bureau_politician: bureau-level official;</li>
+<li>county_politician: county-level official;</li>
+<li>rural_politician: township-level official;</li>
+<li>sensitive_politician: sensitive person.</li>
+<li>foreign_politician: state leaders of other countries.</li>
 entertainment:
-<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
+<li>sensitive_entertainment: sensitive entertainment figure.</li>
 sport:
-<li>sensitive_sport (sensitive sports celebrities)</li>
+<li>Sensitive_sport: sensitive sports celebrity.</li>
 entrepreneur:
-<li>sensitive_entrepreneur</li>
+<li>sensitive_entrepreneur: sensitive entrepreneur.</li>
 scholar:
-<li>sensitive_scholar</li>
+<li>sensitive_scholar: Sensitive educational scholars.</li>
 celebrity:
-<li>sensitive_celebrity</li>
-<li>historical_celebrity (sensitive historical figures)</li>
+<li>sensitive_celebrity: sensitive celebrity.</li>
+<li>historical_celebrity: historical celebrity.</li>
 military:
-<li>sensitive_military (sensitive people in military)</li>
+<li>sensitive_military: sensitive military figure.</li>
      */
     public $Label;
 
     /**
-     * @var string URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
+     * @var string Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
      */
     public $Url;
 
     /**
-     * @var array The pixel coordinates of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+     * @var array Area coordinates of sensitive person and violation icon occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
      */
     public $AreaCoordSet;
 
     /**
-     * @var string Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $PicUrlExpireTime;
 
     /**
-     * @param float $StartTimeOffset Start time offset of a suspected segment in seconds.
-     * @param float $EndTimeOffset End time offset of a suspected segment in seconds.
-     * @param float $Confidence The confidence score for the detected sensitive segments.
-     * @param string $Suggestion The suggestion for handling the sensitive segments. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-     * @param string $Name The name of a sensitive person or banned icon.
-     * @param string $Label The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
+     * @param float $StartTimeOffset Start time offset of a suspected segment, in seconds.
+     * @param float $EndTimeOffset End time offset of a suspected segment, in seconds.
+     * @param float $Confidence Suspected segment sensitivity score.
+     * @param string $Suggestion Suspected segment sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param string $Name Sensitive person, violative icon name.
+     * @param string $Label Suspected segment sensitive result Tag. The mapping between the LabelSet parameter in the content moderation template [visual sensitive task control parameter](https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
+<li>violation_photo: violation icon.</li>
 politician:
-<li>nation_politician (state leader)</li>
-<li>province_politician (provincial officials)</li>
-<li>bureau_politician (bureau-level officials)</li>
-<li>county_politician (county-level officials)</li>
-<li>rural_politician (township-level officials)</li>
-<li>sensitive_politician (sensitive people)</li>
-<li>foreign_politician (state leaders of other countries)</li>
+<li>nation_politician: State leaders;</li>
+<li>province_politician: provincial and ministerial leaders;</li>
+<li>bureau_politician: bureau-level official;</li>
+<li>county_politician: county-level official;</li>
+<li>rural_politician: township-level official;</li>
+<li>sensitive_politician: sensitive person.</li>
+<li>foreign_politician: state leaders of other countries.</li>
 entertainment:
-<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
+<li>sensitive_entertainment: sensitive entertainment figure.</li>
 sport:
-<li>sensitive_sport (sensitive sports celebrities)</li>
+<li>Sensitive_sport: sensitive sports celebrity.</li>
 entrepreneur:
-<li>sensitive_entrepreneur</li>
+<li>sensitive_entrepreneur: sensitive entrepreneur.</li>
 scholar:
-<li>sensitive_scholar</li>
+<li>sensitive_scholar: Sensitive educational scholars.</li>
 celebrity:
-<li>sensitive_celebrity</li>
-<li>historical_celebrity (sensitive historical figures)</li>
+<li>sensitive_celebrity: sensitive celebrity.</li>
+<li>historical_celebrity: historical celebrity.</li>
 military:
-<li>sensitive_military (sensitive people in military)</li>
-     * @param string $Url URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
-     * @param array $AreaCoordSet The pixel coordinates of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
-     * @param string $PicUrlExpireTime Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+<li>sensitive_military: sensitive military figure.</li>
+     * @param string $Url Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
+     * @param array $AreaCoordSet Area coordinates of sensitive person and violation icon occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+     * @param string $PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     function __construct()
     {

@@ -18,84 +18,84 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Smart erasure. coordinate configuration of the removal area.
-The region is defined by the coordinates of the upper left corner and the bottom-right corner.
-The coordinate origin is the top-left corner of the frame and the coordinate points can be specified using pixel values or percentage units.
-**For the Automatic Erasing Area:**
-When the unit is %, the coordinate range is [0,1].
-When unit is px, X value range is [0, video image width]. Y value range is [0, video image height].
-**For the Specified area erasing:**
-Specifies the coordinate range as [0,1) when the unit is %.
-When unit: px, X value range [0, video image width], Y value range [0, video image height].
+ * Smart erasing, coordinate configuration for the removal area.
+The region is determined by the coordinates of the upper left corner and the bottom-right corner.
+The coordinate origin is the top-left corner of the image. Coordinate points can be specified using pixel values or a percentage unit.
+For the auto erase area:
+When unit: %, coordinate range is [0,1].
+When the unit is px, the X range is [0, video image width], and the Y range is [0, video image height].
+For the designated erase area:
+When unit: %, coordinate range is [0,1).
+When the unit is px, the X value range is [0, video image width], and the Y value range is [0, video image height].
  *
- * @method float getLeftTopX() Obtain X-Axis coordinate of the upper left corner.
-When Unit is set to 1 (percentage Unit), 0.05 indicates the horizontal distance from the upper left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
- * @method void setLeftTopX(float $LeftTopX) Set X-Axis coordinate of the upper left corner.
-When Unit is set to 1 (percentage Unit), 0.05 indicates the horizontal distance from the upper left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
- * @method float getLeftTopY() Obtain Y-Axis coordinate of the upper left corner.
-When Unit is set to 1 (using percentage Unit), 0.1 indicates the vertical distance from the top-left corner of the area to the top-left corner of the entire frame is 10% of the screen height.
- * @method void setLeftTopY(float $LeftTopY) Set Y-Axis coordinate of the upper left corner.
-When Unit is set to 1 (using percentage Unit), 0.1 indicates the vertical distance from the top-left corner of the area to the top-left corner of the entire frame is 10% of the screen height.
- * @method float getRightBottomX() Obtain X-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (percentage Unit), 0.75 indicates the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
- * @method void setRightBottomX(float $RightBottomX) Set X-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (percentage Unit), 0.75 indicates the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
- * @method float getRightBottomY() Obtain Y-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (using percentage Unit), 0.9 indicates the vertical distance from the bottom-right corner of the area to the top-left corner of the entire frame is 90% of the screen height.
- * @method void setRightBottomY(float $RightBottomY) Set Y-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (using percentage Unit), 0.9 indicates the vertical distance from the bottom-right corner of the area to the top-left corner of the entire frame is 90% of the screen height.
- * @method integer getUnit() Obtain Specifies the coordinate unit.
--Percentage.
--2 pixel values.
- * @method void setUnit(integer $Unit) Set Specifies the coordinate unit.
--Percentage.
--2 pixel values.
+ * @method float getLeftTopX() Obtain X-axis coordinate of the upper left corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.05 indicates that the horizontal distance from the top-left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
+ * @method void setLeftTopX(float $LeftTopX) Set X-axis coordinate of the upper left corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.05 indicates that the horizontal distance from the top-left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
+ * @method float getLeftTopY() Obtain Y-axis coordinate of the upper left corner.
+For example, when Unit is set to 1, which means using the percentage unit, 0.1 indicates that the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the frame height.
+ * @method void setLeftTopY(float $LeftTopY) Set Y-axis coordinate of the upper left corner.
+For example, when Unit is set to 1, which means using the percentage unit, 0.1 indicates that the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the frame height.
+ * @method float getRightBottomX() Obtain X-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.75 indicates that the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
+ * @method void setRightBottomX(float $RightBottomX) Set X-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.75 indicates that the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
+ * @method float getRightBottomY() Obtain Y-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.9 indicates that the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the frame height.
+ * @method void setRightBottomY(float $RightBottomY) Set Y-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.9 indicates that the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the frame height.
+ * @method integer getUnit() Obtain Coordinate unit
+-Percentage
+- 2 pixel values
+ * @method void setUnit(integer $Unit) Set Coordinate unit
+-Percentage
+- 2 pixel values
  */
 class EraseArea extends AbstractModel
 {
     /**
-     * @var float X-Axis coordinate of the upper left corner.
-When Unit is set to 1 (percentage Unit), 0.05 indicates the horizontal distance from the upper left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
+     * @var float X-axis coordinate of the upper left corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.05 indicates that the horizontal distance from the top-left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
      */
     public $LeftTopX;
 
     /**
-     * @var float Y-Axis coordinate of the upper left corner.
-When Unit is set to 1 (using percentage Unit), 0.1 indicates the vertical distance from the top-left corner of the area to the top-left corner of the entire frame is 10% of the screen height.
+     * @var float Y-axis coordinate of the upper left corner.
+For example, when Unit is set to 1, which means using the percentage unit, 0.1 indicates that the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the frame height.
      */
     public $LeftTopY;
 
     /**
-     * @var float X-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (percentage Unit), 0.75 indicates the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
+     * @var float X-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.75 indicates that the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
      */
     public $RightBottomX;
 
     /**
-     * @var float Y-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (using percentage Unit), 0.9 indicates the vertical distance from the bottom-right corner of the area to the top-left corner of the entire frame is 90% of the screen height.
+     * @var float Y-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.9 indicates that the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the frame height.
      */
     public $RightBottomY;
 
     /**
-     * @var integer Specifies the coordinate unit.
--Percentage.
--2 pixel values.
+     * @var integer Coordinate unit
+-Percentage
+- 2 pixel values
      */
     public $Unit;
 
     /**
-     * @param float $LeftTopX X-Axis coordinate of the upper left corner.
-When Unit is set to 1 (percentage Unit), 0.05 indicates the horizontal distance from the upper left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
-     * @param float $LeftTopY Y-Axis coordinate of the upper left corner.
-When Unit is set to 1 (using percentage Unit), 0.1 indicates the vertical distance from the top-left corner of the area to the top-left corner of the entire frame is 10% of the screen height.
-     * @param float $RightBottomX X-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (percentage Unit), 0.75 indicates the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
-     * @param float $RightBottomY Y-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (using percentage Unit), 0.9 indicates the vertical distance from the bottom-right corner of the area to the top-left corner of the entire frame is 90% of the screen height.
-     * @param integer $Unit Specifies the coordinate unit.
--Percentage.
--2 pixel values.
+     * @param float $LeftTopX X-axis coordinate of the upper left corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.05 indicates that the horizontal distance from the top-left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
+     * @param float $LeftTopY Y-axis coordinate of the upper left corner.
+For example, when Unit is set to 1, which means using the percentage unit, 0.1 indicates that the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the frame height.
+     * @param float $RightBottomX X-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.75 indicates that the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
+     * @param float $RightBottomY Y-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.9 indicates that the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the frame height.
+     * @param integer $Unit Coordinate unit
+-Percentage
+- 2 pixel values
      */
     function __construct()
     {

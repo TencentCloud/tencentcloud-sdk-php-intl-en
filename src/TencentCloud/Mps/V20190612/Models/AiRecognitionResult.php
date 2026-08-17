@@ -20,158 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent recognition result.
  *
- * @method string getType() Obtain The task type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
- * @method void setType(string $Type) Set The task type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
- * @method AiRecognitionTaskFaceResult getFaceTask() Obtain Face recognition result, which is valid when `Type` is 
- `FaceRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFaceTask(AiRecognitionTaskFaceResult $FaceTask) Set Face recognition result, which is valid when `Type` is 
- `FaceRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiRecognitionTaskAsrWordsResult getAsrWordsTask() Obtain Speech keyword recognition result, which is valid when `Type` is
- `AsrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAsrWordsTask(AiRecognitionTaskAsrWordsResult $AsrWordsTask) Set Speech keyword recognition result, which is valid when `Type` is
- `AsrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiRecognitionTaskAsrFullTextResult getAsrFullTextTask() Obtain Full speech recognition result, which is valid when `Type` is
- `AsrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAsrFullTextTask(AiRecognitionTaskAsrFullTextResult $AsrFullTextTask) Set Full speech recognition result, which is valid when `Type` is
- `AsrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiRecognitionTaskOcrWordsResult getOcrWordsTask() Obtain Text keyword recognition result, which is valid when `Type` is
- `OcrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOcrWordsTask(AiRecognitionTaskOcrWordsResult $OcrWordsTask) Set Text keyword recognition result, which is valid when `Type` is
- `OcrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiRecognitionTaskOcrFullTextResult getOcrFullTextTask() Obtain Full text recognition result, which is valid when `Type` is
- `OcrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOcrFullTextTask(AiRecognitionTaskOcrFullTextResult $OcrFullTextTask) Set Full text recognition result, which is valid when `Type` is
- `OcrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiRecognitionTaskTransTextResult getTransTextTask() Obtain The translation result. This parameter is valid only if `Type` is
- `TransTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTransTextTask(AiRecognitionTaskTransTextResult $TransTextTask) Set The translation result. This parameter is valid only if `Type` is
- `TransTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiRecognitionTaskObjectResult getObjectTask() Obtain Object recognition result, which is valid when Type is
-
-ObjectRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setObjectTask(AiRecognitionTaskObjectResult $ObjectTask) Set Object recognition result, which is valid when Type is
-
-ObjectRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation</li>
+ * @method void setType(string $Type) Set Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation</li>
+ * @method AiRecognitionTaskFaceResult getFaceTask() Obtain 
+ * @method void setFaceTask(AiRecognitionTaskFaceResult $FaceTask) Set 
+ * @method AiRecognitionTaskAsrWordsResult getAsrWordsTask() Obtain 
+ * @method void setAsrWordsTask(AiRecognitionTaskAsrWordsResult $AsrWordsTask) Set 
+ * @method AiRecognitionTaskAsrFullTextResult getAsrFullTextTask() Obtain 
+ * @method void setAsrFullTextTask(AiRecognitionTaskAsrFullTextResult $AsrFullTextTask) Set 
+ * @method AiRecognitionTaskOcrWordsResult getOcrWordsTask() Obtain 
+ * @method void setOcrWordsTask(AiRecognitionTaskOcrWordsResult $OcrWordsTask) Set 
+ * @method AiRecognitionTaskOcrFullTextResult getOcrFullTextTask() Obtain 
+ * @method void setOcrFullTextTask(AiRecognitionTaskOcrFullTextResult $OcrFullTextTask) Set 
+ * @method AiRecognitionTaskTransTextResult getTransTextTask() Obtain 
+ * @method void setTransTextTask(AiRecognitionTaskTransTextResult $TransTextTask) Set 
+ * @method AiRecognitionTaskObjectResult getObjectTask() Obtain 
+ * @method void setObjectTask(AiRecognitionTaskObjectResult $ObjectTask) Set 
  */
 class AiRecognitionResult extends AbstractModel
 {
     /**
-     * @var string The task type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
+     * @var string Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation</li>
      */
     public $Type;
 
     /**
-     * @var AiRecognitionTaskFaceResult Face recognition result, which is valid when `Type` is 
- `FaceRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskFaceResult 
      */
     public $FaceTask;
 
     /**
-     * @var AiRecognitionTaskAsrWordsResult Speech keyword recognition result, which is valid when `Type` is
- `AsrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskAsrWordsResult 
      */
     public $AsrWordsTask;
 
     /**
-     * @var AiRecognitionTaskAsrFullTextResult Full speech recognition result, which is valid when `Type` is
- `AsrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskAsrFullTextResult 
      */
     public $AsrFullTextTask;
 
     /**
-     * @var AiRecognitionTaskOcrWordsResult Text keyword recognition result, which is valid when `Type` is
- `OcrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskOcrWordsResult 
      */
     public $OcrWordsTask;
 
     /**
-     * @var AiRecognitionTaskOcrFullTextResult Full text recognition result, which is valid when `Type` is
- `OcrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskOcrFullTextResult 
      */
     public $OcrFullTextTask;
 
     /**
-     * @var AiRecognitionTaskTransTextResult The translation result. This parameter is valid only if `Type` is
- `TransTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskTransTextResult 
      */
     public $TransTextTask;
 
     /**
-     * @var AiRecognitionTaskObjectResult Object recognition result, which is valid when Type is
-
-ObjectRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskObjectResult 
      */
     public $ObjectTask;
 
     /**
-     * @param string $Type The task type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
-     * @param AiRecognitionTaskFaceResult $FaceTask Face recognition result, which is valid when `Type` is 
- `FaceRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiRecognitionTaskAsrWordsResult $AsrWordsTask Speech keyword recognition result, which is valid when `Type` is
- `AsrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiRecognitionTaskAsrFullTextResult $AsrFullTextTask Full speech recognition result, which is valid when `Type` is
- `AsrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiRecognitionTaskOcrWordsResult $OcrWordsTask Text keyword recognition result, which is valid when `Type` is
- `OcrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiRecognitionTaskOcrFullTextResult $OcrFullTextTask Full text recognition result, which is valid when `Type` is
- `OcrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiRecognitionTaskTransTextResult $TransTextTask The translation result. This parameter is valid only if `Type` is
- `TransTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiRecognitionTaskObjectResult $ObjectTask Object recognition result, which is valid when Type is
-
-ObjectRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Type Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation</li>
+     * @param AiRecognitionTaskFaceResult $FaceTask 
+     * @param AiRecognitionTaskAsrWordsResult $AsrWordsTask 
+     * @param AiRecognitionTaskAsrFullTextResult $AsrFullTextTask 
+     * @param AiRecognitionTaskOcrWordsResult $OcrWordsTask 
+     * @param AiRecognitionTaskOcrFullTextResult $OcrFullTextTask 
+     * @param AiRecognitionTaskTransTextResult $TransTextTask 
+     * @param AiRecognitionTaskObjectResult $ObjectTask 
      */
     function __construct()
     {

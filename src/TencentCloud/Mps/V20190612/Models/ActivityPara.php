@@ -18,132 +18,116 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * A subtask of a scheme.
+ * Orchestrate atomic tasks
  *
- * @method TranscodeTaskInput getTranscodeTask() Obtain A transcoding task.
- * @method void setTranscodeTask(TranscodeTaskInput $TranscodeTask) Set A transcoding task.
- * @method AnimatedGraphicTaskInput getAnimatedGraphicTask() Obtain An animated screenshot generation task.
- * @method void setAnimatedGraphicTask(AnimatedGraphicTaskInput $AnimatedGraphicTask) Set An animated screenshot generation task.
- * @method SnapshotByTimeOffsetTaskInput getSnapshotByTimeOffsetTask() Obtain A time point screenshot task.
- * @method void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTaskInput $SnapshotByTimeOffsetTask) Set A time point screenshot task.
- * @method SampleSnapshotTaskInput getSampleSnapshotTask() Obtain A sampled screenshot task.
- * @method void setSampleSnapshotTask(SampleSnapshotTaskInput $SampleSnapshotTask) Set A sampled screenshot task.
- * @method ImageSpriteTaskInput getImageSpriteTask() Obtain An image sprite screenshot task.
- * @method void setImageSpriteTask(ImageSpriteTaskInput $ImageSpriteTask) Set An image sprite screenshot task.
- * @method AdaptiveDynamicStreamingTaskInput getAdaptiveDynamicStreamingTask() Obtain An adaptive bitrate streaming task.
- * @method void setAdaptiveDynamicStreamingTask(AdaptiveDynamicStreamingTaskInput $AdaptiveDynamicStreamingTask) Set An adaptive bitrate streaming task.
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain A content moderation task.
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set A content moderation task.
- * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain A content analysis task.
- * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set A content analysis task.
- * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain A content recognition task.
- * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set A content recognition task.
- * @method AiQualityControlTaskInput getQualityControlTask() Obtain Media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQualityControlTask(AiQualityControlTaskInput $QualityControlTask) Set Media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ExecRulesTask getExecRulesTask() Obtain Conditional judgment of the task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setExecRulesTask(ExecRulesTask $ExecRulesTask) Set Conditional judgment of the task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain Smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) Set Smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method SmartEraseTaskInput getSmartEraseTask() Obtain Smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSmartEraseTask(SmartEraseTaskInput $SmartEraseTask) Set Smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method TranscodeTaskInput getTranscodeTask() Obtain 
+ * @method void setTranscodeTask(TranscodeTaskInput $TranscodeTask) Set 
+ * @method AnimatedGraphicTaskInput getAnimatedGraphicTask() Obtain 
+ * @method void setAnimatedGraphicTask(AnimatedGraphicTaskInput $AnimatedGraphicTask) Set 
+ * @method SnapshotByTimeOffsetTaskInput getSnapshotByTimeOffsetTask() Obtain 
+ * @method void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTaskInput $SnapshotByTimeOffsetTask) Set 
+ * @method SampleSnapshotTaskInput getSampleSnapshotTask() Obtain 
+ * @method void setSampleSnapshotTask(SampleSnapshotTaskInput $SampleSnapshotTask) Set 
+ * @method ImageSpriteTaskInput getImageSpriteTask() Obtain 
+ * @method void setImageSpriteTask(ImageSpriteTaskInput $ImageSpriteTask) Set 
+ * @method AdaptiveDynamicStreamingTaskInput getAdaptiveDynamicStreamingTask() Obtain 
+ * @method void setAdaptiveDynamicStreamingTask(AdaptiveDynamicStreamingTaskInput $AdaptiveDynamicStreamingTask) Set 
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain 
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set 
+ * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain 
+ * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set 
+ * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain 
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set 
+ * @method AiQualityControlTaskInput getQualityControlTask() Obtain 
+ * @method void setQualityControlTask(AiQualityControlTaskInput $QualityControlTask) Set 
+ * @method ExecRulesTask getExecRulesTask() Obtain 
+ * @method void setExecRulesTask(ExecRulesTask $ExecRulesTask) Set 
+ * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain 
+ * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) Set 
+ * @method SmartEraseTaskInput getSmartEraseTask() Obtain 
+ * @method void setSmartEraseTask(SmartEraseTaskInput $SmartEraseTask) Set 
  */
 class ActivityPara extends AbstractModel
 {
     /**
-     * @var TranscodeTaskInput A transcoding task.
+     * @var TranscodeTaskInput 
      */
     public $TranscodeTask;
 
     /**
-     * @var AnimatedGraphicTaskInput An animated screenshot generation task.
+     * @var AnimatedGraphicTaskInput 
      */
     public $AnimatedGraphicTask;
 
     /**
-     * @var SnapshotByTimeOffsetTaskInput A time point screenshot task.
+     * @var SnapshotByTimeOffsetTaskInput 
      */
     public $SnapshotByTimeOffsetTask;
 
     /**
-     * @var SampleSnapshotTaskInput A sampled screenshot task.
+     * @var SampleSnapshotTaskInput 
      */
     public $SampleSnapshotTask;
 
     /**
-     * @var ImageSpriteTaskInput An image sprite screenshot task.
+     * @var ImageSpriteTaskInput 
      */
     public $ImageSpriteTask;
 
     /**
-     * @var AdaptiveDynamicStreamingTaskInput An adaptive bitrate streaming task.
+     * @var AdaptiveDynamicStreamingTaskInput 
      */
     public $AdaptiveDynamicStreamingTask;
 
     /**
-     * @var AiContentReviewTaskInput A content moderation task.
+     * @var AiContentReviewTaskInput 
      */
     public $AiContentReviewTask;
 
     /**
-     * @var AiAnalysisTaskInput A content analysis task.
+     * @var AiAnalysisTaskInput 
      */
     public $AiAnalysisTask;
 
     /**
-     * @var AiRecognitionTaskInput A content recognition task.
+     * @var AiRecognitionTaskInput 
      */
     public $AiRecognitionTask;
 
     /**
-     * @var AiQualityControlTaskInput Media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiQualityControlTaskInput 
      */
     public $QualityControlTask;
 
     /**
-     * @var ExecRulesTask Conditional judgment of the task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var ExecRulesTask 
      */
     public $ExecRulesTask;
 
     /**
-     * @var SmartSubtitlesTaskInput Smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var SmartSubtitlesTaskInput 
      */
     public $SmartSubtitlesTask;
 
     /**
-     * @var SmartEraseTaskInput Smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var SmartEraseTaskInput 
      */
     public $SmartEraseTask;
 
     /**
-     * @param TranscodeTaskInput $TranscodeTask A transcoding task.
-     * @param AnimatedGraphicTaskInput $AnimatedGraphicTask An animated screenshot generation task.
-     * @param SnapshotByTimeOffsetTaskInput $SnapshotByTimeOffsetTask A time point screenshot task.
-     * @param SampleSnapshotTaskInput $SampleSnapshotTask A sampled screenshot task.
-     * @param ImageSpriteTaskInput $ImageSpriteTask An image sprite screenshot task.
-     * @param AdaptiveDynamicStreamingTaskInput $AdaptiveDynamicStreamingTask An adaptive bitrate streaming task.
-     * @param AiContentReviewTaskInput $AiContentReviewTask A content moderation task.
-     * @param AiAnalysisTaskInput $AiAnalysisTask A content analysis task.
-     * @param AiRecognitionTaskInput $AiRecognitionTask A content recognition task.
-     * @param AiQualityControlTaskInput $QualityControlTask Media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExecRulesTask $ExecRulesTask Conditional judgment of the task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SmartSubtitlesTaskInput $SmartSubtitlesTask Smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SmartEraseTaskInput $SmartEraseTask Smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param TranscodeTaskInput $TranscodeTask 
+     * @param AnimatedGraphicTaskInput $AnimatedGraphicTask 
+     * @param SnapshotByTimeOffsetTaskInput $SnapshotByTimeOffsetTask 
+     * @param SampleSnapshotTaskInput $SampleSnapshotTask 
+     * @param ImageSpriteTaskInput $ImageSpriteTask 
+     * @param AdaptiveDynamicStreamingTaskInput $AdaptiveDynamicStreamingTask 
+     * @param AiContentReviewTaskInput $AiContentReviewTask 
+     * @param AiAnalysisTaskInput $AiAnalysisTask 
+     * @param AiRecognitionTaskInput $AiRecognitionTask 
+     * @param AiQualityControlTaskInput $QualityControlTask 
+     * @param ExecRulesTask $ExecRulesTask 
+     * @param SmartSubtitlesTaskInput $SmartSubtitlesTask 
+     * @param SmartEraseTaskInput $SmartEraseTask 
      */
     function __construct()
     {

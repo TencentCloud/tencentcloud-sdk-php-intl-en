@@ -18,58 +18,58 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The result of detecting sensitive information in live streaming videos.
+ * Live stream AI content review image sensitive result
  *
- * @method float getStartPtsTime() Obtain Start PTS time of a suspected segment in seconds.
- * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a suspected segment in seconds.
- * @method float getEndPtsTime() Obtain End PTS time of a suspected segment in seconds.
- * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a suspected segment in seconds.
- * @method float getConfidence() Obtain The confidence score for the detected sensitive segments.
- * @method void setConfidence(float $Confidence) Set The confidence score for the detected sensitive segments.
- * @method string getSuggestion() Obtain Suggestion for porn information detection of a suspected segment. Valid values:
+ * @method float getStartPtsTime() Obtain Start PTS time of a suspected segment, in seconds.
+ * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a suspected segment, in seconds.
+ * @method float getEndPtsTime() Obtain End PTS time of a suspected segment, in seconds.
+ * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a suspected segment, in seconds.
+ * @method float getConfidence() Obtain Sensitive score of the suspected segment.
+ * @method void setConfidence(float $Confidence) Set Sensitive score of the suspected segment.
+ * @method string getSuggestion() Obtain Result suggestion for suspected segment porn detection, permissible range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method void setSuggestion(string $Suggestion) Set Suggestion for porn information detection of a suspected segment. Valid values:
+ * @method void setSuggestion(string $Suggestion) Set Result suggestion for suspected segment porn detection, permissible range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method string getLabel() Obtain The labels for the detected sensitive information. Valid values:
-<li>politician</li>
-<li>violation_photo (banned icons)</li>
- * @method void setLabel(string $Label) Set The labels for the detected sensitive information. Valid values:
-<li>politician</li>
-<li>violation_photo (banned icons)</li>
- * @method string getName() Obtain The name of a sensitive person or banned icon.
- * @method void setName(string $Name) Set The name of a sensitive person or banned icon.
- * @method array getAreaCoordSet() Obtain The pixel coordinates of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
- * @method void setAreaCoordSet(array $AreaCoordSet) Set The pixel coordinates of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
- * @method string getUrl() Obtain URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
- * @method void setUrl(string $Url) Set URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
- * @method string getPicUrlExpireTime() Obtain Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method string getLabel() Obtain Video sensitive result tag, value ranges from...to...
+<li>politician: sensitive person.</li>
+<li>violation_photo: violation icon.</li>
+ * @method void setLabel(string $Label) Set Video sensitive result tag, value ranges from...to...
+<li>politician: sensitive person.</li>
+<li>violation_photo: violation icon.</li>
+ * @method string getName() Obtain Sensitive person, violative icon name.
+ * @method void setName(string $Name) Set Sensitive person, violative icon name.
+ * @method array getAreaCoordSet() Obtain Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
+ * @method string getUrl() Obtain Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
+ * @method void setUrl(string $Url) Set Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
+ * @method string getPicUrlExpireTime() Obtain Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  */
 class LiveStreamAiReviewImagePoliticalResult extends AbstractModel
 {
     /**
-     * @var float Start PTS time of a suspected segment in seconds.
+     * @var float Start PTS time of a suspected segment, in seconds.
      */
     public $StartPtsTime;
 
     /**
-     * @var float End PTS time of a suspected segment in seconds.
+     * @var float End PTS time of a suspected segment, in seconds.
      */
     public $EndPtsTime;
 
     /**
-     * @var float The confidence score for the detected sensitive segments.
+     * @var float Sensitive score of the suspected segment.
      */
     public $Confidence;
 
     /**
-     * @var string Suggestion for porn information detection of a suspected segment. Valid values:
+     * @var string Result suggestion for suspected segment porn detection, permissible range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -77,49 +77,49 @@ class LiveStreamAiReviewImagePoliticalResult extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string The labels for the detected sensitive information. Valid values:
-<li>politician</li>
-<li>violation_photo (banned icons)</li>
+     * @var string Video sensitive result tag, value ranges from...to...
+<li>politician: sensitive person.</li>
+<li>violation_photo: violation icon.</li>
      */
     public $Label;
 
     /**
-     * @var string The name of a sensitive person or banned icon.
+     * @var string Sensitive person, violative icon name.
      */
     public $Name;
 
     /**
-     * @var array The pixel coordinates of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+     * @var array Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
      */
     public $AreaCoordSet;
 
     /**
-     * @var string URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
+     * @var string Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
      */
     public $Url;
 
     /**
-     * @var string Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $PicUrlExpireTime;
 
     /**
-     * @param float $StartPtsTime Start PTS time of a suspected segment in seconds.
-     * @param float $EndPtsTime End PTS time of a suspected segment in seconds.
-     * @param float $Confidence The confidence score for the detected sensitive segments.
-     * @param string $Suggestion Suggestion for porn information detection of a suspected segment. Valid values:
+     * @param float $StartPtsTime Start PTS time of a suspected segment, in seconds.
+     * @param float $EndPtsTime End PTS time of a suspected segment, in seconds.
+     * @param float $Confidence Sensitive score of the suspected segment.
+     * @param string $Suggestion Result suggestion for suspected segment porn detection, permissible range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param string $Label The labels for the detected sensitive information. Valid values:
-<li>politician</li>
-<li>violation_photo (banned icons)</li>
-     * @param string $Name The name of a sensitive person or banned icon.
-     * @param array $AreaCoordSet The pixel coordinates of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
-     * @param string $Url URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
-     * @param string $PicUrlExpireTime Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @param string $Label Video sensitive result tag, value ranges from...to...
+<li>politician: sensitive person.</li>
+<li>violation_photo: violation icon.</li>
+     * @param string $Name Sensitive person, violative icon name.
+     * @param array $AreaCoordSet Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
+     * @param string $Url Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
+     * @param string $PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video deduplication result information.
+ * Video deduplication result info
  *
- * @method string getPath() Obtain Specifies the file path for intelligent video deduplication.
- * @method void setPath(string $Path) Set Specifies the file path for intelligent video deduplication.
- * @method TaskOutputStorage getOutputStorage() Obtain Specifies the storage location for intelligent video deduplication.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Specifies the storage location for intelligent video deduplication.
+ * @method string getPath() Obtain File path for intelligent video deduplication
+ * @method void setPath(string $Path) Set File path for intelligent video deduplication
+ * @method TaskOutputStorage getOutputStorage() Obtain Storage location of intelligent video deduplication
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of intelligent video deduplication
  */
 class AiAnalysisTaskVideoRemakeOutput extends AbstractModel
 {
     /**
-     * @var string Specifies the file path for intelligent video deduplication.
+     * @var string File path for intelligent video deduplication
      */
     public $Path;
 
     /**
-     * @var TaskOutputStorage Specifies the storage location for intelligent video deduplication.
+     * @var TaskOutputStorage Storage location of intelligent video deduplication
      */
     public $OutputStorage;
 
     /**
-     * @param string $Path Specifies the file path for intelligent video deduplication.
-     * @param TaskOutputStorage $OutputStorage Specifies the storage location for intelligent video deduplication.
+     * @param string $Path File path for intelligent video deduplication
+     * @param TaskOutputStorage $OutputStorage Storage location of intelligent video deduplication
      */
     function __construct()
     {

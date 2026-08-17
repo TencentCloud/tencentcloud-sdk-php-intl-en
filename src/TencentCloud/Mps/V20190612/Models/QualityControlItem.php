@@ -18,52 +18,44 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of a checked segment in quality control.
+ * Quality inspection result item
  *
- * @method integer getConfidence() Obtain The confidence score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setConfidence(integer $Confidence) Set The confidence score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getStartTimeOffset() Obtain The start timestamp (second) of the segment.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set The start timestamp (second) of the segment.
- * @method float getEndTimeOffset() Obtain The end timestamp (second) of the segment.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set The end timestamp (second) of the segment.
- * @method array getAreaCoordSet() Obtain The coordinates (px) of the top left and bottom right corner.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAreaCoordSet(array $AreaCoordSet) Set The coordinates (px) of the top left and bottom right corner.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getConfidence() Obtain 
+ * @method void setConfidence(integer $Confidence) Set 
+ * @method float getStartTimeOffset() Obtain Start time of occurrence, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time of occurrence, in seconds.
+ * @method float getEndTimeOffset() Obtain End timestamp of the occurrence, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End timestamp of the occurrence, in seconds.
+ * @method array getAreaCoordSet() Obtain 
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set 
  */
 class QualityControlItem extends AbstractModel
 {
     /**
-     * @var integer The confidence score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Confidence;
 
     /**
-     * @var float The start timestamp (second) of the segment.
+     * @var float Start time of occurrence, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float The end timestamp (second) of the segment.
+     * @var float End timestamp of the occurrence, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @var array The coordinates (px) of the top left and bottom right corner.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $AreaCoordSet;
 
     /**
-     * @param integer $Confidence The confidence score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $StartTimeOffset The start timestamp (second) of the segment.
-     * @param float $EndTimeOffset The end timestamp (second) of the segment.
-     * @param array $AreaCoordSet The coordinates (px) of the top left and bottom right corner.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Confidence 
+     * @param float $StartTimeOffset Start time of occurrence, in seconds.
+     * @param float $EndTimeOffset End timestamp of the occurrence, in seconds.
+     * @param array $AreaCoordSet 
      */
     function __construct()
     {

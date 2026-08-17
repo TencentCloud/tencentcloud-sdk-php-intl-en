@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information about the live streaming summary result.
  *
- * @method array getParagraphs() Obtain Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setParagraphs(array $Paragraphs) Set Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getParagraphs() Obtain 
+ * @method void setParagraphs(array $Paragraphs) Set 
  */
 class LiveAiAnalysisDescriptionItem extends AbstractModel
 {
     /**
-     * @var array Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $Paragraphs;
 
     /**
-     * @param array $Paragraphs Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Paragraphs 
      */
     function __construct()
     {

@@ -24,14 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Task status. Valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
  * @method integer getErrCode() Obtain Error code. 0: successful; other values: failed.
  * @method void setErrCode(integer $ErrCode) Set Error code. 0: successful; other values: failed.
- * @method string getMessage() Obtain Error message.
- * @method void setMessage(string $Message) Set Error message.
+ * @method string getMessage() Obtain Error message
+ * @method void setMessage(string $Message) Set Error message
  * @method AiAnalysisTaskVideoComprehensionInput getInput() Obtain Input file for video (audio) recognition.
  * @method void setInput(AiAnalysisTaskVideoComprehensionInput $Input) Set Input file for video (audio) recognition.
- * @method AiAnalysisTaskVideoComprehensionOutput getOutput() Obtain Output file for video (audio) recognition.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiAnalysisTaskVideoComprehensionOutput $Output) Set Output file for video (audio) recognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskVideoComprehensionOutput getOutput() Obtain 
+ * @method void setOutput(AiAnalysisTaskVideoComprehensionOutput $Output) Set 
  * @method string getErrCodeExt() Obtain Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.
  * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.
  * @method integer getProgress() Obtain Task progress
@@ -54,7 +52,7 @@ class AiAnalysisTaskVideoComprehensionResult extends AbstractModel
     public $ErrCode;
 
     /**
-     * @var string Error message.
+     * @var string Error message
      */
     public $Message;
 
@@ -64,8 +62,7 @@ class AiAnalysisTaskVideoComprehensionResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskVideoComprehensionOutput Output file for video (audio) recognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskVideoComprehensionOutput 
      */
     public $Output;
 
@@ -92,10 +89,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $Status Task status. Valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
      * @param integer $ErrCode Error code. 0: successful; other values: failed.
-     * @param string $Message Error message.
+     * @param string $Message Error message
      * @param AiAnalysisTaskVideoComprehensionInput $Input Input file for video (audio) recognition.
-     * @param AiAnalysisTaskVideoComprehensionOutput $Output Output file for video (audio) recognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskVideoComprehensionOutput $Output 
      * @param string $ErrCodeExt Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.
      * @param integer $Progress Task progress
      * @param string $BeginProcessTime Starting time of task execution, in ISO date and time format.

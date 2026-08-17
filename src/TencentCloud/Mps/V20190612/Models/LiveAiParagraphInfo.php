@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Starting time point of the segment, in seconds.
  * @method float getEndTimeOffset() Obtain End time point of the segment, in seconds.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time point of the segment, in seconds.
- * @method string getBeginTime() Obtain Starting time point of the live streaming segment in ISO date and time format.	
- * @method void setBeginTime(string $BeginTime) Set Starting time point of the live streaming segment in ISO date and time format.	
- * @method string getEndTime() Obtain End time point of the live streaming segment in ISO date and time format.	
- * @method void setEndTime(string $EndTime) Set End time point of the live streaming segment in ISO date and time format.	
+ * @method string getBeginTime() Obtain The start time of a live streaming segment, in the ISO date format.	
+ * @method void setBeginTime(string $BeginTime) Set The start time of a live streaming segment, in the ISO date format.	
+ * @method string getEndTime() Obtain The end time of a live streaming segment, in the ISO date format.	
+ * @method void setEndTime(string $EndTime) Set The end time of a live streaming segment, in the ISO date format.	
  */
 class LiveAiParagraphInfo extends AbstractModel
 {
@@ -63,12 +63,12 @@ class LiveAiParagraphInfo extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var string Starting time point of the live streaming segment in ISO date and time format.	
+     * @var string The start time of a live streaming segment, in the ISO date format.	
      */
     public $BeginTime;
 
     /**
-     * @var string End time point of the live streaming segment in ISO date and time format.	
+     * @var string The end time of a live streaming segment, in the ISO date format.	
      */
     public $EndTime;
 
@@ -78,8 +78,8 @@ class LiveAiParagraphInfo extends AbstractModel
      * @param array $Keywords Segment keyword.
      * @param float $StartTimeOffset Starting time point of the segment, in seconds.
      * @param float $EndTimeOffset End time point of the segment, in seconds.
-     * @param string $BeginTime Starting time point of the live streaming segment in ISO date and time format.	
-     * @param string $EndTime End time point of the live streaming segment in ISO date and time format.	
+     * @param string $BeginTime The start time of a live streaming segment, in the ISO date format.	
+     * @param string $EndTime The end time of a live streaming segment, in the ISO date format.	
      */
     function __construct()
     {

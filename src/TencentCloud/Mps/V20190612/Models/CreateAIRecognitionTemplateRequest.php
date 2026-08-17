@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAIRecognitionTemplate request structure.
  *
- * @method string getName() Obtain Name of a video content recognition template. Length limit: 64 characters.
- * @method void setName(string $Name) Set Name of a video content recognition template. Length limit: 64 characters.
- * @method string getComment() Obtain Description of a video content recognition template. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Description of a video content recognition template. Length limit: 256 characters.
- * @method FaceConfigureInfo getFaceConfigure() Obtain Face recognition control parameter.
- * @method void setFaceConfigure(FaceConfigureInfo $FaceConfigure) Set Face recognition control parameter.
- * @method OcrFullTextConfigureInfo getOcrFullTextConfigure() Obtain Full text recognition control parameter.
- * @method void setOcrFullTextConfigure(OcrFullTextConfigureInfo $OcrFullTextConfigure) Set Full text recognition control parameter.
- * @method OcrWordsConfigureInfo getOcrWordsConfigure() Obtain Text keyword recognition control parameter.
- * @method void setOcrWordsConfigure(OcrWordsConfigureInfo $OcrWordsConfigure) Set Text keyword recognition control parameter.
- * @method AsrFullTextConfigureInfo getAsrFullTextConfigure() Obtain Full speech recognition control parameter.
- * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfo $AsrFullTextConfigure) Set Full speech recognition control parameter.
- * @method AsrWordsConfigureInfo getAsrWordsConfigure() Obtain Speech keyword recognition control parameter.
- * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) Set Speech keyword recognition control parameter.
+ * @method string getName() Obtain Video content recognition template name, length limited to 64 characters.
+ * @method void setName(string $Name) Set Video content recognition template name, length limited to 64 characters.
+ * @method string getComment() Obtain Video Content Recognition template description, length limited to 256 characters.
+ * @method void setComment(string $Comment) Set Video Content Recognition template description, length limited to 256 characters.
+ * @method FaceConfigureInfo getFaceConfigure() Obtain Face Recognition Control Parameter.
+ * @method void setFaceConfigure(FaceConfigureInfo $FaceConfigure) Set Face Recognition Control Parameter.
+ * @method OcrFullTextConfigureInfo getOcrFullTextConfigure() Obtain Full Text Recognition Control Parameter.
+ * @method void setOcrFullTextConfigure(OcrFullTextConfigureInfo $OcrFullTextConfigure) Set Full Text Recognition Control Parameter.
+ * @method OcrWordsConfigureInfo getOcrWordsConfigure() Obtain Text keyword recognition control.
+ * @method void setOcrWordsConfigure(OcrWordsConfigureInfo $OcrWordsConfigure) Set Text keyword recognition control.
+ * @method AsrFullTextConfigureInfo getAsrFullTextConfigure() Obtain Speech Full-text Recognition Control Parameter.
+ * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfo $AsrFullTextConfigure) Set Speech Full-text Recognition Control Parameter.
+ * @method AsrWordsConfigureInfo getAsrWordsConfigure() Obtain Voice keyword recognition control parameters.
+ * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) Set Voice keyword recognition control parameters.
+ * @method TranslateConfigureInfo getTranslateConfigure() Obtain Voice translation control parameters.
+ * @method void setTranslateConfigure(TranslateConfigureInfo $TranslateConfigure) Set Voice translation control parameters.
  */
 class CreateAIRecognitionTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Name of a video content recognition template. Length limit: 64 characters.
+     * @var string Video content recognition template name, length limited to 64 characters.
      */
     public $Name;
 
     /**
-     * @var string Description of a video content recognition template. Length limit: 256 characters.
+     * @var string Video Content Recognition template description, length limited to 256 characters.
      */
     public $Comment;
 
     /**
-     * @var FaceConfigureInfo Face recognition control parameter.
+     * @var FaceConfigureInfo Face Recognition Control Parameter.
      */
     public $FaceConfigure;
 
     /**
-     * @var OcrFullTextConfigureInfo Full text recognition control parameter.
+     * @var OcrFullTextConfigureInfo Full Text Recognition Control Parameter.
      */
     public $OcrFullTextConfigure;
 
     /**
-     * @var OcrWordsConfigureInfo Text keyword recognition control parameter.
+     * @var OcrWordsConfigureInfo Text keyword recognition control.
      */
     public $OcrWordsConfigure;
 
     /**
-     * @var AsrFullTextConfigureInfo Full speech recognition control parameter.
+     * @var AsrFullTextConfigureInfo Speech Full-text Recognition Control Parameter.
      */
     public $AsrFullTextConfigure;
 
     /**
-     * @var AsrWordsConfigureInfo Speech keyword recognition control parameter.
+     * @var AsrWordsConfigureInfo Voice keyword recognition control parameters.
      */
     public $AsrWordsConfigure;
 
     /**
-     * @param string $Name Name of a video content recognition template. Length limit: 64 characters.
-     * @param string $Comment Description of a video content recognition template. Length limit: 256 characters.
-     * @param FaceConfigureInfo $FaceConfigure Face recognition control parameter.
-     * @param OcrFullTextConfigureInfo $OcrFullTextConfigure Full text recognition control parameter.
-     * @param OcrWordsConfigureInfo $OcrWordsConfigure Text keyword recognition control parameter.
-     * @param AsrFullTextConfigureInfo $AsrFullTextConfigure Full speech recognition control parameter.
-     * @param AsrWordsConfigureInfo $AsrWordsConfigure Speech keyword recognition control parameter.
+     * @var TranslateConfigureInfo Voice translation control parameters.
+     */
+    public $TranslateConfigure;
+
+    /**
+     * @param string $Name Video content recognition template name, length limited to 64 characters.
+     * @param string $Comment Video Content Recognition template description, length limited to 256 characters.
+     * @param FaceConfigureInfo $FaceConfigure Face Recognition Control Parameter.
+     * @param OcrFullTextConfigureInfo $OcrFullTextConfigure Full Text Recognition Control Parameter.
+     * @param OcrWordsConfigureInfo $OcrWordsConfigure Text keyword recognition control.
+     * @param AsrFullTextConfigureInfo $AsrFullTextConfigure Speech Full-text Recognition Control Parameter.
+     * @param AsrWordsConfigureInfo $AsrWordsConfigure Voice keyword recognition control parameters.
+     * @param TranslateConfigureInfo $TranslateConfigure Voice translation control parameters.
      */
     function __construct()
     {
@@ -125,6 +133,11 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
         if (array_key_exists("AsrWordsConfigure",$param) and $param["AsrWordsConfigure"] !== null) {
             $this->AsrWordsConfigure = new AsrWordsConfigureInfo();
             $this->AsrWordsConfigure->deserialize($param["AsrWordsConfigure"]);
+        }
+
+        if (array_key_exists("TranslateConfigure",$param) and $param["TranslateConfigure"] !== null) {
+            $this->TranslateConfigure = new TranslateConfigureInfo();
+            $this->TranslateConfigure->deserialize($param["TranslateConfigure"]);
         }
     }
 }

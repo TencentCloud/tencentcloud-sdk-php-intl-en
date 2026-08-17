@@ -20,92 +20,100 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Watermark removal configuration for the smart erasing template.
  *
- * @method string getWatermarkEraseMethod() Obtain Watermark erasing method.
-**Automatic erasing: ** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
-When automatic erasing is used, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
- **Specified area erasing: ** For static watermarks in fixed positions, you are recommended to specify the erasing area directly.When you choose specified area erasing, specify at least one area.
-- auto: automatic erasing.
+ * @method string getWatermarkEraseMethod() Obtain Watermark removal method.
+**Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area for erasure.
+When you choose specified area erasure, import at least a specified region.
+
+- auto: automatic erasing
 - custom: specified area erasing.
- * @method void setWatermarkEraseMethod(string $WatermarkEraseMethod) Set Watermark erasing method.
-**Automatic erasing: ** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
-When automatic erasing is used, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
- **Specified area erasing: ** For static watermarks in fixed positions, you are recommended to specify the erasing area directly.When you choose specified area erasing, specify at least one area.
-- auto: automatic erasing.
+ * @method void setWatermarkEraseMethod(string $WatermarkEraseMethod) Set Watermark removal method.
+**Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area for erasure.
+When you choose specified area erasure, import at least a specified region.
+
+- auto: automatic erasing
 - custom: specified area erasing.
- * @method string getWatermarkModel() Obtain Watermark erasing model.
-Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds.
-Advanced Edition: provide better effects. It applies to reality-style videos, such as short dramas.
-- basic: Basic Edition.
+ * @method string getWatermarkModel() Obtain Watermark removal model.
+Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+Advanced edition: Better effectiveness, suitable for reality style videos such as mini-drama.
+-.
 - advanced: Advanced Edition.
- * @method void setWatermarkModel(string $WatermarkModel) Set Watermark erasing model.
-Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds.
-Advanced Edition: provide better effects. It applies to reality-style videos, such as short dramas.
-- basic: Basic Edition.
+ * @method void setWatermarkModel(string $WatermarkModel) Set Watermark removal model.
+Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+Advanced edition: Better effectiveness, suitable for reality style videos such as mini-drama.
+-.
 - advanced: Advanced Edition.
- * @method array getAutoAreas() Obtain Custom area for automatic erasing.
+ * @method array getAutoAreas() Obtain Automatic removal of custom region.
 For the specified area, AI models are used to automatically detect and erase the target objects.
 Note: When the erasing method is set to custom, this parameter is invalid. Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
- * @method void setAutoAreas(array $AutoAreas) Set Custom area for automatic erasing.
+ * @method void setAutoAreas(array $AutoAreas) Set Automatic removal of custom region.
 For the specified area, AI models are used to automatically detect and erase the target objects.
 Note: When the erasing method is set to custom, this parameter is invalid. Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
- * @method array getCustomAreas() Obtain Custom area for specified area erasing.
+ * @method array getCustomAreas() Obtain Specify a custom region for erasing.
 For the specified area, erase the target objects directly without detection and recognition within a selected time period.
 Note: Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
- * @method void setCustomAreas(array $CustomAreas) Set Custom area for specified area erasing.
+ * @method void setCustomAreas(array $CustomAreas) Set Specify a custom region for erasing.
 For the specified area, erase the target objects directly without detection and recognition within a selected time period.
 Note: Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
  */
 class UpdateSmartEraseWatermarkConfig extends AbstractModel
 {
     /**
-     * @var string Watermark erasing method.
-**Automatic erasing: ** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
-When automatic erasing is used, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
- **Specified area erasing: ** For static watermarks in fixed positions, you are recommended to specify the erasing area directly.When you choose specified area erasing, specify at least one area.
-- auto: automatic erasing.
+     * @var string Watermark removal method.
+**Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area for erasure.
+When you choose specified area erasure, import at least a specified region.
+
+- auto: automatic erasing
 - custom: specified area erasing.
      */
     public $WatermarkEraseMethod;
 
     /**
-     * @var string Watermark erasing model.
-Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds.
-Advanced Edition: provide better effects. It applies to reality-style videos, such as short dramas.
-- basic: Basic Edition.
+     * @var string Watermark removal model.
+Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+Advanced edition: Better effectiveness, suitable for reality style videos such as mini-drama.
+-.
 - advanced: Advanced Edition.
      */
     public $WatermarkModel;
 
     /**
-     * @var array Custom area for automatic erasing.
+     * @var array Automatic removal of custom region.
 For the specified area, AI models are used to automatically detect and erase the target objects.
 Note: When the erasing method is set to custom, this parameter is invalid. Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */
     public $AutoAreas;
 
     /**
-     * @var array Custom area for specified area erasing.
+     * @var array Specify a custom region for erasing.
 For the specified area, erase the target objects directly without detection and recognition within a selected time period.
 Note: Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */
     public $CustomAreas;
 
     /**
-     * @param string $WatermarkEraseMethod Watermark erasing method.
-**Automatic erasing: ** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
-When automatic erasing is used, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
- **Specified area erasing: ** For static watermarks in fixed positions, you are recommended to specify the erasing area directly.When you choose specified area erasing, specify at least one area.
-- auto: automatic erasing.
+     * @param string $WatermarkEraseMethod Watermark removal method.
+**Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area for erasure.
+When you choose specified area erasure, import at least a specified region.
+
+- auto: automatic erasing
 - custom: specified area erasing.
-     * @param string $WatermarkModel Watermark erasing model.
-Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds.
-Advanced Edition: provide better effects. It applies to reality-style videos, such as short dramas.
-- basic: Basic Edition.
+     * @param string $WatermarkModel Watermark removal model.
+Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+Advanced edition: Better effectiveness, suitable for reality style videos such as mini-drama.
+-.
 - advanced: Advanced Edition.
-     * @param array $AutoAreas Custom area for automatic erasing.
+     * @param array $AutoAreas Automatic removal of custom region.
 For the specified area, AI models are used to automatically detect and erase the target objects.
 Note: When the erasing method is set to custom, this parameter is invalid. Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
-     * @param array $CustomAreas Custom area for specified area erasing.
+     * @param array $CustomAreas Specify a custom region for erasing.
 For the specified area, erase the target objects directly without detection and recognition within a selected time period.
 Note: Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */

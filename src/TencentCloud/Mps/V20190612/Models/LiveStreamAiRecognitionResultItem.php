@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI-based live stream recognition result
+ * Live stream AI recognition result
  *
  * @method string getType() Obtain Result type. Valid values:
 <li>FaceRecognition: face recognition.</li>
@@ -26,9 +26,8 @@ use TencentCloud\Common\AbstractModel;
 <li>OcrWordsRecognition: text keyword recognition.</li>
 <li>AsrFullTextRecognition: full speech recognition.</li>
 <li>OcrFullTextRecognition: full text recognition.</li>
-<li>TransTextRecognition: speech translation.</li>
-
-<li>ObjectRecognition: object recognition.</li>
+<li>TransTextRecognition: speech translation</li>
+<li>ObjectRecognition: object detection.</li>
 <li>TagRecognition: highlights marking.</li>
  * @method void setType(string $Type) Set Result type. Valid values:
 <li>FaceRecognition: face recognition.</li>
@@ -36,32 +35,31 @@ use TencentCloud\Common\AbstractModel;
 <li>OcrWordsRecognition: text keyword recognition.</li>
 <li>AsrFullTextRecognition: full speech recognition.</li>
 <li>OcrFullTextRecognition: full text recognition.</li>
-<li>TransTextRecognition: speech translation.</li>
-
-<li>ObjectRecognition: object recognition.</li>
+<li>TransTextRecognition: speech translation</li>
+<li>ObjectRecognition: object detection.</li>
 <li>TagRecognition: highlights marking.</li>
- * @method array getFaceRecognitionResultSet() Obtain Face recognition result, which is valid when `Type` is
-`FaceRecognition`.
- * @method void setFaceRecognitionResultSet(array $FaceRecognitionResultSet) Set Face recognition result, which is valid when `Type` is
-`FaceRecognition`.
- * @method array getAsrWordsRecognitionResultSet() Obtain Speech keyword recognition result, which is valid when `Type` is
-`AsrWordsRecognition`.
- * @method void setAsrWordsRecognitionResultSet(array $AsrWordsRecognitionResultSet) Set Speech keyword recognition result, which is valid when `Type` is
-`AsrWordsRecognition`.
- * @method array getOcrWordsRecognitionResultSet() Obtain Text keyword recognition result, which is valid when `Type` is
-`OcrWordsRecognition`.
- * @method void setOcrWordsRecognitionResultSet(array $OcrWordsRecognitionResultSet) Set Text keyword recognition result, which is valid when `Type` is
-`OcrWordsRecognition`.
- * @method array getAsrFullTextRecognitionResultSet() Obtain Full speech recognition result, which is valid when `Type` is
-`AsrFullTextRecognition`.
- * @method void setAsrFullTextRecognitionResultSet(array $AsrFullTextRecognitionResultSet) Set Full speech recognition result, which is valid when `Type` is
-`AsrFullTextRecognition`.
- * @method array getOcrFullTextRecognitionResultSet() Obtain Full text recognition result, which is valid when `Type` is
-`OcrFullTextRecognition`.
- * @method void setOcrFullTextRecognitionResultSet(array $OcrFullTextRecognitionResultSet) Set Full text recognition result, which is valid when `Type` is
-`OcrFullTextRecognition`.
- * @method array getTransTextRecognitionResultSet() Obtain The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
- * @method void setTransTextRecognitionResultSet(array $TransTextRecognitionResultSet) Set The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
+ * @method array getFaceRecognitionResultSet() Obtain Face recognition result, which is valid when Type is
+FaceRecognition is valid at that time.
+ * @method void setFaceRecognitionResultSet(array $FaceRecognitionResultSet) Set Face recognition result, which is valid when Type is
+FaceRecognition is valid at that time.
+ * @method array getAsrWordsRecognitionResultSet() Obtain Speech keyword recognition result. When Type is
+AsrWordsRecognition.
+ * @method void setAsrWordsRecognitionResultSet(array $AsrWordsRecognitionResultSet) Set Speech keyword recognition result. When Type is
+AsrWordsRecognition.
+ * @method array getOcrWordsRecognitionResultSet() Obtain Text keyword recognition result. When Type is
+OcrWordsRecognition.
+ * @method void setOcrWordsRecognitionResultSet(array $OcrWordsRecognitionResultSet) Set Text keyword recognition result. When Type is
+OcrWordsRecognition.
+ * @method array getAsrFullTextRecognitionResultSet() Obtain Full speech recognition result. When Type is
+AsrFullTextRecognition.
+ * @method void setAsrFullTextRecognitionResultSet(array $AsrFullTextRecognitionResultSet) Set Full speech recognition result. When Type is
+AsrFullTextRecognition.
+ * @method array getOcrFullTextRecognitionResultSet() Obtain Full text recognition result, when Type is
+OcrFullTextRecognition.
+ * @method void setOcrFullTextRecognitionResultSet(array $OcrFullTextRecognitionResultSet) Set Full text recognition result, when Type is
+OcrFullTextRecognition.
+ * @method array getTransTextRecognitionResultSet() Obtain Translation result. Valid when Type is TransTextRecognition.
+ * @method void setTransTextRecognitionResultSet(array $TransTextRecognitionResultSet) Set Translation result. Valid when Type is TransTextRecognition.
  * @method array getObjectRecognitionResultSet() Obtain Object recognition result, which is valid when Type is ObjectRecognition.
  * @method void setObjectRecognitionResultSet(array $ObjectRecognitionResultSet) Set Object recognition result, which is valid when Type is ObjectRecognition.
  * @method array getTagRecognitionResultSet() Obtain 
@@ -76,45 +74,44 @@ class LiveStreamAiRecognitionResultItem extends AbstractModel
 <li>OcrWordsRecognition: text keyword recognition.</li>
 <li>AsrFullTextRecognition: full speech recognition.</li>
 <li>OcrFullTextRecognition: full text recognition.</li>
-<li>TransTextRecognition: speech translation.</li>
-
-<li>ObjectRecognition: object recognition.</li>
+<li>TransTextRecognition: speech translation</li>
+<li>ObjectRecognition: object detection.</li>
 <li>TagRecognition: highlights marking.</li>
      */
     public $Type;
 
     /**
-     * @var array Face recognition result, which is valid when `Type` is
-`FaceRecognition`.
+     * @var array Face recognition result, which is valid when Type is
+FaceRecognition is valid at that time.
      */
     public $FaceRecognitionResultSet;
 
     /**
-     * @var array Speech keyword recognition result, which is valid when `Type` is
-`AsrWordsRecognition`.
+     * @var array Speech keyword recognition result. When Type is
+AsrWordsRecognition.
      */
     public $AsrWordsRecognitionResultSet;
 
     /**
-     * @var array Text keyword recognition result, which is valid when `Type` is
-`OcrWordsRecognition`.
+     * @var array Text keyword recognition result. When Type is
+OcrWordsRecognition.
      */
     public $OcrWordsRecognitionResultSet;
 
     /**
-     * @var array Full speech recognition result, which is valid when `Type` is
-`AsrFullTextRecognition`.
+     * @var array Full speech recognition result. When Type is
+AsrFullTextRecognition.
      */
     public $AsrFullTextRecognitionResultSet;
 
     /**
-     * @var array Full text recognition result, which is valid when `Type` is
-`OcrFullTextRecognition`.
+     * @var array Full text recognition result, when Type is
+OcrFullTextRecognition.
      */
     public $OcrFullTextRecognitionResultSet;
 
     /**
-     * @var array The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
+     * @var array Translation result. Valid when Type is TransTextRecognition.
      */
     public $TransTextRecognitionResultSet;
 
@@ -135,21 +132,20 @@ class LiveStreamAiRecognitionResultItem extends AbstractModel
 <li>OcrWordsRecognition: text keyword recognition.</li>
 <li>AsrFullTextRecognition: full speech recognition.</li>
 <li>OcrFullTextRecognition: full text recognition.</li>
-<li>TransTextRecognition: speech translation.</li>
-
-<li>ObjectRecognition: object recognition.</li>
+<li>TransTextRecognition: speech translation</li>
+<li>ObjectRecognition: object detection.</li>
 <li>TagRecognition: highlights marking.</li>
-     * @param array $FaceRecognitionResultSet Face recognition result, which is valid when `Type` is
-`FaceRecognition`.
-     * @param array $AsrWordsRecognitionResultSet Speech keyword recognition result, which is valid when `Type` is
-`AsrWordsRecognition`.
-     * @param array $OcrWordsRecognitionResultSet Text keyword recognition result, which is valid when `Type` is
-`OcrWordsRecognition`.
-     * @param array $AsrFullTextRecognitionResultSet Full speech recognition result, which is valid when `Type` is
-`AsrFullTextRecognition`.
-     * @param array $OcrFullTextRecognitionResultSet Full text recognition result, which is valid when `Type` is
-`OcrFullTextRecognition`.
-     * @param array $TransTextRecognitionResultSet The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
+     * @param array $FaceRecognitionResultSet Face recognition result, which is valid when Type is
+FaceRecognition is valid at that time.
+     * @param array $AsrWordsRecognitionResultSet Speech keyword recognition result. When Type is
+AsrWordsRecognition.
+     * @param array $OcrWordsRecognitionResultSet Text keyword recognition result. When Type is
+OcrWordsRecognition.
+     * @param array $AsrFullTextRecognitionResultSet Full speech recognition result. When Type is
+AsrFullTextRecognition.
+     * @param array $OcrFullTextRecognitionResultSet Full text recognition result, when Type is
+OcrFullTextRecognition.
+     * @param array $TransTextRecognitionResultSet Translation result. Valid when Type is TransTextRecognition.
      * @param array $ObjectRecognitionResultSet Object recognition result, which is valid when Type is ObjectRecognition.
      * @param array $TagRecognitionResultSet 
      */

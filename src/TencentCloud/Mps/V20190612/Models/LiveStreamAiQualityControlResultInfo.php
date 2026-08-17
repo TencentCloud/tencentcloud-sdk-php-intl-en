@@ -20,26 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Live stream media quality inspection result.
  *
- * @method array getQualityControlResults() Obtain Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQualityControlResults(array $QualityControlResults) Set Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getQualityControlResults() Obtain 
+ * @method void setQualityControlResults(array $QualityControlResults) Set 
  * @method array getDiagnoseResults() Obtain 
  * @method void setDiagnoseResults(array $DiagnoseResults) Set 
- * @method array getQualityControlResultSet() Obtain Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQualityControlResultSet(array $QualityControlResultSet) Set Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDiagnoseResultSet() Obtain Format diagnostic result list.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiagnoseResultSet(array $DiagnoseResultSet) Set Format diagnostic result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getQualityControlResultSet() Obtain 
+ * @method void setQualityControlResultSet(array $QualityControlResultSet) Set 
+ * @method array getDiagnoseResultSet() Obtain 
+ * @method void setDiagnoseResultSet(array $DiagnoseResultSet) Set 
  */
 class LiveStreamAiQualityControlResultInfo extends AbstractModel
 {
     /**
-     * @var array Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
      * @deprecated
      */
     public $QualityControlResults;
@@ -51,25 +44,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DiagnoseResults;
 
     /**
-     * @var array Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $QualityControlResultSet;
 
     /**
-     * @var array Format diagnostic result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $DiagnoseResultSet;
 
     /**
-     * @param array $QualityControlResults Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $QualityControlResults 
      * @param array $DiagnoseResults 
-     * @param array $QualityControlResultSet Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $DiagnoseResultSet Format diagnostic result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $QualityControlResultSet 
+     * @param array $DiagnoseResultSet 
      */
     function __construct()
     {

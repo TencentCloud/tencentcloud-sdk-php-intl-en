@@ -18,76 +18,68 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The translation result.
+ * Translation result.
  *
- * @method string getStatus() Obtain The task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method void setStatus(string $Status) Set The task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method string getErrCodeExt() Obtain The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
- * @method void setErrCodeExt(string $ErrCodeExt) Set The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
- * @method integer getErrCode() Obtain The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
- * @method void setErrCode(integer $ErrCode) Set The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
- * @method string getMessage() Obtain The error message.
- * @method void setMessage(string $Message) Set The error message.
- * @method AiRecognitionTaskTransTextResultInput getInput() Obtain The input of the translation task.
- * @method void setInput(AiRecognitionTaskTransTextResultInput $Input) Set The input of the translation task.
- * @method AiRecognitionTaskTransTextResultOutput getOutput() Obtain The output of the translation task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiRecognitionTaskTransTextResultOutput $Output) Set The output of the translation task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProgress() Obtain Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProgress(integer $Progress) Set Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method integer getErrCode() Obtain Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method AiRecognitionTaskTransTextResultInput getInput() Obtain Translation task input information.
+ * @method void setInput(AiRecognitionTaskTransTextResultInput $Input) Set Translation task input information.
+ * @method AiRecognitionTaskTransTextResultOutput getOutput() Obtain 
+ * @method void setOutput(AiRecognitionTaskTransTextResultOutput $Output) Set 
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
  */
 class AiRecognitionTaskTransTextResult extends AbstractModel
 {
     /**
-     * @var string The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var string The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+     * @var string Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
+     * @var integer Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      */
     public $ErrCode;
 
     /**
-     * @var string The error message.
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var AiRecognitionTaskTransTextResultInput The input of the translation task.
+     * @var AiRecognitionTaskTransTextResultInput Translation task input information.
      */
     public $Input;
 
     /**
-     * @var AiRecognitionTaskTransTextResultOutput The output of the translation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiRecognitionTaskTransTextResultOutput 
      */
     public $Output;
 
     /**
-     * @var integer Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Progress;
 
     /**
-     * @param string $Status The task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; any other value indicates the task has failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
-     * @param integer $ErrCode The error code. `0` indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
-     * @param string $Message The error message.
-     * @param AiRecognitionTaskTransTextResultInput $Input The input of the translation task.
-     * @param AiRecognitionTaskTransTextResultOutput $Output The output of the translation task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Progress Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+     * @param string $Message Error message.
+     * @param AiRecognitionTaskTransTextResultInput $Input Translation task input information.
+     * @param AiRecognitionTaskTransTextResultOutput $Output 
+     * @param integer $Progress 
      */
     function __construct()
     {

@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosBucketName(string $CosBucketName) Set Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
  * @method string getCosBucketRegion() Obtain Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
  * @method void setCosBucketRegion(string $CosBucketRegion) Set Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
- * @method string getCosBucketPath() Obtain Path of the COS bucket to store to.Optional.Example value: my_file.
- * @method void setCosBucketPath(string $CosBucketPath) Set Path of the COS bucket to store to.Optional.Example value: my_file.
+ * @method string getCosBucketPath() Obtain Store to the bucket path of cos.
+Option.
+Example value: my_file.
+ * @method void setCosBucketPath(string $CosBucketPath) Set Store to the bucket path of cos.
+Option.
+Example value: my_file.
  */
 class AigcStoreCosParam extends AbstractModel
 {
@@ -40,14 +44,18 @@ class AigcStoreCosParam extends AbstractModel
     public $CosBucketRegion;
 
     /**
-     * @var string Path of the COS bucket to store to.Optional.Example value: my_file.
+     * @var string Store to the bucket path of cos.
+Option.
+Example value: my_file.
      */
     public $CosBucketPath;
 
     /**
      * @param string $CosBucketName Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
      * @param string $CosBucketRegion Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
-     * @param string $CosBucketPath Path of the COS bucket to store to.Optional.Example value: my_file.
+     * @param string $CosBucketPath Store to the bucket path of cos.
+Option.
+Example value: my_file.
      */
     function __construct()
     {

@@ -20,110 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceAccount request structure.
  *
- * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
- * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
- * @method string getAccountName() Obtain Specifies the account that needs modification.
-- root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
-- Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time.
- * @method void setAccountName(string $AccountName) Set Specifies the account that needs modification.
-- root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
-- Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time.
- * @method string getAccountPassword() Obtain Specifies the access password for the account to be modified.
- * @method void setAccountPassword(string $AccountPassword) Set Specifies the access password for the account to be modified.
- * @method string getRemark() Obtain Account description information.
- * @method void setRemark(string $Remark) Set Account description information.
- * @method array getReadonlyPolicy() Obtain Specifies the read-write request routing policies for the account to be modified.
-- master: read-write request routing to the primary node.
-- replication: read-write request routing to the secondary node.
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Specifies the read-write request routing policies for the account to be modified.
-- master: read-write request routing to the primary node.
-- replication: read-write request routing to the secondary node.
- * @method string getPrivilege() Obtain Specifies the read-write permissions for the account to be modified.
-- r: read-only.
-- w: write-only.
-- rw: read-write.
- * @method void setPrivilege(string $Privilege) Set Specifies the read-write permissions for the account to be modified.
-- r: read-only.
-- w: write-only.
-- rw: read-write.
- * @method boolean getNoAuth() Obtain Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
-- true: set the default account (root) to a password-free account.
-- false: not set the default account (root) to a password-free account.
- * @method void setNoAuth(boolean $NoAuth) Set Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
-- true: set the default account (root) to a password-free account.
-- false: not set the default account (root) to a password-free account.
- * @method boolean getEncryptPassword() Obtain Specifies whether to encrypt the password for the account to be modified.
- * @method void setEncryptPassword(boolean $EncryptPassword) Set Specifies whether to encrypt the password for the account to be modified.
+ * @method string getInstanceId() Obtain <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
+ * @method string getAccountName() Obtain <p>Specify the account that needs modification.</p><ul><li>root: refers to the automatically generated account when a Redis Database Instance is created. Users cannot modify its read-write permissions, but can only modify its request routing strategy.</li><li>Custom account: an account manually created by users once an instance is created successfully. Users can modify its read and write permissions and request routing strategy at any time.</li></ul>
+ * @method void setAccountName(string $AccountName) Set <p>Specify the account that needs modification.</p><ul><li>root: refers to the automatically generated account when a Redis Database Instance is created. Users cannot modify its read-write permissions, but can only modify its request routing strategy.</li><li>Custom account: an account manually created by users once an instance is created successfully. Users can modify its read and write permissions and request routing strategy at any time.</li></ul>
+ * @method string getAccountPassword() Obtain <p>Specifies the access password for the account to be modified.</p>
+ * @method void setAccountPassword(string $AccountPassword) Set <p>Specifies the access password for the account to be modified.</p>
+ * @method string getRemark() Obtain <p>Account description.</p>
+ * @method void setRemark(string $Remark) Set <p>Account description.</p>
+ * @method array getReadonlyPolicy() Obtain <p>Specify the policy for request routing of read-write requests for the modified account.</p><ul><li>master: means read-write requests are routed to the primary node.</li><li>replication: means read-write requests are routed to the secondary node.</li></ul>
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set <p>Specify the policy for request routing of read-write requests for the modified account.</p><ul><li>master: means read-write requests are routed to the primary node.</li><li>replication: means read-write requests are routed to the secondary node.</li></ul>
+ * @method string getPrivilege() Obtain <p>Specify the read/write permission of the account to be modified.</p><ul><li>r: Read-only.</li><li>w: Write-only.</li><li>rw: Read-write.</li></ul>
+ * @method void setPrivilege(string $Privilege) Set <p>Specify the read/write permission of the account to be modified.</p><ul><li>r: Read-only.</li><li>w: Write-only.</li><li>rw: Read-write.</li></ul>
+ * @method boolean getNoAuth() Obtain <p>Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.</p><ul><li>true: The default account (root) is set to a password-free account.</li><li>false: The default account (root) is not set to a password-free account.</li></ul>
+ * @method void setNoAuth(boolean $NoAuth) Set <p>Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.</p><ul><li>true: The default account (root) is set to a password-free account.</li><li>false: The default account (root) is not set to a password-free account.</li></ul>
+ * @method boolean getEncryptPassword() Obtain <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
+ * @method void setEncryptPassword(boolean $EncryptPassword) Set <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
  */
 class ModifyInstanceAccountRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @var string <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Specifies the account that needs modification.
-- root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
-- Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time.
+     * @var string <p>Specify the account that needs modification.</p><ul><li>root: refers to the automatically generated account when a Redis Database Instance is created. Users cannot modify its read-write permissions, but can only modify its request routing strategy.</li><li>Custom account: an account manually created by users once an instance is created successfully. Users can modify its read and write permissions and request routing strategy at any time.</li></ul>
      */
     public $AccountName;
 
     /**
-     * @var string Specifies the access password for the account to be modified.
+     * @var string <p>Specifies the access password for the account to be modified.</p>
      */
     public $AccountPassword;
 
     /**
-     * @var string Account description information.
+     * @var string <p>Account description.</p>
      */
     public $Remark;
 
     /**
-     * @var array Specifies the read-write request routing policies for the account to be modified.
-- master: read-write request routing to the primary node.
-- replication: read-write request routing to the secondary node.
+     * @var array <p>Specify the policy for request routing of read-write requests for the modified account.</p><ul><li>master: means read-write requests are routed to the primary node.</li><li>replication: means read-write requests are routed to the secondary node.</li></ul>
      */
     public $ReadonlyPolicy;
 
     /**
-     * @var string Specifies the read-write permissions for the account to be modified.
-- r: read-only.
-- w: write-only.
-- rw: read-write.
+     * @var string <p>Specify the read/write permission of the account to be modified.</p><ul><li>r: Read-only.</li><li>w: Write-only.</li><li>rw: Read-write.</li></ul>
      */
     public $Privilege;
 
     /**
-     * @var boolean Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
-- true: set the default account (root) to a password-free account.
-- false: not set the default account (root) to a password-free account.
+     * @var boolean <p>Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.</p><ul><li>true: The default account (root) is set to a password-free account.</li><li>false: The default account (root) is not set to a password-free account.</li></ul>
      */
     public $NoAuth;
 
     /**
-     * @var boolean Specifies whether to encrypt the password for the account to be modified.
+     * @var boolean <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
      */
     public $EncryptPassword;
 
     /**
-     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
-     * @param string $AccountName Specifies the account that needs modification.
-- root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
-- Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time.
-     * @param string $AccountPassword Specifies the access password for the account to be modified.
-     * @param string $Remark Account description information.
-     * @param array $ReadonlyPolicy Specifies the read-write request routing policies for the account to be modified.
-- master: read-write request routing to the primary node.
-- replication: read-write request routing to the secondary node.
-     * @param string $Privilege Specifies the read-write permissions for the account to be modified.
-- r: read-only.
-- w: write-only.
-- rw: read-write.
-     * @param boolean $NoAuth Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
-- true: set the default account (root) to a password-free account.
-- false: not set the default account (root) to a password-free account.
-     * @param boolean $EncryptPassword Specifies whether to encrypt the password for the account to be modified.
+     * @param string $InstanceId <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
+     * @param string $AccountName <p>Specify the account that needs modification.</p><ul><li>root: refers to the automatically generated account when a Redis Database Instance is created. Users cannot modify its read-write permissions, but can only modify its request routing strategy.</li><li>Custom account: an account manually created by users once an instance is created successfully. Users can modify its read and write permissions and request routing strategy at any time.</li></ul>
+     * @param string $AccountPassword <p>Specifies the access password for the account to be modified.</p>
+     * @param string $Remark <p>Account description.</p>
+     * @param array $ReadonlyPolicy <p>Specify the policy for request routing of read-write requests for the modified account.</p><ul><li>master: means read-write requests are routed to the primary node.</li><li>replication: means read-write requests are routed to the secondary node.</li></ul>
+     * @param string $Privilege <p>Specify the read/write permission of the account to be modified.</p><ul><li>r: Read-only.</li><li>w: Write-only.</li><li>rw: Read-write.</li></ul>
+     * @param boolean $NoAuth <p>Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.</p><ul><li>true: The default account (root) is set to a password-free account.</li><li>false: The default account (root) is not set to a password-free account.</li></ul>
+     * @param boolean $EncryptPassword <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
      */
     function __construct()
     {

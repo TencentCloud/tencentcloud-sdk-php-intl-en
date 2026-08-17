@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAIRecognitionTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique ID of a video content recognition template.
- * @method void setDefinition(integer $Definition) Set Unique ID of a video content recognition template.
+ * @method integer getDefinition() Obtain Unique identifier of a video content recognition template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of a video content recognition template.
  */
 class DeleteAIRecognitionTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique ID of a video content recognition template.
+     * @var integer Unique identifier of a video content recognition template.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Unique ID of a video content recognition template.
+     * @param integer $Definition Unique identifier of a video content recognition template.
      */
     function __construct()
     {

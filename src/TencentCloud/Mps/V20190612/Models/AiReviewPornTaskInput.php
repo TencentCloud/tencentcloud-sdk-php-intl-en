@@ -18,24 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of a porn information detection task during content audit
+ * Content review porn detection task input parameter type
  *
- * @method integer getDefinition() Obtain The ID of a porn detection template.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefinition(integer $Definition) Set The ID of a porn detection template.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
  */
 class AiReviewPornTaskInput extends AbstractModel
 {
     /**
-     * @var integer The ID of a porn detection template.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @param integer $Definition The ID of a porn detection template.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Definition 
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input type of intelligent categorization task
+ * Intelligent classification task input type.
  *
  * @method integer getDefinition() Obtain <p>ID of the intelligent video cover template.</p>
  * @method void setDefinition(integer $Definition) Set <p>ID of the intelligent video cover template.</p>

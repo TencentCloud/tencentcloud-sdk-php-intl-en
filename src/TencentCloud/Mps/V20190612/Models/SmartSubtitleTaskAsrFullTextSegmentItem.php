@@ -28,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTimeOffset(float $EndTimeOffset) Set <p>End time offset of the recognized segment, in seconds.</p>
  * @method string getText() Obtain <p>Recognized text.</p>
  * @method void setText(string $Text) Set <p>Recognized text.</p>
- * @method array getWordlist() Obtain <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWordlist(array $Wordlist) Set <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getWordlist() Obtain 
+ * @method void setWordlist(array $Wordlist) Set 
  * @method string getSpeakerId() Obtain <p>Speaker ID (if speaker recognition is enabled).</p>
  * @method void setSpeakerId(string $SpeakerId) Set <p>Speaker ID (if speaker recognition is enabled).</p>
  */
@@ -58,8 +56,7 @@ class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel
     public $Text;
 
     /**
-     * @var array <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $Wordlist;
 
@@ -73,8 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param float $StartTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
      * @param float $EndTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
      * @param string $Text <p>Recognized text.</p>
-     * @param array $Wordlist <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Wordlist 
      * @param string $SpeakerId <p>Speaker ID (if speaker recognition is enabled).</p>
      */
     function __construct()

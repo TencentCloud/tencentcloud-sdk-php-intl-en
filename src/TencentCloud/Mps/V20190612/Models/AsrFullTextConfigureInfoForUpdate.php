@@ -18,40 +18,48 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of a full speech recognition task.
+ * Task control parameter for speech full-text recognition
  *
- * @method string getSwitch() Obtain Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
- * @method void setSwitch(string $Switch) Set Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
- * @method string getSubtitleFormat() Obtain Format of the generated subtitles file. If an empty string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: Generates a WebVTT subtitles file.</li>
- * @method void setSubtitleFormat(string $SubtitleFormat) Set Format of the generated subtitles file. If an empty string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: Generates a WebVTT subtitles file.</li>
+ * @method string getSwitch() Obtain Voice full-text recognition task switch, available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disables the intelligent voice full-text recognition task.</li>
+ * @method void setSwitch(string $Switch) Set Voice full-text recognition task switch, available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disables the intelligent voice full-text recognition task.</li>
+ * @method string getSubtitleFormat() Obtain Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+ * @method void setSubtitleFormat(string $SubtitleFormat) Set Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+ * @method string getSourceLanguage() Obtain Video source language.
+ * @method void setSourceLanguage(string $SourceLanguage) Set Video source language.
  */
 class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
+     * @var string Voice full-text recognition task switch, available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disables the intelligent voice full-text recognition task.</li>
      */
     public $Switch;
 
     /**
-     * @var string Format of the generated subtitles file. If an empty string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: Generates a WebVTT subtitles file.</li>
+     * @var string Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
      */
     public $SubtitleFormat;
 
     /**
-     * @param string $Switch Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
-     * @param string $SubtitleFormat Format of the generated subtitles file. If an empty string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: Generates a WebVTT subtitles file.</li>
+     * @var string Video source language.
+     */
+    public $SourceLanguage;
+
+    /**
+     * @param string $Switch Voice full-text recognition task switch, available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disables the intelligent voice full-text recognition task.</li>
+     * @param string $SubtitleFormat Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+     * @param string $SourceLanguage Video source language.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 
         if (array_key_exists("SubtitleFormat",$param) and $param["SubtitleFormat"] !== null) {
             $this->SubtitleFormat = $param["SubtitleFormat"];
+        }
+
+        if (array_key_exists("SourceLanguage",$param) and $param["SourceLanguage"] !== null) {
+            $this->SourceLanguage = $param["SourceLanguage"];
         }
     }
 }

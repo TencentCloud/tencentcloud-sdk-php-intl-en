@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live stream smart subtitle input struct.
+ * Live stream smart subtitle input struct
  *
  * @method integer getDefinition() Obtain Smart subtitle template ID.	
  * @method void setDefinition(integer $Definition) Set Smart subtitle template ID.	

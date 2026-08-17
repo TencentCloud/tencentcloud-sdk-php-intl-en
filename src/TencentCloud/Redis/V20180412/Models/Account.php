@@ -20,102 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sub-account information
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getAccountName() Obtain Account name.
- * @method void setAccountName(string $AccountName) Set Account name.
- * @method string getRemark() Obtain Account description.
- * @method void setRemark(string $Remark) Set Account description.
- * @method string getPrivilege() Obtain Read/Write permission policy.
-- r: read-only.
-
- - w: write-only.
-- rw: read/write.
- * @method void setPrivilege(string $Privilege) Set Read/Write permission policy.
-- r: read-only.
-
- - w: write-only.
-- rw: read/write.
- * @method array getReadonlyPolicy() Obtain Read-only routing policy.
- - master: primary node.
- - replication: replica node.
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Read-only routing policy.
- - master: primary node.
- - replication: replica node.
- * @method integer getStatus() Obtain Sub-account status.
- - 1: account under modification.
- - 2: valid account.
- - 4: account deleted.
- * @method void setStatus(integer $Status) Set Sub-account status.
- - 1: account under modification.
- - 2: valid account.
- - 4: account deleted.
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method string getAccountName() Obtain <p>Account name.</p>
+ * @method void setAccountName(string $AccountName) Set <p>Account name.</p>
+ * @method string getRemark() Obtain <p>Account description.</p>
+ * @method void setRemark(string $Remark) Set <p>Account description.</p>
+ * @method string getPrivilege() Obtain <p>Read/write permission policy. - r: read-only. - w: write-only. - rw: read-write.</p>
+ * @method void setPrivilege(string $Privilege) Set <p>Read/write permission policy. - r: read-only. - w: write-only. - rw: read-write.</p>
+ * @method array getReadonlyPolicy() Obtain <p>Read-only Routing Policy. - master: Master node. - replication: Replica node.</p>
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set <p>Read-only Routing Policy. - master: Master node. - replication: Replica node.</p>
+ * @method integer getStatus() Obtain <p>Sub-account status. - 1: Account change in progress. - 2: Valid. - 4: Deleted.</p>
+ * @method void setStatus(integer $Status) Set <p>Sub-account status. - 1: Account change in progress. - 2: Valid. - 4: Deleted.</p>
+ * @method string getCreateTime() Obtain <p>Account creation time.</p><p>If the parameter is an empty string, the account was created in an earlier version where the recording feature was not supported.</p>
+ * @method void setCreateTime(string $CreateTime) Set <p>Account creation time.</p><p>If the parameter is an empty string, the account was created in an earlier version where the recording feature was not supported.</p>
+ * @method string getPasswordLastModifiedTime() Obtain <p>The time when the account last changed the password.</p><p>If the parameter is an empty string, it means the account was created in an earlier version that did not support the password modification time recording feature.</p>
+ * @method void setPasswordLastModifiedTime(string $PasswordLastModifiedTime) Set <p>The time when the account last changed the password.</p><p>If the parameter is an empty string, it means the account was created in an earlier version that did not support the password modification time recording feature.</p>
  */
 class Account extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Account name.
+     * @var string <p>Account name.</p>
      */
     public $AccountName;
 
     /**
-     * @var string Account description.
+     * @var string <p>Account description.</p>
      */
     public $Remark;
 
     /**
-     * @var string Read/Write permission policy.
-- r: read-only.
-
- - w: write-only.
-- rw: read/write.
+     * @var string <p>Read/write permission policy. - r: read-only. - w: write-only. - rw: read-write.</p>
      */
     public $Privilege;
 
     /**
-     * @var array Read-only routing policy.
- - master: primary node.
- - replication: replica node.
+     * @var array <p>Read-only Routing Policy. - master: Master node. - replication: Replica node.</p>
      */
     public $ReadonlyPolicy;
 
     /**
-     * @var integer Sub-account status.
- - 1: account under modification.
- - 2: valid account.
- - 4: account deleted.
+     * @var integer <p>Sub-account status. - 1: Account change in progress. - 2: Valid. - 4: Deleted.</p>
      */
     public $Status;
 
     /**
-     * @var string Creation time
+     * @var string <p>Account creation time.</p><p>If the parameter is an empty string, the account was created in an earlier version where the recording feature was not supported.</p>
      */
     public $CreateTime;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param string $AccountName Account name.
-     * @param string $Remark Account description.
-     * @param string $Privilege Read/Write permission policy.
-- r: read-only.
+     * @var string <p>The time when the account last changed the password.</p><p>If the parameter is an empty string, it means the account was created in an earlier version that did not support the password modification time recording feature.</p>
+     */
+    public $PasswordLastModifiedTime;
 
- - w: write-only.
-- rw: read/write.
-     * @param array $ReadonlyPolicy Read-only routing policy.
- - master: primary node.
- - replication: replica node.
-     * @param integer $Status Sub-account status.
- - 1: account under modification.
- - 2: valid account.
- - 4: account deleted.
-     * @param string $CreateTime Creation time
+    /**
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param string $AccountName <p>Account name.</p>
+     * @param string $Remark <p>Account description.</p>
+     * @param string $Privilege <p>Read/write permission policy. - r: read-only. - w: write-only. - rw: read-write.</p>
+     * @param array $ReadonlyPolicy <p>Read-only Routing Policy. - master: Master node. - replication: Replica node.</p>
+     * @param integer $Status <p>Sub-account status. - 1: Account change in progress. - 2: Valid. - 4: Deleted.</p>
+     * @param string $CreateTime <p>Account creation time.</p><p>If the parameter is an empty string, the account was created in an earlier version where the recording feature was not supported.</p>
+     * @param string $PasswordLastModifiedTime <p>The time when the account last changed the password.</p><p>If the parameter is an empty string, it means the account was created in an earlier version that did not support the password modification time recording feature.</p>
      */
     function __construct()
     {
@@ -156,6 +128,10 @@ class Account extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("PasswordLastModifiedTime",$param) and $param["PasswordLastModifiedTime"] !== null) {
+            $this->PasswordLastModifiedTime = $param["PasswordLastModifiedTime"];
         }
     }
 }

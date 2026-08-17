@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Full speech recognition result.
  *
- * @method array getSegmentSet() Obtain <p>List of segments for full speech recognition.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSegmentSet(array $SegmentSet) Set <p>List of segments for full speech recognition.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getSegmentSet() Obtain 
+ * @method void setSegmentSet(array $SegmentSet) Set 
  * @method string getPath() Obtain <p>Subtitle file path</p>
  * @method void setPath(string $Path) Set <p>Subtitle file path</p>
  * @method string getSubtitlePath() Obtain <p>Subtitle file URL.</p>
@@ -36,8 +34,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel
 {
     /**
-     * @var array <p>List of segments for full speech recognition.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $SegmentSet;
 
@@ -62,8 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OutputStorage;
 
     /**
-     * @param array $SegmentSet <p>List of segments for full speech recognition.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $SegmentSet 
      * @param string $Path <p>Subtitle file path</p>
      * @param string $SubtitlePath <p>Subtitle file URL.</p>
      * @param SubtitleResult $SubtitleInfo <p>Subtitle recognition result info.</p>

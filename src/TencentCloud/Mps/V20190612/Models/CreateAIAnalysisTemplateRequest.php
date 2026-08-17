@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAIAnalysisTemplate request structure.
  *
- * @method string getName() Obtain Video content analysis template name. Length limit: 64 characters.
- * @method void setName(string $Name) Set Video content analysis template name. Length limit: 64 characters.
- * @method string getComment() Obtain Video content analysis template description. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Video content analysis template description. Length limit: 256 characters.
- * @method ClassificationConfigureInfo getClassificationConfigure() Obtain Control parameter of intelligent categorization task.
- * @method void setClassificationConfigure(ClassificationConfigureInfo $ClassificationConfigure) Set Control parameter of intelligent categorization task.
- * @method TagConfigureInfo getTagConfigure() Obtain Control parameter of intelligent tagging task.
- * @method void setTagConfigure(TagConfigureInfo $TagConfigure) Set Control parameter of intelligent tagging task.
- * @method CoverConfigureInfo getCoverConfigure() Obtain Control parameter of intelligent cover generating task.
- * @method void setCoverConfigure(CoverConfigureInfo $CoverConfigure) Set Control parameter of intelligent cover generating task.
- * @method FrameTagConfigureInfo getFrameTagConfigure() Obtain Control parameter of intelligent frame-specific tagging task.
- * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) Set Control parameter of intelligent frame-specific tagging task.
+ * @method string getName() Obtain Name of the video analysis template, length limited to 64 characters.
+ * @method void setName(string $Name) Set Name of the video analysis template, length limited to 64 characters.
+ * @method string getComment() Obtain Description of the video analysis template, length limited to 256 characters.
+ * @method void setComment(string $Comment) Set Description of the video analysis template, length limited to 256 characters.
+ * @method ClassificationConfigureInfo getClassificationConfigure() Obtain Intelligent Classification Task Control Parameters.
+ * @method void setClassificationConfigure(ClassificationConfigureInfo $ClassificationConfigure) Set Intelligent Classification Task Control Parameters.
+ * @method TagConfigureInfo getTagConfigure() Obtain Intelligent tag task control parameter.
+ * @method void setTagConfigure(TagConfigureInfo $TagConfigure) Set Intelligent tag task control parameter.
+ * @method CoverConfigureInfo getCoverConfigure() Obtain Intelligent Cover Task Control Parameters.
+ * @method void setCoverConfigure(CoverConfigureInfo $CoverConfigure) Set Intelligent Cover Task Control Parameters.
+ * @method FrameTagConfigureInfo getFrameTagConfigure() Obtain Intelligent frame-specific tagging task control parameter.
+ * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) Set Intelligent frame-specific tagging task control parameter.
  */
 class CreateAIAnalysisTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Video content analysis template name. Length limit: 64 characters.
+     * @var string Name of the video analysis template, length limited to 64 characters.
      */
     public $Name;
 
     /**
-     * @var string Video content analysis template description. Length limit: 256 characters.
+     * @var string Description of the video analysis template, length limited to 256 characters.
      */
     public $Comment;
 
     /**
-     * @var ClassificationConfigureInfo Control parameter of intelligent categorization task.
+     * @var ClassificationConfigureInfo Intelligent Classification Task Control Parameters.
      */
     public $ClassificationConfigure;
 
     /**
-     * @var TagConfigureInfo Control parameter of intelligent tagging task.
+     * @var TagConfigureInfo Intelligent tag task control parameter.
      */
     public $TagConfigure;
 
     /**
-     * @var CoverConfigureInfo Control parameter of intelligent cover generating task.
+     * @var CoverConfigureInfo Intelligent Cover Task Control Parameters.
      */
     public $CoverConfigure;
 
     /**
-     * @var FrameTagConfigureInfo Control parameter of intelligent frame-specific tagging task.
+     * @var FrameTagConfigureInfo Intelligent frame-specific tagging task control parameter.
      */
     public $FrameTagConfigure;
 
     /**
-     * @param string $Name Video content analysis template name. Length limit: 64 characters.
-     * @param string $Comment Video content analysis template description. Length limit: 256 characters.
-     * @param ClassificationConfigureInfo $ClassificationConfigure Control parameter of intelligent categorization task.
-     * @param TagConfigureInfo $TagConfigure Control parameter of intelligent tagging task.
-     * @param CoverConfigureInfo $CoverConfigure Control parameter of intelligent cover generating task.
-     * @param FrameTagConfigureInfo $FrameTagConfigure Control parameter of intelligent frame-specific tagging task.
+     * @param string $Name Name of the video analysis template, length limited to 64 characters.
+     * @param string $Comment Description of the video analysis template, length limited to 256 characters.
+     * @param ClassificationConfigureInfo $ClassificationConfigure Intelligent Classification Task Control Parameters.
+     * @param TagConfigureInfo $TagConfigure Intelligent tag task control parameter.
+     * @param CoverConfigureInfo $CoverConfigure Intelligent Cover Task Control Parameters.
+     * @param FrameTagConfigureInfo $FrameTagConfigure Intelligent frame-specific tagging task control parameter.
      */
     function __construct()
     {

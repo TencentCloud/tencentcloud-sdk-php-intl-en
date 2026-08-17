@@ -18,37 +18,35 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of an ASR-based porn information detection in text task during content audit
+ * Content review Asr text porn detection task result kind
  *
- * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method string getErrCodeExt() Obtain The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
- * @method void setErrCodeExt(string $ErrCodeExt) Set The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
- * @method integer getErrCode() Obtain Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
- * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method integer getErrCode() Obtain Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiReviewPornAsrTaskInput getInput() Obtain Input for an ASR-based porn information detection in text task during content audit.
- * @method void setInput(AiReviewPornAsrTaskInput $Input) Set Input for an ASR-based porn information detection in text task during content audit.
- * @method AiReviewPornAsrTaskOutput getOutput() Obtain Output of an ASR-based porn information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiReviewPornAsrTaskOutput $Output) Set Output of an ASR-based porn information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiReviewPornAsrTaskInput getInput() Obtain Content review Asr text pornography detection task input.
+ * @method void setInput(AiReviewPornAsrTaskInput $Input) Set Content review Asr text pornography detection task input.
+ * @method AiReviewPornAsrTaskOutput getOutput() Obtain 
+ * @method void setOutput(AiReviewPornAsrTaskOutput $Output) Set 
  */
 class AiReviewTaskPornAsrResult extends AbstractModel
 {
     /**
-     * @var string Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var string The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+     * @var string Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
+     * @var integer Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      */
     public $ErrCode;
 
@@ -58,24 +56,22 @@ class AiReviewTaskPornAsrResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewPornAsrTaskInput Input for an ASR-based porn information detection in text task during content audit.
+     * @var AiReviewPornAsrTaskInput Content review Asr text pornography detection task input.
      */
     public $Input;
 
     /**
-     * @var AiReviewPornAsrTaskOutput Output of an ASR-based porn information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewPornAsrTaskOutput 
      */
     public $Output;
 
     /**
-     * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
-     * @param integer $ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param AiReviewPornAsrTaskInput $Input Input for an ASR-based porn information detection in text task during content audit.
-     * @param AiReviewPornAsrTaskOutput $Output Output of an ASR-based porn information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiReviewPornAsrTaskInput $Input Content review Asr text pornography detection task input.
+     * @param AiReviewPornAsrTaskOutput $Output 
      */
     function __construct()
     {

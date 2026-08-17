@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result information of intelligent tagging
+ * Intelligent tag result information
  *
- * @method array getTagSet() Obtain List of intelligently generated video tags.
- * @method void setTagSet(array $TagSet) Set List of intelligently generated video tags.
+ * @method array getTagSet() Obtain Video intelligent tag list.
+ * @method void setTagSet(array $TagSet) Set Video intelligent tag list.
  */
 class AiAnalysisTaskTagOutput extends AbstractModel
 {
     /**
-     * @var array List of intelligently generated video tags.
+     * @var array Video intelligent tag list.
      */
     public $TagSet;
 
     /**
-     * @param array $TagSet List of intelligently generated video tags.
+     * @param array $TagSet Video intelligent tag list.
      */
     function __construct()
     {

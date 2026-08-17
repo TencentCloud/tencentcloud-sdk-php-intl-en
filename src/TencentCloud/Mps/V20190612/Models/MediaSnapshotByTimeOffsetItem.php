@@ -18,36 +18,36 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the time point screenshots in a VOD file
+ * Screenshot information at the specified time point for on-demand files
  *
- * @method integer getDefinition() Obtain Specification of a time point screenshot template. 
- * @method void setDefinition(integer $Definition) Set Specification of a time point screenshot template. 
- * @method array getPicInfoSet() Obtain Information set of screenshots of the same specification. Each element represents a screenshot.
- * @method void setPicInfoSet(array $PicInfoSet) Set Information set of screenshots of the same specification. Each element represents a screenshot.
- * @method TaskOutputStorage getStorage() Obtain Location of a time point screenshot file.
- * @method void setStorage(TaskOutputStorage $Storage) Set Location of a time point screenshot file.
+ * @method integer getDefinition() Obtain Specification for SnapshotByTimeOffset, please refer to the [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method void setDefinition(integer $Definition) Set Specification for SnapshotByTimeOffset, please refer to the [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method array getPicInfoSet() Obtain A screenshot information set of the same specification, each element represents a screenshot.
+ * @method void setPicInfoSet(array $PicInfoSet) Set A screenshot information set of the same specification, each element represents a screenshot.
+ * @method TaskOutputStorage getStorage() Obtain Storage location of the SnapshotByTimeOffset file.
+ * @method void setStorage(TaskOutputStorage $Storage) Set Storage location of the SnapshotByTimeOffset file.
  */
 class MediaSnapshotByTimeOffsetItem extends AbstractModel
 {
     /**
-     * @var integer Specification of a time point screenshot template. 
+     * @var integer Specification for SnapshotByTimeOffset, please refer to the [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public $Definition;
 
     /**
-     * @var array Information set of screenshots of the same specification. Each element represents a screenshot.
+     * @var array A screenshot information set of the same specification, each element represents a screenshot.
      */
     public $PicInfoSet;
 
     /**
-     * @var TaskOutputStorage Location of a time point screenshot file.
+     * @var TaskOutputStorage Storage location of the SnapshotByTimeOffset file.
      */
     public $Storage;
 
     /**
-     * @param integer $Definition Specification of a time point screenshot template. 
-     * @param array $PicInfoSet Information set of screenshots of the same specification. Each element represents a screenshot.
-     * @param TaskOutputStorage $Storage Location of a time point screenshot file.
+     * @param integer $Definition Specification for SnapshotByTimeOffset, please refer to the [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param array $PicInfoSet A screenshot information set of the same specification, each element represents a screenshot.
+     * @param TaskOutputStorage $Storage Storage location of the SnapshotByTimeOffset file.
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of intelligent frame-specific tagging task
+ * Intelligent Frame Tagging Task Control Parameter
  *
- * @method string getSwitch() Obtain Switch of intelligent frame-specific tagging task. Valid values:
-<li>ON: enables intelligent frame-specific tagging task;</li>
-<li>OFF: disables intelligent frame-specific tagging task.</li>
- * @method void setSwitch(string $Switch) Set Switch of intelligent frame-specific tagging task. Valid values:
-<li>ON: enables intelligent frame-specific tagging task;</li>
-<li>OFF: disables intelligent frame-specific tagging task.</li>
+ * @method string getSwitch() Obtain Intelligent frame tagging task switch. Valid values:
+<li>ON: Enable intelligent frame-specific tagging task.</li>
+<li>OFF: Disables the intelligent frame-specific tagging task.</li>
+ * @method void setSwitch(string $Switch) Set Intelligent frame tagging task switch. Valid values:
+<li>ON: Enable intelligent frame-specific tagging task.</li>
+<li>OFF: Disables the intelligent frame-specific tagging task.</li>
  */
 class FrameTagConfigureInfo extends AbstractModel
 {
     /**
-     * @var string Switch of intelligent frame-specific tagging task. Valid values:
-<li>ON: enables intelligent frame-specific tagging task;</li>
-<li>OFF: disables intelligent frame-specific tagging task.</li>
+     * @var string Intelligent frame tagging task switch. Valid values:
+<li>ON: Enable intelligent frame-specific tagging task.</li>
+<li>OFF: Disables the intelligent frame-specific tagging task.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Switch of intelligent frame-specific tagging task. Valid values:
-<li>ON: enables intelligent frame-specific tagging task;</li>
-<li>OFF: disables intelligent frame-specific tagging task.</li>
+     * @param string $Switch Intelligent frame tagging task switch. Valid values:
+<li>ON: Enable intelligent frame-specific tagging task.</li>
+<li>OFF: Disables the intelligent frame-specific tagging task.</li>
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getWord() Obtain Text keyword.
  * @method void setWord(string $Word) Set Text keyword.
- * @method array getSegmentSet() Obtain List of segments that contain a text keyword.
- * @method void setSegmentSet(array $SegmentSet) Set List of segments that contain a text keyword.
+ * @method array getSegmentSet() Obtain List of segments where the key text appears.
+ * @method void setSegmentSet(array $SegmentSet) Set List of segments where the key text appears.
  */
 class AiRecognitionTaskOcrWordsResultItem extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AiRecognitionTaskOcrWordsResultItem extends AbstractModel
     public $Word;
 
     /**
-     * @var array List of segments that contain a text keyword.
+     * @var array List of segments where the key text appears.
      */
     public $SegmentSet;
 
     /**
      * @param string $Word Text keyword.
-     * @param array $SegmentSet List of segments that contain a text keyword.
+     * @param array $SegmentSet List of segments where the key text appears.
      */
     function __construct()
     {

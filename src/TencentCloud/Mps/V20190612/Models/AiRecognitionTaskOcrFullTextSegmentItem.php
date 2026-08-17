@@ -18,24 +18,24 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Full text recognition segment.
+ * Full text recognition recording clip.
  *
- * @method float getStartTimeOffset() Obtain Start time offset of a recognition segment in seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a recognition segment in seconds.
- * @method float getEndTimeOffset() Obtain End time offset of a recognition segment in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a recognition segment in seconds.
+ * @method float getStartTimeOffset() Obtain Start time offset of a recognized segment, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a recognized segment, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of a recognized segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a recognized segment, in seconds.
  * @method array getTextSet() Obtain Recognition segment result set.
  * @method void setTextSet(array $TextSet) Set Recognition segment result set.
  */
 class AiRecognitionTaskOcrFullTextSegmentItem extends AbstractModel
 {
     /**
-     * @var float Start time offset of a recognition segment in seconds.
+     * @var float Start time offset of a recognized segment, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of a recognition segment in seconds.
+     * @var float End time offset of a recognized segment, in seconds.
      */
     public $EndTimeOffset;
 
@@ -45,8 +45,8 @@ class AiRecognitionTaskOcrFullTextSegmentItem extends AbstractModel
     public $TextSet;
 
     /**
-     * @param float $StartTimeOffset Start time offset of a recognition segment in seconds.
-     * @param float $EndTimeOffset End time offset of a recognition segment in seconds.
+     * @param float $StartTimeOffset Start time offset of a recognized segment, in seconds.
+     * @param float $EndTimeOffset End time offset of a recognized segment, in seconds.
      * @param array $TextSet Recognition segment result set.
      */
     function __construct()

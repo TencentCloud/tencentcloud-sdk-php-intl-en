@@ -18,38 +18,38 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Smart Erase, specifies the region configuration.
-Erase the designated region directly within a specified period.
-When both BeginMs and EndMs are set to 0, directly perform removal of the designated region in the entire video.
+ * Intelligent erasure, specify the region configuration.
+Directly perform removal in the designated region within a specified period.
+When both BeginMs and EndMs are set to 0, directly erase the designated region in the entire video.
  *
- * @method integer getBeginMs() Obtain Start time, in ms.
- * @method void setBeginMs(integer $BeginMs) Set Start time, in ms.
- * @method integer getEndMs() Obtain End time, unit: ms.
- * @method void setEndMs(integer $EndMs) Set End time, unit: ms.
- * @method array getAreas() Obtain Erases the domain list within the period.
- * @method void setAreas(array $Areas) Set Erases the domain list within the period.
+ * @method integer getBeginMs() Obtain Start time, unit: ms
+ * @method void setBeginMs(integer $BeginMs) Set Start time, unit: ms
+ * @method integer getEndMs() Obtain End time, unit: ms
+ * @method void setEndMs(integer $EndMs) Set End time, unit: ms
+ * @method array getAreas() Obtain Erase domain list during the period
+ * @method void setAreas(array $Areas) Set Erase domain list during the period
  */
 class EraseTimeArea extends AbstractModel
 {
     /**
-     * @var integer Start time, in ms.
+     * @var integer Start time, unit: ms
      */
     public $BeginMs;
 
     /**
-     * @var integer End time, unit: ms.
+     * @var integer End time, unit: ms
      */
     public $EndMs;
 
     /**
-     * @var array Erases the domain list within the period.
+     * @var array Erase domain list during the period
      */
     public $Areas;
 
     /**
-     * @param integer $BeginMs Start time, in ms.
-     * @param integer $EndMs End time, unit: ms.
-     * @param array $Areas Erases the domain list within the period.
+     * @param integer $BeginMs Start time, unit: ms
+     * @param integer $EndMs End time, unit: ms
+     * @param array $Areas Erase domain list during the period
      */
     function __construct()
     {

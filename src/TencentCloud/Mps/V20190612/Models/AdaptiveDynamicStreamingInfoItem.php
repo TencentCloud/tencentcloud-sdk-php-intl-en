@@ -18,16 +18,16 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Adaptive bitrate streaming information
+ * Adaptive Bitrate Streaming information
  *
  * @method integer getDefinition() Obtain Adaptive bitrate streaming specification.
  * @method void setDefinition(integer $Definition) Set Adaptive bitrate streaming specification.
- * @method string getPackage() Obtain Container format. Valid values: HLS, MPEG-DASH.
- * @method void setPackage(string $Package) Set Container format. Valid values: HLS, MPEG-DASH.
- * @method string getPath() Obtain Playback address.
- * @method void setPath(string $Path) Set Playback address.
- * @method TaskOutputStorage getStorage() Obtain Storage location of adaptive bitrate streaming files.
- * @method void setStorage(TaskOutputStorage $Storage) Set Storage location of adaptive bitrate streaming files.
+ * @method string getPackage() Obtain Packaging format, which may be two kinds: HLS and MPEG-DASH.
+ * @method void setPackage(string $Package) Set Packaging format, which may be two kinds: HLS and MPEG-DASH.
+ * @method string getPath() Obtain Playback path.
+ * @method void setPath(string $Path) Set Playback path.
+ * @method TaskOutputStorage getStorage() Obtain Storage location of the adaptive bitrate stream file.
+ * @method void setStorage(TaskOutputStorage $Storage) Set Storage location of the adaptive bitrate stream file.
  */
 class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 {
@@ -37,25 +37,25 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     public $Definition;
 
     /**
-     * @var string Container format. Valid values: HLS, MPEG-DASH.
+     * @var string Packaging format, which may be two kinds: HLS and MPEG-DASH.
      */
     public $Package;
 
     /**
-     * @var string Playback address.
+     * @var string Playback path.
      */
     public $Path;
 
     /**
-     * @var TaskOutputStorage Storage location of adaptive bitrate streaming files.
+     * @var TaskOutputStorage Storage location of the adaptive bitrate stream file.
      */
     public $Storage;
 
     /**
      * @param integer $Definition Adaptive bitrate streaming specification.
-     * @param string $Package Container format. Valid values: HLS, MPEG-DASH.
-     * @param string $Path Playback address.
-     * @param TaskOutputStorage $Storage Storage location of adaptive bitrate streaming files.
+     * @param string $Package Packaging format, which may be two kinds: HLS and MPEG-DASH.
+     * @param string $Path Playback path.
+     * @param TaskOutputStorage $Storage Storage location of the adaptive bitrate stream file.
      */
     function __construct()
     {

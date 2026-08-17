@@ -18,18 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Event notification configuration of a task.
+ * Event notification configuration for task processing.
  *
  * @method string getNotifyType() Obtain Notification type:
-TDMQ-CMQ: message queue.
-"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+TDMQ-CMQ: Message Queue
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
 <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
  * @method void setNotifyType(string $NotifyType) Set Notification type:
-TDMQ-CMQ: message queue.
-"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+TDMQ-CMQ: Message Queue
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
 <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
- * @method string getNotifyUrl() Obtain HTTP callback URL, required if `NotifyType` is set to `URL`
- * @method void setNotifyUrl(string $NotifyUrl) Set HTTP callback URL, required if `NotifyType` is set to `URL`
+ * @method string getNotifyUrl() Obtain HTTP callback URL. This is required if NotifyType is URL.
+ * @method void setNotifyUrl(string $NotifyUrl) Set HTTP callback URL. This is required if NotifyType is URL.
  * @method string getCmqModel() Obtain Queue and Topic models are provided.
  * @method void setCmqModel(string $CmqModel) Set Queue and Topic models are provided.
  * @method string getCmqRegion() Obtain Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
@@ -38,23 +40,22 @@ TDMQ-CMQ: message queue.
  * @method void setQueueName(string $QueueName) Set This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
  * @method string getTopicName() Obtain This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
  * @method void setTopicName(string $TopicName) Set This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
- * @method string getNotifyKey() Obtain Key used to generate a callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNotifyKey(string $NotifyKey) Set Key used to generate a callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNotifyKey() Obtain 
+ * @method void setNotifyKey(string $NotifyKey) Set 
  */
 class LiveStreamTaskNotifyConfig extends AbstractModel
 {
     /**
      * @var string Notification type:
-TDMQ-CMQ: message queue.
-"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+TDMQ-CMQ: Message Queue
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
 <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
      */
     public $NotifyType;
 
     /**
-     * @var string HTTP callback URL, required if `NotifyType` is set to `URL`
+     * @var string HTTP callback URL. This is required if NotifyType is URL.
      */
     public $NotifyUrl;
 
@@ -79,23 +80,22 @@ TDMQ-CMQ: message queue.
     public $TopicName;
 
     /**
-     * @var string Key used to generate a callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $NotifyKey;
 
     /**
      * @param string $NotifyType Notification type:
-TDMQ-CMQ: message queue.
-"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+TDMQ-CMQ: Message Queue
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
 <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
-     * @param string $NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+     * @param string $NotifyUrl HTTP callback URL. This is required if NotifyType is URL.
      * @param string $CmqModel Queue and Topic models are provided.
      * @param string $CmqRegion Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
      * @param string $QueueName This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
      * @param string $TopicName This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
-     * @param string $NotifyKey Key used to generate a callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NotifyKey 
      */
     function __construct()
     {

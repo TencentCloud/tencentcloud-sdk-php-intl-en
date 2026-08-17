@@ -18,56 +18,44 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VOD video file editing information
+ * Edit on-demand video file information
  *
- * @method MediaInputInfo getInputInfo() Obtain Video input information.
- * @method void setInputInfo(MediaInputInfo $InputInfo) Set Video input information.
- * @method float getStartTimeOffset() Obtain The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
- * @method float getEndTimeOffset() Obtain The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
- * @method string getId() Obtain The ID of the material associated with an element. This parameter is required for video compositing tasks.
-
-Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setId(string $Id) Set The ID of the material associated with an element. This parameter is required for video compositing tasks.
-
-Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method MediaInputInfo getInputInfo() Obtain Input video information.
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set Input video information.
+ * @method float getStartTimeOffset() Obtain [Edit] task takes effect, video editing start time offset, measurement unit: second.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set [Edit] task takes effect, video editing start time offset, measurement unit: second.
+ * @method float getEndTimeOffset() Obtain [Edit] task takes effect, video editing end time offset, measurement unit: second.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set [Edit] task takes effect, video editing end time offset, measurement unit: second.
+ * @method string getId() Obtain 
+ * @method void setId(string $Id) Set 
  */
 class EditMediaFileInfo extends AbstractModel
 {
     /**
-     * @var MediaInputInfo Video input information.
+     * @var MediaInputInfo Input video information.
      */
     public $InputInfo;
 
     /**
-     * @var float The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+     * @var float [Edit] task takes effect, video editing start time offset, measurement unit: second.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+     * @var float [Edit] task takes effect, video editing end time offset, measurement unit: second.
      */
     public $EndTimeOffset;
 
     /**
-     * @var string The ID of the material associated with an element. This parameter is required for video compositing tasks.
-
-Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Id;
 
     /**
-     * @param MediaInputInfo $InputInfo Video input information.
-     * @param float $StartTimeOffset The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
-     * @param float $EndTimeOffset The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
-     * @param string $Id The ID of the material associated with an element. This parameter is required for video compositing tasks.
-
-Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MediaInputInfo $InputInfo Input video information.
+     * @param float $StartTimeOffset [Edit] task takes effect, video editing start time offset, measurement unit: second.
+     * @param float $EndTimeOffset [Edit] task takes effect, video editing end time offset, measurement unit: second.
+     * @param string $Id 
      */
     function __construct()
     {

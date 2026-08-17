@@ -30,13 +30,13 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setShadowWidthUnit(integer $ShadowWidthUnit) Set Shadow width unit. 0 for pixel, 1 for percentage. Default is 0 (pixel).
 
- * @method string getShadowColor() Obtain Shadow color. 6-digit base 16 RGB. Black by default if left blank (has set shadow in the current situation).
+ * @method string getShadowColor() Obtain Shadow color. 6-digit base 16 RGB. Black by default if left blank (when shadow is set).
 
- * @method void setShadowColor(string $ShadowColor) Set Shadow color. 6-digit base 16 RGB. Black by default if left blank (has set shadow in the current situation).
+ * @method void setShadowColor(string $ShadowColor) Set Shadow color. 6-digit base 16 RGB. Black by default if left blank (when shadow is set).
 
- * @method float getShadowAlpha() Obtain Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+ * @method float getShadowAlpha() Obtain Shadow transparency. A positive floating-point number in the range of (0, 1]. By default if left blank, the value is 1, which means completely opaque (with shadow configured).
 
- * @method void setShadowAlpha(float $ShadowAlpha) Set Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+ * @method void setShadowAlpha(float $ShadowAlpha) Set Shadow transparency. A positive floating-point number in the range of (0, 1]. By default if left blank, the value is 1, which means completely opaque (with shadow configured).
  */
 class SubtitleShadowConfig extends AbstractModel
 {
@@ -58,13 +58,13 @@ class SubtitleShadowConfig extends AbstractModel
     public $ShadowWidthUnit;
 
     /**
-     * @var string Shadow color. 6-digit base 16 RGB. Black by default if left blank (has set shadow in the current situation).
+     * @var string Shadow color. 6-digit base 16 RGB. Black by default if left blank (when shadow is set).
 
      */
     public $ShadowColor;
 
     /**
-     * @var float Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+     * @var float Shadow transparency. A positive floating-point number in the range of (0, 1]. By default if left blank, the value is 1, which means completely opaque (with shadow configured).
 
      */
     public $ShadowAlpha;
@@ -75,9 +75,9 @@ class SubtitleShadowConfig extends AbstractModel
 
      * @param integer $ShadowWidthUnit Shadow width unit. 0 for pixel, 1 for percentage. Default is 0 (pixel).
 
-     * @param string $ShadowColor Shadow color. 6-digit base 16 RGB. Black by default if left blank (has set shadow in the current situation).
+     * @param string $ShadowColor Shadow color. 6-digit base 16 RGB. Black by default if left blank (when shadow is set).
 
-     * @param float $ShadowAlpha Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+     * @param float $ShadowAlpha Shadow transparency. A positive floating-point number in the range of (0, 1]. By default if left blank, the value is 1, which means completely opaque (with shadow configured).
      */
     function __construct()
     {

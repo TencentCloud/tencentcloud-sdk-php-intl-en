@@ -28,18 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginSubtitlePath(string $OriginSubtitlePath) Set <p>Path of subtitle file extracted from video.</p>
  * @method string getTranslateSubtitlePath() Obtain <p>Path of a subtitle translation file extracted from a video.</p>
  * @method void setTranslateSubtitlePath(string $TranslateSubtitlePath) Set <p>Path of a subtitle translation file extracted from a video.</p>
- * @method SubtitlePosition getSubtitlePos() Obtain <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubtitlePos(SubtitlePosition $SubtitlePos) Set <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVoiceClonedVideo() Obtain <p>File URL of the video after voice type cloning</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoiceClonedVideo(string $VoiceClonedVideo) Set <p>File URL of the video after voice type cloning</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVoiceClonedMarkFile() Obtain <p>File address of the voice type clone annotation</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoiceClonedMarkFile(string $VoiceClonedMarkFile) Set <p>File address of the voice type clone annotation</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method SubtitlePosition getSubtitlePos() Obtain 
+ * @method void setSubtitlePos(SubtitlePosition $SubtitlePos) Set 
+ * @method string getVoiceClonedVideo() Obtain 
+ * @method void setVoiceClonedVideo(string $VoiceClonedVideo) Set 
+ * @method string getVoiceClonedMarkFile() Obtain 
+ * @method void setVoiceClonedMarkFile(string $VoiceClonedMarkFile) Set 
  * @method string getErasedVideoPath() Obtain <p>Result path of a video for removal only</p>
  * @method void setErasedVideoPath(string $ErasedVideoPath) Set <p>Result path of a video for removal only</p>
  * @method string getDubbingEditInfoUrl() Obtain <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
@@ -74,20 +68,17 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
     public $TranslateSubtitlePath;
 
     /**
-     * @var SubtitlePosition <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SubtitlePosition 
      */
     public $SubtitlePos;
 
     /**
-     * @var string <p>File URL of the video after voice type cloning</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $VoiceClonedVideo;
 
     /**
-     * @var string <p>File address of the voice type clone annotation</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $VoiceClonedMarkFile;
 
@@ -121,12 +112,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param TaskOutputStorage $OutputStorage <p>Storage location of a file after removal.</p>
      * @param string $OriginSubtitlePath <p>Path of subtitle file extracted from video.</p>
      * @param string $TranslateSubtitlePath <p>Path of a subtitle translation file extracted from a video.</p>
-     * @param SubtitlePosition $SubtitlePos <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VoiceClonedVideo <p>File URL of the video after voice type cloning</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VoiceClonedMarkFile <p>File address of the voice type clone annotation</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubtitlePosition $SubtitlePos 
+     * @param string $VoiceClonedVideo 
+     * @param string $VoiceClonedMarkFile 
      * @param string $ErasedVideoPath <p>Result path of a video for removal only</p>
      * @param string $DubbingEditInfoUrl <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
      * @param string $FileId <p>FileId of a file after removal.</p>

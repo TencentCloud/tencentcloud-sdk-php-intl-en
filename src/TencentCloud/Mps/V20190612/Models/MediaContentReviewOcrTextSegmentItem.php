@@ -18,52 +18,52 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Suspected segment identified during OCR-based text audit during content audit
+ * Content review Ocr text audit suspected segment
  *
- * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment in seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment in seconds.
- * @method float getEndTimeOffset() Obtain End time offset of a suspected segment in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment in seconds.
- * @method float getConfidence() Obtain Confidence of a suspected segment.
- * @method void setConfidence(float $Confidence) Set Confidence of a suspected segment.
- * @method string getSuggestion() Obtain Suggestion for suspected segment audit. Valid values:
+ * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of a suspected segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment, in seconds.
+ * @method float getConfidence() Obtain Confidence degree of the suspected segment.
+ * @method void setConfidence(float $Confidence) Set Confidence degree of the suspected segment.
+ * @method string getSuggestion() Obtain Result Suggestions for suspected segment review, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Suggestion for suspected segment audit. Valid values:
+ * @method void setSuggestion(string $Suggestion) Set Result Suggestions for suspected segment review, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method array getKeywordSet() Obtain List of suspected keywords.
- * @method void setKeywordSet(array $KeywordSet) Set List of suspected keywords.
- * @method array getAreaCoordSet() Obtain Zone coordinates (at the pixel level) of suspected text: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
- * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates (at the pixel level) of suspected text: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
- * @method string getUrl() Obtain URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
- * @method void setUrl(string $Url) Set URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
- * @method string getPicUrlExpireTime() Obtain Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method array getKeywordSet() Obtain Suspicious keyword list.
+ * @method void setKeywordSet(array $KeywordSet) Set Suspicious keyword list.
+ * @method array getAreaCoordSet() Obtain Area coordinates of suspected text occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Area coordinates of suspected text occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+ * @method string getUrl() Obtain Suspected image URL (Images are not retained permanently, reaching
+The image will be deleted after the PicUrlExpireTime time point.
+ * @method void setUrl(string $Url) Set Suspected image URL (Images are not retained permanently, reaching
+The image will be deleted after the PicUrlExpireTime time point.
+ * @method string getPicUrlExpireTime() Obtain Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  */
 class MediaContentReviewOcrTextSegmentItem extends AbstractModel
 {
     /**
-     * @var float Start time offset of a suspected segment in seconds.
+     * @var float Start time offset of a suspected segment, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of a suspected segment in seconds.
+     * @var float End time offset of a suspected segment, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @var float Confidence of a suspected segment.
+     * @var float Confidence degree of the suspected segment.
      */
     public $Confidence;
 
     /**
-     * @var string Suggestion for suspected segment audit. Valid values:
+     * @var string Result Suggestions for suspected segment review, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -71,39 +71,39 @@ class MediaContentReviewOcrTextSegmentItem extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var array List of suspected keywords.
+     * @var array Suspicious keyword list.
      */
     public $KeywordSet;
 
     /**
-     * @var array Zone coordinates (at the pixel level) of suspected text: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+     * @var array Area coordinates of suspected text occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
      */
     public $AreaCoordSet;
 
     /**
-     * @var string URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
+     * @var string Suspected image URL (Images are not retained permanently, reaching
+The image will be deleted after the PicUrlExpireTime time point.
      */
     public $Url;
 
     /**
-     * @var string Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $PicUrlExpireTime;
 
     /**
-     * @param float $StartTimeOffset Start time offset of a suspected segment in seconds.
-     * @param float $EndTimeOffset End time offset of a suspected segment in seconds.
-     * @param float $Confidence Confidence of a suspected segment.
-     * @param string $Suggestion Suggestion for suspected segment audit. Valid values:
+     * @param float $StartTimeOffset Start time offset of a suspected segment, in seconds.
+     * @param float $EndTimeOffset End time offset of a suspected segment, in seconds.
+     * @param float $Confidence Confidence degree of the suspected segment.
+     * @param string $Suggestion Result Suggestions for suspected segment review, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param array $KeywordSet List of suspected keywords.
-     * @param array $AreaCoordSet Zone coordinates (at the pixel level) of suspected text: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-     * @param string $Url URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
-     * @param string $PicUrlExpireTime Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @param array $KeywordSet Suspicious keyword list.
+     * @param array $AreaCoordSet Area coordinates of suspected text occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+     * @param string $Url Suspected image URL (Images are not retained permanently, reaching
+The image will be deleted after the PicUrlExpireTime time point.
+     * @param string $PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     function __construct()
     {

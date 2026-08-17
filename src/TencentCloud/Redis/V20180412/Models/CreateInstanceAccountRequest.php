@@ -20,102 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstanceAccount request structure.
  *
- * @method string getInstanceId() Obtain Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
- * @method void setInstanceId(string $InstanceId) Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
- * @method string getAccountName() Obtain Custom account name for accessing the database.
-- It contains only letters, digits, underscores (_), and hyphens (-).
-- The length cannot exceed 32 characters.
- * @method void setAccountName(string $AccountName) Set Custom account name for accessing the database.
-- It contains only letters, digits, underscores (_), and hyphens (-).
-- The length cannot exceed 32 characters.
- * @method string getAccountPassword() Obtain Password of the custom account. The password complexity requirements are as follows:
-- It can contain 8 to 64 characters.
-- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- It cannot start with a forward slash (/).
-
- * @method void setAccountPassword(string $AccountPassword) Set Password of the custom account. The password complexity requirements are as follows:
-- It can contain 8 to 64 characters.
-- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- It cannot start with a forward slash (/).
-
- * @method array getReadonlyPolicy() Obtain The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
-- master: Master node.- replication: Replica node.
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
-- master: Master node.- replication: Replica node.
- * @method string getPrivilege() Obtain Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
-- r: read-only.
-- rw: read-write.
- * @method void setPrivilege(string $Privilege) Set Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
-- r: read-only.
-- rw: read-write.
- * @method string getRemark() Obtain Description information about account remarks, with a length of [0, 64] bytes.
- * @method void setRemark(string $Remark) Set Description information about account remarks, with a length of [0, 64] bytes.
- * @method boolean getEncryptPassword() Obtain Whether to encrypt the password.
- * @method void setEncryptPassword(boolean $EncryptPassword) Set Whether to encrypt the password.
+ * @method string getInstanceId() Obtain <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
+ * @method string getAccountName() Obtain <p>Custom account name for accessing the database.</p><ul><li>Consist of letters, digits, underscores, and hyphens only.</li><li>Length cannot be greater than 32.</li></ul>
+ * @method void setAccountName(string $AccountName) Set <p>Custom account name for accessing the database.</p><ul><li>Consist of letters, digits, underscores, and hyphens only.</li><li>Length cannot be greater than 32.</li></ul>
+ * @method string getAccountPassword() Obtain <p>Set a password for the customized account. The password complexity requirements are as follows:</p><ul><li>Character count: [8,64].</li><li>Contain at least two kinds of lowercase letters, uppercase letters, digits and characters ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/.</li><li>Cannot start with "/".</li></ul>
+ * @method void setAccountPassword(string $AccountPassword) Set <p>Set a password for the customized account. The password complexity requirements are as follows:</p><ul><li>Character count: [8,64].</li><li>Contain at least two kinds of lowercase letters, uppercase letters, digits and characters ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/.</li><li>Cannot start with "/".</li></ul>
+ * @method array getReadonlyPolicy() Obtain <p>Read requests for the designated account are routed to the primary node or replica node. Read-only replica is not enabled, and selection of replica nodes is not supported.</p><ul><li>master: primary node</li><li>replication: replica node</li></ul>
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set <p>Read requests for the designated account are routed to the primary node or replica node. Read-only replica is not enabled, and selection of replica nodes is not supported.</p><ul><li>master: primary node</li><li>replication: replica node</li></ul>
+ * @method string getPrivilege() Obtain <p>Account read/write permission supports selecting read-only or read-write permission.</p><ul><li>r: Read-only.</li><li>rw: Read-write.</li></ul>
+ * @method void setPrivilege(string $Privilege) Set <p>Account read/write permission supports selecting read-only or read-write permission.</p><ul><li>r: Read-only.</li><li>rw: Read-write.</li></ul>
+ * @method string getRemark() Obtain <p>Description information about account remarks, with a length of [0, 64] bytes.</p>
+ * @method void setRemark(string $Remark) Set <p>Description information about account remarks, with a length of [0, 64] bytes.</p>
+ * @method boolean getEncryptPassword() Obtain <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
+ * @method void setEncryptPassword(boolean $EncryptPassword) Set <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
  */
 class CreateInstanceAccountRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * @var string <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Custom account name for accessing the database.
-- It contains only letters, digits, underscores (_), and hyphens (-).
-- The length cannot exceed 32 characters.
+     * @var string <p>Custom account name for accessing the database.</p><ul><li>Consist of letters, digits, underscores, and hyphens only.</li><li>Length cannot be greater than 32.</li></ul>
      */
     public $AccountName;
 
     /**
-     * @var string Password of the custom account. The password complexity requirements are as follows:
-- It can contain 8 to 64 characters.
-- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- It cannot start with a forward slash (/).
-
+     * @var string <p>Set a password for the customized account. The password complexity requirements are as follows:</p><ul><li>Character count: [8,64].</li><li>Contain at least two kinds of lowercase letters, uppercase letters, digits and characters ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/.</li><li>Cannot start with "/".</li></ul>
      */
     public $AccountPassword;
 
     /**
-     * @var array The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
-- master: Master node.- replication: Replica node.
+     * @var array <p>Read requests for the designated account are routed to the primary node or replica node. Read-only replica is not enabled, and selection of replica nodes is not supported.</p><ul><li>master: primary node</li><li>replication: replica node</li></ul>
      */
     public $ReadonlyPolicy;
 
     /**
-     * @var string Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
-- r: read-only.
-- rw: read-write.
+     * @var string <p>Account read/write permission supports selecting read-only or read-write permission.</p><ul><li>r: Read-only.</li><li>rw: Read-write.</li></ul>
      */
     public $Privilege;
 
     /**
-     * @var string Description information about account remarks, with a length of [0, 64] bytes.
+     * @var string <p>Description information about account remarks, with a length of [0, 64] bytes.</p>
      */
     public $Remark;
 
     /**
-     * @var boolean Whether to encrypt the password.
+     * @var boolean <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
      */
     public $EncryptPassword;
 
     /**
-     * @param string $InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
-     * @param string $AccountName Custom account name for accessing the database.
-- It contains only letters, digits, underscores (_), and hyphens (-).
-- The length cannot exceed 32 characters.
-     * @param string $AccountPassword Password of the custom account. The password complexity requirements are as follows:
-- It can contain 8 to 64 characters.
-- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- It cannot start with a forward slash (/).
-
-     * @param array $ReadonlyPolicy The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
-- master: Master node.- replication: Replica node.
-     * @param string $Privilege Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
-- r: read-only.
-- rw: read-write.
-     * @param string $Remark Description information about account remarks, with a length of [0, 64] bytes.
-     * @param boolean $EncryptPassword Whether to encrypt the password.
+     * @param string $InstanceId <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
+     * @param string $AccountName <p>Custom account name for accessing the database.</p><ul><li>Consist of letters, digits, underscores, and hyphens only.</li><li>Length cannot be greater than 32.</li></ul>
+     * @param string $AccountPassword <p>Set a password for the customized account. The password complexity requirements are as follows:</p><ul><li>Character count: [8,64].</li><li>Contain at least two kinds of lowercase letters, uppercase letters, digits and characters ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/.</li><li>Cannot start with "/".</li></ul>
+     * @param array $ReadonlyPolicy <p>Read requests for the designated account are routed to the primary node or replica node. Read-only replica is not enabled, and selection of replica nodes is not supported.</p><ul><li>master: primary node</li><li>replication: replica node</li></ul>
+     * @param string $Privilege <p>Account read/write permission supports selecting read-only or read-write permission.</p><ul><li>r: Read-only.</li><li>rw: Read-write.</li></ul>
+     * @param string $Remark <p>Description information about account remarks, with a length of [0, 64] bytes.</p>
+     * @param boolean $EncryptPassword <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
      */
     function __construct()
     {

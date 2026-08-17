@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result information of intelligent categorization
+ * Intelligent classification results info
  *
- * @method array getClassificationSet() Obtain List of intelligently generated video categories.
- * @method void setClassificationSet(array $ClassificationSet) Set List of intelligently generated video categories.
+ * @method array getClassificationSet() Obtain Video intelligent classification list.
+ * @method void setClassificationSet(array $ClassificationSet) Set Video intelligent classification list.
  */
 class AiAnalysisTaskClassificationOutput extends AbstractModel
 {
     /**
-     * @var array List of intelligently generated video categories.
+     * @var array Video intelligent classification list.
      */
     public $ClassificationSet;
 
     /**
-     * @param array $ClassificationSet List of intelligently generated video categories.
+     * @param array $ClassificationSet Video intelligent classification list.
      */
     function __construct()
     {

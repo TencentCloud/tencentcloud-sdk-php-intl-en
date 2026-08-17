@@ -20,28 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Segment information.
  *
- * @method string getSummary() Obtain Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSummary(string $Summary) Set Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSummary() Obtain 
+ * @method void setSummary(string $Summary) Set 
  * @method string getTitle() Obtain Segment title.
  * @method void setTitle(string $Title) Set Segment title.
- * @method array getKeywords() Obtain Segment keywords.
- * @method void setKeywords(array $Keywords) Set Segment keywords.
- * @method float getStartTimeOffset() Obtain Segmentation start time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Segmentation start time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getEndTimeOffset() Obtain Segmentation end time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set Segmentation end time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getKeywords() Obtain Segment keyword.
+ * @method void setKeywords(array $Keywords) Set Segment keyword.
+ * @method float getStartTimeOffset() Obtain 
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set 
+ * @method float getEndTimeOffset() Obtain 
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set 
  */
 class AiParagraphInfo extends AbstractModel
 {
     /**
-     * @var string Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Summary;
 
@@ -51,31 +44,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Title;
 
     /**
-     * @var array Segment keywords.
+     * @var array Segment keyword.
      */
     public $Keywords;
 
     /**
-     * @var float Segmentation start time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $StartTimeOffset;
 
     /**
-     * @var float Segmentation end time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $EndTimeOffset;
 
     /**
-     * @param string $Summary Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Summary 
      * @param string $Title Segment title.
-     * @param array $Keywords Segment keywords.
-     * @param float $StartTimeOffset Segmentation start time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $EndTimeOffset Segmentation end time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Keywords Segment keyword.
+     * @param float $StartTimeOffset 
+     * @param float $EndTimeOffset 
      */
     function __construct()
     {

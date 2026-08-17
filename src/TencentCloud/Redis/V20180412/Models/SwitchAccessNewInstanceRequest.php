@@ -21,24 +21,24 @@ use TencentCloud\Common\AbstractModel;
  * SwitchAccessNewInstance request structure.
  *
  * @method string getInstanceId() Obtain Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
+ For example: crs-xjhsdj****. Please log in to the[ Redis Colose](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
 Sample value: crs-asdasdas.
  * @method void setInstanceId(string $InstanceId) Set Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
+ For example: crs-xjhsdj****. Please log in to the[ Redis Colose](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
 Sample value: crs-asdasdas.
  */
 class SwitchAccessNewInstanceRequest extends AbstractModel
 {
     /**
      * @var string Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
+ For example: crs-xjhsdj****. Please log in to the[ Redis Colose](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
 Sample value: crs-asdasdas.
      */
     public $InstanceId;
 
     /**
      * @param string $InstanceId Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
+ For example: crs-xjhsdj****. Please log in to the[ Redis Colose](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
 Sample value: crs-asdasdas.
      */
     function __construct()

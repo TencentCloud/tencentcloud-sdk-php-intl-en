@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output of speech keyword recognition.
+ * Speech keyword recognition output.
  *
  * @method array getResultSet() Obtain Speech keyword recognition result set.
  * @method void setResultSet(array $ResultSet) Set Speech keyword recognition result set.

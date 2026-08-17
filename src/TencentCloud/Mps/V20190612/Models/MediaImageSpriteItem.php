@@ -18,68 +18,68 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Image sprite information
+ * Sprite image information
  *
- * @method integer getDefinition() Obtain Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
- * @method void setDefinition(integer $Definition) Set Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
- * @method integer getHeight() Obtain Subimage height of an image sprite.
- * @method void setHeight(integer $Height) Set Subimage height of an image sprite.
- * @method integer getWidth() Obtain Subimage width of an image sprite.
- * @method void setWidth(integer $Width) Set Subimage width of an image sprite.
- * @method integer getTotalCount() Obtain Total number of subimages in each image sprite.
- * @method void setTotalCount(integer $TotalCount) Set Total number of subimages in each image sprite.
- * @method array getImagePathSet() Obtain Path to each image sprite.
- * @method void setImagePathSet(array $ImagePathSet) Set Path to each image sprite.
- * @method string getWebVttPath() Obtain Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
- * @method void setWebVttPath(string $WebVttPath) Set Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
- * @method TaskOutputStorage getStorage() Obtain Storage location of an image sprite file.
- * @method void setStorage(TaskOutputStorage $Storage) Set Storage location of an image sprite file.
+ * @method integer getDefinition() Obtain Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method void setDefinition(integer $Definition) Set Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+ * @method integer getHeight() Obtain Height of small images in sprite sheet.
+ * @method void setHeight(integer $Height) Set Height of small images in sprite sheet.
+ * @method integer getWidth() Obtain Width of small images in sprite sheet.
+ * @method void setWidth(integer $Width) Set Width of small images in sprite sheet.
+ * @method integer getTotalCount() Obtain Number of small images in each sprite sheet.
+ * @method void setTotalCount(integer $TotalCount) Set Number of small images in each sprite sheet.
+ * @method array getImagePathSet() Obtain Path of each sprite sheet.
+ * @method void setImagePathSet(array $ImagePathSet) Set Path of each sprite sheet.
+ * @method string getWebVttPath() Obtain 
+ * @method void setWebVttPath(string $WebVttPath) Set 
+ * @method TaskOutputStorage getStorage() Obtain Storage location of the sprite sheet file.
+ * @method void setStorage(TaskOutputStorage $Storage) Set Storage location of the sprite sheet file.
  */
 class MediaImageSpriteItem extends AbstractModel
 {
     /**
-     * @var integer Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @var integer Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public $Definition;
 
     /**
-     * @var integer Subimage height of an image sprite.
+     * @var integer Height of small images in sprite sheet.
      */
     public $Height;
 
     /**
-     * @var integer Subimage width of an image sprite.
+     * @var integer Width of small images in sprite sheet.
      */
     public $Width;
 
     /**
-     * @var integer Total number of subimages in each image sprite.
+     * @var integer Number of small images in each sprite sheet.
      */
     public $TotalCount;
 
     /**
-     * @var array Path to each image sprite.
+     * @var array Path of each sprite sheet.
      */
     public $ImagePathSet;
 
     /**
-     * @var string Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
+     * @var string 
      */
     public $WebVttPath;
 
     /**
-     * @var TaskOutputStorage Storage location of an image sprite file.
+     * @var TaskOutputStorage Storage location of the sprite sheet file.
      */
     public $Storage;
 
     /**
-     * @param integer $Definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-     * @param integer $Height Subimage height of an image sprite.
-     * @param integer $Width Subimage width of an image sprite.
-     * @param integer $TotalCount Total number of subimages in each image sprite.
-     * @param array $ImagePathSet Path to each image sprite.
-     * @param string $WebVttPath Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
-     * @param TaskOutputStorage $Storage Storage location of an image sprite file.
+     * @param integer $Definition Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param integer $Height Height of small images in sprite sheet.
+     * @param integer $Width Width of small images in sprite sheet.
+     * @param integer $TotalCount Number of small images in each sprite sheet.
+     * @param array $ImagePathSet Path of each sprite sheet.
+     * @param string $WebVttPath 
+     * @param TaskOutputStorage $Storage Storage location of the sprite sheet file.
      */
     function __construct()
     {

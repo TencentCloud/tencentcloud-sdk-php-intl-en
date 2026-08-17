@@ -18,56 +18,52 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The result of an intelligent highlight generation task.
+ * Result type of the intelligent highlight
  *
- * @method string getStatus() Obtain The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
- * @method void setStatus(string $Status) Set The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
- * @method integer getErrCode() Obtain Error code. `0`: The task succeeded; other values: The task failed.
- * @method void setErrCode(integer $ErrCode) Set Error code. `0`: The task succeeded; other values: The task failed.
- * @method string getMessage() Obtain The error message.
- * @method void setMessage(string $Message) Set The error message.
- * @method AiAnalysisTaskHighlightInput getInput() Obtain The input of the intelligent highlight generation task.
- * @method void setInput(AiAnalysisTaskHighlightInput $Input) Set The input of the intelligent highlight generation task.
- * @method AiAnalysisTaskHighlightOutput getOutput() Obtain The output of the intelligent highlight generation task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiAnalysisTaskHighlightOutput $Output) Set The output of the intelligent highlight generation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method integer getErrCode() Obtain Error code. 0: Task successful. Other values: Task failed.
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0: Task successful. Other values: Task failed.
+ * @method string getMessage() Obtain Error message.
+ * @method void setMessage(string $Message) Set Error message.
+ * @method AiAnalysisTaskHighlightInput getInput() Obtain Input of the intelligent highlight task.
+ * @method void setInput(AiAnalysisTaskHighlightInput $Input) Set Input of the intelligent highlight task.
+ * @method AiAnalysisTaskHighlightOutput getOutput() Obtain 
+ * @method void setOutput(AiAnalysisTaskHighlightOutput $Output) Set 
  */
 class AiAnalysisTaskHighlightResult extends AbstractModel
 {
     /**
-     * @var string The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var integer Error code. `0`: The task succeeded; other values: The task failed.
+     * @var integer Error code. 0: Task successful. Other values: Task failed.
      */
     public $ErrCode;
 
     /**
-     * @var string The error message.
+     * @var string Error message.
      */
     public $Message;
 
     /**
-     * @var AiAnalysisTaskHighlightInput The input of the intelligent highlight generation task.
+     * @var AiAnalysisTaskHighlightInput Input of the intelligent highlight task.
      */
     public $Input;
 
     /**
-     * @var AiAnalysisTaskHighlightOutput The output of the intelligent highlight generation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskHighlightOutput 
      */
     public $Output;
 
     /**
-     * @param string $Status The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
-     * @param integer $ErrCode Error code. `0`: The task succeeded; other values: The task failed.
-     * @param string $Message The error message.
-     * @param AiAnalysisTaskHighlightInput $Input The input of the intelligent highlight generation task.
-     * @param AiAnalysisTaskHighlightOutput $Output The output of the intelligent highlight generation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
+     * @param string $Message Error message.
+     * @param AiAnalysisTaskHighlightInput $Input Input of the intelligent highlight task.
+     * @param AiAnalysisTaskHighlightOutput $Output 
      */
     function __construct()
     {

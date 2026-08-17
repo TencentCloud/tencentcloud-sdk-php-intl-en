@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimePeriod(string $TimePeriod) Set Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
  * @method integer getAutoBackupType() Obtain Automatic backup type.  Valid value:  `1` (scheduled backup).
  * @method void setAutoBackupType(integer $AutoBackupType) Set Automatic backup type.  Valid value:  `1` (scheduled backup).
- * @method integer getBackupStorageDays() Obtain Specifies the retention days of full backup files. unit: day.
- * @method void setBackupStorageDays(integer $BackupStorageDays) Set Specifies the retention days of full backup files. unit: day.
+ * @method integer getBackupStorageDays() Obtain Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
+ * @method void setBackupStorageDays(integer $BackupStorageDays) Set Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
  */
 class ModifyAutoBackupConfigRequest extends AbstractModel
 {
@@ -57,7 +57,7 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
     public $AutoBackupType;
 
     /**
-     * @var integer Specifies the retention days of full backup files. unit: day.
+     * @var integer Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
      */
     public $BackupStorageDays;
 
@@ -67,7 +67,7 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
      * @param array $WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
      * @param string $TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
      * @param integer $AutoBackupType Automatic backup type.  Valid value:  `1` (scheduled backup).
-     * @param integer $BackupStorageDays Specifies the retention days of full backup files. unit: day.
+     * @param integer $BackupStorageDays Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
      */
     function __construct()
     {

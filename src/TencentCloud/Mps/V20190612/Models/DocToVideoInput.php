@@ -18,84 +18,84 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AIGC document‑to‑video input
+ * 
  *
- * @method array getFileUrl() Obtain <p>Document link for video generation.</p><p>Supported document types: pdf, pptx, docx, png, jpg<br>Document count limit: 3<br>Document size limit: 10MB<br>Document page limit: 100</p>
- * @method void setFileUrl(array $FileUrl) Set <p>Document link for video generation.</p><p>Supported document types: pdf, pptx, docx, png, jpg<br>Document count limit: 3<br>Document size limit: 10MB<br>Document page limit: 100</p>
- * @method string getPrompt() Obtain <p>Prompt information for video generation.</p><p>Prompt length limit: 2,000 characters.</p>
- * @method void setPrompt(string $Prompt) Set <p>Prompt information for video generation.</p><p>Prompt length limit: 2,000 characters.</p>
- * @method string getModelName() Obtain <p>Document-to-video model name</p><p>Default value: Wand</p>
- * @method void setModelName(string $ModelName) Set <p>Document-to-video model name</p><p>Default value: Wand</p>
- * @method string getModelVersion() Obtain <p>Document-to-video model version number</p><p>Default value: 1.0</p>
- * @method void setModelVersion(string $ModelVersion) Set <p>Document-to-video model version number</p><p>Default value: 1.0</p>
- * @method string getRatio() Obtain <p>Aspect ratio of the generated video.</p><p>Enumeration values: </p><ul><li>16:9: 16:9</li><li>9:16: 9:16</li><li>1:1: 1:1</li></ul><p>Default value: 16:9</p>
- * @method void setRatio(string $Ratio) Set <p>Aspect ratio of the generated video.</p><p>Enumeration values: </p><ul><li>16:9: 16:9</li><li>9:16: 9:16</li><li>1:1: 1:1</li></ul><p>Default value: 16:9</p>
- * @method string getLanguage() Obtain <p>Language of the generated video.</p><p>Enumeration values: </p><ul><li>zh: Chinese</li><li>en: English</li><li>ja: Japanese</li><li>ko: Korean</li><li>ru: Russian</li><li>fr: French</li><li>es: Spanish</li><li>de: German</li></ul><p>Default value: zh</p>
- * @method void setLanguage(string $Language) Set <p>Language of the generated video.</p><p>Enumeration values: </p><ul><li>zh: Chinese</li><li>en: English</li><li>ja: Japanese</li><li>ko: Korean</li><li>ru: Russian</li><li>fr: French</li><li>es: Spanish</li><li>de: German</li></ul><p>Default value: zh</p>
- * @method integer getReferenceDuration() Obtain <p>Video duration for reference.</p><p>This is not an exact duration; it serves as a reference for the LLM only.</p><p>Range: [15, 1200]</p><p>Unit: second</p>
- * @method void setReferenceDuration(integer $ReferenceDuration) Set <p>Video duration for reference.</p><p>This is not an exact duration; it serves as a reference for the LLM only.</p><p>Range: [15, 1200]</p><p>Unit: second</p>
- * @method boolean getEnableTTS() Obtain <p>Whether the AI dubbing feature is enabled.</p><p>Default value: false</p>
- * @method void setEnableTTS(boolean $EnableTTS) Set <p>Whether the AI dubbing feature is enabled.</p><p>Default value: false</p>
- * @method string getVoiceId() Obtain <p>Voice ID. Valid only when AI dubbing feature is enabled.</p>
- * @method void setVoiceId(string $VoiceId) Set <p>Voice ID. Valid only when AI dubbing feature is enabled.</p>
+ * @method array getFileUrl() Obtain 
+ * @method void setFileUrl(array $FileUrl) Set 
+ * @method string getPrompt() Obtain 
+ * @method void setPrompt(string $Prompt) Set 
+ * @method string getModelName() Obtain 
+ * @method void setModelName(string $ModelName) Set 
+ * @method string getModelVersion() Obtain 
+ * @method void setModelVersion(string $ModelVersion) Set 
+ * @method string getRatio() Obtain 
+ * @method void setRatio(string $Ratio) Set 
+ * @method string getLanguage() Obtain 
+ * @method void setLanguage(string $Language) Set 
+ * @method integer getReferenceDuration() Obtain 
+ * @method void setReferenceDuration(integer $ReferenceDuration) Set 
+ * @method boolean getEnableTTS() Obtain 
+ * @method void setEnableTTS(boolean $EnableTTS) Set 
+ * @method string getVoiceId() Obtain 
+ * @method void setVoiceId(string $VoiceId) Set 
  */
 class DocToVideoInput extends AbstractModel
 {
     /**
-     * @var array <p>Document link for video generation.</p><p>Supported document types: pdf, pptx, docx, png, jpg<br>Document count limit: 3<br>Document size limit: 10MB<br>Document page limit: 100</p>
+     * @var array 
      */
     public $FileUrl;
 
     /**
-     * @var string <p>Prompt information for video generation.</p><p>Prompt length limit: 2,000 characters.</p>
+     * @var string 
      */
     public $Prompt;
 
     /**
-     * @var string <p>Document-to-video model name</p><p>Default value: Wand</p>
+     * @var string 
      */
     public $ModelName;
 
     /**
-     * @var string <p>Document-to-video model version number</p><p>Default value: 1.0</p>
+     * @var string 
      */
     public $ModelVersion;
 
     /**
-     * @var string <p>Aspect ratio of the generated video.</p><p>Enumeration values: </p><ul><li>16:9: 16:9</li><li>9:16: 9:16</li><li>1:1: 1:1</li></ul><p>Default value: 16:9</p>
+     * @var string 
      */
     public $Ratio;
 
     /**
-     * @var string <p>Language of the generated video.</p><p>Enumeration values: </p><ul><li>zh: Chinese</li><li>en: English</li><li>ja: Japanese</li><li>ko: Korean</li><li>ru: Russian</li><li>fr: French</li><li>es: Spanish</li><li>de: German</li></ul><p>Default value: zh</p>
+     * @var string 
      */
     public $Language;
 
     /**
-     * @var integer <p>Video duration for reference.</p><p>This is not an exact duration; it serves as a reference for the LLM only.</p><p>Range: [15, 1200]</p><p>Unit: second</p>
+     * @var integer 
      */
     public $ReferenceDuration;
 
     /**
-     * @var boolean <p>Whether the AI dubbing feature is enabled.</p><p>Default value: false</p>
+     * @var boolean 
      */
     public $EnableTTS;
 
     /**
-     * @var string <p>Voice ID. Valid only when AI dubbing feature is enabled.</p>
+     * @var string 
      */
     public $VoiceId;
 
     /**
-     * @param array $FileUrl <p>Document link for video generation.</p><p>Supported document types: pdf, pptx, docx, png, jpg<br>Document count limit: 3<br>Document size limit: 10MB<br>Document page limit: 100</p>
-     * @param string $Prompt <p>Prompt information for video generation.</p><p>Prompt length limit: 2,000 characters.</p>
-     * @param string $ModelName <p>Document-to-video model name</p><p>Default value: Wand</p>
-     * @param string $ModelVersion <p>Document-to-video model version number</p><p>Default value: 1.0</p>
-     * @param string $Ratio <p>Aspect ratio of the generated video.</p><p>Enumeration values: </p><ul><li>16:9: 16:9</li><li>9:16: 9:16</li><li>1:1: 1:1</li></ul><p>Default value: 16:9</p>
-     * @param string $Language <p>Language of the generated video.</p><p>Enumeration values: </p><ul><li>zh: Chinese</li><li>en: English</li><li>ja: Japanese</li><li>ko: Korean</li><li>ru: Russian</li><li>fr: French</li><li>es: Spanish</li><li>de: German</li></ul><p>Default value: zh</p>
-     * @param integer $ReferenceDuration <p>Video duration for reference.</p><p>This is not an exact duration; it serves as a reference for the LLM only.</p><p>Range: [15, 1200]</p><p>Unit: second</p>
-     * @param boolean $EnableTTS <p>Whether the AI dubbing feature is enabled.</p><p>Default value: false</p>
-     * @param string $VoiceId <p>Voice ID. Valid only when AI dubbing feature is enabled.</p>
+     * @param array $FileUrl 
+     * @param string $Prompt 
+     * @param string $ModelName 
+     * @param string $ModelVersion 
+     * @param string $Ratio 
+     * @param string $Language 
+     * @param integer $ReferenceDuration 
+     * @param boolean $EnableTTS 
+     * @param string $VoiceId 
      */
     function __construct()
     {

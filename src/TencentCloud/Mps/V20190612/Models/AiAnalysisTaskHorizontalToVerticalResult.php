@@ -20,78 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent landscape-to-portrait result type.
  *
- * @method string getStatus() Obtain Task status, including PROCESSING, SUCCESS, and FAIL.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Task status, including PROCESSING, SUCCESS, and FAIL.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getErrCode() Obtain Error code. 0: Task successful. Other values: Task failed.
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setErrCode(integer $ErrCode) Set Error code. 0: Task successful. Other values: Task failed.
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMessage() Obtain Error message
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMessage(string $Message) Set Error message
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiAnalysisTaskHorizontalToVerticalInput getInput() Obtain Intelligent landscape-to-portrait task input.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInput(AiAnalysisTaskHorizontalToVerticalInput $Input) Set Intelligent landscape-to-portrait task input.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiAnalysisTaskHorizontalToVerticalOutput getOutput() Obtain Intelligent landscape-to-portrait task output.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiAnalysisTaskHorizontalToVerticalOutput $Output) Set Intelligent landscape-to-portrait task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method integer getErrCode() Obtain 
+ * @method void setErrCode(integer $ErrCode) Set 
+ * @method string getMessage() Obtain 
+ * @method void setMessage(string $Message) Set 
+ * @method AiAnalysisTaskHorizontalToVerticalInput getInput() Obtain 
+ * @method void setInput(AiAnalysisTaskHorizontalToVerticalInput $Input) Set 
+ * @method AiAnalysisTaskHorizontalToVerticalOutput getOutput() Obtain 
+ * @method void setOutput(AiAnalysisTaskHorizontalToVerticalOutput $Output) Set 
  */
 class AiAnalysisTaskHorizontalToVerticalResult extends AbstractModel
 {
     /**
-     * @var string Task status, including PROCESSING, SUCCESS, and FAIL.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var integer Error code. 0: Task successful. Other values: Task failed.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $ErrCode;
 
     /**
-     * @var string Error message
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Message;
 
     /**
-     * @var AiAnalysisTaskHorizontalToVerticalInput Intelligent landscape-to-portrait task input.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskHorizontalToVerticalInput 
      */
     public $Input;
 
     /**
-     * @var AiAnalysisTaskHorizontalToVerticalOutput Intelligent landscape-to-portrait task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskHorizontalToVerticalOutput 
      */
     public $Output;
 
     /**
-     * @param string $Status Task status, including PROCESSING, SUCCESS, and FAIL.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Message Error message
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiAnalysisTaskHorizontalToVerticalInput $Input Intelligent landscape-to-portrait task input.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiAnalysisTaskHorizontalToVerticalOutput $Output Intelligent landscape-to-portrait task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Status 
+     * @param integer $ErrCode 
+     * @param string $Message 
+     * @param AiAnalysisTaskHorizontalToVerticalInput $Input 
+     * @param AiAnalysisTaskHorizontalToVerticalOutput $Output 
      */
     function __construct()
     {

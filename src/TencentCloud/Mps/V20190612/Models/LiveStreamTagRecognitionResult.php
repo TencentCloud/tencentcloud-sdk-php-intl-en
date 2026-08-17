@@ -18,44 +18,44 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Live streaming AI timestamp recognition result
  *
- * @method string getId() Obtain 
- * @method void setId(string $Id) Set 
- * @method float getStartPtsTime() Obtain 
- * @method void setStartPtsTime(float $StartPtsTime) Set 
- * @method float getEndPtsTime() Obtain 
- * @method void setEndPtsTime(float $EndPtsTime) Set 
- * @method float getConfidence() Obtain 
- * @method void setConfidence(float $Confidence) Set 
+ * @method string getId() Obtain Timestamp events.
+ * @method void setId(string $Id) Set Timestamp events.
+ * @method float getStartPtsTime() Obtain Start PTS time of a recognized segment, in seconds.
+ * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a recognized segment, in seconds.
+ * @method float getEndPtsTime() Obtain End PTS time of a recognized segment, in seconds.
+ * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a recognized segment, in seconds.
+ * @method float getConfidence() Obtain Confidence of a recognized segment. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of a recognized segment. Value range: 0-100.
  */
 class LiveStreamTagRecognitionResult extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Timestamp events.
      */
     public $Id;
 
     /**
-     * @var float 
+     * @var float Start PTS time of a recognized segment, in seconds.
      */
     public $StartPtsTime;
 
     /**
-     * @var float 
+     * @var float End PTS time of a recognized segment, in seconds.
      */
     public $EndPtsTime;
 
     /**
-     * @var float 
+     * @var float Confidence of a recognized segment. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @param string $Id 
-     * @param float $StartPtsTime 
-     * @param float $EndPtsTime 
-     * @param float $Confidence 
+     * @param string $Id Timestamp events.
+     * @param float $StartPtsTime Start PTS time of a recognized segment, in seconds.
+     * @param float $EndPtsTime End PTS time of a recognized segment, in seconds.
+     * @param float $Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of a full text recognition task
+ * Task control parameter for full text recognition
  *
- * @method string getSwitch() Obtain Switch of a full text recognition task. Valid values:
-<li>ON: Enables an intelligent full text recognition task;</li>
-<li>OFF: Disables an intelligent full text recognition task.</li>
- * @method void setSwitch(string $Switch) Set Switch of a full text recognition task. Valid values:
-<li>ON: Enables an intelligent full text recognition task;</li>
-<li>OFF: Disables an intelligent full text recognition task.</li>
+ * @method string getSwitch() Obtain Task switch for full text recognition, available values:
+<li>ON: Enable intelligent full text recognition task;</li>
+<li>OFF: Disables the intelligent full text recognition task.</li>
+ * @method void setSwitch(string $Switch) Set Task switch for full text recognition, available values:
+<li>ON: Enable intelligent full text recognition task;</li>
+<li>OFF: Disables the intelligent full text recognition task.</li>
  */
 class OcrFullTextConfigureInfo extends AbstractModel
 {
     /**
-     * @var string Switch of a full text recognition task. Valid values:
-<li>ON: Enables an intelligent full text recognition task;</li>
-<li>OFF: Disables an intelligent full text recognition task.</li>
+     * @var string Task switch for full text recognition, available values:
+<li>ON: Enable intelligent full text recognition task;</li>
+<li>OFF: Disables the intelligent full text recognition task.</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Switch of a full text recognition task. Valid values:
-<li>ON: Enables an intelligent full text recognition task;</li>
-<li>OFF: Disables an intelligent full text recognition task.</li>
+     * @param string $Switch Task switch for full text recognition, available values:
+<li>ON: Enable intelligent full text recognition task;</li>
+<li>OFF: Disables the intelligent full text recognition task.</li>
      */
     function __construct()
     {

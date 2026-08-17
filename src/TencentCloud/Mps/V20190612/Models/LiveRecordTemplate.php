@@ -18,37 +18,35 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live recording template details
+ * Live recording template description
  *
- * @method integer getDefinition() Obtain Specifies the recording template unique identifier.
- * @method void setDefinition(integer $Definition) Set Specifies the recording template unique identifier.
+ * @method integer getDefinition() Obtain Unique identifier of the recording template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of the recording template.
  * @method HLSConfigureInfo getHLSConfigure() Obtain HLS configuration parameters
  * @method void setHLSConfigure(HLSConfigureInfo $HLSConfigure) Set HLS configuration parameters
  * @method MP4ConfigureInfo getMP4Configure() Obtain MP4 configuration parameter.
  * @method void setMP4Configure(MP4ConfigureInfo $MP4Configure) Set MP4 configuration parameter.
  * @method string getName() Obtain Recording template name.
  * @method void setName(string $Name) Set Recording template name.
- * @method string getComment() Obtain Template description.
-
- * @method void setComment(string $Comment) Set Template description.
-
+ * @method string getComment() Obtain Template description information.
+ * @method void setComment(string $Comment) Set Template description information.
  * @method string getType() Obtain Template type. Valid values:
-<li>Preset: system-preset template;</li>
-<li>Custom: Custom template.</li>
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
  * @method void setType(string $Type) Set Template type. Valid values:
-<li>Preset: system-preset template;</li>
-<li>Custom: Custom template.</li>
- * @method string getCreateTime() Obtain Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setCreateTime(string $CreateTime) Set Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method string getUpdateTime() Obtain Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
+ * @method string getCreateTime() Obtain Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setCreateTime(string $CreateTime) Set Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getUpdateTime() Obtain Last modification time of the template in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method void setUpdateTime(string $UpdateTime) Set Last modification time of the template in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method string getRecordType() Obtain Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
  * @method void setRecordType(string $RecordType) Set Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
  */
 class LiveRecordTemplate extends AbstractModel
 {
     /**
-     * @var integer Specifies the recording template unique identifier.
+     * @var integer Unique identifier of the recording template.
      */
     public $Definition;
 
@@ -68,25 +66,24 @@ class LiveRecordTemplate extends AbstractModel
     public $Name;
 
     /**
-     * @var string Template description.
-
+     * @var string Template description information.
      */
     public $Comment;
 
     /**
      * @var string Template type. Valid values:
-<li>Preset: system-preset template;</li>
-<li>Custom: Custom template.</li>
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
      */
     public $Type;
 
     /**
-     * @var string Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string Last modification time of the template in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public $UpdateTime;
 
@@ -96,17 +93,16 @@ class LiveRecordTemplate extends AbstractModel
     public $RecordType;
 
     /**
-     * @param integer $Definition Specifies the recording template unique identifier.
+     * @param integer $Definition Unique identifier of the recording template.
      * @param HLSConfigureInfo $HLSConfigure HLS configuration parameters
      * @param MP4ConfigureInfo $MP4Configure MP4 configuration parameter.
      * @param string $Name Recording template name.
-     * @param string $Comment Template description.
-
+     * @param string $Comment Template description information.
      * @param string $Type Template type. Valid values:
-<li>Preset: system-preset template;</li>
-<li>Custom: Custom template.</li>
-     * @param string $CreateTime Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param string $UpdateTime Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
+     * @param string $CreateTime Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $UpdateTime Last modification time of the template in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      * @param string $RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection.
      */
     function __construct()

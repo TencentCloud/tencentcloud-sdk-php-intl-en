@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input type of intelligent frame-specific tagging task
+ * Intelligent frame tagging task input type
  *
  * @method integer getDefinition() Obtain <p>ID of the intelligent video frame-by-frame tagging template.</p>
  * @method void setDefinition(integer $Definition) Set <p>ID of the intelligent video frame-by-frame tagging template.</p>

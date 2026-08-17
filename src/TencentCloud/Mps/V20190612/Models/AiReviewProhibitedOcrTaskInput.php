@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of OCR-based prohibited information detection in text task in content audit
+ * Content review Ocr text prohibited information recognition task input parameter type
  *
- * @method integer getDefinition() Obtain Prohibited information detection template ID.
- * @method void setDefinition(integer $Definition) Set Prohibited information detection template ID.
+ * @method integer getDefinition() Obtain Prohibited information recognition template ID.
+ * @method void setDefinition(integer $Definition) Set Prohibited information recognition template ID.
  */
 class AiReviewProhibitedOcrTaskInput extends AbstractModel
 {
     /**
-     * @var integer Prohibited information detection template ID.
+     * @var integer Prohibited information recognition template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Prohibited information detection template ID.
+     * @param integer $Definition Prohibited information recognition template ID.
      */
     function __construct()
     {

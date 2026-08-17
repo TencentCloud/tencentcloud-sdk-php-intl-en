@@ -20,14 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Image processing result information.
  *
- * @method string getPath() Obtain <p>Path of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
- * @method void setPath(string $Path) Set <p>Path of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
- * @method TaskOutputStorage getOutputStorage() Obtain <p>Storage location of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Storage location of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPath() Obtain 
+ * @method void setPath(string $Path) Set 
+ * @method TaskOutputStorage getOutputStorage() Obtain 
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
  * @method string getContent() Obtain <p>Processing result of the image-to-text task.</p>
  * @method void setContent(string $Content) Set <p>Processing result of the image-to-text task.</p>
  * @method string getFileId() Obtain <p>VOD Standard Edition FileId</p>
@@ -36,14 +32,12 @@ Attention: This field may return null, indicating that no valid values can be ob
 class ImageProcessTaskOutput extends AbstractModel
 {
     /**
-     * @var string <p>Path of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Path;
 
     /**
-     * @var TaskOutputStorage <p>Storage location of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+     * @var TaskOutputStorage 
      */
     public $OutputStorage;
 
@@ -58,10 +52,8 @@ Attention: This field may return null, indicating that no valid values can be ob
     public $FileId;
 
     /**
-     * @param string $Path <p>Path of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskOutputStorage $OutputStorage <p>Storage location of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Path 
+     * @param TaskOutputStorage $OutputStorage 
      * @param string $Content <p>Processing result of the image-to-text task.</p>
      * @param string $FileId <p>VOD Standard Edition FileId</p>
      */

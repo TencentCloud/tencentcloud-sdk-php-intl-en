@@ -24,32 +24,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHotwordsId(string $HotwordsId) Set Parameter for querying by hotword lexicon ID.
  * @method string getName() Obtain Parameter for querying by hotword lexicon name.
  * @method void setName(string $Name) Set Parameter for querying by hotword lexicon name.
- * @method integer getOffset() Obtain Paging offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
+ * @method integer getOffset() Obtain Pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. All hotword lexicons are returned by default.
  * @method void setLimit(integer $Limit) Set Number of returned entries. All hotword lexicons are returned by default.
- * @method integer getOrderType() Obtain Hotword lexicon sorting order.
+ * @method integer getOrderType() Obtain Hotword lexicon sort order
 
 0: ascending (default)
 1: descending
- * @method void setOrderType(integer $OrderType) Set Hotword lexicon sorting order.
+ * @method void setOrderType(integer $OrderType) Set Hotword lexicon sort order
 
 0: ascending (default)
 1: descending
- * @method string getOrderBy() Obtain Sorts hotword lexicons by a specific field. By default, hotword lexicons are sorted by creation time. If an invalid field is used for sorting, the default sorting field applies.
+ * @method string getOrderBy() Obtain Sorts by a certain field. By default, sorts by creation time. Using an illegal field is deemed as the default.
 
- - CreateTime: sort by creation time
- - UpdateTime: sort by update time
- - Name: sort by hotword lexicon name
- - WordCount: sort by the number of hotwords
- - HotwordsId: sort by hotword lexicon ID
- * @method void setOrderBy(string $OrderBy) Set Sorts hotword lexicons by a specific field. By default, hotword lexicons are sorted by creation time. If an invalid field is used for sorting, the default sorting field applies.
+- CreateTime: sort by creation time
+-UpdateTime: Update time sorting
+-Name: Sort by hotword lexicon name.
+- WordCount: sort by the number of hotwords
+- HotwordsId: sort by hotword lexicon ID
+ * @method void setOrderBy(string $OrderBy) Set Sorts by a certain field. By default, sorts by creation time. Using an illegal field is deemed as the default.
 
- - CreateTime: sort by creation time
- - UpdateTime: sort by update time
- - Name: sort by hotword lexicon name
- - WordCount: sort by the number of hotwords
- - HotwordsId: sort by hotword lexicon ID
+- CreateTime: sort by creation time
+-UpdateTime: Update time sorting
+-Name: Sort by hotword lexicon name.
+- WordCount: sort by the number of hotwords
+- HotwordsId: sort by hotword lexicon ID
  * @method array getTypes() Obtain 0: temporary hotword; 1 file-based hotword.
  * @method void setTypes(array $Types) Set 0: temporary hotword; 1 file-based hotword.
  */
@@ -66,7 +66,7 @@ class DescribeAsrHotwordsListRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer Paging offset. Default value: 0.
+     * @var integer Pagination offset. Default value: 0.
      */
     public $Offset;
 
@@ -76,7 +76,7 @@ class DescribeAsrHotwordsListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer Hotword lexicon sorting order.
+     * @var integer Hotword lexicon sort order
 
 0: ascending (default)
 1: descending
@@ -84,13 +84,13 @@ class DescribeAsrHotwordsListRequest extends AbstractModel
     public $OrderType;
 
     /**
-     * @var string Sorts hotword lexicons by a specific field. By default, hotword lexicons are sorted by creation time. If an invalid field is used for sorting, the default sorting field applies.
+     * @var string Sorts by a certain field. By default, sorts by creation time. Using an illegal field is deemed as the default.
 
- - CreateTime: sort by creation time
- - UpdateTime: sort by update time
- - Name: sort by hotword lexicon name
- - WordCount: sort by the number of hotwords
- - HotwordsId: sort by hotword lexicon ID
+- CreateTime: sort by creation time
+-UpdateTime: Update time sorting
+-Name: Sort by hotword lexicon name.
+- WordCount: sort by the number of hotwords
+- HotwordsId: sort by hotword lexicon ID
      */
     public $OrderBy;
 
@@ -102,19 +102,19 @@ class DescribeAsrHotwordsListRequest extends AbstractModel
     /**
      * @param string $HotwordsId Parameter for querying by hotword lexicon ID.
      * @param string $Name Parameter for querying by hotword lexicon name.
-     * @param integer $Offset Paging offset. Default value: 0.
+     * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. All hotword lexicons are returned by default.
-     * @param integer $OrderType Hotword lexicon sorting order.
+     * @param integer $OrderType Hotword lexicon sort order
 
 0: ascending (default)
 1: descending
-     * @param string $OrderBy Sorts hotword lexicons by a specific field. By default, hotword lexicons are sorted by creation time. If an invalid field is used for sorting, the default sorting field applies.
+     * @param string $OrderBy Sorts by a certain field. By default, sorts by creation time. Using an illegal field is deemed as the default.
 
- - CreateTime: sort by creation time
- - UpdateTime: sort by update time
- - Name: sort by hotword lexicon name
- - WordCount: sort by the number of hotwords
- - HotwordsId: sort by hotword lexicon ID
+- CreateTime: sort by creation time
+-UpdateTime: Update time sorting
+-Name: Sort by hotword lexicon name.
+- WordCount: sort by the number of hotwords
+- HotwordsId: sort by hotword lexicon ID
      * @param array $Types 0: temporary hotword; 1 file-based hotword.
      */
     function __construct()

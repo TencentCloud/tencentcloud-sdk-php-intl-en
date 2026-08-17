@@ -22,34 +22,34 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getCheckDuration() Obtain Duration of each loop detection, in seconds. Value range:
 
- - Minimum value: 10.
- - Maximum value: 86400.
+- Minimum value: 10.
+- Maximum value: 86400.
 
  * @method void setCheckDuration(integer $CheckDuration) Set Duration of each loop detection, in seconds. Value range:
 
- - Minimum value: 10.
- - Maximum value: 86400.
+- Minimum value: 10.
+- Maximum value: 86400.
 
  * @method integer getCheckInterval() Obtain Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
- - Minimum value: 10.
- - Maximum value: 3600.
+- Minimum value: 10.
+- Maximum value: 3600.
  * @method void setCheckInterval(integer $CheckInterval) Set Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
- - Minimum value: 10.
- - Maximum value: 3600.
+- Minimum value: 10.
+- Maximum value: 3600.
  * @method integer getSkipDuration() Obtain Skipped opening duration, in seconds. Value range:
- - Minimum value: 1.
- - Maximum value: 1800.
+- Minimum value: 1.
+- Maximum value: 1800.
  * @method void setSkipDuration(integer $SkipDuration) Set Skipped opening duration, in seconds. Value range:
- - Minimum value: 1.
- - Maximum value: 1800.
+- Minimum value: 1.
+- Maximum value: 1800.
  * @method integer getCirclesNumber() Obtain Number of loops. Value range:
- - Minimum value: 0.
- - Maximum value: 1000.
+- Minimum value: 0.
+- Maximum value: 1000.
 
 If the value is 0 or not specified, it indicates that loops are executed until the video ends.
  * @method void setCirclesNumber(integer $CirclesNumber) Set Number of loops. Value range:
- - Minimum value: 0.
- - Maximum value: 1000.
+- Minimum value: 0.
+- Maximum value: 1000.
 
 If the value is 0 or not specified, it indicates that loops are executed until the video ends.
  */
@@ -58,30 +58,30 @@ class TimeSpotCheck extends AbstractModel
     /**
      * @var integer Duration of each loop detection, in seconds. Value range:
 
- - Minimum value: 10.
- - Maximum value: 86400.
+- Minimum value: 10.
+- Maximum value: 86400.
 
      */
     public $CheckDuration;
 
     /**
      * @var integer Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
- - Minimum value: 10.
- - Maximum value: 3600.
+- Minimum value: 10.
+- Maximum value: 3600.
      */
     public $CheckInterval;
 
     /**
      * @var integer Skipped opening duration, in seconds. Value range:
- - Minimum value: 1.
- - Maximum value: 1800.
+- Minimum value: 1.
+- Maximum value: 1800.
      */
     public $SkipDuration;
 
     /**
      * @var integer Number of loops. Value range:
- - Minimum value: 0.
- - Maximum value: 1000.
+- Minimum value: 0.
+- Maximum value: 1000.
 
 If the value is 0 or not specified, it indicates that loops are executed until the video ends.
      */
@@ -90,18 +90,18 @@ If the value is 0 or not specified, it indicates that loops are executed until t
     /**
      * @param integer $CheckDuration Duration of each loop detection, in seconds. Value range:
 
- - Minimum value: 10.
- - Maximum value: 86400.
+- Minimum value: 10.
+- Maximum value: 86400.
 
      * @param integer $CheckInterval Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
- - Minimum value: 10.
- - Maximum value: 3600.
+- Minimum value: 10.
+- Maximum value: 3600.
      * @param integer $SkipDuration Skipped opening duration, in seconds. Value range:
- - Minimum value: 1.
- - Maximum value: 1800.
+- Minimum value: 1.
+- Maximum value: 1800.
      * @param integer $CirclesNumber Number of loops. Value range:
- - Minimum value: 0.
- - Maximum value: 1000.
+- Minimum value: 0.
+- Maximum value: 1000.
 
 If the value is 0 or not specified, it indicates that loops are executed until the video ends.
      */

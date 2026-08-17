@@ -18,48 +18,48 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information about the sensitive content detected based on ASR.
+ * Asr text contains sensitive information
  *
- * @method float getConfidence() Obtain The confidence score for the ASR-based detection of sensitive information. Value range: 0-100.
- * @method void setConfidence(float $Confidence) Set The confidence score for the ASR-based detection of sensitive information. Value range: 0-100.
- * @method string getSuggestion() Obtain The suggestion for handling the sensitive information detected based on ASR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method void setSuggestion(string $Suggestion) Set The suggestion for handling the sensitive information detected based on ASR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method array getSegmentSet() Obtain The video segments that contain sensitive information detected based on ASR.
- * @method void setSegmentSet(array $SegmentSet) Set The video segments that contain sensitive information detected based on ASR.
+ * @method float getConfidence() Obtain Asr text sensitivity scoring, with a score ranging from 0 to -100.
+ * @method void setConfidence(float $Confidence) Set Asr text sensitivity scoring, with a score ranging from 0 to -100.
+ * @method string getSuggestion() Obtain Asr text sensitive result recommendation, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method void setSuggestion(string $Suggestion) Set Asr text sensitive result recommendation, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method array getSegmentSet() Obtain Video segment list with Asr text suspected of sensitivity.
+ * @method void setSegmentSet(array $SegmentSet) Set Video segment list with Asr text suspected of sensitivity.
  */
 class AiReviewPoliticalAsrTaskOutput extends AbstractModel
 {
     /**
-     * @var float The confidence score for the ASR-based detection of sensitive information. Value range: 0-100.
+     * @var float Asr text sensitivity scoring, with a score ranging from 0 to -100.
      */
     public $Confidence;
 
     /**
-     * @var string The suggestion for handling the sensitive information detected based on ASR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * @var string Asr text sensitive result recommendation, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public $Suggestion;
 
     /**
-     * @var array The video segments that contain sensitive information detected based on ASR.
+     * @var array Video segment list with Asr text suspected of sensitivity.
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence The confidence score for the ASR-based detection of sensitive information. Value range: 0-100.
-     * @param string $Suggestion The suggestion for handling the sensitive information detected based on ASR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-     * @param array $SegmentSet The video segments that contain sensitive information detected based on ASR.
+     * @param float $Confidence Asr text sensitivity scoring, with a score ranging from 0 to -100.
+     * @param string $Suggestion Asr text sensitive result recommendation, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param array $SegmentSet Video segment list with Asr text suspected of sensitivity.
      */
     function __construct()
     {

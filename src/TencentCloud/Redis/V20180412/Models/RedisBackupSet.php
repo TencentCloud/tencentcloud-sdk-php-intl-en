@@ -20,130 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Array of instance backups
  *
- * @method string getStartTime() Obtain Backup start time
- * @method void setStartTime(string $StartTime) Set Backup start time
- * @method string getBackupId() Obtain Backup task ID
- * @method void setBackupId(string $BackupId) Set Backup task ID
- * @method string getBackupType() Obtain Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
- * @method void setBackupType(string $BackupType) Set Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
- * @method integer getStatus() Obtain Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
- * @method void setStatus(integer $Status) Set Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
- * @method string getRemark() Obtain Backup remarks
- * @method void setRemark(string $Remark) Set Backup remarks
- * @method integer getLocked() Obtain Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
- * @method void setLocked(integer $Locked) Set Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
- * @method integer getBackupSize() Obtain Internal field, which can be ignored.
- * @method void setBackupSize(integer $BackupSize) Set Internal field, which can be ignored.
- * @method integer getFullBackup() Obtain Internal field, which can be ignored.
- * @method void setFullBackup(integer $FullBackup) Set Internal field, which can be ignored.
- * @method integer getInstanceType() Obtain Internal field, which can be ignored.
- * @method void setInstanceType(integer $InstanceType) Set Internal field, which can be ignored.
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method string getRegion() Obtain The region where the local backup resides.
- * @method void setRegion(string $Region) Set The region where the local backup resides.
- * @method string getEndTime() Obtain Backup end time
- * @method void setEndTime(string $EndTime) Set Backup end time
- * @method string getFileType() Obtain Backup file type
- * @method void setFileType(string $FileType) Set Backup file type
- * @method string getExpireTime() Obtain Backup file expiration time
- * @method void setExpireTime(string $ExpireTime) Set Backup file expiration time
+ * @method string getStartTime() Obtain <p>Backup start time.</p>
+ * @method void setStartTime(string $StartTime) Set <p>Backup start time.</p>
+ * @method string getBackupId() Obtain <p>Backup task ID.</p>
+ * @method void setBackupId(string $BackupId) Set <p>Backup task ID.</p>
+ * @method string getBackupType() Obtain <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
+ * @method void setBackupType(string $BackupType) Set <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
+ * @method integer getStatus() Obtain <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
+ * @method void setStatus(integer $Status) Set <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
+ * @method string getRemark() Obtain <p>Backup remarks.</p>
+ * @method void setRemark(string $Remark) Set <p>Backup remarks.</p>
+ * @method integer getLocked() Obtain <p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
+ * @method void setLocked(integer $Locked) Set <p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
+ * @method integer getBackupSize() Obtain <p>Internal field, which can be ignored.</p>
+ * @method void setBackupSize(integer $BackupSize) Set <p>Internal field, which can be ignored.</p>
+ * @method integer getFullBackup() Obtain <p>Internal field, which can be ignored.</p>
+ * @method void setFullBackup(integer $FullBackup) Set <p>Internal field, which can be ignored.</p>
+ * @method integer getInstanceType() Obtain <p>Internal field, which can be ignored.</p>
+ * @method void setInstanceType(integer $InstanceType) Set <p>Internal field, which can be ignored.</p>
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method string getInstanceName() Obtain <p>Instance name.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p>
+ * @method string getRegion() Obtain <p>Local backup region.</p>
+ * @method void setRegion(string $Region) Set <p>Local backup region.</p>
+ * @method string getEndTime() Obtain <p>Backup end time.</p>
+ * @method void setEndTime(string $EndTime) Set <p>Backup end time.</p>
+ * @method string getFileType() Obtain <p>Backup file type.</p>
+ * @method void setFileType(string $FileType) Set <p>Backup file type.</p>
+ * @method string getExpireTime() Obtain <p>Backup file expiration time.</p>
+ * @method void setExpireTime(string $ExpireTime) Set <p>Backup file expiration time.</p>
+ * @method boolean getEncrypted() Obtain <p>Whether the backup file is encrypted</p>
+ * @method void setEncrypted(boolean $Encrypted) Set <p>Whether the backup file is encrypted</p>
  */
 class RedisBackupSet extends AbstractModel
 {
     /**
-     * @var string Backup start time
+     * @var string <p>Backup start time.</p>
      */
     public $StartTime;
 
     /**
-     * @var string Backup task ID
+     * @var string <p>Backup task ID.</p>
      */
     public $BackupId;
 
     /**
-     * @var string Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
+     * @var string <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
      */
     public $BackupType;
 
     /**
-     * @var integer Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
+     * @var integer <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
      */
     public $Status;
 
     /**
-     * @var string Backup remarks
+     * @var string <p>Backup remarks.</p>
      */
     public $Remark;
 
     /**
-     * @var integer Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
+     * @var integer <p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
      */
     public $Locked;
 
     /**
-     * @var integer Internal field, which can be ignored.
+     * @var integer <p>Internal field, which can be ignored.</p>
      */
     public $BackupSize;
 
     /**
-     * @var integer Internal field, which can be ignored.
+     * @var integer <p>Internal field, which can be ignored.</p>
      */
     public $FullBackup;
 
     /**
-     * @var integer Internal field, which can be ignored.
+     * @var integer <p>Internal field, which can be ignored.</p>
      */
     public $InstanceType;
 
     /**
-     * @var string Instance ID
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string <p>Instance name.</p>
      */
     public $InstanceName;
 
     /**
-     * @var string The region where the local backup resides.
+     * @var string <p>Local backup region.</p>
      */
     public $Region;
 
     /**
-     * @var string Backup end time
+     * @var string <p>Backup end time.</p>
      */
     public $EndTime;
 
     /**
-     * @var string Backup file type
+     * @var string <p>Backup file type.</p>
      */
     public $FileType;
 
     /**
-     * @var string Backup file expiration time
+     * @var string <p>Backup file expiration time.</p>
      */
     public $ExpireTime;
 
     /**
-     * @param string $StartTime Backup start time
-     * @param string $BackupId Backup task ID
-     * @param string $BackupType Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
-     * @param integer $Status Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
-     * @param string $Remark Backup remarks
-     * @param integer $Locked Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
-     * @param integer $BackupSize Internal field, which can be ignored.
-     * @param integer $FullBackup Internal field, which can be ignored.
-     * @param integer $InstanceType Internal field, which can be ignored.
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
-     * @param string $Region The region where the local backup resides.
-     * @param string $EndTime Backup end time
-     * @param string $FileType Backup file type
-     * @param string $ExpireTime Backup file expiration time
+     * @var boolean <p>Whether the backup file is encrypted</p>
+     */
+    public $Encrypted;
+
+    /**
+     * @param string $StartTime <p>Backup start time.</p>
+     * @param string $BackupId <p>Backup task ID.</p>
+     * @param string $BackupType <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
+     * @param integer $Status <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
+     * @param string $Remark <p>Backup remarks.</p>
+     * @param integer $Locked <p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
+     * @param integer $BackupSize <p>Internal field, which can be ignored.</p>
+     * @param integer $FullBackup <p>Internal field, which can be ignored.</p>
+     * @param integer $InstanceType <p>Internal field, which can be ignored.</p>
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param string $InstanceName <p>Instance name.</p>
+     * @param string $Region <p>Local backup region.</p>
+     * @param string $EndTime <p>Backup end time.</p>
+     * @param string $FileType <p>Backup file type.</p>
+     * @param string $ExpireTime <p>Backup file expiration time.</p>
+     * @param boolean $Encrypted <p>Whether the backup file is encrypted</p>
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class RedisBackupSet extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("Encrypted",$param) and $param["Encrypted"] !== null) {
+            $this->Encrypted = $param["Encrypted"];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteTranscodeTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique ID of a transcoding template.
- * @method void setDefinition(integer $Definition) Set Unique ID of a transcoding template.
+ * @method integer getDefinition() Obtain Unique identifier of the transcoding template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of the transcoding template.
  */
 class DeleteTranscodeTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique ID of a transcoding template.
+     * @var integer Unique identifier of the transcoding template.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Unique ID of a transcoding template.
+     * @param integer $Definition Unique identifier of the transcoding template.
      */
     function __construct()
     {

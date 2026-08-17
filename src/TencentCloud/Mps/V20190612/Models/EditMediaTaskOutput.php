@@ -18,28 +18,36 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output of video editing task
+ * Output of the video editing task
  *
- * @method TaskOutputStorage getOutputStorage() Obtain Target storage of edited file.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage of edited file.
- * @method string getPath() Obtain Path of edited video file.
- * @method void setPath(string $Path) Set Path of edited video file.
+ * @method TaskOutputStorage getOutputStorage() Obtain Target storage for the edited file.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage for the edited file.
+ * @method string getPath() Obtain Path of the edited video file.
+ * @method void setPath(string $Path) Set Path of the edited video file.
+ * @method MediaMetaData getMetaData() Obtain 
+ * @method void setMetaData(MediaMetaData $MetaData) Set 
  */
 class EditMediaTaskOutput extends AbstractModel
 {
     /**
-     * @var TaskOutputStorage Target storage of edited file.
+     * @var TaskOutputStorage Target storage for the edited file.
      */
     public $OutputStorage;
 
     /**
-     * @var string Path of edited video file.
+     * @var string Path of the edited video file.
      */
     public $Path;
 
     /**
-     * @param TaskOutputStorage $OutputStorage Target storage of edited file.
-     * @param string $Path Path of edited video file.
+     * @var MediaMetaData 
+     */
+    public $MetaData;
+
+    /**
+     * @param TaskOutputStorage $OutputStorage Target storage for the edited file.
+     * @param string $Path Path of the edited video file.
+     * @param MediaMetaData $MetaData 
      */
     function __construct()
     {
@@ -61,6 +69,11 @@ class EditMediaTaskOutput extends AbstractModel
 
         if (array_key_exists("Path",$param) and $param["Path"] !== null) {
             $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+            $this->MetaData = new MediaMetaData();
+            $this->MetaData->deserialize($param["MetaData"]);
         }
     }
 }

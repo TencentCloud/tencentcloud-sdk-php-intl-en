@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The translation input.
+ * Translate the input.
  *
- * @method integer getDefinition() Obtain The translation template ID.
- * @method void setDefinition(integer $Definition) Set The translation template ID.
+ * @method integer getDefinition() Obtain Translation template ID.
+ * @method void setDefinition(integer $Definition) Set Translation template ID.
  */
 class AiRecognitionTaskTransTextResultInput extends AbstractModel
 {
     /**
-     * @var integer The translation template ID.
+     * @var integer Translation template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition The translation template ID.
+     * @param integer $Definition Translation template ID.
      */
     function __construct()
     {

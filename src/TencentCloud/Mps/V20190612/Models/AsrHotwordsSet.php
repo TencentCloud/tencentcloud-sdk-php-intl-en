@@ -20,118 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Returned result set of hotword lexicon query.
  *
- * @method string getHotwordsId() Obtain Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setHotwordsId(string $HotwordsId) Set Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getStatus() Obtain Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setStatus(integer $Status) Set Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getName() Obtain Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setName(string $Name) Set Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getWordCount() Obtain Number of hotwords in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setWordCount(integer $WordCount) Set Number of hotwords in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getFileName() Obtain Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setFileName(string $FileName) Set Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getCreateTime() Obtain Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setCreateTime(string $CreateTime) Set Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getUpdateTime() Obtain Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method integer getType() Obtain 0: temporary hotword lexicon
-1: file-based hotword lexicon
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setType(integer $Type) Set 0: temporary hotword lexicon
-1: file-based hotword lexicon
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getHotwordsId() Obtain 
+ * @method void setHotwordsId(string $HotwordsId) Set 
+ * @method integer getStatus() Obtain 
+ * @method void setStatus(integer $Status) Set 
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method integer getWordCount() Obtain 
+ * @method void setWordCount(integer $WordCount) Set 
+ * @method string getFileName() Obtain 
+ * @method void setFileName(string $FileName) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getUpdateTime() Obtain 
+ * @method void setUpdateTime(string $UpdateTime) Set 
+ * @method integer getType() Obtain 
+ * @method void setType(integer $Type) Set 
  */
 class AsrHotwordsSet extends AbstractModel
 {
     /**
-     * @var string Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string 
      */
     public $HotwordsId;
 
     /**
-     * @var integer Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer 
      */
     public $Status;
 
     /**
-     * @var string Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var integer Number of hotwords in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer 
      */
     public $WordCount;
 
     /**
-     * @var string Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string 
      */
     public $FileName;
 
     /**
-     * @var string Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string 
      */
     public $UpdateTime;
 
     /**
-     * @var integer 0: temporary hotword lexicon
-1: file-based hotword lexicon
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var integer 
      */
     public $Type;
 
     /**
-     * @param string $HotwordsId Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $Status Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $Name Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $WordCount Number of hotwords in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $FileName Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $CreateTime Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $UpdateTime Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param integer $Type 0: temporary hotword lexicon
-1: file-based hotword lexicon
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $HotwordsId 
+     * @param integer $Status 
+     * @param string $Name 
+     * @param integer $WordCount 
+     * @param string $FileName 
+     * @param string $CreateTime 
+     * @param string $UpdateTime 
+     * @param integer $Type 
      */
     function __construct()
     {

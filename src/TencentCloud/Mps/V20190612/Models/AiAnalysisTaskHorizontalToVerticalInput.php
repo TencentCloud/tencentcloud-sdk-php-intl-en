@@ -20,18 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent landscape-to-portrait task input type.
  *
- * @method integer getDefinition() Obtain <p>ID of the horizontal-to-vertical video transformation template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefinition(integer $Definition) Set <p>ID of the horizontal-to-vertical video transformation template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
  * @method string getExtendedParameter() Obtain <p>Extended parameter.</p>
  * @method void setExtendedParameter(string $ExtendedParameter) Set <p>Extended parameter.</p>
  */
 class AiAnalysisTaskHorizontalToVerticalInput extends AbstractModel
 {
     /**
-     * @var integer <p>ID of the horizontal-to-vertical video transformation template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Definition;
 
@@ -41,8 +38,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ExtendedParameter;
 
     /**
-     * @param integer $Definition <p>ID of the horizontal-to-vertical video transformation template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Definition 
      * @param string $ExtendedParameter <p>Extended parameter.</p>
      */
     function __construct()

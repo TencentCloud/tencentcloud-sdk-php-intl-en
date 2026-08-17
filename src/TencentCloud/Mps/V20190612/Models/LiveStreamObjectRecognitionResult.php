@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(float $Confidence) Set Confidence of a recognized segment. Value range: 0-100.
  * @method array getAreaCoordSet() Obtain Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
  * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
- * @method string getUrl() Obtain Screenshot link.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUrl(string $Url) Set Screenshot link.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
  */
 class LiveStreamObjectRecognitionResult extends AbstractModel
 {
@@ -63,8 +61,7 @@ class LiveStreamObjectRecognitionResult extends AbstractModel
     public $AreaCoordSet;
 
     /**
-     * @var string Screenshot link.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Url;
 
@@ -74,8 +71,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param float $EndPtsOffset End PTS time of a recognized segment, in seconds.
      * @param float $Confidence Confidence of a recognized segment. Value range: 0-100.
      * @param array $AreaCoordSet Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
-     * @param string $Url Screenshot link.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Url 
      */
     function __construct()
     {

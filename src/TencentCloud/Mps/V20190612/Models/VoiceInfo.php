@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) Set <p>List of tags. </p><p>For example: gentle.</p>
  * @method array getScenes() Obtain <p>Recommended scenarios. </p><p>For example: education.</p>
  * @method void setScenes(array $Scenes) Set <p>Recommended scenarios. </p><p>For example: education.</p>
+ * @method string getEngine() Obtain 
+ * @method void setEngine(string $Engine) Set 
  */
 class VoiceInfo extends AbstractModel
 {
@@ -94,6 +96,11 @@ class VoiceInfo extends AbstractModel
     public $Scenes;
 
     /**
+     * @var string 
+     */
+    public $Engine;
+
+    /**
      * @param string $VoiceId <p>Voice ID.</p>
      * @param string $Name <p>Voice name.</p>
      * @param string $Description <p>Voice description.</p>
@@ -104,6 +111,7 @@ class VoiceInfo extends AbstractModel
      * @param string $AudioUrl <p>Audition audio URL.</p>
      * @param array $Labels <p>List of tags. </p><p>For example: gentle.</p>
      * @param array $Scenes <p>Recommended scenarios. </p><p>For example: education.</p>
+     * @param string $Engine 
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class VoiceInfo extends AbstractModel
 
         if (array_key_exists("Scenes",$param) and $param["Scenes"] !== null) {
             $this->Scenes = $param["Scenes"];
+        }
+
+        if (array_key_exists("Engine",$param) and $param["Engine"] !== null) {
+            $this->Engine = $param["Engine"];
         }
     }
 }

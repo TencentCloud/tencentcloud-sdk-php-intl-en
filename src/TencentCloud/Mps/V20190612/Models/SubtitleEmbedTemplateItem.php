@@ -22,22 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Unique identifier of the subtitle suppression template
  * @method void setDefinition(integer $Definition) Set Unique identifier of the subtitle suppression template
- * @method string getName() Obtain Subtitle suppression template name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setName(string $Name) Set Subtitle suppression template name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getComment() Obtain Subtitle suppression template description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setComment(string $Comment) Set Subtitle suppression template description
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getType() Obtain Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getName() Obtain 
+ * @method void setName(string $Name) Set 
+ * @method string getComment() Obtain 
+ * @method void setComment(string $Comment) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
  * @method integer getDeleteTag() Obtain Deletion mark. 0 Not deleted. 1 Deleted.
  * @method void setDeleteTag(integer $DeleteTag) Set Deletion mark. 0 Not deleted. 1 Deleted.
  * @method string getCreateTime() Obtain Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
@@ -46,10 +36,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setUpdateTime(string $UpdateTime) Set Last modification time of the template in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method SubtitleEmbedConfig getSubtitleEmbedConfig() Obtain Subtitle suppression module settings
  * @method void setSubtitleEmbedConfig(SubtitleEmbedConfig $SubtitleEmbedConfig) Set Subtitle suppression module settings
- * @method string getAliasName() Obtain Subtitle suppression template English name
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAliasName(string $AliasName) Set Subtitle suppression template English name
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAliasName() Obtain 
+ * @method void setAliasName(string $AliasName) Set 
  */
 class SubtitleEmbedTemplateItem extends AbstractModel
 {
@@ -59,22 +47,17 @@ class SubtitleEmbedTemplateItem extends AbstractModel
     public $Definition;
 
     /**
-     * @var string Subtitle suppression template name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Name;
 
     /**
-     * @var string Subtitle suppression template description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Comment;
 
     /**
-     * @var string Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Type;
 
@@ -99,27 +82,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SubtitleEmbedConfig;
 
     /**
-     * @var string Subtitle suppression template English name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $AliasName;
 
     /**
      * @param integer $Definition Unique identifier of the subtitle suppression template
-     * @param string $Name Subtitle suppression template name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Comment Subtitle suppression template description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Type Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Name 
+     * @param string $Comment 
+     * @param string $Type 
      * @param integer $DeleteTag Deletion mark. 0 Not deleted. 1 Deleted.
      * @param string $CreateTime Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      * @param string $UpdateTime Last modification time of the template in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      * @param SubtitleEmbedConfig $SubtitleEmbedConfig Subtitle suppression module settings
-     * @param string $AliasName Subtitle suppression template English name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AliasName 
      */
     function __construct()
     {

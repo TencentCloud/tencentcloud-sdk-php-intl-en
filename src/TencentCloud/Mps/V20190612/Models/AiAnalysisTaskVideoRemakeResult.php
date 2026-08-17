@@ -18,56 +18,52 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video deduplication result data structure.
+ * Data structure of the video deduplication result.
  *
- * @method string getStatus() Obtain Specifies the task status. valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
- * @method void setStatus(string $Status) Set Specifies the task status. valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
- * @method integer getErrCode() Obtain Error code. 0: success. other values: failure.
- * @method void setErrCode(integer $ErrCode) Set Error code. 0: success. other values: failure.
- * @method string getMessage() Obtain Error message.
- * @method void setMessage(string $Message) Set Error message.
- * @method AiAnalysisTaskVideoRemakeInput getInput() Obtain Deduplication task input.
- * @method void setInput(AiAnalysisTaskVideoRemakeInput $Input) Set Deduplication task input.
- * @method AiAnalysisTaskVideoRemakeOutput getOutput() Obtain Task output.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setOutput(AiAnalysisTaskVideoRemakeOutput $Output) Set Task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getStatus() Obtain Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
+ * @method void setStatus(string $Status) Set Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
+ * @method integer getErrCode() Obtain Error code. 0: successful; other values: failed.
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0: successful; other values: failed.
+ * @method string getMessage() Obtain Error message
+ * @method void setMessage(string $Message) Set Error message
+ * @method AiAnalysisTaskVideoRemakeInput getInput() Obtain Task input for deduplication
+ * @method void setInput(AiAnalysisTaskVideoRemakeInput $Input) Set Task input for deduplication
+ * @method AiAnalysisTaskVideoRemakeOutput getOutput() Obtain 
+ * @method void setOutput(AiAnalysisTaskVideoRemakeOutput $Output) Set 
  */
 class AiAnalysisTaskVideoRemakeResult extends AbstractModel
 {
     /**
-     * @var string Specifies the task status. valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
+     * @var string Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
      */
     public $Status;
 
     /**
-     * @var integer Error code. 0: success. other values: failure.
+     * @var integer Error code. 0: successful; other values: failed.
      */
     public $ErrCode;
 
     /**
-     * @var string Error message.
+     * @var string Error message
      */
     public $Message;
 
     /**
-     * @var AiAnalysisTaskVideoRemakeInput Deduplication task input.
+     * @var AiAnalysisTaskVideoRemakeInput Task input for deduplication
      */
     public $Input;
 
     /**
-     * @var AiAnalysisTaskVideoRemakeOutput Task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var AiAnalysisTaskVideoRemakeOutput 
      */
     public $Output;
 
     /**
-     * @param string $Status Specifies the task status. valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
-     * @param integer $ErrCode Error code. 0: success. other values: failure.
-     * @param string $Message Error message.
-     * @param AiAnalysisTaskVideoRemakeInput $Input Deduplication task input.
-     * @param AiAnalysisTaskVideoRemakeOutput $Output Task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Status Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
+     * @param integer $ErrCode Error code. 0: successful; other values: failed.
+     * @param string $Message Error message
+     * @param AiAnalysisTaskVideoRemakeInput $Input Task input for deduplication
+     * @param AiAnalysisTaskVideoRemakeOutput $Output 
      */
     function __construct()
     {

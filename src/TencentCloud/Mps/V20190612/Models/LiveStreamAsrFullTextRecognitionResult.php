@@ -18,24 +18,24 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ASR-based full live stream recognition
+ * Live stream recognition Asr full text recognition
  *
  * @method string getText() Obtain Recognized text.
  * @method void setText(string $Text) Set Recognized text.
- * @method float getStartPtsTime() Obtain Start PTS time of recognized segment in seconds.
- * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of recognized segment in seconds.
- * @method float getEndPtsTime() Obtain End PTS time of recognized segment in seconds.
- * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of recognized segment in seconds.
- * @method float getConfidence() Obtain Confidence of recognized segment. Value range: 0–100.
- * @method void setConfidence(float $Confidence) Set Confidence of recognized segment. Value range: 0–100.
+ * @method float getStartPtsTime() Obtain Start PTS time of a recognized segment, in seconds.
+ * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a recognized segment, in seconds.
+ * @method float getEndPtsTime() Obtain End PTS time of a recognized segment, in seconds.
+ * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a recognized segment, in seconds.
+ * @method float getConfidence() Obtain Confidence of a recognized segment. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of a recognized segment. Value range: 0-100.
  * @method string getStartTime() Obtain 
  * @method void setStartTime(string $StartTime) Set 
  * @method string getEndTime() Obtain 
  * @method void setEndTime(string $EndTime) Set 
  * @method boolean getSteadyState() Obtain 
  * @method void setSteadyState(boolean $SteadyState) Set 
- * @method string getUserId() Obtain User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setUserId(string $UserId) Set User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getUserId() Obtain 
+ * @method void setUserId(string $UserId) Set 
  */
 class LiveStreamAsrFullTextRecognitionResult extends AbstractModel
 {
@@ -45,17 +45,17 @@ class LiveStreamAsrFullTextRecognitionResult extends AbstractModel
     public $Text;
 
     /**
-     * @var float Start PTS time of recognized segment in seconds.
+     * @var float Start PTS time of a recognized segment, in seconds.
      */
     public $StartPtsTime;
 
     /**
-     * @var float End PTS time of recognized segment in seconds.
+     * @var float End PTS time of a recognized segment, in seconds.
      */
     public $EndPtsTime;
 
     /**
-     * @var float Confidence of recognized segment. Value range: 0–100.
+     * @var float Confidence of a recognized segment. Value range: 0-100.
      */
     public $Confidence;
 
@@ -75,19 +75,19 @@ class LiveStreamAsrFullTextRecognitionResult extends AbstractModel
     public $SteadyState;
 
     /**
-     * @var string User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string 
      */
     public $UserId;
 
     /**
      * @param string $Text Recognized text.
-     * @param float $StartPtsTime Start PTS time of recognized segment in seconds.
-     * @param float $EndPtsTime End PTS time of recognized segment in seconds.
-     * @param float $Confidence Confidence of recognized segment. Value range: 0–100.
+     * @param float $StartPtsTime Start PTS time of a recognized segment, in seconds.
+     * @param float $EndPtsTime End PTS time of a recognized segment, in seconds.
+     * @param float $Confidence Confidence of a recognized segment. Value range: 0-100.
      * @param string $StartTime 
      * @param string $EndTime 
      * @param boolean $SteadyState 
-     * @param string $UserId User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $UserId 
      */
     function __construct()
     {

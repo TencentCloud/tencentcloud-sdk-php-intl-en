@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Smart subtitle hotword parameter.
  *
- * @method string getSwitch() Obtain Hotword switch.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSwitch(string $Switch) Set Hotword switch.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method string getLibraryId() Obtain Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setLibraryId(string $LibraryId) Set Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method string getLibraryId() Obtain 
+ * @method void setLibraryId(string $LibraryId) Set 
  */
 class AsrHotWordsConfigure extends AbstractModel
 {
     /**
-     * @var string Hotword switch.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var string Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string 
      */
     public $LibraryId;
 
     /**
-     * @param string $Switch Hotword switch.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param string $LibraryId Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Switch 
+     * @param string $LibraryId 
      */
     function __construct()
     {

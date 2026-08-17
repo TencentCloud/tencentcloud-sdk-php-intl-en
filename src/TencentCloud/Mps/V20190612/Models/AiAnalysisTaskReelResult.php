@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI narration and video re-creation result type.
+ * AI narration and video re-creation result type
  *
  * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
@@ -28,22 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskReelInput getInput() Obtain AI narration and video re-creation task input.
  * @method void setInput(AiAnalysisTaskReelInput $Input) Set AI narration and video re-creation task input.
- * @method AiAnalysisTaskReelOutput getOutput() Obtain AI narration and video re-creation task output.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiAnalysisTaskReelOutput $Output) Set AI narration and video re-creation task output.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getErrCodeExt() Obtain Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProgress() Obtain Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProgress(integer $Progress) Set Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBeginProcessTime() Obtain Task start time, in ISO date and time format.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBeginProcessTime(string $BeginProcessTime) Set Task start time, in ISO date and time format.Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getFinishTime() Obtain Task completion time, in ISO date and time format.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFinishTime(string $FinishTime) Set Task completion time, in ISO date and time format.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskReelOutput getOutput() Obtain 
+ * @method void setOutput(AiAnalysisTaskReelOutput $Output) Set 
+ * @method string getErrCodeExt() Obtain 
+ * @method void setErrCodeExt(string $ErrCodeExt) Set 
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
+ * @method string getBeginProcessTime() Obtain 
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set 
+ * @method string getFinishTime() Obtain 
+ * @method void setFinishTime(string $FinishTime) Set 
  */
 class AiAnalysisTaskReelResult extends AbstractModel
 {
@@ -68,30 +62,27 @@ class AiAnalysisTaskReelResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskReelOutput AI narration and video re-creation task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskReelOutput 
      */
     public $Output;
 
     /**
-     * @var string Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $ErrCodeExt;
 
     /**
-     * @var integer Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Progress;
 
     /**
-     * @var string Task start time, in ISO date and time format.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $BeginProcessTime;
 
     /**
-     * @var string Task completion time, in ISO date and time format.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $FinishTime;
 
@@ -100,14 +91,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
      * @param string $Message Error message.
      * @param AiAnalysisTaskReelInput $Input AI narration and video re-creation task input.
-     * @param AiAnalysisTaskReelOutput $Output AI narration and video re-creation task output.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Progress Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BeginProcessTime Task start time, in ISO date and time format.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $FinishTime Task completion time, in ISO date and time format.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskReelOutput $Output 
+     * @param string $ErrCodeExt 
+     * @param integer $Progress 
+     * @param string $BeginProcessTime 
+     * @param string $FinishTime 
      */
     function __construct()
     {

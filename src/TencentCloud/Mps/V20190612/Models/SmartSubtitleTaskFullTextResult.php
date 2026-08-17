@@ -20,34 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Full-text recognition result for smart subtitle tasks.
  *
- * @method string getStatus() Obtain Task status, which can be PROCESSING, SUCCESS, or FAIL.
- * @method void setStatus(string $Status) Set Task status, which can be PROCESSING, SUCCESS, or FAIL.
- * @method string getErrCodeExt() Obtain Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
  * @method integer getErrCode() Obtain Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method SmartSubtitleTaskResultInput getInput() Obtain Input information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInput(SmartSubtitleTaskResultInput $Input) Set Input information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method SmartSubtitleTaskTextResultOutput getOutput() Obtain Output information for smart subtitle tasks.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(SmartSubtitleTaskTextResultOutput $Output) Set Output information for smart subtitle tasks.Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getProgress() Obtain Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setProgress(integer $Progress) Set Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method SmartSubtitleTaskResultInput getInput() Obtain 
+ * @method void setInput(SmartSubtitleTaskResultInput $Input) Set 
+ * @method SmartSubtitleTaskTextResultOutput getOutput() Obtain 
+ * @method void setOutput(SmartSubtitleTaskTextResultOutput $Output) Set 
+ * @method integer getProgress() Obtain 
+ * @method void setProgress(integer $Progress) Set 
  */
 class SmartSubtitleTaskFullTextResult extends AbstractModel
 {
     /**
-     * @var string Task status, which can be PROCESSING, SUCCESS, or FAIL.
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var string Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @var string Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public $ErrCodeExt;
 
@@ -62,32 +58,28 @@ class SmartSubtitleTaskFullTextResult extends AbstractModel
     public $Message;
 
     /**
-     * @var SmartSubtitleTaskResultInput Input information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SmartSubtitleTaskResultInput 
      */
     public $Input;
 
     /**
-     * @var SmartSubtitleTaskTextResultOutput Output information for smart subtitle tasks.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var SmartSubtitleTaskTextResultOutput 
      */
     public $Output;
 
     /**
-     * @var integer Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Progress;
 
     /**
-     * @param string $Status Task status, which can be PROCESSING, SUCCESS, or FAIL.
-     * @param string $ErrCodeExt Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param string $ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      * @param string $Message Error message.
-     * @param SmartSubtitleTaskResultInput $Input Input information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SmartSubtitleTaskTextResultOutput $Output Output information for smart subtitle tasks.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Progress Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SmartSubtitleTaskResultInput $Input 
+     * @param SmartSubtitleTaskTextResultOutput $Output 
+     * @param integer $Progress 
      */
     function __construct()
     {

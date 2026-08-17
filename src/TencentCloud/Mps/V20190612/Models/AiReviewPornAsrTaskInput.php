@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of an ASR-based porn information detection in text task during content audit
+ * Content review Asr text porn detection task input parameter type
  *
- * @method integer getDefinition() Obtain ID of a porn information detection template.
- * @method void setDefinition(integer $Definition) Set ID of a porn information detection template.
+ * @method integer getDefinition() Obtain Pornography detection template ID.
+ * @method void setDefinition(integer $Definition) Set Pornography detection template ID.
  */
 class AiReviewPornAsrTaskInput extends AbstractModel
 {
     /**
-     * @var integer ID of a porn information detection template.
+     * @var integer Pornography detection template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition ID of a porn information detection template.
+     * @param integer $Definition Pornography detection template ID.
      */
     function __construct()
     {

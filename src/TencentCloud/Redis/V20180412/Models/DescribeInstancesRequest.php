@@ -84,8 +84,12 @@ use TencentCloud\Common\AbstractModel;
 - 0: Manual renewal.
 - 1: Automatic renewal.
 - 2: No renewal after expiry.
- * @method string getBillingMode() Obtain Billing mode. Only pay-as-you-go billing is supported.
- * @method void setBillingMode(string $BillingMode) Set Billing mode. Only pay-as-you-go billing is supported.
+ * @method string getBillingMode() Obtain Billing mode.
+- postpaid: pay-as-you-go.
+- prepaid: monthly subscription.
+ * @method void setBillingMode(string $BillingMode) Set Billing mode.
+- postpaid: pay-as-you-go.
+- prepaid: monthly subscription.
  * @method integer getType() Obtain Instance type.
 
 - 2: Redis 2.8 memory edition (standard architecture).
@@ -244,7 +248,9 @@ class DescribeInstancesRequest extends AbstractModel
     public $AutoRenew;
 
     /**
-     * @var string Billing mode. Only pay-as-you-go billing is supported.
+     * @var string Billing mode.
+- postpaid: pay-as-you-go.
+- prepaid: monthly subscription.
      */
     public $BillingMode;
 
@@ -344,7 +350,9 @@ class DescribeInstancesRequest extends AbstractModel
 - 0: Manual renewal.
 - 1: Automatic renewal.
 - 2: No renewal after expiry.
-     * @param string $BillingMode Billing mode. Only pay-as-you-go billing is supported.
+     * @param string $BillingMode Billing mode.
+- postpaid: pay-as-you-go.
+- prepaid: monthly subscription.
      * @param integer $Type Instance type.
 
 - 2: Redis 2.8 memory edition (standard architecture).

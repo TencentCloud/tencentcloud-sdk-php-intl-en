@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Intelligent translation result information.
+ * Intelligent translation result information
  *
  * @method string getVideoPath() Obtain <p>Dubbed video path.</p>
  * @method void setVideoPath(string $VideoPath) Set <p>Dubbed video path.</p>

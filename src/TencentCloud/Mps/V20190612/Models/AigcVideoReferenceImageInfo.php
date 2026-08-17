@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getImageUrl() Obtain Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
  * @method void setImageUrl(string $ImageUrl) Set Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
- * @method string getReferenceType() Obtain Reference type.
-Note:1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
- * @method void setReferenceType(string $ReferenceType) Set Reference type.
-Note:1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+ * @method string getReferenceType() Obtain Reference Type.
+Note:
+1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+ * @method void setReferenceType(string $ReferenceType) Set Reference Type.
+Note:
+1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
  */
 class AigcVideoReferenceImageInfo extends AbstractModel
 {
@@ -35,15 +37,17 @@ class AigcVideoReferenceImageInfo extends AbstractModel
     public $ImageUrl;
 
     /**
-     * @var string Reference type.
-Note:1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+     * @var string Reference Type.
+Note:
+1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
      */
     public $ReferenceType;
 
     /**
      * @param string $ImageUrl Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
-     * @param string $ReferenceType Reference type.
-Note:1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+     * @param string $ReferenceType Reference Type.
+Note:
+1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
      */
     function __construct()
     {

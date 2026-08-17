@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result of AI-based live stream audit
+ * Live stream AI review result
  *
- * @method array getResultSet() Obtain List of content audit results.
- * @method void setResultSet(array $ResultSet) Set List of content audit results.
+ * @method array getResultSet() Obtain Content moderation result list.
+ * @method void setResultSet(array $ResultSet) Set Content moderation result list.
  */
 class LiveStreamAiReviewResultInfo extends AbstractModel
 {
     /**
-     * @var array List of content audit results.
+     * @var array Content moderation result list.
      */
     public $ResultSet;
 
     /**
-     * @param array $ResultSet List of content audit results.
+     * @param array $ResultSet Content moderation result list.
      */
     function __construct()
     {

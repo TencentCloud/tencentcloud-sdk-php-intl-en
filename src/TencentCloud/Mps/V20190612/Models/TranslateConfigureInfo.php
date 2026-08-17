@@ -18,64 +18,52 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of a full speech recognition task.
+ * Speech Translation Task Control Parameter
  *
- * @method string getSwitch() Obtain Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
- * @method void setSwitch(string $Switch) Set Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
- * @method string getSourceLanguage() Obtain 
- * @method void setSourceLanguage(string $SourceLanguage) Set 
- * @method string getDestinationLanguage() Obtain 
- * @method void setDestinationLanguage(string $DestinationLanguage) Set 
- * @method string getSubtitleFormat() Obtain Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSubtitleFormat(string $SubtitleFormat) Set Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSwitch() Obtain Voice translation task switch, available values:
+<li>ON: Enable Intelligent Voice Translation task.</li>
+<li>OFF: Disables the Intelligent Voice Translation task.</li>
+ * @method void setSwitch(string $Switch) Set Voice translation task switch, available values:
+<li>ON: Enable Intelligent Voice Translation task.</li>
+<li>OFF: Disables the Intelligent Voice Translation task.</li>
+ * @method string getSourceLanguage() Obtain Video source language.
+ * @method void setSourceLanguage(string $SourceLanguage) Set Video source language.
+ * @method string getDestinationLanguage() Obtain Target language.
+ * @method void setDestinationLanguage(string $DestinationLanguage) Set Target language.
+ * @method string getSubtitleFormat() Obtain 
+ * @method void setSubtitleFormat(string $SubtitleFormat) Set 
  */
 class TranslateConfigureInfo extends AbstractModel
 {
     /**
-     * @var string Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
+     * @var string Voice translation task switch, available values:
+<li>ON: Enable Intelligent Voice Translation task.</li>
+<li>OFF: Disables the Intelligent Voice Translation task.</li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Video source language.
      */
     public $SourceLanguage;
 
     /**
-     * @var string 
+     * @var string Target language.
      */
     public $DestinationLanguage;
 
     /**
-     * @var string Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $SubtitleFormat;
 
     /**
-     * @param string $Switch Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
-     * @param string $SourceLanguage 
-     * @param string $DestinationLanguage 
-     * @param string $SubtitleFormat Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Switch Voice translation task switch, available values:
+<li>ON: Enable Intelligent Voice Translation task.</li>
+<li>OFF: Disables the Intelligent Voice Translation task.</li>
+     * @param string $SourceLanguage Video source language.
+     * @param string $DestinationLanguage Target language.
+     * @param string $SubtitleFormat 
      */
     function __construct()
     {

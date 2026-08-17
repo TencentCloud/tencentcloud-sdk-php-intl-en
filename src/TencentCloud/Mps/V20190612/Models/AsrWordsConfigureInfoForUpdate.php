@@ -18,40 +18,40 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Speech keyword recognition control parameter.
+ * Voice keyword recognition control parameters.
  *
- * @method string getSwitch() Obtain Switch of a speech keyword recognition task. Valid values:
-<li>ON: Enables a speech keyword recognition task;</li>
-<li>OFF: Disables a speech keyword recognition task.</li>
- * @method void setSwitch(string $Switch) Set Switch of a speech keyword recognition task. Valid values:
-<li>ON: Enables a speech keyword recognition task;</li>
-<li>OFF: Disables a speech keyword recognition task.</li>
- * @method array getLabelSet() Obtain Keyword filter tag, which specifies the keyword tag that needs to be returned. If this parameter is left empty, all results will be returned.
-There can be up to 10 tags, each with a length limit of 16 characters.
- * @method void setLabelSet(array $LabelSet) Set Keyword filter tag, which specifies the keyword tag that needs to be returned. If this parameter is left empty, all results will be returned.
-There can be up to 10 tags, each with a length limit of 16 characters.
+ * @method string getSwitch() Obtain Speech keyword recognition task switch, available values:
+<li>ON: Enable speech keyword recognition task.</li>
+<li>OFF: Disables the speech keyword recognition task.</li>
+ * @method void setSwitch(string $Switch) Set Speech keyword recognition task switch, available values:
+<li>ON: Enable speech keyword recognition task.</li>
+<li>OFF: Disables the speech keyword recognition task.</li>
+ * @method array getLabelSet() Obtain Keyword-based filtering tag. Specify the tag of the keyword that needs to be returned. If it is not filled or is empty, all results are returned.
+The number of tags is up to 10, and each tag can have up to 16 characters.
+ * @method void setLabelSet(array $LabelSet) Set Keyword-based filtering tag. Specify the tag of the keyword that needs to be returned. If it is not filled or is empty, all results are returned.
+The number of tags is up to 10, and each tag can have up to 16 characters.
  */
 class AsrWordsConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Switch of a speech keyword recognition task. Valid values:
-<li>ON: Enables a speech keyword recognition task;</li>
-<li>OFF: Disables a speech keyword recognition task.</li>
+     * @var string Speech keyword recognition task switch, available values:
+<li>ON: Enable speech keyword recognition task.</li>
+<li>OFF: Disables the speech keyword recognition task.</li>
      */
     public $Switch;
 
     /**
-     * @var array Keyword filter tag, which specifies the keyword tag that needs to be returned. If this parameter is left empty, all results will be returned.
-There can be up to 10 tags, each with a length limit of 16 characters.
+     * @var array Keyword-based filtering tag. Specify the tag of the keyword that needs to be returned. If it is not filled or is empty, all results are returned.
+The number of tags is up to 10, and each tag can have up to 16 characters.
      */
     public $LabelSet;
 
     /**
-     * @param string $Switch Switch of a speech keyword recognition task. Valid values:
-<li>ON: Enables a speech keyword recognition task;</li>
-<li>OFF: Disables a speech keyword recognition task.</li>
-     * @param array $LabelSet Keyword filter tag, which specifies the keyword tag that needs to be returned. If this parameter is left empty, all results will be returned.
-There can be up to 10 tags, each with a length limit of 16 characters.
+     * @param string $Switch Speech keyword recognition task switch, available values:
+<li>ON: Enable speech keyword recognition task.</li>
+<li>OFF: Disables the speech keyword recognition task.</li>
+     * @param array $LabelSet Keyword-based filtering tag. Specify the tag of the keyword that needs to be returned. If it is not filled or is empty, all results are returned.
+The number of tags is up to 10, and each tag can have up to 16 characters.
      */
     function __construct()
     {

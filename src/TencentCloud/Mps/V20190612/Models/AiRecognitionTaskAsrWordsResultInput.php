@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input for speech keyword recognition.
+ * Speech keyword recognition input.
  *
  * @method integer getDefinition() Obtain Speech keyword recognition template ID.
  * @method void setDefinition(integer $Definition) Set Speech keyword recognition template ID.

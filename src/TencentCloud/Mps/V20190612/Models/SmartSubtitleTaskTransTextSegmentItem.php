@@ -20,37 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Translated segment.
  *
- * @method float getConfidence() Obtain <p>Confidence of a recognized segment. Value range: 0-100.</p>
- * @method void setConfidence(float $Confidence) Set <p>Confidence of a recognized segment. Value range: 0-100.</p>
- * @method float getStartTimeOffset() Obtain <p>Start time offset of a recognized segment, in seconds.</p>
- * @method void setStartTimeOffset(float $StartTimeOffset) Set <p>Start time offset of a recognized segment, in seconds.</p>
- * @method float getEndTimeOffset() Obtain <p>End time offset of a recognized segment, in seconds.</p>
- * @method void setEndTimeOffset(float $EndTimeOffset) Set <p>End time offset of a recognized segment, in seconds.</p>
+ * @method float getConfidence() Obtain <p>Confidence of the recognized segment. Value range: 0–100.</p>
+ * @method void setConfidence(float $Confidence) Set <p>Confidence of the recognized segment. Value range: 0–100.</p>
+ * @method float getStartTimeOffset() Obtain <p>Start time offset of the recognized segment, in seconds.</p>
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set <p>Start time offset of the recognized segment, in seconds.</p>
+ * @method float getEndTimeOffset() Obtain <p>End time offset of the recognized segment, in seconds.</p>
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set <p>End time offset of the recognized segment, in seconds.</p>
  * @method string getText() Obtain <p>Recognized text.</p>
  * @method void setText(string $Text) Set <p>Recognized text.</p>
  * @method string getTrans() Obtain <p>Translated text.</p>
  * @method void setTrans(string $Trans) Set <p>Translated text.</p>
- * @method array getWordlist() Obtain <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWordlist(array $Wordlist) Set <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSpeakerId() Obtain <p>Speaker ID (if speaker recognition is enabled)</p>
- * @method void setSpeakerId(string $SpeakerId) Set <p>Speaker ID (if speaker recognition is enabled)</p>
+ * @method array getWordlist() Obtain 
+ * @method void setWordlist(array $Wordlist) Set 
+ * @method string getSpeakerId() Obtain <p>Speaker ID (if speaker recognition is enabled).</p>
+ * @method void setSpeakerId(string $SpeakerId) Set <p>Speaker ID (if speaker recognition is enabled).</p>
  */
 class SmartSubtitleTaskTransTextSegmentItem extends AbstractModel
 {
     /**
-     * @var float <p>Confidence of a recognized segment. Value range: 0-100.</p>
+     * @var float <p>Confidence of the recognized segment. Value range: 0–100.</p>
      */
     public $Confidence;
 
     /**
-     * @var float <p>Start time offset of a recognized segment, in seconds.</p>
+     * @var float <p>Start time offset of the recognized segment, in seconds.</p>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float <p>End time offset of a recognized segment, in seconds.</p>
+     * @var float <p>End time offset of the recognized segment, in seconds.</p>
      */
     public $EndTimeOffset;
 
@@ -65,25 +63,23 @@ class SmartSubtitleTaskTransTextSegmentItem extends AbstractModel
     public $Trans;
 
     /**
-     * @var array <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $Wordlist;
 
     /**
-     * @var string <p>Speaker ID (if speaker recognition is enabled)</p>
+     * @var string <p>Speaker ID (if speaker recognition is enabled).</p>
      */
     public $SpeakerId;
 
     /**
-     * @param float $Confidence <p>Confidence of a recognized segment. Value range: 0-100.</p>
-     * @param float $StartTimeOffset <p>Start time offset of a recognized segment, in seconds.</p>
-     * @param float $EndTimeOffset <p>End time offset of a recognized segment, in seconds.</p>
+     * @param float $Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
+     * @param float $StartTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
+     * @param float $EndTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
      * @param string $Text <p>Recognized text.</p>
      * @param string $Trans <p>Translated text.</p>
-     * @param array $Wordlist <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SpeakerId <p>Speaker ID (if speaker recognition is enabled)</p>
+     * @param array $Wordlist 
+     * @param string $SpeakerId <p>Speaker ID (if speaker recognition is enabled).</p>
      */
     function __construct()
     {

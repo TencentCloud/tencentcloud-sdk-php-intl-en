@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Detection policy for media quality inspection.
  *
- * @method string getStrategyType() Obtain Policy type. Valid values:
+ * @method string getStrategyType() Obtain Policy type. Value:
 - TimeSpotCheck
- * @method void setStrategyType(string $StrategyType) Set Policy type. Valid values:
+ * @method void setStrategyType(string $StrategyType) Set Policy type. Value:
 - TimeSpotCheck
  * @method TimeSpotCheck getTimeSpotCheck() Obtain Spot check policy based on time.
  * @method void setTimeSpotCheck(TimeSpotCheck $TimeSpotCheck) Set Spot check policy based on time.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class QualityControlStrategy extends AbstractModel
 {
     /**
-     * @var string Policy type. Valid values:
+     * @var string Policy type. Value:
 - TimeSpotCheck
      */
     public $StrategyType;
@@ -41,7 +41,7 @@ class QualityControlStrategy extends AbstractModel
     public $TimeSpotCheck;
 
     /**
-     * @param string $StrategyType Policy type. Valid values:
+     * @param string $StrategyType Policy type. Value:
 - TimeSpotCheck
      * @param TimeSpotCheck $TimeSpotCheck Spot check policy based on time.
      */

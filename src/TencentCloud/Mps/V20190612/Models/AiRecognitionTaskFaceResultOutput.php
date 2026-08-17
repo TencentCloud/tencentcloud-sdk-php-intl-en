@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output of intelligent face recognition.
+ * Intelligent Face Recognition output.
  *
  * @method array getResultSet() Obtain Intelligent face recognition result set.
  * @method void setResultSet(array $ResultSet) Set Intelligent face recognition result set.

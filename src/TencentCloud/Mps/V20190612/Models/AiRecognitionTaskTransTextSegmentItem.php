@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The translated segments.
+ * Translated segment.
  *
  * @method float getConfidence() Obtain <p>Confidence of the recognized segment. Value range: 0–100.</p>
  * @method void setConfidence(float $Confidence) Set <p>Confidence of the recognized segment. Value range: 0–100.</p>

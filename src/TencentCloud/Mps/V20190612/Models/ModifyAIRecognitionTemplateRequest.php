@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAIRecognitionTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique ID of a video content recognition template.
- * @method void setDefinition(integer $Definition) Set Unique ID of a video content recognition template.
- * @method string getName() Obtain Name of a video content recognition template. Length limit: 64 characters.
- * @method void setName(string $Name) Set Name of a video content recognition template. Length limit: 64 characters.
- * @method string getComment() Obtain Description of a video content recognition template. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Description of a video content recognition template. Length limit: 256 characters.
- * @method FaceConfigureInfoForUpdate getFaceConfigure() Obtain Face recognition control parameter.
- * @method void setFaceConfigure(FaceConfigureInfoForUpdate $FaceConfigure) Set Face recognition control parameter.
- * @method OcrFullTextConfigureInfoForUpdate getOcrFullTextConfigure() Obtain Full text recognition control parameter.
- * @method void setOcrFullTextConfigure(OcrFullTextConfigureInfoForUpdate $OcrFullTextConfigure) Set Full text recognition control parameter.
- * @method OcrWordsConfigureInfoForUpdate getOcrWordsConfigure() Obtain Text keyword recognition control parameter.
- * @method void setOcrWordsConfigure(OcrWordsConfigureInfoForUpdate $OcrWordsConfigure) Set Text keyword recognition control parameter.
- * @method AsrFullTextConfigureInfoForUpdate getAsrFullTextConfigure() Obtain Full speech recognition control parameter.
- * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfoForUpdate $AsrFullTextConfigure) Set Full speech recognition control parameter.
- * @method AsrWordsConfigureInfoForUpdate getAsrWordsConfigure() Obtain Speech keyword recognition control parameter.
- * @method void setAsrWordsConfigure(AsrWordsConfigureInfoForUpdate $AsrWordsConfigure) Set Speech keyword recognition control parameter.
+ * @method integer getDefinition() Obtain Unique identifier of a video content recognition template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of a video content recognition template.
+ * @method string getName() Obtain Video content recognition template name, length limited to 64 characters.
+ * @method void setName(string $Name) Set Video content recognition template name, length limited to 64 characters.
+ * @method string getComment() Obtain Video Content Recognition template description, length limited to 256 characters.
+ * @method void setComment(string $Comment) Set Video Content Recognition template description, length limited to 256 characters.
+ * @method FaceConfigureInfoForUpdate getFaceConfigure() Obtain Face Recognition Control Parameter.
+ * @method void setFaceConfigure(FaceConfigureInfoForUpdate $FaceConfigure) Set Face Recognition Control Parameter.
+ * @method OcrFullTextConfigureInfoForUpdate getOcrFullTextConfigure() Obtain Text Full-text Recognition Control Parameters.
+ * @method void setOcrFullTextConfigure(OcrFullTextConfigureInfoForUpdate $OcrFullTextConfigure) Set Text Full-text Recognition Control Parameters.
+ * @method OcrWordsConfigureInfoForUpdate getOcrWordsConfigure() Obtain Text keyword recognition control parameters.
+ * @method void setOcrWordsConfigure(OcrWordsConfigureInfoForUpdate $OcrWordsConfigure) Set Text keyword recognition control parameters.
+ * @method AsrFullTextConfigureInfoForUpdate getAsrFullTextConfigure() Obtain Voice full-text recognition control parameters.
+ * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfoForUpdate $AsrFullTextConfigure) Set Voice full-text recognition control parameters.
+ * @method AsrWordsConfigureInfoForUpdate getAsrWordsConfigure() Obtain Voice keyword recognition control parameters.
+ * @method void setAsrWordsConfigure(AsrWordsConfigureInfoForUpdate $AsrWordsConfigure) Set Voice keyword recognition control parameters.
+ * @method TranslateConfigureInfoForUpdate getTranslateConfigure() Obtain Voice translation control parameters.
+ * @method void setTranslateConfigure(TranslateConfigureInfoForUpdate $TranslateConfigure) Set Voice translation control parameters.
  */
 class ModifyAIRecognitionTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique ID of a video content recognition template.
+     * @var integer Unique identifier of a video content recognition template.
      */
     public $Definition;
 
     /**
-     * @var string Name of a video content recognition template. Length limit: 64 characters.
+     * @var string Video content recognition template name, length limited to 64 characters.
      */
     public $Name;
 
     /**
-     * @var string Description of a video content recognition template. Length limit: 256 characters.
+     * @var string Video Content Recognition template description, length limited to 256 characters.
      */
     public $Comment;
 
     /**
-     * @var FaceConfigureInfoForUpdate Face recognition control parameter.
+     * @var FaceConfigureInfoForUpdate Face Recognition Control Parameter.
      */
     public $FaceConfigure;
 
     /**
-     * @var OcrFullTextConfigureInfoForUpdate Full text recognition control parameter.
+     * @var OcrFullTextConfigureInfoForUpdate Text Full-text Recognition Control Parameters.
      */
     public $OcrFullTextConfigure;
 
     /**
-     * @var OcrWordsConfigureInfoForUpdate Text keyword recognition control parameter.
+     * @var OcrWordsConfigureInfoForUpdate Text keyword recognition control parameters.
      */
     public $OcrWordsConfigure;
 
     /**
-     * @var AsrFullTextConfigureInfoForUpdate Full speech recognition control parameter.
+     * @var AsrFullTextConfigureInfoForUpdate Voice full-text recognition control parameters.
      */
     public $AsrFullTextConfigure;
 
     /**
-     * @var AsrWordsConfigureInfoForUpdate Speech keyword recognition control parameter.
+     * @var AsrWordsConfigureInfoForUpdate Voice keyword recognition control parameters.
      */
     public $AsrWordsConfigure;
 
     /**
-     * @param integer $Definition Unique ID of a video content recognition template.
-     * @param string $Name Name of a video content recognition template. Length limit: 64 characters.
-     * @param string $Comment Description of a video content recognition template. Length limit: 256 characters.
-     * @param FaceConfigureInfoForUpdate $FaceConfigure Face recognition control parameter.
-     * @param OcrFullTextConfigureInfoForUpdate $OcrFullTextConfigure Full text recognition control parameter.
-     * @param OcrWordsConfigureInfoForUpdate $OcrWordsConfigure Text keyword recognition control parameter.
-     * @param AsrFullTextConfigureInfoForUpdate $AsrFullTextConfigure Full speech recognition control parameter.
-     * @param AsrWordsConfigureInfoForUpdate $AsrWordsConfigure Speech keyword recognition control parameter.
+     * @var TranslateConfigureInfoForUpdate Voice translation control parameters.
+     */
+    public $TranslateConfigure;
+
+    /**
+     * @param integer $Definition Unique identifier of a video content recognition template.
+     * @param string $Name Video content recognition template name, length limited to 64 characters.
+     * @param string $Comment Video Content Recognition template description, length limited to 256 characters.
+     * @param FaceConfigureInfoForUpdate $FaceConfigure Face Recognition Control Parameter.
+     * @param OcrFullTextConfigureInfoForUpdate $OcrFullTextConfigure Text Full-text Recognition Control Parameters.
+     * @param OcrWordsConfigureInfoForUpdate $OcrWordsConfigure Text keyword recognition control parameters.
+     * @param AsrFullTextConfigureInfoForUpdate $AsrFullTextConfigure Voice full-text recognition control parameters.
+     * @param AsrWordsConfigureInfoForUpdate $AsrWordsConfigure Voice keyword recognition control parameters.
+     * @param TranslateConfigureInfoForUpdate $TranslateConfigure Voice translation control parameters.
      */
     function __construct()
     {
@@ -137,6 +145,11 @@ class ModifyAIRecognitionTemplateRequest extends AbstractModel
         if (array_key_exists("AsrWordsConfigure",$param) and $param["AsrWordsConfigure"] !== null) {
             $this->AsrWordsConfigure = new AsrWordsConfigureInfoForUpdate();
             $this->AsrWordsConfigure->deserialize($param["AsrWordsConfigure"]);
+        }
+
+        if (array_key_exists("TranslateConfigure",$param) and $param["TranslateConfigure"] !== null) {
+            $this->TranslateConfigure = new TranslateConfigureInfoForUpdate();
+            $this->TranslateConfigure->deserialize($param["TranslateConfigure"]);
         }
     }
 }

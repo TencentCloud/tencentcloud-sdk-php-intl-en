@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Live streaming AI analysis result
  *
  * @method string getType() Obtain Result type. Valid values:
 <li>SegmentRecognition: video splitting.</li>
@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Description: summary.</li>
  * @method array getSegmentResultSet() Obtain 
  * @method void setSegmentResultSet(array $SegmentResultSet) Set 
- * @method array getHighlightResultSet() Obtain Highlight result. This field is valid when Type is set to Highlight.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHighlightResultSet(array $HighlightResultSet) Set Highlight result. This field is valid when Type is set to Highlight.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getHighlightResultSet() Obtain 
+ * @method void setHighlightResultSet(array $HighlightResultSet) Set 
  * @method LiveAiAnalysisDescriptionItem getDescriptionResult() Obtain Summary result. It is valid when Type is Description.
  * @method void setDescriptionResult(LiveAiAnalysisDescriptionItem $DescriptionResult) Set Summary result. It is valid when Type is Description.
  */
@@ -53,8 +51,7 @@ class LiveStreamAiAnalysisResultItem extends AbstractModel
     public $SegmentResultSet;
 
     /**
-     * @var array Highlight result. This field is valid when Type is set to Highlight.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $HighlightResultSet;
 
@@ -69,8 +66,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>Highlight: highlight.</li>
 <li>Description: summary.</li>
      * @param array $SegmentResultSet 
-     * @param array $HighlightResultSet Highlight result. This field is valid when Type is set to Highlight.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $HighlightResultSet 
      * @param LiveAiAnalysisDescriptionItem $DescriptionResult Summary result. It is valid when Type is Description.
      */
     function __construct()

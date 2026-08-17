@@ -18,72 +18,52 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of a live recording file.
+ * Live streaming Recording output file information
  *
- * @method string getUrl() Obtain The URL of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUrl(string $Url) Set The URL of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSize() Obtain The size of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSize(integer $Size) Set The size of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDuration() Obtain The duration of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDuration(integer $Duration) Set The duration of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStartTime() Obtain The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(string $StartTime) Set The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEndTime() Obtain The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(string $EndTime) Set The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUrl() Obtain 
+ * @method void setUrl(string $Url) Set 
+ * @method integer getSize() Obtain 
+ * @method void setSize(integer $Size) Set 
+ * @method integer getDuration() Obtain 
+ * @method void setDuration(integer $Duration) Set 
+ * @method string getStartTime() Obtain 
+ * @method void setStartTime(string $StartTime) Set 
+ * @method string getEndTime() Obtain 
+ * @method void setEndTime(string $EndTime) Set 
  */
 class LiveRecordFile extends AbstractModel
 {
     /**
-     * @var string The URL of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Url;
 
     /**
-     * @var integer The size of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Size;
 
     /**
-     * @var integer The duration of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Duration;
 
     /**
-     * @var string The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $StartTime;
 
     /**
-     * @var string The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $EndTime;
 
     /**
-     * @param string $Url The URL of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Size The size of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Duration The duration of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StartTime The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EndTime The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Url 
+     * @param integer $Size 
+     * @param integer $Duration 
+     * @param string $StartTime 
+     * @param string $EndTime 
      */
     function __construct()
     {

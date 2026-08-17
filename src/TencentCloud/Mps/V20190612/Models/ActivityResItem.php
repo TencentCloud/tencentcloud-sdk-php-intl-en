@@ -18,168 +18,116 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The execution results of the subtasks of a scheme.
+ * Orchestration subtask output
  *
- * @method MediaProcessTaskTranscodeResult getTranscodeTask() Obtain The result of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTranscodeTask(MediaProcessTaskTranscodeResult $TranscodeTask) Set The result of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method MediaProcessTaskAnimatedGraphicResult getAnimatedGraphicTask() Obtain The result of an animated image generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAnimatedGraphicTask(MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask) Set The result of an animated image generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() Obtain The result of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask) Set The result of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() Obtain The result of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSampleSnapshotTask(MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask) Set The result of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method MediaProcessTaskImageSpriteResult getImageSpriteTask() Obtain The result of an image sprite task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setImageSpriteTask(MediaProcessTaskImageSpriteResult $ImageSpriteTask) Set The result of an image sprite task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method MediaProcessTaskAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() Obtain The result of an adaptive bitrate streaming task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAdaptiveDynamicStreamingTask(MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask) Set The result of an adaptive bitrate streaming task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ScheduleRecognitionTaskResult getRecognitionTask() Obtain The result of a content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRecognitionTask(ScheduleRecognitionTaskResult $RecognitionTask) Set The result of a content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ScheduleReviewTaskResult getReviewTask() Obtain The result of a content moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReviewTask(ScheduleReviewTaskResult $ReviewTask) Set The result of a content moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ScheduleAnalysisTaskResult getAnalysisTask() Obtain The result of a content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAnalysisTask(ScheduleAnalysisTaskResult $AnalysisTask) Set The result of a content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ScheduleQualityControlTaskResult getQualityControlTask() Obtain Media quality inspection task output.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setQualityControlTask(ScheduleQualityControlTaskResult $QualityControlTask) Set Media quality inspection task output.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method ScheduleExecRuleTaskResult getExecRuleTask() Obtain Conditional judgment task output.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setExecRuleTask(ScheduleExecRuleTaskResult $ExecRuleTask) Set Conditional judgment task output.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method ScheduleSmartSubtitleTaskResult getSmartSubtitlesTask() Obtain Smart subtitle task output.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSmartSubtitlesTask(ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask) Set Smart subtitle task output.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method SmartEraseTaskResult getSmartEraseTask() Obtain Smart erase task output.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSmartEraseTask(SmartEraseTaskResult $SmartEraseTask) Set Smart erase task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method MediaProcessTaskTranscodeResult getTranscodeTask() Obtain 
+ * @method void setTranscodeTask(MediaProcessTaskTranscodeResult $TranscodeTask) Set 
+ * @method MediaProcessTaskAnimatedGraphicResult getAnimatedGraphicTask() Obtain 
+ * @method void setAnimatedGraphicTask(MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask) Set 
+ * @method MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() Obtain 
+ * @method void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask) Set 
+ * @method MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() Obtain 
+ * @method void setSampleSnapshotTask(MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask) Set 
+ * @method MediaProcessTaskImageSpriteResult getImageSpriteTask() Obtain 
+ * @method void setImageSpriteTask(MediaProcessTaskImageSpriteResult $ImageSpriteTask) Set 
+ * @method MediaProcessTaskAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() Obtain 
+ * @method void setAdaptiveDynamicStreamingTask(MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask) Set 
+ * @method ScheduleRecognitionTaskResult getRecognitionTask() Obtain 
+ * @method void setRecognitionTask(ScheduleRecognitionTaskResult $RecognitionTask) Set 
+ * @method ScheduleReviewTaskResult getReviewTask() Obtain 
+ * @method void setReviewTask(ScheduleReviewTaskResult $ReviewTask) Set 
+ * @method ScheduleAnalysisTaskResult getAnalysisTask() Obtain 
+ * @method void setAnalysisTask(ScheduleAnalysisTaskResult $AnalysisTask) Set 
+ * @method ScheduleQualityControlTaskResult getQualityControlTask() Obtain 
+ * @method void setQualityControlTask(ScheduleQualityControlTaskResult $QualityControlTask) Set 
+ * @method ScheduleExecRuleTaskResult getExecRuleTask() Obtain 
+ * @method void setExecRuleTask(ScheduleExecRuleTaskResult $ExecRuleTask) Set 
+ * @method ScheduleSmartSubtitleTaskResult getSmartSubtitlesTask() Obtain 
+ * @method void setSmartSubtitlesTask(ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask) Set 
+ * @method SmartEraseTaskResult getSmartEraseTask() Obtain 
+ * @method void setSmartEraseTask(SmartEraseTaskResult $SmartEraseTask) Set 
  */
 class ActivityResItem extends AbstractModel
 {
     /**
-     * @var MediaProcessTaskTranscodeResult The result of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaProcessTaskTranscodeResult 
      */
     public $TranscodeTask;
 
     /**
-     * @var MediaProcessTaskAnimatedGraphicResult The result of an animated image generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaProcessTaskAnimatedGraphicResult 
      */
     public $AnimatedGraphicTask;
 
     /**
-     * @var MediaProcessTaskSnapshotByTimeOffsetResult The result of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaProcessTaskSnapshotByTimeOffsetResult 
      */
     public $SnapshotByTimeOffsetTask;
 
     /**
-     * @var MediaProcessTaskSampleSnapshotResult The result of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaProcessTaskSampleSnapshotResult 
      */
     public $SampleSnapshotTask;
 
     /**
-     * @var MediaProcessTaskImageSpriteResult The result of an image sprite task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaProcessTaskImageSpriteResult 
      */
     public $ImageSpriteTask;
 
     /**
-     * @var MediaProcessTaskAdaptiveDynamicStreamingResult The result of an adaptive bitrate streaming task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaProcessTaskAdaptiveDynamicStreamingResult 
      */
     public $AdaptiveDynamicStreamingTask;
 
     /**
-     * @var ScheduleRecognitionTaskResult The result of a content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ScheduleRecognitionTaskResult 
      */
     public $RecognitionTask;
 
     /**
-     * @var ScheduleReviewTaskResult The result of a content moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ScheduleReviewTaskResult 
      */
     public $ReviewTask;
 
     /**
-     * @var ScheduleAnalysisTaskResult The result of a content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ScheduleAnalysisTaskResult 
      */
     public $AnalysisTask;
 
     /**
-     * @var ScheduleQualityControlTaskResult Media quality inspection task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ScheduleQualityControlTaskResult 
      */
     public $QualityControlTask;
 
     /**
-     * @var ScheduleExecRuleTaskResult Conditional judgment task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var ScheduleExecRuleTaskResult 
      */
     public $ExecRuleTask;
 
     /**
-     * @var ScheduleSmartSubtitleTaskResult Smart subtitle task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var ScheduleSmartSubtitleTaskResult 
      */
     public $SmartSubtitlesTask;
 
     /**
-     * @var SmartEraseTaskResult Smart erase task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var SmartEraseTaskResult 
      */
     public $SmartEraseTask;
 
     /**
-     * @param MediaProcessTaskTranscodeResult $TranscodeTask The result of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask The result of an animated image generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask The result of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask The result of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaProcessTaskImageSpriteResult $ImageSpriteTask The result of an image sprite task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask The result of an adaptive bitrate streaming task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScheduleRecognitionTaskResult $RecognitionTask The result of a content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScheduleReviewTaskResult $ReviewTask The result of a content moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScheduleAnalysisTaskResult $AnalysisTask The result of a content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScheduleQualityControlTaskResult $QualityControlTask Media quality inspection task output.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScheduleExecRuleTaskResult $ExecRuleTask Conditional judgment task output.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask Smart subtitle task output.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SmartEraseTaskResult $SmartEraseTask Smart erase task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param MediaProcessTaskTranscodeResult $TranscodeTask 
+     * @param MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask 
+     * @param MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask 
+     * @param MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask 
+     * @param MediaProcessTaskImageSpriteResult $ImageSpriteTask 
+     * @param MediaProcessTaskAdaptiveDynamicStreamingResult $AdaptiveDynamicStreamingTask 
+     * @param ScheduleRecognitionTaskResult $RecognitionTask 
+     * @param ScheduleReviewTaskResult $ReviewTask 
+     * @param ScheduleAnalysisTaskResult $AnalysisTask 
+     * @param ScheduleQualityControlTaskResult $QualityControlTask 
+     * @param ScheduleExecRuleTaskResult $ExecRuleTask 
+     * @param ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask 
+     * @param SmartEraseTaskResult $SmartEraseTask 
      */
     function __construct()
     {

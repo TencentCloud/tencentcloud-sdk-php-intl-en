@@ -20,130 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupDetail response structure.
  *
- * @method string getBackupId() Obtain Backup ID.
- * @method void setBackupId(string $BackupId) Set Backup ID.
- * @method string getStartTime() Obtain Backup start time.
- * @method void setStartTime(string $StartTime) Set Backup start time.
- * @method string getEndTime() Obtain Backup end time.
- * @method void setEndTime(string $EndTime) Set Backup end time.
- * @method string getBackupType() Obtain Backup mode.
-
-- 1: manual backup.
-- 0: automatic backup.
- * @method void setBackupType(string $BackupType) Set Backup mode.
-
-- 1: manual backup.
-- 0: automatic backup.
- * @method integer getStatus() Obtain Backup status.
-
-- 1: The backup is locked by other processes.
-- 2: The backup is normal and not locked by any processes.
-- -1: The backup has expired.
-- 3: The backup is being exported.
-- 4: The backup is successfully exported.
- * @method void setStatus(integer $Status) Set Backup status.
-
-- 1: The backup is locked by other processes.
-- 2: The backup is normal and not locked by any processes.
-- -1: The backup has expired.
-- 3: The backup is being exported.
-- 4: The backup is successfully exported.
- * @method string getRemark() Obtain Backup remarks.
- * @method void setRemark(string $Remark) Set Backup remarks.
- * @method integer getLocked() Obtain Whether the backup is locked.
-
-- 0: not locked.
-- 1: locked.
- * @method void setLocked(integer $Locked) Set Whether the backup is locked.
-
-- 0: not locked.
-- 1: locked.
- * @method integer getBackupSize() Obtain Backup file size. Unit: byte.
- * @method void setBackupSize(integer $BackupSize) Set Backup file size. Unit: byte.
- * @method integer getInstanceType() Obtain Instance type.
- * @method void setInstanceType(integer $InstanceType) Set Instance type.
- * @method integer getMemSize() Obtain Memory size of a single shard. Unit: MB.
- * @method void setMemSize(integer $MemSize) Set Memory size of a single shard. Unit: MB.
- * @method integer getShardNum() Obtain Number of shards.
- * @method void setShardNum(integer $ShardNum) Set Number of shards.
- * @method integer getReplicasNum() Obtain Number of replicas.
- * @method void setReplicasNum(integer $ReplicasNum) Set Number of replicas.
+ * @method string getBackupId() Obtain <p>Backup ID.</p>
+ * @method void setBackupId(string $BackupId) Set <p>Backup ID.</p>
+ * @method string getStartTime() Obtain <p>Backup start time.</p>
+ * @method void setStartTime(string $StartTime) Set <p>Backup start time.</p>
+ * @method string getEndTime() Obtain <p>Backup end time.</p>
+ * @method void setEndTime(string $EndTime) Set <p>Backup end time.</p>
+ * @method string getBackupType() Obtain <p>Backup method. </p><ul><li>1: Manual backup.</li><li>0: Auto-backup.</li></ul>
+ * @method void setBackupType(string $BackupType) Set <p>Backup method. </p><ul><li>1: Manual backup.</li><li>0: Auto-backup.</li></ul>
+ * @method integer getStatus() Obtain <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
+ * @method void setStatus(integer $Status) Set <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
+ * @method string getRemark() Obtain <p>Backup remarks.</p>
+ * @method void setRemark(string $Remark) Set <p>Backup remarks.</p>
+ * @method integer getLocked() Obtain <p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
+ * @method void setLocked(integer $Locked) Set <p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
+ * @method integer getBackupSize() Obtain <p>Backup file size. Measurement unit: Byte.</p>
+ * @method void setBackupSize(integer $BackupSize) Set <p>Backup file size. Measurement unit: Byte.</p>
+ * @method integer getInstanceType() Obtain <p>Instance type.</p>
+ * @method void setInstanceType(integer $InstanceType) Set <p>Instance type.</p>
+ * @method integer getMemSize() Obtain <p>Memory size of a single shard. Unit: MB.</p>
+ * @method void setMemSize(integer $MemSize) Set <p>Memory size of a single shard. Unit: MB.</p>
+ * @method integer getShardNum() Obtain <p>Number of shards.</p>
+ * @method void setShardNum(integer $ShardNum) Set <p>Number of shards.</p>
+ * @method integer getReplicasNum() Obtain <p>Number of replicas.</p>
+ * @method void setReplicasNum(integer $ReplicasNum) Set <p>Number of replicas.</p>
+ * @method boolean getEncrypted() Obtain <p>Whether it is encrypted or not.</p><p>Enumeration value:</p><ul><li>true: Encrypted</li><li>false: Unencrypted</li></ul>
+ * @method void setEncrypted(boolean $Encrypted) Set <p>Whether it is encrypted or not.</p><p>Enumeration value:</p><ul><li>true: Encrypted</li><li>false: Unencrypted</li></ul>
+ * @method string getDecryptKey() Obtain <p>Decryption key.</p>
+ * @method void setDecryptKey(string $DecryptKey) Set <p>Decryption key.</p>
+ * @method string getKmsKeyId() Obtain <p>Key ID of the key in KMS.</p>
+ * @method void setKmsKeyId(string $KmsKeyId) Set <p>Key ID of the key in KMS.</p>
+ * @method string getKeyAlgorithm() Obtain <p>Encryption algorithm used to encrypt the backup file.</p><p>Enumeration value:</p><ul><li>AES-256-CBC: Currently only support AES-256-CBC.</li></ul>
+ * @method void setKeyAlgorithm(string $KeyAlgorithm) Set <p>Encryption algorithm used to encrypt the backup file.</p><p>Enumeration value:</p><ul><li>AES-256-CBC: Currently only support AES-256-CBC.</li></ul>
  * @method string getRequestId() Obtain The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
  */
 class DescribeBackupDetailResponse extends AbstractModel
 {
     /**
-     * @var string Backup ID.
+     * @var string <p>Backup ID.</p>
      */
     public $BackupId;
 
     /**
-     * @var string Backup start time.
+     * @var string <p>Backup start time.</p>
      */
     public $StartTime;
 
     /**
-     * @var string Backup end time.
+     * @var string <p>Backup end time.</p>
      */
     public $EndTime;
 
     /**
-     * @var string Backup mode.
-
-- 1: manual backup.
-- 0: automatic backup.
+     * @var string <p>Backup method. </p><ul><li>1: Manual backup.</li><li>0: Auto-backup.</li></ul>
      */
     public $BackupType;
 
     /**
-     * @var integer Backup status.
-
-- 1: The backup is locked by other processes.
-- 2: The backup is normal and not locked by any processes.
-- -1: The backup has expired.
-- 3: The backup is being exported.
-- 4: The backup is successfully exported.
+     * @var integer <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
      */
     public $Status;
 
     /**
-     * @var string Backup remarks.
+     * @var string <p>Backup remarks.</p>
      */
     public $Remark;
 
     /**
-     * @var integer Whether the backup is locked.
-
-- 0: not locked.
-- 1: locked.
+     * @var integer <p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
      */
     public $Locked;
 
     /**
-     * @var integer Backup file size. Unit: byte.
+     * @var integer <p>Backup file size. Measurement unit: Byte.</p>
      */
     public $BackupSize;
 
     /**
-     * @var integer Instance type.
+     * @var integer <p>Instance type.</p>
      */
     public $InstanceType;
 
     /**
-     * @var integer Memory size of a single shard. Unit: MB.
+     * @var integer <p>Memory size of a single shard. Unit: MB.</p>
      */
     public $MemSize;
 
     /**
-     * @var integer Number of shards.
+     * @var integer <p>Number of shards.</p>
      */
     public $ShardNum;
 
     /**
-     * @var integer Number of replicas.
+     * @var integer <p>Number of replicas.</p>
      */
     public $ReplicasNum;
+
+    /**
+     * @var boolean <p>Whether it is encrypted or not.</p><p>Enumeration value:</p><ul><li>true: Encrypted</li><li>false: Unencrypted</li></ul>
+     */
+    public $Encrypted;
+
+    /**
+     * @var string <p>Decryption key.</p>
+     */
+    public $DecryptKey;
+
+    /**
+     * @var string <p>Key ID of the key in KMS.</p>
+     */
+    public $KmsKeyId;
+
+    /**
+     * @var string <p>Encryption algorithm used to encrypt the backup file.</p><p>Enumeration value:</p><ul><li>AES-256-CBC: Currently only support AES-256-CBC.</li></ul>
+     */
+    public $KeyAlgorithm;
 
     /**
      * @var string The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -151,30 +143,22 @@ class DescribeBackupDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BackupId Backup ID.
-     * @param string $StartTime Backup start time.
-     * @param string $EndTime Backup end time.
-     * @param string $BackupType Backup mode.
-
-- 1: manual backup.
-- 0: automatic backup.
-     * @param integer $Status Backup status.
-
-- 1: The backup is locked by other processes.
-- 2: The backup is normal and not locked by any processes.
-- -1: The backup has expired.
-- 3: The backup is being exported.
-- 4: The backup is successfully exported.
-     * @param string $Remark Backup remarks.
-     * @param integer $Locked Whether the backup is locked.
-
-- 0: not locked.
-- 1: locked.
-     * @param integer $BackupSize Backup file size. Unit: byte.
-     * @param integer $InstanceType Instance type.
-     * @param integer $MemSize Memory size of a single shard. Unit: MB.
-     * @param integer $ShardNum Number of shards.
-     * @param integer $ReplicasNum Number of replicas.
+     * @param string $BackupId <p>Backup ID.</p>
+     * @param string $StartTime <p>Backup start time.</p>
+     * @param string $EndTime <p>Backup end time.</p>
+     * @param string $BackupType <p>Backup method. </p><ul><li>1: Manual backup.</li><li>0: Auto-backup.</li></ul>
+     * @param integer $Status <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
+     * @param string $Remark <p>Backup remarks.</p>
+     * @param integer $Locked <p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
+     * @param integer $BackupSize <p>Backup file size. Measurement unit: Byte.</p>
+     * @param integer $InstanceType <p>Instance type.</p>
+     * @param integer $MemSize <p>Memory size of a single shard. Unit: MB.</p>
+     * @param integer $ShardNum <p>Number of shards.</p>
+     * @param integer $ReplicasNum <p>Number of replicas.</p>
+     * @param boolean $Encrypted <p>Whether it is encrypted or not.</p><p>Enumeration value:</p><ul><li>true: Encrypted</li><li>false: Unencrypted</li></ul>
+     * @param string $DecryptKey <p>Decryption key.</p>
+     * @param string $KmsKeyId <p>Key ID of the key in KMS.</p>
+     * @param string $KeyAlgorithm <p>Encryption algorithm used to encrypt the backup file.</p><p>Enumeration value:</p><ul><li>AES-256-CBC: Currently only support AES-256-CBC.</li></ul>
      * @param string $RequestId The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
      */
     function __construct()
@@ -236,6 +220,22 @@ class DescribeBackupDetailResponse extends AbstractModel
 
         if (array_key_exists("ReplicasNum",$param) and $param["ReplicasNum"] !== null) {
             $this->ReplicasNum = $param["ReplicasNum"];
+        }
+
+        if (array_key_exists("Encrypted",$param) and $param["Encrypted"] !== null) {
+            $this->Encrypted = $param["Encrypted"];
+        }
+
+        if (array_key_exists("DecryptKey",$param) and $param["DecryptKey"] !== null) {
+            $this->DecryptKey = $param["DecryptKey"];
+        }
+
+        if (array_key_exists("KmsKeyId",$param) and $param["KmsKeyId"] !== null) {
+            $this->KmsKeyId = $param["KmsKeyId"];
+        }
+
+        if (array_key_exists("KeyAlgorithm",$param) and $param["KeyAlgorithm"] !== null) {
+            $this->KeyAlgorithm = $param["KeyAlgorithm"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

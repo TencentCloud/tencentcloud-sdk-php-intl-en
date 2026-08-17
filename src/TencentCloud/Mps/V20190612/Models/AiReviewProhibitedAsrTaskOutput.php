@@ -18,30 +18,30 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ASR-detected prohibited information in speech
+ * Asr text contains prohibited information
  *
- * @method float getConfidence() Obtain Score of ASR-detected prohibited information in speech between 0 and 100.
- * @method void setConfidence(float $Confidence) Set Score of ASR-detected prohibited information in speech between 0 and 100.
- * @method string getSuggestion() Obtain Suggestion for ASR-detected prohibited information in speech. Valid values:
+ * @method float getConfidence() Obtain Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
+ * @method void setConfidence(float $Confidence) Set Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
+ * @method string getSuggestion() Obtain Asr text prohibited result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Suggestion for ASR-detected prohibited information in speech. Valid values:
+ * @method void setSuggestion(string $Suggestion) Set Asr text prohibited result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method array getSegmentSet() Obtain List of video segments that contain the ASR-detected prohibited information in speech.
- * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain the ASR-detected prohibited information in speech.
+ * @method array getSegmentSet() Obtain Video segment list with Asr text suspected of prohibition violations.
+ * @method void setSegmentSet(array $SegmentSet) Set Video segment list with Asr text suspected of prohibition violations.
  */
 class AiReviewProhibitedAsrTaskOutput extends AbstractModel
 {
     /**
-     * @var float Score of ASR-detected prohibited information in speech between 0 and 100.
+     * @var float Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
      */
     public $Confidence;
 
     /**
-     * @var string Suggestion for ASR-detected prohibited information in speech. Valid values:
+     * @var string Asr text prohibited result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -49,17 +49,17 @@ class AiReviewProhibitedAsrTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var array List of video segments that contain the ASR-detected prohibited information in speech.
+     * @var array Video segment list with Asr text suspected of prohibition violations.
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence Score of ASR-detected prohibited information in speech between 0 and 100.
-     * @param string $Suggestion Suggestion for ASR-detected prohibited information in speech. Valid values:
+     * @param float $Confidence Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
+     * @param string $Suggestion Asr text prohibited result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param array $SegmentSet List of video segments that contain the ASR-detected prohibited information in speech.
+     * @param array $SegmentSet Video segment list with Asr text suspected of prohibition violations.
      */
     function __construct()
     {

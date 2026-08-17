@@ -18,76 +18,68 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of intelligently generated highlight segments.
+ * Intelligent highlight info
  *
- * @method string getHighlightPath() Obtain The URL of the highlight segments.
- * @method void setHighlightPath(string $HighlightPath) Set The URL of the highlight segments.
- * @method string getCovImgPath() Obtain The URL of the thumbnail.
- * @method void setCovImgPath(string $CovImgPath) Set The URL of the thumbnail.
- * @method float getConfidence() Obtain The confidence score. Value range: 0-100.
- * @method void setConfidence(float $Confidence) Set The confidence score. Value range: 0-100.
- * @method float getDuration() Obtain The duration of the highlights.
- * @method void setDuration(float $Duration) Set The duration of the highlights.
- * @method array getSegmentSet() Obtain A list of the highlight segments.
- * @method void setSegmentSet(array $SegmentSet) Set A list of the highlight segments.
- * @method string getHighlightUrl() Obtain Intelligent highlight address.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHighlightUrl(string $HighlightUrl) Set Intelligent highlight address.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCovImgUrl() Obtain Intelligent highlight cover address.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCovImgUrl(string $CovImgUrl) Set Intelligent highlight cover address.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHighlightPath() Obtain Intelligent highlight address.
+ * @method void setHighlightPath(string $HighlightPath) Set Intelligent highlight address.
+ * @method string getCovImgPath() Obtain Intelligent highlight cover address.
+ * @method void setCovImgPath(string $CovImgPath) Set Intelligent highlight cover address.
+ * @method float getConfidence() Obtain Reliability of the intelligent highlights, with a value range from 0 to 100.
+ * @method void setConfidence(float $Confidence) Set Reliability of the intelligent highlights, with a value range from 0 to 100.
+ * @method float getDuration() Obtain Intelligent highlight duration.
+ * @method void setDuration(float $Duration) Set Intelligent highlight duration.
+ * @method array getSegmentSet() Obtain Intelligent highlight sub-clip list.
+ * @method void setSegmentSet(array $SegmentSet) Set Intelligent highlight sub-clip list.
+ * @method string getHighlightUrl() Obtain 
+ * @method void setHighlightUrl(string $HighlightUrl) Set 
+ * @method string getCovImgUrl() Obtain 
+ * @method void setCovImgUrl(string $CovImgUrl) Set 
  */
 class MediaAiAnalysisHighlightItem extends AbstractModel
 {
     /**
-     * @var string The URL of the highlight segments.
+     * @var string Intelligent highlight address.
      */
     public $HighlightPath;
 
     /**
-     * @var string The URL of the thumbnail.
+     * @var string Intelligent highlight cover address.
      */
     public $CovImgPath;
 
     /**
-     * @var float The confidence score. Value range: 0-100.
+     * @var float Reliability of the intelligent highlights, with a value range from 0 to 100.
      */
     public $Confidence;
 
     /**
-     * @var float The duration of the highlights.
+     * @var float Intelligent highlight duration.
      */
     public $Duration;
 
     /**
-     * @var array A list of the highlight segments.
+     * @var array Intelligent highlight sub-clip list.
      */
     public $SegmentSet;
 
     /**
-     * @var string Intelligent highlight address.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $HighlightUrl;
 
     /**
-     * @var string Intelligent highlight cover address.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $CovImgUrl;
 
     /**
-     * @param string $HighlightPath The URL of the highlight segments.
-     * @param string $CovImgPath The URL of the thumbnail.
-     * @param float $Confidence The confidence score. Value range: 0-100.
-     * @param float $Duration The duration of the highlights.
-     * @param array $SegmentSet A list of the highlight segments.
-     * @param string $HighlightUrl Intelligent highlight address.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CovImgUrl Intelligent highlight cover address.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HighlightPath Intelligent highlight address.
+     * @param string $CovImgPath Intelligent highlight cover address.
+     * @param float $Confidence Reliability of the intelligent highlights, with a value range from 0 to 100.
+     * @param float $Duration Intelligent highlight duration.
+     * @param array $SegmentSet Intelligent highlight sub-clip list.
+     * @param string $HighlightUrl 
+     * @param string $CovImgUrl 
      */
     function __construct()
     {

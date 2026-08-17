@@ -18,29 +18,29 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI-based live streaming face recognition result
+ * Live streaming AI face recognition result.
  *
- * @method string getId() Obtain Unique ID of figure.
- * @method void setId(string $Id) Set Unique ID of figure.
+ * @method string getId() Obtain Unique identification ID of a figure.
+ * @method void setId(string $Id) Set Unique identification ID of a figure.
  * @method string getName() Obtain Figure name.
  * @method void setName(string $Name) Set Figure name.
- * @method string getType() Obtain Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library</li><li>UserDefine: custom figure library</li>
- * @method void setType(string $Type) Set Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library</li><li>UserDefine: custom figure library</li>
- * @method float getStartPtsTime() Obtain Start PTS time of recognized segment in seconds.
- * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of recognized segment in seconds.
- * @method float getEndPtsTime() Obtain End PTS time of recognized segment in seconds.
- * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of recognized segment in seconds.
- * @method float getConfidence() Obtain Confidence of recognized segment. Value range: 0–100.
- * @method void setConfidence(float $Confidence) Set Confidence of recognized segment. Value range: 0–100.
- * @method array getAreaCoordSet() Obtain Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
- * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+ * @method string getType() Obtain Figure library type, which indicates which figure library the recognized figure comes from.
+<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
+ * @method void setType(string $Type) Set Figure library type, which indicates which figure library the recognized figure comes from.
+<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
+ * @method float getStartPtsTime() Obtain Start PTS time of a recognized segment, in seconds.
+ * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a recognized segment, in seconds.
+ * @method float getEndPtsTime() Obtain End PTS time of a recognized segment, in seconds.
+ * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a recognized segment, in seconds.
+ * @method float getConfidence() Obtain Confidence of a recognized segment. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of a recognized segment. Value range: 0-100.
+ * @method array getAreaCoordSet() Obtain Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
  */
 class LiveStreamFaceRecognitionResult extends AbstractModel
 {
     /**
-     * @var string Unique ID of figure.
+     * @var string Unique identification ID of a figure.
      */
     public $Id;
 
@@ -50,40 +50,40 @@ class LiveStreamFaceRecognitionResult extends AbstractModel
     public $Name;
 
     /**
-     * @var string Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library</li><li>UserDefine: custom figure library</li>
+     * @var string Figure library type, which indicates which figure library the recognized figure comes from.
+<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
      */
     public $Type;
 
     /**
-     * @var float Start PTS time of recognized segment in seconds.
+     * @var float Start PTS time of a recognized segment, in seconds.
      */
     public $StartPtsTime;
 
     /**
-     * @var float End PTS time of recognized segment in seconds.
+     * @var float End PTS time of a recognized segment, in seconds.
      */
     public $EndPtsTime;
 
     /**
-     * @var float Confidence of recognized segment. Value range: 0–100.
+     * @var float Confidence of a recognized segment. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @var array Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+     * @var array Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
      */
     public $AreaCoordSet;
 
     /**
-     * @param string $Id Unique ID of figure.
+     * @param string $Id Unique identification ID of a figure.
      * @param string $Name Figure name.
-     * @param string $Type Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library</li><li>UserDefine: custom figure library</li>
-     * @param float $StartPtsTime Start PTS time of recognized segment in seconds.
-     * @param float $EndPtsTime End PTS time of recognized segment in seconds.
-     * @param float $Confidence Confidence of recognized segment. Value range: 0–100.
-     * @param array $AreaCoordSet Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+     * @param string $Type Figure library type, which indicates which figure library the recognized figure comes from.
+<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
+     * @param float $StartPtsTime Start PTS time of a recognized segment, in seconds.
+     * @param float $EndPtsTime End PTS time of a recognized segment, in seconds.
+     * @param float $Confidence Confidence of a recognized segment. Value range: 0-100.
+     * @param array $AreaCoordSet Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
      */
     function __construct()
     {

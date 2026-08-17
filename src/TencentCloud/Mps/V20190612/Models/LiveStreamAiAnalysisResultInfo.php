@@ -18,36 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Live stream analysis result
  *
- * @method array getResultSet() Obtain Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setResultSet(array $ResultSet) Set Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getResultSet() Obtain 
+ * @method void setResultSet(array $ResultSet) Set 
  */
 class LiveStreamAiAnalysisResultInfo extends AbstractModel
 {
     /**
-     * @var array Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $ResultSet;
 
     /**
-     * @param array $ResultSet Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ResultSet 
      */
     function __construct()
     {

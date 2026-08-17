@@ -18,36 +18,36 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Speech recognition segment.
+ * ASR segment.
  *
- * @method float getStartTimeOffset() Obtain Start time offset of a recognition segment in seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a recognition segment in seconds.
- * @method float getEndTimeOffset() Obtain End time offset of a recognition segment in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a recognition segment in seconds.
- * @method float getConfidence() Obtain Confidence of a recognition segment. Value range: 0-100.
- * @method void setConfidence(float $Confidence) Set Confidence of a recognition segment. Value range: 0-100.
+ * @method float getStartTimeOffset() Obtain Start time offset of a recognized segment, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a recognized segment, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of a recognized segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a recognized segment, in seconds.
+ * @method float getConfidence() Obtain Confidence of a recognized segment. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of a recognized segment. Value range: 0-100.
  */
 class AiRecognitionTaskAsrWordsSegmentItem extends AbstractModel
 {
     /**
-     * @var float Start time offset of a recognition segment in seconds.
+     * @var float Start time offset of a recognized segment, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of a recognition segment in seconds.
+     * @var float End time offset of a recognized segment, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @var float Confidence of a recognition segment. Value range: 0-100.
+     * @var float Confidence of a recognized segment. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @param float $StartTimeOffset Start time offset of a recognition segment in seconds.
-     * @param float $EndTimeOffset End time offset of a recognition segment in seconds.
-     * @param float $Confidence Confidence of a recognition segment. Value range: 0-100.
+     * @param float $StartTimeOffset Start time offset of a recognized segment, in seconds.
+     * @param float $EndTimeOffset End time offset of a recognized segment, in seconds.
+     * @param float $Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     function __construct()
     {

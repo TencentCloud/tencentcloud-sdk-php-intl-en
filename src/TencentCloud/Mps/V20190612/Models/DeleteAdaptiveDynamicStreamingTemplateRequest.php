@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAdaptiveDynamicStreamingTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique ID of an adaptive bitrate streaming template.
- * @method void setDefinition(integer $Definition) Set Unique ID of an adaptive bitrate streaming template.
+ * @method integer getDefinition() Obtain Unique identifier of the adaptive transcoding template.
+ * @method void setDefinition(integer $Definition) Set Unique identifier of the adaptive transcoding template.
  */
 class DeleteAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique ID of an adaptive bitrate streaming template.
+     * @var integer Unique identifier of the adaptive transcoding template.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Unique ID of an adaptive bitrate streaming template.
+     * @param integer $Definition Unique identifier of the adaptive transcoding template.
      */
     function __construct()
     {

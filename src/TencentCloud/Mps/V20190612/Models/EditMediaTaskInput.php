@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input of video editing task.
+ * Input for the video editing task.
  *
- * @method array getFileInfoSet() Obtain Information of input video file.
- * @method void setFileInfoSet(array $FileInfoSet) Set Information of input video file.
+ * @method array getFileInfoSet() Obtain Input video file information.
+ * @method void setFileInfoSet(array $FileInfoSet) Set Input video file information.
  */
 class EditMediaTaskInput extends AbstractModel
 {
     /**
-     * @var array Information of input video file.
+     * @var array Input video file information.
      */
     public $FileInfoSet;
 
     /**
-     * @param array $FileInfoSet Information of input video file.
+     * @param array $FileInfoSet Input video file information.
      */
     function __construct()
     {

@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Area configurations for the subtitle OCR extraction box.
  *
- * @method array getAutoAreas() Obtain Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
- * @method void setAutoAreas(array $AutoAreas) Set Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
+ * @method array getAutoAreas() Obtain Automatically select a custom region.
+For the selected areas, the AI model is used to automatically detect and extract the target content.
+ * @method void setAutoAreas(array $AutoAreas) Set Automatically select a custom region.
+For the selected areas, the AI model is used to automatically detect and extract the target content.
  * @method integer getSampleWidth() Obtain Width of the sample video or image, in pixels.
  * @method void setSampleWidth(integer $SampleWidth) Set Width of the sample video or image, in pixels.
  * @method integer getSampleHeight() Obtain Height of the sample video or image, in pixels.
@@ -30,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 class SelectingSubtitleAreasConfig extends AbstractModel
 {
     /**
-     * @var array Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
+     * @var array Automatically select a custom region.
+For the selected areas, the AI model is used to automatically detect and extract the target content.
      */
     public $AutoAreas;
 
@@ -45,7 +48,8 @@ class SelectingSubtitleAreasConfig extends AbstractModel
     public $SampleHeight;
 
     /**
-     * @param array $AutoAreas Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
+     * @param array $AutoAreas Automatically select a custom region.
+For the selected areas, the AI model is used to automatically detect and extract the target content.
      * @param integer $SampleWidth Width of the sample video or image, in pixels.
      * @param integer $SampleHeight Height of the sample video or image, in pixels.
      */

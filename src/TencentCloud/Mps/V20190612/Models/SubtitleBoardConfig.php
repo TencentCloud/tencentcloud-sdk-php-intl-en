@@ -25,39 +25,39 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getBoardX() Obtain Subtitle background base plate x-axis coordinate position; Supports pixel and percentage format:
 
 - Pixel: Npx. Value range of N: [-4096,4096].
--Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
+- Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
 
 Default value: 0px.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle base plate is at the bottom of the central axis, as shown in the figure below.
+Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle base plate is at the bottom of its central axis, refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
  * @method void setBoardX(integer $BoardX) Set Subtitle background base plate x-axis coordinate position; Supports pixel and percentage format:
 
 - Pixel: Npx. Value range of N: [-4096,4096].
--Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
+- Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
 
 Default value: 0px.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle base plate is at the bottom of the central axis, as shown in the figure below.
+Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle base plate is at the bottom of its central axis, refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
  * @method integer getBoardXUnit() Obtain BoardX unit, 0 pixel, 1 percentage, default is 0, pixel
  * @method void setBoardXUnit(integer $BoardXUnit) Set BoardX unit, 0 pixel, 1 percentage, default is 0, pixel
- * @method integer getBoardY() Obtain Subtitle background base plate y-axis coordinate position; Supports pixel and percentage format:
+ * @method integer getBoardY() Obtain y-axis coordinate position of the subtitle background base plate; supports pixel and percentage format.
 
-- Pixel: Npx. Value range of N: [0,4096].
--Percentage: N%, where N ranges from [0,100]. For example, 10% means the y-coordinate of the subtitle background base plate equals 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram:
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
- * @method void setBoardY(integer $BoardY) Set Subtitle background base plate y-axis coordinate position; Supports pixel and percentage format:
+ * @method void setBoardY(integer $BoardY) Set y-axis coordinate position of the subtitle background base plate; supports pixel and percentage format.
 
-- Pixel: Npx. Value range of N: [0,4096].
--Percentage: N%, where N ranges from [0,100]. For example, 10% means the y-coordinate of the subtitle background base plate equals 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram:
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
  * @method integer getBoardYUnit() Obtain BoardY unit, 0 pixel, 1 percentage, default is 0, pixel
@@ -65,12 +65,12 @@ Note: The origin point of the coordinate axis is located at the bottom of the ce
  * @method integer getBoardWidth() Obtain Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.
+If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
  * @method void setBoardWidth(integer $BoardWidth) Set Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.
+If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
  * @method integer getBoardWidthUnit() Obtain Background width measurement unit. 0: pixel, 1: percentage. Default is 0 (pixel).
 
@@ -79,12 +79,12 @@ If the base plate is enabled and this parameter is not specified, the default wi
  * @method integer getBoardHeight() Obtain Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.
+If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
  * @method void setBoardHeight(integer $BoardHeight) Set Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.
+If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
  * @method integer getBoardHeightUnit() Obtain Base plate height unit, 0 pixel, 1 percentage, defaults to 0, pixel
 
@@ -114,10 +114,10 @@ class SubtitleBoardConfig extends AbstractModel
      * @var integer Subtitle background base plate x-axis coordinate position; Supports pixel and percentage format:
 
 - Pixel: Npx. Value range of N: [-4096,4096].
--Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
+- Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
 
 Default value: 0px.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle base plate is at the bottom of the central axis, as shown in the figure below.
+Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle base plate is at the bottom of its central axis, refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
      */
@@ -129,13 +129,13 @@ Note: The origin of the coordinate axes is at the bottom of the central axis of 
     public $BoardXUnit;
 
     /**
-     * @var integer Subtitle background base plate y-axis coordinate position; Supports pixel and percentage format:
+     * @var integer y-axis coordinate position of the subtitle background base plate; supports pixel and percentage format.
 
-- Pixel: Npx. Value range of N: [0,4096].
--Percentage: N%, where N ranges from [0,100]. For example, 10% means the y-coordinate of the subtitle background base plate equals 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram:
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
      */
@@ -150,7 +150,7 @@ Note: The origin point of the coordinate axis is located at the bottom of the ce
      * @var integer Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.
+If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
      */
     public $BoardWidth;
@@ -165,7 +165,7 @@ If the base plate is enabled and this parameter is not specified, the default wi
      * @var integer Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.
+If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
      */
     public $BoardHeight;
@@ -195,34 +195,34 @@ Default value: 0.8.
      * @param integer $BoardX Subtitle background base plate x-axis coordinate position; Supports pixel and percentage format:
 
 - Pixel: Npx. Value range of N: [-4096,4096].
--Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
+- Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
 
 Default value: 0px.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle base plate is at the bottom of the central axis, as shown in the figure below.
+Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle base plate is at the bottom of its central axis, refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
      * @param integer $BoardXUnit BoardX unit, 0 pixel, 1 percentage, default is 0, pixel
-     * @param integer $BoardY Subtitle background base plate y-axis coordinate position; Supports pixel and percentage format:
+     * @param integer $BoardY y-axis coordinate position of the subtitle background base plate; supports pixel and percentage format.
 
-- Pixel: Npx. Value range of N: [0,4096].
--Percentage: N%, where N ranges from [0,100]. For example, 10% means the y-coordinate of the subtitle background base plate equals 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram:
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
      * @param integer $BoardYUnit BoardY unit, 0 pixel, 1 percentage, default is 0, pixel
      * @param integer $BoardWidth Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.
+If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
      * @param integer $BoardWidthUnit Background width measurement unit. 0: pixel, 1: percentage. Default is 0 (pixel).
 
      * @param integer $BoardHeight Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.
+If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
      * @param integer $BoardHeightUnit Base plate height unit, 0 pixel, 1 percentage, defaults to 0, pixel
 

@@ -18,46 +18,46 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result of porn information detection in speech in AI-based live stream content audit
+ * Live stream AI content review sound pornographic result
  *
- * @method float getStartPtsTime() Obtain Start PTS time of a suspected segment in seconds.
- * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a suspected segment in seconds.
- * @method float getEndPtsTime() Obtain End PTS time of a suspected segment in seconds.
- * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a suspected segment in seconds.
- * @method float getConfidence() Obtain Score of a suspected porn segment.
- * @method void setConfidence(float $Confidence) Set Score of a suspected porn segment.
- * @method string getSuggestion() Obtain Suggestion for porn information detection of a suspected segment. Valid values:
+ * @method float getStartPtsTime() Obtain Start PTS time of a suspected segment, in seconds.
+ * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a suspected segment, in seconds.
+ * @method float getEndPtsTime() Obtain End PTS time of a suspected segment, in seconds.
+ * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a suspected segment, in seconds.
+ * @method float getConfidence() Obtain Suspected segment porn score.
+ * @method void setConfidence(float $Confidence) Set Suspected segment porn score.
+ * @method string getSuggestion() Obtain Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method void setSuggestion(string $Suggestion) Set Suggestion for porn information detection of a suspected segment. Valid values:
+ * @method void setSuggestion(string $Suggestion) Set Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method string getLabel() Obtain Tag of the detected porn information in video. Valid values:
-<li>sexual_moan: Sexual moans.</li>
- * @method void setLabel(string $Label) Set Tag of the detected porn information in video. Valid values:
-<li>sexual_moan: Sexual moans.</li>
+ * @method string getLabel() Obtain Video porn detection result tag, value ranges from...to...
+<li>sexual_moan: Moan.</li>
+ * @method void setLabel(string $Label) Set Video porn detection result tag, value ranges from...to...
+<li>sexual_moan: Moan.</li>
  */
 class LiveStreamAiReviewVoicePornResult extends AbstractModel
 {
     /**
-     * @var float Start PTS time of a suspected segment in seconds.
+     * @var float Start PTS time of a suspected segment, in seconds.
      */
     public $StartPtsTime;
 
     /**
-     * @var float End PTS time of a suspected segment in seconds.
+     * @var float End PTS time of a suspected segment, in seconds.
      */
     public $EndPtsTime;
 
     /**
-     * @var float Score of a suspected porn segment.
+     * @var float Suspected segment porn score.
      */
     public $Confidence;
 
     /**
-     * @var string Suggestion for porn information detection of a suspected segment. Valid values:
+     * @var string Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -65,21 +65,21 @@ class LiveStreamAiReviewVoicePornResult extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string Tag of the detected porn information in video. Valid values:
-<li>sexual_moan: Sexual moans.</li>
+     * @var string Video porn detection result tag, value ranges from...to...
+<li>sexual_moan: Moan.</li>
      */
     public $Label;
 
     /**
-     * @param float $StartPtsTime Start PTS time of a suspected segment in seconds.
-     * @param float $EndPtsTime End PTS time of a suspected segment in seconds.
-     * @param float $Confidence Score of a suspected porn segment.
-     * @param string $Suggestion Suggestion for porn information detection of a suspected segment. Valid values:
+     * @param float $StartPtsTime Start PTS time of a suspected segment, in seconds.
+     * @param float $EndPtsTime End PTS time of a suspected segment, in seconds.
+     * @param float $Confidence Suspected segment porn score.
+     * @param string $Suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param string $Label Tag of the detected porn information in video. Valid values:
-<li>sexual_moan: Sexual moans.</li>
+     * @param string $Label Video porn detection result tag, value ranges from...to...
+<li>sexual_moan: Moan.</li>
      */
     function __construct()
     {

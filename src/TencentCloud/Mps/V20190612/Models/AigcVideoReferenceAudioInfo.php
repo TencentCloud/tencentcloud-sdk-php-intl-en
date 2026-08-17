@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Reference audio information.
+ * 
  *
- * @method string getAudioUrl() Obtain <p>Reference audio URL, which must be accessible from the public network.</p>
- * @method void setAudioUrl(string $AudioUrl) Set <p>Reference audio URL, which must be accessible from the public network.</p>
+ * @method string getAudioUrl() Obtain 
+ * @method void setAudioUrl(string $AudioUrl) Set 
  */
 class AigcVideoReferenceAudioInfo extends AbstractModel
 {
     /**
-     * @var string <p>Reference audio URL, which must be accessible from the public network.</p>
+     * @var string 
      */
     public $AudioUrl;
 
     /**
-     * @param string $AudioUrl <p>Reference audio URL, which must be accessible from the public network.</p>
+     * @param string $AudioUrl 
      */
     function __construct()
     {

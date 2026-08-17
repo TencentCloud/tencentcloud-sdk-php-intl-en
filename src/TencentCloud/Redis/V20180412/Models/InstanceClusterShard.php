@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnected(integer $Connected) Set Service status
 - `0`: Down.
 - `1`: On.
+ * @method string getZoneId() Obtain AZ information.
+ * @method void setZoneId(string $ZoneId) Set AZ information.
+ * @method integer getReplicasNodeId() Obtain Node group ID.
+ * @method void setReplicasNodeId(integer $ReplicasNodeId) Set Node group ID.
  */
 class InstanceClusterShard extends AbstractModel
 {
@@ -112,6 +116,16 @@ class InstanceClusterShard extends AbstractModel
     public $Connected;
 
     /**
+     * @var string AZ information.
+     */
+    public $ZoneId;
+
+    /**
+     * @var integer Node group ID.
+     */
+    public $ReplicasNodeId;
+
+    /**
      * @param string $ShardName The name of a shard node
      * @param string $ShardId The serial number of a shard node
      * @param integer $Role The role of a shard node
@@ -128,6 +142,8 @@ class InstanceClusterShard extends AbstractModel
      * @param integer $Connected Service status
 - `0`: Down.
 - `1`: On.
+     * @param string $ZoneId AZ information.
+     * @param integer $ReplicasNodeId Node group ID.
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class InstanceClusterShard extends AbstractModel
 
         if (array_key_exists("Connected",$param) and $param["Connected"] !== null) {
             $this->Connected = $param["Connected"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("ReplicasNodeId",$param) and $param["ReplicasNodeId"] !== null) {
+            $this->ReplicasNodeId = $param["ReplicasNodeId"];
         }
     }
 }

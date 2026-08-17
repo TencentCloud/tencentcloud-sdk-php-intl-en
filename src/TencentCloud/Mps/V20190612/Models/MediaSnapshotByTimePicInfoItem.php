@@ -18,36 +18,36 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of a time point screenshot
+ * Screenshot information at the specified time point
  *
- * @method float getTimeOffset() Obtain The timestamp (seconds) of the screenshot.
- * @method void setTimeOffset(float $TimeOffset) Set The timestamp (seconds) of the screenshot.
- * @method string getPath() Obtain Path to the screenshot.
- * @method void setPath(string $Path) Set Path to the screenshot.
- * @method array getWaterMarkDefinition() Obtain List of watermarking template IDs if the screenshots are watermarked.
- * @method void setWaterMarkDefinition(array $WaterMarkDefinition) Set List of watermarking template IDs if the screenshots are watermarked.
+ * @method float getTimeOffset() Obtain The screenshot corresponds to the time offset in the video file, expressed in seconds.
+ * @method void setTimeOffset(float $TimeOffset) Set The screenshot corresponds to the time offset in the video file, expressed in seconds.
+ * @method string getPath() Obtain Path of the screenshot.
+ * @method void setPath(string $Path) Set Path of the screenshot.
+ * @method array getWaterMarkDefinition() Obtain If a screenshot is watermarked, list of template IDs used for watermarking.
+ * @method void setWaterMarkDefinition(array $WaterMarkDefinition) Set If a screenshot is watermarked, list of template IDs used for watermarking.
  */
 class MediaSnapshotByTimePicInfoItem extends AbstractModel
 {
     /**
-     * @var float The timestamp (seconds) of the screenshot.
+     * @var float The screenshot corresponds to the time offset in the video file, expressed in seconds.
      */
     public $TimeOffset;
 
     /**
-     * @var string Path to the screenshot.
+     * @var string Path of the screenshot.
      */
     public $Path;
 
     /**
-     * @var array List of watermarking template IDs if the screenshots are watermarked.
+     * @var array If a screenshot is watermarked, list of template IDs used for watermarking.
      */
     public $WaterMarkDefinition;
 
     /**
-     * @param float $TimeOffset The timestamp (seconds) of the screenshot.
-     * @param string $Path Path to the screenshot.
-     * @param array $WaterMarkDefinition List of watermarking template IDs if the screenshots are watermarked.
+     * @param float $TimeOffset The screenshot corresponds to the time offset in the video file, expressed in seconds.
+     * @param string $Path Path of the screenshot.
+     * @param array $WaterMarkDefinition If a screenshot is watermarked, list of template IDs used for watermarking.
      */
     function __construct()
     {

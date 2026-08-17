@@ -18,32 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The output of an intelligent highlight generation task.
+ * Intelligent highlight result.
  *
- * @method array getHighlightSet() Obtain A list of the highlight segments generated.
- * @method void setHighlightSet(array $HighlightSet) Set A list of the highlight segments generated.
- * @method TaskOutputStorage getOutputStorage() Obtain The storage location of the highlight segments.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The storage location of the highlight segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getHighlightSet() Obtain Intelligent video highlight list.
+ * @method void setHighlightSet(array $HighlightSet) Set Intelligent video highlight list.
+ * @method TaskOutputStorage getOutputStorage() Obtain 
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
  */
 class AiAnalysisTaskHighlightOutput extends AbstractModel
 {
     /**
-     * @var array A list of the highlight segments generated.
+     * @var array Intelligent video highlight list.
      */
     public $HighlightSet;
 
     /**
-     * @var TaskOutputStorage The storage location of the highlight segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TaskOutputStorage 
      */
     public $OutputStorage;
 
     /**
-     * @param array $HighlightSet A list of the highlight segments generated.
-     * @param TaskOutputStorage $OutputStorage The storage location of the highlight segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $HighlightSet Intelligent video highlight list.
+     * @param TaskOutputStorage $OutputStorage 
      */
     function __construct()
     {

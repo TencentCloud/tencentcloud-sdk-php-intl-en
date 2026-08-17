@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Splitting result type.
  *
- * @method string getStatus() Obtain Task status, including PROCESSING, SUCCESS, and FAIL.
- * @method void setStatus(string $Status) Set Task status, including PROCESSING, SUCCESS, and FAIL.
- * @method integer getErrCode() Obtain Error code. `0`: Task successful. Other values: Task failed.
- * @method void setErrCode(integer $ErrCode) Set Error code. `0`: Task successful. Other values: Task failed.
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method integer getErrCode() Obtain Error code. 0: Task successful. Other values: Task failed.
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0: Task successful. Other values: Task failed.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskSegmentInput getInput() Obtain Splitting task input.
  * @method void setInput(AiAnalysisTaskSegmentInput $Input) Set Splitting task input.
- * @method AiAnalysisTaskSegmentOutput getOutput() Obtain Splitting task output.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiAnalysisTaskSegmentOutput $Output) Set Splitting task output.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskSegmentOutput getOutput() Obtain 
+ * @method void setOutput(AiAnalysisTaskSegmentOutput $Output) Set 
  */
 class AiAnalysisTaskSegmentResult extends AbstractModel
 {
     /**
-     * @var string Task status, including PROCESSING, SUCCESS, and FAIL.
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var integer Error code. `0`: Task successful. Other values: Task failed.
+     * @var integer Error code. 0: Task successful. Other values: Task failed.
      */
     public $ErrCode;
 
@@ -54,16 +54,16 @@ class AiAnalysisTaskSegmentResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskSegmentOutput Splitting task output.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskSegmentOutput 
      */
     public $Output;
 
     /**
-     * @param string $Status Task status, including PROCESSING, SUCCESS, and FAIL.
-     * @param integer $ErrCode Error code. `0`: Task successful. Other values: Task failed.
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
      * @param string $Message Error message.
      * @param AiAnalysisTaskSegmentInput $Input Splitting task input.
-     * @param AiAnalysisTaskSegmentOutput $Output Splitting task output.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskSegmentOutput $Output 
      */
     function __construct()
     {

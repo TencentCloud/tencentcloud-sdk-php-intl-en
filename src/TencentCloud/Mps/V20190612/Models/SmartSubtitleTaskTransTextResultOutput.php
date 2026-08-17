@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Translation result.
  *
- * @method array getSegmentSet() Obtain <p>List of segments for translation.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSegmentSet(array $SegmentSet) Set <p>List of segments for translation.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getSegmentSet() Obtain 
+ * @method void setSegmentSet(array $SegmentSet) Set 
  * @method string getSubtitlePath() Obtain <p>Subtitle file URL.</p>
  * @method void setSubtitlePath(string $SubtitlePath) Set <p>Subtitle file URL.</p>
  * @method TaskOutputStorage getOutputStorage() Obtain <p>Smart subtitling result storage information.</p>
@@ -36,8 +34,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class SmartSubtitleTaskTransTextResultOutput extends AbstractModel
 {
     /**
-     * @var array <p>List of segments for translation.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $SegmentSet;
 
@@ -62,8 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SubtitleResults;
 
     /**
-     * @param array $SegmentSet <p>List of segments for translation.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $SegmentSet 
      * @param string $SubtitlePath <p>Subtitle file URL.</p>
      * @param TaskOutputStorage $OutputStorage <p>Smart subtitling result storage information.</p>
      * @param string $Path <p>Subtitle file path</p>

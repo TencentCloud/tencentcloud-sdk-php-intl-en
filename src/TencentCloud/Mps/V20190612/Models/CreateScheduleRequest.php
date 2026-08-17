@@ -20,53 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSchedule request structure.
  *
- * @method string getScheduleName() Obtain The scheme name (max 128 characters). This name should be unique across your account.
- * @method void setScheduleName(string $ScheduleName) Set The scheme name (max 128 characters). This name should be unique across your account.
- * @method WorkflowTrigger getTrigger() Obtain The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
- * @method void setTrigger(WorkflowTrigger $Trigger) Set The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
- * @method array getActivities() Obtain The subtasks of the scheme.
- * @method void setActivities(array $Activities) Set The subtasks of the scheme.
- * @method TaskOutputStorage getOutputStorage() Obtain The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
- * @method string getOutputDir() Obtain The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this, the file will be saved to the trigger directory.
- * @method void setOutputDir(string $OutputDir) Set The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this, the file will be saved to the trigger directory.
- * @method TaskNotifyConfig getTaskNotifyConfig() Obtain The notification configuration. If you do not specify this parameter, notifications will not be sent.
- * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set The notification configuration. If you do not specify this parameter, notifications will not be sent.
+ * @method string getScheduleName() Obtain Orchestration name, up to 128 characters. The name is unique for the same user.
+ * @method void setScheduleName(string $ScheduleName) Set Orchestration name, up to 128 characters. The name is unique for the same user.
+ * @method WorkflowTrigger getTrigger() Obtain Orchestrate the bound trigger rule. The orchestration is triggered when an uploaded video hits the rule for the object.
+ * @method void setTrigger(WorkflowTrigger $Trigger) Set Orchestrate the bound trigger rule. The orchestration is triggered when an uploaded video hits the rule for the object.
+ * @method array getActivities() Obtain Orchestration task list.
+ * @method void setActivities(array $Activities) Set Orchestration task list.
+ * @method TaskOutputStorage getOutputStorage() Obtain Media Processing Service output storage location. If left blank, it inherits the storage location from Trigger.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Media Processing Service output storage location. If left blank, it inherits the storage location from Trigger.
+ * @method string getOutputDir() Obtain Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
+If left empty, it is the same as the directory of the trigger file.
+ * @method void setOutputDir(string $OutputDir) Set Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
+If left empty, it is the same as the directory of the trigger file.
+ * @method TaskNotifyConfig getTaskNotifyConfig() Obtain Event notification configuration of the task. If left blank, it indicates that no event notification will be obtained.
+ * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set Event notification configuration of the task. If left blank, it indicates that no event notification will be obtained.
  * @method string getResourceId() Obtain Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
  * @method void setResourceId(string $ResourceId) Set Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
  */
 class CreateScheduleRequest extends AbstractModel
 {
     /**
-     * @var string The scheme name (max 128 characters). This name should be unique across your account.
+     * @var string Orchestration name, up to 128 characters. The name is unique for the same user.
      */
     public $ScheduleName;
 
     /**
-     * @var WorkflowTrigger The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
+     * @var WorkflowTrigger Orchestrate the bound trigger rule. The orchestration is triggered when an uploaded video hits the rule for the object.
      */
     public $Trigger;
 
     /**
-     * @var array The subtasks of the scheme.
+     * @var array Orchestration task list.
      */
     public $Activities;
 
     /**
-     * @var TaskOutputStorage The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
+     * @var TaskOutputStorage Media Processing Service output storage location. If left blank, it inherits the storage location from Trigger.
      */
     public $OutputStorage;
 
     /**
-     * @var string The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this, the file will be saved to the trigger directory.
+     * @var string Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
+If left empty, it is the same as the directory of the trigger file.
      */
     public $OutputDir;
 
     /**
-     * @var TaskNotifyConfig The notification configuration. If you do not specify this parameter, notifications will not be sent.
+     * @var TaskNotifyConfig Event notification configuration of the task. If left blank, it indicates that no event notification will be obtained.
      */
     public $TaskNotifyConfig;
 
@@ -76,13 +76,13 @@ If you do not specify this, the file will be saved to the trigger directory.
     public $ResourceId;
 
     /**
-     * @param string $ScheduleName The scheme name (max 128 characters). This name should be unique across your account.
-     * @param WorkflowTrigger $Trigger The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
-     * @param array $Activities The subtasks of the scheme.
-     * @param TaskOutputStorage $OutputStorage The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
-     * @param string $OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this, the file will be saved to the trigger directory.
-     * @param TaskNotifyConfig $TaskNotifyConfig The notification configuration. If you do not specify this parameter, notifications will not be sent.
+     * @param string $ScheduleName Orchestration name, up to 128 characters. The name is unique for the same user.
+     * @param WorkflowTrigger $Trigger Orchestrate the bound trigger rule. The orchestration is triggered when an uploaded video hits the rule for the object.
+     * @param array $Activities Orchestration task list.
+     * @param TaskOutputStorage $OutputStorage Media Processing Service output storage location. If left blank, it inherits the storage location from Trigger.
+     * @param string $OutputDir Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
+If left empty, it is the same as the directory of the trigger file.
+     * @param TaskNotifyConfig $TaskNotifyConfig Event notification configuration of the task. If left blank, it indicates that no event notification will be obtained.
      * @param string $ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
      */
     function __construct()

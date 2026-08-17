@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAigcTaskStatus request structure.
  *
- * @method string getTaskId() Obtain <p>Task ID.</p>
- * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
  */
 class DescribeAigcTaskStatusRequest extends AbstractModel
 {
     /**
-     * @var string <p>Task ID.</p>
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId <p>Task ID.</p>
+     * @param string $TaskId 
      */
     function __construct()
     {

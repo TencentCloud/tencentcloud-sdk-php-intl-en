@@ -21,11 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * ModifyInstanceAvailabilityZones request structure.
  *
  * @method string getInstanceId() Obtain Specify the instance ID.
- For example: crs-xjhsdj****, please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-
+ For example: crs-xjhsdj****, please log in to the [Redis Console](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
  * @method void setInstanceId(string $InstanceId) Set Specify the instance ID.
- For example: crs-xjhsdj****, please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-
+ For example: crs-xjhsdj****, please log in to the [Redis Console](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
  * @method integer getSwitchOption() Obtain Switch time.
 - 1: Switch during the maintenance window.
 - 2: Switch immediately.
@@ -41,8 +39,7 @@ class ModifyInstanceAvailabilityZonesRequest extends AbstractModel
 {
     /**
      * @var string Specify the instance ID.
- For example: crs-xjhsdj****, please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-
+ For example: crs-xjhsdj****, please log in to the [Redis Console](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
      */
     public $InstanceId;
 
@@ -61,8 +58,7 @@ For instances in a single availability zone, there is no need to configure the N
 
     /**
      * @param string $InstanceId Specify the instance ID.
- For example: crs-xjhsdj****, please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-
+ For example: crs-xjhsdj****, please log in to the [Redis Console](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
      * @param integer $SwitchOption Switch time.
 - 1: Switch during the maintenance window.
 - 2: Switch immediately.

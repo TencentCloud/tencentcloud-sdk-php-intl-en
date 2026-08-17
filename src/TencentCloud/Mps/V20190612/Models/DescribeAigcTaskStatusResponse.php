@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) Set <p>Task ID.</p>
  * @method string getTaskStatus() Obtain <p>Task status description</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
  * @method void setTaskStatus(string $TaskStatus) Set <p>Task status description</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
- * @method string getOutputUrl() Obtain <p>Output url</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutputUrl(string $OutputUrl) Set <p>Output url</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOutputUrl() Obtain 
+ * @method void setOutputUrl(string $OutputUrl) Set 
  * @method string getCreateTime() Obtain <p>Task creation time</p>
  * @method void setCreateTime(string $CreateTime) Set <p>Task creation time</p>
  * @method string getScheduledTime() Obtain <p>Task scheduling time</p>
@@ -58,8 +56,7 @@ class DescribeAigcTaskStatusResponse extends AbstractModel
     public $TaskStatus;
 
     /**
-     * @var string <p>Output url</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $OutputUrl;
 
@@ -106,8 +103,7 @@ Attention: This field may return null, indicating that no valid values can be ob
     /**
      * @param string $TaskId <p>Task ID.</p>
      * @param string $TaskStatus <p>Task status description</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
-     * @param string $OutputUrl <p>Output url</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OutputUrl 
      * @param string $CreateTime <p>Task creation time</p>
      * @param string $ScheduledTime <p>Task scheduling time</p>
      * @param string $FinishedTime <p>Task completion time</p>

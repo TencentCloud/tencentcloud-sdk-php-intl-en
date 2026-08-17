@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of intelligently generated cover
+ * Intelligent cover information
  *
- * @method string getCoverPath() Obtain Storage path of intelligently generated cover.
- * @method void setCoverPath(string $CoverPath) Set Storage path of intelligently generated cover.
- * @method float getConfidence() Obtain Confidence of intelligently generated cover between 0 and 100.
- * @method void setConfidence(float $Confidence) Set Confidence of intelligently generated cover between 0 and 100.
+ * @method string getCoverPath() Obtain Intelligent cover storage path.
+ * @method void setCoverPath(string $CoverPath) Set Intelligent cover storage path.
+ * @method float getConfidence() Obtain Reliability of the intelligent cover, with a value range from 0 to -100.
+ * @method void setConfidence(float $Confidence) Set Reliability of the intelligent cover, with a value range from 0 to -100.
  */
 class MediaAiAnalysisCoverItem extends AbstractModel
 {
     /**
-     * @var string Storage path of intelligently generated cover.
+     * @var string Intelligent cover storage path.
      */
     public $CoverPath;
 
     /**
-     * @var float Confidence of intelligently generated cover between 0 and 100.
+     * @var float Reliability of the intelligent cover, with a value range from 0 to -100.
      */
     public $Confidence;
 
     /**
-     * @param string $CoverPath Storage path of intelligently generated cover.
-     * @param float $Confidence Confidence of intelligently generated cover between 0 and 100.
+     * @param string $CoverPath Intelligent cover storage path.
+     * @param float $Confidence Reliability of the intelligent cover, with a value range from 0 to -100.
      */
     function __construct()
     {

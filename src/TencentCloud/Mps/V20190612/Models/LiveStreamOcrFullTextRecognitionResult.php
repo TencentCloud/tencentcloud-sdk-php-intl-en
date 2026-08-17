@@ -18,52 +18,52 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * OCR-based full live stream recognition
+ * Live stream recognition Ocr full text recognition
  *
- * @method string getText() Obtain Speech text.
- * @method void setText(string $Text) Set Speech text.
- * @method float getStartPtsTime() Obtain Start PTS time of recognized segment in seconds.
- * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of recognized segment in seconds.
- * @method float getEndPtsTime() Obtain End PTS time of recognized segment in seconds.
- * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of recognized segment in seconds.
- * @method float getConfidence() Obtain Confidence of recognized segment. Value range: 0–100.
- * @method void setConfidence(float $Confidence) Set Confidence of recognized segment. Value range: 0–100.
- * @method array getAreaCoordSet() Obtain Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
- * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+ * @method string getText() Obtain Speech and text.
+ * @method void setText(string $Text) Set Speech and text.
+ * @method float getStartPtsTime() Obtain Start PTS time of a recognized segment, in seconds.
+ * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a recognized segment, in seconds.
+ * @method float getEndPtsTime() Obtain End PTS time of a recognized segment, in seconds.
+ * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a recognized segment, in seconds.
+ * @method float getConfidence() Obtain Confidence of a recognized segment. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of a recognized segment. Value range: 0-100.
+ * @method array getAreaCoordSet() Obtain Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
  */
 class LiveStreamOcrFullTextRecognitionResult extends AbstractModel
 {
     /**
-     * @var string Speech text.
+     * @var string Speech and text.
      */
     public $Text;
 
     /**
-     * @var float Start PTS time of recognized segment in seconds.
+     * @var float Start PTS time of a recognized segment, in seconds.
      */
     public $StartPtsTime;
 
     /**
-     * @var float End PTS time of recognized segment in seconds.
+     * @var float End PTS time of a recognized segment, in seconds.
      */
     public $EndPtsTime;
 
     /**
-     * @var float Confidence of recognized segment. Value range: 0–100.
+     * @var float Confidence of a recognized segment. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @var array Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+     * @var array Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
      */
     public $AreaCoordSet;
 
     /**
-     * @param string $Text Speech text.
-     * @param float $StartPtsTime Start PTS time of recognized segment in seconds.
-     * @param float $EndPtsTime End PTS time of recognized segment in seconds.
-     * @param float $Confidence Confidence of recognized segment. Value range: 0–100.
-     * @param array $AreaCoordSet Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+     * @param string $Text Speech and text.
+     * @param float $StartPtsTime Start PTS time of a recognized segment, in seconds.
+     * @param float $EndPtsTime End PTS time of a recognized segment, in seconds.
+     * @param float $Confidence Confidence of a recognized segment. Value range: 0-100.
+     * @param array $AreaCoordSet Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
      */
     function __construct()
     {

@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Results of subtasks for a batch task.
  *
- * @method array getInputInfos() Obtain Input information for a batch task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setInputInfos(array $InputInfos) Set Input information for a batch task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method array getMetadatas() Obtain Metadata of the original video.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setMetadatas(array $Metadatas) Set Metadata of the original video.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method BatchSmartSubtitlesResult getSmartSubtitlesTaskResult() Obtain Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSmartSubtitlesTaskResult(BatchSmartSubtitlesResult $SmartSubtitlesTaskResult) Set Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getInputInfos() Obtain 
+ * @method void setInputInfos(array $InputInfos) Set 
+ * @method array getMetadatas() Obtain 
+ * @method void setMetadatas(array $Metadatas) Set 
+ * @method BatchSmartSubtitlesResult getSmartSubtitlesTaskResult() Obtain 
+ * @method void setSmartSubtitlesTaskResult(BatchSmartSubtitlesResult $SmartSubtitlesTaskResult) Set 
  */
 class BatchSubTaskResult extends AbstractModel
 {
     /**
-     * @var array Input information for a batch task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array 
      */
     public $InputInfos;
 
     /**
-     * @var array Metadata of the original video.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array 
      */
     public $Metadatas;
 
     /**
-     * @var BatchSmartSubtitlesResult Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var BatchSmartSubtitlesResult 
      */
     public $SmartSubtitlesTaskResult;
 
     /**
-     * @param array $InputInfos Input information for a batch task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param array $Metadatas Metadata of the original video.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param BatchSmartSubtitlesResult $SmartSubtitlesTaskResult Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param array $InputInfos 
+     * @param array $Metadatas 
+     * @param BatchSmartSubtitlesResult $SmartSubtitlesTaskResult 
      */
     function __construct()
     {

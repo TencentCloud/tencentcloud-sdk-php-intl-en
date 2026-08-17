@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain <p>Smart subtitle template ID.</p>
  * @method void setDefinition(integer $Definition) Set <p>Smart subtitle template ID.</p>
- * @method RawSmartSubtitleParameter getRawParameter() Obtain <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRawParameter(RawSmartSubtitleParameter $RawParameter) Set <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method RawSmartSubtitleParameter getRawParameter() Obtain 
+ * @method void setRawParameter(RawSmartSubtitleParameter $RawParameter) Set 
  * @method string getUserExtPara() Obtain <p>Extended parameter.</p>
  * @method void setUserExtPara(string $UserExtPara) Set <p>Extended parameter.</p>
  */
@@ -37,8 +35,7 @@ class SmartSubtitleTaskResultInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var RawSmartSubtitleParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RawSmartSubtitleParameter 
      */
     public $RawParameter;
 
@@ -49,8 +46,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param integer $Definition <p>Smart subtitle template ID.</p>
-     * @param RawSmartSubtitleParameter $RawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RawSmartSubtitleParameter $RawParameter 
      * @param string $UserExtPara <p>Extended parameter.</p>
      */
     function __construct()

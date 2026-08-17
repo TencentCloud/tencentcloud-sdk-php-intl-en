@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Task judgment conditions.
  *
- * @method array getRules() Obtain Conditional judgment information.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setRules(array $Rules) Set Conditional judgment information.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getRules() Obtain 
+ * @method void setRules(array $Rules) Set 
  */
 class ExecRulesTask extends AbstractModel
 {
     /**
-     * @var array Conditional judgment information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array 
      */
     public $Rules;
 
     /**
-     * @param array $Rules Conditional judgment information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param array $Rules 
      */
     function __construct()
     {

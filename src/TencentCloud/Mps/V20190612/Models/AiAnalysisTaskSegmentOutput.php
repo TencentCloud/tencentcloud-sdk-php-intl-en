@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getSegmentSet() Obtain Intelligent splitting sub-segment list.
  * @method void setSegmentSet(array $SegmentSet) Set Intelligent splitting sub-segment list.
- * @method string getAbstract() Obtain Video abstract, used for offline scenarios.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setAbstract(string $Abstract) Set Video abstract, used for offline scenarios.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getAbstract() Obtain 
+ * @method void setAbstract(string $Abstract) Set 
  */
 class AiAnalysisTaskSegmentOutput extends AbstractModel
 {
@@ -35,15 +33,13 @@ class AiAnalysisTaskSegmentOutput extends AbstractModel
     public $SegmentSet;
 
     /**
-     * @var string Video abstract, used for offline scenarios.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string 
      */
     public $Abstract;
 
     /**
      * @param array $SegmentSet Intelligent splitting sub-segment list.
-     * @param string $Abstract Video abstract, used for offline scenarios.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Abstract 
      */
     function __construct()
     {

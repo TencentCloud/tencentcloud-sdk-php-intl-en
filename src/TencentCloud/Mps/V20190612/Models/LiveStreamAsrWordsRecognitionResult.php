@@ -18,16 +18,16 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI-based ASR-based live streaming keyword recognition result
+ * Live streaming AI Asr word recognition result
  *
  * @method string getWord() Obtain Speech keyword.
  * @method void setWord(string $Word) Set Speech keyword.
- * @method float getStartPtsTime() Obtain Start PTS time of recognized segment in seconds.
- * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of recognized segment in seconds.
- * @method float getEndPtsTime() Obtain End PTS time of recognized segment in seconds.
- * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of recognized segment in seconds.
- * @method float getConfidence() Obtain Confidence of recognized segment. Value range: 0–100.
- * @method void setConfidence(float $Confidence) Set Confidence of recognized segment. Value range: 0–100.
+ * @method float getStartPtsTime() Obtain Start PTS time of a recognized segment, in seconds.
+ * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a recognized segment, in seconds.
+ * @method float getEndPtsTime() Obtain End PTS time of a recognized segment, in seconds.
+ * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a recognized segment, in seconds.
+ * @method float getConfidence() Obtain Confidence of a recognized segment. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of a recognized segment. Value range: 0-100.
  */
 class LiveStreamAsrWordsRecognitionResult extends AbstractModel
 {
@@ -37,25 +37,25 @@ class LiveStreamAsrWordsRecognitionResult extends AbstractModel
     public $Word;
 
     /**
-     * @var float Start PTS time of recognized segment in seconds.
+     * @var float Start PTS time of a recognized segment, in seconds.
      */
     public $StartPtsTime;
 
     /**
-     * @var float End PTS time of recognized segment in seconds.
+     * @var float End PTS time of a recognized segment, in seconds.
      */
     public $EndPtsTime;
 
     /**
-     * @var float Confidence of recognized segment. Value range: 0–100.
+     * @var float Confidence of a recognized segment. Value range: 0-100.
      */
     public $Confidence;
 
     /**
      * @param string $Word Speech keyword.
-     * @param float $StartPtsTime Start PTS time of recognized segment in seconds.
-     * @param float $EndPtsTime End PTS time of recognized segment in seconds.
-     * @param float $Confidence Confidence of recognized segment. Value range: 0–100.
+     * @param float $StartPtsTime Start PTS time of a recognized segment, in seconds.
+     * @param float $EndPtsTime End PTS time of a recognized segment, in seconds.
+     * @param float $Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     function __construct()
     {

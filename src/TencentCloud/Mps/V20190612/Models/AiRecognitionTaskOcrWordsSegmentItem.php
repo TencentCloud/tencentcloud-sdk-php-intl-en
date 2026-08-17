@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Text recognition segment.
  *
- * @method float getStartTimeOffset() Obtain Start time offset of a recognition segment in seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a recognition segment in seconds.
- * @method float getEndTimeOffset() Obtain End time offset of a recognition segment in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a recognition segment in seconds.
- * @method float getConfidence() Obtain Confidence of a recognition segment. Value range: 0-100.
- * @method void setConfidence(float $Confidence) Set Confidence of a recognition segment. Value range: 0-100.
- * @method array getAreaCoordSet() Obtain Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
- * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+ * @method float getStartTimeOffset() Obtain Start time offset of a recognized segment, in seconds.
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a recognized segment, in seconds.
+ * @method float getEndTimeOffset() Obtain End time offset of a recognized segment, in seconds.
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a recognized segment, in seconds.
+ * @method float getConfidence() Obtain Confidence of a recognized segment. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set Confidence of a recognized segment. Value range: 0-100.
+ * @method array getAreaCoordSet() Obtain Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
  */
 class AiRecognitionTaskOcrWordsSegmentItem extends AbstractModel
 {
     /**
-     * @var float Start time offset of a recognition segment in seconds.
+     * @var float Start time offset of a recognized segment, in seconds.
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time offset of a recognition segment in seconds.
+     * @var float End time offset of a recognized segment, in seconds.
      */
     public $EndTimeOffset;
 
     /**
-     * @var float Confidence of a recognition segment. Value range: 0-100.
+     * @var float Confidence of a recognized segment. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @var array Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+     * @var array Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
      */
     public $AreaCoordSet;
 
     /**
-     * @param float $StartTimeOffset Start time offset of a recognition segment in seconds.
-     * @param float $EndTimeOffset End time offset of a recognition segment in seconds.
-     * @param float $Confidence Confidence of a recognition segment. Value range: 0-100.
-     * @param array $AreaCoordSet Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+     * @param float $StartTimeOffset Start time offset of a recognized segment, in seconds.
+     * @param float $EndTimeOffset End time offset of a recognized segment, in seconds.
+     * @param float $Confidence Confidence of a recognized segment. Value range: 0-100.
+     * @param array $AreaCoordSet Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
      */
     function __construct()
     {

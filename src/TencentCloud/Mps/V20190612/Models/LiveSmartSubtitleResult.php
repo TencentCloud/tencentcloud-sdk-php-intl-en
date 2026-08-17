@@ -18,32 +18,24 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Smart subtitle task result for live stream.
+ * Live stream smart subtitle result
  *
  * @method string getText() Obtain Recognized text.
  * @method void setText(string $Text) Set Recognized text.
- * @method float getStartPTSTime() Obtain Translate the starting PTS time of a segment, in seconds.
- * @method void setStartPTSTime(float $StartPTSTime) Set Translate the starting PTS time of a segment, in seconds.
- * @method float getEndPTSTime() Obtain End PTS time of a translated segment, in seconds.
- * @method void setEndPTSTime(float $EndPTSTime) Set End PTS time of a translated segment, in seconds.
+ * @method float getStartPTSTime() Obtain Start PTS time of a translated recording clip, in seconds.
+ * @method void setStartPTSTime(float $StartPTSTime) Set Start PTS time of a translated recording clip, in seconds.
+ * @method float getEndPTSTime() Obtain End PTS time of a translated recording clip, in seconds.
+ * @method void setEndPTSTime(float $EndPTSTime) Set End PTS time of a translated recording clip, in seconds.
  * @method string getTrans() Obtain Translated text.
  * @method void setTrans(string $Trans) Set Translated text.
- * @method string getStartTime() Obtain Translation started at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(string $StartTime) Set Translation started at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEndTime() Obtain Translation ends at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(string $EndTime) Set Translation ends at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getSteadyState() Obtain Steady-State tag.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSteadyState(boolean $SteadyState) Set Steady-State tag.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUserId() Obtain websocket and trtc real-time translation UserId.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserId(string $UserId) Set websocket and trtc real-time translation UserId.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStartTime() Obtain 
+ * @method void setStartTime(string $StartTime) Set 
+ * @method string getEndTime() Obtain 
+ * @method void setEndTime(string $EndTime) Set 
+ * @method boolean getSteadyState() Obtain 
+ * @method void setSteadyState(boolean $SteadyState) Set 
+ * @method string getUserId() Obtain 
+ * @method void setUserId(string $UserId) Set 
  */
 class LiveSmartSubtitleResult extends AbstractModel
 {
@@ -53,12 +45,12 @@ class LiveSmartSubtitleResult extends AbstractModel
     public $Text;
 
     /**
-     * @var float Translate the starting PTS time of a segment, in seconds.
+     * @var float Start PTS time of a translated recording clip, in seconds.
      */
     public $StartPTSTime;
 
     /**
-     * @var float End PTS time of a translated segment, in seconds.
+     * @var float End PTS time of a translated recording clip, in seconds.
      */
     public $EndPTSTime;
 
@@ -68,42 +60,34 @@ class LiveSmartSubtitleResult extends AbstractModel
     public $Trans;
 
     /**
-     * @var string Translation started at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $StartTime;
 
     /**
-     * @var string Translation ends at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $EndTime;
 
     /**
-     * @var boolean Steady-State tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean 
      */
     public $SteadyState;
 
     /**
-     * @var string websocket and trtc real-time translation UserId.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $UserId;
 
     /**
      * @param string $Text Recognized text.
-     * @param float $StartPTSTime Translate the starting PTS time of a segment, in seconds.
-     * @param float $EndPTSTime End PTS time of a translated segment, in seconds.
+     * @param float $StartPTSTime Start PTS time of a translated recording clip, in seconds.
+     * @param float $EndPTSTime End PTS time of a translated recording clip, in seconds.
      * @param string $Trans Translated text.
-     * @param string $StartTime Translation started at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EndTime Translation ends at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $SteadyState Steady-State tag.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UserId websocket and trtc real-time translation UserId.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $StartTime 
+     * @param string $EndTime 
+     * @param boolean $SteadyState 
+     * @param string $UserId 
      */
     function __construct()
     {

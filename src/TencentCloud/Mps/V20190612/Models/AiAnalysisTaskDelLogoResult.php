@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent removal result type.
  *
- * @method string getStatus() Obtain Task status, including PROCESSING, SUCCESS, and FAIL.
- * @method void setStatus(string $Status) Set Task status, including PROCESSING, SUCCESS, and FAIL.
- * @method integer getErrCode() Obtain Error code. `0`: Task successful. Other values: Task failed.
- * @method void setErrCode(integer $ErrCode) Set Error code. `0`: Task successful. Other values: Task failed.
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method integer getErrCode() Obtain Error code. 0: Task successful. Other values: Task failed.
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0: Task successful. Other values: Task failed.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskDelLogoInput getInput() Obtain Intelligent removal task input.
  * @method void setInput(AiAnalysisTaskDelLogoInput $Input) Set Intelligent removal task input.
- * @method AiAnalysisTaskDelLogoOutput getOutput() Obtain Intelligent removal task output.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiAnalysisTaskDelLogoOutput $Output) Set Intelligent removal task output.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskDelLogoOutput getOutput() Obtain 
+ * @method void setOutput(AiAnalysisTaskDelLogoOutput $Output) Set 
  */
 class AiAnalysisTaskDelLogoResult extends AbstractModel
 {
     /**
-     * @var string Task status, including PROCESSING, SUCCESS, and FAIL.
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var integer Error code. `0`: Task successful. Other values: Task failed.
+     * @var integer Error code. 0: Task successful. Other values: Task failed.
      */
     public $ErrCode;
 
@@ -54,16 +54,16 @@ class AiAnalysisTaskDelLogoResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskDelLogoOutput Intelligent removal task output.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskDelLogoOutput 
      */
     public $Output;
 
     /**
-     * @param string $Status Task status, including PROCESSING, SUCCESS, and FAIL.
-     * @param integer $ErrCode Error code. `0`: Task successful. Other values: Task failed.
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
      * @param string $Message Error message.
      * @param AiAnalysisTaskDelLogoInput $Input Intelligent removal task input.
-     * @param AiAnalysisTaskDelLogoOutput $Output Intelligent removal task output.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskDelLogoOutput $Output 
      */
     function __construct()
     {

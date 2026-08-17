@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ParseNotification request structure.
  *
- * @method string getContent() Obtain Event notification obtained from CMQ.
- * @method void setContent(string $Content) Set Event notification obtained from CMQ.
+ * @method string getContent() Obtain Event notification content obtained from CMQ.
+ * @method void setContent(string $Content) Set Event notification content obtained from CMQ.
  */
 class ParseNotificationRequest extends AbstractModel
 {
     /**
-     * @var string Event notification obtained from CMQ.
+     * @var string Event notification content obtained from CMQ.
      */
     public $Content;
 
     /**
-     * @param string $Content Event notification obtained from CMQ.
+     * @param string $Content Event notification content obtained from CMQ.
      */
     function __construct()
     {

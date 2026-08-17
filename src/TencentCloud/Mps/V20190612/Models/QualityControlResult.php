@@ -18,100 +18,100 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The issues detected by quality control.
+ * Quality inspection exception item.
  *
- * @method string getType() Obtain Exception type. valid values:.
+ * @method string getType() Obtain Exception type. Valid values:
 Jitter: jitter.
-Blur: specifies the blur effect.
-LowLighting: specifies low light.
+Blur: blurry.
+LowLighting: low light.
 HighLighting: overexposure.
-CrashScreen: specifies screen glitch.
-BlackWhiteEdge: specifies the black and white edges.
-SolidColorScreen: specifies the solid color screen.
-Noise: specifies the noise.
-Mosaic: mosaic.
-QRCode: specifies the qr code.
-AppletCode: specifies the mini program code.
-BarCode: specifies the barcode.
-LowVoice: specifies the bass.
-HighVoice: specifies high voice detection.
-NoVoice: specifies mute.
-LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
-AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
-AudioNoise: specifies the audio noise.
- * @method void setType(string $Type) Set Exception type. valid values:.
+CrashScreen: screen glitch.
+BlackWhiteEdge: Black and white edges
+SolidColorScreen: solid color screen.
+Noise: noise.
+Mosaic: Mosaic
+QRCode: QR code.
+AppletCode: Mini program code.
+BarCode: barcode.
+LowVoice: bass.
+HighVoice: high voice detection.
+NoVoice: mute.
+LowEvaluation: The video no-reference score (MOS) is below the threshold.
+AudioEvaluation: The audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: Audio noise.
+ * @method void setType(string $Type) Set Exception type. Valid values:
 Jitter: jitter.
-Blur: specifies the blur effect.
-LowLighting: specifies low light.
+Blur: blurry.
+LowLighting: low light.
 HighLighting: overexposure.
-CrashScreen: specifies screen glitch.
-BlackWhiteEdge: specifies the black and white edges.
-SolidColorScreen: specifies the solid color screen.
-Noise: specifies the noise.
-Mosaic: mosaic.
-QRCode: specifies the qr code.
-AppletCode: specifies the mini program code.
-BarCode: specifies the barcode.
-LowVoice: specifies the bass.
-HighVoice: specifies high voice detection.
-NoVoice: specifies mute.
-LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
-AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
-AudioNoise: specifies the audio noise.
- * @method array getQualityControlItems() Obtain The information of a checked segment in quality control.
- * @method void setQualityControlItems(array $QualityControlItems) Set The information of a checked segment in quality control.
+CrashScreen: screen glitch.
+BlackWhiteEdge: Black and white edges
+SolidColorScreen: solid color screen.
+Noise: noise.
+Mosaic: Mosaic
+QRCode: QR code.
+AppletCode: Mini program code.
+BarCode: barcode.
+LowVoice: bass.
+HighVoice: high voice detection.
+NoVoice: mute.
+LowEvaluation: The video no-reference score (MOS) is below the threshold.
+AudioEvaluation: The audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: Audio noise.
+ * @method array getQualityControlItems() Obtain Quality inspection result item.
+ * @method void setQualityControlItems(array $QualityControlItems) Set Quality inspection result item.
  */
 class QualityControlResult extends AbstractModel
 {
     /**
-     * @var string Exception type. valid values:.
+     * @var string Exception type. Valid values:
 Jitter: jitter.
-Blur: specifies the blur effect.
-LowLighting: specifies low light.
+Blur: blurry.
+LowLighting: low light.
 HighLighting: overexposure.
-CrashScreen: specifies screen glitch.
-BlackWhiteEdge: specifies the black and white edges.
-SolidColorScreen: specifies the solid color screen.
-Noise: specifies the noise.
-Mosaic: mosaic.
-QRCode: specifies the qr code.
-AppletCode: specifies the mini program code.
-BarCode: specifies the barcode.
-LowVoice: specifies the bass.
-HighVoice: specifies high voice detection.
-NoVoice: specifies mute.
-LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
-AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
-AudioNoise: specifies the audio noise.
+CrashScreen: screen glitch.
+BlackWhiteEdge: Black and white edges
+SolidColorScreen: solid color screen.
+Noise: noise.
+Mosaic: Mosaic
+QRCode: QR code.
+AppletCode: Mini program code.
+BarCode: barcode.
+LowVoice: bass.
+HighVoice: high voice detection.
+NoVoice: mute.
+LowEvaluation: The video no-reference score (MOS) is below the threshold.
+AudioEvaluation: The audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: Audio noise.
      */
     public $Type;
 
     /**
-     * @var array The information of a checked segment in quality control.
+     * @var array Quality inspection result item.
      */
     public $QualityControlItems;
 
     /**
-     * @param string $Type Exception type. valid values:.
+     * @param string $Type Exception type. Valid values:
 Jitter: jitter.
-Blur: specifies the blur effect.
-LowLighting: specifies low light.
+Blur: blurry.
+LowLighting: low light.
 HighLighting: overexposure.
-CrashScreen: specifies screen glitch.
-BlackWhiteEdge: specifies the black and white edges.
-SolidColorScreen: specifies the solid color screen.
-Noise: specifies the noise.
-Mosaic: mosaic.
-QRCode: specifies the qr code.
-AppletCode: specifies the mini program code.
-BarCode: specifies the barcode.
-LowVoice: specifies the bass.
-HighVoice: specifies high voice detection.
-NoVoice: specifies mute.
-LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
-AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
-AudioNoise: specifies the audio noise.
-     * @param array $QualityControlItems The information of a checked segment in quality control.
+CrashScreen: screen glitch.
+BlackWhiteEdge: Black and white edges
+SolidColorScreen: solid color screen.
+Noise: noise.
+Mosaic: Mosaic
+QRCode: QR code.
+AppletCode: Mini program code.
+BarCode: barcode.
+LowVoice: bass.
+HighVoice: high voice detection.
+NoVoice: mute.
+LowEvaluation: The video no-reference score (MOS) is below the threshold.
+AudioEvaluation: The audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: Audio noise.
+     * @param array $QualityControlItems Quality inspection result item.
      */
     function __construct()
     {

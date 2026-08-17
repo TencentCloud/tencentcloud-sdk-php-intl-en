@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output of full text recognition.
+ * Full text recognition output.
  *
  * @method array getSegmentSet() Obtain Full text recognition result set.
  * @method void setSegmentSet(array $SegmentSet) Set Full text recognition result set.

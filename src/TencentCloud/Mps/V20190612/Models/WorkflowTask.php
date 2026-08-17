@@ -18,144 +18,124 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of the media processing task.
+ * Media Processing Service task information
  *
- * @method string getTaskId() Obtain The media processing task ID.
- * @method void setTaskId(string $TaskId) Set The media processing task ID.
+ * @method string getTaskId() Obtain Media processing task ID.
+ * @method void setTaskId(string $TaskId) Set Media processing task ID.
  * @method string getStatus() Obtain Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>FINISH: Completed.</li>
+<li>FINISH: completed</li>
  * @method void setStatus(string $Status) Set Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>FINISH: Completed.</li>
- * @method integer getErrCode() Obtain If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
- * @method void setErrCode(integer $ErrCode) Set If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
- * @method string getMessage() Obtain Except those for source errors, error messages vary with task type.
- * @method void setMessage(string $Message) Set Except those for source errors, error messages vary with task type.
- * @method MediaInputInfo getInputInfo() Obtain The information of the file processed.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setInputInfo(MediaInputInfo $InputInfo) Set The information of the file processed.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method MediaMetaData getMetaData() Obtain Metadata of a source video.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of a source video.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getMediaProcessResultSet() Obtain The execution status and result of the media processing task.
- * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set The execution status and result of the media processing task.
- * @method array getAiContentReviewResultSet() Obtain Execution status and result of a video content audit task.
- * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) Set Execution status and result of a video content audit task.
- * @method array getAiAnalysisResultSet() Obtain Execution status and result of video content analysis task.
- * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) Set Execution status and result of video content analysis task.
- * @method array getAiRecognitionResultSet() Obtain Execution status and result of a video content recognition task.
- * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) Set Execution status and result of a video content recognition task.
- * @method ScheduleQualityControlTaskResult getAiQualityControlTaskResult() Obtain Execution status and results of a media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAiQualityControlTaskResult(ScheduleQualityControlTaskResult $AiQualityControlTaskResult) Set Execution status and results of a media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getSmartSubtitlesTaskResult() Obtain Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSmartSubtitlesTaskResult(array $SmartSubtitlesTaskResult) Set Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method SmartEraseTaskResult getSmartEraseTaskResult() Obtain Execution result of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setSmartEraseTaskResult(SmartEraseTaskResult $SmartEraseTaskResult) Set Execution result of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+<li>FINISH: completed</li>
+ * @method integer getErrCode() Obtain An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+ * @method void setErrCode(integer $ErrCode) Set An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+ * @method string getMessage() Obtain The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+ * @method void setMessage(string $Message) Set The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+ * @method MediaInputInfo getInputInfo() Obtain 
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set 
+ * @method MediaMetaData getMetaData() Obtain 
+ * @method void setMetaData(MediaMetaData $MetaData) Set 
+ * @method array getMediaProcessResultSet() Obtain Execution status and results of a Media Processing Service task.
+ * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set Execution status and results of a Media Processing Service task.
+ * @method array getAiContentReviewResultSet() Obtain Execution status and results of a video content review task.
+ * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) Set Execution status and results of a video content review task.
+ * @method array getAiAnalysisResultSet() Obtain Execution status and results of a video content analysis task.
+ * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) Set Execution status and results of a video content analysis task.
+ * @method array getAiRecognitionResultSet() Obtain Task execution status and results of the video content recognition task.
+ * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) Set Task execution status and results of the video content recognition task.
+ * @method ScheduleQualityControlTaskResult getAiQualityControlTaskResult() Obtain 
+ * @method void setAiQualityControlTaskResult(ScheduleQualityControlTaskResult $AiQualityControlTaskResult) Set 
+ * @method array getSmartSubtitlesTaskResult() Obtain 
+ * @method void setSmartSubtitlesTaskResult(array $SmartSubtitlesTaskResult) Set 
+ * @method SmartEraseTaskResult getSmartEraseTaskResult() Obtain 
+ * @method void setSmartEraseTaskResult(SmartEraseTaskResult $SmartEraseTaskResult) Set 
  */
 class WorkflowTask extends AbstractModel
 {
     /**
-     * @var string The media processing task ID.
+     * @var string Media processing task ID.
      */
     public $TaskId;
 
     /**
      * @var string Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>FINISH: Completed.</li>
+<li>FINISH: completed</li>
      */
     public $Status;
 
     /**
-     * @var integer If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+     * @var integer An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
      */
     public $ErrCode;
 
     /**
-     * @var string Except those for source errors, error messages vary with task type.
+     * @var string The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
      */
     public $Message;
 
     /**
-     * @var MediaInputInfo The information of the file processed.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var MediaInputInfo 
      */
     public $InputInfo;
 
     /**
-     * @var MediaMetaData Metadata of a source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaMetaData 
      */
     public $MetaData;
 
     /**
-     * @var array The execution status and result of the media processing task.
+     * @var array Execution status and results of a Media Processing Service task.
      */
     public $MediaProcessResultSet;
 
     /**
-     * @var array Execution status and result of a video content audit task.
+     * @var array Execution status and results of a video content review task.
      */
     public $AiContentReviewResultSet;
 
     /**
-     * @var array Execution status and result of video content analysis task.
+     * @var array Execution status and results of a video content analysis task.
      */
     public $AiAnalysisResultSet;
 
     /**
-     * @var array Execution status and result of a video content recognition task.
+     * @var array Task execution status and results of the video content recognition task.
      */
     public $AiRecognitionResultSet;
 
     /**
-     * @var ScheduleQualityControlTaskResult Execution status and results of a media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ScheduleQualityControlTaskResult 
      */
     public $AiQualityControlTaskResult;
 
     /**
-     * @var array Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var array 
      */
     public $SmartSubtitlesTaskResult;
 
     /**
-     * @var SmartEraseTaskResult Execution result of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var SmartEraseTaskResult 
      */
     public $SmartEraseTaskResult;
 
     /**
-     * @param string $TaskId The media processing task ID.
+     * @param string $TaskId Media processing task ID.
      * @param string $Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>FINISH: Completed.</li>
-     * @param integer $ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
-     * @param string $Message Except those for source errors, error messages vary with task type.
-     * @param MediaInputInfo $InputInfo The information of the file processed.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param MediaMetaData $MetaData Metadata of a source video.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $MediaProcessResultSet The execution status and result of the media processing task.
-     * @param array $AiContentReviewResultSet Execution status and result of a video content audit task.
-     * @param array $AiAnalysisResultSet Execution status and result of video content analysis task.
-     * @param array $AiRecognitionResultSet Execution status and result of a video content recognition task.
-     * @param ScheduleQualityControlTaskResult $AiQualityControlTaskResult Execution status and results of a media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $SmartSubtitlesTaskResult Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SmartEraseTaskResult $SmartEraseTaskResult Execution result of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+<li>FINISH: completed</li>
+     * @param integer $ErrCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+     * @param string $Message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+     * @param MediaInputInfo $InputInfo 
+     * @param MediaMetaData $MetaData 
+     * @param array $MediaProcessResultSet Execution status and results of a Media Processing Service task.
+     * @param array $AiContentReviewResultSet Execution status and results of a video content review task.
+     * @param array $AiAnalysisResultSet Execution status and results of a video content analysis task.
+     * @param array $AiRecognitionResultSet Task execution status and results of the video content recognition task.
+     * @param ScheduleQualityControlTaskResult $AiQualityControlTaskResult 
+     * @param array $SmartSubtitlesTaskResult 
+     * @param SmartEraseTaskResult $SmartEraseTaskResult 
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getWord() Obtain Speech keyword.
  * @method void setWord(string $Word) Set Speech keyword.
- * @method array getSegmentSet() Obtain List of time segments that contain the speech keyword.
- * @method void setSegmentSet(array $SegmentSet) Set List of time segments that contain the speech keyword.
+ * @method array getSegmentSet() Obtain List of segments for the time when speech keywords occur.
+ * @method void setSegmentSet(array $SegmentSet) Set List of segments for the time when speech keywords occur.
  */
 class AiRecognitionTaskAsrWordsResultItem extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AiRecognitionTaskAsrWordsResultItem extends AbstractModel
     public $Word;
 
     /**
-     * @var array List of time segments that contain the speech keyword.
+     * @var array List of segments for the time when speech keywords occur.
      */
     public $SegmentSet;
 
     /**
      * @param string $Word Speech keyword.
-     * @param array $SegmentSet List of time segments that contain the speech keyword.
+     * @param array $SegmentSet List of segments for the time when speech keywords occur.
      */
     function __construct()
     {

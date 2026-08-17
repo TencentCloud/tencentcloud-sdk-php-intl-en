@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(DocToVideoInput $Input) Set <p>Input information for AIGC document‑to‑video generation</p>
  * @method DocToVideoCosInfo getCosInfo() Obtain <p>User cos information, used to store the generation result</p>
  * @method void setCosInfo(DocToVideoCosInfo $CosInfo) Set <p>User cos information, used to store the generation result</p>
+ * @method string getResourceId() Obtain 
+ * @method void setResourceId(string $ResourceId) Set 
  */
 class CreateDocToVideoTaskRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateDocToVideoTaskRequest extends AbstractModel
     public $CosInfo;
 
     /**
+     * @var string 
+     */
+    public $ResourceId;
+
+    /**
      * @param DocToVideoInput $Input <p>Input information for AIGC document‑to‑video generation</p>
      * @param DocToVideoCosInfo $CosInfo <p>User cos information, used to store the generation result</p>
+     * @param string $ResourceId 
      */
     function __construct()
     {
@@ -62,6 +70,10 @@ class CreateDocToVideoTaskRequest extends AbstractModel
         if (array_key_exists("CosInfo",$param) and $param["CosInfo"] !== null) {
             $this->CosInfo = new DocToVideoCosInfo();
             $this->CosInfo->deserialize($param["CosInfo"]);
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

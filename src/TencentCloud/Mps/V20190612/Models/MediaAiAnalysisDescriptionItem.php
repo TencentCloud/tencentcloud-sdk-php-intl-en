@@ -28,14 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTitle(string $Title) Set Intelligent description title.
  * @method array getKeywords() Obtain Intelligent description keywords.
  * @method void setKeywords(array $Keywords) Set Intelligent description keywords.
- * @method array getParagraphs() Obtain Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setParagraphs(array $Paragraphs) Set Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMindMapUrl() Obtain Address of the mind map of a summary task.
-Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setMindMapUrl(string $MindMapUrl) Set Address of the mind map of a summary task.
-Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getParagraphs() Obtain 
+ * @method void setParagraphs(array $Paragraphs) Set 
+ * @method string getMindMapUrl() Obtain 
+ * @method void setMindMapUrl(string $MindMapUrl) Set 
  * @method string getMindMapPath() Obtain Path of the mind map of a summary task.
  * @method void setMindMapPath(string $MindMapPath) Set Path of the mind map of a summary task.
  * @method string getSubtitlePath() Obtain Subtitle file path of the video.
@@ -66,14 +62,12 @@ class MediaAiAnalysisDescriptionItem extends AbstractModel
     public $Keywords;
 
     /**
-     * @var array Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array 
      */
     public $Paragraphs;
 
     /**
-     * @var string Address of the mind map of a summary task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @var string 
      */
     public $MindMapUrl;
 
@@ -97,10 +91,8 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param float $Confidence Confidence of the intelligent description, with a value range from 0 to 100.
      * @param string $Title Intelligent description title.
      * @param array $Keywords Intelligent description keywords.
-     * @param array $Paragraphs Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MindMapUrl Address of the mind map of a summary task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param array $Paragraphs 
+     * @param string $MindMapUrl 
      * @param string $MindMapPath Path of the mind map of a summary task.
      * @param string $SubtitlePath Subtitle file path of the video.
      * @param TaskOutputStorage $OutputStorage Storage location of the summary file.

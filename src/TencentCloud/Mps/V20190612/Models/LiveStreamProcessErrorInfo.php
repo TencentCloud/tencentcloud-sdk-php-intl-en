@@ -18,23 +18,23 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of a live stream processing error
+ * Live stream processing error information
  *
- * @method integer getErrCode() Obtain Error code:
-<li>0: No error;</li>
-<li>If this parameter is not 0, an error has occurred. Please see the error message (`Message`).</li>
- * @method void setErrCode(integer $ErrCode) Set Error code:
-<li>0: No error;</li>
-<li>If this parameter is not 0, an error has occurred. Please see the error message (`Message`).</li>
+ * @method integer getErrCode() Obtain Error code.
+<li>0 means no error.</li>
+<li>Non-zero means error. Refer to the error information in Message.</li>
+ * @method void setErrCode(integer $ErrCode) Set Error code.
+<li>0 means no error.</li>
+<li>Non-zero means error. Refer to the error information in Message.</li>
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  */
 class LiveStreamProcessErrorInfo extends AbstractModel
 {
     /**
-     * @var integer Error code:
-<li>0: No error;</li>
-<li>If this parameter is not 0, an error has occurred. Please see the error message (`Message`).</li>
+     * @var integer Error code.
+<li>0 means no error.</li>
+<li>Non-zero means error. Refer to the error information in Message.</li>
      */
     public $ErrCode;
 
@@ -44,9 +44,9 @@ class LiveStreamProcessErrorInfo extends AbstractModel
     public $Message;
 
     /**
-     * @param integer $ErrCode Error code:
-<li>0: No error;</li>
-<li>If this parameter is not 0, an error has occurred. Please see the error message (`Message`).</li>
+     * @param integer $ErrCode Error code.
+<li>0 means no error.</li>
+<li>Non-zero means error. Refer to the error information in Message.</li>
      * @param string $Message Error message.
      */
     function __construct()

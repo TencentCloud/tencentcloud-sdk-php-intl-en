@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Output of text keyword recognition.
+ * Text keyword recognition output.
  *
  * @method array getResultSet() Obtain Text keyword recognition result set.
  * @method void setResultSet(array $ResultSet) Set Text keyword recognition result set.

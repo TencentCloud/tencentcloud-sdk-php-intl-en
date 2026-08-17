@@ -18,68 +18,68 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task overview for image processing.
+ * 
  *
- * @method string getTaskId() Obtain <p>TaskId of the image processing task.</p>
- * @method void setTaskId(string $TaskId) Set <p>TaskId of the image processing task.</p>
- * @method string getStatus() Obtain <p>Task status.</p><p>Enumeration values: </p><ul><li>FINISH: Task completion</li><li>PROCESSING: Task processing</li></ul>
- * @method void setStatus(string $Status) Set <p>Task status.</p><p>Enumeration values: </p><ul><li>FINISH: Task completion</li><li>PROCESSING: Task processing</li></ul>
- * @method string getInput() Obtain <p>Input file.</p>
- * @method void setInput(string $Input) Set <p>Input file.</p>
- * @method string getCreateTime() Obtain <p>Creation time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
- * @method void setCreateTime(string $CreateTime) Set <p>Creation time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
- * @method string getBeginProcessTime() Obtain <p>Processing start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
- * @method void setBeginProcessTime(string $BeginProcessTime) Set <p>Processing start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
- * @method string getFinishTime() Obtain <p>End time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
- * @method void setFinishTime(string $FinishTime) Set <p>End time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
- * @method boolean getSubTaskHasFailed() Obtain <p>Subtask failure identifier.</p>
- * @method void setSubTaskHasFailed(boolean $SubTaskHasFailed) Set <p>Subtask failure identifier.</p>
+ * @method string getTaskId() Obtain 
+ * @method void setTaskId(string $TaskId) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getInput() Obtain 
+ * @method void setInput(string $Input) Set 
+ * @method string getCreateTime() Obtain 
+ * @method void setCreateTime(string $CreateTime) Set 
+ * @method string getBeginProcessTime() Obtain 
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set 
+ * @method string getFinishTime() Obtain 
+ * @method void setFinishTime(string $FinishTime) Set 
+ * @method boolean getSubTaskHasFailed() Obtain 
+ * @method void setSubTaskHasFailed(boolean $SubTaskHasFailed) Set 
  */
 class ImageTaskInfo extends AbstractModel
 {
     /**
-     * @var string <p>TaskId of the image processing task.</p>
+     * @var string 
      */
     public $TaskId;
 
     /**
-     * @var string <p>Task status.</p><p>Enumeration values: </p><ul><li>FINISH: Task completion</li><li>PROCESSING: Task processing</li></ul>
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string <p>Input file.</p>
+     * @var string 
      */
     public $Input;
 
     /**
-     * @var string <p>Creation time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * @var string 
      */
     public $CreateTime;
 
     /**
-     * @var string <p>Processing start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * @var string 
      */
     public $BeginProcessTime;
 
     /**
-     * @var string <p>End time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * @var string 
      */
     public $FinishTime;
 
     /**
-     * @var boolean <p>Subtask failure identifier.</p>
+     * @var boolean 
      */
     public $SubTaskHasFailed;
 
     /**
-     * @param string $TaskId <p>TaskId of the image processing task.</p>
-     * @param string $Status <p>Task status.</p><p>Enumeration values: </p><ul><li>FINISH: Task completion</li><li>PROCESSING: Task processing</li></ul>
-     * @param string $Input <p>Input file.</p>
-     * @param string $CreateTime <p>Creation time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-     * @param string $BeginProcessTime <p>Processing start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-     * @param string $FinishTime <p>End time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-     * @param boolean $SubTaskHasFailed <p>Subtask failure identifier.</p>
+     * @param string $TaskId 
+     * @param string $Status 
+     * @param string $Input 
+     * @param string $CreateTime 
+     * @param string $BeginProcessTime 
+     * @param string $FinishTime 
+     * @param boolean $SubTaskHasFailed 
      */
     function __construct()
     {

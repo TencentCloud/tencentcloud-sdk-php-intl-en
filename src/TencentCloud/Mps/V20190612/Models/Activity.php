@@ -18,72 +18,70 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * A subtask of a scheme.
+ * Orchestrate atomic tasks
  *
  * @method string getActivityType() Obtain Atomic task type.
-<li>input: starting node.</li>.
-<li>output: termination node.</li>.
-<li>action-trans: specifies transcoding.</li>.
-<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
-<li>action-AIAnalysis: analysis.</li>.
-<li>action-AIRecognition: recognition.</li>.
-<li>action-aiReview: specifies the review action.</li>.
-<li>action-animated-graphics: specifies the animated image.</li>.
-<li>action-image-sprite: specifies the sprite sheet.</li>.
-<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
-<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
-<li>action-AIQualityControl: media quality inspection.</li>.
-<li>action-SmartSubtitles: smart subtitling.</li>.
-<li>action-exec-rules: judgment rule.</li>.
-<li>action-SmartErase: smart erasure.</li>.
+<li>input: start node.</li>
+<li>output: termination node.</li>
+<li>action-trans: transcoding.</li>
+<li>action-samplesnapshot: sampled screenshot taking.</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition.</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: animated image</li>
+<li>action-image-sprite: sprite sheet</li>
+<li>action-snapshotByTimeOffset: time point screenshot taking</li>
+<li>action-adaptive-substream: adaptive bitrate streaming.</li>
+<li>action-AIQualityControl: media quality inspection.</li>
+<li>action-SmartSubtitles: smart subtitle</li>
+<li>action-exec-rules: judgment rule</li>
+<li>action-SmartErase: intelligent removal.</li>
 
 
 
  * @method void setActivityType(string $ActivityType) Set Atomic task type.
-<li>input: starting node.</li>.
-<li>output: termination node.</li>.
-<li>action-trans: specifies transcoding.</li>.
-<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
-<li>action-AIAnalysis: analysis.</li>.
-<li>action-AIRecognition: recognition.</li>.
-<li>action-aiReview: specifies the review action.</li>.
-<li>action-animated-graphics: specifies the animated image.</li>.
-<li>action-image-sprite: specifies the sprite sheet.</li>.
-<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
-<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
-<li>action-AIQualityControl: media quality inspection.</li>.
-<li>action-SmartSubtitles: smart subtitling.</li>.
-<li>action-exec-rules: judgment rule.</li>.
-<li>action-SmartErase: smart erasure.</li>.
+<li>input: start node.</li>
+<li>output: termination node.</li>
+<li>action-trans: transcoding.</li>
+<li>action-samplesnapshot: sampled screenshot taking.</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition.</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: animated image</li>
+<li>action-image-sprite: sprite sheet</li>
+<li>action-snapshotByTimeOffset: time point screenshot taking</li>
+<li>action-adaptive-substream: adaptive bitrate streaming.</li>
+<li>action-AIQualityControl: media quality inspection.</li>
+<li>action-SmartSubtitles: smart subtitle</li>
+<li>action-exec-rules: judgment rule</li>
+<li>action-SmartErase: intelligent removal.</li>
 
 
 
- * @method array getReardriveIndex() Obtain Rear node index array.
- * @method void setReardriveIndex(array $ReardriveIndex) Set Rear node index array.
- * @method ActivityPara getActivityPara() Obtain The parameters of a subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setActivityPara(ActivityPara $ActivityPara) Set The parameters of a subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getReardriveIndex() Obtain Rear drive node index array
+ * @method void setReardriveIndex(array $ReardriveIndex) Set Rear drive node index array
+ * @method ActivityPara getActivityPara() Obtain 
+ * @method void setActivityPara(ActivityPara $ActivityPara) Set 
  */
 class Activity extends AbstractModel
 {
     /**
      * @var string Atomic task type.
-<li>input: starting node.</li>.
-<li>output: termination node.</li>.
-<li>action-trans: specifies transcoding.</li>.
-<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
-<li>action-AIAnalysis: analysis.</li>.
-<li>action-AIRecognition: recognition.</li>.
-<li>action-aiReview: specifies the review action.</li>.
-<li>action-animated-graphics: specifies the animated image.</li>.
-<li>action-image-sprite: specifies the sprite sheet.</li>.
-<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
-<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
-<li>action-AIQualityControl: media quality inspection.</li>.
-<li>action-SmartSubtitles: smart subtitling.</li>.
-<li>action-exec-rules: judgment rule.</li>.
-<li>action-SmartErase: smart erasure.</li>.
+<li>input: start node.</li>
+<li>output: termination node.</li>
+<li>action-trans: transcoding.</li>
+<li>action-samplesnapshot: sampled screenshot taking.</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition.</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: animated image</li>
+<li>action-image-sprite: sprite sheet</li>
+<li>action-snapshotByTimeOffset: time point screenshot taking</li>
+<li>action-adaptive-substream: adaptive bitrate streaming.</li>
+<li>action-AIQualityControl: media quality inspection.</li>
+<li>action-SmartSubtitles: smart subtitle</li>
+<li>action-exec-rules: judgment rule</li>
+<li>action-SmartErase: intelligent removal.</li>
 
 
 
@@ -91,39 +89,37 @@ class Activity extends AbstractModel
     public $ActivityType;
 
     /**
-     * @var array Rear node index array.
+     * @var array Rear drive node index array
      */
     public $ReardriveIndex;
 
     /**
-     * @var ActivityPara The parameters of a subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var ActivityPara 
      */
     public $ActivityPara;
 
     /**
      * @param string $ActivityType Atomic task type.
-<li>input: starting node.</li>.
-<li>output: termination node.</li>.
-<li>action-trans: specifies transcoding.</li>.
-<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
-<li>action-AIAnalysis: analysis.</li>.
-<li>action-AIRecognition: recognition.</li>.
-<li>action-aiReview: specifies the review action.</li>.
-<li>action-animated-graphics: specifies the animated image.</li>.
-<li>action-image-sprite: specifies the sprite sheet.</li>.
-<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
-<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
-<li>action-AIQualityControl: media quality inspection.</li>.
-<li>action-SmartSubtitles: smart subtitling.</li>.
-<li>action-exec-rules: judgment rule.</li>.
-<li>action-SmartErase: smart erasure.</li>.
+<li>input: start node.</li>
+<li>output: termination node.</li>
+<li>action-trans: transcoding.</li>
+<li>action-samplesnapshot: sampled screenshot taking.</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition.</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: animated image</li>
+<li>action-image-sprite: sprite sheet</li>
+<li>action-snapshotByTimeOffset: time point screenshot taking</li>
+<li>action-adaptive-substream: adaptive bitrate streaming.</li>
+<li>action-AIQualityControl: media quality inspection.</li>
+<li>action-SmartSubtitles: smart subtitle</li>
+<li>action-exec-rules: judgment rule</li>
+<li>action-SmartErase: intelligent removal.</li>
 
 
 
-     * @param array $ReardriveIndex Rear node index array.
-     * @param ActivityPara $ActivityPara The parameters of a subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ReardriveIndex Rear drive node index array
+     * @param ActivityPara $ActivityPara 
      */
     function __construct()
     {

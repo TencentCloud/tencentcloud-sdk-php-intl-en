@@ -23,16 +23,16 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSubtitleLayoutConfigSwitch() Obtain Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0
  * @method void setSubtitleLayoutConfigSwitch(integer $SubtitleLayoutConfigSwitch) Set Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0
  * @method integer getLineSpacing() Obtain Line spacing. The value should be a positive integer.
--Value range for pixels: [0, 1000].
-- Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
+- Value range for pixels: [0, 1000].
+- Value range for percentages: [0, 100]. If left blank, the default is 0.
 
  * @method void setLineSpacing(integer $LineSpacing) Set Line spacing. The value should be a positive integer.
--Value range for pixels: [0, 1000].
-- Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
+- Value range for pixels: [0, 1000].
+- Value range for percentages: [0, 100]. If left blank, the default is 0.
 
- * @method integer getLineSpacingUnit() Obtain LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel
+ * @method integer getLineSpacingUnit() Obtain LineSpacing measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel
 
- * @method void setLineSpacingUnit(integer $LineSpacingUnit) Set LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel
+ * @method void setLineSpacingUnit(integer $LineSpacingUnit) Set LineSpacing measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel
 
  * @method string getAlignment() Obtain Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the line count. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the line count. If this is not specified, bottom alignment is used by default.
 
@@ -47,14 +47,14 @@ class SubtitleLayoutConfig extends AbstractModel
 
     /**
      * @var integer Line spacing. The value should be a positive integer.
--Value range for pixels: [0, 1000].
-- Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
+- Value range for pixels: [0, 1000].
+- Value range for percentages: [0, 100]. If left blank, the default is 0.
 
      */
     public $LineSpacing;
 
     /**
-     * @var integer LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel
+     * @var integer LineSpacing measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel
 
      */
     public $LineSpacingUnit;
@@ -68,10 +68,10 @@ class SubtitleLayoutConfig extends AbstractModel
     /**
      * @param integer $SubtitleLayoutConfigSwitch Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0
      * @param integer $LineSpacing Line spacing. The value should be a positive integer.
--Value range for pixels: [0, 1000].
-- Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
+- Value range for pixels: [0, 1000].
+- Value range for percentages: [0, 100]. If left blank, the default is 0.
 
-     * @param integer $LineSpacingUnit LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel
+     * @param integer $LineSpacingUnit LineSpacing measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel
 
      * @param string $Alignment Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the line count. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the line count. If this is not specified, bottom alignment is used by default.
      */

@@ -20,54 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input parameter type for media quality inspection.
  *
- * @method integer getDefinition() Obtain Media quality inspection template ID.
-You can directly use a preset template or customize a template in the console. The preset templates are as follows:
-- 10: Enable all quality inspection items.
-- 20: Only enable quality inspection items corresponding to format diagnosis.
-- 30: Only enable quality inspection items corresponding to no-reference scoring.
-- 40: Only enable quality inspection items corresponding to screen quality.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDefinition(integer $Definition) Set Media quality inspection template ID.
-You can directly use a preset template or customize a template in the console. The preset templates are as follows:
-- 10: Enable all quality inspection items.
-- 20: Only enable quality inspection items corresponding to format diagnosis.
-- 30: Only enable quality inspection items corresponding to no-reference scoring.
-- 40: Only enable quality inspection items corresponding to screen quality.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getChannelExtPara() Obtain The channel extension parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setChannelExtPara(string $ChannelExtPara) Set The channel extension parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getChannelExtPara() Obtain 
+ * @method void setChannelExtPara(string $ChannelExtPara) Set 
  */
 class AiQualityControlTaskInput extends AbstractModel
 {
     /**
-     * @var integer Media quality inspection template ID.
-You can directly use a preset template or customize a template in the console. The preset templates are as follows:
-- 10: Enable all quality inspection items.
-- 20: Only enable quality inspection items corresponding to format diagnosis.
-- 30: Only enable quality inspection items corresponding to no-reference scoring.
-- 40: Only enable quality inspection items corresponding to screen quality.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string The channel extension parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $ChannelExtPara;
 
     /**
-     * @param integer $Definition Media quality inspection template ID.
-You can directly use a preset template or customize a template in the console. The preset templates are as follows:
-- 10: Enable all quality inspection items.
-- 20: Only enable quality inspection items corresponding to format diagnosis.
-- 30: Only enable quality inspection items corresponding to no-reference scoring.
-- 40: Only enable quality inspection items corresponding to screen quality.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ChannelExtPara The channel extension parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Definition 
+     * @param string $ChannelExtPara 
      */
     function __construct()
     {

@@ -18,68 +18,68 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result of AI-based live stream audit
+ * Live stream AI review result
  *
- * @method string getType() Obtain The type of moderation result. Valid values:
-<li>ImagePorn</li>
-<li>ImageTerrorism</li>
-<li>ImagePolitical</li>
-<li>VoicePorn</li>
- * @method void setType(string $Type) Set The type of moderation result. Valid values:
-<li>ImagePorn</li>
-<li>ImageTerrorism</li>
-<li>ImagePolitical</li>
-<li>VoicePorn</li>
- * @method array getImagePornResultSet() Obtain Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
- * @method void setImagePornResultSet(array $ImagePornResultSet) Set Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
- * @method array getImageTerrorismResultSet() Obtain The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
- * @method void setImageTerrorismResultSet(array $ImageTerrorismResultSet) Set The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
- * @method array getImagePoliticalResultSet() Obtain The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
- * @method void setImagePoliticalResultSet(array $ImagePoliticalResultSet) Set The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
- * @method array getVoicePornResultSet() Obtain The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
- * @method void setVoicePornResultSet(array $VoicePornResultSet) Set The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
+ * @method string getType() Obtain Review result type. Valid values:
+<li>ImagePorn: image porn detection.</li>
+<li>ImageTerrorism: image terrorism.</li>
+<li>ImagePolitical: image political sensitivity.</li>
+<li>VoicePorn: sound rule violation.</li>
+ * @method void setType(string $Type) Set Review result type. Valid values:
+<li>ImagePorn: image porn detection.</li>
+<li>ImageTerrorism: image terrorism.</li>
+<li>ImagePolitical: image political sensitivity.</li>
+<li>VoicePorn: sound rule violation.</li>
+ * @method array getImagePornResultSet() Obtain Image porn detection result, valid when Type is ImagePorn.
+ * @method void setImagePornResultSet(array $ImagePornResultSet) Set Image porn detection result, valid when Type is ImagePorn.
+ * @method array getImageTerrorismResultSet() Obtain Result of image terrorism detection, valid when Type is ImageTerrorism.
+ * @method void setImageTerrorismResultSet(array $ImageTerrorismResultSet) Set Result of image terrorism detection, valid when Type is ImageTerrorism.
+ * @method array getImagePoliticalResultSet() Obtain The result of image sensitivity, valid when Type is ImagePolitical.
+ * @method void setImagePoliticalResultSet(array $ImagePoliticalResultSet) Set The result of image sensitivity, valid when Type is ImagePolitical.
+ * @method array getVoicePornResultSet() Obtain Result of sound rule violation, valid when Type is VoicePorn.
+ * @method void setVoicePornResultSet(array $VoicePornResultSet) Set Result of sound rule violation, valid when Type is VoicePorn.
  */
 class LiveStreamAiReviewResultItem extends AbstractModel
 {
     /**
-     * @var string The type of moderation result. Valid values:
-<li>ImagePorn</li>
-<li>ImageTerrorism</li>
-<li>ImagePolitical</li>
-<li>VoicePorn</li>
+     * @var string Review result type. Valid values:
+<li>ImagePorn: image porn detection.</li>
+<li>ImageTerrorism: image terrorism.</li>
+<li>ImagePolitical: image political sensitivity.</li>
+<li>VoicePorn: sound rule violation.</li>
      */
     public $Type;
 
     /**
-     * @var array Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
+     * @var array Image porn detection result, valid when Type is ImagePorn.
      */
     public $ImagePornResultSet;
 
     /**
-     * @var array The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
+     * @var array Result of image terrorism detection, valid when Type is ImageTerrorism.
      */
     public $ImageTerrorismResultSet;
 
     /**
-     * @var array The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
+     * @var array The result of image sensitivity, valid when Type is ImagePolitical.
      */
     public $ImagePoliticalResultSet;
 
     /**
-     * @var array The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
+     * @var array Result of sound rule violation, valid when Type is VoicePorn.
      */
     public $VoicePornResultSet;
 
     /**
-     * @param string $Type The type of moderation result. Valid values:
-<li>ImagePorn</li>
-<li>ImageTerrorism</li>
-<li>ImagePolitical</li>
-<li>VoicePorn</li>
-     * @param array $ImagePornResultSet Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
-     * @param array $ImageTerrorismResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
-     * @param array $ImagePoliticalResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
-     * @param array $VoicePornResultSet The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
+     * @param string $Type Review result type. Valid values:
+<li>ImagePorn: image porn detection.</li>
+<li>ImageTerrorism: image terrorism.</li>
+<li>ImagePolitical: image political sensitivity.</li>
+<li>VoicePorn: sound rule violation.</li>
+     * @param array $ImagePornResultSet Image porn detection result, valid when Type is ImagePorn.
+     * @param array $ImageTerrorismResultSet Result of image terrorism detection, valid when Type is ImageTerrorism.
+     * @param array $ImagePoliticalResultSet The result of image sensitivity, valid when Type is ImagePolitical.
+     * @param array $VoicePornResultSet Result of sound rule violation, valid when Type is VoicePorn.
      */
     function __construct()
     {

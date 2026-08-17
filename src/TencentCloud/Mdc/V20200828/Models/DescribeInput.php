@@ -50,16 +50,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setFailOver(string $FailOver) Set Input failover
 Note: this field may return `null`, indicating that no valid value was found.
- * @method DescribeInputRTMPPullSettings getRTMPPullSettings() Obtain 
- * @method void setRTMPPullSettings(DescribeInputRTMPPullSettings $RTMPPullSettings) Set 
- * @method DescribeInputRTSPPullSettings getRTSPPullSettings() Obtain 
- * @method void setRTSPPullSettings(DescribeInputRTSPPullSettings $RTSPPullSettings) Set 
- * @method DescribeInputHLSPullSettings getHLSPullSettings() Obtain 
- * @method void setHLSPullSettings(DescribeInputHLSPullSettings $HLSPullSettings) Set 
- * @method ResilientStreamConf getResilientStream() Obtain 
- * @method void setResilientStream(ResilientStreamConf $ResilientStream) Set 
+ * @method array getZones() Obtain Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+ * @method void setZones(array $Zones) Set Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+ * @method DescribeInputRTMPPullSettings getRTMPPullSettings() Obtain The input RTMP_PULL configuration information.
+ * @method void setRTMPPullSettings(DescribeInputRTMPPullSettings $RTMPPullSettings) Set The input RTMP_PULL configuration information.
+ * @method DescribeInputRTSPPullSettings getRTSPPullSettings() Obtain The RTSP_PULL configuration information entered.
+ * @method void setRTSPPullSettings(DescribeInputRTSPPullSettings $RTSPPullSettings) Set The RTSP_PULL configuration information entered.
+ * @method DescribeInputHLSPullSettings getHLSPullSettings() Obtain The input HLS-PULL configuration information.
+ * @method void setHLSPullSettings(DescribeInputHLSPullSettings $HLSPullSettings) Set The input HLS-PULL configuration information.
+ * @method ResilientStreamConf getResilientStream() Obtain Extended smooth streaming configuration information.
+ * @method void setResilientStream(ResilientStreamConf $ResilientStream) Set Extended smooth streaming configuration information.
  * @method array getSecurityGroupIds() Obtain The bound security group ID.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The bound security group ID.
+ * @method DescribeInputRISTSettings getRISTSettings() Obtain The input RIST configuration information.
+ * @method void setRISTSettings(DescribeInputRISTSettings $RISTSettings) Set The input RIST configuration information.
+ * @method array getStreamUrls() Obtain Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+ * @method void setStreamUrls(array $StreamUrls) Set Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+ * @method FailOverOption getFailOverOption() Obtain Disaster recovery configuration items
+ * @method void setFailOverOption(FailOverOption $FailOverOption) Set Disaster recovery configuration items
  */
 class DescribeInput extends AbstractModel
 {
@@ -123,22 +131,27 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $FailOver;
 
     /**
-     * @var DescribeInputRTMPPullSettings 
+     * @var array Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+     */
+    public $Zones;
+
+    /**
+     * @var DescribeInputRTMPPullSettings The input RTMP_PULL configuration information.
      */
     public $RTMPPullSettings;
 
     /**
-     * @var DescribeInputRTSPPullSettings 
+     * @var DescribeInputRTSPPullSettings The RTSP_PULL configuration information entered.
      */
     public $RTSPPullSettings;
 
     /**
-     * @var DescribeInputHLSPullSettings 
+     * @var DescribeInputHLSPullSettings The input HLS-PULL configuration information.
      */
     public $HLSPullSettings;
 
     /**
-     * @var ResilientStreamConf 
+     * @var ResilientStreamConf Extended smooth streaming configuration information.
      */
     public $ResilientStream;
 
@@ -146,6 +159,21 @@ Note: this field may return `null`, indicating that no valid value was found.
      * @var array The bound security group ID.
      */
     public $SecurityGroupIds;
+
+    /**
+     * @var DescribeInputRISTSettings The input RIST configuration information.
+     */
+    public $RISTSettings;
+
+    /**
+     * @var array Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+     */
+    public $StreamUrls;
+
+    /**
+     * @var FailOverOption Disaster recovery configuration items
+     */
+    public $FailOverOption;
 
     /**
      * @param string $InputId Input ID.
@@ -163,11 +191,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param DescribeInputRTMPSettings $RTMPSettings RTMP configuration information of an input
      * @param string $FailOver Input failover
 Note: this field may return `null`, indicating that no valid value was found.
-     * @param DescribeInputRTMPPullSettings $RTMPPullSettings 
-     * @param DescribeInputRTSPPullSettings $RTSPPullSettings 
-     * @param DescribeInputHLSPullSettings $HLSPullSettings 
-     * @param ResilientStreamConf $ResilientStream 
+     * @param array $Zones Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+     * @param DescribeInputRTMPPullSettings $RTMPPullSettings The input RTMP_PULL configuration information.
+     * @param DescribeInputRTSPPullSettings $RTSPPullSettings The RTSP_PULL configuration information entered.
+     * @param DescribeInputHLSPullSettings $HLSPullSettings The input HLS-PULL configuration information.
+     * @param ResilientStreamConf $ResilientStream Extended smooth streaming configuration information.
      * @param array $SecurityGroupIds The bound security group ID.
+     * @param DescribeInputRISTSettings $RISTSettings The input RIST configuration information.
+     * @param array $StreamUrls Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+     * @param FailOverOption $FailOverOption Disaster recovery configuration items
      */
     function __construct()
     {
@@ -234,6 +266,10 @@ Note: this field may return `null`, indicating that no valid value was found.
             $this->FailOver = $param["FailOver"];
         }
 
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
+        }
+
         if (array_key_exists("RTMPPullSettings",$param) and $param["RTMPPullSettings"] !== null) {
             $this->RTMPPullSettings = new DescribeInputRTMPPullSettings();
             $this->RTMPPullSettings->deserialize($param["RTMPPullSettings"]);
@@ -256,6 +292,25 @@ Note: this field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("RISTSettings",$param) and $param["RISTSettings"] !== null) {
+            $this->RISTSettings = new DescribeInputRISTSettings();
+            $this->RISTSettings->deserialize($param["RISTSettings"]);
+        }
+
+        if (array_key_exists("StreamUrls",$param) and $param["StreamUrls"] !== null) {
+            $this->StreamUrls = [];
+            foreach ($param["StreamUrls"] as $key => $value){
+                $obj = new StreamUrlDetail();
+                $obj->deserialize($value);
+                array_push($this->StreamUrls, $obj);
+            }
+        }
+
+        if (array_key_exists("FailOverOption",$param) and $param["FailOverOption"] !== null) {
+            $this->FailOverOption = new FailOverOption();
+            $this->FailOverOption->deserialize($param["FailOverOption"]);
         }
     }
 }

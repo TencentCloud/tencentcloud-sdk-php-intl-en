@@ -20,28 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent description result type.
  *
- * @method string getStatus() Obtain Task status, including PROCESSING, SUCCESS, and FAIL.
- * @method void setStatus(string $Status) Set Task status, including PROCESSING, SUCCESS, and FAIL.
- * @method integer getErrCode() Obtain Error code. `0`: Task successful. Other values: Task failed.
- * @method void setErrCode(integer $ErrCode) Set Error code. `0`: Task successful. Other values: Task failed.
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method integer getErrCode() Obtain Error code. 0: Task successful. Other values: Task failed.
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0: Task successful. Other values: Task failed.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskDescriptionInput getInput() Obtain Intelligent description task input.
  * @method void setInput(AiAnalysisTaskDescriptionInput $Input) Set Intelligent description task input.
- * @method AiAnalysisTaskDescriptionOutput getOutput() Obtain Intelligent description task output.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiAnalysisTaskDescriptionOutput $Output) Set Intelligent description task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskDescriptionOutput getOutput() Obtain 
+ * @method void setOutput(AiAnalysisTaskDescriptionOutput $Output) Set 
  */
 class AiAnalysisTaskDescriptionResult extends AbstractModel
 {
     /**
-     * @var string Task status, including PROCESSING, SUCCESS, and FAIL.
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var integer Error code. `0`: Task successful. Other values: Task failed.
+     * @var integer Error code. 0: Task successful. Other values: Task failed.
      */
     public $ErrCode;
 
@@ -56,18 +54,16 @@ class AiAnalysisTaskDescriptionResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskDescriptionOutput Intelligent description task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskDescriptionOutput 
      */
     public $Output;
 
     /**
-     * @param string $Status Task status, including PROCESSING, SUCCESS, and FAIL.
-     * @param integer $ErrCode Error code. `0`: Task successful. Other values: Task failed.
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
      * @param string $Message Error message.
      * @param AiAnalysisTaskDescriptionInput $Input Intelligent description task input.
-     * @param AiAnalysisTaskDescriptionOutput $Output Intelligent description task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskDescriptionOutput $Output 
      */
     function __construct()
     {

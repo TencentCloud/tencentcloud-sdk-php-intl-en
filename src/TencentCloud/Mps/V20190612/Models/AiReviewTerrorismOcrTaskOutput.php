@@ -18,48 +18,48 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information about the sensitive content detected based on OCR.
+ * Ocr text sensitive information
  *
- * @method float getConfidence() Obtain The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
- * @method void setConfidence(float $Confidence) Set The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
- * @method string getSuggestion() Obtain The suggestion for handling the sensitive information detected based on OCR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method void setSuggestion(string $Suggestion) Set The suggestion for handling the sensitive information detected based on OCR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method array getSegmentSet() Obtain The video segments that contain sensitive information detected based on OCR.
- * @method void setSegmentSet(array $SegmentSet) Set The video segments that contain sensitive information detected based on OCR.
+ * @method float getConfidence() Obtain Ocr text sensitive content score, ranging from 0 to III.
+ * @method void setConfidence(float $Confidence) Set Ocr text sensitive content score, ranging from 0 to III.
+ * @method string getSuggestion() Obtain Ocr text sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method void setSuggestion(string $Suggestion) Set Ocr text sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method array getSegmentSet() Obtain List of video segments suspected of containing sensitive content in Ocr text.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments suspected of containing sensitive content in Ocr text.
  */
 class AiReviewTerrorismOcrTaskOutput extends AbstractModel
 {
     /**
-     * @var float The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
+     * @var float Ocr text sensitive content score, ranging from 0 to III.
      */
     public $Confidence;
 
     /**
-     * @var string The suggestion for handling the sensitive information detected based on OCR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * @var string Ocr text sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public $Suggestion;
 
     /**
-     * @var array The video segments that contain sensitive information detected based on OCR.
+     * @var array List of video segments suspected of containing sensitive content in Ocr text.
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
-     * @param string $Suggestion The suggestion for handling the sensitive information detected based on OCR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-     * @param array $SegmentSet The video segments that contain sensitive information detected based on OCR.
+     * @param float $Confidence Ocr text sensitive content score, ranging from 0 to III.
+     * @param string $Suggestion Ocr text sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param array $SegmentSet List of video segments suspected of containing sensitive content in Ocr text.
      */
     function __construct()
     {

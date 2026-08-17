@@ -20,35 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Full speech recognition result.
  *
- * @method array getSegmentSet() Obtain List of full speech recognition segments.
- * @method void setSegmentSet(array $SegmentSet) Set List of full speech recognition segments.
- * @method string getSubtitlePath() Obtain Subtitles file address.
- * @method void setSubtitlePath(string $SubtitlePath) Set Subtitles file address.
- * @method TaskOutputStorage getOutputStorage() Obtain Subtitles file storage location.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Subtitles file storage location.
+ * @method array getSegmentSet() Obtain Full speech recognition segment list.
+ * @method void setSegmentSet(array $SegmentSet) Set Full speech recognition segment list.
+ * @method string getSubtitlePath() Obtain Subtitle file path.
+ * @method void setSubtitlePath(string $SubtitlePath) Set Subtitle file path.
+ * @method TaskOutputStorage getOutputStorage() Obtain Storage location of the subtitle file.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of the subtitle file.
  */
 class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel
 {
     /**
-     * @var array List of full speech recognition segments.
+     * @var array Full speech recognition segment list.
      */
     public $SegmentSet;
 
     /**
-     * @var string Subtitles file address.
+     * @var string Subtitle file path.
      */
     public $SubtitlePath;
 
     /**
-     * @var TaskOutputStorage Subtitles file storage location.
+     * @var TaskOutputStorage Storage location of the subtitle file.
      * @deprecated
      */
     public $OutputStorage;
 
     /**
-     * @param array $SegmentSet List of full speech recognition segments.
-     * @param string $SubtitlePath Subtitles file address.
-     * @param TaskOutputStorage $OutputStorage Subtitles file storage location.
+     * @param array $SegmentSet Full speech recognition segment list.
+     * @param string $SubtitlePath Subtitle file path.
+     * @param TaskOutputStorage $OutputStorage Storage location of the subtitle file.
      */
     function __construct()
     {

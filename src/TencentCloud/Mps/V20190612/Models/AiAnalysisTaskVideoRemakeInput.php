@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video deduplication task input type.
+ * Video deduplication task input type
  *
  * @method integer getDefinition() Obtain <p>ID of the intelligent video deduplication template.</p>
  * @method void setDefinition(integer $Definition) Set <p>ID of the intelligent video deduplication template.</p>

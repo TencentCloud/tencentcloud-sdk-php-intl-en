@@ -18,92 +18,92 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information about the sensitive content detected.
+ * Sensitive information
  *
- * @method float getConfidence() Obtain The confidence score for the detection of sensitive information. Value range: 0-100.
- * @method void setConfidence(float $Confidence) Set The confidence score for the detection of sensitive information. Value range: 0-100.
- * @method string getSuggestion() Obtain The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method void setSuggestion(string $Suggestion) Set The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
- * @method string getLabel() Obtain The labels for the detected sensitive content. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>police</li>
-<li>bloody</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
- * @method void setLabel(string $Label) Set The labels for the detected sensitive content. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>police</li>
-<li>bloody</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
- * @method array getSegmentSet() Obtain The video segments that contain sensitive information.
- * @method void setSegmentSet(array $SegmentSet) Set The video segments that contain sensitive information.
+ * @method float getConfidence() Obtain Video sensitive content score, ranging from 0 to 100.
+ * @method void setConfidence(float $Confidence) Set Video sensitive content score, ranging from 0 to 100.
+ * @method string getSuggestion() Obtain Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method void setSuggestion(string $Suggestion) Set Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+ * @method string getLabel() Obtain Video sensitive content detection result tag, permissible range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: sensitive flags.</li>
+<li>militant: militant.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: sensitive persons.</li>
+<li>scenario: Sensitive content.</li>
+ * @method void setLabel(string $Label) Set Video sensitive content detection result tag, permissible range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: sensitive flags.</li>
+<li>militant: militant.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: sensitive persons.</li>
+<li>scenario: Sensitive content.</li>
+ * @method array getSegmentSet() Obtain List of video segments suspected of containing sensitive content.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments suspected of containing sensitive content.
  */
 class AiReviewTerrorismTaskOutput extends AbstractModel
 {
     /**
-     * @var float The confidence score for the detection of sensitive information. Value range: 0-100.
+     * @var float Video sensitive content score, ranging from 0 to 100.
      */
     public $Confidence;
 
     /**
-     * @var string The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * @var string Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public $Suggestion;
 
     /**
-     * @var string The labels for the detected sensitive content. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>police</li>
-<li>bloody</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
+     * @var string Video sensitive content detection result tag, permissible range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: sensitive flags.</li>
+<li>militant: militant.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: sensitive persons.</li>
+<li>scenario: Sensitive content.</li>
      */
     public $Label;
 
     /**
-     * @var array The video segments that contain sensitive information.
+     * @var array List of video segments suspected of containing sensitive content.
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence The confidence score for the detection of sensitive information. Value range: 0-100.
-     * @param string $Suggestion The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-     * @param string $Label The labels for the detected sensitive content. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>police</li>
-<li>bloody</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
-     * @param array $SegmentSet The video segments that contain sensitive information.
+     * @param float $Confidence Video sensitive content score, ranging from 0 to 100.
+     * @param string $Suggestion Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param string $Label Video sensitive content detection result tag, permissible range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: sensitive flags.</li>
+<li>militant: militant.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: sensitive persons.</li>
+<li>scenario: Sensitive content.</li>
+     * @param array $SegmentSet List of video segments suspected of containing sensitive content.
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Opening and closing segments recognition result type.
  *
- * @method string getStatus() Obtain Task status, including PROCESSING, SUCCESS, and FAIL.
- * @method void setStatus(string $Status) Set Task status, including PROCESSING, SUCCESS, and FAIL.
- * @method integer getErrCode() Obtain Error code. `0`: Task successful. Other values: Task failed.
- * @method void setErrCode(integer $ErrCode) Set Error code. `0`: Task successful. Other values: Task failed.
+ * @method string getStatus() Obtain Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method void setStatus(string $Status) Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+ * @method integer getErrCode() Obtain Error code. 0: Task successful. Other values: Task failed.
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0: Task successful. Other values: Task failed.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method AiAnalysisTaskHeadTailInput getInput() Obtain Opening and closing segments recognition task input.
  * @method void setInput(AiAnalysisTaskHeadTailInput $Input) Set Opening and closing segments recognition task input.
- * @method AiAnalysisTaskHeadTailOutput getOutput() Obtain Opening and closing segments recognition task output.Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiAnalysisTaskHeadTailOutput $Output) Set Opening and closing segments recognition task output.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiAnalysisTaskHeadTailOutput getOutput() Obtain 
+ * @method void setOutput(AiAnalysisTaskHeadTailOutput $Output) Set 
  */
 class AiAnalysisTaskHeadTailResult extends AbstractModel
 {
     /**
-     * @var string Task status, including PROCESSING, SUCCESS, and FAIL.
+     * @var string Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public $Status;
 
     /**
-     * @var integer Error code. `0`: Task successful. Other values: Task failed.
+     * @var integer Error code. 0: Task successful. Other values: Task failed.
      */
     public $ErrCode;
 
@@ -54,16 +54,16 @@ class AiAnalysisTaskHeadTailResult extends AbstractModel
     public $Input;
 
     /**
-     * @var AiAnalysisTaskHeadTailOutput Opening and closing segments recognition task output.Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiAnalysisTaskHeadTailOutput 
      */
     public $Output;
 
     /**
-     * @param string $Status Task status, including PROCESSING, SUCCESS, and FAIL.
-     * @param integer $ErrCode Error code. `0`: Task successful. Other values: Task failed.
+     * @param string $Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param integer $ErrCode Error code. 0: Task successful. Other values: Task failed.
      * @param string $Message Error message.
      * @param AiAnalysisTaskHeadTailInput $Input Opening and closing segments recognition task input.
-     * @param AiAnalysisTaskHeadTailOutput $Output Opening and closing segments recognition task output.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiAnalysisTaskHeadTailOutput $Output 
      */
     function __construct()
     {
