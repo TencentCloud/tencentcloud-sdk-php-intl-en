@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDashboardSubscribe request structure.
  *
- * @method integer getId() Obtain Dashboard subscription id. Obtain the id through the [Get Dashboard Subscription List](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
- * @method void setId(integer $Id) Set Dashboard subscription id. Obtain the id through the [Get Dashboard Subscription List](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
- * @method string getDashboardId() Obtain Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) api.
- * @method void setDashboardId(string $DashboardId) Set Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) api.
+ * @method integer getId() Obtain Dashboard subscription id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
+ * @method void setId(integer $Id) Set Dashboard subscription id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
+ * @method string getDashboardId() Obtain Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+ * @method void setDashboardId(string $DashboardId) Set Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
  * @method string getName() Obtain Dashboard subscription name. Supports a maximum of 128 characters and does not support the '|' character.
  * @method void setName(string $Name) Set Dashboard subscription name. Supports a maximum of 128 characters and does not support the '|' character.
  * @method string getCron() Obtain Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDashboardSubscribeRequest extends AbstractModel
 {
     /**
-     * @var integer Dashboard subscription id. Obtain the id through the [Get Dashboard Subscription List](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
+     * @var integer Dashboard subscription id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
      */
     public $Id;
 
     /**
-     * @var string Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) api.
+     * @var string Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
      */
     public $DashboardId;
 
@@ -59,8 +59,8 @@ class ModifyDashboardSubscribeRequest extends AbstractModel
     public $SubscribeData;
 
     /**
-     * @param integer $Id Dashboard subscription id. Obtain the id through the [Get Dashboard Subscription List](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
-     * @param string $DashboardId Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) api.
+     * @param integer $Id Dashboard subscription id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
+     * @param string $DashboardId Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
      * @param string $Name Dashboard subscription name. Supports a maximum of 128 characters and does not support the '|' character.
      * @param string $Cron Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
      * @param DashboardSubscribeData $SubscribeData Dashboard subscription data.

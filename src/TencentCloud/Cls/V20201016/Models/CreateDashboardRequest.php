@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDashboard request structure.
  *
- * @method string getDashboardName() Obtain dashboard name
- * @method void setDashboardName(string $DashboardName) Set dashboard name
+ * @method string getDashboardName() Obtain Dashboard name
+ * @method void setDashboardName(string $DashboardName) Set Dashboard name
  * @method string getData() Obtain Dashboard configuration data
  * @method void setData(string $Data) Set Dashboard configuration data
  * @method array getTags() Obtain List of tag descriptions. When you specify this parameter, tags can be bound to the corresponding log topic at the same time. It supports up to 10 tag key-value pairs, and one resource can only be bound to one tag key.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDashboardRequest extends AbstractModel
 {
     /**
-     * @var string dashboard name
+     * @var string Dashboard name
      */
     public $DashboardName;
 
@@ -45,7 +45,7 @@ class CreateDashboardRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $DashboardName dashboard name
+     * @param string $DashboardName Dashboard name
      * @param string $Data Dashboard configuration data
      * @param array $Tags List of tag descriptions. When you specify this parameter, tags can be bound to the corresponding log topic at the same time. It supports up to 10 tag key-value pairs, and one resource can only be bound to one tag key.
      */

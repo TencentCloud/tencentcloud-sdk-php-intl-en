@@ -18,7 +18,7 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Description of the tag pair bound to a resource instance when it is created
+ * Description of tag pairs bound at the time of resource instance creation
  *
  * @method string getKey() Obtain Tag key.
  * @method void setKey(string $Key) Set Tag key.

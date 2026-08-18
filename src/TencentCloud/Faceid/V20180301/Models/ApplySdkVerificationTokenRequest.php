@@ -89,12 +89,12 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
  * @method string getExtra() Obtain A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
  * @method void setExtra(string $Extra) Set A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
  * @method string getSdkVersion() Obtain BASIC: Basic version (Default).
-ENHANCE: Enhance version, enable additional output of device risk level field.
+ENHANCED: Enhance version, enable additional output of device risk level field.
 PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
  * @method void setSdkVersion(string $SdkVersion) Set BASIC: Basic version (Default).
-ENHANCE: Enhance version, enable additional output of device risk level field.
+ENHANCED: Enhance version, enable additional output of device risk level field.
 PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
@@ -222,7 +222,7 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
 
     /**
      * @var string BASIC: Basic version (Default).
-ENHANCE: Enhance version, enable additional output of device risk level field.
+ENHANCED: Enhance version, enable additional output of device risk level field.
 PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
@@ -333,7 +333,7 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
 Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
      * @param string $Extra A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
      * @param string $SdkVersion BASIC: Basic version (Default).
-ENHANCE: Enhance version, enable additional output of device risk level field.
+ENHANCED: Enhance version, enable additional output of device risk level field.
 PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	

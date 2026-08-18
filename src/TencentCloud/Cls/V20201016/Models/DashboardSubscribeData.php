@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getNoticeModes() Obtain Dashboard subscription notification method.
  * @method void setNoticeModes(array $NoticeModes) Set Dashboard subscription notification method.
  * @method array getDashboardTime() Obtain Dashboard subscription time. If this field is empty, the dashboard default time is used.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDashboardTime(array $DashboardTime) Set Dashboard subscription time. If this field is empty, the dashboard default time is used.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getTemplateVariables() Obtain Dashboard subscription template variable.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTemplateVariables(array $TemplateVariables) Set Dashboard subscription template variable.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTimezone() Obtain Time zone. Refer to: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#SHANGHAI.
  * @method void setTimezone(string $Timezone) Set Time zone. Refer to: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#SHANGHAI.
  * @method string getSubscribeLanguage() Obtain Language. zh: Chinese; en: English.
@@ -48,13 +44,11 @@ class DashboardSubscribeData extends AbstractModel
 
     /**
      * @var array Dashboard subscription time. If this field is empty, the dashboard default time is used.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DashboardTime;
 
     /**
      * @var array Dashboard subscription template variable.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TemplateVariables;
 
@@ -81,9 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param array $NoticeModes Dashboard subscription notification method.
      * @param array $DashboardTime Dashboard subscription time. If this field is empty, the dashboard default time is used.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $TemplateVariables Dashboard subscription template variable.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Timezone Time zone. Refer to: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#SHANGHAI.
      * @param string $SubscribeLanguage Language. zh: Chinese; en: English.
      * @param string $JumpDomain Call link domain name. It must start with http:// or https:// and must not end with /.

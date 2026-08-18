@@ -22,32 +22,32 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Dashboard subscription name.
 Input limit:
--Cannot be empty
--Length cannot exceed 128 bytes
--Cannot contain character '|'
+-cannot be empty
+-Length cannot exceed 128 bytes.
+-Cannot contain the character '|'
  * @method void setName(string $Name) Set Dashboard subscription name.
 Input limit:
--Cannot be empty
--Length cannot exceed 128 bytes
--Cannot contain character '|'
+-cannot be empty
+-Length cannot exceed 128 bytes.
+-Cannot contain the character '|'
  * @method string getDashboardId() Obtain Dashboard Id.
--Get the dashboard Id by [searching for the dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
+-Get the dashboard Id by [searching for a dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
  * @method void setDashboardId(string $DashboardId) Set Dashboard Id.
--Get the dashboard Id by [searching for the dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
+-Get the dashboard Id by [searching for a dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
  * @method string getCron() Obtain Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
--{seconds} Value ranges from 0 to 59. 
+-{seconds} value ranges from 0 to 59. 
 -{Minutes} Value ranges from 0 to 59. 
 -Hour. Value ranges from 0 to 23. 
--{Date} value ranges from 1 to 31 AND (last day of month: L) 
+-{Date} value ranges from 1 to 31 AND (dayOfMonth last day: L) 
 -{Month} value ranges from 1 to 12. 
--Week value ranges from 0 to 6 [0:Sunday, 6:Saturday]
+-Week value ranges from 0 to 6 [0:Sunday, 6:Saturday].
  * @method void setCron(string $Cron) Set Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
--{seconds} Value ranges from 0 to 59. 
+-{seconds} value ranges from 0 to 59. 
 -{Minutes} Value ranges from 0 to 59. 
 -Hour. Value ranges from 0 to 23. 
--{Date} value ranges from 1 to 31 AND (last day of month: L) 
+-{Date} value ranges from 1 to 31 AND (dayOfMonth last day: L) 
 -{Month} value ranges from 1 to 12. 
--Week value ranges from 0 to 6 [0:Sunday, 6:Saturday]
+-Week value ranges from 0 to 6 [0:Sunday, 6:Saturday].
  * @method DashboardSubscribeData getSubscribeData() Obtain Dashboard subscription data.
  * @method void setSubscribeData(DashboardSubscribeData $SubscribeData) Set Dashboard subscription data.
  */
@@ -56,26 +56,26 @@ class CreateDashboardSubscribeRequest extends AbstractModel
     /**
      * @var string Dashboard subscription name.
 Input limit:
--Cannot be empty
--Length cannot exceed 128 bytes
--Cannot contain character '|'
+-cannot be empty
+-Length cannot exceed 128 bytes.
+-Cannot contain the character '|'
      */
     public $Name;
 
     /**
      * @var string Dashboard Id.
--Get the dashboard Id by [searching for the dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
+-Get the dashboard Id by [searching for a dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
      */
     public $DashboardId;
 
     /**
      * @var string Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
--{seconds} Value ranges from 0 to 59. 
+-{seconds} value ranges from 0 to 59. 
 -{Minutes} Value ranges from 0 to 59. 
 -Hour. Value ranges from 0 to 23. 
--{Date} value ranges from 1 to 31 AND (last day of month: L) 
+-{Date} value ranges from 1 to 31 AND (dayOfMonth last day: L) 
 -{Month} value ranges from 1 to 12. 
--Week value ranges from 0 to 6 [0:Sunday, 6:Saturday]
+-Week value ranges from 0 to 6 [0:Sunday, 6:Saturday].
      */
     public $Cron;
 
@@ -87,18 +87,18 @@ Input limit:
     /**
      * @param string $Name Dashboard subscription name.
 Input limit:
--Cannot be empty
--Length cannot exceed 128 bytes
--Cannot contain character '|'
+-cannot be empty
+-Length cannot exceed 128 bytes.
+-Cannot contain the character '|'
      * @param string $DashboardId Dashboard Id.
--Get the dashboard Id by [searching for the dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
+-Get the dashboard Id by [searching for a dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
      * @param string $Cron Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
--{seconds} Value ranges from 0 to 59. 
+-{seconds} value ranges from 0 to 59. 
 -{Minutes} Value ranges from 0 to 59. 
 -Hour. Value ranges from 0 to 23. 
--{Date} value ranges from 1 to 31 AND (last day of month: L) 
+-{Date} value ranges from 1 to 31 AND (dayOfMonth last day: L) 
 -{Month} value ranges from 1 to 12. 
--Week value ranges from 0 to 6 [0:Sunday, 6:Saturday]
+-Week value ranges from 0 to 6 [0:Sunday, 6:Saturday].
      * @param DashboardSubscribeData $SubscribeData Dashboard subscription data.
      */
     function __construct()

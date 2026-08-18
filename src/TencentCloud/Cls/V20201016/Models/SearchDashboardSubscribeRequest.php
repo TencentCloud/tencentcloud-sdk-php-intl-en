@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchDashboardSubscribe request structure.
  *
- * @method string getDashboardId() Obtain Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
- * @method void setDashboardId(string $DashboardId) Set Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+ * @method string getDashboardId() Obtain Dashboard id. Obtain the DashboardId through the [search for a dashboard.](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+ * @method void setDashboardId(string $DashboardId) Set Dashboard id. Obtain the DashboardId through the [search for a dashboard.](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
  * @method DashboardSubscribeData getSubscribeData() Obtain Dashboard subscription data.
  * @method void setSubscribeData(DashboardSubscribeData $SubscribeData) Set Dashboard subscription data.
- * @method integer getId() Obtain Dashboard subscription Id. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
- * @method void setId(integer $Id) Set Dashboard subscription Id. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
- * @method string getName() Obtain Dashboard subscription Name. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
- * @method void setName(string $Name) Set Dashboard subscription Name. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
+ * @method integer getId() Obtain Dashboard subscription Id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
+ * @method void setId(integer $Id) Set Dashboard subscription Id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
+ * @method string getName() Obtain Dashboard subscription name. Obtain the Name through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
+ * @method void setName(string $Name) Set Dashboard subscription name. Obtain the Name through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
  */
 class SearchDashboardSubscribeRequest extends AbstractModel
 {
     /**
-     * @var string Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+     * @var string Dashboard id. Obtain the DashboardId through the [search for a dashboard.](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
      */
     public $DashboardId;
 
@@ -42,20 +42,20 @@ class SearchDashboardSubscribeRequest extends AbstractModel
     public $SubscribeData;
 
     /**
-     * @var integer Dashboard subscription Id. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
+     * @var integer Dashboard subscription Id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
      */
     public $Id;
 
     /**
-     * @var string Dashboard subscription Name. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
+     * @var string Dashboard subscription name. Obtain the Name through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
      */
     public $Name;
 
     /**
-     * @param string $DashboardId Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+     * @param string $DashboardId Dashboard id. Obtain the DashboardId through the [search for a dashboard.](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
      * @param DashboardSubscribeData $SubscribeData Dashboard subscription data.
-     * @param integer $Id Dashboard subscription Id. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
-     * @param string $Name Dashboard subscription Name. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
+     * @param integer $Id Dashboard subscription Id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
+     * @param string $Name Dashboard subscription name. Obtain the Name through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
      */
     function __construct()
     {

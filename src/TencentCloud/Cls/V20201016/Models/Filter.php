@@ -18,28 +18,28 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Filter
+ * Filters
  *
- * @method string getKey() Obtain Field to be filtered
- * @method void setKey(string $Key) Set Field to be filtered
- * @method array getValues() Obtain Value to be filtered
- * @method void setValues(array $Values) Set Value to be filtered
+ * @method string getKey() Obtain Fields that need to be filtered.
+ * @method void setKey(string $Key) Set Fields that need to be filtered.
+ * @method array getValues() Obtain Values to be filtered
+ * @method void setValues(array $Values) Set Values to be filtered
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string Field to be filtered
+     * @var string Fields that need to be filtered.
      */
     public $Key;
 
     /**
-     * @var array Value to be filtered
+     * @var array Values to be filtered
      */
     public $Values;
 
     /**
-     * @param string $Key Field to be filtered
-     * @param array $Values Value to be filtered
+     * @param string $Key Fields that need to be filtered.
+     * @param array $Values Values to be filtered
      */
     function __construct()
     {

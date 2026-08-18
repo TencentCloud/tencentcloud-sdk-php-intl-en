@@ -133,6 +133,7 @@ Note:
  * @method Models\DescribeConsumersResponse DescribeConsumers(Models\DescribeConsumersRequest $req) This API is used to obtain the shipping rule information list.
  * @method Models\DescribeCosRechargesResponse DescribeCosRecharges(Models\DescribeCosRechargesRequest $req) This API is used to get COS import configuration.
  * @method Models\DescribeDashboardSubscribesResponse DescribeDashboardSubscribes(Models\DescribeDashboardSubscribesRequest $req) This API is used to obtain the dashboard subscription list, and supports paging.
+ * @method Models\DescribeDashboardsResponse DescribeDashboards(Models\DescribeDashboardsRequest $req) This API is used to obtain the dashboard.
  * @method Models\DescribeDataTransformInfoResponse DescribeDataTransformInfo(Models\DescribeDataTransformInfoRequest $req) This API is used to get the basic information of data processing tasks.
  * @method Models\DescribeDlcDeliversResponse DescribeDlcDelivers(Models\DescribeDlcDeliversRequest $req) This API is used to search alarm channel callback configuration lists.
  * @method Models\DescribeEsRechargePreviewResponse DescribeEsRechargePreview(Models\DescribeEsRechargePreviewRequest $req) Import Preview

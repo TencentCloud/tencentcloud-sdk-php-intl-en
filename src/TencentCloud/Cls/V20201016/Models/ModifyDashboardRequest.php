@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDashboard request structure.
  *
- * @method string getDashboardId() Obtain Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
- * @method void setDashboardId(string $DashboardId) Set Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
- * @method string getDashboardName() Obtain dashboard name
- * @method void setDashboardName(string $DashboardName) Set dashboard name
+ * @method string getDashboardId() Obtain Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+ * @method void setDashboardId(string $DashboardId) Set Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+ * @method string getDashboardName() Obtain Dashboard name
+ * @method void setDashboardName(string $DashboardName) Set Dashboard name
  * @method string getData() Obtain Dashboard configuration data
  * @method void setData(string $Data) Set Dashboard configuration data
  * @method array getTags() Obtain List of tag descriptions. When you specify this parameter, tags can be bound to the corresponding log topic at the same time. It supports up to 10 tag key-value pairs, and one resource can only be bound to one tag key.
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDashboardRequest extends AbstractModel
 {
     /**
-     * @var string Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+     * @var string Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
      */
     public $DashboardId;
 
     /**
-     * @var string dashboard name
+     * @var string Dashboard name
      */
     public $DashboardName;
 
@@ -52,8 +52,8 @@ class ModifyDashboardRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $DashboardId Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
-     * @param string $DashboardName dashboard name
+     * @param string $DashboardId Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+     * @param string $DashboardName Dashboard name
      * @param string $Data Dashboard configuration data
      * @param array $Tags List of tag descriptions. When you specify this parameter, tags can be bound to the corresponding log topic at the same time. It supports up to 10 tag key-value pairs, and one resource can only be bound to one tag key.
      */

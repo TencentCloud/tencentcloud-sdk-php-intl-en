@@ -32,8 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtra(string $Extra) Set <p>This parameter is a business passthrough parameter and can be omitted unless otherwise needed.</p>
  * @method string getActionList() Obtain <p>This API is used to control the sequence of actions. The action types are as follows:<br>"blink"<br>"mouth"<br>"nod"<br>"shake"<br>Choose 1-2 actions from the four.<br>Single action example: "blink"<br>Multi-action example: "blink,mouth".<br>Default value is blink.<br>Input this parameter only when SecureLevel is 2 or 4 for different action types to take effect; otherwise, the API returns an error.</p>
  * @method void setActionList(string $ActionList) Set <p>This API is used to control the sequence of actions. The action types are as follows:<br>"blink"<br>"mouth"<br>"nod"<br>"shake"<br>Choose 1-2 actions from the four.<br>Single action example: "blink"<br>Multi-action example: "blink,mouth".<br>Default value is blink.<br>Input this parameter only when SecureLevel is 2 or 4 for different action types to take effect; otherwise, the API returns an error.</p>
- * @method string getSdkVersion() Obtain <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
- * @method void setSdkVersion(string $SdkVersion) Set <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
+ * @method string getSdkVersion() Obtain BASIC: Basic version (Default).
+ENHANCED: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
+ * @method void setSdkVersion(string $SdkVersion) Set BASIC: Basic version (Default).
+ENHANCED: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
  * @method integer getRetryLimit() Obtain <p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
  * @method void setRetryLimit(integer $RetryLimit) Set <p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
  */
@@ -66,7 +74,11 @@ class GetFaceIdTokenIntlRequest extends AbstractModel
     public $ActionList;
 
     /**
-     * @var string <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
+     * @var string BASIC: Basic version (Default).
+ENHANCED: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
      */
     public $SdkVersion;
 
@@ -82,7 +94,11 @@ class GetFaceIdTokenIntlRequest extends AbstractModel
      * @param string $Image <p>The base64 code of the image for comparison, used for the "liveness comparison" mode. This parameter is required when CheckMode is "compare".</p>
      * @param string $Extra <p>This parameter is a business passthrough parameter and can be omitted unless otherwise needed.</p>
      * @param string $ActionList <p>This API is used to control the sequence of actions. The action types are as follows:<br>"blink"<br>"mouth"<br>"nod"<br>"shake"<br>Choose 1-2 actions from the four.<br>Single action example: "blink"<br>Multi-action example: "blink,mouth".<br>Default value is blink.<br>Input this parameter only when SecureLevel is 2 or 4 for different action types to take effect; otherwise, the API returns an error.</p>
-     * @param string $SdkVersion <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
+     * @param string $SdkVersion BASIC: Basic version (Default).
+ENHANCED: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
      * @param integer $RetryLimit <p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
      */
     function __construct()

@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubscribeData(DashboardSubscribeData $SubscribeData) Set Dashboard subscription data.
  * @method string getCreateTime() Obtain Creation time of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
  * @method void setCreateTime(string $CreateTime) Set Creation time of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
- * @method string getUpdateTime() Obtain Dashboard subscription record update time. Format: `YYYY-MM-DD HH:MM:SS`
- * @method void setUpdateTime(string $UpdateTime) Set Dashboard subscription record update time. Format: `YYYY-MM-DD HH:MM:SS`
- * @method string getLastTime() Obtain Time sent successfully of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
- * @method void setLastTime(string $LastTime) Set Time sent successfully of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
+ * @method string getUpdateTime() Obtain Dashboard subscription record update time. Format: YYYY-MM-DD HH:MM:SS
+ * @method void setUpdateTime(string $UpdateTime) Set Dashboard subscription record update time. Format: YYYY-MM-DD HH:MM:SS
+ * @method string getLastTime() Obtain Last time for successful sending of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
+ * @method void setLastTime(string $LastTime) Set Last time for successful sending of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
  * @method integer getUin() Obtain Cloud primary account ID.
  * @method void setUin(integer $Uin) Set Cloud primary account ID.
  * @method integer getSubUin() Obtain Sub-account ID under coud main account.
@@ -76,12 +76,12 @@ class DashboardSubscribeInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string Dashboard subscription record update time. Format: `YYYY-MM-DD HH:MM:SS`
+     * @var string Dashboard subscription record update time. Format: YYYY-MM-DD HH:MM:SS
      */
     public $UpdateTime;
 
     /**
-     * @var string Time sent successfully of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
+     * @var string Last time for successful sending of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
      */
     public $LastTime;
 
@@ -107,8 +107,8 @@ class DashboardSubscribeInfo extends AbstractModel
      * @param string $Cron Dashboard subscription time.
      * @param DashboardSubscribeData $SubscribeData Dashboard subscription data.
      * @param string $CreateTime Creation time of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
-     * @param string $UpdateTime Dashboard subscription record update time. Format: `YYYY-MM-DD HH:MM:SS`
-     * @param string $LastTime Time sent successfully of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
+     * @param string $UpdateTime Dashboard subscription record update time. Format: YYYY-MM-DD HH:MM:SS
+     * @param string $LastTime Last time for successful sending of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
      * @param integer $Uin Cloud primary account ID.
      * @param integer $SubUin Sub-account ID under coud main account.
      * @param string $LastStatus Last sending status of the dashboard subscription records. success: all sent successfully; fail: not sent; partialSuccess: partially sent successfully.
