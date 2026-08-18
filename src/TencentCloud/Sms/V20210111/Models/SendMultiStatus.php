@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFee(integer $Fee) Set Number of billable SMS messages. For billing rules, see Billing Policy.
  * @method string getSessionContext() Obtain User session content.
  * @method void setSessionContext(string $SessionContext) Set User session content.
- * @method string getCode() Obtain SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
- * @method void setCode(string $Code) Set SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
+ * @method string getCode() Obtain SMS request error code. For specific meanings, see [Error Codes](https://www.tencentcloud.com/zh/document/product/382/79029#6.-Error-Code). `Ok` will be returned for successful delivery.
+ * @method void setCode(string $Code) Set SMS request error code. For specific meanings, see [Error Codes](https://www.tencentcloud.com/zh/document/product/382/79029#6.-Error-Code). `Ok` will be returned for successful delivery.
  * @method string getMessage() Obtain SMS request error message.
  * @method void setMessage(string $Message) Set SMS request error message.
- * @method string getIsoCode() Obtain Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
- * @method void setIsoCode(string $IsoCode) Set Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+ * @method string getIsoCode() Obtain Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://www.tencentcloud.com/zh/document/product/382/8414).
+ * @method void setIsoCode(string $IsoCode) Set Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://www.tencentcloud.com/zh/document/product/382/8414).
  */
 class SendMultiStatus extends AbstractModel
 {
@@ -58,7 +58,7 @@ class SendMultiStatus extends AbstractModel
     public $SessionContext;
 
     /**
-     * @var string SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
+     * @var string SMS request error code. For specific meanings, see [Error Codes](https://www.tencentcloud.com/zh/document/product/382/79029#6.-Error-Code). `Ok` will be returned for successful delivery.
      */
     public $Code;
 
@@ -68,7 +68,7 @@ class SendMultiStatus extends AbstractModel
     public $Message;
 
     /**
-     * @var string Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+     * @var string Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://www.tencentcloud.com/zh/document/product/382/8414).
      */
     public $IsoCode;
 
@@ -77,9 +77,9 @@ class SendMultiStatus extends AbstractModel
      * @param string $PhoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
      * @param integer $Fee Number of billable SMS messages. For billing rules, see Billing Policy.
      * @param string $SessionContext User session content.
-     * @param string $Code SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
+     * @param string $Code SMS request error code. For specific meanings, see [Error Codes](https://www.tencentcloud.com/zh/document/product/382/79029#6.-Error-Code). `Ok` will be returned for successful delivery.
      * @param string $Message SMS request error message.
-     * @param string $IsoCode Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+     * @param string $IsoCode Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://www.tencentcloud.com/zh/document/product/382/8414).
      */
     function __construct()
     {
