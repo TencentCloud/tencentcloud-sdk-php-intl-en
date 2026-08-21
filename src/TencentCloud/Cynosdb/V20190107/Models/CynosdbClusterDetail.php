@@ -138,6 +138,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsOpenTDE(boolean $IsOpenTDE) Set <p>Whether to enable transparent data encryption</p>
  * @method string getRealZone() Obtain <p>Current instance availability zone</p>
  * @method void setRealZone(string $RealZone) Set <p>Current instance availability zone</p>
+ * @method string getStorageOverUse() Obtain <p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
+ * @method void setStorageOverUse(string $StorageOverUse) Set <p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
+ * @method string getStorageAutoExpand() Obtain <p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p>
+ * @method void setStorageAutoExpand(string $StorageAutoExpand) Set <p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p>
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -437,6 +441,16 @@ class CynosdbClusterDetail extends AbstractModel
     public $RealZone;
 
     /**
+     * @var string <p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
+     */
+    public $StorageOverUse;
+
+    /**
+     * @var string <p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p>
+     */
+    public $StorageAutoExpand;
+
+    /**
      * @param string $ClusterId <p>Cluster ID.</p>
      * @param string $ClusterName <p>Cluster name.</p>
      * @param string $Region <p>Region</p>
@@ -496,6 +510,8 @@ class CynosdbClusterDetail extends AbstractModel
      * @param string $ClusterLevel <p>Cluster level. For example P0, P1</p>
      * @param boolean $IsOpenTDE <p>Whether to enable transparent data encryption</p>
      * @param string $RealZone <p>Current instance availability zone</p>
+     * @param string $StorageOverUse <p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
+     * @param string $StorageAutoExpand <p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p>
      */
     function __construct()
     {
@@ -775,6 +791,14 @@ class CynosdbClusterDetail extends AbstractModel
 
         if (array_key_exists("RealZone",$param) and $param["RealZone"] !== null) {
             $this->RealZone = $param["RealZone"];
+        }
+
+        if (array_key_exists("StorageOverUse",$param) and $param["StorageOverUse"] !== null) {
+            $this->StorageOverUse = $param["StorageOverUse"];
+        }
+
+        if (array_key_exists("StorageAutoExpand",$param) and $param["StorageAutoExpand"] !== null) {
+            $this->StorageAutoExpand = $param["StorageAutoExpand"];
         }
     }
 }
