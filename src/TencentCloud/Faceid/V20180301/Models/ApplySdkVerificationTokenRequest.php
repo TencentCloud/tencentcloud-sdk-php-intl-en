@@ -42,36 +42,36 @@ Default value: 4
 3: Reflection-based liveness detection
 4: Motion- and reflection-based liveness detection
 Default value: 4
- * @method string getIdCardType() Obtain Specifies the identity document type used for authentication. valid values:.  
+ * @method string getIdCardType() Obtain Specifies the identity document type used for authentication. Valid values:
 
-1. HK (default): hong kong (china) identity card.
-2. ML: malaysian identity card.
-3. Indonesian identity card.
-4. PhilippinesVoteID: specifies the voter card in the philippines.
-5. PhilippinesDrivingLicense: specifies the driving license in philippines.
-6. PhilippinesTinID: specifies the philippines tin id.
-7. PhilippinesSSSID: specifies the SSSID in the philippines.
-8. philippines UMID: specifies the philippines UMID.
-9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-10. ThailandIDCard: specifies the thai identity card.
-11. Mainland id card.
-12. SingaporeIDCard: specifies the Singapore id card.
-13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
- * @method void setIdCardType(string $IdCardType) Set Specifies the identity document type used for authentication. valid values:.  
+1. HK (default): Hong Kong (China) Identity Card.
+2. ML: Malaysia Identity Card.
+3. IndonesiaIDCard: Indonesia Identity Card.
+4. PhilippinesVoteID: Philippines Voter's ID.
+5. PhilippinesDrivingLicense: Philippines Driving License.
+6. PhilippinesTinID: Philippines TIN ID.
+7. PhilippinesSSSID: Philippines SSS ID.
+8. PhilippinesUMID: Philippines UMID.
+9. MLIDPassport: Passports of Hong Kong (China), Macao (China), and Taiwan (China), as well as overseas regions.
+10. ThailandIDCard: Thailand Identity Card.
+11. MainlandIDCard: Chinese Mainland Identity Card.
+12. SingaporeIDCard: Singapore Identity Card.
+13. HMTPermit: Travel Permit for Hong Kong (China), Macao (China), and Taiwan (China).
+ * @method void setIdCardType(string $IdCardType) Set Specifies the identity document type used for authentication. Valid values:
 
-1. HK (default): hong kong (china) identity card.
-2. ML: malaysian identity card.
-3. Indonesian identity card.
-4. PhilippinesVoteID: specifies the voter card in the philippines.
-5. PhilippinesDrivingLicense: specifies the driving license in philippines.
-6. PhilippinesTinID: specifies the philippines tin id.
-7. PhilippinesSSSID: specifies the SSSID in the philippines.
-8. philippines UMID: specifies the philippines UMID.
-9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-10. ThailandIDCard: specifies the thai identity card.
-11. Mainland id card.
-12. SingaporeIDCard: specifies the Singapore id card.
-13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
+1. HK (default): Hong Kong (China) Identity Card.
+2. ML: Malaysia Identity Card.
+3. IndonesiaIDCard: Indonesia Identity Card.
+4. PhilippinesVoteID: Philippines Voter's ID.
+5. PhilippinesDrivingLicense: Philippines Driving License.
+6. PhilippinesTinID: Philippines TIN ID.
+7. PhilippinesSSSID: Philippines SSS ID.
+8. PhilippinesUMID: Philippines UMID.
+9. MLIDPassport: Passports of Hong Kong (China), Macao (China), and Taiwan (China), as well as overseas regions.
+10. ThailandIDCard: Thailand Identity Card.
+11. MainlandIDCard: Chinese Mainland Identity Card.
+12. SingaporeIDCard: Singapore Identity Card.
+13. HMTPermit: Travel Permit for Hong Kong (China), Macao (China), and Taiwan (China).
  * @method string getCompareImage() Obtain The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
  * @method void setCompareImage(string $CompareImage) Set The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
  * @method boolean getNeedVerifyIdCard() Obtain Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
@@ -146,6 +146,9 @@ false : Expired HKID is rejected and cannot enter the liveness process.
  </p><p>Enumeration values:</p><ul><li>true: Album photo upload for verification enabled</li><li>false: Album photo upload for verification disabled</li></ul><p>Default value: false</p>
  * @method void setAllowUploadPhoto(boolean $AllowUploadPhoto) Set <p>Whether uploading photos from the album is permitted for verification during the ID validation phase (prohibited when single-angle multi-image forgery detection is enabled)
  </p><p>Enumeration values:</p><ul><li>true: Album photo upload for verification enabled</li><li>false: Album photo upload for verification disabled</li></ul><p>Default value: false</p>
+ * @method boolean getEnableBotBgDetection() Obtain <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+ * @method void setEnableBotBgDetection(boolean $EnableBotBgDetection) Set <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
  */
 class ApplySdkVerificationTokenRequest extends AbstractModel
 {
@@ -169,21 +172,21 @@ Default value: 4
     public $SecurityLevel;
 
     /**
-     * @var string Specifies the identity document type used for authentication. valid values:.  
+     * @var string Specifies the identity document type used for authentication. Valid values:
 
-1. HK (default): hong kong (china) identity card.
-2. ML: malaysian identity card.
-3. Indonesian identity card.
-4. PhilippinesVoteID: specifies the voter card in the philippines.
-5. PhilippinesDrivingLicense: specifies the driving license in philippines.
-6. PhilippinesTinID: specifies the philippines tin id.
-7. PhilippinesSSSID: specifies the SSSID in the philippines.
-8. philippines UMID: specifies the philippines UMID.
-9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-10. ThailandIDCard: specifies the thai identity card.
-11. Mainland id card.
-12. SingaporeIDCard: specifies the Singapore id card.
-13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
+1. HK (default): Hong Kong (China) Identity Card.
+2. ML: Malaysia Identity Card.
+3. IndonesiaIDCard: Indonesia Identity Card.
+4. PhilippinesVoteID: Philippines Voter's ID.
+5. PhilippinesDrivingLicense: Philippines Driving License.
+6. PhilippinesTinID: Philippines TIN ID.
+7. PhilippinesSSSID: Philippines SSS ID.
+8. PhilippinesUMID: Philippines UMID.
+9. MLIDPassport: Passports of Hong Kong (China), Macao (China), and Taiwan (China), as well as overseas regions.
+10. ThailandIDCard: Thailand Identity Card.
+11. MainlandIDCard: Chinese Mainland Identity Card.
+12. SingaporeIDCard: Singapore Identity Card.
+13. HMTPermit: Travel Permit for Hong Kong (China), Macao (China), and Taiwan (China).
      */
     public $IdCardType;
 
@@ -298,6 +301,12 @@ false : Expired HKID is rejected and cannot enter the liveness process.
     public $AllowUploadPhoto;
 
     /**
+     * @var boolean <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+     */
+    public $EnableBotBgDetection;
+
+    /**
      * @param integer $CheckMode The verification mode. Valid values:
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
@@ -309,21 +318,21 @@ Default value: 1
 3: Reflection-based liveness detection
 4: Motion- and reflection-based liveness detection
 Default value: 4
-     * @param string $IdCardType Specifies the identity document type used for authentication. valid values:.  
+     * @param string $IdCardType Specifies the identity document type used for authentication. Valid values:
 
-1. HK (default): hong kong (china) identity card.
-2. ML: malaysian identity card.
-3. Indonesian identity card.
-4. PhilippinesVoteID: specifies the voter card in the philippines.
-5. PhilippinesDrivingLicense: specifies the driving license in philippines.
-6. PhilippinesTinID: specifies the philippines tin id.
-7. PhilippinesSSSID: specifies the SSSID in the philippines.
-8. philippines UMID: specifies the philippines UMID.
-9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-10. ThailandIDCard: specifies the thai identity card.
-11. Mainland id card.
-12. SingaporeIDCard: specifies the Singapore id card.
-13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
+1. HK (default): Hong Kong (China) Identity Card.
+2. ML: Malaysia Identity Card.
+3. IndonesiaIDCard: Indonesia Identity Card.
+4. PhilippinesVoteID: Philippines Voter's ID.
+5. PhilippinesDrivingLicense: Philippines Driving License.
+6. PhilippinesTinID: Philippines TIN ID.
+7. PhilippinesSSSID: Philippines SSS ID.
+8. PhilippinesUMID: Philippines UMID.
+9. MLIDPassport: Passports of Hong Kong (China), Macao (China), and Taiwan (China), as well as overseas regions.
+10. ThailandIDCard: Thailand Identity Card.
+11. MainlandIDCard: Chinese Mainland Identity Card.
+12. SingaporeIDCard: Singapore Identity Card.
+13. HMTPermit: Travel Permit for Hong Kong (China), Macao (China), and Taiwan (China).
      * @param string $CompareImage The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
      * @param boolean $NeedVerifyIdCard Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
      * @param boolean $DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
@@ -361,6 +370,7 @@ false : Expired HKID is rejected and cannot enter the liveness process.
      * @param boolean $HideProgressBar <p>Controls whether to hide the top progress bar across all pages of the entire process </p><p>Enumeration values:</p><ul><li>true: Do not display the progress bar</li><li>false: Display the progress bar</li></ul><p>Default value: false</p>
      * @param boolean $AllowUploadPhoto <p>Whether uploading photos from the album is permitted for verification during the ID validation phase (prohibited when single-angle multi-image forgery detection is enabled)
  </p><p>Enumeration values:</p><ul><li>true: Album photo upload for verification enabled</li><li>false: Album photo upload for verification disabled</li></ul><p>Default value: false</p>
+     * @param boolean $EnableBotBgDetection <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
      */
     function __construct()
     {
@@ -457,6 +467,10 @@ false : Expired HKID is rejected and cannot enter the liveness process.
 
         if (array_key_exists("AllowUploadPhoto",$param) and $param["AllowUploadPhoto"] !== null) {
             $this->AllowUploadPhoto = $param["AllowUploadPhoto"];
+        }
+
+        if (array_key_exists("EnableBotBgDetection",$param) and $param["EnableBotBgDetection"] !== null) {
+            $this->EnableBotBgDetection = $param["EnableBotBgDetection"];
         }
     }
 }

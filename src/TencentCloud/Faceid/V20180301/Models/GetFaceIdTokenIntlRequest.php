@@ -44,6 +44,9 @@ PLUS: Plus version, enable additional output of device risk level and attack typ
 Please contact us to access enhance version & plus version.	
  * @method integer getRetryLimit() Obtain <p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
  * @method void setRetryLimit(integer $RetryLimit) Set <p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
+ * @method boolean getEnableBotBgDetection() Obtain <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+ * @method void setEnableBotBgDetection(boolean $EnableBotBgDetection) Set <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
  */
 class GetFaceIdTokenIntlRequest extends AbstractModel
 {
@@ -88,6 +91,12 @@ Please contact us to access enhance version & plus version.
     public $RetryLimit;
 
     /**
+     * @var boolean <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+     */
+    public $EnableBotBgDetection;
+
+    /**
      * @param string $CheckMode <p>Indicates the detection mode. Parameter values as follows:<br>"liveness": liveness detection only;<br>"compare": liveness detection + face comparison;<br>Default value: "liveness".</p>
      * @param string $SecureLevel <p>Indicates the security level of authentication. Security levels are divided into:<br>"1": silent liveness;<br>"2": action liveness detection;<br>"3": light liveness;<br>"4": action + light liveness;<br>Default value is "4".</p>
 **Note:** Security level increases from `1` to `4`, with `4` providing the highest security.
@@ -100,6 +109,7 @@ PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
      * @param integer $RetryLimit <p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
+     * @param boolean $EnableBotBgDetection <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
      */
     function __construct()
     {
@@ -140,6 +150,10 @@ Please contact us to access enhance version & plus version.
 
         if (array_key_exists("RetryLimit",$param) and $param["RetryLimit"] !== null) {
             $this->RetryLimit = $param["RetryLimit"];
+        }
+
+        if (array_key_exists("EnableBotBgDetection",$param) and $param["EnableBotBgDetection"] !== null) {
+            $this->EnableBotBgDetection = $param["EnableBotBgDetection"];
         }
     }
 }
