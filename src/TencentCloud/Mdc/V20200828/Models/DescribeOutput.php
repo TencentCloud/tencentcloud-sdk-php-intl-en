@@ -54,20 +54,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setRTMPPullSettings(DescribeOutputRTMPPullSettings $RTMPPullSettings) Set RTMP pull configuration of the output
 Note: This field may return `null`, indicating that no valid value was found.
- * @method array getAllowIpList() Obtain CIDR allowlist
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setAllowIpList(array $AllowIpList) Set CIDR allowlist
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method DescribeOutputRTSPPullSettings getRTSPPullSettings() Obtain 
- * @method void setRTSPPullSettings(DescribeOutputRTSPPullSettings $RTSPPullSettings) Set 
- * @method DescribeOutputHLSPullSettings getHLSPullSettings() Obtain 
- * @method void setHLSPullSettings(DescribeOutputHLSPullSettings $HLSPullSettings) Set 
- * @method integer getMaxConcurrent() Obtain 
- * @method void setMaxConcurrent(integer $MaxConcurrent) Set 
+ * @method array getAllowIpList() Obtain CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
+ * @method void setAllowIpList(array $AllowIpList) Set CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
+ * @method DescribeOutputRTSPPullSettings getRTSPPullSettings() Obtain The output RTSP streaming configuration information.
+ * @method void setRTSPPullSettings(DescribeOutputRTSPPullSettings $RTSPPullSettings) Set The output RTSP streaming configuration information.
+ * @method DescribeOutputHLSPullSettings getHLSPullSettings() Obtain Output the HLS streaming configuration information.
+ * @method void setHLSPullSettings(DescribeOutputHLSPullSettings $HLSPullSettings) Set Output the HLS streaming configuration information.
+ * @method integer getMaxConcurrent() Obtain The maximum number of concurrent streams is 4, with a default of 4.
+ * @method void setMaxConcurrent(integer $MaxConcurrent) Set The maximum number of concurrent streams is 4, with a default of 4.
  * @method array getSecurityGroupIds() Obtain The bound security group IDs.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The bound security group IDs.
+ * @method array getZones() Obtain The available zone currently only supports a maximum of one output.
+ * @method void setZones(array $Zones) Set The available zone currently only supports a maximum of one output.
+ * @method DescribeOutputRISTSettings getRISTSettings() Obtain Output RIST configuration information.
+ * @method void setRISTSettings(DescribeOutputRISTSettings $RISTSettings) Set Output RIST configuration information.
+ * @method PidSelector getPidSelector() Obtain For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+ * @method void setPidSelector(PidSelector $PidSelector) Set For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+ * @method string getOutputKind() Obtain Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+ * @method void setOutputKind(string $OutputKind) Set Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+ * @method array getStreamUrls() Obtain Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+ * @method void setStreamUrls(array $StreamUrls) Set Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+ * @method StreamSelector getStreamSelector() Obtain For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+ * @method void setStreamSelector(StreamSelector $StreamSelector) Set For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
  */
 class DescribeOutput extends AbstractModel
 {
@@ -133,24 +141,22 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $RTMPPullSettings;
 
     /**
-     * @var array CIDR allowlist
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
      */
     public $AllowIpList;
 
     /**
-     * @var DescribeOutputRTSPPullSettings 
+     * @var DescribeOutputRTSPPullSettings The output RTSP streaming configuration information.
      */
     public $RTSPPullSettings;
 
     /**
-     * @var DescribeOutputHLSPullSettings 
+     * @var DescribeOutputHLSPullSettings Output the HLS streaming configuration information.
      */
     public $HLSPullSettings;
 
     /**
-     * @var integer 
+     * @var integer The maximum number of concurrent streams is 4, with a default of 4.
      */
     public $MaxConcurrent;
 
@@ -158,6 +164,37 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @var array The bound security group IDs.
      */
     public $SecurityGroupIds;
+
+    /**
+     * @var array The available zone currently only supports a maximum of one output.
+     */
+    public $Zones;
+
+    /**
+     * @var DescribeOutputRISTSettings Output RIST configuration information.
+     */
+    public $RISTSettings;
+
+    /**
+     * @var PidSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     * @deprecated
+     */
+    public $PidSelector;
+
+    /**
+     * @var string Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+     */
+    public $OutputKind;
+
+    /**
+     * @var array Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+     */
+    public $StreamUrls;
+
+    /**
+     * @var StreamSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     */
+    public $StreamSelector;
 
     /**
      * @param string $OutputId Output ID.
@@ -177,13 +214,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param DescribeOutputRTMPPullSettings $RTMPPullSettings RTMP pull configuration of the output
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param array $AllowIpList CIDR allowlist
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param DescribeOutputRTSPPullSettings $RTSPPullSettings 
-     * @param DescribeOutputHLSPullSettings $HLSPullSettings 
-     * @param integer $MaxConcurrent 
+     * @param array $AllowIpList CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
+     * @param DescribeOutputRTSPPullSettings $RTSPPullSettings The output RTSP streaming configuration information.
+     * @param DescribeOutputHLSPullSettings $HLSPullSettings Output the HLS streaming configuration information.
+     * @param integer $MaxConcurrent The maximum number of concurrent streams is 4, with a default of 4.
      * @param array $SecurityGroupIds The bound security group IDs.
+     * @param array $Zones The available zone currently only supports a maximum of one output.
+     * @param DescribeOutputRISTSettings $RISTSettings Output RIST configuration information.
+     * @param PidSelector $PidSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     * @param string $OutputKind Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+     * @param array $StreamUrls Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+     * @param StreamSelector $StreamSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
      */
     function __construct()
     {
@@ -271,6 +312,38 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("RISTSettings",$param) and $param["RISTSettings"] !== null) {
+            $this->RISTSettings = new DescribeOutputRISTSettings();
+            $this->RISTSettings->deserialize($param["RISTSettings"]);
+        }
+
+        if (array_key_exists("PidSelector",$param) and $param["PidSelector"] !== null) {
+            $this->PidSelector = new PidSelector();
+            $this->PidSelector->deserialize($param["PidSelector"]);
+        }
+
+        if (array_key_exists("OutputKind",$param) and $param["OutputKind"] !== null) {
+            $this->OutputKind = $param["OutputKind"];
+        }
+
+        if (array_key_exists("StreamUrls",$param) and $param["StreamUrls"] !== null) {
+            $this->StreamUrls = [];
+            foreach ($param["StreamUrls"] as $key => $value){
+                $obj = new StreamUrlDetail();
+                $obj->deserialize($value);
+                array_push($this->StreamUrls, $obj);
+            }
+        }
+
+        if (array_key_exists("StreamSelector",$param) and $param["StreamSelector"] !== null) {
+            $this->StreamSelector = new StreamSelector();
+            $this->StreamSelector->deserialize($param["StreamSelector"]);
         }
     }
 }
