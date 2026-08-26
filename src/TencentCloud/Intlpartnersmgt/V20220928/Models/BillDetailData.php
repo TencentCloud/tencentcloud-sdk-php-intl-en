@@ -18,304 +18,300 @@ namespace TencentCloud\Intlpartnersmgt\V20220928\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Customer bill details
+ * Customer Bill Details
  *
- * @method integer getPayerAccountId() Obtain reseller account.
- * @method void setPayerAccountId(integer $PayerAccountId) Set reseller account.
- * @method integer getOwnerAccountId() Obtain Subaccount.
- * @method void setOwnerAccountId(integer $OwnerAccountId) Set Subaccount.
- * @method integer getOperatorAccountId() Obtain Operator account.
- * @method void setOperatorAccountId(integer $OperatorAccountId) Set Operator account.
- * @method string getProductName() Obtain Product name.
- * @method void setProductName(string $ProductName) Set Product name.
- * @method string getBillingMode() Obtain Billing mode
-.
-Monthly subscription (annual and monthly).
-Pay-As-You-Go resources.
-Standard ri reserved instance.
- * @method void setBillingMode(string $BillingMode) Set Billing mode
-.
-Monthly subscription (annual and monthly).
-Pay-As-You-Go resources.
-Standard ri reserved instance.
- * @method string getProjectName() Obtain Project name.
-
- * @method void setProjectName(string $ProjectName) Set Project name.
-
- * @method string getRegion() Obtain Resource region.
- * @method void setRegion(string $Region) Set Resource region.
- * @method string getAvailabilityZone() Obtain Resource available zone.
- * @method void setAvailabilityZone(string $AvailabilityZone) Set Resource available zone.
- * @method string getInstanceId() Obtain Instance id.
- * @method void setInstanceId(string $InstanceId) Set Instance id.
- * @method string getInstanceName() Obtain Instance name.
- * @method void setInstanceName(string $InstanceName) Set Instance name.
- * @method string getSubProductName() Obtain Sub-Product name
-.
-
- * @method void setSubProductName(string $SubProductName) Set Sub-Product name
-.
-
- * @method string getTransactionType() Obtain Settlement type.
- * @method void setTransactionType(string $TransactionType) Set Settlement type.
- * @method string getTransactionId() Obtain <Transaction id>.
- * @method void setTransactionId(string $TransactionId) Set <Transaction id>.
- * @method string getTransactionTime() Obtain Settlement time.
-
- * @method void setTransactionTime(string $TransactionTime) Set Settlement time.
-
- * @method string getUsageStartTime() Obtain <Resource start time>.
- * @method void setUsageStartTime(string $UsageStartTime) Set <Resource start time>.
- * @method string getUsageEndTime() Obtain <Resource end usage time>.
- * @method void setUsageEndTime(string $UsageEndTime) Set <Resource end usage time>.
- * @method string getComponentType() Obtain Component.
- * @method void setComponentType(string $ComponentType) Set Component.
- * @method string getComponentName() Obtain Component name.
- * @method void setComponentName(string $ComponentName) Set Component name.
- * @method string getComponentListPrice() Obtain Component list price.
- * @method void setComponentListPrice(string $ComponentListPrice) Set Component list price.
- * @method string getComponentPriceMeasurementUnit() Obtain Price unit.
- * @method void setComponentPriceMeasurementUnit(string $ComponentPriceMeasurementUnit) Set Price unit.
- * @method string getComponentUsage() Obtain Component usage.
- * @method void setComponentUsage(string $ComponentUsage) Set Component usage.
- * @method string getComponentUsageUnit() Obtain Component usage unit.
- * @method void setComponentUsageUnit(string $ComponentUsageUnit) Set Component usage unit.
- * @method string getUsageDuration() Obtain Resource usage duration.
- * @method void setUsageDuration(string $UsageDuration) Set Resource usage duration.
- * @method string getDurationUnit() Obtain duration unit.
- * @method void setDurationUnit(string $DurationUnit) Set duration unit.
- * @method string getOriginalCost() Obtain Total original price.
-Original cost = component list price * component usage * usage duration.
- * @method void setOriginalCost(string $OriginalCost) Set Total original price.
-Original cost = component list price * component usage * usage duration.
- * @method string getDiscountRate() Obtain Discount (default is 1) - abandoned.
- * @method void setDiscountRate(string $DiscountRate) Set Discount (default is 1) - abandoned.
- * @method string getCurrency() Obtain Currency.
- * @method void setCurrency(string $Currency) Set Currency.
- * @method string getTotalAmountAfterDiscount() Obtain Total cost after discount.
- * @method void setTotalAmountAfterDiscount(string $TotalAmountAfterDiscount) Set Total cost after discount.
- * @method string getVoucherDeduction() Obtain Voucher deduction amount.
- * @method void setVoucherDeduction(string $VoucherDeduction) Set Voucher deduction amount.
- * @method string getTotalCost() Obtain = Total Amount After Discount - Voucher Deduction
- * @method void setTotalCost(string $TotalCost) Set = Total Amount After Discount - Voucher Deduction
- * @method string getId() Obtain Identifier (id).
- * @method void setId(string $Id) Set Identifier (id).
- * @method string getCustomerDiscountRate() Obtain customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
- * @method void setCustomerDiscountRate(string $CustomerDiscountRate) Set customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+ * @method integer getPayerAccountId() Obtain <p> Distributor account</p>
+ * @method void setPayerAccountId(integer $PayerAccountId) Set <p> Distributor account</p>
+ * @method integer getOwnerAccountId() Obtain <p>Sub-Customer account</p>
+ * @method void setOwnerAccountId(integer $OwnerAccountId) Set <p>Sub-Customer account</p>
+ * @method integer getOperatorAccountId() Obtain <p>Operator account</p>
+ * @method void setOperatorAccountId(integer $OperatorAccountId) Set <p>Operator account</p>
+ * @method string getProductName() Obtain <p>Product name.</p>
+ * @method void setProductName(string $ProductName) Set <p>Product name.</p>
+ * @method string getBillingMode() Obtain <p>Billing mode</p><p>Enumeration values:</p><ul><li>yearly/monthly subscription</li><li>Pay-As-You-Go resources</li></ul>
+ * @method void setBillingMode(string $BillingMode) Set <p>Billing mode</p><p>Enumeration values:</p><ul><li>yearly/monthly subscription</li><li>Pay-As-You-Go resources</li></ul>
+ * @method string getProjectName() Obtain <p>Project name.</p>
+ * @method void setProjectName(string $ProjectName) Set <p>Project name.</p>
+ * @method string getRegion() Obtain <p>Associated region of the resource</p>
+ * @method void setRegion(string $Region) Set <p>Associated region of the resource</p>
+ * @method string getAvailabilityZone() Obtain <p>Availability zone of resource</p>
+ * @method void setAvailabilityZone(string $AvailabilityZone) Set <p>Availability zone of resource</p>
+ * @method string getInstanceId() Obtain <p>Instance ID.</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
+ * @method string getInstanceName() Obtain <p>Instance name.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p>
+ * @method string getSubProductName() Obtain <p>Sub-product name</p>
+ * @method void setSubProductName(string $SubProductName) Set <p>Sub-product name</p>
+ * @method string getTransactionType() Obtain <p>Settlement type</p>
+ * @method void setTransactionType(string $TransactionType) Set <p>Settlement type</p>
+ * @method string getTransactionId() Obtain <p>Transaction log ID</p>
+ * @method void setTransactionId(string $TransactionId) Set <p>Transaction log ID</p>
+ * @method string getTransactionTime() Obtain <p>Time of settlement</p>
+ * @method void setTransactionTime(string $TransactionTime) Set <p>Time of settlement</p>
+ * @method string getUsageStartTime() Obtain <p>Resource usage start time</p>
+ * @method void setUsageStartTime(string $UsageStartTime) Set <p>Resource usage start time</p>
+ * @method string getUsageEndTime() Obtain <p>Resource usage end time</p>
+ * @method void setUsageEndTime(string $UsageEndTime) Set <p>Resource usage end time</p>
+ * @method string getComponentType() Obtain <p>Component</p>
+ * @method void setComponentType(string $ComponentType) Set <p>Component</p>
+ * @method string getComponentName() Obtain <p>Component name</p>
+ * @method void setComponentName(string $ComponentName) Set <p>Component name</p>
+ * @method string getComponentListPrice() Obtain <p>Component list price</p>
+ * @method void setComponentListPrice(string $ComponentListPrice) Set <p>Component list price</p>
+ * @method string getComponentPriceMeasurementUnit() Obtain <p>Price unit</p>
+ * @method void setComponentPriceMeasurementUnit(string $ComponentPriceMeasurementUnit) Set <p>Price unit</p>
+ * @method string getComponentUsage() Obtain <p>Component usage</p>
+ * @method void setComponentUsage(string $ComponentUsage) Set <p>Component usage</p>
+ * @method string getComponentUsageUnit() Obtain <p>Component usage unit</p>
+ * @method void setComponentUsageUnit(string $ComponentUsageUnit) Set <p>Component usage unit</p>
+ * @method string getUsageDuration() Obtain <p>Resource usage duration</p>
+ * @method void setUsageDuration(string $UsageDuration) Set <p>Resource usage duration</p>
+ * @method string getDurationUnit() Obtain <p>Duration unit</p>
+ * @method void setDurationUnit(string $DurationUnit) Set <p>Duration unit</p>
+ * @method string getOriginalCost() Obtain <p>Original total price<br>Original Cost = Component List Price * Component Usage * Usage Duration</p>
+ * @method void setOriginalCost(string $OriginalCost) Set <p>Original total price<br>Original Cost = Component List Price * Component Usage * Usage Duration</p>
+ * @method string getDiscountRate() Obtain <p>Discount (default: 1) - abandoned</p>
+ * @method void setDiscountRate(string $DiscountRate) Set <p>Discount (default: 1) - abandoned</p>
+ * @method string getCurrency() Obtain <p>Currency.</p>
+ * @method void setCurrency(string $Currency) Set <p>Currency.</p>
+ * @method string getTotalAmountAfterDiscount() Obtain <p>Total cost after discount</p>
+ * @method void setTotalAmountAfterDiscount(string $TotalAmountAfterDiscount) Set <p>Total cost after discount</p>
+ * @method string getVoucherDeduction() Obtain <p>Voucher deducted amount</p>
+ * @method void setVoucherDeduction(string $VoucherDeduction) Set <p>Voucher deducted amount</p>
+ * @method string getTotalCost() Obtain <p>= Total Amount After Discount - Voucher Deduction</p>
+ * @method void setTotalCost(string $TotalCost) Set <p>= Total Amount After Discount - Voucher Deduction</p>
+ * @method string getId() Obtain <p>id</p>
+ * @method void setId(string $Id) Set <p>id</p>
+ * @method string getCustomerDiscountRate() Obtain <p>customer discount rate. The discount rate for customers of resellers, set by the reseller. The default value is 1.</p>
+ * @method void setCustomerDiscountRate(string $CustomerDiscountRate) Set <p>customer discount rate. The discount rate for customers of resellers, set by the reseller. The default value is 1.</p>
+ * @method string getBusinessCode() Obtain <p>Product code</p>
+ * @method void setBusinessCode(string $BusinessCode) Set <p>Product code</p>
+ * @method string getProductCode() Obtain <p>Sub-product code</p>
+ * @method void setProductCode(string $ProductCode) Set <p>Sub-product code</p>
+ * @method string getComponentCode() Obtain <p>Component type code</p>
+ * @method void setComponentCode(string $ComponentCode) Set <p>Component type code</p>
+ * @method string getItemCode() Obtain <p>Component code</p>
+ * @method void setItemCode(string $ItemCode) Set <p>Component code</p>
  */
 class BillDetailData extends AbstractModel
 {
     /**
-     * @var integer reseller account.
+     * @var integer <p> Distributor account</p>
      */
     public $PayerAccountId;
 
     /**
-     * @var integer Subaccount.
+     * @var integer <p>Sub-Customer account</p>
      */
     public $OwnerAccountId;
 
     /**
-     * @var integer Operator account.
+     * @var integer <p>Operator account</p>
      */
     public $OperatorAccountId;
 
     /**
-     * @var string Product name.
+     * @var string <p>Product name.</p>
      */
     public $ProductName;
 
     /**
-     * @var string Billing mode
-.
-Monthly subscription (annual and monthly).
-Pay-As-You-Go resources.
-Standard ri reserved instance.
+     * @var string <p>Billing mode</p><p>Enumeration values:</p><ul><li>yearly/monthly subscription</li><li>Pay-As-You-Go resources</li></ul>
      */
     public $BillingMode;
 
     /**
-     * @var string Project name.
-
+     * @var string <p>Project name.</p>
      */
     public $ProjectName;
 
     /**
-     * @var string Resource region.
+     * @var string <p>Associated region of the resource</p>
      */
     public $Region;
 
     /**
-     * @var string Resource available zone.
+     * @var string <p>Availability zone of resource</p>
      */
     public $AvailabilityZone;
 
     /**
-     * @var string Instance id.
+     * @var string <p>Instance ID.</p>
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name.
+     * @var string <p>Instance name.</p>
      */
     public $InstanceName;
 
     /**
-     * @var string Sub-Product name
-.
-
+     * @var string <p>Sub-product name</p>
      */
     public $SubProductName;
 
     /**
-     * @var string Settlement type.
+     * @var string <p>Settlement type</p>
      */
     public $TransactionType;
 
     /**
-     * @var string <Transaction id>.
+     * @var string <p>Transaction log ID</p>
      */
     public $TransactionId;
 
     /**
-     * @var string Settlement time.
-
+     * @var string <p>Time of settlement</p>
      */
     public $TransactionTime;
 
     /**
-     * @var string <Resource start time>.
+     * @var string <p>Resource usage start time</p>
      */
     public $UsageStartTime;
 
     /**
-     * @var string <Resource end usage time>.
+     * @var string <p>Resource usage end time</p>
      */
     public $UsageEndTime;
 
     /**
-     * @var string Component.
+     * @var string <p>Component</p>
      */
     public $ComponentType;
 
     /**
-     * @var string Component name.
+     * @var string <p>Component name</p>
      */
     public $ComponentName;
 
     /**
-     * @var string Component list price.
+     * @var string <p>Component list price</p>
      */
     public $ComponentListPrice;
 
     /**
-     * @var string Price unit.
+     * @var string <p>Price unit</p>
      */
     public $ComponentPriceMeasurementUnit;
 
     /**
-     * @var string Component usage.
+     * @var string <p>Component usage</p>
      */
     public $ComponentUsage;
 
     /**
-     * @var string Component usage unit.
+     * @var string <p>Component usage unit</p>
      */
     public $ComponentUsageUnit;
 
     /**
-     * @var string Resource usage duration.
+     * @var string <p>Resource usage duration</p>
      */
     public $UsageDuration;
 
     /**
-     * @var string duration unit.
+     * @var string <p>Duration unit</p>
      */
     public $DurationUnit;
 
     /**
-     * @var string Total original price.
-Original cost = component list price * component usage * usage duration.
+     * @var string <p>Original total price<br>Original Cost = Component List Price * Component Usage * Usage Duration</p>
      */
     public $OriginalCost;
 
     /**
-     * @var string Discount (default is 1) - abandoned.
+     * @var string <p>Discount (default: 1) - abandoned</p>
      */
     public $DiscountRate;
 
     /**
-     * @var string Currency.
+     * @var string <p>Currency.</p>
      */
     public $Currency;
 
     /**
-     * @var string Total cost after discount.
+     * @var string <p>Total cost after discount</p>
      */
     public $TotalAmountAfterDiscount;
 
     /**
-     * @var string Voucher deduction amount.
+     * @var string <p>Voucher deducted amount</p>
      */
     public $VoucherDeduction;
 
     /**
-     * @var string = Total Amount After Discount - Voucher Deduction
+     * @var string <p>= Total Amount After Discount - Voucher Deduction</p>
      */
     public $TotalCost;
 
     /**
-     * @var string Identifier (id).
+     * @var string <p>id</p>
      */
     public $Id;
 
     /**
-     * @var string customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+     * @var string <p>customer discount rate. The discount rate for customers of resellers, set by the reseller. The default value is 1.</p>
      */
     public $CustomerDiscountRate;
 
     /**
-     * @param integer $PayerAccountId reseller account.
-     * @param integer $OwnerAccountId Subaccount.
-     * @param integer $OperatorAccountId Operator account.
-     * @param string $ProductName Product name.
-     * @param string $BillingMode Billing mode
-.
-Monthly subscription (annual and monthly).
-Pay-As-You-Go resources.
-Standard ri reserved instance.
-     * @param string $ProjectName Project name.
+     * @var string <p>Product code</p>
+     */
+    public $BusinessCode;
 
-     * @param string $Region Resource region.
-     * @param string $AvailabilityZone Resource available zone.
-     * @param string $InstanceId Instance id.
-     * @param string $InstanceName Instance name.
-     * @param string $SubProductName Sub-Product name
-.
+    /**
+     * @var string <p>Sub-product code</p>
+     */
+    public $ProductCode;
 
-     * @param string $TransactionType Settlement type.
-     * @param string $TransactionId <Transaction id>.
-     * @param string $TransactionTime Settlement time.
+    /**
+     * @var string <p>Component type code</p>
+     */
+    public $ComponentCode;
 
-     * @param string $UsageStartTime <Resource start time>.
-     * @param string $UsageEndTime <Resource end usage time>.
-     * @param string $ComponentType Component.
-     * @param string $ComponentName Component name.
-     * @param string $ComponentListPrice Component list price.
-     * @param string $ComponentPriceMeasurementUnit Price unit.
-     * @param string $ComponentUsage Component usage.
-     * @param string $ComponentUsageUnit Component usage unit.
-     * @param string $UsageDuration Resource usage duration.
-     * @param string $DurationUnit duration unit.
-     * @param string $OriginalCost Total original price.
-Original cost = component list price * component usage * usage duration.
-     * @param string $DiscountRate Discount (default is 1) - abandoned.
-     * @param string $Currency Currency.
-     * @param string $TotalAmountAfterDiscount Total cost after discount.
-     * @param string $VoucherDeduction Voucher deduction amount.
-     * @param string $TotalCost = Total Amount After Discount - Voucher Deduction
-     * @param string $Id Identifier (id).
-     * @param string $CustomerDiscountRate customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+    /**
+     * @var string <p>Component code</p>
+     */
+    public $ItemCode;
+
+    /**
+     * @param integer $PayerAccountId <p> Distributor account</p>
+     * @param integer $OwnerAccountId <p>Sub-Customer account</p>
+     * @param integer $OperatorAccountId <p>Operator account</p>
+     * @param string $ProductName <p>Product name.</p>
+     * @param string $BillingMode <p>Billing mode</p><p>Enumeration values:</p><ul><li>yearly/monthly subscription</li><li>Pay-As-You-Go resources</li></ul>
+     * @param string $ProjectName <p>Project name.</p>
+     * @param string $Region <p>Associated region of the resource</p>
+     * @param string $AvailabilityZone <p>Availability zone of resource</p>
+     * @param string $InstanceId <p>Instance ID.</p>
+     * @param string $InstanceName <p>Instance name.</p>
+     * @param string $SubProductName <p>Sub-product name</p>
+     * @param string $TransactionType <p>Settlement type</p>
+     * @param string $TransactionId <p>Transaction log ID</p>
+     * @param string $TransactionTime <p>Time of settlement</p>
+     * @param string $UsageStartTime <p>Resource usage start time</p>
+     * @param string $UsageEndTime <p>Resource usage end time</p>
+     * @param string $ComponentType <p>Component</p>
+     * @param string $ComponentName <p>Component name</p>
+     * @param string $ComponentListPrice <p>Component list price</p>
+     * @param string $ComponentPriceMeasurementUnit <p>Price unit</p>
+     * @param string $ComponentUsage <p>Component usage</p>
+     * @param string $ComponentUsageUnit <p>Component usage unit</p>
+     * @param string $UsageDuration <p>Resource usage duration</p>
+     * @param string $DurationUnit <p>Duration unit</p>
+     * @param string $OriginalCost <p>Original total price<br>Original Cost = Component List Price * Component Usage * Usage Duration</p>
+     * @param string $DiscountRate <p>Discount (default: 1) - abandoned</p>
+     * @param string $Currency <p>Currency.</p>
+     * @param string $TotalAmountAfterDiscount <p>Total cost after discount</p>
+     * @param string $VoucherDeduction <p>Voucher deducted amount</p>
+     * @param string $TotalCost <p>= Total Amount After Discount - Voucher Deduction</p>
+     * @param string $Id <p>id</p>
+     * @param string $CustomerDiscountRate <p>customer discount rate. The discount rate for customers of resellers, set by the reseller. The default value is 1.</p>
+     * @param string $BusinessCode <p>Product code</p>
+     * @param string $ProductCode <p>Sub-product code</p>
+     * @param string $ComponentCode <p>Component type code</p>
+     * @param string $ItemCode <p>Component code</p>
      */
     function __construct()
     {
@@ -456,6 +452,22 @@ Original cost = component list price * component usage * usage duration.
 
         if (array_key_exists("CustomerDiscountRate",$param) and $param["CustomerDiscountRate"] !== null) {
             $this->CustomerDiscountRate = $param["CustomerDiscountRate"];
+        }
+
+        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
+            $this->BusinessCode = $param["BusinessCode"];
+        }
+
+        if (array_key_exists("ProductCode",$param) and $param["ProductCode"] !== null) {
+            $this->ProductCode = $param["ProductCode"];
+        }
+
+        if (array_key_exists("ComponentCode",$param) and $param["ComponentCode"] !== null) {
+            $this->ComponentCode = $param["ComponentCode"];
+        }
+
+        if (array_key_exists("ItemCode",$param) and $param["ItemCode"] !== null) {
+            $this->ItemCode = $param["ItemCode"];
         }
     }
 }

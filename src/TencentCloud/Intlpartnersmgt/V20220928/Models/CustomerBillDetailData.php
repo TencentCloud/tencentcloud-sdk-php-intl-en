@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductName(string $ProductName) Set Product name.
  * @method string getBillingMode() Obtain Billing mode
 .
-Monthly subscription.
+yearly/monthly subscription.
 Pay-As-You-Go resources.
 Standard ri reserved instances.
  * @method void setBillingMode(string $BillingMode) Set Billing mode
 .
-Monthly subscription.
+yearly/monthly subscription.
 Pay-As-You-Go resources.
 Standard ri reserved instances.
  * @method string getProjectName() Obtain Project name.
@@ -98,6 +98,14 @@ Original cost = component list price * component usage * usage duration.
  * @method void setId(string $Id) Set Id identifier.
  * @method array getTags() Obtain Tag information.
  * @method void setTags(array $Tags) Set Tag information.
+ * @method string getBusinessCode() Obtain Product code
+ * @method void setBusinessCode(string $BusinessCode) Set Product code
+ * @method string getProductCode() Obtain Subproduct code
+ * @method void setProductCode(string $ProductCode) Set Subproduct code
+ * @method string getComponentCode() Obtain Component type code
+ * @method void setComponentCode(string $ComponentCode) Set Component type code
+ * @method string getItemCode() Obtain Component code
+ * @method void setItemCode(string $ItemCode) Set Component code
  */
 class CustomerBillDetailData extends AbstractModel
 {
@@ -124,7 +132,7 @@ class CustomerBillDetailData extends AbstractModel
     /**
      * @var string Billing mode
 .
-Monthly subscription.
+yearly/monthly subscription.
 Pay-As-You-Go resources.
 Standard ri reserved instances.
      */
@@ -257,13 +265,33 @@ Original cost = component list price * component usage * usage duration.
     public $Tags;
 
     /**
+     * @var string Product code
+     */
+    public $BusinessCode;
+
+    /**
+     * @var string Subproduct code
+     */
+    public $ProductCode;
+
+    /**
+     * @var string Component type code
+     */
+    public $ComponentCode;
+
+    /**
+     * @var string Component code
+     */
+    public $ItemCode;
+
+    /**
      * @param integer $PayerAccountId Distributor account.
      * @param integer $OwnerAccountId Sub-Customer account.
      * @param integer $OperatorAccountId Operator account.
      * @param string $ProductName Product name.
      * @param string $BillingMode Billing mode
 .
-Monthly subscription.
+yearly/monthly subscription.
 Pay-As-You-Go resources.
 Standard ri reserved instances.
      * @param string $ProjectName Project name.
@@ -296,6 +324,10 @@ Original cost = component list price * component usage * usage duration.
      * @param string $TotalCost = Total Amount After Discount - Voucher Deduction
      * @param string $Id Id identifier.
      * @param array $Tags Tag information.
+     * @param string $BusinessCode Product code
+     * @param string $ProductCode Subproduct code
+     * @param string $ComponentCode Component type code
+     * @param string $ItemCode Component code
      */
     function __construct()
     {
@@ -429,6 +461,22 @@ Original cost = component list price * component usage * usage duration.
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
+            $this->BusinessCode = $param["BusinessCode"];
+        }
+
+        if (array_key_exists("ProductCode",$param) and $param["ProductCode"] !== null) {
+            $this->ProductCode = $param["ProductCode"];
+        }
+
+        if (array_key_exists("ComponentCode",$param) and $param["ComponentCode"] !== null) {
+            $this->ComponentCode = $param["ComponentCode"];
+        }
+
+        if (array_key_exists("ItemCode",$param) and $param["ItemCode"] !== null) {
+            $this->ItemCode = $param["ItemCode"];
         }
     }
 }

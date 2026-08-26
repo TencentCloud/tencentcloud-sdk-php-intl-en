@@ -62,15 +62,14 @@ Callable roles: Distributor, Second-level reseller, Reseller
 Callable roles: Distributor, Second-level reseller, Reseller
  * @method Models\DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegion(Models\DescribeBillSummaryByRegionRequest $req) Description: Obtain the summarized value of sub - account bills by region through API.
 Callable roles: Distributor, Second-level reseller, Reseller
- * @method Models\DescribeCustomerBillDetailResponse DescribeCustomerBillDetail(Models\DescribeCustomerBillDetailRequest $req) This API is used to query the customer bill details by resellers.
-Callable roles: Distributor, Second-level reseller, Reseller.
+ * @method Models\DescribeCustomerBillDetailResponse DescribeCustomerBillDetail(Models\DescribeCustomerBillDetailRequest $req) Description: Query customer bill details.
+Resellers, first-level resellers, and second-level resellers can call this API.
  * @method Models\DescribeCustomerBillDetailByDayResponse DescribeCustomerBillDetailByDay(Models\DescribeCustomerBillDetailByDayRequest $req) This API is used to query the daily bill expenditure of customer by resellers.
 Invocation Role: first-level reseller, second-level reseller, reseller.
  * @method Models\DescribeCustomerBillDownloadUrlResponse DescribeCustomerBillDownloadUrl(Models\DescribeCustomerBillDownloadUrlRequest $req) This API is used to get the URL for downloading the customer bill file by reseller. The download conditions are as follows:
 1. Detailed bills (billDetail and billDetailPack) can be downloaded starting from June 2022; resource bills (billResource and billResourcePack) can be downloaded starting from November 2023.
 2. Bill packages (billDetailPack and billResourcePack) can only be downloaded after billing.
- * @method Models\DescribeCustomerBillSummaryResponse DescribeCustomerBillSummary(Models\DescribeCustomerBillSummaryRequest $req) This API is used to query the total amount of customer bills.
-Callable roles: Distributor, Second-level reseller, Reseller
+ * @method Models\DescribeCustomerBillSummaryResponse DescribeCustomerBillSummary(Models\DescribeCustomerBillSummaryRequest $req) Query the aggregate value of a sub-client bill
  * @method Models\DescribeCustomerInfoResponse DescribeCustomerInfo(Models\DescribeCustomerInfoRequest $req) This API is used to query sub-customer information.
 Invocation roles: reseller, first-level distributor.
  * @method Models\DescribeCustomerOwnCostExplorerFilterResponse DescribeCustomerOwnCostExplorerFilter(Models\DescribeCustomerOwnCostExplorerFilterRequest $req) Cost analysis API advanced filtering

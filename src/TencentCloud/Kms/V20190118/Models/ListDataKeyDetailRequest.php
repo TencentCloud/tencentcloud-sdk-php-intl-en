@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListDataKeyDetail request structure.
  *
- * @method integer getOffset() Obtain Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
- * @method void setOffset(integer $Offset) Set Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
- * @method integer getLimit() Obtain Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
- * @method void setLimit(integer $Limit) Set Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
- * @method integer getRole() Obtain Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
- * @method void setRole(integer $Role) Set Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
- * @method integer getOrderType() Obtain Sorts according to the creation time of DataKey. 0 indicates descending sort. 1 indicates ascending sort.
- * @method void setOrderType(integer $OrderType) Set Sorts according to the creation time of DataKey. 0 indicates descending sort. 1 indicates ascending sort.
- * @method integer getKeyState() Obtain Filter based on DataKey state. 0 means all datakeys, 1 means querying only Enabled datakeys, 2 means querying only Disabled datakeys, 3 means querying datakeys in PendingDelete state (keys in scheduled deletion status).
- * @method void setKeyState(integer $KeyState) Set Filter based on DataKey state. 0 means all datakeys, 1 means querying only Enabled datakeys, 2 means querying only Disabled datakeys, 3 means querying datakeys in PendingDelete state (keys in scheduled deletion status).
- * @method string getSearchKeyAlias() Obtain Performs a fuzzy match query based on DataKeyId or DataKeyName.
- * @method void setSearchKeyAlias(string $SearchKeyAlias) Set Performs a fuzzy match query based on DataKeyId or DataKeyName.
- * @method string getOrigin() Obtain Filters data keys by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys requiring user-imported key material. "ALL" or leave unset queries both types. case-sensitive.
- * @method void setOrigin(string $Origin) Set Filters data keys by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys requiring user-imported key material. "ALL" or leave unset queries both types. case-sensitive.
- * @method string getHsmClusterId() Obtain HSM cluster ID corresponding to KMS advanced edition.
- * @method void setHsmClusterId(string $HsmClusterId) Set HSM cluster ID corresponding to KMS advanced edition.
- * @method string getKeyId() Obtain Specifies the globally unique identifier of the root key.
- * @method void setKeyId(string $KeyId) Set Specifies the globally unique identifier of the root key.
- * @method integer getDataKeyLen() Obtain Length of the data key.
- * @method void setDataKeyLen(integer $DataKeyLen) Set Length of the data key.
- * @method array getTagFilters() Obtain Tag filtering conditions.
- * @method void setTagFilters(array $TagFilters) Set Tag filtering conditions.
- * @method array getMemberAccounts() Obtain Array of member account information.
- * @method void setMemberAccounts(array $MemberAccounts) Set Array of member account information.
+ * @method integer getOffset() Obtain <p>It means the same as the Offset in SQL queries, indicating that this retrieval starts from the Offset-th element of the sequentially arranged array. It defaults to 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>It means the same as the Offset in SQL queries, indicating that this retrieval starts from the Offset-th element of the sequentially arranged array. It defaults to 0.</p>
+ * @method integer getLimit() Obtain <p>The meaning is consistent with the Limit in SQL queries, indicating that this time up to Limit elements can be retrieved. The default value is 10, and the maximum value is 200.</p>
+ * @method void setLimit(integer $Limit) Set <p>The meaning is consistent with the Limit in SQL queries, indicating that this time up to Limit elements can be retrieved. The default value is 10, and the maximum value is 200.</p>
+ * @method integer getRole() Obtain <p>Filter by creator role. Default value 0 indicates data keys created by the user, and 1 indicates data keys automatically created by authorized other Cloud services.</p>
+ * @method void setRole(integer $Role) Set <p>Filter by creator role. Default value 0 indicates data keys created by the user, and 1 indicates data keys automatically created by authorized other Cloud services.</p>
+ * @method integer getOrderType() Obtain <p>Sort by DataKey creation time. 0 indicates sort in descending order, and 1 indicates sort in ascending order.</p>
+ * @method void setOrderType(integer $OrderType) Set <p>Sort by DataKey creation time. 0 indicates sort in descending order, and 1 indicates sort in ascending order.</p>
+ * @method integer getKeyState() Obtain <p>Filter by DataKey status. 0 indicates all DataKeys, 1 indicates querying only Enabled DataKeys, 2 indicates querying only Disabled DataKeys, and 3 indicates querying DataKeys in PendingDelete state (keys in scheduled deletion status).</p>
+ * @method void setKeyState(integer $KeyState) Set <p>Filter by DataKey status. 0 indicates all DataKeys, 1 indicates querying only Enabled DataKeys, 2 indicates querying only Disabled DataKeys, and 3 indicates querying DataKeys in PendingDelete state (keys in scheduled deletion status).</p>
+ * @method string getSearchKeyAlias() Obtain <p>Perform a fuzzy match query by DataKeyId or DataKeyName</p>
+ * @method void setSearchKeyAlias(string $SearchKeyAlias) Set <p>Perform a fuzzy match query by DataKeyId or DataKeyName</p>
+ * @method string getOrigin() Obtain <p>Filter by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys with key material to import. "ALL" or leave unset queries both types. Case-sensitive.</p>
+ * @method void setOrigin(string $Origin) Set <p>Filter by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys with key material to import. "ALL" or leave unset queries both types. Case-sensitive.</p>
+ * @method string getHsmClusterId() Obtain <p>HSM Cluster ID corresponding to the KMS advanced edition. When specifying a cluster ID, query the key list within the specified cluster. When specifying default, query the key list of the public cloud shared version. If empty, query all key lists by default, including cluster and non-cluster.</p>
+ * @method void setHsmClusterId(string $HsmClusterId) Set <p>HSM Cluster ID corresponding to the KMS advanced edition. When specifying a cluster ID, query the key list within the specified cluster. When specifying default, query the key list of the public cloud shared version. If empty, query all key lists by default, including cluster and non-cluster.</p>
+ * @method string getKeyId() Obtain <p>Root key globally unique identifier</p>
+ * @method void setKeyId(string $KeyId) Set <p>Root key globally unique identifier</p>
+ * @method integer getDataKeyLen() Obtain <p>Length of the data key</p>
+ * @method void setDataKeyLen(integer $DataKeyLen) Set <p>Length of the data key</p>
+ * @method array getTagFilters() Obtain <p>Tag filtering condition</p>
+ * @method void setTagFilters(array $TagFilters) Set <p>Tag filtering condition</p>
+ * @method array getMemberAccounts() Obtain <p>Member account information array</p>
+ * @method void setMemberAccounts(array $MemberAccounts) Set <p>Member account information array</p>
  */
 class ListDataKeyDetailRequest extends AbstractModel
 {
     /**
-     * @var integer Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
+     * @var integer <p>It means the same as the Offset in SQL queries, indicating that this retrieval starts from the Offset-th element of the sequentially arranged array. It defaults to 0.</p>
      */
     public $Offset;
 
     /**
-     * @var integer Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
+     * @var integer <p>The meaning is consistent with the Limit in SQL queries, indicating that this time up to Limit elements can be retrieved. The default value is 10, and the maximum value is 200.</p>
      */
     public $Limit;
 
     /**
-     * @var integer Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
+     * @var integer <p>Filter by creator role. Default value 0 indicates data keys created by the user, and 1 indicates data keys automatically created by authorized other Cloud services.</p>
      */
     public $Role;
 
     /**
-     * @var integer Sorts according to the creation time of DataKey. 0 indicates descending sort. 1 indicates ascending sort.
+     * @var integer <p>Sort by DataKey creation time. 0 indicates sort in descending order, and 1 indicates sort in ascending order.</p>
      */
     public $OrderType;
 
     /**
-     * @var integer Filter based on DataKey state. 0 means all datakeys, 1 means querying only Enabled datakeys, 2 means querying only Disabled datakeys, 3 means querying datakeys in PendingDelete state (keys in scheduled deletion status).
+     * @var integer <p>Filter by DataKey status. 0 indicates all DataKeys, 1 indicates querying only Enabled DataKeys, 2 indicates querying only Disabled DataKeys, and 3 indicates querying DataKeys in PendingDelete state (keys in scheduled deletion status).</p>
      */
     public $KeyState;
 
     /**
-     * @var string Performs a fuzzy match query based on DataKeyId or DataKeyName.
+     * @var string <p>Perform a fuzzy match query by DataKeyId or DataKeyName</p>
      */
     public $SearchKeyAlias;
 
     /**
-     * @var string Filters data keys by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys requiring user-imported key material. "ALL" or leave unset queries both types. case-sensitive.
+     * @var string <p>Filter by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys with key material to import. "ALL" or leave unset queries both types. Case-sensitive.</p>
      */
     public $Origin;
 
     /**
-     * @var string HSM cluster ID corresponding to KMS advanced edition.
+     * @var string <p>HSM Cluster ID corresponding to the KMS advanced edition. When specifying a cluster ID, query the key list within the specified cluster. When specifying default, query the key list of the public cloud shared version. If empty, query all key lists by default, including cluster and non-cluster.</p>
      */
     public $HsmClusterId;
 
     /**
-     * @var string Specifies the globally unique identifier of the root key.
+     * @var string <p>Root key globally unique identifier</p>
      */
     public $KeyId;
 
     /**
-     * @var integer Length of the data key.
+     * @var integer <p>Length of the data key</p>
      */
     public $DataKeyLen;
 
     /**
-     * @var array Tag filtering conditions.
+     * @var array <p>Tag filtering condition</p>
      */
     public $TagFilters;
 
     /**
-     * @var array Array of member account information.
+     * @var array <p>Member account information array</p>
      */
     public $MemberAccounts;
 
     /**
-     * @param integer $Offset Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
-     * @param integer $Limit Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
-     * @param integer $Role Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
-     * @param integer $OrderType Sorts according to the creation time of DataKey. 0 indicates descending sort. 1 indicates ascending sort.
-     * @param integer $KeyState Filter based on DataKey state. 0 means all datakeys, 1 means querying only Enabled datakeys, 2 means querying only Disabled datakeys, 3 means querying datakeys in PendingDelete state (keys in scheduled deletion status).
-     * @param string $SearchKeyAlias Performs a fuzzy match query based on DataKeyId or DataKeyName.
-     * @param string $Origin Filters data keys by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys requiring user-imported key material. "ALL" or leave unset queries both types. case-sensitive.
-     * @param string $HsmClusterId HSM cluster ID corresponding to KMS advanced edition.
-     * @param string $KeyId Specifies the globally unique identifier of the root key.
-     * @param integer $DataKeyLen Length of the data key.
-     * @param array $TagFilters Tag filtering conditions.
-     * @param array $MemberAccounts Array of member account information.
+     * @param integer $Offset <p>It means the same as the Offset in SQL queries, indicating that this retrieval starts from the Offset-th element of the sequentially arranged array. It defaults to 0.</p>
+     * @param integer $Limit <p>The meaning is consistent with the Limit in SQL queries, indicating that this time up to Limit elements can be retrieved. The default value is 10, and the maximum value is 200.</p>
+     * @param integer $Role <p>Filter by creator role. Default value 0 indicates data keys created by the user, and 1 indicates data keys automatically created by authorized other Cloud services.</p>
+     * @param integer $OrderType <p>Sort by DataKey creation time. 0 indicates sort in descending order, and 1 indicates sort in ascending order.</p>
+     * @param integer $KeyState <p>Filter by DataKey status. 0 indicates all DataKeys, 1 indicates querying only Enabled DataKeys, 2 indicates querying only Disabled DataKeys, and 3 indicates querying DataKeys in PendingDelete state (keys in scheduled deletion status).</p>
+     * @param string $SearchKeyAlias <p>Perform a fuzzy match query by DataKeyId or DataKeyName</p>
+     * @param string $Origin <p>Filter by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys with key material to import. "ALL" or leave unset queries both types. Case-sensitive.</p>
+     * @param string $HsmClusterId <p>HSM Cluster ID corresponding to the KMS advanced edition. When specifying a cluster ID, query the key list within the specified cluster. When specifying default, query the key list of the public cloud shared version. If empty, query all key lists by default, including cluster and non-cluster.</p>
+     * @param string $KeyId <p>Root key globally unique identifier</p>
+     * @param integer $DataKeyLen <p>Length of the data key</p>
+     * @param array $TagFilters <p>Tag filtering condition</p>
+     * @param array $MemberAccounts <p>Member account information array</p>
      */
     function __construct()
     {

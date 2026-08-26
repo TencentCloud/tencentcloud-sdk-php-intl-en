@@ -114,6 +114,8 @@ Note: this field is in beta test.
 -Update: if template t contains this parameter with a value of Update and metadata=[k1:v1, k2:v2], then RunInstances (with metadata=[k2:v3]) + t creates a cvm using metadata=[k1:v1, k2:v3]. 
 -Replace: if the template t contains this parameter with a value of Replace and metadata=[k1:v1, k2:v2], then when creating a cvm using RunInstances (with metadata=[k2:v3]) + t, the created cvm will use metadata=[k2:v3]. 
 Note: this field is in beta test.
+ * @method array getNetworkInterfaces() Obtain Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+ * @method void setNetworkInterfaces(array $NetworkInterfaces) Set Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
  */
 class CreateLaunchTemplateVersionRequest extends AbstractModel
 {
@@ -289,6 +291,11 @@ Note: this field is in beta test.
     public $TemplateDataModifyAction;
 
     /**
+     * @var array Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+     */
+    public $NetworkInterfaces;
+
+    /**
      * @param Placement $Placement Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone, project, and CDH (for dedicated CVMs)
      * @param string $LaunchTemplateId Instance launch template ID. This parameter is used as a basis for creating new template versions.
      * @param integer $LaunchTemplateVersion This parameter, when specified, is used to create instance launch templates. If this parameter is not specified, the default version will be used.
@@ -336,6 +343,7 @@ Note: this field is in beta test.
 -Update: if template t contains this parameter with a value of Update and metadata=[k1:v1, k2:v2], then RunInstances (with metadata=[k2:v3]) + t creates a cvm using metadata=[k1:v1, k2:v3]. 
 -Replace: if the template t contains this parameter with a value of Replace and metadata=[k1:v1, k2:v2], then when creating a cvm using RunInstances (with metadata=[k2:v3]) + t, the created cvm will use metadata=[k2:v3]. 
 Note: this field is in beta test.
+     * @param array $NetworkInterfaces Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
      */
     function __construct()
     {
@@ -492,6 +500,15 @@ Note: this field is in beta test.
 
         if (array_key_exists("TemplateDataModifyAction",$param) and $param["TemplateDataModifyAction"] !== null) {
             $this->TemplateDataModifyAction = $param["TemplateDataModifyAction"];
+        }
+
+        if (array_key_exists("NetworkInterfaces",$param) and $param["NetworkInterfaces"] !== null) {
+            $this->NetworkInterfaces = [];
+            foreach ($param["NetworkInterfaces"] as $key => $value){
+                $obj = new NetworkInterfaces();
+                $obj->deserialize($value);
+                array_push($this->NetworkInterfaces, $obj);
+            }
         }
     }
 }

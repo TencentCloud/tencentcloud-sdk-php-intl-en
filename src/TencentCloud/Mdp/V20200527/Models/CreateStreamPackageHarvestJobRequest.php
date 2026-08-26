@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDestination(string $Destination) Set The path where the recording file is stored in Cos.
  * @method string getManifest() Obtain The file name of the recording file stored in Cos.
  * @method void setManifest(string $Manifest) Set The file name of the recording file stored in Cos.
+ * @method string getCallbackURL() Obtain Callback address after recording completion
+ * @method void setCallbackURL(string $CallbackURL) Set Callback address after recording completion
  */
 class CreateStreamPackageHarvestJobRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateStreamPackageHarvestJobRequest extends AbstractModel
     public $Manifest;
 
     /**
+     * @var string Callback address after recording completion
+     */
+    public $CallbackURL;
+
+    /**
      * @param string $ID HarvestJob ID, a globally unique identifier.
      * @param string $ChannelName The associated channel name.
      * @param string $EndpointName The associated endpoint name.
@@ -88,6 +95,7 @@ class CreateStreamPackageHarvestJobRequest extends AbstractModel
      * @param string $EndTime Task end time supports two formats for TimeFormat input: 1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
      * @param string $Destination The path where the recording file is stored in Cos.
      * @param string $Manifest The file name of the recording file stored in Cos.
+     * @param string $CallbackURL Callback address after recording completion
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CreateStreamPackageHarvestJobRequest extends AbstractModel
 
         if (array_key_exists("Manifest",$param) and $param["Manifest"] !== null) {
             $this->Manifest = $param["Manifest"];
+        }
+
+        if (array_key_exists("CallbackURL",$param) and $param["CallbackURL"] !== null) {
+            $this->CallbackURL = $param["CallbackURL"];
         }
     }
 }

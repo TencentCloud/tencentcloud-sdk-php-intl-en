@@ -20,186 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCustomerBillDetail request structure.
  *
- * @method integer getCustomerUin() Obtain Sub-account UIN.
- * @method void setCustomerUin(integer $CustomerUin) Set Sub-account UIN.
- * @method string getMonth() Obtain Inquiry month, in the format of YYYY-MM, such as 2023-01.
- * @method void setMonth(string $Month) Set Inquiry month, in the format of YYYY-MM, such as 2023-01.
- * @method integer getPageSize() Obtain Page parameter: number of entries per page. Value range: [1, 200]
- * @method void setPageSize(integer $PageSize) Set Page parameter: number of entries per page. Value range: [1, 200]
- * @method integer getPage() Obtain Page parameter: current page number. The minimum value is 1.
- * @method void setPage(integer $Page) Set Page parameter: current page number. The minimum value is 1.
- * @method string getPayMode() Obtain Billing mode. Valid values:
-prePay (Monthly subscription)
-postPay (Pay-As-You-Go resources)
- * @method void setPayMode(string $PayMode) Set Billing mode. Valid values:
-prePay (Monthly subscription)
-postPay (Pay-As-You-Go resources)
- * @method string getActionType() Obtain Transaction type. Valid values:
-prepay_purchase (Purchase)
-prepay_renew (Renewal)
-prepay_modify (Upgrade/Downgrade)
-prepay_return ( Monthly subscription refund)
-postpay_deduct (Pay-as-you-go)
-postpay_deduct_h (Hourly settlement)
-postpay_deduct_d (Daily settlement)
-postpay_deduct_m (Monthly settlement)
-offline_deduct (Offline project deduction)
-online_deduct (Offline product deduction)
-recon_deduct (Adjustment - deduction)
-recon_increase (Adjustment - compensation)
-ripay_purchase (One-off RI Fee)
-postpay_deduct_s (Spot)
-ri_hour_pay (Hourly RI fee)
-prePurchase (New monthly subscription)
-preRenew (Monthly subscription renewal)
-preUpgrade (Upgrade/Downgrade)
-preDowngrade (Upgrade/Downgrade)
-svp_hour_pay (Hourly Savings Plan fee)
-recon_guarantee (Minimum spend deduction)
-pre_purchase (New monthly subscription)
-pre_renew (Monthly subscription renewal)
-pre_upgrade (Upgrade/Downgrade)
-pre_downgrade (Upgrade/Downgrade)
- * @method void setActionType(string $ActionType) Set Transaction type. Valid values:
-prepay_purchase (Purchase)
-prepay_renew (Renewal)
-prepay_modify (Upgrade/Downgrade)
-prepay_return ( Monthly subscription refund)
-postpay_deduct (Pay-as-you-go)
-postpay_deduct_h (Hourly settlement)
-postpay_deduct_d (Daily settlement)
-postpay_deduct_m (Monthly settlement)
-offline_deduct (Offline project deduction)
-online_deduct (Offline product deduction)
-recon_deduct (Adjustment - deduction)
-recon_increase (Adjustment - compensation)
-ripay_purchase (One-off RI Fee)
-postpay_deduct_s (Spot)
-ri_hour_pay (Hourly RI fee)
-prePurchase (New monthly subscription)
-preRenew (Monthly subscription renewal)
-preUpgrade (Upgrade/Downgrade)
-preDowngrade (Upgrade/Downgrade)
-svp_hour_pay (Hourly Savings Plan fee)
-recon_guarantee (Minimum spend deduction)
-pre_purchase (New monthly subscription)
-pre_renew (Monthly subscription renewal)
-pre_upgrade (Upgrade/Downgrade)
-pre_downgrade (Upgrade/Downgrade)
- * @method string getIsConfirmed() Obtain Payment status
-0: not distinguished
-1: paid
-2: unpaid
- * @method void setIsConfirmed(string $IsConfirmed) Set Payment status
-0: not distinguished
-1: paid
-2: unpaid
+ * @method integer getCustomerUin() Obtain <p>Sub-customer uin</p>
+ * @method void setCustomerUin(integer $CustomerUin) Set <p>Sub-customer uin</p>
+ * @method string getMonth() Obtain <p>Inquiry month, in the format of YYYY-MM, such as 2023-01</p>
+ * @method void setMonth(string $Month) Set <p>Inquiry month, in the format of YYYY-MM, such as 2023-01</p>
+ * @method integer getPageSize() Obtain <p>Pagination parameter: entries per page. Value range: [1, 200]</p>
+ * @method void setPageSize(integer $PageSize) Set <p>Pagination parameter: entries per page. Value range: [1, 200]</p>
+ * @method integer getPage() Obtain <p>Pagination parameter: current page number. The minimum value is 1.</p>
+ * @method void setPage(integer $Page) Set <p>Pagination parameter: current page number. The minimum value is 1.</p>
+ * @method string getPayMode() Obtain <p>Billing mode</p><p>Enumeration values:</p><ul><li>prePay: yearly/monthly subscription</li><li>postPay: Pay-As-You-Go resources</li></ul>
+ * @method void setPayMode(string $PayMode) Set <p>Billing mode</p><p>Enumeration values:</p><ul><li>prePay: yearly/monthly subscription</li><li>postPay: Pay-As-You-Go resources</li></ul>
+ * @method string getActionType() Obtain <p>Transaction type</p><p>Enumeration values:</p><ul><li>prepay_purchase: Purchase</li><li>prepay_renew: Renewal</li><li>prepay_modify: Upgrade/Downgrade</li><li>prepay_return: yearly/monthly subscription refund</li><li>postpay_deduct: Pay-as-you-go</li><li>postpay_deduct_h: Hourly settlement</li><li>postpay_deduct_d: Daily settlement</li><li>postpay_deduct_m: Monthly settlement</li><li>offline_deduct: Offline project deduction</li><li>online_deduct: Offline product deduction</li><li>recon_deduct: Adjustment - deduction</li><li>recon_increase: Adjustment - compensation</li><li>ripay_purchase: One-off RI Fee</li><li>postpay_deduct_s: Spot</li><li>ri_hour_pay: Hourly RI fee</li><li>prePurchase: New yearly/monthly subscription</li><li>preRenew: yearly/monthly subscription renewal</li><li>preUpgrade: Upgrade/Downgrade</li><li>preDowngrade: Upgrade/Downgrade</li><li>svp_hour_pay: Hourly Savings Plan fee</li><li>recon_guarantee: Minimum spend deduction</li><li>pre_purchase: New yearly/monthly subscription</li><li>pre_renew: yearly/monthly subscription renewal</li><li>pre_upgrade: Upgrade/Downgrade</li><li>pre_downgrade: Upgrade/Downgrade</li></ul>
+ * @method void setActionType(string $ActionType) Set <p>Transaction type</p><p>Enumeration values:</p><ul><li>prepay_purchase: Purchase</li><li>prepay_renew: Renewal</li><li>prepay_modify: Upgrade/Downgrade</li><li>prepay_return: yearly/monthly subscription refund</li><li>postpay_deduct: Pay-as-you-go</li><li>postpay_deduct_h: Hourly settlement</li><li>postpay_deduct_d: Daily settlement</li><li>postpay_deduct_m: Monthly settlement</li><li>offline_deduct: Offline project deduction</li><li>online_deduct: Offline product deduction</li><li>recon_deduct: Adjustment - deduction</li><li>recon_increase: Adjustment - compensation</li><li>ripay_purchase: One-off RI Fee</li><li>postpay_deduct_s: Spot</li><li>ri_hour_pay: Hourly RI fee</li><li>prePurchase: New yearly/monthly subscription</li><li>preRenew: yearly/monthly subscription renewal</li><li>preUpgrade: Upgrade/Downgrade</li><li>preDowngrade: Upgrade/Downgrade</li><li>svp_hour_pay: Hourly Savings Plan fee</li><li>recon_guarantee: Minimum spend deduction</li><li>pre_purchase: New yearly/monthly subscription</li><li>pre_renew: yearly/monthly subscription renewal</li><li>pre_upgrade: Upgrade/Downgrade</li><li>pre_downgrade: Upgrade/Downgrade</li></ul>
+ * @method string getIsConfirmed() Obtain <p>Payment Status<br>0: case-insensitive<br>1: paid<br>2: unpaid</p>
+ * @method void setIsConfirmed(string $IsConfirmed) Set <p>Payment Status<br>0: case-insensitive<br>1: paid<br>2: unpaid</p>
  */
 class DescribeCustomerBillDetailRequest extends AbstractModel
 {
     /**
-     * @var integer Sub-account UIN.
+     * @var integer <p>Sub-customer uin</p>
      */
     public $CustomerUin;
 
     /**
-     * @var string Inquiry month, in the format of YYYY-MM, such as 2023-01.
+     * @var string <p>Inquiry month, in the format of YYYY-MM, such as 2023-01</p>
      */
     public $Month;
 
     /**
-     * @var integer Page parameter: number of entries per page. Value range: [1, 200]
+     * @var integer <p>Pagination parameter: entries per page. Value range: [1, 200]</p>
      */
     public $PageSize;
 
     /**
-     * @var integer Page parameter: current page number. The minimum value is 1.
+     * @var integer <p>Pagination parameter: current page number. The minimum value is 1.</p>
      */
     public $Page;
 
     /**
-     * @var string Billing mode. Valid values:
-prePay (Monthly subscription)
-postPay (Pay-As-You-Go resources)
+     * @var string <p>Billing mode</p><p>Enumeration values:</p><ul><li>prePay: yearly/monthly subscription</li><li>postPay: Pay-As-You-Go resources</li></ul>
      */
     public $PayMode;
 
     /**
-     * @var string Transaction type. Valid values:
-prepay_purchase (Purchase)
-prepay_renew (Renewal)
-prepay_modify (Upgrade/Downgrade)
-prepay_return ( Monthly subscription refund)
-postpay_deduct (Pay-as-you-go)
-postpay_deduct_h (Hourly settlement)
-postpay_deduct_d (Daily settlement)
-postpay_deduct_m (Monthly settlement)
-offline_deduct (Offline project deduction)
-online_deduct (Offline product deduction)
-recon_deduct (Adjustment - deduction)
-recon_increase (Adjustment - compensation)
-ripay_purchase (One-off RI Fee)
-postpay_deduct_s (Spot)
-ri_hour_pay (Hourly RI fee)
-prePurchase (New monthly subscription)
-preRenew (Monthly subscription renewal)
-preUpgrade (Upgrade/Downgrade)
-preDowngrade (Upgrade/Downgrade)
-svp_hour_pay (Hourly Savings Plan fee)
-recon_guarantee (Minimum spend deduction)
-pre_purchase (New monthly subscription)
-pre_renew (Monthly subscription renewal)
-pre_upgrade (Upgrade/Downgrade)
-pre_downgrade (Upgrade/Downgrade)
+     * @var string <p>Transaction type</p><p>Enumeration values:</p><ul><li>prepay_purchase: Purchase</li><li>prepay_renew: Renewal</li><li>prepay_modify: Upgrade/Downgrade</li><li>prepay_return: yearly/monthly subscription refund</li><li>postpay_deduct: Pay-as-you-go</li><li>postpay_deduct_h: Hourly settlement</li><li>postpay_deduct_d: Daily settlement</li><li>postpay_deduct_m: Monthly settlement</li><li>offline_deduct: Offline project deduction</li><li>online_deduct: Offline product deduction</li><li>recon_deduct: Adjustment - deduction</li><li>recon_increase: Adjustment - compensation</li><li>ripay_purchase: One-off RI Fee</li><li>postpay_deduct_s: Spot</li><li>ri_hour_pay: Hourly RI fee</li><li>prePurchase: New yearly/monthly subscription</li><li>preRenew: yearly/monthly subscription renewal</li><li>preUpgrade: Upgrade/Downgrade</li><li>preDowngrade: Upgrade/Downgrade</li><li>svp_hour_pay: Hourly Savings Plan fee</li><li>recon_guarantee: Minimum spend deduction</li><li>pre_purchase: New yearly/monthly subscription</li><li>pre_renew: yearly/monthly subscription renewal</li><li>pre_upgrade: Upgrade/Downgrade</li><li>pre_downgrade: Upgrade/Downgrade</li></ul>
      */
     public $ActionType;
 
     /**
-     * @var string Payment status
-0: not distinguished
-1: paid
-2: unpaid
+     * @var string <p>Payment Status<br>0: case-insensitive<br>1: paid<br>2: unpaid</p>
      */
     public $IsConfirmed;
 
     /**
-     * @param integer $CustomerUin Sub-account UIN.
-     * @param string $Month Inquiry month, in the format of YYYY-MM, such as 2023-01.
-     * @param integer $PageSize Page parameter: number of entries per page. Value range: [1, 200]
-     * @param integer $Page Page parameter: current page number. The minimum value is 1.
-     * @param string $PayMode Billing mode. Valid values:
-prePay (Monthly subscription)
-postPay (Pay-As-You-Go resources)
-     * @param string $ActionType Transaction type. Valid values:
-prepay_purchase (Purchase)
-prepay_renew (Renewal)
-prepay_modify (Upgrade/Downgrade)
-prepay_return ( Monthly subscription refund)
-postpay_deduct (Pay-as-you-go)
-postpay_deduct_h (Hourly settlement)
-postpay_deduct_d (Daily settlement)
-postpay_deduct_m (Monthly settlement)
-offline_deduct (Offline project deduction)
-online_deduct (Offline product deduction)
-recon_deduct (Adjustment - deduction)
-recon_increase (Adjustment - compensation)
-ripay_purchase (One-off RI Fee)
-postpay_deduct_s (Spot)
-ri_hour_pay (Hourly RI fee)
-prePurchase (New monthly subscription)
-preRenew (Monthly subscription renewal)
-preUpgrade (Upgrade/Downgrade)
-preDowngrade (Upgrade/Downgrade)
-svp_hour_pay (Hourly Savings Plan fee)
-recon_guarantee (Minimum spend deduction)
-pre_purchase (New monthly subscription)
-pre_renew (Monthly subscription renewal)
-pre_upgrade (Upgrade/Downgrade)
-pre_downgrade (Upgrade/Downgrade)
-     * @param string $IsConfirmed Payment status
-0: not distinguished
-1: paid
-2: unpaid
+     * @param integer $CustomerUin <p>Sub-customer uin</p>
+     * @param string $Month <p>Inquiry month, in the format of YYYY-MM, such as 2023-01</p>
+     * @param integer $PageSize <p>Pagination parameter: entries per page. Value range: [1, 200]</p>
+     * @param integer $Page <p>Pagination parameter: current page number. The minimum value is 1.</p>
+     * @param string $PayMode <p>Billing mode</p><p>Enumeration values:</p><ul><li>prePay: yearly/monthly subscription</li><li>postPay: Pay-As-You-Go resources</li></ul>
+     * @param string $ActionType <p>Transaction type</p><p>Enumeration values:</p><ul><li>prepay_purchase: Purchase</li><li>prepay_renew: Renewal</li><li>prepay_modify: Upgrade/Downgrade</li><li>prepay_return: yearly/monthly subscription refund</li><li>postpay_deduct: Pay-as-you-go</li><li>postpay_deduct_h: Hourly settlement</li><li>postpay_deduct_d: Daily settlement</li><li>postpay_deduct_m: Monthly settlement</li><li>offline_deduct: Offline project deduction</li><li>online_deduct: Offline product deduction</li><li>recon_deduct: Adjustment - deduction</li><li>recon_increase: Adjustment - compensation</li><li>ripay_purchase: One-off RI Fee</li><li>postpay_deduct_s: Spot</li><li>ri_hour_pay: Hourly RI fee</li><li>prePurchase: New yearly/monthly subscription</li><li>preRenew: yearly/monthly subscription renewal</li><li>preUpgrade: Upgrade/Downgrade</li><li>preDowngrade: Upgrade/Downgrade</li><li>svp_hour_pay: Hourly Savings Plan fee</li><li>recon_guarantee: Minimum spend deduction</li><li>pre_purchase: New yearly/monthly subscription</li><li>pre_renew: yearly/monthly subscription renewal</li><li>pre_upgrade: Upgrade/Downgrade</li><li>pre_downgrade: Upgrade/Downgrade</li></ul>
+     * @param string $IsConfirmed <p>Payment Status<br>0: case-insensitive<br>1: paid<br>2: unpaid</p>
      */
     function __construct()
     {

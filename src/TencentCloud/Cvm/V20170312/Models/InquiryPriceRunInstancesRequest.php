@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuTopology(CpuTopology $CpuTopology) Set Information about the CPU topology of an instance. If not specified, it is determined by system resources.
  * @method LaunchTemplate getLaunchTemplate() Obtain Instance launch template.
  * @method void setLaunchTemplate(LaunchTemplate $LaunchTemplate) Set Instance launch template.
+ * @method array getNetworkInterfaces() Obtain Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+ * @method void setNetworkInterfaces(array $NetworkInterfaces) Set Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
  */
 class InquiryPriceRunInstancesRequest extends AbstractModel
 {
@@ -193,6 +195,11 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
     public $LaunchTemplate;
 
     /**
+     * @var array Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+     */
+    public $NetworkInterfaces;
+
+    /**
      * @param Placement $Placement Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
  <b>Note: `Placement` is required when `LaunchTemplate` is not specified. If both the parameters are passed in, `Placement` prevails.</b>
      * @param string $ImageId [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images</li><li>Custom images</li><li>Shared images</li><br/>You can obtain the available image IDs in the following ways: <br/><li>For IDs of `public images`, `custom images`, and `shared images`, log in to the [CVM console](https://console.tencentcloud.com/cvm/image/index?rid=1&tab=PUBLIC_IMAGE&imageType=PUBLIC_IMAGE) to query the information. </li><li>Call [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
@@ -220,6 +227,7 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
      * @param string $HpcClusterId HPC cluster ID.
      * @param CpuTopology $CpuTopology Information about the CPU topology of an instance. If not specified, it is determined by system resources.
      * @param LaunchTemplate $LaunchTemplate Instance launch template.
+     * @param array $NetworkInterfaces Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
      */
     function __construct()
     {
@@ -341,6 +349,15 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
         if (array_key_exists("LaunchTemplate",$param) and $param["LaunchTemplate"] !== null) {
             $this->LaunchTemplate = new LaunchTemplate();
             $this->LaunchTemplate->deserialize($param["LaunchTemplate"]);
+        }
+
+        if (array_key_exists("NetworkInterfaces",$param) and $param["NetworkInterfaces"] !== null) {
+            $this->NetworkInterfaces = [];
+            foreach ($param["NetworkInterfaces"] as $key => $value){
+                $obj = new NetworkInterfaces();
+                $obj->deserialize($value);
+                array_push($this->NetworkInterfaces, $obj);
+            }
         }
     }
 }
