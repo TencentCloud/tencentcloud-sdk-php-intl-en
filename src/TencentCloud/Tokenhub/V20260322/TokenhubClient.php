@@ -76,6 +76,19 @@ This API is used to query call details under a package from CLS log service, fil
  * @method Models\DescribeTokenPlanListResponse DescribeTokenPlanList(Models\DescribeTokenPlanListRequest $req) Query the list of Token Plan package options.
 
 Supports pagination, filtering, and sorting. Root accounts can view all packages, while sub-accounts can only view packages created by themselves. Returned results include the main limit package details associated with each package in the limit center.
+ * @method Models\DescribeUsageRankListResponse DescribeUsageRankList(Models\DescribeUsageRankListRequest $req) Query the usage ranking list.
+
+Metric family (MetricType)
+- `tokens` (default): Token usage statistics. Supports Dimension = apikey / endpoint / model.
+Metrics returned: TotalToken (total) / InputTotalToken (input) / OutputTotalToken (output) / CacheTotalToken (read cache).
+- `search`: [To be launched] Online search usage statistics. Supports Dimension = apikey / endpoint / model.
+Returns metrics: SearchRequestCount (search request count)/SearchCount (search engine call count).
+
+content
+-The MetricType field is used to switch metric families. The response echoes back MetricType and MetricKeys.
+-TotalStats: The aggregated value of all objects over the entire time window.
+-PageStats: The aggregated value of objects on the current page.
+- TopList: A list of objects sorted by MetricKeys[0] in descending order, including the aggregated value over the entire period and point-in-time curves.
  * @method Models\ModifyApiKeyInfoResponse ModifyApiKeyInfo(Models\ModifyApiKeyInfoRequest $req) Refresh API key information.
 
 This API is used to update the remark information, IP allowlist and Token quota of an API key (recommended to use QuotaDesired parameter for quota modification). Passing no optional parameters means no modification.
