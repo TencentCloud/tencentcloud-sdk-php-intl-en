@@ -20,40 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MLIDPassportOCR response structure.
  *
- * @method string getID() Obtain Passport ID
- * @method void setID(string $ID) Set Passport ID
- * @method string getName() Obtain Name
- * @method void setName(string $Name) Set Name
- * @method string getDateOfBirth() Obtain Date of birth
- * @method void setDateOfBirth(string $DateOfBirth) Set Date of birth
- * @method string getSex() Obtain Gender (F: female, M: male)
- * @method void setSex(string $Sex) Set Gender (F: female, M: male)
- * @method string getDateOfExpiration() Obtain Expiration date
- * @method void setDateOfExpiration(string $DateOfExpiration) Set Expiration date
- * @method string getIssuingCountry() Obtain Issuing country
- * @method void setIssuingCountry(string $IssuingCountry) Set Issuing country
- * @method string getNationality() Obtain Nationality code (MRZ field)
- * @method void setNationality(string $Nationality) Set Nationality code (MRZ field)
+ * @method string getID() Obtain Parsed passport ID extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method void setID(string $ID) Set Parsed passport ID extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method string getName() Obtain Parsed full name extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method void setName(string $Name) Set Parsed full name extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method string getDateOfBirth() Obtain Parsed date of birth extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method void setDateOfBirth(string $DateOfBirth) Set Parsed date of birth extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method string getSex() Obtain Parsed gender extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method void setSex(string $Sex) Set Parsed gender extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method string getDateOfExpiration() Obtain Parsed expiry date extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method void setDateOfExpiration(string $DateOfExpiration) Set Parsed expiry date extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method string getIssuingCountry() Obtain Parsed issuing country extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method void setIssuingCountry(string $IssuingCountry) Set Parsed issuing country extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method string getNationality() Obtain Parsed country-region code extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method void setNationality(string $Nationality) Set Parsed country-region code extracted from the MRZ (Machine-Readable Zone) of passport
  * @method array getWarn() Obtain This field is deprecated and will always return an empty array. Usage is not recommended.
  * @method void setWarn(array $Warn) Set This field is deprecated and will always return an empty array. Usage is not recommended.
  * @method string getImage() Obtain Base64-encoded identity photo
  * @method void setImage(string $Image) Set Base64-encoded identity photo
  * @method string getAdvancedInfo() Obtain This field is deprecated and will always return "1". Usage is not recommended.
  * @method void setAdvancedInfo(string $AdvancedInfo) Set This field is deprecated and will always return "1". Usage is not recommended.
- * @method string getCodeSet() Obtain The first row of the machine-readable zone (MRZ) at the bottom
- * @method void setCodeSet(string $CodeSet) Set The first row of the machine-readable zone (MRZ) at the bottom
- * @method string getCodeCrc() Obtain The second row of the MRZ at the bottom
- * @method void setCodeCrc(string $CodeCrc) Set The second row of the MRZ at the bottom
- * @method string getSurname() Obtain The surname.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSurname(string $Surname) Set The surname.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getGivenName() Obtain The given name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setGivenName(string $GivenName) Set The given name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getType() Obtain Type (in Machine Readable Zone)
- * @method void setType(string $Type) Set Type (in Machine Readable Zone)
+ * @method string getCodeSet() Obtain Parsed MRZ line 1 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method void setCodeSet(string $CodeSet) Set Parsed MRZ line 1 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method string getCodeCrc() Obtain Parsed MRZ line 2 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method void setCodeCrc(string $CodeCrc) Set Parsed MRZ line 2 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method string getSurname() Obtain Parsed surname extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method void setSurname(string $Surname) Set Parsed surname extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method string getGivenName() Obtain Parsed given name extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method void setGivenName(string $GivenName) Set Parsed given name extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method string getType() Obtain Parsed document type extracted from the MRZ (Machine-Readable Zone) of passport
+ * @method void setType(string $Type) Set Parsed document type extracted from the MRZ (Machine-Readable Zone) of passport
  * @method PassportRecognizeInfos getPassportRecognizeInfos() Obtain Document content in the visual zone
  * @method void setPassportRecognizeInfos(PassportRecognizeInfos $PassportRecognizeInfos) Set Document content in the visual zone
  * @method array getWarnCardInfos() Obtain Card Warning Information
@@ -61,7 +57,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
--9104 Alarm for tamper certificate
+-9104 Alarm for PS certificate
 -9107 Alarm for reflective certificate
 -9108 Alarm for blurry certificate 
 -9109 This capability is not enabled. Please contact customer support to activate the alert service.
@@ -70,7 +66,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
--9104 Alarm for tamper certificate
+-9104 Alarm for PS certificate
 -9107 Alarm for reflective certificate
 -9108 Alarm for blurry certificate 
 -9109 This capability is not enabled. Please contact customer support to activate the alert service.
@@ -84,37 +80,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class MLIDPassportOCRResponse extends AbstractModel
 {
     /**
-     * @var string Passport ID
+     * @var string Parsed passport ID extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public $ID;
 
     /**
-     * @var string Name
+     * @var string Parsed full name extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public $Name;
 
     /**
-     * @var string Date of birth
+     * @var string Parsed date of birth extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public $DateOfBirth;
 
     /**
-     * @var string Gender (F: female, M: male)
+     * @var string Parsed gender extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public $Sex;
 
     /**
-     * @var string Expiration date
+     * @var string Parsed expiry date extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public $DateOfExpiration;
 
     /**
-     * @var string Issuing country
+     * @var string Parsed issuing country extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public $IssuingCountry;
 
     /**
-     * @var string Nationality code (MRZ field)
+     * @var string Parsed country-region code extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public $Nationality;
 
@@ -136,29 +132,27 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $AdvancedInfo;
 
     /**
-     * @var string The first row of the machine-readable zone (MRZ) at the bottom
+     * @var string Parsed MRZ line 1 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public $CodeSet;
 
     /**
-     * @var string The second row of the MRZ at the bottom
+     * @var string Parsed MRZ line 2 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public $CodeCrc;
 
     /**
-     * @var string The surname.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Parsed surname extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public $Surname;
 
     /**
-     * @var string The given name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Parsed given name extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public $GivenName;
 
     /**
-     * @var string Type (in Machine Readable Zone)
+     * @var string Parsed document type extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public $Type;
 
@@ -173,7 +167,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
--9104 Alarm for tamper certificate
+-9104 Alarm for PS certificate
 -9107 Alarm for reflective certificate
 -9108 Alarm for blurry certificate 
 -9109 This capability is not enabled. Please contact customer support to activate the alert service.
@@ -196,30 +190,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $ID Passport ID
-     * @param string $Name Name
-     * @param string $DateOfBirth Date of birth
-     * @param string $Sex Gender (F: female, M: male)
-     * @param string $DateOfExpiration Expiration date
-     * @param string $IssuingCountry Issuing country
-     * @param string $Nationality Nationality code (MRZ field)
+     * @param string $ID Parsed passport ID extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param string $Name Parsed full name extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param string $DateOfBirth Parsed date of birth extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param string $Sex Parsed gender extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param string $DateOfExpiration Parsed expiry date extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param string $IssuingCountry Parsed issuing country extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param string $Nationality Parsed country-region code extracted from the MRZ (Machine-Readable Zone) of passport
      * @param array $Warn This field is deprecated and will always return an empty array. Usage is not recommended.
      * @param string $Image Base64-encoded identity photo
      * @param string $AdvancedInfo This field is deprecated and will always return "1". Usage is not recommended.
-     * @param string $CodeSet The first row of the machine-readable zone (MRZ) at the bottom
-     * @param string $CodeCrc The second row of the MRZ at the bottom
-     * @param string $Surname The surname.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $GivenName The given name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Type Type (in Machine Readable Zone)
+     * @param string $CodeSet Parsed MRZ line 1 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param string $CodeCrc Parsed MRZ line 2 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param string $Surname Parsed surname extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param string $GivenName Parsed given name extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param string $Type Parsed document type extracted from the MRZ (Machine-Readable Zone) of passport
      * @param PassportRecognizeInfos $PassportRecognizeInfos Document content in the visual zone
      * @param array $WarnCardInfos Card Warning Information
 
 -9101 Alarm for covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
--9104 Alarm for tamper certificate
+-9104 Alarm for PS certificate
 -9107 Alarm for reflective certificate
 -9108 Alarm for blurry certificate 
 -9109 This capability is not enabled. Please contact customer support to activate the alert service.
