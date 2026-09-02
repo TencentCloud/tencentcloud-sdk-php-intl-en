@@ -18,12 +18,12 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Data returned in the list of scan tasks list to display information
+ * Scan Task List Display Information
  *
  * @method string getTaskName() Obtain Task name.
  * @method void setTaskName(string $TaskName) Set Task name.
- * @method string getStartTime() Obtain start time of the task
- * @method void setStartTime(string $StartTime) Set start time of the task
+ * @method string getStartTime() Obtain Task start time
+ * @method void setStartTime(string $StartTime) Set Task start time
  * @method string getEndTime() Obtain Task end time
  * @method void setEndTime(string $EndTime) Set Task end time
  * @method string getScanPlanContent() Obtain Cron Format
@@ -70,8 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCWPBlProcess(integer $CWPBlProcess) Set Host Baseline Subtask Progress
  * @method integer getErrorCode() Obtain Exception status code
  * @method void setErrorCode(integer $ErrorCode) Set Exception status code
- * @method string getErrorInfo() Obtain Exception information
- * @method void setErrorInfo(string $ErrorInfo) Set Exception information
+ * @method string getErrorInfo() Obtain Exception message
+ * @method void setErrorInfo(string $ErrorInfo) Set Exception message
  * @method integer getStartDay() Obtain Number of Days for Periodic Task to Start
  * @method void setStartDay(integer $StartDay) Set Number of Days for Periodic Task to Start
  * @method integer getFrequency() Obtain Scanning Frequency, in Days. 1-Daily; 7-Weekly; 30-Monthly; 0-Scan Once.
@@ -80,8 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompleteNumber(integer $CompleteNumber) Set Completion Count
  * @method integer getCompleteAssetNumber() Obtain Completed Asset Count
  * @method void setCompleteAssetNumber(integer $CompleteAssetNumber) Set Completed Asset Count
- * @method integer getRiskCount() Obtain risk count
- * @method void setRiskCount(integer $RiskCount) Set risk count
+ * @method integer getRiskCount() Obtain Risk count
+ * @method void setRiskCount(integer $RiskCount) Set Risk count
  * @method array getAssets() Obtain Asset
  * @method void setAssets(array $Assets) Set Asset
  * @method string getAppId() Obtain User Appid
@@ -109,7 +109,7 @@ class ScanTaskInfoList extends AbstractModel
     public $TaskName;
 
     /**
-     * @var string start time of the task
+     * @var string Task start time
      */
     public $StartTime;
 
@@ -229,7 +229,7 @@ class ScanTaskInfoList extends AbstractModel
     public $ErrorCode;
 
     /**
-     * @var string Exception information
+     * @var string Exception message
      */
     public $ErrorInfo;
 
@@ -254,7 +254,7 @@ class ScanTaskInfoList extends AbstractModel
     public $CompleteAssetNumber;
 
     /**
-     * @var integer risk count
+     * @var integer Risk count
      */
     public $RiskCount;
 
@@ -305,7 +305,7 @@ class ScanTaskInfoList extends AbstractModel
 
     /**
      * @param string $TaskName Task name.
-     * @param string $StartTime start time of the task
+     * @param string $StartTime Task start time
      * @param string $EndTime Task end time
      * @param string $ScanPlanContent Cron Format
      * @param integer $TaskType 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
@@ -329,12 +329,12 @@ class ScanTaskInfoList extends AbstractModel
      * @param integer $CWPPOCProcess Host Vulnerability Scan Subtask Progress
      * @param integer $CWPBlProcess Host Baseline Subtask Progress
      * @param integer $ErrorCode Exception status code
-     * @param string $ErrorInfo Exception information
+     * @param string $ErrorInfo Exception message
      * @param integer $StartDay Number of Days for Periodic Task to Start
      * @param integer $Frequency Scanning Frequency, in Days. 1-Daily; 7-Weekly; 30-Monthly; 0-Scan Once.
      * @param integer $CompleteNumber Completion Count
      * @param integer $CompleteAssetNumber Completed Asset Count
-     * @param integer $RiskCount risk count
+     * @param integer $RiskCount Risk count
      * @param array $Assets Asset
      * @param string $AppId User Appid
      * @param string $UIN User Host Account ID

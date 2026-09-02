@@ -24,20 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRelateEvent(RelatedEvent $RelateEvent) Set Related attack events
  * @method string getLeakContent() Obtain Leaked content
  * @method void setLeakContent(string $LeakContent) Set Leaked content
- * @method string getLeakAPI() Obtain Leak API
- * @method void setLeakAPI(string $LeakAPI) Set Leak API
+ * @method string getLeakAPI() Obtain Leak APIs
+ * @method void setLeakAPI(string $LeakAPI) Set Leak APIs
  * @method string getSecretID() Obtain secretID
  * @method void setSecretID(string $SecretID) Set secretID
- * @method string getRule() Obtain hit rule
- * @method void setRule(string $Rule) Set hit rule
+ * @method string getRule() Obtain Matched rule
+ * @method void setRule(string $Rule) Set Matched rule
  * @method string getRuleDesc() Obtain Rule description
  * @method void setRuleDesc(string $RuleDesc) Set Rule description
  * @method string getProtocolPort() Obtain Protocol port
  * @method void setProtocolPort(string $ProtocolPort) Set Protocol port
  * @method string getAttackContent() Obtain Attack content
  * @method void setAttackContent(string $AttackContent) Set Attack content
- * @method string getAttackIPProfile() Obtain Attack IP profiling
- * @method void setAttackIPProfile(string $AttackIPProfile) Set Attack IP profiling
+ * @method string getAttackIPProfile() Obtain Attack IP profiling.
+ * @method void setAttackIPProfile(string $AttackIPProfile) Set Attack IP profiling.
  * @method string getAttackIPTags() Obtain Attack IP tag
  * @method void setAttackIPTags(string $AttackIPTags) Set Attack IP tag
  * @method string getRequestMethod() Obtain Request method
@@ -60,16 +60,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCVE(string $CVE) Set Public vulnerability and exposure
  * @method string getServiceProcess() Obtain Service process
  * @method void setServiceProcess(string $ServiceProcess) Set Service process
- * @method string getFileName() Obtain Filename
- * @method void setFileName(string $FileName) Set Filename
+ * @method string getFileName() Obtain File name
+ * @method void setFileName(string $FileName) Set File name
  * @method string getFileSize() Obtain File size
  * @method void setFileSize(string $FileSize) Set File size
  * @method string getFileMD5() Obtain File MD5
  * @method void setFileMD5(string $FileMD5) Set File MD5
  * @method string getFileLastAccessTime() Obtain Last access time of the file
  * @method void setFileLastAccessTime(string $FileLastAccessTime) Set Last access time of the file
- * @method string getFileModifyTime() Obtain file modification time
- * @method void setFileModifyTime(string $FileModifyTime) Set file modification time
+ * @method string getFileModifyTime() Obtain File modification time
+ * @method void setFileModifyTime(string $FileModifyTime) Set File modification time
  * @method string getRecentAccessTime() Obtain Last access Time
  * @method void setRecentAccessTime(string $RecentAccessTime) Set Last access Time
  * @method string getRecentModifyTime() Obtain Last modification time
@@ -78,58 +78,58 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVirusName(string $VirusName) Set Virus name
  * @method string getVirusFileTags() Obtain Virus file tag
  * @method void setVirusFileTags(string $VirusFileTags) Set Virus file tag
- * @method string getBehavioralCharacteristics() Obtain behavioral characteristics
- * @method void setBehavioralCharacteristics(string $BehavioralCharacteristics) Set behavioral characteristics
- * @method string getProcessNamePID() Obtain process name (PID)
- * @method void setProcessNamePID(string $ProcessNamePID) Set process name (PID)
+ * @method string getBehavioralCharacteristics() Obtain Behavioral characteristics
+ * @method void setBehavioralCharacteristics(string $BehavioralCharacteristics) Set Behavioral characteristics
+ * @method string getProcessNamePID() Obtain Process name (PID)
+ * @method void setProcessNamePID(string $ProcessNamePID) Set Process name (PID)
  * @method string getProcessPath() Obtain Process path
  * @method void setProcessPath(string $ProcessPath) Set Process path
- * @method string getProcessCommandLine() Obtain Command line of the process
- * @method void setProcessCommandLine(string $ProcessCommandLine) Set Command line of the process
+ * @method string getProcessCommandLine() Obtain Process command line
+ * @method void setProcessCommandLine(string $ProcessCommandLine) Set Process command line
  * @method string getProcessPermissions() Obtain Process permission
  * @method void setProcessPermissions(string $ProcessPermissions) Set Process permission
  * @method string getExecutedCommand() Obtain Execute commands
  * @method void setExecutedCommand(string $ExecutedCommand) Set Execute commands
- * @method string getAffectedFileName() Obtain Affected Filename
- * @method void setAffectedFileName(string $AffectedFileName) Set Affected Filename
- * @method string getDecoyPath() Obtain bait path
- * @method void setDecoyPath(string $DecoyPath) Set bait path
+ * @method string getAffectedFileName() Obtain Affected file name
+ * @method void setAffectedFileName(string $AffectedFileName) Set Affected file name
+ * @method string getDecoyPath() Obtain Bait path
+ * @method void setDecoyPath(string $DecoyPath) Set Bait path
  * @method string getMaliciousProcessFileSize() Obtain Malicious process file size
  * @method void setMaliciousProcessFileSize(string $MaliciousProcessFileSize) Set Malicious process file size
- * @method string getMaliciousProcessFileMD5() Obtain Malicious process file MD5
- * @method void setMaliciousProcessFileMD5(string $MaliciousProcessFileMD5) Set Malicious process file MD5
+ * @method string getMaliciousProcessFileMD5() Obtain MD5 of the malicious process file
+ * @method void setMaliciousProcessFileMD5(string $MaliciousProcessFileMD5) Set MD5 of the malicious process file
  * @method string getMaliciousProcessNamePID() Obtain Malicious process name (PID)
  * @method void setMaliciousProcessNamePID(string $MaliciousProcessNamePID) Set Malicious process name (PID)
  * @method string getMaliciousProcessPath() Obtain Malicious process path
  * @method void setMaliciousProcessPath(string $MaliciousProcessPath) Set Malicious process path
- * @method string getMaliciousProcessStartTime() Obtain malicious process start time
- * @method void setMaliciousProcessStartTime(string $MaliciousProcessStartTime) Set malicious process start time
- * @method string getCommandContent() Obtain command content
- * @method void setCommandContent(string $CommandContent) Set command content
+ * @method string getMaliciousProcessStartTime() Obtain Malicious process startup time
+ * @method void setMaliciousProcessStartTime(string $MaliciousProcessStartTime) Set Malicious process startup time
+ * @method string getCommandContent() Obtain Command
+ * @method void setCommandContent(string $CommandContent) Set Command
  * @method string getStartupUser() Obtain Startup user
  * @method void setStartupUser(string $StartupUser) Set Startup user
  * @method string getUserGroup() Obtain User group
  * @method void setUserGroup(string $UserGroup) Set User group
- * @method string getNewPermissions() Obtain Add new permission
- * @method void setNewPermissions(string $NewPermissions) Set Add new permission
+ * @method string getNewPermissions() Obtain Added permission
+ * @method void setNewPermissions(string $NewPermissions) Set Added permission
  * @method string getParentProcess() Obtain Parent process
  * @method void setParentProcess(string $ParentProcess) Set Parent process
  * @method string getClassName() Obtain Class name
  * @method void setClassName(string $ClassName) Set Class name
- * @method string getClassLoader() Obtain class loader
- * @method void setClassLoader(string $ClassLoader) Set class loader
- * @method string getClassFileSize() Obtain File size
- * @method void setClassFileSize(string $ClassFileSize) Set File size
+ * @method string getClassLoader() Obtain Class loader to which it belongs
+ * @method void setClassLoader(string $ClassLoader) Set Class loader to which it belongs
+ * @method string getClassFileSize() Obtain Individual file size
+ * @method void setClassFileSize(string $ClassFileSize) Set Individual file size
  * @method string getClassFileMD5() Obtain Class file MD5
  * @method void setClassFileMD5(string $ClassFileMD5) Set Class file MD5
  * @method string getParentClassName() Obtain Parent class name
  * @method void setParentClassName(string $ParentClassName) Set Parent class name
- * @method string getInheritedInterface() Obtain inherit an API
- * @method void setInheritedInterface(string $InheritedInterface) Set inherit an API
+ * @method string getInheritedInterface() Obtain Inherit interfaces
+ * @method void setInheritedInterface(string $InheritedInterface) Set Inherit interfaces
  * @method string getComment() Obtain Annotation
  * @method void setComment(string $Comment) Set Annotation
- * @method string getPayloadContent() Obtain payload content
- * @method void setPayloadContent(string $PayloadContent) Set payload content
+ * @method string getPayloadContent() Obtain Payload content
+ * @method void setPayloadContent(string $PayloadContent) Set Payload content
  * @method string getCallbackAddressPortrait() Obtain Callback address profile
  * @method void setCallbackAddressPortrait(string $CallbackAddressPortrait) Set Callback address profile
  * @method string getCallbackAddressTag() Obtain Callback address tag
@@ -138,44 +138,44 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcessMD5(string $ProcessMD5) Set Process MD5
  * @method string getFilePermission() Obtain File permission
  * @method void setFilePermission(string $FilePermission) Set File permission
- * @method array getFromLogAnalysisData() Obtain Information field from log analysis
- * @method void setFromLogAnalysisData(array $FromLogAnalysisData) Set Information field from log analysis
- * @method string getHitProbe() Obtain probe hit
- * @method void setHitProbe(string $HitProbe) Set probe hit
- * @method string getHitHoneyPot() Obtain hit honeypot
+ * @method array getFromLogAnalysisData() Obtain Information fields that come from log analysis
+ * @method void setFromLogAnalysisData(array $FromLogAnalysisData) Set Information fields that come from log analysis
+ * @method string getHitProbe() Obtain Cache hit probe
+ * @method void setHitProbe(string $HitProbe) Set Cache hit probe
+ * @method string getHitHoneyPot() Obtain Hit a honeypot
 
- * @method void setHitHoneyPot(string $HitHoneyPot) Set hit honeypot
+ * @method void setHitHoneyPot(string $HitHoneyPot) Set Hit a honeypot
 
- * @method string getCommandList() Obtain command list
- * @method void setCommandList(string $CommandList) Set command list
- * @method string getAttackEventDesc() Obtain Attack event description
+ * @method string getCommandList() Obtain Command list
+ * @method void setCommandList(string $CommandList) Set Command list
+ * @method string getAttackEventDesc() Obtain Description of the attack event
 
- * @method void setAttackEventDesc(string $AttackEventDesc) Set Attack event description
+ * @method void setAttackEventDesc(string $AttackEventDesc) Set Description of the attack event
 
- * @method string getProcessInfo() Obtain Process information
- * @method void setProcessInfo(string $ProcessInfo) Set Process information
- * @method string getUserNameAndPwd() Obtain Login username & password
- * @method void setUserNameAndPwd(string $UserNameAndPwd) Set Login username & password
+ * @method string getProcessInfo() Obtain Process information.
+ * @method void setProcessInfo(string $ProcessInfo) Set Process information.
+ * @method string getUserNameAndPwd() Obtain Use username and password
+ * @method void setUserNameAndPwd(string $UserNameAndPwd) Set Use username and password
  * @method string getStrategyID() Obtain Host protection policy ID
  * @method void setStrategyID(string $StrategyID) Set Host protection policy ID
  * @method string getStrategyName() Obtain Host protection policy name
  * @method void setStrategyName(string $StrategyName) Set Host protection policy name
- * @method string getHitStrategy() Obtain Host protection hit policy is a combination of policy ID and Policy Name
- * @method void setHitStrategy(string $HitStrategy) Set Host protection hit policy is a combination of policy ID and Policy Name
+ * @method string getHitStrategy() Obtain Host protection hit policy, which is a combination of the policy ID and policy name.
+ * @method void setHitStrategy(string $HitStrategy) Set Host protection hit policy, which is a combination of the policy ID and policy name.
  * @method string getProcessName() Obtain Process name
  * @method void setProcessName(string $ProcessName) Set Process name
  * @method string getPID() Obtain PID
  * @method void setPID(string $PID) Set PID
- * @method string getPodName() Obtain Container Pod name
- * @method void setPodName(string $PodName) Set Container Pod name
- * @method string getPodID() Obtain Container Pod ID
- * @method void setPodID(string $PodID) Set Container Pod ID
+ * @method string getPodName() Obtain Pod name of the container
+ * @method void setPodName(string $PodName) Set Pod name of the container
+ * @method string getPodID() Obtain Pod ID of the container
+ * @method void setPodID(string $PodID) Set Pod ID of the container
  * @method string getResponse() Obtain Http response
  * @method void setResponse(string $Response) Set Http response
- * @method string getSystemCall() Obtain system call
- * @method void setSystemCall(string $SystemCall) Set system call
- * @method string getVerb() Obtain Operation type
- * @method void setVerb(string $Verb) Set Operation type
+ * @method string getSystemCall() Obtain System call
+ * @method void setSystemCall(string $SystemCall) Set System call
+ * @method string getVerb() Obtain Operation type.
+ * @method void setVerb(string $Verb) Set Operation type.
  * @method string getLogID() Obtain Log ID.
  * @method void setLogID(string $LogID) Set Log ID.
  * @method string getDifferent() Obtain Change content
@@ -184,26 +184,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventType(string $EventType) Set Event type
  * @method string getDescription() Obtain Event description
  * @method void setDescription(string $Description) Set Event description
- * @method string getTargetAddress() Obtain Destination address (container reverse shell)
- * @method void setTargetAddress(string $TargetAddress) Set Destination address (container reverse shell)
- * @method string getMaliciousRequestDomain() Obtain Malicious request domain name (container malicious outbound connection)
- * @method void setMaliciousRequestDomain(string $MaliciousRequestDomain) Set Malicious request domain name (container malicious outbound connection)
- * @method string getRuleType() Obtain Rule Type (Container K8sAPI Exception Request)
- * @method void setRuleType(string $RuleType) Set Rule Type (Container K8sAPI Exception Request)
- * @method string getRequestURI() Obtain Requested Resource (Container K8sAPI Exception Request)
- * @method void setRequestURI(string $RequestURI) Set Requested Resource (Container K8sAPI Exception Request)
- * @method string getRequestUser() Obtain Request Initiating User (Container K8sAPI Exception Request)
- * @method void setRequestUser(string $RequestUser) Set Request Initiating User (Container K8sAPI Exception Request)
- * @method string getRequestObject() Obtain Request Object (Container K8sAPI Exception Request)
- * @method void setRequestObject(string $RequestObject) Set Request Object (Container K8sAPI Exception Request)
- * @method string getResponseObject() Obtain Response object (container K8sAPI exception request)
- * @method void setResponseObject(string $ResponseObject) Set Response object (container K8sAPI exception request)
- * @method string getFileType() Obtain File type (Container file tamper)
- * @method void setFileType(string $FileType) Set File type (Container file tamper)
- * @method string getTIType() Obtain Tag feature (malicious outbound connection of container)
- * @method void setTIType(string $TIType) Set Tag feature (malicious outbound connection of container)
- * @method string getSourceIP() Obtain Source IP Address (Container K8sAPI Exception Request)
- * @method void setSourceIP(string $SourceIP) Set Source IP Address (Container K8sAPI Exception Request)
+ * @method string getTargetAddress() Obtain Target address (container reverse shell)
+ * @method void setTargetAddress(string $TargetAddress) Set Target address (container reverse shell)
+ * @method string getMaliciousRequestDomain() Obtain Malicious request domain name (malicious outbound connection of a container)
+ * @method void setMaliciousRequestDomain(string $MaliciousRequestDomain) Set Malicious request domain name (malicious outbound connection of a container)
+ * @method string getRuleType() Obtain Rule type (exceptional request of the K8s API in the container)
+ * @method void setRuleType(string $RuleType) Set Rule type (exceptional request of the K8s API in the container)
+ * @method string getRequestURI() Obtain Requested resource (exceptional request for K8s API of a container)
+ * @method void setRequestURI(string $RequestURI) Set Requested resource (exceptional request for K8s API of a container)
+ * @method string getRequestUser() Obtain Request initiating user (container K8s API abnormal request)
+ * @method void setRequestUser(string $RequestUser) Set Request initiating user (container K8s API abnormal request)
+ * @method string getRequestObject() Obtain Request object (exceptional K8s API request in a container)
+ * @method void setRequestObject(string $RequestObject) Set Request object (exceptional K8s API request in a container)
+ * @method string getResponseObject() Obtain object (for exceptional requests from the K8s API in a container)
+ * @method void setResponseObject(string $ResponseObject) Set object (for exceptional requests from the K8s API in a container)
+ * @method string getFileType() Obtain File type (container file tampering)
+ * @method void setFileType(string $FileType) Set File type (container file tampering)
+ * @method string getTIType() Obtain Tag feature (container malicious outbound connection)
+ * @method void setTIType(string $TIType) Set Tag feature (container malicious outbound connection)
+ * @method string getSourceIP() Obtain Source IP address (exceptional request to the K8s API of a container)
+ * @method void setSourceIP(string $SourceIP) Set Source IP address (exceptional request to the K8s API of a container)
  */
 class AlertExtraInfo extends AbstractModel
 {
@@ -218,7 +218,7 @@ class AlertExtraInfo extends AbstractModel
     public $LeakContent;
 
     /**
-     * @var string Leak API
+     * @var string Leak APIs
      */
     public $LeakAPI;
 
@@ -228,7 +228,7 @@ class AlertExtraInfo extends AbstractModel
     public $SecretID;
 
     /**
-     * @var string hit rule
+     * @var string Matched rule
      */
     public $Rule;
 
@@ -248,7 +248,7 @@ class AlertExtraInfo extends AbstractModel
     public $AttackContent;
 
     /**
-     * @var string Attack IP profiling
+     * @var string Attack IP profiling.
      */
     public $AttackIPProfile;
 
@@ -308,7 +308,7 @@ class AlertExtraInfo extends AbstractModel
     public $ServiceProcess;
 
     /**
-     * @var string Filename
+     * @var string File name
      */
     public $FileName;
 
@@ -328,7 +328,7 @@ class AlertExtraInfo extends AbstractModel
     public $FileLastAccessTime;
 
     /**
-     * @var string file modification time
+     * @var string File modification time
      */
     public $FileModifyTime;
 
@@ -353,12 +353,12 @@ class AlertExtraInfo extends AbstractModel
     public $VirusFileTags;
 
     /**
-     * @var string behavioral characteristics
+     * @var string Behavioral characteristics
      */
     public $BehavioralCharacteristics;
 
     /**
-     * @var string process name (PID)
+     * @var string Process name (PID)
      */
     public $ProcessNamePID;
 
@@ -368,7 +368,7 @@ class AlertExtraInfo extends AbstractModel
     public $ProcessPath;
 
     /**
-     * @var string Command line of the process
+     * @var string Process command line
      */
     public $ProcessCommandLine;
 
@@ -383,12 +383,12 @@ class AlertExtraInfo extends AbstractModel
     public $ExecutedCommand;
 
     /**
-     * @var string Affected Filename
+     * @var string Affected file name
      */
     public $AffectedFileName;
 
     /**
-     * @var string bait path
+     * @var string Bait path
      */
     public $DecoyPath;
 
@@ -398,7 +398,7 @@ class AlertExtraInfo extends AbstractModel
     public $MaliciousProcessFileSize;
 
     /**
-     * @var string Malicious process file MD5
+     * @var string MD5 of the malicious process file
      */
     public $MaliciousProcessFileMD5;
 
@@ -413,12 +413,12 @@ class AlertExtraInfo extends AbstractModel
     public $MaliciousProcessPath;
 
     /**
-     * @var string malicious process start time
+     * @var string Malicious process startup time
      */
     public $MaliciousProcessStartTime;
 
     /**
-     * @var string command content
+     * @var string Command
      */
     public $CommandContent;
 
@@ -433,7 +433,7 @@ class AlertExtraInfo extends AbstractModel
     public $UserGroup;
 
     /**
-     * @var string Add new permission
+     * @var string Added permission
      */
     public $NewPermissions;
 
@@ -448,12 +448,12 @@ class AlertExtraInfo extends AbstractModel
     public $ClassName;
 
     /**
-     * @var string class loader
+     * @var string Class loader to which it belongs
      */
     public $ClassLoader;
 
     /**
-     * @var string File size
+     * @var string Individual file size
      */
     public $ClassFileSize;
 
@@ -468,7 +468,7 @@ class AlertExtraInfo extends AbstractModel
     public $ParentClassName;
 
     /**
-     * @var string inherit an API
+     * @var string Inherit interfaces
      */
     public $InheritedInterface;
 
@@ -478,7 +478,7 @@ class AlertExtraInfo extends AbstractModel
     public $Comment;
 
     /**
-     * @var string payload content
+     * @var string Payload content
      */
     public $PayloadContent;
 
@@ -503,39 +503,39 @@ class AlertExtraInfo extends AbstractModel
     public $FilePermission;
 
     /**
-     * @var array Information field from log analysis
+     * @var array Information fields that come from log analysis
      */
     public $FromLogAnalysisData;
 
     /**
-     * @var string probe hit
+     * @var string Cache hit probe
      */
     public $HitProbe;
 
     /**
-     * @var string hit honeypot
+     * @var string Hit a honeypot
 
      */
     public $HitHoneyPot;
 
     /**
-     * @var string command list
+     * @var string Command list
      */
     public $CommandList;
 
     /**
-     * @var string Attack event description
+     * @var string Description of the attack event
 
      */
     public $AttackEventDesc;
 
     /**
-     * @var string Process information
+     * @var string Process information.
      */
     public $ProcessInfo;
 
     /**
-     * @var string Login username & password
+     * @var string Use username and password
      */
     public $UserNameAndPwd;
 
@@ -550,7 +550,7 @@ class AlertExtraInfo extends AbstractModel
     public $StrategyName;
 
     /**
-     * @var string Host protection hit policy is a combination of policy ID and Policy Name
+     * @var string Host protection hit policy, which is a combination of the policy ID and policy name.
      */
     public $HitStrategy;
 
@@ -565,12 +565,12 @@ class AlertExtraInfo extends AbstractModel
     public $PID;
 
     /**
-     * @var string Container Pod name
+     * @var string Pod name of the container
      */
     public $PodName;
 
     /**
-     * @var string Container Pod ID
+     * @var string Pod ID of the container
      */
     public $PodID;
 
@@ -580,12 +580,12 @@ class AlertExtraInfo extends AbstractModel
     public $Response;
 
     /**
-     * @var string system call
+     * @var string System call
      */
     public $SystemCall;
 
     /**
-     * @var string Operation type
+     * @var string Operation type.
      */
     public $Verb;
 
@@ -610,65 +610,65 @@ class AlertExtraInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var string Destination address (container reverse shell)
+     * @var string Target address (container reverse shell)
      */
     public $TargetAddress;
 
     /**
-     * @var string Malicious request domain name (container malicious outbound connection)
+     * @var string Malicious request domain name (malicious outbound connection of a container)
      */
     public $MaliciousRequestDomain;
 
     /**
-     * @var string Rule Type (Container K8sAPI Exception Request)
+     * @var string Rule type (exceptional request of the K8s API in the container)
      */
     public $RuleType;
 
     /**
-     * @var string Requested Resource (Container K8sAPI Exception Request)
+     * @var string Requested resource (exceptional request for K8s API of a container)
      */
     public $RequestURI;
 
     /**
-     * @var string Request Initiating User (Container K8sAPI Exception Request)
+     * @var string Request initiating user (container K8s API abnormal request)
      */
     public $RequestUser;
 
     /**
-     * @var string Request Object (Container K8sAPI Exception Request)
+     * @var string Request object (exceptional K8s API request in a container)
      */
     public $RequestObject;
 
     /**
-     * @var string Response object (container K8sAPI exception request)
+     * @var string object (for exceptional requests from the K8s API in a container)
      */
     public $ResponseObject;
 
     /**
-     * @var string File type (Container file tamper)
+     * @var string File type (container file tampering)
      */
     public $FileType;
 
     /**
-     * @var string Tag feature (malicious outbound connection of container)
+     * @var string Tag feature (container malicious outbound connection)
      */
     public $TIType;
 
     /**
-     * @var string Source IP Address (Container K8sAPI Exception Request)
+     * @var string Source IP address (exceptional request to the K8s API of a container)
      */
     public $SourceIP;
 
     /**
      * @param RelatedEvent $RelateEvent Related attack events
      * @param string $LeakContent Leaked content
-     * @param string $LeakAPI Leak API
+     * @param string $LeakAPI Leak APIs
      * @param string $SecretID secretID
-     * @param string $Rule hit rule
+     * @param string $Rule Matched rule
      * @param string $RuleDesc Rule description
      * @param string $ProtocolPort Protocol port
      * @param string $AttackContent Attack content
-     * @param string $AttackIPProfile Attack IP profiling
+     * @param string $AttackIPProfile Attack IP profiling.
      * @param string $AttackIPTags Attack IP tag
      * @param string $RequestMethod Request method
      * @param string $HttpLog HTTP log
@@ -680,78 +680,78 @@ class AlertExtraInfo extends AbstractModel
      * @param string $VulnerabilityName Vulnerability name
      * @param string $CVE Public vulnerability and exposure
      * @param string $ServiceProcess Service process
-     * @param string $FileName Filename
+     * @param string $FileName File name
      * @param string $FileSize File size
      * @param string $FileMD5 File MD5
      * @param string $FileLastAccessTime Last access time of the file
-     * @param string $FileModifyTime file modification time
+     * @param string $FileModifyTime File modification time
      * @param string $RecentAccessTime Last access Time
      * @param string $RecentModifyTime Last modification time
      * @param string $VirusName Virus name
      * @param string $VirusFileTags Virus file tag
-     * @param string $BehavioralCharacteristics behavioral characteristics
-     * @param string $ProcessNamePID process name (PID)
+     * @param string $BehavioralCharacteristics Behavioral characteristics
+     * @param string $ProcessNamePID Process name (PID)
      * @param string $ProcessPath Process path
-     * @param string $ProcessCommandLine Command line of the process
+     * @param string $ProcessCommandLine Process command line
      * @param string $ProcessPermissions Process permission
      * @param string $ExecutedCommand Execute commands
-     * @param string $AffectedFileName Affected Filename
-     * @param string $DecoyPath bait path
+     * @param string $AffectedFileName Affected file name
+     * @param string $DecoyPath Bait path
      * @param string $MaliciousProcessFileSize Malicious process file size
-     * @param string $MaliciousProcessFileMD5 Malicious process file MD5
+     * @param string $MaliciousProcessFileMD5 MD5 of the malicious process file
      * @param string $MaliciousProcessNamePID Malicious process name (PID)
      * @param string $MaliciousProcessPath Malicious process path
-     * @param string $MaliciousProcessStartTime malicious process start time
-     * @param string $CommandContent command content
+     * @param string $MaliciousProcessStartTime Malicious process startup time
+     * @param string $CommandContent Command
      * @param string $StartupUser Startup user
      * @param string $UserGroup User group
-     * @param string $NewPermissions Add new permission
+     * @param string $NewPermissions Added permission
      * @param string $ParentProcess Parent process
      * @param string $ClassName Class name
-     * @param string $ClassLoader class loader
-     * @param string $ClassFileSize File size
+     * @param string $ClassLoader Class loader to which it belongs
+     * @param string $ClassFileSize Individual file size
      * @param string $ClassFileMD5 Class file MD5
      * @param string $ParentClassName Parent class name
-     * @param string $InheritedInterface inherit an API
+     * @param string $InheritedInterface Inherit interfaces
      * @param string $Comment Annotation
-     * @param string $PayloadContent payload content
+     * @param string $PayloadContent Payload content
      * @param string $CallbackAddressPortrait Callback address profile
      * @param string $CallbackAddressTag Callback address tag
      * @param string $ProcessMD5 Process MD5
      * @param string $FilePermission File permission
-     * @param array $FromLogAnalysisData Information field from log analysis
-     * @param string $HitProbe probe hit
-     * @param string $HitHoneyPot hit honeypot
+     * @param array $FromLogAnalysisData Information fields that come from log analysis
+     * @param string $HitProbe Cache hit probe
+     * @param string $HitHoneyPot Hit a honeypot
 
-     * @param string $CommandList command list
-     * @param string $AttackEventDesc Attack event description
+     * @param string $CommandList Command list
+     * @param string $AttackEventDesc Description of the attack event
 
-     * @param string $ProcessInfo Process information
-     * @param string $UserNameAndPwd Login username & password
+     * @param string $ProcessInfo Process information.
+     * @param string $UserNameAndPwd Use username and password
      * @param string $StrategyID Host protection policy ID
      * @param string $StrategyName Host protection policy name
-     * @param string $HitStrategy Host protection hit policy is a combination of policy ID and Policy Name
+     * @param string $HitStrategy Host protection hit policy, which is a combination of the policy ID and policy name.
      * @param string $ProcessName Process name
      * @param string $PID PID
-     * @param string $PodName Container Pod name
-     * @param string $PodID Container Pod ID
+     * @param string $PodName Pod name of the container
+     * @param string $PodID Pod ID of the container
      * @param string $Response Http response
-     * @param string $SystemCall system call
-     * @param string $Verb Operation type
+     * @param string $SystemCall System call
+     * @param string $Verb Operation type.
      * @param string $LogID Log ID.
      * @param string $Different Change content
      * @param string $EventType Event type
      * @param string $Description Event description
-     * @param string $TargetAddress Destination address (container reverse shell)
-     * @param string $MaliciousRequestDomain Malicious request domain name (container malicious outbound connection)
-     * @param string $RuleType Rule Type (Container K8sAPI Exception Request)
-     * @param string $RequestURI Requested Resource (Container K8sAPI Exception Request)
-     * @param string $RequestUser Request Initiating User (Container K8sAPI Exception Request)
-     * @param string $RequestObject Request Object (Container K8sAPI Exception Request)
-     * @param string $ResponseObject Response object (container K8sAPI exception request)
-     * @param string $FileType File type (Container file tamper)
-     * @param string $TIType Tag feature (malicious outbound connection of container)
-     * @param string $SourceIP Source IP Address (Container K8sAPI Exception Request)
+     * @param string $TargetAddress Target address (container reverse shell)
+     * @param string $MaliciousRequestDomain Malicious request domain name (malicious outbound connection of a container)
+     * @param string $RuleType Rule type (exceptional request of the K8s API in the container)
+     * @param string $RequestURI Requested resource (exceptional request for K8s API of a container)
+     * @param string $RequestUser Request initiating user (container K8s API abnormal request)
+     * @param string $RequestObject Request object (exceptional K8s API request in a container)
+     * @param string $ResponseObject object (for exceptional requests from the K8s API in a container)
+     * @param string $FileType File type (container file tampering)
+     * @param string $TIType Tag feature (container malicious outbound connection)
+     * @param string $SourceIP Source IP address (exceptional request to the K8s API of a container)
      */
     function __construct()
     {

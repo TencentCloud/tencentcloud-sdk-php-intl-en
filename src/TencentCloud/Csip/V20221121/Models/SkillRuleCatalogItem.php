@@ -18,17 +18,20 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Fusion rule directory item
+ * Fusion rule directory entry
  *
- * @method string getRuleID() Obtain Fusion rule ID (9xxxx)
- * @method void setRuleID(string $RuleID) Set Fusion rule ID (9xxxx)
+ * @method string getRuleID() Obtain Fusion rule ID
+Parameter format: such as 9xxxx
+ * @method void setRuleID(string $RuleID) Set Fusion rule ID
+Parameter format: such as 9xxxx
  * @method string getRuleName() Obtain Risk category name
  * @method void setRuleName(string $RuleName) Set Risk category name
  */
 class SkillRuleCatalogItem extends AbstractModel
 {
     /**
-     * @var string Fusion rule ID (9xxxx)
+     * @var string Fusion rule ID
+Parameter format: such as 9xxxx
      */
     public $RuleID;
 
@@ -38,7 +41,8 @@ class SkillRuleCatalogItem extends AbstractModel
     public $RuleName;
 
     /**
-     * @param string $RuleID Fusion rule ID (9xxxx)
+     * @param string $RuleID Fusion rule ID
+Parameter format: such as 9xxxx
      * @param string $RuleName Risk category name
      */
     function __construct()

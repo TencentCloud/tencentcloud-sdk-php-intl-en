@@ -28,26 +28,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginIP(string $OriginIP) Set Original IP
  * @method integer getPort() Obtain Port.
  * @method void setPort(integer $Port) Set Port.
- * @method string getInstanceID() Obtain asset ID
- * @method void setInstanceID(string $InstanceID) Set asset ID
- * @method string getCity() Obtain city
- * @method void setCity(string $City) Set city
+ * @method string getInstanceID() Obtain Asset ID
+ * @method void setInstanceID(string $InstanceID) Set Asset ID
+ * @method string getCity() Obtain City
+ * @method void setCity(string $City) Set City
  * @method string getProvince() Obtain Province
  * @method void setProvince(string $Province) Set Province
- * @method string getCountry() Obtain nation
- * @method void setCountry(string $Country) Set nation
+ * @method string getCountry() Obtain national
+ * @method void setCountry(string $Country) Set national
  * @method string getAddress() Obtain Address.
  * @method void setAddress(string $Address) Set Address.
- * @method string getLatitude() Obtain latitude
- * @method void setLatitude(string $Latitude) Set latitude
- * @method string getLongitude() Obtain longitude
- * @method void setLongitude(string $Longitude) Set longitude
+ * @method string getLatitude() Obtain Latitude
+ * @method void setLatitude(string $Latitude) Set Latitude
+ * @method string getLongitude() Obtain Longitude
+ * @method void setLongitude(string $Longitude) Set Longitude
  * @method string getInfo() Obtain Information.
  * @method void setInfo(string $Info) Set Information.
  * @method string getDomain() Obtain Domain
  * @method void setDomain(string $Domain) Set Domain
- * @method string getName() Obtain Enterprise Name
- * @method void setName(string $Name) Set Enterprise Name
+ * @method string getName() Obtain Enterprise name
+ * @method void setName(string $Name) Set Enterprise name
  * @method string getAccount() Obtain Account
  * @method void setAccount(string $Account) Set Account
  * @method string getFamily() Obtain Family Group
@@ -56,16 +56,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVirusName(string $VirusName) Set Virus name
  * @method string getMD5() Obtain MD5 Value
  * @method void setMD5(string $MD5) Set MD5 Value
- * @method string getFileName() Obtain Malicious process filename
- * @method void setFileName(string $FileName) Set Malicious process filename
+ * @method string getFileName() Obtain Malicious process file name
+ * @method void setFileName(string $FileName) Set Malicious process file name
  * @method integer getAssetType() Obtain 1-Host Assets; 2-Domain Assets; 3-Network Assets
  * @method void setAssetType(integer $AssetType) Set 1-Host Assets; 2-Domain Assets; 3-Network Assets
  * @method array getFromLogAnalysisData() Obtain Information Fields of Source Log Analysis
  * @method void setFromLogAnalysisData(array $FromLogAnalysisData) Set Information Fields of Source Log Analysis
  * @method string getContainerName() Obtain Container name
  * @method void setContainerName(string $ContainerName) Set Container name
- * @method string getContainerID() Obtain container ID
- * @method void setContainerID(string $ContainerID) Set container ID
+ * @method string getContainerID() Obtain Container ID
+ * @method void setContainerID(string $ContainerID) Set Container ID
  */
 class RoleInfo extends AbstractModel
 {
@@ -90,12 +90,12 @@ class RoleInfo extends AbstractModel
     public $Port;
 
     /**
-     * @var string asset ID
+     * @var string Asset ID
      */
     public $InstanceID;
 
     /**
-     * @var string city
+     * @var string City
      */
     public $City;
 
@@ -105,7 +105,7 @@ class RoleInfo extends AbstractModel
     public $Province;
 
     /**
-     * @var string nation
+     * @var string national
      */
     public $Country;
 
@@ -115,12 +115,12 @@ class RoleInfo extends AbstractModel
     public $Address;
 
     /**
-     * @var string latitude
+     * @var string Latitude
      */
     public $Latitude;
 
     /**
-     * @var string longitude
+     * @var string Longitude
      */
     public $Longitude;
 
@@ -135,7 +135,7 @@ class RoleInfo extends AbstractModel
     public $Domain;
 
     /**
-     * @var string Enterprise Name
+     * @var string Enterprise name
      */
     public $Name;
 
@@ -160,7 +160,7 @@ class RoleInfo extends AbstractModel
     public $MD5;
 
     /**
-     * @var string Malicious process filename
+     * @var string Malicious process file name
      */
     public $FileName;
 
@@ -180,7 +180,7 @@ class RoleInfo extends AbstractModel
     public $ContainerName;
 
     /**
-     * @var string container ID
+     * @var string Container ID
      */
     public $ContainerID;
 
@@ -189,25 +189,25 @@ class RoleInfo extends AbstractModel
      * @param string $HostIP HostIP
      * @param string $OriginIP Original IP
      * @param integer $Port Port.
-     * @param string $InstanceID asset ID
-     * @param string $City city
+     * @param string $InstanceID Asset ID
+     * @param string $City City
      * @param string $Province Province
-     * @param string $Country nation
+     * @param string $Country national
      * @param string $Address Address.
-     * @param string $Latitude latitude
-     * @param string $Longitude longitude
+     * @param string $Latitude Latitude
+     * @param string $Longitude Longitude
      * @param string $Info Information.
      * @param string $Domain Domain
-     * @param string $Name Enterprise Name
+     * @param string $Name Enterprise name
      * @param string $Account Account
      * @param string $Family Family Group
      * @param string $VirusName Virus name
      * @param string $MD5 MD5 Value
-     * @param string $FileName Malicious process filename
+     * @param string $FileName Malicious process file name
      * @param integer $AssetType 1-Host Assets; 2-Domain Assets; 3-Network Assets
      * @param array $FromLogAnalysisData Information Fields of Source Log Analysis
      * @param string $ContainerName Container name
-     * @param string $ContainerID container ID
+     * @param string $ContainerID Container ID
      */
     function __construct()
     {

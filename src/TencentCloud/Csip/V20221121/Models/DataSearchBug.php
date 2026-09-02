@@ -18,14 +18,14 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Vulnerability and asset information
+ * Vulnerability and Asset Information
  *
- * @method string getStateCode() Obtain Query status code
- * @method void setStateCode(string $StateCode) Set Query status code
+ * @method string getStateCode() Obtain Return to Query Status
+ * @method void setStateCode(string $StateCode) Set Return to Query Status
  * @method array getDataBug() Obtain Vulnerability details
  * @method void setDataBug(array $DataBug) Set Vulnerability details
- * @method array getDataAsset() Obtain Vulnerability impact assets details
- * @method void setDataAsset(array $DataAsset) Set Vulnerability impact assets details
+ * @method array getDataAsset() Obtain Vulnerability impact asset details
+ * @method void setDataAsset(array $DataAsset) Set Vulnerability impact asset details
  * @method boolean getVSSScan() Obtain True supports scanning. False does not support scanning.
  * @method void setVSSScan(boolean $VSSScan) Set True supports scanning. False does not support scanning.
  * @method string getCWPScan() Obtain 0-Not Supported; 1-Supported
@@ -36,15 +36,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWafPatch(integer $WafPatch) Set 0-Not Supported; 1-Supported
  * @method integer getCWPFix() Obtain 0-Not Supported; 1-Supported
  * @method void setCWPFix(integer $CWPFix) Set 0-Not Supported; 1-Supported
- * @method array getDataSupport() Obtain Product Support Status
- * @method void setDataSupport(array $DataSupport) Set Product Support Status
+ * @method array getDataSupport() Obtain Product support status
+ * @method void setDataSupport(array $DataSupport) Set Product support status
  * @method string getCveId() Obtain cveId
  * @method void setCveId(string $CveId) Set cveId
  */
 class DataSearchBug extends AbstractModel
 {
     /**
-     * @var string Query status code
+     * @var string Return to Query Status
      */
     public $StateCode;
 
@@ -54,7 +54,7 @@ class DataSearchBug extends AbstractModel
     public $DataBug;
 
     /**
-     * @var array Vulnerability impact assets details
+     * @var array Vulnerability impact asset details
      */
     public $DataAsset;
 
@@ -84,7 +84,7 @@ class DataSearchBug extends AbstractModel
     public $CWPFix;
 
     /**
-     * @var array Product Support Status
+     * @var array Product support status
      */
     public $DataSupport;
 
@@ -94,15 +94,15 @@ class DataSearchBug extends AbstractModel
     public $CveId;
 
     /**
-     * @param string $StateCode Query status code
+     * @param string $StateCode Return to Query Status
      * @param array $DataBug Vulnerability details
-     * @param array $DataAsset Vulnerability impact assets details
+     * @param array $DataAsset Vulnerability impact asset details
      * @param boolean $VSSScan True supports scanning. False does not support scanning.
      * @param string $CWPScan 0-Not Supported; 1-Supported
      * @param string $CFWPatch 1 indicates virtual patches supported, 0 or null indicates not supported.
      * @param integer $WafPatch 0-Not Supported; 1-Supported
      * @param integer $CWPFix 0-Not Supported; 1-Supported
-     * @param array $DataSupport Product Support Status
+     * @param array $DataSupport Product support status
      * @param string $CveId cveId
      */
     function __construct()

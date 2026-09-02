@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method Filter getFilter() Obtain filter
- * @method void setFilter(Filter $Filter) Set filter
+ * @method Filter getFilter() Obtain Filter
+ * @method void setFilter(Filter $Filter) Set Filter
  */
 class DescribeAIAgentAssetListRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeAIAgentAssetListRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var Filter filter
+     * @var Filter Filter
      */
     public $Filter;
 
     /**
      * @param array $MemberId Group Account Member ID
-     * @param Filter $Filter filter
+     * @param Filter $Filter Filter
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccessKeyUserDetail request structure.
  *
- * @method string getSubUin() Obtain Account uin itself.
- * @method void setSubUin(string $SubUin) Set Account uin itself.
+ * @method string getSubUin() Obtain Account's own uin
+ * @method void setSubUin(string $SubUin) Set Account's own uin
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
 class DescribeAccessKeyUserDetailRequest extends AbstractModel
 {
     /**
-     * @var string Account uin itself.
+     * @var string Account's own uin
      */
     public $SubUin;
 
@@ -38,7 +38,7 @@ class DescribeAccessKeyUserDetailRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @param string $SubUin Account uin itself.
+     * @param string $SubUin Account's own uin
      * @param array $MemberId Group Account Member ID
      */
     function __construct()

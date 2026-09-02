@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Vulnerability VPR tag
  *
- * @method string getName() Obtain <p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p>
- * @method void setName(string $Name) Set <p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p>
- * @method string getLevel() Obtain <p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
- * @method void setLevel(string $Level) Set <p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
+ * @method string getName() Obtain <p>Tag name<br>Enumeration values:<br>IN_THE_WILD: exploitation in the wild<br>EXP: has EXP<br>POC: has POC<br>INTERNET_EXPOSED: public network exposure<br>NO_RESTART: no restart required<br>HIGH_VALUE_ASSET: important asset<br>MALWARE_WEAPONIZED: weaponized</p>
+ * @method void setName(string $Name) Set <p>Tag name<br>Enumeration values:<br>IN_THE_WILD: exploitation in the wild<br>EXP: has EXP<br>POC: has POC<br>INTERNET_EXPOSED: public network exposure<br>NO_RESTART: no restart required<br>HIGH_VALUE_ASSET: important asset<br>MALWARE_WEAPONIZED: weaponized</p>
+ * @method string getLevel() Obtain <p>Tag level<br>Enumeration values:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
+ * @method void setLevel(string $Level) Set <p>Tag level<br>Enumeration values:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
  * @method string getRemark() Obtain <p>Tag description</p>
  * @method void setRemark(string $Remark) Set <p>Tag description</p>
  */
 class VPRLabel extends AbstractModel
 {
     /**
-     * @var string <p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p>
+     * @var string <p>Tag name<br>Enumeration values:<br>IN_THE_WILD: exploitation in the wild<br>EXP: has EXP<br>POC: has POC<br>INTERNET_EXPOSED: public network exposure<br>NO_RESTART: no restart required<br>HIGH_VALUE_ASSET: important asset<br>MALWARE_WEAPONIZED: weaponized</p>
      */
     public $Name;
 
     /**
-     * @var string <p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
+     * @var string <p>Tag level<br>Enumeration values:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
      */
     public $Level;
 
@@ -45,8 +45,8 @@ class VPRLabel extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $Name <p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p>
-     * @param string $Level <p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
+     * @param string $Name <p>Tag name<br>Enumeration values:<br>IN_THE_WILD: exploitation in the wild<br>EXP: has EXP<br>POC: has POC<br>INTERNET_EXPOSED: public network exposure<br>NO_RESTART: no restart required<br>HIGH_VALUE_ASSET: important asset<br>MALWARE_WEAPONIZED: weaponized</p>
+     * @param string $Level <p>Tag level<br>Enumeration values:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
      * @param string $Remark <p>Tag description</p>
      */
     function __construct()

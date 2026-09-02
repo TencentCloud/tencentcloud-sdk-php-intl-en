@@ -18,12 +18,12 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of asset scan result
+ * Asset Scan Structure Details
  *
  * @method string getAppID() Obtain User appid.
  * @method void setAppID(string $AppID) Set User appid.
- * @method string getCVEId() Obtain CVE id
- * @method void setCVEId(string $CVEId) Set CVE id
+ * @method string getCVEId() Obtain CVE ID
+ * @method void setCVEId(string $CVEId) Set CVE ID
  * @method integer getIsScan() Obtain Scan Status. 0-Not Scanned by Default; 1-Scanning; 2-Scan Completed; 3-Scan Error.
  * @method void setIsScan(integer $IsScan) Set Scan Status. 0-Not Scanned by Default; 1-Scanning; 2-Scan Completed; 3-Scan Error.
  * @method integer getInfluenceAsset() Obtain Number of Affected Assets
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) Set Task ID.
  * @method integer getTaskPercent() Obtain Task Percentage
  * @method void setTaskPercent(integer $TaskPercent) Set Task Percentage
- * @method integer getTaskTime() Obtain Task Time
- * @method void setTaskTime(integer $TaskTime) Set Task Time
+ * @method integer getTaskTime() Obtain Task time
+ * @method void setTaskTime(integer $TaskTime) Set Task time
  * @method string getScanTime() Obtain Scan time
  * @method void setScanTime(string $ScanTime) Set Scan time
  */
@@ -49,7 +49,7 @@ class AssetInfoDetail extends AbstractModel
     public $AppID;
 
     /**
-     * @var string CVE id
+     * @var string CVE ID
      */
     public $CVEId;
 
@@ -84,7 +84,7 @@ class AssetInfoDetail extends AbstractModel
     public $TaskPercent;
 
     /**
-     * @var integer Task Time
+     * @var integer Task time
      */
     public $TaskTime;
 
@@ -95,14 +95,14 @@ class AssetInfoDetail extends AbstractModel
 
     /**
      * @param string $AppID User appid.
-     * @param string $CVEId CVE id
+     * @param string $CVEId CVE ID
      * @param integer $IsScan Scan Status. 0-Not Scanned by Default; 1-Scanning; 2-Scan Completed; 3-Scan Error.
      * @param integer $InfluenceAsset Number of Affected Assets
      * @param integer $NotRepairAsset Number of Unfixed Assets
      * @param integer $NotProtectAsset Unprotected Asset Count
      * @param string $TaskId Task ID.
      * @param integer $TaskPercent Task Percentage
-     * @param integer $TaskTime Task Time
+     * @param integer $TaskTime Task time
      * @param string $ScanTime Scan time
      */
     function __construct()

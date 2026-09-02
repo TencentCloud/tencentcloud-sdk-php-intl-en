@@ -36,14 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileType(integer $FileType) Set <p>File type (1: Dockerfile, 2: Terraform, 3: KubernetesYaml)</p>
  * @method integer getRiskTotalCnt() Obtain <p>Total number of risks</p>
  * @method void setRiskTotalCnt(integer $RiskTotalCnt) Set <p>Total number of risks</p>
- * @method array getRiskLevelCnt() Obtain <p>Risk level count (0: Low risk, 1: Medium risk, 2: High risk, 3: Critical)</p>
- * @method void setRiskLevelCnt(array $RiskLevelCnt) Set <p>Risk level count (0: Low risk, 1: Medium risk, 2: High risk, 3: Critical)</p>
- * @method string getScanTime() Obtain <p>Scan time</p>
- * @method void setScanTime(string $ScanTime) Set <p>Scan time</p>
- * @method integer getStatus() Obtain <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
- * @method void setStatus(integer $Status) Set <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
- * @method integer getFailType() Obtain <p>Scan failure type (0: No failure, 1: Detection timeout, 2: File format parsing failed, 3: Detection failed)</p>
- * @method void setFailType(integer $FailType) Set <p>Scan failure type (0: No failure, 1: Detection timeout, 2: File format parsing failed, 3: Detection failed)</p>
+ * @method array getRiskLevelCnt() Obtain <p>Number of risk levels (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
+ * @method void setRiskLevelCnt(array $RiskLevelCnt) Set <p>Number of risk levels (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
+ * @method string getScanTime() Obtain <p>Scan time.</p>
+ * @method void setScanTime(string $ScanTime) Set <p>Scan time.</p>
+ * @method integer getStatus() Obtain <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
+ * @method void setStatus(integer $Status) Set <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
+ * @method integer getFailType() Obtain <p>Scan failure type (0: no failure, 1: detection timeout, 2: file format parsing failed, 3: detection failed)</p>
+ * @method void setFailType(integer $FailType) Set <p>Scan failure type (0: no failure, 1: detection timeout, 2: file format parsing failed, 3: detection failed)</p>
  */
 class IaCFile extends AbstractModel
 {
@@ -88,22 +88,22 @@ class IaCFile extends AbstractModel
     public $RiskTotalCnt;
 
     /**
-     * @var array <p>Risk level count (0: Low risk, 1: Medium risk, 2: High risk, 3: Critical)</p>
+     * @var array <p>Number of risk levels (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
      */
     public $RiskLevelCnt;
 
     /**
-     * @var string <p>Scan time</p>
+     * @var string <p>Scan time.</p>
      */
     public $ScanTime;
 
     /**
-     * @var integer <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
+     * @var integer <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
      */
     public $Status;
 
     /**
-     * @var integer <p>Scan failure type (0: No failure, 1: Detection timeout, 2: File format parsing failed, 3: Detection failed)</p>
+     * @var integer <p>Scan failure type (0: no failure, 1: detection timeout, 2: file format parsing failed, 3: detection failed)</p>
      */
     public $FailType;
 
@@ -116,10 +116,10 @@ class IaCFile extends AbstractModel
      * @param string $FilePath <p>File path</p>
      * @param integer $FileType <p>File type (1: Dockerfile, 2: Terraform, 3: KubernetesYaml)</p>
      * @param integer $RiskTotalCnt <p>Total number of risks</p>
-     * @param array $RiskLevelCnt <p>Risk level count (0: Low risk, 1: Medium risk, 2: High risk, 3: Critical)</p>
-     * @param string $ScanTime <p>Scan time</p>
-     * @param integer $Status <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
-     * @param integer $FailType <p>Scan failure type (0: No failure, 1: Detection timeout, 2: File format parsing failed, 3: Detection failed)</p>
+     * @param array $RiskLevelCnt <p>Number of risk levels (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
+     * @param string $ScanTime <p>Scan time.</p>
+     * @param integer $Status <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
+     * @param integer $FailType <p>Scan failure type (0: no failure, 1: detection timeout, 2: file format parsing failed, 3: detection failed)</p>
      */
     function __construct()
     {

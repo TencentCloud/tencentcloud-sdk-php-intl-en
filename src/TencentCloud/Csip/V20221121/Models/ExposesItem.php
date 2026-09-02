@@ -18,16 +18,16 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Exposed assets.
+ * Exposed assets
  *
- * @method string getProvider() Obtain <p>Cloud vendor</p>
- * @method void setProvider(string $Provider) Set <p>Cloud vendor</p>
+ * @method string getProvider() Obtain <p>Cloud service provider.</p>
+ * @method void setProvider(string $Provider) Set <p>Cloud service provider.</p>
  * @method string getCloudAccountName() Obtain <p>Cloud account name</p>
  * @method void setCloudAccountName(string $CloudAccountName) Set <p>Cloud account name</p>
- * @method string getCloudAccountId() Obtain <p>Cloud Account</p>
- * @method void setCloudAccountId(string $CloudAccountId) Set <p>Cloud Account</p>
- * @method string getDomain() Obtain <p>Domain name</p>
- * @method void setDomain(string $Domain) Set <p>Domain name</p>
+ * @method string getCloudAccountId() Obtain <p>Cloud account</p>
+ * @method void setCloudAccountId(string $CloudAccountId) Set <p>Cloud account</p>
+ * @method string getDomain() Obtain <p>Domain Name.</p>
+ * @method void setDomain(string $Domain) Set <p>Domain Name.</p>
  * @method string getIp() Obtain <p>IP</p>
  * @method void setIp(string $Ip) Set <p>IP</p>
  * @method string getPort() Obtain <p>Port or port range</p>
@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAclType(string $AclType) Set <p>acl type</p>
  * @method string getAclList() Obtain <p>acl list</p>
  * @method void setAclList(string $AclList) Set <p>acl list</p>
- * @method string getAssetId() Obtain <p>Asset ID</p>
- * @method void setAssetId(string $AssetId) Set <p>Asset ID</p>
- * @method string getInstanceName() Obtain <p>Instance name</p>
- * @method void setInstanceName(string $InstanceName) Set <p>Instance name</p>
+ * @method string getAssetId() Obtain <p>Asset ID.</p>
+ * @method void setAssetId(string $AssetId) Set <p>Asset ID.</p>
+ * @method string getInstanceName() Obtain <p>Instance name.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p>
  * @method string getAssetType() Obtain <p>Asset type</p>
  * @method void setAssetType(string $AssetType) Set <p>Asset type</p>
  * @method integer getPortServiceCount() Obtain <p>Number of port services</p>
@@ -54,10 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWebAppCount(integer $WebAppCount) Set <p>Number of web applications</p>
  * @method integer getRiskWebAppCount() Obtain <p>Number of web applications at risk</p>
  * @method void setRiskWebAppCount(integer $RiskWebAppCount) Set <p>Number of web applications at risk</p>
- * @method integer getWeakPasswordCount() Obtain <p>Number of weak passwords.</p>
- * @method void setWeakPasswordCount(integer $WeakPasswordCount) Set <p>Number of weak passwords.</p>
- * @method integer getVulCount() Obtain <p>Vulnerability count</p>
- * @method void setVulCount(integer $VulCount) Set <p>Vulnerability count</p>
+ * @method integer getWeakPasswordCount() Obtain <p>Number of weak passwords</p>
+ * @method void setWeakPasswordCount(integer $WeakPasswordCount) Set <p>Number of weak passwords</p>
+ * @method integer getVulCount() Obtain <p>Number of vulnerabilities</p>
+ * @method void setVulCount(integer $VulCount) Set <p>Number of vulnerabilities</p>
  * @method string getCreateTime() Obtain <p>First discovery time</p>
  * @method void setCreateTime(string $CreateTime) Set <p>First discovery time</p>
  * @method string getUpdateTime() Obtain <p>Latest update time.</p>
@@ -86,21 +86,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPortDetectResult(string $PortDetectResult) Set <p>Port exposure result</p>
  * @method string getTag() Obtain <p>Tag.</p>
  * @method void setTag(string $Tag) Set <p>Tag.</p>
- * @method string getComment() Obtain <p>Remark</p>
- * @method void setComment(string $Comment) Set <p>Remark</p>
- * @method integer getToGovernedRiskCount() Obtain <p>Number of risks to be governed</p>
- * @method void setToGovernedRiskCount(integer $ToGovernedRiskCount) Set <p>Number of risks to be governed</p>
- * @method string getToGovernedRiskContent() Obtain <p>Risk content to be governed</p>
- * @method void setToGovernedRiskContent(string $ToGovernedRiskContent) Set <p>Risk content to be governed</p>
- * @method string getAssetTypeIconURL() Obtain <p>Type icon of asset</p>
- * @method void setAssetTypeIconURL(string $AssetTypeIconURL) Set <p>Type icon of asset</p>
- * @method string getAssetTypeIconSolidURL() Obtain <p>Asset type 3D icon</p>
- * @method void setAssetTypeIconSolidURL(string $AssetTypeIconSolidURL) Set <p>Asset type 3D icon</p>
+ * @method string getComment() Obtain <p>Remarks.</p>
+ * @method void setComment(string $Comment) Set <p>Remarks.</p>
+ * @method integer getToGovernedRiskCount() Obtain <p>Number of risks pending governance</p>
+ * @method void setToGovernedRiskCount(integer $ToGovernedRiskCount) Set <p>Number of risks pending governance</p>
+ * @method string getToGovernedRiskContent() Obtain <p>Risk content pending governance</p>
+ * @method void setToGovernedRiskContent(string $ToGovernedRiskContent) Set <p>Risk content pending governance</p>
+ * @method string getAssetTypeIconURL() Obtain <p>Asset type icon</p>
+ * @method void setAssetTypeIconURL(string $AssetTypeIconURL) Set <p>Asset type icon</p>
+ * @method string getAssetTypeIconSolidURL() Obtain <p>3D icon of asset type</p>
+ * @method void setAssetTypeIconSolidURL(string $AssetTypeIconSolidURL) Set <p>3D icon of asset type</p>
  */
 class ExposesItem extends AbstractModel
 {
     /**
-     * @var string <p>Cloud vendor</p>
+     * @var string <p>Cloud service provider.</p>
      */
     public $Provider;
 
@@ -110,12 +110,12 @@ class ExposesItem extends AbstractModel
     public $CloudAccountName;
 
     /**
-     * @var string <p>Cloud Account</p>
+     * @var string <p>Cloud account</p>
      */
     public $CloudAccountId;
 
     /**
-     * @var string <p>Domain name</p>
+     * @var string <p>Domain Name.</p>
      */
     public $Domain;
 
@@ -150,12 +150,12 @@ class ExposesItem extends AbstractModel
     public $AclList;
 
     /**
-     * @var string <p>Asset ID</p>
+     * @var string <p>Asset ID.</p>
      */
     public $AssetId;
 
     /**
-     * @var string <p>Instance name</p>
+     * @var string <p>Instance name.</p>
      */
     public $InstanceName;
 
@@ -185,12 +185,12 @@ class ExposesItem extends AbstractModel
     public $RiskWebAppCount;
 
     /**
-     * @var integer <p>Number of weak passwords.</p>
+     * @var integer <p>Number of weak passwords</p>
      */
     public $WeakPasswordCount;
 
     /**
-     * @var integer <p>Vulnerability count</p>
+     * @var integer <p>Number of vulnerabilities</p>
      */
     public $VulCount;
 
@@ -265,50 +265,50 @@ class ExposesItem extends AbstractModel
     public $Tag;
 
     /**
-     * @var string <p>Remark</p>
+     * @var string <p>Remarks.</p>
      */
     public $Comment;
 
     /**
-     * @var integer <p>Number of risks to be governed</p>
+     * @var integer <p>Number of risks pending governance</p>
      */
     public $ToGovernedRiskCount;
 
     /**
-     * @var string <p>Risk content to be governed</p>
+     * @var string <p>Risk content pending governance</p>
      */
     public $ToGovernedRiskContent;
 
     /**
-     * @var string <p>Type icon of asset</p>
+     * @var string <p>Asset type icon</p>
      */
     public $AssetTypeIconURL;
 
     /**
-     * @var string <p>Asset type 3D icon</p>
+     * @var string <p>3D icon of asset type</p>
      */
     public $AssetTypeIconSolidURL;
 
     /**
-     * @param string $Provider <p>Cloud vendor</p>
+     * @param string $Provider <p>Cloud service provider.</p>
      * @param string $CloudAccountName <p>Cloud account name</p>
-     * @param string $CloudAccountId <p>Cloud Account</p>
-     * @param string $Domain <p>Domain name</p>
+     * @param string $CloudAccountId <p>Cloud account</p>
+     * @param string $Domain <p>Domain Name.</p>
      * @param string $Ip <p>IP</p>
      * @param string $Port <p>Port or port range</p>
      * @param string $Status <p>Open</p>
      * @param string $RiskType <p>Risk type</p>
      * @param string $AclType <p>acl type</p>
      * @param string $AclList <p>acl list</p>
-     * @param string $AssetId <p>Asset ID</p>
-     * @param string $InstanceName <p>Instance name</p>
+     * @param string $AssetId <p>Asset ID.</p>
+     * @param string $InstanceName <p>Instance name.</p>
      * @param string $AssetType <p>Asset type</p>
      * @param integer $PortServiceCount <p>Number of port services</p>
      * @param integer $HighRiskPortServiceCount <p>Number of high-risk ports</p>
      * @param integer $WebAppCount <p>Number of web applications</p>
      * @param integer $RiskWebAppCount <p>Number of web applications at risk</p>
-     * @param integer $WeakPasswordCount <p>Number of weak passwords.</p>
-     * @param integer $VulCount <p>Vulnerability count</p>
+     * @param integer $WeakPasswordCount <p>Number of weak passwords</p>
+     * @param integer $VulCount <p>Number of vulnerabilities</p>
      * @param string $CreateTime <p>First discovery time</p>
      * @param string $UpdateTime <p>Latest update time.</p>
      * @param string $AssetTypeName <p>Instance Type Name</p>
@@ -323,11 +323,11 @@ class ExposesItem extends AbstractModel
      * @param integer $PortDetectCount <p>Number of open ports</p>
      * @param string $PortDetectResult <p>Port exposure result</p>
      * @param string $Tag <p>Tag.</p>
-     * @param string $Comment <p>Remark</p>
-     * @param integer $ToGovernedRiskCount <p>Number of risks to be governed</p>
-     * @param string $ToGovernedRiskContent <p>Risk content to be governed</p>
-     * @param string $AssetTypeIconURL <p>Type icon of asset</p>
-     * @param string $AssetTypeIconSolidURL <p>Asset type 3D icon</p>
+     * @param string $Comment <p>Remarks.</p>
+     * @param integer $ToGovernedRiskCount <p>Number of risks pending governance</p>
+     * @param string $ToGovernedRiskContent <p>Risk content pending governance</p>
+     * @param string $AssetTypeIconURL <p>Asset type icon</p>
+     * @param string $AssetTypeIconSolidURL <p>3D icon of asset type</p>
      */
     function __construct()
     {

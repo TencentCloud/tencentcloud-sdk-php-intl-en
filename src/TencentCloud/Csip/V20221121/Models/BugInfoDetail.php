@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVULCategory(integer $VULCategory) Set Vulnerability Type. 1: Web Application; 2: System Component Vulnerabilities; 3: Configuration Risk.
  * @method string getImpactOs() Obtain Vulnerability Affected System
  * @method void setImpactOs(string $ImpactOs) Set Vulnerability Affected System
- * @method string getImpactCOMPENT() Obtain Affected component
- * @method void setImpactCOMPENT(string $ImpactCOMPENT) Set Affected component
- * @method string getImpactVersion() Obtain Vulnerability Affected Version
- * @method void setImpactVersion(string $ImpactVersion) Set Vulnerability Affected Version
+ * @method string getImpactCOMPENT() Obtain Components affected by the vulnerability
+ * @method void setImpactCOMPENT(string $ImpactCOMPENT) Set Components affected by the vulnerability
+ * @method string getImpactVersion() Obtain Vulnerability affected version
+ * @method void setImpactVersion(string $ImpactVersion) Set Vulnerability affected version
  * @method string getReference() Obtain Link
  * @method void setReference(string $Reference) Set Link
  * @method string getVULDescribe() Obtain Vulnerability description
@@ -109,12 +109,12 @@ class BugInfoDetail extends AbstractModel
     public $ImpactOs;
 
     /**
-     * @var string Affected component
+     * @var string Components affected by the vulnerability
      */
     public $ImpactCOMPENT;
 
     /**
-     * @var string Vulnerability Affected Version
+     * @var string Vulnerability affected version
      */
     public $ImpactVersion;
 
@@ -173,8 +173,8 @@ class BugInfoDetail extends AbstractModel
      * @param string $Tag Vulnerability tag
      * @param integer $VULCategory Vulnerability Type. 1: Web Application; 2: System Component Vulnerabilities; 3: Configuration Risk.
      * @param string $ImpactOs Vulnerability Affected System
-     * @param string $ImpactCOMPENT Affected component
-     * @param string $ImpactVersion Vulnerability Affected Version
+     * @param string $ImpactCOMPENT Components affected by the vulnerability
+     * @param string $ImpactVersion Vulnerability affected version
      * @param string $Reference Link
      * @param string $VULDescribe Vulnerability description
      * @param string $Fix Fixing suggestion

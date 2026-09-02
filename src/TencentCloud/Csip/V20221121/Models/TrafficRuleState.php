@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModule() Obtain <p>Sandbox plug-in module name</p>
  * @method void setModule(string $Module) Set <p>Sandbox plug-in module name</p>
- * @method string getStatus() Obtain <p>Sandbox rule status</p><p>Enumeration value:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
- * @method void setStatus(string $Status) Set <p>Sandbox rule status</p><p>Enumeration value:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+ * @method string getStatus() Obtain <p>Sandbox rule status</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+ * @method void setStatus(string $Status) Set <p>Sandbox rule status</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
  */
 class TrafficRuleState extends AbstractModel
 {
@@ -33,13 +33,13 @@ class TrafficRuleState extends AbstractModel
     public $Module;
 
     /**
-     * @var string <p>Sandbox rule status</p><p>Enumeration value:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+     * @var string <p>Sandbox rule status</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
      */
     public $Status;
 
     /**
      * @param string $Module <p>Sandbox plug-in module name</p>
-     * @param string $Status <p>Sandbox rule status</p><p>Enumeration value:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+     * @param string $Status <p>Sandbox rule status</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
      */
     function __construct()
     {

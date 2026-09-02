@@ -18,48 +18,48 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Product support.
+ * Product support status
  *
- * @method string getServiceName() Obtain Product name.
+ * @method string getServiceName() Obtain Product name:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
- * @method void setServiceName(string $ServiceName) Set Product name.
+ * @method void setServiceName(string $ServiceName) Set Product name:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
- * @method integer getSupportHandledCount() Obtain Total number of processed assets.
- * @method void setSupportHandledCount(integer $SupportHandledCount) Set Total number of processed assets.
- * @method integer getSupportTotalCount() Obtain Total number of supported assets.
- * @method void setSupportTotalCount(integer $SupportTotalCount) Set Total number of supported assets.
- * @method boolean getIsSupport() Obtain Whether the product is supported: 1 for supported; 0 for unsupported.
- * @method void setIsSupport(boolean $IsSupport) Set Whether the product is supported: 1 for supported; 0 for unsupported.
+ * @method integer getSupportHandledCount() Obtain Total number of fixed assets
+ * @method void setSupportHandledCount(integer $SupportHandledCount) Set Total number of fixed assets
+ * @method integer getSupportTotalCount() Obtain Total number of supported assets
+ * @method void setSupportTotalCount(integer $SupportTotalCount) Set Total number of supported assets
+ * @method boolean getIsSupport() Obtain Whether the product is supported. 1: supported; 0: not supported
+ * @method void setIsSupport(boolean $IsSupport) Set Whether the product is supported. 1: supported; 0: not supported
  */
 class ServiceSupport extends AbstractModel
 {
     /**
-     * @var string Product name.
+     * @var string Product name:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
      */
     public $ServiceName;
 
     /**
-     * @var integer Total number of processed assets.
+     * @var integer Total number of fixed assets
      */
     public $SupportHandledCount;
 
     /**
-     * @var integer Total number of supported assets.
+     * @var integer Total number of supported assets
      */
     public $SupportTotalCount;
 
     /**
-     * @var boolean Whether the product is supported: 1 for supported; 0 for unsupported.
+     * @var boolean Whether the product is supported. 1: supported; 0: not supported
      */
     public $IsSupport;
 
     /**
-     * @param string $ServiceName Product name.
+     * @param string $ServiceName Product name:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
-     * @param integer $SupportHandledCount Total number of processed assets.
-     * @param integer $SupportTotalCount Total number of supported assets.
-     * @param boolean $IsSupport Whether the product is supported: 1 for supported; 0 for unsupported.
+     * @param integer $SupportHandledCount Total number of fixed assets
+     * @param integer $SupportTotalCount Total number of supported assets
+     * @param boolean $IsSupport Whether the product is supported. 1: supported; 0: not supported
      */
     function __construct()
     {

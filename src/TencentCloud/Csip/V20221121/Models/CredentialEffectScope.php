@@ -18,44 +18,40 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Effective machine range, used to specify which machines the credential takes effect on
+ * Scope of effective machines, used to specify which machines a credential takes effect on
  *
- * @method integer getExclude() Obtain Whether to exclude the mode
+ * @method integer getExclude() Obtain Whether to exclude mode
 Enumeration values:
-0: Inclusion mode (only takes effect on the Real Server in Instances). At this point, Instances is required.
-1: Exclusion mode (Machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable (Empty list means all machines take effect).
- * @method void setExclude(integer $Exclude) Set Whether to exclude the mode
+0: Inclusion mode (only for the Real Server in Instances). At this point, Instances is required.
+1: Exclusion mode (machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable. An empty list means all machines take effect.
+ * @method void setExclude(integer $Exclude) Set Whether to exclude mode
 Enumeration values:
-0: Inclusion mode (only takes effect on the Real Server in Instances). At this point, Instances is required.
-1: Exclusion mode (Machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable (Empty list means all machines take effect).
- * @method array getInstances() Obtain Machine instance ID list. Required when Exclude is 0, means only these machines can access the credential; Option when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstances(array $Instances) Set Machine instance ID list. Required when Exclude is 0, means only these machines can access the credential; Option when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect).
-Note: This field may return null, indicating that no valid values can be obtained.
+0: Inclusion mode (only for the Real Server in Instances). At this point, Instances is required.
+1: Exclusion mode (machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable. An empty list means all machines take effect.
+ * @method array getInstances() Obtain List of machine instance IDs. Required when Exclude is 0, means only these machines can access the credential. Optional when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect)
+ * @method void setInstances(array $Instances) Set List of machine instance IDs. Required when Exclude is 0, means only these machines can access the credential. Optional when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect)
  */
 class CredentialEffectScope extends AbstractModel
 {
     /**
-     * @var integer Whether to exclude the mode
+     * @var integer Whether to exclude mode
 Enumeration values:
-0: Inclusion mode (only takes effect on the Real Server in Instances). At this point, Instances is required.
-1: Exclusion mode (Machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable (Empty list means all machines take effect).
+0: Inclusion mode (only for the Real Server in Instances). At this point, Instances is required.
+1: Exclusion mode (machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable. An empty list means all machines take effect.
      */
     public $Exclude;
 
     /**
-     * @var array Machine instance ID list. Required when Exclude is 0, means only these machines can access the credential; Option when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array List of machine instance IDs. Required when Exclude is 0, means only these machines can access the credential. Optional when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect)
      */
     public $Instances;
 
     /**
-     * @param integer $Exclude Whether to exclude the mode
+     * @param integer $Exclude Whether to exclude mode
 Enumeration values:
-0: Inclusion mode (only takes effect on the Real Server in Instances). At this point, Instances is required.
-1: Exclusion mode (Machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable (Empty list means all machines take effect).
-     * @param array $Instances Machine instance ID list. Required when Exclude is 0, means only these machines can access the credential; Option when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect).
-Note: This field may return null, indicating that no valid values can be obtained.
+0: Inclusion mode (only for the Real Server in Instances). At this point, Instances is required.
+1: Exclusion mode (machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable. An empty list means all machines take effect.
+     * @param array $Instances List of machine instance IDs. Required when Exclude is 0, means only these machines can access the credential. Optional when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect)
      */
     function __construct()
     {

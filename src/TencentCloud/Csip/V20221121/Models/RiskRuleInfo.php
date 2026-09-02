@@ -18,16 +18,16 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * risk rule
+ * Risk rule
  *
- * @method string getRuleID() Obtain Risk Check Item ID
- * @method void setRuleID(string $RuleID) Set Risk Check Item ID
- * @method string getProvider() Obtain Cloud vendor name
- * @method void setProvider(string $Provider) Set Cloud vendor name
+ * @method string getRuleID() Obtain Risk check item ID
+ * @method void setRuleID(string $RuleID) Set Risk check item ID
+ * @method string getProvider() Obtain Vendor name
+ * @method void setProvider(string $Provider) Set Vendor name
  * @method string getInstanceType() Obtain Instance type
  * @method void setInstanceType(string $InstanceType) Set Instance type
- * @method string getRiskTitle() Obtain risk name
- * @method void setRiskTitle(string $RiskTitle) Set risk name
+ * @method string getRiskTitle() Obtain Risk name
+ * @method void setRiskTitle(string $RiskTitle) Set Risk name
  * @method string getCheckType() Obtain Check type
  * @method void setCheckType(string $CheckType) Set Check type
  * @method string getRiskLevel() Obtain Risk level
@@ -36,18 +36,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskInfluence(string $RiskInfluence) Set Risk damage
  * @method string getRiskFixAdvance() Obtain Risk remediation guide report link
  * @method void setRiskFixAdvance(string $RiskFixAdvance) Set Risk remediation guide report link
- * @method string getDispositionType() Obtain Boundary control
- * @method void setDispositionType(string $DispositionType) Set Boundary control
+ * @method string getDispositionType() Obtain Boundary management and control
+ * @method void setDispositionType(string $DispositionType) Set Boundary management and control
  */
 class RiskRuleInfo extends AbstractModel
 {
     /**
-     * @var string Risk Check Item ID
+     * @var string Risk check item ID
      */
     public $RuleID;
 
     /**
-     * @var string Cloud vendor name
+     * @var string Vendor name
      */
     public $Provider;
 
@@ -57,7 +57,7 @@ class RiskRuleInfo extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string risk name
+     * @var string Risk name
      */
     public $RiskTitle;
 
@@ -82,20 +82,20 @@ class RiskRuleInfo extends AbstractModel
     public $RiskFixAdvance;
 
     /**
-     * @var string Boundary control
+     * @var string Boundary management and control
      */
     public $DispositionType;
 
     /**
-     * @param string $RuleID Risk Check Item ID
-     * @param string $Provider Cloud vendor name
+     * @param string $RuleID Risk check item ID
+     * @param string $Provider Vendor name
      * @param string $InstanceType Instance type
-     * @param string $RiskTitle risk name
+     * @param string $RiskTitle Risk name
      * @param string $CheckType Check type
      * @param string $RiskLevel Risk level
      * @param string $RiskInfluence Risk damage
      * @param string $RiskFixAdvance Risk remediation guide report link
-     * @param string $DispositionType Boundary control
+     * @param string $DispositionType Boundary management and control
      */
     function __construct()
     {

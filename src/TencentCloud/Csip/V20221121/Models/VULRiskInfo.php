@@ -18,16 +18,16 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Vulnerability risk information.
+ * Vulnerability risk information
  *
  * @method string getFix() Obtain Fixing suggestion
  * @method void setFix(string $Fix) Set Fixing suggestion
- * @method string getReferences() Obtain Technology reference/reference link.
- * @method void setReferences(string $References) Set Technology reference/reference link.
+ * @method string getReferences() Obtain Technical reference/Reference link
+ * @method void setReferences(string $References) Set Technical reference/Reference link
  * @method string getDescribe() Obtain Vulnerability description
  * @method void setDescribe(string $Describe) Set Vulnerability description
- * @method array getImpactComponent() Obtain Affected component.
- * @method void setImpactComponent(array $ImpactComponent) Set Affected component.
+ * @method array getImpactComponent() Obtain Affected component
+ * @method void setImpactComponent(array $ImpactComponent) Set Affected component
  */
 class VULRiskInfo extends AbstractModel
 {
@@ -37,7 +37,7 @@ class VULRiskInfo extends AbstractModel
     public $Fix;
 
     /**
-     * @var string Technology reference/reference link.
+     * @var string Technical reference/Reference link
      */
     public $References;
 
@@ -47,15 +47,15 @@ class VULRiskInfo extends AbstractModel
     public $Describe;
 
     /**
-     * @var array Affected component.
+     * @var array Affected component
      */
     public $ImpactComponent;
 
     /**
      * @param string $Fix Fixing suggestion
-     * @param string $References Technology reference/reference link.
+     * @param string $References Technical reference/Reference link
      * @param string $Describe Vulnerability description
-     * @param array $ImpactComponent Affected component.
+     * @param array $ImpactComponent Affected component
      */
     function __construct()
     {

@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateAlertStatusList request structure.
  *
- * @method array getID() Obtain Alarm ID list
- * @method void setID(array $ID) Set Alarm ID list
+ * @method array getID() Obtain List of alarm IDs
+ * @method void setID(array $ID) Set List of alarm IDs
  * @method integer getOperateType() Obtain Operation type. 
-1: Revoke disposal 
-2: Marked with processed 
+1: Undo disposal 
+2: Marked as processed 
 3: Marked as ignored 
 4: Cancel tag disposal
-5: Unmark ignore
+5: Untag and ignore
  * @method void setOperateType(integer $OperateType) Set Operation type. 
-1: Revoke disposal 
-2: Marked with processed 
+1: Undo disposal 
+2: Marked as processed 
 3: Marked as ignored 
 4: Cancel tag disposal
-5: Unmark ignore
+5: Untag and ignore
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  * @method array getOperatedMemberId() Obtain Member ID of the Called Group Account
@@ -42,17 +42,17 @@ use TencentCloud\Common\AbstractModel;
 class UpdateAlertStatusListRequest extends AbstractModel
 {
     /**
-     * @var array Alarm ID list
+     * @var array List of alarm IDs
      */
     public $ID;
 
     /**
      * @var integer Operation type. 
-1: Revoke disposal 
-2: Marked with processed 
+1: Undo disposal 
+2: Marked as processed 
 3: Marked as ignored 
 4: Cancel tag disposal
-5: Unmark ignore
+5: Untag and ignore
      */
     public $OperateType;
 
@@ -67,13 +67,13 @@ class UpdateAlertStatusListRequest extends AbstractModel
     public $OperatedMemberId;
 
     /**
-     * @param array $ID Alarm ID list
+     * @param array $ID List of alarm IDs
      * @param integer $OperateType Operation type. 
-1: Revoke disposal 
-2: Marked with processed 
+1: Undo disposal 
+2: Marked as processed 
 3: Marked as ignored 
 4: Cancel tag disposal
-5: Unmark ignore
+5: Untag and ignore
      * @param array $MemberId Group Account Member ID
      * @param array $OperatedMemberId Member ID of the Called Group Account
      */

@@ -18,62 +18,62 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of a weak password risk
+ * Weak Password Risk from Asset's Perspective
  *
- * @method string getAffectAsset() Obtain Affected assets
- * @method void setAffectAsset(string $AffectAsset) Set Affected assets
- * @method string getLevel() Obtain Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
- * @method void setLevel(string $Level) Set Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+ * @method string getAffectAsset() Obtain Affect assets
+ * @method void setAffectAsset(string $AffectAsset) Set Affect assets
+ * @method string getLevel() Obtain Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
+ * @method void setLevel(string $Level) Set Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
  * @method string getInstanceType() Obtain Asset type
  * @method void setInstanceType(string $InstanceType) Set Asset type
- * @method string getComponent() Obtain Components
- * @method void setComponent(string $Component) Set Components
- * @method string getService() Obtain Service
- * @method void setService(string $Service) Set Service
- * @method string getRecentTime() Obtain Last detected 
- * @method void setRecentTime(string $RecentTime) Set Last detected 
- * @method string getFirstTime() Obtain First detected
- * @method void setFirstTime(string $FirstTime) Set First detected
- * @method integer getStatus() Obtain Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
- * @method void setStatus(integer $Status) Set Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
- * @method string getId() Obtain ID, handle risk usage
- * @method void setId(string $Id) Set ID, handle risk usage
- * @method string getIndex() Obtain Frontend index
- * @method void setIndex(string $Index) Set Frontend index
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method string getAppId() Obtain User AppId
- * @method void setAppId(string $AppId) Set User AppId
+ * @method string getComponent() Obtain Component
+ * @method void setComponent(string $Component) Set Component
+ * @method string getService() Obtain Service.
+ * @method void setService(string $Service) Set Service.
+ * @method string getRecentTime() Obtain Latest Recognition Time
+ * @method void setRecentTime(string $RecentTime) Set Latest Recognition Time
+ * @method string getFirstTime() Obtain First Recognition Time
+ * @method void setFirstTime(string $FirstTime) Set First Recognition Time
+ * @method integer getStatus() Obtain Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
+ * @method void setStatus(integer $Status) Set Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
+ * @method string getId() Obtain ID, fix risks
+ * @method void setId(string $Id) Set ID, fix risks
+ * @method string getIndex() Obtain Front-end Index
+ * @method void setIndex(string $Index) Set Front-end Index
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
+ * @method string getAppId() Obtain User appid.
+ * @method void setAppId(string $AppId) Set User appid.
  * @method string getNick() Obtain User Nickname
  * @method void setNick(string $Nick) Set User Nickname
  * @method string getUin() Obtain User UIN
  * @method void setUin(string $Uin) Set User UIN
  * @method string getPasswordType() Obtain Weak password type
  * @method void setPasswordType(string $PasswordType) Set Weak password type
- * @method string getFrom() Obtain Source of the task
- * @method void setFrom(string $From) Set Source of the task
+ * @method string getFrom() Obtain Source.
+ * @method void setFrom(string $From) Set Source.
  * @method string getVULType() Obtain Vulnerability type
  * @method void setVULType(string $VULType) Set Vulnerability type
  * @method string getVULURL() Obtain Vulnerability URL
  * @method void setVULURL(string $VULURL) Set Vulnerability URL
- * @method string getFix() Obtain Fix suggestion
- * @method void setFix(string $Fix) Set Fix suggestion
- * @method string getPayload() Obtain proof
- * @method void setPayload(string $Payload) Set proof
+ * @method string getFix() Obtain Fixing suggestion
+ * @method void setFix(string $Fix) Set Fixing suggestion
+ * @method string getPayload() Obtain Proof
+ * @method void setPayload(string $Payload) Set Proof
  * @method integer getPort() Obtain Port.
  * @method void setPort(integer $Port) Set Port.
  */
 class AssetViewWeakPassRisk extends AbstractModel
 {
     /**
-     * @var string Affected assets
+     * @var string Affect assets
      */
     public $AffectAsset;
 
     /**
-     * @var string Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @var string Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
      */
     public $Level;
 
@@ -83,52 +83,52 @@ class AssetViewWeakPassRisk extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string Components
+     * @var string Component
      */
     public $Component;
 
     /**
-     * @var string Service
+     * @var string Service.
      */
     public $Service;
 
     /**
-     * @var string Last detected 
+     * @var string Latest Recognition Time
      */
     public $RecentTime;
 
     /**
-     * @var string First detected
+     * @var string First Recognition Time
      */
     public $FirstTime;
 
     /**
-     * @var integer Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * @var integer Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
      */
     public $Status;
 
     /**
-     * @var string ID, handle risk usage
+     * @var string ID, fix risks
      */
     public $Id;
 
     /**
-     * @var string Frontend index
+     * @var string Front-end Index
      */
     public $Index;
 
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
-     * @var string User AppId
+     * @var string User appid.
      */
     public $AppId;
 
@@ -148,7 +148,7 @@ class AssetViewWeakPassRisk extends AbstractModel
     public $PasswordType;
 
     /**
-     * @var string Source of the task
+     * @var string Source.
      */
     public $From;
 
@@ -163,12 +163,12 @@ class AssetViewWeakPassRisk extends AbstractModel
     public $VULURL;
 
     /**
-     * @var string Fix suggestion
+     * @var string Fixing suggestion
      */
     public $Fix;
 
     /**
-     * @var string proof
+     * @var string Proof
      */
     public $Payload;
 
@@ -178,27 +178,27 @@ class AssetViewWeakPassRisk extends AbstractModel
     public $Port;
 
     /**
-     * @param string $AffectAsset Affected assets
-     * @param string $Level Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @param string $AffectAsset Affect assets
+     * @param string $Level Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
      * @param string $InstanceType Asset type
-     * @param string $Component Components
-     * @param string $Service Service
-     * @param string $RecentTime Last detected 
-     * @param string $FirstTime First detected
-     * @param integer $Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-     * @param string $Id ID, handle risk usage
-     * @param string $Index Frontend index
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
-     * @param string $AppId User AppId
+     * @param string $Component Component
+     * @param string $Service Service.
+     * @param string $RecentTime Latest Recognition Time
+     * @param string $FirstTime First Recognition Time
+     * @param integer $Status Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
+     * @param string $Id ID, fix risks
+     * @param string $Index Front-end Index
+     * @param string $InstanceId Instance ID.
+     * @param string $InstanceName Instance name.
+     * @param string $AppId User appid.
      * @param string $Nick User Nickname
      * @param string $Uin User UIN
      * @param string $PasswordType Weak password type
-     * @param string $From Source of the task
+     * @param string $From Source.
      * @param string $VULType Vulnerability type
      * @param string $VULURL Vulnerability URL
-     * @param string $Fix Fix suggestion
-     * @param string $Payload proof
+     * @param string $Fix Fixing suggestion
+     * @param string $Payload Proof
      * @param integer $Port Port.
      */
     function __construct()

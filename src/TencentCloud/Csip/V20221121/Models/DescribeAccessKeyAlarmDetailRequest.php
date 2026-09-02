@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccessKeyAlarmDetail request structure.
  *
- * @method integer getID() Obtain Alarm record ID.
- * @method void setID(integer $ID) Set Alarm record ID.
+ * @method integer getID() Obtain Alarm record ID
+ * @method void setID(integer $ID) Set Alarm record ID
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
 class DescribeAccessKeyAlarmDetailRequest extends AbstractModel
 {
     /**
-     * @var integer Alarm record ID.
+     * @var integer Alarm record ID
      */
     public $ID;
 
@@ -38,7 +38,7 @@ class DescribeAccessKeyAlarmDetailRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @param integer $ID Alarm record ID.
+     * @param integer $ID Alarm record ID
      * @param array $MemberId Group Account Member ID
      */
     function __construct()

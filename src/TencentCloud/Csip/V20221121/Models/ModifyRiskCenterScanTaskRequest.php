@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanPlanContent(string $ScanPlanContent) Set Scan Plan Details
  * @method array getSelfDefiningAssets() Obtain IP/Domain/URL Array
  * @method void setSelfDefiningAssets(array $SelfDefiningAssets) Set IP/Domain/URL Array
- * @method TaskAdvanceCFG getTaskAdvanceCFG() Obtain Advanced configuration.
- * @method void setTaskAdvanceCFG(TaskAdvanceCFG $TaskAdvanceCFG) Set Advanced configuration.
+ * @method TaskAdvanceCFG getTaskAdvanceCFG() Obtain Advanced Configuration
+ * @method void setTaskAdvanceCFG(TaskAdvanceCFG $TaskAdvanceCFG) Set Advanced Configuration
  * @method integer getTaskMode() Obtain Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
  * @method void setTaskMode(integer $TaskMode) Set Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
- * @method string getFinishWebHook() Obtain Task complete callback webhook url.
- * @method void setFinishWebHook(string $FinishWebHook) Set Task complete callback webhook url.
+ * @method string getFinishWebHook() Obtain webhook URL for task completion callbacks
+ * @method void setFinishWebHook(string $FinishWebHook) Set webhook URL for task completion callbacks
  */
 class ModifyRiskCenterScanTaskRequest extends AbstractModel
 {
@@ -93,7 +93,7 @@ class ModifyRiskCenterScanTaskRequest extends AbstractModel
     public $SelfDefiningAssets;
 
     /**
-     * @var TaskAdvanceCFG Advanced configuration.
+     * @var TaskAdvanceCFG Advanced Configuration
      */
     public $TaskAdvanceCFG;
 
@@ -103,7 +103,7 @@ class ModifyRiskCenterScanTaskRequest extends AbstractModel
     public $TaskMode;
 
     /**
-     * @var string Task complete callback webhook url.
+     * @var string webhook URL for task completion callbacks
      */
     public $FinishWebHook;
 
@@ -117,9 +117,9 @@ class ModifyRiskCenterScanTaskRequest extends AbstractModel
      * @param array $Assets Scanned Asset Information List
      * @param string $ScanPlanContent Scan Plan Details
      * @param array $SelfDefiningAssets IP/Domain/URL Array
-     * @param TaskAdvanceCFG $TaskAdvanceCFG Advanced configuration.
+     * @param TaskAdvanceCFG $TaskAdvanceCFG Advanced Configuration
      * @param integer $TaskMode Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
-     * @param string $FinishWebHook Task complete callback webhook url.
+     * @param string $FinishWebHook webhook URL for task completion callbacks
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of server assets
+ * Host asset details
  *
  * @method string getVpcId() Obtain vpc-id
  * @method void setVpcId(string $VpcId) Set vpc-id
@@ -68,16 +68,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKernelModuleNum(integer $KernelModuleNum) Set Number of Kernel Modules
  * @method integer getSystemInstallationPackageNum() Obtain System Installation Package Count
  * @method void setSystemInstallationPackageNum(integer $SystemInstallationPackageNum) Set System Installation Package Count
- * @method integer getSurplusProtectDay() Obtain remaining protection duration
- * @method void setSurplusProtectDay(integer $SurplusProtectDay) Set remaining protection duration
+ * @method integer getSurplusProtectDay() Obtain Remaining protection duration
+ * @method void setSurplusProtectDay(integer $SurplusProtectDay) Set Remaining protection duration
  * @method integer getCWPStatus() Obtain Whether client is installed. 1 for Installed, 0 for Not Installed.
  * @method void setCWPStatus(integer $CWPStatus) Set Whether client is installed. 1 for Installed, 0 for Not Installed.
  * @method array getTag() Obtain Tag.
  * @method void setTag(array $Tag) Set Tag.
  * @method string getProtectLevel() Obtain Protection level
  * @method void setProtectLevel(string $ProtectLevel) Set Protection level
- * @method integer getProtectedDay() Obtain protection duration
- * @method void setProtectedDay(integer $ProtectedDay) Set protection duration
+ * @method integer getProtectedDay() Obtain Protection duration
+ * @method void setProtectedDay(integer $ProtectedDay) Set Protection duration
  */
 class AssetBaseInfoResponse extends AbstractModel
 {
@@ -202,7 +202,7 @@ class AssetBaseInfoResponse extends AbstractModel
     public $SystemInstallationPackageNum;
 
     /**
-     * @var integer remaining protection duration
+     * @var integer Remaining protection duration
      */
     public $SurplusProtectDay;
 
@@ -222,7 +222,7 @@ class AssetBaseInfoResponse extends AbstractModel
     public $ProtectLevel;
 
     /**
-     * @var integer protection duration
+     * @var integer Protection duration
      */
     public $ProtectedDay;
 
@@ -251,11 +251,11 @@ class AssetBaseInfoResponse extends AbstractModel
      * @param integer $EnvironmentVariableNum Number of Environment Variables
      * @param integer $KernelModuleNum Number of Kernel Modules
      * @param integer $SystemInstallationPackageNum System Installation Package Count
-     * @param integer $SurplusProtectDay remaining protection duration
+     * @param integer $SurplusProtectDay Remaining protection duration
      * @param integer $CWPStatus Whether client is installed. 1 for Installed, 0 for Not Installed.
      * @param array $Tag Tag.
      * @param string $ProtectLevel Protection level
-     * @param integer $ProtectedDay protection duration
+     * @param integer $ProtectedDay Protection duration
      */
     function __construct()
     {

@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeKeySandboxCredentialList request structure.
  *
- * @method Filter getFilter() Obtain Filter criteria list: supported filter conditions as follows:
+ * @method Filter getFilter() Obtain Filter criteria list. Supported filter conditions are as follows:
 CredentialName - Credential name (fuzzy matching)
-CredentialType - Credential type (exact match). Parameter values: access, sts.
- * @method void setFilter(Filter $Filter) Set Filter criteria list: supported filter conditions as follows:
+CredentialType - Credential type (exact match). Valid values: access, sts
+ * @method void setFilter(Filter $Filter) Set Filter criteria list. Supported filter conditions are as follows:
 CredentialName - Credential name (fuzzy matching)
-CredentialType - Credential type (exact match). Parameter values: access, sts.
+CredentialType - Credential type (exact match). Valid values: access, sts
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
 class DescribeKeySandboxCredentialListRequest extends AbstractModel
 {
     /**
-     * @var Filter Filter criteria list: supported filter conditions as follows:
+     * @var Filter Filter criteria list. Supported filter conditions are as follows:
 CredentialName - Credential name (fuzzy matching)
-CredentialType - Credential type (exact match). Parameter values: access, sts.
+CredentialType - Credential type (exact match). Valid values: access, sts
      */
     public $Filter;
 
@@ -44,9 +44,9 @@ CredentialType - Credential type (exact match). Parameter values: access, sts.
     public $MemberId;
 
     /**
-     * @param Filter $Filter Filter criteria list: supported filter conditions as follows:
+     * @param Filter $Filter Filter criteria list. Supported filter conditions are as follows:
 CredentialName - Credential name (fuzzy matching)
-CredentialType - Credential type (exact match). Parameter values: access, sts.
+CredentialType - Credential type (exact match). Valid values: access, sts
      * @param array $MemberId Group Account Member ID
      */
     function __construct()

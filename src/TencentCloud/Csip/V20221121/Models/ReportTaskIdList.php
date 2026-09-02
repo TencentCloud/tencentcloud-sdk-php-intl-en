@@ -18,28 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of task IDs in the report
+ * Task_id List in the Report
  *
- * @method array getTaskIdList() Obtain List of task IDs
- * @method void setTaskIdList(array $TaskIdList) Set List of task IDs
- * @method string getAppId() Obtain User AppId
- * @method void setAppId(string $AppId) Set User AppId
+ * @method array getTaskIdList() Obtain Task ID List
+ * @method void setTaskIdList(array $TaskIdList) Set Task ID List
+ * @method string getAppId() Obtain Tenant ID
+ * @method void setAppId(string $AppId) Set Tenant ID
  */
 class ReportTaskIdList extends AbstractModel
 {
     /**
-     * @var array List of task IDs
+     * @var array Task ID List
      */
     public $TaskIdList;
 
     /**
-     * @var string User AppId
+     * @var string Tenant ID
      */
     public $AppId;
 
     /**
-     * @param array $TaskIdList List of task IDs
-     * @param string $AppId User AppId
+     * @param array $TaskIdList Task ID List
+     * @param string $AppId Tenant ID
      */
     function __construct()
     {

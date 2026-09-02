@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method Filter getFilter() Obtain Query condition.
- * @method void setFilter(Filter $Filter) Set Query condition.
+ * @method Filter getFilter() Obtain Query condition
+ * @method void setFilter(Filter $Filter) Set Query condition
  */
 class DescribeVULListRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeVULListRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var Filter Query condition.
+     * @var Filter Query condition
      */
     public $Filter;
 
     /**
      * @param array $MemberId Group Account Member ID
-     * @param Filter $Filter Query condition.
+     * @param Filter $Filter Query condition
      */
     function __construct()
     {

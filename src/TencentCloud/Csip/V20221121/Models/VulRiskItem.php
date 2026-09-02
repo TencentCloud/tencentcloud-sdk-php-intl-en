@@ -18,51 +18,47 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Host vulnerability risk content.
+ * Host vulnerability risk content
  *
- * @method string getCloudAccountID() Obtain Cloud account ID.
- * @method void setCloudAccountID(string $CloudAccountID) Set Cloud account ID.
+ * @method string getCloudAccountID() Obtain Cloud Account ID
+ * @method void setCloudAccountID(string $CloudAccountID) Set Cloud Account ID
  * @method string getAssetID() Obtain Instance ID.
  * @method void setAssetID(string $AssetID) Set Instance ID.
  * @method string getInstanceStatus() Obtain Instance status
  * @method void setInstanceStatus(string $InstanceStatus) Set Instance status
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
  * @method string getCreateTime() Obtain Creation time.
-
-
  * @method void setCreateTime(string $CreateTime) Set Creation time.
-
-
  * @method string getUpdateTime() Obtain Update time
  * @method void setUpdateTime(string $UpdateTime) Set Update time
  * @method string getVulName() Obtain Vulnerability name
  * @method void setVulName(string $VulName) Set Vulnerability name
- * @method string getVulCategory() Obtain Vulnerability type.
- * @method void setVulCategory(string $VulCategory) Set Vulnerability type.
+ * @method string getVulCategory() Obtain vulnerability type
+ * @method void setVulCategory(string $VulCategory) Set vulnerability type
  * @method string getVulLevel() Obtain Vulnerability level
  * @method void setVulLevel(string $VulLevel) Set Vulnerability level
- * @method string getCveID() Obtain CVE id.
- * @method void setCveID(string $CveID) Set CVE id.
+ * @method string getCveID() Obtain CVE ID
+ * @method void setCveID(string $CveID) Set CVE ID
  * @method string getDescription() Obtain Vulnerability description
  * @method void setDescription(string $Description) Set Vulnerability description
- * @method string getContainerID() Obtain Container ID.
- * @method void setContainerID(string $ContainerID) Set Container ID.
- * @method string getFix() Obtain Vulnerability risk remediation recommendation.
- * @method void setFix(string $Fix) Set Vulnerability risk remediation recommendation.
- * @method string getVulCategoryName() Obtain Linux vulnerability.
- * @method void setVulCategoryName(string $VulCategoryName) Set Linux vulnerability.
- * @method string getVulLevelName() Obtain Vulnerability level name.
- * @method void setVulLevelName(string $VulLevelName) Set Vulnerability level name.
- * @method string getInstanceStatusName() Obtain Instance status chinese information.
- * @method void setInstanceStatusName(string $InstanceStatusName) Set Instance status chinese information.
- * @method integer getAppID() Obtain Tenant ID.
- * @method void setAppID(integer $AppID) Set Tenant ID.
+ * @method string getContainerID() Obtain Container ID
+ * @method void setContainerID(string $ContainerID) Set Container ID
+ * @method string getFix() Obtain Vulnerability risk remediation recommendations
+ * @method void setFix(string $Fix) Set Vulnerability risk remediation recommendations
+ * @method string getVulCategoryName() Obtain Linux vulnerability
+ * @method void setVulCategoryName(string $VulCategoryName) Set Linux vulnerability
+ * @method string getVulLevelName() Obtain Vulnerability level name
+ * @method void setVulLevelName(string $VulLevelName) Set Vulnerability level name
+ * @method string getInstanceStatusName() Obtain Chinese information of instance status
+ * @method void setInstanceStatusName(string $InstanceStatusName) Set Chinese information of instance status
+ * @method integer getAppID() Obtain Tenant ID
+ * @method void setAppID(integer $AppID) Set Tenant ID
  */
 class VulRiskItem extends AbstractModel
 {
     /**
-     * @var string Cloud account ID.
+     * @var string Cloud Account ID
      */
     public $CloudAccountID;
 
@@ -77,14 +73,12 @@ class VulRiskItem extends AbstractModel
     public $InstanceStatus;
 
     /**
-     * @var string Instance name
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
      * @var string Creation time.
-
-
      */
     public $CreateTime;
 
@@ -99,7 +93,7 @@ class VulRiskItem extends AbstractModel
     public $VulName;
 
     /**
-     * @var string Vulnerability type.
+     * @var string vulnerability type
      */
     public $VulCategory;
 
@@ -109,7 +103,7 @@ class VulRiskItem extends AbstractModel
     public $VulLevel;
 
     /**
-     * @var string CVE id.
+     * @var string CVE ID
      */
     public $CveID;
 
@@ -119,55 +113,53 @@ class VulRiskItem extends AbstractModel
     public $Description;
 
     /**
-     * @var string Container ID.
+     * @var string Container ID
      */
     public $ContainerID;
 
     /**
-     * @var string Vulnerability risk remediation recommendation.
+     * @var string Vulnerability risk remediation recommendations
      */
     public $Fix;
 
     /**
-     * @var string Linux vulnerability.
+     * @var string Linux vulnerability
      */
     public $VulCategoryName;
 
     /**
-     * @var string Vulnerability level name.
+     * @var string Vulnerability level name
      */
     public $VulLevelName;
 
     /**
-     * @var string Instance status chinese information.
+     * @var string Chinese information of instance status
      */
     public $InstanceStatusName;
 
     /**
-     * @var integer Tenant ID.
+     * @var integer Tenant ID
      */
     public $AppID;
 
     /**
-     * @param string $CloudAccountID Cloud account ID.
+     * @param string $CloudAccountID Cloud Account ID
      * @param string $AssetID Instance ID.
      * @param string $InstanceStatus Instance status
-     * @param string $InstanceName Instance name
+     * @param string $InstanceName Instance name.
      * @param string $CreateTime Creation time.
-
-
      * @param string $UpdateTime Update time
      * @param string $VulName Vulnerability name
-     * @param string $VulCategory Vulnerability type.
+     * @param string $VulCategory vulnerability type
      * @param string $VulLevel Vulnerability level
-     * @param string $CveID CVE id.
+     * @param string $CveID CVE ID
      * @param string $Description Vulnerability description
-     * @param string $ContainerID Container ID.
-     * @param string $Fix Vulnerability risk remediation recommendation.
-     * @param string $VulCategoryName Linux vulnerability.
-     * @param string $VulLevelName Vulnerability level name.
-     * @param string $InstanceStatusName Instance status chinese information.
-     * @param integer $AppID Tenant ID.
+     * @param string $ContainerID Container ID
+     * @param string $Fix Vulnerability risk remediation recommendations
+     * @param string $VulCategoryName Linux vulnerability
+     * @param string $VulLevelName Vulnerability level name
+     * @param string $InstanceStatusName Chinese information of instance status
+     * @param integer $AppID Tenant ID
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getData() Obtain List
  * @method void setData(array $Data) Set List
- * @method integer getTotal() Obtain Total number of results
- * @method void setTotal(integer $Total) Set Total number of results
+ * @method integer getTotal() Obtain Total number.
+ * @method void setTotal(integer $Total) Set Total number.
  * @method array getAssetLocationList() Obtain Asset Attribution
  * @method void setAssetLocationList(array $AssetLocationList) Set Asset Attribution
  * @method array getIpTypeList() Obtain IP List Enumeration
@@ -47,7 +47,7 @@ class DescribePublicIpAssetsResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var integer Total number of results
+     * @var integer Total number.
      */
     public $Total;
 
@@ -88,7 +88,7 @@ class DescribePublicIpAssetsResponse extends AbstractModel
 
     /**
      * @param array $Data List
-     * @param integer $Total Total number of results
+     * @param integer $Total Total number.
      * @param array $AssetLocationList Asset Attribution
      * @param array $IpTypeList IP List Enumeration
      * @param array $RegionList Region List Enumeration

@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) Set Remarks
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method array getSourceIPList() Obtain Source IP name.
- * @method void setSourceIPList(array $SourceIPList) Set Source IP name.
- * @method array getAccessKeyList() Obtain ak name.
- * @method void setAccessKeyList(array $AccessKeyList) Set ak name.
- * @method array getSourceIPIDList() Obtain ID of the source IP.
- * @method void setSourceIPIDList(array $SourceIPIDList) Set ID of the source IP.
- * @method array getAccessKeyIDList() Obtain AK ID.
- * @method void setAccessKeyIDList(array $AccessKeyIDList) Set AK ID.
+ * @method array getSourceIPList() Obtain Source IP Name
+ * @method void setSourceIPList(array $SourceIPList) Set Source IP Name
+ * @method array getAccessKeyList() Obtain ak name
+ * @method void setAccessKeyList(array $AccessKeyList) Set ak name
+ * @method array getSourceIPIDList() Obtain ID of the source IP
+ * @method void setSourceIPIDList(array $SourceIPIDList) Set ID of the source IP
+ * @method array getAccessKeyIDList() Obtain ID of the AK
+ * @method void setAccessKeyIDList(array $AccessKeyIDList) Set ID of the AK
  */
 class UpdateAccessKeyRemarkRequest extends AbstractModel
 {
@@ -46,32 +46,32 @@ class UpdateAccessKeyRemarkRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var array Source IP name.
+     * @var array Source IP Name
      */
     public $SourceIPList;
 
     /**
-     * @var array ak name.
+     * @var array ak name
      */
     public $AccessKeyList;
 
     /**
-     * @var array ID of the source IP.
+     * @var array ID of the source IP
      */
     public $SourceIPIDList;
 
     /**
-     * @var array AK ID.
+     * @var array ID of the AK
      */
     public $AccessKeyIDList;
 
     /**
      * @param string $Remark Remarks
      * @param array $MemberId Group Account Member ID
-     * @param array $SourceIPList Source IP name.
-     * @param array $AccessKeyList ak name.
-     * @param array $SourceIPIDList ID of the source IP.
-     * @param array $AccessKeyIDList AK ID.
+     * @param array $SourceIPList Source IP Name
+     * @param array $AccessKeyList ak name
+     * @param array $SourceIPIDList ID of the source IP
+     * @param array $AccessKeyIDList ID of the AK
      */
     function __construct()
     {

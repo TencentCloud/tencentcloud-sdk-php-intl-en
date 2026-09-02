@@ -18,12 +18,12 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CLB instance and listener information
+ * CLB Instance and Listener Information
  *
  * @method string getListenerId() Obtain Listener ID
  * @method void setListenerId(string $ListenerId) Set Listener ID
- * @method string getListenerName() Obtain listener name
- * @method void setListenerName(string $ListenerName) Set listener name
+ * @method string getListenerName() Obtain Listener name
+ * @method void setListenerName(string $ListenerName) Set Listener name
  * @method string getLoadBalancerId() Obtain CLB Id
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB Id
  * @method string getLoadBalancerName() Obtain CLB name
@@ -55,7 +55,7 @@ class ClbListenerListInfo extends AbstractModel
     public $ListenerId;
 
     /**
-     * @var string listener name
+     * @var string Listener name
      */
     public $ListenerName;
 
@@ -116,7 +116,7 @@ class ClbListenerListInfo extends AbstractModel
 
     /**
      * @param string $ListenerId Listener ID
-     * @param string $ListenerName listener name
+     * @param string $ListenerName Listener name
      * @param string $LoadBalancerId CLB Id
      * @param string $LoadBalancerName CLB name
      * @param string $Protocol Protocol

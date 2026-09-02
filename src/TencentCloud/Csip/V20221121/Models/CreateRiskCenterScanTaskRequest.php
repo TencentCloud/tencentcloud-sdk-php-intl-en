@@ -20,52 +20,52 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRiskCenterScanTask request structure.
  *
- * @method string getTaskName() Obtain Task name
- * @method void setTaskName(string $TaskName) Set Task name
- * @method integer getScanAssetType() Obtain Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required. 
- * @method void setScanAssetType(integer $ScanAssetType) Set Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required. 
- * @method array getScanItem() Obtain Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
- * @method void setScanItem(array $ScanItem) Set Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
- * @method integer getScanPlanType() Obtain Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
- * @method void setScanPlanType(integer $ScanPlanType) Set Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
+ * @method string getTaskName() Obtain Task name.
+ * @method void setTaskName(string $TaskName) Set Task name.
+ * @method integer getScanAssetType() Obtain 0: Full Scan; 1: Specified Asset Scan; 2: Excluded Asset Scan; 3: Manual Entry Scan. 1 and 2 require the Assets field; 3 requires SelfDefiningAssets.
+ * @method void setScanAssetType(integer $ScanAssetType) Set 0: Full Scan; 1: Specified Asset Scan; 2: Excluded Asset Scan; 3: Manual Entry Scan. 1 and 2 require the Assets field; 3 requires SelfDefiningAssets.
+ * @method array getScanItem() Obtain Scan items. port/poc/weakpass/webcontent/configrisk/exposedserver.
+ * @method void setScanItem(array $ScanItem) Set Scan items. port/poc/weakpass/webcontent/configrisk/exposedserver.
+ * @method integer getScanPlanType() Obtain 0: Periodic Task; 1: Scan Now; 2: Scheduled Scan; 3: Custom. If 0, 2, 3, ScanPlanContent is required.
+ * @method void setScanPlanType(integer $ScanPlanType) Set 0: Periodic Task; 1: Scan Now; 2: Scheduled Scan; 3: Custom. If 0, 2, 3, ScanPlanContent is required.
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method array getAssets() Obtain List of assets to scan
- * @method void setAssets(array $Assets) Set List of assets to scan
- * @method string getScanPlanContent() Obtain Details of a scheduled scan task
- * @method void setScanPlanContent(string $ScanPlanContent) Set Details of a scheduled scan task
- * @method array getSelfDefiningAssets() Obtain IP/Domain name/URL
- * @method void setSelfDefiningAssets(array $SelfDefiningAssets) Set IP/Domain name/URL
- * @method string getScanFrom() Obtain Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
- * @method void setScanFrom(string $ScanFrom) Set Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
- * @method TaskAdvanceCFG getTaskAdvanceCFG() Obtain Advanced settings
- * @method void setTaskAdvanceCFG(TaskAdvanceCFG $TaskAdvanceCFG) Set Advanced settings
- * @method integer getTaskMode() Obtain Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
- * @method void setTaskMode(integer $TaskMode) Set Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
- * @method AssetTag getTags() Obtain Asset tags
- * @method void setTags(AssetTag $Tags) Set Asset tags
- * @method string getFinishWebHook() Obtain Task completed callback webhook url
- * @method void setFinishWebHook(string $FinishWebHook) Set Task completed callback webhook url
+ * @method array getAssets() Obtain Scanned Asset Information List
+ * @method void setAssets(array $Assets) Set Scanned Asset Information List
+ * @method string getScanPlanContent() Obtain Scan Plan Details
+ * @method void setScanPlanContent(string $ScanPlanContent) Set Scan Plan Details
+ * @method array getSelfDefiningAssets() Obtain IP/Domain/URL Array
+ * @method void setSelfDefiningAssets(array $SelfDefiningAssets) Set IP/Domain/URL Array
+ * @method string getScanFrom() Obtain Request initiation source. `vss` refers to Vulnerability Scan Service. Users of CSC should fill in `csip`. Default value: `csip`.
+ * @method void setScanFrom(string $ScanFrom) Set Request initiation source. `vss` refers to Vulnerability Scan Service. Users of CSC should fill in `csip`. Default value: `csip`.
+ * @method TaskAdvanceCFG getTaskAdvanceCFG() Obtain Advanced configuration
+ * @method void setTaskAdvanceCFG(TaskAdvanceCFG $TaskAdvanceCFG) Set Advanced configuration
+ * @method integer getTaskMode() Obtain Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
+ * @method void setTaskMode(integer $TaskMode) Set Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
+ * @method AssetTag getTags() Obtain Asset tag
+ * @method void setTags(AssetTag $Tags) Set Asset tag
+ * @method string getFinishWebHook() Obtain webhook URL for task completion callback
+ * @method void setFinishWebHook(string $FinishWebHook) Set webhook URL for task completion callback
  */
 class CreateRiskCenterScanTaskRequest extends AbstractModel
 {
     /**
-     * @var string Task name
+     * @var string Task name.
      */
     public $TaskName;
 
     /**
-     * @var integer Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required. 
+     * @var integer 0: Full Scan; 1: Specified Asset Scan; 2: Excluded Asset Scan; 3: Manual Entry Scan. 1 and 2 require the Assets field; 3 requires SelfDefiningAssets.
      */
     public $ScanAssetType;
 
     /**
-     * @var array Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
+     * @var array Scan items. port/poc/weakpass/webcontent/configrisk/exposedserver.
      */
     public $ScanItem;
 
     /**
-     * @var integer Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
+     * @var integer 0: Periodic Task; 1: Scan Now; 2: Scheduled Scan; 3: Custom. If 0, 2, 3, ScanPlanContent is required.
      */
     public $ScanPlanType;
 
@@ -75,59 +75,59 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var array List of assets to scan
+     * @var array Scanned Asset Information List
      */
     public $Assets;
 
     /**
-     * @var string Details of a scheduled scan task
+     * @var string Scan Plan Details
      */
     public $ScanPlanContent;
 
     /**
-     * @var array IP/Domain name/URL
+     * @var array IP/Domain/URL Array
      */
     public $SelfDefiningAssets;
 
     /**
-     * @var string Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
+     * @var string Request initiation source. `vss` refers to Vulnerability Scan Service. Users of CSC should fill in `csip`. Default value: `csip`.
      */
     public $ScanFrom;
 
     /**
-     * @var TaskAdvanceCFG Advanced settings
+     * @var TaskAdvanceCFG Advanced configuration
      */
     public $TaskAdvanceCFG;
 
     /**
-     * @var integer Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
+     * @var integer Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
      */
     public $TaskMode;
 
     /**
-     * @var AssetTag Asset tags
+     * @var AssetTag Asset tag
      */
     public $Tags;
 
     /**
-     * @var string Task completed callback webhook url
+     * @var string webhook URL for task completion callback
      */
     public $FinishWebHook;
 
     /**
-     * @param string $TaskName Task name
-     * @param integer $ScanAssetType Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required. 
-     * @param array $ScanItem Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
-     * @param integer $ScanPlanType Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
+     * @param string $TaskName Task name.
+     * @param integer $ScanAssetType 0: Full Scan; 1: Specified Asset Scan; 2: Excluded Asset Scan; 3: Manual Entry Scan. 1 and 2 require the Assets field; 3 requires SelfDefiningAssets.
+     * @param array $ScanItem Scan items. port/poc/weakpass/webcontent/configrisk/exposedserver.
+     * @param integer $ScanPlanType 0: Periodic Task; 1: Scan Now; 2: Scheduled Scan; 3: Custom. If 0, 2, 3, ScanPlanContent is required.
      * @param array $MemberId Group Account Member ID
-     * @param array $Assets List of assets to scan
-     * @param string $ScanPlanContent Details of a scheduled scan task
-     * @param array $SelfDefiningAssets IP/Domain name/URL
-     * @param string $ScanFrom Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
-     * @param TaskAdvanceCFG $TaskAdvanceCFG Advanced settings
-     * @param integer $TaskMode Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
-     * @param AssetTag $Tags Asset tags
-     * @param string $FinishWebHook Task completed callback webhook url
+     * @param array $Assets Scanned Asset Information List
+     * @param string $ScanPlanContent Scan Plan Details
+     * @param array $SelfDefiningAssets IP/Domain/URL Array
+     * @param string $ScanFrom Request initiation source. `vss` refers to Vulnerability Scan Service. Users of CSC should fill in `csip`. Default value: `csip`.
+     * @param TaskAdvanceCFG $TaskAdvanceCFG Advanced configuration
+     * @param integer $TaskMode Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
+     * @param AssetTag $Tags Asset tag
+     * @param string $FinishWebHook webhook URL for task completion callback
      */
     function __construct()
     {

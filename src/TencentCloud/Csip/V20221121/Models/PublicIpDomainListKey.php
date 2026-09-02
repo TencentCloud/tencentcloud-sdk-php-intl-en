@@ -18,20 +18,20 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of public IPs/domain name assets
+ * Public IP and Domain Asset List Key
  *
- * @method string getAsset() Obtain IP/Domain
- * @method void setAsset(string $Asset) Set IP/Domain
+ * @method string getAsset() Obtain Asset Value
+ * @method void setAsset(string $Asset) Set Asset Value
  */
 class PublicIpDomainListKey extends AbstractModel
 {
     /**
-     * @var string IP/Domain
+     * @var string Asset Value
      */
     public $Asset;
 
     /**
-     * @param string $Asset IP/Domain
+     * @param string $Asset Asset Value
      */
     function __construct()
     {

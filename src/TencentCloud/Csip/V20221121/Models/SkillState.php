@@ -18,48 +18,48 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SKILL installation status info
+ * SKILL installation status information
  *
- * @method integer getSkillInstallStatus() Obtain SKILL Installation Status
+ * @method integer getSkillInstallStatus() Obtain SKILL installation status
 Enumeration value:
 0: Not installed
-Installing
+1: Installing
 2: Installed
 3: Installation failure
 4: Uninstalling
-5: Uninstallation failed.
- * @method void setSkillInstallStatus(integer $SkillInstallStatus) Set SKILL Installation Status
+5: Uninstallation failed
+ * @method void setSkillInstallStatus(integer $SkillInstallStatus) Set SKILL installation status
 Enumeration value:
 0: Not installed
-Installing
+1: Installing
 2: Installed
 3: Installation failure
 4: Uninstalling
-5: Uninstallation failed.
+5: Uninstallation failed
  * @method string getSkillInstallTime() Obtain SKILL installation/uninstallation operation time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
  * @method void setSkillInstallTime(string $SkillInstallTime) Set SKILL installation/uninstallation operation time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
  * @method string getSkillInstallResult() Obtain SKILL installation/uninstallation result description information
  * @method void setSkillInstallResult(string $SkillInstallResult) Set SKILL installation/uninstallation result description information
  */
 class SkillState extends AbstractModel
 {
     /**
-     * @var integer SKILL Installation Status
+     * @var integer SKILL installation status
 Enumeration value:
 0: Not installed
-Installing
+1: Installing
 2: Installed
 3: Installation failure
 4: Uninstalling
-5: Uninstallation failed.
+5: Uninstallation failed
      */
     public $SkillInstallStatus;
 
     /**
      * @var string SKILL installation/uninstallation operation time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public $SkillInstallTime;
 
@@ -69,16 +69,16 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
     public $SkillInstallResult;
 
     /**
-     * @param integer $SkillInstallStatus SKILL Installation Status
+     * @param integer $SkillInstallStatus SKILL installation status
 Enumeration value:
 0: Not installed
-Installing
+1: Installing
 2: Installed
 3: Installation failure
 4: Uninstalling
-5: Uninstallation failed.
+5: Uninstallation failed
      * @param string $SkillInstallTime SKILL installation/uninstallation operation time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      * @param string $SkillInstallResult SKILL installation/uninstallation result description information
      */
     function __construct()

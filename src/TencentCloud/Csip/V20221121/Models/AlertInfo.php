@@ -20,44 +20,44 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Full Alarm List Data from Alarm Center
  *
- * @method string getID() Obtain alarm ID
- * @method void setID(string $ID) Set alarm ID
- * @method string getName() Obtain alarm name
- * @method void setName(string $Name) Set alarm name
+ * @method string getID() Obtain Alarm ID
+ * @method void setID(string $ID) Set Alarm ID
+ * @method string getName() Obtain Alarm name
+ * @method void setName(string $Name) Set Alarm name
  * @method string getSource() Obtain Alarm source
-CFW: Cloud Firewall
+CFW: Cloud firewall
 WAF: Web application firewall
 CWP: Host Security
 CSIP: Cloud Security Center
  * @method void setSource(string $Source) Set Alarm source
-CFW: Cloud Firewall
+CFW: Cloud firewall
 WAF: Web application firewall
 CWP: Host Security
 CSIP: Cloud Security Center
- * @method integer getLevel() Obtain alarm level
-Prompt.
-2: Low risk
+ * @method integer getLevel() Obtain Alarm level
+1: Prompt
+2: Low-risk
 3: Medium risk
 4: High risk
 5: Critical
- * @method void setLevel(integer $Level) Set alarm level
-Prompt.
-2: Low risk
+ * @method void setLevel(integer $Level) Set Alarm level
+1: Prompt
+2: Low-risk
 3: Medium risk
 4: High risk
 5: Critical
- * @method RoleInfo getAttacker() Obtain attacker
- * @method void setAttacker(RoleInfo $Attacker) Set attacker
- * @method RoleInfo getVictim() Obtain victim
- * @method void setVictim(RoleInfo $Victim) Set victim
- * @method string getEvidenceData() Obtain Evidence data (such as attack content, base64 encoded)
- * @method void setEvidenceData(string $EvidenceData) Set Evidence data (such as attack content, base64 encoded)
- * @method string getEvidenceLocation() Obtain evidence location (for example protocol port)
- * @method void setEvidenceLocation(string $EvidenceLocation) Set evidence location (for example protocol port)
+ * @method RoleInfo getAttacker() Obtain Attacker
+ * @method void setAttacker(RoleInfo $Attacker) Set Attacker
+ * @method RoleInfo getVictim() Obtain Victim.
+ * @method void setVictim(RoleInfo $Victim) Set Victim.
+ * @method string getEvidenceData() Obtain Evidence data (for example, attack content, base64 encoded)
+ * @method void setEvidenceData(string $EvidenceData) Set Evidence data (for example, attack content, base64 encoded)
+ * @method string getEvidenceLocation() Obtain Evidence location (such as protocol port)
+ * @method void setEvidenceLocation(string $EvidenceLocation) Set Evidence location (such as protocol port)
  * @method string getEvidencePath() Obtain Evidence Path
  * @method void setEvidencePath(string $EvidencePath) Set Evidence Path
- * @method string getCreateTime() Obtain Initial alarm time
- * @method void setCreateTime(string $CreateTime) Set Initial alarm time
+ * @method string getCreateTime() Obtain First alarm time
+ * @method void setCreateTime(string $CreateTime) Set First alarm time
  * @method string getUpdateTime() Obtain Latest Alarm Time
  * @method void setUpdateTime(string $UpdateTime) Set Latest Alarm Time
  * @method integer getCount() Obtain Alarm count
@@ -67,9 +67,9 @@ Prompt.
  * @method string getRemediationSuggestion() Obtain Radical Treatment Suggestion
  * @method void setRemediationSuggestion(string $RemediationSuggestion) Set Radical Treatment Suggestion
  * @method integer getStatus() Obtain Processing status
-0: unprocessed, 1: ignored, 2: processed
+0: Unprocessed; 1: Ignored; 2: Processed.
  * @method void setStatus(integer $Status) Set Processing status
-0: unprocessed, 1: ignored, 2: processed
+0: Unprocessed; 1: Ignored; 2: Processed.
  * @method string getProcessType() Obtain Alarm Handling Type
  * @method void setProcessType(string $ProcessType) Set Alarm Handling Type
  * @method string getType() Obtain Major Category of Alarm
@@ -86,34 +86,34 @@ Prompt.
  * @method void setAppID(string $AppID) Set appid
  * @method string getNickName() Obtain Account name
  * @method void setNickName(string $NickName) Set Account name
- * @method string getUin() Obtain account ID
- * @method void setUin(string $Uin) Set account ID
- * @method integer getAction() Obtain Behavior
- * @method void setAction(integer $Action) Set Behavior
- * @method string getRiskInvestigation() Obtain risk detection
- * @method void setRiskInvestigation(string $RiskInvestigation) Set risk detection
+ * @method string getUin() Obtain Account ID
+ * @method void setUin(string $Uin) Set Account ID
+ * @method integer getAction() Obtain Action
+ * @method void setAction(integer $Action) Set Action
+ * @method string getRiskInvestigation() Obtain Risk detection
+ * @method void setRiskInvestigation(string $RiskInvestigation) Set Risk detection
  * @method string getRiskTreatment() Obtain Risk handling
  * @method void setRiskTreatment(string $RiskTreatment) Set Risk handling
- * @method string getLogType() Obtain log type
- * @method void setLogType(string $LogType) Set log type
+ * @method string getLogType() Obtain Log type
+ * @method void setLogType(string $LogType) Set Log type
  * @method string getLogSearch() Obtain Statement retrieval
  * @method void setLogSearch(string $LogSearch) Set Statement retrieval
  */
 class AlertInfo extends AbstractModel
 {
     /**
-     * @var string alarm ID
+     * @var string Alarm ID
      */
     public $ID;
 
     /**
-     * @var string alarm name
+     * @var string Alarm name
      */
     public $Name;
 
     /**
      * @var string Alarm source
-CFW: Cloud Firewall
+CFW: Cloud firewall
 WAF: Web application firewall
 CWP: Host Security
 CSIP: Cloud Security Center
@@ -121,9 +121,9 @@ CSIP: Cloud Security Center
     public $Source;
 
     /**
-     * @var integer alarm level
-Prompt.
-2: Low risk
+     * @var integer Alarm level
+1: Prompt
+2: Low-risk
 3: Medium risk
 4: High risk
 5: Critical
@@ -131,22 +131,22 @@ Prompt.
     public $Level;
 
     /**
-     * @var RoleInfo attacker
+     * @var RoleInfo Attacker
      */
     public $Attacker;
 
     /**
-     * @var RoleInfo victim
+     * @var RoleInfo Victim.
      */
     public $Victim;
 
     /**
-     * @var string Evidence data (such as attack content, base64 encoded)
+     * @var string Evidence data (for example, attack content, base64 encoded)
      */
     public $EvidenceData;
 
     /**
-     * @var string evidence location (for example protocol port)
+     * @var string Evidence location (such as protocol port)
      */
     public $EvidenceLocation;
 
@@ -156,7 +156,7 @@ Prompt.
     public $EvidencePath;
 
     /**
-     * @var string Initial alarm time
+     * @var string First alarm time
      */
     public $CreateTime;
 
@@ -182,7 +182,7 @@ Prompt.
 
     /**
      * @var integer Processing status
-0: unprocessed, 1: ignored, 2: processed
+0: Unprocessed; 1: Ignored; 2: Processed.
      */
     public $Status;
 
@@ -227,17 +227,17 @@ Prompt.
     public $NickName;
 
     /**
-     * @var string account ID
+     * @var string Account ID
      */
     public $Uin;
 
     /**
-     * @var integer Behavior
+     * @var integer Action
      */
     public $Action;
 
     /**
-     * @var string risk detection
+     * @var string Risk detection
      */
     public $RiskInvestigation;
 
@@ -247,7 +247,7 @@ Prompt.
     public $RiskTreatment;
 
     /**
-     * @var string log type
+     * @var string Log type
      */
     public $LogType;
 
@@ -257,31 +257,31 @@ Prompt.
     public $LogSearch;
 
     /**
-     * @param string $ID alarm ID
-     * @param string $Name alarm name
+     * @param string $ID Alarm ID
+     * @param string $Name Alarm name
      * @param string $Source Alarm source
-CFW: Cloud Firewall
+CFW: Cloud firewall
 WAF: Web application firewall
 CWP: Host Security
 CSIP: Cloud Security Center
-     * @param integer $Level alarm level
-Prompt.
-2: Low risk
+     * @param integer $Level Alarm level
+1: Prompt
+2: Low-risk
 3: Medium risk
 4: High risk
 5: Critical
-     * @param RoleInfo $Attacker attacker
-     * @param RoleInfo $Victim victim
-     * @param string $EvidenceData Evidence data (such as attack content, base64 encoded)
-     * @param string $EvidenceLocation evidence location (for example protocol port)
+     * @param RoleInfo $Attacker Attacker
+     * @param RoleInfo $Victim Victim.
+     * @param string $EvidenceData Evidence data (for example, attack content, base64 encoded)
+     * @param string $EvidenceLocation Evidence location (such as protocol port)
      * @param string $EvidencePath Evidence Path
-     * @param string $CreateTime Initial alarm time
+     * @param string $CreateTime First alarm time
      * @param string $UpdateTime Latest Alarm Time
      * @param integer $Count Alarm count
      * @param string $UrgentSuggestion Emergency Mitigation Suggestions
      * @param string $RemediationSuggestion Radical Treatment Suggestion
      * @param integer $Status Processing status
-0: unprocessed, 1: ignored, 2: processed
+0: Unprocessed; 1: Ignored; 2: Processed.
      * @param string $ProcessType Alarm Handling Type
      * @param string $Type Major Category of Alarm
      * @param string $SubType Alarm Subcategory
@@ -290,11 +290,11 @@ Prompt.
      * @param string $Date Alarm Date
      * @param string $AppID appid
      * @param string $NickName Account name
-     * @param string $Uin account ID
-     * @param integer $Action Behavior
-     * @param string $RiskInvestigation risk detection
+     * @param string $Uin Account ID
+     * @param integer $Action Action
+     * @param string $RiskInvestigation Risk detection
      * @param string $RiskTreatment Risk handling
-     * @param string $LogType log type
+     * @param string $LogType Log type
      * @param string $LogSearch Statement retrieval
      */
     function __construct()

@@ -18,55 +18,55 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of a configuration risk
+ * Configuration Risk from Asset's Perspective
  *
- * @method string getId() Obtain The unique ID.
- * @method void setId(string $Id) Set The unique ID.
+ * @method string getId() Obtain Unique ID
+ * @method void setId(string $Id) Set Unique ID
  * @method string getCFGName() Obtain Configuration name
  * @method void setCFGName(string $CFGName) Set Configuration name
  * @method string getCheckType() Obtain Check type
  * @method void setCheckType(string $CheckType) Set Check type
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
  * @method string getInstanceType() Obtain Instance type
  * @method void setInstanceType(string $InstanceType) Set Instance type
- * @method string getAffectAsset() Obtain Affected assets
- * @method void setAffectAsset(string $AffectAsset) Set Affected assets
- * @method string getLevel() Obtain Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
- * @method void setLevel(string $Level) Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
- * @method string getFirstTime() Obtain First detected
- * @method void setFirstTime(string $FirstTime) Set First detected
- * @method string getRecentTime() Obtain Last detected 
- * @method void setRecentTime(string $RecentTime) Set Last detected 
- * @method string getFrom() Obtain Source of the task
- * @method void setFrom(string $From) Set Source of the task
- * @method integer getStatus() Obtain Status
- * @method void setStatus(integer $Status) Set Status
- * @method string getCFGSTD() Obtain relevant standards
- * @method void setCFGSTD(string $CFGSTD) Set relevant standards
- * @method string getCFGDescribe() Obtain Configuration details.
- * @method void setCFGDescribe(string $CFGDescribe) Set Configuration details.
- * @method string getCFGFix() Obtain Fix suggestion
- * @method void setCFGFix(string $CFGFix) Set Fix suggestion
- * @method string getCFGHelpURL() Obtain URL of the help documentation
- * @method void setCFGHelpURL(string $CFGHelpURL) Set URL of the help documentation
- * @method string getIndex() Obtain Data entry key
- * @method void setIndex(string $Index) Set Data entry key
- * @method string getAppId() Obtain User AppId
- * @method void setAppId(string $AppId) Set User AppId
+ * @method string getAffectAsset() Obtain Affect assets
+ * @method void setAffectAsset(string $AffectAsset) Set Affect assets
+ * @method string getLevel() Obtain Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+ * @method void setLevel(string $Level) Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+ * @method string getFirstTime() Obtain First Recognition Time
+ * @method void setFirstTime(string $FirstTime) Set First Recognition Time
+ * @method string getRecentTime() Obtain Latest Recognition Time
+ * @method void setRecentTime(string $RecentTime) Set Latest Recognition Time
+ * @method string getFrom() Obtain Source.
+ * @method void setFrom(string $From) Set Source.
+ * @method integer getStatus() Obtain Status.
+ * @method void setStatus(integer $Status) Set Status.
+ * @method string getCFGSTD() Obtain Relevant standards
+ * @method void setCFGSTD(string $CFGSTD) Set Relevant standards
+ * @method string getCFGDescribe() Obtain Configuration detail
+ * @method void setCFGDescribe(string $CFGDescribe) Set Configuration detail
+ * @method string getCFGFix() Obtain Fixing suggestion
+ * @method void setCFGFix(string $CFGFix) Set Fixing suggestion
+ * @method string getCFGHelpURL() Obtain Help Document Link
+ * @method void setCFGHelpURL(string $CFGHelpURL) Set Help Document Link
+ * @method string getIndex() Obtain Front-end Usage Index
+ * @method void setIndex(string $Index) Set Front-end Usage Index
+ * @method string getAppId() Obtain User appid.
+ * @method void setAppId(string $AppId) Set User appid.
  * @method string getNick() Obtain User Nickname
  * @method void setNick(string $Nick) Set User Nickname
  * @method string getUin() Obtain User UIN
  * @method void setUin(string $Uin) Set User UIN
- * @method string getClbId() Obtain When the asset type is LBL, show this field to locate the specific LB.
- * @method void setClbId(string $ClbId) Set When the asset type is LBL, show this field to locate the specific LB.
+ * @method string getClbId() Obtain This field is displayed when the asset type is LBL, to help locate the specific LB.
+ * @method void setClbId(string $ClbId) Set This field is displayed when the asset type is LBL, to help locate the specific LB.
  */
 class AssetViewCFGRisk extends AbstractModel
 {
     /**
-     * @var string The unique ID.
+     * @var string Unique ID
      */
     public $Id;
 
@@ -81,12 +81,12 @@ class AssetViewCFGRisk extends AbstractModel
     public $CheckType;
 
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string Instance name.
      */
     public $InstanceName;
 
@@ -96,62 +96,62 @@ class AssetViewCFGRisk extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string Affected assets
+     * @var string Affect assets
      */
     public $AffectAsset;
 
     /**
-     * @var string Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @var string Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public $Level;
 
     /**
-     * @var string First detected
+     * @var string First Recognition Time
      */
     public $FirstTime;
 
     /**
-     * @var string Last detected 
+     * @var string Latest Recognition Time
      */
     public $RecentTime;
 
     /**
-     * @var string Source of the task
+     * @var string Source.
      */
     public $From;
 
     /**
-     * @var integer Status
+     * @var integer Status.
      */
     public $Status;
 
     /**
-     * @var string relevant standards
+     * @var string Relevant standards
      */
     public $CFGSTD;
 
     /**
-     * @var string Configuration details.
+     * @var string Configuration detail
      */
     public $CFGDescribe;
 
     /**
-     * @var string Fix suggestion
+     * @var string Fixing suggestion
      */
     public $CFGFix;
 
     /**
-     * @var string URL of the help documentation
+     * @var string Help Document Link
      */
     public $CFGHelpURL;
 
     /**
-     * @var string Data entry key
+     * @var string Front-end Usage Index
      */
     public $Index;
 
     /**
-     * @var string User AppId
+     * @var string User appid.
      */
     public $AppId;
 
@@ -166,32 +166,32 @@ class AssetViewCFGRisk extends AbstractModel
     public $Uin;
 
     /**
-     * @var string When the asset type is LBL, show this field to locate the specific LB.
+     * @var string This field is displayed when the asset type is LBL, to help locate the specific LB.
      */
     public $ClbId;
 
     /**
-     * @param string $Id The unique ID.
+     * @param string $Id Unique ID
      * @param string $CFGName Configuration name
      * @param string $CheckType Check type
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
+     * @param string $InstanceId Instance ID.
+     * @param string $InstanceName Instance name.
      * @param string $InstanceType Instance type
-     * @param string $AffectAsset Affected assets
-     * @param string $Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-     * @param string $FirstTime First detected
-     * @param string $RecentTime Last detected 
-     * @param string $From Source of the task
-     * @param integer $Status Status
-     * @param string $CFGSTD relevant standards
-     * @param string $CFGDescribe Configuration details.
-     * @param string $CFGFix Fix suggestion
-     * @param string $CFGHelpURL URL of the help documentation
-     * @param string $Index Data entry key
-     * @param string $AppId User AppId
+     * @param string $AffectAsset Affect assets
+     * @param string $Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+     * @param string $FirstTime First Recognition Time
+     * @param string $RecentTime Latest Recognition Time
+     * @param string $From Source.
+     * @param integer $Status Status.
+     * @param string $CFGSTD Relevant standards
+     * @param string $CFGDescribe Configuration detail
+     * @param string $CFGFix Fixing suggestion
+     * @param string $CFGHelpURL Help Document Link
+     * @param string $Index Front-end Usage Index
+     * @param string $AppId User appid.
      * @param string $Nick User Nickname
      * @param string $Uin User UIN
-     * @param string $ClbId When the asset type is LBL, show this field to locate the specific LB.
+     * @param string $ClbId This field is displayed when the asset type is LBL, to help locate the specific LB.
      */
     function __construct()
     {

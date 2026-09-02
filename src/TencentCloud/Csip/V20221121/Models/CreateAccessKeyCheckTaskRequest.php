@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  * @method array getRiskIDList() Obtain Risk list.
  * @method void setRiskIDList(array $RiskIDList) Set Risk list.
- * @method array getAccessKeyList() Obtain Access key list.
- * @method void setAccessKeyList(array $AccessKeyList) Set Access key list.
- * @method array getSubUinList() Obtain Account uin list.
- * @method void setSubUinList(array $SubUinList) Set Account uin list.
- * @method array getRiskRuleIDList() Obtain Risk rule id list.
- * @method void setRiskRuleIDList(array $RiskRuleIDList) Set Risk rule id list.
+ * @method array getAccessKeyList() Obtain Access key list
+ * @method void setAccessKeyList(array $AccessKeyList) Set Access key list
+ * @method array getSubUinList() Obtain List of account uins
+ * @method void setSubUinList(array $SubUinList) Set List of account uins
+ * @method array getRiskRuleIDList() Obtain List of risk rule IDs
+ * @method void setRiskRuleIDList(array $RiskRuleIDList) Set List of risk rule IDs
  */
 class CreateAccessKeyCheckTaskRequest extends AbstractModel
 {
@@ -44,26 +44,26 @@ class CreateAccessKeyCheckTaskRequest extends AbstractModel
     public $RiskIDList;
 
     /**
-     * @var array Access key list.
+     * @var array Access key list
      */
     public $AccessKeyList;
 
     /**
-     * @var array Account uin list.
+     * @var array List of account uins
      */
     public $SubUinList;
 
     /**
-     * @var array Risk rule id list.
+     * @var array List of risk rule IDs
      */
     public $RiskRuleIDList;
 
     /**
      * @param array $MemberId Group Account Member ID
      * @param array $RiskIDList Risk list.
-     * @param array $AccessKeyList Access key list.
-     * @param array $SubUinList Account uin list.
-     * @param array $RiskRuleIDList Risk rule id list.
+     * @param array $AccessKeyList Access key list
+     * @param array $SubUinList List of account uins
+     * @param array $RiskRuleIDList List of risk rule IDs
      */
     function __construct()
     {

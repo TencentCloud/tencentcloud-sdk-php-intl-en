@@ -18,72 +18,72 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Access key asset information (source IP perspective).
+ * Access key asset information (source IP perspective)
  *
- * @method integer getID() Obtain id of the source IP.
- * @method void setID(integer $ID) Set id of the source IP.
- * @method string getSourceIP() Obtain Source IP.
- * @method void setSourceIP(string $SourceIP) Set Source IP.
+ * @method integer getID() Obtain Source IP id
+ * @method void setID(integer $ID) Set Source IP id
+ * @method string getSourceIP() Obtain Source IP
+ * @method void setSourceIP(string $SourceIP) Set Source IP
  * @method string getRemark() Obtain Remarks
  * @method void setRemark(string $Remark) Set Remarks
- * @method integer getAppID() Obtain Account associate APPID.
- * @method void setAppID(integer $AppID) Set Account associate APPID.
- * @method string getRegion() Obtain IP region.
- * @method void setRegion(string $Region) Set IP region.
- * @method integer getEventType() Obtain API call method.
--1: uncounted.
-0: console invocation.
+ * @method integer getAppID() Obtain APPID of the account
+ * @method void setAppID(integer $AppID) Set APPID of the account
+ * @method string getRegion() Obtain IP region
+ * @method void setRegion(string $Region) Set IP region
+ * @method integer getEventType() Obtain Calling method
+-1: Uncounted
+0: Console invocation
 1:API
- * @method void setEventType(integer $EventType) Set API call method.
--1: uncounted.
-0: console invocation.
+ * @method void setEventType(integer $EventType) Set Calling method
+-1: Uncounted
+0: Console invocation
 1:API
- * @method integer getIPType() Obtain IP type.
-0: within the account (unremarked).
-1: external accounts (unremarked).
-2: within the account (remarked).
-3: external account (remarked).
- * @method void setIPType(integer $IPType) Set IP type.
-0: within the account (unremarked).
-1: external accounts (unremarked).
-2: within the account (remarked).
-3: external account (remarked).
+ * @method integer getIPType() Obtain IP type
+0: within the account (no remark)
+1: Outside the account (no remarks)
+2: Within the account (remarked)
+3: Outside the account   (Remarks added)
+ * @method void setIPType(integer $IPType) Set IP type
+0: within the account (no remark)
+1: Outside the account (no remarks)
+2: Within the account (remarked)
+3: Outside the account   (Remarks added)
  * @method array getAccessKeyAlarmList() Obtain Alarm information list.
  * @method void setAccessKeyAlarmList(array $AccessKeyAlarmList) Set Alarm information list.
- * @method array getAKInfo() Obtain ak information list.
- * @method void setAKInfo(array $AKInfo) Set ak information list.
+ * @method array getAKInfo() Obtain ak information list
+ * @method void setAKInfo(array $AKInfo) Set ak information list
  * @method integer getActionCount() Obtain Number of API calls.
  * @method void setActionCount(integer $ActionCount) Set Number of API calls.
  * @method string getLastAccessTime() Obtain Last access Time
  * @method void setLastAccessTime(string $LastAccessTime) Set Last access Time
- * @method string getInstanceID() Obtain IP associated instance ID. if an empty string, represents an asset not within the account.
- * @method void setInstanceID(string $InstanceID) Set IP associated instance ID. if an empty string, represents an asset not within the account.
- * @method string getInstanceName() Obtain Associated instance name.
- * @method void setInstanceName(string $InstanceName) Set Associated instance name.
- * @method string getUin() Obtain Account associate Uin.
- * @method void setUin(string $Uin) Set Account associate Uin.
- * @method string getNickname() Obtain Nickname.
- * @method void setNickname(string $Nickname) Set Nickname.
+ * @method string getInstanceID() Obtain Associated instance ID of the IP. If it is an empty string, the asset is not within the account.
+ * @method void setInstanceID(string $InstanceID) Set Associated instance ID of the IP. If it is an empty string, the asset is not within the account.
+ * @method string getInstanceName() Obtain IP associated instance name
+ * @method void setInstanceName(string $InstanceName) Set IP associated instance name
+ * @method string getUin() Obtain Uin of the account
+ * @method void setUin(string $Uin) Set Uin of the account
+ * @method string getNickname() Obtain Nickname
+ * @method void setNickname(string $Nickname) Set Nickname
  * @method boolean getShowStatus() Obtain Display status.
  * @method void setShowStatus(boolean $ShowStatus) Set Display status.
- * @method string getISP() Obtain ISP field.
- * @method void setISP(string $ISP) Set ISP field.
- * @method array getVpcInfo() Obtain vpc information outside the account.
- * @method void setVpcInfo(array $VpcInfo) Set vpc information outside the account.
- * @method integer getCloudType() Obtain Cloud type.
-0 for tencent cloud.
- * @method void setCloudType(integer $CloudType) Set Cloud type.
-0 for tencent cloud.
+ * @method string getISP() Obtain Carrier field
+ * @method void setISP(string $ISP) Set Carrier field
+ * @method array getVpcInfo() Obtain vpc information outside the account
+ * @method void setVpcInfo(array $VpcInfo) Set vpc information outside the account
+ * @method integer getCloudType() Obtain Cloud type
+0: Tencent Cloud
+ * @method void setCloudType(integer $CloudType) Set Cloud type
+0: Tencent Cloud
  */
 class SourceIPAsset extends AbstractModel
 {
     /**
-     * @var integer id of the source IP.
+     * @var integer Source IP id
      */
     public $ID;
 
     /**
-     * @var string Source IP.
+     * @var string Source IP
      */
     public $SourceIP;
 
@@ -93,29 +93,29 @@ class SourceIPAsset extends AbstractModel
     public $Remark;
 
     /**
-     * @var integer Account associate APPID.
+     * @var integer APPID of the account
      */
     public $AppID;
 
     /**
-     * @var string IP region.
+     * @var string IP region
      */
     public $Region;
 
     /**
-     * @var integer API call method.
--1: uncounted.
-0: console invocation.
+     * @var integer Calling method
+-1: Uncounted
+0: Console invocation
 1:API
      */
     public $EventType;
 
     /**
-     * @var integer IP type.
-0: within the account (unremarked).
-1: external accounts (unremarked).
-2: within the account (remarked).
-3: external account (remarked).
+     * @var integer IP type
+0: within the account (no remark)
+1: Outside the account (no remarks)
+2: Within the account (remarked)
+3: Outside the account   (Remarks added)
      */
     public $IPType;
 
@@ -125,7 +125,7 @@ class SourceIPAsset extends AbstractModel
     public $AccessKeyAlarmList;
 
     /**
-     * @var array ak information list.
+     * @var array ak information list
      */
     public $AKInfo;
 
@@ -140,22 +140,22 @@ class SourceIPAsset extends AbstractModel
     public $LastAccessTime;
 
     /**
-     * @var string IP associated instance ID. if an empty string, represents an asset not within the account.
+     * @var string Associated instance ID of the IP. If it is an empty string, the asset is not within the account.
      */
     public $InstanceID;
 
     /**
-     * @var string Associated instance name.
+     * @var string IP associated instance name
      */
     public $InstanceName;
 
     /**
-     * @var string Account associate Uin.
+     * @var string Uin of the account
      */
     public $Uin;
 
     /**
-     * @var string Nickname.
+     * @var string Nickname
      */
     public $Nickname;
 
@@ -165,49 +165,49 @@ class SourceIPAsset extends AbstractModel
     public $ShowStatus;
 
     /**
-     * @var string ISP field.
+     * @var string Carrier field
      */
     public $ISP;
 
     /**
-     * @var array vpc information outside the account.
+     * @var array vpc information outside the account
      */
     public $VpcInfo;
 
     /**
-     * @var integer Cloud type.
-0 for tencent cloud.
+     * @var integer Cloud type
+0: Tencent Cloud
      */
     public $CloudType;
 
     /**
-     * @param integer $ID id of the source IP.
-     * @param string $SourceIP Source IP.
+     * @param integer $ID Source IP id
+     * @param string $SourceIP Source IP
      * @param string $Remark Remarks
-     * @param integer $AppID Account associate APPID.
-     * @param string $Region IP region.
-     * @param integer $EventType API call method.
--1: uncounted.
-0: console invocation.
+     * @param integer $AppID APPID of the account
+     * @param string $Region IP region
+     * @param integer $EventType Calling method
+-1: Uncounted
+0: Console invocation
 1:API
-     * @param integer $IPType IP type.
-0: within the account (unremarked).
-1: external accounts (unremarked).
-2: within the account (remarked).
-3: external account (remarked).
+     * @param integer $IPType IP type
+0: within the account (no remark)
+1: Outside the account (no remarks)
+2: Within the account (remarked)
+3: Outside the account   (Remarks added)
      * @param array $AccessKeyAlarmList Alarm information list.
-     * @param array $AKInfo ak information list.
+     * @param array $AKInfo ak information list
      * @param integer $ActionCount Number of API calls.
      * @param string $LastAccessTime Last access Time
-     * @param string $InstanceID IP associated instance ID. if an empty string, represents an asset not within the account.
-     * @param string $InstanceName Associated instance name.
-     * @param string $Uin Account associate Uin.
-     * @param string $Nickname Nickname.
+     * @param string $InstanceID Associated instance ID of the IP. If it is an empty string, the asset is not within the account.
+     * @param string $InstanceName IP associated instance name
+     * @param string $Uin Uin of the account
+     * @param string $Nickname Nickname
      * @param boolean $ShowStatus Display status.
-     * @param string $ISP ISP field.
-     * @param array $VpcInfo vpc information outside the account.
-     * @param integer $CloudType Cloud type.
-0 for tencent cloud.
+     * @param string $ISP Carrier field
+     * @param array $VpcInfo vpc information outside the account
+     * @param integer $CloudType Cloud type
+0: Tencent Cloud
      */
     function __construct()
     {

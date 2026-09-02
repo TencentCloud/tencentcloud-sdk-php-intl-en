@@ -18,136 +18,136 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Record details.
+ * Call log details
  *
- * @method string getCallID() Obtain Invocation record ID.
- * @method void setCallID(string $CallID) Set Invocation record ID.
- * @method string getAccessKey() Obtain Access key.
- * @method void setAccessKey(string $AccessKey) Set Access key.
- * @method string getAccessKeyRemark() Obtain Access key remark.
- * @method void setAccessKeyRemark(string $AccessKeyRemark) Set Access key remark.
- * @method integer getAccessKeyID() Obtain Access key ID.
- * @method void setAccessKeyID(integer $AccessKeyID) Set Access key ID.
- * @method string getSourceIP() Obtain Source IP of the call.
- * @method void setSourceIP(string $SourceIP) Set Source IP of the call.
- * @method string getSourceIPRemark() Obtain Source IP of the call remark.
- * @method void setSourceIPRemark(string $SourceIPRemark) Set Source IP of the call remark.
- * @method string getRegion() Obtain Source IP region of the call.
- * @method void setRegion(string $Region) Set Source IP region of the call.
- * @method integer getIPType() Obtain IP type 0: within the account (unremarked) 1: outside the account (unremarked) 2: within the account (remarked) 3: outside the account (remarked).
- * @method void setIPType(integer $IPType) Set IP type 0: within the account (unremarked) 1: outside the account (unremarked) 2: within the account (remarked) 3: outside the account (remarked).
- * @method string getEventName() Obtain Call interface name.
- * @method void setEventName(string $EventName) Set Call interface name.
- * @method string getProductName() Obtain Call the product name.
- * @method void setProductName(string $ProductName) Set Call the product name.
- * @method integer getEventType() Obtain Invocation type.
-0: console invocation.
+ * @method string getCallID() Obtain Call record ID
+ * @method void setCallID(string $CallID) Set Call record ID
+ * @method string getAccessKey() Obtain Access key
+ * @method void setAccessKey(string $AccessKey) Set Access key
+ * @method string getAccessKeyRemark() Obtain Access key remark
+ * @method void setAccessKeyRemark(string $AccessKeyRemark) Set Access key remark
+ * @method integer getAccessKeyID() Obtain Access Key ID
+ * @method void setAccessKeyID(integer $AccessKeyID) Set Access Key ID
+ * @method string getSourceIP() Obtain Source IP for calls
+ * @method void setSourceIP(string $SourceIP) Set Source IP for calls
+ * @method string getSourceIPRemark() Obtain Source IP remark of a call
+ * @method void setSourceIPRemark(string $SourceIPRemark) Set Source IP remark of a call
+ * @method string getRegion() Obtain Region of the source IP
+ * @method void setRegion(string $Region) Set Region of the source IP
+ * @method integer getIPType() Obtain IP type. 0: within the account (no remark). 1: outside the account (no remark). 2: within the account (remarked). 3: outside the account (remarked)
+ * @method void setIPType(integer $IPType) Set IP type. 0: within the account (no remark). 1: outside the account (no remark). 2: within the account (remarked). 3: outside the account (remarked)
+ * @method string getEventName() Obtain Name of the called API
+ * @method void setEventName(string $EventName) Set Name of the called API
+ * @method string getProductName() Obtain API call product name
+ * @method void setProductName(string $ProductName) Set API call product name
+ * @method integer getEventType() Obtain Invocation type
+0: Console invocation
 1:API
- * @method void setEventType(integer $EventType) Set Invocation type.
-0: console invocation.
+ * @method void setEventType(integer $EventType) Set Invocation type
+0: Console invocation
 1:API
- * @method string getUserType() Obtain Type of user: CAMUser/root/AssumedRole.
+ * @method string getUserType() Obtain Type of user. Valid values: `CAMUser`, `root`, `AssumedRole`.
 
- * @method void setUserType(string $UserType) Set Type of user: CAMUser/root/AssumedRole.
+ * @method void setUserType(string $UserType) Set Type of user. Valid values: `CAMUser`, `root`, `AssumedRole`.
 
- * @method string getUserName() Obtain User/Role name.
- * @method void setUserName(string $UserName) Set User/Role name.
+ * @method string getUserName() Obtain User/role name
+ * @method void setUserName(string $UserName) Set User/role name
  * @method array getPolicySet() Obtain Policy List
  * @method void setPolicySet(array $PolicySet) Set Policy List
- * @method integer getCallCount() Obtain Number of calls.
- * @method void setCallCount(integer $CallCount) Set Number of calls.
- * @method integer getCode() Obtain Error code.
+ * @method integer getCallCount() Obtain Call count
+ * @method void setCallCount(integer $CallCount) Set Call count
+ * @method integer getCode() Obtain Call error code
 0: Successful
- * @method void setCode(integer $Code) Set Error code.
+ * @method void setCode(integer $Code) Set Call error code
 0: Successful
- * @method string getFirstCallTime() Obtain First time call time.
- * @method void setFirstCallTime(string $FirstCallTime) Set First time call time.
- * @method string getLastCallTime() Obtain Call time.
- * @method void setLastCallTime(string $LastCallTime) Set Call time.
- * @method string getInstanceID() Obtain IP associated asset ID. if an empty string, means not associated with.
- * @method void setInstanceID(string $InstanceID) Set IP associated asset ID. if an empty string, means not associated with.
- * @method string getInstanceName() Obtain Associated asset name of the IP.
- * @method void setInstanceName(string $InstanceName) Set Associated asset name of the IP.
- * @method string getDate() Obtain Aggregate date.
- * @method void setDate(string $Date) Set Aggregate date.
+ * @method string getFirstCallTime() Obtain First call time
+ * @method void setFirstCallTime(string $FirstCallTime) Set First call time
+ * @method string getLastCallTime() Obtain Last call time
+ * @method void setLastCallTime(string $LastCallTime) Set Last call time
+ * @method string getInstanceID() Obtain ID of the associated asset for the IP. If it is an empty string, the IP is not associated with any asset.
+ * @method void setInstanceID(string $InstanceID) Set ID of the associated asset for the IP. If it is an empty string, the IP is not associated with any asset.
+ * @method string getInstanceName() Obtain IP associated asset name
+ * @method void setInstanceName(string $InstanceName) Set IP associated asset name
+ * @method string getDate() Obtain Aggregation date
+ * @method void setDate(string $Date) Set Aggregation date
  * @method integer getAppID() Obtain appid
  * @method void setAppID(integer $AppID) Set appid
  * @method boolean getShowStatus() Obtain Display status.
  * @method void setShowStatus(boolean $ShowStatus) Set Display status.
- * @method string getISP() Obtain Carrier.
- * @method void setISP(string $ISP) Set Carrier.
- * @method array getVpcInfo() Obtain vpc information list outside the account.
- * @method void setVpcInfo(array $VpcInfo) Set vpc information list outside the account.
- * @method array getReqClient() Obtain Request client list.
- * @method void setReqClient(array $ReqClient) Set Request client list.
+ * @method string getISP() Obtain Internet service provider.
+ * @method void setISP(string $ISP) Set Internet service provider.
+ * @method array getVpcInfo() Obtain List of vpc information outside the account
+ * @method void setVpcInfo(array $VpcInfo) Set List of vpc information outside the account
+ * @method array getReqClient() Obtain List of call request clients
+ * @method void setReqClient(array $ReqClient) Set List of call request clients
  */
 class CallRecord extends AbstractModel
 {
     /**
-     * @var string Invocation record ID.
+     * @var string Call record ID
      */
     public $CallID;
 
     /**
-     * @var string Access key.
+     * @var string Access key
      */
     public $AccessKey;
 
     /**
-     * @var string Access key remark.
+     * @var string Access key remark
      */
     public $AccessKeyRemark;
 
     /**
-     * @var integer Access key ID.
+     * @var integer Access Key ID
      */
     public $AccessKeyID;
 
     /**
-     * @var string Source IP of the call.
+     * @var string Source IP for calls
      */
     public $SourceIP;
 
     /**
-     * @var string Source IP of the call remark.
+     * @var string Source IP remark of a call
      */
     public $SourceIPRemark;
 
     /**
-     * @var string Source IP region of the call.
+     * @var string Region of the source IP
      */
     public $Region;
 
     /**
-     * @var integer IP type 0: within the account (unremarked) 1: outside the account (unremarked) 2: within the account (remarked) 3: outside the account (remarked).
+     * @var integer IP type. 0: within the account (no remark). 1: outside the account (no remark). 2: within the account (remarked). 3: outside the account (remarked)
      */
     public $IPType;
 
     /**
-     * @var string Call interface name.
+     * @var string Name of the called API
      */
     public $EventName;
 
     /**
-     * @var string Call the product name.
+     * @var string API call product name
      */
     public $ProductName;
 
     /**
-     * @var integer Invocation type.
-0: console invocation.
+     * @var integer Invocation type
+0: Console invocation
 1:API
      */
     public $EventType;
 
     /**
-     * @var string Type of user: CAMUser/root/AssumedRole.
+     * @var string Type of user. Valid values: `CAMUser`, `root`, `AssumedRole`.
 
      */
     public $UserType;
 
     /**
-     * @var string User/Role name.
+     * @var string User/role name
      */
     public $UserName;
 
@@ -157,38 +157,38 @@ class CallRecord extends AbstractModel
     public $PolicySet;
 
     /**
-     * @var integer Number of calls.
+     * @var integer Call count
      */
     public $CallCount;
 
     /**
-     * @var integer Error code.
+     * @var integer Call error code
 0: Successful
      */
     public $Code;
 
     /**
-     * @var string First time call time.
+     * @var string First call time
      */
     public $FirstCallTime;
 
     /**
-     * @var string Call time.
+     * @var string Last call time
      */
     public $LastCallTime;
 
     /**
-     * @var string IP associated asset ID. if an empty string, means not associated with.
+     * @var string ID of the associated asset for the IP. If it is an empty string, the IP is not associated with any asset.
      */
     public $InstanceID;
 
     /**
-     * @var string Associated asset name of the IP.
+     * @var string IP associated asset name
      */
     public $InstanceName;
 
     /**
-     * @var string Aggregate date.
+     * @var string Aggregation date
      */
     public $Date;
 
@@ -203,51 +203,51 @@ class CallRecord extends AbstractModel
     public $ShowStatus;
 
     /**
-     * @var string Carrier.
+     * @var string Internet service provider.
      */
     public $ISP;
 
     /**
-     * @var array vpc information list outside the account.
+     * @var array List of vpc information outside the account
      */
     public $VpcInfo;
 
     /**
-     * @var array Request client list.
+     * @var array List of call request clients
      */
     public $ReqClient;
 
     /**
-     * @param string $CallID Invocation record ID.
-     * @param string $AccessKey Access key.
-     * @param string $AccessKeyRemark Access key remark.
-     * @param integer $AccessKeyID Access key ID.
-     * @param string $SourceIP Source IP of the call.
-     * @param string $SourceIPRemark Source IP of the call remark.
-     * @param string $Region Source IP region of the call.
-     * @param integer $IPType IP type 0: within the account (unremarked) 1: outside the account (unremarked) 2: within the account (remarked) 3: outside the account (remarked).
-     * @param string $EventName Call interface name.
-     * @param string $ProductName Call the product name.
-     * @param integer $EventType Invocation type.
-0: console invocation.
+     * @param string $CallID Call record ID
+     * @param string $AccessKey Access key
+     * @param string $AccessKeyRemark Access key remark
+     * @param integer $AccessKeyID Access Key ID
+     * @param string $SourceIP Source IP for calls
+     * @param string $SourceIPRemark Source IP remark of a call
+     * @param string $Region Region of the source IP
+     * @param integer $IPType IP type. 0: within the account (no remark). 1: outside the account (no remark). 2: within the account (remarked). 3: outside the account (remarked)
+     * @param string $EventName Name of the called API
+     * @param string $ProductName API call product name
+     * @param integer $EventType Invocation type
+0: Console invocation
 1:API
-     * @param string $UserType Type of user: CAMUser/root/AssumedRole.
+     * @param string $UserType Type of user. Valid values: `CAMUser`, `root`, `AssumedRole`.
 
-     * @param string $UserName User/Role name.
+     * @param string $UserName User/role name
      * @param array $PolicySet Policy List
-     * @param integer $CallCount Number of calls.
-     * @param integer $Code Error code.
+     * @param integer $CallCount Call count
+     * @param integer $Code Call error code
 0: Successful
-     * @param string $FirstCallTime First time call time.
-     * @param string $LastCallTime Call time.
-     * @param string $InstanceID IP associated asset ID. if an empty string, means not associated with.
-     * @param string $InstanceName Associated asset name of the IP.
-     * @param string $Date Aggregate date.
+     * @param string $FirstCallTime First call time
+     * @param string $LastCallTime Last call time
+     * @param string $InstanceID ID of the associated asset for the IP. If it is an empty string, the IP is not associated with any asset.
+     * @param string $InstanceName IP associated asset name
+     * @param string $Date Aggregation date
      * @param integer $AppID appid
      * @param boolean $ShowStatus Display status.
-     * @param string $ISP Carrier.
-     * @param array $VpcInfo vpc information list outside the account.
-     * @param array $ReqClient Request client list.
+     * @param string $ISP Internet service provider.
+     * @param array $VpcInfo List of vpc information outside the account
+     * @param array $ReqClient List of call request clients
      */
     function __construct()
     {

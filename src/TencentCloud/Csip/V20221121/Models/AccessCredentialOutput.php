@@ -18,32 +18,32 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Normal key credential (dedicated for output parameters), used for the response of the query details api. The Value field returns a masked value without exposing plaintext.
+ * General key credential (dedicated output parameter), used for the response of the details query API. The Value field returns the masked value without exposing the plaintext.
  *
- * @method string getKey() Obtain Credential key name (original), such as SecretId, SecretKey, Token
- * @method void setKey(string $Key) Set Credential key name (original), such as SecretId, SecretKey, Token
+ * @method string getKey() Obtain Credential key name (original text), for example, SecretId, SecretKey, and Token.
+ * @method void setKey(string $Key) Set Credential key name (original text), for example, SecretId, SecretKey, and Token.
  * @method string getValue() Obtain Credential key-value (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***; if the length is less than 7 digits, replace all with ***.
  * @method void setValue(string $Value) Set Credential key-value (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***; if the length is less than 7 digits, replace all with ***.
  */
 class AccessCredentialOutput extends AbstractModel
 {
     /**
-     * @var string Credential key name (original), such as SecretId, SecretKey, Token
+     * @var string Credential key name (original text), for example, SecretId, SecretKey, and Token.
      */
     public $Key;
 
     /**
      * @var string Credential key-value (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***; if the length is less than 7 digits, replace all with ***.
      */
     public $Value;
 
     /**
-     * @param string $Key Credential key name (original), such as SecretId, SecretKey, Token
+     * @param string $Key Credential key name (original text), for example, SecretId, SecretKey, and Token.
      * @param string $Value Credential key-value (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***; if the length is less than 7 digits, replace all with ***.
      */
     function __construct()
     {

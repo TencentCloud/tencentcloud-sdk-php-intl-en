@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) Set Sorting type
  * @method string getBy() Obtain Sorting field.
  * @method void setBy(string $By) Set Sorting field.
- * @method string getCloudAccountID() Obtain Cloud account ID.
- * @method void setCloudAccountID(string $CloudAccountID) Set Cloud account ID.
- * @method string getProvider() Obtain Cloud service provider.
- * @method void setProvider(string $Provider) Set Cloud service provider.
+ * @method string getCloudAccountID() Obtain Cloud account ID
+ * @method void setCloudAccountID(string $CloudAccountID) Set Cloud account ID
+ * @method string getProvider() Obtain Cloud service provider
+ * @method void setProvider(string $Provider) Set Cloud service provider
  */
 class DescribeHighBaseLineRiskListRequest extends AbstractModel
 {
@@ -70,12 +70,12 @@ class DescribeHighBaseLineRiskListRequest extends AbstractModel
     public $By;
 
     /**
-     * @var string Cloud account ID.
+     * @var string Cloud account ID
      */
     public $CloudAccountID;
 
     /**
-     * @var string Cloud service provider.
+     * @var string Cloud service provider
      */
     public $Provider;
 
@@ -86,8 +86,8 @@ class DescribeHighBaseLineRiskListRequest extends AbstractModel
      * @param integer $Offset Offset.
      * @param string $Order Sorting type
      * @param string $By Sorting field.
-     * @param string $CloudAccountID Cloud account ID.
-     * @param string $Provider Cloud service provider.
+     * @param string $CloudAccountID Cloud account ID
+     * @param string $Provider Cloud service provider
      */
     function __construct()
     {

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperatedMemberId(array $OperatedMemberId) Set Member ID of the Called Group Account
  * @method string getAssetName() Obtain Asset name
  * @method void setAssetName(string $AssetName) Set Asset name
- * @method integer getAssetType() Obtain 0: Default all 1: Asset ID 2: Domain name
- * @method void setAssetType(integer $AssetType) Set 0: Default all 1: Asset ID 2: Domain name
+ * @method integer getAssetType() Obtain 0: Default: All; 1: Asset ID; 2: Domain name
+ * @method void setAssetType(integer $AssetType) Set 0: Default: All; 1: Asset ID; 2: Domain name
  */
 class DescribeTopAttackInfoRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DescribeTopAttackInfoRequest extends AbstractModel
     public $AssetName;
 
     /**
-     * @var integer 0: Default all 1: Asset ID 2: Domain name
+     * @var integer 0: Default: All; 1: Asset ID; 2: Domain name
      */
     public $AssetType;
 
@@ -79,7 +79,7 @@ class DescribeTopAttackInfoRequest extends AbstractModel
      * @param array $MemberId Group Account Member ID
      * @param array $OperatedMemberId Member ID of the Called Group Account
      * @param string $AssetName Asset name
-     * @param integer $AssetType 0: Default all 1: Asset ID 2: Domain name
+     * @param integer $AssetType 0: Default: All; 1: Asset ID; 2: Domain name
      */
     function __construct()
     {

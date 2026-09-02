@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSearchBugInfo request structure.
  *
- * @method string getId() Obtain 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
- * @method void setId(string $Id) Set 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
- * @method string getCVEId() Obtain CVE number of the vulnerability. It's required when `Id=3`.
- * @method void setCVEId(string $CVEId) Set CVE number of the vulnerability. It's required when `Id=3`.
+ * @method string getId() Obtain Return urgent vulnerabilities when the value is 1, return the emergency vulnerability list when the value is 2, and use with the CVEId field as input to display the vulnerability data when the value is 3.
+ * @method void setId(string $Id) Set Return urgent vulnerabilities when the value is 1, return the emergency vulnerability list when the value is 2, and use with the CVEId field as input to display the vulnerability data when the value is 3.
+ * @method string getCVEId() Obtain Pass in this parameter when id=3.
+ * @method void setCVEId(string $CVEId) Set Pass in this parameter when id=3.
  */
 class DescribeSearchBugInfoRequest extends AbstractModel
 {
     /**
-     * @var string 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
+     * @var string Return urgent vulnerabilities when the value is 1, return the emergency vulnerability list when the value is 2, and use with the CVEId field as input to display the vulnerability data when the value is 3.
      */
     public $Id;
 
     /**
-     * @var string CVE number of the vulnerability. It's required when `Id=3`.
+     * @var string Pass in this parameter when id=3.
      */
     public $CVEId;
 
     /**
-     * @param string $Id 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
-     * @param string $CVEId CVE number of the vulnerability. It's required when `Id=3`.
+     * @param string $Id Return urgent vulnerabilities when the value is 1, return the emergency vulnerability list when the value is 2, and use with the CVEId field as input to display the vulnerability data when the value is 3.
+     * @param string $CVEId Pass in this parameter when id=3.
      */
     function __construct()
     {

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) Set Sorting type
  * @method string getBy() Obtain Sorting field.
  * @method void setBy(string $By) Set Sorting field.
- * @method string getProvider() Obtain Cloud service provider.
- * @method void setProvider(string $Provider) Set Cloud service provider.
+ * @method string getProvider() Obtain Cloud service provider
+ * @method void setProvider(string $Provider) Set Cloud service provider
  */
 class DescribeAssetProcessListRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DescribeAssetProcessListRequest extends AbstractModel
     public $By;
 
     /**
-     * @var string Cloud service provider.
+     * @var string Cloud service provider
      */
     public $Provider;
 
@@ -79,7 +79,7 @@ class DescribeAssetProcessListRequest extends AbstractModel
      * @param integer $Offset Offset.
      * @param string $Order Sorting type
      * @param string $By Sorting field.
-     * @param string $Provider Cloud service provider.
+     * @param string $Provider Cloud service provider
      */
     function __construct()
     {

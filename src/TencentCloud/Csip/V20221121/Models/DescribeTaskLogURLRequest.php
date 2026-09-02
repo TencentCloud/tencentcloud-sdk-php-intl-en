@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskLogURL request structure.
  *
- * @method integer getType() Obtain Type of the task. `0`: Preview; `1`: Download
- * @method void setType(integer $Type) Set Type of the task. `0`: Preview; `1`: Download
+ * @method integer getType() Obtain 0: Preview; 1: Download
+ * @method void setType(integer $Type) Set 0: Preview; 1: Download
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method array getReportItemKeyList() Obtain List of task report IDs
- * @method void setReportItemKeyList(array $ReportItemKeyList) Set List of task report IDs
- * @method array getReportTaskIdList() Obtain List of task IDs in the report
- * @method void setReportTaskIdList(array $ReportTaskIdList) Set List of task IDs in the report
+ * @method array getReportItemKeyList() Obtain Task Report ID List
+ * @method void setReportItemKeyList(array $ReportItemKeyList) Set Task Report ID List
+ * @method array getReportTaskIdList() Obtain List of Task IDs in the Report
+ * @method void setReportTaskIdList(array $ReportTaskIdList) Set List of Task IDs in the Report
  */
 class DescribeTaskLogURLRequest extends AbstractModel
 {
     /**
-     * @var integer Type of the task. `0`: Preview; `1`: Download
+     * @var integer 0: Preview; 1: Download
      */
     public $Type;
 
@@ -42,20 +42,20 @@ class DescribeTaskLogURLRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var array List of task report IDs
+     * @var array Task Report ID List
      */
     public $ReportItemKeyList;
 
     /**
-     * @var array List of task IDs in the report
+     * @var array List of Task IDs in the Report
      */
     public $ReportTaskIdList;
 
     /**
-     * @param integer $Type Type of the task. `0`: Preview; `1`: Download
+     * @param integer $Type 0: Preview; 1: Download
      * @param array $MemberId Group Account Member ID
-     * @param array $ReportItemKeyList List of task report IDs
-     * @param array $ReportTaskIdList List of task IDs in the report
+     * @param array $ReportItemKeyList Task Report ID List
+     * @param array $ReportTaskIdList List of Task IDs in the Report
      */
     function __construct()
     {

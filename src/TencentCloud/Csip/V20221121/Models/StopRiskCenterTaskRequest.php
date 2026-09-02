@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopRiskCenterTask request structure.
  *
- * @method array getTaskIdList() Obtain List of task IDs
- * @method void setTaskIdList(array $TaskIdList) Set List of task IDs
+ * @method array getTaskIdList() Obtain Task ID List
+ * @method void setTaskIdList(array $TaskIdList) Set Task ID List
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
 class StopRiskCenterTaskRequest extends AbstractModel
 {
     /**
-     * @var array List of task IDs
+     * @var array Task ID List
      */
     public $TaskIdList;
 
@@ -38,7 +38,7 @@ class StopRiskCenterTaskRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @param array $TaskIdList List of task IDs
+     * @param array $TaskIdList Task ID List
      * @param array $MemberId Group Account Member ID
      */
     function __construct()

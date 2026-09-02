@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSkillScanPayInfo response structure.
  *
- * @method integer getAppID() Obtain <p>AppID of the associated tenant for the order</p>
- * @method void setAppID(integer $AppID) Set <p>AppID of the associated tenant for the order</p>
- * @method integer getOrderStatus() Obtain <p>Order status<br>Enumeration value:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
- * @method void setOrderStatus(integer $OrderStatus) Set <p>Order status<br>Enumeration value:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
+ * @method integer getAppID() Obtain <p>AppID of the associated tenant of the order</p>
+ * @method void setAppID(integer $AppID) Set <p>AppID of the associated tenant of the order</p>
+ * @method integer getOrderStatus() Obtain <p>Order status<br>Enumeration values:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
+ * @method void setOrderStatus(integer $OrderStatus) Set <p>Order status<br>Enumeration values:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
  * @method integer getTotalQuota() Obtain <p>Total quota</p>
  * @method void setTotalQuota(integer $TotalQuota) Set <p>Total quota</p>
- * @method integer getUsedCount() Obtain <p>Consumed quota.</p>
- * @method void setUsedCount(integer $UsedCount) Set <p>Consumed quota.</p>
- * @method integer getPayMode() Obtain <p>Payment mode<br>Enumeration value:<br>0: Postpaid<br>1: Prepaid</p>
- * @method void setPayMode(integer $PayMode) Set <p>Payment mode<br>Enumeration value:<br>0: Postpaid<br>1: Prepaid</p>
- * @method integer getAutoRenew() Obtain <p>Auto-renewal flag<br>Enumeration value:<br>0: not set<br>1: auto-renewal<br>2: no auto-renewal</p>
- * @method void setAutoRenew(integer $AutoRenew) Set <p>Auto-renewal flag<br>Enumeration value:<br>0: not set<br>1: auto-renewal<br>2: no auto-renewal</p>
+ * @method integer getUsedCount() Obtain <p>Consumed quota</p>
+ * @method void setUsedCount(integer $UsedCount) Set <p>Consumed quota</p>
+ * @method integer getPayMode() Obtain <p>Payment mode<br>Enumeration values:<br>0: postpaid<br>1: prepaid</p>
+ * @method void setPayMode(integer $PayMode) Set <p>Payment mode<br>Enumeration values:<br>0: postpaid<br>1: prepaid</p>
+ * @method integer getAutoRenew() Obtain <p>Auto-renewal flag<br>Enumeration values:<br>0: Not set<br>1: Auto-renewal<br>2: No auto-renewal</p>
+ * @method void setAutoRenew(integer $AutoRenew) Set <p>Auto-renewal flag<br>Enumeration values:<br>0: Not set<br>1: Auto-renewal<br>2: No auto-renewal</p>
  * @method string getResourceId() Obtain <p>Resource ID</p>
  * @method void setResourceId(string $ResourceId) Set <p>Resource ID</p>
- * @method integer getTimeSpan() Obtain <p>Purchase period</p>
- * @method void setTimeSpan(integer $TimeSpan) Set <p>Purchase period</p>
+ * @method integer getTimeSpan() Obtain <p>Purchase period.</p>
+ * @method void setTimeSpan(integer $TimeSpan) Set <p>Purchase period.</p>
  * @method string getTimeUnit() Obtain <p>Duration unit</p>
  * @method void setTimeUnit(string $TimeUnit) Set <p>Duration unit</p>
  * @method string getBeginTime() Obtain <p>Order start time</p>
  * @method void setBeginTime(string $BeginTime) Set <p>Order start time</p>
  * @method string getEndTime() Obtain <p>Order expiration time</p>
  * @method void setEndTime(string $EndTime) Set <p>Order expiration time</p>
- * @method string getBetaEndTime() Obtain <p>Open beta end time is fixed as 2026-06-30 23:59:59</p>
- * @method void setBetaEndTime(string $BetaEndTime) Set <p>Open beta end time is fixed as 2026-06-30 23:59:59</p>
+ * @method string getBetaEndTime() Obtain <p>Open beta end time, fixed as 2026-06-30 23:59:59</p>
+ * @method void setBetaEndTime(string $BetaEndTime) Set <p>Open beta end time, fixed as 2026-06-30 23:59:59</p>
  * @method string getTimeNow() Obtain <p>Server current time</p>
  * @method void setTimeNow(string $TimeNow) Set <p>Server current time</p>
  * @method string getUin() Obtain <p>Tenant Uin</p>
@@ -56,12 +56,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSkillScanPayInfoResponse extends AbstractModel
 {
     /**
-     * @var integer <p>AppID of the associated tenant for the order</p>
+     * @var integer <p>AppID of the associated tenant of the order</p>
      */
     public $AppID;
 
     /**
-     * @var integer <p>Order status<br>Enumeration value:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
+     * @var integer <p>Order status<br>Enumeration values:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
      */
     public $OrderStatus;
 
@@ -71,17 +71,17 @@ class DescribeSkillScanPayInfoResponse extends AbstractModel
     public $TotalQuota;
 
     /**
-     * @var integer <p>Consumed quota.</p>
+     * @var integer <p>Consumed quota</p>
      */
     public $UsedCount;
 
     /**
-     * @var integer <p>Payment mode<br>Enumeration value:<br>0: Postpaid<br>1: Prepaid</p>
+     * @var integer <p>Payment mode<br>Enumeration values:<br>0: postpaid<br>1: prepaid</p>
      */
     public $PayMode;
 
     /**
-     * @var integer <p>Auto-renewal flag<br>Enumeration value:<br>0: not set<br>1: auto-renewal<br>2: no auto-renewal</p>
+     * @var integer <p>Auto-renewal flag<br>Enumeration values:<br>0: Not set<br>1: Auto-renewal<br>2: No auto-renewal</p>
      */
     public $AutoRenew;
 
@@ -91,7 +91,7 @@ class DescribeSkillScanPayInfoResponse extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var integer <p>Purchase period</p>
+     * @var integer <p>Purchase period.</p>
      */
     public $TimeSpan;
 
@@ -111,7 +111,7 @@ class DescribeSkillScanPayInfoResponse extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string <p>Open beta end time is fixed as 2026-06-30 23:59:59</p>
+     * @var string <p>Open beta end time, fixed as 2026-06-30 23:59:59</p>
      */
     public $BetaEndTime;
 
@@ -136,18 +136,18 @@ class DescribeSkillScanPayInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $AppID <p>AppID of the associated tenant for the order</p>
-     * @param integer $OrderStatus <p>Order status<br>Enumeration value:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
+     * @param integer $AppID <p>AppID of the associated tenant of the order</p>
+     * @param integer $OrderStatus <p>Order status<br>Enumeration values:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
      * @param integer $TotalQuota <p>Total quota</p>
-     * @param integer $UsedCount <p>Consumed quota.</p>
-     * @param integer $PayMode <p>Payment mode<br>Enumeration value:<br>0: Postpaid<br>1: Prepaid</p>
-     * @param integer $AutoRenew <p>Auto-renewal flag<br>Enumeration value:<br>0: not set<br>1: auto-renewal<br>2: no auto-renewal</p>
+     * @param integer $UsedCount <p>Consumed quota</p>
+     * @param integer $PayMode <p>Payment mode<br>Enumeration values:<br>0: postpaid<br>1: prepaid</p>
+     * @param integer $AutoRenew <p>Auto-renewal flag<br>Enumeration values:<br>0: Not set<br>1: Auto-renewal<br>2: No auto-renewal</p>
      * @param string $ResourceId <p>Resource ID</p>
-     * @param integer $TimeSpan <p>Purchase period</p>
+     * @param integer $TimeSpan <p>Purchase period.</p>
      * @param string $TimeUnit <p>Duration unit</p>
      * @param string $BeginTime <p>Order start time</p>
      * @param string $EndTime <p>Order expiration time</p>
-     * @param string $BetaEndTime <p>Open beta end time is fixed as 2026-06-30 23:59:59</p>
+     * @param string $BetaEndTime <p>Open beta end time, fixed as 2026-06-30 23:59:59</p>
      * @param string $TimeNow <p>Server current time</p>
      * @param string $Uin <p>Tenant Uin</p>
      * @param string $NickName <p>Tenant nickname</p>

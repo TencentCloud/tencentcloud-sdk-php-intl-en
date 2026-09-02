@@ -18,17 +18,17 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of task IDs
+ * Task ID List Key
  *
- * @method string getTaskId() Obtain Task ID
- * @method void setTaskId(string $TaskId) Set Task ID
+ * @method string getTaskId() Obtain Task ID.
+ * @method void setTaskId(string $TaskId) Set Task ID.
  * @method string getTargetAppId() Obtain APP ID
  * @method void setTargetAppId(string $TargetAppId) Set APP ID
  */
 class TaskIdListKey extends AbstractModel
 {
     /**
-     * @var string Task ID
+     * @var string Task ID.
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class TaskIdListKey extends AbstractModel
     public $TargetAppId;
 
     /**
-     * @param string $TaskId Task ID
+     * @param string $TaskId Task ID.
      * @param string $TargetAppId APP ID
      */
     function __construct()

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUin() Obtain Member Account UIN
  * @method void setUin(string $Uin) Set Member Account UIN
- * @method string getNickName() Obtain member account name
- * @method void setNickName(string $NickName) Set member account name
+ * @method string getNickName() Obtain Member account name
+ * @method void setNickName(string $NickName) Set Member account name
  * @method string getNodeName() Obtain Department Node Name, Account's Department
  * @method void setNodeName(string $NodeName) Set Department Node Name, Account's Department
  * @method integer getAssetCount() Obtain Number of assets
@@ -62,12 +62,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPermissionList(array $PermissionList) Set Multi-Cloud Account Permission List
  * @method integer getAuthType() Obtain 1
  * @method void setAuthType(integer $AuthType) Set 1
- * @method integer getTcMemberType() Obtain Tencent Cloud Group Account
-Tencent Cloud access account
-2: non-Tencent Cloud
- * @method void setTcMemberType(integer $TcMemberType) Set Tencent Cloud Group Account
-Tencent Cloud access account
-2: non-Tencent Cloud
+ * @method integer getTcMemberType() Obtain 0 Tencent Cloud Group Account
+1 Tencent Cloud access account
+2. Non-Tencent Cloud
+ * @method void setTcMemberType(integer $TcMemberType) Set 0 Tencent Cloud Group Account
+1 Tencent Cloud access account
+2. Non-Tencent Cloud
  * @method integer getSubUserCount() Obtain Number of sub-accounts.
  * @method void setSubUserCount(integer $SubUserCount) Set Number of sub-accounts.
  * @method string getJoinTypeInfo() Obtain Joining method details
@@ -81,7 +81,7 @@ class OrganizationUserInfo extends AbstractModel
     public $Uin;
 
     /**
-     * @var string member account name
+     * @var string Member account name
      */
     public $NickName;
 
@@ -181,9 +181,9 @@ class OrganizationUserInfo extends AbstractModel
     public $AuthType;
 
     /**
-     * @var integer Tencent Cloud Group Account
-Tencent Cloud access account
-2: non-Tencent Cloud
+     * @var integer 0 Tencent Cloud Group Account
+1 Tencent Cloud access account
+2. Non-Tencent Cloud
      */
     public $TcMemberType;
 
@@ -199,7 +199,7 @@ Tencent Cloud access account
 
     /**
      * @param string $Uin Member Account UIN
-     * @param string $NickName member account name
+     * @param string $NickName Member account name
      * @param string $NodeName Department Node Name, Account's Department
      * @param integer $AssetCount Number of assets
      * @param integer $RiskCount Number of risks
@@ -219,9 +219,9 @@ Tencent Cloud access account
      * @param boolean $IsExpired Whether the multi-cloud account is expired.
      * @param array $PermissionList Multi-Cloud Account Permission List
      * @param integer $AuthType 1
-     * @param integer $TcMemberType Tencent Cloud Group Account
-Tencent Cloud access account
-2: non-Tencent Cloud
+     * @param integer $TcMemberType 0 Tencent Cloud Group Account
+1 Tencent Cloud access account
+2. Non-Tencent Cloud
      * @param integer $SubUserCount Number of sub-accounts.
      * @param string $JoinTypeInfo Joining method details
      */

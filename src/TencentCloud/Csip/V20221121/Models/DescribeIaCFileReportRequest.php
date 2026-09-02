@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIaCFileReport request structure.
  *
- * @method integer getAssetId() Obtain <p>Asset ID</p>
- * @method void setAssetId(integer $AssetId) Set <p>Asset ID</p>
+ * @method integer getAssetId() Obtain <p>Asset ID.</p>
+ * @method void setAssetId(integer $AssetId) Set <p>Asset ID.</p>
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
 class DescribeIaCFileReportRequest extends AbstractModel
 {
     /**
-     * @var integer <p>Asset ID</p>
+     * @var integer <p>Asset ID.</p>
      */
     public $AssetId;
 
@@ -38,7 +38,7 @@ class DescribeIaCFileReportRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @param integer $AssetId <p>Asset ID</p>
+     * @param integer $AssetId <p>Asset ID.</p>
      * @param array $MemberId Group Account Member ID
      */
     function __construct()

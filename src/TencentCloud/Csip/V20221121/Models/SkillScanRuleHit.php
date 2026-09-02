@@ -18,28 +18,32 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * hit rule
+ * Matched rule items
  *
- * @method string getRuleID() Obtain Fusion rule number (9xxxx) can be cross-referenced with RuleCatalog.
- * @method void setRuleID(string $RuleID) Set Fusion rule number (9xxxx) can be cross-referenced with RuleCatalog.
- * @method string getDescription() Obtain Current description of the specific detection for the matched rule, including file location, behavioral features, risks, etc.
- * @method void setDescription(string $Description) Set Current description of the specific detection for the matched rule, including file location, behavioral features, risks, etc.
+ * @method string getRuleID() Obtain Fusion rule number
+Parameter format: such as 9xxxx
+ * @method void setRuleID(string $RuleID) Set Fusion rule number
+Parameter format: such as 9xxxx
+ * @method string getDescription() Obtain Risk discovery description
+ * @method void setDescription(string $Description) Set Risk discovery description
  */
 class SkillScanRuleHit extends AbstractModel
 {
     /**
-     * @var string Fusion rule number (9xxxx) can be cross-referenced with RuleCatalog.
+     * @var string Fusion rule number
+Parameter format: such as 9xxxx
      */
     public $RuleID;
 
     /**
-     * @var string Current description of the specific detection for the matched rule, including file location, behavioral features, risks, etc.
+     * @var string Risk discovery description
      */
     public $Description;
 
     /**
-     * @param string $RuleID Fusion rule number (9xxxx) can be cross-referenced with RuleCatalog.
-     * @param string $Description Current description of the specific detection for the matched rule, including file location, behavioral features, risks, etc.
+     * @param string $RuleID Fusion rule number
+Parameter format: such as 9xxxx
+     * @param string $Description Risk discovery description
      */
     function __construct()
     {

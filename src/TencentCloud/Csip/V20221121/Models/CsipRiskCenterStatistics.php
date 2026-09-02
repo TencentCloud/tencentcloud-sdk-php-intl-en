@@ -18,14 +18,14 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Risk center risk overview statistics.
+ * Risk center risk overview statistics
  *
  * @method integer getPortTotal() Obtain Total Number of Port Risks
  * @method void setPortTotal(integer $PortTotal) Set Total Number of Port Risks
  * @method integer getPortHighLevel() Obtain High Port Risk Count
  * @method void setPortHighLevel(integer $PortHighLevel) Set High Port Risk Count
- * @method integer getWeakPasswordTotal() Obtain 	Total number of weak password risks.
- * @method void setWeakPasswordTotal(integer $WeakPasswordTotal) Set 	Total number of weak password risks.
+ * @method integer getWeakPasswordTotal() Obtain 	Total number of weak password risks
+ * @method void setWeakPasswordTotal(integer $WeakPasswordTotal) Set 	Total number of weak password risks
  * @method integer getWeakPasswordHighLevel() Obtain High Weak Password Risk Count
  * @method void setWeakPasswordHighLevel(integer $WeakPasswordHighLevel) Set High Weak Password Risk Count
  * @method integer getWebsiteTotal() Obtain Website Risk Count
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWebsiteHighLevel(integer $WebsiteHighLevel) Set Number of High Risks on Websites
  * @method string getLastScanTime() Obtain Time of the Latest Scan
  * @method void setLastScanTime(string $LastScanTime) Set Time of the Latest Scan
- * @method integer getVULTotal() Obtain Number of vulnerability risks.
- * @method void setVULTotal(integer $VULTotal) Set Number of vulnerability risks.
+ * @method integer getVULTotal() Obtain Number of Vulnerability Risks
+ * @method void setVULTotal(integer $VULTotal) Set Number of Vulnerability Risks
  * @method integer getVULHighLevel() Obtain Number of High-Risk Vulnerability Risks
  * @method void setVULHighLevel(integer $VULHighLevel) Set Number of High-Risk Vulnerability Risks
  * @method integer getCFGTotal() Obtain Number of Configuration Item Risks
@@ -43,21 +43,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCFGHighLevel() Obtain Number of High-Risk Configuration Item Risks
  * @method void setCFGHighLevel(integer $CFGHighLevel) Set Number of High-Risk Configuration Item Risks
  * @method integer getServerTotal() Obtain Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setServerTotal(integer $ServerTotal) Set Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getServerHighLevel() Obtain High Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setServerHighLevel(integer $ServerHighLevel) Set High Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getHostBaseLineRiskTotal() Obtain Number of host baseline risks.
- * @method void setHostBaseLineRiskTotal(integer $HostBaseLineRiskTotal) Set Number of host baseline risks.
- * @method integer getHostBaseLineRiskHighLevel() Obtain Number of high-risk risks.
- * @method void setHostBaseLineRiskHighLevel(integer $HostBaseLineRiskHighLevel) Set Number of high-risk risks.
- * @method integer getPodBaseLineRiskTotal() Obtain Baseline risk count of the container.
- * @method void setPodBaseLineRiskTotal(integer $PodBaseLineRiskTotal) Set Baseline risk count of the container.
- * @method integer getPodBaseLineRiskHighLevel() Obtain Number of high-risk baseline risks in the container.
- * @method void setPodBaseLineRiskHighLevel(integer $PodBaseLineRiskHighLevel) Set Number of high-risk baseline risks in the container.
+ * @method integer getHostBaseLineRiskTotal() Obtain Number of host baseline risks
+ * @method void setHostBaseLineRiskTotal(integer $HostBaseLineRiskTotal) Set Number of host baseline risks
+ * @method integer getHostBaseLineRiskHighLevel() Obtain Number of high-risk risks in the host baseline
+ * @method void setHostBaseLineRiskHighLevel(integer $HostBaseLineRiskHighLevel) Set Number of high-risk risks in the host baseline
+ * @method integer getPodBaseLineRiskTotal() Obtain Number of baseline risks in the container
+ * @method void setPodBaseLineRiskTotal(integer $PodBaseLineRiskTotal) Set Number of baseline risks in the container
+ * @method integer getPodBaseLineRiskHighLevel() Obtain Number of high-risk risks in the container baseline
+ * @method void setPodBaseLineRiskHighLevel(integer $PodBaseLineRiskHighLevel) Set Number of high-risk risks in the container baseline
  */
 class CsipRiskCenterStatistics extends AbstractModel
 {
@@ -72,7 +68,7 @@ class CsipRiskCenterStatistics extends AbstractModel
     public $PortHighLevel;
 
     /**
-     * @var integer 	Total number of weak password risks.
+     * @var integer 	Total number of weak password risks
      */
     public $WeakPasswordTotal;
 
@@ -97,7 +93,7 @@ class CsipRiskCenterStatistics extends AbstractModel
     public $LastScanTime;
 
     /**
-     * @var integer Number of vulnerability risks.
+     * @var integer Number of Vulnerability Risks
      */
     public $VULTotal;
 
@@ -118,56 +114,52 @@ class CsipRiskCenterStatistics extends AbstractModel
 
     /**
      * @var integer Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ServerTotal;
 
     /**
      * @var integer High Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ServerHighLevel;
 
     /**
-     * @var integer Number of host baseline risks.
+     * @var integer Number of host baseline risks
      */
     public $HostBaseLineRiskTotal;
 
     /**
-     * @var integer Number of high-risk risks.
+     * @var integer Number of high-risk risks in the host baseline
      */
     public $HostBaseLineRiskHighLevel;
 
     /**
-     * @var integer Baseline risk count of the container.
+     * @var integer Number of baseline risks in the container
      */
     public $PodBaseLineRiskTotal;
 
     /**
-     * @var integer Number of high-risk baseline risks in the container.
+     * @var integer Number of high-risk risks in the container baseline
      */
     public $PodBaseLineRiskHighLevel;
 
     /**
      * @param integer $PortTotal Total Number of Port Risks
      * @param integer $PortHighLevel High Port Risk Count
-     * @param integer $WeakPasswordTotal 	Total number of weak password risks.
+     * @param integer $WeakPasswordTotal 	Total number of weak password risks
      * @param integer $WeakPasswordHighLevel High Weak Password Risk Count
      * @param integer $WebsiteTotal Website Risk Count
      * @param integer $WebsiteHighLevel Number of High Risks on Websites
      * @param string $LastScanTime Time of the Latest Scan
-     * @param integer $VULTotal Number of vulnerability risks.
+     * @param integer $VULTotal Number of Vulnerability Risks
      * @param integer $VULHighLevel Number of High-Risk Vulnerability Risks
      * @param integer $CFGTotal Number of Configuration Item Risks
      * @param integer $CFGHighLevel Number of High-Risk Configuration Item Risks
      * @param integer $ServerTotal Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ServerHighLevel High Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $HostBaseLineRiskTotal Number of host baseline risks.
-     * @param integer $HostBaseLineRiskHighLevel Number of high-risk risks.
-     * @param integer $PodBaseLineRiskTotal Baseline risk count of the container.
-     * @param integer $PodBaseLineRiskHighLevel Number of high-risk baseline risks in the container.
+     * @param integer $HostBaseLineRiskTotal Number of host baseline risks
+     * @param integer $HostBaseLineRiskHighLevel Number of high-risk risks in the host baseline
+     * @param integer $PodBaseLineRiskTotal Number of baseline risks in the container
+     * @param integer $PodBaseLineRiskHighLevel Number of high-risk risks in the container baseline
      */
     function __construct()
     {

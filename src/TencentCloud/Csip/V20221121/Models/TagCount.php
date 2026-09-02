@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Product Log Entries
  *
- * @method string getName() Obtain Product Name
- * @method void setName(string $Name) Set Product Name
+ * @method string getName() Obtain Product name
+ * @method void setName(string $Name) Set Product name
  * @method integer getCount() Obtain Number of logs.
  * @method void setCount(integer $Count) Set Number of logs.
  */
 class TagCount extends AbstractModel
 {
     /**
-     * @var string Product Name
+     * @var string Product name
      */
     public $Name;
 
@@ -38,7 +38,7 @@ class TagCount extends AbstractModel
     public $Count;
 
     /**
-     * @param string $Name Product Name
+     * @param string $Name Product name
      * @param integer $Count Number of logs.
      */
     function __construct()

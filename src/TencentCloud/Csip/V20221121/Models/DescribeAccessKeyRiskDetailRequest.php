@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccessKeyRiskDetail request structure.
  *
- * @method integer getID() Obtain Risk record ID.
- * @method void setID(integer $ID) Set Risk record ID.
+ * @method integer getID() Obtain Risk record ID
+ * @method void setID(integer $ID) Set Risk record ID
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
 class DescribeAccessKeyRiskDetailRequest extends AbstractModel
 {
     /**
-     * @var integer Risk record ID.
+     * @var integer Risk record ID
      */
     public $ID;
 
@@ -38,7 +38,7 @@ class DescribeAccessKeyRiskDetailRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @param integer $ID Risk record ID.
+     * @param integer $ID Risk record ID
      * @param array $MemberId Group Account Member ID
      */
     function __construct()

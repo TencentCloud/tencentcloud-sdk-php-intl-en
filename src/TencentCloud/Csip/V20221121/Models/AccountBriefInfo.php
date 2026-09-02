@@ -18,14 +18,14 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Account brief information
+ * Brief account information
  *
  * @method integer getAppID() Obtain <p>Account AppID</p>
  * @method void setAppID(integer $AppID) Set <p>Account AppID</p>
  * @method string getNick() Obtain <p>Account nickname</p>
  * @method void setNick(string $Nick) Set <p>Account nickname</p>
- * @method string getUin() Obtain <p>account Uin</p>
- * @method void setUin(string $Uin) Set <p>account Uin</p>
+ * @method string getUin() Obtain <p>Account Uin</p>
+ * @method void setUin(string $Uin) Set <p>Account Uin</p>
  */
 class AccountBriefInfo extends AbstractModel
 {
@@ -40,14 +40,14 @@ class AccountBriefInfo extends AbstractModel
     public $Nick;
 
     /**
-     * @var string <p>account Uin</p>
+     * @var string <p>Account Uin</p>
      */
     public $Uin;
 
     /**
      * @param integer $AppID <p>Account AppID</p>
      * @param string $Nick <p>Account nickname</p>
-     * @param string $Uin <p>account Uin</p>
+     * @param string $Uin <p>Account Uin</p>
      */
     function __construct()
     {

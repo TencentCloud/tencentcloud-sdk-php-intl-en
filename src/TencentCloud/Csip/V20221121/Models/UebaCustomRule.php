@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * User behavior analysis Custom policy structure
+ * User behavior analysis custom policy structure
  *
  * @method string getRuleName() Obtain Policy name.
  * @method void setRuleName(string $RuleName) Set Policy name.
@@ -27,30 +27,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserType(integer $UserType) Set 1: Cloud account
 2: Custom user
  * @method integer getTimeInterval() Obtain Occurrence time
-10 minutes
-2:1 hour
+1: 10 minutes
+2: 1 hour
 3: One day
-4: A week
+4: One week
 5: One month
  * @method void setTimeInterval(integer $TimeInterval) Set Occurrence time
-10 minutes
-2:1 hour
+1: 10 minutes
+2: 1 hour
 3: One day
-4: A week
+4: One week
 5: One month
- * @method UebaEventContent getEventContent() Obtain Event
- * @method void setEventContent(UebaEventContent $EventContent) Set Event
+ * @method UebaEventContent getEventContent() Obtain Event that occurred
+ * @method void setEventContent(UebaEventContent $EventContent) Set Event that occurred
  * @method string getAlertName() Obtain Alarm name
  * @method void setAlertName(string $AlertName) Set Alarm name
  * @method integer getAlterLevel() Obtain Alarm type
-Prompt.
-1: low
+0: Notification
+1: Low risk
 2: Medium risk
 3: High risk
 4: Critical
  * @method void setAlterLevel(integer $AlterLevel) Set Alarm type
-Prompt.
-1: low
+0: Notification
+1: Low risk
 2: Medium risk
 3: High risk
 4: Critical
@@ -58,12 +58,12 @@ Prompt.
  * @method void setOperator(array $Operator) Set Operator.
  * @method array getOperateObject() Obtain Operation object.
  * @method void setOperateObject(array $OperateObject) Set Operation object.
- * @method array getOperateMethod() Obtain Operation method
- * @method void setOperateMethod(array $OperateMethod) Set Operation method
+ * @method array getOperateMethod() Obtain Operation method.
+ * @method void setOperateMethod(array $OperateMethod) Set Operation method.
  * @method string getLogType() Obtain Log type
  * @method void setLogType(string $LogType) Set Log type
- * @method string getLogTypeStr() Obtain Chinese name in logs
- * @method void setLogTypeStr(string $LogTypeStr) Set Chinese name in logs
+ * @method string getLogTypeStr() Obtain Log Chinese name
+ * @method void setLogTypeStr(string $LogTypeStr) Set Log Chinese name
  */
 class UebaCustomRule extends AbstractModel
 {
@@ -80,16 +80,16 @@ class UebaCustomRule extends AbstractModel
 
     /**
      * @var integer Occurrence time
-10 minutes
-2:1 hour
+1: 10 minutes
+2: 1 hour
 3: One day
-4: A week
+4: One week
 5: One month
      */
     public $TimeInterval;
 
     /**
-     * @var UebaEventContent Event
+     * @var UebaEventContent Event that occurred
      */
     public $EventContent;
 
@@ -100,8 +100,8 @@ class UebaCustomRule extends AbstractModel
 
     /**
      * @var integer Alarm type
-Prompt.
-1: low
+0: Notification
+1: Low risk
 2: Medium risk
 3: High risk
 4: Critical
@@ -119,7 +119,7 @@ Prompt.
     public $OperateObject;
 
     /**
-     * @var array Operation method
+     * @var array Operation method.
      */
     public $OperateMethod;
 
@@ -129,7 +129,7 @@ Prompt.
     public $LogType;
 
     /**
-     * @var string Chinese name in logs
+     * @var string Log Chinese name
      */
     public $LogTypeStr;
 
@@ -138,24 +138,24 @@ Prompt.
      * @param integer $UserType 1: Cloud account
 2: Custom user
      * @param integer $TimeInterval Occurrence time
-10 minutes
-2:1 hour
+1: 10 minutes
+2: 1 hour
 3: One day
-4: A week
+4: One week
 5: One month
-     * @param UebaEventContent $EventContent Event
+     * @param UebaEventContent $EventContent Event that occurred
      * @param string $AlertName Alarm name
      * @param integer $AlterLevel Alarm type
-Prompt.
-1: low
+0: Notification
+1: Low risk
 2: Medium risk
 3: High risk
 4: Critical
      * @param array $Operator Operator.
      * @param array $OperateObject Operation object.
-     * @param array $OperateMethod Operation method
+     * @param array $OperateMethod Operation method.
      * @param string $LogType Log type
-     * @param string $LogTypeStr Chinese name in logs
+     * @param string $LogTypeStr Log Chinese name
      */
     function __construct()
     {

@@ -18,46 +18,46 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Filter conditions.
+ * Filter criteria
  *
- * @method string getName() Obtain Filter item
- * @method void setName(string $Name) Set Filter item
- * @method array getValues() Obtain Filter value
- * @method void setValues(array $Values) Set Filter value
- * @method integer getOperatorType() Obtain Central platform definition:.
-1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
-Exact match fills 7. fuzzy matching fills 9. 
+ * @method string getName() Obtain Filtered Items
+ * @method void setName(string $Name) Set Filtered Items
+ * @method array getValues() Obtain Filtered Value
+ * @method void setValues(array $Values) Set Filtered Value
+ * @method integer getOperatorType() Obtain Central platform definition:
+1 equal 2 greater than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 exact matching 14 bitwise AND
+Enter 7 for exact match and 9 for fuzzy matching. 
 
- * @method void setOperatorType(integer $OperatorType) Set Central platform definition:.
-1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
-Exact match fills 7. fuzzy matching fills 9. 
+ * @method void setOperatorType(integer $OperatorType) Set Central platform definition:
+1 equal 2 greater than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 exact matching 14 bitwise AND
+Enter 7 for exact match and 9 for fuzzy matching. 
  */
 class WhereFilter extends AbstractModel
 {
     /**
-     * @var string Filter item
+     * @var string Filtered Items
      */
     public $Name;
 
     /**
-     * @var array Filter value
+     * @var array Filtered Value
      */
     public $Values;
 
     /**
-     * @var integer Central platform definition:.
-1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
-Exact match fills 7. fuzzy matching fills 9. 
+     * @var integer Central platform definition:
+1 equal 2 greater than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 exact matching 14 bitwise AND
+Enter 7 for exact match and 9 for fuzzy matching. 
 
      */
     public $OperatorType;
 
     /**
-     * @param string $Name Filter item
-     * @param array $Values Filter value
-     * @param integer $OperatorType Central platform definition:.
-1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
-Exact match fills 7. fuzzy matching fills 9. 
+     * @param string $Name Filtered Items
+     * @param array $Values Filtered Value
+     * @param integer $OperatorType Central platform definition:
+1 equal 2 greater than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 exact matching 14 bitwise AND
+Enter 7 for exact match and 9 for fuzzy matching. 
      */
     function __construct()
     {

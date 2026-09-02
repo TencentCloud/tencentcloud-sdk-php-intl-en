@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteIaCAccessToken request structure.
  *
- * @method array getId() Obtain <p>Delete ID list</p>
- * @method void setId(array $Id) Set <p>Delete ID list</p>
+ * @method array getId() Obtain <p>List of deleted IDs</p>
+ * @method void setId(array $Id) Set <p>List of deleted IDs</p>
  */
 class DeleteIaCAccessTokenRequest extends AbstractModel
 {
     /**
-     * @var array <p>Delete ID list</p>
+     * @var array <p>List of deleted IDs</p>
      */
     public $Id;
 
     /**
-     * @param array $Id <p>Delete ID list</p>
+     * @param array $Id <p>List of deleted IDs</p>
      */
     function __construct()
     {

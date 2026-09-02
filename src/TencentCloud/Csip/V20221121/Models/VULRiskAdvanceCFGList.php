@@ -18,22 +18,22 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of advanced vulnerability scan configurations
+ * Vulnerability Risk Advanced Configuration List
  *
  * @method string getRiskId() Obtain Risk ID
  * @method void setRiskId(string $RiskId) Set Risk ID
  * @method string getVULName() Obtain Vulnerability name
  * @method void setVULName(string $VULName) Set Vulnerability name
- * @method string getRiskLevel() Obtain Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
- * @method void setRiskLevel(string $RiskLevel) Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
- * @method string getCheckFrom() Obtain Source of the check task
- * @method void setCheckFrom(string $CheckFrom) Set Source of the check task
+ * @method string getRiskLevel() Obtain Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+ * @method void setRiskLevel(string $RiskLevel) Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+ * @method string getCheckFrom() Obtain Recognition source
+ * @method void setCheckFrom(string $CheckFrom) Set Recognition source
  * @method integer getEnable() Obtain Enable/Disable. 1-Enable; 0-Disable.
  * @method void setEnable(integer $Enable) Set Enable/Disable. 1-Enable; 0-Disable.
- * @method string getVULType() Obtain Risk type.
- * @method void setVULType(string $VULType) Set Risk type.
- * @method string getImpactVersion() Obtain Affected versions
- * @method void setImpactVersion(string $ImpactVersion) Set Affected versions
+ * @method string getVULType() Obtain Risk type
+ * @method void setVULType(string $VULType) Set Risk type
+ * @method string getImpactVersion() Obtain Affected version
+ * @method void setImpactVersion(string $ImpactVersion) Set Affected version
  * @method string getCVE() Obtain CVE
  * @method void setCVE(string $CVE) Set CVE
  * @method array getVULTag() Obtain Vulnerability tag
@@ -50,14 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImpactComponent(string $ImpactComponent) Set Affected component
  * @method string getPayload() Obtain Vulnerability Payload
  * @method void setPayload(string $Payload) Set Vulnerability Payload
- * @method string getReferences() Obtain Technology reference
- * @method void setReferences(string $References) Set Technology reference
+ * @method string getReferences() Obtain Technical reference
+ * @method void setReferences(string $References) Set Technical reference
  * @method string getCVSS() Obtain CVSS Score
  * @method void setCVSS(string $CVSS) Set CVSS Score
- * @method string getAttackHeat() Obtain Attack intensity
- * @method void setAttackHeat(string $AttackHeat) Set Attack intensity
- * @method array getServiceSupport() Obtain Security Product Support Status
- * @method void setServiceSupport(array $ServiceSupport) Set Security Product Support Status
+ * @method string getAttackHeat() Obtain Attack level
+ * @method void setAttackHeat(string $AttackHeat) Set Attack level
+ * @method array getServiceSupport() Obtain Security product support status
+ * @method void setServiceSupport(array $ServiceSupport) Set Security product support status
  * @method string getRecentScanTime() Obtain Latest detection time
  * @method void setRecentScanTime(string $RecentScanTime) Set Latest detection time
  */
@@ -74,12 +74,12 @@ class VULRiskAdvanceCFGList extends AbstractModel
     public $VULName;
 
     /**
-     * @var string Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @var string Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public $RiskLevel;
 
     /**
-     * @var string Source of the check task
+     * @var string Recognition source
      */
     public $CheckFrom;
 
@@ -89,12 +89,12 @@ class VULRiskAdvanceCFGList extends AbstractModel
     public $Enable;
 
     /**
-     * @var string Risk type.
+     * @var string Risk type
      */
     public $VULType;
 
     /**
-     * @var string Affected versions
+     * @var string Affected version
      */
     public $ImpactVersion;
 
@@ -139,7 +139,7 @@ class VULRiskAdvanceCFGList extends AbstractModel
     public $Payload;
 
     /**
-     * @var string Technology reference
+     * @var string Technical reference
      */
     public $References;
 
@@ -149,12 +149,12 @@ class VULRiskAdvanceCFGList extends AbstractModel
     public $CVSS;
 
     /**
-     * @var string Attack intensity
+     * @var string Attack level
      */
     public $AttackHeat;
 
     /**
-     * @var array Security Product Support Status
+     * @var array Security product support status
      */
     public $ServiceSupport;
 
@@ -166,11 +166,11 @@ class VULRiskAdvanceCFGList extends AbstractModel
     /**
      * @param string $RiskId Risk ID
      * @param string $VULName Vulnerability name
-     * @param string $RiskLevel Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-     * @param string $CheckFrom Source of the check task
+     * @param string $RiskLevel Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+     * @param string $CheckFrom Recognition source
      * @param integer $Enable Enable/Disable. 1-Enable; 0-Disable.
-     * @param string $VULType Risk type.
-     * @param string $ImpactVersion Affected versions
+     * @param string $VULType Risk type
+     * @param string $ImpactVersion Affected version
      * @param string $CVE CVE
      * @param array $VULTag Vulnerability tag
      * @param array $FixMethod Repair method
@@ -179,10 +179,10 @@ class VULRiskAdvanceCFGList extends AbstractModel
      * @param string $VULDescribe Vulnerability description
      * @param string $ImpactComponent Affected component
      * @param string $Payload Vulnerability Payload
-     * @param string $References Technology reference
+     * @param string $References Technical reference
      * @param string $CVSS CVSS Score
-     * @param string $AttackHeat Attack intensity
-     * @param array $ServiceSupport Security Product Support Status
+     * @param string $AttackHeat Attack level
+     * @param array $ServiceSupport Security product support status
      * @param string $RecentScanTime Latest detection time
      */
     function __construct()

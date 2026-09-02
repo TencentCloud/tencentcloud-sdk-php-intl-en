@@ -18,36 +18,36 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mapping of asset type and instance type.
+ * Mapping between asset types and instance types
  *
- * @method string getText() Obtain Asset type.
- * @method void setText(string $Text) Set Asset type.
- * @method string getValue() Obtain Asset type.
- * @method void setValue(string $Value) Set Asset type.
- * @method array getInstanceTypeList() Obtain Mapping of asset type and instance type.
- * @method void setInstanceTypeList(array $InstanceTypeList) Set Mapping of asset type and instance type.
+ * @method string getText() Obtain Asset type
+ * @method void setText(string $Text) Set Asset type
+ * @method string getValue() Obtain Asset type
+ * @method void setValue(string $Value) Set Asset type
+ * @method array getInstanceTypeList() Obtain Asset type and instance type mapping relationship
+ * @method void setInstanceTypeList(array $InstanceTypeList) Set Asset type and instance type mapping relationship
  */
 class AssetInstanceTypeMap extends AbstractModel
 {
     /**
-     * @var string Asset type.
+     * @var string Asset type
      */
     public $Text;
 
     /**
-     * @var string Asset type.
+     * @var string Asset type
      */
     public $Value;
 
     /**
-     * @var array Mapping of asset type and instance type.
+     * @var array Asset type and instance type mapping relationship
      */
     public $InstanceTypeList;
 
     /**
-     * @param string $Text Asset type.
-     * @param string $Value Asset type.
-     * @param array $InstanceTypeList Mapping of asset type and instance type.
+     * @param string $Text Asset type
+     * @param string $Value Asset type
+     * @param array $InstanceTypeList Asset type and instance type mapping relationship
      */
     function __construct()
     {

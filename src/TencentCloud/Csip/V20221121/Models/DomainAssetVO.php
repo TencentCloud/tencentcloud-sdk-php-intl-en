@@ -18,20 +18,20 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Domain assets 
+ * Domain assets
  *
  * @method array getAssetId() Obtain Asset ID
  * @method void setAssetId(array $AssetId) Set Asset ID
- * @method array getAssetName() Obtain Asset Name
- * @method void setAssetName(array $AssetName) Set Asset Name
+ * @method array getAssetName() Obtain Asset name
+ * @method void setAssetName(array $AssetName) Set Asset name
  * @method array getAssetType() Obtain Asset type
  * @method void setAssetType(array $AssetType) Set Asset type
  * @method array getRegion() Obtain Region.
  * @method void setRegion(array $Region) Set Region.
  * @method integer getWAFStatus() Obtain WAF Status
  * @method void setWAFStatus(integer $WAFStatus) Set WAF Status
- * @method string getAssetCreateTime() Obtain Asset Creation Time
- * @method void setAssetCreateTime(string $AssetCreateTime) Set Asset Creation Time
+ * @method string getAssetCreateTime() Obtain Asset creation time
+ * @method void setAssetCreateTime(string $AssetCreateTime) Set Asset creation time
  * @method integer getAppId() Obtain Appid
  * @method void setAppId(integer $AppId) Set Appid
  * @method string getUin() Obtain Account ID
@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsCore(integer $IsCore) Set Core or Not
  * @method integer getIsCloud() Obtain Whether it is on-cloud asset.
  * @method void setIsCloud(integer $IsCloud) Set Whether it is on-cloud asset.
- * @method integer getAttack() Obtain network attack
- * @method void setAttack(integer $Attack) Set network attack
+ * @method integer getAttack() Obtain Network attack
+ * @method void setAttack(integer $Attack) Set Network attack
  * @method integer getAccess() Obtain Network access
  * @method void setAccess(integer $Access) Set Network access
  * @method integer getIntercept() Obtain Network Interception
@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutFlow(string $OutFlow) Set Cumulative Outbound Traffic
  * @method string getLastScanTime() Obtain Last scan time
  * @method void setLastScanTime(string $LastScanTime) Set Last scan time
- * @method integer getPortRisk() Obtain port risk
- * @method void setPortRisk(integer $PortRisk) Set port risk
+ * @method integer getPortRisk() Obtain Port risk
+ * @method void setPortRisk(integer $PortRisk) Set Port risk
  * @method integer getVulnerabilityRisk() Obtain Vulnerability risk
  * @method void setVulnerabilityRisk(integer $VulnerabilityRisk) Set Vulnerability risk
  * @method integer getConfigurationRisk() Obtain Configuration risk
@@ -78,10 +78,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWebContentRisk(integer $WebContentRisk) Set Content risk
  * @method array getTag() Obtain tag
  * @method void setTag(array $Tag) Set tag
- * @method string getSourceType() Obtain Associated instance type
- * @method void setSourceType(string $SourceType) Set Associated instance type
- * @method string getMemberId() Obtain Member ID information
- * @method void setMemberId(string $MemberId) Set Member ID information
+ * @method string getSourceType() Obtain Type of the associated instance
+ * @method void setSourceType(string $SourceType) Set Type of the associated instance
+ * @method string getMemberId() Obtain memberId information
+ * @method void setMemberId(string $MemberId) Set memberId information
  * @method integer getCCAttack() Obtain CC Attack
  * @method void setCCAttack(integer $CCAttack) Set CC Attack
  * @method integer getWebAttack() Obtain Web Attack
@@ -107,7 +107,7 @@ class DomainAssetVO extends AbstractModel
     public $AssetId;
 
     /**
-     * @var array Asset Name
+     * @var array Asset name
      */
     public $AssetName;
 
@@ -127,7 +127,7 @@ class DomainAssetVO extends AbstractModel
     public $WAFStatus;
 
     /**
-     * @var string Asset Creation Time
+     * @var string Asset creation time
      */
     public $AssetCreateTime;
 
@@ -157,7 +157,7 @@ class DomainAssetVO extends AbstractModel
     public $IsCloud;
 
     /**
-     * @var integer network attack
+     * @var integer Network attack
      */
     public $Attack;
 
@@ -197,7 +197,7 @@ class DomainAssetVO extends AbstractModel
     public $LastScanTime;
 
     /**
-     * @var integer port risk
+     * @var integer Port risk
      */
     public $PortRisk;
 
@@ -247,12 +247,12 @@ class DomainAssetVO extends AbstractModel
     public $Tag;
 
     /**
-     * @var string Associated instance type
+     * @var string Type of the associated instance
      */
     public $SourceType;
 
     /**
-     * @var string Member ID information
+     * @var string memberId information
      */
     public $MemberId;
 
@@ -298,17 +298,17 @@ class DomainAssetVO extends AbstractModel
 
     /**
      * @param array $AssetId Asset ID
-     * @param array $AssetName Asset Name
+     * @param array $AssetName Asset name
      * @param array $AssetType Asset type
      * @param array $Region Region.
      * @param integer $WAFStatus WAF Status
-     * @param string $AssetCreateTime Asset Creation Time
+     * @param string $AssetCreateTime Asset creation time
      * @param integer $AppId Appid
      * @param string $Uin Account ID
      * @param string $NickName Account name
      * @param integer $IsCore Core or Not
      * @param integer $IsCloud Whether it is on-cloud asset.
-     * @param integer $Attack network attack
+     * @param integer $Attack Network attack
      * @param integer $Access Network access
      * @param integer $Intercept Network Interception
      * @param string $InBandwidth Inbound peak bandwidth
@@ -316,7 +316,7 @@ class DomainAssetVO extends AbstractModel
      * @param string $InFlow Cumulative Inbound Traffic
      * @param string $OutFlow Cumulative Outbound Traffic
      * @param string $LastScanTime Last scan time
-     * @param integer $PortRisk port risk
+     * @param integer $PortRisk Port risk
      * @param integer $VulnerabilityRisk Vulnerability risk
      * @param integer $ConfigurationRisk Configuration risk
      * @param integer $ScanTask Scan Task
@@ -326,8 +326,8 @@ class DomainAssetVO extends AbstractModel
      * @param integer $WeakPassword Weak password risk
      * @param integer $WebContentRisk Content risk
      * @param array $Tag tag
-     * @param string $SourceType Associated instance type
-     * @param string $MemberId Member ID information
+     * @param string $SourceType Type of the associated instance
+     * @param string $MemberId memberId information
      * @param integer $CCAttack CC Attack
      * @param integer $WebAttack Web Attack
      * @param integer $ServiceRisk Number of Risk Service Exposures

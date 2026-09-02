@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  * @method Filter getFilter() Obtain Filter parameters
  * @method void setFilter(Filter $Filter) Set Filter parameters
- * @method array getAssetTypes() Obtain Asset types. Values: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
- * @method void setAssetTypes(array $AssetTypes) Set Asset types. Values: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+ * @method array getAssetTypes() Obtain Asset type: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+ * @method void setAssetTypes(array $AssetTypes) Set Asset type: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
  */
 class DescribeDbAssetsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeDbAssetsRequest extends AbstractModel
     public $Filter;
 
     /**
-     * @var array Asset types. Values: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+     * @var array Asset type: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
      */
     public $AssetTypes;
 
     /**
      * @param array $MemberId Group Account Member ID
      * @param Filter $Filter Filter parameters
-     * @param array $AssetTypes Asset types. Values: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+     * @param array $AssetTypes Asset type: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
      */
     function __construct()
     {

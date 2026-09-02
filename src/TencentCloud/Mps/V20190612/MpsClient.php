@@ -231,9 +231,11 @@ Live stream processing event notification supports HTTP callbacks and also suppo
 - Smart content moderation (such as pornography detection and sensitive information detection).
 - Smart content analysis (such as tags, classifications, covers, frame tags, video splitting, highlights, opening and ending clips, and marking points for games).
 - Smart content recognition (such as human faces, full texts, text keywords, full speech, speech keywords, speech translation, and object recognition).
+ * @method Models\QueryHunyuan3DTaskResponse QueryHunyuan3DTask(Models\QueryHunyuan3DTaskRequest $req) Query the result corresponding to a Hunyuan3D task.
  * @method Models\QueryProjectResponse QueryProject(Models\QueryProjectRequest $req) This API is used to query an episode project.
  * @method Models\RecognizeAudioResponse RecognizeAudio(Models\RecognizeAudioRequest $req) This API is used to return the speech recognition results synchronously.
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) This API is used to reset a workflow that already exists and is in disable status.
+ * @method Models\SubmitHunyuan3DTaskResponse SubmitHunyuan3DTask(Models\SubmitHunyuan3DTaskRequest $req) Submit creation of a Hunyuan 3D task.
  * @method Models\SyncDubbingResponse SyncDubbing(Models\SyncDubbingRequest $req) This API is used to return the cloned voice ID or synthetic audio result. The default maximum number of cloned or designed voices is 100.
  * @method Models\TextToSpeechResponse TextToSpeech(Models\TextToSpeechRequest $req) This API is used to generate speech synchronously based on input text and specified voice tone.
  * @method Models\TextToSpeechAsyncResponse TextToSpeechAsync(Models\TextToSpeechAsyncRequest $req) This API is used to convert text to speech asynchronously and supports long text to speech.

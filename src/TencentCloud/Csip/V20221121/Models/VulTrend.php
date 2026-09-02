@@ -18,31 +18,31 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Vulnerability trends, attack trend, users affected, affect assets.
+ * Vulnerability trends - Attack trend, Users Affected, Affecting Assets
  *
- * @method integer getAffectAssetCount() Obtain Number of affected assets.
- * @method void setAffectAssetCount(integer $AffectAssetCount) Set Number of affected assets.
- * @method integer getAffectUserCount() Obtain Number of users affected.
- * @method void setAffectUserCount(integer $AffectUserCount) Set Number of users affected.
- * @method integer getAttackCount() Obtain Number of attacks.
- * @method void setAttackCount(integer $AttackCount) Set Number of attacks.
+ * @method integer getAffectAssetCount() Obtain Number of affected assets
+ * @method void setAffectAssetCount(integer $AffectAssetCount) Set Number of affected assets
+ * @method integer getAffectUserCount() Obtain Number of impacted users
+ * @method void setAffectUserCount(integer $AffectUserCount) Set Number of impacted users
+ * @method integer getAttackCount() Obtain Number of attacks
+ * @method void setAttackCount(integer $AttackCount) Set Number of attacks
  * @method string getDate() Obtain Time
  * @method void setDate(string $Date) Set Time
  */
 class VulTrend extends AbstractModel
 {
     /**
-     * @var integer Number of affected assets.
+     * @var integer Number of affected assets
      */
     public $AffectAssetCount;
 
     /**
-     * @var integer Number of users affected.
+     * @var integer Number of impacted users
      */
     public $AffectUserCount;
 
     /**
-     * @var integer Number of attacks.
+     * @var integer Number of attacks
      */
     public $AttackCount;
 
@@ -52,9 +52,9 @@ class VulTrend extends AbstractModel
     public $Date;
 
     /**
-     * @param integer $AffectAssetCount Number of affected assets.
-     * @param integer $AffectUserCount Number of users affected.
-     * @param integer $AttackCount Number of attacks.
+     * @param integer $AffectAssetCount Number of affected assets
+     * @param integer $AffectUserCount Number of impacted users
+     * @param integer $AttackCount Number of attacks
      * @param string $Date Time
      */
     function __construct()

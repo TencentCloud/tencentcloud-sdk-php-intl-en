@@ -18,12 +18,12 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Advanced vulnerability scan configuration
+ * Vulnerability Risk Advanced Configuration
  *
  * @method string getRiskId() Obtain Risk ID
  * @method void setRiskId(string $RiskId) Set Risk ID
- * @method integer getEnable() Obtain Whether to enable. `0`: no, `1`: yes.
- * @method void setEnable(integer $Enable) Set Whether to enable. `0`: no, `1`: yes.
+ * @method integer getEnable() Obtain Whether to enable. 0-Not to Enable; 1-Enable.
+ * @method void setEnable(integer $Enable) Set Whether to enable. 0-Not to Enable; 1-Enable.
  */
 class TaskCenterVulRiskInputParam extends AbstractModel
 {
@@ -33,13 +33,13 @@ class TaskCenterVulRiskInputParam extends AbstractModel
     public $RiskId;
 
     /**
-     * @var integer Whether to enable. `0`: no, `1`: yes.
+     * @var integer Whether to enable. 0-Not to Enable; 1-Enable.
      */
     public $Enable;
 
     /**
      * @param string $RiskId Risk ID
-     * @param integer $Enable Whether to enable. `0`: no, `1`: yes.
+     * @param integer $Enable Whether to enable. 0-Not to Enable; 1-Enable.
      */
     function __construct()
     {

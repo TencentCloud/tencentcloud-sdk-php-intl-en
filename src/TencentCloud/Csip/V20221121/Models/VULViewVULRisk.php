@@ -18,50 +18,50 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of a vulnerability
+ * Vulnerability Risk Objects from Vulnerability's Perspective
  *
- * @method string getPort() Obtain Port
- * @method void setPort(string $Port) Set Port
- * @method integer getNoHandleCount() Obtain Affected assets
- * @method void setNoHandleCount(integer $NoHandleCount) Set Affected assets
- * @method string getLevel() Obtain Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
- * @method void setLevel(string $Level) Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
- * @method string getComponent() Obtain Components
- * @method void setComponent(string $Component) Set Components
- * @method string getRecentTime() Obtain Last detected 
- * @method void setRecentTime(string $RecentTime) Set Last detected 
- * @method string getFirstTime() Obtain First detected
- * @method void setFirstTime(string $FirstTime) Set First detected
+ * @method string getPort() Obtain Port.
+ * @method void setPort(string $Port) Set Port.
+ * @method integer getNoHandleCount() Obtain Affect assets
+ * @method void setNoHandleCount(integer $NoHandleCount) Set Affect assets
+ * @method string getLevel() Obtain Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
+ * @method void setLevel(string $Level) Set Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
+ * @method string getComponent() Obtain Component
+ * @method void setComponent(string $Component) Set Component
+ * @method string getRecentTime() Obtain Latest Recognition Time
+ * @method void setRecentTime(string $RecentTime) Set Latest Recognition Time
+ * @method string getFirstTime() Obtain First Recognition Time
+ * @method void setFirstTime(string $FirstTime) Set First Recognition Time
  * @method integer getAffectAssetCount() Obtain Number of Affected Assets
  * @method void setAffectAssetCount(integer $AffectAssetCount) Set Number of Affected Assets
  * @method string getId() Obtain Risk ID
  * @method void setId(string $Id) Set Risk ID
  * @method string getFrom() Obtain Scan Source. See API Return Enumeration Type for details.
  * @method void setFrom(string $From) Set Scan Source. See API Return Enumeration Type for details.
- * @method string getIndex() Obtain Frontend index
- * @method void setIndex(string $Index) Set Frontend index
+ * @method string getIndex() Obtain Front-end Index
+ * @method void setIndex(string $Index) Set Front-end Index
  * @method string getVULType() Obtain Vulnerability type
  * @method void setVULType(string $VULType) Set Vulnerability type
  * @method string getVULName() Obtain Vulnerability name
  * @method void setVULName(string $VULName) Set Vulnerability name
- * @method string getCVE() Obtain CVE number
- * @method void setCVE(string $CVE) Set CVE number
+ * @method string getCVE() Obtain cve
+ * @method void setCVE(string $CVE) Set cve
  * @method string getDescribe() Obtain Description
  * @method void setDescribe(string $Describe) Set Description
  * @method string getPayload() Obtain Vulnerability Payload
  * @method void setPayload(string $Payload) Set Vulnerability Payload
- * @method string getAppName() Obtain Affected component
- * @method void setAppName(string $AppName) Set Affected component
- * @method string getReferences() Obtain Technology reference
- * @method void setReferences(string $References) Set Technology reference
- * @method string getAppVersion() Obtain Vulnerability Affected Version
- * @method void setAppVersion(string $AppVersion) Set Vulnerability Affected Version
- * @method string getVULURL() Obtain risks
- * @method void setVULURL(string $VULURL) Set risks
+ * @method string getAppName() Obtain Vulnerability Impact Component
+ * @method void setAppName(string $AppName) Set Vulnerability Impact Component
+ * @method string getReferences() Obtain Technical reference
+ * @method void setReferences(string $References) Set Technical reference
+ * @method string getAppVersion() Obtain Affected versions
+ * @method void setAppVersion(string $AppVersion) Set Affected versions
+ * @method string getVULURL() Obtain Risk Points
+ * @method void setVULURL(string $VULURL) Set Risk Points
  * @method string getNick() Obtain User Nickname
  * @method void setNick(string $Nick) Set User Nickname
- * @method string getAppId() Obtain User `appid`
- * @method void setAppId(string $AppId) Set User `appid`
+ * @method string getAppId() Obtain User appid.
+ * @method void setAppId(string $AppId) Set User appid.
  * @method string getUin() Obtain User UIN
  * @method void setUin(string $Uin) Set User UIN
  * @method string getFix() Obtain Fixing suggestion
@@ -72,32 +72,32 @@ use TencentCloud\Common\AbstractModel;
 class VULViewVULRisk extends AbstractModel
 {
     /**
-     * @var string Port
+     * @var string Port.
      */
     public $Port;
 
     /**
-     * @var integer Affected assets
+     * @var integer Affect assets
      */
     public $NoHandleCount;
 
     /**
-     * @var string Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @var string Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
      */
     public $Level;
 
     /**
-     * @var string Components
+     * @var string Component
      */
     public $Component;
 
     /**
-     * @var string Last detected 
+     * @var string Latest Recognition Time
      */
     public $RecentTime;
 
     /**
-     * @var string First detected
+     * @var string First Recognition Time
      */
     public $FirstTime;
 
@@ -117,7 +117,7 @@ class VULViewVULRisk extends AbstractModel
     public $From;
 
     /**
-     * @var string Frontend index
+     * @var string Front-end Index
      */
     public $Index;
 
@@ -132,7 +132,7 @@ class VULViewVULRisk extends AbstractModel
     public $VULName;
 
     /**
-     * @var string CVE number
+     * @var string cve
      */
     public $CVE;
 
@@ -147,22 +147,22 @@ class VULViewVULRisk extends AbstractModel
     public $Payload;
 
     /**
-     * @var string Affected component
+     * @var string Vulnerability Impact Component
      */
     public $AppName;
 
     /**
-     * @var string Technology reference
+     * @var string Technical reference
      */
     public $References;
 
     /**
-     * @var string Vulnerability Affected Version
+     * @var string Affected versions
      */
     public $AppVersion;
 
     /**
-     * @var string risks
+     * @var string Risk Points
      */
     public $VULURL;
 
@@ -172,7 +172,7 @@ class VULViewVULRisk extends AbstractModel
     public $Nick;
 
     /**
-     * @var string User `appid`
+     * @var string User appid.
      */
     public $AppId;
 
@@ -192,27 +192,27 @@ class VULViewVULRisk extends AbstractModel
     public $EMGCVulType;
 
     /**
-     * @param string $Port Port
-     * @param integer $NoHandleCount Affected assets
-     * @param string $Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-     * @param string $Component Components
-     * @param string $RecentTime Last detected 
-     * @param string $FirstTime First detected
+     * @param string $Port Port.
+     * @param integer $NoHandleCount Affect assets
+     * @param string $Level Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
+     * @param string $Component Component
+     * @param string $RecentTime Latest Recognition Time
+     * @param string $FirstTime First Recognition Time
      * @param integer $AffectAssetCount Number of Affected Assets
      * @param string $Id Risk ID
      * @param string $From Scan Source. See API Return Enumeration Type for details.
-     * @param string $Index Frontend index
+     * @param string $Index Front-end Index
      * @param string $VULType Vulnerability type
      * @param string $VULName Vulnerability name
-     * @param string $CVE CVE number
+     * @param string $CVE cve
      * @param string $Describe Description
      * @param string $Payload Vulnerability Payload
-     * @param string $AppName Affected component
-     * @param string $References Technology reference
-     * @param string $AppVersion Vulnerability Affected Version
-     * @param string $VULURL risks
+     * @param string $AppName Vulnerability Impact Component
+     * @param string $References Technical reference
+     * @param string $AppVersion Affected versions
+     * @param string $VULURL Risk Points
      * @param string $Nick User Nickname
-     * @param string $AppId User `appid`
+     * @param string $AppId User appid.
      * @param string $Uin User UIN
      * @param string $Fix Fixing suggestion
      * @param integer $EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.

@@ -18,40 +18,40 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Subnet assets
+ * Subnet Assets
  *
  * @method string getAppId() Obtain appid
  * @method void setAppId(string $AppId) Set appid
- * @method string getUin() Obtain UIN
- * @method void setUin(string $Uin) Set UIN
+ * @method string getUin() Obtain uin
+ * @method void setUin(string $Uin) Set uin
  * @method string getAssetId() Obtain Asset ID
  * @method void setAssetId(string $AssetId) Set Asset ID
  * @method string getAssetName() Obtain Asset name
  * @method void setAssetName(string $AssetName) Set Asset name
- * @method string getRegion() Obtain Region
- * @method void setRegion(string $Region) Set Region
- * @method string getVpcId() Obtain VPC ID
- * @method void setVpcId(string $VpcId) Set VPC ID
- * @method string getVpcName() Obtain VPC name
- * @method void setVpcName(string $VpcName) Set VPC name
+ * @method string getRegion() Obtain Region.
+ * @method void setRegion(string $Region) Set Region.
+ * @method string getVpcId() Obtain VPC id
+ * @method void setVpcId(string $VpcId) Set VPC id
+ * @method string getVpcName() Obtain VPC Name
+ * @method void setVpcName(string $VpcName) Set VPC Name
  * @method array getTag() Obtain Tag.
  * @method void setTag(array $Tag) Set Tag.
- * @method string getNick() Obtain User name
- * @method void setNick(string $Nick) Set User name
- * @method string getCIDR() Obtain CIDR block
- * @method void setCIDR(string $CIDR) Set CIDR block
+ * @method string getNick() Obtain Nickname
+ * @method void setNick(string $Nick) Set Nickname
+ * @method string getCIDR() Obtain cidr
+ * @method void setCIDR(string $CIDR) Set cidr
  * @method string getZone() Obtain Availability zone
  * @method void setZone(string $Zone) Set Availability zone
- * @method integer getCVM() Obtain Number of CVMs
- * @method void setCVM(integer $CVM) Set Number of CVMs
- * @method integer getAvailableIp() Obtain Number of available IPs
- * @method void setAvailableIp(integer $AvailableIp) Set Number of available IPs
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method integer getConfigureRisk() Obtain Configuration risks
- * @method void setConfigureRisk(integer $ConfigureRisk) Set Configuration risks
- * @method integer getScanTask() Obtain Number of tasks.
- * @method void setScanTask(integer $ScanTask) Set Number of tasks.
+ * @method integer getCVM() Obtain CVM Count
+ * @method void setCVM(integer $CVM) Set CVM Count
+ * @method integer getAvailableIp() Obtain Available IP Count
+ * @method void setAvailableIp(integer $AvailableIp) Set Available IP Count
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method integer getConfigureRisk() Obtain Configuration risk
+ * @method void setConfigureRisk(integer $ConfigureRisk) Set Configuration risk
+ * @method integer getScanTask() Obtain Number of tasks
+ * @method void setScanTask(integer $ScanTask) Set Number of tasks
  * @method string getLastScanTime() Obtain Last scan time
  * @method void setLastScanTime(string $LastScanTime) Set Last scan time
  * @method integer getIsCore() Obtain Core or Not
@@ -67,7 +67,7 @@ class SubnetAsset extends AbstractModel
     public $AppId;
 
     /**
-     * @var string UIN
+     * @var string uin
      */
     public $Uin;
 
@@ -82,17 +82,17 @@ class SubnetAsset extends AbstractModel
     public $AssetName;
 
     /**
-     * @var string Region
+     * @var string Region.
      */
     public $Region;
 
     /**
-     * @var string VPC ID
+     * @var string VPC id
      */
     public $VpcId;
 
     /**
-     * @var string VPC name
+     * @var string VPC Name
      */
     public $VpcName;
 
@@ -102,12 +102,12 @@ class SubnetAsset extends AbstractModel
     public $Tag;
 
     /**
-     * @var string User name
+     * @var string Nickname
      */
     public $Nick;
 
     /**
-     * @var string CIDR block
+     * @var string cidr
      */
     public $CIDR;
 
@@ -117,27 +117,27 @@ class SubnetAsset extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer Number of CVMs
+     * @var integer CVM Count
      */
     public $CVM;
 
     /**
-     * @var integer Number of available IPs
+     * @var integer Available IP Count
      */
     public $AvailableIp;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var integer Configuration risks
+     * @var integer Configuration risk
      */
     public $ConfigureRisk;
 
     /**
-     * @var integer Number of tasks.
+     * @var integer Number of tasks
      */
     public $ScanTask;
 
@@ -158,21 +158,21 @@ class SubnetAsset extends AbstractModel
 
     /**
      * @param string $AppId appid
-     * @param string $Uin UIN
+     * @param string $Uin uin
      * @param string $AssetId Asset ID
      * @param string $AssetName Asset name
-     * @param string $Region Region
-     * @param string $VpcId VPC ID
-     * @param string $VpcName VPC name
+     * @param string $Region Region.
+     * @param string $VpcId VPC id
+     * @param string $VpcName VPC Name
      * @param array $Tag Tag.
-     * @param string $Nick User name
-     * @param string $CIDR CIDR block
+     * @param string $Nick Nickname
+     * @param string $CIDR cidr
      * @param string $Zone Availability zone
-     * @param integer $CVM Number of CVMs
-     * @param integer $AvailableIp Number of available IPs
-     * @param string $CreateTime Creation time
-     * @param integer $ConfigureRisk Configuration risks
-     * @param integer $ScanTask Number of tasks.
+     * @param integer $CVM CVM Count
+     * @param integer $AvailableIp Available IP Count
+     * @param string $CreateTime Creation time.
+     * @param integer $ConfigureRisk Configuration risk
+     * @param integer $ScanTask Number of tasks
      * @param string $LastScanTime Last scan time
      * @param integer $IsCore Core or Not
      * @param integer $IsNewAsset New Asset or Not. 1: New

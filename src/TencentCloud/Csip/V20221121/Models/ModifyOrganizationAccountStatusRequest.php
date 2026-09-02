@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyOrganizationAccountStatus request structure.
  *
- * @method integer getStatus() Obtain Modify group account status. 1 Enable, 0 Disable.
- * @method void setStatus(integer $Status) Set Modify group account status. 1 Enable, 0 Disable.
+ * @method integer getStatus() Obtain Modify the group account status. 1: enable, 0: disable.
+ * @method void setStatus(integer $Status) Set Modify the group account status. 1: enable, 0: disable.
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
 class ModifyOrganizationAccountStatusRequest extends AbstractModel
 {
     /**
-     * @var integer Modify group account status. 1 Enable, 0 Disable.
+     * @var integer Modify the group account status. 1: enable, 0: disable.
      */
     public $Status;
 
@@ -38,7 +38,7 @@ class ModifyOrganizationAccountStatusRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @param integer $Status Modify group account status. 1 Enable, 0 Disable.
+     * @param integer $Status Modify the group account status. 1: enable, 0: disable.
      * @param array $MemberId Group Account Member ID
      */
     function __construct()

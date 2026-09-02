@@ -18,12 +18,12 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Vulnerability impact component information.
+ * Vulnerability Impact component information
  *
  * @method string getComponent() Obtain Component name
  * @method void setComponent(string $Component) Set Component name
- * @method string getVersion() Obtain Version name.
- * @method void setVersion(string $Version) Set Version name.
+ * @method string getVersion() Obtain Version name
+ * @method void setVersion(string $Version) Set Version name
  */
 class VulImpactComponentInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class VulImpactComponentInfo extends AbstractModel
     public $Component;
 
     /**
-     * @var string Version name.
+     * @var string Version name
      */
     public $Version;
 
     /**
      * @param string $Component Component name
-     * @param string $Version Version name.
+     * @param string $Version Version name
      */
     function __construct()
     {

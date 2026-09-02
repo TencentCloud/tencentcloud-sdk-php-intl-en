@@ -18,65 +18,65 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Port risk details
+ * Port Risk Objects from Asset's Perspective
  *
- * @method integer getPort() Obtain Port
- * @method void setPort(integer $Port) Set Port
- * @method string getAffectAsset() Obtain Affected assets
- * @method void setAffectAsset(string $AffectAsset) Set Affected assets
- * @method string getLevel() Obtain Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
- * @method void setLevel(string $Level) Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+ * @method integer getPort() Obtain Port.
+ * @method void setPort(integer $Port) Set Port.
+ * @method string getAffectAsset() Obtain Affect assets
+ * @method void setAffectAsset(string $AffectAsset) Set Affect assets
+ * @method string getLevel() Obtain Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+ * @method void setLevel(string $Level) Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
  * @method string getInstanceType() Obtain Asset type
  * @method void setInstanceType(string $InstanceType) Set Asset type
- * @method string getProtocol() Obtain Network protocol
- * @method void setProtocol(string $Protocol) Set Network protocol
- * @method string getComponent() Obtain Components
- * @method void setComponent(string $Component) Set Components
- * @method string getService() Obtain Service
- * @method void setService(string $Service) Set Service
- * @method string getRecentTime() Obtain Last detected 
- * @method void setRecentTime(string $RecentTime) Set Last detected 
- * @method string getFirstTime() Obtain First detected
- * @method void setFirstTime(string $FirstTime) Set First detected
- * @method integer getSuggestion() Obtain Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
- * @method void setSuggestion(integer $Suggestion) Set Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
- * @method integer getStatus() Obtain Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
- * @method void setStatus(integer $Status) Set Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+ * @method string getProtocol() Obtain Protocol
+ * @method void setProtocol(string $Protocol) Set Protocol
+ * @method string getComponent() Obtain Component
+ * @method void setComponent(string $Component) Set Component
+ * @method string getService() Obtain Service.
+ * @method void setService(string $Service) Set Service.
+ * @method string getRecentTime() Obtain Latest Recognition Time
+ * @method void setRecentTime(string $RecentTime) Set Latest Recognition Time
+ * @method string getFirstTime() Obtain First Recognition Time
+ * @method void setFirstTime(string $FirstTime) Set First Recognition Time
+ * @method integer getSuggestion() Obtain Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
+ * @method void setSuggestion(integer $Suggestion) Set Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
+ * @method integer getStatus() Obtain Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
+ * @method void setStatus(integer $Status) Set Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
  * @method string getId() Obtain Risk ID
  * @method void setId(string $Id) Set Risk ID
- * @method string getIndex() Obtain Frontend index
- * @method void setIndex(string $Index) Set Frontend index
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method string getAppId() Obtain User `appid`
- * @method void setAppId(string $AppId) Set User `appid`
+ * @method string getIndex() Obtain Front-end Index
+ * @method void setIndex(string $Index) Set Front-end Index
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
+ * @method string getAppId() Obtain User appid.
+ * @method void setAppId(string $AppId) Set User appid.
  * @method string getNick() Obtain User Nickname
  * @method void setNick(string $Nick) Set User Nickname
  * @method string getUin() Obtain User UIN
  * @method void setUin(string $Uin) Set User UIN
  * @method string getFrom() Obtain Recognition Source. See Enumeration Return for details.
  * @method void setFrom(string $From) Set Recognition Source. See Enumeration Return for details.
- * @method string getServiceJudge() Obtain Service judgment, high-risk service, web service, other service
- * @method void setServiceJudge(string $ServiceJudge) Set Service judgment, high-risk service, web service, other service
- * @method integer getXspmStatus() Obtain Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
- * @method void setXspmStatus(integer $XspmStatus) Set Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+ * @method string getServiceJudge() Obtain Service judgment. high_risk_service: high-risk service. web_service: web service. other_service: other service.
+ * @method void setServiceJudge(string $ServiceJudge) Set Service judgment. high_risk_service: high-risk service. web_service: web service. other_service: other service.
+ * @method integer getXspmStatus() Obtain Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
+ * @method void setXspmStatus(integer $XspmStatus) Set Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
  */
 class AssetViewPortRisk extends AbstractModel
 {
     /**
-     * @var integer Port
+     * @var integer Port.
      */
     public $Port;
 
     /**
-     * @var string Affected assets
+     * @var string Affect assets
      */
     public $AffectAsset;
 
     /**
-     * @var string Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @var string Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public $Level;
 
@@ -86,37 +86,37 @@ class AssetViewPortRisk extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string Network protocol
+     * @var string Protocol
      */
     public $Protocol;
 
     /**
-     * @var string Components
+     * @var string Component
      */
     public $Component;
 
     /**
-     * @var string Service
+     * @var string Service.
      */
     public $Service;
 
     /**
-     * @var string Last detected 
+     * @var string Latest Recognition Time
      */
     public $RecentTime;
 
     /**
-     * @var string First detected
+     * @var string First Recognition Time
      */
     public $FirstTime;
 
     /**
-     * @var integer Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
+     * @var integer Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
      */
     public $Suggestion;
 
     /**
-     * @var integer Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+     * @var integer Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
      */
     public $Status;
 
@@ -126,22 +126,22 @@ class AssetViewPortRisk extends AbstractModel
     public $Id;
 
     /**
-     * @var string Frontend index
+     * @var string Front-end Index
      */
     public $Index;
 
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
-     * @var string User `appid`
+     * @var string User appid.
      */
     public $AppId;
 
@@ -161,37 +161,37 @@ class AssetViewPortRisk extends AbstractModel
     public $From;
 
     /**
-     * @var string Service judgment, high-risk service, web service, other service
+     * @var string Service judgment. high_risk_service: high-risk service. web_service: web service. other_service: other service.
      */
     public $ServiceJudge;
 
     /**
-     * @var integer Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+     * @var integer Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
      */
     public $XspmStatus;
 
     /**
-     * @param integer $Port Port
-     * @param string $AffectAsset Affected assets
-     * @param string $Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @param integer $Port Port.
+     * @param string $AffectAsset Affect assets
+     * @param string $Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      * @param string $InstanceType Asset type
-     * @param string $Protocol Network protocol
-     * @param string $Component Components
-     * @param string $Service Service
-     * @param string $RecentTime Last detected 
-     * @param string $FirstTime First detected
-     * @param integer $Suggestion Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
-     * @param integer $Status Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+     * @param string $Protocol Protocol
+     * @param string $Component Component
+     * @param string $Service Service.
+     * @param string $RecentTime Latest Recognition Time
+     * @param string $FirstTime First Recognition Time
+     * @param integer $Suggestion Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
+     * @param integer $Status Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
      * @param string $Id Risk ID
-     * @param string $Index Frontend index
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
-     * @param string $AppId User `appid`
+     * @param string $Index Front-end Index
+     * @param string $InstanceId Instance ID.
+     * @param string $InstanceName Instance name.
+     * @param string $AppId User appid.
      * @param string $Nick User Nickname
      * @param string $Uin User UIN
      * @param string $From Recognition Source. See Enumeration Return for details.
-     * @param string $ServiceJudge Service judgment, high-risk service, web service, other service
-     * @param integer $XspmStatus Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+     * @param string $ServiceJudge Service judgment. high_risk_service: high-risk service. web_service: web service. other_service: other service.
+     * @param integer $XspmStatus Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
      */
     function __construct()
     {

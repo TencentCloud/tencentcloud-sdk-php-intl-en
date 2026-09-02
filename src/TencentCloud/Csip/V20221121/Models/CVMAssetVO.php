@@ -20,31 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Host Asset Information
 
-Enumerate host protection status. left is a constant, right side displays.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: flagship protection.
-5: offline.
-6: shut down.
+Enumeration of host protection status. The left side is a constant, and the right side is the display.
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown
  *
  * @method string getAssetId() Obtain Asset ID
  * @method void setAssetId(string $AssetId) Set Asset ID
- * @method string getAssetName() Obtain Asset name.
- * @method void setAssetName(string $AssetName) Set Asset name.
- * @method string getAssetType() Obtain Asset type.
- * @method void setAssetType(string $AssetType) Set Asset type.
+ * @method string getAssetName() Obtain Asset name
+ * @method void setAssetName(string $AssetName) Set Asset name
+ * @method string getAssetType() Obtain Asset type
+ * @method void setAssetType(string $AssetType) Set Asset type
  * @method string getRegion() Obtain Region.
  * @method void setRegion(string $Region) Set Region.
  * @method integer getCWPStatus() Obtain Protection status
  * @method void setCWPStatus(integer $CWPStatus) Set Protection status
- * @method string getAssetCreateTime() Obtain Asset creation time.
- * @method void setAssetCreateTime(string $AssetCreateTime) Set Asset creation time.
+ * @method string getAssetCreateTime() Obtain Asset creation time
+ * @method void setAssetCreateTime(string $AssetCreateTime) Set Asset creation time
  * @method string getPublicIp() Obtain Public IP address
  * @method void setPublicIp(string $PublicIp) Set Public IP address
- * @method string getPrivateIp() Obtain Private IP.
- * @method void setPrivateIp(string $PrivateIp) Set Private IP.
+ * @method string getPrivateIp() Obtain Private IP
+ * @method void setPrivateIp(string $PrivateIp) Set Private IP
  * @method string getVpcId() Obtain vpc id
  * @method void setVpcId(string $VpcId) Set vpc id
  * @method string getVpcName() Obtain VPC Name
@@ -63,10 +63,10 @@ Basic edition protection.
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
  * @method string getSubnetName() Obtain Subnet Name
  * @method void setSubnetName(string $SubnetName) Set Subnet Name
- * @method string getInstanceUuid() Obtain CWP Agent UUID.
- * @method void setInstanceUuid(string $InstanceUuid) Set CWP Agent UUID.
- * @method string getInstanceQUuid() Obtain CVM host UUID.
- * @method void setInstanceQUuid(string $InstanceQUuid) Set CVM host UUID.
+ * @method string getInstanceUuid() Obtain Host security Agent UUID
+ * @method void setInstanceUuid(string $InstanceUuid) Set Host security Agent UUID
+ * @method string getInstanceQUuid() Obtain CVM UUID
+ * @method void setInstanceQUuid(string $InstanceQUuid) Set CVM UUID
  * @method string getOsName() Obtain OS Name
  * @method void setOsName(string $OsName) Set OS Name
  * @method integer getPartitionCount() Obtain Partition
@@ -89,34 +89,34 @@ Basic edition protection.
  * @method void setAccountCount(string $AccountCount) Set Number of Accounts
  * @method string getProcessCount() Obtain Number of Processes
  * @method void setProcessCount(string $ProcessCount) Set Number of Processes
- * @method string getAppCount() Obtain Software application.
- * @method void setAppCount(string $AppCount) Set Software application.
+ * @method string getAppCount() Obtain Software application
+ * @method void setAppCount(string $AppCount) Set Software application
  * @method integer getPortCount() Obtain Listening port
  * @method void setPortCount(integer $PortCount) Set Listening port
- * @method integer getAttack() Obtain Network attack.
- * @method void setAttack(integer $Attack) Set Network attack.
- * @method integer getAccess() Obtain Network access.
- * @method void setAccess(integer $Access) Set Network access.
+ * @method integer getAttack() Obtain Network attack
+ * @method void setAttack(integer $Attack) Set Network attack
+ * @method integer getAccess() Obtain Network access
+ * @method void setAccess(integer $Access) Set Network access
  * @method integer getIntercept() Obtain Network Interception
  * @method void setIntercept(integer $Intercept) Set Network Interception
- * @method string getInBandwidth() Obtain Inbound peak bandwidth.
- * @method void setInBandwidth(string $InBandwidth) Set Inbound peak bandwidth.
- * @method string getOutBandwidth() Obtain Outbound peak bandwidth.
- * @method void setOutBandwidth(string $OutBandwidth) Set Outbound peak bandwidth.
- * @method string getInFlow() Obtain Total inbound traffic.
- * @method void setInFlow(string $InFlow) Set Total inbound traffic.
- * @method string getOutFlow() Obtain Outbound cumulative traffic.
- * @method void setOutFlow(string $OutFlow) Set Outbound cumulative traffic.
+ * @method string getInBandwidth() Obtain Inbound peak bandwidth
+ * @method void setInBandwidth(string $InBandwidth) Set Inbound peak bandwidth
+ * @method string getOutBandwidth() Obtain Outbound peak bandwidth
+ * @method void setOutBandwidth(string $OutBandwidth) Set Outbound peak bandwidth
+ * @method string getInFlow() Obtain Total inbound traffic
+ * @method void setInFlow(string $InFlow) Set Total inbound traffic
+ * @method string getOutFlow() Obtain Outbound cumulative traffic
+ * @method void setOutFlow(string $OutFlow) Set Outbound cumulative traffic
  * @method string getLastScanTime() Obtain Last scan time
  * @method void setLastScanTime(string $LastScanTime) Set Last scan time
- * @method integer getNetWorkOut() Obtain Malicious outgoing request.
- * @method void setNetWorkOut(integer $NetWorkOut) Set Malicious outgoing request.
- * @method integer getPortRisk() Obtain Port risk.
- * @method void setPortRisk(integer $PortRisk) Set Port risk.
- * @method integer getVulnerabilityRisk() Obtain Vulnerability risk.
- * @method void setVulnerabilityRisk(integer $VulnerabilityRisk) Set Vulnerability risk.
- * @method integer getConfigurationRisk() Obtain Configuration risk.
- * @method void setConfigurationRisk(integer $ConfigurationRisk) Set Configuration risk.
+ * @method integer getNetWorkOut() Obtain Malicious outgoing request
+ * @method void setNetWorkOut(integer $NetWorkOut) Set Malicious outgoing request
+ * @method integer getPortRisk() Obtain Port risk
+ * @method void setPortRisk(integer $PortRisk) Set Port risk
+ * @method integer getVulnerabilityRisk() Obtain Vulnerability risk
+ * @method void setVulnerabilityRisk(integer $VulnerabilityRisk) Set Vulnerability risk
+ * @method integer getConfigurationRisk() Obtain Configuration risk
+ * @method void setConfigurationRisk(integer $ConfigurationRisk) Set Configuration risk
  * @method integer getScanTask() Obtain Scan Task Count
  * @method void setScanTask(integer $ScanTask) Set Scan Task Count
  * @method array getTag() Obtain Tag.
@@ -125,58 +125,58 @@ Basic edition protection.
  * @method void setMemberId(string $MemberId) Set memberId
  * @method string getOs() Obtain Full OS Name
  * @method void setOs(string $Os) Set Full OS Name
- * @method integer getRiskExposure() Obtain Risk service exposure.
- * @method void setRiskExposure(integer $RiskExposure) Set Risk service exposure.
+ * @method integer getRiskExposure() Obtain Risk service exposure
+ * @method void setRiskExposure(integer $RiskExposure) Set Risk service exposure
  * @method integer getBASAgentStatus() Obtain Simulated Attack Tool Status. 0 indicates not installed. 1 indicates installed. 2 indicates offline.
  * @method void setBASAgentStatus(integer $BASAgentStatus) Set Simulated Attack Tool Status. 0 indicates not installed. 1 indicates installed. 2 indicates offline.
  * @method integer getIsNewAsset() Obtain 1-New Asset; 0-Not a New Asset
  * @method void setIsNewAsset(integer $IsNewAsset) Set 1-New Asset; 0-Not a New Asset
- * @method integer getCVMAgentStatus() Obtain 0: not installed; 1: install; 2: installing.
- * @method void setCVMAgentStatus(integer $CVMAgentStatus) Set 0: not installed; 1: install; 2: installing.
- * @method integer getCVMStatus() Obtain 1: enable 0: not enabled.
- * @method void setCVMStatus(integer $CVMStatus) Set 1: enable 0: not enabled.
- * @method integer getDefenseModel() Obtain 1: client installed 0: not installed 2: Agentless.
- * @method void setDefenseModel(integer $DefenseModel) Set 1: client installed 0: not installed 2: Agentless.
- * @method integer getTatStatus() Obtain 1: installed 0: not installed.
- * @method void setTatStatus(integer $TatStatus) Set 1: installed 0: not installed.
- * @method array getCpuTrend() Obtain cpu trend chart.
- * @method void setCpuTrend(array $CpuTrend) Set cpu trend chart.
- * @method array getMemoryTrend() Obtain Memory trend chart.
- * @method void setMemoryTrend(array $MemoryTrend) Set Memory trend chart.
- * @method integer getAgentStatus() Obtain 1: agent online 0: agent offline 2: host offline.
- * @method void setAgentStatus(integer $AgentStatus) Set 1: agent online 0: agent offline 2: host offline.
- * @method integer getCloseDefenseCount() Obtain Number of shutdowns this month.
- * @method void setCloseDefenseCount(integer $CloseDefenseCount) Set Number of shutdowns this month.
- * @method string getInstanceState() Obtain Running state.
- * @method void setInstanceState(string $InstanceState) Set Running state.
- * @method array getSecurityGroupIds() Obtain Security group data.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group data.
- * @method integer getAgentMemRss() Obtain Physical memory occupied KB.
- * @method void setAgentMemRss(integer $AgentMemRss) Set Physical memory occupied KB.
- * @method float getAgentCpuPer() Obtain CPU utilization percentage.
- * @method void setAgentCpuPer(float $AgentCpuPer) Set CPU utilization percentage.
- * @method integer getRealAppid() Obtain Actual appid belonging to cvm.
- * @method void setRealAppid(integer $RealAppid) Set Actual appid belonging to cvm.
- * @method integer getCloudType() Obtain Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
- * @method void setCloudType(integer $CloudType) Set Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
- * @method integer getProtectStatus() Obtain Host protection status enumeration.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: ultimate edition protection.
-5: offline.
-6: shutdown.
- * @method void setProtectStatus(integer $ProtectStatus) Set Host protection status enumeration.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: ultimate edition protection.
-5: offline.
-6: shutdown.
- * @method string getOfflineTime() Obtain Last offline time.
- * @method void setOfflineTime(string $OfflineTime) Set Last offline time.
+ * @method integer getCVMAgentStatus() Obtain 0: not installed; 1: installed; 2: installing
+ * @method void setCVMAgentStatus(integer $CVMAgentStatus) Set 0: not installed; 1: installed; 2: installing
+ * @method integer getCVMStatus() Obtain 1: Enable; 0: Not enabled
+ * @method void setCVMStatus(integer $CVMStatus) Set 1: Enable; 0: Not enabled
+ * @method integer getDefenseModel() Obtain 1: Installed on the client 0: Not installed 2: Agentless
+ * @method void setDefenseModel(integer $DefenseModel) Set 1: Installed on the client 0: Not installed 2: Agentless
+ * @method integer getTatStatus() Obtain 1: installed; 0: not installed
+ * @method void setTatStatus(integer $TatStatus) Set 1: installed; 0: not installed
+ * @method array getCpuTrend() Obtain cpu trend chart
+ * @method void setCpuTrend(array $CpuTrend) Set cpu trend chart
+ * @method array getMemoryTrend() Obtain Memory trend chart
+ * @method void setMemoryTrend(array $MemoryTrend) Set Memory trend chart
+ * @method integer getAgentStatus() Obtain 1: agent online 0: agent offline 2: Host offline
+ * @method void setAgentStatus(integer $AgentStatus) Set 1: agent online 0: agent offline 2: Host offline
+ * @method integer getCloseDefenseCount() Obtain Number of protection shutdowns this month
+ * @method void setCloseDefenseCount(integer $CloseDefenseCount) Set Number of protection shutdowns this month
+ * @method string getInstanceState() Obtain Running status.
+ * @method void setInstanceState(string $InstanceState) Set Running status.
+ * @method array getSecurityGroupIds() Obtain Security group data
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group data
+ * @method integer getAgentMemRss() Obtain Physical memory usage in KB
+ * @method void setAgentMemRss(integer $AgentMemRss) Set Physical memory usage in KB
+ * @method float getAgentCpuPer() Obtain CPU utilization percentage
+ * @method void setAgentCpuPer(float $AgentCpuPer) Set CPU utilization percentage
+ * @method integer getRealAppid() Obtain appid that the cvm actually belongs to
+ * @method void setRealAppid(integer $RealAppid) Set appid that the cvm actually belongs to
+ * @method integer getCloudType() Obtain Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
+ * @method void setCloudType(integer $CloudType) Set Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
+ * @method integer getProtectStatus() Obtain Host Protection Status Enumeration
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown
+ * @method void setProtectStatus(integer $ProtectStatus) Set Host Protection Status Enumeration
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown
+ * @method string getOfflineTime() Obtain Last offline time
+ * @method void setOfflineTime(string $OfflineTime) Set Last offline time
  */
 class CVMAssetVO extends AbstractModel
 {
@@ -186,12 +186,12 @@ class CVMAssetVO extends AbstractModel
     public $AssetId;
 
     /**
-     * @var string Asset name.
+     * @var string Asset name
      */
     public $AssetName;
 
     /**
-     * @var string Asset type.
+     * @var string Asset type
      */
     public $AssetType;
 
@@ -206,7 +206,7 @@ class CVMAssetVO extends AbstractModel
     public $CWPStatus;
 
     /**
-     * @var string Asset creation time.
+     * @var string Asset creation time
      */
     public $AssetCreateTime;
 
@@ -216,7 +216,7 @@ class CVMAssetVO extends AbstractModel
     public $PublicIp;
 
     /**
-     * @var string Private IP.
+     * @var string Private IP
      */
     public $PrivateIp;
 
@@ -266,12 +266,12 @@ class CVMAssetVO extends AbstractModel
     public $SubnetName;
 
     /**
-     * @var string CWP Agent UUID.
+     * @var string Host security Agent UUID
      */
     public $InstanceUuid;
 
     /**
-     * @var string CVM host UUID.
+     * @var string CVM UUID
      */
     public $InstanceQUuid;
 
@@ -331,7 +331,7 @@ class CVMAssetVO extends AbstractModel
     public $ProcessCount;
 
     /**
-     * @var string Software application.
+     * @var string Software application
      */
     public $AppCount;
 
@@ -341,12 +341,12 @@ class CVMAssetVO extends AbstractModel
     public $PortCount;
 
     /**
-     * @var integer Network attack.
+     * @var integer Network attack
      */
     public $Attack;
 
     /**
-     * @var integer Network access.
+     * @var integer Network access
      */
     public $Access;
 
@@ -356,22 +356,22 @@ class CVMAssetVO extends AbstractModel
     public $Intercept;
 
     /**
-     * @var string Inbound peak bandwidth.
+     * @var string Inbound peak bandwidth
      */
     public $InBandwidth;
 
     /**
-     * @var string Outbound peak bandwidth.
+     * @var string Outbound peak bandwidth
      */
     public $OutBandwidth;
 
     /**
-     * @var string Total inbound traffic.
+     * @var string Total inbound traffic
      */
     public $InFlow;
 
     /**
-     * @var string Outbound cumulative traffic.
+     * @var string Outbound cumulative traffic
      */
     public $OutFlow;
 
@@ -381,22 +381,22 @@ class CVMAssetVO extends AbstractModel
     public $LastScanTime;
 
     /**
-     * @var integer Malicious outgoing request.
+     * @var integer Malicious outgoing request
      */
     public $NetWorkOut;
 
     /**
-     * @var integer Port risk.
+     * @var integer Port risk
      */
     public $PortRisk;
 
     /**
-     * @var integer Vulnerability risk.
+     * @var integer Vulnerability risk
      */
     public $VulnerabilityRisk;
 
     /**
-     * @var integer Configuration risk.
+     * @var integer Configuration risk
      */
     public $ConfigurationRisk;
 
@@ -421,7 +421,7 @@ class CVMAssetVO extends AbstractModel
     public $Os;
 
     /**
-     * @var integer Risk service exposure.
+     * @var integer Risk service exposure
      */
     public $RiskExposure;
 
@@ -436,101 +436,101 @@ class CVMAssetVO extends AbstractModel
     public $IsNewAsset;
 
     /**
-     * @var integer 0: not installed; 1: install; 2: installing.
+     * @var integer 0: not installed; 1: installed; 2: installing
      */
     public $CVMAgentStatus;
 
     /**
-     * @var integer 1: enable 0: not enabled.
+     * @var integer 1: Enable; 0: Not enabled
      */
     public $CVMStatus;
 
     /**
-     * @var integer 1: client installed 0: not installed 2: Agentless.
+     * @var integer 1: Installed on the client 0: Not installed 2: Agentless
      */
     public $DefenseModel;
 
     /**
-     * @var integer 1: installed 0: not installed.
+     * @var integer 1: installed; 0: not installed
      */
     public $TatStatus;
 
     /**
-     * @var array cpu trend chart.
+     * @var array cpu trend chart
      */
     public $CpuTrend;
 
     /**
-     * @var array Memory trend chart.
+     * @var array Memory trend chart
      */
     public $MemoryTrend;
 
     /**
-     * @var integer 1: agent online 0: agent offline 2: host offline.
+     * @var integer 1: agent online 0: agent offline 2: Host offline
      */
     public $AgentStatus;
 
     /**
-     * @var integer Number of shutdowns this month.
+     * @var integer Number of protection shutdowns this month
      */
     public $CloseDefenseCount;
 
     /**
-     * @var string Running state.
+     * @var string Running status.
      */
     public $InstanceState;
 
     /**
-     * @var array Security group data.
+     * @var array Security group data
      */
     public $SecurityGroupIds;
 
     /**
-     * @var integer Physical memory occupied KB.
+     * @var integer Physical memory usage in KB
      */
     public $AgentMemRss;
 
     /**
-     * @var float CPU utilization percentage.
+     * @var float CPU utilization percentage
      */
     public $AgentCpuPer;
 
     /**
-     * @var integer Actual appid belonging to cvm.
+     * @var integer appid that the cvm actually belongs to
      */
     public $RealAppid;
 
     /**
-     * @var integer Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+     * @var integer Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
      */
     public $CloudType;
 
     /**
-     * @var integer Host protection status enumeration.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: ultimate edition protection.
-5: offline.
-6: shutdown.
+     * @var integer Host Protection Status Enumeration
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown
      */
     public $ProtectStatus;
 
     /**
-     * @var string Last offline time.
+     * @var string Last offline time
      */
     public $OfflineTime;
 
     /**
      * @param string $AssetId Asset ID
-     * @param string $AssetName Asset name.
-     * @param string $AssetType Asset type.
+     * @param string $AssetName Asset name
+     * @param string $AssetType Asset type
      * @param string $Region Region.
      * @param integer $CWPStatus Protection status
-     * @param string $AssetCreateTime Asset creation time.
+     * @param string $AssetCreateTime Asset creation time
      * @param string $PublicIp Public IP address
-     * @param string $PrivateIp Private IP.
+     * @param string $PrivateIp Private IP
      * @param string $VpcId vpc id
      * @param string $VpcName VPC Name
      * @param integer $AppId App ID information
@@ -540,8 +540,8 @@ Basic edition protection.
      * @param integer $IsCore Core or Not
      * @param string $SubnetId Subnet ID
      * @param string $SubnetName Subnet Name
-     * @param string $InstanceUuid CWP Agent UUID.
-     * @param string $InstanceQUuid CVM host UUID.
+     * @param string $InstanceUuid Host security Agent UUID
+     * @param string $InstanceQUuid CVM UUID
      * @param string $OsName OS Name
      * @param integer $PartitionCount Partition
      * @param string $CPUInfo CPU Information
@@ -553,50 +553,50 @@ Basic edition protection.
      * @param string $DiskLoad Hard Disk Load
      * @param string $AccountCount Number of Accounts
      * @param string $ProcessCount Number of Processes
-     * @param string $AppCount Software application.
+     * @param string $AppCount Software application
      * @param integer $PortCount Listening port
-     * @param integer $Attack Network attack.
-     * @param integer $Access Network access.
+     * @param integer $Attack Network attack
+     * @param integer $Access Network access
      * @param integer $Intercept Network Interception
-     * @param string $InBandwidth Inbound peak bandwidth.
-     * @param string $OutBandwidth Outbound peak bandwidth.
-     * @param string $InFlow Total inbound traffic.
-     * @param string $OutFlow Outbound cumulative traffic.
+     * @param string $InBandwidth Inbound peak bandwidth
+     * @param string $OutBandwidth Outbound peak bandwidth
+     * @param string $InFlow Total inbound traffic
+     * @param string $OutFlow Outbound cumulative traffic
      * @param string $LastScanTime Last scan time
-     * @param integer $NetWorkOut Malicious outgoing request.
-     * @param integer $PortRisk Port risk.
-     * @param integer $VulnerabilityRisk Vulnerability risk.
-     * @param integer $ConfigurationRisk Configuration risk.
+     * @param integer $NetWorkOut Malicious outgoing request
+     * @param integer $PortRisk Port risk
+     * @param integer $VulnerabilityRisk Vulnerability risk
+     * @param integer $ConfigurationRisk Configuration risk
      * @param integer $ScanTask Scan Task Count
      * @param array $Tag Tag.
      * @param string $MemberId memberId
      * @param string $Os Full OS Name
-     * @param integer $RiskExposure Risk service exposure.
+     * @param integer $RiskExposure Risk service exposure
      * @param integer $BASAgentStatus Simulated Attack Tool Status. 0 indicates not installed. 1 indicates installed. 2 indicates offline.
      * @param integer $IsNewAsset 1-New Asset; 0-Not a New Asset
-     * @param integer $CVMAgentStatus 0: not installed; 1: install; 2: installing.
-     * @param integer $CVMStatus 1: enable 0: not enabled.
-     * @param integer $DefenseModel 1: client installed 0: not installed 2: Agentless.
-     * @param integer $TatStatus 1: installed 0: not installed.
-     * @param array $CpuTrend cpu trend chart.
-     * @param array $MemoryTrend Memory trend chart.
-     * @param integer $AgentStatus 1: agent online 0: agent offline 2: host offline.
-     * @param integer $CloseDefenseCount Number of shutdowns this month.
-     * @param string $InstanceState Running state.
-     * @param array $SecurityGroupIds Security group data.
-     * @param integer $AgentMemRss Physical memory occupied KB.
-     * @param float $AgentCpuPer CPU utilization percentage.
-     * @param integer $RealAppid Actual appid belonging to cvm.
-     * @param integer $CloudType Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
-     * @param integer $ProtectStatus Host protection status enumeration.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: ultimate edition protection.
-5: offline.
-6: shutdown.
-     * @param string $OfflineTime Last offline time.
+     * @param integer $CVMAgentStatus 0: not installed; 1: installed; 2: installing
+     * @param integer $CVMStatus 1: Enable; 0: Not enabled
+     * @param integer $DefenseModel 1: Installed on the client 0: Not installed 2: Agentless
+     * @param integer $TatStatus 1: installed; 0: not installed
+     * @param array $CpuTrend cpu trend chart
+     * @param array $MemoryTrend Memory trend chart
+     * @param integer $AgentStatus 1: agent online 0: agent offline 2: Host offline
+     * @param integer $CloseDefenseCount Number of protection shutdowns this month
+     * @param string $InstanceState Running status.
+     * @param array $SecurityGroupIds Security group data
+     * @param integer $AgentMemRss Physical memory usage in KB
+     * @param float $AgentCpuPer CPU utilization percentage
+     * @param integer $RealAppid appid that the cvm actually belongs to
+     * @param integer $CloudType Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
+     * @param integer $ProtectStatus Host Protection Status Enumeration
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown
+     * @param string $OfflineTime Last offline time
      */
     function __construct()
     {

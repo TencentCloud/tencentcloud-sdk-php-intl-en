@@ -24,36 +24,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) Set User appid.
  * @method string getUin() Obtain User UIN
  * @method void setUin(string $Uin) Set User UIN
- * @method string getNickName() Obtain Nickname.
- * @method void setNickName(string $NickName) Set Nickname.
- * @method string getInstanceId() Obtain Mirror id.
- * @method void setInstanceId(string $InstanceId) Set Mirror id.
- * @method string getInstanceName() Obtain Image name.
- * @method void setInstanceName(string $InstanceName) Set Image name.
+ * @method string getNickName() Obtain Nickname
+ * @method void setNickName(string $NickName) Set Nickname
+ * @method string getInstanceId() Obtain Image id
+ * @method void setInstanceId(string $InstanceId) Set Image id
+ * @method string getInstanceName() Obtain Image Name
+ * @method void setInstanceName(string $InstanceName) Set Image Name
  * @method string getInstanceCreateTime() Obtain Image creation time.
  * @method void setInstanceCreateTime(string $InstanceCreateTime) Set Image creation time.
  * @method string getInstanceSize() Obtain Image Size with Unit
  * @method void setInstanceSize(string $InstanceSize) Set Image Size with Unit
- * @method integer getBuildCount() Obtain Build times.
- * @method void setBuildCount(integer $BuildCount) Set Build times.
+ * @method integer getBuildCount() Obtain Build Times
+ * @method void setBuildCount(integer $BuildCount) Set Build Times
  * @method string getInstanceType() Obtain Image type.
  * @method void setInstanceType(string $InstanceType) Set Image type.
- * @method integer getAuthStatus() Obtain Authorization status.
- * @method void setAuthStatus(integer $AuthStatus) Set Authorization status.
- * @method string getInstanceVersion() Obtain Mirror version.
- * @method void setInstanceVersion(string $InstanceVersion) Set Mirror version.
+ * @method integer getAuthStatus() Obtain Authorization status
+ * @method void setAuthStatus(integer $AuthStatus) Set Authorization status
+ * @method string getInstanceVersion() Obtain Mirror version
+ * @method void setInstanceVersion(string $InstanceVersion) Set Mirror version
  * @method string getRegion() Obtain Region.
  * @method void setRegion(string $Region) Set Region.
- * @method string getRepositoryUrl() Obtain Repository address.
- * @method void setRepositoryUrl(string $RepositoryUrl) Set Repository address.
- * @method string getRepositoryName() Obtain Repository name.
- * @method void setRepositoryName(string $RepositoryName) Set Repository name.
+ * @method string getRepositoryUrl() Obtain Repository address
+ * @method void setRepositoryUrl(string $RepositoryUrl) Set Repository address
+ * @method string getRepositoryName() Obtain Repository name
+ * @method void setRepositoryName(string $RepositoryName) Set Repository name
  * @method integer getIsCore() Obtain Core or Not
  * @method void setIsCore(integer $IsCore) Set Core or Not
- * @method integer getVulRisk() Obtain Vulnerability risk.
- * @method void setVulRisk(integer $VulRisk) Set Vulnerability risk.
- * @method integer getCheckCount() Obtain Check task.
- * @method void setCheckCount(integer $CheckCount) Set Check task.
+ * @method integer getVulRisk() Obtain Vulnerability risk
+ * @method void setVulRisk(integer $VulRisk) Set Vulnerability risk
+ * @method integer getCheckCount() Obtain Check task
+ * @method void setCheckCount(integer $CheckCount) Set Check task
  * @method string getCheckTime() Obtain Health Checkup Time
  * @method void setCheckTime(string $CheckTime) Set Health Checkup Time
  * @method integer getIsNewAsset() Obtain New Asset or Not. 1: New
@@ -72,17 +72,17 @@ class RepositoryImageVO extends AbstractModel
     public $Uin;
 
     /**
-     * @var string Nickname.
+     * @var string Nickname
      */
     public $NickName;
 
     /**
-     * @var string Mirror id.
+     * @var string Image id
      */
     public $InstanceId;
 
     /**
-     * @var string Image name.
+     * @var string Image Name
      */
     public $InstanceName;
 
@@ -97,7 +97,7 @@ class RepositoryImageVO extends AbstractModel
     public $InstanceSize;
 
     /**
-     * @var integer Build times.
+     * @var integer Build Times
      */
     public $BuildCount;
 
@@ -107,12 +107,12 @@ class RepositoryImageVO extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var integer Authorization status.
+     * @var integer Authorization status
      */
     public $AuthStatus;
 
     /**
-     * @var string Mirror version.
+     * @var string Mirror version
      */
     public $InstanceVersion;
 
@@ -122,12 +122,12 @@ class RepositoryImageVO extends AbstractModel
     public $Region;
 
     /**
-     * @var string Repository address.
+     * @var string Repository address
      */
     public $RepositoryUrl;
 
     /**
-     * @var string Repository name.
+     * @var string Repository name
      */
     public $RepositoryName;
 
@@ -137,12 +137,12 @@ class RepositoryImageVO extends AbstractModel
     public $IsCore;
 
     /**
-     * @var integer Vulnerability risk.
+     * @var integer Vulnerability risk
      */
     public $VulRisk;
 
     /**
-     * @var integer Check task.
+     * @var integer Check task
      */
     public $CheckCount;
 
@@ -159,21 +159,21 @@ class RepositoryImageVO extends AbstractModel
     /**
      * @param integer $AppId User appid.
      * @param string $Uin User UIN
-     * @param string $NickName Nickname.
-     * @param string $InstanceId Mirror id.
-     * @param string $InstanceName Image name.
+     * @param string $NickName Nickname
+     * @param string $InstanceId Image id
+     * @param string $InstanceName Image Name
      * @param string $InstanceCreateTime Image creation time.
      * @param string $InstanceSize Image Size with Unit
-     * @param integer $BuildCount Build times.
+     * @param integer $BuildCount Build Times
      * @param string $InstanceType Image type.
-     * @param integer $AuthStatus Authorization status.
-     * @param string $InstanceVersion Mirror version.
+     * @param integer $AuthStatus Authorization status
+     * @param string $InstanceVersion Mirror version
      * @param string $Region Region.
-     * @param string $RepositoryUrl Repository address.
-     * @param string $RepositoryName Repository name.
+     * @param string $RepositoryUrl Repository address
+     * @param string $RepositoryName Repository name
      * @param integer $IsCore Core or Not
-     * @param integer $VulRisk Vulnerability risk.
-     * @param integer $CheckCount Check task.
+     * @param integer $VulRisk Vulnerability risk
+     * @param integer $CheckCount Check task
      * @param string $CheckTime Health Checkup Time
      * @param integer $IsNewAsset New Asset or Not. 1: New
      */

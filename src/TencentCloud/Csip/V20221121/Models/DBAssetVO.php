@@ -18,18 +18,18 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of a database asset
+ * DB Asset Output Fields
  *
  * @method string getAssetId() Obtain Asset ID
  * @method void setAssetId(string $AssetId) Set Asset ID
- * @method string getAssetName() Obtain Asset name.
- * @method void setAssetName(string $AssetName) Set Asset name.
- * @method string getAssetType() Obtain Asset type.
- * @method void setAssetType(string $AssetType) Set Asset type.
+ * @method string getAssetName() Obtain Asset name
+ * @method void setAssetName(string $AssetName) Set Asset name
+ * @method string getAssetType() Obtain Asset type
+ * @method void setAssetType(string $AssetType) Set Asset type
  * @method string getVpcId() Obtain vpcid
  * @method void setVpcId(string $VpcId) Set vpcid
- * @method string getVpcName() Obtain vpc Tag.
- * @method void setVpcName(string $VpcName) Set vpc Tag.
+ * @method string getVpcName() Obtain vpc tag
+ * @method void setVpcName(string $VpcName) Set vpc tag
  * @method string getRegion() Obtain Region.
  * @method void setRegion(string $Region) Set Region.
  * @method string getDomain() Obtain Domain
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssetCreateTime(string $AssetCreateTime) Set Asset creation time.
  * @method string getLastScanTime() Obtain Last scan time
  * @method void setLastScanTime(string $LastScanTime) Set Last scan time
- * @method integer getConfigurationRisk() Obtain Configuration risk.
- * @method void setConfigurationRisk(integer $ConfigurationRisk) Set Configuration risk.
- * @method integer getAttack() Obtain Network attack.
- * @method void setAttack(integer $Attack) Set Network attack.
- * @method integer getAccess() Obtain Network access.
- * @method void setAccess(integer $Access) Set Network access.
+ * @method integer getConfigurationRisk() Obtain Configuration risk
+ * @method void setConfigurationRisk(integer $ConfigurationRisk) Set Configuration risk
+ * @method integer getAttack() Obtain Network attack
+ * @method void setAttack(integer $Attack) Set Network attack
+ * @method integer getAccess() Obtain Network access
+ * @method void setAccess(integer $Access) Set Network access
  * @method integer getScanTask() Obtain Scan Task
  * @method void setScanTask(integer $ScanTask) Set Scan Task
  * @method integer getAppId() Obtain User appid.
@@ -75,12 +75,12 @@ class DBAssetVO extends AbstractModel
     public $AssetId;
 
     /**
-     * @var string Asset name.
+     * @var string Asset name
      */
     public $AssetName;
 
     /**
-     * @var string Asset type.
+     * @var string Asset type
      */
     public $AssetType;
 
@@ -90,7 +90,7 @@ class DBAssetVO extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string vpc Tag.
+     * @var string vpc tag
      */
     public $VpcName;
 
@@ -115,17 +115,17 @@ class DBAssetVO extends AbstractModel
     public $LastScanTime;
 
     /**
-     * @var integer Configuration risk.
+     * @var integer Configuration risk
      */
     public $ConfigurationRisk;
 
     /**
-     * @var integer Network attack.
+     * @var integer Network attack
      */
     public $Attack;
 
     /**
-     * @var integer Network access.
+     * @var integer Network access
      */
     public $Access;
 
@@ -186,17 +186,17 @@ class DBAssetVO extends AbstractModel
 
     /**
      * @param string $AssetId Asset ID
-     * @param string $AssetName Asset name.
-     * @param string $AssetType Asset type.
+     * @param string $AssetName Asset name
+     * @param string $AssetType Asset type
      * @param string $VpcId vpcid
-     * @param string $VpcName vpc Tag.
+     * @param string $VpcName vpc tag
      * @param string $Region Region.
      * @param string $Domain Domain
      * @param string $AssetCreateTime Asset creation time.
      * @param string $LastScanTime Last scan time
-     * @param integer $ConfigurationRisk Configuration risk.
-     * @param integer $Attack Network attack.
-     * @param integer $Access Network access.
+     * @param integer $ConfigurationRisk Configuration risk
+     * @param integer $Attack Network attack
+     * @param integer $Access Network access
      * @param integer $ScanTask Scan Task
      * @param integer $AppId User appid.
      * @param string $Uin User UIN

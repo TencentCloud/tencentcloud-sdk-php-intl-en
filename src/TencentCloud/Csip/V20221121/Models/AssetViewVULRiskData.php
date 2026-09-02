@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Vulnerability Risk Objects from Asset's Perspective
  *
- * @method string getAffectAsset() Obtain Impact assets.
- * @method void setAffectAsset(string $AffectAsset) Set Impact assets.
- * @method string getLevel() Obtain Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - serious.
- * @method void setLevel(string $Level) Set Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - serious.
- * @method string getInstanceType() Obtain Asset type.
- * @method void setInstanceType(string $InstanceType) Set Asset type.
- * @method string getComponent() Obtain Component.
- * @method void setComponent(string $Component) Set Component.
+ * @method string getAffectAsset() Obtain Affect assets
+ * @method void setAffectAsset(string $AffectAsset) Set Affect assets
+ * @method string getLevel() Obtain Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+ * @method void setLevel(string $Level) Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+ * @method string getInstanceType() Obtain Asset type
+ * @method void setInstanceType(string $InstanceType) Set Asset type
+ * @method string getComponent() Obtain Component
+ * @method void setComponent(string $Component) Set Component
  * @method string getRecentTime() Obtain Latest Recognition Time
  * @method void setRecentTime(string $RecentTime) Set Latest Recognition Time
  * @method string getFirstTime() Obtain First Recognition Time
  * @method void setFirstTime(string $FirstTime) Set First Recognition Time
- * @method integer getStatus() Obtain Status, 0 unprocessed, 1 tagged, 2 ignored, 3 processed, 4 under disposal, 5 detecting, 6 partially processed.
- * @method void setStatus(integer $Status) Set Status, 0 unprocessed, 1 tagged, 2 ignored, 3 processed, 4 under disposal, 5 detecting, 6 partially processed.
+ * @method integer getStatus() Obtain Status. 0: unprocessed, 1: tagged processed, 2: ignored, 3: processed, 4: under disposal, 5: in-progress detection, 6: partially processed
+ * @method void setStatus(integer $Status) Set Status. 0: unprocessed, 1: tagged processed, 2: ignored, 3: processed, 4: under disposal, 5: in-progress detection, 6: partially processed
  * @method string getRiskId() Obtain Risk ID
  * @method void setRiskId(string $RiskId) Set Risk ID
  * @method string getInstanceId() Obtain Instance ID.
@@ -46,16 +46,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNick(string $Nick) Set User Nickname
  * @method string getUin() Obtain User UIN
  * @method void setUin(string $Uin) Set User UIN
- * @method string getVULType() Obtain Vulnerability type.
- * @method void setVULType(string $VULType) Set Vulnerability type.
+ * @method string getVULType() Obtain Vulnerability type
+ * @method void setVULType(string $VULType) Set Vulnerability type
  * @method string getPort() Obtain Port.
  * @method void setPort(string $Port) Set Port.
- * @method string getAppName() Obtain Vulnerability impact component.
- * @method void setAppName(string $AppName) Set Vulnerability impact component.
- * @method string getAppVersion() Obtain Vulnerability impact version.
- * @method void setAppVersion(string $AppVersion) Set Vulnerability impact version.
- * @method string getVULURL() Obtain Risks.
- * @method void setVULURL(string $VULURL) Set Risks.
+ * @method string getAppName() Obtain Vulnerability Impact component
+ * @method void setAppName(string $AppName) Set Vulnerability Impact component
+ * @method string getAppVersion() Obtain Vulnerability Impact version
+ * @method void setAppVersion(string $AppVersion) Set Vulnerability Impact version
+ * @method string getVULURL() Obtain Risk point
+ * @method void setVULURL(string $VULURL) Set Risk point
  * @method string getVULName() Obtain Vulnerability name
  * @method void setVULName(string $VULName) Set Vulnerability name
  * @method string getCVE() Obtain cve
@@ -74,54 +74,54 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEMGCVulType(integer $EMGCVulType) Set Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
  * @method float getCVSS() Obtain CVSS score
  * @method void setCVSS(float $CVSS) Set CVSS score
- * @method string getIndex() Obtain Frontend index id.
- * @method void setIndex(string $Index) Set Frontend index id.
+ * @method string getIndex() Obtain Frontend index id
+ * @method void setIndex(string $Index) Set Frontend index id
  * @method string getPCMGRId() Obtain pcmgrId
  * @method void setPCMGRId(string $PCMGRId) Set pcmgrId
  * @method string getLogId() Obtain Report ID
  * @method void setLogId(string $LogId) Set Report ID
  * @method string getTaskId() Obtain Task ID.
  * @method void setTaskId(string $TaskId) Set Task ID.
- * @method array getVulTag() Obtain Vulnerability Tag.
- * @method void setVulTag(array $VulTag) Set Vulnerability Tag.
- * @method string getDisclosureTime() Obtain Vulnerability disclosure time.
- * @method void setDisclosureTime(string $DisclosureTime) Set Vulnerability disclosure time.
- * @method integer getAttackHeat() Obtain Attack intensity.
- * @method void setAttackHeat(integer $AttackHeat) Set Attack intensity.
- * @method integer getIsSuggest() Obtain Whether the vulnerability is mandatory. 1 for yes, 0 for no.
- * @method void setIsSuggest(integer $IsSuggest) Set Whether the vulnerability is mandatory. 1 for yes, 0 for no.
+ * @method array getVulTag() Obtain Vulnerability tag
+ * @method void setVulTag(array $VulTag) Set Vulnerability tag
+ * @method string getDisclosureTime() Obtain Vulnerability disclosure time
+ * @method void setDisclosureTime(string $DisclosureTime) Set Vulnerability disclosure time
+ * @method integer getAttackHeat() Obtain Attack level
+ * @method void setAttackHeat(integer $AttackHeat) Set Attack level
+ * @method integer getIsSuggest() Obtain Whether vulnerability 1 is mandatory. 0 indicates false.
+ * @method void setIsSuggest(integer $IsSuggest) Set Whether vulnerability 1 is mandatory. 0 indicates false.
  * @method string getHandleTaskId() Obtain Disposal task ID.
  * @method void setHandleTaskId(string $HandleTaskId) Set Disposal task ID.
- * @method string getEngineSource() Obtain Engine source.
- * @method void setEngineSource(string $EngineSource) Set Engine source.
- * @method string getVulRiskId() Obtain New vulnerability risk id (same as RiskId in the network-wide vulnerabilities table).
- * @method void setVulRiskId(string $VulRiskId) Set New vulnerability risk id (same as RiskId in the network-wide vulnerabilities table).
- * @method string getTvdID() Obtain New version vulnerability id.
- * @method void setTvdID(string $TvdID) Set New version vulnerability id.
- * @method integer getIsOneClick() Obtain Is it possible to perform a one-click physical examination, 1 - yes, 0 - not allowed.
- * @method void setIsOneClick(integer $IsOneClick) Set Is it possible to perform a one-click physical examination, 1 - yes, 0 - not allowed.
- * @method integer getIsPOC() Obtain Whether to perform a POC scan. valid values: 0 (not a POC), 1 (POC).
- * @method void setIsPOC(integer $IsPOC) Set Whether to perform a POC scan. valid values: 0 (not a POC), 1 (POC).
+ * @method string getEngineSource() Obtain Engine source
+ * @method void setEngineSource(string $EngineSource) Set Engine source
+ * @method string getVulRiskId() Obtain New vulnerability risk id (same as RiskId in the network-wide vulnerability table)
+ * @method void setVulRiskId(string $VulRiskId) Set New vulnerability risk id (same as RiskId in the network-wide vulnerability table)
+ * @method string getTvdID() Obtain Vulnerability id of the new version
+ * @method void setTvdID(string $TvdID) Set Vulnerability id of the new version
+ * @method integer getIsOneClick() Obtain Whether to perform one-click physical examination. 1: yes, 0: no.
+ * @method void setIsOneClick(integer $IsOneClick) Set Whether to perform one-click physical examination. 1: yes, 0: no.
+ * @method integer getIsPOC() Obtain Whether it is a POC scan. 0: non-POC; 1: POC
+ * @method void setIsPOC(integer $IsPOC) Set Whether it is a POC scan. 0: non-POC; 1: POC
  */
 class AssetViewVULRiskData extends AbstractModel
 {
     /**
-     * @var string Impact assets.
+     * @var string Affect assets
      */
     public $AffectAsset;
 
     /**
-     * @var string Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - serious.
+     * @var string Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public $Level;
 
     /**
-     * @var string Asset type.
+     * @var string Asset type
      */
     public $InstanceType;
 
     /**
-     * @var string Component.
+     * @var string Component
      */
     public $Component;
 
@@ -136,7 +136,7 @@ class AssetViewVULRiskData extends AbstractModel
     public $FirstTime;
 
     /**
-     * @var integer Status, 0 unprocessed, 1 tagged, 2 ignored, 3 processed, 4 under disposal, 5 detecting, 6 partially processed.
+     * @var integer Status. 0: unprocessed, 1: tagged processed, 2: ignored, 3: processed, 4: under disposal, 5: in-progress detection, 6: partially processed
      */
     public $Status;
 
@@ -171,7 +171,7 @@ class AssetViewVULRiskData extends AbstractModel
     public $Uin;
 
     /**
-     * @var string Vulnerability type.
+     * @var string Vulnerability type
      */
     public $VULType;
 
@@ -181,17 +181,17 @@ class AssetViewVULRiskData extends AbstractModel
     public $Port;
 
     /**
-     * @var string Vulnerability impact component.
+     * @var string Vulnerability Impact component
      */
     public $AppName;
 
     /**
-     * @var string Vulnerability impact version.
+     * @var string Vulnerability Impact version
      */
     public $AppVersion;
 
     /**
-     * @var string Risks.
+     * @var string Risk point
      */
     public $VULURL;
 
@@ -241,7 +241,7 @@ class AssetViewVULRiskData extends AbstractModel
     public $CVSS;
 
     /**
-     * @var string Frontend index id.
+     * @var string Frontend index id
      */
     public $Index;
 
@@ -261,22 +261,22 @@ class AssetViewVULRiskData extends AbstractModel
     public $TaskId;
 
     /**
-     * @var array Vulnerability Tag.
+     * @var array Vulnerability tag
      */
     public $VulTag;
 
     /**
-     * @var string Vulnerability disclosure time.
+     * @var string Vulnerability disclosure time
      */
     public $DisclosureTime;
 
     /**
-     * @var integer Attack intensity.
+     * @var integer Attack level
      */
     public $AttackHeat;
 
     /**
-     * @var integer Whether the vulnerability is mandatory. 1 for yes, 0 for no.
+     * @var integer Whether vulnerability 1 is mandatory. 0 indicates false.
      */
     public $IsSuggest;
 
@@ -286,49 +286,49 @@ class AssetViewVULRiskData extends AbstractModel
     public $HandleTaskId;
 
     /**
-     * @var string Engine source.
+     * @var string Engine source
      */
     public $EngineSource;
 
     /**
-     * @var string New vulnerability risk id (same as RiskId in the network-wide vulnerabilities table).
+     * @var string New vulnerability risk id (same as RiskId in the network-wide vulnerability table)
      */
     public $VulRiskId;
 
     /**
-     * @var string New version vulnerability id.
+     * @var string Vulnerability id of the new version
      */
     public $TvdID;
 
     /**
-     * @var integer Is it possible to perform a one-click physical examination, 1 - yes, 0 - not allowed.
+     * @var integer Whether to perform one-click physical examination. 1: yes, 0: no.
      */
     public $IsOneClick;
 
     /**
-     * @var integer Whether to perform a POC scan. valid values: 0 (not a POC), 1 (POC).
+     * @var integer Whether it is a POC scan. 0: non-POC; 1: POC
      */
     public $IsPOC;
 
     /**
-     * @param string $AffectAsset Impact assets.
-     * @param string $Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - serious.
-     * @param string $InstanceType Asset type.
-     * @param string $Component Component.
+     * @param string $AffectAsset Affect assets
+     * @param string $Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+     * @param string $InstanceType Asset type
+     * @param string $Component Component
      * @param string $RecentTime Latest Recognition Time
      * @param string $FirstTime First Recognition Time
-     * @param integer $Status Status, 0 unprocessed, 1 tagged, 2 ignored, 3 processed, 4 under disposal, 5 detecting, 6 partially processed.
+     * @param integer $Status Status. 0: unprocessed, 1: tagged processed, 2: ignored, 3: processed, 4: under disposal, 5: in-progress detection, 6: partially processed
      * @param string $RiskId Risk ID
      * @param string $InstanceId Instance ID.
      * @param string $InstanceName Instance name.
      * @param string $AppId User appid.
      * @param string $Nick User Nickname
      * @param string $Uin User UIN
-     * @param string $VULType Vulnerability type.
+     * @param string $VULType Vulnerability type
      * @param string $Port Port.
-     * @param string $AppName Vulnerability impact component.
-     * @param string $AppVersion Vulnerability impact version.
-     * @param string $VULURL Risks.
+     * @param string $AppName Vulnerability Impact component
+     * @param string $AppVersion Vulnerability Impact version
+     * @param string $VULURL Risk point
      * @param string $VULName Vulnerability name
      * @param string $CVE cve
      * @param string $POCId pocid
@@ -338,20 +338,20 @@ class AssetViewVULRiskData extends AbstractModel
      * @param string $Payload Payload
      * @param integer $EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
      * @param float $CVSS CVSS score
-     * @param string $Index Frontend index id.
+     * @param string $Index Frontend index id
      * @param string $PCMGRId pcmgrId
      * @param string $LogId Report ID
      * @param string $TaskId Task ID.
-     * @param array $VulTag Vulnerability Tag.
-     * @param string $DisclosureTime Vulnerability disclosure time.
-     * @param integer $AttackHeat Attack intensity.
-     * @param integer $IsSuggest Whether the vulnerability is mandatory. 1 for yes, 0 for no.
+     * @param array $VulTag Vulnerability tag
+     * @param string $DisclosureTime Vulnerability disclosure time
+     * @param integer $AttackHeat Attack level
+     * @param integer $IsSuggest Whether vulnerability 1 is mandatory. 0 indicates false.
      * @param string $HandleTaskId Disposal task ID.
-     * @param string $EngineSource Engine source.
-     * @param string $VulRiskId New vulnerability risk id (same as RiskId in the network-wide vulnerabilities table).
-     * @param string $TvdID New version vulnerability id.
-     * @param integer $IsOneClick Is it possible to perform a one-click physical examination, 1 - yes, 0 - not allowed.
-     * @param integer $IsPOC Whether to perform a POC scan. valid values: 0 (not a POC), 1 (POC).
+     * @param string $EngineSource Engine source
+     * @param string $VulRiskId New vulnerability risk id (same as RiskId in the network-wide vulnerability table)
+     * @param string $TvdID Vulnerability id of the new version
+     * @param integer $IsOneClick Whether to perform one-click physical examination. 1: yes, 0: no.
+     * @param integer $IsPOC Whether it is a POC scan. 0: non-POC; 1: POC
      */
     function __construct()
     {

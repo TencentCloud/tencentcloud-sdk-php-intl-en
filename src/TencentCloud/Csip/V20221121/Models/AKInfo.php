@@ -18,31 +18,31 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AK brief information.
+ * AK brief information
  *
- * @method integer getID() Obtain ak id.
- * @method void setID(integer $ID) Set ak id.
- * @method string getName() Obtain ak specific value. returns temporary key when temporary key is used.
- * @method void setName(string $Name) Set ak specific value. returns temporary key when temporary key is used.
- * @method string getUser() Obtain Associated account.
- * @method void setUser(string $User) Set Associated account.
+ * @method integer getID() Obtain id of the ak
+ * @method void setID(integer $ID) Set id of the ak
+ * @method string getName() Obtain `ak` specific value. This field returns the temporary key when the temporary key is used.
+ * @method void setName(string $Name) Set `ak` specific value. This field returns the temporary key when the temporary key is used.
+ * @method string getUser() Obtain Associated account
+ * @method void setUser(string $User) Set Associated account
  * @method string getRemark() Obtain Remarks
  * @method void setRemark(string $Remark) Set Remarks
  */
 class AKInfo extends AbstractModel
 {
     /**
-     * @var integer ak id.
+     * @var integer id of the ak
      */
     public $ID;
 
     /**
-     * @var string ak specific value. returns temporary key when temporary key is used.
+     * @var string `ak` specific value. This field returns the temporary key when the temporary key is used.
      */
     public $Name;
 
     /**
-     * @var string Associated account.
+     * @var string Associated account
      */
     public $User;
 
@@ -52,9 +52,9 @@ class AKInfo extends AbstractModel
     public $Remark;
 
     /**
-     * @param integer $ID ak id.
-     * @param string $Name ak specific value. returns temporary key when temporary key is used.
-     * @param string $User Associated account.
+     * @param integer $ID id of the ak
+     * @param string $Name `ak` specific value. This field returns the temporary key when the temporary key is used.
+     * @param string $User Associated account
      * @param string $Remark Remarks
      */
     function __construct()

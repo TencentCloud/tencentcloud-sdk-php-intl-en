@@ -1,0 +1,135 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Csip\V20221121\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * dspm data identification classification group list item
+ *
+ * @method integer getId() Obtain <p>Level group id</p>
+ * @method void setId(integer $Id) Set <p>Level group id</p>
+ * @method string getName() Obtain <p>Level group name</p>
+ * @method void setName(string $Name) Set <p>Level group name</p>
+ * @method string getDescription() Obtain <p>Level group description</p>
+ * @method void setDescription(string $Description) Set <p>Level group description</p>
+ * @method integer getType() Obtain <p>Level group type</p><p>Enumeration values:</p><ul><li>0: Built-in</li><li>1: Custom</li></ul>
+ * @method void setType(integer $Type) Set <p>Level group type</p><p>Enumeration values:</p><ul><li>0: Built-in</li><li>1: Custom</li></ul>
+ * @method array getLevelItems() Obtain <p>Level information</p>
+ * @method void setLevelItems(array $LevelItems) Set <p>Level information</p>
+ * @method string getUpdateTime() Obtain <p>Update time</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+ * @method void setUpdateTime(string $UpdateTime) Set <p>Update time</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+ * @method array getComplianceRelations() Obtain <p>Associated identification template information</p>
+ * @method void setComplianceRelations(array $ComplianceRelations) Set <p>Associated identification template information</p>
+ */
+class DspmIdentifyLevelGroupItem extends AbstractModel
+{
+    /**
+     * @var integer <p>Level group id</p>
+     */
+    public $Id;
+
+    /**
+     * @var string <p>Level group name</p>
+     */
+    public $Name;
+
+    /**
+     * @var string <p>Level group description</p>
+     */
+    public $Description;
+
+    /**
+     * @var integer <p>Level group type</p><p>Enumeration values:</p><ul><li>0: Built-in</li><li>1: Custom</li></ul>
+     */
+    public $Type;
+
+    /**
+     * @var array <p>Level information</p>
+     */
+    public $LevelItems;
+
+    /**
+     * @var string <p>Update time</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+     */
+    public $UpdateTime;
+
+    /**
+     * @var array <p>Associated identification template information</p>
+     */
+    public $ComplianceRelations;
+
+    /**
+     * @param integer $Id <p>Level group id</p>
+     * @param string $Name <p>Level group name</p>
+     * @param string $Description <p>Level group description</p>
+     * @param integer $Type <p>Level group type</p><p>Enumeration values:</p><ul><li>0: Built-in</li><li>1: Custom</li></ul>
+     * @param array $LevelItems <p>Level information</p>
+     * @param string $UpdateTime <p>Update time</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+     * @param array $ComplianceRelations <p>Associated identification template information</p>
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("LevelItems",$param) and $param["LevelItems"] !== null) {
+            $this->LevelItems = [];
+            foreach ($param["LevelItems"] as $key => $value){
+                $obj = new DspmIdentifyLevelItem();
+                $obj->deserialize($value);
+                array_push($this->LevelItems, $obj);
+            }
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("ComplianceRelations",$param) and $param["ComplianceRelations"] !== null) {
+            $this->ComplianceRelations = [];
+            foreach ($param["ComplianceRelations"] as $key => $value){
+                $obj = new DspmIdentifyRefComplianceInfo();
+                $obj->deserialize($value);
+                array_push($this->ComplianceRelations, $obj);
+            }
+        }
+    }
+}

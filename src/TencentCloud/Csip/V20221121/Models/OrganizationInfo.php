@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Group Account Details
  *
- * @method string getNickName() Obtain member account name
- * @method void setNickName(string $NickName) Set member account name
+ * @method string getNickName() Obtain Member account name
+ * @method void setNickName(string $NickName) Set Member account name
  * @method string getNodeName() Obtain Department Node Name, Account's Department
  * @method void setNodeName(string $NodeName) Set Department Node Name, Account's Department
  * @method string getRole() Obtain Member/Admin/DelegatedAdmin/EntityAdmin, corresponding to Member/Administrator/Delegated Administrator/Entity Administrator
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJoinType(string $JoinType) Set Account Joining Method: Create/Invite.
  * @method string getGroupName() Obtain Group Name
  * @method void setGroupName(string $GroupName) Set Group Name
- * @method string getAdminName() Obtain administrator account name
- * @method void setAdminName(string $AdminName) Set administrator account name
+ * @method string getAdminName() Obtain Admin account name
+ * @method void setAdminName(string $AdminName) Set Admin account name
  * @method string getAdminUin() Obtain Administrator UIN
  * @method void setAdminUin(string $AdminUin) Set Administrator UIN
  * @method string getCreateTime() Obtain Creation time.
@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemberCount(integer $MemberCount) Set Number of members
  * @method integer getSubAccountCount() Obtain Number of sub-accounts
  * @method void setSubAccountCount(integer $SubAccountCount) Set Number of sub-accounts
- * @method integer getAbnormalSubUserCount() Obtain Number of abnormal sub-accounts
- * @method void setAbnormalSubUserCount(integer $AbnormalSubUserCount) Set Number of abnormal sub-accounts
+ * @method integer getAbnormalSubUserCount() Obtain Number of exceptional sub-accounts
+ * @method void setAbnormalSubUserCount(integer $AbnormalSubUserCount) Set Number of exceptional sub-accounts
  * @method array getGroupPermission() Obtain Group Relationship Policy Permissions
  * @method void setGroupPermission(array $GroupPermission) Set Group Relationship Policy Permissions
  * @method array getMemberPermission() Obtain Membership Policy Permissions
@@ -68,8 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCSIPProtect(string $CSIPProtect) Set Advanced/Enterprise/Ultimate 
  * @method integer getQuotaConsumer() Obtain 1 indicates the quota consumer.
  * @method void setQuotaConsumer(integer $QuotaConsumer) Set 1 indicates the quota consumer.
- * @method integer getEnableAdminCount() Obtain Number of activations by admin/delegated admin
- * @method void setEnableAdminCount(integer $EnableAdminCount) Set Number of activations by admin/delegated admin
+ * @method integer getEnableAdminCount() Obtain Number of enabled admins/delegated admins
+ * @method void setEnableAdminCount(integer $EnableAdminCount) Set Number of enabled admins/delegated admins
  * @method array getCloudCountDesc() Obtain Account Multi-Cloud Information Statistics, in array format. Refer to the description of CloudCountDesc for details.
  * @method void setCloudCountDesc(array $CloudCountDesc) Set Account Multi-Cloud Information Statistics, in array format. Refer to the description of CloudCountDesc for details.
  * @method integer getAdminCount() Obtain Total number of admins/delegated admins
@@ -78,7 +78,7 @@ use TencentCloud\Common\AbstractModel;
 class OrganizationInfo extends AbstractModel
 {
     /**
-     * @var string member account name
+     * @var string Member account name
      */
     public $NickName;
 
@@ -108,7 +108,7 @@ class OrganizationInfo extends AbstractModel
     public $GroupName;
 
     /**
-     * @var string administrator account name
+     * @var string Admin account name
      */
     public $AdminName;
 
@@ -138,7 +138,7 @@ class OrganizationInfo extends AbstractModel
     public $SubAccountCount;
 
     /**
-     * @var integer Number of abnormal sub-accounts
+     * @var integer Number of exceptional sub-accounts
      */
     public $AbnormalSubUserCount;
 
@@ -198,7 +198,7 @@ class OrganizationInfo extends AbstractModel
     public $QuotaConsumer;
 
     /**
-     * @var integer Number of activations by admin/delegated admin
+     * @var integer Number of enabled admins/delegated admins
      */
     public $EnableAdminCount;
 
@@ -213,19 +213,19 @@ class OrganizationInfo extends AbstractModel
     public $AdminCount;
 
     /**
-     * @param string $NickName member account name
+     * @param string $NickName Member account name
      * @param string $NodeName Department Node Name, Account's Department
      * @param string $Role Member/Admin/DelegatedAdmin/EntityAdmin, corresponding to Member/Administrator/Delegated Administrator/Entity Administrator
      * @param string $MemberId Member Account ID
      * @param string $JoinType Account Joining Method: Create/Invite.
      * @param string $GroupName Group Name
-     * @param string $AdminName administrator account name
+     * @param string $AdminName Admin account name
      * @param string $AdminUin Administrator UIN
      * @param string $CreateTime Creation time.
      * @param integer $NodeCount Number of departments
      * @param integer $MemberCount Number of members
      * @param integer $SubAccountCount Number of sub-accounts
-     * @param integer $AbnormalSubUserCount Number of abnormal sub-accounts
+     * @param integer $AbnormalSubUserCount Number of exceptional sub-accounts
      * @param array $GroupPermission Group Relationship Policy Permissions
      * @param array $MemberPermission Membership Policy Permissions
      * @param integer $GroupPayMode Group Payment Mode. 0: Self-payment; 1: Proxy Payment.
@@ -237,7 +237,7 @@ class OrganizationInfo extends AbstractModel
      * @param string $MemberCreateTime Member Creation Time
      * @param string $CSIPProtect Advanced/Enterprise/Ultimate 
      * @param integer $QuotaConsumer 1 indicates the quota consumer.
-     * @param integer $EnableAdminCount Number of activations by admin/delegated admin
+     * @param integer $EnableAdminCount Number of enabled admins/delegated admins
      * @param array $CloudCountDesc Account Multi-Cloud Information Statistics, in array format. Refer to the description of CloudCountDesc for details.
      * @param integer $AdminCount Total number of admins/delegated admins
      */

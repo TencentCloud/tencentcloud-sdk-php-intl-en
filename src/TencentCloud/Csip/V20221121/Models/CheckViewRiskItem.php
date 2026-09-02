@@ -18,24 +18,24 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Check item perspective risk
+ * Check item viewing angle risk
  *
- * @method string getRiskRuleId() Obtain <p>Check item rule ID</p>
- * @method void setRiskRuleId(string $RiskRuleId) Set <p>Check item rule ID</p>
+ * @method string getRiskRuleId() Obtain <p>check item rule ID</p>
+ * @method void setRiskRuleId(string $RiskRuleId) Set <p>check item rule ID</p>
  * @method string getRiskTitle() Obtain <p>Risk name</p>
  * @method void setRiskTitle(string $RiskTitle) Set <p>Risk name</p>
  * @method string getCheckType() Obtain <p>Check type</p>
  * @method void setCheckType(string $CheckType) Set <p>Check type</p>
- * @method string getSeverity() Obtain <p>Risk level</p>
- * @method void setSeverity(string $Severity) Set <p>Risk level</p>
- * @method string getRiskDesc() Obtain <p>1 risk item exists</p>
- * @method void setRiskDesc(string $RiskDesc) Set <p>1 risk item exists</p>
+ * @method string getSeverity() Obtain <p>Risk level.</p>
+ * @method void setSeverity(string $Severity) Set <p>Risk level.</p>
+ * @method string getRiskDesc() Obtain <p>There is 1 risk item</p>
+ * @method void setRiskDesc(string $RiskDesc) Set <p>There is 1 risk item</p>
  * @method string getCreateTime() Obtain <p>First discovery time</p>
  * @method void setCreateTime(string $CreateTime) Set <p>First discovery time</p>
  * @method string getUpdateTime() Obtain <p>Risk update time</p>
  * @method void setUpdateTime(string $UpdateTime) Set <p>Risk update time</p>
- * @method string getProvider() Obtain <p>Cloud vendor</p>
- * @method void setProvider(string $Provider) Set <p>Cloud vendor</p>
+ * @method string getProvider() Obtain <p>Cloud service provider.</p>
+ * @method void setProvider(string $Provider) Set <p>Cloud service provider.</p>
  * @method integer getRiskStatus() Obtain <p>Risk status</p>
  * @method void setRiskStatus(integer $RiskStatus) Set <p>Risk status</p>
  * @method integer getAssetCount() Obtain <p>Number of affected assets</p>
@@ -46,17 +46,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssetType(string $AssetType) Set <p>Asset type</p>
  * @method string getEventType() Obtain <p>Event type</p>
  * @method void setEventType(string $EventType) Set <p>Event type</p>
- * @method string getClassify() Obtain <p>Disposal categorization</p>
- * @method void setClassify(string $Classify) Set <p>Disposal categorization</p>
- * @method array getStandardTerms() Obtain <p>cspm standard clauses</p>
- * @method void setStandardTerms(array $StandardTerms) Set <p>cspm standard clauses</p>
+ * @method string getClassify() Obtain <p>Handling category</p>
+ * @method void setClassify(string $Classify) Set <p>Handling category</p>
+ * @method array getStandardTerms() Obtain <p>cspm specification clause</p>
+ * @method void setStandardTerms(array $StandardTerms) Set <p>cspm specification clause</p>
  * @method string getAssetTypeIconURL() Obtain <p>Asset type icon</p>
  * @method void setAssetTypeIconURL(string $AssetTypeIconURL) Set <p>Asset type icon</p>
  */
 class CheckViewRiskItem extends AbstractModel
 {
     /**
-     * @var string <p>Check item rule ID</p>
+     * @var string <p>check item rule ID</p>
      */
     public $RiskRuleId;
 
@@ -71,12 +71,12 @@ class CheckViewRiskItem extends AbstractModel
     public $CheckType;
 
     /**
-     * @var string <p>Risk level</p>
+     * @var string <p>Risk level.</p>
      */
     public $Severity;
 
     /**
-     * @var string <p>1 risk item exists</p>
+     * @var string <p>There is 1 risk item</p>
      */
     public $RiskDesc;
 
@@ -91,7 +91,7 @@ class CheckViewRiskItem extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string <p>Cloud vendor</p>
+     * @var string <p>Cloud service provider.</p>
      */
     public $Provider;
 
@@ -121,12 +121,12 @@ class CheckViewRiskItem extends AbstractModel
     public $EventType;
 
     /**
-     * @var string <p>Disposal categorization</p>
+     * @var string <p>Handling category</p>
      */
     public $Classify;
 
     /**
-     * @var array <p>cspm standard clauses</p>
+     * @var array <p>cspm specification clause</p>
      */
     public $StandardTerms;
 
@@ -136,21 +136,21 @@ class CheckViewRiskItem extends AbstractModel
     public $AssetTypeIconURL;
 
     /**
-     * @param string $RiskRuleId <p>Check item rule ID</p>
+     * @param string $RiskRuleId <p>check item rule ID</p>
      * @param string $RiskTitle <p>Risk name</p>
      * @param string $CheckType <p>Check type</p>
-     * @param string $Severity <p>Risk level</p>
-     * @param string $RiskDesc <p>1 risk item exists</p>
+     * @param string $Severity <p>Risk level.</p>
+     * @param string $RiskDesc <p>There is 1 risk item</p>
      * @param string $CreateTime <p>First discovery time</p>
      * @param string $UpdateTime <p>Risk update time</p>
-     * @param string $Provider <p>Cloud vendor</p>
+     * @param string $Provider <p>Cloud service provider.</p>
      * @param integer $RiskStatus <p>Risk status</p>
      * @param integer $AssetCount <p>Number of affected assets</p>
      * @param integer $RiskCount <p>Number of risks</p>
      * @param string $AssetType <p>Asset type</p>
      * @param string $EventType <p>Event type</p>
-     * @param string $Classify <p>Disposal categorization</p>
-     * @param array $StandardTerms <p>cspm standard clauses</p>
+     * @param string $Classify <p>Handling category</p>
+     * @param array $StandardTerms <p>cspm specification clause</p>
      * @param string $AssetTypeIconURL <p>Asset type icon</p>
      */
     function __construct()

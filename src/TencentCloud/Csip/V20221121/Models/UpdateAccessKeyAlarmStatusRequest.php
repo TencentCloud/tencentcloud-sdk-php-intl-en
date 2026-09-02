@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateAccessKeyAlarmStatus request structure.
  *
- * @method integer getStatus() Obtain Status  0: unprocessed 1: fixed 2: ignored.
- * @method void setStatus(integer $Status) Set Status  0: unprocessed 1: fixed 2: ignored.
+ * @method integer getStatus() Obtain Status. 0: unprocessed; 1: processed; 2: ignored
+ * @method void setStatus(integer $Status) Set Status. 0: unprocessed; 1: processed; 2: ignored
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method array getAlarmIDList() Obtain Alarm ID list.
- * @method void setAlarmIDList(array $AlarmIDList) Set Alarm ID list.
- * @method array getRiskIDList() Obtain Risk ID list.
- * @method void setRiskIDList(array $RiskIDList) Set Risk ID list.
+ * @method array getAlarmIDList() Obtain List of alarm IDs
+ * @method void setAlarmIDList(array $AlarmIDList) Set List of alarm IDs
+ * @method array getRiskIDList() Obtain Risk ID list
+ * @method void setRiskIDList(array $RiskIDList) Set Risk ID list
  */
 class UpdateAccessKeyAlarmStatusRequest extends AbstractModel
 {
     /**
-     * @var integer Status  0: unprocessed 1: fixed 2: ignored.
+     * @var integer Status. 0: unprocessed; 1: processed; 2: ignored
      */
     public $Status;
 
@@ -42,20 +42,20 @@ class UpdateAccessKeyAlarmStatusRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var array Alarm ID list.
+     * @var array List of alarm IDs
      */
     public $AlarmIDList;
 
     /**
-     * @var array Risk ID list.
+     * @var array Risk ID list
      */
     public $RiskIDList;
 
     /**
-     * @param integer $Status Status  0: unprocessed 1: fixed 2: ignored.
+     * @param integer $Status Status. 0: unprocessed; 1: processed; 2: ignored
      * @param array $MemberId Group Account Member ID
-     * @param array $AlarmIDList Alarm ID list.
-     * @param array $RiskIDList Risk ID list.
+     * @param array $AlarmIDList List of alarm IDs
+     * @param array $RiskIDList Risk ID list
      */
     function __construct()
     {

@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * This example shows you how to obtain the cluster list.
 
-Cluster protection status. enumerate on the left. display on the right.
-Cluster protection status. 
-Not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-6: uninstalling. 
-7: uninstallation exception.
+Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception
  *
  * @method integer getAppId() Obtain Tenant ID
  * @method void setAppId(integer $AppId) Set Tenant ID
- * @method string getUin() Obtain Tenant uin.
- * @method void setUin(string $Uin) Set Tenant uin.
+ * @method string getUin() Obtain Tenant uin
+ * @method void setUin(string $Uin) Set Tenant uin
  * @method string getNick() Obtain Tenant Nickname
  * @method void setNick(string $Nick) Set Tenant Nickname
  * @method string getRegion() Obtain Region.
@@ -49,60 +49,60 @@ Unprotected.
  * @method void setInstanceCreateTime(string $InstanceCreateTime) Set Cluster Creation Time
  * @method string getStatus() Obtain Status.
  * @method void setStatus(string $Status) Set Status.
- * @method integer getProtectStatus() Obtain Cluster protection status, enumerate on the left, display on the right.
-Protection status of the cluster. 
-0: not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-Uninstalling. 
-7: uninstallation exception.
- * @method void setProtectStatus(integer $ProtectStatus) Set Cluster protection status, enumerate on the left, display on the right.
-Protection status of the cluster. 
-0: not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-Uninstalling. 
-7: uninstallation exception.
- * @method string getProtectInfo() Obtain Access information, being empty indicates no access exception info.
- * @method void setProtectInfo(string $ProtectInfo) Set Access information, being empty indicates no access exception info.
- * @method string getVpcId() Obtain VPC id.
- * @method void setVpcId(string $VpcId) Set VPC id.
- * @method string getVpcName() Obtain VPC name.
- * @method void setVpcName(string $VpcName) Set VPC name.
- * @method string getKubernetesVersion() Obtain kubernetes version.
- * @method void setKubernetesVersion(string $KubernetesVersion) Set kubernetes version.
- * @method string getComponent() Obtain Runtime component.
- * @method void setComponent(string $Component) Set Runtime component.
- * @method string getComponentVersion() Obtain Runtime component version.
- * @method void setComponentVersion(string $ComponentVersion) Set Runtime component version.
- * @method string getComponentStatus() Obtain Component status.
- * @method void setComponentStatus(string $ComponentStatus) Set Component status.
+ * @method integer getProtectStatus() Obtain Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception
+ * @method void setProtectStatus(integer $ProtectStatus) Set Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception
+ * @method string getProtectInfo() Obtain Access information. Being not empty indicates an access exception message.
+ * @method void setProtectInfo(string $ProtectInfo) Set Access information. Being not empty indicates an access exception message.
+ * @method string getVpcId() Obtain VPC id
+ * @method void setVpcId(string $VpcId) Set VPC id
+ * @method string getVpcName() Obtain VPC name
+ * @method void setVpcName(string $VpcName) Set VPC name
+ * @method string getKubernetesVersion() Obtain kubernetes version
+ * @method void setKubernetesVersion(string $KubernetesVersion) Set kubernetes version
+ * @method string getComponent() Obtain Runtime component
+ * @method void setComponent(string $Component) Set Runtime component
+ * @method string getComponentVersion() Obtain Runtime component version
+ * @method void setComponentVersion(string $ComponentVersion) Set Runtime component version
+ * @method string getComponentStatus() Obtain Component status
+ * @method void setComponentStatus(string $ComponentStatus) Set Component status
  * @method string getCheckTime() Obtain Health Checkup Time
  * @method void setCheckTime(string $CheckTime) Set Health Checkup Time
- * @method integer getMachineCount() Obtain Associated hosts.
- * @method void setMachineCount(integer $MachineCount) Set Associated hosts.
+ * @method integer getMachineCount() Obtain Number of associated hosts
+ * @method void setMachineCount(integer $MachineCount) Set Number of associated hosts
  * @method integer getPodCount() Obtain Associated Pod Count
  * @method void setPodCount(integer $PodCount) Set Associated Pod Count
  * @method integer getServiceCount() Obtain Associated Service Count
  * @method void setServiceCount(integer $ServiceCount) Set Associated Service Count
- * @method integer getVulRisk() Obtain Vulnerability risk.
- * @method void setVulRisk(integer $VulRisk) Set Vulnerability risk.
- * @method integer getCFGRisk() Obtain Configuration risk.
- * @method void setCFGRisk(integer $CFGRisk) Set Configuration risk.
+ * @method integer getVulRisk() Obtain Vulnerability risk
+ * @method void setVulRisk(integer $VulRisk) Set Vulnerability risk
+ * @method integer getCFGRisk() Obtain Configuration risk
+ * @method void setCFGRisk(integer $CFGRisk) Set Configuration risk
  * @method integer getCheckCount() Obtain Health Checkup Count
  * @method void setCheckCount(integer $CheckCount) Set Health Checkup Count
  * @method integer getIsCore() Obtain Whether it is core. 1: Core; 2: Non-core.
  * @method void setIsCore(integer $IsCore) Set Whether it is core. 1: Core; 2: Non-core.
  * @method integer getIsNewAsset() Obtain New Asset or Not. 1: New
  * @method void setIsNewAsset(integer $IsNewAsset) Set New Asset or Not. 1: New
- * @method integer getCloudType() Obtain Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
- * @method void setCloudType(integer $CloudType) Set Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+ * @method integer getCloudType() Obtain Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
+ * @method void setCloudType(integer $CloudType) Set Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
  */
 class AssetCluster extends AbstractModel
 {
@@ -112,7 +112,7 @@ class AssetCluster extends AbstractModel
     public $AppId;
 
     /**
-     * @var string Tenant uin.
+     * @var string Tenant uin
      */
     public $Uin;
 
@@ -152,51 +152,51 @@ class AssetCluster extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Cluster protection status, enumerate on the left, display on the right.
-Protection status of the cluster. 
-0: not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-Uninstalling. 
-7: uninstallation exception.
+     * @var integer Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception
      */
     public $ProtectStatus;
 
     /**
-     * @var string Access information, being empty indicates no access exception info.
+     * @var string Access information. Being not empty indicates an access exception message.
      */
     public $ProtectInfo;
 
     /**
-     * @var string VPC id.
+     * @var string VPC id
      */
     public $VpcId;
 
     /**
-     * @var string VPC name.
+     * @var string VPC name
      */
     public $VpcName;
 
     /**
-     * @var string kubernetes version.
+     * @var string kubernetes version
      */
     public $KubernetesVersion;
 
     /**
-     * @var string Runtime component.
+     * @var string Runtime component
      */
     public $Component;
 
     /**
-     * @var string Runtime component version.
+     * @var string Runtime component version
      */
     public $ComponentVersion;
 
     /**
-     * @var string Component status.
+     * @var string Component status
      */
     public $ComponentStatus;
 
@@ -206,7 +206,7 @@ Uninstalling.
     public $CheckTime;
 
     /**
-     * @var integer Associated hosts.
+     * @var integer Number of associated hosts
      */
     public $MachineCount;
 
@@ -221,12 +221,12 @@ Uninstalling.
     public $ServiceCount;
 
     /**
-     * @var integer Vulnerability risk.
+     * @var integer Vulnerability risk
      */
     public $VulRisk;
 
     /**
-     * @var integer Configuration risk.
+     * @var integer Configuration risk
      */
     public $CFGRisk;
 
@@ -246,13 +246,13 @@ Uninstalling.
     public $IsNewAsset;
 
     /**
-     * @var integer Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+     * @var integer Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
      */
     public $CloudType;
 
     /**
      * @param integer $AppId Tenant ID
-     * @param string $Uin Tenant uin.
+     * @param string $Uin Tenant uin
      * @param string $Nick Tenant Nickname
      * @param string $Region Region.
      * @param string $AssetId Cluster ID.
@@ -260,33 +260,33 @@ Uninstalling.
      * @param string $AssetType Cluster type.
      * @param string $InstanceCreateTime Cluster Creation Time
      * @param string $Status Status.
-     * @param integer $ProtectStatus Cluster protection status, enumerate on the left, display on the right.
-Protection status of the cluster. 
-0: not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-Uninstalling. 
-7: uninstallation exception.
-     * @param string $ProtectInfo Access information, being empty indicates no access exception info.
-     * @param string $VpcId VPC id.
-     * @param string $VpcName VPC name.
-     * @param string $KubernetesVersion kubernetes version.
-     * @param string $Component Runtime component.
-     * @param string $ComponentVersion Runtime component version.
-     * @param string $ComponentStatus Component status.
+     * @param integer $ProtectStatus Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception
+     * @param string $ProtectInfo Access information. Being not empty indicates an access exception message.
+     * @param string $VpcId VPC id
+     * @param string $VpcName VPC name
+     * @param string $KubernetesVersion kubernetes version
+     * @param string $Component Runtime component
+     * @param string $ComponentVersion Runtime component version
+     * @param string $ComponentStatus Component status
      * @param string $CheckTime Health Checkup Time
-     * @param integer $MachineCount Associated hosts.
+     * @param integer $MachineCount Number of associated hosts
      * @param integer $PodCount Associated Pod Count
      * @param integer $ServiceCount Associated Service Count
-     * @param integer $VulRisk Vulnerability risk.
-     * @param integer $CFGRisk Configuration risk.
+     * @param integer $VulRisk Vulnerability risk
+     * @param integer $CFGRisk Configuration risk
      * @param integer $CheckCount Health Checkup Count
      * @param integer $IsCore Whether it is core. 1: Core; 2: Non-core.
      * @param integer $IsNewAsset New Asset or Not. 1: New
-     * @param integer $CloudType Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+     * @param integer $CloudType Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
      */
     function __construct()
     {

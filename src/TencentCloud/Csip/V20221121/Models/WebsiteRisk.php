@@ -18,96 +18,96 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of a content risk
+ * Website Risk Objects
  *
- * @method string getAffectAsset() Obtain Affected assets
- * @method void setAffectAsset(string $AffectAsset) Set Affected assets
- * @method string getLevel() Obtain Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
- * @method void setLevel(string $Level) Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
- * @method string getRecentTime() Obtain Last detected
- * @method void setRecentTime(string $RecentTime) Set Last detected
- * @method string getFirstTime() Obtain First detected
- * @method void setFirstTime(string $FirstTime) Set First detected
- * @method integer getStatus() Obtain Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
- * @method void setStatus(integer $Status) Set Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
- * @method string getId() Obtain ID, use to handle risk
- * @method void setId(string $Id) Set ID, use to handle risk
- * @method string getIndex() Obtain Frontend index
- * @method void setIndex(string $Index) Set Frontend index
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method string getAppId() Obtain User `appid`
- * @method void setAppId(string $AppId) Set User `appid`
+ * @method string getAffectAsset() Obtain Affect assets
+ * @method void setAffectAsset(string $AffectAsset) Set Affect assets
+ * @method string getLevel() Obtain Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+ * @method void setLevel(string $Level) Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+ * @method string getRecentTime() Obtain Latest Recognition Time
+ * @method void setRecentTime(string $RecentTime) Set Latest Recognition Time
+ * @method string getFirstTime() Obtain First Recognition Time
+ * @method void setFirstTime(string $FirstTime) Set First Recognition Time
+ * @method integer getStatus() Obtain Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
+ * @method void setStatus(integer $Status) Set Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
+ * @method string getId() Obtain ID, handle risks
+ * @method void setId(string $Id) Set ID, handle risks
+ * @method string getIndex() Obtain Front-end Index
+ * @method void setIndex(string $Index) Set Front-end Index
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
+ * @method string getAppId() Obtain User appid.
+ * @method void setAppId(string $AppId) Set User appid.
  * @method string getNick() Obtain User Nickname
  * @method void setNick(string $Nick) Set User Nickname
  * @method string getUin() Obtain User UIN
  * @method void setUin(string $Uin) Set User UIN
- * @method string getURL() Obtain URL of the risk
- * @method void setURL(string $URL) Set URL of the risk
- * @method string getURLPath() Obtain URL of the risk file
- * @method void setURLPath(string $URLPath) Set URL of the risk file
+ * @method string getURL() Obtain Risky link
+ * @method void setURL(string $URL) Set Risky link
+ * @method string getURLPath() Obtain Risk File Address
+ * @method void setURLPath(string $URLPath) Set Risk File Address
  * @method string getInstanceType() Obtain Instance type
  * @method void setInstanceType(string $InstanceType) Set Instance type
- * @method string getDetectEngine() Obtain Check type.
- * @method void setDetectEngine(string $DetectEngine) Set Check type.
- * @method string getResultDescribe() Obtain Result description.
- * @method void setResultDescribe(string $ResultDescribe) Set Result description.
- * @method string getSourceURL() Obtain Source URL
- * @method void setSourceURL(string $SourceURL) Set Source URL
- * @method string getSourceURLPath() Obtain Source file URL
- * @method void setSourceURLPath(string $SourceURLPath) Set Source file URL
+ * @method string getDetectEngine() Obtain Type.
+ * @method void setDetectEngine(string $DetectEngine) Set Type.
+ * @method string getResultDescribe() Obtain Result Description
+ * @method void setResultDescribe(string $ResultDescribe) Set Result Description
+ * @method string getSourceURL() Obtain Source Address URL
+ * @method void setSourceURL(string $SourceURL) Set Source Address URL
+ * @method string getSourceURLPath() Obtain Source File Address
+ * @method void setSourceURLPath(string $SourceURLPath) Set Source File Address
  */
 class WebsiteRisk extends AbstractModel
 {
     /**
-     * @var string Affected assets
+     * @var string Affect assets
      */
     public $AffectAsset;
 
     /**
-     * @var string Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @var string Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public $Level;
 
     /**
-     * @var string Last detected
+     * @var string Latest Recognition Time
      */
     public $RecentTime;
 
     /**
-     * @var string First detected
+     * @var string First Recognition Time
      */
     public $FirstTime;
 
     /**
-     * @var integer Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * @var integer Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
      */
     public $Status;
 
     /**
-     * @var string ID, use to handle risk
+     * @var string ID, handle risks
      */
     public $Id;
 
     /**
-     * @var string Frontend index
+     * @var string Front-end Index
      */
     public $Index;
 
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
-     * @var string User `appid`
+     * @var string User appid.
      */
     public $AppId;
 
@@ -122,12 +122,12 @@ class WebsiteRisk extends AbstractModel
     public $Uin;
 
     /**
-     * @var string URL of the risk
+     * @var string Risky link
      */
     public $URL;
 
     /**
-     * @var string URL of the risk file
+     * @var string Risk File Address
      */
     public $URLPath;
 
@@ -137,45 +137,45 @@ class WebsiteRisk extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string Check type.
+     * @var string Type.
      */
     public $DetectEngine;
 
     /**
-     * @var string Result description.
+     * @var string Result Description
      */
     public $ResultDescribe;
 
     /**
-     * @var string Source URL
+     * @var string Source Address URL
      */
     public $SourceURL;
 
     /**
-     * @var string Source file URL
+     * @var string Source File Address
      */
     public $SourceURLPath;
 
     /**
-     * @param string $AffectAsset Affected assets
-     * @param string $Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-     * @param string $RecentTime Last detected
-     * @param string $FirstTime First detected
-     * @param integer $Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-     * @param string $Id ID, use to handle risk
-     * @param string $Index Frontend index
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
-     * @param string $AppId User `appid`
+     * @param string $AffectAsset Affect assets
+     * @param string $Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+     * @param string $RecentTime Latest Recognition Time
+     * @param string $FirstTime First Recognition Time
+     * @param integer $Status Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
+     * @param string $Id ID, handle risks
+     * @param string $Index Front-end Index
+     * @param string $InstanceId Instance ID.
+     * @param string $InstanceName Instance name.
+     * @param string $AppId User appid.
      * @param string $Nick User Nickname
      * @param string $Uin User UIN
-     * @param string $URL URL of the risk
-     * @param string $URLPath URL of the risk file
+     * @param string $URL Risky link
+     * @param string $URLPath Risk File Address
      * @param string $InstanceType Instance type
-     * @param string $DetectEngine Check type.
-     * @param string $ResultDescribe Result description.
-     * @param string $SourceURL Source URL
-     * @param string $SourceURLPath Source file URL
+     * @param string $DetectEngine Type.
+     * @param string $ResultDescribe Result Description
+     * @param string $SourceURL Source Address URL
+     * @param string $SourceURLPath Source File Address
      */
     function __construct()
     {

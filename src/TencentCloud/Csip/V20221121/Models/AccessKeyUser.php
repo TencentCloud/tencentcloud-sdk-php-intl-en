@@ -18,65 +18,65 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Access key account information.
+ * Access key account information
  *
- * @method integer getID() Obtain Account ID.
- * @method void setID(integer $ID) Set Account ID.
+ * @method integer getID() Obtain Account ID
+ * @method void setID(integer $ID) Set Account ID
  * @method string getName() Obtain Account name
  * @method void setName(string $Name) Set Account name
- * @method integer getType() Obtain 0 root account 1 sub-account.
- * @method void setType(integer $Type) Set 0 root account 1 sub-account.
- * @method integer getAccessType() Obtain Access method.
+ * @method integer getType() Obtain 0 Root account 1 Sub-account
+ * @method void setType(integer $Type) Set 0 Root account 1 Sub-account
+ * @method integer getAccessType() Obtain Access method
 0 API
-1 console and API.
- * @method void setAccessType(integer $AccessType) Set Access method.
+1 Console and API
+ * @method void setAccessType(integer $AccessType) Set Access method
 0 API
-1 console and API.
- * @method integer getAdvice() Obtain Security recommendation enumerate 0 normal 1 process immediately 2 recommend reinforcement.
- * @method void setAdvice(integer $Advice) Set Security recommendation enumerate 0 normal 1 process immediately 2 recommend reinforcement.
+1 Console and API
+ * @method integer getAdvice() Obtain Security advice. Enumerated values: 0: Normal. 1: Process now. 2: Hardening recommended.
+ * @method void setAdvice(integer $Advice) Set Security advice. Enumerated values: 0: Normal. 1: Process now. 2: Hardening recommended.
  * @method array getAccessKeyAlarmList() Obtain Alarm information list.
  * @method void setAccessKeyAlarmList(array $AccessKeyAlarmList) Set Alarm information list.
  * @method array getAccessKeyRiskList() Obtain Risk information list.
  * @method void setAccessKeyRiskList(array $AccessKeyRiskList) Set Risk information list.
- * @method integer getAppID() Obtain Account associate APPID.
- * @method void setAppID(integer $AppID) Set Account associate APPID.
- * @method string getNickname() Obtain Nickname of the main account.
- * @method void setNickname(string $Nickname) Set Nickname of the main account.
- * @method string getSubNickname() Obtain Sub-Account nickname.
- * @method void setSubNickname(string $SubNickname) Set Sub-Account nickname.
- * @method string getUin() Obtain Account Uin belonging to main account.
- * @method void setUin(string $Uin) Set Account Uin belonging to main account.
- * @method string getSubUin() Obtain Account self uin, same as root account uin when it is the root account.
- * @method void setSubUin(string $SubUin) Set Account self uin, same as root account uin when it is the root account.
- * @method string getLoginIP() Obtain Login IP.
- * @method void setLoginIP(string $LoginIP) Set Login IP.
+ * @method integer getAppID() Obtain APPID of the account
+ * @method void setAppID(integer $AppID) Set APPID of the account
+ * @method string getNickname() Obtain Main account nickname
+ * @method void setNickname(string $Nickname) Set Main account nickname
+ * @method string getSubNickname() Obtain Sub-account nickname
+ * @method void setSubNickname(string $SubNickname) Set Sub-account nickname
+ * @method string getUin() Obtain Uin of the main account to which the account belongs
+ * @method void setUin(string $Uin) Set Uin of the main account to which the account belongs
+ * @method string getSubUin() Obtain Account's own uin. For a root account, it is the same as the root account uin.
+ * @method void setSubUin(string $SubUin) Set Account's own uin. For a root account, it is the same as the root account uin.
+ * @method string getLoginIP() Obtain Login IP
+ * @method void setLoginIP(string $LoginIP) Set Login IP
  * @method string getLoginLocation() Obtain Login address.
  * @method void setLoginLocation(string $LoginLocation) Set Login address.
- * @method string getLoginTime() Obtain Log-In time.
- * @method void setLoginTime(string $LoginTime) Set Log-In time.
+ * @method string getLoginTime() Obtain Log-in time
+ * @method void setLoginTime(string $LoginTime) Set Log-in time
  * @method string getISP() Obtain ISP name
  * @method void setISP(string $ISP) Set ISP name
- * @method integer getActionFlag() Obtain Whether operation protection is enabled.
-0 not enabled.
-1: enabled.
- * @method void setActionFlag(integer $ActionFlag) Set Whether operation protection is enabled.
-0 not enabled.
-1: enabled.
- * @method integer getLoginFlag() Obtain Is login protection enabled?.
-0 not enabled.
-1: enabled.
- * @method void setLoginFlag(integer $LoginFlag) Set Is login protection enabled?.
-0 not enabled.
-1: enabled.
- * @method integer getCheckStatus() Obtain 0 means detected. 1 means detecting.
- * @method void setCheckStatus(integer $CheckStatus) Set 0 means detected. 1 means detecting.
- * @method integer getCloudType() Obtain Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
- * @method void setCloudType(integer $CloudType) Set Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+ * @method integer getActionFlag() Obtain Whether operation protection is enabled
+0: not enabled
+1: On.
+ * @method void setActionFlag(integer $ActionFlag) Set Whether operation protection is enabled
+0: not enabled
+1: On.
+ * @method integer getLoginFlag() Obtain Whether login protection is enabled
+0: not enabled
+1: On.
+ * @method void setLoginFlag(integer $LoginFlag) Set Whether login protection is enabled
+0: not enabled
+1: On.
+ * @method integer getCheckStatus() Obtain 0 indicates detected, and 1 indicates in-progress detection.
+ * @method void setCheckStatus(integer $CheckStatus) Set 0 indicates detected, and 1 indicates in-progress detection.
+ * @method integer getCloudType() Obtain Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
+ * @method void setCloudType(integer $CloudType) Set Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
  */
 class AccessKeyUser extends AbstractModel
 {
     /**
-     * @var integer Account ID.
+     * @var integer Account ID
      */
     public $ID;
 
@@ -86,19 +86,19 @@ class AccessKeyUser extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 0 root account 1 sub-account.
+     * @var integer 0 Root account 1 Sub-account
      */
     public $Type;
 
     /**
-     * @var integer Access method.
+     * @var integer Access method
 0 API
-1 console and API.
+1 Console and API
      */
     public $AccessType;
 
     /**
-     * @var integer Security recommendation enumerate 0 normal 1 process immediately 2 recommend reinforcement.
+     * @var integer Security advice. Enumerated values: 0: Normal. 1: Process now. 2: Hardening recommended.
      */
     public $Advice;
 
@@ -113,32 +113,32 @@ class AccessKeyUser extends AbstractModel
     public $AccessKeyRiskList;
 
     /**
-     * @var integer Account associate APPID.
+     * @var integer APPID of the account
      */
     public $AppID;
 
     /**
-     * @var string Nickname of the main account.
+     * @var string Main account nickname
      */
     public $Nickname;
 
     /**
-     * @var string Sub-Account nickname.
+     * @var string Sub-account nickname
      */
     public $SubNickname;
 
     /**
-     * @var string Account Uin belonging to main account.
+     * @var string Uin of the main account to which the account belongs
      */
     public $Uin;
 
     /**
-     * @var string Account self uin, same as root account uin when it is the root account.
+     * @var string Account's own uin. For a root account, it is the same as the root account uin.
      */
     public $SubUin;
 
     /**
-     * @var string Login IP.
+     * @var string Login IP
      */
     public $LoginIP;
 
@@ -148,7 +148,7 @@ class AccessKeyUser extends AbstractModel
     public $LoginLocation;
 
     /**
-     * @var string Log-In time.
+     * @var string Log-in time
      */
     public $LoginTime;
 
@@ -158,56 +158,56 @@ class AccessKeyUser extends AbstractModel
     public $ISP;
 
     /**
-     * @var integer Whether operation protection is enabled.
-0 not enabled.
-1: enabled.
+     * @var integer Whether operation protection is enabled
+0: not enabled
+1: On.
      */
     public $ActionFlag;
 
     /**
-     * @var integer Is login protection enabled?.
-0 not enabled.
-1: enabled.
+     * @var integer Whether login protection is enabled
+0: not enabled
+1: On.
      */
     public $LoginFlag;
 
     /**
-     * @var integer 0 means detected. 1 means detecting.
+     * @var integer 0 indicates detected, and 1 indicates in-progress detection.
      */
     public $CheckStatus;
 
     /**
-     * @var integer Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+     * @var integer Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
      */
     public $CloudType;
 
     /**
-     * @param integer $ID Account ID.
+     * @param integer $ID Account ID
      * @param string $Name Account name
-     * @param integer $Type 0 root account 1 sub-account.
-     * @param integer $AccessType Access method.
+     * @param integer $Type 0 Root account 1 Sub-account
+     * @param integer $AccessType Access method
 0 API
-1 console and API.
-     * @param integer $Advice Security recommendation enumerate 0 normal 1 process immediately 2 recommend reinforcement.
+1 Console and API
+     * @param integer $Advice Security advice. Enumerated values: 0: Normal. 1: Process now. 2: Hardening recommended.
      * @param array $AccessKeyAlarmList Alarm information list.
      * @param array $AccessKeyRiskList Risk information list.
-     * @param integer $AppID Account associate APPID.
-     * @param string $Nickname Nickname of the main account.
-     * @param string $SubNickname Sub-Account nickname.
-     * @param string $Uin Account Uin belonging to main account.
-     * @param string $SubUin Account self uin, same as root account uin when it is the root account.
-     * @param string $LoginIP Login IP.
+     * @param integer $AppID APPID of the account
+     * @param string $Nickname Main account nickname
+     * @param string $SubNickname Sub-account nickname
+     * @param string $Uin Uin of the main account to which the account belongs
+     * @param string $SubUin Account's own uin. For a root account, it is the same as the root account uin.
+     * @param string $LoginIP Login IP
      * @param string $LoginLocation Login address.
-     * @param string $LoginTime Log-In time.
+     * @param string $LoginTime Log-in time
      * @param string $ISP ISP name
-     * @param integer $ActionFlag Whether operation protection is enabled.
-0 not enabled.
-1: enabled.
-     * @param integer $LoginFlag Is login protection enabled?.
-0 not enabled.
-1: enabled.
-     * @param integer $CheckStatus 0 means detected. 1 means detecting.
-     * @param integer $CloudType Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+     * @param integer $ActionFlag Whether operation protection is enabled
+0: not enabled
+1: On.
+     * @param integer $LoginFlag Whether login protection is enabled
+0: not enabled
+1: On.
+     * @param integer $CheckStatus 0 indicates detected, and 1 indicates in-progress detection.
+     * @param integer $CloudType Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
      */
     function __construct()
     {

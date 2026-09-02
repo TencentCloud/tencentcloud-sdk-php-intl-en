@@ -18,28 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IaC detection file risk
+ * Risk of IaC detection files
  *
- * @method integer getLevel() Obtain <p>Risk level (0: low-risk, 1: medium-risk, 2: high-risk, 3: critical)</p>
- * @method void setLevel(integer $Level) Set <p>Risk level (0: low-risk, 1: medium-risk, 2: high-risk, 3: critical)</p>
- * @method integer getLine() Obtain <p>Row count of risk location</p>
- * @method void setLine(integer $Line) Set <p>Row count of risk location</p>
+ * @method integer getLevel() Obtain <p>Risk level (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
+ * @method void setLevel(integer $Level) Set <p>Risk level (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
+ * @method integer getLine() Obtain <p>Line count where the risk resides</p>
+ * @method void setLine(integer $Line) Set <p>Line count where the risk resides</p>
  * @method string getRuleName() Obtain <p>rule name</p>
  * @method void setRuleName(string $RuleName) Set <p>rule name</p>
- * @method string getDescription() Obtain <p>Problem description</p>
- * @method void setDescription(string $Description) Set <p>Problem description</p>
- * @method string getSuggestion() Obtain <p>Repair recommendation</p>
- * @method void setSuggestion(string $Suggestion) Set <p>Repair recommendation</p>
+ * @method string getDescription() Obtain <p>Issue description</p>
+ * @method void setDescription(string $Description) Set <p>Issue description</p>
+ * @method string getSuggestion() Obtain <p>Fixing suggestion</p>
+ * @method void setSuggestion(string $Suggestion) Set <p>Fixing suggestion</p>
  */
 class IaCFileRisk extends AbstractModel
 {
     /**
-     * @var integer <p>Risk level (0: low-risk, 1: medium-risk, 2: high-risk, 3: critical)</p>
+     * @var integer <p>Risk level (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
      */
     public $Level;
 
     /**
-     * @var integer <p>Row count of risk location</p>
+     * @var integer <p>Line count where the risk resides</p>
      */
     public $Line;
 
@@ -49,21 +49,21 @@ class IaCFileRisk extends AbstractModel
     public $RuleName;
 
     /**
-     * @var string <p>Problem description</p>
+     * @var string <p>Issue description</p>
      */
     public $Description;
 
     /**
-     * @var string <p>Repair recommendation</p>
+     * @var string <p>Fixing suggestion</p>
      */
     public $Suggestion;
 
     /**
-     * @param integer $Level <p>Risk level (0: low-risk, 1: medium-risk, 2: high-risk, 3: critical)</p>
-     * @param integer $Line <p>Row count of risk location</p>
+     * @param integer $Level <p>Risk level (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
+     * @param integer $Line <p>Line count where the risk resides</p>
      * @param string $RuleName <p>rule name</p>
-     * @param string $Description <p>Problem description</p>
-     * @param string $Suggestion <p>Repair recommendation</p>
+     * @param string $Description <p>Issue description</p>
+     * @param string $Suggestion <p>Fixing suggestion</p>
      */
     function __construct()
     {

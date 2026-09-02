@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlertList request structure.
  *
- * @method Filter getFilter() Obtain Tag search filter criteria
- * @method void setFilter(Filter $Filter) Set Tag search filter criteria
+ * @method Filter getFilter() Obtain Filter criteria for tag search
+ * @method void setFilter(Filter $Filter) Set Filter criteria for tag search
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  * @method array getOperatedMemberId() Obtain Member ID of the Called Group Account
  * @method void setOperatedMemberId(array $OperatedMemberId) Set Member ID of the Called Group Account
- * @method integer getAssetType() Obtain 0: Default all 1: Asset ID 2: Domain name
- * @method void setAssetType(integer $AssetType) Set 0: Default all 1: Asset ID 2: Domain name
+ * @method integer getAssetType() Obtain 0: Default: All; 1: Asset ID; 2: Domain name
+ * @method void setAssetType(integer $AssetType) Set 0: Default: All; 1: Asset ID; 2: Domain name
  */
 class DescribeAlertListRequest extends AbstractModel
 {
     /**
-     * @var Filter Tag search filter criteria
+     * @var Filter Filter criteria for tag search
      */
     public $Filter;
 
@@ -47,15 +47,15 @@ class DescribeAlertListRequest extends AbstractModel
     public $OperatedMemberId;
 
     /**
-     * @var integer 0: Default all 1: Asset ID 2: Domain name
+     * @var integer 0: Default: All; 1: Asset ID; 2: Domain name
      */
     public $AssetType;
 
     /**
-     * @param Filter $Filter Tag search filter criteria
+     * @param Filter $Filter Filter criteria for tag search
      * @param array $MemberId Group Account Member ID
      * @param array $OperatedMemberId Member ID of the Called Group Account
-     * @param integer $AssetType 0: Default all 1: Asset ID 2: Domain name
+     * @param integer $AssetType 0: Default: All; 1: Asset ID; 2: Domain name
      */
     function __construct()
     {

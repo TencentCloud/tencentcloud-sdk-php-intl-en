@@ -18,12 +18,12 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task report information
+ * Task Report Information
  *
- * @method string getTaskLogName() Obtain report name
- * @method void setTaskLogName(string $TaskLogName) Set report name
- * @method string getTaskLogId() Obtain Report ID.
- * @method void setTaskLogId(string $TaskLogId) Set Report ID.
+ * @method string getTaskLogName() Obtain Report Name
+ * @method void setTaskLogName(string $TaskLogName) Set Report Name
+ * @method string getTaskLogId() Obtain Report ID
+ * @method void setTaskLogId(string $TaskLogId) Set Report ID
  * @method integer getAssetsNumber() Obtain Associated Asset Count
  * @method void setAssetsNumber(integer $AssetsNumber) Set Associated Asset Count
  * @method integer getRiskNumber() Obtain Security Risk Count
@@ -52,12 +52,12 @@ use TencentCloud\Common\AbstractModel;
 class TaskLogInfo extends AbstractModel
 {
     /**
-     * @var string report name
+     * @var string Report Name
      */
     public $TaskLogName;
 
     /**
-     * @var string Report ID.
+     * @var string Report ID
      */
     public $TaskLogId;
 
@@ -122,8 +122,8 @@ class TaskLogInfo extends AbstractModel
     public $TemplateId;
 
     /**
-     * @param string $TaskLogName report name
-     * @param string $TaskLogId Report ID.
+     * @param string $TaskLogName Report Name
+     * @param string $TaskLogId Report ID
      * @param integer $AssetsNumber Associated Asset Count
      * @param integer $RiskNumber Security Risk Count
      * @param string $Time Report generation time

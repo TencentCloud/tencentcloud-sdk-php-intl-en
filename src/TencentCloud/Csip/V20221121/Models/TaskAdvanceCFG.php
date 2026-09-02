@@ -18,16 +18,16 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Advanced task configuration
+ * Task Advanced Configuration
  *
  * @method array getPortRisk() Obtain Port Risk Advanced Configuration
  * @method void setPortRisk(array $PortRisk) Set Port Risk Advanced Configuration
- * @method array getVulRisk() Obtain Advanced vulnerability scan configuration
- * @method void setVulRisk(array $VulRisk) Set Advanced vulnerability scan configuration
- * @method array getWeakPwdRisk() Obtain Advanced weak password check configuration
- * @method void setWeakPwdRisk(array $WeakPwdRisk) Set Advanced weak password check configuration
- * @method array getCFGRisk() Obtain Advanced configuration risk scan configuration
- * @method void setCFGRisk(array $CFGRisk) Set Advanced configuration risk scan configuration
+ * @method array getVulRisk() Obtain Vulnerability Risk Advanced Configuration
+ * @method void setVulRisk(array $VulRisk) Set Vulnerability Risk Advanced Configuration
+ * @method array getWeakPwdRisk() Obtain Weak Password Risk Advanced Configuration
+ * @method void setWeakPwdRisk(array $WeakPwdRisk) Set Weak Password Risk Advanced Configuration
+ * @method array getCFGRisk() Obtain Advanced Configuration of Configuration Risk
+ * @method void setCFGRisk(array $CFGRisk) Set Advanced Configuration of Configuration Risk
  */
 class TaskAdvanceCFG extends AbstractModel
 {
@@ -37,25 +37,25 @@ class TaskAdvanceCFG extends AbstractModel
     public $PortRisk;
 
     /**
-     * @var array Advanced vulnerability scan configuration
+     * @var array Vulnerability Risk Advanced Configuration
      */
     public $VulRisk;
 
     /**
-     * @var array Advanced weak password check configuration
+     * @var array Weak Password Risk Advanced Configuration
      */
     public $WeakPwdRisk;
 
     /**
-     * @var array Advanced configuration risk scan configuration
+     * @var array Advanced Configuration of Configuration Risk
      */
     public $CFGRisk;
 
     /**
      * @param array $PortRisk Port Risk Advanced Configuration
-     * @param array $VulRisk Advanced vulnerability scan configuration
-     * @param array $WeakPwdRisk Advanced weak password check configuration
-     * @param array $CFGRisk Advanced configuration risk scan configuration
+     * @param array $VulRisk Vulnerability Risk Advanced Configuration
+     * @param array $WeakPwdRisk Weak Password Risk Advanced Configuration
+     * @param array $CFGRisk Advanced Configuration of Configuration Risk
      */
     function __construct()
     {

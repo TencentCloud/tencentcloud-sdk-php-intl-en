@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() Obtain <p>Group account member id</p>
  * @method void setMemberId(array $MemberId) Set <p>Group account member id</p>
- * @method string getAssetId() Obtain Asset ID.
- * @method void setAssetId(string $AssetId) Set Asset ID.
- * @method string getIp() Obtain Asset IP.
- * @method void setIp(string $Ip) Set Asset IP.
- * @method string getDomain() Obtain Asset domain name.
- * @method void setDomain(string $Domain) Set Asset domain name.
- * @method string getPort() Obtain Port or port range.
- * @method void setPort(string $Port) Set Port or port range.
+ * @method string getAssetId() Obtain Asset ID
+ * @method void setAssetId(string $AssetId) Set Asset ID
+ * @method string getIp() Obtain Asset IP
+ * @method void setIp(string $Ip) Set Asset IP
+ * @method string getDomain() Obtain Asset domain
+ * @method void setDomain(string $Domain) Set Asset domain
+ * @method string getPort() Obtain Port or port range
+ * @method void setPort(string $Port) Set Port or port range
  */
 class DescribeExposePathRequest extends AbstractModel
 {
@@ -39,31 +39,31 @@ class DescribeExposePathRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var string Asset ID.
+     * @var string Asset ID
      */
     public $AssetId;
 
     /**
-     * @var string Asset IP.
+     * @var string Asset IP
      */
     public $Ip;
 
     /**
-     * @var string Asset domain name.
+     * @var string Asset domain
      */
     public $Domain;
 
     /**
-     * @var string Port or port range.
+     * @var string Port or port range
      */
     public $Port;
 
     /**
      * @param array $MemberId <p>Group account member id</p>
-     * @param string $AssetId Asset ID.
-     * @param string $Ip Asset IP.
-     * @param string $Domain Asset domain name.
-     * @param string $Port Port or port range.
+     * @param string $AssetId Asset ID
+     * @param string $Ip Asset IP
+     * @param string $Domain Asset domain
+     * @param string $Port Port or port range
      */
     function __construct()
     {

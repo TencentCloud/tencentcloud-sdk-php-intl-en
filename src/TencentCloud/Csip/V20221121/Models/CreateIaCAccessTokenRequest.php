@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain <p>CI/CD name</p>
  * @method void setName(string $Name) Set <p>CI/CD name</p>
- * @method integer getPeriod() Obtain <p>Result storage duration (30/60/90/120/150/180 days)</p>
- * @method void setPeriod(integer $Period) Set <p>Result storage duration (30/60/90/120/150/180 days)</p>
+ * @method integer getPeriod() Obtain <p>Storage duration of scanning results (30/60/90/120/150/180 days)</p>
+ * @method void setPeriod(integer $Period) Set <p>Storage duration of scanning results (30/60/90/120/150/180 days)</p>
  */
 class CreateIaCAccessTokenRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CreateIaCAccessTokenRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer <p>Result storage duration (30/60/90/120/150/180 days)</p>
+     * @var integer <p>Storage duration of scanning results (30/60/90/120/150/180 days)</p>
      */
     public $Period;
 
     /**
      * @param string $Name <p>CI/CD name</p>
-     * @param integer $Period <p>Result storage duration (30/60/90/120/150/180 days)</p>
+     * @param integer $Period <p>Storage duration of scanning results (30/60/90/120/150/180 days)</p>
      */
     function __construct()
     {

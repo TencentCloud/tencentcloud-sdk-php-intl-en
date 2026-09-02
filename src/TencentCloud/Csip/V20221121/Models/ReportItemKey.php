@@ -18,20 +18,20 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Report item
+ * Report Item Key
  *
- * @method array getTaskLogList() Obtain List of report IDs.
- * @method void setTaskLogList(array $TaskLogList) Set List of report IDs.
+ * @method array getTaskLogList() Obtain Log ID List
+ * @method void setTaskLogList(array $TaskLogList) Set Log ID List
  */
 class ReportItemKey extends AbstractModel
 {
     /**
-     * @var array List of report IDs.
+     * @var array Log ID List
      */
     public $TaskLogList;
 
     /**
-     * @param array $TaskLogList List of report IDs.
+     * @param array $TaskLogList Log ID List
      */
     function __construct()
     {

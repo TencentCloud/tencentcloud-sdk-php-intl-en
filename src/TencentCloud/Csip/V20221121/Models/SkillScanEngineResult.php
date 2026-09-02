@@ -18,40 +18,40 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Sub-engine scanning result
+ * Scanning result of the sub-engine
  *
- * @method string getScanType() Obtain Sub-engine type
-Enumeration value:
+ * @method string getScanType() Obtain Sub-engine type.
+Enumeration values:
 AI: AI engine
-STATIC: Static analysis engine
- * @method void setScanType(string $ScanType) Set Sub-engine type
-Enumeration value:
+STATIC: static analysis engine
+ * @method void setScanType(string $ScanType) Set Sub-engine type.
+Enumeration values:
 AI: AI engine
-STATIC: Static analysis engine
- * @method array getRuleList() Obtain The rule list hit by the engine
- * @method void setRuleList(array $RuleList) Set The rule list hit by the engine
+STATIC: static analysis engine
+ * @method array getRuleList() Obtain Hit rule list.
+ * @method void setRuleList(array $RuleList) Set Hit rule list.
  */
 class SkillScanEngineResult extends AbstractModel
 {
     /**
-     * @var string Sub-engine type
-Enumeration value:
+     * @var string Sub-engine type.
+Enumeration values:
 AI: AI engine
-STATIC: Static analysis engine
+STATIC: static analysis engine
      */
     public $ScanType;
 
     /**
-     * @var array The rule list hit by the engine
+     * @var array Hit rule list.
      */
     public $RuleList;
 
     /**
-     * @param string $ScanType Sub-engine type
-Enumeration value:
+     * @param string $ScanType Sub-engine type.
+Enumeration values:
 AI: AI engine
-STATIC: Static analysis engine
-     * @param array $RuleList The rule list hit by the engine
+STATIC: static analysis engine
+     * @param array $RuleList Hit rule list.
      */
     function __construct()
     {

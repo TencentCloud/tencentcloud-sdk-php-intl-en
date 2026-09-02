@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Brief asset tag element for CSIP internal use.
+ * Brief asset tag element for internal CSIP use.
  *
  * @method string getColor() Obtain Tag display color.
  * @method void setColor(string $Color) Set Tag display color.

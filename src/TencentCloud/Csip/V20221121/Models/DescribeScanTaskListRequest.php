@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method Filter getFilter() Obtain Filter conditions
- * @method void setFilter(Filter $Filter) Set Filter conditions
- * @method array getTags() Obtain Tags
- * @method void setTags(array $Tags) Set Tags
+ * @method Filter getFilter() Obtain Filtered Content
+ * @method void setFilter(Filter $Filter) Set Filtered Content
+ * @method array getTags() Obtain Tag.
+ * @method void setTags(array $Tags) Set Tag.
  */
 class DescribeScanTaskListRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeScanTaskListRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var Filter Filter conditions
+     * @var Filter Filtered Content
      */
     public $Filter;
 
     /**
-     * @var array Tags
+     * @var array Tag.
      */
     public $Tags;
 
     /**
      * @param array $MemberId Group Account Member ID
-     * @param Filter $Filter Filter conditions
-     * @param array $Tags Tags
+     * @param Filter $Filter Filtered Content
+     * @param array $Tags Tag.
      */
     function __construct()
     {

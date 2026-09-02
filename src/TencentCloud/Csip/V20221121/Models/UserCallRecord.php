@@ -18,49 +18,49 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Record details.
+ * Details of call log records
  *
- * @method string getSourceIP() Obtain Source IP of the call.
- * @method void setSourceIP(string $SourceIP) Set Source IP of the call.
- * @method integer getEventType() Obtain Invocation type.
-0: console invocation.
+ * @method string getSourceIP() Obtain Source IP of the api call
+ * @method void setSourceIP(string $SourceIP) Set Source IP of the api call
+ * @method integer getEventType() Obtain Invocation type
+0: Console invocation
 1:API
- * @method void setEventType(integer $EventType) Set Invocation type.
-0: console invocation.
+ * @method void setEventType(integer $EventType) Set Invocation type
+0: Console invocation
 1:API
  * @method integer getCallCount() Obtain Number of calls.
  * @method void setCallCount(integer $CallCount) Set Number of calls.
- * @method integer getCode() Obtain Error code.
+ * @method integer getCode() Obtain Call error code
 0: Successful
- * @method void setCode(integer $Code) Set Error code.
+ * @method void setCode(integer $Code) Set Call error code
 0: Successful
- * @method string getFirstCallTime() Obtain First time call time.
- * @method void setFirstCallTime(string $FirstCallTime) Set First time call time.
- * @method string getLastCallTime() Obtain Call time.
- * @method void setLastCallTime(string $LastCallTime) Set Call time.
- * @method string getSourceIPRemark() Obtain Source IP of the call remark.
- * @method void setSourceIPRemark(string $SourceIPRemark) Set Source IP of the call remark.
- * @method string getRegion() Obtain Source IP region of the call.
- * @method void setRegion(string $Region) Set Source IP region of the call.
- * @method string getUserName() Obtain User/Role name.
- * @method void setUserName(string $UserName) Set User/Role name.
- * @method string getDate() Obtain Aggregate date.
- * @method void setDate(string $Date) Set Aggregate date.
+ * @method string getFirstCallTime() Obtain First call time
+ * @method void setFirstCallTime(string $FirstCallTime) Set First call time
+ * @method string getLastCallTime() Obtain Last call time
+ * @method void setLastCallTime(string $LastCallTime) Set Last call time
+ * @method string getSourceIPRemark() Obtain Remark on source IP of the api call
+ * @method void setSourceIPRemark(string $SourceIPRemark) Set Remark on source IP of the api call
+ * @method string getRegion() Obtain Region of the source IP of the api call
+ * @method void setRegion(string $Region) Set Region of the source IP of the api call
+ * @method string getUserName() Obtain User/role name
+ * @method void setUserName(string $UserName) Set User/role name
+ * @method string getDate() Obtain Aggregation date
+ * @method void setDate(string $Date) Set Aggregation date
  * @method integer getAppID() Obtain appid
  * @method void setAppID(integer $AppID) Set appid
- * @method string getISP() Obtain Carrier.
- * @method void setISP(string $ISP) Set Carrier.
+ * @method string getISP() Obtain Internet service provider.
+ * @method void setISP(string $ISP) Set Internet service provider.
  */
 class UserCallRecord extends AbstractModel
 {
     /**
-     * @var string Source IP of the call.
+     * @var string Source IP of the api call
      */
     public $SourceIP;
 
     /**
-     * @var integer Invocation type.
-0: console invocation.
+     * @var integer Invocation type
+0: Console invocation
 1:API
      */
     public $EventType;
@@ -71,38 +71,38 @@ class UserCallRecord extends AbstractModel
     public $CallCount;
 
     /**
-     * @var integer Error code.
+     * @var integer Call error code
 0: Successful
      */
     public $Code;
 
     /**
-     * @var string First time call time.
+     * @var string First call time
      */
     public $FirstCallTime;
 
     /**
-     * @var string Call time.
+     * @var string Last call time
      */
     public $LastCallTime;
 
     /**
-     * @var string Source IP of the call remark.
+     * @var string Remark on source IP of the api call
      */
     public $SourceIPRemark;
 
     /**
-     * @var string Source IP region of the call.
+     * @var string Region of the source IP of the api call
      */
     public $Region;
 
     /**
-     * @var string User/Role name.
+     * @var string User/role name
      */
     public $UserName;
 
     /**
-     * @var string Aggregate date.
+     * @var string Aggregation date
      */
     public $Date;
 
@@ -112,26 +112,26 @@ class UserCallRecord extends AbstractModel
     public $AppID;
 
     /**
-     * @var string Carrier.
+     * @var string Internet service provider.
      */
     public $ISP;
 
     /**
-     * @param string $SourceIP Source IP of the call.
-     * @param integer $EventType Invocation type.
-0: console invocation.
+     * @param string $SourceIP Source IP of the api call
+     * @param integer $EventType Invocation type
+0: Console invocation
 1:API
      * @param integer $CallCount Number of calls.
-     * @param integer $Code Error code.
+     * @param integer $Code Call error code
 0: Successful
-     * @param string $FirstCallTime First time call time.
-     * @param string $LastCallTime Call time.
-     * @param string $SourceIPRemark Source IP of the call remark.
-     * @param string $Region Source IP region of the call.
-     * @param string $UserName User/Role name.
-     * @param string $Date Aggregate date.
+     * @param string $FirstCallTime First call time
+     * @param string $LastCallTime Last call time
+     * @param string $SourceIPRemark Remark on source IP of the api call
+     * @param string $Region Region of the source IP of the api call
+     * @param string $UserName User/role name
+     * @param string $Date Aggregation date
      * @param integer $AppID appid
-     * @param string $ISP Carrier.
+     * @param string $ISP Internet service provider.
      */
     function __construct()
     {

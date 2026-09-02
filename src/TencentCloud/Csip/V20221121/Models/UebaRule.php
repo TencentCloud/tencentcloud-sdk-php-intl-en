@@ -18,26 +18,26 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * User Behavior Analysis Policy
+ * User behavior analysis policy
  *
  * @method string getRuleID() Obtain Policy ID
  * @method void setRuleID(string $RuleID) Set Policy ID
  * @method string getRuleName() Obtain Rule name
  * @method void setRuleName(string $RuleName) Set Rule name
- * @method integer getRuleType() Obtain Policy type
-System policy
-custom policy
- * @method void setRuleType(integer $RuleType) Set Policy type
-System policy
-custom policy
+ * @method integer getRuleType() Obtain Policy type.
+0: System policy
+1: Create custom policy
+ * @method void setRuleType(integer $RuleType) Set Policy type.
+0: System policy
+1: Create custom policy
  * @method integer getRuleLevel() Obtain Policy level
-Prompt.
+0: Prompt.
 1: low
 2: Medium risk
 3: High risk
 4: Critical
  * @method void setRuleLevel(integer $RuleLevel) Set Policy level
-Prompt.
+0: Prompt.
 1: low
 2: Medium risk
 3: High risk
@@ -48,21 +48,21 @@ Prompt.
  * @method void setRuleStatus(boolean $RuleStatus) Set Policy switch
  * @method integer getHitCount() Obtain Number of hits
  * @method void setHitCount(integer $HitCount) Set Number of hits
- * @method string getAppID() Obtain Associated account Appid.
- * @method void setAppID(string $AppID) Set Associated account Appid.
+ * @method string getAppID() Obtain Appid of the associated account
+ * @method void setAppID(string $AppID) Set Appid of the associated account
  * @method string getMemberID() Obtain Multi-account, member ID
  * @method void setMemberID(string $MemberID) Set Multi-account, member ID
  * @method string getUin() Obtain Uin
  * @method void setUin(string $Uin) Set Uin
  * @method string getNickname() Obtain Nickname
  * @method void setNickname(string $Nickname) Set Nickname
- * @method UebaCustomRule getCustomRuleDetail() Obtain Custom rule specific content
- * @method void setCustomRuleDetail(UebaCustomRule $CustomRuleDetail) Set Custom rule specific content
+ * @method UebaCustomRule getCustomRuleDetail() Obtain Specific content of the custom rule
+ * @method void setCustomRuleDetail(UebaCustomRule $CustomRuleDetail) Set Specific content of the custom rule
  * @method integer getCloudType() Obtain Cloud type
-0 Tencent Cloud
+Tencent Cloud: 0
 aws:1
  * @method void setCloudType(integer $CloudType) Set Cloud type
-0 Tencent Cloud
+Tencent Cloud: 0
 aws:1
  */
 class UebaRule extends AbstractModel
@@ -78,15 +78,15 @@ class UebaRule extends AbstractModel
     public $RuleName;
 
     /**
-     * @var integer Policy type
-System policy
-custom policy
+     * @var integer Policy type.
+0: System policy
+1: Create custom policy
      */
     public $RuleType;
 
     /**
      * @var integer Policy level
-Prompt.
+0: Prompt.
 1: low
 2: Medium risk
 3: High risk
@@ -110,7 +110,7 @@ Prompt.
     public $HitCount;
 
     /**
-     * @var string Associated account Appid.
+     * @var string Appid of the associated account
      */
     public $AppID;
 
@@ -130,13 +130,13 @@ Prompt.
     public $Nickname;
 
     /**
-     * @var UebaCustomRule Custom rule specific content
+     * @var UebaCustomRule Specific content of the custom rule
      */
     public $CustomRuleDetail;
 
     /**
      * @var integer Cloud type
-0 Tencent Cloud
+Tencent Cloud: 0
 aws:1
      */
     public $CloudType;
@@ -144,11 +144,11 @@ aws:1
     /**
      * @param string $RuleID Policy ID
      * @param string $RuleName Rule name
-     * @param integer $RuleType Policy type
-System policy
-custom policy
+     * @param integer $RuleType Policy type.
+0: System policy
+1: Create custom policy
      * @param integer $RuleLevel Policy level
-Prompt.
+0: Prompt.
 1: low
 2: Medium risk
 3: High risk
@@ -156,13 +156,13 @@ Prompt.
      * @param string $RuleContent Policy content
      * @param boolean $RuleStatus Policy switch
      * @param integer $HitCount Number of hits
-     * @param string $AppID Associated account Appid.
+     * @param string $AppID Appid of the associated account
      * @param string $MemberID Multi-account, member ID
      * @param string $Uin Uin
      * @param string $Nickname Nickname
-     * @param UebaCustomRule $CustomRuleDetail Custom rule specific content
+     * @param UebaCustomRule $CustomRuleDetail Specific content of the custom rule
      * @param integer $CloudType Cloud type
-0 Tencent Cloud
+Tencent Cloud: 0
 aws:1
      */
     function __construct()

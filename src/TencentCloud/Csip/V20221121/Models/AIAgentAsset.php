@@ -18,36 +18,36 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Ai Agent Asset Information List Item
+ * Ai Agent asset information list item
  *
  * @method string getID() Obtain <p>ID identifier</p>
  * @method void setID(string $ID) Set <p>ID identifier</p>
  * @method string getAgentName() Obtain <p>agent name</p>
  * @method void setAgentName(string $AgentName) Set <p>agent name</p>
- * @method array getAgentModel() Obtain <p>agent model name usage</p>
- * @method void setAgentModel(array $AgentModel) Set <p>agent model name usage</p>
+ * @method array getAgentModel() Obtain <p>Model name used by the agent</p>
+ * @method void setAgentModel(array $AgentModel) Set <p>Model name used by the agent</p>
  * @method string getInstanceID() Obtain <p>Instance ID</p>
  * @method void setInstanceID(string $InstanceID) Set <p>Instance ID</p>
- * @method string getInstanceName() Obtain <p>Instance name</p>
- * @method void setInstanceName(string $InstanceName) Set <p>Instance name</p>
- * @method array getMetadataRiskList() Obtain <p>metadata risk list. Has the following enumeration values: 1. AK_TMP 2. USER_DATA</p>
- * @method void setMetadataRiskList(array $MetadataRiskList) Set <p>metadata risk list. Has the following enumeration values: 1. AK_TMP 2. USER_DATA</p>
+ * @method string getInstanceName() Obtain <p>Instance name.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p>
+ * @method array getMetadataRiskList() Obtain <p>metadata risk list. It has the following enumeration values: 1. AK_TMP  2. USER_DATA</p>
+ * @method void setMetadataRiskList(array $MetadataRiskList) Set <p>metadata risk list. It has the following enumeration values: 1. AK_TMP  2. USER_DATA</p>
  * @method string getIdentityTimeFirst() Obtain <p>First detection time</p>
  * @method void setIdentityTimeFirst(string $IdentityTimeFirst) Set <p>First detection time</p>
  * @method string getIdentityTimeLast() Obtain <p>Latest detected time</p>
  * @method void setIdentityTimeLast(string $IdentityTimeLast) Set <p>Latest detected time</p>
- * @method string getIdentityMethod() Obtain <p>Detect method. Has the following enumeration values: 1. FINGER Detect via asset fingerprinting 2. NETWORK Detect via network access mode</p>
- * @method void setIdentityMethod(string $IdentityMethod) Set <p>Detect method. Has the following enumeration values: 1. FINGER Detect via asset fingerprinting 2. NETWORK Detect via network access mode</p>
- * @method string getExposureStatus() Obtain <p>Exposure status. Has the following enumeration values. 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
- * @method void setExposureStatus(string $ExposureStatus) Set <p>Exposure status. Has the following enumeration values. 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
+ * @method string getIdentityMethod() Obtain <p>Detection method. It has the following enumeration values: 1. FINGER: detected by asset fingerprinting. 2. NETWORK: detected by network access mode</p>
+ * @method void setIdentityMethod(string $IdentityMethod) Set <p>Detection method. It has the following enumeration values: 1. FINGER: detected by asset fingerprinting. 2. NETWORK: detected by network access mode</p>
+ * @method string getExposureStatus() Obtain <p>Exposure status. It has the following enumeration values: 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
+ * @method void setExposureStatus(string $ExposureStatus) Set <p>Exposure status. It has the following enumeration values: 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
  * @method string getMetadataRiskURL() Obtain <p>Corresponding path when metadata is at risk</p>
  * @method void setMetadataRiskURL(string $MetadataRiskURL) Set <p>Corresponding path when metadata is at risk</p>
- * @method SkillState getSkillState() Obtain <p>None</p>
- * @method void setSkillState(SkillState $SkillState) Set <p>None</p>
+ * @method SkillState getSkillState() Obtain <p>Credential Skill installation status</p>
+ * @method void setSkillState(SkillState $SkillState) Set <p>Credential Skill installation status</p>
  * @method TrafficPluginState getTrafficPluginState() Obtain <p>Traffic sandbox plug-in status</p>
  * @method void setTrafficPluginState(TrafficPluginState $TrafficPluginState) Set <p>Traffic sandbox plug-in status</p>
- * @method array getTrafficRuleState() Obtain <p>Sandbox rule status for traffic</p>
- * @method void setTrafficRuleState(array $TrafficRuleState) Set <p>Sandbox rule status for traffic</p>
+ * @method array getTrafficRuleState() Obtain <p>Traffic sandbox rule status</p>
+ * @method void setTrafficRuleState(array $TrafficRuleState) Set <p>Traffic sandbox rule status</p>
  * @method CommandPluginState getCommandPluginState() Obtain <p>Command sandbox plug-in status</p>
  * @method void setCommandPluginState(CommandPluginState $CommandPluginState) Set <p>Command sandbox plug-in status</p>
  */
@@ -64,7 +64,7 @@ class AIAgentAsset extends AbstractModel
     public $AgentName;
 
     /**
-     * @var array <p>agent model name usage</p>
+     * @var array <p>Model name used by the agent</p>
      */
     public $AgentModel;
 
@@ -74,12 +74,12 @@ class AIAgentAsset extends AbstractModel
     public $InstanceID;
 
     /**
-     * @var string <p>Instance name</p>
+     * @var string <p>Instance name.</p>
      */
     public $InstanceName;
 
     /**
-     * @var array <p>metadata risk list. Has the following enumeration values: 1. AK_TMP 2. USER_DATA</p>
+     * @var array <p>metadata risk list. It has the following enumeration values: 1. AK_TMP  2. USER_DATA</p>
      */
     public $MetadataRiskList;
 
@@ -94,12 +94,12 @@ class AIAgentAsset extends AbstractModel
     public $IdentityTimeLast;
 
     /**
-     * @var string <p>Detect method. Has the following enumeration values: 1. FINGER Detect via asset fingerprinting 2. NETWORK Detect via network access mode</p>
+     * @var string <p>Detection method. It has the following enumeration values: 1. FINGER: detected by asset fingerprinting. 2. NETWORK: detected by network access mode</p>
      */
     public $IdentityMethod;
 
     /**
-     * @var string <p>Exposure status. Has the following enumeration values. 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
+     * @var string <p>Exposure status. It has the following enumeration values: 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
      */
     public $ExposureStatus;
 
@@ -109,7 +109,7 @@ class AIAgentAsset extends AbstractModel
     public $MetadataRiskURL;
 
     /**
-     * @var SkillState <p>None</p>
+     * @var SkillState <p>Credential Skill installation status</p>
      */
     public $SkillState;
 
@@ -119,7 +119,7 @@ class AIAgentAsset extends AbstractModel
     public $TrafficPluginState;
 
     /**
-     * @var array <p>Sandbox rule status for traffic</p>
+     * @var array <p>Traffic sandbox rule status</p>
      */
     public $TrafficRuleState;
 
@@ -131,18 +131,18 @@ class AIAgentAsset extends AbstractModel
     /**
      * @param string $ID <p>ID identifier</p>
      * @param string $AgentName <p>agent name</p>
-     * @param array $AgentModel <p>agent model name usage</p>
+     * @param array $AgentModel <p>Model name used by the agent</p>
      * @param string $InstanceID <p>Instance ID</p>
-     * @param string $InstanceName <p>Instance name</p>
-     * @param array $MetadataRiskList <p>metadata risk list. Has the following enumeration values: 1. AK_TMP 2. USER_DATA</p>
+     * @param string $InstanceName <p>Instance name.</p>
+     * @param array $MetadataRiskList <p>metadata risk list. It has the following enumeration values: 1. AK_TMP  2. USER_DATA</p>
      * @param string $IdentityTimeFirst <p>First detection time</p>
      * @param string $IdentityTimeLast <p>Latest detected time</p>
-     * @param string $IdentityMethod <p>Detect method. Has the following enumeration values: 1. FINGER Detect via asset fingerprinting 2. NETWORK Detect via network access mode</p>
-     * @param string $ExposureStatus <p>Exposure status. Has the following enumeration values. 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
+     * @param string $IdentityMethod <p>Detection method. It has the following enumeration values: 1. FINGER: detected by asset fingerprinting. 2. NETWORK: detected by network access mode</p>
+     * @param string $ExposureStatus <p>Exposure status. It has the following enumeration values: 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
      * @param string $MetadataRiskURL <p>Corresponding path when metadata is at risk</p>
-     * @param SkillState $SkillState <p>None</p>
+     * @param SkillState $SkillState <p>Credential Skill installation status</p>
      * @param TrafficPluginState $TrafficPluginState <p>Traffic sandbox plug-in status</p>
-     * @param array $TrafficRuleState <p>Sandbox rule status for traffic</p>
+     * @param array $TrafficRuleState <p>Traffic sandbox rule status</p>
      * @param CommandPluginState $CommandPluginState <p>Command sandbox plug-in status</p>
      */
     function __construct()

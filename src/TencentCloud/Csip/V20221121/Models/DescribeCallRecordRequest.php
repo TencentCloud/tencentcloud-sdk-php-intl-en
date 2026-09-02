@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method integer getAccessKeyID() Obtain Access key ID.
- * @method void setAccessKeyID(integer $AccessKeyID) Set Access key ID.
- * @method integer getSourceIPID() Obtain ID of the source IP for the call.
- * @method void setSourceIPID(integer $SourceIPID) Set ID of the source IP for the call.
- * @method string getAccUin() Obtain Access account uin.
- * @method void setAccUin(string $AccUin) Set Access account uin.
- * @method string getAccessKey() Obtain Access key. Note: Temporary key is unsupported.
- * @method void setAccessKey(string $AccessKey) Set Access key. Note: Temporary key is unsupported.
+ * @method integer getAccessKeyID() Obtain Access key ID
+ * @method void setAccessKeyID(integer $AccessKeyID) Set Access key ID
+ * @method integer getSourceIPID() Obtain ID of the call source IP
+ * @method void setSourceIPID(integer $SourceIPID) Set ID of the call source IP
+ * @method string getAccUin() Obtain Access account uin
+ * @method void setAccUin(string $AccUin) Set Access account uin
+ * @method string getAccessKey() Obtain Access key. Note: unsupported for temporary keys.
+ * @method void setAccessKey(string $AccessKey) Set Access key. Note: unsupported for temporary keys.
  * @method Filter getFilter() Obtain Filter.
  * @method void setFilter(Filter $Filter) Set Filter.
  */
@@ -41,22 +41,22 @@ class DescribeCallRecordRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var integer Access key ID.
+     * @var integer Access key ID
      */
     public $AccessKeyID;
 
     /**
-     * @var integer ID of the source IP for the call.
+     * @var integer ID of the call source IP
      */
     public $SourceIPID;
 
     /**
-     * @var string Access account uin.
+     * @var string Access account uin
      */
     public $AccUin;
 
     /**
-     * @var string Access key. Note: Temporary key is unsupported.
+     * @var string Access key. Note: unsupported for temporary keys.
      */
     public $AccessKey;
 
@@ -67,10 +67,10 @@ class DescribeCallRecordRequest extends AbstractModel
 
     /**
      * @param array $MemberId Group Account Member ID
-     * @param integer $AccessKeyID Access key ID.
-     * @param integer $SourceIPID ID of the source IP for the call.
-     * @param string $AccUin Access account uin.
-     * @param string $AccessKey Access key. Note: Temporary key is unsupported.
+     * @param integer $AccessKeyID Access key ID
+     * @param integer $SourceIPID ID of the call source IP
+     * @param string $AccUin Access account uin
+     * @param string $AccessKey Access key. Note: unsupported for temporary keys.
      * @param Filter $Filter Filter.
      */
     function __construct()

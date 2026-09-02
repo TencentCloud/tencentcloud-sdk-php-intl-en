@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() Obtain <p>Group account member id</p>
  * @method void setMemberId(array $MemberId) Set <p>Group account member id</p>
- * @method array getFilters() Obtain <p>Filter content</p>
- * @method void setFilters(array $Filters) Set <p>Filter content</p>
+ * @method array getFilters() Obtain <p>Filter content.</p>
+ * @method void setFilters(array $Filters) Set <p>Filter content.</p>
  * @method integer getLimit() Obtain <p>Page size.</p>
  * @method void setLimit(integer $Limit) Set <p>Page size.</p>
  * @method integer getOffset() Obtain <p>Offset.</p>
@@ -41,7 +41,7 @@ class DescribeCheckViewRisksRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var array <p>Filter content</p>
+     * @var array <p>Filter content.</p>
      */
     public $Filters;
 
@@ -67,7 +67,7 @@ class DescribeCheckViewRisksRequest extends AbstractModel
 
     /**
      * @param array $MemberId <p>Group account member id</p>
-     * @param array $Filters <p>Filter content</p>
+     * @param array $Filters <p>Filter content.</p>
      * @param integer $Limit <p>Page size.</p>
      * @param integer $Offset <p>Offset.</p>
      * @param string $Order <p>Sorting type</p>

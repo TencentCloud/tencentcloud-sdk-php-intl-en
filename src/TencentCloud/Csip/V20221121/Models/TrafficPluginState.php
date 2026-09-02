@@ -20,98 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI Agent traffic sandbox plug-in status
  *
- * @method string getInstallStatus() Obtain Plugin installation status (upper layer aggregation)
+ * @method string getInstallStatus() Obtain Plugin installation status (upper-level aggregation)
 Enumeration value:
-NONE: Not installed
-INSTALLING
-INSTALLED: Installed
-INSTALL_FAIL: Installation failure
- * @method void setInstallStatus(string $InstallStatus) Set Plugin installation status (upper layer aggregation)
+NONE: not installed
+INSTALLING: installing
+INSTALLED: installed
+INSTALL_FAIL: installation failure
+ * @method void setInstallStatus(string $InstallStatus) Set Plugin installation status (upper-level aggregation)
 Enumeration value:
-NONE: Not installed
-INSTALLING
-INSTALLED: Installed
-INSTALL_FAIL: Installation failure
- * @method string getStatus() Obtain Plugin installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when successfully installed (InstallStatus=INSTALLED); specific failure reason when installation failure (InstallStatus=INSTALL_FAIL).
+NONE: not installed
+INSTALLING: installing
+INSTALLED: installed
+INSTALL_FAIL: installation failure
+ * @method string getStatus() Obtain Plug-in installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when installation is successful (InstallStatus=INSTALLED); specific failure reason when installation fails (InstallStatus=INSTALL_FAIL).
 Enumeration value:
-NOT_SUPPORT: Unsupported environment
-CONTAINER_NOT_FOUND: Container does not exist.
-RESTART required
+NOT_SUPPORT: The environment does not support it
+CONTAINER_NOT_FOUND: container does not exist.
+REQUIRE_RESTART: restart required
 CA_FAILED: CA failed
-EBPF_FAILED: eBPF failed
+EBPF_FAILED: eBPF failure
 IPTABLE_FAILED: iptables failed.
 REDIRECT_FAILED: Traffic redirection failed.
- * @method void setStatus(string $Status) Set Plugin installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when successfully installed (InstallStatus=INSTALLED); specific failure reason when installation failure (InstallStatus=INSTALL_FAIL).
+ * @method void setStatus(string $Status) Set Plug-in installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when installation is successful (InstallStatus=INSTALLED); specific failure reason when installation fails (InstallStatus=INSTALL_FAIL).
 Enumeration value:
-NOT_SUPPORT: Unsupported environment
-CONTAINER_NOT_FOUND: Container does not exist.
-RESTART required
+NOT_SUPPORT: The environment does not support it
+CONTAINER_NOT_FOUND: container does not exist.
+REQUIRE_RESTART: restart required
 CA_FAILED: CA failed
-EBPF_FAILED: eBPF failed
+EBPF_FAILED: eBPF failure
 IPTABLE_FAILED: iptables failed.
 REDIRECT_FAILED: Traffic redirection failed.
- * @method string getMessage() Obtain Status copywriting (internationalization description derived from Status based on request language)
- * @method void setMessage(string $Message) Set Status copywriting (internationalization description derived from Status based on request language)
+ * @method string getMessage() Obtain Status copywriting (an internationalized description derived from Status based on the request language)
+ * @method void setMessage(string $Message) Set Status copywriting (an internationalized description derived from Status based on the request language)
  * @method string getActivityTime() Obtain Recent activity time of the plug-in
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
  * @method void setActivityTime(string $ActivityTime) Set Recent activity time of the plug-in
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
  */
 class TrafficPluginState extends AbstractModel
 {
     /**
-     * @var string Plugin installation status (upper layer aggregation)
+     * @var string Plugin installation status (upper-level aggregation)
 Enumeration value:
-NONE: Not installed
-INSTALLING
-INSTALLED: Installed
-INSTALL_FAIL: Installation failure
+NONE: not installed
+INSTALLING: installing
+INSTALLED: installed
+INSTALL_FAIL: installation failure
      */
     public $InstallStatus;
 
     /**
-     * @var string Plugin installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when successfully installed (InstallStatus=INSTALLED); specific failure reason when installation failure (InstallStatus=INSTALL_FAIL).
+     * @var string Plug-in installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when installation is successful (InstallStatus=INSTALLED); specific failure reason when installation fails (InstallStatus=INSTALL_FAIL).
 Enumeration value:
-NOT_SUPPORT: Unsupported environment
-CONTAINER_NOT_FOUND: Container does not exist.
-RESTART required
+NOT_SUPPORT: The environment does not support it
+CONTAINER_NOT_FOUND: container does not exist.
+REQUIRE_RESTART: restart required
 CA_FAILED: CA failed
-EBPF_FAILED: eBPF failed
+EBPF_FAILED: eBPF failure
 IPTABLE_FAILED: iptables failed.
 REDIRECT_FAILED: Traffic redirection failed.
      */
     public $Status;
 
     /**
-     * @var string Status copywriting (internationalization description derived from Status based on request language)
+     * @var string Status copywriting (an internationalized description derived from Status based on the request language)
      */
     public $Message;
 
     /**
      * @var string Recent activity time of the plug-in
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public $ActivityTime;
 
     /**
-     * @param string $InstallStatus Plugin installation status (upper layer aggregation)
+     * @param string $InstallStatus Plugin installation status (upper-level aggregation)
 Enumeration value:
-NONE: Not installed
-INSTALLING
-INSTALLED: Installed
-INSTALL_FAIL: Installation failure
-     * @param string $Status Plugin installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when successfully installed (InstallStatus=INSTALLED); specific failure reason when installation failure (InstallStatus=INSTALL_FAIL).
+NONE: not installed
+INSTALLING: installing
+INSTALLED: installed
+INSTALL_FAIL: installation failure
+     * @param string $Status Plug-in installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when installation is successful (InstallStatus=INSTALLED); specific failure reason when installation fails (InstallStatus=INSTALL_FAIL).
 Enumeration value:
-NOT_SUPPORT: Unsupported environment
-CONTAINER_NOT_FOUND: Container does not exist.
-RESTART required
+NOT_SUPPORT: The environment does not support it
+CONTAINER_NOT_FOUND: container does not exist.
+REQUIRE_RESTART: restart required
 CA_FAILED: CA failed
-EBPF_FAILED: eBPF failed
+EBPF_FAILED: eBPF failure
 IPTABLE_FAILED: iptables failed.
 REDIRECT_FAILED: Traffic redirection failed.
-     * @param string $Message Status copywriting (internationalization description derived from Status based on request language)
+     * @param string $Message Status copywriting (an internationalized description derived from Status based on the request language)
      * @param string $ActivityTime Recent activity time of the plug-in
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     function __construct()
     {

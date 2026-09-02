@@ -18,18 +18,18 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Access key Alarm record.
+ * Access key alarm records
  *
  * @method string getName() Obtain <p>Alarm name</p>
  * @method void setName(string $Name) Set <p>Alarm name</p>
- * @method integer getLevel() Obtain <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
- * @method void setLevel(integer $Level) Set <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
+ * @method integer getLevel() Obtain <p>Alarm level<br>0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical</p>
+ * @method void setLevel(integer $Level) Set <p>Alarm level<br>0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical</p>
  * @method integer getID() Obtain <p>Alarm record ID</p>
  * @method void setID(integer $ID) Set <p>Alarm record ID</p>
  * @method integer getAlarmRuleID() Obtain <p>Alarm rule ID</p>
  * @method void setAlarmRuleID(integer $AlarmRuleID) Set <p>Alarm rule ID</p>
- * @method integer getAlarmType() Obtain <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
- * @method void setAlarmType(integer $AlarmType) Set <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
+ * @method integer getAlarmType() Obtain <p>Alarm type<br>0 Abnormal calls<br>1 Leak monitoring</p>
+ * @method void setAlarmType(integer $AlarmType) Set <p>Alarm type<br>0 Abnormal calls<br>1 Leak monitoring</p>
  * @method string getAccessKey() Obtain <p>Access key</p>
  * @method void setAccessKey(string $AccessKey) Set <p>Access key</p>
  * @method integer getAccessKeyID() Obtain <p>Access Key ID</p>
@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessKeyRemark(string $AccessKeyRemark) Set <p>Access key remark</p>
  * @method string getLastAlarmTime() Obtain <p>Last alarm time</p>
  * @method void setLastAlarmTime(string $LastAlarmTime) Set <p>Last alarm time</p>
- * @method integer getStatus() Obtain <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
- * @method void setStatus(integer $Status) Set <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
- * @method string getDate() Obtain <p>Aggregate date</p>
- * @method void setDate(string $Date) Set <p>Aggregate date</p>
+ * @method integer getStatus() Obtain <p>Alarm status<br>0 - Unprocessed, 1 - Processed, 2 - Ignored</p>
+ * @method void setStatus(integer $Status) Set <p>Alarm status<br>0 - Unprocessed, 1 - Processed, 2 - Ignored</p>
+ * @method string getDate() Obtain <p>Aggregation date</p>
+ * @method void setDate(string $Date) Set <p>Aggregation date</p>
  * @method array getTag() Obtain <p>Alarm tag</p>
  * @method void setTag(array $Tag) Set <p>Alarm tag</p>
  * @method string getUin() Obtain <p>Uin of the main account</p>
@@ -50,30 +50,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNickname(string $Nickname) Set <p>Nickname of the main account</p>
  * @method string getSubUin() Obtain <p>Sub-account Uin</p>
  * @method void setSubUin(string $SubUin) Set <p>Sub-account Uin</p>
- * @method string getSubNickname() Obtain <p>Sub-account nickname</p>
- * @method void setSubNickname(string $SubNickname) Set <p>Sub-account nickname</p>
- * @method integer getType() Obtain <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
- * @method void setType(integer $Type) Set <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
+ * @method string getSubNickname() Obtain <p>Belonging sub-account nickname</p>
+ * @method void setSubNickname(string $SubNickname) Set <p>Belonging sub-account nickname</p>
+ * @method integer getType() Obtain <p>Account type<br>0: root account AK; 1: sub-account AK; 2: temporary key</p>
+ * @method void setType(integer $Type) Set <p>Account type<br>0: root account AK; 1: sub-account AK; 2: temporary key</p>
  * @method integer getAppID() Obtain <p>App ID</p>
  * @method void setAppID(integer $AppID) Set <p>App ID</p>
  * @method array getLeakEvidence() Obtain <p>Leakage evidence</p>
  * @method void setLeakEvidence(array $LeakEvidence) Set <p>Leakage evidence</p>
- * @method boolean getIsSupportEditWhiteAccount() Obtain <p>Whether support editing trust account</p>
- * @method void setIsSupportEditWhiteAccount(boolean $IsSupportEditWhiteAccount) Set <p>Whether support editing trust account</p>
+ * @method boolean getIsSupportEditWhiteAccount() Obtain <p>Whether editing trusted accounts is supported</p>
+ * @method void setIsSupportEditWhiteAccount(boolean $IsSupportEditWhiteAccount) Set <p>Whether editing trusted accounts is supported</p>
  * @method string getEvidence() Obtain <p>Alert evidence</p>
  * @method void setEvidence(string $Evidence) Set <p>Alert evidence</p>
- * @method string getRuleKey() Obtain <p>Alarm rule flag</p>
- * @method void setRuleKey(string $RuleKey) Set <p>Alarm rule flag</p>
- * @method integer getCloudType() Obtain <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
- * @method void setCloudType(integer $CloudType) Set <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
- * @method integer getAIStatus() Obtain <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
- * @method void setAIStatus(integer $AIStatus) Set <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
- * @method integer getFirstAlarmTimestamp() Obtain <p>First alarm timestamp (in seconds)</p>
- * @method void setFirstAlarmTimestamp(integer $FirstAlarmTimestamp) Set <p>First alarm timestamp (in seconds)</p>
+ * @method string getRuleKey() Obtain <p>Alarm rule identifier</p>
+ * @method void setRuleKey(string $RuleKey) Set <p>Alarm rule identifier</p>
+ * @method integer getCloudType() Obtain <p>Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud</p>
+ * @method void setCloudType(integer $CloudType) Set <p>Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud</p>
+ * @method integer getAIStatus() Obtain <p>Alarm AI analysis status<br>-1: Analysis failed<br>0: Not analyzed<br>1: Under analysis<br>2: Analysis successful, real alarm<br>3: Analysis successful, suspicious alarm</p>
+ * @method void setAIStatus(integer $AIStatus) Set <p>Alarm AI analysis status<br>-1: Analysis failed<br>0: Not analyzed<br>1: Under analysis<br>2: Analysis successful, real alarm<br>3: Analysis successful, suspicious alarm</p>
+ * @method integer getFirstAlarmTimestamp() Obtain <p>Initial alarm timestamp (in seconds)</p>
+ * @method void setFirstAlarmTimestamp(integer $FirstAlarmTimestamp) Set <p>Initial alarm timestamp (in seconds)</p>
  * @method integer getLastAlarmTimestamp() Obtain <p>Last alarm timestamp (in seconds)</p>
  * @method void setLastAlarmTimestamp(integer $LastAlarmTimestamp) Set <p>Last alarm timestamp (in seconds)</p>
- * @method string getAIFailedReason() Obtain <p>AI analysis failure description. Empty string if not failed.</p>
- * @method void setAIFailedReason(string $AIFailedReason) Set <p>AI analysis failure description. Empty string if not failed.</p>
+ * @method string getAIFailedReason() Obtain <p>AI analysis failure description, an empty string if no failure</p>
+ * @method void setAIFailedReason(string $AIFailedReason) Set <p>AI analysis failure description, an empty string if no failure</p>
  */
 class AccessKeyAlarm extends AbstractModel
 {
@@ -83,7 +83,7 @@ class AccessKeyAlarm extends AbstractModel
     public $Name;
 
     /**
-     * @var integer <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
+     * @var integer <p>Alarm level<br>0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical</p>
      */
     public $Level;
 
@@ -98,7 +98,7 @@ class AccessKeyAlarm extends AbstractModel
     public $AlarmRuleID;
 
     /**
-     * @var integer <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
+     * @var integer <p>Alarm type<br>0 Abnormal calls<br>1 Leak monitoring</p>
      */
     public $AlarmType;
 
@@ -123,12 +123,12 @@ class AccessKeyAlarm extends AbstractModel
     public $LastAlarmTime;
 
     /**
-     * @var integer <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
+     * @var integer <p>Alarm status<br>0 - Unprocessed, 1 - Processed, 2 - Ignored</p>
      */
     public $Status;
 
     /**
-     * @var string <p>Aggregate date</p>
+     * @var string <p>Aggregation date</p>
      */
     public $Date;
 
@@ -153,12 +153,12 @@ class AccessKeyAlarm extends AbstractModel
     public $SubUin;
 
     /**
-     * @var string <p>Sub-account nickname</p>
+     * @var string <p>Belonging sub-account nickname</p>
      */
     public $SubNickname;
 
     /**
-     * @var integer <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
+     * @var integer <p>Account type<br>0: root account AK; 1: sub-account AK; 2: temporary key</p>
      */
     public $Type;
 
@@ -173,7 +173,7 @@ class AccessKeyAlarm extends AbstractModel
     public $LeakEvidence;
 
     /**
-     * @var boolean <p>Whether support editing trust account</p>
+     * @var boolean <p>Whether editing trusted accounts is supported</p>
      */
     public $IsSupportEditWhiteAccount;
 
@@ -183,22 +183,22 @@ class AccessKeyAlarm extends AbstractModel
     public $Evidence;
 
     /**
-     * @var string <p>Alarm rule flag</p>
+     * @var string <p>Alarm rule identifier</p>
      */
     public $RuleKey;
 
     /**
-     * @var integer <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
+     * @var integer <p>Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud</p>
      */
     public $CloudType;
 
     /**
-     * @var integer <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
+     * @var integer <p>Alarm AI analysis status<br>-1: Analysis failed<br>0: Not analyzed<br>1: Under analysis<br>2: Analysis successful, real alarm<br>3: Analysis successful, suspicious alarm</p>
      */
     public $AIStatus;
 
     /**
-     * @var integer <p>First alarm timestamp (in seconds)</p>
+     * @var integer <p>Initial alarm timestamp (in seconds)</p>
      */
     public $FirstAlarmTimestamp;
 
@@ -208,38 +208,38 @@ class AccessKeyAlarm extends AbstractModel
     public $LastAlarmTimestamp;
 
     /**
-     * @var string <p>AI analysis failure description. Empty string if not failed.</p>
+     * @var string <p>AI analysis failure description, an empty string if no failure</p>
      */
     public $AIFailedReason;
 
     /**
      * @param string $Name <p>Alarm name</p>
-     * @param integer $Level <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
+     * @param integer $Level <p>Alarm level<br>0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical</p>
      * @param integer $ID <p>Alarm record ID</p>
      * @param integer $AlarmRuleID <p>Alarm rule ID</p>
-     * @param integer $AlarmType <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
+     * @param integer $AlarmType <p>Alarm type<br>0 Abnormal calls<br>1 Leak monitoring</p>
      * @param string $AccessKey <p>Access key</p>
      * @param integer $AccessKeyID <p>Access Key ID</p>
      * @param string $AccessKeyRemark <p>Access key remark</p>
      * @param string $LastAlarmTime <p>Last alarm time</p>
-     * @param integer $Status <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
-     * @param string $Date <p>Aggregate date</p>
+     * @param integer $Status <p>Alarm status<br>0 - Unprocessed, 1 - Processed, 2 - Ignored</p>
+     * @param string $Date <p>Aggregation date</p>
      * @param array $Tag <p>Alarm tag</p>
      * @param string $Uin <p>Uin of the main account</p>
      * @param string $Nickname <p>Nickname of the main account</p>
      * @param string $SubUin <p>Sub-account Uin</p>
-     * @param string $SubNickname <p>Sub-account nickname</p>
-     * @param integer $Type <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
+     * @param string $SubNickname <p>Belonging sub-account nickname</p>
+     * @param integer $Type <p>Account type<br>0: root account AK; 1: sub-account AK; 2: temporary key</p>
      * @param integer $AppID <p>App ID</p>
      * @param array $LeakEvidence <p>Leakage evidence</p>
-     * @param boolean $IsSupportEditWhiteAccount <p>Whether support editing trust account</p>
+     * @param boolean $IsSupportEditWhiteAccount <p>Whether editing trusted accounts is supported</p>
      * @param string $Evidence <p>Alert evidence</p>
-     * @param string $RuleKey <p>Alarm rule flag</p>
-     * @param integer $CloudType <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
-     * @param integer $AIStatus <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
-     * @param integer $FirstAlarmTimestamp <p>First alarm timestamp (in seconds)</p>
+     * @param string $RuleKey <p>Alarm rule identifier</p>
+     * @param integer $CloudType <p>Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud</p>
+     * @param integer $AIStatus <p>Alarm AI analysis status<br>-1: Analysis failed<br>0: Not analyzed<br>1: Under analysis<br>2: Analysis successful, real alarm<br>3: Analysis successful, suspicious alarm</p>
+     * @param integer $FirstAlarmTimestamp <p>Initial alarm timestamp (in seconds)</p>
      * @param integer $LastAlarmTimestamp <p>Last alarm timestamp (in seconds)</p>
-     * @param string $AIFailedReason <p>AI analysis failure description. Empty string if not failed.</p>
+     * @param string $AIFailedReason <p>AI analysis failure description, an empty string if no failure</p>
      */
     function __construct()
     {

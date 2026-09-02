@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScanStatistic request structure.
  *
- * @method array getMemberId() Obtain Group Account Member ID
- * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method string getTaskLogId() Obtain Health check task id.
- * @method void setTaskLogId(string $TaskLogId) Set Health check task id.
+ * @method array getMemberId() Obtain <p>Group account member id</p>
+ * @method void setMemberId(array $MemberId) Set <p>Group account member id</p>
+ * @method string getTaskLogId() Obtain Health check task id
+ * @method void setTaskLogId(string $TaskLogId) Set Health check task id
  */
 class DescribeScanStatisticRequest extends AbstractModel
 {
     /**
-     * @var array Group Account Member ID
+     * @var array <p>Group account member id</p>
      */
     public $MemberId;
 
     /**
-     * @var string Health check task id.
+     * @var string Health check task id
      */
     public $TaskLogId;
 
     /**
-     * @param array $MemberId Group Account Member ID
-     * @param string $TaskLogId Health check task id.
+     * @param array $MemberId <p>Group account member id</p>
+     * @param string $TaskLogId Health check task id
      */
     function __construct()
     {

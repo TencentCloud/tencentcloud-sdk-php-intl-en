@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method array getContent() Obtain asset
- * @method void setContent(array $Content) Set asset
- * @method integer getRetainPath() Obtain Whether to retain the path configuration. `1`: Retain; Others: Do not retain. It defaults to do not retain if not specified.
- * @method void setRetainPath(integer $RetainPath) Set Whether to retain the path configuration. `1`: Retain; Others: Do not retain. It defaults to do not retain if not specified.
- * @method integer getIgnoreAsset() Obtain Whether to ignore this asset in the future. `1`: Ignore; Others: Do not ignore. It defaults to ignore if not specified.
- * @method void setIgnoreAsset(integer $IgnoreAsset) Set Whether to ignore this asset in the future. `1`: Ignore; Others: Do not ignore. It defaults to ignore if not specified.
- * @method array getTags() Obtain Asset tags
- * @method void setTags(array $Tags) Set Asset tags
- * @method string getType() Obtain Deletion mode. Values: `ALL` (delete all). If it's not specified, `Content` is required.
- * @method void setType(string $Type) Set Deletion mode. Values: `ALL` (delete all). If it's not specified, `Content` is required.
+ * @method array getContent() Obtain Asset
+ * @method void setContent(array $Content) Set Asset
+ * @method integer getRetainPath() Obtain Whether to retain path configuration. 1: Yes; Other: No. No if not specified by default.
+ * @method void setRetainPath(integer $RetainPath) Set Whether to retain path configuration. 1: Yes; Other: No. No if not specified by default.
+ * @method integer getIgnoreAsset() Obtain Whether to ignore this asset in the future. 1: Yes; Other: No. No if not specified by default.
+ * @method void setIgnoreAsset(integer $IgnoreAsset) Set Whether to ignore this asset in the future. 1: Yes; Other: No. No if not specified by default.
+ * @method array getTags() Obtain Asset tag
+ * @method void setTags(array $Tags) Set Asset tag
+ * @method string getType() Obtain Delete type. ALL: deleting all, which will directly ignore the content of Content; Other value: not all, and Content is required. Other value by default.
+ * @method void setType(string $Type) Set Delete type. ALL: deleting all, which will directly ignore the content of Content; Other value: not all, and Content is required. Other value by default.
  */
 class DeleteDomainAndIpRequest extends AbstractModel
 {
@@ -41,37 +41,37 @@ class DeleteDomainAndIpRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var array asset
+     * @var array Asset
      */
     public $Content;
 
     /**
-     * @var integer Whether to retain the path configuration. `1`: Retain; Others: Do not retain. It defaults to do not retain if not specified.
+     * @var integer Whether to retain path configuration. 1: Yes; Other: No. No if not specified by default.
      */
     public $RetainPath;
 
     /**
-     * @var integer Whether to ignore this asset in the future. `1`: Ignore; Others: Do not ignore. It defaults to ignore if not specified.
+     * @var integer Whether to ignore this asset in the future. 1: Yes; Other: No. No if not specified by default.
      */
     public $IgnoreAsset;
 
     /**
-     * @var array Asset tags
+     * @var array Asset tag
      */
     public $Tags;
 
     /**
-     * @var string Deletion mode. Values: `ALL` (delete all). If it's not specified, `Content` is required.
+     * @var string Delete type. ALL: deleting all, which will directly ignore the content of Content; Other value: not all, and Content is required. Other value by default.
      */
     public $Type;
 
     /**
      * @param array $MemberId Group Account Member ID
-     * @param array $Content asset
-     * @param integer $RetainPath Whether to retain the path configuration. `1`: Retain; Others: Do not retain. It defaults to do not retain if not specified.
-     * @param integer $IgnoreAsset Whether to ignore this asset in the future. `1`: Ignore; Others: Do not ignore. It defaults to ignore if not specified.
-     * @param array $Tags Asset tags
-     * @param string $Type Deletion mode. Values: `ALL` (delete all). If it's not specified, `Content` is required.
+     * @param array $Content Asset
+     * @param integer $RetainPath Whether to retain path configuration. 1: Yes; Other: No. No if not specified by default.
+     * @param integer $IgnoreAsset Whether to ignore this asset in the future. 1: Yes; Other: No. No if not specified by default.
+     * @param array $Tags Asset tag
+     * @param string $Type Delete type. ALL: deleting all, which will directly ignore the content of Content; Other value: not all, and Content is required. Other value by default.
      */
     function __construct()
     {

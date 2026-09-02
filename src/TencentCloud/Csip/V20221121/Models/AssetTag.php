@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Asset tags
+ * Security Center Asset Tag
  *
  * @method string getTagKey() Obtain Tag Key, can be letters, digits, and underscores.
  * @method void setTagKey(string $TagKey) Set Tag Key, can be letters, digits, and underscores.

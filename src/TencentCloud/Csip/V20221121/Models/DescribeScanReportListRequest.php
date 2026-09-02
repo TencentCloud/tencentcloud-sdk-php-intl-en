@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method Filter getFilter() Obtain Filter conditions
- * @method void setFilter(Filter $Filter) Set Filter conditions
+ * @method Filter getFilter() Obtain List Filters
+ * @method void setFilter(Filter $Filter) Set List Filters
  */
 class DescribeScanReportListRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeScanReportListRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var Filter Filter conditions
+     * @var Filter List Filters
      */
     public $Filter;
 
     /**
      * @param array $MemberId Group Account Member ID
-     * @param Filter $Filter Filter conditions
+     * @param Filter $Filter List Filters
      */
     function __construct()
     {

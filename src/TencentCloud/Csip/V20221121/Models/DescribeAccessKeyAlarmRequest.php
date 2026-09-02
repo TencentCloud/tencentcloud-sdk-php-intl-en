@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilter(Filter $Filter) Set Filter.
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method integer getAccessKeyID() Obtain Access key ID.
- * @method void setAccessKeyID(integer $AccessKeyID) Set Access key ID.
- * @method integer getSourceIPID() Obtain ID of the source IP.
- * @method void setSourceIPID(integer $SourceIPID) Set ID of the source IP.
+ * @method integer getAccessKeyID() Obtain Access key ID
+ * @method void setAccessKeyID(integer $AccessKeyID) Set Access key ID
+ * @method integer getSourceIPID() Obtain ID of the source IP
+ * @method void setSourceIPID(integer $SourceIPID) Set ID of the source IP
  * @method string getSubUin() Obtain Account UIN
  * @method void setSubUin(string $SubUin) Set Account UIN
  */
@@ -44,12 +44,12 @@ class DescribeAccessKeyAlarmRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var integer Access key ID.
+     * @var integer Access key ID
      */
     public $AccessKeyID;
 
     /**
-     * @var integer ID of the source IP.
+     * @var integer ID of the source IP
      */
     public $SourceIPID;
 
@@ -61,8 +61,8 @@ class DescribeAccessKeyAlarmRequest extends AbstractModel
     /**
      * @param Filter $Filter Filter.
      * @param array $MemberId Group Account Member ID
-     * @param integer $AccessKeyID Access key ID.
-     * @param integer $SourceIPID ID of the source IP.
+     * @param integer $AccessKeyID Access key ID
+     * @param integer $SourceIPID ID of the source IP
      * @param string $SubUin Account UIN
      */
     function __construct()

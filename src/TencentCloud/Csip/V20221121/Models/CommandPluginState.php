@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI Agent command sandbox plug-in status
  *
- * @method string getInstallStatus() Obtain <p>Plug-in installation status (upper layer aggregation)<br>Enumeration value:<br>NONE: Not installed<br>INSTALLING: Installing<br>INSTALLED: Installed<br>INSTALL_FAIL: Installation failure</p>
- * @method void setInstallStatus(string $InstallStatus) Set <p>Plug-in installation status (upper layer aggregation)<br>Enumeration value:<br>NONE: Not installed<br>INSTALLING: Installing<br>INSTALLED: Installed<br>INSTALL_FAIL: Installation failure</p>
+ * @method string getInstallStatus() Obtain <p>Plug-in installation status (upper-layer aggregation)<br>Enumeration values:<br>NONE: not installed<br>INSTALLING: installing<br>INSTALLED: installed<br>INSTALL_FAIL: installation failure</p>
+ * @method void setInstallStatus(string $InstallStatus) Set <p>Plug-in installation status (upper-layer aggregation)<br>Enumeration values:<br>NONE: not installed<br>INSTALLING: installing<br>INSTALLED: installed<br>INSTALL_FAIL: installation failure</p>
  */
 class CommandPluginState extends AbstractModel
 {
     /**
-     * @var string <p>Plug-in installation status (upper layer aggregation)<br>Enumeration value:<br>NONE: Not installed<br>INSTALLING: Installing<br>INSTALLED: Installed<br>INSTALL_FAIL: Installation failure</p>
+     * @var string <p>Plug-in installation status (upper-layer aggregation)<br>Enumeration values:<br>NONE: not installed<br>INSTALLING: installing<br>INSTALLED: installed<br>INSTALL_FAIL: installation failure</p>
      */
     public $InstallStatus;
 
     /**
-     * @param string $InstallStatus <p>Plug-in installation status (upper layer aggregation)<br>Enumeration value:<br>NONE: Not installed<br>INSTALLING: Installing<br>INSTALLED: Installed<br>INSTALL_FAIL: Installation failure</p>
+     * @param string $InstallStatus <p>Plug-in installation status (upper-layer aggregation)<br>Enumeration values:<br>NONE: not installed<br>INSTALLING: installing<br>INSTALLED: installed<br>INSTALL_FAIL: installation failure</p>
      */
     function __construct()
     {

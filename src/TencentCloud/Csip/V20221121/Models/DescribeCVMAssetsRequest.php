@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method Filter getFilter() Obtain Filter parameters.
- * @method void setFilter(Filter $Filter) Set Filter parameters.
+ * @method Filter getFilter() Obtain Filter parameters
+ * @method void setFilter(Filter $Filter) Set Filter parameters
  */
 class DescribeCVMAssetsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeCVMAssetsRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var Filter Filter parameters.
+     * @var Filter Filter parameters
      */
     public $Filter;
 
     /**
      * @param array $MemberId Group Account Member ID
-     * @param Filter $Filter Filter parameters.
+     * @param Filter $Filter Filter parameters
      */
     function __construct()
     {

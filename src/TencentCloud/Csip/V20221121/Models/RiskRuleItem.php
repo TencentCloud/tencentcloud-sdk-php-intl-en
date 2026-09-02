@@ -18,18 +18,18 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * risk rule
+ * Risk rule
  *
- * @method string getItemId() Obtain Risk Check Item ID
- * @method void setItemId(string $ItemId) Set Risk Check Item ID
- * @method string getProvider() Obtain Cloud vendor name
- * @method void setProvider(string $Provider) Set Cloud vendor name
+ * @method string getItemId() Obtain Risk check item ID
+ * @method void setItemId(string $ItemId) Set Risk check item ID
+ * @method string getProvider() Obtain Vendor name
+ * @method void setProvider(string $Provider) Set Vendor name
  * @method string getInstanceType() Obtain Instance type
  * @method void setInstanceType(string $InstanceType) Set Instance type
  * @method string getInstanceName() Obtain Instance Type Name
  * @method void setInstanceName(string $InstanceName) Set Instance Type Name
- * @method string getRiskTitle() Obtain risk name
- * @method void setRiskTitle(string $RiskTitle) Set risk name
+ * @method string getRiskTitle() Obtain Risk name
+ * @method void setRiskTitle(string $RiskTitle) Set Risk name
  * @method string getCheckType() Obtain Check type
  * @method void setCheckType(string $CheckType) Set Check type
  * @method string getSeverity() Obtain Risk level
@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class RiskRuleItem extends AbstractModel
 {
     /**
-     * @var string Risk Check Item ID
+     * @var string Risk check item ID
      */
     public $ItemId;
 
     /**
-     * @var string Cloud vendor name
+     * @var string Vendor name
      */
     public $Provider;
 
@@ -60,7 +60,7 @@ class RiskRuleItem extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var string risk name
+     * @var string Risk name
      */
     public $RiskTitle;
 
@@ -80,11 +80,11 @@ class RiskRuleItem extends AbstractModel
     public $RiskInfluence;
 
     /**
-     * @param string $ItemId Risk Check Item ID
-     * @param string $Provider Cloud vendor name
+     * @param string $ItemId Risk check item ID
+     * @param string $Provider Vendor name
      * @param string $InstanceType Instance type
      * @param string $InstanceName Instance Type Name
-     * @param string $RiskTitle risk name
+     * @param string $RiskTitle Risk name
      * @param string $CheckType Check type
      * @param string $Severity Risk level
      * @param string $RiskInfluence Risk damage

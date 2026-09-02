@@ -18,60 +18,60 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Access key asset Alarm information.
+ * Access key asset alarm information
  *
- * @method integer getType() Obtain Alarm type/risktype.
-Alarm type:.
-Abnormal calls.
-Leakage detection.
-2 custom.
+ * @method integer getType() Obtain Alarm type/Risk type
+Alarm type:
+0Abnormal calls
+1. Leakage detection
+Custom parameter 2.
 
-Risk type:.
-Configuration risk.
-Custom risk.
- * @method void setType(integer $Type) Set Alarm type/risktype.
-Alarm type:.
-Abnormal calls.
-Leakage detection.
-2 custom.
+Risk type:
+0: Configuration risk
+1: Custom risk
+ * @method void setType(integer $Type) Set Alarm type/Risk type
+Alarm type:
+0Abnormal calls
+1. Leakage detection
+Custom parameter 2.
 
-Risk type:.
-Configuration risk.
-Custom risk.
- * @method integer getCount() Obtain Alarm count/number of risks.
- * @method void setCount(integer $Count) Set Alarm count/number of risks.
+Risk type:
+0: Configuration risk
+1: Custom risk
+ * @method integer getCount() Obtain Alarm count / risk quantity
+ * @method void setCount(integer $Count) Set Alarm count / risk quantity
  */
 class AccessKeyAlarmInfo extends AbstractModel
 {
     /**
-     * @var integer Alarm type/risktype.
-Alarm type:.
-Abnormal calls.
-Leakage detection.
-2 custom.
+     * @var integer Alarm type/Risk type
+Alarm type:
+0Abnormal calls
+1. Leakage detection
+Custom parameter 2.
 
-Risk type:.
-Configuration risk.
-Custom risk.
+Risk type:
+0: Configuration risk
+1: Custom risk
      */
     public $Type;
 
     /**
-     * @var integer Alarm count/number of risks.
+     * @var integer Alarm count / risk quantity
      */
     public $Count;
 
     /**
-     * @param integer $Type Alarm type/risktype.
-Alarm type:.
-Abnormal calls.
-Leakage detection.
-2 custom.
+     * @param integer $Type Alarm type/Risk type
+Alarm type:
+0Abnormal calls
+1. Leakage detection
+Custom parameter 2.
 
-Risk type:.
-Configuration risk.
-Custom risk.
-     * @param integer $Count Alarm count/number of risks.
+Risk type:
+0: Configuration risk
+1: Custom risk
+     * @param integer $Count Alarm count / risk quantity
      */
     function __construct()
     {

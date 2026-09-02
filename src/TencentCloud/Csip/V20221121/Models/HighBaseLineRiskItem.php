@@ -18,45 +18,45 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * High-Risk baseline risk content.
+ * Risk content of high-risk baseline
  *
- * @method string getCloudAccountID() Obtain Cloud account ID.
- * @method void setCloudAccountID(string $CloudAccountID) Set Cloud account ID.
+ * @method string getCloudAccountID() Obtain Cloud Account ID
+ * @method void setCloudAccountID(string $CloudAccountID) Set Cloud Account ID
  * @method string getAssetID() Obtain Instance ID.
  * @method void setAssetID(string $AssetID) Set Instance ID.
  * @method string getInstanceStatus() Obtain Instance status
  * @method void setInstanceStatus(string $InstanceStatus) Set Instance status
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method string getRiskName() Obtain Risk name.
- * @method void setRiskName(string $RiskName) Set Risk name.
- * @method string getRiskCategory() Obtain Risk classification.
- * @method void setRiskCategory(string $RiskCategory) Set Risk classification.
- * @method string getRiskLevel() Obtain Risk level.
- * @method void setRiskLevel(string $RiskLevel) Set Risk level.
- * @method string getRiskDesc() Obtain Risk description.
- * @method void setRiskDesc(string $RiskDesc) Set Risk description.
- * @method string getRiskResult() Obtain Risk result.
- * @method void setRiskResult(string $RiskResult) Set Risk result.
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
+ * @method string getRiskName() Obtain Risk name
+ * @method void setRiskName(string $RiskName) Set Risk name
+ * @method string getRiskCategory() Obtain Risk classification
+ * @method void setRiskCategory(string $RiskCategory) Set Risk classification
+ * @method string getRiskLevel() Obtain Risk level
+ * @method void setRiskLevel(string $RiskLevel) Set Risk level
+ * @method string getRiskDesc() Obtain Risk description
+ * @method void setRiskDesc(string $RiskDesc) Set Risk description
+ * @method string getRiskResult() Obtain Risk result
+ * @method void setRiskResult(string $RiskResult) Set Risk result
  * @method string getFixAdvice() Obtain Fixing suggestion
  * @method void setFixAdvice(string $FixAdvice) Set Fixing suggestion
- * @method string getRiskCategoryName() Obtain Linux vulnerability.
- * @method void setRiskCategoryName(string $RiskCategoryName) Set Linux vulnerability.
- * @method string getRiskLevelName() Obtain Risk name.
- * @method void setRiskLevelName(string $RiskLevelName) Set Risk name.
+ * @method string getRiskCategoryName() Obtain Linux vulnerability
+ * @method void setRiskCategoryName(string $RiskCategoryName) Set Linux vulnerability
+ * @method string getRiskLevelName() Obtain Risk level name
+ * @method void setRiskLevelName(string $RiskLevelName) Set Risk level name
  * @method string getInstanceStatusName() Obtain Instance status
  * @method void setInstanceStatusName(string $InstanceStatusName) Set Instance status
  * @method string getCreateTime() Obtain First detection time
  * @method void setCreateTime(string $CreateTime) Set First detection time
  * @method string getUpdateTime() Obtain Last discovery time
  * @method void setUpdateTime(string $UpdateTime) Set Last discovery time
- * @method integer getAppID() Obtain Tenant ID.
- * @method void setAppID(integer $AppID) Set Tenant ID.
+ * @method integer getAppID() Obtain Tenant ID
+ * @method void setAppID(integer $AppID) Set Tenant ID
  */
 class HighBaseLineRiskItem extends AbstractModel
 {
     /**
-     * @var string Cloud account ID.
+     * @var string Cloud Account ID
      */
     public $CloudAccountID;
 
@@ -71,32 +71,32 @@ class HighBaseLineRiskItem extends AbstractModel
     public $InstanceStatus;
 
     /**
-     * @var string Instance name
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
-     * @var string Risk name.
+     * @var string Risk name
      */
     public $RiskName;
 
     /**
-     * @var string Risk classification.
+     * @var string Risk classification
      */
     public $RiskCategory;
 
     /**
-     * @var string Risk level.
+     * @var string Risk level
      */
     public $RiskLevel;
 
     /**
-     * @var string Risk description.
+     * @var string Risk description
      */
     public $RiskDesc;
 
     /**
-     * @var string Risk result.
+     * @var string Risk result
      */
     public $RiskResult;
 
@@ -106,12 +106,12 @@ class HighBaseLineRiskItem extends AbstractModel
     public $FixAdvice;
 
     /**
-     * @var string Linux vulnerability.
+     * @var string Linux vulnerability
      */
     public $RiskCategoryName;
 
     /**
-     * @var string Risk name.
+     * @var string Risk level name
      */
     public $RiskLevelName;
 
@@ -131,27 +131,27 @@ class HighBaseLineRiskItem extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var integer Tenant ID.
+     * @var integer Tenant ID
      */
     public $AppID;
 
     /**
-     * @param string $CloudAccountID Cloud account ID.
+     * @param string $CloudAccountID Cloud Account ID
      * @param string $AssetID Instance ID.
      * @param string $InstanceStatus Instance status
-     * @param string $InstanceName Instance name
-     * @param string $RiskName Risk name.
-     * @param string $RiskCategory Risk classification.
-     * @param string $RiskLevel Risk level.
-     * @param string $RiskDesc Risk description.
-     * @param string $RiskResult Risk result.
+     * @param string $InstanceName Instance name.
+     * @param string $RiskName Risk name
+     * @param string $RiskCategory Risk classification
+     * @param string $RiskLevel Risk level
+     * @param string $RiskDesc Risk description
+     * @param string $RiskResult Risk result
      * @param string $FixAdvice Fixing suggestion
-     * @param string $RiskCategoryName Linux vulnerability.
-     * @param string $RiskLevelName Risk name.
+     * @param string $RiskCategoryName Linux vulnerability
+     * @param string $RiskLevelName Risk level name
      * @param string $InstanceStatusName Instance status
      * @param string $CreateTime First detection time
      * @param string $UpdateTime Last discovery time
-     * @param integer $AppID Tenant ID.
+     * @param integer $AppID Tenant ID
      */
     function __construct()
     {

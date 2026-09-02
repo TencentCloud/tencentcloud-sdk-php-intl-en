@@ -18,60 +18,60 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Alarm count for access key.
+ * Access key alarm count
  *
- * @method integer getID() Obtain Access key ID.
- * @method void setID(integer $ID) Set Access key ID.
- * @method string getAccessKey() Obtain Access key.
- * @method void setAccessKey(string $AccessKey) Set Access key.
- * @method integer getAlarmCount() Obtain Alarm count.
- * @method void setAlarmCount(integer $AlarmCount) Set Alarm count.
- * @method integer getAccessKeyStatus() Obtain Security credentials status. valid values: 0 (disabled), 1 (enabled), 2 (deleted).
- * @method void setAccessKeyStatus(integer $AccessKeyStatus) Set Security credentials status. valid values: 0 (disabled), 1 (enabled), 2 (deleted).
- * @method string getAccessKeyCreateTime() Obtain AK creation time.
- * @method void setAccessKeyCreateTime(string $AccessKeyCreateTime) Set AK creation time.
- * @method string getLastAccessTime() Obtain AK last usage time. returns "-" if never used.
- * @method void setLastAccessTime(string $LastAccessTime) Set AK last usage time. returns "-" if never used.
+ * @method integer getID() Obtain Access key ID
+ * @method void setID(integer $ID) Set Access key ID
+ * @method string getAccessKey() Obtain Access key
+ * @method void setAccessKey(string $AccessKey) Set Access key
+ * @method integer getAlarmCount() Obtain Alarm count
+ * @method void setAlarmCount(integer $AlarmCount) Set Alarm count
+ * @method integer getAccessKeyStatus() Obtain Access key status: `0`: disabled, `1`: enabled, `2`: deleted
+ * @method void setAccessKeyStatus(integer $AccessKeyStatus) Set Access key status: `0`: disabled, `1`: enabled, `2`: deleted
+ * @method string getAccessKeyCreateTime() Obtain AK creation time
+ * @method void setAccessKeyCreateTime(string $AccessKeyCreateTime) Set AK creation time
+ * @method string getLastAccessTime() Obtain Last AK usage time. If it has never been used, "-" is returned.
+ * @method void setLastAccessTime(string $LastAccessTime) Set Last AK usage time. If it has never been used, "-" is returned.
  */
 class AccessKeyAlarmCount extends AbstractModel
 {
     /**
-     * @var integer Access key ID.
+     * @var integer Access key ID
      */
     public $ID;
 
     /**
-     * @var string Access key.
+     * @var string Access key
      */
     public $AccessKey;
 
     /**
-     * @var integer Alarm count.
+     * @var integer Alarm count
      */
     public $AlarmCount;
 
     /**
-     * @var integer Security credentials status. valid values: 0 (disabled), 1 (enabled), 2 (deleted).
+     * @var integer Access key status: `0`: disabled, `1`: enabled, `2`: deleted
      */
     public $AccessKeyStatus;
 
     /**
-     * @var string AK creation time.
+     * @var string AK creation time
      */
     public $AccessKeyCreateTime;
 
     /**
-     * @var string AK last usage time. returns "-" if never used.
+     * @var string Last AK usage time. If it has never been used, "-" is returned.
      */
     public $LastAccessTime;
 
     /**
-     * @param integer $ID Access key ID.
-     * @param string $AccessKey Access key.
-     * @param integer $AlarmCount Alarm count.
-     * @param integer $AccessKeyStatus Security credentials status. valid values: 0 (disabled), 1 (enabled), 2 (deleted).
-     * @param string $AccessKeyCreateTime AK creation time.
-     * @param string $LastAccessTime AK last usage time. returns "-" if never used.
+     * @param integer $ID Access key ID
+     * @param string $AccessKey Access key
+     * @param integer $AlarmCount Alarm count
+     * @param integer $AccessKeyStatus Access key status: `0`: disabled, `1`: enabled, `2`: deleted
+     * @param string $AccessKeyCreateTime AK creation time
+     * @param string $LastAccessTime Last AK usage time. If it has never been used, "-" is returned.
      */
     function __construct()
     {

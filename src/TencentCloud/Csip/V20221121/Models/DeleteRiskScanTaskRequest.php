@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRiskScanTask request structure.
  *
- * @method array getTaskIdList() Obtain task id and target AppID list
- * @method void setTaskIdList(array $TaskIdList) Set task id and target AppID list
+ * @method array getTaskIdList() Obtain Task id and target AppID list
+ * @method void setTaskIdList(array $TaskIdList) Set Task id and target AppID list
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
 class DeleteRiskScanTaskRequest extends AbstractModel
 {
     /**
-     * @var array task id and target AppID list
+     * @var array Task id and target AppID list
      */
     public $TaskIdList;
 
@@ -38,7 +38,7 @@ class DeleteRiskScanTaskRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @param array $TaskIdList task id and target AppID list
+     * @param array $TaskIdList Task id and target AppID list
      * @param array $MemberId Group Account Member ID
      */
     function __construct()

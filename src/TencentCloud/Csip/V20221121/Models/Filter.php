@@ -18,68 +18,68 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Query filters
+ * The list query API adopts the new filter API, which is directly passed to the backend for query filtering.
  *
- * @method integer getLimit() Obtain Max number of returned results
- * @method void setLimit(integer $Limit) Set Max number of returned results
- * @method integer getOffset() Obtain Query offset
- * @method void setOffset(integer $Offset) Set Query offset
- * @method string getOrder() Obtain Sorting order. Values: `asc` (ascending), `desc` (descending).
- * @method void setOrder(string $Order) Set Sorting order. Values: `asc` (ascending), `desc` (descending).
- * @method string getBy() Obtain Specify the field used for sorting
- * @method void setBy(string $By) Set Specify the field used for sorting
- * @method array getFilters() Obtain Filtered columns and content
- * @method void setFilters(array $Filters) Set Filtered columns and content
- * @method string getStartTime() Obtain Start time of the query period. 
- * @method void setStartTime(string $StartTime) Set Start time of the query period. 
- * @method string getEndTime() Obtain End time of the query period.
- * @method void setEndTime(string $EndTime) Set End time of the query period.
+ * @method integer getLimit() Obtain Query Quantity Limit
+ * @method void setLimit(integer $Limit) Set Query Quantity Limit
+ * @method integer getOffset() Obtain Query Offset Position
+ * @method void setOffset(integer $Offset) Set Query Offset Position
+ * @method string getOrder() Obtain Sort by Ascending or Descending Order. Ascending: asc, Descending: desc.
+ * @method void setOrder(string $Order) Set Sort by Ascending or Descending Order. Ascending: asc, Descending: desc.
+ * @method string getBy() Obtain Fields to Sort
+ * @method void setBy(string $By) Set Fields to Sort
+ * @method array getFilters() Obtain Filtered Columns and Content
+ * @method void setFilters(array $Filters) Set Filtered Columns and Content
+ * @method string getStartTime() Obtain Can be left blank. Log usage query time.
+ * @method void setStartTime(string $StartTime) Set Can be left blank. Log usage query time.
+ * @method string getEndTime() Obtain Can be left blank. Log usage query time.
+ * @method void setEndTime(string $EndTime) Set Can be left blank. Log usage query time.
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var integer Max number of returned results
+     * @var integer Query Quantity Limit
      */
     public $Limit;
 
     /**
-     * @var integer Query offset
+     * @var integer Query Offset Position
      */
     public $Offset;
 
     /**
-     * @var string Sorting order. Values: `asc` (ascending), `desc` (descending).
+     * @var string Sort by Ascending or Descending Order. Ascending: asc, Descending: desc.
      */
     public $Order;
 
     /**
-     * @var string Specify the field used for sorting
+     * @var string Fields to Sort
      */
     public $By;
 
     /**
-     * @var array Filtered columns and content
+     * @var array Filtered Columns and Content
      */
     public $Filters;
 
     /**
-     * @var string Start time of the query period. 
+     * @var string Can be left blank. Log usage query time.
      */
     public $StartTime;
 
     /**
-     * @var string End time of the query period.
+     * @var string Can be left blank. Log usage query time.
      */
     public $EndTime;
 
     /**
-     * @param integer $Limit Max number of returned results
-     * @param integer $Offset Query offset
-     * @param string $Order Sorting order. Values: `asc` (ascending), `desc` (descending).
-     * @param string $By Specify the field used for sorting
-     * @param array $Filters Filtered columns and content
-     * @param string $StartTime Start time of the query period. 
-     * @param string $EndTime End time of the query period.
+     * @param integer $Limit Query Quantity Limit
+     * @param integer $Offset Query Offset Position
+     * @param string $Order Sort by Ascending or Descending Order. Ascending: asc, Descending: desc.
+     * @param string $By Fields to Sort
+     * @param array $Filters Filtered Columns and Content
+     * @param string $StartTime Can be left blank. Log usage query time.
+     * @param string $EndTime Can be left blank. Log usage query time.
      */
     function __construct()
     {

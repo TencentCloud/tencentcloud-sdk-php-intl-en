@@ -18,70 +18,70 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of a vulnerability
+ * Vulnerability Risk Objects from Asset's Perspective
  *
  * @method string getAffectAsset() Obtain Affected assets
  * @method void setAffectAsset(string $AffectAsset) Set Affected assets
- * @method string getLevel() Obtain Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+ * @method string getLevel() Obtain Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
 
- * @method void setLevel(string $Level) Set Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+ * @method void setLevel(string $Level) Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
 
  * @method string getInstanceType() Obtain Asset type
  * @method void setInstanceType(string $InstanceType) Set Asset type
- * @method string getComponent() Obtain Components
- * @method void setComponent(string $Component) Set Components
- * @method string getService() Obtain Service
- * @method void setService(string $Service) Set Service
- * @method string getRecentTime() Obtain Last detected 
- * @method void setRecentTime(string $RecentTime) Set Last detected 
- * @method string getFirstTime() Obtain First detected
- * @method void setFirstTime(string $FirstTime) Set First detected
- * @method integer getStatus() Obtain Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
- * @method void setStatus(integer $Status) Set Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+ * @method string getComponent() Obtain Component
+ * @method void setComponent(string $Component) Set Component
+ * @method string getService() Obtain Service.
+ * @method void setService(string $Service) Set Service.
+ * @method string getRecentTime() Obtain Latest Recognition Time
+ * @method void setRecentTime(string $RecentTime) Set Latest Recognition Time
+ * @method string getFirstTime() Obtain First Recognition Time
+ * @method void setFirstTime(string $FirstTime) Set First Recognition Time
+ * @method integer getStatus() Obtain Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
+ * @method void setStatus(integer $Status) Set Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
  * @method string getId() Obtain Risk ID
  * @method void setId(string $Id) Set Risk ID
- * @method string getIndex() Obtain Frontend index
- * @method void setIndex(string $Index) Set Frontend index
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method string getAppId() Obtain User `appid`
- * @method void setAppId(string $AppId) Set User `appid`
+ * @method string getIndex() Obtain Front-end Index
+ * @method void setIndex(string $Index) Set Front-end Index
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
+ * @method string getAppId() Obtain User appid.
+ * @method void setAppId(string $AppId) Set User appid.
  * @method string getNick() Obtain User Nickname
  * @method void setNick(string $Nick) Set User Nickname
  * @method string getUin() Obtain User UIN
  * @method void setUin(string $Uin) Set User UIN
  * @method string getVULType() Obtain Vulnerability type
  * @method void setVULType(string $VULType) Set Vulnerability type
- * @method string getPort() Obtain Port
- * @method void setPort(string $Port) Set Port
+ * @method string getPort() Obtain Port.
+ * @method void setPort(string $Port) Set Port.
  * @method string getDescribe() Obtain Vulnerability description
  * @method void setDescribe(string $Describe) Set Vulnerability description
- * @method string getAppName() Obtain Vulnerability impact component.
- * @method void setAppName(string $AppName) Set Vulnerability impact component.
- * @method string getReferences() Obtain Technology reference.
- * @method void setReferences(string $References) Set Technology reference.
- * @method string getAppVersion() Obtain Vulnerability impact version.
- * @method void setAppVersion(string $AppVersion) Set Vulnerability impact version.
- * @method string getVULURL() Obtain Risks.
- * @method void setVULURL(string $VULURL) Set Risks.
+ * @method string getAppName() Obtain Affected component of the vulnerability
+ * @method void setAppName(string $AppName) Set Affected component of the vulnerability
+ * @method string getReferences() Obtain Technical reference
+ * @method void setReferences(string $References) Set Technical reference
+ * @method string getAppVersion() Obtain Vulnerability Impact version
+ * @method void setAppVersion(string $AppVersion) Set Vulnerability Impact version
+ * @method string getVULURL() Obtain Risk point
+ * @method void setVULURL(string $VULURL) Set Risk point
  * @method string getVULName() Obtain Vulnerability name
  * @method void setVULName(string $VULName) Set Vulnerability name
- * @method string getCVE() Obtain CVE number
- * @method void setCVE(string $CVE) Set CVE number
+ * @method string getCVE() Obtain cve
+ * @method void setCVE(string $CVE) Set cve
  * @method string getFix() Obtain Fixing solution
  * @method void setFix(string $Fix) Set Fixing solution
- * @method string getPOCId() Obtain POC ID
- * @method void setPOCId(string $POCId) Set POC ID
+ * @method string getPOCId() Obtain pocid
+ * @method void setPOCId(string $POCId) Set pocid
  * @method string getFrom() Obtain Scan Source
  * @method void setFrom(string $From) Set Scan Source
- * @method integer getCWPVersion() Obtain CWPP edition
- * @method void setCWPVersion(integer $CWPVersion) Set CWPP edition
- * @method boolean getIsSupportRepair() Obtain Whether it can be fixed 
- * @method void setIsSupportRepair(boolean $IsSupportRepair) Set Whether it can be fixed 
- * @method boolean getIsSupportDetect() Obtain Whether it can be detected
- * @method void setIsSupportDetect(boolean $IsSupportDetect) Set Whether it can be detected
+ * @method integer getCWPVersion() Obtain Host version.
+ * @method void setCWPVersion(integer $CWPVersion) Set Host version.
+ * @method boolean getIsSupportRepair() Obtain Whether repair is supported
+ * @method void setIsSupportRepair(boolean $IsSupportRepair) Set Whether repair is supported
+ * @method boolean getIsSupportDetect() Obtain Whether scanning is supported.
+ * @method void setIsSupportDetect(boolean $IsSupportDetect) Set Whether scanning is supported.
  * @method string getInstanceUUID() Obtain Instance UUID
  * @method void setInstanceUUID(string $InstanceUUID) Set Instance UUID
  * @method string getPayload() Obtain Payload
@@ -97,7 +97,7 @@ class AssetViewVULRisk extends AbstractModel
     public $AffectAsset;
 
     /**
-     * @var string Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+     * @var string Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
 
      */
     public $Level;
@@ -108,27 +108,27 @@ class AssetViewVULRisk extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string Components
+     * @var string Component
      */
     public $Component;
 
     /**
-     * @var string Service
+     * @var string Service.
      */
     public $Service;
 
     /**
-     * @var string Last detected 
+     * @var string Latest Recognition Time
      */
     public $RecentTime;
 
     /**
-     * @var string First detected
+     * @var string First Recognition Time
      */
     public $FirstTime;
 
     /**
-     * @var integer Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * @var integer Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
      */
     public $Status;
 
@@ -138,22 +138,22 @@ class AssetViewVULRisk extends AbstractModel
     public $Id;
 
     /**
-     * @var string Frontend index
+     * @var string Front-end Index
      */
     public $Index;
 
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
-     * @var string User `appid`
+     * @var string User appid.
      */
     public $AppId;
 
@@ -173,7 +173,7 @@ class AssetViewVULRisk extends AbstractModel
     public $VULType;
 
     /**
-     * @var string Port
+     * @var string Port.
      */
     public $Port;
 
@@ -183,22 +183,22 @@ class AssetViewVULRisk extends AbstractModel
     public $Describe;
 
     /**
-     * @var string Vulnerability impact component.
+     * @var string Affected component of the vulnerability
      */
     public $AppName;
 
     /**
-     * @var string Technology reference.
+     * @var string Technical reference
      */
     public $References;
 
     /**
-     * @var string Vulnerability impact version.
+     * @var string Vulnerability Impact version
      */
     public $AppVersion;
 
     /**
-     * @var string Risks.
+     * @var string Risk point
      */
     public $VULURL;
 
@@ -208,7 +208,7 @@ class AssetViewVULRisk extends AbstractModel
     public $VULName;
 
     /**
-     * @var string CVE number
+     * @var string cve
      */
     public $CVE;
 
@@ -218,7 +218,7 @@ class AssetViewVULRisk extends AbstractModel
     public $Fix;
 
     /**
-     * @var string POC ID
+     * @var string pocid
      */
     public $POCId;
 
@@ -228,17 +228,17 @@ class AssetViewVULRisk extends AbstractModel
     public $From;
 
     /**
-     * @var integer CWPP edition
+     * @var integer Host version.
      */
     public $CWPVersion;
 
     /**
-     * @var boolean Whether it can be fixed 
+     * @var boolean Whether repair is supported
      */
     public $IsSupportRepair;
 
     /**
-     * @var boolean Whether it can be detected
+     * @var boolean Whether scanning is supported.
      */
     public $IsSupportDetect;
 
@@ -259,36 +259,36 @@ class AssetViewVULRisk extends AbstractModel
 
     /**
      * @param string $AffectAsset Affected assets
-     * @param string $Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+     * @param string $Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
 
      * @param string $InstanceType Asset type
-     * @param string $Component Components
-     * @param string $Service Service
-     * @param string $RecentTime Last detected 
-     * @param string $FirstTime First detected
-     * @param integer $Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * @param string $Component Component
+     * @param string $Service Service.
+     * @param string $RecentTime Latest Recognition Time
+     * @param string $FirstTime First Recognition Time
+     * @param integer $Status Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
      * @param string $Id Risk ID
-     * @param string $Index Frontend index
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
-     * @param string $AppId User `appid`
+     * @param string $Index Front-end Index
+     * @param string $InstanceId Instance ID.
+     * @param string $InstanceName Instance name.
+     * @param string $AppId User appid.
      * @param string $Nick User Nickname
      * @param string $Uin User UIN
      * @param string $VULType Vulnerability type
-     * @param string $Port Port
+     * @param string $Port Port.
      * @param string $Describe Vulnerability description
-     * @param string $AppName Vulnerability impact component.
-     * @param string $References Technology reference.
-     * @param string $AppVersion Vulnerability impact version.
-     * @param string $VULURL Risks.
+     * @param string $AppName Affected component of the vulnerability
+     * @param string $References Technical reference
+     * @param string $AppVersion Vulnerability Impact version
+     * @param string $VULURL Risk point
      * @param string $VULName Vulnerability name
-     * @param string $CVE CVE number
+     * @param string $CVE cve
      * @param string $Fix Fixing solution
-     * @param string $POCId POC ID
+     * @param string $POCId pocid
      * @param string $From Scan Source
-     * @param integer $CWPVersion CWPP edition
-     * @param boolean $IsSupportRepair Whether it can be fixed 
-     * @param boolean $IsSupportDetect Whether it can be detected
+     * @param integer $CWPVersion Host version.
+     * @param boolean $IsSupportRepair Whether repair is supported
+     * @param boolean $IsSupportDetect Whether scanning is supported.
      * @param string $InstanceUUID Instance UUID
      * @param string $Payload Payload
      * @param integer $EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.

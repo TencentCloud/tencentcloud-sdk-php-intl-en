@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Source IP of the call public account information.
+ * Source IP of the call. External account info.
  *
  * @method string getName() Obtain Account name
  * @method void setName(string $Name) Set Account name
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppID(integer $AppID) Set App ID of the VPC.
  * @method string getVpcID() Obtain vpc id
  * @method void setVpcID(string $VpcID) Set vpc id
- * @method string getVpcName() Obtain vpc name.
- * @method void setVpcName(string $VpcName) Set vpc name.
+ * @method string getVpcName() Obtain VPC name.
+ * @method void setVpcName(string $VpcName) Set VPC name.
  */
 class SourceIPVpcInfo extends AbstractModel
 {
@@ -47,7 +47,7 @@ class SourceIPVpcInfo extends AbstractModel
     public $VpcID;
 
     /**
-     * @var string vpc name.
+     * @var string VPC name.
      */
     public $VpcName;
 
@@ -55,7 +55,7 @@ class SourceIPVpcInfo extends AbstractModel
      * @param string $Name Account name
      * @param integer $AppID App ID of the VPC.
      * @param string $VpcID vpc id
-     * @param string $VpcName vpc name.
+     * @param string $VpcName VPC name.
      */
     function __construct()
     {

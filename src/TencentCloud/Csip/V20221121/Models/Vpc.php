@@ -18,34 +18,34 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of VPCs
+ * VPC List Data
  *
- * @method integer getSubnet() Obtain Subnet (32-bit mask)
- * @method void setSubnet(integer $Subnet) Set Subnet (32-bit mask)
- * @method integer getConnectedVpc() Obtain Connected VPC (32-bit mask)
- * @method void setConnectedVpc(integer $ConnectedVpc) Set Connected VPC (32-bit mask)
+ * @method integer getSubnet() Obtain Subnet (supports only 32-bit)
+ * @method void setSubnet(integer $Subnet) Set Subnet (supports only 32-bit)
+ * @method integer getConnectedVpc() Obtain Interconnected VPC (supports only 32-bit)
+ * @method void setConnectedVpc(integer $ConnectedVpc) Set Interconnected VPC (supports only 32-bit)
  * @method string getAssetId() Obtain Asset ID
  * @method void setAssetId(string $AssetId) Set Asset ID
- * @method string getRegion() Obtain Region
- * @method void setRegion(string $Region) Set Region
- * @method integer getCVM() Obtain CVM (only 32-bit)
- * @method void setCVM(integer $CVM) Set CVM (only 32-bit)
+ * @method string getRegion() Obtain region
+ * @method void setRegion(string $Region) Set region
+ * @method integer getCVM() Obtain CVM (supports only 32-bit)
+ * @method void setCVM(integer $CVM) Set CVM (supports only 32-bit)
  * @method array getTag() Obtain Tag.
  * @method void setTag(array $Tag) Set Tag.
  * @method array getDNS() Obtain DNS Domain
  * @method void setDNS(array $DNS) Set DNS Domain
  * @method string getAssetName() Obtain Asset name
  * @method void setAssetName(string $AssetName) Set Asset name
- * @method string getCIDR() Obtain CIDR block
- * @method void setCIDR(string $CIDR) Set CIDR block
+ * @method string getCIDR() Obtain CIDR Network Segmentation
+ * @method void setCIDR(string $CIDR) Set CIDR Network Segmentation
  * @method string getCreateTime() Obtain Asset creation time
  * @method void setCreateTime(string $CreateTime) Set Asset creation time
  * @method string getAppId() Obtain appid
  * @method void setAppId(string $AppId) Set appid
- * @method string getUin() Obtain UIN
- * @method void setUin(string $Uin) Set UIN
- * @method string getNick() Obtain User name
- * @method void setNick(string $Nick) Set User name
+ * @method string getUin() Obtain uin
+ * @method void setUin(string $Uin) Set uin
+ * @method string getNick() Obtain Nickname
+ * @method void setNick(string $Nick) Set Nickname
  * @method integer getIsNewAsset() Obtain New Asset or Not. 1: New
  * @method void setIsNewAsset(integer $IsNewAsset) Set New Asset or Not. 1: New
  * @method integer getIsCore() Obtain Whether it is a core asset. 1-Yes, 2-No.
@@ -54,12 +54,12 @@ use TencentCloud\Common\AbstractModel;
 class Vpc extends AbstractModel
 {
     /**
-     * @var integer Subnet (32-bit mask)
+     * @var integer Subnet (supports only 32-bit)
      */
     public $Subnet;
 
     /**
-     * @var integer Connected VPC (32-bit mask)
+     * @var integer Interconnected VPC (supports only 32-bit)
      */
     public $ConnectedVpc;
 
@@ -69,12 +69,12 @@ class Vpc extends AbstractModel
     public $AssetId;
 
     /**
-     * @var string Region
+     * @var string region
      */
     public $Region;
 
     /**
-     * @var integer CVM (only 32-bit)
+     * @var integer CVM (supports only 32-bit)
      */
     public $CVM;
 
@@ -94,7 +94,7 @@ class Vpc extends AbstractModel
     public $AssetName;
 
     /**
-     * @var string CIDR block
+     * @var string CIDR Network Segmentation
      */
     public $CIDR;
 
@@ -109,12 +109,12 @@ class Vpc extends AbstractModel
     public $AppId;
 
     /**
-     * @var string UIN
+     * @var string uin
      */
     public $Uin;
 
     /**
-     * @var string User name
+     * @var string Nickname
      */
     public $Nick;
 
@@ -129,19 +129,19 @@ class Vpc extends AbstractModel
     public $IsCore;
 
     /**
-     * @param integer $Subnet Subnet (32-bit mask)
-     * @param integer $ConnectedVpc Connected VPC (32-bit mask)
+     * @param integer $Subnet Subnet (supports only 32-bit)
+     * @param integer $ConnectedVpc Interconnected VPC (supports only 32-bit)
      * @param string $AssetId Asset ID
-     * @param string $Region Region
-     * @param integer $CVM CVM (only 32-bit)
+     * @param string $Region region
+     * @param integer $CVM CVM (supports only 32-bit)
      * @param array $Tag Tag.
      * @param array $DNS DNS Domain
      * @param string $AssetName Asset name
-     * @param string $CIDR CIDR block
+     * @param string $CIDR CIDR Network Segmentation
      * @param string $CreateTime Asset creation time
      * @param string $AppId appid
-     * @param string $Uin UIN
-     * @param string $Nick User name
+     * @param string $Uin uin
+     * @param string $Nick Nickname
      * @param integer $IsNewAsset New Asset or Not. 1: New
      * @param integer $IsCore Whether it is a core asset. 1-Yes, 2-No.
      */

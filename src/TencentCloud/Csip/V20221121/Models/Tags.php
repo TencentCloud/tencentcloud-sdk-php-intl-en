@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Server tag information
+ * Host Tag Information
  *
  * @method string getTagKey() Obtain Host tag key
  * @method void setTagKey(string $TagKey) Set Host tag key

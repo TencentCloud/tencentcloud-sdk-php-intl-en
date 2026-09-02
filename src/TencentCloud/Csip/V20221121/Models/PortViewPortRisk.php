@@ -18,40 +18,40 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Port risk details
+ * Port Risk Objects from Port's Perspective
  *
  * @method integer getNoHandleCount() Obtain Unprocessed quantity.
  * @method void setNoHandleCount(integer $NoHandleCount) Set Unprocessed quantity.
- * @method string getLevel() Obtain Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
- * @method void setLevel(string $Level) Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
- * @method string getProtocol() Obtain Network protocol
- * @method void setProtocol(string $Protocol) Set Network protocol
- * @method string getComponent() Obtain Components
- * @method void setComponent(string $Component) Set Components
- * @method integer getPort() Obtain Port
- * @method void setPort(integer $Port) Set Port
- * @method string getRecentTime() Obtain Last detected 
- * @method void setRecentTime(string $RecentTime) Set Last detected 
- * @method string getFirstTime() Obtain First detected
- * @method void setFirstTime(string $FirstTime) Set First detected
- * @method integer getSuggestion() Obtain Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
- * @method void setSuggestion(integer $Suggestion) Set Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
+ * @method string getLevel() Obtain Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: severe.
+ * @method void setLevel(string $Level) Set Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: severe.
+ * @method string getProtocol() Obtain Protocol
+ * @method void setProtocol(string $Protocol) Set Protocol
+ * @method string getComponent() Obtain Component
+ * @method void setComponent(string $Component) Set Component
+ * @method integer getPort() Obtain Port.
+ * @method void setPort(integer $Port) Set Port.
+ * @method string getRecentTime() Obtain Latest Recognition Time
+ * @method void setRecentTime(string $RecentTime) Set Latest Recognition Time
+ * @method string getFirstTime() Obtain First Recognition Time
+ * @method void setFirstTime(string $FirstTime) Set First Recognition Time
+ * @method integer getSuggestion() Obtain Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
+ * @method void setSuggestion(integer $Suggestion) Set Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
  * @method string getAffectAssetCount() Obtain Number of Affected Assets
  * @method void setAffectAssetCount(string $AffectAssetCount) Set Number of Affected Assets
  * @method string getId() Obtain ID
  * @method void setId(string $Id) Set ID
  * @method string getFrom() Obtain Source recognition
  * @method void setFrom(string $From) Set Source recognition
- * @method string getIndex() Obtain Data entry key
- * @method void setIndex(string $Index) Set Data entry key
- * @method string getAppId() Obtain User AppId
- * @method void setAppId(string $AppId) Set User AppId
+ * @method string getIndex() Obtain Front-end Index
+ * @method void setIndex(string $Index) Set Front-end Index
+ * @method string getAppId() Obtain User appid.
+ * @method void setAppId(string $AppId) Set User appid.
  * @method string getNick() Obtain User Nickname
  * @method void setNick(string $Nick) Set User Nickname
  * @method string getUin() Obtain User UIN
  * @method void setUin(string $Uin) Set User UIN
- * @method string getService() Obtain Service
- * @method void setService(string $Service) Set Service
+ * @method string getService() Obtain Service.
+ * @method void setService(string $Service) Set Service.
  */
 class PortViewPortRisk extends AbstractModel
 {
@@ -61,37 +61,37 @@ class PortViewPortRisk extends AbstractModel
     public $NoHandleCount;
 
     /**
-     * @var string Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @var string Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: severe.
      */
     public $Level;
 
     /**
-     * @var string Network protocol
+     * @var string Protocol
      */
     public $Protocol;
 
     /**
-     * @var string Components
+     * @var string Component
      */
     public $Component;
 
     /**
-     * @var integer Port
+     * @var integer Port.
      */
     public $Port;
 
     /**
-     * @var string Last detected 
+     * @var string Latest Recognition Time
      */
     public $RecentTime;
 
     /**
-     * @var string First detected
+     * @var string First Recognition Time
      */
     public $FirstTime;
 
     /**
-     * @var integer Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
+     * @var integer Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
      */
     public $Suggestion;
 
@@ -111,12 +111,12 @@ class PortViewPortRisk extends AbstractModel
     public $From;
 
     /**
-     * @var string Data entry key
+     * @var string Front-end Index
      */
     public $Index;
 
     /**
-     * @var string User AppId
+     * @var string User appid.
      */
     public $AppId;
 
@@ -131,27 +131,27 @@ class PortViewPortRisk extends AbstractModel
     public $Uin;
 
     /**
-     * @var string Service
+     * @var string Service.
      */
     public $Service;
 
     /**
      * @param integer $NoHandleCount Unprocessed quantity.
-     * @param string $Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-     * @param string $Protocol Network protocol
-     * @param string $Component Components
-     * @param integer $Port Port
-     * @param string $RecentTime Last detected 
-     * @param string $FirstTime First detected
-     * @param integer $Suggestion Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
+     * @param string $Level Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: severe.
+     * @param string $Protocol Protocol
+     * @param string $Component Component
+     * @param integer $Port Port.
+     * @param string $RecentTime Latest Recognition Time
+     * @param string $FirstTime First Recognition Time
+     * @param integer $Suggestion Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
      * @param string $AffectAssetCount Number of Affected Assets
      * @param string $Id ID
      * @param string $From Source recognition
-     * @param string $Index Data entry key
-     * @param string $AppId User AppId
+     * @param string $Index Front-end Index
+     * @param string $AppId User appid.
      * @param string $Nick User Nickname
      * @param string $Uin User UIN
-     * @param string $Service Service
+     * @param string $Service Service.
      */
     function __construct()
     {

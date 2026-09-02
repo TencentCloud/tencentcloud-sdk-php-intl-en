@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * risk details
+ * Risk details
  *
  * @method string getCreateTime() Obtain <p>First discovery time</p>
  * @method void setCreateTime(string $CreateTime) Set <p>First discovery time</p>
@@ -28,28 +28,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskStatus(integer $RiskStatus) Set <p>Risk status</p>
  * @method string getRiskContent() Obtain <p>Risk content</p>
  * @method void setRiskContent(string $RiskContent) Set <p>Risk content</p>
- * @method string getProvider() Obtain <p>Cloud service provider</p>
- * @method void setProvider(string $Provider) Set <p>Cloud service provider</p>
+ * @method string getProvider() Obtain <p>Cloud service provider.</p>
+ * @method void setProvider(string $Provider) Set <p>Cloud service provider.</p>
  * @method string getProviderName() Obtain <p>Vendor name</p>
  * @method void setProviderName(string $ProviderName) Set <p>Vendor name</p>
- * @method string getCloudAccountId() Obtain <p>cloud account</p>
- * @method void setCloudAccountId(string $CloudAccountId) Set <p>cloud account</p>
+ * @method string getCloudAccountId() Obtain <p>Cloud account</p>
+ * @method void setCloudAccountId(string $CloudAccountId) Set <p>Cloud account</p>
  * @method string getCloudAccountName() Obtain <p>Cloud account name</p>
  * @method void setCloudAccountName(string $CloudAccountName) Set <p>Cloud account name</p>
  * @method string getInstanceId() Obtain <p>Instance ID.</p>
  * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
- * @method string getInstanceName() Obtain <p>Instance name</p>
- * @method void setInstanceName(string $InstanceName) Set <p>Instance name</p>
+ * @method string getInstanceName() Obtain <p>Instance name.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p>
  * @method integer getRiskId() Obtain <p>Risk ID</p>
  * @method void setRiskId(integer $RiskId) Set <p>Risk ID</p>
  * @method string getRiskRuleId() Obtain <p>Risk rule ID</p>
  * @method void setRiskRuleId(string $RiskRuleId) Set <p>Risk rule ID</p>
  * @method string getCheckStatus() Obtain <p>Risk verification status</p>
  * @method void setCheckStatus(string $CheckStatus) Set <p>Risk verification status</p>
- * @method integer getAppID() Obtain <p>User AppID</p>
- * @method void setAppID(integer $AppID) Set <p>User AppID</p>
+ * @method integer getAppID() Obtain <p>User AppID.</p>
+ * @method void setAppID(integer $AppID) Set <p>User AppID.</p>
  * @method string getAssetType() Obtain <p>Asset type</p>
  * @method void setAssetType(string $AssetType) Set <p>Asset type</p>
+ * @method string getReason() Obtain <p>Risk ignore reason</p>
+ * @method void setReason(string $Reason) Set <p>Risk ignore reason</p>
  */
 class RiskDetailItem extends AbstractModel
 {
@@ -74,7 +76,7 @@ class RiskDetailItem extends AbstractModel
     public $RiskContent;
 
     /**
-     * @var string <p>Cloud service provider</p>
+     * @var string <p>Cloud service provider.</p>
      */
     public $Provider;
 
@@ -84,7 +86,7 @@ class RiskDetailItem extends AbstractModel
     public $ProviderName;
 
     /**
-     * @var string <p>cloud account</p>
+     * @var string <p>Cloud account</p>
      */
     public $CloudAccountId;
 
@@ -99,7 +101,7 @@ class RiskDetailItem extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string <p>Instance name</p>
+     * @var string <p>Instance name.</p>
      */
     public $InstanceName;
 
@@ -119,7 +121,7 @@ class RiskDetailItem extends AbstractModel
     public $CheckStatus;
 
     /**
-     * @var integer <p>User AppID</p>
+     * @var integer <p>User AppID.</p>
      */
     public $AppID;
 
@@ -129,21 +131,27 @@ class RiskDetailItem extends AbstractModel
     public $AssetType;
 
     /**
+     * @var string <p>Risk ignore reason</p>
+     */
+    public $Reason;
+
+    /**
      * @param string $CreateTime <p>First discovery time</p>
      * @param string $UpdateTime <p>Update time.</p>
      * @param integer $RiskStatus <p>Risk status</p>
      * @param string $RiskContent <p>Risk content</p>
-     * @param string $Provider <p>Cloud service provider</p>
+     * @param string $Provider <p>Cloud service provider.</p>
      * @param string $ProviderName <p>Vendor name</p>
-     * @param string $CloudAccountId <p>cloud account</p>
+     * @param string $CloudAccountId <p>Cloud account</p>
      * @param string $CloudAccountName <p>Cloud account name</p>
      * @param string $InstanceId <p>Instance ID.</p>
-     * @param string $InstanceName <p>Instance name</p>
+     * @param string $InstanceName <p>Instance name.</p>
      * @param integer $RiskId <p>Risk ID</p>
      * @param string $RiskRuleId <p>Risk rule ID</p>
      * @param string $CheckStatus <p>Risk verification status</p>
-     * @param integer $AppID <p>User AppID</p>
+     * @param integer $AppID <p>User AppID.</p>
      * @param string $AssetType <p>Asset type</p>
+     * @param string $Reason <p>Risk ignore reason</p>
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class RiskDetailItem extends AbstractModel
 
         if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
             $this->AssetType = $param["AssetType"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

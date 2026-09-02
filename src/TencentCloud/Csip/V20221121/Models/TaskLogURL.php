@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Temp download URL for the report PDF
+ * Temporary Link for Report PDF Download
  *
  * @method string getURL() Obtain Temporary Link for Report Download
  * @method void setURL(string $URL) Set Temporary Link for Report Download

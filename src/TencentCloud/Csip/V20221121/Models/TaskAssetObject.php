@@ -18,16 +18,16 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task asset information
+ * Task Asset Items
  *
- * @method string getAssetName() Obtain Asset name.
- * @method void setAssetName(string $AssetName) Set Asset name.
- * @method string getInstanceType() Obtain Asset type.
- * @method void setInstanceType(string $InstanceType) Set Asset type.
- * @method string getAssetType() Obtain Asset category.
- * @method void setAssetType(string $AssetType) Set Asset category.
- * @method string getAsset() Obtain IP, domain name, asset ID, database ID, and more
- * @method void setAsset(string $Asset) Set IP, domain name, asset ID, database ID, and more
+ * @method string getAssetName() Obtain Asset name
+ * @method void setAssetName(string $AssetName) Set Asset name
+ * @method string getInstanceType() Obtain Asset type
+ * @method void setInstanceType(string $InstanceType) Set Asset type
+ * @method string getAssetType() Obtain Asset category
+ * @method void setAssetType(string $AssetType) Set Asset category
+ * @method string getAsset() Obtain IP/Domain/Asset ID, Database ID, etc.
+ * @method void setAsset(string $Asset) Set IP/Domain/Asset ID, Database ID, etc.
  * @method string getRegion() Obtain Region.
  * @method void setRegion(string $Region) Set Region.
  * @method string getArn() Obtain Unique ID of Multi-Cloud Assets
@@ -36,22 +36,22 @@ use TencentCloud\Common\AbstractModel;
 class TaskAssetObject extends AbstractModel
 {
     /**
-     * @var string Asset name.
+     * @var string Asset name
      */
     public $AssetName;
 
     /**
-     * @var string Asset type.
+     * @var string Asset type
      */
     public $InstanceType;
 
     /**
-     * @var string Asset category.
+     * @var string Asset category
      */
     public $AssetType;
 
     /**
-     * @var string IP, domain name, asset ID, database ID, and more
+     * @var string IP/Domain/Asset ID, Database ID, etc.
      */
     public $Asset;
 
@@ -66,10 +66,10 @@ class TaskAssetObject extends AbstractModel
     public $Arn;
 
     /**
-     * @param string $AssetName Asset name.
-     * @param string $InstanceType Asset type.
-     * @param string $AssetType Asset category.
-     * @param string $Asset IP, domain name, asset ID, database ID, and more
+     * @param string $AssetName Asset name
+     * @param string $InstanceType Asset type
+     * @param string $AssetType Asset category
+     * @param string $Asset IP/Domain/Asset ID, Database ID, etc.
      * @param string $Region Region.
      * @param string $Arn Unique ID of Multi-Cloud Assets
      */

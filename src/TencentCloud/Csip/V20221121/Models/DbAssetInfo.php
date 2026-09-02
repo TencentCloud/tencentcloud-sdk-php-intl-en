@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of a database asset. 
+ * DB Asset Details
  *
  * @method integer getCFWStatus() Obtain Cloud Defense Status
  * @method void setCFWStatus(integer $CFWStatus) Set Cloud Defense Status

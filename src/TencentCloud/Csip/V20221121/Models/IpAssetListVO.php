@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * List of IPs
+ * IP List
  *
  * @method string getAssetId() Obtain Asset ID
  * @method void setAssetId(string $AssetId) Set Asset ID
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set Region.
  * @method integer getCFWStatus() Obtain Cloud Defense Status
  * @method void setCFWStatus(integer $CFWStatus) Set Cloud Defense Status
- * @method string getAssetCreateTime() Obtain Asset creation time
- * @method void setAssetCreateTime(string $AssetCreateTime) Set Asset creation time
+ * @method string getAssetCreateTime() Obtain Asset creation time.
+ * @method void setAssetCreateTime(string $AssetCreateTime) Set Asset creation time.
  * @method string getPublicIp() Obtain Public IP address
  * @method void setPublicIp(string $PublicIp) Set Public IP address
  * @method integer getPublicIpType() Obtain Public IP Type
@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsCore(integer $IsCore) Set Core
  * @method integer getIsCloud() Obtain On-Cloud
  * @method void setIsCloud(integer $IsCloud) Set On-Cloud
- * @method integer getAttack() Obtain network attack
- * @method void setAttack(integer $Attack) Set network attack
+ * @method integer getAttack() Obtain Network attack
+ * @method void setAttack(integer $Attack) Set Network attack
  * @method integer getAccess() Obtain Network access
  * @method void setAccess(integer $Access) Set Network access
  * @method integer getIntercept() Obtain Network Interception
@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutBandwidth(string $OutBandwidth) Set Outbound bandwidth
  * @method string getInFlow() Obtain Inbound traffic
  * @method void setInFlow(string $InFlow) Set Inbound traffic
- * @method string getOutFlow() Obtain outbound traffic
- * @method void setOutFlow(string $OutFlow) Set outbound traffic
+ * @method string getOutFlow() Obtain Outbound traffic
+ * @method void setOutFlow(string $OutFlow) Set Outbound traffic
  * @method string getLastScanTime() Obtain Last scan time
  * @method void setLastScanTime(string $LastScanTime) Set Last scan time
  * @method integer getPortRisk() Obtain Port risk
@@ -74,18 +74,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfigurationRisk(integer $ConfigurationRisk) Set Configuration risk
  * @method integer getScanTask() Obtain Scan Task
  * @method void setScanTask(integer $ScanTask) Set Scan Task
- * @method integer getWeakPassword() Obtain weak password
- * @method void setWeakPassword(integer $WeakPassword) Set weak password
+ * @method integer getWeakPassword() Obtain Weak password
+ * @method void setWeakPassword(integer $WeakPassword) Set Weak password
  * @method integer getWebContentRisk() Obtain Content risk
  * @method void setWebContentRisk(integer $WebContentRisk) Set Content risk
  * @method array getTag() Obtain Tag.
  * @method void setTag(array $Tag) Set Tag.
  * @method string getAddressId() Obtain EIP Primary Key
  * @method void setAddressId(string $AddressId) Set EIP Primary Key
- * @method string getMemberId() Obtain Member ID information
- * @method void setMemberId(string $MemberId) Set Member ID information
- * @method integer getRiskExposure() Obtain risk service exposure
- * @method void setRiskExposure(integer $RiskExposure) Set risk service exposure
+ * @method string getMemberId() Obtain MemberId information
+ * @method void setMemberId(string $MemberId) Set MemberId information
+ * @method integer getRiskExposure() Obtain Risk service exposure
+ * @method void setRiskExposure(integer $RiskExposure) Set Risk service exposure
  * @method integer getIsNewAsset() Obtain New Asset or Not. 1: New
  * @method void setIsNewAsset(integer $IsNewAsset) Set New Asset or Not. 1: New
  * @method integer getVerifyStatus() Obtain Asset Authentication Status. 0-Pending Authentication; 1-Authentication Succeeded; 2-Authentication in Progress; 3+-Authentication Failed.
@@ -119,7 +119,7 @@ class IpAssetListVO extends AbstractModel
     public $CFWStatus;
 
     /**
-     * @var string Asset creation time
+     * @var string Asset creation time.
      */
     public $AssetCreateTime;
 
@@ -169,7 +169,7 @@ class IpAssetListVO extends AbstractModel
     public $IsCloud;
 
     /**
-     * @var integer network attack
+     * @var integer Network attack
      */
     public $Attack;
 
@@ -199,7 +199,7 @@ class IpAssetListVO extends AbstractModel
     public $InFlow;
 
     /**
-     * @var string outbound traffic
+     * @var string Outbound traffic
      */
     public $OutFlow;
 
@@ -229,7 +229,7 @@ class IpAssetListVO extends AbstractModel
     public $ScanTask;
 
     /**
-     * @var integer weak password
+     * @var integer Weak password
      */
     public $WeakPassword;
 
@@ -249,12 +249,12 @@ class IpAssetListVO extends AbstractModel
     public $AddressId;
 
     /**
-     * @var string Member ID information
+     * @var string MemberId information
      */
     public $MemberId;
 
     /**
-     * @var integer risk service exposure
+     * @var integer Risk service exposure
      */
     public $RiskExposure;
 
@@ -274,7 +274,7 @@ class IpAssetListVO extends AbstractModel
      * @param string $AssetType Asset type
      * @param string $Region Region.
      * @param integer $CFWStatus Cloud Defense Status
-     * @param string $AssetCreateTime Asset creation time
+     * @param string $AssetCreateTime Asset creation time.
      * @param string $PublicIp Public IP address
      * @param integer $PublicIpType Public IP Type
      * @param string $VpcId vpc
@@ -284,24 +284,24 @@ class IpAssetListVO extends AbstractModel
      * @param string $NickName Name
      * @param integer $IsCore Core
      * @param integer $IsCloud On-Cloud
-     * @param integer $Attack network attack
+     * @param integer $Attack Network attack
      * @param integer $Access Network access
      * @param integer $Intercept Network Interception
      * @param string $InBandwidth Inbound bandwidth
      * @param string $OutBandwidth Outbound bandwidth
      * @param string $InFlow Inbound traffic
-     * @param string $OutFlow outbound traffic
+     * @param string $OutFlow Outbound traffic
      * @param string $LastScanTime Last scan time
      * @param integer $PortRisk Port risk
      * @param integer $VulnerabilityRisk Vulnerability risk
      * @param integer $ConfigurationRisk Configuration risk
      * @param integer $ScanTask Scan Task
-     * @param integer $WeakPassword weak password
+     * @param integer $WeakPassword Weak password
      * @param integer $WebContentRisk Content risk
      * @param array $Tag Tag.
      * @param string $AddressId EIP Primary Key
-     * @param string $MemberId Member ID information
-     * @param integer $RiskExposure risk service exposure
+     * @param string $MemberId MemberId information
+     * @param integer $RiskExposure Risk service exposure
      * @param integer $IsNewAsset New Asset or Not. 1: New
      * @param integer $VerifyStatus Asset Authentication Status. 0-Pending Authentication; 1-Authentication Succeeded; 2-Authentication in Progress; 3+-Authentication Failed.
      */

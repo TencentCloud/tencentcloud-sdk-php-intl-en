@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Native tag key-value pair on the cloud.
+ * Native tag key-value pair in the cloud.
  *
  * @method string getName() Obtain Tag key.
  * @method void setName(string $Name) Set Tag key.

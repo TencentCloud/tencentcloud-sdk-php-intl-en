@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRiskCenterRiskStatus request structure.
  *
- * @method array getRiskStatusKeys() Obtain Data of risk assets
- * @method void setRiskStatusKeys(array $RiskStatusKeys) Set Data of risk assets
- * @method integer getStatus() Obtain Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
- * @method void setStatus(integer $Status) Set Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
- * @method integer getType() Obtain Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
- * @method void setType(integer $Type) Set Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
+ * @method array getRiskStatusKeys() Obtain Risky Asset Related Data
+ * @method void setRiskStatusKeys(array $RiskStatusKeys) Set Risky Asset Related Data
+ * @method integer getStatus() Obtain Disposition status. 1: Handled; 2: Ignored; 3: Cancel disposed; 4: Cancel ignored.
+ * @method void setStatus(integer $Status) Set Disposition status. 1: Handled; 2: Ignored; 3: Cancel disposed; 4: Cancel ignored.
+ * @method integer getType() Obtain Risk Type. 0: Port Risk; 1: Vulnerability Risk; 2: Weak Password Risk; 3: Web Sites Content Risk; 4: Configuration Risk; 5: Exposed Risk Service
+ * @method void setType(integer $Type) Set Risk Type. 0: Port Risk; 1: Vulnerability Risk; 2: Weak Password Risk; 3: Web Sites Content Risk; 4: Configuration Risk; 5: Exposed Risk Service
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  */
 class ModifyRiskCenterRiskStatusRequest extends AbstractModel
 {
     /**
-     * @var array Data of risk assets
+     * @var array Risky Asset Related Data
      */
     public $RiskStatusKeys;
 
     /**
-     * @var integer Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
+     * @var integer Disposition status. 1: Handled; 2: Ignored; 3: Cancel disposed; 4: Cancel ignored.
      */
     public $Status;
 
     /**
-     * @var integer Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
+     * @var integer Risk Type. 0: Port Risk; 1: Vulnerability Risk; 2: Weak Password Risk; 3: Web Sites Content Risk; 4: Configuration Risk; 5: Exposed Risk Service
      */
     public $Type;
 
@@ -52,9 +52,9 @@ class ModifyRiskCenterRiskStatusRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @param array $RiskStatusKeys Data of risk assets
-     * @param integer $Status Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
-     * @param integer $Type Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
+     * @param array $RiskStatusKeys Risky Asset Related Data
+     * @param integer $Status Disposition status. 1: Handled; 2: Ignored; 3: Cancel disposed; 4: Cancel ignored.
+     * @param integer $Type Risk Type. 0: Port Risk; 1: Vulnerability Risk; 2: Weak Password Risk; 3: Web Sites Content Risk; 4: Configuration Risk; 5: Exposed Risk Service
      * @param array $MemberId Group Account Member ID
      */
     function __construct()

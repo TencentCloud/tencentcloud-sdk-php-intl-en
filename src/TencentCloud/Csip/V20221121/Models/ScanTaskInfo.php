@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of a scan task
+ * Scan Task Details
  *
  * @method string getTaskId() Obtain Task ID
  * @method void setTaskId(string $TaskId) Set Task ID
@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Task Status Code: 1-Awaiting Start, 2-Scanning, 3-Scan Error, 4-Scan Completed.
  * @method integer getProgress() Obtain Task progress
  * @method void setProgress(integer $Progress) Set Task progress
- * @method string getTaskTime() Obtain Task Completion Time
- * @method void setTaskTime(string $TaskTime) Set Task Completion Time
- * @method string getReportId() Obtain report ID
- * @method void setReportId(string $ReportId) Set report ID
- * @method string getReportName() Obtain report name
- * @method void setReportName(string $ReportName) Set report name
+ * @method string getTaskTime() Obtain Task completion time
+ * @method void setTaskTime(string $TaskTime) Set Task completion time
+ * @method string getReportId() Obtain Report ID
+ * @method void setReportId(string $ReportId) Set Report ID
+ * @method string getReportName() Obtain Report name
+ * @method void setReportName(string $ReportName) Set Report name
  * @method integer getScanPlan() Obtain Scanning Schedule. 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
  * @method void setScanPlan(integer $ScanPlan) Set Scanning Schedule. 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
  * @method integer getAssetCount() Obtain Number of Associated Assets
@@ -68,17 +68,17 @@ class ScanTaskInfo extends AbstractModel
     public $Progress;
 
     /**
-     * @var string Task Completion Time
+     * @var string Task completion time
      */
     public $TaskTime;
 
     /**
-     * @var string report ID
+     * @var string Report ID
      */
     public $ReportId;
 
     /**
-     * @var string report name
+     * @var string Report name
      */
     public $ReportName;
 
@@ -112,9 +112,9 @@ class ScanTaskInfo extends AbstractModel
      * @param string $TaskName Task name.
      * @param integer $Status Task Status Code: 1-Awaiting Start, 2-Scanning, 3-Scan Error, 4-Scan Completed.
      * @param integer $Progress Task progress
-     * @param string $TaskTime Task Completion Time
-     * @param string $ReportId report ID
-     * @param string $ReportName report name
+     * @param string $TaskTime Task completion time
+     * @param string $ReportId Report ID
+     * @param string $ReportName Report name
      * @param integer $ScanPlan Scanning Schedule. 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
      * @param integer $AssetCount Number of Associated Assets
      * @param string $AppId APP ID

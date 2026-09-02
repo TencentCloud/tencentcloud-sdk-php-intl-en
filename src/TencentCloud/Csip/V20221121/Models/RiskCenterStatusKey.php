@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Risk data
+ * Risk Center Status Handling Key
  *
  * @method string getId() Obtain Risk ID
  * @method void setId(string $Id) Set Risk ID
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIPDomain(string $PublicIPDomain) Set Public IP/domain name
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getAppId() Obtain User AppId
- * @method void setAppId(string $AppId) Set User AppId
+ * @method string getAppId() Obtain APP ID
+ * @method void setAppId(string $AppId) Set APP ID
  */
 class RiskCenterStatusKey extends AbstractModel
 {
@@ -47,7 +47,7 @@ class RiskCenterStatusKey extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string User AppId
+     * @var string APP ID
      */
     public $AppId;
 
@@ -55,7 +55,7 @@ class RiskCenterStatusKey extends AbstractModel
      * @param string $Id Risk ID
      * @param string $PublicIPDomain Public IP/domain name
      * @param string $InstanceId Instance ID.
-     * @param string $AppId User AppId
+     * @param string $AppId APP ID
      */
     function __construct()
     {

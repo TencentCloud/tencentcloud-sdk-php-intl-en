@@ -18,20 +18,20 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Risk information from asset perspective
+ * Risk information from the asset perspective
  *
  * @method integer getAppId() Obtain <p>Tenant ID</p>
  * @method void setAppId(integer $AppId) Set <p>Tenant ID</p>
- * @method string getProvider() Obtain <p>Cloud vendor</p>
- * @method void setProvider(string $Provider) Set <p>Cloud vendor</p>
+ * @method string getProvider() Obtain <p>Cloud service provider.</p>
+ * @method void setProvider(string $Provider) Set <p>Cloud service provider.</p>
  * @method string getProviderName() Obtain <p>Cloud vendor name</p>
  * @method void setProviderName(string $ProviderName) Set <p>Cloud vendor name</p>
  * @method string getCloudAccountName() Obtain <p>Cloud account name</p>
  * @method void setCloudAccountName(string $CloudAccountName) Set <p>Cloud account name</p>
  * @method string getCloudAccountId() Obtain <p>Cloud Account ID</p>
  * @method void setCloudAccountId(string $CloudAccountId) Set <p>Cloud Account ID</p>
- * @method string getInstanceName() Obtain <p>Instance name</p>
- * @method void setInstanceName(string $InstanceName) Set <p>Instance name</p>
+ * @method string getInstanceName() Obtain <p>Instance name.</p>
+ * @method void setInstanceName(string $InstanceName) Set <p>Instance name.</p>
  * @method string getInstanceId() Obtain <p>Instance ID.</p>
  * @method void setInstanceId(string $InstanceId) Set <p>Instance ID.</p>
  * @method string getCreateTime() Obtain <p>First discovery time</p>
@@ -44,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskTitle(string $RiskTitle) Set <p>Risk name</p>
  * @method string getCheckType() Obtain <p>Check type</p>
  * @method void setCheckType(string $CheckType) Set <p>Check type</p>
- * @method string getSeverity() Obtain <p>Risk level</p>
- * @method void setSeverity(string $Severity) Set <p>Risk level</p>
+ * @method string getSeverity() Obtain <p>Risk level.</p>
+ * @method void setSeverity(string $Severity) Set <p>Risk level.</p>
  * @method string getRiskRuleId() Obtain <p>Risk rule ID</p>
  * @method void setRiskRuleId(string $RiskRuleId) Set <p>Risk rule ID</p>
- * @method string getClassify() Obtain <p>Disposal categorization</p>
- * @method void setClassify(string $Classify) Set <p>Disposal categorization</p>
+ * @method string getClassify() Obtain <p>Handling category</p>
+ * @method void setClassify(string $Classify) Set <p>Handling category</p>
  * @method array getStandardTerms() Obtain <p>Cybersecurity classified protection compliance</p>
  * @method void setStandardTerms(array $StandardTerms) Set <p>Cybersecurity classified protection compliance</p>
  * @method string getAssetType() Obtain <p>Asset type</p>
@@ -67,7 +67,7 @@ class AssetRiskItem extends AbstractModel
     public $AppId;
 
     /**
-     * @var string <p>Cloud vendor</p>
+     * @var string <p>Cloud service provider.</p>
      */
     public $Provider;
 
@@ -87,7 +87,7 @@ class AssetRiskItem extends AbstractModel
     public $CloudAccountId;
 
     /**
-     * @var string <p>Instance name</p>
+     * @var string <p>Instance name.</p>
      */
     public $InstanceName;
 
@@ -122,7 +122,7 @@ class AssetRiskItem extends AbstractModel
     public $CheckType;
 
     /**
-     * @var string <p>Risk level</p>
+     * @var string <p>Risk level.</p>
      */
     public $Severity;
 
@@ -132,7 +132,7 @@ class AssetRiskItem extends AbstractModel
     public $RiskRuleId;
 
     /**
-     * @var string <p>Disposal categorization</p>
+     * @var string <p>Handling category</p>
      */
     public $Classify;
 
@@ -158,20 +158,20 @@ class AssetRiskItem extends AbstractModel
 
     /**
      * @param integer $AppId <p>Tenant ID</p>
-     * @param string $Provider <p>Cloud vendor</p>
+     * @param string $Provider <p>Cloud service provider.</p>
      * @param string $ProviderName <p>Cloud vendor name</p>
      * @param string $CloudAccountName <p>Cloud account name</p>
      * @param string $CloudAccountId <p>Cloud Account ID</p>
-     * @param string $InstanceName <p>Instance name</p>
+     * @param string $InstanceName <p>Instance name.</p>
      * @param string $InstanceId <p>Instance ID.</p>
      * @param string $CreateTime <p>First discovery time</p>
      * @param string $UpdateTime <p>Update time.</p>
      * @param integer $RiskStatus <p>Risk status</p>
      * @param string $RiskTitle <p>Risk name</p>
      * @param string $CheckType <p>Check type</p>
-     * @param string $Severity <p>Risk level</p>
+     * @param string $Severity <p>Risk level.</p>
      * @param string $RiskRuleId <p>Risk rule ID</p>
-     * @param string $Classify <p>Disposal categorization</p>
+     * @param string $Classify <p>Handling category</p>
      * @param array $StandardTerms <p>Cybersecurity classified protection compliance</p>
      * @param string $AssetType <p>Asset type</p>
      * @param string $AssetTypeIconURL <p>Asset type icon</p>

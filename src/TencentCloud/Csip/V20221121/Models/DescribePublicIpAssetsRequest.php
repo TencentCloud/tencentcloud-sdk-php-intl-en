@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method Filter getFilter() Obtain Filter parameters
- * @method void setFilter(Filter $Filter) Set Filter parameters
- * @method array getTags() Obtain CSC tags of the asset
- * @method void setTags(array $Tags) Set CSC tags of the asset
+ * @method Filter getFilter() Obtain Filter parameter
+ * @method void setFilter(Filter $Filter) Set Filter parameter
+ * @method array getTags() Obtain Security Center Custom Tag
+ * @method void setTags(array $Tags) Set Security Center Custom Tag
  */
 class DescribePublicIpAssetsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribePublicIpAssetsRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var Filter Filter parameters
+     * @var Filter Filter parameter
      */
     public $Filter;
 
     /**
-     * @var array CSC tags of the asset
+     * @var array Security Center Custom Tag
      */
     public $Tags;
 
     /**
      * @param array $MemberId Group Account Member ID
-     * @param Filter $Filter Filter parameters
-     * @param array $Tags CSC tags of the asset
+     * @param Filter $Filter Filter parameter
+     * @param array $Tags Security Center Custom Tag
      */
     function __construct()
     {

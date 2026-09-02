@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method string getRiskId() Obtain Risk id.
- * @method void setRiskId(string $RiskId) Set Risk id.
+ * @method string getRiskId() Obtain Risk id
+ * @method void setRiskId(string $RiskId) Set Risk id
  * @method string getPCMGRId() Obtain pcMgrId
  * @method void setPCMGRId(string $PCMGRId) Set pcMgrId
  */
@@ -35,7 +35,7 @@ class DescribeVULRiskDetailRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var string Risk id.
+     * @var string Risk id
      */
     public $RiskId;
 
@@ -46,7 +46,7 @@ class DescribeVULRiskDetailRequest extends AbstractModel
 
     /**
      * @param array $MemberId Group Account Member ID
-     * @param string $RiskId Risk id.
+     * @param string $RiskId Risk id
      * @param string $PCMGRId pcMgrId
      */
     function __construct()

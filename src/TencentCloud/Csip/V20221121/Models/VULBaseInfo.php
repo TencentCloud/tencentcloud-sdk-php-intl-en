@@ -18,24 +18,24 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Emergency vulnerability basic data.
+ * Basic data of urgent vulnerabilities
  *
- * @method string getLevel() Obtain Risk level.
-High - high risk, middle - medium risk, low - low risk, info - Note.
- * @method void setLevel(string $Level) Set Risk level.
-High - high risk, middle - medium risk, low - low risk, info - Note.
- * @method string getComponent() Obtain Component.
- * @method void setComponent(string $Component) Set Component.
- * @method string getPublishTime() Obtain Release date.
- * @method void setPublishTime(string $PublishTime) Set Release date.
+ * @method string getLevel() Obtain Risk level
+high risk / Medium risk / low risk / Notification
+ * @method void setLevel(string $Level) Set Risk level
+high risk / Medium risk / low risk / Notification
+ * @method string getComponent() Obtain Component
+ * @method void setComponent(string $Component) Set Component
+ * @method string getPublishTime() Obtain Vulnerability release time
+ * @method void setPublishTime(string $PublishTime) Set Vulnerability release time
  * @method string getLastScanTime() Obtain Last scan time
  * @method void setLastScanTime(string $LastScanTime) Set Last scan time
  * @method integer getAffectAssetCount() Obtain Number of Affected Assets
  * @method void setAffectAssetCount(integer $AffectAssetCount) Set Number of Affected Assets
  * @method string getRiskId() Obtain Risk ID
  * @method void setRiskId(string $RiskId) Set Risk ID
- * @method string getVULType() Obtain Vulnerability type.
- * @method void setVULType(string $VULType) Set Vulnerability type.
+ * @method string getVULType() Obtain Vulnerability type
+ * @method void setVULType(string $VULType) Set Vulnerability type
  * @method string getVULName() Obtain Vulnerability name
  * @method void setVULName(string $VULName) Set Vulnerability name
  * @method string getCVE() Obtain cve
@@ -44,90 +44,62 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
  * @method void setDescribe(string $Describe) Set Description
  * @method string getPayload() Obtain Vulnerability Payload
  * @method void setPayload(string $Payload) Set Vulnerability Payload
- * @method string getAppName() Obtain Vulnerability impact component.
- * @method void setAppName(string $AppName) Set Vulnerability impact component.
- * @method string getReferences() Obtain Technology reference.
- * @method void setReferences(string $References) Set Technology reference.
- * @method string getAppVersion() Obtain Vulnerability impact version.
- * @method void setAppVersion(string $AppVersion) Set Vulnerability impact version.
- * @method string getVULURL() Obtain Risks.
- * @method void setVULURL(string $VULURL) Set Risks.
+ * @method string getAppName() Obtain Vulnerability Impact component
+ * @method void setAppName(string $AppName) Set Vulnerability Impact component
+ * @method string getReferences() Obtain Technical reference
+ * @method void setReferences(string $References) Set Technical reference
+ * @method string getAppVersion() Obtain Vulnerability Impact version
+ * @method void setAppVersion(string $AppVersion) Set Vulnerability Impact version
+ * @method string getVULURL() Obtain Risk point
+ * @method void setVULURL(string $VULURL) Set Risk point
  * @method string getNick() Obtain User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNick(string $Nick) Set User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getAppId() Obtain User appid.
  * @method void setAppId(string $AppId) Set User appid.
  * @method string getUin() Obtain User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUin(string $Uin) Set User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getFix() Obtain Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFix(string $Fix) Set Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getEMGCVulType() Obtain Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEMGCVulType(integer $EMGCVulType) Set Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method float getCVSS() Obtain CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCVSS(float $CVSS) Set CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getAttackHeat() Obtain Attack intensity.
+ * @method integer getAttackHeat() Obtain Attack heat
 0/1/2/3 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAttackHeat(integer $AttackHeat) Set Attack intensity.
+ * @method void setAttackHeat(integer $AttackHeat) Set Attack heat
 0/1/2/3 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getScanStatus() Obtain Detection status 0 unscanned 1 scan in progress 2 scan complete.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setScanStatus(integer $ScanStatus) Set Detection status 0 unscanned 1 scan in progress 2 scan complete.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsSuggest() Obtain 1/0 whether compulsory.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsSuggest(integer $IsSuggest) Set 1/0 whether compulsory.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getScanStatus() Obtain Detection status. 0: unscanned; 1: scan in progress; 2: scan complete
+ * @method void setScanStatus(integer $ScanStatus) Set Detection status. 0: unscanned; 1: scan in progress; 2: scan complete
+ * @method integer getIsSuggest() Obtain Whether 1/0 is required
+ * @method void setIsSuggest(integer $IsSuggest) Set Whether 1/0 is required
  * @method array getVulTag() Obtain Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVulTag(array $VulTag) Set Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSupportProduct() Obtain Support products: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" (comma-separated).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSupportProduct(string $SupportProduct) Set Support products: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" (comma-separated).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTaskId() Obtain Vulnerability detection task id.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTaskId(string $TaskId) Set Vulnerability detection task id.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSupportProduct() Obtain Supported products, separate with commas: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
+ * @method void setSupportProduct(string $SupportProduct) Set Supported products, separate with commas: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
+ * @method string getTaskId() Obtain Vulnerability detection task id
+ * @method void setTaskId(string $TaskId) Set Vulnerability detection task id
  * @method string getIndex() Obtain Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIndex(string $Index) Set Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPcmgrID() Obtain Vulnerability id old version.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPcmgrID(string $PcmgrID) Set Vulnerability id old version.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTvdID() Obtain Vulnerability id new version.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTvdID(string $TvdID) Set Vulnerability id new version.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPcmgrID() Obtain Vulnerability id (legacy version)
+ * @method void setPcmgrID(string $PcmgrID) Set Vulnerability id (legacy version)
+ * @method string getTvdID() Obtain Vulnerability id New version
+ * @method void setTvdID(string $TvdID) Set Vulnerability id New version
  */
 class VULBaseInfo extends AbstractModel
 {
     /**
-     * @var string Risk level.
-High - high risk, middle - medium risk, low - low risk, info - Note.
+     * @var string Risk level
+high risk / Medium risk / low risk / Notification
      */
     public $Level;
 
     /**
-     * @var string Component.
+     * @var string Component
      */
     public $Component;
 
     /**
-     * @var string Release date.
+     * @var string Vulnerability release time
      */
     public $PublishTime;
 
@@ -147,7 +119,7 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
     public $RiskId;
 
     /**
-     * @var string Vulnerability type.
+     * @var string Vulnerability type
      */
     public $VULType;
 
@@ -172,28 +144,27 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
     public $Payload;
 
     /**
-     * @var string Vulnerability impact component.
+     * @var string Vulnerability Impact component
      */
     public $AppName;
 
     /**
-     * @var string Technology reference.
+     * @var string Technical reference
      */
     public $References;
 
     /**
-     * @var string Vulnerability impact version.
+     * @var string Vulnerability Impact version
      */
     public $AppVersion;
 
     /**
-     * @var string Risks.
+     * @var string Risk point
      */
     public $VULURL;
 
     /**
      * @var string User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Nick;
 
@@ -204,130 +175,103 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Uin;
 
     /**
      * @var string Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Fix;
 
     /**
      * @var integer Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EMGCVulType;
 
     /**
      * @var float CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CVSS;
 
     /**
-     * @var integer Attack intensity.
+     * @var integer Attack heat
 0/1/2/3 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AttackHeat;
 
     /**
-     * @var integer Detection status 0 unscanned 1 scan in progress 2 scan complete.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Detection status. 0: unscanned; 1: scan in progress; 2: scan complete
      */
     public $ScanStatus;
 
     /**
-     * @var integer 1/0 whether compulsory.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether 1/0 is required
      */
     public $IsSuggest;
 
     /**
      * @var array Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VulTag;
 
     /**
-     * @var string Support products: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" (comma-separated).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Supported products, separate with commas: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
      */
     public $SupportProduct;
 
     /**
-     * @var string Vulnerability detection task id.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Vulnerability detection task id
      */
     public $TaskId;
 
     /**
      * @var string Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Index;
 
     /**
-     * @var string Vulnerability id old version.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Vulnerability id (legacy version)
      */
     public $PcmgrID;
 
     /**
-     * @var string Vulnerability id new version.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Vulnerability id New version
      */
     public $TvdID;
 
     /**
-     * @param string $Level Risk level.
-High - high risk, middle - medium risk, low - low risk, info - Note.
-     * @param string $Component Component.
-     * @param string $PublishTime Release date.
+     * @param string $Level Risk level
+high risk / Medium risk / low risk / Notification
+     * @param string $Component Component
+     * @param string $PublishTime Vulnerability release time
      * @param string $LastScanTime Last scan time
      * @param integer $AffectAssetCount Number of Affected Assets
      * @param string $RiskId Risk ID
-     * @param string $VULType Vulnerability type.
+     * @param string $VULType Vulnerability type
      * @param string $VULName Vulnerability name
      * @param string $CVE cve
      * @param string $Describe Description
      * @param string $Payload Vulnerability Payload
-     * @param string $AppName Vulnerability impact component.
-     * @param string $References Technology reference.
-     * @param string $AppVersion Vulnerability impact version.
-     * @param string $VULURL Risks.
+     * @param string $AppName Vulnerability Impact component
+     * @param string $References Technical reference
+     * @param string $AppVersion Vulnerability Impact version
+     * @param string $VULURL Risk point
      * @param string $Nick User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $AppId User appid.
      * @param string $Uin User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Fix Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param float $CVSS CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $AttackHeat Attack intensity.
+     * @param integer $AttackHeat Attack heat
 0/1/2/3 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $ScanStatus Detection status 0 unscanned 1 scan in progress 2 scan complete.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsSuggest 1/0 whether compulsory.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ScanStatus Detection status. 0: unscanned; 1: scan in progress; 2: scan complete
+     * @param integer $IsSuggest Whether 1/0 is required
      * @param array $VulTag Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SupportProduct Support products: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" (comma-separated).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TaskId Vulnerability detection task id.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SupportProduct Supported products, separate with commas: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
+     * @param string $TaskId Vulnerability detection task id
      * @param string $Index Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PcmgrID Vulnerability id old version.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TvdID Vulnerability id new version.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PcmgrID Vulnerability id (legacy version)
+     * @param string $TvdID Vulnerability id New version
      */
     function __construct()
     {

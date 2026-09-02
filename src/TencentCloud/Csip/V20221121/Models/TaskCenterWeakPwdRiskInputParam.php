@@ -18,28 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Advanced weak password check configuration
+ * Weak Password Risk Advanced Configuration
  *
- * @method integer getCheckItemId() Obtain Check item ID
- * @method void setCheckItemId(integer $CheckItemId) Set Check item ID
- * @method integer getEnable() Obtain Whether to enable. `0`: no, `1`: yes.
- * @method void setEnable(integer $Enable) Set Whether to enable. `0`: no, `1`: yes.
+ * @method integer getCheckItemId() Obtain Detection Item ID
+ * @method void setCheckItemId(integer $CheckItemId) Set Detection Item ID
+ * @method integer getEnable() Obtain Whether to enable. 0-Not to Enable; 1-Enable.
+ * @method void setEnable(integer $Enable) Set Whether to enable. 0-Not to Enable; 1-Enable.
  */
 class TaskCenterWeakPwdRiskInputParam extends AbstractModel
 {
     /**
-     * @var integer Check item ID
+     * @var integer Detection Item ID
      */
     public $CheckItemId;
 
     /**
-     * @var integer Whether to enable. `0`: no, `1`: yes.
+     * @var integer Whether to enable. 0-Not to Enable; 1-Enable.
      */
     public $Enable;
 
     /**
-     * @param integer $CheckItemId Check item ID
-     * @param integer $Enable Whether to enable. `0`: no, `1`: yes.
+     * @param integer $CheckItemId Detection Item ID
+     * @param integer $Enable Whether to enable. 0-Not to Enable; 1-Enable.
      */
     function __construct()
     {

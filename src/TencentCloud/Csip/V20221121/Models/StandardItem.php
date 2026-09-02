@@ -18,28 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CSPM standard
+ * CSPM specification
  *
- * @method integer getID() Obtain Specification ID
- * @method void setID(integer $ID) Set Specification ID
- * @method string getName() Obtain Standard name
- * @method void setName(string $Name) Set Standard name
+ * @method integer getID() Obtain Regulation ID
+ * @method void setID(integer $ID) Set Regulation ID
+ * @method string getName() Obtain Specification name
+ * @method void setName(string $Name) Set Specification name
  */
 class StandardItem extends AbstractModel
 {
     /**
-     * @var integer Specification ID
+     * @var integer Regulation ID
      */
     public $ID;
 
     /**
-     * @var string Standard name
+     * @var string Specification name
      */
     public $Name;
 
     /**
-     * @param integer $ID Specification ID
-     * @param string $Name Standard name
+     * @param integer $ID Regulation ID
+     * @param string $Name Specification name
      */
     function __construct()
     {

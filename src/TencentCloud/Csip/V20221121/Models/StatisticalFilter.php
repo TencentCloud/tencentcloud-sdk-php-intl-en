@@ -18,16 +18,16 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * User Behavior Analysis Statistical Condition
+ * User behavior analysis statistical conditions
  *
  * @method integer getOperatorType() Obtain 0: Not based on statistical testing
 1: Occurrence count higher than a fixed value
-2: Occurrence count exceeds 100 percent of the period average
-3: Occurrences higher than 50 percent of the user average
+2: Occurrence count exceeds the cycle average by percent
+3: Occurrences higher than the user average percent
  * @method void setOperatorType(integer $OperatorType) Set 0: Not based on statistical testing
 1: Occurrence count higher than a fixed value
-2: Occurrence count exceeds 100 percent of the period average
-3: Occurrences higher than 50 percent of the user average
+2: Occurrence count exceeds the cycle average by percent
+3: Occurrences higher than the user average percent
  * @method float getValue() Obtain Statistical value
  * @method void setValue(float $Value) Set Statistical value
  */
@@ -36,8 +36,8 @@ class StatisticalFilter extends AbstractModel
     /**
      * @var integer 0: Not based on statistical testing
 1: Occurrence count higher than a fixed value
-2: Occurrence count exceeds 100 percent of the period average
-3: Occurrences higher than 50 percent of the user average
+2: Occurrence count exceeds the cycle average by percent
+3: Occurrences higher than the user average percent
      */
     public $OperatorType;
 
@@ -49,8 +49,8 @@ class StatisticalFilter extends AbstractModel
     /**
      * @param integer $OperatorType 0: Not based on statistical testing
 1: Occurrence count higher than a fixed value
-2: Occurrence count exceeds 100 percent of the period average
-3: Occurrences higher than 50 percent of the user average
+2: Occurrence count exceeds the cycle average by percent
+3: Occurrences higher than the user average percent
      * @param float $Value Statistical value
      */
     function __construct()

@@ -18,131 +18,131 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Access key risk record.
+ * Access key risk record
  *
- * @method string getName() Obtain Risk name.
- * @method void setName(string $Name) Set Risk name.
- * @method integer getLevel() Obtain Risk level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
- * @method void setLevel(integer $Level) Set Risk level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
- * @method integer getID() Obtain Risk record ID.
- * @method void setID(integer $ID) Set Risk record ID.
- * @method integer getRiskRuleID() Obtain Risk rule ID.
- * @method void setRiskRuleID(integer $RiskRuleID) Set Risk rule ID.
- * @method integer getRiskType() Obtain Risk type.
-Configuration risk.
- * @method void setRiskType(integer $RiskType) Set Risk type.
-Configuration risk.
- * @method string getAccessKey() Obtain Access key.
- * @method void setAccessKey(string $AccessKey) Set Access key.
- * @method integer getAccessKeyID() Obtain Access key ID.
- * @method void setAccessKeyID(integer $AccessKeyID) Set Access key ID.
- * @method string getAccessKeyRemark() Obtain Access key remark.
- * @method void setAccessKeyRemark(string $AccessKeyRemark) Set Access key remark.
- * @method string getRiskTime() Obtain Detection time of risk.
- * @method void setRiskTime(string $RiskTime) Set Detection time of risk.
- * @method integer getStatus() Obtain Risk status.
-0 - unprocessed 2 - ignored 3 - converged.
- * @method void setStatus(integer $Status) Set Risk status.
-0 - unprocessed 2 - ignored 3 - converged.
- * @method array getTag() Obtain Risk Tag.
- * @method void setTag(array $Tag) Set Risk Tag.
- * @method string getEvidence() Obtain Risk evidence.
- * @method void setEvidence(string $Evidence) Set Risk evidence.
+ * @method string getName() Obtain Risk name
+ * @method void setName(string $Name) Set Risk name
+ * @method integer getLevel() Obtain Risk level
+0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical
+ * @method void setLevel(integer $Level) Set Risk level
+0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical
+ * @method integer getID() Obtain Risk record ID
+ * @method void setID(integer $ID) Set Risk record ID
+ * @method integer getRiskRuleID() Obtain Risk rule ID
+ * @method void setRiskRuleID(integer $RiskRuleID) Set Risk rule ID
+ * @method integer getRiskType() Obtain Risk type
+0 - Configuration risk
+ * @method void setRiskType(integer $RiskType) Set Risk type
+0 - Configuration risk
+ * @method string getAccessKey() Obtain Access key
+ * @method void setAccessKey(string $AccessKey) Set Access key
+ * @method integer getAccessKeyID() Obtain Access Key ID
+ * @method void setAccessKeyID(integer $AccessKeyID) Set Access Key ID
+ * @method string getAccessKeyRemark() Obtain Access key remark
+ * @method void setAccessKeyRemark(string $AccessKeyRemark) Set Access key remark
+ * @method string getRiskTime() Obtain Risk detection time
+ * @method void setRiskTime(string $RiskTime) Set Risk detection time
+ * @method integer getStatus() Obtain Risk status
+0: unprocessed; 2: ignored; 3: converged
+ * @method void setStatus(integer $Status) Set Risk status
+0: unprocessed; 2: ignored; 3: converged
+ * @method array getTag() Obtain Risk tag
+ * @method void setTag(array $Tag) Set Risk tag
+ * @method string getEvidence() Obtain Risk evidence
+ * @method void setEvidence(string $Evidence) Set Risk evidence
  * @method string getDescription() Obtain Risk description.
  * @method void setDescription(string $Description) Set Risk description.
- * @method string getUin() Obtain Account associate Uin belonging to main account.
- * @method void setUin(string $Uin) Set Account associate Uin belonging to main account.
- * @method string getNickname() Obtain Nickname of the main account.
- * @method void setNickname(string $Nickname) Set Nickname of the main account.
- * @method string getSubUin() Obtain Sub-Account Uin belonging to.
- * @method void setSubUin(string $SubUin) Set Sub-Account Uin belonging to.
- * @method string getSubNickname() Obtain Sub-Account nickname.
- * @method void setSubNickname(string $SubNickname) Set Sub-Account nickname.
- * @method integer getType() Obtain Account type.
-0 root account AK 1 sub-account AK.
-2 temporary key.
- * @method void setType(integer $Type) Set Account type.
-0 root account AK 1 sub-account AK.
-2 temporary key.
+ * @method string getUin() Obtain Uin of the main account
+ * @method void setUin(string $Uin) Set Uin of the main account
+ * @method string getNickname() Obtain Nickname of the main account
+ * @method void setNickname(string $Nickname) Set Nickname of the main account
+ * @method string getSubUin() Obtain Uin of the associated sub-account
+ * @method void setSubUin(string $SubUin) Set Uin of the associated sub-account
+ * @method string getSubNickname() Obtain Sub-account nickname
+ * @method void setSubNickname(string $SubNickname) Set Sub-account nickname
+ * @method integer getType() Obtain Account type
+0-Root Account AK, 1-Sub-account AK
+2 Temporary key
+ * @method void setType(integer $Type) Set Account type
+0-Root Account AK, 1-Sub-account AK
+2 Temporary key
  * @method integer getCheckStatus() Obtain Detection status.
-0: detected.
-1 indicates detecting.
+0 means detected
+1: Indicates detection in progress
  * @method void setCheckStatus(integer $CheckStatus) Set Detection status.
-0: detected.
-1 indicates detecting.
+0 means detected
+1: Indicates detection in progress
  * @method integer getAppID() Obtain App ID
  * @method void setAppID(integer $AppID) Set App ID
- * @method string getQueryParam() Obtain Query parameter corresponding to the risk.
- * @method void setQueryParam(string $QueryParam) Set Query parameter corresponding to the risk.
- * @method integer getCloudType() Obtain Cloud type 0 for tencent cloud 4 for alibaba cloud.
- * @method void setCloudType(integer $CloudType) Set Cloud type 0 for tencent cloud 4 for alibaba cloud.
- * @method array getRelatedAK() Obtain Related AK list, including AK name and remark.
- * @method void setRelatedAK(array $RelatedAK) Set Related AK list, including AK name and remark.
+ * @method string getQueryParam() Obtain Query parameter corresponding to the risk
+ * @method void setQueryParam(string $QueryParam) Set Query parameter corresponding to the risk
+ * @method integer getCloudType() Obtain Cloud type. 0: Tencent Cloud; 4: Alibaba Cloud
+ * @method void setCloudType(integer $CloudType) Set Cloud type. 0: Tencent Cloud; 4: Alibaba Cloud
+ * @method array getRelatedAK() Obtain List of related AKs, including AK names and remarks
+ * @method void setRelatedAK(array $RelatedAK) Set List of related AKs, including AK names and remarks
  */
 class AccessKeyRisk extends AbstractModel
 {
     /**
-     * @var string Risk name.
+     * @var string Risk name
      */
     public $Name;
 
     /**
-     * @var integer Risk level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
+     * @var integer Risk level
+0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical
      */
     public $Level;
 
     /**
-     * @var integer Risk record ID.
+     * @var integer Risk record ID
      */
     public $ID;
 
     /**
-     * @var integer Risk rule ID.
+     * @var integer Risk rule ID
      */
     public $RiskRuleID;
 
     /**
-     * @var integer Risk type.
-Configuration risk.
+     * @var integer Risk type
+0 - Configuration risk
      */
     public $RiskType;
 
     /**
-     * @var string Access key.
+     * @var string Access key
      */
     public $AccessKey;
 
     /**
-     * @var integer Access key ID.
+     * @var integer Access Key ID
      */
     public $AccessKeyID;
 
     /**
-     * @var string Access key remark.
+     * @var string Access key remark
      */
     public $AccessKeyRemark;
 
     /**
-     * @var string Detection time of risk.
+     * @var string Risk detection time
      */
     public $RiskTime;
 
     /**
-     * @var integer Risk status.
-0 - unprocessed 2 - ignored 3 - converged.
+     * @var integer Risk status
+0: unprocessed; 2: ignored; 3: converged
      */
     public $Status;
 
     /**
-     * @var array Risk Tag.
+     * @var array Risk tag
      */
     public $Tag;
 
     /**
-     * @var string Risk evidence.
+     * @var string Risk evidence
      */
     public $Evidence;
 
@@ -152,36 +152,36 @@ Configuration risk.
     public $Description;
 
     /**
-     * @var string Account associate Uin belonging to main account.
+     * @var string Uin of the main account
      */
     public $Uin;
 
     /**
-     * @var string Nickname of the main account.
+     * @var string Nickname of the main account
      */
     public $Nickname;
 
     /**
-     * @var string Sub-Account Uin belonging to.
+     * @var string Uin of the associated sub-account
      */
     public $SubUin;
 
     /**
-     * @var string Sub-Account nickname.
+     * @var string Sub-account nickname
      */
     public $SubNickname;
 
     /**
-     * @var integer Account type.
-0 root account AK 1 sub-account AK.
-2 temporary key.
+     * @var integer Account type
+0-Root Account AK, 1-Sub-account AK
+2 Temporary key
      */
     public $Type;
 
     /**
      * @var integer Detection status.
-0: detected.
-1 indicates detecting.
+0 means detected
+1: Indicates detection in progress
      */
     public $CheckStatus;
 
@@ -191,51 +191,51 @@ Configuration risk.
     public $AppID;
 
     /**
-     * @var string Query parameter corresponding to the risk.
+     * @var string Query parameter corresponding to the risk
      */
     public $QueryParam;
 
     /**
-     * @var integer Cloud type 0 for tencent cloud 4 for alibaba cloud.
+     * @var integer Cloud type. 0: Tencent Cloud; 4: Alibaba Cloud
      */
     public $CloudType;
 
     /**
-     * @var array Related AK list, including AK name and remark.
+     * @var array List of related AKs, including AK names and remarks
      */
     public $RelatedAK;
 
     /**
-     * @param string $Name Risk name.
-     * @param integer $Level Risk level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
-     * @param integer $ID Risk record ID.
-     * @param integer $RiskRuleID Risk rule ID.
-     * @param integer $RiskType Risk type.
-Configuration risk.
-     * @param string $AccessKey Access key.
-     * @param integer $AccessKeyID Access key ID.
-     * @param string $AccessKeyRemark Access key remark.
-     * @param string $RiskTime Detection time of risk.
-     * @param integer $Status Risk status.
-0 - unprocessed 2 - ignored 3 - converged.
-     * @param array $Tag Risk Tag.
-     * @param string $Evidence Risk evidence.
+     * @param string $Name Risk name
+     * @param integer $Level Risk level
+0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical
+     * @param integer $ID Risk record ID
+     * @param integer $RiskRuleID Risk rule ID
+     * @param integer $RiskType Risk type
+0 - Configuration risk
+     * @param string $AccessKey Access key
+     * @param integer $AccessKeyID Access Key ID
+     * @param string $AccessKeyRemark Access key remark
+     * @param string $RiskTime Risk detection time
+     * @param integer $Status Risk status
+0: unprocessed; 2: ignored; 3: converged
+     * @param array $Tag Risk tag
+     * @param string $Evidence Risk evidence
      * @param string $Description Risk description.
-     * @param string $Uin Account associate Uin belonging to main account.
-     * @param string $Nickname Nickname of the main account.
-     * @param string $SubUin Sub-Account Uin belonging to.
-     * @param string $SubNickname Sub-Account nickname.
-     * @param integer $Type Account type.
-0 root account AK 1 sub-account AK.
-2 temporary key.
+     * @param string $Uin Uin of the main account
+     * @param string $Nickname Nickname of the main account
+     * @param string $SubUin Uin of the associated sub-account
+     * @param string $SubNickname Sub-account nickname
+     * @param integer $Type Account type
+0-Root Account AK, 1-Sub-account AK
+2 Temporary key
      * @param integer $CheckStatus Detection status.
-0: detected.
-1 indicates detecting.
+0 means detected
+1: Indicates detection in progress
      * @param integer $AppID App ID
-     * @param string $QueryParam Query parameter corresponding to the risk.
-     * @param integer $CloudType Cloud type 0 for tencent cloud 4 for alibaba cloud.
-     * @param array $RelatedAK Related AK list, including AK name and remark.
+     * @param string $QueryParam Query parameter corresponding to the risk
+     * @param integer $CloudType Cloud type. 0: Tencent Cloud; 4: Alibaba Cloud
+     * @param array $RelatedAK List of related AKs, including AK names and remarks
      */
     function __construct()
     {

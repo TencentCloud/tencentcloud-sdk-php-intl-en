@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Configuration Risk Objects from Configuration's Perspective
  *
- * @method integer getNoHandleCount() Obtain Impact assets.
- * @method void setNoHandleCount(integer $NoHandleCount) Set Impact assets.
- * @method string getLevel() Obtain Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
- * @method void setLevel(string $Level) Set Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+ * @method integer getNoHandleCount() Obtain Affect assets
+ * @method void setNoHandleCount(integer $NoHandleCount) Set Affect assets
+ * @method string getLevel() Obtain Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+ * @method void setLevel(string $Level) Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
  * @method string getRecentTime() Obtain Latest Recognition Time
  * @method void setRecentTime(string $RecentTime) Set Latest Recognition Time
  * @method string getFirstTime() Obtain First Recognition Time
@@ -39,47 +39,31 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAppId() Obtain User appid.
  * @method void setAppId(string $AppId) Set User appid.
  * @method string getNick() Obtain User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNick(string $Nick) Set User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUin() Obtain User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUin(string $Uin) Set User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCFGName() Obtain Configuration name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCFGName(string $CFGName) Set Configuration name.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCheckType() Obtain Check type.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCheckType(string $CheckType) Set Check type.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCFGName() Obtain Configuration name
+ * @method void setCFGName(string $CFGName) Set Configuration name
+ * @method string getCheckType() Obtain Check type
+ * @method void setCheckType(string $CheckType) Set Check type
  * @method string getCFGSTD() Obtain -
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCFGSTD(string $CFGSTD) Set -
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCFGDescribe() Obtain Description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCFGDescribe(string $CFGDescribe) Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCFGFix() Obtain Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCFGFix(string $CFGFix) Set Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCFGHelpURL() Obtain Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCFGHelpURL(string $CFGHelpURL) Set Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCFGHelpURL() Obtain Help documentation
+ * @method void setCFGHelpURL(string $CFGHelpURL) Set Help documentation
  */
 class CFGViewCFGRisk extends AbstractModel
 {
     /**
-     * @var integer Impact assets.
+     * @var integer Affect assets
      */
     public $NoHandleCount;
 
     /**
-     * @var string Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+     * @var string Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public $Level;
 
@@ -120,55 +104,47 @@ class CFGViewCFGRisk extends AbstractModel
 
     /**
      * @var string User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Nick;
 
     /**
      * @var string User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Uin;
 
     /**
-     * @var string Configuration name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Configuration name
      */
     public $CFGName;
 
     /**
-     * @var string Check type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Check type
      */
     public $CheckType;
 
     /**
      * @var string -
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CFGSTD;
 
     /**
      * @var string Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CFGDescribe;
 
     /**
      * @var string Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CFGFix;
 
     /**
-     * @var string Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Help documentation
      */
     public $CFGHelpURL;
 
     /**
-     * @param integer $NoHandleCount Impact assets.
-     * @param string $Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+     * @param integer $NoHandleCount Affect assets
+     * @param string $Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      * @param string $RecentTime Latest Recognition Time
      * @param string $FirstTime First Recognition Time
      * @param integer $AffectAssetCount Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
@@ -177,21 +153,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Index Front-end Index
      * @param string $AppId User appid.
      * @param string $Nick User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Uin User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CFGName Configuration name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CheckType Check type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CFGName Configuration name
+     * @param string $CheckType Check type
      * @param string $CFGSTD -
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CFGDescribe Description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CFGFix Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CFGHelpURL Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CFGHelpURL Help documentation
      */
     function __construct()
     {

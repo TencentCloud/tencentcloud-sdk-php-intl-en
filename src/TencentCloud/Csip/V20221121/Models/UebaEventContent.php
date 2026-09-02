@@ -18,19 +18,19 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * User behavior analysis Event structure
+ * Event structure of user behavior analysis
  *
  * @method integer getEventType() Obtain Event type
 1: Statement retrieval
-2: Filter search
+2: Filter retrieval
  * @method void setEventType(integer $EventType) Set Event type
 1: Statement retrieval
-2: Filter search
- * @method string getContent() Obtain Statement retrieval content
- * @method void setContent(string $Content) Set Statement retrieval content
- * @method array getFilters() Obtain retrieval condition
+2: Filter retrieval
+ * @method string getContent() Obtain Content for statement retrieval
+ * @method void setContent(string $Content) Set Content for statement retrieval
+ * @method array getFilters() Obtain Retrieval criteria
 
- * @method void setFilters(array $Filters) Set retrieval condition
+ * @method void setFilters(array $Filters) Set Retrieval criteria
 
  * @method StatisticalFilter getStatisticalFilter() Obtain Statistical condition
  * @method void setStatisticalFilter(StatisticalFilter $StatisticalFilter) Set Statistical condition
@@ -40,17 +40,17 @@ class UebaEventContent extends AbstractModel
     /**
      * @var integer Event type
 1: Statement retrieval
-2: Filter search
+2: Filter retrieval
      */
     public $EventType;
 
     /**
-     * @var string Statement retrieval content
+     * @var string Content for statement retrieval
      */
     public $Content;
 
     /**
-     * @var array retrieval condition
+     * @var array Retrieval criteria
 
      */
     public $Filters;
@@ -63,9 +63,9 @@ class UebaEventContent extends AbstractModel
     /**
      * @param integer $EventType Event type
 1: Statement retrieval
-2: Filter search
-     * @param string $Content Statement retrieval content
-     * @param array $Filters retrieval condition
+2: Filter retrieval
+     * @param string $Content Content for statement retrieval
+     * @param array $Filters Retrieval criteria
 
      * @param StatisticalFilter $StatisticalFilter Statistical condition
      */

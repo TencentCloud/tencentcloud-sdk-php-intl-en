@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRiskCallRecord request structure.
  *
- * @method integer getRiskID() Obtain Risk record ID.
- * @method void setRiskID(integer $RiskID) Set Risk record ID.
+ * @method integer getRiskID() Obtain Risk record ID
+ * @method void setRiskID(integer $RiskID) Set Risk record ID
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
  * @method Filter getFilter() Obtain Filter.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRiskCallRecordRequest extends AbstractModel
 {
     /**
-     * @var integer Risk record ID.
+     * @var integer Risk record ID
      */
     public $RiskID;
 
@@ -45,7 +45,7 @@ class DescribeRiskCallRecordRequest extends AbstractModel
     public $Filter;
 
     /**
-     * @param integer $RiskID Risk record ID.
+     * @param integer $RiskID Risk record ID
      * @param array $MemberId Group Account Member ID
      * @param Filter $Filter Filter.
      */

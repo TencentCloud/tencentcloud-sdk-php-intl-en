@@ -18,44 +18,44 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Exposed asset category.
+ * Exposed asset category
  *
- * @method string getProvider() Obtain Cloud service provider.
- * @method void setProvider(string $Provider) Set Cloud service provider.
- * @method string getProviderName() Obtain Vendor name.
- * @method void setProviderName(string $ProviderName) Set Vendor name.
- * @method string getAssetType() Obtain Asset type.
- * @method void setAssetType(string $AssetType) Set Asset type.
- * @method string getAssetTypeName() Obtain Asset type name.
- * @method void setAssetTypeName(string $AssetTypeName) Set Asset type name.
+ * @method string getProvider() Obtain Cloud service provider
+ * @method void setProvider(string $Provider) Set Cloud service provider
+ * @method string getProviderName() Obtain Cloud vendor name
+ * @method void setProviderName(string $ProviderName) Set Cloud vendor name
+ * @method string getAssetType() Obtain Asset type
+ * @method void setAssetType(string $AssetType) Set Asset type
+ * @method string getAssetTypeName() Obtain Asset type name
+ * @method void setAssetTypeName(string $AssetTypeName) Set Asset type name
  */
 class ExposeAssetTypeItem extends AbstractModel
 {
     /**
-     * @var string Cloud service provider.
+     * @var string Cloud service provider
      */
     public $Provider;
 
     /**
-     * @var string Vendor name.
+     * @var string Cloud vendor name
      */
     public $ProviderName;
 
     /**
-     * @var string Asset type.
+     * @var string Asset type
      */
     public $AssetType;
 
     /**
-     * @var string Asset type name.
+     * @var string Asset type name
      */
     public $AssetTypeName;
 
     /**
-     * @param string $Provider Cloud service provider.
-     * @param string $ProviderName Vendor name.
-     * @param string $AssetType Asset type.
-     * @param string $AssetTypeName Asset type name.
+     * @param string $Provider Cloud service provider
+     * @param string $ProviderName Cloud vendor name
+     * @param string $AssetType Asset type
+     * @param string $AssetTypeName Asset type name
      */
     function __construct()
     {

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPort() Obtain Port.
  * @method void setPort(string $Port) Set Port.
- * @method integer getNoHandleCount() Obtain Impact assets.
- * @method void setNoHandleCount(integer $NoHandleCount) Set Impact assets.
- * @method string getLevel() Obtain Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
- * @method void setLevel(string $Level) Set Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
- * @method string getComponent() Obtain Component.
- * @method void setComponent(string $Component) Set Component.
+ * @method integer getNoHandleCount() Obtain Affect assets
+ * @method void setNoHandleCount(integer $NoHandleCount) Set Affect assets
+ * @method string getLevel() Obtain Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+ * @method void setLevel(string $Level) Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+ * @method string getComponent() Obtain Component
+ * @method void setComponent(string $Component) Set Component
  * @method string getRecentTime() Obtain Latest Recognition Time
  * @method void setRecentTime(string $RecentTime) Set Latest Recognition Time
  * @method string getFirstTime() Obtain First Recognition Time
@@ -40,20 +40,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrom(string $From) Set Scan Source. See API Return Enumeration Type for details.
  * @method string getIndex() Obtain Front-end Index
  * @method void setIndex(string $Index) Set Front-end Index
- * @method string getVULType() Obtain Vulnerability type.
- * @method void setVULType(string $VULType) Set Vulnerability type.
+ * @method string getVULType() Obtain Vulnerability type
+ * @method void setVULType(string $VULType) Set Vulnerability type
  * @method string getVULName() Obtain Vulnerability name
  * @method void setVULName(string $VULName) Set Vulnerability name
  * @method string getCVE() Obtain cve
  * @method void setCVE(string $CVE) Set cve
  * @method string getPayload() Obtain Vulnerability Payload
  * @method void setPayload(string $Payload) Set Vulnerability Payload
- * @method string getAppName() Obtain Vulnerability impact component.
- * @method void setAppName(string $AppName) Set Vulnerability impact component.
- * @method string getAppVersion() Obtain Vulnerability impact version.
- * @method void setAppVersion(string $AppVersion) Set Vulnerability impact version.
- * @method string getVULURL() Obtain Risks.
- * @method void setVULURL(string $VULURL) Set Risks.
+ * @method string getAppName() Obtain Vulnerability Impact component
+ * @method void setAppName(string $AppName) Set Vulnerability Impact component
+ * @method string getAppVersion() Obtain Affected versions of the vulnerability
+ * @method void setAppVersion(string $AppVersion) Set Affected versions of the vulnerability
+ * @method string getVULURL() Obtain Risk point
+ * @method void setVULURL(string $VULURL) Set Risk point
  * @method string getNick() Obtain User Nickname
  * @method void setNick(string $Nick) Set User Nickname
  * @method string getAppId() Obtain User appid.
@@ -66,24 +66,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCVSS(float $CVSS) Set CVSS score
  * @method string getPCMGRId() Obtain PCMGRId
  * @method void setPCMGRId(string $PCMGRId) Set PCMGRId
- * @method array getVulTag() Obtain Vulnerability tag. during searching, emergency mandatory parameter VulTag=SuggestRepair/EMGCVul.
- * @method void setVulTag(array $VulTag) Set Vulnerability tag. during searching, emergency mandatory parameter VulTag=SuggestRepair/EMGCVul.
- * @method string getDisclosureTime() Obtain Vulnerability disclosure time.
- * @method void setDisclosureTime(string $DisclosureTime) Set Vulnerability disclosure time.
- * @method integer getAttackHeat() Obtain Attack intensity.
- * @method void setAttackHeat(integer $AttackHeat) Set Attack intensity.
- * @method integer getIsSuggest() Obtain Whether a mandatory vulnerability: 1 - yes; 0 - no.
- * @method void setIsSuggest(integer $IsSuggest) Set Whether a mandatory vulnerability: 1 - yes; 0 - no.
- * @method string getHandleTaskId() Obtain Disposal task id.
- * @method void setHandleTaskId(string $HandleTaskId) Set Disposal task id.
- * @method string getEngineSource() Obtain Engine source.
- * @method void setEngineSource(string $EngineSource) Set Engine source.
- * @method string getVulRiskId() Obtain New vulnerability risk id.
- * @method void setVulRiskId(string $VulRiskId) Set New vulnerability risk id.
- * @method string getTvdID() Obtain New version vulnerability id.
- * @method void setTvdID(string $TvdID) Set New version vulnerability id.
- * @method integer getIsOneClick() Obtain Is it possible to perform a one-click physical examination. valid values: 1-yes, 0-not allowed.
- * @method void setIsOneClick(integer $IsOneClick) Set Is it possible to perform a one-click physical examination. valid values: 1-yes, 0-not allowed.
+ * @method array getVulTag() Obtain Vulnerability tag. During searching, you must pass in `VulTag=SuggestRepair/EMGCVul` for emergency and mandatory vulnerabilities.
+ * @method void setVulTag(array $VulTag) Set Vulnerability tag. During searching, you must pass in `VulTag=SuggestRepair/EMGCVul` for emergency and mandatory vulnerabilities.
+ * @method string getDisclosureTime() Obtain Vulnerability disclosure time
+ * @method void setDisclosureTime(string $DisclosureTime) Set Vulnerability disclosure time
+ * @method integer getAttackHeat() Obtain Attack heat
+ * @method void setAttackHeat(integer $AttackHeat) Set Attack heat
+ * @method integer getIsSuggest() Obtain Whether it is a mandatory vulnerability. 1: yes, 0: no
+ * @method void setIsSuggest(integer $IsSuggest) Set Whether it is a mandatory vulnerability. 1: yes, 0: no
+ * @method string getHandleTaskId() Obtain Disposal task id
+ * @method void setHandleTaskId(string $HandleTaskId) Set Disposal task id
+ * @method string getEngineSource() Obtain Engine source
+ * @method void setEngineSource(string $EngineSource) Set Engine source
+ * @method string getVulRiskId() Obtain New vulnerability risk id
+ * @method void setVulRiskId(string $VulRiskId) Set New vulnerability risk id
+ * @method string getTvdID() Obtain New version vulnerability id
+ * @method void setTvdID(string $TvdID) Set New version vulnerability id
+ * @method integer getIsOneClick() Obtain Is one-click physical examination possible? 1: allowed, 0: not allowed.
+ * @method void setIsOneClick(integer $IsOneClick) Set Is one-click physical examination possible? 1: allowed, 0: not allowed.
  */
 class VULViewVULRiskData extends AbstractModel
 {
@@ -93,17 +93,17 @@ class VULViewVULRiskData extends AbstractModel
     public $Port;
 
     /**
-     * @var integer Impact assets.
+     * @var integer Affect assets
      */
     public $NoHandleCount;
 
     /**
-     * @var string Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+     * @var string Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public $Level;
 
     /**
-     * @var string Component.
+     * @var string Component
      */
     public $Component;
 
@@ -138,7 +138,7 @@ class VULViewVULRiskData extends AbstractModel
     public $Index;
 
     /**
-     * @var string Vulnerability type.
+     * @var string Vulnerability type
      */
     public $VULType;
 
@@ -158,17 +158,17 @@ class VULViewVULRiskData extends AbstractModel
     public $Payload;
 
     /**
-     * @var string Vulnerability impact component.
+     * @var string Vulnerability Impact component
      */
     public $AppName;
 
     /**
-     * @var string Vulnerability impact version.
+     * @var string Affected versions of the vulnerability
      */
     public $AppVersion;
 
     /**
-     * @var string Risks.
+     * @var string Risk point
      */
     public $VULURL;
 
@@ -203,83 +203,83 @@ class VULViewVULRiskData extends AbstractModel
     public $PCMGRId;
 
     /**
-     * @var array Vulnerability tag. during searching, emergency mandatory parameter VulTag=SuggestRepair/EMGCVul.
+     * @var array Vulnerability tag. During searching, you must pass in `VulTag=SuggestRepair/EMGCVul` for emergency and mandatory vulnerabilities.
      */
     public $VulTag;
 
     /**
-     * @var string Vulnerability disclosure time.
+     * @var string Vulnerability disclosure time
      */
     public $DisclosureTime;
 
     /**
-     * @var integer Attack intensity.
+     * @var integer Attack heat
      */
     public $AttackHeat;
 
     /**
-     * @var integer Whether a mandatory vulnerability: 1 - yes; 0 - no.
+     * @var integer Whether it is a mandatory vulnerability. 1: yes, 0: no
      */
     public $IsSuggest;
 
     /**
-     * @var string Disposal task id.
+     * @var string Disposal task id
      */
     public $HandleTaskId;
 
     /**
-     * @var string Engine source.
+     * @var string Engine source
      */
     public $EngineSource;
 
     /**
-     * @var string New vulnerability risk id.
+     * @var string New vulnerability risk id
      */
     public $VulRiskId;
 
     /**
-     * @var string New version vulnerability id.
+     * @var string New version vulnerability id
      */
     public $TvdID;
 
     /**
-     * @var integer Is it possible to perform a one-click physical examination. valid values: 1-yes, 0-not allowed.
+     * @var integer Is one-click physical examination possible? 1: allowed, 0: not allowed.
      */
     public $IsOneClick;
 
     /**
      * @param string $Port Port.
-     * @param integer $NoHandleCount Impact assets.
-     * @param string $Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
-     * @param string $Component Component.
+     * @param integer $NoHandleCount Affect assets
+     * @param string $Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+     * @param string $Component Component
      * @param string $RecentTime Latest Recognition Time
      * @param string $FirstTime First Recognition Time
      * @param integer $AffectAssetCount Number of Affected Assets
      * @param string $RiskId Risk ID
      * @param string $From Scan Source. See API Return Enumeration Type for details.
      * @param string $Index Front-end Index
-     * @param string $VULType Vulnerability type.
+     * @param string $VULType Vulnerability type
      * @param string $VULName Vulnerability name
      * @param string $CVE cve
      * @param string $Payload Vulnerability Payload
-     * @param string $AppName Vulnerability impact component.
-     * @param string $AppVersion Vulnerability impact version.
-     * @param string $VULURL Risks.
+     * @param string $AppName Vulnerability Impact component
+     * @param string $AppVersion Affected versions of the vulnerability
+     * @param string $VULURL Risk point
      * @param string $Nick User Nickname
      * @param string $AppId User appid.
      * @param string $Uin User UIN
      * @param integer $EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
      * @param float $CVSS CVSS score
      * @param string $PCMGRId PCMGRId
-     * @param array $VulTag Vulnerability tag. during searching, emergency mandatory parameter VulTag=SuggestRepair/EMGCVul.
-     * @param string $DisclosureTime Vulnerability disclosure time.
-     * @param integer $AttackHeat Attack intensity.
-     * @param integer $IsSuggest Whether a mandatory vulnerability: 1 - yes; 0 - no.
-     * @param string $HandleTaskId Disposal task id.
-     * @param string $EngineSource Engine source.
-     * @param string $VulRiskId New vulnerability risk id.
-     * @param string $TvdID New version vulnerability id.
-     * @param integer $IsOneClick Is it possible to perform a one-click physical examination. valid values: 1-yes, 0-not allowed.
+     * @param array $VulTag Vulnerability tag. During searching, you must pass in `VulTag=SuggestRepair/EMGCVul` for emergency and mandatory vulnerabilities.
+     * @param string $DisclosureTime Vulnerability disclosure time
+     * @param integer $AttackHeat Attack heat
+     * @param integer $IsSuggest Whether it is a mandatory vulnerability. 1: yes, 0: no
+     * @param string $HandleTaskId Disposal task id
+     * @param string $EngineSource Engine source
+     * @param string $VulRiskId New vulnerability risk id
+     * @param string $TvdID New version vulnerability id
+     * @param integer $IsOneClick Is one-click physical examination possible? 1: allowed, 0: not allowed.
      */
     function __construct()
     {

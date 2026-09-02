@@ -18,58 +18,54 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Network interface card asset.
+ * Network interface card asset
  *
  * @method string getAppId() Obtain appid
  * @method void setAppId(string $AppId) Set appid
  * @method string getUin() Obtain uin
  * @method void setUin(string $Uin) Set uin
- * @method string getAssetId() Obtain Asset ID.
- * @method void setAssetId(string $AssetId) Set Asset ID.
- * @method string getAssetName() Obtain Asset name.
- * @method void setAssetName(string $AssetName) Set Asset name.
- * @method string getAssetType() Obtain Asset type.
- * @method void setAssetType(string $AssetType) Set Asset type.
+ * @method string getAssetId() Obtain Asset ID
+ * @method void setAssetId(string $AssetId) Set Asset ID
+ * @method string getAssetName() Obtain Asset name
+ * @method void setAssetName(string $AssetName) Set Asset name
+ * @method string getAssetType() Obtain Asset type
+ * @method void setAssetType(string $AssetType) Set Asset type
  * @method string getPrivateIp() Obtain VPC IP
  * @method void setPrivateIp(string $PrivateIp) Set VPC IP
  * @method string getPublicIp() Obtain Public IP address
  * @method void setPublicIp(string $PublicIp) Set Public IP address
  * @method string getRegion() Obtain Region.
  * @method void setRegion(string $Region) Set Region.
- * @method string getVpcId() Obtain VPC id.
- * @method void setVpcId(string $VpcId) Set VPC id.
+ * @method string getVpcId() Obtain VPC id
+ * @method void setVpcId(string $VpcId) Set VPC id
  * @method string getVpcName() Obtain VPC Name
  * @method void setVpcName(string $VpcName) Set VPC Name
  * @method array getTag() Obtain Tag.
  * @method void setTag(array $Tag) Set Tag.
- * @method string getOutboundPeakBandwidth() Obtain Outbound peak bandwidth.
- * @method void setOutboundPeakBandwidth(string $OutboundPeakBandwidth) Set Outbound peak bandwidth.
- * @method string getInboundPeakBandwidth() Obtain Inbound peak bandwidth.
- * @method void setInboundPeakBandwidth(string $InboundPeakBandwidth) Set Inbound peak bandwidth.
+ * @method string getOutboundPeakBandwidth() Obtain Outbound peak bandwidth
+ * @method void setOutboundPeakBandwidth(string $OutboundPeakBandwidth) Set Outbound peak bandwidth
+ * @method string getInboundPeakBandwidth() Obtain Inbound peak bandwidth
+ * @method void setInboundPeakBandwidth(string $InboundPeakBandwidth) Set Inbound peak bandwidth
  * @method string getOutboundCumulativeFlow() Obtain Cumulative Outbound Traffic
  * @method void setOutboundCumulativeFlow(string $OutboundCumulativeFlow) Set Cumulative Outbound Traffic
  * @method string getInboundCumulativeFlow() Obtain Cumulative Inbound Traffic
  * @method void setInboundCumulativeFlow(string $InboundCumulativeFlow) Set Cumulative Inbound Traffic
- * @method integer getNetworkAttack() Obtain Network attack.
- * @method void setNetworkAttack(integer $NetworkAttack) Set Network attack.
- * @method integer getExposedPort() Obtain Expose ports.
- * @method void setExposedPort(integer $ExposedPort) Set Expose ports.
- * @method integer getExposedVUL() Obtain Exposed vulnerability.
- * @method void setExposedVUL(integer $ExposedVUL) Set Exposed vulnerability.
- * @method integer getConfigureRisk() Obtain Configuration risk.
- * @method void setConfigureRisk(integer $ConfigureRisk) Set Configuration risk.
+ * @method integer getNetworkAttack() Obtain Network attack
+ * @method void setNetworkAttack(integer $NetworkAttack) Set Network attack
+ * @method integer getExposedPort() Obtain Exposed port
+ * @method void setExposedPort(integer $ExposedPort) Set Exposed port
+ * @method integer getExposedVUL() Obtain Exposed vulnerability
+ * @method void setExposedVUL(integer $ExposedVUL) Set Exposed vulnerability
+ * @method integer getConfigureRisk() Obtain Configuration risk
+ * @method void setConfigureRisk(integer $ConfigureRisk) Set Configuration risk
  * @method string getCreateTime() Obtain Creation time.
-
-
  * @method void setCreateTime(string $CreateTime) Set Creation time.
-
-
- * @method integer getScanTask() Obtain Number of tasks.
- * @method void setScanTask(integer $ScanTask) Set Number of tasks.
+ * @method integer getScanTask() Obtain Number of Tasks
+ * @method void setScanTask(integer $ScanTask) Set Number of Tasks
  * @method string getLastScanTime() Obtain Last scan time
  * @method void setLastScanTime(string $LastScanTime) Set Last scan time
- * @method string getNick() Obtain Nickname.
- * @method void setNick(string $Nick) Set Nickname.
+ * @method string getNick() Obtain Nickname
+ * @method void setNick(string $Nick) Set Nickname
  * @method integer getIsCore() Obtain Core or Not
  * @method void setIsCore(integer $IsCore) Set Core or Not
  * @method integer getIsNewAsset() Obtain New Asset or Not. 1: New
@@ -88,17 +84,17 @@ class NICAsset extends AbstractModel
     public $Uin;
 
     /**
-     * @var string Asset ID.
+     * @var string Asset ID
      */
     public $AssetId;
 
     /**
-     * @var string Asset name.
+     * @var string Asset name
      */
     public $AssetName;
 
     /**
-     * @var string Asset type.
+     * @var string Asset type
      */
     public $AssetType;
 
@@ -118,7 +114,7 @@ class NICAsset extends AbstractModel
     public $Region;
 
     /**
-     * @var string VPC id.
+     * @var string VPC id
      */
     public $VpcId;
 
@@ -133,12 +129,12 @@ class NICAsset extends AbstractModel
     public $Tag;
 
     /**
-     * @var string Outbound peak bandwidth.
+     * @var string Outbound peak bandwidth
      */
     public $OutboundPeakBandwidth;
 
     /**
-     * @var string Inbound peak bandwidth.
+     * @var string Inbound peak bandwidth
      */
     public $InboundPeakBandwidth;
 
@@ -153,34 +149,32 @@ class NICAsset extends AbstractModel
     public $InboundCumulativeFlow;
 
     /**
-     * @var integer Network attack.
+     * @var integer Network attack
      */
     public $NetworkAttack;
 
     /**
-     * @var integer Expose ports.
+     * @var integer Exposed port
      */
     public $ExposedPort;
 
     /**
-     * @var integer Exposed vulnerability.
+     * @var integer Exposed vulnerability
      */
     public $ExposedVUL;
 
     /**
-     * @var integer Configuration risk.
+     * @var integer Configuration risk
      */
     public $ConfigureRisk;
 
     /**
      * @var string Creation time.
-
-
      */
     public $CreateTime;
 
     /**
-     * @var integer Number of tasks.
+     * @var integer Number of Tasks
      */
     public $ScanTask;
 
@@ -190,7 +184,7 @@ class NICAsset extends AbstractModel
     public $LastScanTime;
 
     /**
-     * @var string Nickname.
+     * @var string Nickname
      */
     public $Nick;
 
@@ -207,29 +201,27 @@ class NICAsset extends AbstractModel
     /**
      * @param string $AppId appid
      * @param string $Uin uin
-     * @param string $AssetId Asset ID.
-     * @param string $AssetName Asset name.
-     * @param string $AssetType Asset type.
+     * @param string $AssetId Asset ID
+     * @param string $AssetName Asset name
+     * @param string $AssetType Asset type
      * @param string $PrivateIp VPC IP
      * @param string $PublicIp Public IP address
      * @param string $Region Region.
-     * @param string $VpcId VPC id.
+     * @param string $VpcId VPC id
      * @param string $VpcName VPC Name
      * @param array $Tag Tag.
-     * @param string $OutboundPeakBandwidth Outbound peak bandwidth.
-     * @param string $InboundPeakBandwidth Inbound peak bandwidth.
+     * @param string $OutboundPeakBandwidth Outbound peak bandwidth
+     * @param string $InboundPeakBandwidth Inbound peak bandwidth
      * @param string $OutboundCumulativeFlow Cumulative Outbound Traffic
      * @param string $InboundCumulativeFlow Cumulative Inbound Traffic
-     * @param integer $NetworkAttack Network attack.
-     * @param integer $ExposedPort Expose ports.
-     * @param integer $ExposedVUL Exposed vulnerability.
-     * @param integer $ConfigureRisk Configuration risk.
+     * @param integer $NetworkAttack Network attack
+     * @param integer $ExposedPort Exposed port
+     * @param integer $ExposedVUL Exposed vulnerability
+     * @param integer $ConfigureRisk Configuration risk
      * @param string $CreateTime Creation time.
-
-
-     * @param integer $ScanTask Number of tasks.
+     * @param integer $ScanTask Number of Tasks
      * @param string $LastScanTime Last scan time
-     * @param string $Nick Nickname.
+     * @param string $Nick Nickname
      * @param integer $IsCore Core or Not
      * @param integer $IsNewAsset New Asset or Not. 1: New
      */

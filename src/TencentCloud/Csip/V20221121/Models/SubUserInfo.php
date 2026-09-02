@@ -18,10 +18,10 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Sub-account Details
+ * Sub-account details
  *
- * @method integer getID() Obtain <p>Primary key ID, with no business significance, only serves as a unique key.</p>
- * @method void setID(integer $ID) Set <p>Primary key ID, with no business significance, only serves as a unique key.</p>
+ * @method integer getID() Obtain <p>Primary key ID, no business significance, used only as a unique key</p>
+ * @method void setID(integer $ID) Set <p>Primary key ID, no business significance, used only as a unique key</p>
  * @method string getAppID() Obtain <p>Sub-account Appid</p>
  * @method void setAppID(string $AppID) Set <p>Sub-account Appid</p>
  * @method string getUin() Obtain <p>Sub-account UIn</p>
@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerUin(string $OwnerUin) Set <p>Root account Uin</p>
  * @method string getOwnerNickName() Obtain <p>Root account name</p>
  * @method void setOwnerNickName(string $OwnerNickName) Set <p>Root account name</p>
- * @method string getOwnerMemberID() Obtain <p>Member ID information belonging to main account</p>
- * @method void setOwnerMemberID(string $OwnerMemberID) Set <p>Member ID information belonging to main account</p>
- * @method integer getCloudType() Obtain <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
- * @method void setCloudType(integer $CloudType) Set <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
+ * @method string getOwnerMemberID() Obtain <p>memberId information belonging to main account</p>
+ * @method void setOwnerMemberID(string $OwnerMemberID) Set <p>memberId information belonging to main account</p>
+ * @method integer getCloudType() Obtain <p>Account type. 0: Tencent Cloud account; 1: AWS account</p>
+ * @method void setCloudType(integer $CloudType) Set <p>Account type. 0: Tencent Cloud account; 1: AWS account</p>
  * @method integer getServiceCount() Obtain <p>Number of accessible services</p>
  * @method void setServiceCount(integer $ServiceCount) Set <p>Number of accessible services</p>
  * @method integer getInterfaceCount() Obtain <p>Number of accessible APIs</p>
@@ -52,17 +52,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionRiskCount(integer $ActionRiskCount) Set <p>Dangerous behavior alarm</p>
  * @method boolean getIsAccessCloudAudit() Obtain <p>Whether to access operation audit log</p>
  * @method void setIsAccessCloudAudit(boolean $IsAccessCloudAudit) Set <p>Whether to access operation audit log</p>
- * @method boolean getIsAccessCheck() Obtain <p>Security check for configuration risk required or not</p>
- * @method void setIsAccessCheck(boolean $IsAccessCheck) Set <p>Security check for configuration risk required or not</p>
- * @method boolean getIsAccessUeba() Obtain <p>Whether configure user behavior management policy</p>
- * @method void setIsAccessUeba(boolean $IsAccessUeba) Set <p>Whether configure user behavior management policy</p>
+ * @method boolean getIsAccessCheck() Obtain <p>Whether to configure a security check for risks</p>
+ * @method void setIsAccessCheck(boolean $IsAccessCheck) Set <p>Whether to configure a security check for risks</p>
+ * @method boolean getIsAccessUeba() Obtain <p>Whether to configure a user behavior management policy</p>
+ * @method void setIsAccessUeba(boolean $IsAccessUeba) Set <p>Whether to configure a user behavior management policy</p>
  * @method integer getCreateTime() Obtain <p>Creation time (Unix timestamp).</p>
  * @method void setCreateTime(integer $CreateTime) Set <p>Creation time (Unix timestamp).</p>
  */
 class SubUserInfo extends AbstractModel
 {
     /**
-     * @var integer <p>Primary key ID, with no business significance, only serves as a unique key.</p>
+     * @var integer <p>Primary key ID, no business significance, used only as a unique key</p>
      */
     public $ID;
 
@@ -97,12 +97,12 @@ class SubUserInfo extends AbstractModel
     public $OwnerNickName;
 
     /**
-     * @var string <p>Member ID information belonging to main account</p>
+     * @var string <p>memberId information belonging to main account</p>
      */
     public $OwnerMemberID;
 
     /**
-     * @var integer <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
+     * @var integer <p>Account type. 0: Tencent Cloud account; 1: AWS account</p>
      */
     public $CloudType;
 
@@ -142,12 +142,12 @@ class SubUserInfo extends AbstractModel
     public $IsAccessCloudAudit;
 
     /**
-     * @var boolean <p>Security check for configuration risk required or not</p>
+     * @var boolean <p>Whether to configure a security check for risks</p>
      */
     public $IsAccessCheck;
 
     /**
-     * @var boolean <p>Whether configure user behavior management policy</p>
+     * @var boolean <p>Whether to configure a user behavior management policy</p>
      */
     public $IsAccessUeba;
 
@@ -157,15 +157,15 @@ class SubUserInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @param integer $ID <p>Primary key ID, with no business significance, only serves as a unique key.</p>
+     * @param integer $ID <p>Primary key ID, no business significance, used only as a unique key</p>
      * @param string $AppID <p>Sub-account Appid</p>
      * @param string $Uin <p>Sub-account UIn</p>
      * @param string $NickName <p>Sub-account name</p>
      * @param string $OwnerAppID <p>Root Account Appid</p>
      * @param string $OwnerUin <p>Root account Uin</p>
      * @param string $OwnerNickName <p>Root account name</p>
-     * @param string $OwnerMemberID <p>Member ID information belonging to main account</p>
-     * @param integer $CloudType <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
+     * @param string $OwnerMemberID <p>memberId information belonging to main account</p>
+     * @param integer $CloudType <p>Account type. 0: Tencent Cloud account; 1: AWS account</p>
      * @param integer $ServiceCount <p>Number of accessible services</p>
      * @param integer $InterfaceCount <p>Number of accessible APIs</p>
      * @param integer $AssetCount <p>Number of accessible resources</p>
@@ -173,8 +173,8 @@ class SubUserInfo extends AbstractModel
      * @param integer $ConfigRiskCount <p>Permission configuration risk</p>
      * @param integer $ActionRiskCount <p>Dangerous behavior alarm</p>
      * @param boolean $IsAccessCloudAudit <p>Whether to access operation audit log</p>
-     * @param boolean $IsAccessCheck <p>Security check for configuration risk required or not</p>
-     * @param boolean $IsAccessUeba <p>Whether configure user behavior management policy</p>
+     * @param boolean $IsAccessCheck <p>Whether to configure a security check for risks</p>
+     * @param boolean $IsAccessUeba <p>Whether to configure a user behavior management policy</p>
      * @param integer $CreateTime <p>Creation time (Unix timestamp).</p>
      */
     function __construct()

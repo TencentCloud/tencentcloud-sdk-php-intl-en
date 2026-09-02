@@ -18,7 +18,7 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Vulnerability Information Product Support Status
+ * Vulnerability information product support status
  *
  * @method boolean getVSSScan() Obtain True supports scanning. False does not support scanning.
  * @method void setVSSScan(boolean $VSSScan) Set True supports scanning. False does not support scanning.

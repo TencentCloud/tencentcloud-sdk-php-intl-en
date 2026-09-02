@@ -24,24 +24,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCredentialId(string $CredentialId) Set Credential ID
  * @method string getCredentialName() Obtain Credential name
  * @method void setCredentialName(string $CredentialName) Set Credential name
- * @method string getCredentialType() Obtain Credential Type
+ * @method string getCredentialType() Obtain Credential type
 Enumeration value:
-access: normal Key (Key-Value pair)
+access: standard Key (Key-Value pair)
 sts: STS temporary key credential
- * @method void setCredentialType(string $CredentialType) Set Credential Type
+ * @method void setCredentialType(string $CredentialType) Set Credential type
 Enumeration value:
-access: normal Key (Key-Value pair)
+access: standard Key (Key-Value pair)
 sts: STS temporary key credential
- * @method CredentialEffectScope getCredentialEffectScope() Obtain Effective machine scope
- * @method void setCredentialEffectScope(CredentialEffectScope $CredentialEffectScope) Set Effective machine scope
+ * @method CredentialEffectScope getCredentialEffectScope() Obtain Scope of effective machines
+ * @method void setCredentialEffectScope(CredentialEffectScope $CredentialEffectScope) Set Scope of effective machines
  * @method string getCreateTime() Obtain Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
  * @method void setCreateTime(string $CreateTime) Set Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
  * @method string getUpdateTime() Obtain Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
  * @method void setUpdateTime(string $UpdateTime) Set Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
  */
 class KeySandboxCredential extends AbstractModel
 {
@@ -56,42 +56,42 @@ class KeySandboxCredential extends AbstractModel
     public $CredentialName;
 
     /**
-     * @var string Credential Type
+     * @var string Credential type
 Enumeration value:
-access: normal Key (Key-Value pair)
+access: standard Key (Key-Value pair)
 sts: STS temporary key credential
      */
     public $CredentialType;
 
     /**
-     * @var CredentialEffectScope Effective machine scope
+     * @var CredentialEffectScope Scope of effective machines
      */
     public $CredentialEffectScope;
 
     /**
      * @var string Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public $CreateTime;
 
     /**
      * @var string Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public $UpdateTime;
 
     /**
      * @param string $CredentialId Credential ID
      * @param string $CredentialName Credential name
-     * @param string $CredentialType Credential Type
+     * @param string $CredentialType Credential type
 Enumeration value:
-access: normal Key (Key-Value pair)
+access: standard Key (Key-Value pair)
 sts: STS temporary key credential
-     * @param CredentialEffectScope $CredentialEffectScope Effective machine scope
+     * @param CredentialEffectScope $CredentialEffectScope Scope of effective machines
      * @param string $CreateTime Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      * @param string $UpdateTime Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     function __construct()
     {

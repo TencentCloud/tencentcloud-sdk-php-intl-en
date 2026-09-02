@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRiskCenterCFGViewCFGRiskList response structure.
  *
- * @method integer getTotalCount() Obtain Total number of entries
- * @method void setTotalCount(integer $TotalCount) Set Total number of entries
+ * @method integer getTotalCount() Obtain Total quantity.
+ * @method void setTotalCount(integer $TotalCount) Set Total quantity.
  * @method array getData() Obtain Configuration Risk List from Asset's Perspective
  * @method void setData(array $Data) Set Configuration Risk List from Asset's Perspective
  * @method array getStatusLists() Obtain Status list
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRiskCenterCFGViewCFGRiskListResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of entries
+     * @var integer Total quantity.
      */
     public $TotalCount;
 
@@ -87,7 +87,7 @@ class DescribeRiskCenterCFGViewCFGRiskListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total number of entries
+     * @param integer $TotalCount Total quantity.
      * @param array $Data Configuration Risk List from Asset's Perspective
      * @param array $StatusLists Status list
      * @param array $LevelLists Danger Level List

@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set <p>CI/CD name</p>
  * @method string getToken() Obtain <p>Token for integration</p>
  * @method void setToken(string $Token) Set <p>Token for integration</p>
- * @method integer getPeriod() Obtain <p>Scanning result storage duration</p>
- * @method void setPeriod(integer $Period) Set <p>Scanning result storage duration</p>
- * @method integer getFileCnt() Obtain <p>Scanned file</p>
- * @method void setFileCnt(integer $FileCnt) Set <p>Scanned file</p>
+ * @method integer getPeriod() Obtain <p>Result storage duration of scan</p>
+ * @method void setPeriod(integer $Period) Set <p>Result storage duration of scan</p>
+ * @method integer getFileCnt() Obtain <p>Scanned file.</p>
+ * @method void setFileCnt(integer $FileCnt) Set <p>Scanned file.</p>
  * @method string getLastScanStatus() Obtain <p>Latest scan status</p>
  * @method void setLastScanStatus(string $LastScanStatus) Set <p>Latest scan status</p>
  * @method string getLastScanTime() Obtain <p>Last scan time.</p>
@@ -60,12 +60,12 @@ class CICDToken extends AbstractModel
     public $Token;
 
     /**
-     * @var integer <p>Scanning result storage duration</p>
+     * @var integer <p>Result storage duration of scan</p>
      */
     public $Period;
 
     /**
-     * @var integer <p>Scanned file</p>
+     * @var integer <p>Scanned file.</p>
      */
     public $FileCnt;
 
@@ -84,8 +84,8 @@ class CICDToken extends AbstractModel
      * @param integer $AppId <p>appid</p>
      * @param string $Name <p>CI/CD name</p>
      * @param string $Token <p>Token for integration</p>
-     * @param integer $Period <p>Scanning result storage duration</p>
-     * @param integer $FileCnt <p>Scanned file</p>
+     * @param integer $Period <p>Result storage duration of scan</p>
+     * @param integer $FileCnt <p>Scanned file.</p>
      * @param string $LastScanStatus <p>Latest scan status</p>
      * @param string $LastScanTime <p>Last scan time.</p>
      */

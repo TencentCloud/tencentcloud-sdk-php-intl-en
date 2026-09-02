@@ -18,16 +18,16 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Host process content.
+ * Host process content
  *
- * @method string getCloudAccountID() Obtain Cloud account ID.
- * @method void setCloudAccountID(string $CloudAccountID) Set Cloud account ID.
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
- * @method integer getAppID() Obtain Tenant ID.
- * @method void setAppID(integer $AppID) Set Tenant ID.
- * @method string getCloudAccountName() Obtain Account name.
- * @method void setCloudAccountName(string $CloudAccountName) Set Account name.
+ * @method string getCloudAccountID() Obtain Cloud Account ID
+ * @method void setCloudAccountID(string $CloudAccountID) Set Cloud Account ID
+ * @method string getInstanceName() Obtain Instance name.
+ * @method void setInstanceName(string $InstanceName) Set Instance name.
+ * @method integer getAppID() Obtain Tenant ID
+ * @method void setAppID(integer $AppID) Set Tenant ID
+ * @method string getCloudAccountName() Obtain Cloud account name
+ * @method void setCloudAccountName(string $CloudAccountName) Set Cloud account name
  * @method string getInstanceID() Obtain Instance ID.
  * @method void setInstanceID(string $InstanceID) Set Instance ID.
  * @method string getPublicIp() Obtain Public IP address
@@ -40,28 +40,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcessName(string $ProcessName) Set Process name
  * @method string getCmdLine() Obtain Command line
  * @method void setCmdLine(string $CmdLine) Set Command line
- * @method string getPort() Obtain Listening port list.
- * @method void setPort(string $Port) Set Listening port list.
+ * @method string getPort() Obtain Listening port list
+ * @method void setPort(string $Port) Set Listening port list
  */
 class AssetProcessItem extends AbstractModel
 {
     /**
-     * @var string Cloud account ID.
+     * @var string Cloud Account ID
      */
     public $CloudAccountID;
 
     /**
-     * @var string Instance name
+     * @var string Instance name.
      */
     public $InstanceName;
 
     /**
-     * @var integer Tenant ID.
+     * @var integer Tenant ID
      */
     public $AppID;
 
     /**
-     * @var string Account name.
+     * @var string Cloud account name
      */
     public $CloudAccountName;
 
@@ -96,22 +96,22 @@ class AssetProcessItem extends AbstractModel
     public $CmdLine;
 
     /**
-     * @var string Listening port list.
+     * @var string Listening port list
      */
     public $Port;
 
     /**
-     * @param string $CloudAccountID Cloud account ID.
-     * @param string $InstanceName Instance name
-     * @param integer $AppID Tenant ID.
-     * @param string $CloudAccountName Account name.
+     * @param string $CloudAccountID Cloud Account ID
+     * @param string $InstanceName Instance name.
+     * @param integer $AppID Tenant ID
+     * @param string $CloudAccountName Cloud account name
      * @param string $InstanceID Instance ID.
      * @param string $PublicIp Public IP address
      * @param string $PrivateIp Private IP address
      * @param string $ProcessID Process ID
      * @param string $ProcessName Process name
      * @param string $CmdLine Command line
-     * @param string $Port Listening port list.
+     * @param string $Port Listening port list
      */
     function __construct()
     {

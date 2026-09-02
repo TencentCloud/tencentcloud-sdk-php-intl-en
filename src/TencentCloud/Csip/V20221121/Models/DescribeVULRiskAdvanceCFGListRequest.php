@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method string getTaskId() Obtain Task ID
- * @method void setTaskId(string $TaskId) Set Task ID
- * @method Filter getFilter() Obtain Filter conditions.
- * @method void setFilter(Filter $Filter) Set Filter conditions.
+ * @method string getTaskId() Obtain Task ID.
+ * @method void setTaskId(string $TaskId) Set Task ID.
+ * @method Filter getFilter() Obtain Filter criteria.
+ * @method void setFilter(Filter $Filter) Set Filter criteria.
  */
 class DescribeVULRiskAdvanceCFGListRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeVULRiskAdvanceCFGListRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var string Task ID
+     * @var string Task ID.
      */
     public $TaskId;
 
     /**
-     * @var Filter Filter conditions.
+     * @var Filter Filter criteria.
      */
     public $Filter;
 
     /**
      * @param array $MemberId Group Account Member ID
-     * @param string $TaskId Task ID
-     * @param Filter $Filter Filter conditions.
+     * @param string $TaskId Task ID.
+     * @param Filter $Filter Filter criteria.
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Filter condition
+ * Filter Data Objects
  *
- * @method string getValue() Obtain Filter value
- * @method void setValue(string $Value) Set Filter value
- * @method string getText() Obtain Filter name
- * @method void setText(string $Text) Set Filter name
+ * @method string getValue() Obtain English Translation
+ * @method void setValue(string $Value) Set English Translation
+ * @method string getText() Obtain Chinese Translation
+ * @method void setText(string $Text) Set Chinese Translation
  */
 class FilterDataObject extends AbstractModel
 {
     /**
-     * @var string Filter value
+     * @var string English Translation
      */
     public $Value;
 
     /**
-     * @var string Filter name
+     * @var string Chinese Translation
      */
     public $Text;
 
     /**
-     * @param string $Value Filter value
-     * @param string $Text Filter name
+     * @param string $Value English Translation
+     * @param string $Text Chinese Translation
      */
     function __construct()
     {

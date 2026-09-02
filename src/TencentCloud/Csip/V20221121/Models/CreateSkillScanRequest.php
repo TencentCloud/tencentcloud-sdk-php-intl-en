@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSkillScan request structure.
  *
- * @method string getFileBase64() Obtain Base64 encoding of the ZIP file content
-Input limit: File size limit 7MB (before encoding), only effective ZIP format.
- * @method void setFileBase64(string $FileBase64) Set Base64 encoding of the ZIP file content
-Input limit: File size limit 7MB (before encoding), only effective ZIP format.
+ * @method string getFileBase64() Obtain Base64-encoded ZIP file content
+Input limits: file size limit 7 MB (before encoding). Only valid ZIP format is accepted.
+ * @method void setFileBase64(string $FileBase64) Set Base64-encoded ZIP file content
+Input limits: file size limit 7 MB (before encoding). Only valid ZIP format is accepted.
  * @method string getFileName() Obtain Filename for server log
 Parameter format: such as my-skill.zip
  * @method void setFileName(string $FileName) Set Filename for server log
@@ -32,8 +32,8 @@ Parameter format: such as my-skill.zip
 class CreateSkillScanRequest extends AbstractModel
 {
     /**
-     * @var string Base64 encoding of the ZIP file content
-Input limit: File size limit 7MB (before encoding), only effective ZIP format.
+     * @var string Base64-encoded ZIP file content
+Input limits: file size limit 7 MB (before encoding). Only valid ZIP format is accepted.
      */
     public $FileBase64;
 
@@ -44,8 +44,8 @@ Parameter format: such as my-skill.zip
     public $FileName;
 
     /**
-     * @param string $FileBase64 Base64 encoding of the ZIP file content
-Input limit: File size limit 7MB (before encoding), only effective ZIP format.
+     * @param string $FileBase64 Base64-encoded ZIP file content
+Input limits: file size limit 7 MB (before encoding). Only valid ZIP format is accepted.
      * @param string $FileName Filename for server log
 Parameter format: such as my-skill.zip
      */

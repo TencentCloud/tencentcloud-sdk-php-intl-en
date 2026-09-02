@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getData() Obtain Configuration item list
  * @method void setData(array $Data) Set Configuration item list
- * @method integer getTotalCount() Obtain Total number of results
- * @method void setTotalCount(integer $TotalCount) Set Total number of results
+ * @method integer getTotalCount() Obtain Total number.
+ * @method void setTotalCount(integer $TotalCount) Set Total number.
  * @method array getRiskLevelLists() Obtain Risk Level Filter List
  * @method void setRiskLevelLists(array $RiskLevelLists) Set Risk Level Filter List
  * @method array getVULTypeLists() Obtain Vulnerability Type Filter List
@@ -43,7 +43,7 @@ class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var integer Total number of results
+     * @var integer Total number.
      */
     public $TotalCount;
 
@@ -74,7 +74,7 @@ class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel
 
     /**
      * @param array $Data Configuration item list
-     * @param integer $TotalCount Total number of results
+     * @param integer $TotalCount Total number.
      * @param array $RiskLevelLists Risk Level Filter List
      * @param array $VULTypeLists Vulnerability Type Filter List
      * @param array $CheckFromLists Recognition Source Filter List

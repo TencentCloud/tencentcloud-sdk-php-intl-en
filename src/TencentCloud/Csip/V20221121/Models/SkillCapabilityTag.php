@@ -18,28 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Skill power tag
+ * Skill capacity tag
  *
- * @method string getID() Obtain Capacity tag identification, suitable for program judgment, filtering or aggregation usage
- * @method void setID(string $ID) Set Capacity tag identification, suitable for program judgment, filtering or aggregation usage
- * @method string getName() Obtain Capacity Tag Display Name
- * @method void setName(string $Name) Set Capacity Tag Display Name
+ * @method string getID() Obtain Capacity tag identification
+ * @method void setID(string $ID) Set Capacity tag identification
+ * @method string getName() Obtain Display name of the capability tag
+ * @method void setName(string $Name) Set Display name of the capability tag
  */
 class SkillCapabilityTag extends AbstractModel
 {
     /**
-     * @var string Capacity tag identification, suitable for program judgment, filtering or aggregation usage
+     * @var string Capacity tag identification
      */
     public $ID;
 
     /**
-     * @var string Capacity Tag Display Name
+     * @var string Display name of the capability tag
      */
     public $Name;
 
     /**
-     * @param string $ID Capacity tag identification, suitable for program judgment, filtering or aggregation usage
-     * @param string $Name Capacity Tag Display Name
+     * @param string $ID Capacity tag identification
+     * @param string $Name Display name of the capability tag
      */
     function __construct()
     {

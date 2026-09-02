@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Multi-Cloud Account Statistics
  *
- * @method integer getCloudType() Obtain 0 means Tencent Cloud
+ * @method integer getCloudType() Obtain 0 indicates Tencent Cloud
 1 indicates AWS
- * @method void setCloudType(integer $CloudType) Set 0 means Tencent Cloud
+ * @method void setCloudType(integer $CloudType) Set 0 indicates Tencent Cloud
 1 indicates AWS
  * @method integer getCloudCount() Obtain Account Quantity
  * @method void setCloudCount(integer $CloudCount) Set Account Quantity
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class CloudCountDesc extends AbstractModel
 {
     /**
-     * @var integer 0 means Tencent Cloud
+     * @var integer 0 indicates Tencent Cloud
 1 indicates AWS
      */
     public $CloudType;
@@ -48,7 +48,7 @@ class CloudCountDesc extends AbstractModel
     public $CloudDesc;
 
     /**
-     * @param integer $CloudType 0 means Tencent Cloud
+     * @param integer $CloudType 0 indicates Tencent Cloud
 1 indicates AWS
      * @param integer $CloudCount Account Quantity
      * @param string $CloudDesc Description of The Cloud Account Type

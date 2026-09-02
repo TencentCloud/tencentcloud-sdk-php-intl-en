@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAbnormalCallRecord request structure.
  *
- * @method integer getAlarmRuleID() Obtain Alarm rule ID.
- * @method void setAlarmRuleID(integer $AlarmRuleID) Set Alarm rule ID.
+ * @method integer getAlarmRuleID() Obtain Alarm rule ID
+ * @method void setAlarmRuleID(integer $AlarmRuleID) Set Alarm rule ID
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method string getAccessKey() Obtain Access key.
- * @method void setAccessKey(string $AccessKey) Set Access key.
- * @method string getSourceIP() Obtain Source IP of the call.
- * @method void setSourceIP(string $SourceIP) Set Source IP of the call.
+ * @method string getAccessKey() Obtain Access key
+ * @method void setAccessKey(string $AccessKey) Set Access key
+ * @method string getSourceIP() Obtain Call source IP
+ * @method void setSourceIP(string $SourceIP) Set Call source IP
  * @method Filter getFilter() Obtain Filter.
  * @method void setFilter(Filter $Filter) Set Filter.
  */
 class DescribeAbnormalCallRecordRequest extends AbstractModel
 {
     /**
-     * @var integer Alarm rule ID.
+     * @var integer Alarm rule ID
      */
     public $AlarmRuleID;
 
@@ -44,12 +44,12 @@ class DescribeAbnormalCallRecordRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var string Access key.
+     * @var string Access key
      */
     public $AccessKey;
 
     /**
-     * @var string Source IP of the call.
+     * @var string Call source IP
      */
     public $SourceIP;
 
@@ -59,10 +59,10 @@ class DescribeAbnormalCallRecordRequest extends AbstractModel
     public $Filter;
 
     /**
-     * @param integer $AlarmRuleID Alarm rule ID.
+     * @param integer $AlarmRuleID Alarm rule ID
      * @param array $MemberId Group Account Member ID
-     * @param string $AccessKey Access key.
-     * @param string $SourceIP Source IP of the call.
+     * @param string $AccessKey Access key
+     * @param string $SourceIP Call source IP
      * @param Filter $Filter Filter.
      */
     function __construct()

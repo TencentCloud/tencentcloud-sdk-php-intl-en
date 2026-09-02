@@ -18,44 +18,44 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * STS temporary key credential (dedicated for output parameters), used for the response of the query details api. The SecretID and SecretKey fields return masked values, while System returns the original text.
+ * STS temporary key credential (dedicated for output parameters), used for the response of the query details API. The SecretID and SecretKey fields return masked values, and System returns the original text.
  *
- * @method string getSystem() Obtain Credential provider flag (original text), such as tencentCam, aws, aliyun
- * @method void setSystem(string $System) Set Credential provider flag (original text), such as tencentCam, aws, aliyun
+ * @method string getSystem() Obtain Credential provider identifier (original), for example tencentCam, aws, aliyun
+ * @method void setSystem(string $System) Set Credential provider identifier (original), for example tencentCam, aws, aliyun
  * @method string getSecretID() Obtain SecretID (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
  * @method void setSecretID(string $SecretID) Set SecretID (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
  * @method string getSecretKey() Obtain SecretKey (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
  * @method void setSecretKey(string $SecretKey) Set SecretKey (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
  */
 class STSCredentialOutput extends AbstractModel
 {
     /**
-     * @var string Credential provider flag (original text), such as tencentCam, aws, aliyun
+     * @var string Credential provider identifier (original), for example tencentCam, aws, aliyun
      */
     public $System;
 
     /**
      * @var string SecretID (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
      */
     public $SecretID;
 
     /**
      * @var string SecretKey (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
      */
     public $SecretKey;
 
     /**
-     * @param string $System Credential provider flag (original text), such as tencentCam, aws, aliyun
+     * @param string $System Credential provider identifier (original), for example tencentCam, aws, aliyun
      * @param string $SecretID SecretID (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
      * @param string $SecretKey SecretKey (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
      */
     function __construct()
     {

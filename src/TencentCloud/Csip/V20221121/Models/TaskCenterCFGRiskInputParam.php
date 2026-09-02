@@ -18,36 +18,36 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Advanced configuration risk scan configuration
+ * Advanced Configuration of Configuration Risk
  *
- * @method string getItemId() Obtain Check item ID
- * @method void setItemId(string $ItemId) Set Check item ID
- * @method integer getEnable() Obtain Whether to enable. `0`: no, `1`: yes.
- * @method void setEnable(integer $Enable) Set Whether to enable. `0`: no, `1`: yes.
- * @method string getResourceType() Obtain Resource type
- * @method void setResourceType(string $ResourceType) Set Resource type
+ * @method string getItemId() Obtain Detection Item ID
+ * @method void setItemId(string $ItemId) Set Detection Item ID
+ * @method integer getEnable() Obtain Whether to enable. 0-Not to Enable; 1-Enable.
+ * @method void setEnable(integer $Enable) Set Whether to enable. 0-Not to Enable; 1-Enable.
+ * @method string getResourceType() Obtain Resource type.
+ * @method void setResourceType(string $ResourceType) Set Resource type.
  */
 class TaskCenterCFGRiskInputParam extends AbstractModel
 {
     /**
-     * @var string Check item ID
+     * @var string Detection Item ID
      */
     public $ItemId;
 
     /**
-     * @var integer Whether to enable. `0`: no, `1`: yes.
+     * @var integer Whether to enable. 0-Not to Enable; 1-Enable.
      */
     public $Enable;
 
     /**
-     * @var string Resource type
+     * @var string Resource type.
      */
     public $ResourceType;
 
     /**
-     * @param string $ItemId Check item ID
-     * @param integer $Enable Whether to enable. `0`: no, `1`: yes.
-     * @param string $ResourceType Resource type
+     * @param string $ItemId Detection Item ID
+     * @param integer $Enable Whether to enable. 0-Not to Enable; 1-Enable.
+     * @param string $ResourceType Resource type.
      */
     function __construct()
     {

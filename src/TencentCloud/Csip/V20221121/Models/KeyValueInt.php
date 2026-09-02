@@ -18,17 +18,17 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Key-value pair (integer).
+ * Key-value pair (integer)
  *
- * @method integer getKey() Obtain <p>Key</p>
- * @method void setKey(integer $Key) Set <p>Key</p>
+ * @method integer getKey() Obtain <p>Key.</p>
+ * @method void setKey(integer $Key) Set <p>Key.</p>
  * @method integer getValue() Obtain <p>Value.</p>
  * @method void setValue(integer $Value) Set <p>Value.</p>
  */
 class KeyValueInt extends AbstractModel
 {
     /**
-     * @var integer <p>Key</p>
+     * @var integer <p>Key.</p>
      */
     public $Key;
 
@@ -38,7 +38,7 @@ class KeyValueInt extends AbstractModel
     public $Value;
 
     /**
-     * @param integer $Key <p>Key</p>
+     * @param integer $Key <p>Key.</p>
      * @param integer $Value <p>Value.</p>
      */
     function __construct()

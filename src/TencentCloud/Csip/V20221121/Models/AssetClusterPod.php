@@ -18,18 +18,18 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * This example shows you how to list the list of cluster pods. 
+ * Cluster Pod List
  *
  * @method integer getAppId() Obtain Tenant ID
  * @method void setAppId(integer $AppId) Set Tenant ID
- * @method string getUin() Obtain Tenant UIN
- * @method void setUin(string $Uin) Set Tenant UIN
- * @method string getNick() Obtain Tenant name
- * @method void setNick(string $Nick) Set Tenant name
+ * @method string getUin() Obtain Tenant uin
+ * @method void setUin(string $Uin) Set Tenant uin
+ * @method string getNick() Obtain Tenant Nickname
+ * @method void setNick(string $Nick) Set Tenant Nickname
  * @method string getRegion() Obtain Region.
  * @method void setRegion(string $Region) Set Region.
- * @method string getAssetId() Obtain Pod ID
- * @method void setAssetId(string $AssetId) Set Pod ID
+ * @method string getAssetId() Obtain pod id
+ * @method void setAssetId(string $AssetId) Set pod id
  * @method string getAssetName() Obtain Pod name
  * @method void setAssetName(string $AssetName) Set Pod name
  * @method string getInstanceCreateTime() Obtain Pod Creation Time
@@ -44,14 +44,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterName(string $ClusterName) Set Cluster name.
  * @method string getMachineId() Obtain Host ID
  * @method void setMachineId(string $MachineId) Set Host ID
- * @method string getMachineName() Obtain host name
- * @method void setMachineName(string $MachineName) Set host name
+ * @method string getMachineName() Obtain MachineName
+ * @method void setMachineName(string $MachineName) Set MachineName
  * @method string getPodIp() Obtain pod ip
  * @method void setPodIp(string $PodIp) Set pod ip
  * @method integer getServiceCount() Obtain Associated Service Count
  * @method void setServiceCount(integer $ServiceCount) Set Associated Service Count
- * @method integer getContainerCount() Obtain Associated container number
- * @method void setContainerCount(integer $ContainerCount) Set Associated container number
+ * @method integer getContainerCount() Obtain Number of associated containers
+ * @method void setContainerCount(integer $ContainerCount) Set Number of associated containers
  * @method string getPublicIp() Obtain Public IP address
  * @method void setPublicIp(string $PublicIp) Set Public IP address
  * @method string getPrivateIp() Obtain Private IP address
@@ -69,12 +69,12 @@ class AssetClusterPod extends AbstractModel
     public $AppId;
 
     /**
-     * @var string Tenant UIN
+     * @var string Tenant uin
      */
     public $Uin;
 
     /**
-     * @var string Tenant name
+     * @var string Tenant Nickname
      */
     public $Nick;
 
@@ -84,7 +84,7 @@ class AssetClusterPod extends AbstractModel
     public $Region;
 
     /**
-     * @var string Pod ID
+     * @var string pod id
      */
     public $AssetId;
 
@@ -124,7 +124,7 @@ class AssetClusterPod extends AbstractModel
     public $MachineId;
 
     /**
-     * @var string host name
+     * @var string MachineName
      */
     public $MachineName;
 
@@ -139,7 +139,7 @@ class AssetClusterPod extends AbstractModel
     public $ServiceCount;
 
     /**
-     * @var integer Associated container number
+     * @var integer Number of associated containers
      */
     public $ContainerCount;
 
@@ -165,10 +165,10 @@ class AssetClusterPod extends AbstractModel
 
     /**
      * @param integer $AppId Tenant ID
-     * @param string $Uin Tenant UIN
-     * @param string $Nick Tenant name
+     * @param string $Uin Tenant uin
+     * @param string $Nick Tenant Nickname
      * @param string $Region Region.
-     * @param string $AssetId Pod ID
+     * @param string $AssetId pod id
      * @param string $AssetName Pod name
      * @param string $InstanceCreateTime Pod Creation Time
      * @param string $Namespace Namespace
@@ -176,10 +176,10 @@ class AssetClusterPod extends AbstractModel
      * @param string $ClusterId Cluster ID.
      * @param string $ClusterName Cluster name.
      * @param string $MachineId Host ID
-     * @param string $MachineName host name
+     * @param string $MachineName MachineName
      * @param string $PodIp pod ip
      * @param integer $ServiceCount Associated Service Count
-     * @param integer $ContainerCount Associated container number
+     * @param integer $ContainerCount Number of associated containers
      * @param string $PublicIp Public IP address
      * @param string $PrivateIp Private IP address
      * @param integer $IsCore Whether it is core. 1: Core; 2: Non-core.

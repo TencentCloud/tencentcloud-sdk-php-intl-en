@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(array $Content) Set Public IP/domain name
  * @method array getMemberId() Obtain Group Account Member ID
  * @method void setMemberId(array $MemberId) Set Group Account Member ID
- * @method array getTags() Obtain Asset tags
- * @method void setTags(array $Tags) Set Asset tags
+ * @method array getTags() Obtain Asset tag
+ * @method void setTags(array $Tags) Set Asset tag
  */
 class CreateDomainAndIpRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateDomainAndIpRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var array Asset tags
+     * @var array Asset tag
      */
     public $Tags;
 
     /**
      * @param array $Content Public IP/domain name
      * @param array $MemberId Group Account Member ID
-     * @param array $Tags Asset tags
+     * @param array $Tags Asset tag
      */
     function __construct()
     {

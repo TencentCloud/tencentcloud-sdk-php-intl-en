@@ -18,14 +18,14 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Risk call record details.
+ * Risk call record details
  *
- * @method string getEventName() Obtain API name.
- * @method void setEventName(string $EventName) Set API name.
- * @method string getEventDescCN() Obtain Chinese description of the API.
- * @method void setEventDescCN(string $EventDescCN) Set Chinese description of the API.
- * @method string getEventDescEN() Obtain Interface description.
- * @method void setEventDescEN(string $EventDescEN) Set Interface description.
+ * @method string getEventName() Obtain API name
+ * @method void setEventName(string $EventName) Set API name
+ * @method string getEventDescCN() Obtain Chinese description of the api
+ * @method void setEventDescCN(string $EventDescCN) Set Chinese description of the api
+ * @method string getEventDescEN() Obtain Interface description
+ * @method void setEventDescEN(string $EventDescEN) Set Interface description
  * @method string getProductName() Obtain Product name
  * @method void setProductName(string $ProductName) Set Product name
  * @method string getProductNameCN() Obtain Product Chinese Name
@@ -36,17 +36,17 @@ use TencentCloud\Common\AbstractModel;
 class RiskCallRecord extends AbstractModel
 {
     /**
-     * @var string API name.
+     * @var string API name
      */
     public $EventName;
 
     /**
-     * @var string Chinese description of the API.
+     * @var string Chinese description of the api
      */
     public $EventDescCN;
 
     /**
-     * @var string Interface description.
+     * @var string Interface description
      */
     public $EventDescEN;
 
@@ -66,9 +66,9 @@ class RiskCallRecord extends AbstractModel
     public $CallCount;
 
     /**
-     * @param string $EventName API name.
-     * @param string $EventDescCN Chinese description of the API.
-     * @param string $EventDescEN Interface description.
+     * @param string $EventName API name
+     * @param string $EventDescCN Chinese description of the api
+     * @param string $EventDescEN Interface description
      * @param string $ProductName Product name
      * @param string $ProductNameCN Product Chinese Name
      * @param integer $CallCount Number of calls.
