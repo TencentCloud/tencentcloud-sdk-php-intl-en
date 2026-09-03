@@ -20,302 +20,282 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information set of eligible launch configurations.
  *
- * @method integer getProjectId() Obtain Project ID of the instance.
- * @method void setProjectId(integer $ProjectId) Set Project ID of the instance.
- * @method string getLaunchConfigurationId() Obtain Launch configuration ID
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID
- * @method string getLaunchConfigurationName() Obtain Launch configuration name.
- * @method void setLaunchConfigurationName(string $LaunchConfigurationName) Set Launch configuration name.
- * @method string getInstanceType() Obtain Instance model.
- * @method void setInstanceType(string $InstanceType) Set Instance model.
- * @method SystemDisk getSystemDisk() Obtain Information of the instance's system disk configuration.
- * @method void setSystemDisk(SystemDisk $SystemDisk) Set Information of the instance's system disk configuration.
- * @method array getDataDisks() Obtain Information of the instance's data disk configuration.
- * @method void setDataDisks(array $DataDisks) Set Information of the instance's data disk configuration.
- * @method LimitedLoginSettings getLoginSettings() Obtain Instance login settings.
- * @method void setLoginSettings(LimitedLoginSettings $LoginSettings) Set Instance login settings.
- * @method InternetAccessible getInternetAccessible() Obtain Information of the public network bandwidth configuration.
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set Information of the public network bandwidth configuration.
- * @method array getSecurityGroupIds() Obtain Security group of the instance.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group of the instance.
- * @method array getAutoScalingGroupAbstractSet() Obtain Auto scaling group associated with the launch configuration.
- * @method void setAutoScalingGroupAbstractSet(array $AutoScalingGroupAbstractSet) Set Auto scaling group associated with the launch configuration.
- * @method string getUserData() Obtain Custom data.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUserData(string $UserData) Set Custom data.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreatedTime() Obtain Specifies the startup configuration creation time. uses UTC standard time.
- * @method void setCreatedTime(string $CreatedTime) Set Specifies the startup configuration creation time. uses UTC standard time.
- * @method EnhancedService getEnhancedService() Obtain Conditions of enhancement services for the instance and their settings.
- * @method void setEnhancedService(EnhancedService $EnhancedService) Set Conditions of enhancement services for the instance and their settings.
- * @method string getImageId() Obtain Image ID.
- * @method void setImageId(string $ImageId) Set Image ID.
- * @method string getLaunchConfigurationStatus() Obtain Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
- * @method void setLaunchConfigurationStatus(string $LaunchConfigurationStatus) Set Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
- * @method string getInstanceChargeType() Obtain Instance billing type. valid values:.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
-<Li>SPOTPAID: spot payment</li>.
-<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
-<Li>CDCPAID: dedicated cluster payment</li>.
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type. valid values:.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
-<Li>SPOTPAID: spot payment</li>.
-<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
-<Li>CDCPAID: dedicated cluster payment</li>.
- * @method InstanceMarketOptionsRequest getInstanceMarketOptions() Obtain Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) Set Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getInstanceTypes() Obtain List of instance models.
- * @method void setInstanceTypes(array $InstanceTypes) Set List of instance models.
- * @method array getInstanceTags() Obtain List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
- * @method void setInstanceTags(array $InstanceTags) Set List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
- * @method array getTags() Obtain Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
- * @method void setTags(array $Tags) Set Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
- * @method integer getVersionNumber() Obtain Version
- * @method void setVersionNumber(integer $VersionNumber) Set Version
- * @method string getUpdatedTime() Obtain Last update time is in standard UTC time.
- * @method void setUpdatedTime(string $UpdatedTime) Set Last update time is in standard UTC time.
- * @method string getCamRoleName() Obtain Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
- * @method void setCamRoleName(string $CamRoleName) Set Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
- * @method string getLastOperationInstanceTypesCheckPolicy() Obtain Value of InstanceTypesCheckPolicy upon the last operation.
- * @method void setLastOperationInstanceTypesCheckPolicy(string $LastOperationInstanceTypesCheckPolicy) Set Value of InstanceTypesCheckPolicy upon the last operation.
- * @method HostNameSettings getHostNameSettings() Obtain CVM hostname settings.
- * @method void setHostNameSettings(HostNameSettings $HostNameSettings) Set CVM hostname settings.
- * @method InstanceNameSettings getInstanceNameSettings() Obtain Settings of CVM instance names
- * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) Set Settings of CVM instance names
- * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
- * @method string getDiskTypePolicy() Obtain Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
- * @method void setDiskTypePolicy(string $DiskTypePolicy) Set Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
- * @method string getHpcClusterId() Obtain HPC ID<br>
-Note: This field is default to empty
- * @method void setHpcClusterId(string $HpcClusterId) Set HPC ID<br>
-Note: This field is default to empty
- * @method IPv6InternetAccessible getIPv6InternetAccessible() Obtain IPv6 public network bandwidth configuration.
- * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) Set IPv6 public network bandwidth configuration.
- * @method array getDisasterRecoverGroupIds() Obtain Placement group ID, supporting specification of only one.
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Placement group ID, supporting specification of only one.
- * @method string getImageFamily() Obtain Image family name.
- * @method void setImageFamily(string $ImageFamily) Set Image family name.
- * @method string getDedicatedClusterId() Obtain CDC ID.
- * @method void setDedicatedClusterId(string $DedicatedClusterId) Set CDC ID.
+ * @method integer getProjectId() Obtain <p>Project ID of the instance.</p>
+ * @method void setProjectId(integer $ProjectId) Set <p>Project ID of the instance.</p>
+ * @method string getLaunchConfigurationId() Obtain <p>Launch configuration ID.</p>
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set <p>Launch configuration ID.</p>
+ * @method string getLaunchConfigurationName() Obtain <p>Startup configuration name.</p>
+ * @method void setLaunchConfigurationName(string $LaunchConfigurationName) Set <p>Startup configuration name.</p>
+ * @method string getInstanceType() Obtain <p>Instance model.</p>
+ * @method void setInstanceType(string $InstanceType) Set <p>Instance model.</p>
+ * @method SystemDisk getSystemDisk() Obtain <p>Instance system disk configuration information.</p>
+ * @method void setSystemDisk(SystemDisk $SystemDisk) Set <p>Instance system disk configuration information.</p>
+ * @method array getDataDisks() Obtain <p>Instance data disk configuration information.</p>
+ * @method void setDataDisks(array $DataDisks) Set <p>Instance data disk configuration information.</p>
+ * @method LimitedLoginSettings getLoginSettings() Obtain <p>Instance login settings.</p>
+ * @method void setLoginSettings(LimitedLoginSettings $LoginSettings) Set <p>Instance login settings.</p>
+ * @method InternetAccessible getInternetAccessible() Obtain <p>Public network bandwidth-related information settings.</p>
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set <p>Public network bandwidth-related information settings.</p>
+ * @method array getSecurityGroupIds() Obtain <p>Security group to which an instance belongs.</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>Security group to which an instance belongs.</p>
+ * @method array getAutoScalingGroupAbstractSet() Obtain <p>The scaling group bound to the launch configuration.</p>
+ * @method void setAutoScalingGroupAbstractSet(array $AutoScalingGroupAbstractSet) Set <p>The scaling group bound to the launch configuration.</p>
+ * @method string getUserData() Obtain <p>Custom data.</p>
+ * @method void setUserData(string $UserData) Set <p>Custom data.</p>
+ * @method string getCreatedTime() Obtain <p>Launch configuration creation time, in standard <code>UTC</code> time.</p>
+ * @method void setCreatedTime(string $CreatedTime) Set <p>Launch configuration creation time, in standard <code>UTC</code> time.</p>
+ * @method EnhancedService getEnhancedService() Obtain <p>Enhanced services enabling situation of the instance and its settings.</p>
+ * @method void setEnhancedService(EnhancedService $EnhancedService) Set <p>Enhanced services enabling situation of the instance and its settings.</p>
+ * @method string getImageId() Obtain <p>Image ID.</p>
+ * @method void setImageId(string $ImageId) Set <p>Image ID.</p>
+ * @method string getLaunchConfigurationStatus() Obtain <p>Current status of the launch configuration. Value range: <li>NORMAL: Normal</li><li>IMAGE_ABNORMAL: The launch configuration image is exceptional</li><li>CBS_SNAP_ABNORMAL: The launch configuration data disk snapshot is exceptional</li><li>SECURITY_GROUP_ABNORMAL: The launch configuration security group is exceptional</li></p>
+ * @method void setLaunchConfigurationStatus(string $LaunchConfigurationStatus) Set <p>Current status of the launch configuration. Value range: <li>NORMAL: Normal</li><li>IMAGE_ABNORMAL: The launch configuration image is exceptional</li><li>CBS_SNAP_ABNORMAL: The launch configuration data disk snapshot is exceptional</li><li>SECURITY_GROUP_ABNORMAL: The launch configuration security group is exceptional</li></p>
+ * @method string getInstanceChargeType() Obtain <p>Instance billing type. The value range is as follows:</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepaid, i.e. monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set <p>Instance billing type. The value range is as follows:</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepaid, i.e. monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
+ * @method InstanceMarketOptionsRequest getInstanceMarketOptions() Obtain <p>Market-related options of the instance, such as spot instance parameters. If the payment mode of the specified instance is spot payment, this parameter is required.</p>
+ * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) Set <p>Market-related options of the instance, such as spot instance parameters. If the payment mode of the specified instance is spot payment, this parameter is required.</p>
+ * @method array getInstanceTypes() Obtain <p>Instance model list.</p>
+ * @method void setInstanceTypes(array $InstanceTypes) Set <p>Instance model list.</p>
+ * @method array getInstanceTags() Obtain <p>Instance tag list. Instances scaled out will automatically come with tags, supporting up to 10 tags.</p>
+ * @method void setInstanceTags(array $InstanceTags) Set <p>Instance tag list. Instances scaled out will automatically come with tags, supporting up to 10 tags.</p>
+ * @method array getTags() Obtain <p>Tag list. The tags in this parameter are only used to bind launch configurations and will not be passed to CVM instances scaled out based on the launch configuration.</p>
+ * @method void setTags(array $Tags) Set <p>Tag list. The tags in this parameter are only used to bind launch configurations and will not be passed to CVM instances scaled out based on the launch configuration.</p>
+ * @method integer getVersionNumber() Obtain <p>Version number.</p>
+ * @method void setVersionNumber(integer $VersionNumber) Set <p>Version number.</p>
+ * @method string getUpdatedTime() Obtain <p>Update time in standard <code>UTC</code> format.</p>
+ * @method void setUpdatedTime(string $UpdatedTime) Set <p>Update time in standard <code>UTC</code> format.</p>
+ * @method string getCamRoleName() Obtain <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
+ * @method void setCamRoleName(string $CamRoleName) Set <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
+ * @method string getLastOperationInstanceTypesCheckPolicy() Obtain <p>The value of InstanceTypesCheckPolicy last time when operating.</p>
+ * @method void setLastOperationInstanceTypesCheckPolicy(string $LastOperationInstanceTypesCheckPolicy) Set <p>The value of InstanceTypesCheckPolicy last time when operating.</p>
+ * @method HostNameSettings getHostNameSettings() Obtain <p>Related settings for the CVM host name (HostName).</p>
+ * @method void setHostNameSettings(HostNameSettings $HostNameSettings) Set <p>Related settings for the CVM host name (HostName).</p>
+ * @method InstanceNameSettings getInstanceNameSettings() Obtain <p>Related settings for the cloud server instance name (InstanceName).</p>
+ * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) Set <p>Related settings for the cloud server instance name (InstanceName).</p>
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain <p>Prepaid mode, i.e., parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode for the specified instance is prepaid.</p>
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set <p>Prepaid mode, i.e., parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode for the specified instance is prepaid.</p>
+ * @method string getDiskTypePolicy() Obtain <p>Cloud disk type selection policy. Parameter value range: <li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select available cloud disk types in the current AZ</li></p>
+ * @method void setDiskTypePolicy(string $DiskTypePolicy) Set <p>Cloud disk type selection policy. Parameter value range: <li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select available cloud disk types in the current AZ</li></p>
+ * @method string getHpcClusterId() Obtain <p>Hyper Computing Cluster ID.<br><br>Note: This field is empty by default.</p>
+ * @method void setHpcClusterId(string $HpcClusterId) Set <p>Hyper Computing Cluster ID.<br><br>Note: This field is empty by default.</p>
+ * @method IPv6InternetAccessible getIPv6InternetAccessible() Obtain <p>IPv6 public network bandwidth-related information settings.</p>
+ * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) Set <p>IPv6 public network bandwidth-related information settings.</p>
+ * @method array getDisasterRecoverGroupIds() Obtain <p>Placement Group id. Only one can be specified.</p>
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set <p>Placement Group id. Only one can be specified.</p>
+ * @method string getImageFamily() Obtain <p>Image family name.</p>
+ * @method void setImageFamily(string $ImageFamily) Set <p>Image family name.</p>
+ * @method string getDedicatedClusterId() Obtain <p>Local dedicated cluster ID.</p>
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) Set <p>Local dedicated cluster ID.</p>
+ * @method array getNetworkInterfaces() Obtain <p>ENI configuration of the launch configuration.</p>
+ * @method void setNetworkInterfaces(array $NetworkInterfaces) Set <p>ENI configuration of the launch configuration.</p>
  */
 class LaunchConfiguration extends AbstractModel
 {
     /**
-     * @var integer Project ID of the instance.
+     * @var integer <p>Project ID of the instance.</p>
      */
     public $ProjectId;
 
     /**
-     * @var string Launch configuration ID
+     * @var string <p>Launch configuration ID.</p>
      */
     public $LaunchConfigurationId;
 
     /**
-     * @var string Launch configuration name.
+     * @var string <p>Startup configuration name.</p>
      */
     public $LaunchConfigurationName;
 
     /**
-     * @var string Instance model.
+     * @var string <p>Instance model.</p>
      */
     public $InstanceType;
 
     /**
-     * @var SystemDisk Information of the instance's system disk configuration.
+     * @var SystemDisk <p>Instance system disk configuration information.</p>
      */
     public $SystemDisk;
 
     /**
-     * @var array Information of the instance's data disk configuration.
+     * @var array <p>Instance data disk configuration information.</p>
      */
     public $DataDisks;
 
     /**
-     * @var LimitedLoginSettings Instance login settings.
+     * @var LimitedLoginSettings <p>Instance login settings.</p>
      */
     public $LoginSettings;
 
     /**
-     * @var InternetAccessible Information of the public network bandwidth configuration.
+     * @var InternetAccessible <p>Public network bandwidth-related information settings.</p>
      */
     public $InternetAccessible;
 
     /**
-     * @var array Security group of the instance.
+     * @var array <p>Security group to which an instance belongs.</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @var array Auto scaling group associated with the launch configuration.
+     * @var array <p>The scaling group bound to the launch configuration.</p>
      */
     public $AutoScalingGroupAbstractSet;
 
     /**
-     * @var string Custom data.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string <p>Custom data.</p>
      */
     public $UserData;
 
     /**
-     * @var string Specifies the startup configuration creation time. uses UTC standard time.
+     * @var string <p>Launch configuration creation time, in standard <code>UTC</code> time.</p>
      */
     public $CreatedTime;
 
     /**
-     * @var EnhancedService Conditions of enhancement services for the instance and their settings.
+     * @var EnhancedService <p>Enhanced services enabling situation of the instance and its settings.</p>
      */
     public $EnhancedService;
 
     /**
-     * @var string Image ID.
+     * @var string <p>Image ID.</p>
      */
     public $ImageId;
 
     /**
-     * @var string Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
+     * @var string <p>Current status of the launch configuration. Value range: <li>NORMAL: Normal</li><li>IMAGE_ABNORMAL: The launch configuration image is exceptional</li><li>CBS_SNAP_ABNORMAL: The launch configuration data disk snapshot is exceptional</li><li>SECURITY_GROUP_ABNORMAL: The launch configuration security group is exceptional</li></p>
      */
     public $LaunchConfigurationStatus;
 
     /**
-     * @var string Instance billing type. valid values:.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
-<Li>SPOTPAID: spot payment</li>.
-<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
-<Li>CDCPAID: dedicated cluster payment</li>.
+     * @var string <p>Instance billing type. The value range is as follows:</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepaid, i.e. monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
      */
     public $InstanceChargeType;
 
     /**
-     * @var InstanceMarketOptionsRequest Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var InstanceMarketOptionsRequest <p>Market-related options of the instance, such as spot instance parameters. If the payment mode of the specified instance is spot payment, this parameter is required.</p>
      */
     public $InstanceMarketOptions;
 
     /**
-     * @var array List of instance models.
+     * @var array <p>Instance model list.</p>
      */
     public $InstanceTypes;
 
     /**
-     * @var array List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
+     * @var array <p>Instance tag list. Instances scaled out will automatically come with tags, supporting up to 10 tags.</p>
      */
     public $InstanceTags;
 
     /**
-     * @var array Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
+     * @var array <p>Tag list. The tags in this parameter are only used to bind launch configurations and will not be passed to CVM instances scaled out based on the launch configuration.</p>
      */
     public $Tags;
 
     /**
-     * @var integer Version
+     * @var integer <p>Version number.</p>
      */
     public $VersionNumber;
 
     /**
-     * @var string Last update time is in standard UTC time.
+     * @var string <p>Update time in standard <code>UTC</code> format.</p>
      */
     public $UpdatedTime;
 
     /**
-     * @var string Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+     * @var string <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
      */
     public $CamRoleName;
 
     /**
-     * @var string Value of InstanceTypesCheckPolicy upon the last operation.
+     * @var string <p>The value of InstanceTypesCheckPolicy last time when operating.</p>
      */
     public $LastOperationInstanceTypesCheckPolicy;
 
     /**
-     * @var HostNameSettings CVM hostname settings.
+     * @var HostNameSettings <p>Related settings for the CVM host name (HostName).</p>
      */
     public $HostNameSettings;
 
     /**
-     * @var InstanceNameSettings Settings of CVM instance names
+     * @var InstanceNameSettings <p>Related settings for the cloud server instance name (InstanceName).</p>
      */
     public $InstanceNameSettings;
 
     /**
-     * @var InstanceChargePrepaid Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+     * @var InstanceChargePrepaid <p>Prepaid mode, i.e., parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode for the specified instance is prepaid.</p>
      */
     public $InstanceChargePrepaid;
 
     /**
-     * @var string Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
+     * @var string <p>Cloud disk type selection policy. Parameter value range: <li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select available cloud disk types in the current AZ</li></p>
      */
     public $DiskTypePolicy;
 
     /**
-     * @var string HPC ID<br>
-Note: This field is default to empty
+     * @var string <p>Hyper Computing Cluster ID.<br><br>Note: This field is empty by default.</p>
      */
     public $HpcClusterId;
 
     /**
-     * @var IPv6InternetAccessible IPv6 public network bandwidth configuration.
+     * @var IPv6InternetAccessible <p>IPv6 public network bandwidth-related information settings.</p>
      */
     public $IPv6InternetAccessible;
 
     /**
-     * @var array Placement group ID, supporting specification of only one.
+     * @var array <p>Placement Group id. Only one can be specified.</p>
      */
     public $DisasterRecoverGroupIds;
 
     /**
-     * @var string Image family name.
+     * @var string <p>Image family name.</p>
      */
     public $ImageFamily;
 
     /**
-     * @var string CDC ID.
+     * @var string <p>Local dedicated cluster ID.</p>
      */
     public $DedicatedClusterId;
 
     /**
-     * @param integer $ProjectId Project ID of the instance.
-     * @param string $LaunchConfigurationId Launch configuration ID
-     * @param string $LaunchConfigurationName Launch configuration name.
-     * @param string $InstanceType Instance model.
-     * @param SystemDisk $SystemDisk Information of the instance's system disk configuration.
-     * @param array $DataDisks Information of the instance's data disk configuration.
-     * @param LimitedLoginSettings $LoginSettings Instance login settings.
-     * @param InternetAccessible $InternetAccessible Information of the public network bandwidth configuration.
-     * @param array $SecurityGroupIds Security group of the instance.
-     * @param array $AutoScalingGroupAbstractSet Auto scaling group associated with the launch configuration.
-     * @param string $UserData Custom data.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreatedTime Specifies the startup configuration creation time. uses UTC standard time.
-     * @param EnhancedService $EnhancedService Conditions of enhancement services for the instance and their settings.
-     * @param string $ImageId Image ID.
-     * @param string $LaunchConfigurationStatus Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
-     * @param string $InstanceChargeType Instance billing type. valid values:.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
-<Li>SPOTPAID: spot payment</li>.
-<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
-<Li>CDCPAID: dedicated cluster payment</li>.
-     * @param InstanceMarketOptionsRequest $InstanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $InstanceTypes List of instance models.
-     * @param array $InstanceTags List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
-     * @param array $Tags Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
-     * @param integer $VersionNumber Version
-     * @param string $UpdatedTime Last update time is in standard UTC time.
-     * @param string $CamRoleName Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
-     * @param string $LastOperationInstanceTypesCheckPolicy Value of InstanceTypesCheckPolicy upon the last operation.
-     * @param HostNameSettings $HostNameSettings CVM hostname settings.
-     * @param InstanceNameSettings $InstanceNameSettings Settings of CVM instance names
-     * @param InstanceChargePrepaid $InstanceChargePrepaid Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
-     * @param string $DiskTypePolicy Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
-     * @param string $HpcClusterId HPC ID<br>
-Note: This field is default to empty
-     * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6 public network bandwidth configuration.
-     * @param array $DisasterRecoverGroupIds Placement group ID, supporting specification of only one.
-     * @param string $ImageFamily Image family name.
-     * @param string $DedicatedClusterId CDC ID.
+     * @var array <p>ENI configuration of the launch configuration.</p>
+     */
+    public $NetworkInterfaces;
+
+    /**
+     * @param integer $ProjectId <p>Project ID of the instance.</p>
+     * @param string $LaunchConfigurationId <p>Launch configuration ID.</p>
+     * @param string $LaunchConfigurationName <p>Startup configuration name.</p>
+     * @param string $InstanceType <p>Instance model.</p>
+     * @param SystemDisk $SystemDisk <p>Instance system disk configuration information.</p>
+     * @param array $DataDisks <p>Instance data disk configuration information.</p>
+     * @param LimitedLoginSettings $LoginSettings <p>Instance login settings.</p>
+     * @param InternetAccessible $InternetAccessible <p>Public network bandwidth-related information settings.</p>
+     * @param array $SecurityGroupIds <p>Security group to which an instance belongs.</p>
+     * @param array $AutoScalingGroupAbstractSet <p>The scaling group bound to the launch configuration.</p>
+     * @param string $UserData <p>Custom data.</p>
+     * @param string $CreatedTime <p>Launch configuration creation time, in standard <code>UTC</code> time.</p>
+     * @param EnhancedService $EnhancedService <p>Enhanced services enabling situation of the instance and its settings.</p>
+     * @param string $ImageId <p>Image ID.</p>
+     * @param string $LaunchConfigurationStatus <p>Current status of the launch configuration. Value range: <li>NORMAL: Normal</li><li>IMAGE_ABNORMAL: The launch configuration image is exceptional</li><li>CBS_SNAP_ABNORMAL: The launch configuration data disk snapshot is exceptional</li><li>SECURITY_GROUP_ABNORMAL: The launch configuration security group is exceptional</li></p>
+     * @param string $InstanceChargeType <p>Instance billing type. The value range is as follows:</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepaid, i.e. monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
+     * @param InstanceMarketOptionsRequest $InstanceMarketOptions <p>Market-related options of the instance, such as spot instance parameters. If the payment mode of the specified instance is spot payment, this parameter is required.</p>
+     * @param array $InstanceTypes <p>Instance model list.</p>
+     * @param array $InstanceTags <p>Instance tag list. Instances scaled out will automatically come with tags, supporting up to 10 tags.</p>
+     * @param array $Tags <p>Tag list. The tags in this parameter are only used to bind launch configurations and will not be passed to CVM instances scaled out based on the launch configuration.</p>
+     * @param integer $VersionNumber <p>Version number.</p>
+     * @param string $UpdatedTime <p>Update time in standard <code>UTC</code> format.</p>
+     * @param string $CamRoleName <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
+     * @param string $LastOperationInstanceTypesCheckPolicy <p>The value of InstanceTypesCheckPolicy last time when operating.</p>
+     * @param HostNameSettings $HostNameSettings <p>Related settings for the CVM host name (HostName).</p>
+     * @param InstanceNameSettings $InstanceNameSettings <p>Related settings for the cloud server instance name (InstanceName).</p>
+     * @param InstanceChargePrepaid $InstanceChargePrepaid <p>Prepaid mode, i.e., parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode for the specified instance is prepaid.</p>
+     * @param string $DiskTypePolicy <p>Cloud disk type selection policy. Parameter value range: <li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select available cloud disk types in the current AZ</li></p>
+     * @param string $HpcClusterId <p>Hyper Computing Cluster ID.<br><br>Note: This field is empty by default.</p>
+     * @param IPv6InternetAccessible $IPv6InternetAccessible <p>IPv6 public network bandwidth-related information settings.</p>
+     * @param array $DisasterRecoverGroupIds <p>Placement Group id. Only one can be specified.</p>
+     * @param string $ImageFamily <p>Image family name.</p>
+     * @param string $DedicatedClusterId <p>Local dedicated cluster ID.</p>
+     * @param array $NetworkInterfaces <p>ENI configuration of the launch configuration.</p>
      */
     function __construct()
     {
@@ -489,6 +469,15 @@ Note: This field is default to empty
 
         if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
             $this->DedicatedClusterId = $param["DedicatedClusterId"];
+        }
+
+        if (array_key_exists("NetworkInterfaces",$param) and $param["NetworkInterfaces"] !== null) {
+            $this->NetworkInterfaces = [];
+            foreach ($param["NetworkInterfaces"] as $key => $value){
+                $obj = new NetworkInterface();
+                $obj->deserialize($value);
+                array_push($this->NetworkInterfaces, $obj);
+            }
         }
     }
 }

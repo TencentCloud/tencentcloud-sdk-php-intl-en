@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * This describes the internet accessibility of the instance created by a launch configuration and declares the internet usage billing method of the instance and the maximum bandwidth
  *
  * @method string getInternetChargeType() Obtain Network billing type. Valid values: <li>BANDWIDTH_PREPAID: prepaid by bandwidth;</li> <li>TRAFFIC_POSTPAID_BY_HOUR: postpaid by traffic per hour;</li> <li>BANDWIDTH_POSTPAID_BY_HOUR: postpaid by bandwidth per hour;</li> <li>BANDWIDTH_PACKAGE: bandwidth package users.</li> Default value: TRAFFIC_POSTPAID_BY_HOUR.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInternetChargeType(string $InternetChargeType) Set Network billing type. Valid values: <li>BANDWIDTH_PREPAID: prepaid by bandwidth;</li> <li>TRAFFIC_POSTPAID_BY_HOUR: postpaid by traffic per hour;</li> <li>BANDWIDTH_POSTPAID_BY_HOUR: postpaid by bandwidth per hour;</li> <li>BANDWIDTH_PACKAGE: bandwidth package users.</li> Default value: TRAFFIC_POSTPAID_BY_HOUR.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getInternetMaxBandwidthOut() Obtain The maximum outbound bandwidth in Mbps of the public network. The default value is 0 Mbps. The upper limit of bandwidth varies by model. For more information, see [Purchase Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/509?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set The maximum outbound bandwidth in Mbps of the public network. The default value is 0 Mbps. The upper limit of bandwidth varies by model. For more information, see [Purchase Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/509?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method boolean getPublicIpAssigned() Obtain Whether to assign a public IP address. Valid values: <li>TRUE: Allocate a public IP address.</li> <li>FALSE: Do not allocate a public IP address.</li> When the public network bandwidth is greater than 0 Mbps, you can choose whether to enable this feature based on your needs. By default, this feature is enabled. When the public network bandwidth is 0, public IP address assignment is not allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPublicIpAssigned(boolean $PublicIpAssigned) Set Whether to assign a public IP address. Valid values: <li>TRUE: Allocate a public IP address.</li> <li>FALSE: Do not allocate a public IP address.</li> When the public network bandwidth is greater than 0 Mbps, you can choose whether to enable this feature based on your needs. By default, this feature is enabled. When the public network bandwidth is 0, public IP address assignment is not allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBandwidthPackageId() Obtain Bandwidth package ID. You can obtain the ID from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://intl.cloud.tencent.com/document/api/215/19209?from_cn_redirect=1) API.
-Note: this field may return null, indicating that no valid value was found.
- * @method void setBandwidthPackageId(string $BandwidthPackageId) Set Bandwidth package ID. You can obtain the ID from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://intl.cloud.tencent.com/document/api/215/19209?from_cn_redirect=1) API.
-Note: this field may return null, indicating that no valid value was found.
+ * @method integer getInternetMaxBandwidthOut() Obtain Public network outbound bandwidth cap. Unit: Mbps. Default value: 0 Mbps. Bandwidth cap range varies by model. For specific limitations, see [Purchase Network Bandwidth](https://www.tencentcloud.com/document/product/213/509?from_cn_redirect=1).
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set Public network outbound bandwidth cap. Unit: Mbps. Default value: 0 Mbps. Bandwidth cap range varies by model. For specific limitations, see [Purchase Network Bandwidth](https://www.tencentcloud.com/document/product/213/509?from_cn_redirect=1).
+ * @method boolean getPublicIpAssigned() Obtain Whether to assign a public IP address. Valid values: <li>TRUE: Allocate a public IP address.</li><li>FALSE: Do not allocate a public IP address.</li>When the public network bandwidth is greater than 0 Mbps, you can choose whether to enable this feature. By default, a public IP address is assigned. When the public network bandwidth is 0, assigning a public IP address is not allowed.
+ * @method void setPublicIpAssigned(boolean $PublicIpAssigned) Set Whether to assign a public IP address. Valid values: <li>TRUE: Allocate a public IP address.</li><li>FALSE: Do not allocate a public IP address.</li>When the public network bandwidth is greater than 0 Mbps, you can choose whether to enable this feature. By default, a public IP address is assigned. When the public network bandwidth is 0, assigning a public IP address is not allowed.
+ * @method string getBandwidthPackageId() Obtain Bandwidth package ID, which can be obtained from the `BandwidthPackageId` in the return value from the [DescribeBandwidthPackages](https://www.tencentcloud.com/document/api/215/19209?from_cn_redirect=1) API.
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) Set Bandwidth package ID, which can be obtained from the `BandwidthPackageId` in the return value from the [DescribeBandwidthPackages](https://www.tencentcloud.com/document/api/215/19209?from_cn_redirect=1) API.
  * @method string getInternetServiceProvider() Obtain Line type. for details on various types of lines and supported regions, refer to [EIP IP address type](https://www.tencentcloud.com/zh/document/product/213/5733). default value: BGP.
 
 <Li>BGP: general bgp line.</li>.
@@ -93,25 +85,21 @@ class InternetAccessible extends AbstractModel
 {
     /**
      * @var string Network billing type. Valid values: <li>BANDWIDTH_PREPAID: prepaid by bandwidth;</li> <li>TRAFFIC_POSTPAID_BY_HOUR: postpaid by traffic per hour;</li> <li>BANDWIDTH_POSTPAID_BY_HOUR: postpaid by bandwidth per hour;</li> <li>BANDWIDTH_PACKAGE: bandwidth package users.</li> Default value: TRAFFIC_POSTPAID_BY_HOUR.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InternetChargeType;
 
     /**
-     * @var integer The maximum outbound bandwidth in Mbps of the public network. The default value is 0 Mbps. The upper limit of bandwidth varies by model. For more information, see [Purchase Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/509?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Public network outbound bandwidth cap. Unit: Mbps. Default value: 0 Mbps. Bandwidth cap range varies by model. For specific limitations, see [Purchase Network Bandwidth](https://www.tencentcloud.com/document/product/213/509?from_cn_redirect=1).
      */
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var boolean Whether to assign a public IP address. Valid values: <li>TRUE: Allocate a public IP address.</li> <li>FALSE: Do not allocate a public IP address.</li> When the public network bandwidth is greater than 0 Mbps, you can choose whether to enable this feature based on your needs. By default, this feature is enabled. When the public network bandwidth is 0, public IP address assignment is not allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether to assign a public IP address. Valid values: <li>TRUE: Allocate a public IP address.</li><li>FALSE: Do not allocate a public IP address.</li>When the public network bandwidth is greater than 0 Mbps, you can choose whether to enable this feature. By default, a public IP address is assigned. When the public network bandwidth is 0, assigning a public IP address is not allowed.
      */
     public $PublicIpAssigned;
 
     /**
-     * @var string Bandwidth package ID. You can obtain the ID from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://intl.cloud.tencent.com/document/api/215/19209?from_cn_redirect=1) API.
-Note: this field may return null, indicating that no valid value was found.
+     * @var string Bandwidth package ID, which can be obtained from the `BandwidthPackageId` in the return value from the [DescribeBandwidthPackages](https://www.tencentcloud.com/document/api/215/19209?from_cn_redirect=1) API.
      */
     public $BandwidthPackageId;
 
@@ -159,13 +147,9 @@ Changing this field configuration will take effect immediately for resources alr
 
     /**
      * @param string $InternetChargeType Network billing type. Valid values: <li>BANDWIDTH_PREPAID: prepaid by bandwidth;</li> <li>TRAFFIC_POSTPAID_BY_HOUR: postpaid by traffic per hour;</li> <li>BANDWIDTH_POSTPAID_BY_HOUR: postpaid by bandwidth per hour;</li> <li>BANDWIDTH_PACKAGE: bandwidth package users.</li> Default value: TRAFFIC_POSTPAID_BY_HOUR.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $InternetMaxBandwidthOut The maximum outbound bandwidth in Mbps of the public network. The default value is 0 Mbps. The upper limit of bandwidth varies by model. For more information, see [Purchase Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/509?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param boolean $PublicIpAssigned Whether to assign a public IP address. Valid values: <li>TRUE: Allocate a public IP address.</li> <li>FALSE: Do not allocate a public IP address.</li> When the public network bandwidth is greater than 0 Mbps, you can choose whether to enable this feature based on your needs. By default, this feature is enabled. When the public network bandwidth is 0, public IP address assignment is not allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BandwidthPackageId Bandwidth package ID. You can obtain the ID from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://intl.cloud.tencent.com/document/api/215/19209?from_cn_redirect=1) API.
-Note: this field may return null, indicating that no valid value was found.
+     * @param integer $InternetMaxBandwidthOut Public network outbound bandwidth cap. Unit: Mbps. Default value: 0 Mbps. Bandwidth cap range varies by model. For specific limitations, see [Purchase Network Bandwidth](https://www.tencentcloud.com/document/product/213/509?from_cn_redirect=1).
+     * @param boolean $PublicIpAssigned Whether to assign a public IP address. Valid values: <li>TRUE: Allocate a public IP address.</li><li>FALSE: Do not allocate a public IP address.</li>When the public network bandwidth is greater than 0 Mbps, you can choose whether to enable this feature. By default, a public IP address is assigned. When the public network bandwidth is 0, assigning a public IP address is not allowed.
+     * @param string $BandwidthPackageId Bandwidth package ID, which can be obtained from the `BandwidthPackageId` in the return value from the [DescribeBandwidthPackages](https://www.tencentcloud.com/document/api/215/19209?from_cn_redirect=1) API.
      * @param string $InternetServiceProvider Line type. for details on various types of lines and supported regions, refer to [EIP IP address type](https://www.tencentcloud.com/zh/document/product/213/5733). default value: BGP.
 
 <Li>BGP: general bgp line.</li>.

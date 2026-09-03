@@ -69,6 +69,7 @@ class DescribeModelServiceGroupsRequest extends AbstractModel
 
     /**
      * @var string Service classification.
+     * @deprecated
      */
     public $ServiceCategory;
 

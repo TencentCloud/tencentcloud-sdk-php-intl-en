@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageName(string $ImageName) Set Image name.Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getSupportDataPipeline() Obtain Whether to support data generation.Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSupportDataPipeline(boolean $SupportDataPipeline) Set Whether to support data generation.Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ImageSecret getImageSecret() Obtain 
+ * @method void setImageSecret(ImageSecret $ImageSecret) Set 
  */
 class ImageInfo extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ImageInfo extends AbstractModel
     public $SupportDataPipeline;
 
     /**
+     * @var ImageSecret 
+     */
+    public $ImageSecret;
+
+    /**
      * @param string $ImageType Image type. Valid values: TCR ( which indicates a Tencent Container Registry (TCR) image), CCR (which indicates a TCR Personal Edition image), PreSet (which indicates a platform preset image), and CUSTOM (which indicates a third-party custom image).
      * @param string $ImageUrl Image address.
      * @param string $RegistryRegion Region corresponding to the TCR image.Note: This field may return null, indicating that no valid values can be obtained.
@@ -80,6 +87,7 @@ class ImageInfo extends AbstractModel
      * @param boolean $AllowSaveAllContent Whether to allow exporting all content.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ImageName Image name.Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $SupportDataPipeline Whether to support data generation.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ImageSecret $ImageSecret 
      */
     function __construct()
     {
@@ -120,6 +128,11 @@ class ImageInfo extends AbstractModel
 
         if (array_key_exists("SupportDataPipeline",$param) and $param["SupportDataPipeline"] !== null) {
             $this->SupportDataPipeline = $param["SupportDataPipeline"];
+        }
+
+        if (array_key_exists("ImageSecret",$param) and $param["ImageSecret"] !== null) {
+            $this->ImageSecret = new ImageSecret();
+            $this->ImageSecret->deserialize($param["ImageSecret"]);
         }
     }
 }

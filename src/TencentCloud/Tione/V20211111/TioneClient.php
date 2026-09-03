@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tione\V20211111\Models as Models;
 
 /**
+ * @method Models\CreateTrainingTaskResponse CreateTrainingTask(Models\CreateTrainingTaskRequest $req) This API is used to create a model training task.
  * @method Models\DescribeModelServiceGroupsResponse DescribeModelServiceGroups(Models\DescribeModelServiceGroupsRequest $req) This API is used to list online inference service groups.
  */
 

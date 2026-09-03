@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set <p>Launch configuration ID. obtain available launch configuration ids in the following ways:</p>
 <li>query the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>
 <li>obtain the launch configuration ID by calling the [DescribeLaunchConfigurations](https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1) api and retrieving the LaunchConfigurationId from the returned information.</li>
- * @method integer getMaxSize() Obtain <P>Maximum number of instances. value range: [0,2000]. to meet the requirement, the maximum value must be equal to or greater than the expected value, and the expected value must be equal to or greater than the minimum value.</p>.
- * @method void setMaxSize(integer $MaxSize) Set <P>Maximum number of instances. value range: [0,2000]. to meet the requirement, the maximum value must be equal to or greater than the expected value, and the expected value must be equal to or greater than the minimum value.</p>.
+ * @method integer getMaxSize() Obtain <p>Maximum instance count, value range: [0, 2000]. The maximum value must be greater than or equal to the expected value, and the expected value must be greater than or equal to the minimum value.</p><p>Value range: [0, 2000]</p>
+ * @method void setMaxSize(integer $MaxSize) Set <p>Maximum instance count, value range: [0, 2000]. The maximum value must be greater than or equal to the expected value, and the expected value must be greater than or equal to the minimum value.</p><p>Value range: [0, 2000]</p>
  * @method integer getMinSize() Obtain <P>Minimum number of instances. value range: [0,2000]. to meet the requirement, the maximum value must be equal to or greater than the expected value, and the expected value must be equal to or greater than the minimum value.</p>.
  * @method void setMinSize(integer $MinSize) Set <P>Minimum number of instances. value range: [0,2000]. to meet the requirement, the maximum value must be equal to or greater than the expected value, and the expected value must be equal to or greater than the minimum value.</p>.
  * @method integer getProjectId() Obtain <p>Project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1). Default value is 0, indicating usage of the default project.</p>.
@@ -111,7 +111,7 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
     public $LaunchConfigurationId;
 
     /**
-     * @var integer <P>Maximum number of instances. value range: [0,2000]. to meet the requirement, the maximum value must be equal to or greater than the expected value, and the expected value must be equal to or greater than the minimum value.</p>.
+     * @var integer <p>Maximum instance count, value range: [0, 2000]. The maximum value must be greater than or equal to the expected value, and the expected value must be greater than or equal to the minimum value.</p><p>Value range: [0, 2000]</p>
      */
     public $MaxSize;
 
@@ -220,7 +220,7 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
      * @param string $LaunchConfigurationId <p>Launch configuration ID. obtain available launch configuration ids in the following ways:</p>
 <li>query the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>
 <li>obtain the launch configuration ID by calling the [DescribeLaunchConfigurations](https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1) api and retrieving the LaunchConfigurationId from the returned information.</li>
-     * @param integer $MaxSize <P>Maximum number of instances. value range: [0,2000]. to meet the requirement, the maximum value must be equal to or greater than the expected value, and the expected value must be equal to or greater than the minimum value.</p>.
+     * @param integer $MaxSize <p>Maximum instance count, value range: [0, 2000]. The maximum value must be greater than or equal to the expected value, and the expected value must be greater than or equal to the minimum value.</p><p>Value range: [0, 2000]</p>
      * @param integer $MinSize <P>Minimum number of instances. value range: [0,2000]. to meet the requirement, the maximum value must be equal to or greater than the expected value, and the expected value must be equal to or greater than the minimum value.</p>.
      * @param integer $ProjectId <p>Project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1). Default value is 0, indicating usage of the default project.</p>.
      * @param array $SubnetIds subnet ID list. valid vpc subnet ids can be obtained by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet) for querying. you can also call the API [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) and retrieve them from the SubnetId field in the API response.

@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendStatusStatistics request structure.
  *
- * @method string getBeginTime() Obtain Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
- * @method void setBeginTime(string $BeginTime) Set Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
+ * @method string getBeginTime() Obtain Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).Note: the statistical range includes the current hour.
+ * @method void setBeginTime(string $BeginTime) Set Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).Note: the statistical range includes the current hour.
  * @method string getEndTime() Obtain End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-Note: `EndTime` must be after `BeginTime`.
+Note: `EndTime` must be after `BeginTime`, and the statistical range includes the current hour.
  * @method void setEndTime(string $EndTime) Set End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-Note: `EndTime` must be after `BeginTime`.
+Note: `EndTime` must be after `BeginTime`, and the statistical range includes the current hour.
  * @method string getSmsSdkAppId() Obtain The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
  * @method void setSmsSdkAppId(string $SmsSdkAppId) Set The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
  * @method integer getLimit() Obtain Upper limit.
@@ -40,13 +40,13 @@ Note: this parameter is currently fixed at 0.
 class SendStatusStatisticsRequest extends AbstractModel
 {
     /**
-     * @var string Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
+     * @var string Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).Note: the statistical range includes the current hour.
      */
     public $BeginTime;
 
     /**
      * @var string End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-Note: `EndTime` must be after `BeginTime`.
+Note: `EndTime` must be after `BeginTime`, and the statistical range includes the current hour.
      */
     public $EndTime;
 
@@ -68,9 +68,9 @@ Note: this parameter is currently fixed at 0.
     public $Offset;
 
     /**
-     * @param string $BeginTime Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
+     * @param string $BeginTime Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).Note: the statistical range includes the current hour.
      * @param string $EndTime End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-Note: `EndTime` must be after `BeginTime`.
+Note: `EndTime` must be after `BeginTime`, and the statistical range includes the current hour.
      * @param string $SmsSdkAppId The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
      * @param integer $Limit Upper limit.
 Note: this parameter is currently fixed at 0.

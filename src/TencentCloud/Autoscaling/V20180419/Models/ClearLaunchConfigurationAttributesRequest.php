@@ -20,94 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ClearLaunchConfigurationAttributes request structure.
  *
- * @method string getLaunchConfigurationId() Obtain Launch configuration ID. obtain in the following ways:.
-<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
-<li>Get the launch configuration ID by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.</li>.
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID. obtain in the following ways:.
-<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
-<li>Get the launch configuration ID by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.</li>.
- * @method boolean getClearDataDisks() Obtain Whether to clear data disk information. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
- * @method void setClearDataDisks(boolean $ClearDataDisks) Set Whether to clear data disk information. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
- * @method boolean getClearHostNameSettings() Obtain Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
- * @method void setClearHostNameSettings(boolean $ClearHostNameSettings) Set Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
- * @method boolean getClearInstanceNameSettings() Obtain Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
- * @method void setClearInstanceNameSettings(boolean $ClearInstanceNameSettings) Set Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
- * @method boolean getClearDisasterRecoverGroupIds() Obtain Whether to clear placement group information. This parameter is optional. Default value: `false`.
-`True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
- * @method void setClearDisasterRecoverGroupIds(boolean $ClearDisasterRecoverGroupIds) Set Whether to clear placement group information. This parameter is optional. Default value: `false`.
-`True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
- * @method boolean getClearInstanceTags() Obtain Whether to clear the instance tag list. This parameter is optional, and its default value is false.
-If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
- * @method void setClearInstanceTags(boolean $ClearInstanceTags) Set Whether to clear the instance tag list. This parameter is optional, and its default value is false.
-If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
- * @method boolean getClearMetadata() Obtain Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
- * @method void setClearMetadata(boolean $ClearMetadata) Set Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+ * @method string getLaunchConfigurationId() Obtain <p>Launch configuration ID. Obtain it in the following ways:</p><li>Log in to the [console](https://console.cloud.tencent.com/autoscaling/config) and query the launch configuration ID.</li><li>Call the API [DescribeLaunchConfigurations](https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1) and obtain the launch configuration ID from the `LaunchConfigurationId` in the returned information.</li>
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set <p>Launch configuration ID. Obtain it in the following ways:</p><li>Log in to the [console](https://console.cloud.tencent.com/autoscaling/config) and query the launch configuration ID.</li><li>Call the API [DescribeLaunchConfigurations](https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1) and obtain the launch configuration ID from the `LaunchConfigurationId` in the returned information.</li>
+ * @method boolean getClearDataDisks() Obtain <p>Whether to clear data disk information. This parameter is optional and defaults to false.<br>Enter true to clear "data disk" information. After clearing, newly created CVMs will not contain any data disk.</p>
+ * @method void setClearDataDisks(boolean $ClearDataDisks) Set <p>Whether to clear data disk information. This parameter is optional and defaults to false.<br>Enter true to clear "data disk" information. After clearing, newly created CVMs will not contain any data disk.</p>
+ * @method boolean getClearHostNameSettings() Obtain <p>Whether to clear the MachineName-related settings of the CVM. Optional. It is false by default.<br>Set to true to clear the host name settings. After clearing, newly created CVMs will not have a host name configured.</p>
+ * @method void setClearHostNameSettings(boolean $ClearHostNameSettings) Set <p>Whether to clear the MachineName-related settings of the CVM. Optional. It is false by default.<br>Set to true to clear the host name settings. After clearing, newly created CVMs will not have a host name configured.</p>
+ * @method boolean getClearInstanceNameSettings() Obtain <p>Whether to clear the CVM instance name related settings. This parameter is optional and is false by default.<br>If set to true, the host name setting information is cleared. After clearing, newly created CVMs will be configured based on "as-{{ scaling group AutoScalingGroupName }}".</p>
+ * @method void setClearInstanceNameSettings(boolean $ClearInstanceNameSettings) Set <p>Whether to clear the CVM instance name related settings. This parameter is optional and is false by default.<br>If set to true, the host name setting information is cleared. After clearing, newly created CVMs will be configured based on "as-{{ scaling group AutoScalingGroupName }}".</p>
+ * @method boolean getClearDisasterRecoverGroupIds() Obtain <p>Whether to clear the placement group information. This parameter is optional and defaults to false.<br>Set it to true to clear the placement group information. After clearing, newly created hosts will not be assigned to any placement group.</p>
+ * @method void setClearDisasterRecoverGroupIds(boolean $ClearDisasterRecoverGroupIds) Set <p>Whether to clear the placement group information. This parameter is optional and defaults to false.<br>Set it to true to clear the placement group information. After clearing, newly created hosts will not be assigned to any placement group.</p>
+ * @method boolean getClearInstanceTags() Obtain <p>Whether to clear the instance tag list. This parameter is optional and is false by default.<br>If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.</p>
+ * @method void setClearInstanceTags(boolean $ClearInstanceTags) Set <p>Whether to clear the instance tag list. This parameter is optional and is false by default.<br>If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.</p>
+ * @method boolean getClearMetadata() Obtain <p>Whether to clear MetaData. This parameter is optional and defaults to false. Enter true to clear MetaData. After clearing, newly created CVMs will not associate custom Metadata.</p>
+ * @method void setClearMetadata(boolean $ClearMetadata) Set <p>Whether to clear MetaData. This parameter is optional and defaults to false. Enter true to clear MetaData. After clearing, newly created CVMs will not associate custom Metadata.</p>
+ * @method boolean getClearNetworkInterfaces() Obtain <p>Whether to clear the NetworkInterfaces in the launch configuration. If the value is TRUE, clear it; if not passed or FALSE, this field will not be processed.</p>
+ * @method void setClearNetworkInterfaces(boolean $ClearNetworkInterfaces) Set <p>Whether to clear the NetworkInterfaces in the launch configuration. If the value is TRUE, clear it; if not passed or FALSE, this field will not be processed.</p>
  */
 class ClearLaunchConfigurationAttributesRequest extends AbstractModel
 {
     /**
-     * @var string Launch configuration ID. obtain in the following ways:.
-<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
-<li>Get the launch configuration ID by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.</li>.
+     * @var string <p>Launch configuration ID. Obtain it in the following ways:</p><li>Log in to the [console](https://console.cloud.tencent.com/autoscaling/config) and query the launch configuration ID.</li><li>Call the API [DescribeLaunchConfigurations](https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1) and obtain the launch configuration ID from the `LaunchConfigurationId` in the returned information.</li>
      */
     public $LaunchConfigurationId;
 
     /**
-     * @var boolean Whether to clear data disk information. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
+     * @var boolean <p>Whether to clear data disk information. This parameter is optional and defaults to false.<br>Enter true to clear "data disk" information. After clearing, newly created CVMs will not contain any data disk.</p>
      */
     public $ClearDataDisks;
 
     /**
-     * @var boolean Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
+     * @var boolean <p>Whether to clear the MachineName-related settings of the CVM. Optional. It is false by default.<br>Set to true to clear the host name settings. After clearing, newly created CVMs will not have a host name configured.</p>
      */
     public $ClearHostNameSettings;
 
     /**
-     * @var boolean Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
+     * @var boolean <p>Whether to clear the CVM instance name related settings. This parameter is optional and is false by default.<br>If set to true, the host name setting information is cleared. After clearing, newly created CVMs will be configured based on "as-{{ scaling group AutoScalingGroupName }}".</p>
      */
     public $ClearInstanceNameSettings;
 
     /**
-     * @var boolean Whether to clear placement group information. This parameter is optional. Default value: `false`.
-`True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+     * @var boolean <p>Whether to clear the placement group information. This parameter is optional and defaults to false.<br>Set it to true to clear the placement group information. After clearing, newly created hosts will not be assigned to any placement group.</p>
      */
     public $ClearDisasterRecoverGroupIds;
 
     /**
-     * @var boolean Whether to clear the instance tag list. This parameter is optional, and its default value is false.
-If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+     * @var boolean <p>Whether to clear the instance tag list. This parameter is optional and is false by default.<br>If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.</p>
      */
     public $ClearInstanceTags;
 
     /**
-     * @var boolean Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+     * @var boolean <p>Whether to clear MetaData. This parameter is optional and defaults to false. Enter true to clear MetaData. After clearing, newly created CVMs will not associate custom Metadata.</p>
      */
     public $ClearMetadata;
 
     /**
-     * @param string $LaunchConfigurationId Launch configuration ID. obtain in the following ways:.
-<li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
-<li>Get the launch configuration ID by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.</li>.
-     * @param boolean $ClearDataDisks Whether to clear data disk information. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
-     * @param boolean $ClearHostNameSettings Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
-     * @param boolean $ClearInstanceNameSettings Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
-     * @param boolean $ClearDisasterRecoverGroupIds Whether to clear placement group information. This parameter is optional. Default value: `false`.
-`True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
-     * @param boolean $ClearInstanceTags Whether to clear the instance tag list. This parameter is optional, and its default value is false.
-If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
-     * @param boolean $ClearMetadata Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+     * @var boolean <p>Whether to clear the NetworkInterfaces in the launch configuration. If the value is TRUE, clear it; if not passed or FALSE, this field will not be processed.</p>
+     */
+    public $ClearNetworkInterfaces;
+
+    /**
+     * @param string $LaunchConfigurationId <p>Launch configuration ID. Obtain it in the following ways:</p><li>Log in to the [console](https://console.cloud.tencent.com/autoscaling/config) and query the launch configuration ID.</li><li>Call the API [DescribeLaunchConfigurations](https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1) and obtain the launch configuration ID from the `LaunchConfigurationId` in the returned information.</li>
+     * @param boolean $ClearDataDisks <p>Whether to clear data disk information. This parameter is optional and defaults to false.<br>Enter true to clear "data disk" information. After clearing, newly created CVMs will not contain any data disk.</p>
+     * @param boolean $ClearHostNameSettings <p>Whether to clear the MachineName-related settings of the CVM. Optional. It is false by default.<br>Set to true to clear the host name settings. After clearing, newly created CVMs will not have a host name configured.</p>
+     * @param boolean $ClearInstanceNameSettings <p>Whether to clear the CVM instance name related settings. This parameter is optional and is false by default.<br>If set to true, the host name setting information is cleared. After clearing, newly created CVMs will be configured based on "as-{{ scaling group AutoScalingGroupName }}".</p>
+     * @param boolean $ClearDisasterRecoverGroupIds <p>Whether to clear the placement group information. This parameter is optional and defaults to false.<br>Set it to true to clear the placement group information. After clearing, newly created hosts will not be assigned to any placement group.</p>
+     * @param boolean $ClearInstanceTags <p>Whether to clear the instance tag list. This parameter is optional and is false by default.<br>If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.</p>
+     * @param boolean $ClearMetadata <p>Whether to clear MetaData. This parameter is optional and defaults to false. Enter true to clear MetaData. After clearing, newly created CVMs will not associate custom Metadata.</p>
+     * @param boolean $ClearNetworkInterfaces <p>Whether to clear the NetworkInterfaces in the launch configuration. If the value is TRUE, clear it; if not passed or FALSE, this field will not be processed.</p>
      */
     function __construct()
     {
@@ -148,6 +128,10 @@ If true is filled in, it indicates that the instance tag list should be cleared.
 
         if (array_key_exists("ClearMetadata",$param) and $param["ClearMetadata"] !== null) {
             $this->ClearMetadata = $param["ClearMetadata"];
+        }
+
+        if (array_key_exists("ClearNetworkInterfaces",$param) and $param["ClearNetworkInterfaces"] !== null) {
+            $this->ClearNetworkInterfaces = $param["ClearNetworkInterfaces"];
         }
     }
 }

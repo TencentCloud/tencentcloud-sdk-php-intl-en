@@ -30,6 +30,7 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\CreateUsersResponse CreateUsers(Models\CreateUsersRequest $req) This API is used to create users in batches.
  * @method Models\DeleteDBSBackupSetsResponse DeleteDBSBackupSets(Models\DeleteDBSBackupSetsRequest $req) This API is used to delete manual backups of instances.
  * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) This API is used to batch delete users.
+ * @method Models\DescribeDBEnginesResponse DescribeDBEngines(Models\DescribeDBEnginesRequest $req) This API is used to obtain the DB engine version list.
  * @method Models\DescribeDBInstanceDetailResponse DescribeDBInstanceDetail(Models\DescribeDBInstanceDetailRequest $req) This API is used to query instance details.
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) This API is used to query instance list.
  * @method Models\DescribeDBParametersResponse DescribeDBParameters(Models\DescribeDBParametersRequest $req) This API is used to obtain the current parameter settings of the instance.
@@ -65,7 +66,6 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\ModifyInstanceSSLStatusResponse ModifyInstanceSSLStatus(Models\ModifyInstanceSSLStatusRequest $req) This API is used to enable or disable the SSL feature of an instance.
  * @method Models\ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(Models\ModifyMaintenanceWindowRequest $req) Add new or modify instance maintenance time window configurations
  * @method Models\ModifyUserPrivilegesResponse ModifyUserPrivileges(Models\ModifyUserPrivilegesRequest $req) This API is used to modify user permissions.
- * @method Models\ResetUserPasswordResponse ResetUserPassword(Models\ResetUserPasswordRequest $req) This API is used to reset user password.
  * @method Models\ResetUsersPasswordResponse ResetUsersPassword(Models\ResetUsersPasswordRequest $req) This API is used to batch reset user password.
  * @method Models\RestartDBInstancesResponse RestartDBInstances(Models\RestartDBInstancesRequest $req) This API is used to restart database instances.
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) This API is used to scale up a TDSQL Boundless instance, which can be a primary instance or a disaster recovery instance.

@@ -32,10 +32,8 @@ use TencentCloud\Common\AbstractModel;
 `ORIGINAL`: Auto Scaling sends the input parameter `InstanceName` to the CVM directly. The CVM may append a serial number to the `InstanceName`. The `InstanceName` of the instances within the scaling group may conflict.
 
 `UNIQUE`: the input parameter `InstanceName` is the prefix of an instance name. Auto Scaling and CVM expand it. The `InstanceName` of an instance in the scaling group is unique.
- * @method string getInstanceNameSuffix() Obtain CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceNameSuffix(string $InstanceNameSuffix) Set CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceNameSuffix() Obtain Name suffix of a CVM instance. The suffix length must be 1 to 105 characters, and the total length of the InstanceName value plus the suffix cannot exceed 107 characters.
+ * @method void setInstanceNameSuffix(string $InstanceNameSuffix) Set Name suffix of a CVM instance. The suffix length must be 1 to 105 characters, and the total length of the InstanceName value plus the suffix cannot exceed 107 characters.
  * @method string getInstanceNameDelimiter() Obtain Specifies the delimiter for the CVM instance name. The default delimiter is a dot (.). Valid values: 
 - dot (.)
 -  hyphen (-)
@@ -70,8 +68,7 @@ class InstanceNameSettings extends AbstractModel
     public $InstanceNameStyle;
 
     /**
-     * @var string CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Name suffix of a CVM instance. The suffix length must be 1 to 105 characters, and the total length of the InstanceName value plus the suffix cannot exceed 107 characters.
      */
     public $InstanceNameSuffix;
 
@@ -94,8 +91,7 @@ Delimiter used for concatenating instance name, index, and suffix. Assuming inst
 `ORIGINAL`: Auto Scaling sends the input parameter `InstanceName` to the CVM directly. The CVM may append a serial number to the `InstanceName`. The `InstanceName` of the instances within the scaling group may conflict.
 
 `UNIQUE`: the input parameter `InstanceName` is the prefix of an instance name. Auto Scaling and CVM expand it. The `InstanceName` of an instance in the scaling group is unique.
-     * @param string $InstanceNameSuffix CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceNameSuffix Name suffix of a CVM instance. The suffix length must be 1 to 105 characters, and the total length of the InstanceName value plus the suffix cannot exceed 107 characters.
      * @param string $InstanceNameDelimiter Specifies the delimiter for the CVM instance name. The default delimiter is a dot (.). Valid values: 
 - dot (.)
 -  hyphen (-)

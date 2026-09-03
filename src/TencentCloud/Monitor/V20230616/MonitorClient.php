@@ -23,7 +23,30 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Monitor\V20230616\Models as Models;
 
 /**
+ * @method Models\CancelAIWorkbenchChatResponse CancelAIWorkbenchChat(Models\CancelAIWorkbenchChatRequest $req) Cancel dialogue execution
+ * @method Models\CreateAIWorkbenchAgentResponse CreateAIWorkbenchAgent(Models\CreateAIWorkbenchAgentRequest $req) This API is used to create an Agent.
+ * @method Models\CreateAIWorkbenchTaskResponse CreateAIWorkbenchTask(Models\CreateAIWorkbenchTaskRequest $req) Create a task
+ * @method Models\DeleteAIWorkbenchAgentResponse DeleteAIWorkbenchAgent(Models\DeleteAIWorkbenchAgentRequest $req) Delete Agent
+ * @method Models\DeleteAIWorkbenchTaskResponse DeleteAIWorkbenchTask(Models\DeleteAIWorkbenchTaskRequest $req) This API is used to delete a task.
+ * @method Models\DescribeAIWorkbenchAgentResponse DescribeAIWorkbenchAgent(Models\DescribeAIWorkbenchAgentRequest $req) Query Agent details.
+ * @method Models\DescribeAIWorkbenchArtifactResponse DescribeAIWorkbenchArtifact(Models\DescribeAIWorkbenchArtifactRequest $req) Query artifact details.
+ * @method Models\DescribeAIWorkbenchExecutionResponse DescribeAIWorkbenchExecution(Models\DescribeAIWorkbenchExecutionRequest $req) Query execution details.
+ * @method Models\DescribeAIWorkbenchSessionResponse DescribeAIWorkbenchSession(Models\DescribeAIWorkbenchSessionRequest $req) Query session details
+ * @method Models\DescribeAIWorkbenchSkillResponse DescribeAIWorkbenchSkill(Models\DescribeAIWorkbenchSkillRequest $req) Query skill details
  * @method Models\DescribeAlarmNotifyHistoriesResponse DescribeAlarmNotifyHistories(Models\DescribeAlarmNotifyHistoriesRequest $req) Query alarm notification history as needed
+ * @method Models\GetAIWorkbenchArtifactDownloadURLResponse GetAIWorkbenchArtifactDownloadURL(Models\GetAIWorkbenchArtifactDownloadURLRequest $req) Get the download URL of AI Workbench artifacts.
+ * @method Models\ListAIWorkbenchAgentsResponse ListAIWorkbenchAgents(Models\ListAIWorkbenchAgentsRequest $req) Query the Agent list.
+ * @method Models\ListAIWorkbenchArtifactsResponse ListAIWorkbenchArtifacts(Models\ListAIWorkbenchArtifactsRequest $req) Query the product list
+ * @method Models\ListAIWorkbenchExecutionsResponse ListAIWorkbenchExecutions(Models\ListAIWorkbenchExecutionsRequest $req) Query the execution list
+ * @method Models\ListAIWorkbenchMCPsResponse ListAIWorkbenchMCPs(Models\ListAIWorkbenchMCPsRequest $req) Query the MCP list.
+ * @method Models\ListAIWorkbenchMessagesResponse ListAIWorkbenchMessages(Models\ListAIWorkbenchMessagesRequest $req) This API is used to query message list.
+ * @method Models\ListAIWorkbenchResourceInstancesResponse ListAIWorkbenchResourceInstances(Models\ListAIWorkbenchResourceInstancesRequest $req) List resource instances.
+ * @method Models\ListAIWorkbenchResourceMapsResponse ListAIWorkbenchResourceMaps(Models\ListAIWorkbenchResourceMapsRequest $req) Query the list of resource maps
+ * @method Models\ListAIWorkbenchSessionsResponse ListAIWorkbenchSessions(Models\ListAIWorkbenchSessionsRequest $req) Query session list
+ * @method Models\ListAIWorkbenchSkillsResponse ListAIWorkbenchSkills(Models\ListAIWorkbenchSkillsRequest $req) Query the skill list
+ * @method Models\ListAIWorkbenchTasksResponse ListAIWorkbenchTasks(Models\ListAIWorkbenchTasksRequest $req) This API is used to query the task list.
+ * @method Models\TriggerAIWorkbenchTaskResponse TriggerAIWorkbenchTask(Models\TriggerAIWorkbenchTaskRequest $req) Manually trigger a task.
+ * @method Models\UpdateAIWorkbenchAgentResponse UpdateAIWorkbenchAgent(Models\UpdateAIWorkbenchAgentRequest $req) Update an Agent
  */
 
 class MonitorClient extends AbstractClient

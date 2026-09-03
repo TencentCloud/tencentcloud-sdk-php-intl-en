@@ -20,34 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CVM HostName settings
  *
- * @method string getHostName() Obtain Specifies the cvm hostname.
-<li>Dots (.) and hyphens (-) cannot be used as the first or last character of HostName, and cannot be used consecutively.</li>. 
-<Li>Windows instances are not supported.</li>. 
-<li>Instances of other types (such as Linux): specifies the character length should be within the range of [2, 42]. multiple dots (.) are allowed. each segment between dots can consist of letters (case-insensitive), digits, and hyphens (-). using only digits is not allowed.</li>. 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostName(string $HostName) Set Specifies the cvm hostname.
-<li>Dots (.) and hyphens (-) cannot be used as the first or last character of HostName, and cannot be used consecutively.</li>. 
-<Li>Windows instances are not supported.</li>. 
-<li>Instances of other types (such as Linux): specifies the character length should be within the range of [2, 42]. multiple dots (.) are allowed. each segment between dots can consist of letters (case-insensitive), digits, and hyphens (-). using only digits is not allowed.</li>. 
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHostNameStyle() Obtain The style of the CVM HostName. Valid values include ORIGINAL and UNIQUE, and the default value is ORIGINAL.
-<li>ORIGINAL: AS passes HostName filled in the input parameters to CVM. CVM may append serial numbers to HostName, which can result in conflicts with HostName of instances in the scaling group.</li>
+ * @method string getHostName() Obtain CVM HostName.
+<li>Dots (.) and hyphens (-) cannot be used as the first or last character of HostName, and cannot be used consecutively.</li> 
+<li>Windows instances are not supported.</li> 
+<li>Instances of other types (e.g., Linux): The length of the character should be within the range of [2, 42]. Multiple dots (.) are allowed. Each segment between dot marks can consist of letters (case-insensitive), digits, and hyphens (-). Using only digits is not allowed.</li>
+ * @method void setHostName(string $HostName) Set CVM HostName.
+<li>Dots (.) and hyphens (-) cannot be used as the first or last character of HostName, and cannot be used consecutively.</li> 
+<li>Windows instances are not supported.</li> 
+<li>Instances of other types (e.g., Linux): The length of the character should be within the range of [2, 42]. Multiple dots (.) are allowed. Each segment between dot marks can consist of letters (case-insensitive), digits, and hyphens (-). Using only digits is not allowed.</li>
+ * @method string getHostNameStyle() Obtain The style of the CVM host name. Valid values include ORIGINAL and UNIQUE, and the default value is ORIGINAL.
+<li>ORIGINAL: AS passes HostName filled in the input parameters to CVM. CVM may append serial numbers to HostName, which can result in conflicts with HostName of instances in the scaling group.</li> 
 <li> UNIQUE: HostName filled in the input parameters acts as a prefix for the HostName. AS and CVM will expand this prefix to ensure that HostName of the instance in the scaling group is unique.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostNameStyle(string $HostNameStyle) Set The style of the CVM HostName. Valid values include ORIGINAL and UNIQUE, and the default value is ORIGINAL.
-<li>ORIGINAL: AS passes HostName filled in the input parameters to CVM. CVM may append serial numbers to HostName, which can result in conflicts with HostName of instances in the scaling group.</li>
+ * @method void setHostNameStyle(string $HostNameStyle) Set The style of the CVM host name. Valid values include ORIGINAL and UNIQUE, and the default value is ORIGINAL.
+<li>ORIGINAL: AS passes HostName filled in the input parameters to CVM. CVM may append serial numbers to HostName, which can result in conflicts with HostName of instances in the scaling group.</li> 
 <li> UNIQUE: HostName filled in the input parameters acts as a prefix for the HostName. AS and CVM will expand this prefix to ensure that HostName of the instance in the scaling group is unique.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getHostNameSuffix() Obtain Specifies the hostname suffix for cvm.
-<li>Dots (.) and hyphens (-) cannot be used as the last character of HostNameSuffix, and cannot be used consecutively.</li>
-<Li>Windows instances are not supported.</li>
-<li>Instances of other types (such as Linux): The character length should be within the range of [1, 39], and the combined length with HostName cannot exceed 41. Multiple dots (.) are allowed. each segment between dots can consist of letters (case-insensitive), digits, and hyphens (-).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostNameSuffix(string $HostNameSuffix) Set Specifies the hostname suffix for cvm.
-<li>Dots (.) and hyphens (-) cannot be used as the last character of HostNameSuffix, and cannot be used consecutively.</li>
-<Li>Windows instances are not supported.</li>
-<li>Instances of other types (such as Linux): The character length should be within the range of [1, 39], and the combined length with HostName cannot exceed 41. Multiple dots (.) are allowed. each segment between dots can consist of letters (case-insensitive), digits, and hyphens (-).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHostNameSuffix() Obtain Hostname suffix of a CVM instance.
+<li>Dots (.) and hyphens (-) cannot be used as the last character of HostNameSuffix, and cannot be used consecutively.</li> 
+<li>Windows instances are not supported.</li> 
+<li>Instances of other types (e.g., Linux): The length of the character should be within the range of [1, 39], and the combined length with HostName should not exceed 41. Multiple dots (.) are allowed. Each segment between dots can consist of letters (case-insensitive), digits, and hyphens (-).</li>
+ * @method void setHostNameSuffix(string $HostNameSuffix) Set Hostname suffix of a CVM instance.
+<li>Dots (.) and hyphens (-) cannot be used as the last character of HostNameSuffix, and cannot be used consecutively.</li> 
+<li>Windows instances are not supported.</li> 
+<li>Instances of other types (e.g., Linux): The length of the character should be within the range of [1, 39], and the combined length with HostName should not exceed 41. Multiple dots (.) are allowed. Each segment between dots can consist of letters (case-insensitive), digits, and hyphens (-).</li>
  * @method string getHostNameDelimiter() Obtain Specifies the delimiter for the CVM host name. The default delimiter is a dot (.). Valid values: 
 - dot (.)
 -  hyphen (-)
@@ -68,28 +62,25 @@ Delimiter used for concatenating host name, index, and suffix. Assuming host nam
 class HostNameSettings extends AbstractModel
 {
     /**
-     * @var string Specifies the cvm hostname.
-<li>Dots (.) and hyphens (-) cannot be used as the first or last character of HostName, and cannot be used consecutively.</li>. 
-<Li>Windows instances are not supported.</li>. 
-<li>Instances of other types (such as Linux): specifies the character length should be within the range of [2, 42]. multiple dots (.) are allowed. each segment between dots can consist of letters (case-insensitive), digits, and hyphens (-). using only digits is not allowed.</li>. 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string CVM HostName.
+<li>Dots (.) and hyphens (-) cannot be used as the first or last character of HostName, and cannot be used consecutively.</li> 
+<li>Windows instances are not supported.</li> 
+<li>Instances of other types (e.g., Linux): The length of the character should be within the range of [2, 42]. Multiple dots (.) are allowed. Each segment between dot marks can consist of letters (case-insensitive), digits, and hyphens (-). Using only digits is not allowed.</li>
      */
     public $HostName;
 
     /**
-     * @var string The style of the CVM HostName. Valid values include ORIGINAL and UNIQUE, and the default value is ORIGINAL.
-<li>ORIGINAL: AS passes HostName filled in the input parameters to CVM. CVM may append serial numbers to HostName, which can result in conflicts with HostName of instances in the scaling group.</li>
+     * @var string The style of the CVM host name. Valid values include ORIGINAL and UNIQUE, and the default value is ORIGINAL.
+<li>ORIGINAL: AS passes HostName filled in the input parameters to CVM. CVM may append serial numbers to HostName, which can result in conflicts with HostName of instances in the scaling group.</li> 
 <li> UNIQUE: HostName filled in the input parameters acts as a prefix for the HostName. AS and CVM will expand this prefix to ensure that HostName of the instance in the scaling group is unique.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostNameStyle;
 
     /**
-     * @var string Specifies the hostname suffix for cvm.
-<li>Dots (.) and hyphens (-) cannot be used as the last character of HostNameSuffix, and cannot be used consecutively.</li>
-<Li>Windows instances are not supported.</li>
-<li>Instances of other types (such as Linux): The character length should be within the range of [1, 39], and the combined length with HostName cannot exceed 41. Multiple dots (.) are allowed. each segment between dots can consist of letters (case-insensitive), digits, and hyphens (-).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Hostname suffix of a CVM instance.
+<li>Dots (.) and hyphens (-) cannot be used as the last character of HostNameSuffix, and cannot be used consecutively.</li> 
+<li>Windows instances are not supported.</li> 
+<li>Instances of other types (e.g., Linux): The length of the character should be within the range of [1, 39], and the combined length with HostName should not exceed 41. Multiple dots (.) are allowed. Each segment between dots can consist of letters (case-insensitive), digits, and hyphens (-).</li>
      */
     public $HostNameSuffix;
 
@@ -106,20 +97,17 @@ Delimiter used for concatenating host name, index, and suffix. Assuming host nam
     public $HostNameDelimiter;
 
     /**
-     * @param string $HostName Specifies the cvm hostname.
-<li>Dots (.) and hyphens (-) cannot be used as the first or last character of HostName, and cannot be used consecutively.</li>. 
-<Li>Windows instances are not supported.</li>. 
-<li>Instances of other types (such as Linux): specifies the character length should be within the range of [2, 42]. multiple dots (.) are allowed. each segment between dots can consist of letters (case-insensitive), digits, and hyphens (-). using only digits is not allowed.</li>. 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HostNameStyle The style of the CVM HostName. Valid values include ORIGINAL and UNIQUE, and the default value is ORIGINAL.
-<li>ORIGINAL: AS passes HostName filled in the input parameters to CVM. CVM may append serial numbers to HostName, which can result in conflicts with HostName of instances in the scaling group.</li>
+     * @param string $HostName CVM HostName.
+<li>Dots (.) and hyphens (-) cannot be used as the first or last character of HostName, and cannot be used consecutively.</li> 
+<li>Windows instances are not supported.</li> 
+<li>Instances of other types (e.g., Linux): The length of the character should be within the range of [2, 42]. Multiple dots (.) are allowed. Each segment between dot marks can consist of letters (case-insensitive), digits, and hyphens (-). Using only digits is not allowed.</li>
+     * @param string $HostNameStyle The style of the CVM host name. Valid values include ORIGINAL and UNIQUE, and the default value is ORIGINAL.
+<li>ORIGINAL: AS passes HostName filled in the input parameters to CVM. CVM may append serial numbers to HostName, which can result in conflicts with HostName of instances in the scaling group.</li> 
 <li> UNIQUE: HostName filled in the input parameters acts as a prefix for the HostName. AS and CVM will expand this prefix to ensure that HostName of the instance in the scaling group is unique.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $HostNameSuffix Specifies the hostname suffix for cvm.
-<li>Dots (.) and hyphens (-) cannot be used as the last character of HostNameSuffix, and cannot be used consecutively.</li>
-<Li>Windows instances are not supported.</li>
-<li>Instances of other types (such as Linux): The character length should be within the range of [1, 39], and the combined length with HostName cannot exceed 41. Multiple dots (.) are allowed. each segment between dots can consist of letters (case-insensitive), digits, and hyphens (-).</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HostNameSuffix Hostname suffix of a CVM instance.
+<li>Dots (.) and hyphens (-) cannot be used as the last character of HostNameSuffix, and cannot be used consecutively.</li> 
+<li>Windows instances are not supported.</li> 
+<li>Instances of other types (e.g., Linux): The length of the character should be within the range of [1, 39], and the combined length with HostName should not exceed 41. Multiple dots (.) are allowed. Each segment between dots can consist of letters (case-insensitive), digits, and hyphens (-).</li>
      * @param string $HostNameDelimiter Specifies the delimiter for the CVM host name. The default delimiter is a dot (.). Valid values: 
 - dot (.)
 -  hyphen (-)

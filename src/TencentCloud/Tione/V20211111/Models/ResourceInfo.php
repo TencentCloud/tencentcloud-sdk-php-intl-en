@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealGpu(integer $RealGpu) Set It is not required for creation or update operations. This field is used for display only.The actual GPU card resources for postpaid instances using fractional GPU cards. This value represents the total number of actual physical GPU cards consumed.RealGpu=100 indicates the consumption of 1 GPU card. Depending on the actual instance type, this may represent: 4 instances each using a 1/4 card, 2 instances each using a 1/2 card, or 1 instance using a full card.
  * @method array getRealGpuDetailSet() Obtain It is not required for creation or update operations. This field is used for display only. It involves detailed GPU usage information.
  * @method void setRealGpuDetailSet(array $RealGpuDetailSet) Set It is not required for creation or update operations. This field is used for display only. It involves detailed GPU usage information.
+ * @method boolean getEnableRDMA() Obtain Indicates whether to enable RDMA.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEnableRDMA(boolean $EnableRDMA) Set Indicates whether to enable RDMA.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRootDisk() Obtain 
+ * @method void setRootDisk(integer $RootDisk) Set 
+ * @method integer getDataDisk() Obtain 
+ * @method void setDataDisk(integer $DataDisk) Set 
  */
 class ResourceInfo extends AbstractModel
 {
@@ -66,12 +74,32 @@ class ResourceInfo extends AbstractModel
     public $RealGpuDetailSet;
 
     /**
+     * @var boolean Indicates whether to enable RDMA.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EnableRDMA;
+
+    /**
+     * @var integer 
+     */
+    public $RootDisk;
+
+    /**
+     * @var integer 
+     */
+    public $DataDisk;
+
+    /**
      * @param integer $Cpu Processor resource, in 1/1000 cores.Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Memory Memory resource, in MB.Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Gpu Number of GPU card resources, in 0.01 units of GpuType.Gpu=100 indicates the use of "1" GPU card. However, this "1" card could refer to a virtualized 1/4 card or a full physical card, depending on the instance type.Example 1: If the instance type includes 1 virtual GPU card, and each virtual GPU card corresponds to 1/4 of a physical T4 card, then GpuType=T4, Gpu=100, and RealGpu=25.Example 2: If the instance type includes 4 full GPU cards, and each card corresponds to 1 physical T4 card, then GpuType=T4, Gpu=400, and RealGpu=400.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $GpuType GPU card model. Valid values: T4 and V100. It only displays the current GPU card model. If multiple types of cards are used simultaneously, see the value of RealGpuDetailSet.Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RealGpu It is not required for creation or update operations. This field is used for display only.The actual GPU card resources for postpaid instances using fractional GPU cards. This value represents the total number of actual physical GPU cards consumed.RealGpu=100 indicates the consumption of 1 GPU card. Depending on the actual instance type, this may represent: 4 instances each using a 1/4 card, 2 instances each using a 1/2 card, or 1 instance using a full card.
      * @param array $RealGpuDetailSet It is not required for creation or update operations. This field is used for display only. It involves detailed GPU usage information.
+     * @param boolean $EnableRDMA Indicates whether to enable RDMA.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RootDisk 
+     * @param integer $DataDisk 
      */
     function __construct()
     {
@@ -113,6 +141,18 @@ class ResourceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RealGpuDetailSet, $obj);
             }
+        }
+
+        if (array_key_exists("EnableRDMA",$param) and $param["EnableRDMA"] !== null) {
+            $this->EnableRDMA = $param["EnableRDMA"];
+        }
+
+        if (array_key_exists("RootDisk",$param) and $param["RootDisk"] !== null) {
+            $this->RootDisk = $param["RootDisk"];
+        }
+
+        if (array_key_exists("DataDisk",$param) and $param["DataDisk"] !== null) {
+            $this->DataDisk = $param["DataDisk"];
         }
     }
 }

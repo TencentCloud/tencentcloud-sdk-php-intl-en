@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Status of TAT service.
  *
- * @method boolean getEnabled() Obtain Whether to enable [TencentCloud Automation Tools](https://intl.cloud.tencent.com/document/product/1340?from_cn_redirect=1). Valid values:<br><li>`TRUE`: Enable<br><li>`FALSE`: Not enable.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setEnabled(boolean $Enabled) Set Whether to enable [TencentCloud Automation Tools](https://intl.cloud.tencent.com/document/product/1340?from_cn_redirect=1). Valid values:<br><li>`TRUE`: Enable<br><li>`FALSE`: Not enable.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getEnabled() Obtain Enable [Tencent Cloud Automation Tools](https://www.tencentcloud.com/document/product/1340?from_cn_redirect=1) service or not. Valid values: <br><li>TRUE: enables the TAT service <br><li>FALSE: disables the TAT service
+ * @method void setEnabled(boolean $Enabled) Set Enable [Tencent Cloud Automation Tools](https://www.tencentcloud.com/document/product/1340?from_cn_redirect=1) service or not. Valid values: <br><li>TRUE: enables the TAT service <br><li>FALSE: disables the TAT service
  */
 class RunAutomationServiceEnabled extends AbstractModel
 {
     /**
-     * @var boolean Whether to enable [TencentCloud Automation Tools](https://intl.cloud.tencent.com/document/product/1340?from_cn_redirect=1). Valid values:<br><li>`TRUE`: Enable<br><li>`FALSE`: Not enable.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var boolean Enable [Tencent Cloud Automation Tools](https://www.tencentcloud.com/document/product/1340?from_cn_redirect=1) service or not. Valid values: <br><li>TRUE: enables the TAT service <br><li>FALSE: disables the TAT service
      */
     public $Enabled;
 
     /**
-     * @param boolean $Enabled Whether to enable [TencentCloud Automation Tools](https://intl.cloud.tencent.com/document/product/1340?from_cn_redirect=1). Valid values:<br><li>`TRUE`: Enable<br><li>`FALSE`: Not enable.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $Enabled Enable [Tencent Cloud Automation Tools](https://www.tencentcloud.com/document/product/1340?from_cn_redirect=1) service or not. Valid values: <br><li>TRUE: enables the TAT service <br><li>FALSE: disables the TAT service
      */
     function __construct()
     {

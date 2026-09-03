@@ -32,8 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelSource(string $ModelSource) Set Model source.
  * @method CosPathInfo getCosPathInfo() Obtain COS path information.
  * @method void setCosPathInfo(CosPathInfo $CosPathInfo) Set COS path information.
- * @method GooseFSx getGooseFSx() Obtain GooseFSx configurations, and is valid when ModelSource is GooseFSx.
- * @method void setGooseFSx(GooseFSx $GooseFSx) Set GooseFSx configurations, and is valid when ModelSource is GooseFSx.
+ * @method GooseFSx getGooseFSx() Obtain GooseFSx configuration. This parameter takes effect if ModelSource is GooseFSx.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGooseFSx(GooseFSx $GooseFSx) Set GooseFSx configuration. This parameter takes effect if ModelSource is GooseFSx.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getAlgorithmFramework() Obtain Algorithm framework corresponding to the model (reserved field).Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAlgorithmFramework(string $AlgorithmFramework) Set Algorithm framework corresponding to the model (reserved field).Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getModelType() Obtain Default: NORMAL; accelerated model: ACCELERATE; automatic learning model: AUTO_ML.Note: This field may return null, indicating that no valid values can be obtained.
@@ -80,7 +82,8 @@ class ModelInfo extends AbstractModel
     public $CosPathInfo;
 
     /**
-     * @var GooseFSx GooseFSx configurations, and is valid when ModelSource is GooseFSx.
+     * @var GooseFSx GooseFSx configuration. This parameter takes effect if ModelSource is GooseFSx.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $GooseFSx;
 
@@ -121,7 +124,8 @@ class ModelInfo extends AbstractModel
      * @param string $ModelVersion Model version.
      * @param string $ModelSource Model source.
      * @param CosPathInfo $CosPathInfo COS path information.
-     * @param GooseFSx $GooseFSx GooseFSx configurations, and is valid when ModelSource is GooseFSx.
+     * @param GooseFSx $GooseFSx GooseFSx configuration. This parameter takes effect if ModelSource is GooseFSx.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $AlgorithmFramework Algorithm framework corresponding to the model (reserved field).Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ModelType Default: NORMAL; accelerated model: ACCELERATE; automatic learning model: AUTO_ML.Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ModelFormat Model format.Note: This field may return null, indicating that no valid values can be obtained.

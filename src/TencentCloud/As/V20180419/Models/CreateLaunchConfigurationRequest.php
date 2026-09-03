@@ -20,314 +20,242 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLaunchConfiguration request structure.
  *
- * @method string getLaunchConfigurationName() Obtain Display name of the launch configuration, which can contain letters, digits, underscores and hyphens (-), and dots. Up to of 60 bytes allowed..
- * @method void setLaunchConfigurationName(string $LaunchConfigurationName) Set Display name of the launch configuration, which can contain letters, digits, underscores and hyphens (-), and dots. Up to of 60 bytes allowed..
- * @method string getImageId() Obtain [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
- * @method void setImageId(string $ImageId) Set [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
- * @method integer getProjectId() Obtain Project ID of the launch configuration. default value is 0, indicating usage of the default project. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1).
-Note: the instance's project ID within the scaling group takes the project ID of the scaling group, which is irrelevant here.
- * @method void setProjectId(integer $ProjectId) Set Project ID of the launch configuration. default value is 0, indicating usage of the default project. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1).
-Note: the instance's project ID within the scaling group takes the project ID of the scaling group, which is irrelevant here.
- * @method string getInstanceType() Obtain Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeZoneInstanceConfigInfos](https://www.tencentcloud.com/document/product/213/33254) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
-`InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
- * @method void setInstanceType(string $InstanceType) Set Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeZoneInstanceConfigInfos](https://www.tencentcloud.com/document/product/213/33254) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
-`InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
- * @method SystemDisk getSystemDisk() Obtain System disk configuration of the instance. If this parameter is not specified, the default value will be used.
- * @method void setSystemDisk(SystemDisk $SystemDisk) Set System disk configuration of the instance. If this parameter is not specified, the default value will be used.
- * @method array getDataDisks() Obtain Information of the instance's data disk configuration. If this parameter is not specified, no data disk is purchased by default. Up to 11 data disks can be supported.
- * @method void setDataDisks(array $DataDisks) Set Information of the instance's data disk configuration. If this parameter is not specified, no data disk is purchased by default. Up to 11 data disks can be supported.
- * @method InternetAccessible getInternetAccessible() Obtain Configuration of public network bandwidth. If this parameter is not specified, 0 Mbps will be used by default.
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set Configuration of public network bandwidth. If this parameter is not specified, 0 Mbps will be used by default.
- * @method LoginSettings getLoginSettings() Obtain Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
- * @method void setLoginSettings(LoginSettings $LoginSettings) Set Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
- * @method array getSecurityGroupIds() Obtain The security group to which the instance belongs. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1). If this parameter is not specified, no security group will be bound by default.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The security group to which the instance belongs. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1). If this parameter is not specified, no security group will be bound by default.
- * @method EnhancedService getEnhancedService() Obtain Enhanced services. You can use this parameter to specify whether to enable services such as Cloud Security and Cloud Monitor. If this parameter is not specified, Cloud Monitor and Cloud Security will be enabled by default.
- * @method void setEnhancedService(EnhancedService $EnhancedService) Set Enhanced services. You can use this parameter to specify whether to enable services such as Cloud Security and Cloud Monitor. If this parameter is not specified, Cloud Monitor and Cloud Security will be enabled by default.
- * @method string getUserData() Obtain Base64-encoded custom data of up to 16 KB.
- * @method void setUserData(string $UserData) Set Base64-encoded custom data of up to 16 KB.
- * @method string getInstanceChargeType() Obtain Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
-<li>SPOTPAID: spot instance</li>
-<li> CDCPAID: dedicated cluster</li>
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
-<li>SPOTPAID: spot instance</li>
-<li> CDCPAID: dedicated cluster</li>
- * @method InstanceMarketOptionsRequest getInstanceMarketOptions() Obtain Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
- * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) Set Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
- * @method array getInstanceTypes() Obtain Instance model list. different instance models specify different resource specifications. supports up to 10 instance models.
-The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
- * @method void setInstanceTypes(array $InstanceTypes) Set Instance model list. different instance models specify different resource specifications. supports up to 10 instance models.
-The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
- * @method string getCamRoleName() Obtain CAM role name. you can obtain it from the roleName in the return value from the API [DescribeRoleList](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
- * @method void setCamRoleName(string $CamRoleName) Set CAM role name. you can obtain it from the roleName in the return value from the API [DescribeRoleList](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
- * @method string getInstanceTypesCheckPolicy() Obtain Instance type validation policy. valid values include ALL and ANY. default value: ANY. this parameter is valid only when the InstanceTypes parameter contains multiple instance types.
-<li>ALL: verification passes if ALL instancetypes are available; otherwise, a verification error will be reported.</li>.
-<li>ANY: verification passes if ANY InstanceType is available; otherwise, a verification error will be reported.</li>.
-
-Common reasons for unavailable instancetypes include the instancetype being sold out and the corresponding cloud disk being sold out.
-If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
- * @method void setInstanceTypesCheckPolicy(string $InstanceTypesCheckPolicy) Set Instance type validation policy. valid values include ALL and ANY. default value: ANY. this parameter is valid only when the InstanceTypes parameter contains multiple instance types.
-<li>ALL: verification passes if ALL instancetypes are available; otherwise, a verification error will be reported.</li>.
-<li>ANY: verification passes if ANY InstanceType is available; otherwise, a verification error will be reported.</li>.
-
-Common reasons for unavailable instancetypes include the instancetype being sold out and the corresponding cloud disk being sold out.
-If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
- * @method array getInstanceTags() Obtain List of tags. This parameter is used to bind up to 10 tags to newly added instances.
- * @method void setInstanceTags(array $InstanceTags) Set List of tags. This parameter is used to bind up to 10 tags to newly added instances.
- * @method array getTags() Obtain List of tags. You can specify tags that you want to bind to the launch configuration. Each launch configuration can have up to 30 tags.
- * @method void setTags(array $Tags) Set List of tags. You can specify tags that you want to bind to the launch configuration. Each launch configuration can have up to 30 tags.
- * @method HostNameSettings getHostNameSettings() Obtain Specifies the related settings for the cloud virtual machine HostName (HostName).
-windows instances do not support setting hostname. 
-When adding new attributes, the cloud virtual machine hostname must be transmitted. other fields not transmitted will be set as default.
-Validates whether the host name (with suffix added if it exists) exceeds the maximum of 46 characters.
- * @method void setHostNameSettings(HostNameSettings $HostNameSettings) Set Specifies the related settings for the cloud virtual machine HostName (HostName).
-windows instances do not support setting hostname. 
-When adding new attributes, the cloud virtual machine hostname must be transmitted. other fields not transmitted will be set as default.
-Validates whether the host name (with suffix added if it exists) exceeds the maximum of 46 characters.
- * @method InstanceNameSettings getInstanceNameSettings() Obtain Specifies the related settings of the cloud server instance name (InstanceName).
-If the user sets this field in the launch configuration, the instance name of the instance created by the scaling group will be set according to this field and passed to CVM. if the user does not set this field in the launch configuration, the instance name of the instance created by the scaling group will be set as "as-{{ scaling group AutoScalingGroupName }}" and passed to CVM.
-Specifies the instance name of the cloud virtual machine when adding this attribute. other fields not transmitted will be set as default.
-Verifies whether the instance name (add the suffix if it exists) exceeds the maximum of 108 characters.
- * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) Set Specifies the related settings of the cloud server instance name (InstanceName).
-If the user sets this field in the launch configuration, the instance name of the instance created by the scaling group will be set according to this field and passed to CVM. if the user does not set this field in the launch configuration, the instance name of the instance created by the scaling group will be set as "as-{{ scaling group AutoScalingGroupName }}" and passed to CVM.
-Specifies the instance name of the cloud virtual machine when adding this attribute. other fields not transmitted will be set as default.
-Verifies whether the instance name (add the suffix if it exists) exceeds the maximum of 108 characters.
- * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
- * @method string getDiskTypePolicy() Obtain Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
-<li>ORIGINAL: Use the set cloud disk type.</li>
-<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
- * @method void setDiskTypePolicy(string $DiskTypePolicy) Set Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
-<li>ORIGINAL: Use the set cloud disk type.</li>
-<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
- * @method string getHpcClusterId() Obtain High-Performance computing cluster ID. This parameter is not currently supported for the international site.
-Note: this field is empty by default.
- * @method void setHpcClusterId(string $HpcClusterId) Set High-Performance computing cluster ID. This parameter is not currently supported for the international site.
-Note: this field is empty by default.
- * @method IPv6InternetAccessible getIPv6InternetAccessible() Obtain IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
- * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) Set IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
- * @method array getDisasterRecoverGroupIds() Obtain Placement group ID. Only one is allowed.
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Placement group ID. Only one is allowed.
- * @method string getImageFamily() Obtain Image family name. one and only one must be filled in between image Id and image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
- * @method void setImageFamily(string $ImageFamily) Set Image family name. one and only one must be filled in between image Id and image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
- * @method string getDedicatedClusterId() Obtain Local exclusive cluster ID. this parameter can be obtained through the [DescribeDedicatedClusters](https://intl.cloud.tencent.com/document/product/1346/73758?from_cn_redirect=1) api.
- * @method void setDedicatedClusterId(string $DedicatedClusterId) Set Local exclusive cluster ID. this parameter can be obtained through the [DescribeDedicatedClusters](https://intl.cloud.tencent.com/document/product/1346/73758?from_cn_redirect=1) api.
- * @method Metadata getMetadata() Obtain Custom metadata.
- * @method void setMetadata(Metadata $Metadata) Set Custom metadata.
+ * @method string getLaunchConfigurationName() Obtain <p>Display name of the launch configuration. The name only supports Chinese, English, numbers, underscores, the separator "-", and decimal points. The maximum length cannot exceed 60 bytes.</p>
+ * @method void setLaunchConfigurationName(string $LaunchConfigurationName) Set <p>Display name of the launch configuration. The name only supports Chinese, English, numbers, underscores, the separator "-", and decimal points. The maximum length cannot exceed 60 bytes.</p>
+ * @method string getImageId() Obtain <p>Specify a valid <a href="https://www.tencentcloud.com/document/product/213/4940?from_cn_redirect=1">image</a> ID, such as <code>img-8toqc6s3</code>. One and only one of image ID and image family name must be filled in. There are four image types:<br><li>Public image</li><li>Custom image</li><li>Shared image</li><li>Service market image</li><br>You can get available image IDs in the following ways:<br><li>You can query the image IDs of <code>public images</code>, <code>custom images</code>, and <code>shared images</code> by logging in to the <a href="https://console.cloud.tencent.com/cvm/image?rid=1&amp;imageType=PUBLIC_IMAGE">console</a>; query the image IDs in the <code>service image market</code> in <a href="https://market.cloud.tencent.com/list">Marketplace</a>.</li><li>Call the <a href="https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1">DescribeImages</a> API and get the <code>ImageId</code> field in the returned information.</li></p>
+ * @method void setImageId(string $ImageId) Set <p>Specify a valid <a href="https://www.tencentcloud.com/document/product/213/4940?from_cn_redirect=1">image</a> ID, such as <code>img-8toqc6s3</code>. One and only one of image ID and image family name must be filled in. There are four image types:<br><li>Public image</li><li>Custom image</li><li>Shared image</li><li>Service market image</li><br>You can get available image IDs in the following ways:<br><li>You can query the image IDs of <code>public images</code>, <code>custom images</code>, and <code>shared images</code> by logging in to the <a href="https://console.cloud.tencent.com/cvm/image?rid=1&amp;imageType=PUBLIC_IMAGE">console</a>; query the image IDs in the <code>service image market</code> in <a href="https://market.cloud.tencent.com/list">Marketplace</a>.</li><li>Call the <a href="https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1">DescribeImages</a> API and get the <code>ImageId</code> field in the returned information.</li></p>
+ * @method integer getProjectId() Obtain <p>The project ID of the launch configuration. Default value: 0, indicating the default project. Obtain this parameter by calling <a href="https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1">DescribeProject</a> and using the projectId field in the return value.<br>Note: The project ID of instances within the scaling group is the scaling group project ID, irrelevant to the value here.</p>
+ * @method void setProjectId(integer $ProjectId) Set <p>The project ID of the launch configuration. Default value: 0, indicating the default project. Obtain this parameter by calling <a href="https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1">DescribeProject</a> and using the projectId field in the return value.<br>Note: The project ID of instances within the scaling group is the scaling group project ID, irrelevant to the value here.</p>
+ * @method string getInstanceType() Obtain <p>Instance model. Different instance models specify different resource specifications. The specific values can be obtained by calling the <a href="https://www.tencentcloud.com/document/api/213/15749?from_cn_redirect=1">DescribeInstanceTypeConfigs</a> API to get the latest specification table or refer to the <a href="https://www.tencentcloud.com/document/product/213/11518?from_cn_redirect=1">instance type</a> description.<br>The <code>InstanceType</code> and <code>InstanceTypes</code> parameters are mutually exclusive, and one and only one must be filled in.</p>
+ * @method void setInstanceType(string $InstanceType) Set <p>Instance model. Different instance models specify different resource specifications. The specific values can be obtained by calling the <a href="https://www.tencentcloud.com/document/api/213/15749?from_cn_redirect=1">DescribeInstanceTypeConfigs</a> API to get the latest specification table or refer to the <a href="https://www.tencentcloud.com/document/product/213/11518?from_cn_redirect=1">instance type</a> description.<br>The <code>InstanceType</code> and <code>InstanceTypes</code> parameters are mutually exclusive, and one and only one must be filled in.</p>
+ * @method SystemDisk getSystemDisk() Obtain <p>Instance system disk configuration information. If not specified, it will be allocated based on system default values.</p>
+ * @method void setSystemDisk(SystemDisk $SystemDisk) Set <p>Instance system disk configuration information. If not specified, it will be allocated based on system default values.</p>
+ * @method array getDataDisks() Obtain <p>Instance data disk configuration information. If not specified, no data disks are purchased by default, and a maximum of 11 data disks can be specified.</p>
+ * @method void setDataDisks(array $DataDisks) Set <p>Instance data disk configuration information. If not specified, no data disks are purchased by default, and a maximum of 11 data disks can be specified.</p>
+ * @method InternetAccessible getInternetAccessible() Obtain <p>Public network bandwidth-related information settings. If not specified, the public network bandwidth defaults to 0 Mbps.</p>
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set <p>Public network bandwidth-related information settings. If not specified, the public network bandwidth defaults to 0 Mbps.</p>
+ * @method LoginSettings getLoginSettings() Obtain <p>Instance login settings. Through this parameter, you can set the instance's login method to password, key, or maintain the image's original login settings. By default, a password will be randomly generated, and the user will be notified through an internal message.</p>
+ * @method void setLoginSettings(LoginSettings $LoginSettings) Set <p>Instance login settings. Through this parameter, you can set the instance's login method to password, key, or maintain the image's original login settings. By default, a password will be randomly generated, and the user will be notified through an internal message.</p>
+ * @method array getSecurityGroupIds() Obtain <p>Security group to which an instance belongs. The value of this parameter can be obtained from the returned <code>SecurityGroupId</code> field of the <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API. If this parameter is not specified, no security groups are associated by default.</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>Security group to which an instance belongs. The value of this parameter can be obtained from the returned <code>SecurityGroupId</code> field of the <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API. If this parameter is not specified, no security groups are associated by default.</p>
+ * @method EnhancedService getEnhancedService() Obtain <p>Enhancement services. This parameter can be used to specify whether to enable services such as Cloud Monitor and cloud security. If not specified, cloud monitoring and cloud security services are enabled by default.</p>
+ * @method void setEnhancedService(EnhancedService $EnhancedService) Set <p>Enhancement services. This parameter can be used to specify whether to enable services such as Cloud Monitor and cloud security. If not specified, cloud monitoring and cloud security services are enabled by default.</p>
+ * @method string getUserData() Obtain <p>Custom data after Base64 encoding should not exceed 16KB.</p>
+ * @method void setUserData(string $UserData) Set <p>Custom data after Base64 encoding should not exceed 16KB.</p>
+ * @method string getInstanceChargeType() Obtain <p>Instance billing type. The default value of CVM is handled as POSTPAID_BY_HOUR.</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepayment, which is monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set <p>Instance billing type. The default value of CVM is handled as POSTPAID_BY_HOUR.</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepayment, which is monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
+ * @method InstanceMarketOptionsRequest getInstanceMarketOptions() Obtain <p>Market options of the instance, such as spot instance parameters. This parameter is required if the payment mode of the specified instance is spot payment.</p>
+ * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) Set <p>Market options of the instance, such as spot instance parameters. This parameter is required if the payment mode of the specified instance is spot payment.</p>
+ * @method array getInstanceTypes() Obtain <p>Instance model list. Different instance models specify different resource specifications, and a maximum of 10 instance models are supported.<br>The <code>InstanceType</code> and <code>InstanceTypes</code> parameters are mutually exclusive. One and only one of them must be filled in. To obtain the specific values, call the API <a href="https://www.tencentcloud.com/document/api/213/15749?from_cn_redirect=1">DescribeInstanceTypeConfigs</a> to get the latest specification table or see <a href="https://www.tencentcloud.com/document/product/213/11518?from_cn_redirect=1">Instance Specifications</a>.</p>
+ * @method void setInstanceTypes(array $InstanceTypes) Set <p>Instance model list. Different instance models specify different resource specifications, and a maximum of 10 instance models are supported.<br>The <code>InstanceType</code> and <code>InstanceTypes</code> parameters are mutually exclusive. One and only one of them must be filled in. To obtain the specific values, call the API <a href="https://www.tencentcloud.com/document/api/213/15749?from_cn_redirect=1">DescribeInstanceTypeConfigs</a> to get the latest specification table or see <a href="https://www.tencentcloud.com/document/product/213/11518?from_cn_redirect=1">Instance Specifications</a>.</p>
+ * @method string getCamRoleName() Obtain <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
+ * @method void setCamRoleName(string $CamRoleName) Set <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
+ * @method string getInstanceTypesCheckPolicy() Obtain <p>Instance type validation policy. Valid values include ALL and ANY. Default value: ANY. This parameter is valid only when InstanceTypes contains multiple models.</p><li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li><li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li><p>Common causes of InstanceTypes unavailable include the instance type sold out and the corresponding cloud disk sold out.<br>If a model in InstanceTypes does not exist or has been removed, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.</p>
+ * @method void setInstanceTypesCheckPolicy(string $InstanceTypesCheckPolicy) Set <p>Instance type validation policy. Valid values include ALL and ANY. Default value: ANY. This parameter is valid only when InstanceTypes contains multiple models.</p><li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li><li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li><p>Common causes of InstanceTypes unavailable include the instance type sold out and the corresponding cloud disk sold out.<br>If a model in InstanceTypes does not exist or has been removed, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.</p>
+ * @method array getInstanceTags() Obtain <p>Tag list. By specifying this parameter, the instances added through scale-out can be bound to the tag. A maximum of 10 tags can be specified.</p>
+ * @method void setInstanceTags(array $InstanceTags) Set <p>Tag list. By specifying this parameter, the instances added through scale-out can be bound to the tag. A maximum of 10 tags can be specified.</p>
+ * @method array getTags() Obtain <p>Tag description list. By specifying this parameter, you can bind tags to a launch configuration. Each launch configuration supports up to 30 tags.</p>
+ * @method void setTags(array $Tags) Set <p>Tag description list. By specifying this parameter, you can bind tags to a launch configuration. Each launch configuration supports up to 30 tags.</p>
+ * @method HostNameSettings getHostNameSettings() Obtain <p>Related settings of the CVM host name (HostName).<br>Setting the host name for windows instances is unsupported.<br>When adding this attribute, you must pass the CVM host name. Other unspecified fields will be set to default values.<br>The host name (with the suffix added if it exists) is verified against a maximum length of 46 characters.</p>
+ * @method void setHostNameSettings(HostNameSettings $HostNameSettings) Set <p>Related settings of the CVM host name (HostName).<br>Setting the host name for windows instances is unsupported.<br>When adding this attribute, you must pass the CVM host name. Other unspecified fields will be set to default values.<br>The host name (with the suffix added if it exists) is verified against a maximum length of 46 characters.</p>
+ * @method InstanceNameSettings getInstanceNameSettings() Obtain <p>Related settings of CVM instance name (InstanceName).<br>If the user sets this field in the launch configuration, the InstanceName of instances created by the scaling group is set according to this field and transmitted to CVM. If the user does not set this field in the launch configuration, the InstanceName of instances created by the scaling group is set as "as-{{ scaling group AutoScalingGroupName }}" and transmitted to CVM.<br>When adding new this attribute, the instance name of the CVM must be transmitted. Other fields not transmitted will be set as default values.<br>It will verify whether the instance name (plus the suffix if it exists) exceeds the maximum length of 108 characters.</p>
+ * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) Set <p>Related settings of CVM instance name (InstanceName).<br>If the user sets this field in the launch configuration, the InstanceName of instances created by the scaling group is set according to this field and transmitted to CVM. If the user does not set this field in the launch configuration, the InstanceName of instances created by the scaling group is set as "as-{{ scaling group AutoScalingGroupName }}" and transmitted to CVM.<br>When adding new this attribute, the instance name of the CVM must be transmitted. Other fields not transmitted will be set as default values.<br>It will verify whether the instance name (plus the suffix if it exists) exceeds the maximum length of 108 characters.</p>
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain <p>Prepaid mode, that is, parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. If the billing mode of the specified instance is prepaid, this parameter must be passed.</p>
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set <p>Prepaid mode, that is, parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. If the billing mode of the specified instance is prepaid, this parameter must be passed.</p>
+ * @method string getDiskTypePolicy() Obtain <p>Cloud disk type selection policy. Default value: ORIGINAL. Value range:</p><li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select the currently available cloud disk type</li>
+ * @method void setDiskTypePolicy(string $DiskTypePolicy) Set <p>Cloud disk type selection policy. Default value: ORIGINAL. Value range:</p><li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select the currently available cloud disk type</li>
+ * @method string getHpcClusterId() Obtain <p>Hyper Computing Cluster ID. You can obtain this parameter by calling the <a href="https://www.tencentcloud.com/document/product/213/83220?from_cn_redirect=1">DescribeHpcClusters</a> API.<br>Note: This field is empty by default.</p>
+ * @method void setHpcClusterId(string $HpcClusterId) Set <p>Hyper Computing Cluster ID. You can obtain this parameter by calling the <a href="https://www.tencentcloud.com/document/product/213/83220?from_cn_redirect=1">DescribeHpcClusters</a> API.<br>Note: This field is empty by default.</p>
+ * @method IPv6InternetAccessible getIPv6InternetAccessible() Obtain <p>Public network bandwidth-related information settings for IPv6. If the new instance contains an IPv6 address, this parameter can allocate public network bandwidth to the IPv6 address of the new instance. When the Ipv6AddressCount parameter of the scaling group associated with the launch configuration is 0, this parameter will not take effect.</p>
+ * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) Set <p>Public network bandwidth-related information settings for IPv6. If the new instance contains an IPv6 address, this parameter can allocate public network bandwidth to the IPv6 address of the new instance. When the Ipv6AddressCount parameter of the scaling group associated with the launch configuration is 0, this parameter will not take effect.</p>
+ * @method array getDisasterRecoverGroupIds() Obtain <p>Placement Group id. Only one can be specified.</p>
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set <p>Placement Group id. Only one can be specified.</p>
+ * @method string getImageFamily() Obtain <p>Image family name. Either image Id or image family name must be specified, and one and only one must be filled in. This parameter can be obtained through the <a href="https://www.tencentcloud.com/document/product/213/15715?from_cn_redirect=1">DescribeImages</a> API.</p>
+ * @method void setImageFamily(string $ImageFamily) Set <p>Image family name. Either image Id or image family name must be specified, and one and only one must be filled in. This parameter can be obtained through the <a href="https://www.tencentcloud.com/document/product/213/15715?from_cn_redirect=1">DescribeImages</a> API.</p>
+ * @method string getDedicatedClusterId() Obtain <p>CDC ID. Obtain this parameter through the <a href="https://www.tencentcloud.com/document/product/1346/73758?from_cn_redirect=1">DescribeDedicatedClusters</a> API.</p>
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) Set <p>CDC ID. Obtain this parameter through the <a href="https://www.tencentcloud.com/document/product/1346/73758?from_cn_redirect=1">DescribeDedicatedClusters</a> API.</p>
+ * @method Metadata getMetadata() Obtain <p>Custom metadata.</p>
+ * @method void setMetadata(Metadata $Metadata) Set <p>Custom metadata.</p>
+ * @method array getNetworkInterfaces() Obtain <p>Configure the elastic network interface for scale-out instances.</p><p>Input limits: up to 17 items. When configuring this parameter, you must explicitly include and can only include one PRIMARY. AS does not auto-complete the primary ENI. An explicitly empty array is illegal. Spot instances do not support this parameter.</p><p>The VPC and subnet are automatically injected by the scaling group based on the current candidate subnets. If not configured, they are not transmitted to CVM. The SecurityGroupIds parameter in the launch configuration is retained.</p>
+ * @method void setNetworkInterfaces(array $NetworkInterfaces) Set <p>Configure the elastic network interface for scale-out instances.</p><p>Input limits: up to 17 items. When configuring this parameter, you must explicitly include and can only include one PRIMARY. AS does not auto-complete the primary ENI. An explicitly empty array is illegal. Spot instances do not support this parameter.</p><p>The VPC and subnet are automatically injected by the scaling group based on the current candidate subnets. If not configured, they are not transmitted to CVM. The SecurityGroupIds parameter in the launch configuration is retained.</p>
  */
 class CreateLaunchConfigurationRequest extends AbstractModel
 {
     /**
-     * @var string Display name of the launch configuration, which can contain letters, digits, underscores and hyphens (-), and dots. Up to of 60 bytes allowed..
+     * @var string <p>Display name of the launch configuration. The name only supports Chinese, English, numbers, underscores, the separator "-", and decimal points. The maximum length cannot exceed 60 bytes.</p>
      */
     public $LaunchConfigurationName;
 
     /**
-     * @var string [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
+     * @var string <p>Specify a valid <a href="https://www.tencentcloud.com/document/product/213/4940?from_cn_redirect=1">image</a> ID, such as <code>img-8toqc6s3</code>. One and only one of image ID and image family name must be filled in. There are four image types:<br><li>Public image</li><li>Custom image</li><li>Shared image</li><li>Service market image</li><br>You can get available image IDs in the following ways:<br><li>You can query the image IDs of <code>public images</code>, <code>custom images</code>, and <code>shared images</code> by logging in to the <a href="https://console.cloud.tencent.com/cvm/image?rid=1&amp;imageType=PUBLIC_IMAGE">console</a>; query the image IDs in the <code>service image market</code> in <a href="https://market.cloud.tencent.com/list">Marketplace</a>.</li><li>Call the <a href="https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1">DescribeImages</a> API and get the <code>ImageId</code> field in the returned information.</li></p>
      */
     public $ImageId;
 
     /**
-     * @var integer Project ID of the launch configuration. default value is 0, indicating usage of the default project. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1).
-Note: the instance's project ID within the scaling group takes the project ID of the scaling group, which is irrelevant here.
+     * @var integer <p>The project ID of the launch configuration. Default value: 0, indicating the default project. Obtain this parameter by calling <a href="https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1">DescribeProject</a> and using the projectId field in the return value.<br>Note: The project ID of instances within the scaling group is the scaling group project ID, irrelevant to the value here.</p>
      */
     public $ProjectId;
 
     /**
-     * @var string Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeZoneInstanceConfigInfos](https://www.tencentcloud.com/document/product/213/33254) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
-`InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
+     * @var string <p>Instance model. Different instance models specify different resource specifications. The specific values can be obtained by calling the <a href="https://www.tencentcloud.com/document/api/213/15749?from_cn_redirect=1">DescribeInstanceTypeConfigs</a> API to get the latest specification table or refer to the <a href="https://www.tencentcloud.com/document/product/213/11518?from_cn_redirect=1">instance type</a> description.<br>The <code>InstanceType</code> and <code>InstanceTypes</code> parameters are mutually exclusive, and one and only one must be filled in.</p>
      */
     public $InstanceType;
 
     /**
-     * @var SystemDisk System disk configuration of the instance. If this parameter is not specified, the default value will be used.
+     * @var SystemDisk <p>Instance system disk configuration information. If not specified, it will be allocated based on system default values.</p>
      */
     public $SystemDisk;
 
     /**
-     * @var array Information of the instance's data disk configuration. If this parameter is not specified, no data disk is purchased by default. Up to 11 data disks can be supported.
+     * @var array <p>Instance data disk configuration information. If not specified, no data disks are purchased by default, and a maximum of 11 data disks can be specified.</p>
      */
     public $DataDisks;
 
     /**
-     * @var InternetAccessible Configuration of public network bandwidth. If this parameter is not specified, 0 Mbps will be used by default.
+     * @var InternetAccessible <p>Public network bandwidth-related information settings. If not specified, the public network bandwidth defaults to 0 Mbps.</p>
      */
     public $InternetAccessible;
 
     /**
-     * @var LoginSettings Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
+     * @var LoginSettings <p>Instance login settings. Through this parameter, you can set the instance's login method to password, key, or maintain the image's original login settings. By default, a password will be randomly generated, and the user will be notified through an internal message.</p>
      */
     public $LoginSettings;
 
     /**
-     * @var array The security group to which the instance belongs. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1). If this parameter is not specified, no security group will be bound by default.
+     * @var array <p>Security group to which an instance belongs. The value of this parameter can be obtained from the returned <code>SecurityGroupId</code> field of the <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API. If this parameter is not specified, no security groups are associated by default.</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @var EnhancedService Enhanced services. You can use this parameter to specify whether to enable services such as Cloud Security and Cloud Monitor. If this parameter is not specified, Cloud Monitor and Cloud Security will be enabled by default.
+     * @var EnhancedService <p>Enhancement services. This parameter can be used to specify whether to enable services such as Cloud Monitor and cloud security. If not specified, cloud monitoring and cloud security services are enabled by default.</p>
      */
     public $EnhancedService;
 
     /**
-     * @var string Base64-encoded custom data of up to 16 KB.
+     * @var string <p>Custom data after Base64 encoding should not exceed 16KB.</p>
      */
     public $UserData;
 
     /**
-     * @var string Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
-<li>SPOTPAID: spot instance</li>
-<li> CDCPAID: dedicated cluster</li>
+     * @var string <p>Instance billing type. The default value of CVM is handled as POSTPAID_BY_HOUR.</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepayment, which is monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
      */
     public $InstanceChargeType;
 
     /**
-     * @var InstanceMarketOptionsRequest Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
+     * @var InstanceMarketOptionsRequest <p>Market options of the instance, such as spot instance parameters. This parameter is required if the payment mode of the specified instance is spot payment.</p>
      */
     public $InstanceMarketOptions;
 
     /**
-     * @var array Instance model list. different instance models specify different resource specifications. supports up to 10 instance models.
-The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+     * @var array <p>Instance model list. Different instance models specify different resource specifications, and a maximum of 10 instance models are supported.<br>The <code>InstanceType</code> and <code>InstanceTypes</code> parameters are mutually exclusive. One and only one of them must be filled in. To obtain the specific values, call the API <a href="https://www.tencentcloud.com/document/api/213/15749?from_cn_redirect=1">DescribeInstanceTypeConfigs</a> to get the latest specification table or see <a href="https://www.tencentcloud.com/document/product/213/11518?from_cn_redirect=1">Instance Specifications</a>.</p>
      */
     public $InstanceTypes;
 
     /**
-     * @var string CAM role name. you can obtain it from the roleName in the return value from the API [DescribeRoleList](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+     * @var string <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
      */
     public $CamRoleName;
 
     /**
-     * @var string Instance type validation policy. valid values include ALL and ANY. default value: ANY. this parameter is valid only when the InstanceTypes parameter contains multiple instance types.
-<li>ALL: verification passes if ALL instancetypes are available; otherwise, a verification error will be reported.</li>.
-<li>ANY: verification passes if ANY InstanceType is available; otherwise, a verification error will be reported.</li>.
-
-Common reasons for unavailable instancetypes include the instancetype being sold out and the corresponding cloud disk being sold out.
-If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
+     * @var string <p>Instance type validation policy. Valid values include ALL and ANY. Default value: ANY. This parameter is valid only when InstanceTypes contains multiple models.</p><li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li><li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li><p>Common causes of InstanceTypes unavailable include the instance type sold out and the corresponding cloud disk sold out.<br>If a model in InstanceTypes does not exist or has been removed, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.</p>
      */
     public $InstanceTypesCheckPolicy;
 
     /**
-     * @var array List of tags. This parameter is used to bind up to 10 tags to newly added instances.
+     * @var array <p>Tag list. By specifying this parameter, the instances added through scale-out can be bound to the tag. A maximum of 10 tags can be specified.</p>
      */
     public $InstanceTags;
 
     /**
-     * @var array List of tags. You can specify tags that you want to bind to the launch configuration. Each launch configuration can have up to 30 tags.
+     * @var array <p>Tag description list. By specifying this parameter, you can bind tags to a launch configuration. Each launch configuration supports up to 30 tags.</p>
      */
     public $Tags;
 
     /**
-     * @var HostNameSettings Specifies the related settings for the cloud virtual machine HostName (HostName).
-windows instances do not support setting hostname. 
-When adding new attributes, the cloud virtual machine hostname must be transmitted. other fields not transmitted will be set as default.
-Validates whether the host name (with suffix added if it exists) exceeds the maximum of 46 characters.
+     * @var HostNameSettings <p>Related settings of the CVM host name (HostName).<br>Setting the host name for windows instances is unsupported.<br>When adding this attribute, you must pass the CVM host name. Other unspecified fields will be set to default values.<br>The host name (with the suffix added if it exists) is verified against a maximum length of 46 characters.</p>
      */
     public $HostNameSettings;
 
     /**
-     * @var InstanceNameSettings Specifies the related settings of the cloud server instance name (InstanceName).
-If the user sets this field in the launch configuration, the instance name of the instance created by the scaling group will be set according to this field and passed to CVM. if the user does not set this field in the launch configuration, the instance name of the instance created by the scaling group will be set as "as-{{ scaling group AutoScalingGroupName }}" and passed to CVM.
-Specifies the instance name of the cloud virtual machine when adding this attribute. other fields not transmitted will be set as default.
-Verifies whether the instance name (add the suffix if it exists) exceeds the maximum of 108 characters.
+     * @var InstanceNameSettings <p>Related settings of CVM instance name (InstanceName).<br>If the user sets this field in the launch configuration, the InstanceName of instances created by the scaling group is set according to this field and transmitted to CVM. If the user does not set this field in the launch configuration, the InstanceName of instances created by the scaling group is set as "as-{{ scaling group AutoScalingGroupName }}" and transmitted to CVM.<br>When adding new this attribute, the instance name of the CVM must be transmitted. Other fields not transmitted will be set as default values.<br>It will verify whether the instance name (plus the suffix if it exists) exceeds the maximum length of 108 characters.</p>
      */
     public $InstanceNameSettings;
 
     /**
-     * @var InstanceChargePrepaid Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+     * @var InstanceChargePrepaid <p>Prepaid mode, that is, parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. If the billing mode of the specified instance is prepaid, this parameter must be passed.</p>
      */
     public $InstanceChargePrepaid;
 
     /**
-     * @var string Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
-<li>ORIGINAL: Use the set cloud disk type.</li>
-<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
+     * @var string <p>Cloud disk type selection policy. Default value: ORIGINAL. Value range:</p><li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select the currently available cloud disk type</li>
      */
     public $DiskTypePolicy;
 
     /**
-     * @var string High-Performance computing cluster ID. This parameter is not currently supported for the international site.
-Note: this field is empty by default.
+     * @var string <p>Hyper Computing Cluster ID. You can obtain this parameter by calling the <a href="https://www.tencentcloud.com/document/product/213/83220?from_cn_redirect=1">DescribeHpcClusters</a> API.<br>Note: This field is empty by default.</p>
      */
     public $HpcClusterId;
 
     /**
-     * @var IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+     * @var IPv6InternetAccessible <p>Public network bandwidth-related information settings for IPv6. If the new instance contains an IPv6 address, this parameter can allocate public network bandwidth to the IPv6 address of the new instance. When the Ipv6AddressCount parameter of the scaling group associated with the launch configuration is 0, this parameter will not take effect.</p>
      */
     public $IPv6InternetAccessible;
 
     /**
-     * @var array Placement group ID. Only one is allowed.
+     * @var array <p>Placement Group id. Only one can be specified.</p>
      */
     public $DisasterRecoverGroupIds;
 
     /**
-     * @var string Image family name. one and only one must be filled in between image Id and image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
+     * @var string <p>Image family name. Either image Id or image family name must be specified, and one and only one must be filled in. This parameter can be obtained through the <a href="https://www.tencentcloud.com/document/product/213/15715?from_cn_redirect=1">DescribeImages</a> API.</p>
      */
     public $ImageFamily;
 
     /**
-     * @var string Local exclusive cluster ID. this parameter can be obtained through the [DescribeDedicatedClusters](https://intl.cloud.tencent.com/document/product/1346/73758?from_cn_redirect=1) api.
+     * @var string <p>CDC ID. Obtain this parameter through the <a href="https://www.tencentcloud.com/document/product/1346/73758?from_cn_redirect=1">DescribeDedicatedClusters</a> API.</p>
      */
     public $DedicatedClusterId;
 
     /**
-     * @var Metadata Custom metadata.
+     * @var Metadata <p>Custom metadata.</p>
      */
     public $Metadata;
 
     /**
-     * @param string $LaunchConfigurationName Display name of the launch configuration, which can contain letters, digits, underscores and hyphens (-), and dots. Up to of 60 bytes allowed..
-     * @param string $ImageId [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
-     * @param integer $ProjectId Project ID of the launch configuration. default value is 0, indicating usage of the default project. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1).
-Note: the instance's project ID within the scaling group takes the project ID of the scaling group, which is irrelevant here.
-     * @param string $InstanceType Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeZoneInstanceConfigInfos](https://www.tencentcloud.com/document/product/213/33254) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
-`InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
-     * @param SystemDisk $SystemDisk System disk configuration of the instance. If this parameter is not specified, the default value will be used.
-     * @param array $DataDisks Information of the instance's data disk configuration. If this parameter is not specified, no data disk is purchased by default. Up to 11 data disks can be supported.
-     * @param InternetAccessible $InternetAccessible Configuration of public network bandwidth. If this parameter is not specified, 0 Mbps will be used by default.
-     * @param LoginSettings $LoginSettings Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
-     * @param array $SecurityGroupIds The security group to which the instance belongs. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1). If this parameter is not specified, no security group will be bound by default.
-     * @param EnhancedService $EnhancedService Enhanced services. You can use this parameter to specify whether to enable services such as Cloud Security and Cloud Monitor. If this parameter is not specified, Cloud Monitor and Cloud Security will be enabled by default.
-     * @param string $UserData Base64-encoded custom data of up to 16 KB.
-     * @param string $InstanceChargeType Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-<li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>
-<li>SPOTPAID: spot instance</li>
-<li> CDCPAID: dedicated cluster</li>
-     * @param InstanceMarketOptionsRequest $InstanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-     * @param array $InstanceTypes Instance model list. different instance models specify different resource specifications. supports up to 10 instance models.
-The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
-     * @param string $CamRoleName CAM role name. you can obtain it from the roleName in the return value from the API [DescribeRoleList](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
-     * @param string $InstanceTypesCheckPolicy Instance type validation policy. valid values include ALL and ANY. default value: ANY. this parameter is valid only when the InstanceTypes parameter contains multiple instance types.
-<li>ALL: verification passes if ALL instancetypes are available; otherwise, a verification error will be reported.</li>.
-<li>ANY: verification passes if ANY InstanceType is available; otherwise, a verification error will be reported.</li>.
+     * @var array <p>Configure the elastic network interface for scale-out instances.</p><p>Input limits: up to 17 items. When configuring this parameter, you must explicitly include and can only include one PRIMARY. AS does not auto-complete the primary ENI. An explicitly empty array is illegal. Spot instances do not support this parameter.</p><p>The VPC and subnet are automatically injected by the scaling group based on the current candidate subnets. If not configured, they are not transmitted to CVM. The SecurityGroupIds parameter in the launch configuration is retained.</p>
+     */
+    public $NetworkInterfaces;
 
-Common reasons for unavailable instancetypes include the instancetype being sold out and the corresponding cloud disk being sold out.
-If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
-     * @param array $InstanceTags List of tags. This parameter is used to bind up to 10 tags to newly added instances.
-     * @param array $Tags List of tags. You can specify tags that you want to bind to the launch configuration. Each launch configuration can have up to 30 tags.
-     * @param HostNameSettings $HostNameSettings Specifies the related settings for the cloud virtual machine HostName (HostName).
-windows instances do not support setting hostname. 
-When adding new attributes, the cloud virtual machine hostname must be transmitted. other fields not transmitted will be set as default.
-Validates whether the host name (with suffix added if it exists) exceeds the maximum of 46 characters.
-     * @param InstanceNameSettings $InstanceNameSettings Specifies the related settings of the cloud server instance name (InstanceName).
-If the user sets this field in the launch configuration, the instance name of the instance created by the scaling group will be set according to this field and passed to CVM. if the user does not set this field in the launch configuration, the instance name of the instance created by the scaling group will be set as "as-{{ scaling group AutoScalingGroupName }}" and passed to CVM.
-Specifies the instance name of the cloud virtual machine when adding this attribute. other fields not transmitted will be set as default.
-Verifies whether the instance name (add the suffix if it exists) exceeds the maximum of 108 characters.
-     * @param InstanceChargePrepaid $InstanceChargePrepaid Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
-     * @param string $DiskTypePolicy Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
-<li>ORIGINAL: Use the set cloud disk type.</li>
-<li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
-     * @param string $HpcClusterId High-Performance computing cluster ID. This parameter is not currently supported for the international site.
-Note: this field is empty by default.
-     * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
-     * @param array $DisasterRecoverGroupIds Placement group ID. Only one is allowed.
-     * @param string $ImageFamily Image family name. one and only one must be filled in between image Id and image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
-     * @param string $DedicatedClusterId Local exclusive cluster ID. this parameter can be obtained through the [DescribeDedicatedClusters](https://intl.cloud.tencent.com/document/product/1346/73758?from_cn_redirect=1) api.
-     * @param Metadata $Metadata Custom metadata.
+    /**
+     * @param string $LaunchConfigurationName <p>Display name of the launch configuration. The name only supports Chinese, English, numbers, underscores, the separator "-", and decimal points. The maximum length cannot exceed 60 bytes.</p>
+     * @param string $ImageId <p>Specify a valid <a href="https://www.tencentcloud.com/document/product/213/4940?from_cn_redirect=1">image</a> ID, such as <code>img-8toqc6s3</code>. One and only one of image ID and image family name must be filled in. There are four image types:<br><li>Public image</li><li>Custom image</li><li>Shared image</li><li>Service market image</li><br>You can get available image IDs in the following ways:<br><li>You can query the image IDs of <code>public images</code>, <code>custom images</code>, and <code>shared images</code> by logging in to the <a href="https://console.cloud.tencent.com/cvm/image?rid=1&amp;imageType=PUBLIC_IMAGE">console</a>; query the image IDs in the <code>service image market</code> in <a href="https://market.cloud.tencent.com/list">Marketplace</a>.</li><li>Call the <a href="https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1">DescribeImages</a> API and get the <code>ImageId</code> field in the returned information.</li></p>
+     * @param integer $ProjectId <p>The project ID of the launch configuration. Default value: 0, indicating the default project. Obtain this parameter by calling <a href="https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1">DescribeProject</a> and using the projectId field in the return value.<br>Note: The project ID of instances within the scaling group is the scaling group project ID, irrelevant to the value here.</p>
+     * @param string $InstanceType <p>Instance model. Different instance models specify different resource specifications. The specific values can be obtained by calling the <a href="https://www.tencentcloud.com/document/api/213/15749?from_cn_redirect=1">DescribeInstanceTypeConfigs</a> API to get the latest specification table or refer to the <a href="https://www.tencentcloud.com/document/product/213/11518?from_cn_redirect=1">instance type</a> description.<br>The <code>InstanceType</code> and <code>InstanceTypes</code> parameters are mutually exclusive, and one and only one must be filled in.</p>
+     * @param SystemDisk $SystemDisk <p>Instance system disk configuration information. If not specified, it will be allocated based on system default values.</p>
+     * @param array $DataDisks <p>Instance data disk configuration information. If not specified, no data disks are purchased by default, and a maximum of 11 data disks can be specified.</p>
+     * @param InternetAccessible $InternetAccessible <p>Public network bandwidth-related information settings. If not specified, the public network bandwidth defaults to 0 Mbps.</p>
+     * @param LoginSettings $LoginSettings <p>Instance login settings. Through this parameter, you can set the instance's login method to password, key, or maintain the image's original login settings. By default, a password will be randomly generated, and the user will be notified through an internal message.</p>
+     * @param array $SecurityGroupIds <p>Security group to which an instance belongs. The value of this parameter can be obtained from the returned <code>SecurityGroupId</code> field of the <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API. If this parameter is not specified, no security groups are associated by default.</p>
+     * @param EnhancedService $EnhancedService <p>Enhancement services. This parameter can be used to specify whether to enable services such as Cloud Monitor and cloud security. If not specified, cloud monitoring and cloud security services are enabled by default.</p>
+     * @param string $UserData <p>Custom data after Base64 encoding should not exceed 16KB.</p>
+     * @param string $InstanceChargeType <p>Instance billing type. The default value of CVM is handled as POSTPAID_BY_HOUR.</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepayment, which is monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
+     * @param InstanceMarketOptionsRequest $InstanceMarketOptions <p>Market options of the instance, such as spot instance parameters. This parameter is required if the payment mode of the specified instance is spot payment.</p>
+     * @param array $InstanceTypes <p>Instance model list. Different instance models specify different resource specifications, and a maximum of 10 instance models are supported.<br>The <code>InstanceType</code> and <code>InstanceTypes</code> parameters are mutually exclusive. One and only one of them must be filled in. To obtain the specific values, call the API <a href="https://www.tencentcloud.com/document/api/213/15749?from_cn_redirect=1">DescribeInstanceTypeConfigs</a> to get the latest specification table or see <a href="https://www.tencentcloud.com/document/product/213/11518?from_cn_redirect=1">Instance Specifications</a>.</p>
+     * @param string $CamRoleName <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
+     * @param string $InstanceTypesCheckPolicy <p>Instance type validation policy. Valid values include ALL and ANY. Default value: ANY. This parameter is valid only when InstanceTypes contains multiple models.</p><li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li><li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li><p>Common causes of InstanceTypes unavailable include the instance type sold out and the corresponding cloud disk sold out.<br>If a model in InstanceTypes does not exist or has been removed, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.</p>
+     * @param array $InstanceTags <p>Tag list. By specifying this parameter, the instances added through scale-out can be bound to the tag. A maximum of 10 tags can be specified.</p>
+     * @param array $Tags <p>Tag description list. By specifying this parameter, you can bind tags to a launch configuration. Each launch configuration supports up to 30 tags.</p>
+     * @param HostNameSettings $HostNameSettings <p>Related settings of the CVM host name (HostName).<br>Setting the host name for windows instances is unsupported.<br>When adding this attribute, you must pass the CVM host name. Other unspecified fields will be set to default values.<br>The host name (with the suffix added if it exists) is verified against a maximum length of 46 characters.</p>
+     * @param InstanceNameSettings $InstanceNameSettings <p>Related settings of CVM instance name (InstanceName).<br>If the user sets this field in the launch configuration, the InstanceName of instances created by the scaling group is set according to this field and transmitted to CVM. If the user does not set this field in the launch configuration, the InstanceName of instances created by the scaling group is set as "as-{{ scaling group AutoScalingGroupName }}" and transmitted to CVM.<br>When adding new this attribute, the instance name of the CVM must be transmitted. Other fields not transmitted will be set as default values.<br>It will verify whether the instance name (plus the suffix if it exists) exceeds the maximum length of 108 characters.</p>
+     * @param InstanceChargePrepaid $InstanceChargePrepaid <p>Prepaid mode, that is, parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. If the billing mode of the specified instance is prepaid, this parameter must be passed.</p>
+     * @param string $DiskTypePolicy <p>Cloud disk type selection policy. Default value: ORIGINAL. Value range:</p><li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select the currently available cloud disk type</li>
+     * @param string $HpcClusterId <p>Hyper Computing Cluster ID. You can obtain this parameter by calling the <a href="https://www.tencentcloud.com/document/product/213/83220?from_cn_redirect=1">DescribeHpcClusters</a> API.<br>Note: This field is empty by default.</p>
+     * @param IPv6InternetAccessible $IPv6InternetAccessible <p>Public network bandwidth-related information settings for IPv6. If the new instance contains an IPv6 address, this parameter can allocate public network bandwidth to the IPv6 address of the new instance. When the Ipv6AddressCount parameter of the scaling group associated with the launch configuration is 0, this parameter will not take effect.</p>
+     * @param array $DisasterRecoverGroupIds <p>Placement Group id. Only one can be specified.</p>
+     * @param string $ImageFamily <p>Image family name. Either image Id or image family name must be specified, and one and only one must be filled in. This parameter can be obtained through the <a href="https://www.tencentcloud.com/document/product/213/15715?from_cn_redirect=1">DescribeImages</a> API.</p>
+     * @param string $DedicatedClusterId <p>CDC ID. Obtain this parameter through the <a href="https://www.tencentcloud.com/document/product/1346/73758?from_cn_redirect=1">DescribeDedicatedClusters</a> API.</p>
+     * @param Metadata $Metadata <p>Custom metadata.</p>
+     * @param array $NetworkInterfaces <p>Configure the elastic network interface for scale-out instances.</p><p>Input limits: up to 17 items. When configuring this parameter, you must explicitly include and can only include one PRIMARY. AS does not auto-complete the primary ENI. An explicitly empty array is illegal. Spot instances do not support this parameter.</p><p>The VPC and subnet are automatically injected by the scaling group based on the current candidate subnets. If not configured, they are not transmitted to CVM. The SecurityGroupIds parameter in the launch configuration is retained.</p>
      */
     function __construct()
     {
@@ -477,6 +405,15 @@ Note: this field is empty by default.
         if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
             $this->Metadata = new Metadata();
             $this->Metadata->deserialize($param["Metadata"]);
+        }
+
+        if (array_key_exists("NetworkInterfaces",$param) and $param["NetworkInterfaces"] !== null) {
+            $this->NetworkInterfaces = [];
+            foreach ($param["NetworkInterfaces"] as $key => $value){
+                $obj = new NetworkInterface();
+                $obj->deserialize($value);
+                array_push($this->NetworkInterfaces, $obj);
+            }
         }
     }
 }
