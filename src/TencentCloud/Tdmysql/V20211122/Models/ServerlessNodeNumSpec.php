@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Tdmysql\V20211122\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TransferStoragePrepayToPostpay request structure.
+ * 
  *
- * @method string getClusterId() Obtain <p>Cluster ID.</p>
- * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method integer getMinNodeNum() Obtain 
+ * @method void setMinNodeNum(integer $MinNodeNum) Set 
+ * @method integer getMaxNodeNum() Obtain 
+ * @method void setMaxNodeNum(integer $MaxNodeNum) Set 
  */
-class TransferStoragePrepayToPostpayRequest extends AbstractModel
+class ServerlessNodeNumSpec extends AbstractModel
 {
     /**
-     * @var string <p>Cluster ID.</p>
+     * @var integer 
      */
-    public $ClusterId;
+    public $MinNodeNum;
 
     /**
-     * @param string $ClusterId <p>Cluster ID.</p>
+     * @var integer 
+     */
+    public $MaxNodeNum;
+
+    /**
+     * @param integer $MinNodeNum 
+     * @param integer $MaxNodeNum 
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class TransferStoragePrepayToPostpayRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists("MinNodeNum",$param) and $param["MinNodeNum"] !== null) {
+            $this->MinNodeNum = $param["MinNodeNum"];
+        }
+
+        if (array_key_exists("MaxNodeNum",$param) and $param["MaxNodeNum"] !== null) {
+            $this->MaxNodeNum = $param["MaxNodeNum"];
         }
     }
 }

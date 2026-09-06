@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Tdmysql\V20211122\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TransferStoragePrepayToPostpay request structure.
+ * ResetDbaAdminPrivileges request structure.
  *
- * @method string getClusterId() Obtain <p>Cluster ID.</p>
- * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method string getInstanceId() Obtain <p>Instance id</p>
+ * @method void setInstanceId(string $InstanceId) Set <p>Instance id</p>
  */
-class TransferStoragePrepayToPostpayRequest extends AbstractModel
+class ResetDbaAdminPrivilegesRequest extends AbstractModel
 {
     /**
-     * @var string <p>Cluster ID.</p>
+     * @var string <p>Instance id</p>
      */
-    public $ClusterId;
+    public $InstanceId;
 
     /**
-     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param string $InstanceId <p>Instance id</p>
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class TransferStoragePrepayToPostpayRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

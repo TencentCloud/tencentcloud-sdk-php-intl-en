@@ -23,13 +23,16 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tdmysql\V20211122\Models as Models;
 
 /**
+ * @method Models\BreakStandbyDBInstanceRelationResponse BreakStandbyDBInstanceRelation(Models\BreakStandbyDBInstanceRelationRequest $req) This API is used to terminate the replication between the primary instance and the disaster recovery instance.
  * @method Models\CancelIsolateDBInstancesResponse CancelIsolateDBInstances(Models\CancelIsolateDBInstancesRequest $req) This API is used to lift isolation for instances in batch.
  * @method Models\CreateCloneInstanceResponse CreateCloneInstance(Models\CreateCloneInstanceRequest $req) This API is used to create clone instances.
  * @method Models\CreateDBInstancesResponse CreateDBInstances(Models\CreateDBInstancesRequest $req) This API is used to batch create instances.
  * @method Models\CreateDBSBackupResponse CreateDBSBackup(Models\CreateDBSBackupRequest $req) This API is used to create a manual backup of an instance.
+ * @method Models\CreateStandbyDBInstanceResponse CreateStandbyDBInstance(Models\CreateStandbyDBInstanceRequest $req) This API is used to create disaster recovery instances in batches.
  * @method Models\CreateUsersResponse CreateUsers(Models\CreateUsersRequest $req) This API is used to create users in batches.
  * @method Models\DeleteDBSBackupSetsResponse DeleteDBSBackupSets(Models\DeleteDBSBackupSetsRequest $req) This API is used to delete manual backups of instances.
  * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) This API is used to batch delete users.
+ * @method Models\DescribeDBCharsetsResponse DescribeDBCharsets(Models\DescribeDBCharsetsRequest $req) This API is used to query supported character sets.
  * @method Models\DescribeDBEnginesResponse DescribeDBEngines(Models\DescribeDBEnginesRequest $req) This API is used to obtain the DB engine version list.
  * @method Models\DescribeDBInstanceDetailResponse DescribeDBInstanceDetail(Models\DescribeDBInstanceDetailRequest $req) This API is used to query instance details.
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) This API is used to query instance list.
@@ -45,11 +48,14 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\DescribeDatabaseObjectsResponse DescribeDatabaseObjects(Models\DescribeDatabaseObjectsRequest $req) This API is used to query the object list in the database of a cloud database instance, including table, stored procedure, view and function.
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) This API is used to query the database list of a cloud database instance.
  * @method Models\DescribeFlowResponse DescribeFlow(Models\DescribeFlowRequest $req) This API is used to query the process status of an asynchronous task.
+ * @method Models\DescribeFlowTypesResponse DescribeFlowTypes(Models\DescribeFlowTypesRequest $req) This API is used to obtain all task types.
+ * @method Models\DescribeInstanceDataReservedSpaceResponse DescribeInstanceDataReservedSpace(Models\DescribeInstanceDataReservedSpaceRequest $req) This API is used to query the data retention space of an instance.
  * @method Models\DescribeInstanceSSLStatusResponse DescribeInstanceSSLStatus(Models\DescribeInstanceSSLStatusRequest $req) This API is used to query the SSL status of an instance.
  * @method Models\DescribeMaintenanceWindowResponse DescribeMaintenanceWindow(Models\DescribeMaintenanceWindowRequest $req) Query maintenance time window configurations
  * @method Models\DescribeSaleInfoResponse DescribeSaleInfo(Models\DescribeSaleInfoRequest $req) This API is used to query available regions.
  * @method Models\DescribeSlowLogsResponse DescribeSlowLogs(Models\DescribeSlowLogsRequest $req) This API is used to query slow logs.
- * @method Models\DescribeSpecsResponse DescribeSpecs(Models\DescribeSpecsRequest $req) This API is used to list available component specifications.
+ * @method Models\DescribeSpecsResponse DescribeSpecs(Models\DescribeSpecsRequest $req) This API is used to query sales specifications.
+ * @method Models\DescribeStandbyDBInstanceRelationDetailResponse DescribeStandbyDBInstanceRelationDetail(Models\DescribeStandbyDBInstanceRelationDetailRequest $req) This API is used to query disaster recovery connection relationships of an instance.
  * @method Models\DescribeUserPrivilegesResponse DescribeUserPrivileges(Models\DescribeUserPrivilegesRequest $req) This API is used to query user permissions.
  * @method Models\DescribeUsersResponse DescribeUsers(Models\DescribeUsersRequest $req) This API is used to query user list.
  * @method Models\DestroyInstancesResponse DestroyInstances(Models\DestroyInstancesRequest $req) This API is used to destroy instances in batch.
@@ -61,11 +67,13 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\ModifyDBParametersResponse ModifyDBParameters(Models\ModifyDBParametersRequest $req) This API is used to modify instance parameters.
  * @method Models\ModifyDBSBackupPolicyResponse ModifyDBSBackupPolicy(Models\ModifyDBSBackupPolicyRequest $req) This API is used to modify the instance backup strategy.
  * @method Models\ModifyDBSBackupSetCommentResponse ModifyDBSBackupSetComment(Models\ModifyDBSBackupSetCommentRequest $req) This API is used to modify backup notes of an instance.
+ * @method Models\ModifyInstanceDataReservedSpaceResponse ModifyInstanceDataReservedSpace(Models\ModifyInstanceDataReservedSpaceRequest $req) This API is used to modify the reserved space for instance data.
  * @method Models\ModifyInstanceNameResponse ModifyInstanceName(Models\ModifyInstanceNameRequest $req) This API is used to modify instance name.
  * @method Models\ModifyInstanceNetworkResponse ModifyInstanceNetwork(Models\ModifyInstanceNetworkRequest $req) This API is used to modify the network to which the instance belongs.
  * @method Models\ModifyInstanceSSLStatusResponse ModifyInstanceSSLStatus(Models\ModifyInstanceSSLStatusRequest $req) This API is used to enable or disable the SSL feature of an instance.
  * @method Models\ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(Models\ModifyMaintenanceWindowRequest $req) Add new or modify instance maintenance time window configurations
  * @method Models\ModifyUserPrivilegesResponse ModifyUserPrivileges(Models\ModifyUserPrivilegesRequest $req) This API is used to modify user permissions.
+ * @method Models\ResetDbaAdminPrivilegesResponse ResetDbaAdminPrivileges(Models\ResetDbaAdminPrivilegesRequest $req) Reset the permissions of the dbaadmin account.
  * @method Models\ResetUsersPasswordResponse ResetUsersPassword(Models\ResetUsersPasswordRequest $req) This API is used to batch reset user password.
  * @method Models\RestartDBInstancesResponse RestartDBInstances(Models\RestartDBInstancesRequest $req) This API is used to restart database instances.
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) This API is used to scale up a TDSQL Boundless instance, which can be a primary instance or a disaster recovery instance.

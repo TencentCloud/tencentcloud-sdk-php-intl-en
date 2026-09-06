@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Node specification for storage
  *
- * @method string getSpecCode() Obtain <p>Specification code</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSpecCode(string $SpecCode) Set <p>Specification code</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSpecCode() Obtain 
+ * @method void setSpecCode(string $SpecCode) Set 
  * @method integer getStorageNodeCpu() Obtain <p>CPU cores of the storage node</p>
  * @method void setStorageNodeCpu(integer $StorageNodeCpu) Set <p>CPU cores of the storage node</p>
  * @method integer getStorageNodeMem() Obtain <p>Storage node memory size</p>
@@ -36,14 +34,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setStorageNodeMinNum(integer $StorageNodeMinNum) Set <p>Minimum number of storage nodes</p>
  * @method integer getStorageNodeMinDisk() Obtain <p>Node disk size minimum</p>
  * @method void setStorageNodeMinDisk(integer $StorageNodeMinDisk) Set <p>Node disk size minimum</p>
- * @method string getStorageType() Obtain <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStorageType(string $StorageType) Set <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStorageNodeDefaultDisk() Obtain <p>Default disk size of storage node for frontend display</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStorageNodeDefaultDisk(integer $StorageNodeDefaultDisk) Set <p>Default disk size of storage node for frontend display</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStorageType() Obtain 
+ * @method void setStorageType(string $StorageType) Set 
+ * @method integer getStorageNodeDefaultDisk() Obtain 
+ * @method void setStorageNodeDefaultDisk(integer $StorageNodeDefaultDisk) Set 
  * @method array getInstanceMode() Obtain <p>Specification support billing mode list</p>
  * @method void setInstanceMode(array $InstanceMode) Set <p>Specification support billing mode list</p>
  * @method string getDiskTypeCategory() Obtain <p>Disk Type CLOUD_DISK: cloud disk LOCAL_DISK: local disk</p>
@@ -52,8 +46,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class StorageNodeSpec extends AbstractModel
 {
     /**
-     * @var string <p>Specification code</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $SpecCode;
 
@@ -88,14 +81,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $StorageNodeMinDisk;
 
     /**
-     * @var string <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $StorageType;
 
     /**
-     * @var integer <p>Default disk size of storage node for frontend display</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $StorageNodeDefaultDisk;
 
@@ -110,18 +101,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DiskTypeCategory;
 
     /**
-     * @param string $SpecCode <p>Specification code</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SpecCode 
      * @param integer $StorageNodeCpu <p>CPU cores of the storage node</p>
      * @param integer $StorageNodeMem <p>Storage node memory size</p>
      * @param integer $StorageNodeMaxNum <p>Maximum quantity of storage nodes</p>
      * @param integer $StorageNodeMaxDisk <p>Node disk size capacity limit</p>
      * @param integer $StorageNodeMinNum <p>Minimum number of storage nodes</p>
      * @param integer $StorageNodeMinDisk <p>Node disk size minimum</p>
-     * @param string $StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $StorageNodeDefaultDisk <p>Default disk size of storage node for frontend display</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $StorageType 
+     * @param integer $StorageNodeDefaultDisk 
      * @param array $InstanceMode <p>Specification support billing mode list</p>
      * @param string $DiskTypeCategory <p>Disk Type CLOUD_DISK: cloud disk LOCAL_DISK: local disk</p>
      */

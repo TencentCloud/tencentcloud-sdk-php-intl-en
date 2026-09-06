@@ -18,8 +18,10 @@ namespace TencentCloud\Tdmysql\V20211122\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateDBInstances request structure.
+ * CreateStandbyDBInstance request structure.
  *
+ * @method string getPrimaryInstanceId() Obtain <p>Primary instance id</p>
+ * @method void setPrimaryInstanceId(string $PrimaryInstanceId) Set <p>Primary instance id</p>
  * @method string getZone() Obtain <p>Creating an Instance Region</p>
  * @method void setZone(string $Zone) Set <p>Creating an Instance Region</p>
  * @method string getVpcId() Obtain <p>Character type vpcid</p>
@@ -34,20 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageNodeNum(integer $StorageNodeNum) Set <p>Number of storage nodes</p>
  * @method integer getReplications() Obtain <p>Number of node replicas for storage, up to 5, must be an odd number</p>
  * @method void setReplications(integer $Replications) Set <p>Number of node replicas for storage, up to 5, must be an odd number</p>
- * @method integer getInstanceCount() Obtain <p>Instance count. Maximum is 10.</p>
- * @method void setInstanceCount(integer $InstanceCount) Set <p>Instance count. Maximum is 10.</p>
  * @method integer getFullReplications() Obtain <p>Number of replicas</p>
  * @method void setFullReplications(integer $FullReplications) Set <p>Number of replicas</p>
- * @method string getCreateVersion() Obtain <p>Create an instance version, using the current latest version by default</p>
- * @method void setCreateVersion(string $CreateVersion) Set <p>Create an instance version, using the current latest version by default</p>
  * @method string getInstanceName() Obtain <p>Instance name. The required length is 1-60. It can contain Chinese characters, English case, digits, hyphens (-), and underscores (_).</p>
  * @method void setInstanceName(string $InstanceName) Set <p>Instance name. The required length is 1-60. It can contain Chinese characters, English case, digits, hyphens (-), and underscores (_).</p>
- * @method array getResourceTags() Obtain <p>Tag key-value pair array</p>
- * @method void setResourceTags(array $ResourceTags) Set <p>Tag key-value pair array</p>
- * @method array getInitParams() Obtain <p>Initialize instance parameters. For example:<br>character_set_server (character set, defaults to utf8),<br>lower_case_table_names (table name case sensitivity, 0 - sensitive; 1 - insensitive, default is 0)</p>
- * @method void setInitParams(array $InitParams) Set <p>Initialize instance parameters. For example:<br>character_set_server (character set, defaults to utf8),<br>lower_case_table_names (table name case sensitivity, 0 - sensitive; 1 - insensitive, default is 0)</p>
- * @method string getTimeUnit() Obtain <p>Time unit, m: month</p>
- * @method void setTimeUnit(string $TimeUnit) Set <p>Time unit, m: month</p>
+ * @method string getTimeUnit() Obtain <p>Time unit. y: year, m: month, d: day</p>
+ * @method void setTimeUnit(string $TimeUnit) Set <p>Time unit. y: year, m: month, d: day</p>
  * @method integer getTimeSpan() Obtain <p>Commodity duration size</p>
  * @method void setTimeSpan(integer $TimeSpan) Set <p>Commodity duration size</p>
  * @method integer getStorageNodeCpu() Obtain <p>CPU cores of the storage node</p>
@@ -56,8 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageNodeMem(integer $StorageNodeMem) Set <p>Storage node memory size</p>
  * @method string getPayMode() Obtain <p>Payment mode. 0 means pay-as-you-go/postpaid, 1 means prepaid.</p>
  * @method void setPayMode(string $PayMode) Set <p>Payment mode. 0 means pay-as-you-go/postpaid, 1 means prepaid.</p>
- * @method integer getMCNum() Obtain <p>Number of control nodes</p>
- * @method void setMCNum(integer $MCNum) Set <p>Number of control nodes</p>
  * @method integer getVport() Obtain <p>Custom port</p>
  * @method void setVport(integer $Vport) Set <p>Custom port</p>
  * @method array getZones() Obtain <p>Multi-AZ availability zone list</p>
@@ -66,33 +58,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(boolean $AutoVoucher) Set <p>Whether to use a coupon.</p>
  * @method array getVoucherIds() Obtain <p>Coupon list</p>
  * @method void setVoucherIds(array $VoucherIds) Set <p>Coupon list</p>
- * @method string getInstanceType() Obtain <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
- * @method void setInstanceType(string $InstanceType) Set <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
+ * @method string getInstanceType() Obtain <p>Instance Architecture Type. "hybrid" is supported since v19.0.0</p>
+ * @method void setInstanceType(string $InstanceType) Set <p>Instance Architecture Type. "hybrid" is supported since v19.0.0</p>
  * @method string getStorageType() Obtain <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
  * @method void setStorageType(string $StorageType) Set <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
- * @method integer getAZMode() Obtain <p>AZ mode. 1: Single AZ, 2: Multi-AZ non-primary AZ, 3: Multi-AZ primary AZ</p>
- * @method void setAZMode(integer $AZMode) Set <p>AZ mode. 1: Single AZ, 2: Multi-AZ non-primary AZ, 3: Multi-AZ primary AZ</p>
- * @method string getInstanceMode() Obtain <p>Instance mode</p>
- * @method void setInstanceMode(string $InstanceMode) Set <p>Instance mode</p>
- * @method string getTemplateId() Obtain <p>Parameter template id</p>
- * @method void setTemplateId(string $TemplateId) Set <p>Parameter template id</p>
- * @method string getSQLMode() Obtain <p>Compatible mode, enum:MySQL,HBase</p>
- * @method void setSQLMode(string $SQLMode) Set <p>Compatible mode, enum:MySQL,HBase</p>
- * @method AutoScalingConfig getAutoScaleConfig() Obtain 
- * @method void setAutoScaleConfig(AutoScalingConfig $AutoScaleConfig) Set 
- * @method array getSecurityGroupIds() Obtain <p>Security group binding list</p>
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>Security group binding list</p>
- * @method string getUserName() Obtain <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
- * @method void setUserName(string $UserName) Set <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
+ * @method array getResourceTags() Obtain <p>Tag key-value pair array</p>
+ * @method void setResourceTags(array $ResourceTags) Set <p>Tag key-value pair array</p>
+ * @method string getPrimaryInstanceRegion() Obtain <p>Region of the primary instance</p>
+ * @method void setPrimaryInstanceRegion(string $PrimaryInstanceRegion) Set <p>Region of the primary instance</p>
+ * @method string getInstanceMode() Obtain <p>Instance mode, normal: standard type; enhanced: enhanced</p>
+ * @method void setInstanceMode(string $InstanceMode) Set <p>Instance mode, normal: standard type; enhanced: enhanced</p>
  * @method string getPassword() Obtain <p>dbaadmin password</p>
  * @method void setPassword(string $Password) Set <p>dbaadmin password</p>
- * @method integer getEncryptionEnable() Obtain <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
- * @method void setEncryptionEnable(integer $EncryptionEnable) Set <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
- * @method array getAutoScaleConfigs() Obtain 
- * @method void setAutoScaleConfigs(array $AutoScaleConfigs) Set 
+ * @method array getSecurityGroupIds() Obtain <p>Bind the security group id list</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set <p>Bind the security group id list</p>
  */
-class CreateDBInstancesRequest extends AbstractModel
+class CreateStandbyDBInstanceRequest extends AbstractModel
 {
+    /**
+     * @var string <p>Primary instance id</p>
+     */
+    public $PrimaryInstanceId;
+
     /**
      * @var string <p>Creating an Instance Region</p>
      */
@@ -129,19 +116,9 @@ class CreateDBInstancesRequest extends AbstractModel
     public $Replications;
 
     /**
-     * @var integer <p>Instance count. Maximum is 10.</p>
-     */
-    public $InstanceCount;
-
-    /**
      * @var integer <p>Number of replicas</p>
      */
     public $FullReplications;
-
-    /**
-     * @var string <p>Create an instance version, using the current latest version by default</p>
-     */
-    public $CreateVersion;
 
     /**
      * @var string <p>Instance name. The required length is 1-60. It can contain Chinese characters, English case, digits, hyphens (-), and underscores (_).</p>
@@ -149,17 +126,7 @@ class CreateDBInstancesRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var array <p>Tag key-value pair array</p>
-     */
-    public $ResourceTags;
-
-    /**
-     * @var array <p>Initialize instance parameters. For example:<br>character_set_server (character set, defaults to utf8),<br>lower_case_table_names (table name case sensitivity, 0 - sensitive; 1 - insensitive, default is 0)</p>
-     */
-    public $InitParams;
-
-    /**
-     * @var string <p>Time unit, m: month</p>
+     * @var string <p>Time unit. y: year, m: month, d: day</p>
      */
     public $TimeUnit;
 
@@ -184,11 +151,6 @@ class CreateDBInstancesRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var integer <p>Number of control nodes</p>
-     */
-    public $MCNum;
-
-    /**
      * @var integer <p>Custom port</p>
      */
     public $Vport;
@@ -209,7 +171,7 @@ class CreateDBInstancesRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @var string <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
+     * @var string <p>Instance Architecture Type. "hybrid" is supported since v19.0.0</p>
      */
     public $InstanceType;
 
@@ -219,39 +181,19 @@ class CreateDBInstancesRequest extends AbstractModel
     public $StorageType;
 
     /**
-     * @var integer <p>AZ mode. 1: Single AZ, 2: Multi-AZ non-primary AZ, 3: Multi-AZ primary AZ</p>
+     * @var array <p>Tag key-value pair array</p>
      */
-    public $AZMode;
+    public $ResourceTags;
 
     /**
-     * @var string <p>Instance mode</p>
+     * @var string <p>Region of the primary instance</p>
+     */
+    public $PrimaryInstanceRegion;
+
+    /**
+     * @var string <p>Instance mode, normal: standard type; enhanced: enhanced</p>
      */
     public $InstanceMode;
-
-    /**
-     * @var string <p>Parameter template id</p>
-     */
-    public $TemplateId;
-
-    /**
-     * @var string <p>Compatible mode, enum:MySQL,HBase</p>
-     */
-    public $SQLMode;
-
-    /**
-     * @var AutoScalingConfig 
-     */
-    public $AutoScaleConfig;
-
-    /**
-     * @var array <p>Security group binding list</p>
-     */
-    public $SecurityGroupIds;
-
-    /**
-     * @var string <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
-     */
-    public $UserName;
 
     /**
      * @var string <p>dbaadmin password</p>
@@ -259,16 +201,12 @@ class CreateDBInstancesRequest extends AbstractModel
     public $Password;
 
     /**
-     * @var integer <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
+     * @var array <p>Bind the security group id list</p>
      */
-    public $EncryptionEnable;
+    public $SecurityGroupIds;
 
     /**
-     * @var array 
-     */
-    public $AutoScaleConfigs;
-
-    /**
+     * @param string $PrimaryInstanceId <p>Primary instance id</p>
      * @param string $Zone <p>Creating an Instance Region</p>
      * @param string $VpcId <p>Character type vpcid</p>
      * @param string $SubnetId <p>Character type subnetid</p>
@@ -276,34 +214,24 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param integer $Disk <p>Node disk capacity (unit: GB)</p>
      * @param integer $StorageNodeNum <p>Number of storage nodes</p>
      * @param integer $Replications <p>Number of node replicas for storage, up to 5, must be an odd number</p>
-     * @param integer $InstanceCount <p>Instance count. Maximum is 10.</p>
      * @param integer $FullReplications <p>Number of replicas</p>
-     * @param string $CreateVersion <p>Create an instance version, using the current latest version by default</p>
      * @param string $InstanceName <p>Instance name. The required length is 1-60. It can contain Chinese characters, English case, digits, hyphens (-), and underscores (_).</p>
-     * @param array $ResourceTags <p>Tag key-value pair array</p>
-     * @param array $InitParams <p>Initialize instance parameters. For example:<br>character_set_server (character set, defaults to utf8),<br>lower_case_table_names (table name case sensitivity, 0 - sensitive; 1 - insensitive, default is 0)</p>
-     * @param string $TimeUnit <p>Time unit, m: month</p>
+     * @param string $TimeUnit <p>Time unit. y: year, m: month, d: day</p>
      * @param integer $TimeSpan <p>Commodity duration size</p>
      * @param integer $StorageNodeCpu <p>CPU cores of the storage node</p>
      * @param integer $StorageNodeMem <p>Storage node memory size</p>
      * @param string $PayMode <p>Payment mode. 0 means pay-as-you-go/postpaid, 1 means prepaid.</p>
-     * @param integer $MCNum <p>Number of control nodes</p>
      * @param integer $Vport <p>Custom port</p>
      * @param array $Zones <p>Multi-AZ availability zone list</p>
      * @param boolean $AutoVoucher <p>Whether to use a coupon.</p>
      * @param array $VoucherIds <p>Coupon list</p>
-     * @param string $InstanceType <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
+     * @param string $InstanceType <p>Instance Architecture Type. "hybrid" is supported since v19.0.0</p>
      * @param string $StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-     * @param integer $AZMode <p>AZ mode. 1: Single AZ, 2: Multi-AZ non-primary AZ, 3: Multi-AZ primary AZ</p>
-     * @param string $InstanceMode <p>Instance mode</p>
-     * @param string $TemplateId <p>Parameter template id</p>
-     * @param string $SQLMode <p>Compatible mode, enum:MySQL,HBase</p>
-     * @param AutoScalingConfig $AutoScaleConfig 
-     * @param array $SecurityGroupIds <p>Security group binding list</p>
-     * @param string $UserName <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
+     * @param array $ResourceTags <p>Tag key-value pair array</p>
+     * @param string $PrimaryInstanceRegion <p>Region of the primary instance</p>
+     * @param string $InstanceMode <p>Instance mode, normal: standard type; enhanced: enhanced</p>
      * @param string $Password <p>dbaadmin password</p>
-     * @param integer $EncryptionEnable <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
-     * @param array $AutoScaleConfigs 
+     * @param array $SecurityGroupIds <p>Bind the security group id list</p>
      */
     function __construct()
     {
@@ -318,6 +246,10 @@ class CreateDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("PrimaryInstanceId",$param) and $param["PrimaryInstanceId"] !== null) {
+            $this->PrimaryInstanceId = $param["PrimaryInstanceId"];
+        }
+
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
         }
@@ -346,38 +278,12 @@ class CreateDBInstancesRequest extends AbstractModel
             $this->Replications = $param["Replications"];
         }
 
-        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
-            $this->InstanceCount = $param["InstanceCount"];
-        }
-
         if (array_key_exists("FullReplications",$param) and $param["FullReplications"] !== null) {
             $this->FullReplications = $param["FullReplications"];
         }
 
-        if (array_key_exists("CreateVersion",$param) and $param["CreateVersion"] !== null) {
-            $this->CreateVersion = $param["CreateVersion"];
-        }
-
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
-        }
-
-        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
-            $this->ResourceTags = [];
-            foreach ($param["ResourceTags"] as $key => $value){
-                $obj = new ResourceTag();
-                $obj->deserialize($value);
-                array_push($this->ResourceTags, $obj);
-            }
-        }
-
-        if (array_key_exists("InitParams",$param) and $param["InitParams"] !== null) {
-            $this->InitParams = [];
-            foreach ($param["InitParams"] as $key => $value){
-                $obj = new InstanceParam();
-                $obj->deserialize($value);
-                array_push($this->InitParams, $obj);
-            }
         }
 
         if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
@@ -398,10 +304,6 @@ class CreateDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
-        }
-
-        if (array_key_exists("MCNum",$param) and $param["MCNum"] !== null) {
-            $this->MCNum = $param["MCNum"];
         }
 
         if (array_key_exists("Vport",$param) and $param["Vport"] !== null) {
@@ -428,50 +330,29 @@ class CreateDBInstancesRequest extends AbstractModel
             $this->StorageType = $param["StorageType"];
         }
 
-        if (array_key_exists("AZMode",$param) and $param["AZMode"] !== null) {
-            $this->AZMode = $param["AZMode"];
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
+        }
+
+        if (array_key_exists("PrimaryInstanceRegion",$param) and $param["PrimaryInstanceRegion"] !== null) {
+            $this->PrimaryInstanceRegion = $param["PrimaryInstanceRegion"];
         }
 
         if (array_key_exists("InstanceMode",$param) and $param["InstanceMode"] !== null) {
             $this->InstanceMode = $param["InstanceMode"];
         }
 
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
-        }
-
-        if (array_key_exists("SQLMode",$param) and $param["SQLMode"] !== null) {
-            $this->SQLMode = $param["SQLMode"];
-        }
-
-        if (array_key_exists("AutoScaleConfig",$param) and $param["AutoScaleConfig"] !== null) {
-            $this->AutoScaleConfig = new AutoScalingConfig();
-            $this->AutoScaleConfig->deserialize($param["AutoScaleConfig"]);
-        }
-
-        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
-            $this->SecurityGroupIds = $param["SecurityGroupIds"];
-        }
-
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
-        }
-
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
         }
 
-        if (array_key_exists("EncryptionEnable",$param) and $param["EncryptionEnable"] !== null) {
-            $this->EncryptionEnable = $param["EncryptionEnable"];
-        }
-
-        if (array_key_exists("AutoScaleConfigs",$param) and $param["AutoScaleConfigs"] !== null) {
-            $this->AutoScaleConfigs = [];
-            foreach ($param["AutoScaleConfigs"] as $key => $value){
-                $obj = new AutoScalingConfig();
-                $obj->deserialize($value);
-                array_push($this->AutoScaleConfigs, $obj);
-            }
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

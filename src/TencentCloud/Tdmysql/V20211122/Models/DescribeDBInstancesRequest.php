@@ -26,8 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set <p>Maximum return count, defaults to 20, maximum 100</p>
  * @method integer getOffset() Obtain <p>Offset, which is an integer multiple of Limit.</p>
  * @method void setOffset(integer $Offset) Set <p>Offset, which is an integer multiple of Limit.</p>
- * @method string getEngineType() Obtain <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
- * @method void setEngineType(string $EngineType) Set <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+ * @method string getEngineType() Obtain <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
+ * @method void setEngineType(string $EngineType) Set <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
+ * @method string getOrderBy() Obtain 
+ * @method void setOrderBy(string $OrderBy) Set 
+ * @method string getOrderDirection() Obtain 
+ * @method void setOrderDirection(string $OrderDirection) Set 
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -47,15 +51,27 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+     * @var string <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
      */
     public $EngineType;
+
+    /**
+     * @var string 
+     */
+    public $OrderBy;
+
+    /**
+     * @var string 
+     */
+    public $OrderDirection;
 
     /**
      * @param array $Filters <p>Filter parameters</p>
      * @param integer $Limit <p>Maximum return count, defaults to 20, maximum 100</p>
      * @param integer $Offset <p>Offset, which is an integer multiple of Limit.</p>
-     * @param string $EngineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+     * @param string $EngineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
+     * @param string $OrderBy 
+     * @param string $OrderDirection 
      */
     function __construct()
     {
@@ -89,6 +105,14 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
             $this->EngineType = $param["EngineType"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
+            $this->OrderDirection = $param["OrderDirection"];
         }
     }
 }

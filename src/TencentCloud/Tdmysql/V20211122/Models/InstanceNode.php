@@ -20,322 +20,218 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Node information
  *
- * @method integer getID() Obtain Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setID(integer $ID) Set Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getID() Obtain 
+ * @method void setID(integer $ID) Set 
+ * @method string getInstanceId() Obtain 
+ * @method void setInstanceId(string $InstanceId) Set 
  * @method string getNodeId() Obtain Node Id
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNodeId(string $NodeId) Set Node Id
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIp() Obtain Instance Ip
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIp(string $Ip) Set Instance Ip
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEniIp() Obtain Eni IP of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEniIp(string $EniIp) Set Eni IP of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getPort() Obtain Instance Port
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPort(integer $Port) Set Instance Port
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSpecCode() Obtain Instance SpecCode
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSpecCode(string $SpecCode) Set Instance SpecCode
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getNodeName() Obtain Instance NodeName
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setNodeName(string $NodeName) Set Instance NodeName
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCpu() Obtain Instance Cpu
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCpu(integer $Cpu) Set Instance Cpu
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getMem() Obtain Instance memory
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMem(integer $Mem) Set Instance memory
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDisk() Obtain Instance Disk
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDisk(integer $Disk) Set Instance Disk
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getType() Obtain Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setType(string $Type) Set Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain Instance status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Instance status
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVersion() Obtain instance version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVersion(string $Version) Set instance version
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getZone() Obtain Region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZone(string $Zone) Set Region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getLocalDNS() Obtain Instance LocalDNS
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLocalDNS(string $LocalDNS) Set Instance LocalDNS
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRegion() Obtain Instance Region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Instance Region
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getLogDisk() Obtain Instance log disk
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLogDisk(integer $LogDisk) Set Instance log disk
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDataDisk() Obtain Instance data disk
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataDisk(integer $DataDisk) Set Instance data disk
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getZoneID() Obtain Zone ID of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setZoneID(string $ZoneID) Set Zone ID of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSpecName() Obtain Instance SpecName
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSpecName(string $SpecName) Set Instance SpecName
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getReplicas() Obtain Instance Replicas
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReplicas(integer $Replicas) Set Instance Replicas
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getShards() Obtain Instance Shards
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setShards(integer $Shards) Set Instance Shards
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getDataReplicas() Obtain Instance data replica
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDataReplicas(integer $DataReplicas) Set Instance data replica
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getParams() Obtain Initialize parameter
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setParams(string $Params) Set Initialize parameter
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStorageType() Obtain Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStorageType(string $StorageType) Set Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIp() Obtain 
+ * @method void setIp(string $Ip) Set 
+ * @method string getEniIp() Obtain 
+ * @method void setEniIp(string $EniIp) Set 
+ * @method integer getPort() Obtain 
+ * @method void setPort(integer $Port) Set 
+ * @method string getSpecCode() Obtain 
+ * @method void setSpecCode(string $SpecCode) Set 
+ * @method string getNodeName() Obtain 
+ * @method void setNodeName(string $NodeName) Set 
+ * @method integer getCpu() Obtain 
+ * @method void setCpu(integer $Cpu) Set 
+ * @method integer getMem() Obtain 
+ * @method void setMem(integer $Mem) Set 
+ * @method integer getDisk() Obtain 
+ * @method void setDisk(integer $Disk) Set 
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method string getStatus() Obtain 
+ * @method void setStatus(string $Status) Set 
+ * @method string getVersion() Obtain 
+ * @method void setVersion(string $Version) Set 
+ * @method string getZone() Obtain 
+ * @method void setZone(string $Zone) Set 
+ * @method string getLocalDNS() Obtain 
+ * @method void setLocalDNS(string $LocalDNS) Set 
+ * @method string getRegion() Obtain 
+ * @method void setRegion(string $Region) Set 
+ * @method integer getLogDisk() Obtain 
+ * @method void setLogDisk(integer $LogDisk) Set 
+ * @method integer getDataDisk() Obtain 
+ * @method void setDataDisk(integer $DataDisk) Set 
+ * @method string getZoneID() Obtain 
+ * @method void setZoneID(string $ZoneID) Set 
+ * @method string getSpecName() Obtain 
+ * @method void setSpecName(string $SpecName) Set 
+ * @method integer getReplicas() Obtain 
+ * @method void setReplicas(integer $Replicas) Set 
+ * @method integer getShards() Obtain 
+ * @method void setShards(integer $Shards) Set 
+ * @method integer getDataReplicas() Obtain 
+ * @method void setDataReplicas(integer $DataReplicas) Set 
+ * @method string getParams() Obtain 
+ * @method void setParams(string $Params) Set 
+ * @method string getStorageType() Obtain 
+ * @method void setStorageType(string $StorageType) Set 
  */
 class InstanceNode extends AbstractModel
 {
     /**
-     * @var integer Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $ID;
 
     /**
-     * @var string Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $InstanceId;
 
     /**
      * @var string Node Id
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NodeId;
 
     /**
-     * @var string Instance Ip
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Ip;
 
     /**
-     * @var string Eni IP of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $EniIp;
 
     /**
-     * @var integer Instance Port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Port;
 
     /**
-     * @var string Instance SpecCode
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $SpecCode;
 
     /**
-     * @var string Instance NodeName
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $NodeName;
 
     /**
-     * @var integer Instance Cpu
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Cpu;
 
     /**
-     * @var integer Instance memory
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Mem;
 
     /**
-     * @var integer Instance Disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Disk;
 
     /**
-     * @var string Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var string Instance status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Status;
 
     /**
-     * @var string instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Version;
 
     /**
-     * @var string Region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Zone;
 
     /**
-     * @var string Instance LocalDNS
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $LocalDNS;
 
     /**
-     * @var string Instance Region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Region;
 
     /**
-     * @var integer Instance log disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $LogDisk;
 
     /**
-     * @var integer Instance data disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $DataDisk;
 
     /**
-     * @var string Zone ID of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $ZoneID;
 
     /**
-     * @var string Instance SpecName
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $SpecName;
 
     /**
-     * @var integer Instance Replicas
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Replicas;
 
     /**
-     * @var integer Instance Shards
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $Shards;
 
     /**
-     * @var integer Instance data replica
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer 
      */
     public $DataReplicas;
 
     /**
-     * @var string Initialize parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $Params;
 
     /**
-     * @var string Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
      */
     public $StorageType;
 
     /**
-     * @param integer $ID Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ID 
+     * @param string $InstanceId 
      * @param string $NodeId Node Id
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Ip Instance Ip
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EniIp Eni IP of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Port Instance Port
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SpecCode Instance SpecCode
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $NodeName Instance NodeName
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Cpu Instance Cpu
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Mem Instance memory
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Disk Instance Disk
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Type Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status Instance status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Version instance version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Zone Region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $LocalDNS Instance LocalDNS
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Region Instance Region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $LogDisk Instance log disk
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DataDisk Instance data disk
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ZoneID Zone ID of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SpecName Instance SpecName
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Replicas Instance Replicas
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Shards Instance Shards
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $DataReplicas Instance data replica
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Params Initialize parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StorageType Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Ip 
+     * @param string $EniIp 
+     * @param integer $Port 
+     * @param string $SpecCode 
+     * @param string $NodeName 
+     * @param integer $Cpu 
+     * @param integer $Mem 
+     * @param integer $Disk 
+     * @param string $Type 
+     * @param string $Status 
+     * @param string $Version 
+     * @param string $Zone 
+     * @param string $LocalDNS 
+     * @param string $Region 
+     * @param integer $LogDisk 
+     * @param integer $DataDisk 
+     * @param string $ZoneID 
+     * @param string $SpecName 
+     * @param integer $Replicas 
+     * @param integer $Shards 
+     * @param integer $DataReplicas 
+     * @param string $Params 
+     * @param string $StorageType 
      */
     function __construct()
     {

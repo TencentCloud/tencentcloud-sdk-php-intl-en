@@ -18,36 +18,36 @@ namespace TencentCloud\Tdmysql\V20211122\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ccu range of a serverless instance
+ * 
  *
- * @method float getRangeMin() Obtain <p>Minimum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRangeMin(float $RangeMin) Set <p>Minimum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getRangeMax() Obtain <p>Maximum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRangeMax(float $RangeMax) Set <p>Maximum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getRangeMin() Obtain 
+ * @method void setRangeMin(float $RangeMin) Set 
+ * @method float getRangeMax() Obtain 
+ * @method void setRangeMax(float $RangeMax) Set 
+ * @method string getResourceType() Obtain 
+ * @method void setResourceType(string $ResourceType) Set 
  */
 class AutoScalingConfig extends AbstractModel
 {
     /**
-     * @var float <p>Minimum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $RangeMin;
 
     /**
-     * @var float <p>Maximum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float 
      */
     public $RangeMax;
 
     /**
-     * @param float $RangeMin <p>Minimum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $RangeMax <p>Maximum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string 
+     */
+    public $ResourceType;
+
+    /**
+     * @param float $RangeMin 
+     * @param float $RangeMax 
+     * @param string $ResourceType 
      */
     function __construct()
     {
@@ -68,6 +68,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RangeMax",$param) and $param["RangeMax"] !== null) {
             $this->RangeMax = $param["RangeMax"];
+        }
+
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
         }
     }
 }
