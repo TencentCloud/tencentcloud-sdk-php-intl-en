@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Tag information, which is used to return the tag of the associated instance
  *
- * @method string getTagKey() Obtain Tag key
- * @method void setTagKey(string $TagKey) Set Tag key
- * @method string getTagValue() Obtain Tag value
- * @method void setTagValue(string $TagValue) Set Tag value
+ * @method string getTagKey() Obtain Tag key.
+ * @method void setTagKey(string $TagKey) Set Tag key.
+ * @method string getTagValue() Obtain Tag value.
+ * @method void setTagValue(string $TagValue) Set Tag value.
  */
 class TagInfo extends AbstractModel
 {
     /**
-     * @var string Tag key
+     * @var string Tag key.
      */
     public $TagKey;
 
     /**
-     * @var string Tag value
+     * @var string Tag value.
      */
     public $TagValue;
 
     /**
-     * @param string $TagKey Tag key
-     * @param string $TagValue Tag value
+     * @param string $TagKey Tag key.
+     * @param string $TagValue Tag value.
      */
     function __construct()
     {

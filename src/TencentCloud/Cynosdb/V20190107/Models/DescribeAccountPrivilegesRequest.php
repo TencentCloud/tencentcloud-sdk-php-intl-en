@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountName(string $AccountName) Set Account name
  * @method string getHost() Obtain Host
  * @method void setHost(string $Host) Set Host
- * @method string getDb() Obtain When the database name is “*”, the value specified in `Type` and `TableName` will be ignored, indicating that the user's global permissions are being modified.
- * @method void setDb(string $Db) Set When the database name is “*”, the value specified in `Type` and `TableName` will be ignored, indicating that the user's global permissions are being modified.
- * @method string getType() Obtain Object type in a specified database. Valid values: `table`, `*`.
- * @method void setType(string $Type) Set Object type in a specified database. Valid values: `table`, `*`.
- * @method string getTableName() Obtain The database name can be specified when `Type` is 'table'.
- * @method void setTableName(string $TableName) Set The database name can be specified when `Type` is 'table'.
+ * @method string getDb() Obtain Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`.
+ * @method void setDb(string $Db) Set Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`.
+ * @method string getType() Obtain Specific object types under the designated database. Options: "table", "*". Defaults to * if not specified. TableName must be specified when Type is table.
+ * @method void setType(string $Type) Set Specific object types under the designated database. Options: "table", "*". Defaults to * if not specified. TableName must be specified when Type is table.
+ * @method string getTableName() Obtain When Type is "table", it is used to specify the table name. Required when Type is "table".
+ * @method void setTableName(string $TableName) Set When Type is "table", it is used to specify the table name. Required when Type is "table".
  */
 class DescribeAccountPrivilegesRequest extends AbstractModel
 {
@@ -51,17 +51,17 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
     public $Host;
 
     /**
-     * @var string When the database name is “*”, the value specified in `Type` and `TableName` will be ignored, indicating that the user's global permissions are being modified.
+     * @var string Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`.
      */
     public $Db;
 
     /**
-     * @var string Object type in a specified database. Valid values: `table`, `*`.
+     * @var string Specific object types under the designated database. Options: "table", "*". Defaults to * if not specified. TableName must be specified when Type is table.
      */
     public $Type;
 
     /**
-     * @var string The database name can be specified when `Type` is 'table'.
+     * @var string When Type is "table", it is used to specify the table name. Required when Type is "table".
      */
     public $TableName;
 
@@ -69,9 +69,9 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
      * @param string $ClusterId Cluster ID
      * @param string $AccountName Account name
      * @param string $Host Host
-     * @param string $Db When the database name is “*”, the value specified in `Type` and `TableName` will be ignored, indicating that the user's global permissions are being modified.
-     * @param string $Type Object type in a specified database. Valid values: `table`, `*`.
-     * @param string $TableName The database name can be specified when `Type` is 'table'.
+     * @param string $Db Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`.
+     * @param string $Type Specific object types under the designated database. Options: "table", "*". Defaults to * if not specified. TableName must be specified when Type is table.
+     * @param string $TableName When Type is "table", it is used to specify the table name. Required when Type is "table".
      */
     function __construct()
     {

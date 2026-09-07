@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadOnlyCount(integer $ReadOnlyCount) Set <p>Number of newly-added read-only instances, value range (0,15]</p>
  * @method string getDeviceType() Obtain <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
  * @method void setDeviceType(string $DeviceType) Set <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
- * @method string getInstanceGrpId() Obtain <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
- * @method void setInstanceGrpId(string $InstanceGrpId) Set <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+ * @method string getInstanceGrpId() Obtain <p>This field has been deprecated. The current version no longer transmits this value.</p>
+ * @method void setInstanceGrpId(string $InstanceGrpId) Set <p>This field has been deprecated. The current version no longer transmits this value.</p>
  * @method string getVpcId() Obtain <p>ID of the associated VPC network.</p>
  * @method void setVpcId(string $VpcId) Set <p>ID of the associated VPC network.</p>
  * @method string getSubnetId() Obtain <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
@@ -85,7 +85,7 @@ class AddInstancesRequest extends AbstractModel
     public $DeviceType;
 
     /**
-     * @var string <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+     * @var string <p>This field has been deprecated. The current version no longer transmits this value.</p>
      * @deprecated
      */
     public $InstanceGrpId;
@@ -156,7 +156,7 @@ class AddInstancesRequest extends AbstractModel
      * @param integer $Memory <p>Memory in GB</p>
      * @param integer $ReadOnlyCount <p>Number of newly-added read-only instances, value range (0,15]</p>
      * @param string $DeviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
-     * @param string $InstanceGrpId <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+     * @param string $InstanceGrpId <p>This field has been deprecated. The current version no longer transmits this value.</p>
      * @param string $VpcId <p>ID of the associated VPC network.</p>
      * @param string $SubnetId <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
      * @param integer $Port <p>Port used when adding new RO groups, value range [0,65535)</p>

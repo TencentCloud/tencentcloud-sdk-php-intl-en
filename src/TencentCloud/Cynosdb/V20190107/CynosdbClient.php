@@ -95,6 +95,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeClusterParamsResponse DescribeClusterParams(Models\DescribeClusterParamsRequest $req) This API is used to query cluster parameters.
  * @method Models\DescribeClusterPasswordComplexityResponse DescribeClusterPasswordComplexity(Models\DescribeClusterPasswordComplexityRequest $req) This API is used to view the cluster password complexity details.
  * @method Models\DescribeClusterReadOnlyResponse DescribeClusterReadOnly(Models\DescribeClusterReadOnlyRequest $req) This API is used to query the cluster read-only switch.
+ * @method Models\DescribeClusterStorageAutoExpandResponse DescribeClusterStorageAutoExpand(Models\DescribeClusterStorageAutoExpandRequest $req) This API is used to query the automated storage expansion configuration.
  * @method Models\DescribeClusterTransparentEncryptInfoResponse DescribeClusterTransparentEncryptInfo(Models\DescribeClusterTransparentEncryptInfoRequest $req) This API is used to query cluster transparent encryption information.
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) This API is used to describe clusters.
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) This API is used to query instance security group information.
@@ -175,6 +176,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyClusterBinlogRedoLogAutoCopyVaultResponse ModifyClusterBinlogRedoLogAutoCopyVault(Models\ModifyClusterBinlogRedoLogAutoCopyVaultRequest $req) This API is used to modify cluster configuration to automatically copy Binlog and RedoLog to safe.
  * @method Models\ModifyClusterDatabaseResponse ModifyClusterDatabase(Models\ModifyClusterDatabaseRequest $req) This API is used to modify account authorization of a database.
  * @method Models\ModifyClusterGlobalEncryptionResponse ModifyClusterGlobalEncryption(Models\ModifyClusterGlobalEncryptionRequest $req) Enable global encryption
+ * @method Models\ModifyClusterLevelResponse ModifyClusterLevel(Models\ModifyClusterLevelRequest $req) Modify cluster
  * @method Models\ModifyClusterNameResponse ModifyClusterName(Models\ModifyClusterNameRequest $req) This API is used to modify cluster names.
  * @method Models\ModifyClusterParamResponse ModifyClusterParam(Models\ModifyClusterParamRequest $req) This API is used to modify cluster parameters.
  * @method Models\ModifyClusterPasswordComplexityResponse ModifyClusterPasswordComplexity(Models\ModifyClusterPasswordComplexityRequest $req) This API is used to modify or enable cluster password complexity.

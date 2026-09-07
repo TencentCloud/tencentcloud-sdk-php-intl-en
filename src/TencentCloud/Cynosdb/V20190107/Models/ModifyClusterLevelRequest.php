@@ -18,12 +18,14 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TransferClusterPrepayToPostpay request structure.
+ * ModifyClusterLevel request structure.
  *
  * @method string getClusterId() Obtain <p>Cluster ID.</p>
  * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method string getClusterLevel() Obtain <p>Cluster level</p>
+ * @method void setClusterLevel(string $ClusterLevel) Set <p>Cluster level</p>
  */
-class TransferClusterPrepayToPostpayRequest extends AbstractModel
+class ModifyClusterLevelRequest extends AbstractModel
 {
     /**
      * @var string <p>Cluster ID.</p>
@@ -31,7 +33,13 @@ class TransferClusterPrepayToPostpayRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var string <p>Cluster level</p>
+     */
+    public $ClusterLevel;
+
+    /**
      * @param string $ClusterId <p>Cluster ID.</p>
+     * @param string $ClusterLevel <p>Cluster level</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class TransferClusterPrepayToPostpayRequest extends AbstractModel
         }
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
         }
     }
 }

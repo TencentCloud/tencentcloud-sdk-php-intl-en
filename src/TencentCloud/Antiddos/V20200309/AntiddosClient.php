@@ -25,6 +25,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
 /**
  * @method Models\AssociateDDoSEipAddressResponse AssociateDDoSEipAddress(Models\AssociateDDoSEipAddressRequest $req) This API is used to bind an EIP to an Anti-DDoS Advanced instance or a specified private IP of an ENI.
  * @method Models\AssociateDDoSEipLoadBalancerResponse AssociateDDoSEipLoadBalancer(Models\AssociateDDoSEipLoadBalancerRequest $req) This API is used to bind an Anti-DDoS EIP to the specified private IP of a CLB instance.
+ * @method Models\CreateBgpInstanceResponse CreateBgpInstance(Models\CreateBgpInstanceRequest $req) This API is used to purchase Anti-DDoS packages.
  * @method Models\CreateBlackWhiteIpListResponse CreateBlackWhiteIpList(Models\CreateBlackWhiteIpListRequest $req) This API is used to add an Anti-DDoS IP blocklist/allowlist.
  * @method Models\CreateBoundIPResponse CreateBoundIP(Models\CreateBoundIPRequest $req) This API is used to bind an IP to an Anti-DDoS Pro instance Both single IP instances and multi-IP instances are available. Note that you should wait until the current binding or unbinding completes before using this async API for new operations.
  * @method Models\CreateCCPrecisionPolicyResponse CreateCCPrecisionPolicy(Models\CreateCCPrecisionPolicyRequest $req) This API is used to create a CC precise protection policy.

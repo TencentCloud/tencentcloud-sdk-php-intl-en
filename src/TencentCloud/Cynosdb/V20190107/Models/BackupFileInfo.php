@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapShotType(string $SnapShotType) Set <p>Snapshot type. Value range: full, full; increment, incremental</p>
  * @method string getBackupName() Obtain <p>Backup file remark</p>
  * @method void setBackupName(string $BackupName) Set <p>Backup file remark</p>
+ * @method array getExistRegions() Obtain <p>Region where backup files are located</p>
+ * @method void setExistRegions(array $ExistRegions) Set <p>Region where backup files are located</p>
  * @method string getCopyStatus() Obtain <p>Delivery status</p>
  * @method void setCopyStatus(string $CopyStatus) Set <p>Delivery status</p>
  * @method string getEncryptKeyId() Obtain <p>Key id</p>
@@ -118,6 +120,11 @@ class BackupFileInfo extends AbstractModel
     public $BackupName;
 
     /**
+     * @var array <p>Region where backup files are located</p>
+     */
+    public $ExistRegions;
+
+    /**
      * @var string <p>Delivery status</p>
      */
     public $CopyStatus;
@@ -155,6 +162,7 @@ class BackupFileInfo extends AbstractModel
      * @param integer $BackupId <p>Backup ID</p>
      * @param string $SnapShotType <p>Snapshot type. Value range: full, full; increment, incremental</p>
      * @param string $BackupName <p>Backup file remark</p>
+     * @param array $ExistRegions <p>Region where backup files are located</p>
      * @param string $CopyStatus <p>Delivery status</p>
      * @param string $EncryptKeyId <p>Key id</p>
      * @param string $EncryptRegion <p>Key region</p>
@@ -220,6 +228,15 @@ class BackupFileInfo extends AbstractModel
 
         if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
             $this->BackupName = $param["BackupName"];
+        }
+
+        if (array_key_exists("ExistRegions",$param) and $param["ExistRegions"] !== null) {
+            $this->ExistRegions = [];
+            foreach ($param["ExistRegions"] as $key => $value){
+                $obj = new BackupRegionAndIds();
+                $obj->deserialize($value);
+                array_push($this->ExistRegions, $obj);
+            }
         }
 
         if (array_key_exists("CopyStatus",$param) and $param["CopyStatus"] !== null) {

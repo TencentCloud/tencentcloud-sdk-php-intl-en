@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 CCU: compute resource package. DISK: storage resource package.
  * @method void setPackageType(string $PackageType) Set Specifies the resource package type.
 CCU: compute resource package. DISK: storage resource package.
+ * @method string getPackageVersion() Obtain Resource package edition
+base - basic, common - general, enterprise - business
+ * @method void setPackageVersion(string $PackageVersion) Set Resource package edition
+base - basic, common - general, enterprise - business
  * @method string getPackageRegion() Obtain Resource package region of use.
 China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
  * @method void setPackageRegion(string $PackageRegion) Set Resource package region of use.
@@ -85,6 +89,12 @@ class Package extends AbstractModel
 CCU: compute resource package. DISK: storage resource package.
      */
     public $PackageType;
+
+    /**
+     * @var string Resource package edition
+base - basic, common - general, enterprise - business
+     */
+    public $PackageVersion;
 
     /**
      * @var string Resource package region of use.
@@ -144,6 +154,8 @@ Specifies that the fee has been refunded.
      * @param string $PackageName Resource package name.
      * @param string $PackageType Specifies the resource package type.
 CCU: compute resource package. DISK: storage resource package.
+     * @param string $PackageVersion Resource package edition
+base - basic, common - general, enterprise - business
      * @param string $PackageRegion Resource package region of use.
 China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
      * @param string $Status Specifies the status of the resource package.
@@ -188,6 +200,10 @@ Specifies that the fee has been refunded.
 
         if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
             $this->PackageType = $param["PackageType"];
+        }
+
+        if (array_key_exists("PackageVersion",$param) and $param["PackageVersion"] !== null) {
+            $this->PackageVersion = $param["PackageVersion"];
         }
 
         if (array_key_exists("PackageRegion",$param) and $param["PackageRegion"] !== null) {

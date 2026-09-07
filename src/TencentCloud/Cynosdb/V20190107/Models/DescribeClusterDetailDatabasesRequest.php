@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterDetailDatabases request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method integer getOffset() Obtain Offset. Default value: `0`.
- * @method void setOffset(integer $Offset) Set Offset. Default value: `0`.
- * @method integer getLimit() Obtain Number of returned results. Default value: `20`. Maximum value: `100`.
- * @method void setLimit(integer $Limit) Set Number of returned results. Default value: `20`. Maximum value: `100`.
- * @method string getDbName() Obtain Database name
- * @method void setDbName(string $DbName) Set Database name
+ * @method string getClusterId() Obtain <p>Cluster ID.</p>
+ * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
+ * @method integer getOffset() Obtain <p>Offset. Default value: 0.</p>
+ * @method void setOffset(integer $Offset) Set <p>Offset. Default value: 0.</p>
+ * @method integer getLimit() Obtain <p>Number of returned results. Default: 20; maximum: 100</p>
+ * @method void setLimit(integer $Limit) Set <p>Number of returned results. Default: 20; maximum: 100</p>
+ * @method string getDbName() Obtain <p>Database name. Perform substring match by this field.</p>
+ * @method void setDbName(string $DbName) Set <p>Database name. Perform substring match by this field.</p>
  */
 class DescribeClusterDetailDatabasesRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string <p>Cluster ID.</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer Offset. Default value: `0`.
+     * @var integer <p>Offset. Default value: 0.</p>
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned results. Default value: `20`. Maximum value: `100`.
+     * @var integer <p>Number of returned results. Default: 20; maximum: 100</p>
      */
     public $Limit;
 
     /**
-     * @var string Database name
+     * @var string <p>Database name. Perform substring match by this field.</p>
      */
     public $DbName;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param integer $Offset Offset. Default value: `0`.
-     * @param integer $Limit Number of returned results. Default value: `20`. Maximum value: `100`.
-     * @param string $DbName Database name
+     * @param string $ClusterId <p>Cluster ID.</p>
+     * @param integer $Offset <p>Offset. Default value: 0.</p>
+     * @param integer $Limit <p>Number of returned results. Default: 20; maximum: 100</p>
+     * @param string $DbName <p>Database name. Perform substring match by this field.</p>
      */
     function __construct()
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TransferClusterPrepayToPostpay request structure.
+ * DescribeClusterStorageAutoExpand request structure.
  *
  * @method string getClusterId() Obtain <p>Cluster ID.</p>
  * @method void setClusterId(string $ClusterId) Set <p>Cluster ID.</p>
  */
-class TransferClusterPrepayToPostpayRequest extends AbstractModel
+class DescribeClusterStorageAutoExpandRequest extends AbstractModel
 {
     /**
      * @var string <p>Cluster ID.</p>

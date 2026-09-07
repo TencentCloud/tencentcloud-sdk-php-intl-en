@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncludeZoneStocks(boolean $IncludeZoneStocks) Set <p>Whether required to return AZ information</p>
  * @method string getDeviceType() Obtain <p>Instance machine type.</p>
  * @method void setDeviceType(string $DeviceType) Set <p>Instance machine type.</p>
- * @method string getClusterLevel() Obtain <p>Cluster level, optional. For example P0, P1</p>
- * @method void setClusterLevel(string $ClusterLevel) Set <p>Cluster level, optional. For example P0, P1</p>
+ * @method string getClusterLevel() Obtain <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
+ * @method void setClusterLevel(string $ClusterLevel) Set <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
  */
 class DescribeInstanceSpecsRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeInstanceSpecsRequest extends AbstractModel
     public $DeviceType;
 
     /**
-     * @var string <p>Cluster level, optional. For example P0, P1</p>
+     * @var string <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
      */
     public $ClusterLevel;
 
@@ -55,7 +55,7 @@ class DescribeInstanceSpecsRequest extends AbstractModel
      * @param string $DbType <p>Database type, value ranges from...to... </p><li> MYSQL </li>
      * @param boolean $IncludeZoneStocks <p>Whether required to return AZ information</p>
      * @param string $DeviceType <p>Instance machine type.</p>
-     * @param string $ClusterLevel <p>Cluster level, optional. For example P0, P1</p>
+     * @param string $ClusterLevel <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
      */
     function __construct()
     {

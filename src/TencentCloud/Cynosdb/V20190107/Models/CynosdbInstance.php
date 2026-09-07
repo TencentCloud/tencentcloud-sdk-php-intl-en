@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set <p>Region</p>
  * @method string getZone() Obtain <p>Primary availability zone of the cluster</p>
  * @method void setZone(string $Zone) Set <p>Primary availability zone of the cluster</p>
- * @method string getStatus() Obtain <p>Instance status</p>
- * @method void setStatus(string $Status) Set <p>Instance status</p>
+ * @method string getStatus() Obtain <p>Instance status</p><p>Enumeration values:</p><ul><li>creating: Under creation</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+ * @method void setStatus(string $Status) Set <p>Instance status</p><p>Enumeration values:</p><ul><li>creating: Under creation</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
  * @method string getStatusDesc() Obtain <p>Instance status description in Chinese</p>
  * @method void setStatusDesc(string $StatusDesc) Set <p>Instance status description in Chinese</p>
  * @method string getDbMode() Obtain <p>Instance form, whether it is a serverless instance</p>
@@ -189,7 +189,7 @@ class CynosdbInstance extends AbstractModel
     public $Zone;
 
     /**
-     * @var string <p>Instance status</p>
+     * @var string <p>Instance status</p><p>Enumeration values:</p><ul><li>creating: Under creation</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
      */
     public $Status;
 
@@ -453,7 +453,7 @@ class CynosdbInstance extends AbstractModel
      * @param integer $ProjectId <p>Project ID</p>
      * @param string $Region <p>Region</p>
      * @param string $Zone <p>Primary availability zone of the cluster</p>
-     * @param string $Status <p>Instance status</p>
+     * @param string $Status <p>Instance status</p><p>Enumeration values:</p><ul><li>creating: Under creation</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
      * @param string $StatusDesc <p>Instance status description in Chinese</p>
      * @param string $DbMode <p>Instance form, whether it is a serverless instance</p>
      * @param string $DbType <p>Database type</p>
