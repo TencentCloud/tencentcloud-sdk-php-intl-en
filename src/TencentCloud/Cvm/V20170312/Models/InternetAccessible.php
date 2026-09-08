@@ -18,7 +18,7 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Describes the accessibility of an instance in the public network, including its network billing method, maximum bandwidth, etc.
+ * Describes the public network accessibility of the instance's primary network interface, including the public network billing mode, maximum bandwidth, and other settings.
  *
  * @method string getInternetChargeType() Obtain Network connection billing plan. Valid value:
 

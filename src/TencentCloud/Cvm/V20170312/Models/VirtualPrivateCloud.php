@@ -18,7 +18,7 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Describes information on VPC, including subnets, IP addresses, etc.
+ * Describes VPC information for the primary network interface, including subnet and IP address information.
  *
  * @method string getVpcId() Obtain vpc ID, such as `vpc-xxx`. Valid vpc ids can be queried by logging in to the [console](https://console.tencentcloud.com/vpc/vpc?rid=1) or by calling the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778) and obtaining the `VpcId` field from the API response. if both VpcId and SubnetId are input as `DEFAULT` when creating an instance, the DEFAULT vpc network will be forcibly used.
  * @method void setVpcId(string $VpcId) Set vpc ID, such as `vpc-xxx`. Valid vpc ids can be queried by logging in to the [console](https://console.tencentcloud.com/vpc/vpc?rid=1) or by calling the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778) and obtaining the `VpcId` field from the API response. if both VpcId and SubnetId are input as `DEFAULT` when creating an instance, the DEFAULT vpc network will be forcibly used.
