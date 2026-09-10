@@ -33,27 +33,31 @@ Input rule: when the Audio field is provided, the system will not accept user-su
 Format description: audio must be mono, sampling rate must be consistent with the corresponding TTS sampling rate, and coded as a Base64 string.
 Input rule: when the Audio field is provided, the system will not accept user-submitted input in the Text field. the system will play the Audio content in the Audio field directly.
  * @method integer getDropMode() Obtain Defaults to 0. valid at that time only when Interrupt is false.
--0 means drop messages with Interrupt set to false during the occurrence of interaction.
--1 indicates that during the occurrence of an interaction, messages with Interrupt as false will not be dropped but cached, waiting to be processed when finished.
-
+<ul>
+<li>0 means drop messages with Interrupt set to false during the occurrence of interaction.</li>
+<li>1 indicates that during the occurrence of an interaction, messages with Interrupt as false will not be dropped but cached, waiting to be processed when finished.</li>
+</ul>
 Note: if DropMode is 1, multiple messages can be cached. if an interruption occurs subsequently, the cache of messages will be cleared.
  * @method void setDropMode(integer $DropMode) Set Defaults to 0. valid at that time only when Interrupt is false.
--0 means drop messages with Interrupt set to false during the occurrence of interaction.
--1 indicates that during the occurrence of an interaction, messages with Interrupt as false will not be dropped but cached, waiting to be processed when finished.
-
+<ul>
+<li>0 means drop messages with Interrupt set to false during the occurrence of interaction.</li>
+<li>1 indicates that during the occurrence of an interaction, messages with Interrupt as false will not be dropped but cached, waiting to be processed when finished.</li>
+</ul>
 Note: if DropMode is 1, multiple messages can be cached. if an interruption occurs subsequently, the cache of messages will be cleared.
  * @method integer getPriority() Obtain The message priority of ServerPushText. 0 means interruptible, 1 means not interruptible. currently only support 0. if you need to input 1, submit a ticket to contact us to grant permission.
 Note: after receiving a message with Priority=1, any other messages will be ignored (including messages with Priority=1) until the message processing of Priority=1 is complete. this field can be used together with the Interrupt and DropMode fields.
 Example:.
--Priority=1, Interrupt=true, interrupts existing interaction and broadcasts immediately. the broadcast will not be interrupted during the process.
--Priority=1, Interrupt=false, DropMode=1. wait for the current interaction to complete before broadcasting. the broadcast will not be interrupted during the process.
-
+<ul>
+<li>Priority=1, Interrupt=true, interrupts existing interaction and broadcasts immediately. the broadcast will not be interrupted during the process.</li>
+<li>Priority=1, Interrupt=false, DropMode=1. wait for the current interaction to complete before broadcasting. the broadcast will not be interrupted during the process.</li>
+</ul>
  * @method void setPriority(integer $Priority) Set The message priority of ServerPushText. 0 means interruptible, 1 means not interruptible. currently only support 0. if you need to input 1, submit a ticket to contact us to grant permission.
 Note: after receiving a message with Priority=1, any other messages will be ignored (including messages with Priority=1) until the message processing of Priority=1 is complete. this field can be used together with the Interrupt and DropMode fields.
 Example:.
--Priority=1, Interrupt=true, interrupts existing interaction and broadcasts immediately. the broadcast will not be interrupted during the process.
--Priority=1, Interrupt=false, DropMode=1. wait for the current interaction to complete before broadcasting. the broadcast will not be interrupted during the process.
-
+<ul>
+<li>Priority=1, Interrupt=true, interrupts existing interaction and broadcasts immediately. the broadcast will not be interrupted during the process.</li>
+<li>Priority=1, Interrupt=false, DropMode=1. wait for the current interaction to complete before broadcasting. the broadcast will not be interrupted during the process.</li>
+</ul>
  * @method boolean getAddHistory() Obtain Whether to add the text to the llm history context.
  * @method void setAddHistory(boolean $AddHistory) Set Whether to add the text to the llm history context.
  * @method string getMetaInfo() Obtain If filled, it will be bound to the subtitle and sent to the terminal. note that the content must be a json string.
@@ -85,9 +89,10 @@ Input rule: when the Audio field is provided, the system will not accept user-su
 
     /**
      * @var integer Defaults to 0. valid at that time only when Interrupt is false.
--0 means drop messages with Interrupt set to false during the occurrence of interaction.
--1 indicates that during the occurrence of an interaction, messages with Interrupt as false will not be dropped but cached, waiting to be processed when finished.
-
+<ul>
+<li>0 means drop messages with Interrupt set to false during the occurrence of interaction.</li>
+<li>1 indicates that during the occurrence of an interaction, messages with Interrupt as false will not be dropped but cached, waiting to be processed when finished.</li>
+</ul>
 Note: if DropMode is 1, multiple messages can be cached. if an interruption occurs subsequently, the cache of messages will be cleared.
      */
     public $DropMode;
@@ -96,9 +101,10 @@ Note: if DropMode is 1, multiple messages can be cached. if an interruption occu
      * @var integer The message priority of ServerPushText. 0 means interruptible, 1 means not interruptible. currently only support 0. if you need to input 1, submit a ticket to contact us to grant permission.
 Note: after receiving a message with Priority=1, any other messages will be ignored (including messages with Priority=1) until the message processing of Priority=1 is complete. this field can be used together with the Interrupt and DropMode fields.
 Example:.
--Priority=1, Interrupt=true, interrupts existing interaction and broadcasts immediately. the broadcast will not be interrupted during the process.
--Priority=1, Interrupt=false, DropMode=1. wait for the current interaction to complete before broadcasting. the broadcast will not be interrupted during the process.
-
+<ul>
+<li>Priority=1, Interrupt=true, interrupts existing interaction and broadcasts immediately. the broadcast will not be interrupted during the process.</li>
+<li>Priority=1, Interrupt=false, DropMode=1. wait for the current interaction to complete before broadcasting. the broadcast will not be interrupted during the process.</li>
+</ul>
      */
     public $Priority;
 
@@ -120,16 +126,18 @@ Example:.
 Format description: audio must be mono, sampling rate must be consistent with the corresponding TTS sampling rate, and coded as a Base64 string.
 Input rule: when the Audio field is provided, the system will not accept user-submitted input in the Text field. the system will play the Audio content in the Audio field directly.
      * @param integer $DropMode Defaults to 0. valid at that time only when Interrupt is false.
--0 means drop messages with Interrupt set to false during the occurrence of interaction.
--1 indicates that during the occurrence of an interaction, messages with Interrupt as false will not be dropped but cached, waiting to be processed when finished.
-
+<ul>
+<li>0 means drop messages with Interrupt set to false during the occurrence of interaction.</li>
+<li>1 indicates that during the occurrence of an interaction, messages with Interrupt as false will not be dropped but cached, waiting to be processed when finished.</li>
+</ul>
 Note: if DropMode is 1, multiple messages can be cached. if an interruption occurs subsequently, the cache of messages will be cleared.
      * @param integer $Priority The message priority of ServerPushText. 0 means interruptible, 1 means not interruptible. currently only support 0. if you need to input 1, submit a ticket to contact us to grant permission.
 Note: after receiving a message with Priority=1, any other messages will be ignored (including messages with Priority=1) until the message processing of Priority=1 is complete. this field can be used together with the Interrupt and DropMode fields.
 Example:.
--Priority=1, Interrupt=true, interrupts existing interaction and broadcasts immediately. the broadcast will not be interrupted during the process.
--Priority=1, Interrupt=false, DropMode=1. wait for the current interaction to complete before broadcasting. the broadcast will not be interrupted during the process.
-
+<ul>
+<li>Priority=1, Interrupt=true, interrupts existing interaction and broadcasts immediately. the broadcast will not be interrupted during the process.</li>
+<li>Priority=1, Interrupt=false, DropMode=1. wait for the current interaction to complete before broadcasting. the broadcast will not be interrupted during the process.</li>
+</ul>
      * @param boolean $AddHistory Whether to add the text to the llm history context.
      * @param string $MetaInfo If filled, it will be bound to the subtitle and sent to the terminal. note that the content must be a json string.
      */

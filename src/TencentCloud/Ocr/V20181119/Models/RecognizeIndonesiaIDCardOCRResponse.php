@@ -58,7 +58,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKota(string $Kota) Set The city.
  * @method array getWarnCardInfos() Obtain Card Warning Information
 
--9101 Alarm for covered certificate
+-9101 Alarm for incomplete or covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
 -9104 Alarm for tamper certificate
@@ -69,7 +69,7 @@ use TencentCloud\Common\AbstractModel;
 -9109 This capability is not enabled. Please contact customer support to activate the alert service
  * @method void setWarnCardInfos(array $WarnCardInfos) Set Card Warning Information
 
--9101 Alarm for covered certificate
+-9101 Alarm for incomplete or covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
 -9104 Alarm for tamper certificate
@@ -176,7 +176,7 @@ class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel
     /**
      * @var array Card Warning Information
 
--9101 Alarm for covered certificate
+-9101 Alarm for incomplete or covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
 -9104 Alarm for tamper certificate
@@ -214,7 +214,7 @@ class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel
      * @param string $Kota The city.
      * @param array $WarnCardInfos Card Warning Information
 
--9101 Alarm for covered certificate
+-9101 Alarm for incomplete or covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
 -9104 Alarm for tamper certificate

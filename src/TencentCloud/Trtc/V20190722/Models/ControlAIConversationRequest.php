@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerPushText(ServerPushText $ServerPushText) Set Server-Sent broadcast text Command. required when Command is ServerPushText.
  * @method InvokeLLM getInvokeLLM() Obtain The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content request to the large model and adds X-Invoke-LLM="1" to the header.
  * @method void setInvokeLLM(InvokeLLM $InvokeLLM) Set The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content request to the large model and adds X-Invoke-LLM="1" to the header.
+ * @method TransparentData getTransparentData() Obtain Information passed through to the client
+ * @method void setTransparentData(TransparentData $TransparentData) Set Information passed through to the client
  */
 class ControlAIConversationRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ControlAIConversationRequest extends AbstractModel
     public $InvokeLLM;
 
     /**
+     * @var TransparentData Information passed through to the client
+     */
+    public $TransparentData;
+
+    /**
      * @param string $TaskId Task unique identifier.
      * @param string $Command Control command. currently supports the following commands: - ServerPushText: server sends text to the AI robot, and the AI robot will broadcast the text. - InvokeLLM: server sends text to the large model to trigger dialogue.
      * @param ServerPushText $ServerPushText Server-Sent broadcast text Command. required when Command is ServerPushText.
      * @param InvokeLLM $InvokeLLM The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content request to the large model and adds X-Invoke-LLM="1" to the header.
+     * @param TransparentData $TransparentData Information passed through to the client
      */
     function __construct()
     {
@@ -86,6 +94,11 @@ class ControlAIConversationRequest extends AbstractModel
         if (array_key_exists("InvokeLLM",$param) and $param["InvokeLLM"] !== null) {
             $this->InvokeLLM = new InvokeLLM();
             $this->InvokeLLM->deserialize($param["InvokeLLM"]);
+        }
+
+        if (array_key_exists("TransparentData",$param) and $param["TransparentData"] !== null) {
+            $this->TransparentData = new TransparentData();
+            $this->TransparentData->deserialize($param["TransparentData"]);
         }
     }
 }

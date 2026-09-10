@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecognizeIndonesiaIDCardOCR request structure.
  *
- * @method string getImageBase64() Obtain The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
- * @method void setImageBase64(string $ImageBase64) Set The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
+ * @method string getImageBase64() Obtain The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
+ * @method void setImageBase64(string $ImageBase64) Set The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
  * @method string getImageUrl() Obtain The Url address of the image. 
 Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. 
-Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is no more than 3 seconds. 
+Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is no more than 3 seconds. 
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 For a non-Tencent Cloud URL, the download speed and stability may be affected.
  * @method void setImageUrl(string $ImageUrl) Set The Url address of the image. 
 Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. 
-Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is no more than 3 seconds. 
+Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is no more than 3 seconds. 
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 For a non-Tencent Cloud URL, the download speed and stability may be affected.
  * @method boolean getReturnHeadImage() Obtain Whether to return the portrait photo.
-If selected true, image restrictions are: Image size after encoding must not exceed 5M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
+If selected true, image restrictions are: Image size after encoding must not exceed 2M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
 Support PNG, jpg, JPEG, BMP, no support for GIF images.
 If portrait matting fails, return an empty string.
  * @method void setReturnHeadImage(boolean $ReturnHeadImage) Set Whether to return the portrait photo.
-If selected true, image restrictions are: Image size after encoding must not exceed 5M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
+If selected true, image restrictions are: Image size after encoding must not exceed 2M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
 Support PNG, jpg, JPEG, BMP, no support for GIF images.
 If portrait matting fails, return an empty string.
  * @method string getScene() Obtain Scene parameter, default value is V1
@@ -52,14 +52,14 @@ V2
 class RecognizeIndonesiaIDCardOCRRequest extends AbstractModel
 {
     /**
-     * @var string The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
+     * @var string The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
      */
     public $ImageBase64;
 
     /**
      * @var string The Url address of the image. 
 Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. 
-Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is no more than 3 seconds. 
+Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is no more than 3 seconds. 
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 For a non-Tencent Cloud URL, the download speed and stability may be affected.
      */
@@ -67,7 +67,7 @@ For a non-Tencent Cloud URL, the download speed and stability may be affected.
 
     /**
      * @var boolean Whether to return the portrait photo.
-If selected true, image restrictions are: Image size after encoding must not exceed 5M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
+If selected true, image restrictions are: Image size after encoding must not exceed 2M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
 Support PNG, jpg, JPEG, BMP, no support for GIF images.
 If portrait matting fails, return an empty string.
      */
@@ -83,14 +83,14 @@ V2
     public $Scene;
 
     /**
-     * @param string $ImageBase64 The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
+     * @param string $ImageBase64 The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
      * @param string $ImageUrl The Url address of the image. 
 Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. 
-Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is no more than 3 seconds. 
+Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is no more than 3 seconds. 
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 For a non-Tencent Cloud URL, the download speed and stability may be affected.
      * @param boolean $ReturnHeadImage Whether to return the portrait photo.
-If selected true, image restrictions are: Image size after encoding must not exceed 5M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
+If selected true, image restrictions are: Image size after encoding must not exceed 2M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
 Support PNG, jpg, JPEG, BMP, no support for GIF images.
 If portrait matting fails, return an empty string.
      * @param string $Scene Scene parameter, default value is V1
