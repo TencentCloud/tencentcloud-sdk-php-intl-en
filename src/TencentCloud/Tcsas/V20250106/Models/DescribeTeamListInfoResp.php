@@ -18,100 +18,108 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Team list information.
+ * Information of teams.
  *
- * @method string getTeamId() Obtain Team ID.
- * @method void setTeamId(string $TeamId) Set Team ID.
- * @method string getTeamName() Obtain Team name.
- * @method void setTeamName(string $TeamName) Set Team name.
- * @method string getAdminUserId() Obtain Admin user ID.
- * @method void setAdminUserId(string $AdminUserId) Set Admin user ID.
- * @method string getAdminUserAccount() Obtain Admin account.
- * @method void setAdminUserAccount(string $AdminUserAccount) Set Admin account.
- * @method string getAdminUserName() Obtain Admin username.
- * @method void setAdminUserName(string $AdminUserName) Set Admin username.
- * @method integer getMemberCount() Obtain Number of team members.
- * @method void setMemberCount(integer $MemberCount) Set Number of team members.
- * @method string getRegisterLink() Obtain Team registration link.
- * @method void setRegisterLink(string $RegisterLink) Set Team registration link.
- * @method array getTeamRoleTypeList() Obtain Team role types. 
- * @method void setTeamRoleTypeList(array $TeamRoleTypeList) Set Team role types. 
- * @method integer getRelatedTeamId() Obtain Associated team ID.
- * @method void setRelatedTeamId(integer $RelatedTeamId) Set Associated team ID.
- * @method integer getExpireTime() Obtain Team expiration time. 0 indicates no expiration.
- * @method void setExpireTime(integer $ExpireTime) Set Team expiration time. 0 indicates no expiration.
- * @method integer getStatus() Obtain Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
- * @method void setStatus(integer $Status) Set Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
+ * @method string getTeamId() Obtain <p>Team ID.</p>
+ * @method void setTeamId(string $TeamId) Set <p>Team ID.</p>
+ * @method string getTeamName() Obtain <p>Team name.</p>
+ * @method void setTeamName(string $TeamName) Set <p>Team name.</p>
+ * @method string getAdminUserId() Obtain <p>Admin user ID.</p>
+ * @method void setAdminUserId(string $AdminUserId) Set <p>Admin user ID.</p>
+ * @method string getAdminUserAccount() Obtain <p>Admin account.</p>
+ * @method void setAdminUserAccount(string $AdminUserAccount) Set <p>Admin account.</p>
+ * @method string getAdminUserName() Obtain <p>Admin username.</p>
+ * @method void setAdminUserName(string $AdminUserName) Set <p>Admin username.</p>
+ * @method integer getMemberCount() Obtain <p>Number of team members.</p>
+ * @method void setMemberCount(integer $MemberCount) Set <p>Number of team members.</p>
+ * @method string getRegisterLink() Obtain <p>Team registration link.</p>
+ * @method void setRegisterLink(string $RegisterLink) Set <p>Team registration link.</p>
+ * @method array getTeamRoleTypeList() Obtain <p>Team role types.</p>
+ * @method void setTeamRoleTypeList(array $TeamRoleTypeList) Set <p>Team role types.</p>
+ * @method integer getRelatedTeamId() Obtain <p>Associated team ID.</p>
+ * @method void setRelatedTeamId(integer $RelatedTeamId) Set <p>Associated team ID.</p>
+ * @method integer getExpireTime() Obtain <p>Team expiration time. 0 indicates no expiration.</p>
+ * @method void setExpireTime(integer $ExpireTime) Set <p>Team expiration time. 0 indicates no expiration.</p>
+ * @method integer getStatus() Obtain <p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p>
+ * @method void setStatus(integer $Status) Set <p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p>
+ * @method array getAdminUsers() Obtain <p>Information of multiple team admin users.</p>
+ * @method void setAdminUsers(array $AdminUsers) Set <p>Information of multiple team admin users.</p>
  */
 class DescribeTeamListInfoResp extends AbstractModel
 {
     /**
-     * @var string Team ID.
+     * @var string <p>Team ID.</p>
      */
     public $TeamId;
 
     /**
-     * @var string Team name.
+     * @var string <p>Team name.</p>
      */
     public $TeamName;
 
     /**
-     * @var string Admin user ID.
+     * @var string <p>Admin user ID.</p>
      */
     public $AdminUserId;
 
     /**
-     * @var string Admin account.
+     * @var string <p>Admin account.</p>
      */
     public $AdminUserAccount;
 
     /**
-     * @var string Admin username.
+     * @var string <p>Admin username.</p>
      */
     public $AdminUserName;
 
     /**
-     * @var integer Number of team members.
+     * @var integer <p>Number of team members.</p>
      */
     public $MemberCount;
 
     /**
-     * @var string Team registration link.
+     * @var string <p>Team registration link.</p>
      */
     public $RegisterLink;
 
     /**
-     * @var array Team role types. 
+     * @var array <p>Team role types.</p>
      */
     public $TeamRoleTypeList;
 
     /**
-     * @var integer Associated team ID.
+     * @var integer <p>Associated team ID.</p>
      */
     public $RelatedTeamId;
 
     /**
-     * @var integer Team expiration time. 0 indicates no expiration.
+     * @var integer <p>Team expiration time. 0 indicates no expiration.</p>
      */
     public $ExpireTime;
 
     /**
-     * @var integer Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
+     * @var integer <p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p>
      */
     public $Status;
 
     /**
-     * @param string $TeamId Team ID.
-     * @param string $TeamName Team name.
-     * @param string $AdminUserId Admin user ID.
-     * @param string $AdminUserAccount Admin account.
-     * @param string $AdminUserName Admin username.
-     * @param integer $MemberCount Number of team members.
-     * @param string $RegisterLink Team registration link.
-     * @param array $TeamRoleTypeList Team role types. 
-     * @param integer $RelatedTeamId Associated team ID.
-     * @param integer $ExpireTime Team expiration time. 0 indicates no expiration.
-     * @param integer $Status Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
+     * @var array <p>Information of multiple team admin users.</p>
+     */
+    public $AdminUsers;
+
+    /**
+     * @param string $TeamId <p>Team ID.</p>
+     * @param string $TeamName <p>Team name.</p>
+     * @param string $AdminUserId <p>Admin user ID.</p>
+     * @param string $AdminUserAccount <p>Admin account.</p>
+     * @param string $AdminUserName <p>Admin username.</p>
+     * @param integer $MemberCount <p>Number of team members.</p>
+     * @param string $RegisterLink <p>Team registration link.</p>
+     * @param array $TeamRoleTypeList <p>Team role types.</p>
+     * @param integer $RelatedTeamId <p>Associated team ID.</p>
+     * @param integer $ExpireTime <p>Team expiration time. 0 indicates no expiration.</p>
+     * @param integer $Status <p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p>
+     * @param array $AdminUsers <p>Information of multiple team admin users.</p>
      */
     function __construct()
     {
@@ -168,6 +176,15 @@ class DescribeTeamListInfoResp extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("AdminUsers",$param) and $param["AdminUsers"] !== null) {
+            $this->AdminUsers = [];
+            foreach ($param["AdminUsers"] as $key => $value){
+                $obj = new TeamAdminUserInfo();
+                $obj->deserialize($value);
+                array_push($this->AdminUsers, $obj);
+            }
         }
     }
 }

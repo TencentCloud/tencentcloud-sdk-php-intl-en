@@ -18,7 +18,7 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Line chart data.
+ * Time-series data.
  *
  * @method integer getDataTime() Obtain Date in YYYYMM format.
 Note: This field may return null, indicating that no valid values can be obtained.

@@ -34,7 +34,7 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\CreateApplicationSensitiveAPIResponse CreateApplicationSensitiveAPI(Models\CreateApplicationSensitiveAPIRequest $req) This API is used to create a superapp sensitive API.
  * @method Models\CreateGlobalDomainACLResponse CreateGlobalDomainACL(Models\CreateGlobalDomainACLRequest $req) This API is used to create a global domain allowlist or blocklist.
  * @method Models\CreateMNGResponse CreateMNG(Models\CreateMNGRequest $req) This API is used to create a mini game.
- * @method Models\CreateMNGAppSecretResponse CreateMNGAppSecret(Models\CreateMNGAppSecretRequest $req) This API is used to generate a mini game secret key.
+ * @method Models\CreateMNGAppSecretResponse CreateMNGAppSecret(Models\CreateMNGAppSecretRequest $req) This API is used to create a mini game secret key.
  * @method Models\CreateMNGApprovalResponse CreateMNGApproval(Models\CreateMNGApprovalRequest $req) This API is used to create a mini game approval request.
  * @method Models\CreateMNGDomainACLResponse CreateMNGDomainACL(Models\CreateMNGDomainACLRequest $req) This API is used to create a domain allowlist/blocklist for a mini game.
  * @method Models\CreateMNGSensitiveAPIPermissionApprovalResponse CreateMNGSensitiveAPIPermissionApproval(Models\CreateMNGSensitiveAPIPermissionApprovalRequest $req) This API is used to create a permission request to allow a mini game to call sensitive APIs.
@@ -61,9 +61,9 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\DeleteTeamResponse DeleteTeam(Models\DeleteTeamRequest $req) This API is used to deletes a team.
  * @method Models\DeleteTeamMemberResponse DeleteTeamMember(Models\DeleteTeamMemberRequest $req) This API is used to delete a team member.
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) This API is used to delete a user.
- * @method Models\DescribeAPPDataDetailLineChartResponse DescribeAPPDataDetailLineChart(Models\DescribeAPPDataDetailLineChartRequest $req) This API is used to query the line chart data for selected superapp metrics.
+ * @method Models\DescribeAPPDataDetailLineChartResponse DescribeAPPDataDetailLineChart(Models\DescribeAPPDataDetailLineChartRequest $req) This API is used to query the time-series data for selected superapp metrics.
  * @method Models\DescribeAPPDataOverviewResponse DescribeAPPDataOverview(Models\DescribeAPPDataOverviewRequest $req) This API is used to query the data overview for the selected superapp metrics.
- * @method Models\DescribeAdvertisingLineChartResponse DescribeAdvertisingLineChart(Models\DescribeAdvertisingLineChartRequest $req) This API is used to query the advertising line chart data for a mini program within a specified date range.
+ * @method Models\DescribeAdvertisingLineChartResponse DescribeAdvertisingLineChart(Models\DescribeAdvertisingLineChartRequest $req) This API is used to query the time-series advertising data for a mini program within a specified date range.
  * @method Models\DescribeAdvertisingOverviewResponse DescribeAdvertisingOverview(Models\DescribeAdvertisingOverviewRequest $req) This API is used to query the mini program advertising overview.
  * @method Models\DescribeApplicationResponse DescribeApplication(Models\DescribeApplicationRequest $req) This API is used to query the superapp details.
  * @method Models\DescribeApplicationConfigFileResponse DescribeApplicationConfigFile(Models\DescribeApplicationConfigFileRequest $req) This API is used to query the configuration files of a superapp.
@@ -76,11 +76,11 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\DescribeGlobalOverviewReportDetailResponse DescribeGlobalOverviewReportDetail(Models\DescribeGlobalOverviewReportDetailRequest $req) This API is used to query the detailed report data for global overview within a specified date range.
  * @method Models\DescribeMNGResponse DescribeMNG(Models\DescribeMNGRequest $req) This API is used to query the mini game details.
  * @method Models\DescribeMNGAccessAnalysisDetailResponse DescribeMNGAccessAnalysisDetail(Models\DescribeMNGAccessAnalysisDetailRequest $req) This API is used to query the detailed visit analysis data for a mini game within a specified date range.
- * @method Models\DescribeMNGAccessAnalysisLineChartResponse DescribeMNGAccessAnalysisLineChart(Models\DescribeMNGAccessAnalysisLineChartRequest $req) This API is used to query the mini game visit analysis line chart.
+ * @method Models\DescribeMNGAccessAnalysisLineChartResponse DescribeMNGAccessAnalysisLineChart(Models\DescribeMNGAccessAnalysisLineChartRequest $req) This API is used to query the time-series visit data of a mini game.
  * @method Models\DescribeMNGAccessAnalysisOverviewResponse DescribeMNGAccessAnalysisOverview(Models\DescribeMNGAccessAnalysisOverviewRequest $req) This API is used to query an overview of visit analysis data for a mini game within a specified date range.
  * @method Models\DescribeMNGActiveUserRealTimeStatisticsResponse DescribeMNGActiveUserRealTimeStatistics(Models\DescribeMNGActiveUserRealTimeStatisticsRequest $req) This API is used to query the mini game real-time active user statistics.
  * @method Models\DescribeMNGAdvertisingDetailResponse DescribeMNGAdvertisingDetail(Models\DescribeMNGAdvertisingDetailRequest $req) This API is used to query the detailed mini game advertising data over a specified period.
- * @method Models\DescribeMNGAdvertisingLineChartResponse DescribeMNGAdvertisingLineChart(Models\DescribeMNGAdvertisingLineChartRequest $req) This API is used to query the mini game advertising data in a line chart format.
+ * @method Models\DescribeMNGAdvertisingLineChartResponse DescribeMNGAdvertisingLineChart(Models\DescribeMNGAdvertisingLineChartRequest $req) This API is used to query the time-series advertising data of a mini game.
  * @method Models\DescribeMNGAdvertisingOverviewResponse DescribeMNGAdvertisingOverview(Models\DescribeMNGAdvertisingOverviewRequest $req) This API is used to query an overview of mini game ad metrics within a specified date range.
  * @method Models\DescribeMNGAllStageVersionsResponse DescribeMNGAllStageVersions(Models\DescribeMNGAllStageVersionsRequest $req) This API is used to query mini game version information across all phases.
  * @method Models\DescribeMNGAppSecretResponse DescribeMNGAppSecret(Models\DescribeMNGAppSecretRequest $req) This API is used to query mini game secret keys.
@@ -88,10 +88,10 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\DescribeMNGDomainACLResponse DescribeMNGDomainACL(Models\DescribeMNGDomainACLRequest $req) This API is used to query the domain name allowlist/blocklist of a mini game.
  * @method Models\DescribeMNGListResponse DescribeMNGList(Models\DescribeMNGListRequest $req) This API is used to query the list of mini games.
  * @method Models\DescribeMNGMAUDataDetailResponse DescribeMNGMAUDataDetail(Models\DescribeMNGMAUDataDetailRequest $req) This API is used to query the detailed mini game monthly active user data.
- * @method Models\DescribeMNGMAULineChartResponse DescribeMNGMAULineChart(Models\DescribeMNGMAULineChartRequest $req) This API is used to query the mini game MAU line chart.
+ * @method Models\DescribeMNGMAULineChartResponse DescribeMNGMAULineChart(Models\DescribeMNGMAULineChartRequest $req) This API is used to query the time-series MAU data of a mini game.
  * @method Models\DescribeMNGMAUMonthlyComparisonMetricCardResponse DescribeMNGMAUMonthlyComparisonMetricCard(Models\DescribeMNGMAUMonthlyComparisonMetricCardRequest $req) This API is used to query the MAU comparison data for a mini game between two months.
  * @method Models\DescribeMNGOfflinePackageURLResponse DescribeMNGOfflinePackageURL(Models\DescribeMNGOfflinePackageURLRequest $req) This API is used to query the download URL of the mini game package.
- * @method Models\DescribeMNGPaymentLineChartResponse DescribeMNGPaymentLineChart(Models\DescribeMNGPaymentLineChartRequest $req) This API is used to query the mini game payment line chart.
+ * @method Models\DescribeMNGPaymentLineChartResponse DescribeMNGPaymentLineChart(Models\DescribeMNGPaymentLineChartRequest $req) This API is used to query the time-series payment data of a mini game.
  * @method Models\DescribeMNGPaymentOverviewResponse DescribeMNGPaymentOverview(Models\DescribeMNGPaymentOverviewRequest $req) This API is used to query an overview of mini game payment data within a specified period.
  * @method Models\DescribeMNGPaymentReportDetailResponse DescribeMNGPaymentReportDetail(Models\DescribeMNGPaymentReportDetailRequest $req) This API is used to query a detailed payment report data for a mini game.
  * @method Models\DescribeMNGPaymentRetentionAnalysisResponse DescribeMNGPaymentRetentionAnalysis(Models\DescribeMNGPaymentRetentionAnalysisRequest $req) This API is used to query the mini game payment retention data.
@@ -105,6 +105,8 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\DescribeMNGSubscribeMessageTemplateLibraryListResponse DescribeMNGSubscribeMessageTemplateLibraryList(Models\DescribeMNGSubscribeMessageTemplateLibraryListRequest $req) This API is used to query the mini game subscription message template library list.
  * @method Models\DescribeMNGSubscribeMessageTemplateListResponse DescribeMNGSubscribeMessageTemplateList(Models\DescribeMNGSubscribeMessageTemplateListRequest $req) This API is used to query the mini game subscription message template list.
  * @method Models\DescribeMNGVersionResponse DescribeMNGVersion(Models\DescribeMNGVersionRequest $req) This API is used to query the mini game version creation results.
+ * @method Models\DescribeMNGVersionAuditDetailResponse DescribeMNGVersionAuditDetail(Models\DescribeMNGVersionAuditDetailRequest $req) This API is used to query mini game version approval details.
+ * @method Models\DescribeMNGVersionAuditListResponse DescribeMNGVersionAuditList(Models\DescribeMNGVersionAuditListRequest $req) This API is used to query mini game version approval records.
  * @method Models\DescribeMNPResponse DescribeMNP(Models\DescribeMNPRequest $req) This API is used to query the mini program details.
  * @method Models\DescribeMNPAccessAnalysisOverviewResponse DescribeMNPAccessAnalysisOverview(Models\DescribeMNPAccessAnalysisOverviewRequest $req) This API is used to query the overview of mini program visit analysis data within a specified date range.
  * @method Models\DescribeMNPActiveUserRealTimeStatisticsResponse DescribeMNPActiveUserRealTimeStatistics(Models\DescribeMNPActiveUserRealTimeStatisticsRequest $req) This API is used to query the mini program real-time active user statistics.
@@ -116,14 +118,14 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\DescribeMNPDomainACLResponse DescribeMNPDomainACL(Models\DescribeMNPDomainACLRequest $req) This API is used to query the domain allowlist/blocklist of a mini program.
  * @method Models\DescribeMNPListResponse DescribeMNPList(Models\DescribeMNPListRequest $req) This API is used to query the mini program list.
  * @method Models\DescribeMNPMAUDataDetailResponse DescribeMNPMAUDataDetail(Models\DescribeMNPMAUDataDetailRequest $req) This API is used to query the detailed mini program monthly active user data.
- * @method Models\DescribeMNPMAULineChartResponse DescribeMNPMAULineChart(Models\DescribeMNPMAULineChartRequest $req) This API is used to query the mini program monthly active user data in a line chart format.
+ * @method Models\DescribeMNPMAULineChartResponse DescribeMNPMAULineChart(Models\DescribeMNPMAULineChartRequest $req) This API is used to query the time-series MAU data of a mini program.
  * @method Models\DescribeMNPMAUMetricCardResponse DescribeMNPMAUMetricCard(Models\DescribeMNPMAUMetricCardRequest $req) This API is used to query the MAU comparison data for a mini program between two months.
  * @method Models\DescribeMNPOfflinePackageURLResponse DescribeMNPOfflinePackageURL(Models\DescribeMNPOfflinePackageURLRequest $req) This API is used to query the download URL of the mini program package.
  * @method Models\DescribeMNPPageAnalysisDetailResponse DescribeMNPPageAnalysisDetail(Models\DescribeMNPPageAnalysisDetailRequest $req) This API is used to query the detailed mini program page visit data.
  * @method Models\DescribeMNPPaymentApprovalInfoResponse DescribeMNPPaymentApprovalInfo(Models\DescribeMNPPaymentApprovalInfoRequest $req) This API is used to query the mini program payment approval information.
  * @method Models\DescribeMNPPreviewResponse DescribeMNPPreview(Models\DescribeMNPPreviewRequest $req) This API is used to query the mini program preview details.
  * @method Models\DescribeMNPReleasedVersionHistoryResponse DescribeMNPReleasedVersionHistory(Models\DescribeMNPReleasedVersionHistoryRequest $req) This API is used to query the release version history of a mini program.
- * @method Models\DescribeMNPReportDataLineChartResponse DescribeMNPReportDataLineChart(Models\DescribeMNPReportDataLineChartRequest $req) This API is used to query the mini program visit analysis line chart within a given date range.
+ * @method Models\DescribeMNPReportDataLineChartResponse DescribeMNPReportDataLineChart(Models\DescribeMNPReportDataLineChartRequest $req) This API is used to query the time-series visit data of a mini program within a given date range.
  * @method Models\DescribeMNPReportDetailResponse DescribeMNPReportDetail(Models\DescribeMNPReportDetailRequest $req) This API is used to query the detailed mini program visit analysis data.
  * @method Models\DescribeMNPRetentionDataResponse DescribeMNPRetentionData(Models\DescribeMNPRetentionDataRequest $req) This API is used to query the mini program user retention data within a specified date range.
  * @method Models\DescribeMNPSensitiveAPIPermissionApprovalResponse DescribeMNPSensitiveAPIPermissionApproval(Models\DescribeMNPSensitiveAPIPermissionApprovalRequest $req) This API is used to query the details of a sensitive API permission request for a mini program.
@@ -134,12 +136,14 @@ use TencentCloud\Tcsas\V20250106\Models as Models;
  * @method Models\DescribeMNPSubscribeMessageTemplateLibraryListResponse DescribeMNPSubscribeMessageTemplateLibraryList(Models\DescribeMNPSubscribeMessageTemplateLibraryListRequest $req) This API is used to query the mini program subscription message template library list.
  * @method Models\DescribeMNPSubscribeMessageTemplateListResponse DescribeMNPSubscribeMessageTemplateList(Models\DescribeMNPSubscribeMessageTemplateListRequest $req) This API is used to query the mini program subscription message template list.
  * @method Models\DescribeMNPVersionResponse DescribeMNPVersion(Models\DescribeMNPVersionRequest $req) This API is used to query the mini program version creation results.
+ * @method Models\DescribeMNPVersionAuditDetailResponse DescribeMNPVersionAuditDetail(Models\DescribeMNPVersionAuditDetailRequest $req) This API is used to query mini program version approval details.
+ * @method Models\DescribeMNPVersionAuditListResponse DescribeMNPVersionAuditList(Models\DescribeMNPVersionAuditListRequest $req) This API is used to query mini program version approval records.
  * @method Models\DescribePaymentDataDetailResponse DescribePaymentDataDetail(Models\DescribePaymentDataDetailRequest $req) This API is used to query the mini program payment data details within a specified date range.
- * @method Models\DescribePaymentDataLineChartResponse DescribePaymentDataLineChart(Models\DescribePaymentDataLineChartRequest $req) This API is used to query the mini program payment line chart within a specified date range.
+ * @method Models\DescribePaymentDataLineChartResponse DescribePaymentDataLineChart(Models\DescribePaymentDataLineChartRequest $req) This API is used to query the time-series payment data of a mini program.
  * @method Models\DescribePaymentDataOverviewResponse DescribePaymentDataOverview(Models\DescribePaymentDataOverviewRequest $req) This API is used to query an overview of mini program payment data within a specified date range.
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) This API is used to query a list of roles.
  * @method Models\DescribeTeamResponse DescribeTeam(Models\DescribeTeamRequest $req) This API is used to query the team details.
- * @method Models\DescribeTeamListResponse DescribeTeamList(Models\DescribeTeamListRequest $req) This API is used to query a list of teams.
+ * @method Models\DescribeTeamListResponse DescribeTeamList(Models\DescribeTeamListRequest $req) This API is used to query the teams.
  * @method Models\DescribeTeamMemberListResponse DescribeTeamMemberList(Models\DescribeTeamMemberListRequest $req) This API is used to query a list of team members.
  * @method Models\DescribeTempSecret4UploadFile2CosResponse DescribeTempSecret4UploadFile2Cos(Models\DescribeTempSecret4UploadFile2CosRequest $req) This API is used to obtain a temporary key for file uploads.
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) This API is used to query the user details.

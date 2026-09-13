@@ -18,7 +18,7 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * MAU line chart data.
+ * Time-series MAU data.
  *
  * @method integer getDataTime() Obtain Date in YYYYMM format.
  * @method void setDataTime(integer $DataTime) Set Date in YYYYMM format.

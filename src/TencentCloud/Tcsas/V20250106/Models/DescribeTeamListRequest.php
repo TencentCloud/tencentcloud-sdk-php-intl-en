@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTeamList request structure.
  *
- * @method integer getOffset() Obtain Pagination offset.
- * @method void setOffset(integer $Offset) Set Pagination offset.
- * @method integer getLimit() Obtain Number of entries per page.
- * @method void setLimit(integer $Limit) Set Number of entries per page.
- * @method string getPlatformId() Obtain Platform ID.
- * @method void setPlatformId(string $PlatformId) Set Platform ID.
- * @method string getKeyword() Obtain Search keyword (team name).
- * @method void setKeyword(string $Keyword) Set Search keyword (team name).
+ * @method integer getOffset() Obtain <p>Pagination offset.</p>
+ * @method void setOffset(integer $Offset) Set <p>Pagination offset.</p>
+ * @method integer getLimit() Obtain <p>Pagination count.</p>
+ * @method void setLimit(integer $Limit) Set <p>Pagination count.</p>
+ * @method string getPlatformId() Obtain <p>Platform ID.</p>
+ * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
+ * @method string getKeyword() Obtain <p>Team name.</p>
+ * @method void setKeyword(string $Keyword) Set <p>Team name.</p>
  */
 class DescribeTeamListRequest extends AbstractModel
 {
     /**
-     * @var integer Pagination offset.
+     * @var integer <p>Pagination offset.</p>
      */
     public $Offset;
 
     /**
-     * @var integer Number of entries per page.
+     * @var integer <p>Pagination count.</p>
      */
     public $Limit;
 
     /**
-     * @var string Platform ID.
+     * @var string <p>Platform ID.</p>
      */
     public $PlatformId;
 
     /**
-     * @var string Search keyword (team name).
+     * @var string <p>Team name.</p>
      */
     public $Keyword;
 
     /**
-     * @param integer $Offset Pagination offset.
-     * @param integer $Limit Number of entries per page.
-     * @param string $PlatformId Platform ID.
-     * @param string $Keyword Search keyword (team name).
+     * @param integer $Offset <p>Pagination offset.</p>
+     * @param integer $Limit <p>Pagination count.</p>
+     * @param string $PlatformId <p>Platform ID.</p>
+     * @param string $Keyword <p>Team name.</p>
      */
     function __construct()
     {

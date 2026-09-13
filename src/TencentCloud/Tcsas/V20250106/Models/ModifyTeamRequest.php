@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTeam request structure.
  *
- * @method string getTeamId() Obtain Team ID.
- * @method void setTeamId(string $TeamId) Set Team ID.
- * @method string getTeamName() Obtain Team name.
- * @method void setTeamName(string $TeamName) Set Team name.
- * @method string getPlatformId() Obtain Platform ID.
- * @method void setPlatformId(string $PlatformId) Set Platform ID.
- * @method string getAdminUserId() Obtain Team administrator.
- * @method void setAdminUserId(string $AdminUserId) Set Team administrator.
+ * @method string getTeamId() Obtain <p>Team ID.</p>
+ * @method void setTeamId(string $TeamId) Set <p>Team ID.</p>
+ * @method string getTeamName() Obtain <p>Team name.</p>
+ * @method void setTeamName(string $TeamName) Set <p>Team name.</p>
+ * @method string getPlatformId() Obtain <p>Platform ID.</p>
+ * @method void setPlatformId(string $PlatformId) Set <p>Platform ID.</p>
+ * @method string getAdminUserId() Obtain <p>Team admin.</p>
+ * @method void setAdminUserId(string $AdminUserId) Set <p>Team admin.</p>
+ * @method array getAdminUserIds() Obtain <p>Team admin user IDs.</p>
+ * @method void setAdminUserIds(array $AdminUserIds) Set <p>Team admin user IDs.</p>
  */
 class ModifyTeamRequest extends AbstractModel
 {
     /**
-     * @var string Team ID.
+     * @var string <p>Team ID.</p>
      */
     public $TeamId;
 
     /**
-     * @var string Team name.
+     * @var string <p>Team name.</p>
      */
     public $TeamName;
 
     /**
-     * @var string Platform ID.
+     * @var string <p>Platform ID.</p>
      */
     public $PlatformId;
 
     /**
-     * @var string Team administrator.
+     * @var string <p>Team admin.</p>
      */
     public $AdminUserId;
 
     /**
-     * @param string $TeamId Team ID.
-     * @param string $TeamName Team name.
-     * @param string $PlatformId Platform ID.
-     * @param string $AdminUserId Team administrator.
+     * @var array <p>Team admin user IDs.</p>
+     */
+    public $AdminUserIds;
+
+    /**
+     * @param string $TeamId <p>Team ID.</p>
+     * @param string $TeamName <p>Team name.</p>
+     * @param string $PlatformId <p>Platform ID.</p>
+     * @param string $AdminUserId <p>Team admin.</p>
+     * @param array $AdminUserIds <p>Team admin user IDs.</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyTeamRequest extends AbstractModel
 
         if (array_key_exists("AdminUserId",$param) and $param["AdminUserId"] !== null) {
             $this->AdminUserId = $param["AdminUserId"];
+        }
+
+        if (array_key_exists("AdminUserIds",$param) and $param["AdminUserIds"] !== null) {
+            $this->AdminUserIds = $param["AdminUserIds"];
         }
     }
 }

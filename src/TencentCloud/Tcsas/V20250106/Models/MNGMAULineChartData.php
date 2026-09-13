@@ -18,7 +18,7 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Mini game MAU line chart data.
+ * Time-series MAU data of a mini game.
  *
  * @method integer getDataTime() Obtain Date in YYYYMM format. 
 Note: This field may return null, indicating that no valid values can be obtained.

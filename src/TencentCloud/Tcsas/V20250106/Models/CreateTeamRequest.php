@@ -20,58 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTeam request structure.
  *
- * @method string getTeamName() Obtain Team name.
- * @method void setTeamName(string $TeamName) Set Team name.
- * @method string getAdminUserId() Obtain Admin name.
- * @method void setAdminUserId(string $AdminUserId) Set Admin name.
- * @method array getTeamRoleTypeList() Obtain Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
- * @method void setTeamRoleTypeList(array $TeamRoleTypeList) Set Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
- * @method string getRemark() Obtain Remark.
- * @method void setRemark(string $Remark) Set Remark.
- * @method string getPlatformId() Obtain Platform ID, required for API call.
- * @method void setPlatformId(string $PlatformId) Set Platform ID, required for API call.
- * @method string getRelatedTeamId() Obtain Associated team ID.
- * @method void setRelatedTeamId(string $RelatedTeamId) Set Associated team ID.
+ * @method string getTeamName() Obtain <p>Team name.</p>
+ * @method void setTeamName(string $TeamName) Set <p>Team name.</p>
+ * @method string getAdminUserId() Obtain <p>Administrator name.</p>
+ * @method void setAdminUserId(string $AdminUserId) Set <p>Administrator name.</p>
+ * @method array getTeamRoleTypeList() Obtain <p>Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).</p>
+ * @method void setTeamRoleTypeList(array $TeamRoleTypeList) Set <p>Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).</p>
+ * @method string getRemark() Obtain <p>Remarks.</p>
+ * @method void setRemark(string $Remark) Set <p>Remarks.</p>
+ * @method string getPlatformId() Obtain <p>Platform ID, required for API call.</p>
+ * @method void setPlatformId(string $PlatformId) Set <p>Platform ID, required for API call.</p>
+ * @method string getRelatedTeamId() Obtain <p>Associated team ID.</p>
+ * @method void setRelatedTeamId(string $RelatedTeamId) Set <p>Associated team ID.</p>
+ * @method integer getExpiryTime() Obtain <p>Team expiration time as a Unix timestamp in seconds. 0 indicates no expiration. This parameter takes effect only when creating a mini program team.</p>
+ * @method void setExpiryTime(integer $ExpiryTime) Set <p>Team expiration time as a Unix timestamp in seconds. 0 indicates no expiration. This parameter takes effect only when creating a mini program team.</p>
+ * @method array getAdminUserIds() Obtain <p>Administrator user IDs.</p>
+ * @method void setAdminUserIds(array $AdminUserIds) Set <p>Administrator user IDs.</p>
  */
 class CreateTeamRequest extends AbstractModel
 {
     /**
-     * @var string Team name.
+     * @var string <p>Team name.</p>
      */
     public $TeamName;
 
     /**
-     * @var string Admin name.
+     * @var string <p>Administrator name.</p>
      */
     public $AdminUserId;
 
     /**
-     * @var array Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
+     * @var array <p>Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).</p>
      */
     public $TeamRoleTypeList;
 
     /**
-     * @var string Remark.
+     * @var string <p>Remarks.</p>
      */
     public $Remark;
 
     /**
-     * @var string Platform ID, required for API call.
+     * @var string <p>Platform ID, required for API call.</p>
      */
     public $PlatformId;
 
     /**
-     * @var string Associated team ID.
+     * @var string <p>Associated team ID.</p>
      */
     public $RelatedTeamId;
 
     /**
-     * @param string $TeamName Team name.
-     * @param string $AdminUserId Admin name.
-     * @param array $TeamRoleTypeList Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
-     * @param string $Remark Remark.
-     * @param string $PlatformId Platform ID, required for API call.
-     * @param string $RelatedTeamId Associated team ID.
+     * @var integer <p>Team expiration time as a Unix timestamp in seconds. 0 indicates no expiration. This parameter takes effect only when creating a mini program team.</p>
+     */
+    public $ExpiryTime;
+
+    /**
+     * @var array <p>Administrator user IDs.</p>
+     */
+    public $AdminUserIds;
+
+    /**
+     * @param string $TeamName <p>Team name.</p>
+     * @param string $AdminUserId <p>Administrator name.</p>
+     * @param array $TeamRoleTypeList <p>Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).</p>
+     * @param string $Remark <p>Remarks.</p>
+     * @param string $PlatformId <p>Platform ID, required for API call.</p>
+     * @param string $RelatedTeamId <p>Associated team ID.</p>
+     * @param integer $ExpiryTime <p>Team expiration time as a Unix timestamp in seconds. 0 indicates no expiration. This parameter takes effect only when creating a mini program team.</p>
+     * @param array $AdminUserIds <p>Administrator user IDs.</p>
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class CreateTeamRequest extends AbstractModel
 
         if (array_key_exists("RelatedTeamId",$param) and $param["RelatedTeamId"] !== null) {
             $this->RelatedTeamId = $param["RelatedTeamId"];
+        }
+
+        if (array_key_exists("ExpiryTime",$param) and $param["ExpiryTime"] !== null) {
+            $this->ExpiryTime = $param["ExpiryTime"];
+        }
+
+        if (array_key_exists("AdminUserIds",$param) and $param["AdminUserIds"] !== null) {
+            $this->AdminUserIds = $param["AdminUserIds"];
         }
     }
 }

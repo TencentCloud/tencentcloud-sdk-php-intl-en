@@ -18,7 +18,7 @@ namespace TencentCloud\Tcsas\V20250106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Paginated team list.
+ * Paged information of teams
  *
  * @method integer getTotalCount() Obtain Total number of entries.
  * @method void setTotalCount(integer $TotalCount) Set Total number of entries.

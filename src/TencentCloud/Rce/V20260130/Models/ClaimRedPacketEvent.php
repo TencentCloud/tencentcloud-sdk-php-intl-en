@@ -1,0 +1,143 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Rce\V20260130\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * ClaimRedPacket event details
+ *
+ * @method string getPromotionId() Obtain <p>The ID of the promotion</p>
+ * @method void setPromotionId(string $PromotionId) Set <p>The ID of the promotion</p>
+ * @method string getPromotionName() Obtain <p>The Name of the promotion</p>
+ * @method void setPromotionName(string $PromotionName) Set <p>The Name of the promotion</p>
+ * @method string getDescription() Obtain <p>The description of the promotion</p>
+ * @method void setDescription(string $Description) Set <p>The description of the promotion</p>
+ * @method string getInviterUserId() Obtain <p>The ID of the inviter</p>
+ * @method void setInviterUserId(string $InviterUserId) Set <p>The ID of the inviter</p>
+ * @method string getRedPacketId() Obtain <p>The ID of the red packet</p>
+ * @method void setRedPacketId(string $RedPacketId) Set <p>The ID of the red packet</p>
+ * @method string getRedPacketType() Obtain <p>The type of red packet, for example, random amount, passcode, standard</p>
+ * @method void setRedPacketType(string $RedPacketType) Set <p>The type of red packet, for example, random amount, passcode, standard</p>
+ * @method Amount getRedPacketAmount() Obtain <p>The amount  in the red packet</p>
+ * @method void setRedPacketAmount(Amount $RedPacketAmount) Set <p>The amount  in the red packet</p>
+ * @method array getCust() Obtain <p>The custom parameters agreed with RCE. An array of objects in K:V format. e.g.[{"Key": "ApproverName", "Value": "bob"},{"Key":"ApproverPhone","Value": "+86131****5678"}]</p>
+ * @method void setCust(array $Cust) Set <p>The custom parameters agreed with RCE. An array of objects in K:V format. e.g.[{"Key": "ApproverName", "Value": "bob"},{"Key":"ApproverPhone","Value": "+86131****5678"}]</p>
+ */
+class ClaimRedPacketEvent extends AbstractModel
+{
+    /**
+     * @var string <p>The ID of the promotion</p>
+     */
+    public $PromotionId;
+
+    /**
+     * @var string <p>The Name of the promotion</p>
+     */
+    public $PromotionName;
+
+    /**
+     * @var string <p>The description of the promotion</p>
+     */
+    public $Description;
+
+    /**
+     * @var string <p>The ID of the inviter</p>
+     */
+    public $InviterUserId;
+
+    /**
+     * @var string <p>The ID of the red packet</p>
+     */
+    public $RedPacketId;
+
+    /**
+     * @var string <p>The type of red packet, for example, random amount, passcode, standard</p>
+     */
+    public $RedPacketType;
+
+    /**
+     * @var Amount <p>The amount  in the red packet</p>
+     */
+    public $RedPacketAmount;
+
+    /**
+     * @var array <p>The custom parameters agreed with RCE. An array of objects in K:V format. e.g.[{"Key": "ApproverName", "Value": "bob"},{"Key":"ApproverPhone","Value": "+86131****5678"}]</p>
+     */
+    public $Cust;
+
+    /**
+     * @param string $PromotionId <p>The ID of the promotion</p>
+     * @param string $PromotionName <p>The Name of the promotion</p>
+     * @param string $Description <p>The description of the promotion</p>
+     * @param string $InviterUserId <p>The ID of the inviter</p>
+     * @param string $RedPacketId <p>The ID of the red packet</p>
+     * @param string $RedPacketType <p>The type of red packet, for example, random amount, passcode, standard</p>
+     * @param Amount $RedPacketAmount <p>The amount  in the red packet</p>
+     * @param array $Cust <p>The custom parameters agreed with RCE. An array of objects in K:V format. e.g.[{"Key": "ApproverName", "Value": "bob"},{"Key":"ApproverPhone","Value": "+86131****5678"}]</p>
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("PromotionId",$param) and $param["PromotionId"] !== null) {
+            $this->PromotionId = $param["PromotionId"];
+        }
+
+        if (array_key_exists("PromotionName",$param) and $param["PromotionName"] !== null) {
+            $this->PromotionName = $param["PromotionName"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("InviterUserId",$param) and $param["InviterUserId"] !== null) {
+            $this->InviterUserId = $param["InviterUserId"];
+        }
+
+        if (array_key_exists("RedPacketId",$param) and $param["RedPacketId"] !== null) {
+            $this->RedPacketId = $param["RedPacketId"];
+        }
+
+        if (array_key_exists("RedPacketType",$param) and $param["RedPacketType"] !== null) {
+            $this->RedPacketType = $param["RedPacketType"];
+        }
+
+        if (array_key_exists("RedPacketAmount",$param) and $param["RedPacketAmount"] !== null) {
+            $this->RedPacketAmount = new Amount();
+            $this->RedPacketAmount->deserialize($param["RedPacketAmount"]);
+        }
+
+        if (array_key_exists("Cust",$param) and $param["Cust"] !== null) {
+            $this->Cust = [];
+            foreach ($param["Cust"] as $key => $value){
+                $obj = new Cust();
+                $obj->deserialize($value);
+                array_push($this->Cust, $obj);
+            }
+        }
+    }
+}

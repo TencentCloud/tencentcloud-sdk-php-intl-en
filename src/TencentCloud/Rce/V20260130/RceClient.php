@@ -26,6 +26,7 @@ use TencentCloud\Rce\V20260130\Models as Models;
  * @method Models\AssessDeviceRiskPremiumProResponse AssessDeviceRiskPremiumPro(Models\AssessDeviceRiskPremiumProRequest $req) Device Risk assessment - Premium
  * @method Models\AssessDeviceRiskProResponse AssessDeviceRiskPro(Models\AssessDeviceRiskProRequest $req) Device Risk Assessment - Basic
  * @method Models\AssessEnvironmentRiskResponse AssessEnvironmentRisk(Models\AssessEnvironmentRiskRequest $req) Environment Risk Assessment
+ * @method Models\ReportEventResponse ReportEvent(Models\ReportEventRequest $req) Used to report events that do not require real-time decision-making in your business. Our engine will perform computations and apply machine learning to mine risk features from these events, which are then used to support real-time event risk assessment.
  */
 
 class RceClient extends AbstractClient
