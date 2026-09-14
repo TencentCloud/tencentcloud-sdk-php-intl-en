@@ -18,52 +18,40 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Artifact removal (smoothing) configuration.
+ * Artifact (burr) removal configuration
  *
- * @method string getSwitch() Obtain Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+ * @method string getSwitch() Obtain Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
- * @method void setSwitch(string $Switch) Set Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+ * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
- * @method string getType() Obtain Type, available values:
-<li>weak</li>
-<li>strong</li>
-Default value: weak.
- * @method void setType(string $Type) Set Type, available values:
-<li>weak</li>
-<li>strong</li>
-Default value: weak.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
  */
 class ArtifactRepairConfig extends AbstractModel
 {
     /**
-     * @var string Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @var string Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      */
     public $Switch;
 
     /**
-     * @var string Type, available values:
-<li>weak</li>
-<li>strong</li>
-Default value: weak.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @param string $Switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @param string $Switch Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-     * @param string $Type Type, available values:
-<li>weak</li>
-<li>strong</li>
-Default value: weak.
+     * @param string $Type 
      */
     function __construct()
     {

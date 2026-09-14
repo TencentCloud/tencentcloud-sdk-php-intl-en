@@ -18,60 +18,60 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Media processing VOD object information.
+ * 
  *
- * @method string getBucket() Obtain <p><em>Bucket ID</em> where the media processing object file resides</p>
- * @method void setBucket(string $Bucket) Set <p><em>Bucket ID</em> where the media processing object file resides</p>
- * @method string getRegion() Obtain <p>Region of the Bucket where the media processing object file resides</p>
- * @method void setRegion(string $Region) Set <p>Region of the Bucket where the media processing object file resides</p>
- * @method string getObject() Obtain <p>Input path of the media processing object file</p>
- * @method void setObject(string $Object) Set <p>Input path of the media processing object file</p>
- * @method integer getSubAppId() Obtain <p>VOD application ID.</p>
- * @method void setSubAppId(integer $SubAppId) Set <p>VOD application ID.</p>
- * @method integer getVodBasic() Obtain <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
- * @method void setVodBasic(integer $VodBasic) Set <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
- * @method string getFileId() Obtain <p>VOD Standard Edition FileId</p>
- * @method void setFileId(string $FileId) Set <p>VOD Standard Edition FileId</p>
+ * @method string getBucket() Obtain 
+ * @method void setBucket(string $Bucket) Set 
+ * @method string getRegion() Obtain 
+ * @method void setRegion(string $Region) Set 
+ * @method string getObject() Obtain 
+ * @method void setObject(string $Object) Set 
+ * @method integer getSubAppId() Obtain 
+ * @method void setSubAppId(integer $SubAppId) Set 
+ * @method integer getVodBasic() Obtain 
+ * @method void setVodBasic(integer $VodBasic) Set 
+ * @method string getFileId() Obtain 
+ * @method void setFileId(string $FileId) Set 
  */
 class VODInputInfo extends AbstractModel
 {
     /**
-     * @var string <p><em>Bucket ID</em> where the media processing object file resides</p>
+     * @var string 
      */
     public $Bucket;
 
     /**
-     * @var string <p>Region of the Bucket where the media processing object file resides</p>
+     * @var string 
      */
     public $Region;
 
     /**
-     * @var string <p>Input path of the media processing object file</p>
+     * @var string 
      */
     public $Object;
 
     /**
-     * @var integer <p>VOD application ID.</p>
+     * @var integer 
      */
     public $SubAppId;
 
     /**
-     * @var integer <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+     * @var integer 
      */
     public $VodBasic;
 
     /**
-     * @var string <p>VOD Standard Edition FileId</p>
+     * @var string 
      */
     public $FileId;
 
     /**
-     * @param string $Bucket <p><em>Bucket ID</em> where the media processing object file resides</p>
-     * @param string $Region <p>Region of the Bucket where the media processing object file resides</p>
-     * @param string $Object <p>Input path of the media processing object file</p>
-     * @param integer $SubAppId <p>VOD application ID.</p>
-     * @param integer $VodBasic <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
-     * @param string $FileId <p>VOD Standard Edition FileId</p>
+     * @param string $Bucket 
+     * @param string $Region 
+     * @param string $Object 
+     * @param integer $SubAppId 
+     * @param integer $VodBasic 
+     * @param string $FileId 
      */
     function __construct()
     {

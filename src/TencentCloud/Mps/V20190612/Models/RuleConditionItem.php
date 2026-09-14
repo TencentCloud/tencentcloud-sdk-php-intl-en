@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rule condition configuration.
+ * 
  *
- * @method string getKey() Obtain Key of the quality inspection item condition.
- * @method void setKey(string $Key) Set Key of the quality inspection item condition.
- * @method string getValue() Obtain Value corresponding to the condition.
- * @method void setValue(string $Value) Set Value corresponding to the condition.
+ * @method string getKey() Obtain 
+ * @method void setKey(string $Key) Set 
+ * @method string getValue() Obtain 
+ * @method void setValue(string $Value) Set 
  */
 class RuleConditionItem extends AbstractModel
 {
     /**
-     * @var string Key of the quality inspection item condition.
+     * @var string 
      */
     public $Key;
 
     /**
-     * @var string Value corresponding to the condition.
+     * @var string 
      */
     public $Value;
 
     /**
-     * @param string $Key Key of the quality inspection item condition.
-     * @param string $Value Value corresponding to the condition.
+     * @param string $Key 
+     * @param string $Value 
      */
     function __construct()
     {

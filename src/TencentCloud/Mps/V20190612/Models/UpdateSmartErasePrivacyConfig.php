@@ -18,44 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Privacy protection configuration for the smart erasing template.
+ * 
  *
- * @method string getPrivacyModel() Obtain Privacy protection removal method.
-- Blur: blur detection
-- mosaic
- * @method void setPrivacyModel(string $PrivacyModel) Set Privacy protection removal method.
-- Blur: blur detection
-- mosaic
- * @method array getPrivacyTargets() Obtain Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
-- face: human face
-- plate: license plate.
- * @method void setPrivacyTargets(array $PrivacyTargets) Set Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
-- face: human face
-- plate: license plate.
+ * @method string getPrivacyModel() Obtain 
+ * @method void setPrivacyModel(string $PrivacyModel) Set 
+ * @method array getPrivacyTargets() Obtain 
+ * @method void setPrivacyTargets(array $PrivacyTargets) Set 
  */
 class UpdateSmartErasePrivacyConfig extends AbstractModel
 {
     /**
-     * @var string Privacy protection removal method.
-- Blur: blur detection
-- mosaic
+     * @var string 
      */
     public $PrivacyModel;
 
     /**
-     * @var array Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
-- face: human face
-- plate: license plate.
+     * @var array 
      */
     public $PrivacyTargets;
 
     /**
-     * @param string $PrivacyModel Privacy protection removal method.
-- Blur: blur detection
-- mosaic
-     * @param array $PrivacyTargets Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
-- face: human face
-- plate: license plate.
+     * @param string $PrivacyModel 
+     * @param array $PrivacyTargets 
      */
     function __construct()
     {

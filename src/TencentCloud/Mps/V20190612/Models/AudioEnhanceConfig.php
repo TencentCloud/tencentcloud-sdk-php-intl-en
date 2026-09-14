@@ -18,44 +18,44 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The audio enhancement configuration.
+ * Audio enhancement configuration
  *
- * @method AudioDenoiseConfig getDenoise() Obtain Audio noise reduction configuration.
- * @method void setDenoise(AudioDenoiseConfig $Denoise) Set Audio noise reduction configuration.
- * @method AudioSeparateConfig getSeparate() Obtain Audio separation configuration.
- * @method void setSeparate(AudioSeparateConfig $Separate) Set Audio separation configuration.
- * @method VolumeBalanceConfig getVolumeBalance() Obtain Volume equalization configuration.
- * @method void setVolumeBalance(VolumeBalanceConfig $VolumeBalance) Set Volume equalization configuration.
- * @method AudioBeautifyConfig getBeautify() Obtain Audio beautification configuration.
- * @method void setBeautify(AudioBeautifyConfig $Beautify) Set Audio beautification configuration.
+ * @method AudioDenoiseConfig getDenoise() Obtain 
+ * @method void setDenoise(AudioDenoiseConfig $Denoise) Set 
+ * @method AudioSeparateConfig getSeparate() Obtain 
+ * @method void setSeparate(AudioSeparateConfig $Separate) Set 
+ * @method VolumeBalanceConfig getVolumeBalance() Obtain 
+ * @method void setVolumeBalance(VolumeBalanceConfig $VolumeBalance) Set 
+ * @method AudioBeautifyConfig getBeautify() Obtain 
+ * @method void setBeautify(AudioBeautifyConfig $Beautify) Set 
  */
 class AudioEnhanceConfig extends AbstractModel
 {
     /**
-     * @var AudioDenoiseConfig Audio noise reduction configuration.
+     * @var AudioDenoiseConfig 
      */
     public $Denoise;
 
     /**
-     * @var AudioSeparateConfig Audio separation configuration.
+     * @var AudioSeparateConfig 
      */
     public $Separate;
 
     /**
-     * @var VolumeBalanceConfig Volume equalization configuration.
+     * @var VolumeBalanceConfig 
      */
     public $VolumeBalance;
 
     /**
-     * @var AudioBeautifyConfig Audio beautification configuration.
+     * @var AudioBeautifyConfig 
      */
     public $Beautify;
 
     /**
-     * @param AudioDenoiseConfig $Denoise Audio noise reduction configuration.
-     * @param AudioSeparateConfig $Separate Audio separation configuration.
-     * @param VolumeBalanceConfig $VolumeBalance Volume equalization configuration.
-     * @param AudioBeautifyConfig $Beautify Audio beautification configuration.
+     * @param AudioDenoiseConfig $Denoise 
+     * @param AudioSeparateConfig $Separate 
+     * @param VolumeBalanceConfig $VolumeBalance 
+     * @param AudioBeautifyConfig $Beautify 
      */
     function __construct()
     {

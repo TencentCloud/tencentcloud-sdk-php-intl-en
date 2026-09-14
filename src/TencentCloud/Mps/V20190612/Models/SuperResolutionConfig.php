@@ -18,68 +18,48 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Super resolution configuration.
+ * Super-resolution configuration.
  *
- * @method string getSwitch() Obtain Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+ * @method string getSwitch() Obtain Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
- * @method void setSwitch(string $Switch) Set Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+ * @method void setSwitch(string $Switch) Set Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
- * @method string getType() Obtain Type, available values:
-<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
-<li>hq: Targeting high-resolution video super-resolution.</li>
-Default value: lq.
- * @method void setType(string $Type) Set Type, available values:
-<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
-<li>hq: Targeting high-resolution video super-resolution.</li>
-Default value: lq.
- * @method integer getSize() Obtain Super-resolution multiple, optional value:
-<li>2: Currently only support 2x super resolution.</li>
-Default value: 2.
- * @method void setSize(integer $Size) Set Super-resolution multiple, optional value:
-<li>2: Currently only support 2x super resolution.</li>
-Default value: 2.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method integer getSize() Obtain 
+ * @method void setSize(integer $Size) Set 
  */
 class SuperResolutionConfig extends AbstractModel
 {
     /**
-     * @var string Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @var string Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public $Switch;
 
     /**
-     * @var string Type, available values:
-<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
-<li>hq: Targeting high-resolution video super-resolution.</li>
-Default value: lq.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var integer Super-resolution multiple, optional value:
-<li>2: Currently only support 2x super resolution.</li>
-Default value: 2.
+     * @var integer 
      */
     public $Size;
 
     /**
-     * @param string $Switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @param string $Switch Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
-     * @param string $Type Type, available values:
-<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
-<li>hq: Targeting high-resolution video super-resolution.</li>
-Default value: lq.
-     * @param integer $Size Super-resolution multiple, optional value:
-<li>2: Currently only support 2x super resolution.</li>
-Default value: 2.
+     * @param string $Type 
+     * @param integer $Size 
      */
     function __construct()
     {

@@ -18,128 +18,108 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the video stream in a VOD file
+ * Video stream information of VOD files
  *
- * @method integer getBitrate() Obtain Bitrate of a video stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBitrate(integer $Bitrate) Set Bitrate of a video stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getHeight() Obtain Height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHeight(integer $Height) Set Height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getWidth() Obtain Width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWidth(integer $Width) Set Width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCodec() Obtain Video stream codec, such as h264.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCodec(string $Codec) Set Video stream codec, such as h264.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getFps() Obtain Frame rate in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setFps(integer $Fps) Set Frame rate in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getColorPrimaries() Obtain Colorspace.
- * @method void setColorPrimaries(string $ColorPrimaries) Set Colorspace.
- * @method string getColorSpace() Obtain Colorspace.
- * @method void setColorSpace(string $ColorSpace) Set Colorspace.
- * @method string getColorTransfer() Obtain Colorspace.
- * @method void setColorTransfer(string $ColorTransfer) Set Colorspace.
- * @method string getHdrType() Obtain HDR type.
- * @method void setHdrType(string $HdrType) Set HDR type.
- * @method string getCodecs() Obtain Video Codecs.
- * @method void setCodecs(string $Codecs) Set Video Codecs.
- * @method integer getFpsNumerator() Obtain Numerator of the frame rate
- * @method void setFpsNumerator(integer $FpsNumerator) Set Numerator of the frame rate
- * @method integer getFpsDenominator() Obtain Denominator of the frame rate
- * @method void setFpsDenominator(integer $FpsDenominator) Set Denominator of the frame rate
+ * @method integer getBitrate() Obtain Bitrate of the video stream. Unit: bps.
+ * @method void setBitrate(integer $Bitrate) Set Bitrate of the video stream. Unit: bps.
+ * @method integer getHeight() Obtain Height of a video stream. Unit: px.
+ * @method void setHeight(integer $Height) Set Height of a video stream. Unit: px.
+ * @method integer getWidth() Obtain Video stream width in px.
+ * @method void setWidth(integer $Width) Set Video stream width in px.
+ * @method string getCodec() Obtain Video stream encoding format, for example, h264.
+ * @method void setCodec(string $Codec) Set Video stream encoding format, for example, h264.
+ * @method integer getFps() Obtain Frame rate. Measurement unit: hz.
+ * @method void setFps(integer $Fps) Set Frame rate. Measurement unit: hz.
+ * @method string getColorPrimaries() Obtain 
+ * @method void setColorPrimaries(string $ColorPrimaries) Set 
+ * @method string getColorSpace() Obtain 
+ * @method void setColorSpace(string $ColorSpace) Set 
+ * @method string getColorTransfer() Obtain 
+ * @method void setColorTransfer(string $ColorTransfer) Set 
+ * @method string getHdrType() Obtain 
+ * @method void setHdrType(string $HdrType) Set 
+ * @method string getCodecs() Obtain 
+ * @method void setCodecs(string $Codecs) Set 
+ * @method integer getFpsNumerator() Obtain 
+ * @method void setFpsNumerator(integer $FpsNumerator) Set 
+ * @method integer getFpsDenominator() Obtain 
+ * @method void setFpsDenominator(integer $FpsDenominator) Set 
  */
 class MediaVideoStreamItem extends AbstractModel
 {
     /**
-     * @var integer Bitrate of a video stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Bitrate of the video stream. Unit: bps.
      */
     public $Bitrate;
 
     /**
-     * @var integer Height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Height of a video stream. Unit: px.
      */
     public $Height;
 
     /**
-     * @var integer Width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Video stream width in px.
      */
     public $Width;
 
     /**
-     * @var string Video stream codec, such as h264.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Video stream encoding format, for example, h264.
      */
     public $Codec;
 
     /**
-     * @var integer Frame rate in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Frame rate. Measurement unit: hz.
      */
     public $Fps;
 
     /**
-     * @var string Colorspace.
+     * @var string 
      */
     public $ColorPrimaries;
 
     /**
-     * @var string Colorspace.
+     * @var string 
      */
     public $ColorSpace;
 
     /**
-     * @var string Colorspace.
+     * @var string 
      */
     public $ColorTransfer;
 
     /**
-     * @var string HDR type.
+     * @var string 
      */
     public $HdrType;
 
     /**
-     * @var string Video Codecs.
+     * @var string 
      */
     public $Codecs;
 
     /**
-     * @var integer Numerator of the frame rate
+     * @var integer 
      */
     public $FpsNumerator;
 
     /**
-     * @var integer Denominator of the frame rate
+     * @var integer 
      */
     public $FpsDenominator;
 
     /**
-     * @param integer $Bitrate Bitrate of a video stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Height Height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Width Width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Codec Video stream codec, such as h264.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Fps Frame rate in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ColorPrimaries Colorspace.
-     * @param string $ColorSpace Colorspace.
-     * @param string $ColorTransfer Colorspace.
-     * @param string $HdrType HDR type.
-     * @param string $Codecs Video Codecs.
-     * @param integer $FpsNumerator Numerator of the frame rate
-     * @param integer $FpsDenominator Denominator of the frame rate
+     * @param integer $Bitrate Bitrate of the video stream. Unit: bps.
+     * @param integer $Height Height of a video stream. Unit: px.
+     * @param integer $Width Video stream width in px.
+     * @param string $Codec Video stream encoding format, for example, h264.
+     * @param integer $Fps Frame rate. Measurement unit: hz.
+     * @param string $ColorPrimaries 
+     * @param string $ColorSpace 
+     * @param string $ColorTransfer 
+     * @param string $HdrType 
+     * @param string $Codecs 
+     * @param integer $FpsNumerator 
+     * @param integer $FpsDenominator 
      */
     function __construct()
     {

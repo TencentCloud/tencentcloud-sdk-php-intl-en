@@ -18,44 +18,44 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rule of the `{number}` variable in the output file name.
+ * Rules for the `{number}` variable in the output filename.
  *
- * @method integer getInitialValue() Obtain Start value of the `{number}` variable. Default value: 0.
- * @method void setInitialValue(integer $InitialValue) Set Start value of the `{number}` variable. Default value: 0.
- * @method integer getIncrement() Obtain Increment of the `{number}` variable. Default value: 1.
- * @method void setIncrement(integer $Increment) Set Increment of the `{number}` variable. Default value: 1.
- * @method integer getMinLength() Obtain Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
- * @method void setMinLength(integer $MinLength) Set Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
- * @method string getPlaceHolder() Obtain Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
- * @method void setPlaceHolder(string $PlaceHolder) Set Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
+ * @method integer getInitialValue() Obtain The starting value of the `{number}` variable. Default value: 0.
+ * @method void setInitialValue(integer $InitialValue) Set The starting value of the `{number}` variable. Default value: 0.
+ * @method integer getIncrement() Obtain The growth step length of the `{number}` variable, with a default value of 1.
+ * @method void setIncrement(integer $Increment) Set The growth step length of the `{number}` variable, with a default value of 1.
+ * @method integer getMinLength() Obtain Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
+ * @method void setMinLength(integer $MinLength) Set Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
+ * @method string getPlaceHolder() Obtain Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
+ * @method void setPlaceHolder(string $PlaceHolder) Set Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
  */
 class NumberFormat extends AbstractModel
 {
     /**
-     * @var integer Start value of the `{number}` variable. Default value: 0.
+     * @var integer The starting value of the `{number}` variable. Default value: 0.
      */
     public $InitialValue;
 
     /**
-     * @var integer Increment of the `{number}` variable. Default value: 1.
+     * @var integer The growth step length of the `{number}` variable, with a default value of 1.
      */
     public $Increment;
 
     /**
-     * @var integer Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
+     * @var integer Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
      */
     public $MinLength;
 
     /**
-     * @var string Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
+     * @var string Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
      */
     public $PlaceHolder;
 
     /**
-     * @param integer $InitialValue Start value of the `{number}` variable. Default value: 0.
-     * @param integer $Increment Increment of the `{number}` variable. Default value: 1.
-     * @param integer $MinLength Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
-     * @param string $PlaceHolder Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
+     * @param integer $InitialValue The starting value of the `{number}` variable. Default value: 0.
+     * @param integer $Increment The growth step length of the `{number}` variable, with a default value of 1.
+     * @param integer $MinLength Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
+     * @param string $PlaceHolder Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
      */
     function __construct()
     {

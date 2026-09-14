@@ -18,36 +18,36 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * cos information. Stores user-provided cos information for saving results
  *
- * @method string getCosBucketRegion() Obtain 
- * @method void setCosBucketRegion(string $CosBucketRegion) Set 
- * @method string getCosBucketName() Obtain 
- * @method void setCosBucketName(string $CosBucketName) Set 
- * @method string getCosBucketPath() Obtain 
- * @method void setCosBucketPath(string $CosBucketPath) Set 
+ * @method string getCosBucketRegion() Obtain <p>cos bucket region</p>
+ * @method void setCosBucketRegion(string $CosBucketRegion) Set <p>cos bucket region</p>
+ * @method string getCosBucketName() Obtain <p>cos bucket name</p>
+ * @method void setCosBucketName(string $CosBucketName) Set <p>cos bucket name</p>
+ * @method string getCosBucketPath() Obtain <p>cos bucket path</p>
+ * @method void setCosBucketPath(string $CosBucketPath) Set <p>cos bucket path</p>
  */
 class DocToVideoCosInfo extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string <p>cos bucket region</p>
      */
     public $CosBucketRegion;
 
     /**
-     * @var string 
+     * @var string <p>cos bucket name</p>
      */
     public $CosBucketName;
 
     /**
-     * @var string 
+     * @var string <p>cos bucket path</p>
      */
     public $CosBucketPath;
 
     /**
-     * @param string $CosBucketRegion 
-     * @param string $CosBucketName 
-     * @param string $CosBucketPath 
+     * @param string $CosBucketRegion <p>cos bucket region</p>
+     * @param string $CosBucketName <p>cos bucket name</p>
+     * @param string $CosBucketPath <p>cos bucket path</p>
      */
     function __construct()
     {

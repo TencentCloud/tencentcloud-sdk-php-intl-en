@@ -18,56 +18,56 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of the media processing output object.
+ * Media processing output object information.
  *
- * @method string getType() Obtain Specifies the type of storage location for the media processing service output object. valid values:.
-<Li>COS: cos storage.</li>.
-<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
-<Li>VOD: video-on-demand (vod) pro edition</li>.
- * @method void setType(string $Type) Set Specifies the type of storage location for the media processing service output object. valid values:.
-<Li>COS: cos storage.</li>.
-<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
-<Li>VOD: video-on-demand (vod) pro edition</li>.
- * @method CosOutputStorage getCosOutputStorage() Obtain Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
- * @method void setCosOutputStorage(CosOutputStorage $CosOutputStorage) Set Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
- * @method S3OutputStorage getS3OutputStorage() Obtain Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
- * @method void setS3OutputStorage(S3OutputStorage $S3OutputStorage) Set Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
- * @method VODOutputStorage getVODOutputStorage() Obtain Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
- * @method void setVODOutputStorage(VODOutputStorage $VODOutputStorage) Set Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
+ * @method string getType() Obtain Type of the media processing output object storage location. Supported values:
+<li>COS: COS storage</li>
+<li>AWS-S3: AWS storage, suitable for AWS tasks only and requires the same region</li>
+<li> VOD: VOD Pro Edition </li>
+ * @method void setType(string $Type) Set Type of the media processing output object storage location. Supported values:
+<li>COS: COS storage</li>
+<li>AWS-S3: AWS storage, suitable for AWS tasks only and requires the same region</li>
+<li> VOD: VOD Pro Edition </li>
+ * @method CosOutputStorage getCosOutputStorage() Obtain 
+ * @method void setCosOutputStorage(CosOutputStorage $CosOutputStorage) Set 
+ * @method S3OutputStorage getS3OutputStorage() Obtain 
+ * @method void setS3OutputStorage(S3OutputStorage $S3OutputStorage) Set 
+ * @method VODOutputStorage getVODOutputStorage() Obtain 
+ * @method void setVODOutputStorage(VODOutputStorage $VODOutputStorage) Set 
  */
 class TaskOutputStorage extends AbstractModel
 {
     /**
-     * @var string Specifies the type of storage location for the media processing service output object. valid values:.
-<Li>COS: cos storage.</li>.
-<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
-<Li>VOD: video-on-demand (vod) pro edition</li>.
+     * @var string Type of the media processing output object storage location. Supported values:
+<li>COS: COS storage</li>
+<li>AWS-S3: AWS storage, suitable for AWS tasks only and requires the same region</li>
+<li> VOD: VOD Pro Edition </li>
      */
     public $Type;
 
     /**
-     * @var CosOutputStorage Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
+     * @var CosOutputStorage 
      */
     public $CosOutputStorage;
 
     /**
-     * @var S3OutputStorage Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
+     * @var S3OutputStorage 
      */
     public $S3OutputStorage;
 
     /**
-     * @var VODOutputStorage Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
+     * @var VODOutputStorage 
      */
     public $VODOutputStorage;
 
     /**
-     * @param string $Type Specifies the type of storage location for the media processing service output object. valid values:.
-<Li>COS: cos storage.</li>.
-<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
-<Li>VOD: video-on-demand (vod) pro edition</li>.
-     * @param CosOutputStorage $CosOutputStorage Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
-     * @param S3OutputStorage $S3OutputStorage Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
-     * @param VODOutputStorage $VODOutputStorage Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
+     * @param string $Type Type of the media processing output object storage location. Supported values:
+<li>COS: COS storage</li>
+<li>AWS-S3: AWS storage, suitable for AWS tasks only and requires the same region</li>
+<li> VOD: VOD Pro Edition </li>
+     * @param CosOutputStorage $CosOutputStorage 
+     * @param S3OutputStorage $S3OutputStorage 
+     * @param VODOutputStorage $VODOutputStorage 
      */
     function __construct()
     {

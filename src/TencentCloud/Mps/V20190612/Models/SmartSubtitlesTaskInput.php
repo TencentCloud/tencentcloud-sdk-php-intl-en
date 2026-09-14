@@ -18,48 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Smart subtitle input struct.
+ * 
  *
- * @method integer getDefinition() Obtain Smart subtitle template ID.	
- * @method void setDefinition(integer $Definition) Set Smart subtitle template ID.	
- * @method string getUserExtPara() Obtain User extension field, which does not need to be filled in for general scenarios.
- * @method void setUserExtPara(string $UserExtPara) Set User extension field, which does not need to be filled in for general scenarios.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getUserExtPara() Obtain 
+ * @method void setUserExtPara(string $UserExtPara) Set 
  * @method RawSmartSubtitleParameter getRawParameter() Obtain 
  * @method void setRawParameter(RawSmartSubtitleParameter $RawParameter) Set 
  * @method TaskOutputStorage getOutputStorage() Obtain 
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
- * @method string getOutputObjectPath() Obtain Output path of the generated subtitle file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-
-Relative path example:
-- File name_{variable name}.{format}
--File name.{format}
-
-Absolute path example:
--/Custom path/Filename_{variable name}.{format}
-
-If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
- * @method void setOutputObjectPath(string $OutputObjectPath) Set Output path of the generated subtitle file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-
-Relative path example:
-- File name_{variable name}.{format}
--File name.{format}
-
-Absolute path example:
--/Custom path/Filename_{variable name}.{format}
-
-If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+ * @method string getOutputObjectPath() Obtain 
+ * @method void setOutputObjectPath(string $OutputObjectPath) Set 
  */
 class SmartSubtitlesTaskInput extends AbstractModel
 {
     /**
-     * @var integer Smart subtitle template ID.	
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string User extension field, which does not need to be filled in for general scenarios.
+     * @var string 
      */
     public $UserExtPara;
 
@@ -74,36 +54,16 @@ class SmartSubtitlesTaskInput extends AbstractModel
     public $OutputStorage;
 
     /**
-     * @var string Output path of the generated subtitle file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-
-Relative path example:
-- File name_{variable name}.{format}
--File name.{format}
-
-Absolute path example:
--/Custom path/Filename_{variable name}.{format}
-
-If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+     * @var string 
      */
     public $OutputObjectPath;
 
     /**
-     * @param integer $Definition Smart subtitle template ID.	
-     * @param string $UserExtPara User extension field, which does not need to be filled in for general scenarios.
+     * @param integer $Definition 
+     * @param string $UserExtPara 
      * @param RawSmartSubtitleParameter $RawParameter 
      * @param TaskOutputStorage $OutputStorage 
-     * @param string $OutputObjectPath Output path of the generated subtitle file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-
-Relative path example:
-- File name_{variable name}.{format}
--File name.{format}
-
-Absolute path example:
--/Custom path/Filename_{variable name}.{format}
-
-If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+     * @param string $OutputObjectPath 
      */
     function __construct()
     {

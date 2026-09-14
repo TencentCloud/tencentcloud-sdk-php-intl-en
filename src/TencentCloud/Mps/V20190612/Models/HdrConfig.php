@@ -18,60 +18,40 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HDR configuration.
+ * HDR configuration
  *
- * @method string getSwitch() Obtain Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+ * @method string getSwitch() Obtain Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
- * @method void setSwitch(string $Switch) Set Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+ * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
- * @method string getType() Obtain Type, available values:
-<li>HDR10</li>
-<li>HLG</li>
-Default Value: HDR10.
-Note: The video encoding method should be h264 or h265.
-Note: The video encoding bit depth is 10.
- * @method void setType(string $Type) Set Type, available values:
-<li>HDR10</li>
-<li>HLG</li>
-Default Value: HDR10.
-Note: The video encoding method should be h264 or h265.
-Note: The video encoding bit depth is 10.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
  */
 class HdrConfig extends AbstractModel
 {
     /**
-     * @var string Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @var string Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public $Switch;
 
     /**
-     * @var string Type, available values:
-<li>HDR10</li>
-<li>HLG</li>
-Default Value: HDR10.
-Note: The video encoding method should be h264 or h265.
-Note: The video encoding bit depth is 10.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @param string $Switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @param string $Switch Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
-     * @param string $Type Type, available values:
-<li>HDR10</li>
-<li>HLG</li>
-Default Value: HDR10.
-Note: The video encoding method should be h264 or h265.
-Note: The video encoding bit depth is 10.
+     * @param string $Type 
      */
     function __construct()
     {

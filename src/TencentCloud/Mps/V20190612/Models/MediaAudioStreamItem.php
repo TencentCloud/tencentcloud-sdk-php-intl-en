@@ -18,72 +18,60 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the audio stream in a VOD file
+ * Audio stream information of VOD files
  *
- * @method integer getBitrate() Obtain Bitrate of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBitrate(integer $Bitrate) Set Bitrate of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSamplingRate() Obtain Sample rate of an audio stream in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSamplingRate(integer $SamplingRate) Set Sample rate of an audio stream in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCodec() Obtain Audio stream codec, such as aac.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCodec(string $Codec) Set Audio stream codec, such as aac.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getChannel() Obtain Number of audio channels, for example 2.
- * @method void setChannel(integer $Channel) Set Number of audio channels, for example 2.
- * @method string getCodecs() Obtain Audio Codecs.
- * @method void setCodecs(string $Codecs) Set Audio Codecs.
- * @method float getLoudness() Obtain Audio loudness.
- * @method void setLoudness(float $Loudness) Set Audio loudness.
+ * @method integer getBitrate() Obtain Bitrate of the audio stream. Unit: bps.
+ * @method void setBitrate(integer $Bitrate) Set Bitrate of the audio stream. Unit: bps.
+ * @method integer getSamplingRate() Obtain Sampling rate of the audio stream. Unit: hz.
+ * @method void setSamplingRate(integer $SamplingRate) Set Sampling rate of the audio stream. Unit: hz.
+ * @method string getCodec() Obtain Audio stream encoding format, for example, aac.
+ * @method void setCodec(string $Codec) Set Audio stream encoding format, for example, aac.
+ * @method integer getChannel() Obtain 
+ * @method void setChannel(integer $Channel) Set 
+ * @method string getCodecs() Obtain 
+ * @method void setCodecs(string $Codecs) Set 
+ * @method float getLoudness() Obtain 
+ * @method void setLoudness(float $Loudness) Set 
  */
 class MediaAudioStreamItem extends AbstractModel
 {
     /**
-     * @var integer Bitrate of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Bitrate of the audio stream. Unit: bps.
      */
     public $Bitrate;
 
     /**
-     * @var integer Sample rate of an audio stream in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Sampling rate of the audio stream. Unit: hz.
      */
     public $SamplingRate;
 
     /**
-     * @var string Audio stream codec, such as aac.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Audio stream encoding format, for example, aac.
      */
     public $Codec;
 
     /**
-     * @var integer Number of audio channels, for example 2.
+     * @var integer 
      */
     public $Channel;
 
     /**
-     * @var string Audio Codecs.
+     * @var string 
      */
     public $Codecs;
 
     /**
-     * @var float Audio loudness.
+     * @var float 
      */
     public $Loudness;
 
     /**
-     * @param integer $Bitrate Bitrate of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SamplingRate Sample rate of an audio stream in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Codec Audio stream codec, such as aac.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Channel Number of audio channels, for example 2.
-     * @param string $Codecs Audio Codecs.
-     * @param float $Loudness Audio loudness.
+     * @param integer $Bitrate Bitrate of the audio stream. Unit: bps.
+     * @param integer $SamplingRate Sampling rate of the audio stream. Unit: hz.
+     * @param string $Codec Audio stream encoding format, for example, aac.
+     * @param integer $Channel 
+     * @param string $Codecs 
+     * @param float $Loudness 
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Event notification configuration of a task.
+ * Event notification configuration of the task.
  *
  * @method string getNotifyType() Obtain <p>Notification type. Valid values:</p><li>CMQ: Removed. We recommend that you switch to TDMQ-CMQ.</li><li>TDMQ-CMQ: TDMQ.</li><li>URL: If URL is specified, HTTP callbacks are pushed to the URL specified in NotifyUrl. The callback protocol is HTTP and JSON. The packet body is the same as the output parameter of the event parsing notification API.</li><li>SCF: This is not recommended. Additional configuration for SCF is required in the console.</li><li>AWS-SQS: AWS queue. This is only suitable for AWS tasks in the same region.</li><font color="red"> Note: The default value is TDMQ-CMQ if this is not specified or empty. To use another type, you need to specify the corresponding value. If TDMQ-CMQ is used, oversized task response may cause failure to write to the queue. </font>
  * @method void setNotifyType(string $NotifyType) Set <p>Notification type. Valid values:</p><li>CMQ: Removed. We recommend that you switch to TDMQ-CMQ.</li><li>TDMQ-CMQ: TDMQ.</li><li>URL: If URL is specified, HTTP callbacks are pushed to the URL specified in NotifyUrl. The callback protocol is HTTP and JSON. The packet body is the same as the output parameter of the event parsing notification API.</li><li>SCF: This is not recommended. Additional configuration for SCF is required in the console.</li><li>AWS-SQS: AWS queue. This is only suitable for AWS tasks in the same region.</li><font color="red"> Note: The default value is TDMQ-CMQ if this is not specified or empty. To use another type, you need to specify the corresponding value. If TDMQ-CMQ is used, oversized task response may cause failure to write to the queue. </font>
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicName(string $TopicName) Set <p>This field takes effect if the model is Topic. It indicates the topic name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
  * @method string getQueueName() Obtain <p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
  * @method void setQueueName(string $QueueName) Set <p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
- * @method AwsSQS getAwsSQS() Obtain <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
- * @method void setAwsSQS(AwsSQS $AwsSQS) Set <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
+ * @method AwsSQS getAwsSQS() Obtain 
+ * @method void setAwsSQS(AwsSQS $AwsSQS) Set 
  * @method string getNotifyKey() Obtain <p>Key used to generate the callback signature.</p>
  * @method void setNotifyKey(string $NotifyKey) Set <p>Key used to generate the callback signature.</p>
  */
@@ -77,7 +77,7 @@ class TaskNotifyConfig extends AbstractModel
     public $QueueName;
 
     /**
-     * @var AwsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
+     * @var AwsSQS 
      */
     public $AwsSQS;
 
@@ -94,7 +94,7 @@ class TaskNotifyConfig extends AbstractModel
      * @param string $CmqRegion <p>CMQ or TDMQ for CMQ region, such as sh or bj.</p>
      * @param string $TopicName <p>This field takes effect if the model is Topic. It indicates the topic name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
      * @param string $QueueName <p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
-     * @param AwsSQS $AwsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
+     * @param AwsSQS $AwsSQS 
      * @param string $NotifyKey <p>Key used to generate the callback signature.</p>
      */
     function __construct()

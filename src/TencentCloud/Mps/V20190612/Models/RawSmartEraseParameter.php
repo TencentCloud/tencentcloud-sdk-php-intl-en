@@ -18,27 +18,27 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom parameters for smart erasing.
+ * 
  *
- * @method string getEraseType() Obtain <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
- * @method void setEraseType(string $EraseType) Set <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+ * @method string getEraseType() Obtain 
+ * @method void setEraseType(string $EraseType) Set 
  * @method SmartEraseSubtitleConfig getEraseSubtitleConfig() Obtain 
  * @method void setEraseSubtitleConfig(SmartEraseSubtitleConfig $EraseSubtitleConfig) Set 
  * @method SmartEraseWatermarkConfig getEraseWatermarkConfig() Obtain 
  * @method void setEraseWatermarkConfig(SmartEraseWatermarkConfig $EraseWatermarkConfig) Set 
  * @method SmartErasePrivacyConfig getErasePrivacyConfig() Obtain 
  * @method void setErasePrivacyConfig(SmartErasePrivacyConfig $ErasePrivacyConfig) Set 
- * @method integer getSubtitleEmbedId() Obtain <p>id of the subtitle removal suppression template.</p>
- * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) Set <p>id of the subtitle removal suppression template.</p>
- * @method integer getUseOriginalPos() Obtain <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
- * @method void setUseOriginalPos(integer $UseOriginalPos) Set <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
- * @method integer getUseOriginalSize() Obtain <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
- * @method void setUseOriginalSize(integer $UseOriginalSize) Set <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+ * @method integer getSubtitleEmbedId() Obtain 
+ * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) Set 
+ * @method integer getUseOriginalPos() Obtain 
+ * @method void setUseOriginalPos(integer $UseOriginalPos) Set 
+ * @method integer getUseOriginalSize() Obtain 
+ * @method void setUseOriginalSize(integer $UseOriginalSize) Set 
  */
 class RawSmartEraseParameter extends AbstractModel
 {
     /**
-     * @var string <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+     * @var string 
      */
     public $EraseType;
 
@@ -58,28 +58,28 @@ class RawSmartEraseParameter extends AbstractModel
     public $ErasePrivacyConfig;
 
     /**
-     * @var integer <p>id of the subtitle removal suppression template.</p>
+     * @var integer 
      */
     public $SubtitleEmbedId;
 
     /**
-     * @var integer <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+     * @var integer 
      */
     public $UseOriginalPos;
 
     /**
-     * @var integer <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+     * @var integer 
      */
     public $UseOriginalSize;
 
     /**
-     * @param string $EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+     * @param string $EraseType 
      * @param SmartEraseSubtitleConfig $EraseSubtitleConfig 
      * @param SmartEraseWatermarkConfig $EraseWatermarkConfig 
      * @param SmartErasePrivacyConfig $ErasePrivacyConfig 
-     * @param integer $SubtitleEmbedId <p>id of the subtitle removal suppression template.</p>
-     * @param integer $UseOriginalPos <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
-     * @param integer $UseOriginalSize <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+     * @param integer $SubtitleEmbedId 
+     * @param integer $UseOriginalPos 
+     * @param integer $UseOriginalSize 
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task judgment conditions.
+ * 
  *
  * @method array getRules() Obtain 
  * @method void setRules(array $Rules) Set 

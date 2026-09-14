@@ -18,14 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of the subtitles to add.
+ * External subtitle.
  *
- * @method string getType() Obtain <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
- * @method void setType(string $Type) Set <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
- * @method MediaInputInfo getSubtitle() Obtain <p>Subtitle file.</p>
- * @method void setSubtitle(MediaInputInfo $Subtitle) Set <p>Subtitle file.</p>
- * @method string getSubtitleName() Obtain <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
- * @method void setSubtitleName(string $SubtitleName) Set <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method MediaInputInfo getSubtitle() Obtain 
+ * @method void setSubtitle(MediaInputInfo $Subtitle) Set 
+ * @method string getSubtitleName() Obtain 
+ * @method void setSubtitleName(string $SubtitleName) Set 
  * @method string getSubtitleLanguage() Obtain <p>Subtitle language, such as eng.</p>
  * @method void setSubtitleLanguage(string $SubtitleLanguage) Set <p>Subtitle language, such as eng.</p>
  * @method string getOutputFormat() Obtain <p>Subtitle output format. Valid values: {&quot;WebVTT&quot;,&quot;TTML&quot;}.<br>Default value: &quot;WebVTT&quot;.</p>
@@ -36,17 +36,17 @@ use TencentCloud\Common\AbstractModel;
 class AddOnSubtitle extends AbstractModel
 {
     /**
-     * @var string <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var MediaInputInfo <p>Subtitle file.</p>
+     * @var MediaInputInfo 
      */
     public $Subtitle;
 
     /**
-     * @var string <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+     * @var string 
      */
     public $SubtitleName;
 
@@ -66,9 +66,9 @@ class AddOnSubtitle extends AbstractModel
     public $DefaultTrack;
 
     /**
-     * @param string $Type <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
-     * @param MediaInputInfo $Subtitle <p>Subtitle file.</p>
-     * @param string $SubtitleName <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+     * @param string $Type 
+     * @param MediaInputInfo $Subtitle 
+     * @param string $SubtitleName 
      * @param string $SubtitleLanguage <p>Subtitle language, such as eng.</p>
      * @param string $OutputFormat <p>Subtitle output format. Valid values: {&quot;WebVTT&quot;,&quot;TTML&quot;}.<br>Default value: &quot;WebVTT&quot;.</p>
      * @param boolean $DefaultTrack <p>Default subtitle track. When set to true, the current subtitle is designated as the default subtitle track. A maximum of 1 default subtitle track can be specified.<br>Default value: false.</p>

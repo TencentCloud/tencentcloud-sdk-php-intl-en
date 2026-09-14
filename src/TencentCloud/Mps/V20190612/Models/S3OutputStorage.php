@@ -18,44 +18,44 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The AWS S3 storage information of an output file.
+ * AWS S3 output location
  *
- * @method string getS3Bucket() Obtain S3 bucket.
- * @method void setS3Bucket(string $S3Bucket) Set S3 bucket.
- * @method string getS3Region() Obtain Region of the S3 bucket.
- * @method void setS3Region(string $S3Region) Set Region of the S3 bucket.
- * @method string getS3SecretId() Obtain Secret key id for uploading media content to the AWS private network.
- * @method void setS3SecretId(string $S3SecretId) Set Secret key id for uploading media content to the AWS private network.
- * @method string getS3SecretKey() Obtain Upload the secret key for media content on the AWS private network.
- * @method void setS3SecretKey(string $S3SecretKey) Set Upload the secret key for media content on the AWS private network.
+ * @method string getS3Bucket() Obtain S3 bucket。
+ * @method void setS3Bucket(string $S3Bucket) Set S3 bucket。
+ * @method string getS3Region() Obtain 
+ * @method void setS3Region(string $S3Region) Set 
+ * @method string getS3SecretId() Obtain 
+ * @method void setS3SecretId(string $S3SecretId) Set 
+ * @method string getS3SecretKey() Obtain 
+ * @method void setS3SecretKey(string $S3SecretKey) Set 
  */
 class S3OutputStorage extends AbstractModel
 {
     /**
-     * @var string S3 bucket.
+     * @var string S3 bucket。
      */
     public $S3Bucket;
 
     /**
-     * @var string Region of the S3 bucket.
+     * @var string 
      */
     public $S3Region;
 
     /**
-     * @var string Secret key id for uploading media content to the AWS private network.
+     * @var string 
      */
     public $S3SecretId;
 
     /**
-     * @var string Upload the secret key for media content on the AWS private network.
+     * @var string 
      */
     public $S3SecretKey;
 
     /**
-     * @param string $S3Bucket S3 bucket.
-     * @param string $S3Region Region of the S3 bucket.
-     * @param string $S3SecretId Secret key id for uploading media content to the AWS private network.
-     * @param string $S3SecretKey Upload the secret key for media content on the AWS private network.
+     * @param string $S3Bucket S3 bucket。
+     * @param string $S3Region 
+     * @param string $S3SecretId 
+     * @param string $S3SecretKey 
      */
     function __construct()
     {

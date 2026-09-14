@@ -18,64 +18,52 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Event notification configuration for task processing.
+ * 
  *
- * @method string getNotifyType() Obtain Notification type:
-TDMQ-CMQ: Message Queue
-"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
-
-<Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
- * @method void setNotifyType(string $NotifyType) Set Notification type:
-TDMQ-CMQ: Message Queue
-"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
-
-<Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
- * @method string getNotifyUrl() Obtain HTTP callback URL. This is required if NotifyType is URL.
- * @method void setNotifyUrl(string $NotifyUrl) Set HTTP callback URL. This is required if NotifyType is URL.
- * @method string getCmqModel() Obtain Queue and Topic models are provided.
- * @method void setCmqModel(string $CmqModel) Set Queue and Topic models are provided.
- * @method string getCmqRegion() Obtain Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
- * @method void setCmqRegion(string $CmqRegion) Set Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
- * @method string getQueueName() Obtain This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
- * @method void setQueueName(string $QueueName) Set This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
- * @method string getTopicName() Obtain This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
- * @method void setTopicName(string $TopicName) Set This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
+ * @method string getNotifyType() Obtain 
+ * @method void setNotifyType(string $NotifyType) Set 
+ * @method string getNotifyUrl() Obtain 
+ * @method void setNotifyUrl(string $NotifyUrl) Set 
+ * @method string getCmqModel() Obtain 
+ * @method void setCmqModel(string $CmqModel) Set 
+ * @method string getCmqRegion() Obtain 
+ * @method void setCmqRegion(string $CmqRegion) Set 
+ * @method string getQueueName() Obtain 
+ * @method void setQueueName(string $QueueName) Set 
+ * @method string getTopicName() Obtain 
+ * @method void setTopicName(string $TopicName) Set 
  * @method string getNotifyKey() Obtain 
  * @method void setNotifyKey(string $NotifyKey) Set 
  */
 class LiveStreamTaskNotifyConfig extends AbstractModel
 {
     /**
-     * @var string Notification type:
-TDMQ-CMQ: Message Queue
-"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
-
-<Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
+     * @var string 
      */
     public $NotifyType;
 
     /**
-     * @var string HTTP callback URL. This is required if NotifyType is URL.
+     * @var string 
      */
     public $NotifyUrl;
 
     /**
-     * @var string Queue and Topic models are provided.
+     * @var string 
      */
     public $CmqModel;
 
     /**
-     * @var string Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
+     * @var string 
      */
     public $CmqRegion;
 
     /**
-     * @var string This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
+     * @var string 
      */
     public $QueueName;
 
     /**
-     * @var string This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
+     * @var string 
      */
     public $TopicName;
 
@@ -85,16 +73,12 @@ TDMQ-CMQ: Message Queue
     public $NotifyKey;
 
     /**
-     * @param string $NotifyType Notification type:
-TDMQ-CMQ: Message Queue
-"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
-
-<Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
-     * @param string $NotifyUrl HTTP callback URL. This is required if NotifyType is URL.
-     * @param string $CmqModel Queue and Topic models are provided.
-     * @param string $CmqRegion Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
-     * @param string $QueueName This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
-     * @param string $TopicName This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
+     * @param string $NotifyType 
+     * @param string $NotifyUrl 
+     * @param string $CmqModel 
+     * @param string $CmqRegion 
+     * @param string $QueueName 
+     * @param string $TopicName 
      * @param string $NotifyKey 
      */
     function __construct()

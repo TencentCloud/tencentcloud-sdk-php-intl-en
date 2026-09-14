@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Live stream smart subtitle input struct
+ * 
  *
- * @method integer getDefinition() Obtain Smart subtitle template ID.	
- * @method void setDefinition(integer $Definition) Set Smart subtitle template ID.	
- * @method string getUserExtPara() Obtain User extension field, which does not need to be filled in for general scenarios.
- * @method void setUserExtPara(string $UserExtPara) Set User extension field, which does not need to be filled in for general scenarios.
+ * @method integer getDefinition() Obtain 
+ * @method void setDefinition(integer $Definition) Set 
+ * @method string getUserExtPara() Obtain 
+ * @method void setUserExtPara(string $UserExtPara) Set 
  */
 class LiveSmartSubtitlesTaskInput extends AbstractModel
 {
     /**
-     * @var integer Smart subtitle template ID.	
+     * @var integer 
      */
     public $Definition;
 
     /**
-     * @var string User extension field, which does not need to be filled in for general scenarios.
+     * @var string 
      */
     public $UserExtPara;
 
     /**
-     * @param integer $Definition Smart subtitle template ID.	
-     * @param string $UserExtPara User extension field, which does not need to be filled in for general scenarios.
+     * @param integer $Definition 
+     * @param string $UserExtPara 
      */
     function __construct()
     {

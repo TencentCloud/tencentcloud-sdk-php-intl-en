@@ -18,17 +18,17 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of video content recognition
+ * Input parameter type for video content recognition
  *
- * @method integer getDefinition() Obtain Intelligent video recognition template ID.
- * @method void setDefinition(integer $Definition) Set Intelligent video recognition template ID.
+ * @method integer getDefinition() Obtain Intelligent video identification template ID.
+ * @method void setDefinition(integer $Definition) Set Intelligent video identification template ID.
  * @method string getUserExtPara() Obtain User extension field, which does not need to be filled in for general scenarios.
  * @method void setUserExtPara(string $UserExtPara) Set User extension field, which does not need to be filled in for general scenarios.
  */
 class AiRecognitionTaskInput extends AbstractModel
 {
     /**
-     * @var integer Intelligent video recognition template ID.
+     * @var integer Intelligent video identification template ID.
      */
     public $Definition;
 
@@ -38,7 +38,7 @@ class AiRecognitionTaskInput extends AbstractModel
     public $UserExtPara;
 
     /**
-     * @param integer $Definition Intelligent video recognition template ID.
+     * @param integer $Definition Intelligent video identification template ID.
      * @param string $UserExtPara User extension field, which does not need to be filled in for general scenarios.
      */
     function __construct()

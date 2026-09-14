@@ -18,66 +18,66 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The DRM encryption details.
+ * Drm encryption information.
  *
  * @method string getType() Obtain Encryption type.
 
 - simpleaes
-Can only be used for HLS. format support: ts and mp4.
-Only can be used in slice mode. cannot be used in singlefile mode.
+Can only be used for HLS. Format support: ts and mp4.
+Only slice mode can be used. singlefile mode cannot be used.
 
 - fairplay:
-Can only be used for HLS. the segment format can only be mp4.
-Supports slice mode or singlefile mode.
+Can only be used for HLS. The segment format can only be mp4.
+Slice mode or singlefile mode can be used.
 
 - widevine:
-Can be used for HLS and DASH. the slice format can only be mp4.
-Output HLS: specifies the slicing or singlefile mode can be used.
-OutputOutput DASH]: can only be in singlefile mode.
+Can be used for HLS and DASH. The segment format can only be mp4.
+Output HLS: The slicing or singlefile mode can be used.
+Output DASH: can only be in singlefile mode
 
 - playready:
-Can be used for HLS and DASH. the slice format can only be mp4.
-Output HLS: specifies the slicing or singlefile mode can be used.
-Output DASH: can only be in singlefile mode.
+Can be used for HLS and DASH. The segment format can only be mp4.
+Output HLS: The slicing or singlefile mode can be used.
+Output DASH: can only be in singlefile mode
 
 - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
-Can only be used for HLS. valid values: mp4.
-Supports slice mode or single file mode.
+Can only be used for HLS. The segment format can only be mp4.
+Slice mode or singlefile mode can be used.
 
 - widevine+playready:
-Applicable to HLS and MPEG-DASH. the format can only be mp4.
-HLS format can use slice mode or single file mode.
-Specifies that only singlefile mode can be used for MPEG-DASH.
+Applicable to HLS and MPEG-DASH. The segment format can only be mp4.
+For HLS format, you can use the slicing mode or singlefile mode.
+For MPEG-DASH, only singlefile mode can be used.
  * @method void setType(string $Type) Set Encryption type.
 
 - simpleaes
-Can only be used for HLS. format support: ts and mp4.
-Only can be used in slice mode. cannot be used in singlefile mode.
+Can only be used for HLS. Format support: ts and mp4.
+Only slice mode can be used. singlefile mode cannot be used.
 
 - fairplay:
-Can only be used for HLS. the segment format can only be mp4.
-Supports slice mode or singlefile mode.
+Can only be used for HLS. The segment format can only be mp4.
+Slice mode or singlefile mode can be used.
 
 - widevine:
-Can be used for HLS and DASH. the slice format can only be mp4.
-Output HLS: specifies the slicing or singlefile mode can be used.
-OutputOutput DASH]: can only be in singlefile mode.
+Can be used for HLS and DASH. The segment format can only be mp4.
+Output HLS: The slicing or singlefile mode can be used.
+Output DASH: can only be in singlefile mode
 
 - playready:
-Can be used for HLS and DASH. the slice format can only be mp4.
-Output HLS: specifies the slicing or singlefile mode can be used.
-Output DASH: can only be in singlefile mode.
+Can be used for HLS and DASH. The segment format can only be mp4.
+Output HLS: The slicing or singlefile mode can be used.
+Output DASH: can only be in singlefile mode
 
 - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
-Can only be used for HLS. valid values: mp4.
-Supports slice mode or single file mode.
+Can only be used for HLS. The segment format can only be mp4.
+Slice mode or singlefile mode can be used.
 
 - widevine+playready:
-Applicable to HLS and MPEG-DASH. the format can only be mp4.
-HLS format can use slice mode or single file mode.
-Specifies that only singlefile mode can be used for MPEG-DASH.
- * @method SimpleAesDrm getSimpleAesDrm() Obtain SimpleAes encrypted information.
- * @method void setSimpleAesDrm(SimpleAesDrm $SimpleAesDrm) Set SimpleAes encrypted information.
+Applicable to HLS and MPEG-DASH. The segment format can only be mp4.
+For HLS format, you can use the slicing mode or singlefile mode.
+For MPEG-DASH, only singlefile mode can be used.
+ * @method SimpleAesDrm getSimpleAesDrm() Obtain 
+ * @method void setSimpleAesDrm(SimpleAesDrm $SimpleAesDrm) Set 
  * @method SpekeDrm getSpekeDrm() Obtain Information about FairPlay, WideVine, and PlayReady encryption.
  * @method void setSpekeDrm(SpekeDrm $SpekeDrm) Set Information about FairPlay, WideVine, and PlayReady encryption.
  */
@@ -87,36 +87,36 @@ class DrmInfo extends AbstractModel
      * @var string Encryption type.
 
 - simpleaes
-Can only be used for HLS. format support: ts and mp4.
-Only can be used in slice mode. cannot be used in singlefile mode.
+Can only be used for HLS. Format support: ts and mp4.
+Only slice mode can be used. singlefile mode cannot be used.
 
 - fairplay:
-Can only be used for HLS. the segment format can only be mp4.
-Supports slice mode or singlefile mode.
+Can only be used for HLS. The segment format can only be mp4.
+Slice mode or singlefile mode can be used.
 
 - widevine:
-Can be used for HLS and DASH. the slice format can only be mp4.
-Output HLS: specifies the slicing or singlefile mode can be used.
-OutputOutput DASH]: can only be in singlefile mode.
+Can be used for HLS and DASH. The segment format can only be mp4.
+Output HLS: The slicing or singlefile mode can be used.
+Output DASH: can only be in singlefile mode
 
 - playready:
-Can be used for HLS and DASH. the slice format can only be mp4.
-Output HLS: specifies the slicing or singlefile mode can be used.
-Output DASH: can only be in singlefile mode.
+Can be used for HLS and DASH. The segment format can only be mp4.
+Output HLS: The slicing or singlefile mode can be used.
+Output DASH: can only be in singlefile mode
 
 - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
-Can only be used for HLS. valid values: mp4.
-Supports slice mode or single file mode.
+Can only be used for HLS. The segment format can only be mp4.
+Slice mode or singlefile mode can be used.
 
 - widevine+playready:
-Applicable to HLS and MPEG-DASH. the format can only be mp4.
-HLS format can use slice mode or single file mode.
-Specifies that only singlefile mode can be used for MPEG-DASH.
+Applicable to HLS and MPEG-DASH. The segment format can only be mp4.
+For HLS format, you can use the slicing mode or singlefile mode.
+For MPEG-DASH, only singlefile mode can be used.
      */
     public $Type;
 
     /**
-     * @var SimpleAesDrm SimpleAes encrypted information.
+     * @var SimpleAesDrm 
      */
     public $SimpleAesDrm;
 
@@ -129,32 +129,32 @@ Specifies that only singlefile mode can be used for MPEG-DASH.
      * @param string $Type Encryption type.
 
 - simpleaes
-Can only be used for HLS. format support: ts and mp4.
-Only can be used in slice mode. cannot be used in singlefile mode.
+Can only be used for HLS. Format support: ts and mp4.
+Only slice mode can be used. singlefile mode cannot be used.
 
 - fairplay:
-Can only be used for HLS. the segment format can only be mp4.
-Supports slice mode or singlefile mode.
+Can only be used for HLS. The segment format can only be mp4.
+Slice mode or singlefile mode can be used.
 
 - widevine:
-Can be used for HLS and DASH. the slice format can only be mp4.
-Output HLS: specifies the slicing or singlefile mode can be used.
-OutputOutput DASH]: can only be in singlefile mode.
+Can be used for HLS and DASH. The segment format can only be mp4.
+Output HLS: The slicing or singlefile mode can be used.
+Output DASH: can only be in singlefile mode
 
 - playready:
-Can be used for HLS and DASH. the slice format can only be mp4.
-Output HLS: specifies the slicing or singlefile mode can be used.
-Output DASH: can only be in singlefile mode.
+Can be used for HLS and DASH. The segment format can only be mp4.
+Output HLS: The slicing or singlefile mode can be used.
+Output DASH: can only be in singlefile mode
 
 - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
-Can only be used for HLS. valid values: mp4.
-Supports slice mode or single file mode.
+Can only be used for HLS. The segment format can only be mp4.
+Slice mode or singlefile mode can be used.
 
 - widevine+playready:
-Applicable to HLS and MPEG-DASH. the format can only be mp4.
-HLS format can use slice mode or single file mode.
-Specifies that only singlefile mode can be used for MPEG-DASH.
-     * @param SimpleAesDrm $SimpleAesDrm SimpleAes encrypted information.
+Applicable to HLS and MPEG-DASH. The segment format can only be mp4.
+For HLS format, you can use the slicing mode or singlefile mode.
+For MPEG-DASH, only singlefile mode can be used.
+     * @param SimpleAesDrm $SimpleAesDrm 
      * @param SpekeDrm $SpekeDrm Information about FairPlay, WideVine, and PlayReady encryption.
      */
     function __construct()

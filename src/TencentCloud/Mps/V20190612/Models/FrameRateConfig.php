@@ -18,48 +18,40 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Frame interpolation configuration.
+ * Frame interpolation frame rate configuration
  *
- * @method string getSwitch() Obtain Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+ * @method string getSwitch() Obtain Capability configuration switch. Valid values:
+<li>ON: enabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
- * @method void setSwitch(string $Switch) Set Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+ * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
+<li>ON: enabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
- * @method integer getFps() Obtain Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
-Default value: 0.
-Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
- * @method void setFps(integer $Fps) Set Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
-Default value: 0.
-Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
+ * @method integer getFps() Obtain 
+ * @method void setFps(integer $Fps) Set 
  */
 class FrameRateConfig extends AbstractModel
 {
     /**
-     * @var string Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @var string Capability configuration switch. Valid values:
+<li>ON: enabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      */
     public $Switch;
 
     /**
-     * @var integer Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
-Default value: 0.
-Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
+     * @var integer 
      */
     public $Fps;
 
     /**
-     * @param string $Switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @param string $Switch Capability configuration switch. Valid values:
+<li>ON: enabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-     * @param integer $Fps Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
-Default value: 0.
-Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
+     * @param integer $Fps 
      */
     function __construct()
     {

@@ -18,116 +18,116 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video enhancement configuration.
+ * Video enhancement configuration
  *
- * @method FrameRateConfig getFrameRate() Obtain <p>Frame rate configuration (old) for the frame interpolation. New users are recommended to use FrameRateWithDen for configuring the frame rate of frame interpolation, which supports fractions and provides better results. Note that FrameRate and FrameRateWithDen are mutually exclusive; configuring both simultaneously may cause task failures. The configuration does not take effect if the source frame rate is greater than or equal to the target frame rate.</p>
- * @method void setFrameRate(FrameRateConfig $FrameRate) Set <p>Frame rate configuration (old) for the frame interpolation. New users are recommended to use FrameRateWithDen for configuring the frame rate of frame interpolation, which supports fractions and provides better results. Note that FrameRate and FrameRateWithDen are mutually exclusive; configuring both simultaneously may cause task failures. The configuration does not take effect if the source frame rate is greater than or equal to the target frame rate.</p>
- * @method SuperResolutionConfig getSuperResolution() Obtain <p>Super-resolution configuration. The video is not processed when the source resolution is higher than the target resolution. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
- * @method void setSuperResolution(SuperResolutionConfig $SuperResolution) Set <p>Super-resolution configuration. The video is not processed when the source resolution is higher than the target resolution. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
- * @method HdrConfig getHdr() Obtain <p>HDR configuration.</p>
- * @method void setHdr(HdrConfig $Hdr) Set <p>HDR configuration.</p>
- * @method VideoDenoiseConfig getDenoise() Obtain <p>Video noise reduction configuration. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
- * @method void setDenoise(VideoDenoiseConfig $Denoise) Set <p>Video noise reduction configuration. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
- * @method ImageQualityEnhanceConfig getImageQualityEnhance() Obtain <p>Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
- * @method void setImageQualityEnhance(ImageQualityEnhanceConfig $ImageQualityEnhance) Set <p>Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
- * @method ColorEnhanceConfig getColorEnhance() Obtain <p>Color enhancement configuration.</p>
- * @method void setColorEnhance(ColorEnhanceConfig $ColorEnhance) Set <p>Color enhancement configuration.</p>
- * @method LowLightEnhanceConfig getLowLightEnhance() Obtain <p>Low-light enhancement configuration.</p>
- * @method void setLowLightEnhance(LowLightEnhanceConfig $LowLightEnhance) Set <p>Low-light enhancement configuration.</p>
- * @method ScratchRepairConfig getScratchRepair() Obtain <p>Scratches removal configuration.</p>
- * @method void setScratchRepair(ScratchRepairConfig $ScratchRepair) Set <p>Scratches removal configuration.</p>
- * @method ArtifactRepairConfig getArtifactRepair() Obtain <p>Artifacts removal configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
- * @method void setArtifactRepair(ArtifactRepairConfig $ArtifactRepair) Set <p>Artifacts removal configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
- * @method string getEnhanceSceneType() Obtain <p>Enhanced scenario configuration, available values:</p><li>common (General), general enhancement parameter, suitable for various video types, foundation optimization parameters, enhance overall video quality.</li><li>AIGC, overall resolution enhancement, use AI technology to enhance video overall resolution, improve image definition.</li><li>short_play (Mini-drama & AI simulation drama), enhance face and subtitle details, highlight facial expression details and subtitle clarity, improve viewing experience.</li><li>AI_comic (AI comic drama), enhance comic style image detail.</li><li>short_video (short video), optimize complex and diverse image quality issues, target complex scenarios in short videos, optimize video quality, address multiple visual issues.</li><li>game (Gaming video), restore motion blur, enhance details, focus on enhancing the clarity of game details, restore motion blur areas, make the game screen content clearer and more various.</li><li>HD_movie_series (Ultra-high-definition TV shows and movies), obtain ultra-high-definition smooth effect, target the demand for broadcasting/OTT ultra-high-definition video, generate 4K 60fps HDR Ultra-High-Definition Standard video. Support broadcasting scenario format standards.</li><li>LQ_material (Low-quality material/Classic film restoration), overall resolution enhancement, target old video with insufficient resolution, blur distortion, scratch damage and color temperature issues due to older shooting era for specialized optimization.</li><li>lecture (Showroom/E-commerce/Conference/lecture), beautify and enhance face effect, target scenarios where people explain in showroom/e-commerce/conference/lecture, perform specialized optimization for face region, noise reduction, burr processing.</li><li>Fill-in string represents non-use of enhanced scenario.</li>
- * @method void setEnhanceSceneType(string $EnhanceSceneType) Set <p>Enhanced scenario configuration, available values:</p><li>common (General), general enhancement parameter, suitable for various video types, foundation optimization parameters, enhance overall video quality.</li><li>AIGC, overall resolution enhancement, use AI technology to enhance video overall resolution, improve image definition.</li><li>short_play (Mini-drama & AI simulation drama), enhance face and subtitle details, highlight facial expression details and subtitle clarity, improve viewing experience.</li><li>AI_comic (AI comic drama), enhance comic style image detail.</li><li>short_video (short video), optimize complex and diverse image quality issues, target complex scenarios in short videos, optimize video quality, address multiple visual issues.</li><li>game (Gaming video), restore motion blur, enhance details, focus on enhancing the clarity of game details, restore motion blur areas, make the game screen content clearer and more various.</li><li>HD_movie_series (Ultra-high-definition TV shows and movies), obtain ultra-high-definition smooth effect, target the demand for broadcasting/OTT ultra-high-definition video, generate 4K 60fps HDR Ultra-High-Definition Standard video. Support broadcasting scenario format standards.</li><li>LQ_material (Low-quality material/Classic film restoration), overall resolution enhancement, target old video with insufficient resolution, blur distortion, scratch damage and color temperature issues due to older shooting era for specialized optimization.</li><li>lecture (Showroom/E-commerce/Conference/lecture), beautify and enhance face effect, target scenarios where people explain in showroom/e-commerce/conference/lecture, perform specialized optimization for face region, noise reduction, burr processing.</li><li>Fill-in string represents non-use of enhanced scenario.</li>
- * @method DiffusionEnhanceConfig getDiffusionEnhance() Obtain <p>LLM enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot intersect with super-resolution and noise reduction.</p>
- * @method void setDiffusionEnhance(DiffusionEnhanceConfig $DiffusionEnhance) Set <p>LLM enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot intersect with super-resolution and noise reduction.</p>
- * @method FrameRateWithDenConfig getFrameRateWithDen() Obtain <p>The new frame interpolation frame rate configuration supports fractions. Note that you must choose between this and FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.</p>
- * @method void setFrameRateWithDen(FrameRateWithDenConfig $FrameRateWithDen) Set <p>The new frame interpolation frame rate configuration supports fractions. Note that you must choose between this and FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.</p>
- * @method AiRestorationConfig getAiRestoration() Obtain <p>Large model repair configuration. Note that you can configure at most one of large model, comprehensive enhancement, and artifacts removal. It cannot intersect with super-resolution and noise reduction.</p>
- * @method void setAiRestoration(AiRestorationConfig $AiRestoration) Set <p>Large model repair configuration. Note that you can configure at most one of large model, comprehensive enhancement, and artifacts removal. It cannot intersect with super-resolution and noise reduction.</p>
+ * @method FrameRateConfig getFrameRate() Obtain 
+ * @method void setFrameRate(FrameRateConfig $FrameRate) Set 
+ * @method SuperResolutionConfig getSuperResolution() Obtain 
+ * @method void setSuperResolution(SuperResolutionConfig $SuperResolution) Set 
+ * @method HdrConfig getHdr() Obtain 
+ * @method void setHdr(HdrConfig $Hdr) Set 
+ * @method VideoDenoiseConfig getDenoise() Obtain 
+ * @method void setDenoise(VideoDenoiseConfig $Denoise) Set 
+ * @method ImageQualityEnhanceConfig getImageQualityEnhance() Obtain 
+ * @method void setImageQualityEnhance(ImageQualityEnhanceConfig $ImageQualityEnhance) Set 
+ * @method ColorEnhanceConfig getColorEnhance() Obtain 
+ * @method void setColorEnhance(ColorEnhanceConfig $ColorEnhance) Set 
+ * @method LowLightEnhanceConfig getLowLightEnhance() Obtain 
+ * @method void setLowLightEnhance(LowLightEnhanceConfig $LowLightEnhance) Set 
+ * @method ScratchRepairConfig getScratchRepair() Obtain 
+ * @method void setScratchRepair(ScratchRepairConfig $ScratchRepair) Set 
+ * @method ArtifactRepairConfig getArtifactRepair() Obtain 
+ * @method void setArtifactRepair(ArtifactRepairConfig $ArtifactRepair) Set 
+ * @method string getEnhanceSceneType() Obtain 
+ * @method void setEnhanceSceneType(string $EnhanceSceneType) Set 
+ * @method DiffusionEnhanceConfig getDiffusionEnhance() Obtain 
+ * @method void setDiffusionEnhance(DiffusionEnhanceConfig $DiffusionEnhance) Set 
+ * @method FrameRateWithDenConfig getFrameRateWithDen() Obtain 
+ * @method void setFrameRateWithDen(FrameRateWithDenConfig $FrameRateWithDen) Set 
+ * @method AiRestorationConfig getAiRestoration() Obtain 
+ * @method void setAiRestoration(AiRestorationConfig $AiRestoration) Set 
  */
 class VideoEnhanceConfig extends AbstractModel
 {
     /**
-     * @var FrameRateConfig <p>Frame rate configuration (old) for the frame interpolation. New users are recommended to use FrameRateWithDen for configuring the frame rate of frame interpolation, which supports fractions and provides better results. Note that FrameRate and FrameRateWithDen are mutually exclusive; configuring both simultaneously may cause task failures. The configuration does not take effect if the source frame rate is greater than or equal to the target frame rate.</p>
+     * @var FrameRateConfig 
      */
     public $FrameRate;
 
     /**
-     * @var SuperResolutionConfig <p>Super-resolution configuration. The video is not processed when the source resolution is higher than the target resolution. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
+     * @var SuperResolutionConfig 
      */
     public $SuperResolution;
 
     /**
-     * @var HdrConfig <p>HDR configuration.</p>
+     * @var HdrConfig 
      */
     public $Hdr;
 
     /**
-     * @var VideoDenoiseConfig <p>Video noise reduction configuration. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
+     * @var VideoDenoiseConfig 
      */
     public $Denoise;
 
     /**
-     * @var ImageQualityEnhanceConfig <p>Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
+     * @var ImageQualityEnhanceConfig 
      */
     public $ImageQualityEnhance;
 
     /**
-     * @var ColorEnhanceConfig <p>Color enhancement configuration.</p>
+     * @var ColorEnhanceConfig 
      */
     public $ColorEnhance;
 
     /**
-     * @var LowLightEnhanceConfig <p>Low-light enhancement configuration.</p>
+     * @var LowLightEnhanceConfig 
      */
     public $LowLightEnhance;
 
     /**
-     * @var ScratchRepairConfig <p>Scratches removal configuration.</p>
+     * @var ScratchRepairConfig 
      */
     public $ScratchRepair;
 
     /**
-     * @var ArtifactRepairConfig <p>Artifacts removal configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
+     * @var ArtifactRepairConfig 
      */
     public $ArtifactRepair;
 
     /**
-     * @var string <p>Enhanced scenario configuration, available values:</p><li>common (General), general enhancement parameter, suitable for various video types, foundation optimization parameters, enhance overall video quality.</li><li>AIGC, overall resolution enhancement, use AI technology to enhance video overall resolution, improve image definition.</li><li>short_play (Mini-drama & AI simulation drama), enhance face and subtitle details, highlight facial expression details and subtitle clarity, improve viewing experience.</li><li>AI_comic (AI comic drama), enhance comic style image detail.</li><li>short_video (short video), optimize complex and diverse image quality issues, target complex scenarios in short videos, optimize video quality, address multiple visual issues.</li><li>game (Gaming video), restore motion blur, enhance details, focus on enhancing the clarity of game details, restore motion blur areas, make the game screen content clearer and more various.</li><li>HD_movie_series (Ultra-high-definition TV shows and movies), obtain ultra-high-definition smooth effect, target the demand for broadcasting/OTT ultra-high-definition video, generate 4K 60fps HDR Ultra-High-Definition Standard video. Support broadcasting scenario format standards.</li><li>LQ_material (Low-quality material/Classic film restoration), overall resolution enhancement, target old video with insufficient resolution, blur distortion, scratch damage and color temperature issues due to older shooting era for specialized optimization.</li><li>lecture (Showroom/E-commerce/Conference/lecture), beautify and enhance face effect, target scenarios where people explain in showroom/e-commerce/conference/lecture, perform specialized optimization for face region, noise reduction, burr processing.</li><li>Fill-in string represents non-use of enhanced scenario.</li>
+     * @var string 
      */
     public $EnhanceSceneType;
 
     /**
-     * @var DiffusionEnhanceConfig <p>LLM enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot intersect with super-resolution and noise reduction.</p>
+     * @var DiffusionEnhanceConfig 
      */
     public $DiffusionEnhance;
 
     /**
-     * @var FrameRateWithDenConfig <p>The new frame interpolation frame rate configuration supports fractions. Note that you must choose between this and FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.</p>
+     * @var FrameRateWithDenConfig 
      */
     public $FrameRateWithDen;
 
     /**
-     * @var AiRestorationConfig <p>Large model repair configuration. Note that you can configure at most one of large model, comprehensive enhancement, and artifacts removal. It cannot intersect with super-resolution and noise reduction.</p>
+     * @var AiRestorationConfig 
      */
     public $AiRestoration;
 
     /**
-     * @param FrameRateConfig $FrameRate <p>Frame rate configuration (old) for the frame interpolation. New users are recommended to use FrameRateWithDen for configuring the frame rate of frame interpolation, which supports fractions and provides better results. Note that FrameRate and FrameRateWithDen are mutually exclusive; configuring both simultaneously may cause task failures. The configuration does not take effect if the source frame rate is greater than or equal to the target frame rate.</p>
-     * @param SuperResolutionConfig $SuperResolution <p>Super-resolution configuration. The video is not processed when the source resolution is higher than the target resolution. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
-     * @param HdrConfig $Hdr <p>HDR configuration.</p>
-     * @param VideoDenoiseConfig $Denoise <p>Video noise reduction configuration. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
-     * @param ImageQualityEnhanceConfig $ImageQualityEnhance <p>Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
-     * @param ColorEnhanceConfig $ColorEnhance <p>Color enhancement configuration.</p>
-     * @param LowLightEnhanceConfig $LowLightEnhance <p>Low-light enhancement configuration.</p>
-     * @param ScratchRepairConfig $ScratchRepair <p>Scratches removal configuration.</p>
-     * @param ArtifactRepairConfig $ArtifactRepair <p>Artifacts removal configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
-     * @param string $EnhanceSceneType <p>Enhanced scenario configuration, available values:</p><li>common (General), general enhancement parameter, suitable for various video types, foundation optimization parameters, enhance overall video quality.</li><li>AIGC, overall resolution enhancement, use AI technology to enhance video overall resolution, improve image definition.</li><li>short_play (Mini-drama & AI simulation drama), enhance face and subtitle details, highlight facial expression details and subtitle clarity, improve viewing experience.</li><li>AI_comic (AI comic drama), enhance comic style image detail.</li><li>short_video (short video), optimize complex and diverse image quality issues, target complex scenarios in short videos, optimize video quality, address multiple visual issues.</li><li>game (Gaming video), restore motion blur, enhance details, focus on enhancing the clarity of game details, restore motion blur areas, make the game screen content clearer and more various.</li><li>HD_movie_series (Ultra-high-definition TV shows and movies), obtain ultra-high-definition smooth effect, target the demand for broadcasting/OTT ultra-high-definition video, generate 4K 60fps HDR Ultra-High-Definition Standard video. Support broadcasting scenario format standards.</li><li>LQ_material (Low-quality material/Classic film restoration), overall resolution enhancement, target old video with insufficient resolution, blur distortion, scratch damage and color temperature issues due to older shooting era for specialized optimization.</li><li>lecture (Showroom/E-commerce/Conference/lecture), beautify and enhance face effect, target scenarios where people explain in showroom/e-commerce/conference/lecture, perform specialized optimization for face region, noise reduction, burr processing.</li><li>Fill-in string represents non-use of enhanced scenario.</li>
-     * @param DiffusionEnhanceConfig $DiffusionEnhance <p>LLM enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot intersect with super-resolution and noise reduction.</p>
-     * @param FrameRateWithDenConfig $FrameRateWithDen <p>The new frame interpolation frame rate configuration supports fractions. Note that you must choose between this and FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.</p>
-     * @param AiRestorationConfig $AiRestoration <p>Large model repair configuration. Note that you can configure at most one of large model, comprehensive enhancement, and artifacts removal. It cannot intersect with super-resolution and noise reduction.</p>
+     * @param FrameRateConfig $FrameRate 
+     * @param SuperResolutionConfig $SuperResolution 
+     * @param HdrConfig $Hdr 
+     * @param VideoDenoiseConfig $Denoise 
+     * @param ImageQualityEnhanceConfig $ImageQualityEnhance 
+     * @param ColorEnhanceConfig $ColorEnhance 
+     * @param LowLightEnhanceConfig $LowLightEnhance 
+     * @param ScratchRepairConfig $ScratchRepair 
+     * @param ArtifactRepairConfig $ArtifactRepair 
+     * @param string $EnhanceSceneType 
+     * @param DiffusionEnhanceConfig $DiffusionEnhance 
+     * @param FrameRateWithDenConfig $FrameRateWithDen 
+     * @param AiRestorationConfig $AiRestoration 
      */
     function __construct()
     {

@@ -18,40 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TESHD parameter configuration.
+ * TSC parameter configuration.
  *
- * @method string getType() Obtain Top Speed Codec type. Available values:
-<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
-<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
-Leave it blank to keep it unchanged.
- * @method void setType(string $Type) Set Top Speed Codec type. Available values:
-<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
-<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
-Leave it blank to keep it unchanged.
- * @method integer getMaxVideoBitrate() Obtain Upper limit of video bitrate. Leave blank to keep unchanged.
- * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set Upper limit of video bitrate. Leave blank to keep unchanged.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
+ * @method integer getMaxVideoBitrate() Obtain 
+ * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set 
  */
 class TEHDConfigForUpdate extends AbstractModel
 {
     /**
-     * @var string Top Speed Codec type. Available values:
-<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
-<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
-Leave it blank to keep it unchanged.
+     * @var string 
      */
     public $Type;
 
     /**
-     * @var integer Upper limit of video bitrate. Leave blank to keep unchanged.
+     * @var integer 
      */
     public $MaxVideoBitrate;
 
     /**
-     * @param string $Type Top Speed Codec type. Available values:
-<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
-<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
-Leave it blank to keep it unchanged.
-     * @param integer $MaxVideoBitrate Upper limit of video bitrate. Leave blank to keep unchanged.
+     * @param string $Type 
+     * @param integer $MaxVideoBitrate 
      */
     function __construct()
     {

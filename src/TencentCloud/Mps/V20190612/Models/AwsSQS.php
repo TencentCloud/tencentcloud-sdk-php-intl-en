@@ -18,44 +18,44 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of an AWS SQS queue.
+ * Aws SQS queue information
  *
- * @method string getSQSRegion() Obtain SQS queue area.
- * @method void setSQSRegion(string $SQSRegion) Set SQS queue area.
- * @method string getSQSQueueName() Obtain SQS queue name.
- * @method void setSQSQueueName(string $SQSQueueName) Set SQS queue name.
- * @method string getS3SecretId() Obtain Secret id for read-write SQS.
- * @method void setS3SecretId(string $S3SecretId) Set Secret id for read-write SQS.
- * @method string getS3SecretKey() Obtain Read-write SQS secret key.
- * @method void setS3SecretKey(string $S3SecretKey) Set Read-write SQS secret key.
+ * @method string getSQSRegion() Obtain 
+ * @method void setSQSRegion(string $SQSRegion) Set 
+ * @method string getSQSQueueName() Obtain 
+ * @method void setSQSQueueName(string $SQSQueueName) Set 
+ * @method string getS3SecretId() Obtain 
+ * @method void setS3SecretId(string $S3SecretId) Set 
+ * @method string getS3SecretKey() Obtain 
+ * @method void setS3SecretKey(string $S3SecretKey) Set 
  */
 class AwsSQS extends AbstractModel
 {
     /**
-     * @var string SQS queue area.
+     * @var string 
      */
     public $SQSRegion;
 
     /**
-     * @var string SQS queue name.
+     * @var string 
      */
     public $SQSQueueName;
 
     /**
-     * @var string Secret id for read-write SQS.
+     * @var string 
      */
     public $S3SecretId;
 
     /**
-     * @var string Read-write SQS secret key.
+     * @var string 
      */
     public $S3SecretKey;
 
     /**
-     * @param string $SQSRegion SQS queue area.
-     * @param string $SQSQueueName SQS queue name.
-     * @param string $S3SecretId Secret id for read-write SQS.
-     * @param string $S3SecretKey Read-write SQS secret key.
+     * @param string $SQSRegion 
+     * @param string $SQSQueueName 
+     * @param string $S3SecretId 
+     * @param string $S3SecretKey 
      */
     function __construct()
     {

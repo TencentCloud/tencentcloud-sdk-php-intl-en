@@ -18,18 +18,18 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of a sampled screenshot task.
+ * Sampled screenshot taking task input parameter type.
  *
  * @method integer getDefinition() Obtain <p>Sampled screenshot template ID.</p>
  * @method void setDefinition(integer $Definition) Set <p>Sampled screenshot template ID.</p>
  * @method array getWatermarkSet() Obtain <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
  * @method void setWatermarkSet(array $WatermarkSet) Set <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
- * @method TaskOutputStorage getOutputStorage() Obtain <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+ * @method TaskOutputStorage getOutputStorage() Obtain 
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
  * @method string getOutputObjectPath() Obtain <p>Output path of the image file after the sampled screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_sampleSnapshot_{definition}_{number}.{format}</code>.
  * @method void setOutputObjectPath(string $OutputObjectPath) Set <p>Output path of the image file after the sampled screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_sampleSnapshot_{definition}_{number}.{format}</code>.
- * @method NumberFormat getObjectNumberFormat() Obtain <p>Rule of the <code>{number}</code> variable in the output path after sampling screenshot taking.</p>
- * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) Set <p>Rule of the <code>{number}</code> variable in the output path after sampling screenshot taking.</p>
+ * @method NumberFormat getObjectNumberFormat() Obtain 
+ * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) Set 
  * @method string getExtInfo() Obtain <p>Extended parameter.</p>
  * @method void setExtInfo(string $ExtInfo) Set <p>Extended parameter.</p>
  */
@@ -46,7 +46,7 @@ class SampleSnapshotTaskInput extends AbstractModel
     public $WatermarkSet;
 
     /**
-     * @var TaskOutputStorage <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+     * @var TaskOutputStorage 
      */
     public $OutputStorage;
 
@@ -56,7 +56,7 @@ class SampleSnapshotTaskInput extends AbstractModel
     public $OutputObjectPath;
 
     /**
-     * @var NumberFormat <p>Rule of the <code>{number}</code> variable in the output path after sampling screenshot taking.</p>
+     * @var NumberFormat 
      */
     public $ObjectNumberFormat;
 
@@ -68,9 +68,9 @@ class SampleSnapshotTaskInput extends AbstractModel
     /**
      * @param integer $Definition <p>Sampled screenshot template ID.</p>
      * @param array $WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
-     * @param TaskOutputStorage $OutputStorage <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+     * @param TaskOutputStorage $OutputStorage 
      * @param string $OutputObjectPath <p>Output path of the image file after the sampled screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_sampleSnapshot_{definition}_{number}.{format}</code>.
-     * @param NumberFormat $ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after sampling screenshot taking.</p>
+     * @param NumberFormat $ObjectNumberFormat 
      * @param string $ExtInfo <p>Extended parameter.</p>
      */
     function __construct()

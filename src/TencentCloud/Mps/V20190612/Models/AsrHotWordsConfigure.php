@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Smart subtitle hotword parameter.
+ * 
  *
  * @method string getSwitch() Obtain 
  * @method void setSwitch(string $Switch) Set 

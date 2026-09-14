@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInput(DocToVideoInput $Input) Set <p>Input information for AIGC document‑to‑video generation</p>
  * @method DocToVideoCosInfo getCosInfo() Obtain <p>User cos information, used to store the generation result</p>
  * @method void setCosInfo(DocToVideoCosInfo $CosInfo) Set <p>User cos information, used to store the generation result</p>
- * @method string getResourceId() Obtain 
- * @method void setResourceId(string $ResourceId) Set 
+ * @method string getResourceId() Obtain <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+ * @method void setResourceId(string $ResourceId) Set <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
  */
 class CreateDocToVideoTaskRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateDocToVideoTaskRequest extends AbstractModel
     public $CosInfo;
 
     /**
-     * @var string 
+     * @var string <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
      */
     public $ResourceId;
 
     /**
      * @param DocToVideoInput $Input <p>Input information for AIGC document‑to‑video generation</p>
      * @param DocToVideoCosInfo $CosInfo <p>User cos information, used to store the generation result</p>
-     * @param string $ResourceId 
+     * @param string $ResourceId <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
      */
     function __construct()
     {

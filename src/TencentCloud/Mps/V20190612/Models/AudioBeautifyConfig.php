@@ -18,52 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The audio improvement configuration.
+ * Volume beautification configuration
  *
- * @method string getSwitch() Obtain Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
- * @method void setSwitch(string $Switch) Set Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
- * @method array getTypes() Obtain Type. Multiple selections allowed. Valid values:
-<li>declick: noise removal</li>
-<li>deesser: Dental Click Suppression</li>
-Default value: declick.
- * @method void setTypes(array $Types) Set Type. Multiple selections allowed. Valid values:
-<li>declick: noise removal</li>
-<li>deesser: Dental Click Suppression</li>
-Default value: declick.
+ * @method string getSwitch() Obtain <p>Capability configuration switch. Available values: </p><li>ON: Enable;</li><li>OFF: Disable.</li>Default value: ON.
+ * @method void setSwitch(string $Switch) Set <p>Capability configuration switch. Available values: </p><li>ON: Enable;</li><li>OFF: Disable.</li>Default value: ON.
+ * @method array getTypes() Obtain <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
+ * @method void setTypes(array $Types) Set <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
  */
 class AudioBeautifyConfig extends AbstractModel
 {
     /**
-     * @var string Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
+     * @var string <p>Capability configuration switch. Available values: </p><li>ON: Enable;</li><li>OFF: Disable.</li>Default value: ON.
      */
     public $Switch;
 
     /**
-     * @var array Type. Multiple selections allowed. Valid values:
-<li>declick: noise removal</li>
-<li>deesser: Dental Click Suppression</li>
-Default value: declick.
+     * @var array <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
      */
     public $Types;
 
     /**
-     * @param string $Switch Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
-     * @param array $Types Type. Multiple selections allowed. Valid values:
-<li>declick: noise removal</li>
-<li>deesser: Dental Click Suppression</li>
-Default value: declick.
+     * @param string $Switch <p>Capability configuration switch. Available values: </p><li>ON: Enable;</li><li>OFF: Disable.</li>Default value: ON.
+     * @param array $Types <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
      */
     function __construct()
     {

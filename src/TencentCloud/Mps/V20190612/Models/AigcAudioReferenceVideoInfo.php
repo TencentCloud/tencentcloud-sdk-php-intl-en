@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Reference video asset for AIGC video generation.
+ * 
  *
- * @method string getVideoUrl() Obtain <p>Reference video URL, which must be accessible from the public network.</p>
- * @method void setVideoUrl(string $VideoUrl) Set <p>Reference video URL, which must be accessible from the public network.</p>
+ * @method string getVideoUrl() Obtain 
+ * @method void setVideoUrl(string $VideoUrl) Set 
  */
 class AigcAudioReferenceVideoInfo extends AbstractModel
 {
     /**
-     * @var string <p>Reference video URL, which must be accessible from the public network.</p>
+     * @var string 
      */
     public $VideoUrl;
 
     /**
-     * @param string $VideoUrl <p>Reference video URL, which must be accessible from the public network.</p>
+     * @param string $VideoUrl 
      */
     function __construct()
     {

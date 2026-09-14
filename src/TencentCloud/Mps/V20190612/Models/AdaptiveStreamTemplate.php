@@ -18,28 +18,26 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Adaptive bitrate streaming parameter template
+ * Adaptive transcoding stream parameter template
  *
  * @method AudioTemplateInfo getAudio() Obtain Audio parameter information.
  * @method void setAudio(AudioTemplateInfo $Audio) Set Audio parameter information.
  * @method VideoTemplateInfo getVideo() Obtain Video parameter information.
  * @method void setVideo(VideoTemplateInfo $Video) Set Video parameter information.
- * @method integer getRemoveAudio() Obtain Whether to remove audio stream. Valid values:
-<li>0: no,</li>
+ * @method integer getRemoveAudio() Obtain Whether to remove the audio stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
- * @method void setRemoveAudio(integer $RemoveAudio) Set Whether to remove audio stream. Valid values:
-<li>0: no,</li>
+ * @method void setRemoveAudio(integer $RemoveAudio) Set Whether to remove the audio stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
- * @method integer getRemoveVideo() Obtain Whether to remove video stream. Valid values:
-<li>0: no,</li>
+ * @method integer getRemoveVideo() Obtain Whether to remove the video stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
- * @method void setRemoveVideo(integer $RemoveVideo) Set Whether to remove video stream. Valid values:
-<li>0: no,</li>
+ * @method void setRemoveVideo(integer $RemoveVideo) Set Whether to remove the video stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
- * @method array getAudioList() Obtain Audio parameter information list.
-Note: This parameter is used when self-adaptive transcoding uses audio track merging for multiple audio tracks. The maximum length of the parameter array is 64.
- * @method void setAudioList(array $AudioList) Set Audio parameter information list.
-Note: This parameter is used when self-adaptive transcoding uses audio track merging for multiple audio tracks. The maximum length of the parameter array is 64.
+ * @method array getAudioList() Obtain 
+ * @method void setAudioList(array $AudioList) Set 
  */
 class AdaptiveStreamTemplate extends AbstractModel
 {
@@ -54,36 +52,34 @@ class AdaptiveStreamTemplate extends AbstractModel
     public $Video;
 
     /**
-     * @var integer Whether to remove audio stream. Valid values:
-<li>0: no,</li>
+     * @var integer Whether to remove the audio stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
      */
     public $RemoveAudio;
 
     /**
-     * @var integer Whether to remove video stream. Valid values:
-<li>0: no,</li>
+     * @var integer Whether to remove the video stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
      */
     public $RemoveVideo;
 
     /**
-     * @var array Audio parameter information list.
-Note: This parameter is used when self-adaptive transcoding uses audio track merging for multiple audio tracks. The maximum length of the parameter array is 64.
+     * @var array 
      */
     public $AudioList;
 
     /**
      * @param AudioTemplateInfo $Audio Audio parameter information.
      * @param VideoTemplateInfo $Video Video parameter information.
-     * @param integer $RemoveAudio Whether to remove audio stream. Valid values:
-<li>0: no,</li>
+     * @param integer $RemoveAudio Whether to remove the audio stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
-     * @param integer $RemoveVideo Whether to remove video stream. Valid values:
-<li>0: no,</li>
+     * @param integer $RemoveVideo Whether to remove the video stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
-     * @param array $AudioList Audio parameter information list.
-Note: This parameter is used when self-adaptive transcoding uses audio track merging for multiple audio tracks. The maximum length of the parameter array is 64.
+     * @param array $AudioList 
      */
     function __construct()
     {

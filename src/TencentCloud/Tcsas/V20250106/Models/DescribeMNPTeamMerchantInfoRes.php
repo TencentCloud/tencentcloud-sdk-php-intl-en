@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setID(string $ID) Set <p>Merchant binding ID of the mini program team, used to unbind the merchant.</p>
  * @method string getMerchantName() Obtain <p>Merchant name.</p>
  * @method void setMerchantName(string $MerchantName) Set <p>Merchant name.</p>
+ * @method string getCurrency() Obtain <p>Payment currency.</p>
+ * @method void setCurrency(string $Currency) Set <p>Payment currency.</p>
  */
 class DescribeMNPTeamMerchantInfoRes extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeMNPTeamMerchantInfoRes extends AbstractModel
     public $MerchantName;
 
     /**
+     * @var string <p>Payment currency.</p>
+     */
+    public $Currency;
+
+    /**
      * @param string $MerchantID <p>Merchant ID.</p>
      * @param integer $ApprovalStatus <p>Approval status. Valid values: 0: In progress; 10: Approved; 20: Rejected.</p>
      * @param string $ID <p>Merchant binding ID of the mini program team, used to unbind the merchant.</p>
      * @param string $MerchantName <p>Merchant name.</p>
+     * @param string $Currency <p>Payment currency.</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeMNPTeamMerchantInfoRes extends AbstractModel
 
         if (array_key_exists("MerchantName",$param) and $param["MerchantName"] !== null) {
             $this->MerchantName = $param["MerchantName"];
+        }
+
+        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
+            $this->Currency = $param["Currency"];
         }
     }
 }

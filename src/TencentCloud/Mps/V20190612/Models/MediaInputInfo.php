@@ -18,68 +18,68 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The information of the object to process.
+ * Input object information for media processing.
  *
- * @method string getType() Obtain Type of input source object. valid values:.
-<Li>COS: specifies the cos origin.</li>
-<Li>URL: the url source.</li>
-<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
-<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
- * @method void setType(string $Type) Set Type of input source object. valid values:.
-<Li>COS: specifies the cos origin.</li>
-<Li>URL: the url source.</li>
-<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
-<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
- * @method CosInputInfo getCosInputInfo() Obtain The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
- * @method void setCosInputInfo(CosInputInfo $CosInputInfo) Set The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
- * @method UrlInputInfo getUrlInputInfo() Obtain Valid when Type is URL. This item is required and indicates the media processing URL object information.
- * @method void setUrlInputInfo(UrlInputInfo $UrlInputInfo) Set Valid when Type is URL. This item is required and indicates the media processing URL object information.
- * @method S3InputInfo getS3InputInfo() Obtain Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
- * @method void setS3InputInfo(S3InputInfo $S3InputInfo) Set Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
- * @method VODInputInfo getVODInputInfo() Obtain Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
- * @method void setVODInputInfo(VODInputInfo $VODInputInfo) Set Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
+ * @method string getType() Obtain Type of the input source object. Supported values:
+<li>COS: COS origin</li>
+<li> URL: URL source</li>
+<li> AWS-S3: AWS source, currently only support transcoding task </li>
+<li> VOD: VOD Pro Edition </li>
+ * @method void setType(string $Type) Set Type of the input source object. Supported values:
+<li>COS: COS origin</li>
+<li> URL: URL source</li>
+<li> AWS-S3: AWS source, currently only support transcoding task </li>
+<li> VOD: VOD Pro Edition </li>
+ * @method CosInputInfo getCosInputInfo() Obtain Required when `Type` is `COS`. It represents the COS object information for media processing.
+ * @method void setCosInputInfo(CosInputInfo $CosInputInfo) Set Required when `Type` is `COS`. It represents the COS object information for media processing.
+ * @method UrlInputInfo getUrlInputInfo() Obtain 
+ * @method void setUrlInputInfo(UrlInputInfo $UrlInputInfo) Set 
+ * @method S3InputInfo getS3InputInfo() Obtain 
+ * @method void setS3InputInfo(S3InputInfo $S3InputInfo) Set 
+ * @method VODInputInfo getVODInputInfo() Obtain 
+ * @method void setVODInputInfo(VODInputInfo $VODInputInfo) Set 
  */
 class MediaInputInfo extends AbstractModel
 {
     /**
-     * @var string Type of input source object. valid values:.
-<Li>COS: specifies the cos origin.</li>
-<Li>URL: the url source.</li>
-<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
-<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
+     * @var string Type of the input source object. Supported values:
+<li>COS: COS origin</li>
+<li> URL: URL source</li>
+<li> AWS-S3: AWS source, currently only support transcoding task </li>
+<li> VOD: VOD Pro Edition </li>
      */
     public $Type;
 
     /**
-     * @var CosInputInfo The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
+     * @var CosInputInfo Required when `Type` is `COS`. It represents the COS object information for media processing.
      */
     public $CosInputInfo;
 
     /**
-     * @var UrlInputInfo Valid when Type is URL. This item is required and indicates the media processing URL object information.
+     * @var UrlInputInfo 
      */
     public $UrlInputInfo;
 
     /**
-     * @var S3InputInfo Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
+     * @var S3InputInfo 
      */
     public $S3InputInfo;
 
     /**
-     * @var VODInputInfo Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
+     * @var VODInputInfo 
      */
     public $VODInputInfo;
 
     /**
-     * @param string $Type Type of input source object. valid values:.
-<Li>COS: specifies the cos origin.</li>
-<Li>URL: the url source.</li>
-<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
-<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
-     * @param CosInputInfo $CosInputInfo The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
-     * @param UrlInputInfo $UrlInputInfo Valid when Type is URL. This item is required and indicates the media processing URL object information.
-     * @param S3InputInfo $S3InputInfo Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
-     * @param VODInputInfo $VODInputInfo Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
+     * @param string $Type Type of the input source object. Supported values:
+<li>COS: COS origin</li>
+<li> URL: URL source</li>
+<li> AWS-S3: AWS source, currently only support transcoding task </li>
+<li> VOD: VOD Pro Edition </li>
+     * @param CosInputInfo $CosInputInfo Required when `Type` is `COS`. It represents the COS object information for media processing.
+     * @param UrlInputInfo $UrlInputInfo 
+     * @param S3InputInfo $S3InputInfo 
+     * @param VODInputInfo $VODInputInfo 
      */
     function __construct()
     {

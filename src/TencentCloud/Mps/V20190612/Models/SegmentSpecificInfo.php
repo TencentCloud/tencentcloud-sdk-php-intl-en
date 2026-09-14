@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information on special segment configuration.
  *
- * @method string getSwitch() Obtain Switch for segment duration at startup. Optional values:
-on: Turn on
-off: Turn off the switch
-Default value: off
- * @method void setSwitch(string $Switch) Set Switch for segment duration at startup. Optional values:
-on: Turn on
-off: Turn off the switch
-Default value: off
- * @method integer getFragmentTime() Obtain Segment duration at startup. Unit: second
- * @method void setFragmentTime(integer $FragmentTime) Set Segment duration at startup. Unit: second
- * @method integer getFragmentEndNum() Obtain Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
- * @method void setFragmentEndNum(integer $FragmentEndNum) Set Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
+ * @method string getSwitch() Obtain 
+ * @method void setSwitch(string $Switch) Set 
+ * @method integer getFragmentTime() Obtain 
+ * @method void setFragmentTime(integer $FragmentTime) Set 
+ * @method integer getFragmentEndNum() Obtain 
+ * @method void setFragmentEndNum(integer $FragmentEndNum) Set 
  */
 class SegmentSpecificInfo extends AbstractModel
 {
     /**
-     * @var string Switch for segment duration at startup. Optional values:
-on: Turn on
-off: Turn off the switch
-Default value: off
+     * @var string 
      */
     public $Switch;
 
     /**
-     * @var integer Segment duration at startup. Unit: second
+     * @var integer 
      */
     public $FragmentTime;
 
     /**
-     * @var integer Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
+     * @var integer 
      */
     public $FragmentEndNum;
 
     /**
-     * @param string $Switch Switch for segment duration at startup. Optional values:
-on: Turn on
-off: Turn off the switch
-Default value: off
-     * @param integer $FragmentTime Segment duration at startup. Unit: second
-     * @param integer $FragmentEndNum Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
+     * @param string $Switch 
+     * @param integer $FragmentTime 
+     * @param integer $FragmentEndNum 
      */
     function __construct()
     {

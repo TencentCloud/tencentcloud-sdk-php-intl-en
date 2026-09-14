@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The URL of the object to process.
+ * Media processing URL object information.
  *
- * @method string getUrl() Obtain URL of a video.
- * @method void setUrl(string $Url) Set URL of a video.
+ * @method string getUrl() Obtain Video URL.
+ * @method void setUrl(string $Url) Set Video URL.
  */
 class UrlInputInfo extends AbstractModel
 {
     /**
-     * @var string URL of a video.
+     * @var string Video URL.
      */
     public $Url;
 
     /**
-     * @param string $Url URL of a video.
+     * @param string $Url Video URL.
      */
     function __construct()
     {

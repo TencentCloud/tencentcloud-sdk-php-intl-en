@@ -18,44 +18,36 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information required for uploading AIGC result files to COS. The MPS_QcsRole role needs to be created and authorized.
+ * 
  *
- * @method string getCosBucketName() Obtain Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
- * @method void setCosBucketName(string $CosBucketName) Set Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
- * @method string getCosBucketRegion() Obtain Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
- * @method void setCosBucketRegion(string $CosBucketRegion) Set Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
- * @method string getCosBucketPath() Obtain Store to the bucket path of cos.
-Option.
-Example value: my_file.
- * @method void setCosBucketPath(string $CosBucketPath) Set Store to the bucket path of cos.
-Option.
-Example value: my_file.
+ * @method string getCosBucketName() Obtain 
+ * @method void setCosBucketName(string $CosBucketName) Set 
+ * @method string getCosBucketRegion() Obtain 
+ * @method void setCosBucketRegion(string $CosBucketRegion) Set 
+ * @method string getCosBucketPath() Obtain 
+ * @method void setCosBucketPath(string $CosBucketPath) Set 
  */
 class AigcStoreCosParam extends AbstractModel
 {
     /**
-     * @var string Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
+     * @var string 
      */
     public $CosBucketName;
 
     /**
-     * @var string Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
+     * @var string 
      */
     public $CosBucketRegion;
 
     /**
-     * @var string Store to the bucket path of cos.
-Option.
-Example value: my_file.
+     * @var string 
      */
     public $CosBucketPath;
 
     /**
-     * @param string $CosBucketName Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
-     * @param string $CosBucketRegion Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
-     * @param string $CosBucketPath Store to the bucket path of cos.
-Option.
-Example value: my_file.
+     * @param string $CosBucketName 
+     * @param string $CosBucketRegion 
+     * @param string $CosBucketPath 
      */
     function __construct()
     {

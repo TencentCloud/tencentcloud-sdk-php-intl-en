@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Opening and closing credits parameters
+ * Opening and ending segments parameter.
  *
- * @method array getHeadSet() Obtain Opening scene list.
- * @method void setHeadSet(array $HeadSet) Set Opening scene list.
- * @method array getTailSet() Obtain Ending list.
- * @method void setTailSet(array $TailSet) Set Ending list.
+ * @method array getHeadSet() Obtain 
+ * @method void setHeadSet(array $HeadSet) Set 
+ * @method array getTailSet() Obtain 
+ * @method void setTailSet(array $TailSet) Set 
  */
 class HeadTailParameter extends AbstractModel
 {
     /**
-     * @var array Opening scene list.
+     * @var array 
      */
     public $HeadSet;
 
     /**
-     * @var array Ending list.
+     * @var array 
      */
     public $TailSet;
 
     /**
-     * @param array $HeadSet Opening scene list.
-     * @param array $TailSet Ending list.
+     * @param array $HeadSet 
+     * @param array $TailSet 
      */
     function __construct()
     {

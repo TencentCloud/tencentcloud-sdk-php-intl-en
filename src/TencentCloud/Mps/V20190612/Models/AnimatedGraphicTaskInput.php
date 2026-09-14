@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Type of an animated image generating task.
+ * Type of rotating image tasks.
  *
  * @method integer getDefinition() Obtain <p>Video-to-GIF conversion template ID.</p>
  * @method void setDefinition(integer $Definition) Set <p>Video-to-GIF conversion template ID.</p>
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(float $StartTimeOffset) Set <p>Start time of the GIF in the video, in seconds.</p>
  * @method float getEndTimeOffset() Obtain <p>End time of the GIF in the video, in seconds.</p>
  * @method void setEndTimeOffset(float $EndTimeOffset) Set <p>End time of the GIF in the video, in seconds.</p>
- * @method TaskOutputStorage getOutputStorage() Obtain <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
+ * @method TaskOutputStorage getOutputStorage() Obtain 
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set 
  * @method string getOutputObjectPath() Obtain <p>Output path of the file after GIF conversion, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_animatedGraphic_{definition}.{format}</code>.
  * @method void setOutputObjectPath(string $OutputObjectPath) Set <p>Output path of the file after GIF conversion, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_animatedGraphic_{definition}.{format}</code>.
  * @method string getExtInfo() Obtain <p>Extended parameter.</p>
@@ -51,7 +51,7 @@ class AnimatedGraphicTaskInput extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var TaskOutputStorage <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
+     * @var TaskOutputStorage 
      */
     public $OutputStorage;
 
@@ -69,7 +69,7 @@ class AnimatedGraphicTaskInput extends AbstractModel
      * @param integer $Definition <p>Video-to-GIF conversion template ID.</p>
      * @param float $StartTimeOffset <p>Start time of the GIF in the video, in seconds.</p>
      * @param float $EndTimeOffset <p>End time of the GIF in the video, in seconds.</p>
-     * @param TaskOutputStorage $OutputStorage <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
+     * @param TaskOutputStorage $OutputStorage 
      * @param string $OutputObjectPath <p>Output path of the file after GIF conversion, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_animatedGraphic_{definition}.{format}</code>.
      * @param string $ExtInfo <p>Extended parameter.</p>
      */

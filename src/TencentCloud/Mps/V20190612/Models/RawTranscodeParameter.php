@@ -18,74 +18,74 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Specifications for custom transcoding
+ * Specification parameters of custom transcoding.
  *
- * @method string getContainer() Obtain Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
- * @method void setContainer(string $Container) Set Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
- * @method integer getRemoveVideo() Obtain Whether to remove video data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
+ * @method string getContainer() Obtain Muxing format. Available values: mp4, flv, hls, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
+ * @method void setContainer(string $Container) Set Muxing format. Available values: mp4, flv, hls, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
+ * @method integer getRemoveVideo() Obtain Indicates whether to remove video data. Parameter value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
 Default value: 0.
- * @method void setRemoveVideo(integer $RemoveVideo) Set Whether to remove video data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
+ * @method void setRemoveVideo(integer $RemoveVideo) Set Indicates whether to remove video data. Parameter value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
 Default value: 0.
- * @method integer getRemoveAudio() Obtain Whether to remove audio data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
+ * @method integer getRemoveAudio() Obtain Whether to remove audio data. Parameter Value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
 Default value: 0.
- * @method void setRemoveAudio(integer $RemoveAudio) Set Whether to remove audio data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
+ * @method void setRemoveAudio(integer $RemoveAudio) Set Whether to remove audio data. Parameter Value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
 Default value: 0.
- * @method VideoTemplateInfo getVideoTemplate() Obtain Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
- * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) Set Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
- * @method AudioTemplateInfo getAudioTemplate() Obtain Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
- * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) Set Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
- * @method TEHDConfig getTEHDConfig() Obtain TESHD transcoding parameter.
- * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set TESHD transcoding parameter.
+ * @method VideoTemplateInfo getVideoTemplate() Obtain Video stream configuration parameters. This field is required when RemoveVideo is 0.
+ * @method void setVideoTemplate(VideoTemplateInfo $VideoTemplate) Set Video stream configuration parameters. This field is required when RemoveVideo is 0.
+ * @method AudioTemplateInfo getAudioTemplate() Obtain Audio stream configuration parameters. This field is required when RemoveAudio is 0.
+ * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) Set Audio stream configuration parameters. This field is required when RemoveAudio is 0.
+ * @method TEHDConfig getTEHDConfig() Obtain TSC transcoding parameters.
+ * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set TSC transcoding parameters.
  * @method string getStdExtInfo() Obtain Additional parameter, which is a serialized JSON string.
  * @method void setStdExtInfo(string $StdExtInfo) Set Additional parameter, which is a serialized JSON string.
- * @method EnhanceConfig getEnhanceConfig() Obtain Audio/Video enhancement configuration
- * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement configuration
- * @method SubtitleTemplate getSubtitleTemplate() Obtain Subtitle parameter
- * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set Subtitle parameter
+ * @method EnhanceConfig getEnhanceConfig() Obtain 
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set 
+ * @method SubtitleTemplate getSubtitleTemplate() Obtain 
+ * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set 
  */
 class RawTranscodeParameter extends AbstractModel
 {
     /**
-     * @var string Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+     * @var string Muxing format. Available values: mp4, flv, hls, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
      */
     public $Container;
 
     /**
-     * @var integer Whether to remove video data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
+     * @var integer Indicates whether to remove video data. Parameter value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
 Default value: 0.
      */
     public $RemoveVideo;
 
     /**
-     * @var integer Whether to remove audio data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
+     * @var integer Whether to remove audio data. Parameter Value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
 Default value: 0.
      */
     public $RemoveAudio;
 
     /**
-     * @var VideoTemplateInfo Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+     * @var VideoTemplateInfo Video stream configuration parameters. This field is required when RemoveVideo is 0.
      */
     public $VideoTemplate;
 
     /**
-     * @var AudioTemplateInfo Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+     * @var AudioTemplateInfo Audio stream configuration parameters. This field is required when RemoveAudio is 0.
      */
     public $AudioTemplate;
 
     /**
-     * @var TEHDConfig TESHD transcoding parameter.
+     * @var TEHDConfig TSC transcoding parameters.
      */
     public $TEHDConfig;
 
@@ -95,31 +95,31 @@ Default value: 0.
     public $StdExtInfo;
 
     /**
-     * @var EnhanceConfig Audio/Video enhancement configuration
+     * @var EnhanceConfig 
      */
     public $EnhanceConfig;
 
     /**
-     * @var SubtitleTemplate Subtitle parameter
+     * @var SubtitleTemplate 
      */
     public $SubtitleTemplate;
 
     /**
-     * @param string $Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
-     * @param integer $RemoveVideo Whether to remove video data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
+     * @param string $Container Muxing format. Available values: mp4, flv, hls, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
+     * @param integer $RemoveVideo Indicates whether to remove video data. Parameter value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
 Default value: 0.
-     * @param integer $RemoveAudio Whether to remove audio data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
+     * @param integer $RemoveAudio Whether to remove audio data. Parameter Value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
 Default value: 0.
-     * @param VideoTemplateInfo $VideoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
-     * @param AudioTemplateInfo $AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
-     * @param TEHDConfig $TEHDConfig TESHD transcoding parameter.
+     * @param VideoTemplateInfo $VideoTemplate Video stream configuration parameters. This field is required when RemoveVideo is 0.
+     * @param AudioTemplateInfo $AudioTemplate Audio stream configuration parameters. This field is required when RemoveAudio is 0.
+     * @param TEHDConfig $TEHDConfig TSC transcoding parameters.
      * @param string $StdExtInfo Additional parameter, which is a serialized JSON string.
-     * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement configuration
-     * @param SubtitleTemplate $SubtitleTemplate Subtitle parameter
+     * @param EnhanceConfig $EnhanceConfig 
+     * @param SubtitleTemplate $SubtitleTemplate 
      */
     function __construct()
     {

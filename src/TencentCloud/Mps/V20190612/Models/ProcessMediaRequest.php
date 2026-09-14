@@ -20,214 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessMedia request structure.
  *
- * @method MediaInputInfo getInputInfo() Obtain The information of the file to process.
- * @method void setInputInfo(MediaInputInfo $InputInfo) Set The information of the file to process.
- * @method TaskOutputStorage getOutputStorage() Obtain Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
-
-Note: When InputInfo.Type is URL, this parameter is required.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
-
-Note: When InputInfo.Type is URL, this parameter is required.
- * @method string getOutputDir() Obtain The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
- * @method void setOutputDir(string $OutputDir) Set The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
- * @method integer getScheduleId() Obtain Orchestration ID.
-Note 1: For parameters OutputStorage and OutputDir:
-<li>When a sub-task node in service orchestration has OutputStorage and OutputDir configured, the output configured in this sub-task node is used as the output of the sub-task.</li>
-<li>When a sub-task node in service orchestration does not have OutputStorage and OutputDir configured, if the task creation API (ProcessMedia) has specified an output, it will override the default output of the original orchestration.</li>
-<li>The priority of output settings is: Orchestration sub-task node > Output specified by the task API > Corresponding configuration within an orchestration.</li>
-Note 2: For the TaskNotifyConfig parameter, if the task creation API (ProcessMedia) has set this parameter, it will override the default callback of the original orchestration.
-
-Note 3: The trigger configured for an orchestration is for automatically starting the orchestration. It stops working when you manually call this API to start an orchestration.
- * @method void setScheduleId(integer $ScheduleId) Set Orchestration ID.
-Note 1: For parameters OutputStorage and OutputDir:
-<li>When a sub-task node in service orchestration has OutputStorage and OutputDir configured, the output configured in this sub-task node is used as the output of the sub-task.</li>
-<li>When a sub-task node in service orchestration does not have OutputStorage and OutputDir configured, if the task creation API (ProcessMedia) has specified an output, it will override the default output of the original orchestration.</li>
-<li>The priority of output settings is: Orchestration sub-task node > Output specified by the task API > Corresponding configuration within an orchestration.</li>
-Note 2: For the TaskNotifyConfig parameter, if the task creation API (ProcessMedia) has set this parameter, it will override the default callback of the original orchestration.
-
-Note 3: The trigger configured for an orchestration is for automatically starting the orchestration. It stops working when you manually call this API to start an orchestration.
- * @method MediaProcessTaskInput getMediaProcessTask() Obtain The media processing parameters to use.
- * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set The media processing parameters to use.
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Type parameter of a video content audit task.
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Type parameter of a video content audit task.
- * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Video content analysis task parameter.
- * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Video content analysis task parameter.
- * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain Type parameter of a video content recognition task.
- * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set Type parameter of a video content recognition task.
- * @method AiQualityControlTaskInput getAiQualityControlTask() Obtain Media quality inspection type task parameters.
- * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) Set Media quality inspection type task parameters.
- * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain Smart subtitle task.
- * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) Set Smart subtitle task.
- * @method SmartEraseTaskInput getSmartEraseTask() Obtain Smart erase task parameter.
- * @method void setSmartEraseTask(SmartEraseTaskInput $SmartEraseTask) Set Smart erase task parameter.
- * @method TaskNotifyConfig getTaskNotifyConfig() Obtain Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
- * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
- * @method integer getTasksPriority() Obtain Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
- * @method void setTasksPriority(integer $TasksPriority) Set Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
- * @method string getSessionId() Obtain Identification code for deduplication, up to 50 characters. If a request with the same identification code was made within the past 3 days, an error will be returned for the current request. If this parameter is not provided or is an empty string, deduplication will not be performed for this request.
- * @method void setSessionId(string $SessionId) Set Identification code for deduplication, up to 50 characters. If a request with the same identification code was made within the past 3 days, an error will be returned for the current request. If this parameter is not provided or is an empty string, deduplication will not be performed for this request.
- * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
- * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
- * @method string getTaskType() Obtain The task type.
-<li> `Online` (default): A task that is executed immediately.</li>
-<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
- * @method void setTaskType(string $TaskType) Set The task type.
-<li> `Online` (default): A task that is executed immediately.</li>
-<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
- * @method string getResourceId() Obtain Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
- * @method void setResourceId(string $ResourceId) Set Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
- * @method integer getSkipMateData() Obtain Whether to skip metadata acquisition. Valid values:
-0: do not skip
-1: skip
-Default value: 0		
- * @method void setSkipMateData(integer $SkipMateData) Set Whether to skip metadata acquisition. Valid values:
-0: do not skip
-1: skip
-Default value: 0		
+ * @method MediaInputInfo getInputInfo() Obtain <p>Input information of the media processing file.</p>
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set <p>Input information of the media processing file.</p>
+ * @method TaskOutputStorage getOutputStorage() Obtain <p>Target storage for media processing output files. If left empty, it inherits the storage location in InputInfo.<br>Note: When InputInfo.Type is URL, this parameter is required.</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set <p>Target storage for media processing output files. If left empty, it inherits the storage location in InputInfo.<br>Note: When InputInfo.Type is URL, this parameter is required.</p>
+ * @method string getOutputDir() Obtain <p>Target directory for output files generated by media processing. Must start and end with a slash (/), such as <code>/movie/201907/</code>.<br>If left empty, the directory is the same as the directory of the file in InputInfo.</p>
+ * @method void setOutputDir(string $OutputDir) Set <p>Target directory for output files generated by media processing. Must start and end with a slash (/), such as <code>/movie/201907/</code>.<br>If left empty, the directory is the same as the directory of the file in InputInfo.</p>
+ * @method integer getScheduleId() Obtain <p>Orchestration ID.<br>Note 1: For the OutputStorage and OutputDir parameters:</p><li>If OutputStorage and OutputDir are configured in the subtask node of service orchestration, the output configured in the subtask node serves as the subtask output.</li><li>If OutputStorage and OutputDir are not configured in the subtask node of service orchestration and the task creation API (ProcessMedia) has specified output, the default output of the original orchestration is overridden.</li><li>Output settings priority: orchestration subtask node &gt; task API specification &gt; corresponding configuration within orchestration</li>Note 2: For the TaskNotifyConfig parameter, if it has been configured in the task creation API (ProcessMedia), the default callback of the original orchestration is overridden.<p>Note 3: The Trigger configured for orchestration is only used to automatically Trigger scenarios. In a manual request, the configured Trigger is meaningless.</p>
+ * @method void setScheduleId(integer $ScheduleId) Set <p>Orchestration ID.<br>Note 1: For the OutputStorage and OutputDir parameters:</p><li>If OutputStorage and OutputDir are configured in the subtask node of service orchestration, the output configured in the subtask node serves as the subtask output.</li><li>If OutputStorage and OutputDir are not configured in the subtask node of service orchestration and the task creation API (ProcessMedia) has specified output, the default output of the original orchestration is overridden.</li><li>Output settings priority: orchestration subtask node &gt; task API specification &gt; corresponding configuration within orchestration</li>Note 2: For the TaskNotifyConfig parameter, if it has been configured in the task creation API (ProcessMedia), the default callback of the original orchestration is overridden.<p>Note 3: The Trigger configured for orchestration is only used to automatically Trigger scenarios. In a manual request, the configured Trigger is meaningless.</p>
+ * @method MediaProcessTaskInput getMediaProcessTask() Obtain <p>Media processing task parameter.</p>
+ * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set <p>Media processing task parameter.</p>
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain <p>Parameters for the video content review task.</p>
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set <p>Parameters for the video content review task.</p>
+ * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain <p>Parameters for the video content analysis task.</p>
+ * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set <p>Parameters for the video content analysis task.</p>
+ * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain <p>Parameters for the video content recognition task.</p>
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set <p>Parameters for the video content recognition task.</p>
+ * @method AiQualityControlTaskInput getAiQualityControlTask() Obtain <p>Parameters for the media quality inspection task.</p>
+ * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) Set <p>Parameters for the media quality inspection task.</p>
+ * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() Obtain <p>Smart subtitle.</p>
+ * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) Set <p>Smart subtitle.</p>
+ * @method SmartEraseTaskInput getSmartEraseTask() Obtain <p>Intelligent erasure type task parameter</p>
+ * @method void setSmartEraseTask(SmartEraseTaskInput $SmartEraseTask) Set <p>Intelligent erasure type task parameter</p>
+ * @method AIDubbingTaskInput getAIDubbingTask() Obtain <p>Parameters for the AI Dubbing task.</p>
+ * @method void setAIDubbingTask(AIDubbingTaskInput $AIDubbingTask) Set <p>Parameters for the AI Dubbing task.</p>
+ * @method TaskNotifyConfig getTaskNotifyConfig() Obtain <p>Event notification information of the task. If this is not specified, no event notification is obtained.</p>
+ * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set <p>Event notification information of the task. If this is not specified, no event notification is obtained.</p>
+ * @method integer getTasksPriority() Obtain <p>Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+ * @method void setTasksPriority(integer $TasksPriority) Set <p>Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+ * @method string getSessionId() Obtain <p>Identification code for deduplication. If there was a request with the same identification code within the past 3 days, an error will be returned for the current request. It can contain up to 50 characters. If this parameter is not passed or is an empty string, deduplication will not be performed for this request.</p>
+ * @method void setSessionId(string $SessionId) Set <p>Identification code for deduplication. If there was a request with the same identification code within the past 3 days, an error will be returned for the current request. It can contain up to 50 characters. If this parameter is not passed or is an empty string, deduplication will not be performed for this request.</p>
+ * @method string getSessionContext() Obtain <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method void setSessionContext(string $SessionContext) Set <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+ * @method string getTaskType() Obtain <p>Task type. Default: Online</p><li> Online: real-time task</li><li> Offline: idle task. Timeliness is not guaranteed. Processing ends within 3 days by default</li>
+ * @method void setTaskType(string $TaskType) Set <p>Task type. Default: Online</p><li> Online: real-time task</li><li> Offline: idle task. Timeliness is not guaranteed. Processing ends within 3 days by default</li>
+ * @method string getResourceId() Obtain <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+ * @method void setResourceId(string $ResourceId) Set <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+ * @method array getActivities() Obtain <p>Media orchestration task group<br>Note: If you fill in this parameter, the ScheduleId field will become invalid. Activities have a higher priority than ScheduleId.</p>
+ * @method void setActivities(array $Activities) Set <p>Media orchestration task group<br>Note: If you fill in this parameter, the ScheduleId field will become invalid. Activities have a higher priority than ScheduleId.</p>
+ * @method integer getSkipMateData() Obtain <p>Whether to skip metadata acquisition. Valid values:<br>0: Do not skip,<br>1: Skip,<br>Default value: 0.</p>
+ * @method void setSkipMateData(integer $SkipMateData) Set <p>Whether to skip metadata acquisition. Valid values:<br>0: Do not skip,<br>1: Skip,<br>Default value: 0.</p>
  */
 class ProcessMediaRequest extends AbstractModel
 {
     /**
-     * @var MediaInputInfo The information of the file to process.
+     * @var MediaInputInfo <p>Input information of the media processing file.</p>
      */
     public $InputInfo;
 
     /**
-     * @var TaskOutputStorage Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
-
-Note: When InputInfo.Type is URL, this parameter is required.
+     * @var TaskOutputStorage <p>Target storage for media processing output files. If left empty, it inherits the storage location in InputInfo.<br>Note: When InputInfo.Type is URL, this parameter is required.</p>
      */
     public $OutputStorage;
 
     /**
-     * @var string The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
+     * @var string <p>Target directory for output files generated by media processing. Must start and end with a slash (/), such as <code>/movie/201907/</code>.<br>If left empty, the directory is the same as the directory of the file in InputInfo.</p>
      */
     public $OutputDir;
 
     /**
-     * @var integer Orchestration ID.
-Note 1: For parameters OutputStorage and OutputDir:
-<li>When a sub-task node in service orchestration has OutputStorage and OutputDir configured, the output configured in this sub-task node is used as the output of the sub-task.</li>
-<li>When a sub-task node in service orchestration does not have OutputStorage and OutputDir configured, if the task creation API (ProcessMedia) has specified an output, it will override the default output of the original orchestration.</li>
-<li>The priority of output settings is: Orchestration sub-task node > Output specified by the task API > Corresponding configuration within an orchestration.</li>
-Note 2: For the TaskNotifyConfig parameter, if the task creation API (ProcessMedia) has set this parameter, it will override the default callback of the original orchestration.
-
-Note 3: The trigger configured for an orchestration is for automatically starting the orchestration. It stops working when you manually call this API to start an orchestration.
+     * @var integer <p>Orchestration ID.<br>Note 1: For the OutputStorage and OutputDir parameters:</p><li>If OutputStorage and OutputDir are configured in the subtask node of service orchestration, the output configured in the subtask node serves as the subtask output.</li><li>If OutputStorage and OutputDir are not configured in the subtask node of service orchestration and the task creation API (ProcessMedia) has specified output, the default output of the original orchestration is overridden.</li><li>Output settings priority: orchestration subtask node &gt; task API specification &gt; corresponding configuration within orchestration</li>Note 2: For the TaskNotifyConfig parameter, if it has been configured in the task creation API (ProcessMedia), the default callback of the original orchestration is overridden.<p>Note 3: The Trigger configured for orchestration is only used to automatically Trigger scenarios. In a manual request, the configured Trigger is meaningless.</p>
      */
     public $ScheduleId;
 
     /**
-     * @var MediaProcessTaskInput The media processing parameters to use.
+     * @var MediaProcessTaskInput <p>Media processing task parameter.</p>
      */
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput Type parameter of a video content audit task.
+     * @var AiContentReviewTaskInput <p>Parameters for the video content review task.</p>
      */
     public $AiContentReviewTask;
 
     /**
-     * @var AiAnalysisTaskInput Video content analysis task parameter.
+     * @var AiAnalysisTaskInput <p>Parameters for the video content analysis task.</p>
      */
     public $AiAnalysisTask;
 
     /**
-     * @var AiRecognitionTaskInput Type parameter of a video content recognition task.
+     * @var AiRecognitionTaskInput <p>Parameters for the video content recognition task.</p>
      */
     public $AiRecognitionTask;
 
     /**
-     * @var AiQualityControlTaskInput Media quality inspection type task parameters.
+     * @var AiQualityControlTaskInput <p>Parameters for the media quality inspection task.</p>
      */
     public $AiQualityControlTask;
 
     /**
-     * @var SmartSubtitlesTaskInput Smart subtitle task.
+     * @var SmartSubtitlesTaskInput <p>Smart subtitle.</p>
      */
     public $SmartSubtitlesTask;
 
     /**
-     * @var SmartEraseTaskInput Smart erase task parameter.
+     * @var SmartEraseTaskInput <p>Intelligent erasure type task parameter</p>
      */
     public $SmartEraseTask;
 
     /**
-     * @var TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
+     * @var AIDubbingTaskInput <p>Parameters for the AI Dubbing task.</p>
+     */
+    public $AIDubbingTask;
+
+    /**
+     * @var TaskNotifyConfig <p>Event notification information of the task. If this is not specified, no event notification is obtained.</p>
      */
     public $TaskNotifyConfig;
 
     /**
-     * @var integer Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+     * @var integer <p>Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
      */
     public $TasksPriority;
 
     /**
-     * @var string Identification code for deduplication, up to 50 characters. If a request with the same identification code was made within the past 3 days, an error will be returned for the current request. If this parameter is not provided or is an empty string, deduplication will not be performed for this request.
+     * @var string <p>Identification code for deduplication. If there was a request with the same identification code within the past 3 days, an error will be returned for the current request. It can contain up to 50 characters. If this parameter is not passed or is an empty string, deduplication will not be performed for this request.</p>
      */
     public $SessionId;
 
     /**
-     * @var string The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * @var string <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public $SessionContext;
 
     /**
-     * @var string The task type.
-<li> `Online` (default): A task that is executed immediately.</li>
-<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
+     * @var string <p>Task type. Default: Online</p><li> Online: real-time task</li><li> Offline: idle task. Timeliness is not guaranteed. Processing ends within 3 days by default</li>
      */
     public $TaskType;
 
     /**
-     * @var string Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+     * @var string <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
      */
     public $ResourceId;
 
     /**
-     * @var integer Whether to skip metadata acquisition. Valid values:
-0: do not skip
-1: skip
-Default value: 0		
+     * @var array <p>Media orchestration task group<br>Note: If you fill in this parameter, the ScheduleId field will become invalid. Activities have a higher priority than ScheduleId.</p>
+     */
+    public $Activities;
+
+    /**
+     * @var integer <p>Whether to skip metadata acquisition. Valid values:<br>0: Do not skip,<br>1: Skip,<br>Default value: 0.</p>
      */
     public $SkipMateData;
 
     /**
-     * @param MediaInputInfo $InputInfo The information of the file to process.
-     * @param TaskOutputStorage $OutputStorage Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
-
-Note: When InputInfo.Type is URL, this parameter is required.
-     * @param string $OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
-     * @param integer $ScheduleId Orchestration ID.
-Note 1: For parameters OutputStorage and OutputDir:
-<li>When a sub-task node in service orchestration has OutputStorage and OutputDir configured, the output configured in this sub-task node is used as the output of the sub-task.</li>
-<li>When a sub-task node in service orchestration does not have OutputStorage and OutputDir configured, if the task creation API (ProcessMedia) has specified an output, it will override the default output of the original orchestration.</li>
-<li>The priority of output settings is: Orchestration sub-task node > Output specified by the task API > Corresponding configuration within an orchestration.</li>
-Note 2: For the TaskNotifyConfig parameter, if the task creation API (ProcessMedia) has set this parameter, it will override the default callback of the original orchestration.
-
-Note 3: The trigger configured for an orchestration is for automatically starting the orchestration. It stops working when you manually call this API to start an orchestration.
-     * @param MediaProcessTaskInput $MediaProcessTask The media processing parameters to use.
-     * @param AiContentReviewTaskInput $AiContentReviewTask Type parameter of a video content audit task.
-     * @param AiAnalysisTaskInput $AiAnalysisTask Video content analysis task parameter.
-     * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of a video content recognition task.
-     * @param AiQualityControlTaskInput $AiQualityControlTask Media quality inspection type task parameters.
-     * @param SmartSubtitlesTaskInput $SmartSubtitlesTask Smart subtitle task.
-     * @param SmartEraseTaskInput $SmartEraseTask Smart erase task parameter.
-     * @param TaskNotifyConfig $TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
-     * @param integer $TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
-     * @param string $SessionId Identification code for deduplication, up to 50 characters. If a request with the same identification code was made within the past 3 days, an error will be returned for the current request. If this parameter is not provided or is an empty string, deduplication will not be performed for this request.
-     * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-     * @param string $TaskType The task type.
-<li> `Online` (default): A task that is executed immediately.</li>
-<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
-     * @param string $ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
-     * @param integer $SkipMateData Whether to skip metadata acquisition. Valid values:
-0: do not skip
-1: skip
-Default value: 0		
+     * @param MediaInputInfo $InputInfo <p>Input information of the media processing file.</p>
+     * @param TaskOutputStorage $OutputStorage <p>Target storage for media processing output files. If left empty, it inherits the storage location in InputInfo.<br>Note: When InputInfo.Type is URL, this parameter is required.</p>
+     * @param string $OutputDir <p>Target directory for output files generated by media processing. Must start and end with a slash (/), such as <code>/movie/201907/</code>.<br>If left empty, the directory is the same as the directory of the file in InputInfo.</p>
+     * @param integer $ScheduleId <p>Orchestration ID.<br>Note 1: For the OutputStorage and OutputDir parameters:</p><li>If OutputStorage and OutputDir are configured in the subtask node of service orchestration, the output configured in the subtask node serves as the subtask output.</li><li>If OutputStorage and OutputDir are not configured in the subtask node of service orchestration and the task creation API (ProcessMedia) has specified output, the default output of the original orchestration is overridden.</li><li>Output settings priority: orchestration subtask node &gt; task API specification &gt; corresponding configuration within orchestration</li>Note 2: For the TaskNotifyConfig parameter, if it has been configured in the task creation API (ProcessMedia), the default callback of the original orchestration is overridden.<p>Note 3: The Trigger configured for orchestration is only used to automatically Trigger scenarios. In a manual request, the configured Trigger is meaningless.</p>
+     * @param MediaProcessTaskInput $MediaProcessTask <p>Media processing task parameter.</p>
+     * @param AiContentReviewTaskInput $AiContentReviewTask <p>Parameters for the video content review task.</p>
+     * @param AiAnalysisTaskInput $AiAnalysisTask <p>Parameters for the video content analysis task.</p>
+     * @param AiRecognitionTaskInput $AiRecognitionTask <p>Parameters for the video content recognition task.</p>
+     * @param AiQualityControlTaskInput $AiQualityControlTask <p>Parameters for the media quality inspection task.</p>
+     * @param SmartSubtitlesTaskInput $SmartSubtitlesTask <p>Smart subtitle.</p>
+     * @param SmartEraseTaskInput $SmartEraseTask <p>Intelligent erasure type task parameter</p>
+     * @param AIDubbingTaskInput $AIDubbingTask <p>Parameters for the AI Dubbing task.</p>
+     * @param TaskNotifyConfig $TaskNotifyConfig <p>Event notification information of the task. If this is not specified, no event notification is obtained.</p>
+     * @param integer $TasksPriority <p>Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+     * @param string $SessionId <p>Identification code for deduplication. If there was a request with the same identification code within the past 3 days, an error will be returned for the current request. It can contain up to 50 characters. If this parameter is not passed or is an empty string, deduplication will not be performed for this request.</p>
+     * @param string $SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param string $TaskType <p>Task type. Default: Online</p><li> Online: real-time task</li><li> Offline: idle task. Timeliness is not guaranteed. Processing ends within 3 days by default</li>
+     * @param string $ResourceId <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+     * @param array $Activities <p>Media orchestration task group<br>Note: If you fill in this parameter, the ScheduleId field will become invalid. Activities have a higher priority than ScheduleId.</p>
+     * @param integer $SkipMateData <p>Whether to skip metadata acquisition. Valid values:<br>0: Do not skip,<br>1: Skip,<br>Default value: 0.</p>
      */
     function __construct()
     {
@@ -295,6 +251,11 @@ Default value: 0
             $this->SmartEraseTask->deserialize($param["SmartEraseTask"]);
         }
 
+        if (array_key_exists("AIDubbingTask",$param) and $param["AIDubbingTask"] !== null) {
+            $this->AIDubbingTask = new AIDubbingTaskInput();
+            $this->AIDubbingTask->deserialize($param["AIDubbingTask"]);
+        }
+
         if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {
             $this->TaskNotifyConfig = new TaskNotifyConfig();
             $this->TaskNotifyConfig->deserialize($param["TaskNotifyConfig"]);
@@ -318,6 +279,15 @@ Default value: 0
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("Activities",$param) and $param["Activities"] !== null) {
+            $this->Activities = [];
+            foreach ($param["Activities"] as $key => $value){
+                $obj = new Activity();
+                $obj->deserialize($value);
+                array_push($this->Activities, $obj);
+            }
         }
 
         if (array_key_exists("SkipMateData",$param) and $param["SkipMateData"] !== null) {

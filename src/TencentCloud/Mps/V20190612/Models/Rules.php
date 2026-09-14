@@ -18,20 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task judgment conditions.
+ * 
  *
  * @method string getId() Obtain 
  * @method void setId(string $Id) Set 
  * @method array getConditions() Obtain 
  * @method void setConditions(array $Conditions) Set 
- * @method string getLinker() Obtain Logical operator for the list of conditions. Valid values:
-
-- &&: logical AND
-- ||: logical OR
- * @method void setLinker(string $Linker) Set Logical operator for the list of conditions. Valid values:
-
-- &&: logical AND
-- ||: logical OR
+ * @method string getLinker() Obtain 
+ * @method void setLinker(string $Linker) Set 
  * @method array getRearDriveIndexs() Obtain 
  * @method void setRearDriveIndexs(array $RearDriveIndexs) Set 
  */
@@ -48,10 +42,7 @@ class Rules extends AbstractModel
     public $Conditions;
 
     /**
-     * @var string Logical operator for the list of conditions. Valid values:
-
-- &&: logical AND
-- ||: logical OR
+     * @var string 
      */
     public $Linker;
 
@@ -63,10 +54,7 @@ class Rules extends AbstractModel
     /**
      * @param string $Id 
      * @param array $Conditions 
-     * @param string $Linker Logical operator for the list of conditions. Valid values:
-
-- &&: logical AND
-- ||: logical OR
+     * @param string $Linker 
      * @param array $RearDriveIndexs 
      */
     function __construct()

@@ -18,64 +18,52 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The AWS S3 storage information of a source file.
+ * AWS S3 storage input
  *
- * @method string getS3Bucket() Obtain S3 bucket.
- * @method void setS3Bucket(string $S3Bucket) Set S3 bucket.
- * @method string getS3Region() Obtain Region of the S3 bucket. Currently supports:  
-us-east-1  
-eu-west-3
-
- * @method void setS3Region(string $S3Region) Set Region of the S3 bucket. Currently supports:  
-us-east-1  
-eu-west-3
-
- * @method string getS3Object() Obtain Resource path of the media in the S3 bucket.
- * @method void setS3Object(string $S3Object) Set Resource path of the media in the S3 bucket.
- * @method string getS3SecretId() Obtain AWS private network access media resource secret key id.
- * @method void setS3SecretId(string $S3SecretId) Set AWS private network access media resource secret key id.
- * @method string getS3SecretKey() Obtain AWS private network access media content key.
- * @method void setS3SecretKey(string $S3SecretKey) Set AWS private network access media content key.
+ * @method string getS3Bucket() Obtain S3 bucket。
+ * @method void setS3Bucket(string $S3Bucket) Set S3 bucket。
+ * @method string getS3Region() Obtain 
+ * @method void setS3Region(string $S3Region) Set 
+ * @method string getS3Object() Obtain 
+ * @method void setS3Object(string $S3Object) Set 
+ * @method string getS3SecretId() Obtain 
+ * @method void setS3SecretId(string $S3SecretId) Set 
+ * @method string getS3SecretKey() Obtain 
+ * @method void setS3SecretKey(string $S3SecretKey) Set 
  */
 class S3InputInfo extends AbstractModel
 {
     /**
-     * @var string S3 bucket.
+     * @var string S3 bucket。
      */
     public $S3Bucket;
 
     /**
-     * @var string Region of the S3 bucket. Currently supports:  
-us-east-1  
-eu-west-3
-
+     * @var string 
      */
     public $S3Region;
 
     /**
-     * @var string Resource path of the media in the S3 bucket.
+     * @var string 
      */
     public $S3Object;
 
     /**
-     * @var string AWS private network access media resource secret key id.
+     * @var string 
      */
     public $S3SecretId;
 
     /**
-     * @var string AWS private network access media content key.
+     * @var string 
      */
     public $S3SecretKey;
 
     /**
-     * @param string $S3Bucket S3 bucket.
-     * @param string $S3Region Region of the S3 bucket. Currently supports:  
-us-east-1  
-eu-west-3
-
-     * @param string $S3Object Resource path of the media in the S3 bucket.
-     * @param string $S3SecretId AWS private network access media resource secret key id.
-     * @param string $S3SecretKey AWS private network access media content key.
+     * @param string $S3Bucket S3 bucket。
+     * @param string $S3Region 
+     * @param string $S3Object 
+     * @param string $S3SecretId 
+     * @param string $S3SecretKey 
      */
     function __construct()
     {

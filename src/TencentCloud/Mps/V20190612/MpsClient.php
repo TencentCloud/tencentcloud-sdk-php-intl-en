@@ -25,6 +25,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 /**
  * @method Models\BatchProcessMediaResponse BatchProcessMedia(Models\BatchProcessMediaRequest $req) This API is used to initiate batch processing tasks for URL video links, with features:
 Smart subtitle (full speech, speech hotword, and speech translation)
+ * @method Models\ChangeVoiceResponse ChangeVoice(Models\ChangeVoiceRequest $req) Synchronize tone conversion to convert the input audio into the specified timbre based on the input audio and specified timbre.
  * @method Models\CloneViralResponse CloneViral(Models\CloneViralRequest $req) Clone a hit product. Input a reference video of a hit product and a product image to generate a video with aligned style and pace.
  * @method Models\CloneVoiceResponse CloneVoice(Models\CloneVoiceRequest $req) This API is used to clone a voice type from a reference audio.
  * @method Models\CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(Models\CreateAIAnalysisTemplateRequest $req) This API is used to create a user-defined content analysis template. Up to 50 templates can be created.
@@ -39,7 +40,7 @@ Smart subtitle (full speech, speech hotword, and speech translation)
  * @method Models\CreateAsrHotwordsResponse CreateAsrHotwords(Models\CreateAsrHotwordsRequest $req) This API is used to create a smart subtitle hotword lexicon.
  * @method Models\CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplate(Models\CreateBlindWatermarkTemplateRequest $req) This API is used to create a user-defined digital watermark template.
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) This API is used to create a custom content moderation template. Up to 50 templates can be created in total.
- * @method Models\CreateDocToVideoTaskResponse CreateDocToVideoTask(Models\CreateDocToVideoTaskRequest $req) This API is used to create an AIGC documentation generation video task.
+ * @method Models\CreateDocToVideoTaskResponse CreateDocToVideoTask(Models\CreateDocToVideoTaskRequest $req) Creates an AIGC document-to-video task.
 This API is used to query tasks.
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) This API is used to create a custom image sprite generating template. Up to 16 templates can be created.
  * @method Models\CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(Models\CreateLiveRecordTemplateRequest $req) This API is used to create a live recording template.
@@ -186,6 +187,9 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
  * @method Models\ModifyAsrHotwordsResponse ModifyAsrHotwords(Models\ModifyAsrHotwordsRequest $req) This API is used to update a smart subtitle hotword lexicon.
  * @method Models\ModifyBlindWatermarkTemplateResponse ModifyBlindWatermarkTemplate(Models\ModifyBlindWatermarkTemplateRequest $req) This API is used to modify a user-defined digital watermark template. The digital watermark type cannot be modified.
  * @method Models\ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(Models\ModifyContentReviewTemplateRequest $req) This API is used to modify a custom content moderation template.
+ * @method Models\ModifyDocToVideoTaskStatusResponse ModifyDocToVideoTaskStatus(Models\ModifyDocToVideoTaskStatusRequest $req) Modify the status of an AIGC document-to-video task.
+
+Contains two actions: confirm and regenerate.
  * @method Models\ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(Models\ModifyImageSpriteTemplateRequest $req) This API is used to modify a custom image sprite generating template.
  * @method Models\ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(Models\ModifyLiveRecordTemplateRequest $req) This example shows you how to modify a live streaming recording template.
  * @method Models\ModifyPersonSampleResponse ModifyPersonSample(Models\ModifyPersonSampleRequest $req) This API is used to modify image samples by image ID. You can use it to modify the name and description of an image sample and add/delete/reset facial features or tags. There must be at least one image left after the deletion of facial features; otherwise, please reset instead of delete the facial features.
@@ -218,18 +222,18 @@ Quality inspection (live stream format diagnosis, audio and video content detect
 Recording
 
 Live stream processing event notification supports HTTP callbacks and also supports real-time writing to the message queue CMQ specified by the user. The user obtains the event notification result from the message queue CMQ. Meanwhile, if an output file exists during the process, it will be written to the target storage of the output file specified by the user.
- * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate a processing task for video URLs or media files in Cloud Object Storage (COS). Features include:
-- Audio/Video transcoding (such as standard transcoding, top speed codec (TSC) transcoding, audio/video enhancement, visible watermark addition, and digital watermark addition).
+ * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate a processing task for URL video links or media files in COS. Features include:
+- Audio/Video transcoding (such as standard transcoding, Top Speed Codec (TSC) transcoding, audio/video enhancement, visible watermark addition, and digital watermark addition).
 - Adaptive bitrate streaming conversion for audios/videos.
 - Video-to-GIF conversion.
-- Time point screenshot of videos.
+- Screenshot taking at specified time points.
 - Sampled screenshot of videos.
 - Image sprite of video screenshots.
-- Media quality inspection (such as media format diagnosis, audio/video content detection, and scoring without reference, where audio/video content detection mainly covers jitter, blur, low light, overexposure, screen glitches, noise, mosaic, QR code, and other issues).
+- Media quality inspection (such as media format diagnosis, audio/video content detection, and no-reference scoring, where audio/video content detection mainly covers jitter, blur, low light, overexposure, screen glitches, noise, mosaic, QR code, and other issues).
 - Smart subtitle (such as subtitle generation and translation).
 - Smart erasing (such as watermark removal, subtitle removal, and privacy protection).
-- Smart content moderation (such as pornography detection and sensitive information detection).
-- Smart content analysis (such as tags, classifications, covers, frame tags, video splitting, highlights, opening and ending clips, and marking points for games).
+- Intelligent content moderation (such as pornography detection and sensitive information detection).
+-.
 - Smart content recognition (such as human faces, full texts, text keywords, full speech, speech keywords, speech translation, and object recognition).
  * @method Models\QueryHunyuan3DTaskResponse QueryHunyuan3DTask(Models\QueryHunyuan3DTaskRequest $req) Query the result corresponding to a Hunyuan3D task.
  * @method Models\QueryProjectResponse QueryProject(Models\QueryProjectRequest $req) This API is used to query an episode project.

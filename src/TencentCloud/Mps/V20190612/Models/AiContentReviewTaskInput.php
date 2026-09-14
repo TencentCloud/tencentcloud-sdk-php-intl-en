@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task type of intelligent content audit
+ * Task type for intelligent content moderation
  *
- * @method integer getDefinition() Obtain Video content audit template ID.
- * @method void setDefinition(integer $Definition) Set Video content audit template ID.
+ * @method integer getDefinition() Obtain Video content review template ID.
+ * @method void setDefinition(integer $Definition) Set Video content review template ID.
  */
 class AiContentReviewTaskInput extends AbstractModel
 {
     /**
-     * @var integer Video content audit template ID.
+     * @var integer Video content review template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Video content audit template ID.
+     * @param integer $Definition Video content review template ID.
      */
     function __construct()
     {

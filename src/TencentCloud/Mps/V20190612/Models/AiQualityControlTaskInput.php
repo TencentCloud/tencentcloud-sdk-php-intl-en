@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type for media quality inspection.
+ * 
  *
  * @method integer getDefinition() Obtain 
  * @method void setDefinition(integer $Definition) Set 

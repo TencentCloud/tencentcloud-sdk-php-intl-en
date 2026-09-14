@@ -18,144 +18,100 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Metadata of a VOD media file
+ * Meta-information of on-demand media files
  *
- * @method integer getSize() Obtain Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSize(integer $Size) Set Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getContainer() Obtain Container, such as m4a and mp4.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setContainer(string $Container) Set Container, such as m4a and mp4.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getBitrate() Obtain Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBitrate(integer $Bitrate) Set Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getHeight() Obtain Maximum value of the height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHeight(integer $Height) Set Maximum value of the height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getWidth() Obtain Maximum value of the width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWidth(integer $Width) Set Maximum value of the width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getDuration() Obtain Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDuration(float $Duration) Set Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRotate() Obtain Selected angle during video recording in degrees.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRotate(integer $Rotate) Set Selected angle during video recording in degrees.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSize() Obtain Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+ * @method void setSize(integer $Size) Set Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+ * @method string getContainer() Obtain Container type, for example, m4a and mp4.
+ * @method void setContainer(string $Container) Set Container type, for example, m4a and mp4.
+ * @method integer getBitrate() Obtain Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
+ * @method void setBitrate(integer $Bitrate) Set Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
+ * @method integer getHeight() Obtain Maximum height of a video stream. Unit: px.
+ * @method void setHeight(integer $Height) Set Maximum height of a video stream. Unit: px.
+ * @method integer getWidth() Obtain Maximum video stream width in px.
+ * @method void setWidth(integer $Width) Set Maximum video stream width in px.
+ * @method float getDuration() Obtain Video duration, unit: seconds.
+ * @method void setDuration(float $Duration) Set Video duration, unit: seconds.
+ * @method integer getRotate() Obtain Selection angle during video shooting. Unit: degree.
+ * @method void setRotate(integer $Rotate) Set Selection angle during video shooting. Unit: degree.
  * @method array getVideoStreamSet() Obtain Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVideoStreamSet(array $VideoStreamSet) Set Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getAudioStreamSet() Obtain Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAudioStreamSet(array $AudioStreamSet) Set Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getVideoDuration() Obtain Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVideoDuration(float $VideoDuration) Set Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method float getAudioDuration() Obtain Audio duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAudioDuration(float $AudioDuration) Set Audio duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getVideoDuration() Obtain Video duration, unit: seconds.
+ * @method void setVideoDuration(float $VideoDuration) Set Video duration, unit: seconds.
+ * @method float getAudioDuration() Obtain Audio duration, in seconds.
+ * @method void setAudioDuration(float $AudioDuration) Set Audio duration, in seconds.
  */
 class MediaMetaData extends AbstractModel
 {
     /**
-     * @var integer Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
      */
     public $Size;
 
     /**
-     * @var string Container, such as m4a and mp4.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Container type, for example, m4a and mp4.
      */
     public $Container;
 
     /**
-     * @var integer Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
      */
     public $Bitrate;
 
     /**
-     * @var integer Maximum value of the height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Maximum height of a video stream. Unit: px.
      */
     public $Height;
 
     /**
-     * @var integer Maximum value of the width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Maximum video stream width in px.
      */
     public $Width;
 
     /**
-     * @var float Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Video duration, unit: seconds.
      */
     public $Duration;
 
     /**
-     * @var integer Selected angle during video recording in degrees.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Selection angle during video shooting. Unit: degree.
      */
     public $Rotate;
 
     /**
      * @var array Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VideoStreamSet;
 
     /**
      * @var array Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AudioStreamSet;
 
     /**
-     * @var float Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Video duration, unit: seconds.
      */
     public $VideoDuration;
 
     /**
-     * @var float Audio duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var float Audio duration, in seconds.
      */
     public $AudioDuration;
 
     /**
-     * @param integer $Size Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Container Container, such as m4a and mp4.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Height Maximum value of the height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Width Maximum value of the width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $Duration Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Rotate Selected angle during video recording in degrees.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Size Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+     * @param string $Container Container type, for example, m4a and mp4.
+     * @param integer $Bitrate Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
+     * @param integer $Height Maximum height of a video stream. Unit: px.
+     * @param integer $Width Maximum video stream width in px.
+     * @param float $Duration Video duration, unit: seconds.
+     * @param integer $Rotate Selection angle during video shooting. Unit: degree.
      * @param array $VideoStreamSet Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $AudioStreamSet Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $VideoDuration Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param float $AudioDuration Audio duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $VideoDuration Video duration, unit: seconds.
+     * @param float $AudioDuration Audio duration, in seconds.
      */
     function __construct()
     {

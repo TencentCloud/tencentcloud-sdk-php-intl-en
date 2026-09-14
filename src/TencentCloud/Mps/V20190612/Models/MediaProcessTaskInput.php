@@ -18,45 +18,45 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The type of media processing task.
+ * Media processing task type
  *
- * @method array getTranscodeTaskSet() Obtain List of transcoding tasks.
- * @method void setTranscodeTaskSet(array $TranscodeTaskSet) Set List of transcoding tasks.
- * @method array getAnimatedGraphicTaskSet() Obtain List of animated image screenshot tasks.
- * @method void setAnimatedGraphicTaskSet(array $AnimatedGraphicTaskSet) Set List of animated image screenshot tasks.
- * @method array getSnapshotByTimeOffsetTaskSet() Obtain List of time point screenshot tasks.
- * @method void setSnapshotByTimeOffsetTaskSet(array $SnapshotByTimeOffsetTaskSet) Set List of time point screenshot tasks.
- * @method array getSampleSnapshotTaskSet() Obtain List of sampled screenshot tasks.
- * @method void setSampleSnapshotTaskSet(array $SampleSnapshotTaskSet) Set List of sampled screenshot tasks.
- * @method array getImageSpriteTaskSet() Obtain List of image sprite screenshot tasks.
- * @method void setImageSpriteTaskSet(array $ImageSpriteTaskSet) Set List of image sprite screenshot tasks.
+ * @method array getTranscodeTaskSet() Obtain Video transcoding task list.
+ * @method void setTranscodeTaskSet(array $TranscodeTaskSet) Set Video transcoding task list.
+ * @method array getAnimatedGraphicTaskSet() Obtain List of video-to-GIF tasks.
+ * @method void setAnimatedGraphicTaskSet(array $AnimatedGraphicTaskSet) Set List of video-to-GIF tasks.
+ * @method array getSnapshotByTimeOffsetTaskSet() Obtain List of time point screenshot tasks for videos.
+ * @method void setSnapshotByTimeOffsetTaskSet(array $SnapshotByTimeOffsetTaskSet) Set List of time point screenshot tasks for videos.
+ * @method array getSampleSnapshotTaskSet() Obtain List of sampled screenshot tasks for videos.
+ * @method void setSampleSnapshotTaskSet(array $SampleSnapshotTaskSet) Set List of sampled screenshot tasks for videos.
+ * @method array getImageSpriteTaskSet() Obtain List of image sprite tasks for videos.
+ * @method void setImageSpriteTaskSet(array $ImageSpriteTaskSet) Set List of image sprite tasks for videos.
  * @method array getAdaptiveDynamicStreamingTaskSet() Obtain List of adaptive bitrate streaming tasks.
  * @method void setAdaptiveDynamicStreamingTaskSet(array $AdaptiveDynamicStreamingTaskSet) Set List of adaptive bitrate streaming tasks.
  */
 class MediaProcessTaskInput extends AbstractModel
 {
     /**
-     * @var array List of transcoding tasks.
+     * @var array Video transcoding task list.
      */
     public $TranscodeTaskSet;
 
     /**
-     * @var array List of animated image screenshot tasks.
+     * @var array List of video-to-GIF tasks.
      */
     public $AnimatedGraphicTaskSet;
 
     /**
-     * @var array List of time point screenshot tasks.
+     * @var array List of time point screenshot tasks for videos.
      */
     public $SnapshotByTimeOffsetTaskSet;
 
     /**
-     * @var array List of sampled screenshot tasks.
+     * @var array List of sampled screenshot tasks for videos.
      */
     public $SampleSnapshotTaskSet;
 
     /**
-     * @var array List of image sprite screenshot tasks.
+     * @var array List of image sprite tasks for videos.
      */
     public $ImageSpriteTaskSet;
 
@@ -66,11 +66,11 @@ class MediaProcessTaskInput extends AbstractModel
     public $AdaptiveDynamicStreamingTaskSet;
 
     /**
-     * @param array $TranscodeTaskSet List of transcoding tasks.
-     * @param array $AnimatedGraphicTaskSet List of animated image screenshot tasks.
-     * @param array $SnapshotByTimeOffsetTaskSet List of time point screenshot tasks.
-     * @param array $SampleSnapshotTaskSet List of sampled screenshot tasks.
-     * @param array $ImageSpriteTaskSet List of image sprite screenshot tasks.
+     * @param array $TranscodeTaskSet Video transcoding task list.
+     * @param array $AnimatedGraphicTaskSet List of video-to-GIF tasks.
+     * @param array $SnapshotByTimeOffsetTaskSet List of time point screenshot tasks for videos.
+     * @param array $SampleSnapshotTaskSet List of sampled screenshot tasks for videos.
+     * @param array $ImageSpriteTaskSet List of image sprite tasks for videos.
      * @param array $AdaptiveDynamicStreamingTaskSet List of adaptive bitrate streaming tasks.
      */
     function __construct()

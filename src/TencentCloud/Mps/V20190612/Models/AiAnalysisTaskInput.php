@@ -18,22 +18,12 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI video intelligent analysis input parameter types
+ * Input parameter type for AI smart video analysis
  *
  * @method integer getDefinition() Obtain Video content analysis template ID.
  * @method void setDefinition(integer $Definition) Set Video content analysis template ID.
- * @method string getExtendedParameter() Obtain Additional parameters, whose value is a serialized json string.
-Note: This parameter is used to meet customization requirements. See the following:
-[Smart Erase Tutorial](https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1)
-[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
-[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
-[Horizontal-to-Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
- * @method void setExtendedParameter(string $ExtendedParameter) Set Additional parameters, whose value is a serialized json string.
-Note: This parameter is used to meet customization requirements. See the following:
-[Smart Erase Tutorial](https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1)
-[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
-[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
-[Horizontal-to-Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
+ * @method string getExtendedParameter() Obtain 
+ * @method void setExtendedParameter(string $ExtendedParameter) Set 
  */
 class AiAnalysisTaskInput extends AbstractModel
 {
@@ -43,23 +33,13 @@ class AiAnalysisTaskInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var string Additional parameters, whose value is a serialized json string.
-Note: This parameter is used to meet customization requirements. See the following:
-[Smart Erase Tutorial](https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1)
-[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
-[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
-[Horizontal-to-Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
+     * @var string 
      */
     public $ExtendedParameter;
 
     /**
      * @param integer $Definition Video content analysis template ID.
-     * @param string $ExtendedParameter Additional parameters, whose value is a serialized json string.
-Note: This parameter is used to meet customization requirements. See the following:
-[Smart Erase Tutorial](https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1)
-[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
-[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
-[Horizontal-to-Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
+     * @param string $ExtendedParameter 
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Audio/Video enhancement configuration.
+ * Audio/video enhancement configuration
  *
- * @method VideoEnhanceConfig getVideoEnhance() Obtain Video enhancement configuration.
- * @method void setVideoEnhance(VideoEnhanceConfig $VideoEnhance) Set Video enhancement configuration.
- * @method AudioEnhanceConfig getAudioEnhance() Obtain Audio enhancement configuration.
- * @method void setAudioEnhance(AudioEnhanceConfig $AudioEnhance) Set Audio enhancement configuration.
+ * @method VideoEnhanceConfig getVideoEnhance() Obtain 
+ * @method void setVideoEnhance(VideoEnhanceConfig $VideoEnhance) Set 
+ * @method AudioEnhanceConfig getAudioEnhance() Obtain 
+ * @method void setAudioEnhance(AudioEnhanceConfig $AudioEnhance) Set 
  */
 class EnhanceConfig extends AbstractModel
 {
     /**
-     * @var VideoEnhanceConfig Video enhancement configuration.
+     * @var VideoEnhanceConfig 
      */
     public $VideoEnhance;
 
     /**
-     * @var AudioEnhanceConfig Audio enhancement configuration.
+     * @var AudioEnhanceConfig 
      */
     public $AudioEnhance;
 
     /**
-     * @param VideoEnhanceConfig $VideoEnhance Video enhancement configuration.
-     * @param AudioEnhanceConfig $AudioEnhance Audio enhancement configuration.
+     * @param VideoEnhanceConfig $VideoEnhance 
+     * @param AudioEnhanceConfig $AudioEnhance 
      */
     function __construct()
     {

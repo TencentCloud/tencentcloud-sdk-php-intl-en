@@ -18,52 +18,52 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom parameters for smart erasing.
+ * 
  *
- * @method string getEraseType() Obtain <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
- * @method void setEraseType(string $EraseType) Set <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
- * @method UpdateSmartEraseSubtitleConfig getEraseSubtitleConfig() Obtain <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
- * @method void setEraseSubtitleConfig(UpdateSmartEraseSubtitleConfig $EraseSubtitleConfig) Set <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
- * @method UpdateSmartEraseWatermarkConfig getEraseWatermarkConfig() Obtain <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
- * @method void setEraseWatermarkConfig(UpdateSmartEraseWatermarkConfig $EraseWatermarkConfig) Set <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
- * @method UpdateSmartErasePrivacyConfig getErasePrivacyConfig() Obtain <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
- * @method void setErasePrivacyConfig(UpdateSmartErasePrivacyConfig $ErasePrivacyConfig) Set <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
- * @method integer getSubtitleEmbedId() Obtain <p>id of the subtitle removal suppression template.</p>
- * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) Set <p>id of the subtitle removal suppression template.</p>
+ * @method string getEraseType() Obtain 
+ * @method void setEraseType(string $EraseType) Set 
+ * @method UpdateSmartEraseSubtitleConfig getEraseSubtitleConfig() Obtain 
+ * @method void setEraseSubtitleConfig(UpdateSmartEraseSubtitleConfig $EraseSubtitleConfig) Set 
+ * @method UpdateSmartEraseWatermarkConfig getEraseWatermarkConfig() Obtain 
+ * @method void setEraseWatermarkConfig(UpdateSmartEraseWatermarkConfig $EraseWatermarkConfig) Set 
+ * @method UpdateSmartErasePrivacyConfig getErasePrivacyConfig() Obtain 
+ * @method void setErasePrivacyConfig(UpdateSmartErasePrivacyConfig $ErasePrivacyConfig) Set 
+ * @method integer getSubtitleEmbedId() Obtain 
+ * @method void setSubtitleEmbedId(integer $SubtitleEmbedId) Set 
  */
 class OverrideEraseParameter extends AbstractModel
 {
     /**
-     * @var string <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+     * @var string 
      */
     public $EraseType;
 
     /**
-     * @var UpdateSmartEraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+     * @var UpdateSmartEraseSubtitleConfig 
      */
     public $EraseSubtitleConfig;
 
     /**
-     * @var UpdateSmartEraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+     * @var UpdateSmartEraseWatermarkConfig 
      */
     public $EraseWatermarkConfig;
 
     /**
-     * @var UpdateSmartErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+     * @var UpdateSmartErasePrivacyConfig 
      */
     public $ErasePrivacyConfig;
 
     /**
-     * @var integer <p>id of the subtitle removal suppression template.</p>
+     * @var integer 
      */
     public $SubtitleEmbedId;
 
     /**
-     * @param string $EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
-     * @param UpdateSmartEraseSubtitleConfig $EraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
-     * @param UpdateSmartEraseWatermarkConfig $EraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
-     * @param UpdateSmartErasePrivacyConfig $ErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
-     * @param integer $SubtitleEmbedId <p>id of the subtitle removal suppression template.</p>
+     * @param string $EraseType 
+     * @param UpdateSmartEraseSubtitleConfig $EraseSubtitleConfig 
+     * @param UpdateSmartEraseWatermarkConfig $EraseWatermarkConfig 
+     * @param UpdateSmartErasePrivacyConfig $ErasePrivacyConfig 
+     * @param integer $SubtitleEmbedId 
      */
     function __construct()
     {

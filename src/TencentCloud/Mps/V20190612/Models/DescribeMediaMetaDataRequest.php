@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMediaMetaData request structure.
  *
- * @method MediaInputInfo getInputInfo() Obtain Input information of the file that needs to get meta information.
- * @method void setInputInfo(MediaInputInfo $InputInfo) Set Input information of the file that needs to get meta information.
+ * @method MediaInputInfo getInputInfo() Obtain <p>Input information of the file that needs to get meta information.</p>
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set <p>Input information of the file that needs to get meta information.</p>
+ * @method string getMode() Obtain <p>When set to slow, expand the API timeout duration</p><p>Enumeration values:</p><ul><li>slow: expand the API timeout duration</li></ul>
+ * @method void setMode(string $Mode) Set <p>When set to slow, expand the API timeout duration</p><p>Enumeration values:</p><ul><li>slow: expand the API timeout duration</li></ul>
  */
 class DescribeMediaMetaDataRequest extends AbstractModel
 {
     /**
-     * @var MediaInputInfo Input information of the file that needs to get meta information.
+     * @var MediaInputInfo <p>Input information of the file that needs to get meta information.</p>
      */
     public $InputInfo;
 
     /**
-     * @param MediaInputInfo $InputInfo Input information of the file that needs to get meta information.
+     * @var string <p>When set to slow, expand the API timeout duration</p><p>Enumeration values:</p><ul><li>slow: expand the API timeout duration</li></ul>
+     */
+    public $Mode;
+
+    /**
+     * @param MediaInputInfo $InputInfo <p>Input information of the file that needs to get meta information.</p>
+     * @param string $Mode <p>When set to slow, expand the API timeout duration</p><p>Enumeration values:</p><ul><li>slow: expand the API timeout duration</li></ul>
      */
     function __construct()
     {
@@ -49,6 +57,10 @@ class DescribeMediaMetaDataRequest extends AbstractModel
         if (array_key_exists("InputInfo",$param) and $param["InputInfo"] !== null) {
             $this->InputInfo = new MediaInputInfo();
             $this->InputInfo->deserialize($param["InputInfo"]);
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
     }
 }

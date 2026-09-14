@@ -21,30 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * LLM enhancement.
  *
  * @method string getSwitch() Obtain Capability configuration switch. Valid values:
+
 ON: enabled.
 OFF: disabled.
 Default value: OFF.
  * @method void setSwitch(string $Switch) Set Capability configuration switch. Valid values:
+
 ON: enabled.
 OFF: disabled.
 Default value: OFF.
- * @method string getType() Obtain Strength type, available values:
-
-weak
-normal
-strong
-Default value: normal.
- * @method void setType(string $Type) Set Strength type, available values:
-
-weak
-normal
-strong
-Default value: normal.
+ * @method string getType() Obtain 
+ * @method void setType(string $Type) Set 
  */
 class DiffusionEnhanceConfig extends AbstractModel
 {
     /**
      * @var string Capability configuration switch. Valid values:
+
 ON: enabled.
 OFF: disabled.
 Default value: OFF.
@@ -52,26 +45,17 @@ Default value: OFF.
     public $Switch;
 
     /**
-     * @var string Strength type, available values:
-
-weak
-normal
-strong
-Default value: normal.
+     * @var string 
      */
     public $Type;
 
     /**
      * @param string $Switch Capability configuration switch. Valid values:
+
 ON: enabled.
 OFF: disabled.
 Default value: OFF.
-     * @param string $Type Strength type, available values:
-
-weak
-normal
-strong
-Default value: normal.
+     * @param string $Type 
      */
     function __construct()
     {
